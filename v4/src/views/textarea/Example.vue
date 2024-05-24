@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="textarea/Demo1">
       <template #tip>
-        <div>多行文本。查看 <router-link class="link" :to="{name: 'VXEAPI', params: {name: 'textarea'}}">API</router-link></div>
+        <div>多行文本</div>
       </template>
     </CodeLight>
 

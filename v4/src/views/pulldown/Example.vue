@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="pulldown/Demo1">
       <template #tip>
-        <div>下拉容器。查看 <router-link class="link" :to="{name: 'VXEAPI', params: {name: 'pulldown'}}">API</router-link></div>
+        <div>下拉容器</div>
       </template>
     </CodeLight>
 

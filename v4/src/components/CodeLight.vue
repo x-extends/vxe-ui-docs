@@ -1,9 +1,9 @@
 <template>
   <div class="code-light">
     <div class="example-tip">
-      <p class="tip">
+      <div class="tip">
         <slot name="tip"></slot>
-      </p>
+      </div>
     </div>
 
     <div v-if="$slots.use" class="example-use">
@@ -18,14 +18,14 @@
       <slot name="describe"></slot>
     </div>
 
-    <!-- <div class="example-code">
+    <div class="example-code">
       <div class="example-btns">
-        <vxe-tooltip :content="$t('app.body.button.fixDocTip')">
-          <vxe-button class="example-btn" mode="text" icon="vxe-icon-warning-triangle-fill" @click="openDocs">{{ $t('app.body.button.fixDocs') }}</vxe-button>
+        <vxe-tooltip :content="$t('app.docs.button.fixDocTip')">
+          <vxe-button class="example-btn" mode="text" icon="vxe-icon-warning-triangle-fill" @click="openDocs">{{ $t('app.docs.button.fixDocs') }}</vxe-button>
         </vxe-tooltip>
-        <vxe-button class="example-btn" mode="text" icon="vxe-icon-copy" @click="copyCode" :disabled="!showJsCode && !showTsCode">{{ $t('app.body.button.copyCode') }}</vxe-button>
-        <vxe-button class="example-btn" mode="text" :status="showJsCode ? 'primary' : ''" :loading="jsLoading" :icon="showJsCode ? 'vxe-icon-eye-fill' : 'vxe-icon-eye-fill-close'" @click="toggleJsVisible">{{ $t(showJsCode ? 'app.body.button.hideCode' : 'app.body.button.showJsCode') }}</vxe-button>
-        <vxe-button class="example-btn" mode="text" :status="showTsCode ? 'primary' : ''" :loading="tsLoading" :icon="showTsCode ? 'vxe-icon-eye-fill' : 'vxe-icon-eye-fill-close'" @click="toggleTsVisible">{{ $t(showTsCode ? 'app.body.button.hideCode' : 'app.body.button.showTsCode') }}</vxe-button>
+        <vxe-button class="example-btn" mode="text" icon="vxe-icon-copy" @click="copyCode" :disabled="!showJsCode && !showTsCode">{{ $t('app.docs.button.copyCode') }}</vxe-button>
+        <vxe-button class="example-btn" mode="text" :status="showJsCode ? 'primary' : ''" :loading="jsLoading" :icon="showJsCode ? 'vxe-icon-eye-fill' : 'vxe-icon-eye-fill-close'" @click="toggleJsVisible">{{ $t(showJsCode ? 'app.docs.button.hideCode' : 'app.docs.button.showJsCode') }}</vxe-button>
+        <vxe-button class="example-btn" mode="text" :status="showTsCode ? 'primary' : ''" :loading="tsLoading" :icon="showTsCode ? 'vxe-icon-eye-fill' : 'vxe-icon-eye-fill-close'" @click="toggleTsVisible">{{ $t(showTsCode ? 'app.docs.button.hideCode' : 'app.docs.button.showTsCode') }}</vxe-button>
       </div>
       <div class="example-code-warpper" v-show="showJsCode">
         <div v-for="(item, index) in importJsCodes" :key="index" class="example-code-item">
@@ -55,15 +55,17 @@
           <CodeRender language="html" :code="tsCodeText"></CodeRender>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { defineAsyncComponent, PropType } from 'vue'
-// import { codeJsMaps } from '@/common/cache'
-// import { VxeUI } from 'vxe-pc-ui'
-// import XEClipboard from 'xe-clipboard'
+import { ref, computed, defineAsyncComponent, PropType } from 'vue'
+import { codeJsMaps, codeTsMaps } from '@/common/cache'
+import { VxeUI } from 'vxe-pc-ui'
+import { useAppStore } from '@/store/app'
+
+const appStore = useAppStore()
 
 const props = defineProps({
   path: String,
@@ -73,180 +75,178 @@ const props = defineProps({
   }
 })
 
-// const jsCodeText = ref('')
-// const tsCodeText = ref('')
+const jsCodeText = ref('')
+const tsCodeText = ref('')
 
-// const gitBaseUrl = 'https://github.com/x-extends/vxe-table-docs/tree/main/v4'
+const showJsCode = ref(false)
+const showTsCode = ref(false)
+const jsLoading = ref(false)
+const tsLoading = ref(false)
 
-// const showJsCode = ref(false)
-// const showTsCode = ref(false)
-// const jsLoading = ref(false)
-// const tsLoading = ref(false)
-
-// const importTsCodes = ref<{
-//   path: string
-//   name: string
-//   text: string
-// }[]>([])
-// const importJsCodes = ref<{
-//   path: string
-//   name: string
-//   text: string
-// }[]>([])
+const importTsCodes = ref<{
+  path: string
+  name: string
+  text: string
+}[]>([])
+const importJsCodes = ref<{
+  path: string
+  name: string
+  text: string
+}[]>([])
 
 const DemoCode = defineAsyncComponent(() => import(`@/views/${props.path}`))
 
-// const compDir = computed(() => {
-//   const paths = props.path?.split('/') || []
-//   return `${gitBaseUrl}/src/views/${paths.slice(0, paths.length - 1).join('/')}`
-// })
+const compDir = computed(() => {
+  const paths = props.path?.split('/') || []
+  return `${appStore.docsGithubUrl}/src/views/${paths.slice(0, paths.length - 1).join('/')}`
+})
 
-// const getFileName = (path: string) => {
-//   return path.split('/').slice(-1)[0]
-// }
+const getFileName = (path: string) => {
+  return path.split('/').slice(-1)[0]
+}
 
-// const loadJsCode = () => {
-//   const compPath = props.path
-//   if (compPath) {
-//     if (codeJsMaps[compPath]) {
-//       jsCodeText.value = codeJsMaps[compPath]
-//       jsLoading.value = false
-//     } else {
-//       jsLoading.value = true
-//       Promise.all([
-//         fetch(`${process.env.BASE_URL}example/js/${compPath}.vue?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
-//           if (response.status >= 200 && response.status < 400) {
-//             return response.text()
-//           }
-//           return '暂无示例'
-//         }),
-//         ...(props.extraImports?.map(impPath => {
-//           return fetch(`${process.env.BASE_URL}example/js/${impPath}.js?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
-//             if (response.status >= 200 && response.status < 400) {
-//               return response.text().then(text => {
-//                 return {
-//                   path: `${impPath}.js`,
-//                   name: getFileName(`${impPath}.js`),
-//                   text
-//                 }
-//               })
-//             }
-//             return {
-//               path: `${impPath}.js`,
-//               name: getFileName(`${impPath}.js`),
-//               text: ''
-//             }
-//           })
-//         }) || [])
-//       ]).then(([text1, ...impTexts]) => {
-//         jsCodeText.value = text1 || ''
-//         codeJsMaps[compPath] = jsCodeText.value
-//         importJsCodes.value = impTexts || '暂无'
-//         jsLoading.value = false
-//       }).catch(() => {
-//         jsLoading.value = false
-//       })
-//     }
-//   } else if (jsCodeText.value) {
-//     jsLoading.value = false
-//   }
-//   return Promise.resolve()
-// }
+const loadJsCode = () => {
+  const compPath = props.path
+  if (compPath) {
+    if (codeJsMaps[compPath]) {
+      jsCodeText.value = codeJsMaps[compPath]
+      jsLoading.value = false
+    } else {
+      jsLoading.value = true
+      Promise.all([
+        fetch(`${process.env.BASE_URL}example/js/${compPath}.vue?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+          if (response.status >= 200 && response.status < 400) {
+            return response.text()
+          }
+          return '暂无示例'
+        }),
+        ...(props.extraImports?.map(impPath => {
+          return fetch(`${process.env.BASE_URL}example/js/${impPath}.js?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+            if (response.status >= 200 && response.status < 400) {
+              return response.text().then(text => {
+                return {
+                  path: `${impPath}.js`,
+                  name: getFileName(`${impPath}.js`),
+                  text
+                }
+              })
+            }
+            return {
+              path: `${impPath}.js`,
+              name: getFileName(`${impPath}.js`),
+              text: ''
+            }
+          })
+        }) || [])
+      ]).then(([text1, ...impTexts]) => {
+        jsCodeText.value = text1 || ''
+        codeJsMaps[compPath] = jsCodeText.value
+        importJsCodes.value = impTexts || '暂无'
+        jsLoading.value = false
+      }).catch(() => {
+        jsLoading.value = false
+      })
+    }
+  } else if (jsCodeText.value) {
+    jsLoading.value = false
+  }
+  return Promise.resolve()
+}
 
-// const loadTsCode = () => {
-//   const compPath = props.path
-//   if (compPath) {
-//     if (codeTsMaps[compPath]) {
-//       tsCodeText.value = codeTsMaps[compPath]
-//       tsLoading.value = false
-//     } else {
-//       tsLoading.value = true
-//       Promise.all([
-//         fetch(`${process.env.BASE_URL}example/ts/${compPath}.vue?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
-//           if (response.status >= 200 && response.status < 400) {
-//             return response.text()
-//           }
-//           return '暂无示例'
-//         }),
-//         ...(props.extraImports?.map(impPath => {
-//           return fetch(`${process.env.BASE_URL}example/ts/${impPath}.ts?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
-//             if (response.status >= 200 && response.status < 400) {
-//               return response.text().then(text => {
-//                 return {
-//                   path: `${impPath}.ts`,
-//                   name: getFileName(`${impPath}.ts`),
-//                   text
-//                 }
-//               })
-//             }
-//             return {
-//               path: `${impPath}.ts`,
-//               name: getFileName(`${impPath}.ts`),
-//               text: ''
-//             }
-//           })
-//         }) || [])
-//       ]).then(([text1, ...impTexts]) => {
-//         tsCodeText.value = text1 || ''
-//         codeTsMaps[compPath] = tsCodeText.value
-//         importTsCodes.value = impTexts || '暂无'
-//         tsLoading.value = false
-//       }).catch(() => {
-//         tsLoading.value = false
-//       })
-//     }
-//   } else if (tsCodeText.value) {
-//     tsLoading.value = false
-//   }
-//   return Promise.resolve()
-// }
+const loadTsCode = () => {
+  const compPath = props.path
+  if (compPath) {
+    if (codeTsMaps[compPath]) {
+      tsCodeText.value = codeTsMaps[compPath]
+      tsLoading.value = false
+    } else {
+      tsLoading.value = true
+      Promise.all([
+        fetch(`${process.env.BASE_URL}example/ts/${compPath}.vue?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+          if (response.status >= 200 && response.status < 400) {
+            return response.text()
+          }
+          return '暂无示例'
+        }),
+        ...(props.extraImports?.map(impPath => {
+          return fetch(`${process.env.BASE_URL}example/ts/${impPath}.ts?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+            if (response.status >= 200 && response.status < 400) {
+              return response.text().then(text => {
+                return {
+                  path: `${impPath}.ts`,
+                  name: getFileName(`${impPath}.ts`),
+                  text
+                }
+              })
+            }
+            return {
+              path: `${impPath}.ts`,
+              name: getFileName(`${impPath}.ts`),
+              text: ''
+            }
+          })
+        }) || [])
+      ]).then(([text1, ...impTexts]) => {
+        tsCodeText.value = text1 || ''
+        codeTsMaps[compPath] = tsCodeText.value
+        importTsCodes.value = impTexts || '暂无'
+        tsLoading.value = false
+      }).catch(() => {
+        tsLoading.value = false
+      })
+    }
+  } else if (tsCodeText.value) {
+    tsLoading.value = false
+  }
+  return Promise.resolve()
+}
 
-// const toggleJsVisible = () => {
-//   showTsCode.value = false
-//   showJsCode.value = !showJsCode.value
-//   if (showJsCode.value) {
-//     loadJsCode()
-//   }
-// }
+const toggleJsVisible = () => {
+  showTsCode.value = false
+  showJsCode.value = !showJsCode.value
+  if (showJsCode.value) {
+    loadJsCode()
+  }
+}
 
-// const toggleTsVisible = () => {
-//   showJsCode.value = false
-//   showTsCode.value = !showTsCode.value
-//   if (showTsCode.value) {
-//     loadTsCode()
-//   }
-// }
+const toggleTsVisible = () => {
+  showJsCode.value = false
+  showTsCode.value = !showTsCode.value
+  if (showTsCode.value) {
+    loadTsCode()
+  }
+}
 
-// const copyCode = () => {
-//   let codeContent = ''
-//   if (showJsCode.value) {
-//     codeContent = jsCodeText.value
-//   } else if (showTsCode.value) {
-//     codeContent = tsCodeText.value
-//   }
-//   if (codeContent) {
-//     if (XEClipboard.copy(codeContent)) {
-//       VxeUI.modal.message({ content: '已复制到剪贴板！', status: 'success' })
-//     }
-//   }
-// }
+const copyCode = () => {
+  let codeContent = ''
+  if (showJsCode.value) {
+    codeContent = jsCodeText.value
+  } else if (showTsCode.value) {
+    codeContent = tsCodeText.value
+  }
+  if (codeContent) {
+    if (VxeUI.clipboard.copy(codeContent)) {
+      VxeUI.modal.message({ content: '已复制到剪贴板！', status: 'success' })
+    }
+  }
+}
 
-// const openDocs = () => {
-//   open(`${gitBaseUrl}/src/views/${props.path}.vue`)
-// }
+const openDocs = () => {
+  open(`${appStore.docsGithubUrl}/src/views/${props.path}.vue`)
+}
 </script>
 
 <style lang="scss" scoped>
 .code-light {
-  margin: 60px 0;
-  border: 1px solid var(--vxe-table-docs-layout-border-color);
+  margin: 30px 0;
+  border: 1px solid var(--vxe-ui-docs-layout-border-color);
   border-radius: 4px;
   ::v-deep(.tip) {
     margin: 0;
   }
 }
 .example-tip {
-  padding: 30px 30px 0 30px;
+  padding: 15px 15px 0 30px;
 }
 .example-use {
   padding: 30px 30px 0 30px;
@@ -263,7 +263,7 @@ const DemoCode = defineAsyncComponent(() => import(`@/views/${props.path}`))
   align-items: center;
   justify-content: center;
   height: 60px;
-  border-top: 1px dashed var(--vxe-table-docs-layout-border-color);
+  border-top: 1px dashed var(--vxe-ui-docs-layout-border-color);
   .example-btn {
     min-width: 100px;
   }

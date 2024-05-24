@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="input/Demo1">
       <template #tip>
-        <div>输入框。查看 <router-link class="link" :to="{name: 'VXEAPI', params: {name: 'input'}}">API</router-link></div>
+        <div>输入框</div>
         <div><span class="red">（注：输入组件输出为字符串类型）</span></div>
       </template>
     </CodeLight>

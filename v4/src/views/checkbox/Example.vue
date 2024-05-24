@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="checkbox/Demo1">
       <template #tip>
-        <div>复选框。查看 <router-link class="link" :to="{name: 'VXEAPI', params: {name: 'checkbox'}}">API</router-link></div>
+        <div>复选框</div>
       </template>
     </CodeLight>
 

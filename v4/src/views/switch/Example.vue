@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="switch/Demo1">
       <template #tip>
-        <div>按钮。查看 <router-link class="link" :to="{name: 'VXEAPI', params: {name: 'switch'}}">API</router-link></div>
+        <div>按钮</div>
       </template>
     </CodeLight>
 

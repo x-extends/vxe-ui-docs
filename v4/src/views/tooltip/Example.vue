@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="tooltip/Demo1">
       <template #tip>
-        <div>工具提示。查看 <router-link class="link" :to="{name: 'VXEAPI', params: {name: 'tooltip'}}">API</router-link></div>
+        <div>工具提示</div>
       </template>
     </CodeLight>
 

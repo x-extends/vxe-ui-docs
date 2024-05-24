@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="pager/Demo1">
       <template #tip>
-        <div>分页。查看 <router-link class="link" :to="{name: 'VXEAPI', params: {name: 'pager'}}">API</router-link></div>
+        <div>分页</div>
       </template>
     </CodeLight>
 
