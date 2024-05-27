@@ -8,6 +8,7 @@
     </div>
     <div class="header-middle"></div>
     <div class="header-right">
+      <vxe-select v-model="currLang" :options="langOptions"></vxe-select>
       <vxe-switch
         class="link theme"
         v-model="currTheme"
@@ -21,7 +22,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { ref, computed } from 'vue'
 import { useAppStore } from '@/store/app'
 const siteBaseUrl = computed(() => appStore.siteBaseUrl)
 
@@ -33,6 +34,20 @@ const currTheme = computed({
   },
   set (name) {
     appStore.setTheme(name)
+  }
+})
+
+const langOptions = ref([
+  { value: 'zh-CN', label: '中文' },
+  { value: 'en-US', label: '英文' }
+])
+
+const currLang = computed({
+  get () {
+    return appStore.language
+  },
+  set (lang) {
+    appStore.setLanguage(lang)
   }
 })
 </script>

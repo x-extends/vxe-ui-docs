@@ -10,7 +10,7 @@
       <slot name="use"></slot>
     </div>
 
-    <div class="example-demo">
+    <div v-if="path" class="example-demo">
       <DemoCode />
     </div>
 
@@ -18,7 +18,7 @@
       <slot name="describe"></slot>
     </div>
 
-    <div class="example-code">
+    <div v-if="path" class="example-code">
       <div class="example-btns">
         <vxe-tooltip :content="$t('app.docs.button.fixDocTip')">
           <vxe-button class="example-btn" mode="text" icon="vxe-icon-warning-triangle-fill" @click="openDocs">{{ $t('app.docs.button.fixDocs') }}</vxe-button>
@@ -30,13 +30,13 @@
       <div class="example-code-warpper" v-show="showJsCode">
         <div v-for="(item, index) in importJsCodes" :key="index" class="example-code-item">
           <div class="example-code-file">
-            <a class="link" :href="`${compDir}/${item.name}`" title="点击查看" target="_blank">{{ item.name }}</a>
+            <vxe-link :href="`${compDir}/${item.name}`" title="点击查看" target="_blank">{{ item.name }}</vxe-link>
           </div>
           <CodeRender language="javascript" :code="item.text"></CodeRender>
         </div>
         <div class="example-code-item">
           <div class="example-code-file">
-            <a class="link" :href="`${compDir}/${getFileName(`${path}.vue`)}`" title="点击查看" target="_blank">{{ getFileName(`${path}.vue`) }}</a>
+            <vxe-link :href="`${compDir}/${getFileName(`${path}.vue`)}`" title="点击查看" target="_blank">{{ getFileName(`${path}.vue`) }}</vxe-link>
           </div>
           <CodeRender language="html" :code="jsCodeText"></CodeRender>
         </div>
@@ -44,13 +44,13 @@
       <div class="example-code-warpper" v-show="showTsCode">
         <div v-for="(item, index) in importTsCodes" :key="index" class="example-code-item">
           <div class="example-code-file">
-            <a class="link" :href="`${compDir}/${item.name}`" title="点击查看" target="_blank">{{ item.name }}</a>
+            <vxe-link :href="`${compDir}/${item.name}`" title="点击查看" target="_blank">{{ item.name }}</vxe-link>
           </div>
           <CodeRender language="javascript" :code="item.text"></CodeRender>
         </div>
         <div class="example-code-item">
           <div class="example-code-file">
-            <a class="link" :href="`${compDir}/${getFileName(`${path}.vue`)}`" title="点击查看" target="_blank">{{ getFileName(`${path}.vue`) }}</a>
+            <vxe-link :href="`${compDir}/${getFileName(`${path}.vue`)}`" title="点击查看" target="_blank">{{ getFileName(`${path}.vue`) }}</vxe-link>
           </div>
           <CodeRender language="html" :code="tsCodeText"></CodeRender>
         </div>
@@ -94,7 +94,7 @@ const importJsCodes = ref<{
   text: string
 }[]>([])
 
-const DemoCode = defineAsyncComponent(() => import(`@/views/${props.path}`))
+const DemoCode = props.path ? defineAsyncComponent(() => import(`@/views/${props.path}`)) : null
 
 const compDir = computed(() => {
   const paths = props.path?.split('/') || []
@@ -246,10 +246,10 @@ const openDocs = () => {
   }
 }
 .example-tip {
-  padding: 15px 15px 0 30px;
+  padding: 8px 24px 8px 24px;
 }
 .example-use {
-  padding: 30px 30px 0 30px;
+  padding: 0 24px 0 24px;
 }
 .example-demo {
   margin: 30px;
@@ -282,11 +282,10 @@ const openDocs = () => {
 }
 .example-code-file {
   position: absolute;
-  top: 0;
+  top: -6px;
   left: 0;
-  font-size: 12px;
-  .link {
-    color: #666666;
+  a {
+    font-size: 12px;
   }
 }
 </style>

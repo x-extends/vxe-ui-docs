@@ -8,6 +8,64 @@ export interface NavVO {
   children?: NavVO[]
 }
 
+const componentList = [
+  'anchor',
+  'anchor-link',
+  'breadcrumb',
+  'breadcrumb-item',
+  'button',
+  'button-group',
+  'calendar',
+  'card',
+  'checkbox',
+  'checkbox-group',
+  'col',
+  'collapse',
+  'collapse-pane',
+  'date-input',
+  'drawer',
+  'form',
+  'form-design',
+  'form-gather',
+  'form-item',
+  'form-view',
+  'icon',
+  'input',
+  'layout-aside',
+  'layout-body',
+  'layout-container',
+  'layout-footer',
+  'layout-header',
+  'link',
+  'list-design',
+  'list-view',
+  'list',
+  'loading',
+  'menu',
+  'modal',
+  'number-input',
+  'optgroup',
+  'option',
+  'pager',
+  'password-input',
+  'print',
+  'pulldown',
+  'radio',
+  'radio-button',
+  'radio-group',
+  'row',
+  'select',
+  'switch',
+  'tab-pane',
+  'tabs',
+  'textarea',
+  'tips',
+  'tooltip',
+  'tree',
+  'tree-select',
+  'upload'
+]
+
 export const navConfigList: NavVO[] = [
   {
     title: '开发指南',
@@ -87,7 +145,7 @@ export const navConfigList: NavVO[] = [
   {
     title: '表格组件',
     children: [
-      { title: '查看文档', linkUrl: 'https://vxetable.cn/' }
+      { title: '查看文档', linkUrl: 'https://vxeui.com/' }
       // { title: '基础表格' },
       // { title: '配置式表格' },
       // { title: '格式化（全局）' },
@@ -126,7 +184,7 @@ export const navConfigList: NavVO[] = [
     title: '反馈组件',
     children: [
       // { title: 'Loading 加载中' },
-      // { title: 'Tips 提示' },
+      { title: 'Tips 段落提示' },
       // { title: 'Alert 警告提示' },
       // { title: 'Notification 通知提示框' },
       // { title: 'Modal.Message 轻提示' },
@@ -150,40 +208,43 @@ export const navConfigList: NavVO[] = [
       {
         title: 'FormDesign 表单设计器',
         children: [
-          { title: '基础功能', routerLink: { name: 'ComponentFormDesignBase' } },
-          { title: 'API' }
+          { title: '基础功能', routerLink: { name: 'ComponentFormDesignBase' } }
+          // { title: 'API' }
         ]
       }
-      // { title: 'ListDesign 列表设计器' }
+      // { title: 'ListDesign 列表设计器' },
+      // { title: 'FlowDesign 流程设计器' },
       // { title: 'PrintDesign 打印设计器' }
     ]
   },
-  {
-    title: '渲染器（高级用法）',
-    children: [
-      { title: '表格-筛选渲染' },
-      { title: '表格-单元格渲染' },
-      { title: '表格-可编辑渲染' },
-      { title: '表格-工具栏渲染' },
-      { title: '表格-空数据渲染' },
-      { title: '表单-项渲染' },
-      { title: '表单设计器-控件渲染' },
-      { title: '列表设计器-控件渲染' },
-      { title: '打印设计器-控件渲染' }
-    ]
-  },
-  {
-    title: '扩展插件',
-    children: [
-      { title: '集成第三方适配器' }
-    ]
-  },
+  // {
+  //   title: '渲染器（高级用法）',
+  //   children: [
+  //     { title: '表格-筛选渲染' },
+  //     { title: '表格-单元格渲染' },
+  //     { title: '表格-可编辑渲染' },
+  //     { title: '表格-工具栏渲染' },
+  //     { title: '表格-空数据渲染' },
+  //     { title: '表单-项渲染' },
+  //     { title: '表单设计器-控件渲染' },
+  //     { title: '列表设计器-控件渲染' },
+  //     { title: '打印设计器-控件渲染' }
+  //   ]
+  // },
+  // {
+  //   title: '扩展插件',
+  //   children: [
+  //     { title: '集成第三方适配器' }
+  //   ]
+  // },
   {
     title: 'API',
     isExpand: true,
-    children: [
-      { title: 'Button' },
-      { title: 'Table' }
-    ]
+    children: componentList.map(name => {
+      return {
+        title: `${name}`,
+        routerLink: { name: 'DocsApi', params: { name } }
+      }
+    })
   }
 ]

@@ -4,20 +4,20 @@ import myZhCN from './lang/zh-CN'
 import myZhTC from './lang/zh-TC'
 import myEnUS from './lang/en-US'
 
-const languageList = ['zh_CN', 'zh_TC', 'en_US']
+const languageList = ['zh-CN', 'zh-TC', 'en-US']
 const customLanguage = localStorage.getItem('language')
 
 const i18n = createI18n({
   warnHtmlMessage: false,
-  locale: customLanguage && languageList.includes(customLanguage) ? customLanguage : ['zh-CN', 'zh-HK', 'zh-MO', 'zh-TW'].includes(navigator.language) ? 'zh_CN' : 'en_US',
+  locale: customLanguage && languageList.includes(customLanguage) ? customLanguage : ['zh-CN', 'zh-HK', 'zh-MO', 'zh-TW'].includes(navigator.language) ? 'zh-CN' : 'en-US',
   messages: {
-    zh_CN: {
+    'zh-CN': {
       ...myZhCN
     },
-    zh_TC: {
+    'zh-TC': {
       ...myZhTC
     },
-    en_US: {
+    'en-US': {
       ...myEnUS
     }
   }

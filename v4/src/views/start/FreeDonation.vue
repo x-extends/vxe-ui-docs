@@ -13,7 +13,7 @@
       <div style="float: left;">
         <div style="padding: 15px 0;">
           <div style="font-size: 22px;font-weight: 700;">QQ交流群</div>
-          <div style="padding-top: 15px;">该群供大家交流問題，如果群人数已满，将会不定期剔除不活跃的，<br>如果有 bug 请准备好 <a class="link" href="https://vxetable.cn/issues.html" target="_blank">复现链接</a> 并通过提交 <a class="link" href="https://github.com/x-extends/vxe-table/issues" target="_blank">issues</a> 反馈</div>
+          <div style="padding-top: 15px;">该群供大家交流問題，如果群人数已满，将会不定期剔除不活跃的，<br>如果有 bug 请准备好 <a class="link" href="https://vxeui.com/issues.html" target="_blank">复现链接</a> 并通过提交 <a class="link" href="https://github.com/x-extends/vxe-table/issues" target="_blank">issues</a> 反馈</div>
         </div>
         <img :src="`${siteBaseUrl}static/donation/qq1.png`">
         <img :src="`${siteBaseUrl}static/donation/qq2.png`">

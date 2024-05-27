@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row-wrapper">
-      <VxeFormDesign :widgets="formDesignWidgets" :height="600" />
+      <VxeFormDesign :widgets="formDesignWidgets" :height="800" />
     </div>
   </div>
 </template>
@@ -12,7 +12,7 @@ import { VxeFormDesignPropTypes } from 'vxe-pc-ui'
 
 const formDesignWidgets = ref<VxeFormDesignPropTypes.Widgets>([
   {
-    title: '基础控件',
+    customGroup: '自定义分组名称',
     children: [
       'input',
       'textarea',
@@ -20,7 +20,7 @@ const formDesignWidgets = ref<VxeFormDesignPropTypes.Widgets>([
     ]
   },
   {
-    title: '布局控件',
+    group: 'layout',
     children: [
       'row'
     ]

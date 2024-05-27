@@ -19,6 +19,10 @@ import 'vxe-pc-ui/lib/style.css'
 import VxeUITable from 'vxe-table'
 import 'vxe-table/lib/style.css'
 
+import enUS from '@vxe-ui/core/packages/language/en-US'
+
+VxeUI.setI18n('en-US', enUS)
+
 const app = createApp(App)
 
 app.component('PreCode', PreCode)

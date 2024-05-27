@@ -1,14 +1,14 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
-import StartInstall from '../views/start/install/CodeExample.vue'
-import StartUse from '../views/start/use/CodeExample.vue'
-import StartIcons from '../views/start/icon/CodeExample.vue'
-import StartConfig from '../views/start/config/CodeExample.vue'
-import StartTheme from '../views/start/theme/CodeExample.vue'
-import StartI18n from '../views/start/i18n/CodeExample.vue'
-import StartUseZIndex from '../views/start/z-index/CodeExample.vue'
-import FreeDonation from '../views/start/FreeDonation.vue'
-import JoinSponsor from '../views/start/JoinSponsor.vue'
+import StartInstall from '@/views/start/install/CodeExample.vue'
+import StartUse from '@/views/start/use/CodeExample.vue'
+import StartIcons from '@/views/start/icon/CodeExample.vue'
+import StartConfig from '@/views/start/config/CodeExample.vue'
+import StartTheme from '@/views/start/theme/CodeExample.vue'
+import StartI18n from '@/views/start/i18n/CodeExample.vue'
+import StartUseZIndex from '@/views/start/z-index/CodeExample.vue'
+import FreeDonation from '@/views/start/FreeDonation.vue'
+import JoinSponsor from '@/views/start/JoinSponsor.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -79,7 +79,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'clipboard',
         name: 'ToolClipboard',
-        component: () => import('../views/tool/clipboard/CodeExample.vue')
+        component: () => import('@/views/tool/clipboard/CodeExample.vue')
       }
     ]
   },
@@ -89,92 +89,92 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'icon',
         name: 'ComponentIcon',
-        component: () => import('../views/icon/Example.vue')
+        component: () => import('@/views/icon/Example.vue')
       },
       {
         path: 'row',
         name: 'ComponentRow',
-        component: () => import('../views/row/CodeExample.vue')
+        component: () => import('@/views/row/CodeExample.vue')
       },
       {
         path: 'link',
         name: 'ComponentLink',
-        component: () => import('../views/link/Example.vue')
+        component: () => import('@/views/link/Example.vue')
       },
       {
         path: 'button',
         name: 'ComponentButton',
-        component: () => import('../views/button/Example.vue')
+        component: () => import('@/views/button/Example.vue')
       },
       {
         path: 'radio',
         name: 'ComponentRadio',
-        component: () => import('../views/radio/Example.vue')
+        component: () => import('@/views/radio/Example.vue')
       },
       {
         path: 'checkbox',
         name: 'ComponentCheckbox',
-        component: () => import('../views/checkbox/Example.vue')
+        component: () => import('@/views/checkbox/Example.vue')
       },
       {
         path: 'input',
         name: 'ComponentInput',
-        component: () => import('../views/input/Example.vue')
+        component: () => import('@/views/input/Example.vue')
       },
       {
         path: 'textarea',
         name: 'ComponentTextarea',
-        component: () => import('../views/textarea/Example.vue')
+        component: () => import('@/views/textarea/Example.vue')
       },
       {
         path: 'select',
         name: 'ComponentSelect',
-        component: () => import('../views/select/Example.vue')
+        component: () => import('@/views/select/Example.vue')
       },
       {
         path: 'pager',
         name: 'ComponentPager',
-        component: () => import('../views/pager/Example.vue')
+        component: () => import('@/views/pager/Example.vue')
       },
       {
         path: 'modal',
         name: 'ComponentModal',
-        component: () => import('../views/modal/Example.vue')
+        component: () => import('@/views/modal/Example.vue')
       },
       {
         path: 'tooltip',
         name: 'ComponentTooltip',
-        component: () => import('../views/tooltip/Example.vue')
+        component: () => import('@/views/tooltip/Example.vue')
       },
       {
         path: 'switch',
         name: 'ComponentSwitch',
-        component: () => import('../views/switch/Example.vue')
+        component: () => import('@/views/switch/Example.vue')
       },
       {
         path: 'list',
         name: 'ComponentList',
-        component: () => import('../views/list/Example.vue')
+        component: () => import('@/views/list/Example.vue')
       },
       {
         path: 'pulldown',
         name: 'ComponentPulldown',
-        component: () => import('../views/pulldown/Example.vue')
+        component: () => import('@/views/pulldown/Example.vue')
       },
       {
         path: 'tabs',
         name: 'ComponentTabs',
-        component: () => import('../views/tabs/CodeExample.vue')
+        component: () => import('@/views/tabs/CodeExample.vue')
       },
       {
         path: 'drawer',
         name: 'ComponentDrawer',
-        component: () => import('../views/drawer/CodeExample.vue')
+        component: () => import('@/views/drawer/CodeExample.vue')
       },
       {
         path: 'print',
         name: 'ComponentPrint',
-        component: () => import('../views/print/CodeExample.vue')
+        component: () => import('@/views/print/CodeExample.vue')
       },
       {
         path: 'form/basics',
@@ -182,22 +182,22 @@ const routes: Array<RouteRecordRaw> = [
           {
             path: 'base',
             name: 'ComponentFormBasicsBase',
-            component: () => import('../views/form/basics/base/Example.vue')
+            component: () => import('@/views/form/basics/base/Example.vue')
           },
           {
             path: 'customLayout',
             name: 'ComponentFormBasicsCustomLayout',
-            component: () => import('../views/form/basics/customLayout/Example.vue')
+            component: () => import('@/views/form/basics/customLayout/Example.vue')
           },
           {
             path: 'vertical',
             name: 'ComponentFormBasicsVertical',
-            component: () => import('../views/form/basics/vertical/Example.vue')
+            component: () => import('@/views/form/basics/vertical/Example.vue')
           },
           {
             path: 'valid',
             name: 'ComponentFormBasicsValid',
-            component: () => import('../views/form/basics/valid/Example.vue')
+            component: () => import('@/views/form/basics/valid/Example.vue')
           }
         ]
       },
@@ -207,7 +207,7 @@ const routes: Array<RouteRecordRaw> = [
           {
             path: 'base',
             name: 'ComponentFormConfigBase',
-            component: () => import('../views/form/config/base/Example.vue')
+            component: () => import('@/views/form/config/base/Example.vue')
           }
         ]
       },
@@ -217,7 +217,7 @@ const routes: Array<RouteRecordRaw> = [
           {
             path: 'base',
             name: 'ComponentFormDesignBase',
-            component: () => import('../views/form-design/base/CodeExample.vue')
+            component: () => import('@/views/form-design/base/CodeExample.vue')
           }
         ]
       }
@@ -225,8 +225,8 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/:name/api',
-    name: 'DocdApi',
-    component: () => import('../views/api/DocdApi.vue')
+    name: 'DocsApi',
+    component: () => import('@/views/api/DocsApi.vue')
   }
 ]
 
