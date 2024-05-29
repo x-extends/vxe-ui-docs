@@ -3,7 +3,7 @@
     <CodeLight>
       <template #tip>
         <VxeTips status="primary" title="Vite 方式">
-          如果您使用了 vite，借助插件 <a class="link" href="https://www.npmjs.com/package/unplugin-vue-components" target="_blank">unplugin-vue-components</a> 可以实现按需加载模块。
+          如果您使用了 vite，借助插件 <vxe-link href="https://www.npmjs.com/package/unplugin-vue-components" target="_blank">unplugin-vue-components</vxe-link> 可以实现按需加载模块。
         </VxeTips>
       </template>
 
@@ -36,7 +36,7 @@
     <CodeLight>
       <template #tip>
         <VxeTips status="primary" title="Webpack 方式">
-          如果您使用了 webpack，借助插件 <a class="link" href="https://www.npmjs.com/package/unplugin-vue-components" target="_blank">unplugin-vue-components</a> 可以实现按需加载模块。
+          如果您使用了 webpack，借助插件 <vxe-link  href="https://www.npmjs.com/package/unplugin-vue-components" target="_blank">unplugin-vue-components</vxe-link> 可以实现按需加载模块。
         </VxeTips>
       </template>
 
@@ -68,9 +68,8 @@
 
     <CodeLight>
       <template #tip>
-        <VxeTips status="success" title="使用">
-          根据需要选择引入就可以实现按需加载模块，减少文件体积，以下是全量的组件及模块安装列表。
-        </VxeTips>
+        <VxeTips status="success" title="全量组件" content="根据需要选择引入就可以实现按需加载模块，减少文件体积，以下是全量的组件及模块安装列表。"></VxeTips>
+        <VxeTips status="error" title="注意" content="组件按需加载是不带任何语言包和主题的，需要手动导入语音包和主题变量。"></VxeTips>
       </template>
 
       <template #use>
@@ -78,6 +77,8 @@
           <pre-code class="javascript">
             // ...
             import {
+              VxeUI,
+
               VxeAnchor,
               VxeAnchorLink,
               VxeBreadcrumb,
@@ -137,11 +138,17 @@
               VxeUpload,
             } from 'vxe-pc-ui'
 
-            // 导入主题变量，也可以重写主题变量
-            import 'vxe-table/styles/cssvar.scss'
+            // 导入主题变量
+            import 'vxe-pc-ui/styles/cssvar.scss'
 
-            function LazyVxeUI (app: App) {
-              App.use(VxeAnchor)
+            // 导入默认的语言
+            import zhCN from 'vxe-pc-ui/lib/language/zh-CN'
+
+            VxeUI.setI18n('zh-CN', zhCN)
+            VxeUI.setLanguage('zh-CN')
+
+            function LazyVxeUI (app) {
+              app.use(VxeAnchor)
               app.use(VxeAnchorLink)
               app.use(VxeBreadcrumb)
               app.use(VxeBreadcrumbItem)

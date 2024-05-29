@@ -1,12 +1,12 @@
 <template>
   <div>
-    <CodeLight path="link/Demo1">
+    <CodeLight path="text/Demo1">
       <template #tip>
-        <VxeTips status="primary">链接</VxeTips>
+        <VxeTips status="primary">文本</VxeTips>
       </template>
     </CodeLight>
 
-    <CodeLight path="link/Demo2">
+    <CodeLight path="text/Demo2">
       <template #tip>
         <VxeTips status="primary">状态</VxeTips>
       </template>

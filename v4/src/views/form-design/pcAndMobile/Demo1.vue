@@ -2,7 +2,7 @@
   <div>
     <div class="row-wrapper">
       <vxe-button status="primary" @click="clickEvent">获取json</vxe-button>
-      <VxeFormDesign ref="formDesignRef" :widgets="formDesignWidgets" :height="800" />
+      <vxe-form-design ref="formDesignRef" :widgets="formDesignWidgets" :height="800" showMobile />
     </div>
   </div>
 </template>
@@ -14,6 +14,12 @@ import { VxeFormDesignPropTypes, VxeFormDesignInstance } from 'vxe-pc-ui'
 const formDesignRef = ref<VxeFormDesignInstance>()
 
 const formDesignWidgets = ref<VxeFormDesignPropTypes.Widgets>([
+  {
+    group: 'layout',
+    children: [
+      'row'
+    ]
+  },
   {
     group: 'base',
     children: [

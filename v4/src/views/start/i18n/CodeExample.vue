@@ -3,7 +3,7 @@
     <CodeLight>
       <template #tip>
         <VxeTips status="primary">
-          通过调用 VxeUI.setI18n() 方法可以设置组件当前语言
+          通过调用 VxeUI.setLanguage('zh-CN') 方法可以切换组件语言
         </VxeTips>
       </template>
 
@@ -12,16 +12,16 @@
           <pre-code class="javascript">
             import { VxeUI } from 'vxe-pc-ui'
 
-            import zhCN from '@vxe-ui/core/packages/language/zh-CN'
-            // import zhHK from '@vxe-ui/core/packages/language/zh-HK'
-            // import zhTW from '@vxe-ui/core/packages/language/zh-TW'
-            // import zhMO from '@vxe-ui/core/packages/language/zh-MO'
-            // import enUS from '@vxe-ui/core/packages/language/en-US'
-            // import jaJP from '@vxe-ui/core/packages/language/ja-JP'
-            // import esES from '@vxe-ui/core/packages/language/es-ES'
-            // import ptBR from '@vxe-ui/core/packages/language/pt-BR'
+            import zhCN from 'vxe-pc-ui/lib/language/zh-CN'
+            // import zhHK from 'vxe-pc-ui/lib/language/zh-HK'
+            // import zhTW from 'vxe-pc-ui/lib/language/zh-TW'
+            // import zhMO from 'vxe-pc-ui/lib/language/zh-MO'
+            // import enUS from 'vxe-pc-ui/lib/language/en-US'
+            // import jaJP from 'vxe-pc-ui/lib/language/ja-JP'
+            // import esES from 'vxe-pc-ui/lib/language/es-ES'
+            // import ptBR from 'vxe-pc-ui/lib/language/pt-BR'
 
-            // 注册语言
+            // 增加语言
             // VxeUI.setI18n('zh-CN', zhCN)
             // VxeUI.setI18n('zh-HK', zhHK)
             // VxeUI.setI18n('zh-TW', zhTW)

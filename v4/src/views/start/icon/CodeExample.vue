@@ -64,7 +64,10 @@
               FORM_FOLDING: 'vxe-icon-arrow-up rotate180',
               FORM_UNFOLDING: 'vxe-icon-arrow-up',
 
-              // design-form
+              // form-design
+              DESIGN_FORM_STYLE_SETTING: 'vxe-icon-layout',
+              DESIGN_FORM_PROPS_PC: 'vxe-icon-pc',
+              DESIGN_FORM_PROPS_MOBILE: 'vxe-icon-mobile',
               DESIGN_FORM_WIDGET_ADD: 'vxe-icon-square-plus-fill',
               DESIGN_FORM_WIDGET_COPY: 'vxe-icon-copy',
               DESIGN_FORM_WIDGET_DELETE: 'vxe-icon-delete',

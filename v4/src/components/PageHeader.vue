@@ -5,18 +5,30 @@
         <img :src="`${siteBaseUrl}logo.png`">
         <span class="title">Vxe UI</span>
       </a>
+      <a href='https://gitee.com/x-extends/vxe-pc-ui/stargazers'>
+        <img src='https://gitee.com/x-extends/vxe-pc-ui/badge/star.svg?theme=gvp' alt='star'>
+      </a>
+      <a href="http://npm-stat.com/charts.html?package=vxe-pc-ui">
+        <img src="https://img.shields.io/npm/dm/vxe-pc-ui.svg">
+      </a>
+      <a href="https://github.com/x-extends/vxe-pc-ui/stargazers">
+        <img src="https://img.shields.io/github/stars/x-extends/vxe-pc-ui.svg">
+      </a>
     </div>
     <div class="header-middle"></div>
     <div class="header-right">
-      <vxe-select v-model="currLang" :options="langOptions"></vxe-select>
       <vxe-switch
-        class="link theme"
+        class="link switch-theme"
         v-model="currTheme"
+        size="mini"
         open-value="light"
         open-label="白天"
         close-value="dark"
         close-label="夜间">
       </vxe-switch>
+      <vxe-select v-model="currLang" class="switch-lang" size="mini" :options="langOptions"></vxe-select>
+      <vxe-select v-model="currVersion" class="switch-version" size="mini" :options="versionOptions"></vxe-select>
+      <vxe-link class="free-donation" status="success" :router-link="{name: 'FreeDonation'}">支持我们</vxe-link>
     </div>
   </div>
 </template>
@@ -50,6 +62,20 @@ const currLang = computed({
     appStore.setLanguage(lang)
   }
 })
+
+const versionOptions = ref([
+  { value: '4', label: 'v4.x (vue 3.x 稳定版)' },
+  { value: '3', label: 'v3.x (vue 2.6+ 长期维护版)', disabled: true }
+])
+
+const currVersion = computed({
+  get () {
+    return appStore.docsVersion
+  },
+  set (value) {
+
+  }
+})
 </script>
 
 <style lang="scss" scoped>
@@ -65,6 +91,16 @@ const currLang = computed({
   }
   .header-middle {
     flex-grow: 1;
+  }
+  .switch-lang {
+    width: 80px;
+    margin-right: 20px;
+  }
+  .switch-theme,
+  .switch-lang,
+  .switch-version,
+  .free-donation {
+    margin-right: 20px;
   }
 }
 .header-left {

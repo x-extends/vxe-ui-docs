@@ -24,6 +24,8 @@
   margin: 10px 0;
 }
 .mybg {
+  line-height: 30px;
+  text-align: center;
   color: #ffffff;
   background-color: #409eff;
 }

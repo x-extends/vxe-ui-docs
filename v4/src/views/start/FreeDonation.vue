@@ -1,39 +1,32 @@
 <template>
   <div>
-    <p class="tip">{{ $t('app.footer.donationDesc') }}</p>
-    <div class="upgrade">
-      <a class="link" href="https://github.com/x-extends/vxe-table/issues/712">
-        <span>😱{{ $t('app.body.other.compatibility') }}</span>
-      </a>
-      <a class="link" href="https://github.com/x-extends/vxe-table/releases">
-        <span>👀{{ $t('app.body.other.releases') }}</span>
-      </a>
+    <div class="fd-top">
+      <vxe-link status="primary" icon="vxe-icon-feedback" href="https://github.com/x-extends/vxe-pc-ui" target="_blank">更新日志</vxe-link>
+      <vxe-link status="error" icon="vxe-icon-warning-triangle" href="https://github.com/x-extends/vxe-pc-ui" target="_blank">兼容性变动</vxe-link>
     </div>
-    <div class="content" style="padding-top: 50px">
-      <div style="float: left;">
-        <div style="padding: 15px 0;">
-          <div style="font-size: 22px;font-weight: 700;">QQ交流群</div>
-          <div style="padding-top: 15px;">该群供大家交流問題，如果群人数已满，将会不定期剔除不活跃的，<br>如果有 bug 请准备好 <a class="link" href="https://vxeui.com/issues.html" target="_blank">复现链接</a> 并通过提交 <a class="link" href="https://github.com/x-extends/vxe-table/issues" target="_blank">issues</a> 反馈</div>
+    <vxe-tips title="Vxe UI" status="primary">
+      <div><vxe-link status="primary" href="https://github.com/x-extends/vxe-pc-ui" target="_blank">Vxe UI</vxe-link> 是 MIT 开源的，使用完全免费。为了使项目能够健康持续的发展下去，您可以通过下方扫码来支持作者。</div>
+    </vxe-tips>
+    <vxe-tips title="Vxe UI 发展历史" status="success">
+      <div>2016 开源了 javascript 工具类 <vxe-link status="primary" href="https://github.com/x-extends/xe-utils" target="_blank">xe-utils</vxe-link>、请求库 <vxe-link status="primary" href="https://github.com/x-extends/xe-ajax" target="_blank">xe-ajax</vxe-link></div>
+      <div>2018 开源了表格库 <vxe-link status="primary" href="https://github.com/x-extends/vxe-table" target="_blank">vxe-table</vxe-link></div>
+      <div>2024 开源了组件库 <vxe-link status="primary" href="https://github.com/x-extends/vxe-pc-ui" target="_blank">vxe-pc-ui</vxe-link></div>
+    </vxe-tips>
+
+    <vxe-tabs v-model="supportAuthor" >
+      <vxe-tab-pane title="QQ交流群" name="1">
+        <div style="text-align: center;">
+          <img :src="`${siteBaseUrl}static/donation/qq1.png`">
+          <img :src="`${siteBaseUrl}static/donation/qq2.png`">
         </div>
-        <img :src="`${siteBaseUrl}static/donation/qq1.png`">
-        <img :src="`${siteBaseUrl}static/donation/qq2.png`">
-      </div>
-      <div style="float: right;">
-        <div style="padding: 15px 0;width: 500px;">
-          <vxe-radio-group v-model="supportAuthor">
-            <vxe-radio label="1" content="关于 vxe-table"></vxe-radio>
-            <vxe-radio label="2" content="赞助作者"></vxe-radio>
-          </vxe-radio-group>
-          <div style="padding-top: 15px;">
-            <span v-if="supportAuthor === '1'">vxe-table 是 <a class="link" href="https://github.com/x-extends/vxe-table/blob/master/LICENSE" target="_blank">MIT</a> 开源的，使用完全免费。</span>
-          </div>
-        </div>
-        <div v-if="supportAuthor === '2'">
-          <div>如果该项目帮助了您，请作者喝杯咖啡吧</div>
+      </vxe-tab-pane>
+      <vxe-tab-pane title="赞助作者" name="2">
+        <div style="text-align: center;">
+          <h2 style="padding: 40px 0 20px 0;">如果该项目帮助了您，请作者喝杯咖啡吧</h2>
           <img :src="`${siteBaseUrl}static/donation/pay.jpg`">
         </div>
-      </div>
-    </div>
+      </vxe-tab-pane>
+    </vxe-tabs>
   </div>
 </template>
 
@@ -58,22 +51,11 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.desc {
-  padding-left: 40px;
-  .title {
-    padding: 5px 0;
-    font-weight: 700;
+.fd-top {
+  text-align: right;
+  padding: 8px 0 16px 0;
+  .vxe-link {
+    margin-right: 8px;
   }
-  .plan {
-    margin: 0;
-    padding: 0;
-    i {
-      color: #409eff;
-      margin-right: 5px;
-    }
-  }
-}
-.content {
-  text-align: center;
 }
 </style>

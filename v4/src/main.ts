@@ -19,7 +19,7 @@ import 'vxe-pc-ui/lib/style.css'
 import VxeUITable from 'vxe-table'
 import 'vxe-table/lib/style.css'
 
-import enUS from '@vxe-ui/core/packages/language/en-US'
+import enUS from 'vxe-pc-ui/packages/language/en-US'
 
 VxeUI.setI18n('en-US', enUS)
 

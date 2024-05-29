@@ -2,7 +2,7 @@
   <div>
     <div class="row-wrapper">
       <vxe-button status="primary" @click="clickEvent">获取json</vxe-button>
-      <VxeFormDesign ref="formDesignRef" :widgets="formDesignWidgets" :height="800" />
+      <vxe-form-design ref="formDesignRef" :widgets="formDesignWidgets" :height="800" />
     </div>
   </div>
 </template>
@@ -15,12 +15,27 @@ const formDesignRef = ref<VxeFormDesignInstance>()
 
 const formDesignWidgets = ref<VxeFormDesignPropTypes.Widgets>([
   {
-    group: 'base',
+    customGroup: '输入控件',
     children: [
       'VxeInput',
-      'VxeTextarea',
-      'VxeSelect',
-      'VxeSwitch',
+      'VxeTextarea'
+    ]
+  },
+  {
+    customGroup: '下拉控件',
+    children: [
+      'VxeSelect'
+    ]
+  },
+  {
+    customGroup: '开关控件',
+    children: [
+      'VxeSwitch'
+    ]
+  },
+  {
+    customGroup: '其他控件',
+    children: [
       'VxeRadioGroup',
       'VxeCheckboxGroup'
     ]

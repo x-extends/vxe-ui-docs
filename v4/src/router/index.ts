@@ -97,6 +97,11 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/row/CodeExample.vue')
       },
       {
+        path: 'text',
+        name: 'ComponentText',
+        component: () => import('@/views/text/Example.vue')
+      },
+      {
         path: 'link',
         name: 'ComponentLink',
         component: () => import('@/views/link/Example.vue')
@@ -120,6 +125,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'input',
         name: 'ComponentInput',
         component: () => import('@/views/input/Example.vue')
+      },
+      {
+        path: 'password-input',
+        name: 'ComponentPasswordInput',
+        component: () => import('@/views/password-input/CodeExample.vue')
       },
       {
         path: 'textarea',
@@ -172,6 +182,11 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/drawer/CodeExample.vue')
       },
       {
+        path: 'tips',
+        name: 'ComponentTips',
+        component: () => import('@/views/tips/CodeExample.vue')
+      },
+      {
         path: 'print',
         name: 'ComponentPrint',
         component: () => import('@/views/print/CodeExample.vue')
@@ -218,6 +233,26 @@ const routes: Array<RouteRecordRaw> = [
             path: 'base',
             name: 'ComponentFormDesignBase',
             component: () => import('@/views/form-design/base/CodeExample.vue')
+          },
+          {
+            path: 'customGroup',
+            name: 'ComponentFormDesignCustomGroup',
+            component: () => import('@/views/form-design/customGroup/CodeExample.vue')
+          },
+          {
+            path: 'mobile',
+            name: 'ComponentFormDesignMobile',
+            component: () => import('@/views/form-design/mobile/CodeExample.vue')
+          },
+          {
+            path: 'pcAndMobile',
+            name: 'ComponentFormDesignPcAndMobile',
+            component: () => import('@/views/form-design/pcAndMobile/CodeExample.vue')
+          },
+          {
+            path: 'renderView',
+            name: 'ComponentFormDesignRenderView',
+            component: () => import('@/views/form-design/renderView/CodeExample.vue')
           }
         ]
       }

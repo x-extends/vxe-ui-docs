@@ -1,9 +1,9 @@
 <template>
   <div>
-    <CodeLight path="form-design/base/Demo1">
+    <CodeLight path="form-design/pcAndMobile/Demo1">
       <template #tip>
         <VxeTips status="primary">
-          零代码表单设计器，拖拉拽直接生成表单 JSON 数据
+          渲染多端，一份 JSON 可以渲染多端： PC 端 和 H5 端、小程序
         </VxeTips>
       </template>
     </CodeLight>

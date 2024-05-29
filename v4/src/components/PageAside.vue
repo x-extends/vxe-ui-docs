@@ -1,5 +1,5 @@
 <template>
-  <div class="page-aside">
+  <div ref="asideElemRef" class="page-aside">
     <div class="nav-top">
       <vxe-input v-model="searchName" placeholder="文档搜索"></vxe-input>
     </div>
@@ -11,14 +11,14 @@
       <div class="nav-subs">
         <div class="nav-item nav-level2" v-for="(item2, index2) in item1.children" :key="index2">
           <div class="nav-name" :title="item2.title">
-            <vxe-link v-if="item2.routerLink" class="nav-item-link" :router-link="item2.routerLink">{{ item2.title }}</vxe-link>
+            <vxe-link v-if="item2.routerLink" :class="['nav-item-link', item2.routerLink.name]" :router-link="item2.routerLink">{{ item2.title }}</vxe-link>
             <vxe-link v-else-if="item2.linkUrl" class="nav-item-link" :href="item2.linkUrl" target="_blank">{{ item2.title }}</vxe-link>
             <span v-else>{{ item2.title }}</span>
           </div>
           <div v-if="item2.children && item2.children.length" class="nav-subs">
             <div class="nav-item nav-level3" v-for="(item3, index3) in item2.children" :key="index3">
               <div class="nav-name" :title="item3.title">
-                <vxe-link v-if="item3.routerLink" class="nav-item-link" :router-link="item3.routerLink">{{ item3.title }}</vxe-link>
+                <vxe-link v-if="item3.routerLink" :class="['nav-item-link', item3.routerLink.name]" :router-link="item3.routerLink">{{ item3.title }}</vxe-link>
                 <span v-else>{{ item3.title }}</span>
               </div>
             </div>
@@ -30,9 +30,14 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, watch, nextTick } from 'vue'
+import { useRoute } from 'vue-router'
 import { navConfigList, NavVO } from '@/common/nav-config'
+import XEUtils from 'xe-utils'
 
+const route = useRoute()
+
+const asideElemRef = ref<HTMLElement>()
 const searchName = ref('')
 
 const navList = ref<NavVO[]>([])
@@ -48,7 +53,33 @@ const toggleExpand = (item1: NavVO) => {
   item1.isExpand = !item1.isExpand
 }
 
+const scrollToNav = (item: NavVO) => {
+  nextTick(() => {
+    const asideElem = asideElemRef.value
+    if (asideElem && item.routerLink) {
+      const linkEl = asideElem.querySelector(`.nav-item-link.${item.routerLink.name}`)
+      if (linkEl) {
+        (linkEl as any).scrollIntoViewIfNeeded()
+      }
+    }
+  })
+}
+
+const updateExpand = () => {
+  const routeName = route.name
+  const rest = XEUtils.findTree(navList.value, item => item.routerLink && item.routerLink.name === routeName, { children: 'children' })
+  if (rest) {
+    rest.nodes[0].isExpand = true
+    scrollToNav(rest.item)
+  }
+}
+
+watch(route, () => {
+  updateExpand()
+})
+
 createNavList()
+updateExpand()
 </script>
 
 <style lang="scss" scoped>
@@ -83,6 +114,9 @@ createNavList()
   }
   .nav-item-link {
     display: block;
+    &.router-link-exact-active {
+      color: var(--vxe-ui-docs-primary-color);
+    }
   }
   .nav-level1 {
     & > .nav-name {

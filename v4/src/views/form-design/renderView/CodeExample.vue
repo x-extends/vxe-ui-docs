@@ -1,9 +1,9 @@
 <template>
   <div>
-    <CodeLight path="form-design/base/Demo1">
+    <CodeLight path="form-design/renderView/Demo1">
       <template #tip>
         <VxeTips status="primary">
-          零代码表单设计器，拖拉拽直接生成表单 JSON 数据
+          表单渲染，将表单设计器的 JSON 传给进去就可以渲染一个表单
         </VxeTips>
       </template>
     </CodeLight>

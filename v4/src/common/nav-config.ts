@@ -93,6 +93,7 @@ export const navConfigList: NavVO[] = [
       { title: 'Icon 图标', routerLink: { name: 'ComponentIcon' } },
       // { title: 'Layout布局' },
       { title: 'Row 栅格', routerLink: { name: 'ComponentRow' } },
+      { title: 'Text 文本', routerLink: { name: 'ComponentText' } },
       { title: 'Link 链接', routerLink: { name: 'ComponentLink' } },
       // { title: 'Tag 标签' },
       { title: 'Button 按钮', routerLink: { name: 'ComponentButton' } }
@@ -145,7 +146,7 @@ export const navConfigList: NavVO[] = [
   {
     title: '表格组件',
     children: [
-      { title: '查看文档', linkUrl: 'https://vxeui.com/' }
+      { title: '查看文档', linkUrl: 'https://vxetable.cn/v4.7/' }
       // { title: '基础表格' },
       // { title: '配置式表格' },
       // { title: '格式化（全局）' },
@@ -163,9 +164,9 @@ export const navConfigList: NavVO[] = [
       { title: 'Checkbox 复选框', routerLink: { name: 'ComponentCheckbox' } },
       { title: 'Input 输入框', routerLink: { name: 'ComponentInput' } },
       // { title: 'TextInput 单行文本输入' },
-      // { title: 'Textarea 多行文本输入' },
+      { title: 'Textarea 多行文本输入', routerLink: { name: 'ComponentTextarea' } },
       // { title: 'NumberInput 数值输入' },
-      // { title: 'PasswordInput 密码输入' },
+      { title: 'PasswordInput 密码输入', routerLink: { name: 'ComponentPasswordInput' } },
       // { title: 'DatePicker 日期选择器' },
       // { title: 'WeekPicker 周选择器' },
       // { title: 'MonthPicker 月选择器' },
@@ -184,7 +185,7 @@ export const navConfigList: NavVO[] = [
     title: '反馈组件',
     children: [
       // { title: 'Loading 加载中' },
-      { title: 'Tips 段落提示' },
+      { title: 'Tips 小贴士', routerLink: { name: 'ComponentTips' } },
       // { title: 'Alert 警告提示' },
       // { title: 'Notification 通知提示框' },
       // { title: 'Modal.Message 轻提示' },
@@ -208,7 +209,11 @@ export const navConfigList: NavVO[] = [
       {
         title: 'FormDesign 表单设计器',
         children: [
-          { title: '基础功能', routerLink: { name: 'ComponentFormDesignBase' } }
+          { title: '基础功能', routerLink: { name: 'ComponentFormDesignBase' } },
+          { title: '自定义控件分组', routerLink: { name: 'ComponentFormDesignCustomGroup' } },
+          { title: '移动端设计器', routerLink: { name: 'ComponentFormDesignMobile' } },
+          { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentFormDesignPcAndMobile' } },
+          { title: '渲染视图', routerLink: { name: 'ComponentFormDesignRenderView' } }
           // { title: 'API' }
         ]
       }
