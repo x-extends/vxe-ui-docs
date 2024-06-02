@@ -91,26 +91,28 @@ export const navConfigList: NavVO[] = [
     title: '基础组件',
     children: [
       { title: 'Icon 图标', routerLink: { name: 'ComponentIcon' } },
-      // { title: 'Layout布局' },
+      { title: 'Layout 布局', routerLink: { name: 'ComponentLayout' } },
       { title: 'Row 栅格', routerLink: { name: 'ComponentRow' } },
       { title: 'Text 文本', routerLink: { name: 'ComponentText' } },
       { title: 'Link 链接', routerLink: { name: 'ComponentLink' } },
-      // { title: 'Tag 标签' },
+      { title: 'Tag 标签', routerLink: { name: 'ComponentTag' } },
       { title: 'Button 按钮', routerLink: { name: 'ComponentButton' } }
     ]
   },
   {
     title: '导航组件',
     children: [
-      // { title: 'Breadcrumb 面包屑' },
-      // { title: 'Menu 菜单' },
-      // { title: 'Anchor 锚点' },
+      { title: 'Breadcrumb 面包屑', routerLink: { name: 'ComponentBreadcrumb' } },
+      { title: 'Menu 菜单', routerLink: { name: 'ComponentMenu' } },
+      { title: 'Anchor 锚点', routerLink: { name: 'ComponentAnchor' } },
       { title: 'Pager 分页', routerLink: { name: 'ComponentPager' } }
     ]
   },
   {
     title: '展示组件',
     children: [
+      { title: 'Image 图片', routerLink: { name: 'ComponentImage' } },
+      { title: 'ImagePreview 图片预览', routerLink: { name: 'ComponentImagePreview' } },
       { title: 'Tabs 页签', routerLink: { name: 'ComponentTabs' } },
       // { title: 'Progress 进度条' },
       // { title: 'Card 卡片' },
@@ -162,7 +164,25 @@ export const navConfigList: NavVO[] = [
       { title: 'Switch 开关', routerLink: { name: 'ComponentSwitch' } },
       { title: 'Radio 单选框', routerLink: { name: 'ComponentRadio' } },
       { title: 'Checkbox 复选框', routerLink: { name: 'ComponentCheckbox' } },
-      { title: 'Input 输入框', routerLink: { name: 'ComponentInput' } },
+      {
+        title: 'Input 输入框',
+        children: [
+          { title: '文本类型', routerLink: { name: 'ComponentInputText' } },
+          { title: '搜索类型', routerLink: { name: 'ComponentInputSearch' } },
+          { title: '密码类型', routerLink: { name: 'ComponentInputPassword' } },
+          { title: '时间类型', routerLink: { name: 'ComponentInputTime' } },
+          { title: '日期类型', routerLink: { name: 'ComponentInputDate' } },
+          { title: '日期带时间类型', routerLink: { name: 'ComponentInputDatetime' } },
+          { title: '周类型', routerLink: { name: 'ComponentInputWeek' } },
+          { title: '月度类型', routerLink: { name: 'ComponentInputMonth' } },
+          { title: '季度类型', routerLink: { name: 'ComponentInputQuarter' } },
+          { title: '年度类型', routerLink: { name: 'ComponentInputYear' } },
+          { title: '数值类型', routerLink: { name: 'ComponentInputNumber' } },
+          { title: '整数类型', routerLink: { name: 'ComponentInputInteger' } },
+          { title: '小数类型', routerLink: { name: 'ComponentInputFloat' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentInputTemplate' } }
+        ]
+      },
       // { title: 'TextInput 单行文本输入' },
       { title: 'Textarea 多行文本输入', routerLink: { name: 'ComponentTextarea' } },
       // { title: 'NumberInput 数值输入' },
@@ -174,10 +194,16 @@ export const navConfigList: NavVO[] = [
       // { title: 'YearPicker 年选择器' },
       // { title: 'TimePicker 时间选择器' },
       // { title: 'DateTimePicker日期带时间选择器' },
-      { title: 'Select 下拉框', routerLink: { name: 'ComponentSelect' } }
+      { title: 'Select 下拉框', routerLink: { name: 'ComponentSelect' } },
       // { title: 'Tree 树形控件' },
       // { title: 'TreeSelect 树形下拉框' },
-      // { title: 'Upload 附件上传' },
+      {
+        title: 'Upload 上传',
+        children: [
+          { title: '文件上传', routerLink: { name: 'ComponentUploadFile' } },
+          { title: '图片上传', routerLink: { name: 'ComponentUploadImage' } }
+        ]
+      }
       // { title: 'Transfer 穿梭框' }
     ]
   },
@@ -186,11 +212,17 @@ export const navConfigList: NavVO[] = [
     children: [
       // { title: 'Loading 加载中' },
       { title: 'Tips 小贴士', routerLink: { name: 'ComponentTips' } },
-      // { title: 'Alert 警告提示' },
+      { title: 'Alert 警告提示', routerLink: { name: 'ComponentAlert' } },
       // { title: 'Notification 通知提示框' },
-      // { title: 'Modal.Message 轻提示' },
-      // { title: 'Modal.Alert 消息提示框' },
-      { title: 'Modal.Open 窗口', routerLink: { name: 'ComponentModal' } },
+      {
+        title: 'Modal 模态窗',
+        children: [
+          { title: '轻提示框', routerLink: { name: 'ComponentModalMessage' } },
+          { title: '提示框', routerLink: { name: 'ComponentModalAlert' } },
+          { title: '确认框', routerLink: { name: 'ComponentModalConfirm' } },
+          { title: '弹出窗口', routerLink: { name: 'ComponentModalOpen' } }
+        ]
+      },
       { title: 'Drawer 抽屉', routerLink: { name: 'ComponentDrawer' } },
       // { title: 'Popover 气泡提示框' },
       { title: 'Tooltip 文字提示', routerLink: { name: 'ComponentTooltip' } }
@@ -216,8 +248,16 @@ export const navConfigList: NavVO[] = [
           { title: '渲染视图', routerLink: { name: 'ComponentFormDesignRenderView' } }
           // { title: 'API' }
         ]
+        // },
+        // {
+        //   title: 'ListDesign 列表设计器',
+        //   children: [
+        //     { title: '基础功能', routerLink: { name: 'ComponentListDesignBase' } },
+        //     { title: '移动端设计器', routerLink: { name: 'ComponentListDesignMobile' } },
+        //     { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentListDesignPcAndMobile' } }
+
+      //   ]
       }
-      // { title: 'ListDesign 列表设计器' },
       // { title: 'FlowDesign 流程设计器' },
       // { title: 'PrintDesign 打印设计器' }
     ]

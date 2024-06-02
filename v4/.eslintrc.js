@@ -12,7 +12,11 @@ module.exports = {
     ecmaVersion: 2020
   },
   globals: {
-    defineProps: true
+    axios: true,
+    defineProps: true,
+    defineEmits: true,
+    defineExpose: true,
+    defineSlots: true
   },
   rules: {
     'no-console': 'off',

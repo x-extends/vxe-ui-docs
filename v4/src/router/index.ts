@@ -89,7 +89,12 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'icon',
         name: 'ComponentIcon',
-        component: () => import('@/views/icon/Example.vue')
+        component: () => import('@/views/icon/CodeExample.vue')
+      },
+      {
+        path: 'layout',
+        name: 'ComponentLayout',
+        component: () => import('@/views/layout/CodeExample.vue')
       },
       {
         path: 'row',
@@ -97,19 +102,49 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/row/CodeExample.vue')
       },
       {
+        path: 'breadcrumb',
+        name: 'ComponentBreadcrumb',
+        component: () => import('@/views/breadcrumb/CodeExample.vue')
+      },
+      {
+        path: 'menu',
+        name: 'ComponentMenu',
+        component: () => import('@/views/menu/CodeExample.vue')
+      },
+      {
+        path: 'image',
+        name: 'ComponentImage',
+        component: () => import('@/views/image/CodeExample.vue')
+      },
+      {
+        path: 'image-preview',
+        name: 'ComponentImagePreview',
+        component: () => import('@/views/image-preview/CodeExample.vue')
+      },
+      {
+        path: 'anchor',
+        name: 'ComponentAnchor',
+        component: () => import('@/views/anchor/CodeExample.vue')
+      },
+      {
         path: 'text',
         name: 'ComponentText',
-        component: () => import('@/views/text/Example.vue')
+        component: () => import('@/views/text/CodeExample.vue')
       },
       {
         path: 'link',
         name: 'ComponentLink',
-        component: () => import('@/views/link/Example.vue')
+        component: () => import('@/views/link/CodeExample.vue')
+      },
+      {
+        path: 'tag',
+        name: 'ComponentTag',
+        component: () => import('@/views/tag/CodeExample.vue')
       },
       {
         path: 'button',
         name: 'ComponentButton',
-        component: () => import('@/views/button/Example.vue')
+        component: () => import('@/views/button/CodeExample.vue')
       },
       {
         path: 'radio',
@@ -123,13 +158,88 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'input',
-        name: 'ComponentInput',
-        component: () => import('@/views/input/Example.vue')
+        children: [
+          {
+            path: 'text',
+            name: 'ComponentInputText',
+            component: () => import('@/views/input/text/CodeExample.vue')
+          },
+          {
+            path: 'search',
+            name: 'ComponentInputSearch',
+            component: () => import('@/views/input/search/CodeExample.vue')
+          },
+          {
+            path: 'password',
+            name: 'ComponentInputPassword',
+            component: () => import('@/views/input/password/CodeExample.vue')
+          },
+          {
+            path: 'date',
+            name: 'ComponentInputDate',
+            component: () => import('@/views/input/date/CodeExample.vue')
+          },
+          {
+            path: 'week',
+            name: 'ComponentInputWeek',
+            component: () => import('@/views/input/week/CodeExample.vue')
+          },
+          {
+            path: 'month',
+            name: 'ComponentInputMonth',
+            component: () => import('@/views/input/month/CodeExample.vue')
+          },
+          {
+            path: 'quarter',
+            name: 'ComponentInputQuarter',
+            component: () => import('@/views/input/quarter/CodeExample.vue')
+          },
+          {
+            path: 'year',
+            name: 'ComponentInputYear',
+            component: () => import('@/views/input/year/CodeExample.vue')
+          },
+          {
+            path: 'time',
+            name: 'ComponentInputTime',
+            component: () => import('@/views/input/time/CodeExample.vue')
+          },
+          {
+            path: 'datetime',
+            name: 'ComponentInputDatetime',
+            component: () => import('@/views/input/datetime/CodeExample.vue')
+          },
+          {
+            path: 'number',
+            name: 'ComponentInputNumber',
+            component: () => import('@/views/input/number/CodeExample.vue')
+          },
+          {
+            path: 'integer',
+            name: 'ComponentInputInteger',
+            component: () => import('@/views/input/integer/CodeExample.vue')
+          },
+          {
+            path: 'float',
+            name: 'ComponentInputFloat',
+            component: () => import('@/views/input/float/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentInputTemplate',
+            component: () => import('@/views/input/template/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'password-input',
         name: 'ComponentPasswordInput',
         component: () => import('@/views/password-input/CodeExample.vue')
+      },
+      {
+        path: 'number-input',
+        name: 'ComponentNumberInput',
+        component: () => import('@/views/number-input/CodeExample.vue')
       },
       {
         path: 'textarea',
@@ -148,8 +258,28 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'modal',
-        name: 'ComponentModal',
-        component: () => import('@/views/modal/Example.vue')
+        children: [
+          {
+            path: 'message',
+            name: 'ComponentModalMessage',
+            component: () => import('@/views/modal/message/Example.vue')
+          },
+          {
+            path: 'alert',
+            name: 'ComponentModalAlert',
+            component: () => import('@/views/modal/alert/Example.vue')
+          },
+          {
+            path: 'confirm',
+            name: 'ComponentModalConfirm',
+            component: () => import('@/views/modal/confirm/Example.vue')
+          },
+          {
+            path: 'open',
+            name: 'ComponentModalOpen',
+            component: () => import('@/views/modal/modal/Example.vue')
+          }
+        ]
       },
       {
         path: 'tooltip',
@@ -185,6 +315,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'tips',
         name: 'ComponentTips',
         component: () => import('@/views/tips/CodeExample.vue')
+      },
+      {
+        path: 'alert',
+        name: 'ComponentAlert',
+        component: () => import('@/views/alert/CodeExample.vue')
       },
       {
         path: 'print',
@@ -253,6 +388,41 @@ const routes: Array<RouteRecordRaw> = [
             path: 'renderView',
             name: 'ComponentFormDesignRenderView',
             component: () => import('@/views/form-design/renderView/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'list-design',
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentListDesignBase',
+            component: () => import('@/views/list-design/base/CodeExample.vue')
+          },
+          {
+            path: 'mobile',
+            name: 'ComponentListDesignMobile',
+            component: () => import('@/views/list-design/mobile/CodeExample.vue')
+          },
+          {
+            path: 'pcAndMobile',
+            name: 'ComponentListDesignPcAndMobile',
+            component: () => import('@/views/list-design/pcAndMobile/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'upload',
+        children: [
+          {
+            path: 'file',
+            name: 'ComponentUploadFile',
+            component: () => import('@/views/upload/file/CodeExample.vue')
+          },
+          {
+            path: 'image',
+            name: 'ComponentUploadImage',
+            component: () => import('@/views/upload/image/CodeExample.vue')
           }
         ]
       }

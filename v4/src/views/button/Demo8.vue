@@ -40,11 +40,11 @@
         <vxe-button mode="text" content="下拉按钮3"></vxe-button>
       </template>
     </vxe-button>
-    <vxe-button status="danger" transfer placement="bottom">
+    <vxe-button status="error" transfer placement="bottom">
       <template #default>固定向下</template>
       <template #dropdowns>
         <vxe-button mode="text" content="下拉按钮1"></vxe-button>
-        <vxe-button mode="text" content="下拉按钮2" status="danger"></vxe-button>
+        <vxe-button mode="text" content="下拉按钮2" status="error"></vxe-button>
         <vxe-button mode="text" content="下拉按钮3"></vxe-button>
       </template>
     </vxe-button>

@@ -69,7 +69,7 @@
     <CodeLight>
       <template #tip>
         <VxeTips status="success" title="全量组件" content="根据需要选择引入就可以实现按需加载模块，减少文件体积，以下是全量的组件及模块安装列表。"></VxeTips>
-        <VxeTips status="error" title="注意" content="组件按需加载是不带任何语言包和主题的，需要手动导入语音包和主题变量。"></VxeTips>
+        <VxeTips status="error" title="" content="组件按需加载是不带语言包和主题的，需要手动导入语言包和主题变量。"></VxeTips>
       </template>
 
       <template #use>

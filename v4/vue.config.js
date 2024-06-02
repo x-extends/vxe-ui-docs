@@ -42,7 +42,8 @@ module.exports = defineConfig({
       hints: false
     },
     externals: {
-      'highlight.js': 'hljs'
+      'highlight.js': 'hljs',
+      axios: 'axios'
     }
   },
   chainWebpack (config) {

@@ -2,7 +2,7 @@
   <div>
     <div class="row-wrapper">
       <vxe-button status="primary" @click="clickEvent">获取json</vxe-button>
-      <VxeFormDesign ref="formDesignRef" :widgets="formDesignWidgets" :height="800" />
+      <vxe-form-design ref="formDesignRef" :widgets="formDesignWidgets" :height="800" />
     </div>
   </div>
 </template>
@@ -30,7 +30,7 @@ const formDesignWidgets = ref<VxeFormDesignPropTypes.Widgets>([
 const clickEvent = () => {
   const $formDesign = formDesignRef.value
   if ($formDesign) {
-    console.log($formDesign.getConfig())
+    console.log(JSON.stringify($formDesign.getConfig()))
   }
 }
 </script>

@@ -1,28 +1,35 @@
 <template>
   <div>
-    <vxe-tips>
-      提示信息
+    <vxe-tips status="primary">
+      主题色
     </vxe-tips>
-    <vxe-tips title="标题sss" status="primary">
-      提示信息
+    <vxe-tips status="success">
+      成功颜色
     </vxe-tips>
-    <vxe-tips title="标题sss" status="success">
-      提示信息
+    <vxe-tips status="info">
+      信息颜色
     </vxe-tips>
-    <vxe-tips title="标题sss" status="info">
-      提示信息
+    <vxe-tips status="warning">
+      警告颜色
     </vxe-tips>
-    <vxe-tips title="标题sss" status="warning">
-      提示信息
+    <vxe-tips status="error">
+      错误颜色
     </vxe-tips>
-    <vxe-tips title="标题sss" status="error">
-      提示信息
+
+    <vxe-tips title="带图标" status="primary" icon="vxe-icon-info-circle">
+      主题色
     </vxe-tips>
-    <vxe-tips title="标题sss" status="danger">
-      提示信息
+    <vxe-tips title="带图标" status="success" icon="vxe-icon-info-circle">
+      成功颜色
     </vxe-tips>
-    <vxe-tips title="标题sss" status="primary" icon="vxe-icon-info-circle">
-      提示信息
+    <vxe-tips title="带图标" status="info" icon="vxe-icon-info-circle">
+      信息颜色
+    </vxe-tips>
+    <vxe-tips title="带图标" status="warning" icon="vxe-icon-info-circle">
+      警告颜色
+    </vxe-tips>
+    <vxe-tips title="带图标" status="error" icon="vxe-icon-info-circle">
+      错误颜色
     </vxe-tips>
   </div>
 </template>

@@ -2,7 +2,9 @@
   <div>
     <CodeLight path="tips/Demo1">
       <template #tip>
-        <div>小贴士</div>
+        <vxe-tips status="primary" title="小贴士">
+          用于在页面中显示各种提示
+        </vxe-tips>
       </template>
     </CodeLight>
   </div>

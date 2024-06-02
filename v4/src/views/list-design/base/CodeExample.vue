@@ -1,0 +1,11 @@
+<template>
+  <div>
+    <CodeLight path="list-design/base/Demo1">
+      <template #tip>
+        <VxeTips status="primary">
+          零代码表单设计器，拖拉拽直接生成表单 JSON 数据
+        </VxeTips>
+      </template>
+    </CodeLight>
+  </div>
+</template>

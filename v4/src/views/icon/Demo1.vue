@@ -6,7 +6,7 @@
     </p>
     <p>
       <vxe-icon name="refresh" status="success" roll></vxe-icon>
-      <vxe-icon name="print" status="danger"></vxe-icon>
+      <vxe-icon name="print" status="error"></vxe-icon>
     </p>
     <p>
       <vxe-button mode="text" icon="vxe-icon-search"></vxe-button>

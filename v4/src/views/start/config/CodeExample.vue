@@ -13,6 +13,7 @@
             import { VxeUI } from 'vxe-pc-ui'
 
             VxeUI.setConfig({
+              alert: {},
               anchor: {},
               anchorLink: {},
               breadcrumb: {
@@ -30,11 +31,13 @@
               column: {},
               drawer: {
                 // size: null,
+                position: 'left',
                 showHeader: true,
                 lockView: true,
                 mask: true,
                 showTitleOverflow: true,
-                showClose: true
+                showClose: true,
+                padding: true
               },
               form: {
                 // preventSubmit: false,
@@ -50,14 +53,16 @@
                 titleAsterisk: true
               },
               formDesign: {
-                formConfig: {
-                  vertical: true
-                }
+                height: 400,
+                showPc: true
               },
               formGather: {},
               formItem: {},
+              formView: {},
               grid: {},
               icon: {},
+              image: {},
+              imagePreview: {},
               input: {
                 // size: null,
                 // transfer: false
@@ -79,7 +84,10 @@
               link: {
                 underline: true
               },
-              listDesign: {},
+              listDesign: {
+                height: 400,
+                showPc: true
+              },
               list: {
                 // size: null,
                 scrollY: {
@@ -102,6 +110,7 @@
                 dblclickZoom: true,
                 showTitleOverflow: true,
                 showClose: true,
+                padding: true,
                 draggable: true,
                 showConfirmButton: null,
                 // storage: false,
@@ -138,15 +147,19 @@
               tabs: {},
               textarea: {},
               toolbar: {},
-              tips: {
-                title: 'Tip'
-              },
+              tips: {},
               tooltip: {
                 // size: null,
                 trigger: 'hover',
                 theme: 'dark',
                 enterDelay: 500,
                 leaveDelay: 300
+              },
+              tree: {},
+              treeSelect: {},
+              upload: {
+                mode: 'all',
+                imageTypes: ['jpg', 'jpeg', 'png', 'gif']
               }
             })
           </pre-code>

@@ -1,11 +1,11 @@
 <template>
   <div>
-    <vxe-tabs v-model="selectTab" >
-      <vxe-tab-pane title="xxx1" name="1">xxxx</vxe-tab-pane>
-      <vxe-tab-pane title="xxx2" name="2">cccc</vxe-tab-pane>
-      <vxe-tab-pane title="xxx3" name="3">vvvv</vxe-tab-pane>
-      <vxe-tab-pane title="xxx4" name="4">ggg</vxe-tab-pane>
-      <vxe-tab-pane title="xxx5" name="5">ooo</vxe-tab-pane>
+    <vxe-tabs v-model="selectTab">
+      <vxe-tab-pane title="标题1" name="1">内容1</vxe-tab-pane>
+      <vxe-tab-pane title="标题2" name="2">内容2</vxe-tab-pane>
+      <vxe-tab-pane title="标题3" name="3">内容3</vxe-tab-pane>
+      <vxe-tab-pane title="标题4" name="4">内容4</vxe-tab-pane>
+      <vxe-tab-pane title="标题5" name="5">内容5</vxe-tab-pane>
     </vxe-tabs>
   </div>
 </template>

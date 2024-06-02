@@ -2,37 +2,37 @@
   <div>
     <CodeLight path="checkbox/Demo1">
       <template #tip>
-        <div>复选框</div>
+        <vxe-tips status="primary" title="复选框"></vxe-tips>
       </template>
     </CodeLight>
 
     <CodeLight path="checkbox/Demo2">
       <template #tip>
-        <div>半选状态</div>
+        <vxe-tips status="primary">半选状态</vxe-tips>
       </template>
     </CodeLight>
 
     <CodeLight path="checkbox/Demo3">
       <template #tip>
-        <div>禁用状态</div>
+        <vxe-tips status="primary">禁用状态</vxe-tips>
       </template>
     </CodeLight>
 
     <CodeLight path="checkbox/Demo4">
       <template #tip>
-        <div>自定义选中和未选择的值</div>
+        <vxe-tips status="primary">自定义选中和未选择的值</vxe-tips>
       </template>
     </CodeLight>
 
     <CodeLight path="checkbox/Demo5">
       <template #tip>
-        <div>复选组</div>
+        <vxe-tips status="primary">复选组</vxe-tips>
       </template>
     </CodeLight>
 
     <CodeLight path="checkbox/Demo6">
       <template #tip>
-        <div>限制最大选择数量</div>
+        <vxe-tips status="primary">限制最大选择数量</vxe-tips>
       </template>
 
       <template #describe>

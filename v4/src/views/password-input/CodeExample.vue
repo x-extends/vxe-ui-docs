@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="password-input/Demo1">
       <template #tip>
-        <div>密码输入</div>
+        <vxe-tips status="primary" title="密码输入"></vxe-tips>
       </template>
     </CodeLight>
   </div>

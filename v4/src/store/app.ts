@@ -23,7 +23,7 @@ export const useAppStore = defineStore('app', {
       pluginDocsUrl: `${process.env.VUE_APP_SITE_BASE_URL}pluginDocs/`,
       pluginApiUrl: `${process.env.VUE_APP_SITE_BASE_URL}plugins/`,
       docsGithubUrl: 'https://github.com/x-extends/vxe-ui-docs/tree/main/v4',
-      serveApiUrl: 'https://api.vxeui.com/demo',
+      serveApiUrl: 'https://api.vxetable.cn/demo',
       compApiMaps: null as any
     }
   },

@@ -10,8 +10,9 @@ import PreCode from './components/PreCode.vue'
 import CodeLight from './components/CodeLight.vue'
 import CodeList from './components/CodeList.vue'
 import CodeRender from './components/CodeRender.vue'
+import ApiLink from './components/ApiLink.vue'
 
-import './plugins'
+import axios from 'axios'
 
 import VxeUI from 'vxe-pc-ui'
 import 'vxe-pc-ui/lib/style.css'
@@ -21,6 +22,8 @@ import 'vxe-table/lib/style.css'
 
 import enUS from 'vxe-pc-ui/packages/language/en-US'
 
+axios.defaults.baseURL = 'https://api.vxetable.cn'
+
 VxeUI.setI18n('en-US', enUS)
 
 const app = createApp(App)
@@ -29,6 +32,7 @@ app.component('PreCode', PreCode)
 app.component('CodeLight', CodeLight)
 app.component('CodeList', CodeList)
 app.component('CodeRender', CodeRender)
+app.component('ApiLink', ApiLink)
 
 app.use(VxeUI)
 app.use(VxeUITable)

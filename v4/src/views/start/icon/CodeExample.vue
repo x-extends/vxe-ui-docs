@@ -2,7 +2,7 @@
   <div>
     <CodeLight>
       <template #tip>
-        <VxeTips status="primary">
+        <VxeTips status="primary" title="自定义图标">
           通过调用 VxeUI.setIcon({ ... }) 方法可以全局替换组件内置的图标
         </VxeTips>
       </template>
@@ -38,6 +38,15 @@
               PAGER_NEXT_PAGE: 'vxe-icon-arrow-right',
               PAGER_JUMP_MORE: 'vxe-icon-ellipsis-h',
 
+              // radio
+              RADIO_CHECKED: 'vxe-icon-radio-checked-fill',
+              RADIO_UNCHECKED: 'vxe-icon-radio-unchecked',
+
+              // checkbox
+              CHECKBOX_INDETERMINATE: 'vxe-icon-checkbox-indeterminate-fill',
+              CHECKBOX_CHECKED: 'vxe-icon-checkbox-checked-fill',
+              CHECKBOX_UNCHECKED: 'vxe-icon-checkbox-unchecked',
+
               // input
               INPUT_CLEAR: 'vxe-icon-error-circle-fill',
               INPUT_PWD: 'vxe-icon-eye-fill',
@@ -65,15 +74,61 @@
               FORM_UNFOLDING: 'vxe-icon-arrow-up',
 
               // form-design
-              DESIGN_FORM_STYLE_SETTING: 'vxe-icon-layout',
-              DESIGN_FORM_PROPS_PC: 'vxe-icon-pc',
-              DESIGN_FORM_PROPS_MOBILE: 'vxe-icon-mobile',
-              DESIGN_FORM_WIDGET_ADD: 'vxe-icon-square-plus-fill',
-              DESIGN_FORM_WIDGET_COPY: 'vxe-icon-copy',
-              DESIGN_FORM_WIDGET_DELETE: 'vxe-icon-delete',
-              DESIGN_FORM_WIDGET_OPTION_DELETE: 'vxe-icon-delete',
-              DESIGN_FORM_WIDGET_OPTION_EXPAND_OPEN: 'vxe-icon-square-plus',
-              DESIGN_FORM_WIDGET_OPTION_EXPAND_CLOSE: 'vxe-icon-square-minus'
+              FORM_DESIGN_STYLE_SETTING: 'vxe-icon-layout',
+              FORM_DESIGN_PROPS_PC: 'vxe-icon-pc',
+              FORM_DESIGN_PROPS_MOBILE: 'vxe-icon-mobile',
+              FORM_DESIGN_WIDGET_ADD: 'vxe-icon-square-plus-fill',
+              FORM_DESIGN_WIDGET_COPY: 'vxe-icon-copy',
+              FORM_DESIGN_WIDGET_DELETE: 'vxe-icon-delete',
+              FORM_DESIGN_WIDGET_OPTION_DELETE: 'vxe-icon-delete',
+              FORM_DESIGN_WIDGET_OPTION_EXPAND_OPEN: 'vxe-icon-square-plus',
+              FORM_DESIGN_WIDGET_OPTION_EXPAND_CLOSE: 'vxe-icon-square-minus',
+
+              // list-design
+              LIST_DESIGN_FIELD_SETTING: 'vxe-icon-custom-column',
+              LIST_DESIGN_LIST_SETTING: 'vxe-icon-menu',
+
+              // upload
+              UPLOAD_FILE_ERROR: 'vxe-icon-warning-circle-fill',
+              UPLOAD_FILE_ADD: 'vxe-icon-upload',
+              UPLOAD_FILE_DELETE: 'vxe-icon-delete',
+              UPLOAD_IMAGE_RE_UPLOAD: 'vxe-icon-repeat',
+              UPLOAD_IMAGE_ADD: 'vxe-icon-add',
+              UPLOAD_IMAGE_DELETE: 'vxe-icon-close',
+              UPLOAD_LOADING: 'vxe-icon-spinner roll vxe-loading--default-icon',
+              UPLOAD_FILE_TYPE_DEFAULT: 'vxe-icon-file',
+              UPLOAD_FILE_TYPE_XLSX: 'vxe-icon-file-excel',
+              UPLOAD_FILE_TYPE_XLS: 'vxe-icon-file-excel',
+              UPLOAD_FILE_TYPE_PDF: 'vxe-icon-file-pdf',
+              UPLOAD_FILE_TYPE_PNG: 'vxe-icon-file-image',
+              UPLOAD_FILE_TYPE_GIF: 'vxe-icon-file-image',
+              UPLOAD_FILE_TYPE_JPG: 'vxe-icon-file-image',
+              UPLOAD_FILE_TYPE_JPEG: 'vxe-icon-file-image',
+              UPLOAD_FILE_TYPE_MD: 'vxe-icon-file-markdown',
+              UPLOAD_FILE_TYPE_PPD: 'vxe-icon-file-ppt',
+              UPLOAD_FILE_TYPE_DOCX: 'vxe-icon-file-word',
+              UPLOAD_FILE_TYPE_DOC: 'vxe-icon-file-word',
+              UPLOAD_FILE_TYPE_ZIP: 'vxe-icon-file-zip',
+              UPLOAD_FILE_TYPE_TXT: 'vxe-icon-file-txt',
+
+              // image-preview
+              IMAGE_PREVIEW_CLOSE: 'vxe-icon-close',
+              IMAGE_PREVIEW_PREVIOUS: 'vxe-icon-arrow-left',
+              IMAGE_PREVIEW_NEXT: 'vxe-icon-arrow-right',
+              IMAGE_PREVIEW_PCT_FULL: 'vxe-icon-pct-full',
+              IMAGE_PREVIEW_PCT_1_1: 'vxe-icon-pct-1-1',
+              IMAGE_PREVIEW_ZOOM_OUT: 'vxe-icon-search-zoom-out',
+              IMAGE_PREVIEW_ZOOM_IN: 'vxe-icon-search-zoom-in',
+              IMAGE_PREVIEW_ROTATE_LEFT: 'vxe-icon-rotate-left',
+              IMAGE_PREVIEW_ROTATE_RIGHT: 'vxe-icon-rotate-right',
+              IMAGE_PREVIEW_PRINT: 'vxe-icon-print',
+
+              // alert
+              ALERT_CLOSE: 'vxe-icon-close',
+              ALERT_INFO: 'vxe-icon-info-circle-fill',
+              ALERT_SUCCESS: 'vxe-icon-success-circle-fill',
+              ALERT_WARNING: 'vxe-icon-warning-circle-fill',
+              ALERT_ERROR: 'vxe-icon-error-circle-fill'
             })
           </pre-code>
         </pre>

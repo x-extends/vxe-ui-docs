@@ -14,7 +14,7 @@
       <vxe-button-group round>
         <vxe-button content="按钮1" status="warning"></vxe-button>
         <vxe-button content="按钮2" status="success"></vxe-button>
-        <vxe-button content="按钮3" status="danger"></vxe-button>
+        <vxe-button content="按钮3" status="error"></vxe-button>
       </vxe-button-group>
     </p>
 
@@ -32,7 +32,7 @@
       <vxe-button-group mode="text">
         <vxe-button content="文本按钮1" status="warning"></vxe-button>
         <vxe-button content="文本按钮2" status="success"></vxe-button>
-        <vxe-button content="文本按钮3" status="danger"></vxe-button>
+        <vxe-button content="文本按钮3" status="error"></vxe-button>
       </vxe-button-group>
     </p>
 
@@ -48,6 +48,6 @@ import { ref } from 'vue'
 const btnList = ref([
   { content: '按钮1', status: 'warning', name: 1 },
   { content: '按钮1', status: 'success', name: 2 },
-  { content: '按钮1', status: 'danger', name: 3 }
+  { content: '按钮1', status: 'error', name: 3 }
 ])
 </script>

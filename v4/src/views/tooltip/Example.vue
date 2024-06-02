@@ -2,7 +2,9 @@
   <div>
     <CodeLight path="tooltip/Demo1">
       <template #tip>
-        <div>工具提示</div>
+        <vxe-tips status="primary">
+         文字提示，默认会在
+        </vxe-tips>
       </template>
     </CodeLight>
 

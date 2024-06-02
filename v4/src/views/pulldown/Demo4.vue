@@ -4,7 +4,7 @@
       <template #header>
         <div class="my-headdown4">
           <vxe-button mode="text" status="primary">按钮1</vxe-button>
-          <vxe-button mode="text" status="danger">按钮2</vxe-button>
+          <vxe-button mode="text" status="error">按钮2</vxe-button>
         </div>
       </template>
 

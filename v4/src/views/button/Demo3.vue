@@ -6,6 +6,6 @@
     <vxe-button content="成功颜色" status="success" round></vxe-button>
     <vxe-button content="信息颜色" status="info" round></vxe-button>
     <vxe-button content="警告颜色" status="warning" round></vxe-button>
-    <vxe-button content="危险颜色" status="danger" round></vxe-button>
+    <vxe-button content="错误颜色" status="error" round></vxe-button>
   </div>
 </template>

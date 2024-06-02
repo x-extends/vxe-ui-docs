@@ -45,7 +45,7 @@ const formDesignWidgets = ref<VxeFormDesignPropTypes.Widgets>([
 const clickEvent = () => {
   const $formDesign = formDesignRef.value
   if ($formDesign) {
-    console.log($formDesign.getConfig())
+    console.log(JSON.stringify($formDesign.getConfig()))
   }
 }
 </script>

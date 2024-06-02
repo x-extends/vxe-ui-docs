@@ -2,31 +2,31 @@
   <div>
     <CodeLight path="switch/Demo1">
       <template #tip>
-        <div>按钮</div>
+        <vxe-tips status="primary" title="开关"></vxe-tips>
       </template>
     </CodeLight>
 
     <CodeLight path="switch/Demo2">
       <template #tip>
-        <div>禁用状态</div>
+        <vxe-tips status="primary">禁用状态</vxe-tips>
       </template>
     </CodeLight>
 
     <CodeLight path="switch/Demo3">
       <template #tip>
-        <div>自定义值</div>
+        <vxe-tips status="primary">自定义值</vxe-tips>
       </template>
     </CodeLight>
 
     <CodeLight path="switch/Demo4">
       <template #tip>
-        <div>自定义名称</div>
+        <vxe-tips status="primary">自定义名称</vxe-tips>
       </template>
     </CodeLight>
 
     <CodeLight path="switch/Demo5">
       <template #tip>
-        <div>自定义图标</div>
+        <vxe-tips status="primary">自定义图标</vxe-tips>
       </template>
 
       <template #describe>
