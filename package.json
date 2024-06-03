@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build:v4": "cd v4 && npm run build",
-    "update": "npm run update:all",
+    "update": "npm install --legacy-peer-deps && npm run update:all",
     "update:v4": "cd v4 && npm install --legacy-peer-deps",
     "update:all": "npm run update:v4",
     "build": "npm run build:vxe",
