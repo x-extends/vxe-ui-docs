@@ -201,7 +201,7 @@ export const navConfigList: NavVO[] = [
           {
             title: '基础功能',
             children: [
-              // { title: '基础', routerLink: { name: 'ComponentGridBaseBasic' } },
+              { title: '基础', routerLink: { name: 'ComponentGridBaseBasic' } },
               // { title: '尺寸', routerLink: { name: 'ComponentGridBaseSize' } },
               // { title: '数据类型', routerLink: { name: 'ComponentGridBaseData' } },
               // { title: '空数据提示', routerLink: { name: 'ComponentGridBaseEmpty' } },
