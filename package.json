@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "build:v4": "cd v4 && npm run build",
+    "update": "npm run update:all",
     "update:v4": "cd v4 && npm install --legacy-peer-deps",
     "update:all": "npm run update:v4",
+    "build": "npm run build:vxe",
     "build:all": "npm run build:v4",
     "build:docs": "gulp build_docs && npm run build:zip",
     "build:vxe": "gulp build_docs && gulp build_vxe_docs && npm run build:zip",
