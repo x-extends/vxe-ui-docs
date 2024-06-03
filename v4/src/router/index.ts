@@ -323,8 +323,38 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'print',
-        name: 'ComponentPrint',
-        component: () => import('@/views/print/CodeExample.vue')
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentPrintBase',
+            component: () => import('@/views/print/base/CodeExample.vue')
+          },
+          {
+            path: 'page',
+            children: [
+              {
+                path: 'basics',
+                name: 'ComponentPrintPageBasics',
+                component: () => import('@/views/print/page/basics/CodeExample.vue')
+              },
+              {
+                path: 'header',
+                name: 'ComponentPrintPageHeader',
+                component: () => import('@/views/print/page/header/CodeExample.vue')
+              },
+              {
+                path: 'footer',
+                name: 'ComponentPrintPageFooter',
+                component: () => import('@/views/print/page/footer/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                name: 'ComponentPrintPageTemplate',
+                component: () => import('@/views/print/page/template/CodeExample.vue')
+              }
+            ]
+          }
+        ]
       },
       {
         path: 'tree',

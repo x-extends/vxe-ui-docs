@@ -330,7 +330,21 @@ export const navConfigList: NavVO[] = [
     title: '其他组件',
     children: [
       // { title: 'Watermark 水印' },
-      { title: 'Print 打印', routerLink: { name: 'ComponentPrint' } }
+      {
+        title: 'Print 打印',
+        children: [
+          { title: '常规打印', routerLink: { name: 'ComponentPrintBase' } },
+          {
+            title: '分页打印',
+            children: [
+              { title: '基础', routerLink: { name: 'ComponentPrintPageBasics' } },
+              { title: '页眉/标题', routerLink: { name: 'ComponentPrintPageHeader' } },
+              { title: '页尾/页码', routerLink: { name: 'ComponentPrintPageFooter' } },
+              { title: '自定义模板', routerLink: { name: 'ComponentPrintPageTemplate' } }
+            ]
+          }
+        ]
+      }
     ]
   },
   {
