@@ -158,11 +158,6 @@ gulp.task('copy_v4_docs', () => {
 })
 
 gulp.task('copy_v4_index', gulp.series('copy_v4_docs', () => {
-  return gulp.src('v4/dist/issues.html')
-    // .pipe(replace('</head>', `${adScript}${isForceAd ? adCheckScript : ''}</head>`))
-    // .pipe(replace('</body>', `${sponsorsTmplScript}${adTmplScript}</body>`))
-    .pipe(gulp.dest('_temp/v4'))
-}, () => {
   return gulp.src('v4/dist/index.html')
     // .pipe(replace('</head>', `${adScript}${isForceAd ? adCheckScript : ''}</head>`))
     // .pipe(replace('</body>', `${sponsorsTmplScript}${adTmplScript}</body>`))
@@ -209,7 +204,6 @@ gulp.task('build_latest_docs', () => {
   return gulp.src([
     'docs/v4/favicon.ico',
     'docs/v4/index.html',
-    'docs/v4/issues.html',
     'docs/v4/logo.png'
   ])
     .pipe(gulp.dest('docs'))
