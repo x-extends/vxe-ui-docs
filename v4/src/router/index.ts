@@ -149,12 +149,12 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'radio',
         name: 'ComponentRadio',
-        component: () => import('@/views/radio/Example.vue')
+        component: () => import('@/views/radio/CodeExample.vue')
       },
       {
         path: 'checkbox',
         name: 'ComponentCheckbox',
-        component: () => import('@/views/checkbox/Example.vue')
+        component: () => import('@/views/checkbox/CodeExample.vue')
       },
       {
         path: 'input',
@@ -244,17 +244,17 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'textarea',
         name: 'ComponentTextarea',
-        component: () => import('@/views/textarea/Example.vue')
+        component: () => import('@/views/textarea/CodeExample.vue')
       },
       {
         path: 'select',
         name: 'ComponentSelect',
-        component: () => import('@/views/select/Example.vue')
+        component: () => import('@/views/select/CodeExample.vue')
       },
       {
         path: 'pager',
         name: 'ComponentPager',
-        component: () => import('@/views/pager/Example.vue')
+        component: () => import('@/views/pager/CodeExample.vue')
       },
       {
         path: 'modal',
@@ -262,44 +262,44 @@ const routes: Array<RouteRecordRaw> = [
           {
             path: 'message',
             name: 'ComponentModalMessage',
-            component: () => import('@/views/modal/message/Example.vue')
+            component: () => import('@/views/modal/message/CodeExample.vue')
           },
           {
             path: 'alert',
             name: 'ComponentModalAlert',
-            component: () => import('@/views/modal/alert/Example.vue')
+            component: () => import('@/views/modal/alert/CodeExample.vue')
           },
           {
             path: 'confirm',
             name: 'ComponentModalConfirm',
-            component: () => import('@/views/modal/confirm/Example.vue')
+            component: () => import('@/views/modal/confirm/CodeExample.vue')
           },
           {
             path: 'open',
             name: 'ComponentModalOpen',
-            component: () => import('@/views/modal/modal/Example.vue')
+            component: () => import('@/views/modal/modal/CodeExample.vue')
           }
         ]
       },
       {
         path: 'tooltip',
         name: 'ComponentTooltip',
-        component: () => import('@/views/tooltip/Example.vue')
+        component: () => import('@/views/tooltip/CodeExample.vue')
       },
       {
         path: 'switch',
         name: 'ComponentSwitch',
-        component: () => import('@/views/switch/Example.vue')
+        component: () => import('@/views/switch/CodeExample.vue')
       },
       {
         path: 'list',
         name: 'ComponentList',
-        component: () => import('@/views/list/Example.vue')
+        component: () => import('@/views/list/CodeExample.vue')
       },
       {
         path: 'pulldown',
         name: 'ComponentPulldown',
-        component: () => import('@/views/pulldown/Example.vue')
+        component: () => import('@/views/pulldown/CodeExample.vue')
       },
       {
         path: 'tabs',
@@ -327,27 +327,52 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/print/CodeExample.vue')
       },
       {
+        path: 'tree',
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentTreeBase',
+            component: () => import('@/views/tree/base/CodeExample.vue')
+          },
+          {
+            path: 'current',
+            name: 'ComponentTreeCurrent',
+            component: () => import('@/views/tree/current/CodeExample.vue')
+          },
+          {
+            path: 'radio',
+            name: 'ComponentTreeRadio',
+            component: () => import('@/views/tree/radio/CodeExample.vue')
+          },
+          {
+            path: 'checkbox',
+            name: 'ComponentTreeCheckbox',
+            component: () => import('@/views/tree/checkbox/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'form/basics',
         children: [
           {
             path: 'base',
             name: 'ComponentFormBasicsBase',
-            component: () => import('@/views/form/basics/base/Example.vue')
+            component: () => import('@/views/form/basics/base/CodeExample.vue')
           },
           {
             path: 'customLayout',
             name: 'ComponentFormBasicsCustomLayout',
-            component: () => import('@/views/form/basics/customLayout/Example.vue')
+            component: () => import('@/views/form/basics/customLayout/CodeExample.vue')
           },
           {
             path: 'vertical',
             name: 'ComponentFormBasicsVertical',
-            component: () => import('@/views/form/basics/vertical/Example.vue')
+            component: () => import('@/views/form/basics/vertical/CodeExample.vue')
           },
           {
             path: 'valid',
             name: 'ComponentFormBasicsValid',
-            component: () => import('@/views/form/basics/valid/Example.vue')
+            component: () => import('@/views/form/basics/valid/CodeExample.vue')
           }
         ]
       },
@@ -357,7 +382,7 @@ const routes: Array<RouteRecordRaw> = [
           {
             path: 'base',
             name: 'ComponentFormConfigBase',
-            component: () => import('@/views/form/config/base/Example.vue')
+            component: () => import('@/views/form/config/base/CodeExample.vue')
           }
         ]
       },
@@ -423,6 +448,386 @@ const routes: Array<RouteRecordRaw> = [
             path: 'image',
             name: 'ComponentUploadImage',
             component: () => import('@/views/upload/image/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'table',
+        children: [
+          {
+            path: 'base',
+            children: [
+              {
+                path: 'basic',
+                name: 'ComponentTableBaseBasic',
+                component: () => import('@/views/table/base/basic/CodeExample.vue')
+              },
+              {
+                path: 'size',
+                name: 'ComponentTableBaseSize',
+                component: () => import('@/views/table/base/size/CodeExample.vue')
+              },
+              {
+                path: 'align',
+                name: 'ComponentTableBaseAlign',
+                component: () => import('@/views/table/base/align/CodeExample.vue')
+              },
+              {
+                path: 'width',
+                name: 'ComponentTableBaseWidth',
+                component: () => import('@/views/table/base/width/CodeExample.vue')
+              },
+              {
+                path: 'autoBreak',
+                name: 'ComponentTableBaseAutoBreak',
+                component: () => import('@/views/table/base/autoBreak/CodeExample.vue')
+              },
+              {
+                path: 'overflow',
+                name: 'ComponentTableBaseOverflow',
+                component: () => import('@/views/table/base/overflow/CodeExample.vue')
+              },
+              {
+                path: 'tooltip',
+                name: 'ComponentTableBaseTooltip',
+                component: () => import('@/views/table/base/tooltip/CodeExample.vue')
+              },
+              {
+                path: 'stripe',
+                name: 'ComponentTableBaseStripe',
+                component: () => import('@/views/table/base/stripe/CodeExample.vue')
+              },
+              {
+                path: 'border',
+                name: 'ComponentTableBaseBorder',
+                component: () => import('@/views/table/base/border/CodeExample.vue')
+              },
+              {
+                path: 'round',
+                name: 'ComponentTableBaseRound',
+                component: () => import('@/views/table/base/round/CodeExample.vue')
+              },
+              {
+                path: 'style',
+                name: 'ComponentTableBaseStyle',
+                component: () => import('@/views/table/base/style/CodeExample.vue')
+              },
+              {
+                path: 'dynamicStyle',
+                name: 'ComponentTableBaseDynamicStyle',
+                component: () => import('@/views/table/base/dynamicStyle/CodeExample.vue')
+              },
+              {
+                path: 'header',
+                name: 'ComponentTableBaseHeader',
+                component: () => import('@/views/table/base/header/CodeExample.vue')
+              },
+              {
+                path: 'headerHighlight',
+                name: 'ComponentTableBaseHeaderHighlight',
+                component: () => import('@/views/table/base/headerHighlight/CodeExample.vue')
+              },
+              {
+                path: 'resizable',
+                name: 'ComponentTableBaseHeaderResizable',
+                component: () => import('@/views/table/base/resizable/CodeExample.vue')
+              },
+              {
+                path: 'minHeight',
+                name: 'ComponentTableBaseHeaderMinHeight',
+                component: () => import('@/views/table/base/minHeight/CodeExample.vue')
+              },
+              {
+                path: 'height',
+                name: 'ComponentTableBaseHeight',
+                component: () => import('@/views/table/base/height/CodeExample.vue')
+              },
+              {
+                path: 'maxHeight',
+                name: 'ComponentTableBaseMaxHeight',
+                component: () => import('@/views/table/base/maxHeight/CodeExample.vue')
+              },
+              {
+                path: 'rowHeight',
+                name: 'ComponentTableBaseRowHeight',
+                component: () => import('@/views/table/base/rowHeight/CodeExample.vue')
+              },
+              {
+                path: 'autoHeight',
+                name: 'ComponentTableBaseAutoHeight',
+                component: () => import('@/views/table/base/autoHeight/CodeExample.vue')
+              },
+              {
+                path: 'fixed',
+                name: 'ComponentTableBaseFixed',
+                component: () => import('@/views/table/base/fixed/CodeExample.vue')
+              },
+              {
+                path: 'fixedFull',
+                name: 'ComponentTableBaseFixedFull',
+                component: () => import('@/views/table/base/fixedFull/CodeExample.vue')
+              },
+              {
+                path: 'footer',
+                name: 'ComponentTableBaseFooter',
+                component: () => import('@/views/table/base/footer/CodeExample.vue')
+              },
+              {
+                path: 'group',
+                name: 'ComponentTableBaseGroup',
+                component: () => import('@/views/table/base/group/CodeExample.vue')
+              },
+              {
+                path: 'seq',
+                name: 'ComponentTableBaseSeq',
+                component: () => import('@/views/table/base/seq/CodeExample.vue')
+              },
+              {
+                path: 'current',
+                name: 'ComponentTableBaseCurrent',
+                component: () => import('@/views/table/base/current/CodeExample.vue')
+              },
+              {
+                path: 'radio',
+                name: 'ComponentTableBaseRadio',
+                component: () => import('@/views/table/base/radio/CodeExample.vue')
+              },
+              {
+                path: 'selection',
+                name: 'ComponentTableBaseSelection',
+                component: () => import('@/views/table/base/selection/CodeExample.vue')
+              },
+              {
+                path: 'sort',
+                name: 'ComponentTableBaseSort',
+                component: () => import('@/views/table/base/sort/CodeExample.vue')
+              },
+              {
+                path: 'filter',
+                name: 'ComponentTableBaseFilter',
+                component: () => import('@/views/table/base/filter/CodeExample.vue')
+              },
+              {
+                path: 'empty',
+                name: 'ComponentTableBaseEmpty',
+                component: () => import('@/views/table/base/empty/CodeExample.vue')
+              },
+              {
+                path: 'loading',
+                name: 'ComponentTableBaseLoading',
+                component: () => import('@/views/table/base/loading/CodeExample.vue')
+              },
+              {
+                path: 'format',
+                name: 'ComponentTableBaseFormat',
+                component: () => import('@/views/table/base/format/CodeExample.vue')
+              },
+              {
+                path: 'data',
+                name: 'ComponentTableBaseData',
+                component: () => import('@/views/table/base/data/CodeExample.vue')
+              },
+              {
+                path: 'html',
+                name: 'ComponentTableBaseHtml',
+                component: () => import('@/views/table/base/html/CodeExample.vue')
+              },
+              {
+                path: 'full',
+                name: 'ComponentTableBaseFull',
+                component: () => import('@/views/table/base/full/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
+      {
+        path: 'grid',
+        children: [
+          {
+            path: 'base',
+            children: [
+              {
+                path: 'basic',
+                name: 'ComponentGridBaseBasic',
+                component: () => import('@/views/grid/base/basic/CodeExample.vue')
+              },
+              {
+                path: 'size',
+                name: 'ComponentGridBaseSize',
+                component: () => import('@/views/grid/base/size/CodeExample.vue')
+              },
+              {
+                path: 'align',
+                name: 'ComponentGridBaseAlign',
+                component: () => import('@/views/grid/base/align/CodeExample.vue')
+              },
+              {
+                path: 'width',
+                name: 'ComponentGridBaseWidth',
+                component: () => import('@/views/grid/base/width/CodeExample.vue')
+              },
+              {
+                path: 'autoBreak',
+                name: 'ComponentGridBaseAutoBreak',
+                component: () => import('@/views/grid/base/autoBreak/CodeExample.vue')
+              },
+              {
+                path: 'overflow',
+                name: 'ComponentGridBaseOverflow',
+                component: () => import('@/views/grid/base/overflow/CodeExample.vue')
+              },
+              {
+                path: 'tooltip',
+                name: 'ComponentGridBaseTooltip',
+                component: () => import('@/views/grid/base/tooltip/CodeExample.vue')
+              },
+              {
+                path: 'stripe',
+                name: 'ComponentGridBaseStripe',
+                component: () => import('@/views/grid/base/stripe/CodeExample.vue')
+              },
+              {
+                path: 'border',
+                name: 'ComponentGridBaseBorder',
+                component: () => import('@/views/grid/base/border/CodeExample.vue')
+              },
+              {
+                path: 'round',
+                name: 'ComponentGridBaseRound',
+                component: () => import('@/views/grid/base/round/CodeExample.vue')
+              },
+              {
+                path: 'style',
+                name: 'ComponentGridBaseStyle',
+                component: () => import('@/views/grid/base/style/CodeExample.vue')
+              },
+              {
+                path: 'dynamicStyle',
+                name: 'ComponentGridBaseDynamicStyle',
+                component: () => import('@/views/grid/base/dynamicStyle/CodeExample.vue')
+              },
+              {
+                path: 'header',
+                name: 'ComponentGridBaseHeader',
+                component: () => import('@/views/grid/base/header/CodeExample.vue')
+              },
+              {
+                path: 'headerHighlight',
+                name: 'ComponentGridBaseHeaderHighlight',
+                component: () => import('@/views/grid/base/headerHighlight/CodeExample.vue')
+              },
+              {
+                path: 'resizable',
+                name: 'ComponentGridBaseHeaderResizable',
+                component: () => import('@/views/grid/base/resizable/CodeExample.vue')
+              },
+              {
+                path: 'minHeight',
+                name: 'ComponentGridBaseHeaderMinHeight',
+                component: () => import('@/views/grid/base/minHeight/CodeExample.vue')
+              },
+              {
+                path: 'height',
+                name: 'ComponentGridBaseHeight',
+                component: () => import('@/views/grid/base/height/CodeExample.vue')
+              },
+              {
+                path: 'maxHeight',
+                name: 'ComponentGridBaseMaxHeight',
+                component: () => import('@/views/grid/base/maxHeight/CodeExample.vue')
+              },
+              {
+                path: 'rowHeight',
+                name: 'ComponentGridBaseRowHeight',
+                component: () => import('@/views/grid/base/rowHeight/CodeExample.vue')
+              },
+              {
+                path: 'autoHeight',
+                name: 'ComponentGridBaseAutoHeight',
+                component: () => import('@/views/grid/base/autoHeight/CodeExample.vue')
+              },
+              {
+                path: 'fixed',
+                name: 'ComponentGridBaseFixed',
+                component: () => import('@/views/grid/base/fixed/CodeExample.vue')
+              },
+              {
+                path: 'fixedFull',
+                name: 'ComponentGridBaseFixedFull',
+                component: () => import('@/views/grid/base/fixedFull/CodeExample.vue')
+              },
+              {
+                path: 'footer',
+                name: 'ComponentGridBaseFooter',
+                component: () => import('@/views/grid/base/footer/CodeExample.vue')
+              },
+              {
+                path: 'group',
+                name: 'ComponentGridBaseGroup',
+                component: () => import('@/views/grid/base/group/CodeExample.vue')
+              },
+              {
+                path: 'seq',
+                name: 'ComponentGridBaseSeq',
+                component: () => import('@/views/grid/base/seq/CodeExample.vue')
+              },
+              {
+                path: 'current',
+                name: 'ComponentGridBaseCurrent',
+                component: () => import('@/views/grid/base/current/CodeExample.vue')
+              },
+              {
+                path: 'radio',
+                name: 'ComponentGridBaseRadio',
+                component: () => import('@/views/grid/base/radio/CodeExample.vue')
+              },
+              {
+                path: 'selection',
+                name: 'ComponentGridBaseSelection',
+                component: () => import('@/views/grid/base/selection/CodeExample.vue')
+              },
+              {
+                path: 'sort',
+                name: 'ComponentGridBaseSort',
+                component: () => import('@/views/grid/base/sort/CodeExample.vue')
+              },
+              {
+                path: 'filter',
+                name: 'ComponentGridBaseFilter',
+                component: () => import('@/views/grid/base/filter/CodeExample.vue')
+              },
+              {
+                path: 'empty',
+                name: 'ComponentGridBaseEmpty',
+                component: () => import('@/views/grid/base/empty/CodeExample.vue')
+              },
+              {
+                path: 'loading',
+                name: 'ComponentGridBaseLoading',
+                component: () => import('@/views/grid/base/loading/CodeExample.vue')
+              },
+              {
+                path: 'format',
+                name: 'ComponentGridBaseFormat',
+                component: () => import('@/views/grid/base/format/CodeExample.vue')
+              },
+              {
+                path: 'data',
+                name: 'ComponentGridBaseData',
+                component: () => import('@/views/grid/base/data/CodeExample.vue')
+              },
+              {
+                path: 'html',
+                name: 'ComponentGridBaseHtml',
+                component: () => import('@/views/grid/base/html/CodeExample.vue')
+              },
+              {
+                path: 'full',
+                name: 'ComponentGridBaseFull',
+                component: () => import('@/views/grid/base/full/CodeExample.vue')
+              }
+            ]
           }
         ]
       }

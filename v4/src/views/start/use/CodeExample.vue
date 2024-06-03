@@ -55,6 +55,10 @@
                     VxeResolver({
                       libraryName: 'vxe-pc-ui'
                       // importStyle: true
+                    }),
+                    VxeResolver({
+                      libraryName: 'vxe-table'
+                      // importStyle: true
                     })
                   ]
                 })
@@ -138,7 +142,16 @@
               VxeUpload,
             } from 'vxe-pc-ui'
 
-            // 导入主题变量
+            import {
+              VxeTable,
+              VxeColumn,
+              VxeColgroup,
+              VxeGrid,
+              VxeToolbar
+            } from 'vxe-table'
+
+            // 导入主题变量，也可以重写主题变量
+            import 'vxe-table/styles/cssvar.scss'
             import 'vxe-pc-ui/styles/cssvar.scss'
 
             // 导入默认的语言
@@ -207,7 +220,15 @@
               app.use(VxeUpload)
             }
 
-            createApp(App).use(LazyVxeUI).mount('#app')
+            function LazyVxeTable (app) {
+              app.use(VxeTable)
+              app.use(VxeColumn)
+              app.use(VxeColgroup)
+              app.use(VxeGrid)
+              app.use(VxeToolbar)
+            }
+
+            createApp(App).use(LazyVxeUI).use(LazyVxeTable).mount('#app')
           </pre-code>
         </pre>
       </template>

@@ -20,6 +20,12 @@
 
     <CodeLight path="upload/image/Demo4">
       <template #tip>
+        <vxe-tips status="primary">显示上传进度</vxe-tips>
+      </template>
+    </CodeLight>
+
+    <CodeLight path="upload/image/Demo9">
+      <template #tip>
         <vxe-tips status="primary">自定义图片格式，默认支持 jpg, jpeg, png, gif 图片格式</vxe-tips>
       </template>
     </CodeLight>

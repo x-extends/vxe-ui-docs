@@ -55,7 +55,7 @@ const appStore = useAppStore()
 const filterName = ref('')
 
 const apiName = computed(() => {
-  return route.params.name as string
+  return route.query.name as string
 })
 
 const apiConfig = computed(() => {

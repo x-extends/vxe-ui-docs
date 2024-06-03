@@ -20,6 +20,12 @@
 
     <CodeLight path="upload/file/Demo4">
       <template #tip>
+        <vxe-tips status="primary">显示上传进度</vxe-tips>
+      </template>
+    </CodeLight>
+
+    <CodeLight path="upload/file/Demo9">
+      <template #tip>
         <vxe-tips status="primary">自定义文件格式</vxe-tips>
       </template>
     </CodeLight>

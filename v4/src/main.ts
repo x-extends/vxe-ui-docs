@@ -20,6 +20,8 @@ import 'vxe-pc-ui/lib/style.css'
 import VxeUITable from 'vxe-table'
 import 'vxe-table/lib/style.css'
 
+import '@/views/table/base/format/demo2.format'
+
 import enUS from 'vxe-pc-ui/packages/language/en-US'
 
 axios.defaults.baseURL = 'https://api.vxetable.cn'

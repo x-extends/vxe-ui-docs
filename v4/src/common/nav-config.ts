@@ -148,9 +148,99 @@ export const navConfigList: NavVO[] = [
   {
     title: '表格组件',
     children: [
-      { title: '查看文档', linkUrl: 'https://vxetable.cn/v4.7/' }
-      // { title: '基础表格' },
-      // { title: '配置式表格' },
+      { title: '点击查看完整文档', linkUrl: 'https://vxetable.cn/v4.7/' },
+      {
+        title: '静态表格',
+        children: [
+          {
+            title: '基础功能',
+            children: [
+              { title: '基础', routerLink: { name: 'ComponentTableBaseBasic' } },
+              { title: '尺寸', routerLink: { name: 'ComponentTableBaseSize' } },
+              { title: '数据类型', routerLink: { name: 'ComponentTableBaseData' } },
+              { title: '空数据提示', routerLink: { name: 'ComponentTableBaseEmpty' } },
+              { title: '边框', routerLink: { name: 'ComponentTableBaseBorder' } },
+              { title: '圆角', routerLink: { name: 'ComponentTableBaseRound' } },
+              { title: '对齐方式', routerLink: { name: 'ComponentTableBaseAlign' } },
+              { title: '列宽设置', routerLink: { name: 'ComponentTableBaseWidth' } },
+              { title: '自动换行', routerLink: { name: 'ComponentTableBaseAutoBreak' } },
+              { title: '溢出隐藏', routerLink: { name: 'ComponentTableBaseOverflow' } },
+              { title: '文本提示', routerLink: { name: 'ComponentTableBaseTooltip' } },
+              { title: '斑马线样式', routerLink: { name: 'ComponentTableBaseStripe' } },
+              { title: '单元格样式', routerLink: { name: 'ComponentTableBaseStyle' } },
+              { title: '动态样式', routerLink: { name: 'ComponentTableBaseDynamicStyle' } },
+              { title: '隐藏表头', routerLink: { name: 'ComponentTableBaseHeader' } },
+              { title: '高亮列', routerLink: { name: 'ComponentTableBaseHeaderHighlight' } },
+              { title: '拖拽调整列宽', routerLink: { name: 'ComponentTableBaseHeaderResizable' } },
+              { title: '表格最小高度', routerLink: { name: 'ComponentTableBaseHeaderMinHeight' } },
+              { title: '表格高度', routerLink: { name: 'ComponentTableBaseHeight' } },
+              { title: '表格最大高度', routerLink: { name: 'ComponentTableBaseMaxHeight' } },
+              { title: '表格响应式高度', routerLink: { name: 'ComponentTableBaseAutoHeight' } },
+              { title: '设置行度', routerLink: { name: 'ComponentTableBaseRowHeight' } },
+              { title: '冻结列', routerLink: { name: 'ComponentTableBaseFixed' } },
+              { title: '冻结表头和列', routerLink: { name: 'ComponentTableBaseFixedFull' } },
+              { title: '表尾', routerLink: { name: 'ComponentTableBaseFooter' } },
+              { title: '分组表头', routerLink: { name: 'ComponentTableBaseGroup' } },
+              { title: '高亮行与列', routerLink: { name: 'ComponentTableBaseCurrent' } },
+              { title: '排序', routerLink: { name: 'ComponentTableBaseSort' } },
+              { title: '筛选', routerLink: { name: 'ComponentTableBaseFilter' } },
+              { title: '加载中', routerLink: { name: 'ComponentTableBaseLoading' } },
+              { title: '格式化内容', routerLink: { name: 'ComponentTableBaseFormat' } },
+              { title: '序号', routerLink: { name: 'ComponentTableBaseSeq' } },
+              { title: '单选框', routerLink: { name: 'ComponentTableBaseRadio' } },
+              { title: '复选框', routerLink: { name: 'ComponentTableBaseSelection' } },
+              { title: 'HTML 类型', routerLink: { name: 'ComponentTableBaseHtml' } },
+              { title: '完整案例', routerLink: { name: 'ComponentTableBaseFull' } }
+            ]
+          }
+        ]
+      },
+      {
+        title: '配置式动态表格',
+        children: [
+          {
+            title: '基础功能',
+            children: [
+              // { title: '基础', routerLink: { name: 'ComponentGridBaseBasic' } },
+              // { title: '尺寸', routerLink: { name: 'ComponentGridBaseSize' } },
+              // { title: '数据类型', routerLink: { name: 'ComponentGridBaseData' } },
+              // { title: '空数据提示', routerLink: { name: 'ComponentGridBaseEmpty' } },
+              // { title: '边框', routerLink: { name: 'ComponentGridBaseBorder' } },
+              // { title: '圆角', routerLink: { name: 'ComponentGridBaseRound' } },
+              { title: '对齐方式', routerLink: { name: 'ComponentGridBaseAlign' } },
+              // { title: '列宽设置', routerLink: { name: 'ComponentGridBaseWidth' } },
+              // { title: '自动换行', routerLink: { name: 'ComponentGridBaseAutoBreak' } },
+              // { title: '溢出隐藏', routerLink: { name: 'ComponentGridBaseOverflow' } },
+              // { title: '文本提示', routerLink: { name: 'ComponentGridBaseTooltip' } },
+              // { title: '斑马线样式', routerLink: { name: 'ComponentGridBaseStripe' } },
+              // { title: '单元格样式', routerLink: { name: 'ComponentGridBaseStyle' } },
+              // { title: '动态样式', routerLink: { name: 'ComponentGridBaseDynamicStyle' } },
+              // { title: '隐藏表头', routerLink: { name: 'ComponentGridBaseHeader' } },
+              // { title: '高亮列', routerLink: { name: 'ComponentGridBaseHeaderHighlight' } },
+              // { title: '拖拽调整列宽', routerLink: { name: 'ComponentGridBaseHeaderResizable' } },
+              // { title: '表格最小高度', routerLink: { name: 'ComponentGridBaseHeaderMinHeight' } },
+              // { title: '表格高度', routerLink: { name: 'ComponentGridBaseHeight' } },
+              // { title: '表格最大高度', routerLink: { name: 'ComponentGridBaseMaxHeight' } },
+              // { title: '表格响应式高度', routerLink: { name: 'ComponentGridBaseAutoHeight' } },
+              // { title: '设置行度', routerLink: { name: 'ComponentGridBaseRowHeight' } },
+              // { title: '冻结列', routerLink: { name: 'ComponentGridBaseFixed' } },
+              // { title: '冻结表头和列', routerLink: { name: 'ComponentGridBaseFixedFull' } },
+              // { title: '表尾', routerLink: { name: 'ComponentGridBaseFooter' } },
+              // { title: '分组表头', routerLink: { name: 'ComponentGridBaseGroup' } },
+              // { title: '高亮行与列', routerLink: { name: 'ComponentGridBaseCurrent' } },
+              // { title: '排序', routerLink: { name: 'ComponentGridBaseSort' } },
+              // { title: '筛选', routerLink: { name: 'ComponentGridBaseFilter' } },
+              // { title: '加载中', routerLink: { name: 'ComponentGridBaseLoading' } },
+              // { title: '格式化内容', routerLink: { name: 'ComponentGridBaseFormat' } },
+              // { title: '序号', routerLink: { name: 'ComponentGridBaseSeq' } },
+              // { title: '单选框', routerLink: { name: 'ComponentGridBaseRadio' } },
+              // { title: '复选框', routerLink: { name: 'ComponentGridBaseSelection' } },
+              // { title: 'HTML 类型', routerLink: { name: 'ComponentGridBaseHtml' } },
+              { title: '完整案例', routerLink: { name: 'ComponentGridBaseFull' } }
+            ]
+          }
+        ]
+      }
       // { title: '格式化（全局）' },
       // { title: '右键菜单（全局）' },
       // { title: '校验器（全局）' },
@@ -185,7 +275,7 @@ export const navConfigList: NavVO[] = [
       },
       // { title: 'TextInput 单行文本输入' },
       { title: 'Textarea 多行文本输入', routerLink: { name: 'ComponentTextarea' } },
-      // { title: 'NumberInput 数值输入' },
+      { title: 'NumberInput 数值输入', routerLink: { name: 'ComponentNumberInput' } },
       { title: 'PasswordInput 密码输入', routerLink: { name: 'ComponentPasswordInput' } },
       // { title: 'DatePicker 日期选择器' },
       // { title: 'WeekPicker 周选择器' },
@@ -195,7 +285,15 @@ export const navConfigList: NavVO[] = [
       // { title: 'TimePicker 时间选择器' },
       // { title: 'DateTimePicker日期带时间选择器' },
       { title: 'Select 下拉框', routerLink: { name: 'ComponentSelect' } },
-      // { title: 'Tree 树形控件' },
+      {
+        title: 'Tree 树形组件',
+        children: [
+          { title: '基础树', routerLink: { name: 'ComponentTreeBase' } },
+          { title: '高亮行', routerLink: { name: 'ComponentTreeCurrent' } },
+          { title: '单选框', routerLink: { name: 'ComponentTreeRadio' } },
+          { title: '复选框', routerLink: { name: 'ComponentTreeCheckbox' } }
+        ]
+      },
       // { title: 'TreeSelect 树形下拉框' },
       {
         title: 'Upload 上传',

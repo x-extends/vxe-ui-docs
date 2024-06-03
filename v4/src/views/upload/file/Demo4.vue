@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-upload v-model="fileList" multiple :file-types="['pdf', 'xlsx']" :upload-method="uploadMethod"></vxe-upload>
+    <vxe-upload v-model="fileList" multiple show-progress :upload-method="uploadMethod"></vxe-upload>
   </div>
 </template>
 
@@ -17,6 +17,7 @@ const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress })
   return axios.post('/demo/api/pub/upload/single', formData, {
     onUploadProgress (progressEvent) {
       const percentCompleted = Math.round((progressEvent.loaded * 100) / (progressEvent.total || 0))
+      // 更新进度
       updateProgress(percentCompleted)
     }
   }).then((res) => {

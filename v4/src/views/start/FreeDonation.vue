@@ -10,8 +10,8 @@
     <vxe-tips title="Vxe UI 发展历史" status="success">
       <div>2016 开源了 javascript 工具类 <vxe-link status="primary" href="https://github.com/x-extends/xe-utils" target="_blank">xe-utils</vxe-link>、请求库 <vxe-link status="primary" href="https://github.com/x-extends/xe-ajax" target="_blank">xe-ajax</vxe-link></div>
       <div>2018 开源了表格库 <vxe-link status="primary" href="https://github.com/x-extends/vxe-table" target="_blank">vxe-table</vxe-link></div>
-      <div>2024 开源了组件库 <vxe-link status="primary" href="https://github.com/x-extends/vxe-pc-ui" target="_blank">vxe-pc-ui</vxe-link></div>
-      <div>敬请期待：移动端 H5 、小程序组件库、数据图表、 </div>
+      <div>2024 开源了组件库 <vxe-link status="primary" href="https://github.com/x-extends/vxe-pc-ui" target="_blank">vxe-pc-ui</vxe-link>（从 Vxe Table 中分离出组件，最终成就 Vxe UI）</div>
+      <div>敬请期待：admin模板、移动端 H5 、小程序组件库、数据图表 </div>
     </vxe-tips>
 
     <vxe-tabs v-model="supportAuthor" >

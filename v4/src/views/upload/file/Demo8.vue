@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-upload v-model="fileList" multiple :limit-count="6" :limit-size="50" show-error-status auto-hidden-button :upload-method="uploadMethod"></vxe-upload>
+    <vxe-upload v-model="fileList" multiple :limit-count="6" :limit-size="50" show-progress show-error-status auto-hidden-button :upload-method="uploadMethod"></vxe-upload>
   </div>
 </template>
 

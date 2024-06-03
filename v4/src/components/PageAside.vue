@@ -6,20 +6,30 @@
     <div class="nav-item nav-level1" v-for="(item1, index1) in navList" :key="index1" :class="[{'is-expand': item1.isExpand}]">
       <div class="nav-name" :title="item1.title" @click="toggleExpand(item1)">
         <span class="vxe-icon-arrow-right nav-link-icon"></span>
-        <span>{{ item1.title }}</span>
+        <span class="nav-item-text">{{ item1.title }}</span>
       </div>
       <div class="nav-subs">
         <div class="nav-item nav-level2" v-for="(item2, index2) in item1.children" :key="index2">
           <div class="nav-name" :title="item2.title">
             <vxe-link v-if="item2.routerLink" :class="['nav-item-link', item2.routerLink.name]" :router-link="item2.routerLink">{{ item2.title }}</vxe-link>
             <vxe-link v-else-if="item2.linkUrl" class="nav-item-link" :href="item2.linkUrl" target="_blank">{{ item2.title }}</vxe-link>
-            <span v-else>{{ item2.title }}</span>
+            <span v-else class="nav-item-text">∞ {{ item2.title }}</span>
           </div>
           <div v-if="item2.children && item2.children.length" class="nav-subs">
             <div class="nav-item nav-level3" v-for="(item3, index3) in item2.children" :key="index3">
               <div class="nav-name" :title="item3.title">
                 <vxe-link v-if="item3.routerLink" :class="['nav-item-link', item3.routerLink.name]" :router-link="item3.routerLink">{{ item3.title }}</vxe-link>
-                <span v-else>{{ item3.title }}</span>
+                <vxe-link v-else-if="item3.linkUrl" class="nav-item-link" :href="item3.linkUrl" target="_blank">{{ item3.title }}</vxe-link>
+                <span v-else class="nav-item-text">∞ {{ item3.title }}</span>
+              </div>
+              <div v-if="item3.children && item3.children.length" class="nav-subs">
+                <div class="nav-item nav-level4" v-for="(item4, index3) in item3.children" :key="index3">
+                  <div class="nav-name" :title="item4.title">
+                    <vxe-link v-if="item4.routerLink" :class="['nav-item-link', item4.routerLink.name]" :router-link="item4.routerLink">{{ item4.title }}</vxe-link>
+                    <vxe-link v-else-if="item4.linkUrl" class="nav-item-link" :href="item4.linkUrl" target="_blank">{{ item4.title }}</vxe-link>
+                    <span v-else class="nav-item-text">{{ item4.title }}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -154,12 +164,22 @@ updateExpand()
       line-height: 34px;
       padding-left: 3.4em;
     }
+    .nav-item-text {
+      color: var(--vxe-ui-input-placeholder-color);
+    }
   }
   .nav-level3 {
     & > .nav-name {
       font-size: 14px;
       line-height: 32px;
       padding-left: 5em;
+    }
+  }
+  .nav-level4 {
+    & > .nav-name {
+      font-size: 12px;
+      line-height: 28px;
+      padding-left: 7.4em;
     }
   }
 }
