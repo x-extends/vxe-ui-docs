@@ -35,7 +35,7 @@ const printEvent1 = () => {
 const printEvent2 = () => {
   VxeUI.print({
     customStyle: '@page {size: auto;margin: 0mm;}html,body{height:100%;}body{padding:40px;}',
-    content: `
+    html: `
     <div class="vxe-print-page-break">
       <h1>第一页</h1>
       <div>内容</div>

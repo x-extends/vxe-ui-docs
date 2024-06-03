@@ -39,21 +39,21 @@ const printEvent2 = () => {
   VxeUI.print({
     pageBreaks: [
       {
-        content: `
+        bodyHtml: `
         <div>第一页</div>
         <div>内容</div>
         <div>内容</div>
         `
       },
       {
-        content: `
+        bodyHtml: `
         <div>第二页</div>
         <div>内容</div>
         <div>内容</div>
         `
       },
       {
-        content: `
+        bodyHtml: `
         <div>第三页</div>
         <div>内容</div>
         <div>内容</div>
