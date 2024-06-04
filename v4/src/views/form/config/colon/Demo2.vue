@@ -16,6 +16,8 @@ interface FormDataVO {
 }
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
+  titleColon: true,
+  vertical: true,
   data: {
     name: 'test1',
     nickname: 'Testing',

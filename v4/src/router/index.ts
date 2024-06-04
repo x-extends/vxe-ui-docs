@@ -382,37 +382,107 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
-        path: 'form/basics',
+        path: '/form',
         children: [
           {
-            path: 'base',
-            name: 'ComponentFormBasicsBase',
-            component: () => import('@/views/form/basics/base/CodeExample.vue')
+            path: 'basics',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentFormBasicsBase',
+                component: () => import('@/views/form/basics/base/CodeExample.vue')
+              },
+              {
+                path: 'size',
+                name: 'ComponentFormBasicsSize',
+                component: () => import('@/views/form/basics/size/CodeExample.vue')
+              },
+              {
+                path: 'colon',
+                name: 'ComponentFormBasicsColon',
+                component: () => import('@/views/form/basics/colon/CodeExample.vue')
+              },
+              {
+                path: 'bold',
+                name: 'ComponentFormBasicsBold',
+                component: () => import('@/views/form/basics/bold/CodeExample.vue')
+              },
+              {
+                path: 'align',
+                name: 'ComponentFormBasicsAlign',
+                component: () => import('@/views/form/basics/align/CodeExample.vue')
+              },
+              {
+                path: 'tooltip',
+                name: 'ComponentFormBasicsTooltip',
+                component: () => import('@/views/form/basics/tooltip/CodeExample.vue')
+              },
+              {
+                path: 'width',
+                name: 'ComponentFormBasicsWidth',
+                component: () => import('@/views/form/basics/width/CodeExample.vue')
+              },
+              {
+                path: 'overflow',
+                name: 'ComponentFormBasicsOverflow',
+                component: () => import('@/views/form/basics/overflow/CodeExample.vue')
+              },
+              {
+                path: 'gather',
+                name: 'ComponentFormBasicsGather',
+                component: () => import('@/views/form/basics/gather/CodeExample.vue')
+              },
+              {
+                path: 'customLayout',
+                name: 'ComponentFormBasicsCustomLayout',
+                component: () => import('@/views/form/basics/customLayout/CodeExample.vue')
+              },
+              {
+                path: 'vertical',
+                name: 'ComponentFormBasicsVertical',
+                component: () => import('@/views/form/basics/vertical/CodeExample.vue')
+              },
+              {
+                path: 'valid',
+                name: 'ComponentFormBasicsValid',
+                component: () => import('@/views/form/basics/valid/CodeExample.vue')
+              }
+            ]
           },
           {
-            path: 'customLayout',
-            name: 'ComponentFormBasicsCustomLayout',
-            component: () => import('@/views/form/basics/customLayout/CodeExample.vue')
-          },
-          {
-            path: 'vertical',
-            name: 'ComponentFormBasicsVertical',
-            component: () => import('@/views/form/basics/vertical/CodeExample.vue')
-          },
-          {
-            path: 'valid',
-            name: 'ComponentFormBasicsValid',
-            component: () => import('@/views/form/basics/valid/CodeExample.vue')
-          }
-        ]
-      },
-      {
-        path: 'form/config',
-        children: [
-          {
-            path: 'base',
-            name: 'ComponentFormConfigBase',
-            component: () => import('@/views/form/config/base/CodeExample.vue')
+            path: 'config',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentFormConfigBase',
+                component: () => import('@/views/form/config/base/CodeExample.vue')
+              },
+              {
+                path: 'colon',
+                name: 'ComponentFormConfigColon',
+                component: () => import('@/views/form/config/colon/CodeExample.vue')
+              },
+              {
+                path: 'bold',
+                name: 'ComponentFormConfigBold',
+                component: () => import('@/views/form/config/bold/CodeExample.vue')
+              },
+              {
+                path: 'gather',
+                name: 'ComponentFormConfigGather',
+                component: () => import('@/views/form/config/gather/CodeExample.vue')
+              },
+              {
+                path: 'vertical',
+                name: 'ComponentFormConfigVertical',
+                component: () => import('@/views/form/config/vertical/CodeExample.vue')
+              },
+              {
+                path: 'valid',
+                name: 'ComponentFormConfigValid',
+                component: () => import('@/views/form/config/valid/CodeExample.vue')
+              }
+            ]
           }
         ]
       },

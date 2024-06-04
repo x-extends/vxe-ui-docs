@@ -2,11 +2,13 @@
   <div>
     <vxe-form
       ref="formRef"
+      title-colon
+      title-width="120"
+      title-align="right"
       :data="formData"
-      :rules="formRules"
       @submit="submitEvent"
       @reset="resetEvent">
-      <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
+      <vxe-form-item title="太长，超出自动换行太长，超出自动换行" field="name" span="24" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>
         </template>
@@ -33,7 +35,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeUI, VxeFormInstance, VxeFormPropTypes, VxeFormEvents } from 'vxe-pc-ui'
+import { VxeUI, VxeFormInstance, VxeFormEvents } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -49,27 +51,6 @@ const formData = ref<FormDataVO>({
   nickname: 'Testing',
   sex: '',
   age: ''
-})
-
-const formRules = ref<VxeFormPropTypes.Rules<FormDataVO>>({
-  name: [
-    { required: true, message: '请输入名称' },
-    { min: 3, max: 5, message: '长度在 3 到 5 个字符' }
-  ],
-  sex: [
-    { required: true, message: '请选择性别' }
-  ],
-  age: [
-    { required: true, message: '请输入年龄' },
-    {
-      validator ({ itemValue }) {
-        // 自定义校验
-        if (Number(itemValue) > 35 || Number(itemValue) < 18) {
-          return new Error('年龄在 18 ~ 35 之间')
-        }
-      }
-    }
-  ]
 })
 
 const changeEvent = (params: any) => {

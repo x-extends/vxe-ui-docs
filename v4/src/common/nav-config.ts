@@ -131,15 +131,28 @@ export const navConfigList: NavVO[] = [
         title: '基础表单',
         children: [
           { title: '基础功能', routerLink: { name: 'ComponentFormBasicsBase' } },
-          { title: '自定义布局', routerLink: { name: 'ComponentFormBasicsCustomLayout' } },
+          { title: '尺寸', routerLink: { name: 'ComponentFormBasicsSize' } },
           { title: '上下布局', routerLink: { name: 'ComponentFormBasicsVertical' } },
+          { title: '标题冒号', routerLink: { name: 'ComponentFormBasicsColon' } },
+          { title: '标题加粗', routerLink: { name: 'ComponentFormBasicsBold' } },
+          { title: '标题宽度', routerLink: { name: 'ComponentFormBasicsWidth' } },
+          { title: '对齐方式', routerLink: { name: 'ComponentFormBasicsAlign' } },
+          { title: '溢出隐藏', routerLink: { name: 'ComponentFormBasicsOverflow' } },
+          { title: '文字提示', routerLink: { name: 'ComponentFormBasicsTooltip' } },
+          { title: '分行/分列', routerLink: { name: 'ComponentFormBasicsGather' } },
+          { title: '自定义布局', routerLink: { name: 'ComponentFormBasicsCustomLayout' } },
           { title: '表单校验', routerLink: { name: 'ComponentFormBasicsValid' } }
         ]
       },
       {
         title: '配置式表单',
         children: [
-          { title: '基础功能', routerLink: { name: 'ComponentFormConfigBase' } }
+          { title: '基础功能', routerLink: { name: 'ComponentFormConfigBase' } },
+          { title: '上下布局', routerLink: { name: 'ComponentFormConfigVertical' } },
+          { title: '标题冒号', routerLink: { name: 'ComponentFormConfigColon' } },
+          { title: '标题加粗', routerLink: { name: 'ComponentFormConfigBold' } },
+          { title: '分行/分列', routerLink: { name: 'ComponentFormConfigGather' } },
+          { title: '表单校验', routerLink: { name: 'ComponentFormConfigValid' } }
         ]
       }
       // { title: '校验器（全局）' }
