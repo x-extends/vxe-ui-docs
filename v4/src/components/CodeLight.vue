@@ -259,7 +259,7 @@ const openDocs = () => {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .code-light {
   margin: 30px 0;
   border: 1px solid var(--vxe-ui-docs-layout-border-color);
@@ -313,6 +313,8 @@ const openDocs = () => {
 }
 
 .example-use-header {
+  line-height: 2em;
+  font-size: 1.4em;
   cursor: pointer;
   .example-use-icon,
   .example-use-title {
@@ -333,6 +335,11 @@ const openDocs = () => {
   }
 }
 .example-use-body {
-  padding-left: 64px;
+  padding: 20px 64px 0 64px;
+  text-align: center;
+  & > img {
+    max-width: 100%;
+    max-height: 300px;
+  }
 }
 </style>
