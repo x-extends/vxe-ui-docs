@@ -382,7 +382,7 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
-        path: '/form',
+        path: 'form',
         children: [
           {
             path: 'basics',
