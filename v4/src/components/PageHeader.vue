@@ -17,6 +17,20 @@
     </div>
     <div class="header-middle"></div>
     <div class="header-right">
+      <vxe-pulldown v-model="showSystemMenu">
+        <vxe-button class="system-menu-btn" status="primary" mode="text" @click="showSystemMenu = !showSystemMenu">
+          <span style="padding-right: 8px;">生态系统</span>
+          <vxe-icon name="arrow-down"></vxe-icon>
+        </vxe-button>
+
+        <template #dropdown>
+          <ul class="system-menu-wrapper">
+            <li v-for="(item, index) in systemMenuList" :key="index">
+              <vxe-link v-bind="item" target="_blank"></vxe-link>
+            </li>
+          </ul>
+        </template>
+      </vxe-pulldown>
       <vxe-switch
         class="link switch-theme"
         v-model="currTheme"
@@ -26,7 +40,7 @@
         close-value="dark"
         close-label="夜间">
       </vxe-switch>
-      <vxe-select v-model="currLang" class="switch-lang" size="mini" :options="langOptions"></vxe-select>
+      <vxe-radio-group v-model="currLang" class="switch-lang" type="button" size="mini" :options="langOptions"></vxe-radio-group>
       <vxe-select v-model="currVersion" class="switch-version" size="mini" :options="versionOptions"></vxe-select>
       <vxe-link class="free-donation" status="success" :router-link="{name: 'FreeDonation'}">支持我们</vxe-link>
     </div>
@@ -36,9 +50,19 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
 import { useAppStore } from '@/store/app'
+import { VxeLinkProps } from 'vxe-pc-ui'
+
 const siteBaseUrl = computed(() => appStore.siteBaseUrl)
 
 const appStore = useAppStore()
+
+const showSystemMenu = ref(false)
+const systemMenuList = ref<VxeLinkProps[]>([
+  { content: 'Vxe Print Web 打印控件', href: 'https://vxeui.com/#/component/print/base' },
+  { content: 'Vxe Table 专业表格', href: 'https://vxetable.cn' },
+  { content: 'Vxe Form 专业表单', href: 'https://vxeui.com/#/component/form/base' },
+  { content: 'Vxe Form Design 表单设计器', href: 'https://vxeui.com/#/component/form-design/base' }
+])
 
 const currTheme = computed({
   get () {
@@ -93,13 +117,14 @@ const currVersion = computed({
     flex-grow: 1;
   }
   .switch-lang {
-    width: 80px;
     margin-right: 20px;
   }
+  .system-menu-btn,
   .switch-theme,
   .switch-lang,
   .switch-version,
   .free-donation {
+    flex-shrink: 0;
     margin-right: 20px;
   }
 }
@@ -122,6 +147,18 @@ const currVersion = computed({
       display: inline-block;
       vertical-align: middle;
     }
+  }
+}
+.system-menu-wrapper {
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
+  width: 280px;
+  border: 1px solid var(--vxe-ui-docs-layout-border-color);
+  & > li {
+    line-height: 28px;
+    padding: 0 16px;
+    font-size: 14px;
   }
 }
 </style>
