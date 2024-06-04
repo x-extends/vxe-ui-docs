@@ -2,20 +2,22 @@
   <div>
     <CodeLight path="table/base/data/Demo1">
       <template #tip>
-        <vxe-tips status="primary">支持多种数据格式：默认标准结构、深层结构、二维数组</vxe-tips>
+        <vxe-tips status="primary" title="标准结构">使用对象数组形式</vxe-tips>
       </template>
     </CodeLight>
 
     <CodeLight path="table/base/data/Demo2">
       <template #tip>
-        <vxe-tips status="primary">深层结构，可用于带有复杂结构的场景<span class="red">（缺点深层级数据类型必须先定义，深层结构将影响性能，具体取决于数据量大小）</span></vxe-tips>
+        <vxe-tips status="primary" title="深层结构">可用于带有复杂结构的场景</vxe-tips>
+        <vxe-tips status="error">深层级数据类型必须先定义字段，层级越深越影响性能，具体取决于数据量大小</vxe-tips>
       </template>
     </CodeLight>
 
-    <!-- <CodeLight path="table/base/data/Demo3">
+    <CodeLight path="table/base/data/Demo3">
       <template #tip>
-        <div>二维数组结构，适用场景较少<span class="red">（缺点局限性比较大，需要手动指定 <ApiLink name="table" prop="row-config"/>.<ApiLink name="table" prop="keyField"/> 唯一主键）</span></div>
+        <vxe-tips status="primary" title="二维数组结构"></vxe-tips>
+        <vxe-tips status="error">不建议被使用，局限性很大，必须设置唯一主键，通过设置 <ApiLink name="table" prop="row-config"/>.<ApiLink name="table" prop="keyField"/> 使用</vxe-tips>
       </template>
-    </CodeLight> -->
+    </CodeLight>
   </div>
 </template>

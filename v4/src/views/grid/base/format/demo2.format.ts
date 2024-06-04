@@ -1,4 +1,4 @@
-import { VxeUI } from 'vxe-table'
+import { VxeUI } from 'vxe-pc-ui'
 import XEUtils from 'xe-utils'
 
 // 式化日期，默认 yyyy-MM-dd HH:mm:ss

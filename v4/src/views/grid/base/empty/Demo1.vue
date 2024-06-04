@@ -1,18 +1,12 @@
 <template>
   <div>
-    <vxe-table
-      empty-text="没有更多数据了！"
-      :data="tableData">
-      <vxe-column type="seq" width="60"></vxe-column>
-      <vxe-column field="name" title="Name"></vxe-column>
-      <vxe-column field="sex" title="Sex"></vxe-column>
-      <vxe-column field="age" title="Age"></vxe-column>
-    </vxe-table>
+    <vxe-grid v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { reactive } from 'vue'
+import { VxeGridProps } from 'vxe-pc-ui'
 
 interface RowVO {
   name: string
@@ -22,5 +16,15 @@ interface RowVO {
   address: string
 }
 
-const tableData = ref<RowVO[]>([])
+const gridOptions = reactive<VxeGridProps<RowVO>>({
+  emptyText: '没有更多数据了！',
+  columns: [
+    { type: 'seq', width: 60 },
+    { field: 'name', title: 'Name' },
+    { field: 'sex', title: 'Sex' },
+    { field: 'age', title: 'Age' },
+    { field: 'address', title: 'Address', showOverflow: true }
+  ],
+  data: []
+})
 </script>

@@ -21,7 +21,7 @@
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
-import { VxeColumnPropTypes } from 'vxe-table'
+import { VxeColumnPropTypes } from 'vxe-pc-ui'
 
 interface RowVO {
   id: number

@@ -15,7 +15,7 @@
           </pre-code>
           <pre-code class="javascript">
             // ...
-            import VxeUITable from 'vxe-table'
+            import VxeUITable from 'vxe-pc-ui'
             import 'vxe-table/lib/style.css'
             // ...
 

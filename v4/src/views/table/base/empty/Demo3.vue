@@ -40,5 +40,5 @@ loading.value = true
 setTimeout(() => {
   tableData.value = []
   loading.value = false
-}, 1000)
+}, 2000)
 </script>

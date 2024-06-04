@@ -57,7 +57,7 @@
                       // importStyle: true
                     }),
                     VxeResolver({
-                      libraryName: 'vxe-table'
+                      libraryName: 'vxe-pc-ui'
                       // importStyle: true
                     })
                   ]
@@ -148,7 +148,7 @@
               VxeColgroup,
               VxeGrid,
               VxeToolbar
-            } from 'vxe-table'
+            } from 'vxe-pc-ui'
 
             // 导入主题变量，也可以重写主题变量
             import 'vxe-table/styles/cssvar.scss'
