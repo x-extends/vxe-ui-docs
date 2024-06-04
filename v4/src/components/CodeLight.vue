@@ -10,6 +10,26 @@
       <slot name="use"></slot>
     </div>
 
+    <div v-if="$slots.use" class="example-use">
+      <h2 class="example-use-header" :class="{active: showUse}" @click="showUse = !showUse">
+        <vxe-icon class="example-use-icon" name="arrow-right"></vxe-icon>
+        <span class="example-use-title">安装&使用</span>
+      </h2>
+      <div v-show="showUse" class="example-use-body">
+        <slot name="use"></slot>
+      </div>
+    </div>
+
+    <div v-if="$slots.preview" class="example-preview">
+      <h2 class="example-use-header" :class="{active: showPreview}" @click="showPreview = !showPreview">
+        <vxe-icon class="example-use-icon" name="arrow-right"></vxe-icon>
+        <span class="example-use-title">操作&预览</span>
+      </h2>
+      <div v-show="showPreview" class="example-use-body">
+        <slot name="preview"></slot>
+      </div>
+    </div>
+
     <div v-if="path" class="example-demo">
       <DemoCode />
     </div>
@@ -74,6 +94,9 @@ const props = defineProps({
     defalt: () => []
   }
 })
+
+const showUse = ref(false)
+const showPreview = ref(true)
 
 const jsCodeText = ref('')
 const tsCodeText = ref('')
@@ -287,5 +310,29 @@ const openDocs = () => {
   a {
     font-size: 12px;
   }
+}
+
+.example-use-header {
+  cursor: pointer;
+  .example-use-icon,
+  .example-use-title {
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+  }
+  .example-use-icon {
+    transition: transform 0.2s ease-in-out;
+  }
+  .example-use-title {
+    padding-left: 10px;
+  }
+  &.active {
+    .example-use-icon {
+      transform: rotate(90deg);
+    }
+  }
+}
+.example-use-body {
+  padding-left: 64px;
 }
 </style>

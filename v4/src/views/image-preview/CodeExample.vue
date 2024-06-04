@@ -5,6 +5,10 @@
         <vxe-tips status="primary" title="图片预览"></vxe-tips>
       </template>
 
+      <template #preview>
+        <img :src="`${appStore.siteBaseUrl}resource/ui/image-preview.gif`">
+      </template>
+
       <template #describe>
         <pre>
           <pre-code>
@@ -26,3 +30,10 @@
     </CodeLight>
   </div>
 </template>
+
+<script lang="ts" setup>
+import { computed } from 'vue'
+import { useAppStore } from '@/store/app'
+
+const appStore = useAppStore()
+</script>
