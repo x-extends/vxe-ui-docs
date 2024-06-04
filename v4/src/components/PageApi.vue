@@ -1,12 +1,12 @@
 <template>
   <div class="api-view">
     <vxe-grid
-      ref="xGrid"
+      ref="gridRef"
       id="document_api"
       class="api-table"
       v-bind="gridOptions">
       <template #toolbar_buttons>
-        <vxe-input clearable class="search-input" v-model="filterName" type="search" :placeholder="`vxe-${apiName} ${$t('app.api.apiSearch')}`" @keyup="searchEvent" @clear="searchEvent"></vxe-input>
+        <vxe-input clearable class="search-input" v-model="searchName" type="search" :placeholder="`vxe-${apiName} ${$t('app.api.apiSearch')}`" @keyup="searchEvent" @clear="searchEvent"></vxe-input>
       </template>
 
       <template #default_version="{ row }">
@@ -32,10 +32,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, watch, nextTick, computed } from 'vue'
+import { ref, watch, nextTick, computed, reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import { useAppStore } from '@/store/app'
-import { VxeGridProps } from 'vxe-pc-ui'
+import { VxeGridProps, VxeGridInstance } from 'vxe-pc-ui'
 import i18n from '@/i18n'
 import XEUtils from 'xe-utils'
 
@@ -52,10 +52,14 @@ interface RowVO {
 
 const route = useRoute()
 const appStore = useAppStore()
-const filterName = ref('')
+
+const gridRef = ref<VxeGridInstance>()
+
+const searchName = ref('')
+const tableData = ref<any[]>([])
 
 const apiName = computed(() => {
-  return route.query.name as string
+  return route.params.name as string
 })
 
 const apiConfig = computed(() => {
@@ -63,7 +67,7 @@ const apiConfig = computed(() => {
 })
 
 const loadList = () => {
-  gridOptions.value.loading = true
+  gridOptions.loading = true
   return new Promise<void>(resolve => {
     setTimeout(() => {
       const list = XEUtils.clone(apiConfig.value, true) || []
@@ -75,14 +79,16 @@ const loadList = () => {
         }
         item.i18nValue = i18n.global.t(item.i18nKey)
       }, { children: 'list' })
-      gridOptions.value.data = list
-      gridOptions.value.loading = false
+      tableData.value = list
+      gridOptions.data = list
+      gridOptions.loading = false
+      handleSearch()
       resolve()
     }, 150)
   })
 }
 
-const gridOptions = ref<VxeGridProps<RowVO>>({
+const gridOptions = reactive<VxeGridProps<RowVO>>({
   autoResize: true,
   height: 'auto',
   loading: false,
@@ -147,47 +153,54 @@ const gridOptions = ref<VxeGridProps<RowVO>>({
   data: []
 })
 
+const handleValueHighlight = (str: string, filterRE: RegExp) => {
+  return `${str || ''}`.replace(filterRE, (match) => `<span class="keyword-lighten">${match}</span>`)
+}
+
 const handleSearch = () => {
-  // const filterName = XEUtils.toValueString(apiData.filterName).trim()
-  // if (filterName) {
-  //   const options = { children: 'list' }
-  //   if (/pro/i.test(filterName)) {
-  //     const rest = XEUtils.searchTree(apiData.tableData, item => item.version === 'extend-cell-area', options)
-  //     gridOptions.value.data = rest
-  //   } else {
-  //     const filterRE = new RegExp(`${filterName}|${XEUtils.camelCase(filterName)}|${XEUtils.kebabCase(filterName)}`, 'i')
-  //     const searchProps = ['name', 'desc', 'type', 'enum', 'defVal', 'version']
-  //     const rest = XEUtils.searchTree(apiData.tableData, item => searchProps.some(key => filterRE.test(item[key])), options)
-  //     XEUtils.eachTree(rest, item => {
-  //       searchProps.forEach(key => {
-  //         if (key !== 'version') {
-  //           item[key] = item[key].replace(filterRE, (match: string) => `<span class="keyword-lighten">${match}</span>`)
-  //         }
-  //       })
-  //     }, options)
-  //     gridOptions.value.data = rest
-  //   }
-  //   setTimeout(() => {
-  //     const $grid = xGrid.value
-  //     if ($grid) {
-  //       $grid.setAllTreeExpand(true)
-  //     }
-  //   }, 300)
-  // } else {
-  //   gridOptions.value.data = apiData.tableData.slice(0)
-  //   nextTick(() => {
-  //     const $grid = xGrid.value
-  //     if ($grid) {
-  //       $grid.setTreeExpand(apiData.defaultExpandRows, true)
-  //     }
-  //   })
-  // }
+  const filterName = XEUtils.toValueString(searchName.value).trim()
+  if (filterName) {
+    const options = { children: 'list' }
+    if (/pro/i.test(filterName)) {
+      const rest = XEUtils.searchTree(tableData.value, item => item.version === 'extend-cell-area', options)
+      gridOptions.data = rest
+    } else {
+      const filterRE = new RegExp(`${filterName}|${XEUtils.camelCase(filterName)}|${XEUtils.kebabCase(filterName)}`, 'i')
+      const rest = XEUtils.searchTree(tableData.value, item => {
+        return filterRE.test(item.name) || filterRE.test(item.i18nValue)
+      }, options)
+      XEUtils.eachTree(rest, item => {
+        item.name = handleValueHighlight(item.name, filterRE)
+        item.i18nValue = handleValueHighlight(item.i18nValue, filterRE)
+      }, options)
+      gridOptions.data = rest
+      setTimeout(() => {
+        const $grid = gridRef.value
+        if ($grid) {
+          $grid.setAllTreeExpand(true)
+        }
+      }, 300)
+    }
+  } else {
+    gridOptions.data = tableData.value.slice(0)
+    setTimeout(() => {
+      const $grid = gridRef.value
+      if ($grid) {
+        $grid.setTreeExpand(gridOptions.data, true)
+      }
+    }, 300)
+  }
 }
 
 // 调用频率间隔 500 毫秒
 const searchEvent = XEUtils.debounce(handleSearch, 500, { leading: false, trailing: true })
 
 watch(apiName, () => {
+  const $grid = gridRef.value
+  searchName.value = ''
+  if ($grid) {
+    $grid.clearAll()
+  }
   loadList()
 })
 
@@ -206,5 +219,9 @@ appStore.updateComponentApiJSON()
 .api-view {
   height: 100%;
   overflow: hidden;
+}
+::v-deep(.keyword-lighten) {
+  color: #000;
+  background-color: #FFFF00;
 }
 </style>
