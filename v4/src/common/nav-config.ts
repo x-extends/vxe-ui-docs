@@ -9,6 +9,7 @@ export interface NavVO {
 }
 
 const componentList = [
+  'alert',
   'anchor',
   'anchor-link',
   'breadcrumb',
@@ -24,12 +25,16 @@ const componentList = [
   'collapse-pane',
   'date-input',
   'drawer',
+  'flow-design',
+  'flow-view',
   'form',
   'form-design',
   'form-gather',
   'form-item',
   'form-view',
   'icon',
+  'image',
+  'image-preview',
   'input',
   'layout-aside',
   'layout-body',
@@ -48,6 +53,7 @@ const componentList = [
   'option',
   'pager',
   'password-input',
+  'print-page-break',
   'print',
   'pulldown',
   'radio',
@@ -58,12 +64,20 @@ const componentList = [
   'switch',
   'tab-pane',
   'tabs',
+  'tag',
+  'text',
   'textarea',
   'tips',
   'tooltip',
   'tree',
   'tree-select',
-  'upload'
+  'upload',
+
+  'table',
+  'column',
+  'colgroup',
+  'toolbar',
+  'grid'
 ]
 
 export const navConfigList: NavVO[] = [
