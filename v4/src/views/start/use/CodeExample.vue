@@ -3,7 +3,7 @@
     <CodeLight>
       <template #tip>
         <VxeTips status="primary" title="按需加载">
-          当只用得到部分组件时，只需两步，按需加载可以减掉未被使用的组件。
+          当只用得到部分组件时，只需两步，通过按需加载插件可以去掉未被使用的组件。
         </VxeTips>
         <VxeTips status="success" title="步骤 1. 插件配置"></VxeTips>
       </template>
