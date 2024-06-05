@@ -10,7 +10,7 @@
       <template #use>
         <pre>
           <pre-code class="shell">
-            npm install vite-plugin-lazy-import
+            npm install vite-plugin-lazy-import -D
           </pre-code>
           <pre-code class="javascript">
             // ...
