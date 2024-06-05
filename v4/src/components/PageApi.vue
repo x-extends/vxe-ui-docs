@@ -84,7 +84,7 @@ const loadList = () => {
       gridOptions.loading = false
       handleSearch()
       resolve()
-    }, 150)
+    }, 100)
   })
 }
 
@@ -179,7 +179,7 @@ const handleSearch = () => {
         if ($grid) {
           $grid.setAllTreeExpand(true)
         }
-      }, 300)
+      }, 100)
     }
   } else {
     gridOptions.data = tableData.value.slice(0)
@@ -188,7 +188,7 @@ const handleSearch = () => {
       if ($grid) {
         $grid.setTreeExpand(gridOptions.data, true)
       }
-    }, 300)
+    }, 100)
   }
 }
 
