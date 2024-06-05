@@ -10,22 +10,12 @@
       <slot name="use"></slot>
     </div>
 
-    <div v-if="$slots.use" class="example-use">
-      <h2 class="example-use-header" :class="{active: showUse}" @click="showUse = !showUse">
-        <vxe-icon class="example-use-icon" name="arrow-right"></vxe-icon>
-        <span class="example-use-title">安装&使用</span>
-      </h2>
-      <div v-show="showUse" class="example-use-body">
-        <slot name="use"></slot>
-      </div>
-    </div>
-
     <div v-if="$slots.preview" class="example-preview">
-      <h2 class="example-use-header" :class="{active: showPreview}" @click="showPreview = !showPreview">
-        <vxe-icon class="example-use-icon" name="arrow-right"></vxe-icon>
-        <span class="example-use-title">操作&预览</span>
+      <h2 class="example-preview-header" :class="{active: showPreview}" @click="showPreview = !showPreview">
+        <vxe-icon class="example-preview-icon" name="arrow-right"></vxe-icon>
+        <span class="example-preview-title">操作&预览</span>
       </h2>
-      <div v-show="showPreview" class="example-use-body">
+      <div v-show="showPreview" class="example-preview-body">
         <slot name="preview"></slot>
       </div>
     </div>
@@ -335,6 +325,36 @@ const openDocs = () => {
   }
 }
 .example-use-body {
+  padding: 20px 64px 0 64px;
+  & > img {
+    max-width: 100%;
+    max-height: 300px;
+  }
+}
+
+.example-preview-header {
+  line-height: 2em;
+  font-size: 1.4em;
+  cursor: pointer;
+  .example-preview-icon,
+  .example-preview-title {
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+  }
+  .example-preview-icon {
+    transition: transform 0.2s ease-in-out;
+  }
+  .example-preview-title {
+    padding-left: 10px;
+  }
+  &.active {
+    .example-preview-icon {
+      transform: rotate(90deg);
+    }
+  }
+}
+.example-preview-body {
   padding: 20px 64px 0 64px;
   text-align: center;
   & > img {
