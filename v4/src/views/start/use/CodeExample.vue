@@ -3,25 +3,29 @@
     <CodeLight>
       <template #tip>
         <VxeTips status="primary" title="Vite 方式">
-          如果您使用了 vite，借助插件 <vxe-link href="https://www.npmjs.com/package/unplugin-vue-components" target="_blank">unplugin-vue-components</vxe-link> 可以实现按需加载模块。
+          如果您使用了 vite，借助插件 <vxe-link href="https://www.npmjs.com/package/vite-plugin-lazy-import" target="_blank">vite-plugin-lazy-import</vxe-link> 可以实现按需加载模块。
         </VxeTips>
       </template>
 
       <template #use>
         <pre>
+          <pre-code class="shell">
+            npm install vite-plugin-lazy-import
+          </pre-code>
           <pre-code class="javascript">
             // ...
-            import Components from 'unplugin-vue-components/vite'
-            import { VxeResolver } from '@vxecli/import-unplugin-vue-components'
+            import { lazyImport, VxeResolver } from 'vite-plugin-lazy-import'
 
             export default defineConfig({
               plugins: [
                 // ...,
-                Components({
+                lazyImport({
                   resolvers: [
                     VxeResolver({
+                      libraryName: 'vxe-table'
+                    }),
+                    VxeResolver({
                       libraryName: 'vxe-pc-ui'
-                      // importStyle: true
                     })
                   ]
                 })
@@ -33,7 +37,7 @@
       </template>
     </CodeLight>
 
-    <CodeLight>
+    <!-- <CodeLight>
       <template #tip>
         <VxeTips status="primary" title="Webpack 方式">
           如果您使用了 webpack，借助插件 <vxe-link  href="https://www.npmjs.com/package/unplugin-vue-components" target="_blank">unplugin-vue-components</vxe-link> 可以实现按需加载模块。
@@ -68,7 +72,7 @@
           </pre-code>
         </pre>
       </template>
-    </CodeLight>
+    </CodeLight> -->
 
     <CodeLight>
       <template #tip>
