@@ -42,10 +42,12 @@
 <script lang="ts" setup>
 import { ref, watch, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
+import { useAppStore } from '@/store/app'
 import { navConfigList, NavVO } from '@/common/nav-config'
 import XEUtils from 'xe-utils'
 
 const route = useRoute()
+const appStore = useAppStore()
 
 const asideElemRef = ref<HTMLElement>()
 const searchName = ref('')
@@ -56,7 +58,17 @@ const createNavList = () => {
   navConfigList.forEach(item => {
     item.isExpand = item.isExpand || false
   })
-  navList.value = navConfigList
+  const apiItem = navConfigList.find(item => item.title === 'API')
+  if (apiItem) {
+    apiItem.children = XEUtils.keys(appStore.compApiMaps).map(compName => {
+      const [a, name] = compName.split('-')
+      return {
+        title: `${name}`,
+        routerLink: { name: 'DocsApi', params: { name } }
+      }
+    })
+  }
+  navList.value = XEUtils.clone(navConfigList, true)
 }
 
 const toggleExpand = (item1: NavVO) => {
@@ -88,8 +100,14 @@ watch(route, () => {
   updateExpand()
 })
 
+watch(() => appStore.compApiMaps, () => {
+  createNavList()
+})
+
 createNavList()
 updateExpand()
+
+appStore.updateComponentApiJSON()
 </script>
 
 <style lang="scss" scoped>

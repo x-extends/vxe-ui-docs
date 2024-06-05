@@ -8,78 +8,6 @@ export interface NavVO {
   children?: NavVO[]
 }
 
-const componentList = [
-  'alert',
-  'anchor',
-  'anchor-link',
-  'breadcrumb',
-  'breadcrumb-item',
-  'button',
-  'button-group',
-  'calendar',
-  'card',
-  'checkbox',
-  'checkbox-group',
-  'col',
-  'collapse',
-  'collapse-pane',
-  'date-input',
-  'drawer',
-  'flow-design',
-  'flow-view',
-  'form',
-  'form-design',
-  'form-gather',
-  'form-item',
-  'form-view',
-  'icon',
-  'image',
-  'image-preview',
-  'input',
-  'layout-aside',
-  'layout-body',
-  'layout-container',
-  'layout-footer',
-  'layout-header',
-  'link',
-  'list-design',
-  'list-view',
-  'list',
-  'loading',
-  'menu',
-  'modal',
-  'number-input',
-  'optgroup',
-  'option',
-  'pager',
-  'password-input',
-  'print-page-break',
-  'print',
-  'pulldown',
-  'radio',
-  'radio-button',
-  'radio-group',
-  'row',
-  'select',
-  'switch',
-  'tab-pane',
-  'tabs',
-  'tag',
-  'text',
-  'textarea',
-  'tips',
-  'tooltip',
-  'tree',
-  'tree-select',
-  'upload',
-
-  'table',
-  'column',
-  'colgroup',
-  'toolbar',
-  'grid'
-]
-
 export const navConfigList: NavVO[] = [
   {
     title: '开发指南',
@@ -424,11 +352,6 @@ export const navConfigList: NavVO[] = [
   {
     title: 'API',
     isExpand: true,
-    children: componentList.map(name => {
-      return {
-        title: `${name}`,
-        routerLink: { name: 'DocsApi', params: { name } }
-      }
-    })
+    children: []
   }
 ]

@@ -2,7 +2,6 @@
   <div class="api-view">
     <vxe-grid
       ref="gridRef"
-      id="document_api"
       class="api-table"
       v-bind="gridOptions">
       <template #toolbar_buttons>
@@ -89,6 +88,7 @@ const loadList = () => {
 }
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
+  id: 'document_api',
   autoResize: true,
   height: 'auto',
   loading: false,
@@ -106,7 +106,6 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   },
   customConfig: {
     storage: true,
-    mode: 'popup',
     checkMethod ({ column }) {
       if (['name', 'desc'].includes(column.field)) {
         return false
@@ -211,8 +210,6 @@ watch(() => appStore.compApiMaps, () => {
 nextTick(() => {
   loadList()
 })
-
-appStore.updateComponentApiJSON()
 </script>
 
 <style lang="scss" scoped>
