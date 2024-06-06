@@ -339,7 +339,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '可视化组件',
+    title: '可视化',
     children: [
       {
         title: 'FormDesign 表单设计器',

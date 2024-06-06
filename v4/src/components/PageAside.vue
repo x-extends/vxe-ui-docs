@@ -16,7 +16,13 @@
                 children-field="searchResult"
                 trigger="row">
                 <template #title="{ row }">
-                  <span v-html="row.title"></span>
+                  <vxe-link v-if="row.routerLink" :class="[getApiClass(row)]" :router-link="row.routerLink" @click="searchRowClickEvent">
+                    <span v-html="row.title"></span>
+                  </vxe-link>
+                  <vxe-link v-else-if="row.linkUrl" :href="row.linkUrl" target="_blank">
+                    <span v-html="row.title"></span>
+                  </vxe-link>
+                  <span v-else v-html="row.title"></span>
                 </template>
               </vxe-tree>
             </div>
@@ -167,6 +173,10 @@ const changeSearchEvent = () => {
   searchLoading.value = true
   showSearchList.value = true
   searchEvent()
+}
+
+const searchRowClickEvent = () => {
+  showSearchList.value = false
 }
 
 const expandAllApiTree = () => {
