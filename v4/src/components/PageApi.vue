@@ -217,8 +217,7 @@ nextTick(() => {
   height: 100%;
   overflow: hidden;
 }
-::v-deep(.keyword-lighten) {
-  color: #000;
-  background-color: #FFFF00;
+.search-input {
+  width: 300px;
 }
 </style>

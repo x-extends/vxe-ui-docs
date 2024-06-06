@@ -1,10 +1,16 @@
 export interface NavVO {
   title: string
+  isAPI?: boolean
   isExpand?: boolean
   isNew?: boolean
   isUnpublished?: boolean
-  routerLink?: any
+  routerLink?: {
+    name: string
+    params?: Record<string, string | number>
+    query?: Record<string, string | number>
+  }
   linkUrl?: string
+  keywords?: string[]
   children?: NavVO[]
 }
 
@@ -32,7 +38,13 @@ export const navConfigList: NavVO[] = [
   {
     title: '基础组件',
     children: [
-      { title: 'Icon 图标', routerLink: { name: 'ComponentIcon' } },
+      {
+        title: 'Icon 图标',
+        children: [
+          { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon' } } },
+          { title: '图标列表', routerLink: { name: 'ComponentIcon' } }
+        ]
+      },
       { title: 'Layout 布局', routerLink: { name: 'ComponentLayout' } },
       { title: 'Row 栅格', routerLink: { name: 'ComponentRow' } },
       { title: 'Text 文本', routerLink: { name: 'ComponentText' } },
@@ -54,7 +66,13 @@ export const navConfigList: NavVO[] = [
     title: '展示组件',
     children: [
       { title: 'Image 图片', routerLink: { name: 'ComponentImage' } },
-      { title: 'ImagePreview 图片预览', routerLink: { name: 'ComponentImagePreview' } },
+      {
+        title: 'ImagePreview 图片预览',
+        children: [
+          { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image-preview' } } },
+          { title: '打开预览', routerLink: { name: 'ComponentImagePreview' } }
+        ]
+      },
       { title: 'Tabs 页签', routerLink: { name: 'ComponentTabs' } },
       // { title: 'Progress 进度条' },
       // { title: 'Card 卡片' },
@@ -67,8 +85,9 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '表单组件',
+    title: '表单',
     children: [
+      { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form' } } },
       {
         title: '基础表单',
         children: [
@@ -101,9 +120,70 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '表格组件',
+    title: '数据组件',
+    children: [
+      { title: 'Switch 开关', routerLink: { name: 'ComponentSwitch' } },
+      { title: 'Radio 单选框', routerLink: { name: 'ComponentRadio' } },
+      { title: 'Checkbox 复选框', routerLink: { name: 'ComponentCheckbox' } },
+      {
+        title: 'Input 输入框',
+        children: [
+          { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'input' } } },
+          { title: '文本类型', routerLink: { name: 'ComponentInputText' } },
+          { title: '搜索类型', routerLink: { name: 'ComponentInputSearch' } },
+          { title: '密码类型', routerLink: { name: 'ComponentInputPassword' } },
+          { title: '时间类型', routerLink: { name: 'ComponentInputTime' } },
+          { title: '日期类型', routerLink: { name: 'ComponentInputDate' } },
+          { title: '日期带时间类型', routerLink: { name: 'ComponentInputDatetime' } },
+          { title: '周类型', routerLink: { name: 'ComponentInputWeek' } },
+          { title: '月度类型', routerLink: { name: 'ComponentInputMonth' } },
+          { title: '季度类型', routerLink: { name: 'ComponentInputQuarter' } },
+          { title: '年度类型', routerLink: { name: 'ComponentInputYear' } },
+          { title: '数值类型', routerLink: { name: 'ComponentInputNumber' } },
+          { title: '整数类型', routerLink: { name: 'ComponentInputInteger' } },
+          { title: '小数类型', routerLink: { name: 'ComponentInputFloat' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentInputTemplate' } }
+        ]
+      },
+      // { title: 'TextInput 单行文本输入' },
+      { title: 'Textarea 多行文本输入', routerLink: { name: 'ComponentTextarea' } },
+      { title: 'NumberInput 数值输入', routerLink: { name: 'ComponentNumberInput' } },
+      { title: 'PasswordInput 密码输入', routerLink: { name: 'ComponentPasswordInput' } },
+      // { title: 'DatePicker 日期选择器' },
+      // { title: 'WeekPicker 周选择器' },
+      // { title: 'MonthPicker 月选择器' },
+      // { title: 'QuarterPicker 季度选择' },
+      // { title: 'YearPicker 年选择器' },
+      // { title: 'TimePicker 时间选择器' },
+      // { title: 'DateTimePicker日期带时间选择器' },
+      { title: 'Select 下拉框', routerLink: { name: 'ComponentSelect' } },
+      {
+        title: 'Tree 树形组件',
+        children: [
+          { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tree' } } },
+          { title: '基础树', routerLink: { name: 'ComponentTreeBase' } },
+          { title: '高亮行', routerLink: { name: 'ComponentTreeCurrent' } },
+          { title: '单选框', routerLink: { name: 'ComponentTreeRadio' } },
+          { title: '复选框', routerLink: { name: 'ComponentTreeCheckbox' } }
+        ]
+      },
+      // { title: 'TreeSelect 树形下拉框' },
+      {
+        title: 'Upload 上传',
+        children: [
+          { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'upload' } } },
+          { title: '文件上传', routerLink: { name: 'ComponentUploadFile' } },
+          { title: '图片上传', routerLink: { name: 'ComponentUploadImage' } }
+        ]
+      }
+      // { title: 'Transfer 穿梭框' }
+    ]
+  },
+  {
+    title: '表格',
     children: [
       { title: '点击查看完整文档', linkUrl: 'https://vxetable.cn/v4.7/' },
+      { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'table' } } },
       {
         title: '静态表格',
         children: [
@@ -201,63 +281,6 @@ export const navConfigList: NavVO[] = [
       // { title: '校验器（全局）' },
       // { title: '指令注册（全局）' },
       // { title: '事件拦截（高级）' }
-    ]
-  },
-  {
-    title: '数据组件',
-    children: [
-      { title: 'Switch 开关', routerLink: { name: 'ComponentSwitch' } },
-      { title: 'Radio 单选框', routerLink: { name: 'ComponentRadio' } },
-      { title: 'Checkbox 复选框', routerLink: { name: 'ComponentCheckbox' } },
-      {
-        title: 'Input 输入框',
-        children: [
-          { title: '文本类型', routerLink: { name: 'ComponentInputText' } },
-          { title: '搜索类型', routerLink: { name: 'ComponentInputSearch' } },
-          { title: '密码类型', routerLink: { name: 'ComponentInputPassword' } },
-          { title: '时间类型', routerLink: { name: 'ComponentInputTime' } },
-          { title: '日期类型', routerLink: { name: 'ComponentInputDate' } },
-          { title: '日期带时间类型', routerLink: { name: 'ComponentInputDatetime' } },
-          { title: '周类型', routerLink: { name: 'ComponentInputWeek' } },
-          { title: '月度类型', routerLink: { name: 'ComponentInputMonth' } },
-          { title: '季度类型', routerLink: { name: 'ComponentInputQuarter' } },
-          { title: '年度类型', routerLink: { name: 'ComponentInputYear' } },
-          { title: '数值类型', routerLink: { name: 'ComponentInputNumber' } },
-          { title: '整数类型', routerLink: { name: 'ComponentInputInteger' } },
-          { title: '小数类型', routerLink: { name: 'ComponentInputFloat' } },
-          { title: '自定义插槽模板', routerLink: { name: 'ComponentInputTemplate' } }
-        ]
-      },
-      // { title: 'TextInput 单行文本输入' },
-      { title: 'Textarea 多行文本输入', routerLink: { name: 'ComponentTextarea' } },
-      { title: 'NumberInput 数值输入', routerLink: { name: 'ComponentNumberInput' } },
-      { title: 'PasswordInput 密码输入', routerLink: { name: 'ComponentPasswordInput' } },
-      // { title: 'DatePicker 日期选择器' },
-      // { title: 'WeekPicker 周选择器' },
-      // { title: 'MonthPicker 月选择器' },
-      // { title: 'QuarterPicker 季度选择' },
-      // { title: 'YearPicker 年选择器' },
-      // { title: 'TimePicker 时间选择器' },
-      // { title: 'DateTimePicker日期带时间选择器' },
-      { title: 'Select 下拉框', routerLink: { name: 'ComponentSelect' } },
-      {
-        title: 'Tree 树形组件',
-        children: [
-          { title: '基础树', routerLink: { name: 'ComponentTreeBase' } },
-          { title: '高亮行', routerLink: { name: 'ComponentTreeCurrent' } },
-          { title: '单选框', routerLink: { name: 'ComponentTreeRadio' } },
-          { title: '复选框', routerLink: { name: 'ComponentTreeCheckbox' } }
-        ]
-      },
-      // { title: 'TreeSelect 树形下拉框' },
-      {
-        title: 'Upload 上传',
-        children: [
-          { title: '文件上传', routerLink: { name: 'ComponentUploadFile' } },
-          { title: '图片上传', routerLink: { name: 'ComponentUploadImage' } }
-        ]
-      }
-      // { title: 'Transfer 穿梭框' }
     ]
   },
   {
