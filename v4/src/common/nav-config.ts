@@ -45,8 +45,6 @@ export const navConfigList: NavVO[] = [
           { title: '图标列表', routerLink: { name: 'ComponentIcon' } }
         ]
       },
-      { title: 'Layout 布局', routerLink: { name: 'ComponentLayout' } },
-      { title: 'Row 栅格', routerLink: { name: 'ComponentRow' } },
       { title: 'Text 文本', routerLink: { name: 'ComponentText' } },
       { title: 'Link 链接', routerLink: { name: 'ComponentLink' } },
       { title: 'Tag 标签', routerLink: { name: 'ComponentTag' } },
@@ -63,8 +61,24 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '展示组件',
+    title: '容器组件',
     children: [
+      { title: 'Layout 页面布局', routerLink: { name: 'ComponentLayout' } },
+      { title: 'Row 行与列', routerLink: { name: 'ComponentRow' } },
+      // { title: 'Progress 进度条' },
+      {
+        title: 'Card 卡片',
+        children: [
+          { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'card' } } },
+          { title: '基础', routerLink: { name: 'ComponentCardBase' } },
+          { title: '宽度', routerLink: { name: 'ComponentCardWidth' } },
+          { title: '高度', routerLink: { name: 'ComponentCardHeight' } },
+          { title: '显示/隐藏边框', routerLink: { name: 'ComponentCardBorder' } },
+          { title: '显示/隐藏边距', routerLink: { name: 'ComponentCardPadding' } },
+          { title: '边框阴影', routerLink: { name: 'ComponentCardShadow' } },
+          { title: '自定义模板', routerLink: { name: 'ComponentCardTemplate' } }
+        ]
+      },
       { title: 'Image 图片', routerLink: { name: 'ComponentImage' } },
       {
         title: 'ImagePreview 图片预览',
@@ -74,11 +88,8 @@ export const navConfigList: NavVO[] = [
         ]
       },
       { title: 'Tabs 页签', routerLink: { name: 'ComponentTabs' } },
-      // { title: 'Progress 进度条' },
-      // { title: 'Card 卡片' },
       { title: 'Pulldown 下拉容器', routerLink: { name: 'ComponentPulldown' } },
       // { title: 'Carousel 走马灯' },
-      // { title: 'Image 图片' },
       // { title: 'Calendar 日历' },
       // { title: 'Collapse 折叠面板' },
       { title: 'List 虚拟列表', routerLink: { name: 'ComponentList' } }

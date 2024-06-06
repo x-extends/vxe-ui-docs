@@ -323,7 +323,7 @@ appStore.updateComponentApiJSON()
 .nav-search-wrapper {
   max-height: 70vh;
   width: 600px;
-  padding: 16px;
+  padding: 32px;
   overflow: auto;
   border-radius: 4px;
   font-size: 18px;

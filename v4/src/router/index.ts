@@ -322,6 +322,46 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/alert/CodeExample.vue')
       },
       {
+        path: 'card',
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentCardBase',
+            component: () => import('@/views/card/base/CodeExample.vue')
+          },
+          {
+            path: 'width',
+            name: 'ComponentCardWidth',
+            component: () => import('@/views/card/width/CodeExample.vue')
+          },
+          {
+            path: 'height',
+            name: 'ComponentCardHeight',
+            component: () => import('@/views/card/height/CodeExample.vue')
+          },
+          {
+            path: 'border',
+            name: 'ComponentCardBorder',
+            component: () => import('@/views/card/border/CodeExample.vue')
+          },
+          {
+            path: 'padding',
+            name: 'ComponentCardPadding',
+            component: () => import('@/views/card/padding/CodeExample.vue')
+          },
+          {
+            path: 'shadow',
+            name: 'ComponentCardShadow',
+            component: () => import('@/views/card/shadow/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentCardTemplate',
+            component: () => import('@/views/card/template/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'print',
         children: [
           {
