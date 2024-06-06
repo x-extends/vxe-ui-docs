@@ -1,6 +1,8 @@
 export interface NavVO {
   title: string
-  isAPI?: boolean
+  name?: string
+  isAllAPI?: boolean
+  isSelfAPI?: boolean
   isExpand?: boolean
   isNew?: boolean
   isUnpublished?: boolean
@@ -41,7 +43,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Icon 图标',
         children: [
-          { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon' } } },
           { title: '图标列表', routerLink: { name: 'ComponentIcon' } }
         ]
       },
@@ -69,7 +71,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Card 卡片',
         children: [
-          { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'card' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'card' } } },
           { title: '基础', routerLink: { name: 'ComponentCardBase' } },
           { title: '宽度', routerLink: { name: 'ComponentCardWidth' } },
           { title: '高度', routerLink: { name: 'ComponentCardHeight' } },
@@ -83,7 +85,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'ImagePreview 图片预览',
         children: [
-          { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image-preview' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image-preview' } } },
           { title: '打开预览', routerLink: { name: 'ComponentImagePreview' } }
         ]
       },
@@ -98,7 +100,7 @@ export const navConfigList: NavVO[] = [
   {
     title: '表单',
     children: [
-      { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form' } } },
+      { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form' } } },
       {
         title: '基础表单',
         children: [
@@ -139,7 +141,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Input 输入框',
         children: [
-          { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'input' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'input' } } },
           { title: '文本类型', routerLink: { name: 'ComponentInputText' } },
           { title: '搜索类型', routerLink: { name: 'ComponentInputSearch' } },
           { title: '密码类型', routerLink: { name: 'ComponentInputPassword' } },
@@ -171,7 +173,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Tree 树形组件',
         children: [
-          { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tree' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tree' } } },
           { title: '基础树', routerLink: { name: 'ComponentTreeBase' } },
           { title: '高亮行', routerLink: { name: 'ComponentTreeCurrent' } },
           { title: '单选框', routerLink: { name: 'ComponentTreeRadio' } },
@@ -182,7 +184,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Upload 上传',
         children: [
-          { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'upload' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'upload' } } },
           { title: '文件上传', routerLink: { name: 'ComponentUploadFile' } },
           { title: '图片上传', routerLink: { name: 'ComponentUploadImage' } }
         ]
@@ -194,7 +196,7 @@ export const navConfigList: NavVO[] = [
     title: '表格',
     children: [
       { title: '点击查看完整文档', linkUrl: 'https://vxetable.cn/v4.7/' },
-      { title: 'API', isAPI: true, routerLink: { name: 'DocsApi', params: { name: 'table' } } },
+      { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'table' } } },
       {
         title: '静态表格',
         children: [

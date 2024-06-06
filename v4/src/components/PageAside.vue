@@ -40,21 +40,21 @@
       <div v-if="item1.children && item1.children.length" class="nav-subs">
         <div class="nav-item nav-level2" v-for="(item2, index2) in item1.children" :key="index2">
           <div class="nav-name" :title="item2.title">
-            <vxe-link v-if="item2.routerLink" :class="['nav-item-link', item2.routerLink.name]" :router-link="item2.routerLink">{{ item2.title }}</vxe-link>
+            <vxe-link v-if="item2.routerLink" :class="['nav-item-link', getApiClass(item2)]" :router-link="item2.routerLink">{{ item2.title }}</vxe-link>
             <vxe-link v-else-if="item2.linkUrl" class="nav-item-link" :href="item2.linkUrl" target="_blank">{{ item2.title }}</vxe-link>
             <span v-else class="nav-item-text">∞ {{ item2.title }}</span>
           </div>
           <div v-if="!['API'].includes(item1.title) && item2.children && item2.children.length" class="nav-subs">
             <div class="nav-item nav-level3" v-for="(item3, index3) in item2.children" :key="index3">
               <div class="nav-name" :title="item3.title">
-                <vxe-link v-if="item3.routerLink" :class="['nav-item-link', item3.routerLink.name]" :router-link="item3.routerLink">{{ item3.title }}</vxe-link>
+                <vxe-link v-if="item3.routerLink" :class="['nav-item-link', getApiClass(item3)]" :router-link="item3.routerLink">{{ item3.title }}</vxe-link>
                 <vxe-link v-else-if="item3.linkUrl" class="nav-item-link" :href="item3.linkUrl" target="_blank">{{ item3.title }}</vxe-link>
                 <span v-else class="nav-item-text">∞ {{ item3.title }}</span>
               </div>
               <div v-if="item3.children && item3.children.length" class="nav-subs">
                 <div class="nav-item nav-level4" v-for="(item4, index3) in item3.children" :key="index3">
                   <div class="nav-name" :title="item4.title">
-                    <vxe-link v-if="item4.routerLink" :class="['nav-item-link', item4.routerLink.name]" :router-link="item4.routerLink">{{ item4.title }}</vxe-link>
+                    <vxe-link v-if="item4.routerLink" :class="['nav-item-link', getApiClass(item4)]" :router-link="item4.routerLink">{{ item4.title }}</vxe-link>
                     <vxe-link v-else-if="item4.linkUrl" class="nav-item-link" :href="item4.linkUrl" target="_blank">{{ item4.title }}</vxe-link>
                     <span v-else class="nav-item-text">{{ item4.title }}</span>
                   </div>
@@ -89,9 +89,10 @@ const showSearchList = ref(false)
 const searchLoading = ref(false)
 const searchList = ref<NavVO[]>([])
 
-const handleNavApiParams = (item) => {
-  if (item.isAPI) {
+const handleNavApiParams = (item: NavVO) => {
+  if (item.isSelfAPI) {
     if (item.routerLink && item.routerLink.params) {
+      item.name = `${item.routerLink.params.name}`
       item.routerLink.query = Object.assign({}, item.routerLink.query, { apiKey: item.routerLink.params.name })
     }
   }
@@ -114,6 +115,8 @@ const createNavList = () => {
       const name = compName.split('-').slice(1).join('-')
       apiList.push({
         title: `${compName}`,
+        name: name,
+        isAllAPI: true,
         routerLink: { name: 'DocsApi', params: { name } },
         children: XEUtils.mapTree(list, obj => {
           obj.title = obj.name
@@ -177,11 +180,24 @@ const toggleExpand = (item1: NavVO) => {
   item1.isExpand = !item1.isExpand
 }
 
+const getApiClass = (item: NavVO) => {
+  if (!item.routerLink) {
+    return ''
+  }
+  if (item.isAllAPI) {
+    return `${item.routerLink.name}-all-${item.name}`
+  }
+  if (item.isSelfAPI) {
+    return `${item.routerLink.name}-self-${item.name}`
+  }
+  return `${item.routerLink.name}`
+}
+
 const scrollToNav = (item: NavVO) => {
   nextTick(() => {
     const asideElem = asideElemRef.value
     if (asideElem && item.routerLink) {
-      const linkEl = asideElem.querySelector(`.nav-item-link.${item.routerLink.name}`)
+      const linkEl = asideElem.querySelector(`.nav-item-link.${getApiClass(item)}`)
       if (linkEl) {
         (linkEl as any).scrollIntoViewIfNeeded()
       }
@@ -192,12 +208,19 @@ const scrollToNav = (item: NavVO) => {
 const updateExpand = () => {
   const routeName = route.name
   const apiKey = route.query.apiKey
+  const apiName = route.params.name
   const rest = XEUtils.findTree(navList.value, item => {
     const { routerLink } = item
     if (!routerLink) {
       return false
     }
-    if (apiKey ? (routerLink.params && routerLink.params.name === apiKey) : routerLink.name === routeName) {
+    if (routerLink.name === routeName) {
+      if (item.isSelfAPI) {
+        return routerLink.params && routerLink.params.name === apiKey
+      }
+      if (item.isAllAPI) {
+        return routerLink.params && routerLink.params.name === apiName
+      }
       return true
     }
     return false
