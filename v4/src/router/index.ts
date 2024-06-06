@@ -508,6 +508,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/form/config/bold/CodeExample.vue')
               },
               {
+                path: 'tooltip',
+                name: 'ComponentFormConfigTooltip',
+                component: () => import('@/views/form/config/tooltip/CodeExample.vue')
+              },
+              {
                 path: 'gather',
                 name: 'ComponentFormConfigGather',
                 component: () => import('@/views/form/config/gather/CodeExample.vue')

@@ -125,6 +125,7 @@ export const navConfigList: NavVO[] = [
           { title: '上下布局', routerLink: { name: 'ComponentFormConfigVertical' } },
           { title: '标题冒号', routerLink: { name: 'ComponentFormConfigColon' } },
           { title: '标题加粗', routerLink: { name: 'ComponentFormConfigBold' } },
+          { title: '文字提示', routerLink: { name: 'ComponentFormConfigTooltip' } },
           { title: '分行/分列', routerLink: { name: 'ComponentFormConfigGather' } },
           { title: '表单校验', routerLink: { name: 'ComponentFormConfigValid' } }
         ]

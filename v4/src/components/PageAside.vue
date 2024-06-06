@@ -219,17 +219,17 @@ const updateExpand = () => {
   const routeName = route.name
   const apiKey = route.query.apiKey
   const apiName = route.params.name
-  const rest = XEUtils.findTree(navList.value, item => {
+  const rest = XEUtils.findTree(navList.value, (item) => {
     const { routerLink } = item
     if (!routerLink) {
       return false
     }
     if (routerLink.name === routeName) {
       if (item.isSelfAPI) {
-        return routerLink.params && routerLink.params.name === apiKey
+        return !!(routerLink.params && routerLink.params.name === apiKey)
       }
       if (item.isAllAPI) {
-        return routerLink.params && routerLink.params.name === apiName
+        return !!(routerLink.params && routerLink.params.name === apiName)
       }
       return true
     }
