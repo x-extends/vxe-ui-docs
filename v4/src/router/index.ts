@@ -713,11 +713,6 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/table/base/fixedFull/CodeExample.vue')
               },
               {
-                path: 'footer',
-                name: 'ComponentTableBaseFooter',
-                component: () => import('@/views/table/base/footer/CodeExample.vue')
-              },
-              {
                 path: 'group',
                 name: 'ComponentTableBaseGroup',
                 component: () => import('@/views/table/base/group/CodeExample.vue')
@@ -781,6 +776,106 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'full',
                 name: 'ComponentTableBaseFull',
                 component: () => import('@/views/table/base/full/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'footer',
+            children: [
+              {
+                path: 'footerData',
+                name: 'ComponentTableFooterFooterData',
+                component: () => import('@/views/table/footer/footerData/CodeExample.vue')
+              },
+              {
+                path: 'footerMethod',
+                name: 'ComponentTableFooterFooterMethod',
+                component: () => import('@/views/table/footer/footerMethod/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'merge',
+            children: [
+              {
+                path: 'row',
+                name: 'ComponentTableMergeRow',
+                component: () => import('@/views/table/merge/row/CodeExample.vue')
+              },
+              {
+                path: 'column',
+                name: 'ComponentTableMergeColumn',
+                component: () => import('@/views/table/merge/column/CodeExample.vue')
+              },
+              {
+                path: 'all',
+                name: 'ComponentTableMergeAll',
+                component: () => import('@/views/table/merge/all/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'toolbar',
+            children: [
+              {
+                path: 'basic',
+                name: 'ComponentTableToolbarBasic',
+                component: () => import('@/views/table/toolbar/basic/CodeExample.vue')
+              },
+              {
+                path: 'custom',
+                name: 'ComponentTableToolbarCustom',
+                component: () => import('@/views/table/toolbar/custom/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'custom',
+            children: [
+              {
+                path: 'toolbar',
+                name: 'ComponentTableCustomToolbar',
+                component: () => import('@/views/table/custom/toolbar/CodeExample.vue')
+              },
+              {
+                path: 'visible',
+                name: 'ComponentTableCustomVisible',
+                component: () => import('@/views/table/custom/visible/CodeExample.vue')
+              },
+              {
+                path: 'fixed',
+                name: 'ComponentTableCustomFixed',
+                component: () => import('@/views/table/custom/fixed/CodeExample.vue')
+              },
+              {
+                path: 'resizable',
+                name: 'ComponentTableCustomResizable',
+                component: () => import('@/views/table/custom/resizable/CodeExample.vue')
+              },
+              {
+                path: 'sort',
+                name: 'ComponentTableCustomSort',
+                component: () => import('@/views/table/custom/sort/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                name: 'ComponentTableCustomTemplate',
+                component: () => import('@/views/table/custom/template/CodeExample.vue')
+              },
+              {
+                path: 'placement',
+                name: 'ComponentTableCustomPlacement',
+                component: () => import('@/views/table/custom/placement/CodeExample.vue')
+              },
+              {
+                path: 'storage',
+                name: 'ComponentTableCustomStorage',
+                component: () => import('@/views/table/custom/storage/CodeExample.vue')
+              },
+              {
+                path: 'events',
+                name: 'ComponentTableCustomEvents',
+                component: () => import('@/views/table/custom/events/CodeExample.vue')
               }
             ]
           }

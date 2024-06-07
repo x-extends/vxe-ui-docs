@@ -228,7 +228,6 @@ export const navConfigList: NavVO[] = [
               { title: '设置行度', routerLink: { name: 'ComponentTableBaseRowHeight' } },
               { title: '冻结列', routerLink: { name: 'ComponentTableBaseFixed' } },
               { title: '冻结表头和列', routerLink: { name: 'ComponentTableBaseFixedFull' } },
-              { title: '表尾', routerLink: { name: 'ComponentTableBaseFooter' } },
               { title: '分组表头', routerLink: { name: 'ComponentTableBaseGroup' } },
               { title: '高亮行与列', routerLink: { name: 'ComponentTableBaseCurrent' } },
               { title: '排序', routerLink: { name: 'ComponentTableBaseSort' } },
@@ -241,7 +240,75 @@ export const navConfigList: NavVO[] = [
               { title: 'HTML 类型', routerLink: { name: 'ComponentTableBaseHtml' } },
               { title: '完整案例', routerLink: { name: 'ComponentTableBaseFull' } }
             ]
+          },
+          {
+            title: '单元格合并',
+            children: [
+              { title: '合并行', routerLink: { name: 'ComponentTableMergeRow' } },
+              { title: '合并列', routerLink: { name: 'ComponentTableMergeColumn' } },
+              { title: '合并行与列', routerLink: { name: 'ComponentTableMergeAll' } }
+            ]
+          },
+          {
+            title: '表尾数据',
+            children: [
+              { title: '标准结构', routerLink: { name: 'ComponentTableFooterFooterData' } },
+              { title: '自定义数据方法', routerLink: { name: 'ComponentTableFooterFooterMethod' } }
+            ]
+          },
+          // {
+          //   title: '展开行',
+          //   children: []
+          // },
+          // {
+          //   title: '右键菜单',
+          //   children: []
+          // },
+          {
+            title: '工具栏',
+            children: [
+              { title: '工具栏布局', routerLink: { name: 'ComponentTableToolbarBasic' } },
+              { title: '自定义列', routerLink: { name: 'ComponentTableToolbarCustom' } }
+            ]
+          },
+          {
+            title: '自定义列',
+            children: [
+              { title: '关联工具栏', routerLink: { name: 'ComponentTableCustomToolbar' } },
+              { title: '允许调整列显示隐藏', routerLink: { name: 'ComponentTableCustomVisible' } },
+              { title: '允许调整列冻结', routerLink: { name: 'ComponentTableCustomFixed' } },
+              { title: '允许调整列宽', routerLink: { name: 'ComponentTableCustomResizable' } },
+              { title: '允许拖拽列顺序', routerLink: { name: 'ComponentTableCustomSort' } },
+              { title: '自定义模板', routerLink: { name: 'ComponentTableCustomTemplate' } },
+              { title: '自定义弹出位置', routerLink: { name: 'ComponentTableCustomPlacement' } },
+              { title: '本地保存列设置', routerLink: { name: 'ComponentTableCustomStorage' } },
+              { title: '服务端保存列设置', routerLink: { name: 'ComponentTableCustomEvents' } }
+            ]
           }
+          // {
+          //   title: '数据分页',
+          //   children: []
+          // },
+          // {
+          //   title: '树形结构',
+          //   children: []
+          // },
+          // {
+          //   title: '可编辑',
+          //   children: []
+          // },
+          // {
+          //   title: '导入/导出数据',
+          //   children: []
+          // },
+          // {
+          //   title: '打印表格',
+          //   children: []
+          // },
+          // {
+          //   title: '虚拟滚动',
+          //   children: []
+          // }
         ]
       },
       {

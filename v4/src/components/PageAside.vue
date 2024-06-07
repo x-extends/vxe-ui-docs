@@ -105,15 +105,10 @@ const handleNavApiParams = (item: NavVO) => {
 }
 
 const createNavList = () => {
-  navConfigList.forEach(item1 => {
-    item1.isExpand = item1.isExpand || false
-    item1.children?.forEach(item2 => {
-      handleNavApiParams(item2)
-      item2.children?.forEach(item3 => {
-        handleNavApiParams(item3)
-      })
-    })
-  })
+  XEUtils.eachTree(navConfigList, item => {
+    item.isExpand = item.isExpand || false
+    handleNavApiParams(item)
+  }, { children: 'children' })
   const apiItem = navConfigList.find(item => item.title === 'API')
   if (apiItem) {
     const apiList: NavVO[] = []
