@@ -1,20 +1,8 @@
 <template>
   <div>
-    <CodeLight path="pager/Demo1">
+    <CodeLight path="pager/size/Demo1">
       <template #tip>
-        <vxe-tips status="primary" title="分页"></vxe-tips>
-      </template>
-    </CodeLight>
-
-    <CodeLight path="pager/Demo2">
-      <template #tip>
-        <vxe-tips status="primary">自定义布局</vxe-tips>
-      </template>
-    </CodeLight>
-
-    <CodeLight path="pager/Demo3">
-      <template #tip>
-        <vxe-tips status="primary">自定义插槽</vxe-tips>
+        <vxe-tips status="primary" title="尺寸"></vxe-tips>
       </template>
 
       <template #describe>

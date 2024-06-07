@@ -1,25 +1,21 @@
 <template>
   <div>
     <vxe-pager
-      align="left"
       v-model:current-page="pageVO1.currentPage"
       v-model:page-size="pageVO1.pageSize"
       :total="pageVO1.total"
-      :page-sizes="[10, 20, 100, {label: '大量数据', value: 1000}, {label: '全量数据', value: -1}]"
-      :layouts="['PrevJump', 'PrevPage', 'Number', 'NextPage', 'NextJump', 'Sizes', 'FullJump', 'Total']"
       @page-change="pageChangeEvent">
       <template #left>
-        <vxe-button content="更多操作" size="small">
+        <vxe-button content="自定义左侧" size="small">
           <template #dropdowns>
             <vxe-button content="批量修改" mode="text"></vxe-button>
             <vxe-button content="批量管理" mode="text"></vxe-button>
             <vxe-button content="批量删除" mode="text"></vxe-button>
           </template>
         </vxe-button>
+        <img src="https://pic2.zhimg.com/50/v2-f7031359103859e1ed38559715ef5f3f_hd.gif" height="34">
       </template>
       <template #right>
-        <img src="https://pic2.zhimg.com/50/v2-f7031359103859e1ed38559715ef5f3f_hd.gif" height="34">
-        <img src="https://pic2.zhimg.com/50/v2-f7031359103859e1ed38559715ef5f3f_hd.gif" height="34">
         <img src="https://pic2.zhimg.com/50/v2-f7031359103859e1ed38559715ef5f3f_hd.gif" height="34">
       </template>
     </vxe-pager>
@@ -31,7 +27,7 @@ import { reactive } from 'vue'
 
 const pageVO1 = reactive({
   currentPage: 1,
-  pageSize: 30,
+  pageSize: 15,
   total: 100
 })
 

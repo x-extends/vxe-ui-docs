@@ -253,8 +253,33 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'pager',
-        name: 'ComponentPager',
-        component: () => import('@/views/pager/CodeExample.vue')
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentPagerSize',
+            component: () => import('@/views/pager/size/CodeExample.vue')
+          },
+          {
+            path: 'align',
+            name: 'ComponentPagerAlign',
+            component: () => import('@/views/pager/align/CodeExample.vue')
+          },
+          {
+            path: 'pageSize',
+            name: 'ComponentPagerPageSize',
+            component: () => import('@/views/pager/pageSize/CodeExample.vue')
+          },
+          {
+            path: 'layout',
+            name: 'ComponentPagerLayout',
+            component: () => import('@/views/pager/layout/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentPagerTemplate',
+            component: () => import('@/views/pager/template/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'modal',

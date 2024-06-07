@@ -59,7 +59,17 @@ export const navConfigList: NavVO[] = [
       { title: 'Breadcrumb 面包屑', routerLink: { name: 'ComponentBreadcrumb' } },
       { title: 'Menu 菜单', routerLink: { name: 'ComponentMenu' } },
       { title: 'Anchor 锚点', routerLink: { name: 'ComponentAnchor' } },
-      { title: 'Pager 分页', routerLink: { name: 'ComponentPager' } }
+      {
+        title: 'Pager 分页',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pager' } } },
+          { title: '尺寸', routerLink: { name: 'ComponentPagerSize' } },
+          { title: '对齐方式', routerLink: { name: 'ComponentPagerAlign' } },
+          { title: '自定义页大小列表', routerLink: { name: 'ComponentPagerPageSize' } },
+          { title: '自定义布局', routerLink: { name: 'ComponentPagerLayout' } },
+          { title: '自定义模板', routerLink: { name: 'ComponentPagerTemplate' } }
+        ]
+      }
     ]
   },
   {
