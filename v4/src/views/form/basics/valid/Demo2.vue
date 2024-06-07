@@ -21,7 +21,7 @@
       </vxe-form-item>
       <vxe-form-item align="center" span="24" :item-render="{}">
         <template #default>
-          <vxe-button status="primary" content="提交" @click="submitEvent"></vxe-button>
+          <vxe-button status="primary" content="手动提交" @click="submitEvent"></vxe-button>
         </template>
       </vxe-form-item>
     </vxe-form>

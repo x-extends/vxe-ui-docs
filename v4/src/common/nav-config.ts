@@ -115,6 +115,7 @@ export const navConfigList: NavVO[] = [
           { title: '文字提示', routerLink: { name: 'ComponentFormBasicsTooltip' } },
           { title: '分行/分列', routerLink: { name: 'ComponentFormBasicsGather' } },
           { title: '自定义布局', routerLink: { name: 'ComponentFormBasicsCustomLayout' } },
+          { title: '折叠表单', routerLink: { name: 'ComponentFormBasicsCollapse' } },
           { title: '表单校验', routerLink: { name: 'ComponentFormBasicsValid' } }
         ]
       },
@@ -127,6 +128,7 @@ export const navConfigList: NavVO[] = [
           { title: '标题加粗', routerLink: { name: 'ComponentFormConfigBold' } },
           { title: '文字提示', routerLink: { name: 'ComponentFormConfigTooltip' } },
           { title: '分行/分列', routerLink: { name: 'ComponentFormConfigGather' } },
+          { title: '折叠表单', routerLink: { name: 'ComponentFormConfigCollapse' } },
           { title: '表单校验', routerLink: { name: 'ComponentFormConfigValid' } }
         ]
       }
@@ -279,7 +281,7 @@ export const navConfigList: NavVO[] = [
               { title: '允许调整列冻结', routerLink: { name: 'ComponentTableCustomFixed' } },
               { title: '允许调整列宽', routerLink: { name: 'ComponentTableCustomResizable' } },
               { title: '允许拖拽列顺序', routerLink: { name: 'ComponentTableCustomSort' } },
-              { title: '自定义模板', routerLink: { name: 'ComponentTableCustomTemplate' } },
+              { title: '自定义触发弹出设置', routerLink: { name: 'ComponentTableCustomTemplate' } },
               { title: '自定义弹出位置', routerLink: { name: 'ComponentTableCustomPlacement' } },
               { title: '本地保存列设置', routerLink: { name: 'ComponentTableCustomStorage' } },
               { title: '服务端保存列设置', routerLink: { name: 'ComponentTableCustomEvents' } }

@@ -13,6 +13,7 @@ import CodeRender from './components/CodeRender.vue'
 import ApiLink from './components/ApiLink.vue'
 
 import axios from 'axios'
+import XEUtils from 'xe-utils'
 
 import VxeUI from 'vxe-pc-ui'
 import 'vxe-pc-ui/lib/style.css'
@@ -23,6 +24,14 @@ import 'vxe-table/lib/style.css'
 import '@/views/table/base/format/demo2.format'
 
 import enUS from 'vxe-pc-ui/packages/language/en-US'
+
+declare global {
+  interface Window {
+    XEUtils: typeof XEUtils;
+  }
+}
+
+window.XEUtils = XEUtils
 
 axios.defaults.baseURL = 'https://api.vxetable.cn'
 

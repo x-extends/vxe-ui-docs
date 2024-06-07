@@ -483,6 +483,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/form/basics/vertical/CodeExample.vue')
               },
               {
+                path: 'collapse',
+                name: 'ComponentFormBasicsCollapse',
+                component: () => import('@/views/form/basics/collapse/CodeExample.vue')
+              },
+              {
                 path: 'valid',
                 name: 'ComponentFormBasicsValid',
                 component: () => import('@/views/form/basics/valid/CodeExample.vue')
@@ -521,6 +526,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'vertical',
                 name: 'ComponentFormConfigVertical',
                 component: () => import('@/views/form/config/vertical/CodeExample.vue')
+              },
+              {
+                path: 'collapse',
+                name: 'ComponentFormConfigCollapse',
+                component: () => import('@/views/form/config/collapse/CodeExample.vue')
               },
               {
                 path: 'valid',

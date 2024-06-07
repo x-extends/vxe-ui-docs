@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button status="primary" @click="openCustomEvent">右上角</vxe-button>
+    <vxe-toolbar ref="toolbarRef" custom></vxe-toolbar>
     <vxe-table
       ref="tableRef"
       :custom-config="{placement: 'topRight'}"
@@ -14,9 +14,9 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
-import { VxeTableInstance } from 'vxe-pc-ui'
+import { VxeTableInstance, VxeToolbarInstance } from 'vxe-pc-ui'
 
 interface RowVO {
   id: number
@@ -27,6 +27,7 @@ interface RowVO {
   address: string
 }
 
+const toolbarRef = ref<VxeToolbarInstance>()
 const tableRef = ref<VxeTableInstance>()
 
 const tableData = ref<RowVO[]>([
@@ -36,10 +37,11 @@ const tableData = ref<RowVO[]>([
   { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
 ])
 
-const openCustomEvent = () => {
+onMounted(() => {
   const $table = tableRef.value
-  if ($table) {
-    $table.openCustom()
+  const $toolbar = toolbarRef.value
+  if ($table && $toolbar) {
+    $table.connect($toolbar)
   }
-}
+})
 </script>
