@@ -54,7 +54,7 @@ const appStore = useAppStore()
 
 const gridRef = ref<VxeGridInstance>()
 
-const searchName = ref('')
+const searchName = ref(route.query.q || '')
 const tableData = ref<any[]>([])
 
 const apiName = computed(() => {

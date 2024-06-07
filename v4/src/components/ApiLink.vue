@@ -1,5 +1,5 @@
 <template>
-  <vxe-link :router-link="{name: 'DocsApi', params: { name }, query: { q }}" :content="q || prop" />
+  <vxe-link :router-link="{name: 'DocsApi', params: { name }, query: { q: q || prop }}" :content="q || prop" />
 </template>
 
 <script lang="ts" setup>

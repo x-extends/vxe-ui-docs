@@ -318,8 +318,18 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'list',
-        name: 'ComponentList',
-        component: () => import('@/views/list/CodeExample.vue')
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentListBase',
+            component: () => import('@/views/list/base/CodeExample.vue')
+          },
+          {
+            path: 'table',
+            name: 'ComponentListTable',
+            component: () => import('@/views/list/table/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'pulldown',
