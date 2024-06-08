@@ -5,7 +5,7 @@
         <vxe-input v-model="searchName" placeholder="可搜索的下拉框" @focus="focusEvent" @keyup="keyupEvent"></vxe-input>
       </template>
       <template #dropdown>
-        <div class="my-dropdown1">
+        <div class="dropdown-select">
           <div class="list-item1" v-for="item in list" :key="item.value" @click="selectEvent(item)">
             <i class="vxe-icon-user-fill"></i>
             <span>{{ item.label }}</span>
@@ -59,7 +59,7 @@ const selectEvent = (item: ItemVO) => {
 </script>
 
 <style lang="scss" scoped>
-.my-dropdown1 {
+.dropdown-select {
   height: 200px;
   overflow: auto;
   border-radius: 4px;

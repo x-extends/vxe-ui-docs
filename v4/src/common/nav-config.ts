@@ -47,18 +47,60 @@ export const navConfigList: NavVO[] = [
           { title: '图标列表', routerLink: { name: 'ComponentIcon' } }
         ]
       },
-      { title: 'Text 文本', routerLink: { name: 'ComponentText' } },
-      { title: 'Link 链接', routerLink: { name: 'ComponentLink' } },
-      { title: 'Tag 标签', routerLink: { name: 'ComponentTag' } },
-      { title: 'Button 按钮', routerLink: { name: 'ComponentButton' } }
+      {
+        title: 'Text 文本',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'text' } } },
+          { title: '状态颜色', routerLink: { name: 'ComponentText' } }
+        ]
+      },
+      {
+        title: 'Link 链接',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'link' } } },
+          { title: '状态颜色', routerLink: { name: 'ComponentLink' } }
+        ]
+      },
+      {
+        title: 'Tag 标签',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tag' } } },
+          { title: '状态颜色', routerLink: { name: 'ComponentTag' } }
+        ]
+      },
+      {
+        title: 'Button 按钮',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'button' } } },
+          { title: '状态颜色', routerLink: { name: 'ComponentButton' } }
+        ]
+      }
     ]
   },
   {
     title: '导航组件',
     children: [
-      { title: 'Breadcrumb 面包屑', routerLink: { name: 'ComponentBreadcrumb' } },
-      { title: 'Menu 菜单', routerLink: { name: 'ComponentMenu' } },
-      { title: 'Anchor 锚点', routerLink: { name: 'ComponentAnchor' } },
+      {
+        title: 'Breadcrumb 面包屑',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'breadcrumb' } } },
+          { title: '基础', routerLink: { name: 'ComponentBreadcrumb' } }
+        ]
+      },
+      {
+        title: 'Menu 菜单',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'menu' } } },
+          { title: '基础', routerLink: { name: 'ComponentMenu' } }
+        ]
+      },
+      {
+        title: 'Anchor 锚点',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'anchor' } } },
+          { title: '自定义容器', routerLink: { name: 'ComponentAnchor' } }
+        ]
+      },
       {
         title: 'Pager 分页',
         children: [
@@ -75,8 +117,18 @@ export const navConfigList: NavVO[] = [
   {
     title: '容器组件',
     children: [
-      { title: 'Layout 页面布局', routerLink: { name: 'ComponentLayout' } },
-      { title: 'Row 行与列', routerLink: { name: 'ComponentRow' } },
+      {
+        title: 'Layout 页面布局',
+        children: [
+          { title: '页面布局', routerLink: { name: 'ComponentLayout' } }
+        ]
+      },
+      {
+        title: 'Row 行与列',
+        children: [
+          { title: '行列排版', routerLink: { name: 'ComponentRow' } }
+        ]
+      },
       // { title: 'Progress 进度条' },
       {
         title: 'Card 卡片',
@@ -91,7 +143,14 @@ export const navConfigList: NavVO[] = [
           { title: '自定义模板', routerLink: { name: 'ComponentCardTemplate' } }
         ]
       },
-      { title: 'Image 图片', routerLink: { name: 'ComponentImage' } },
+      {
+        title: 'Image 图片',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image' } } },
+          { title: '设置宽高', routerLink: { name: 'ComponentImageBase' } },
+          { title: '懒加载', routerLink: { name: 'ComponentImageLazy' } }
+        ]
+      },
       {
         title: 'ImagePreview 图片预览',
         children: [
@@ -99,8 +158,27 @@ export const navConfigList: NavVO[] = [
           { title: '打开预览', routerLink: { name: 'ComponentImagePreview' } }
         ]
       },
-      { title: 'Tabs 页签', routerLink: { name: 'ComponentTabs' } },
-      { title: 'Pulldown 下拉容器', routerLink: { name: 'ComponentPulldown' } },
+      {
+        title: 'Tabs 页签',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tabs' } } },
+          { title: '基础', routerLink: { name: 'ComponentTabsBase' } },
+          { title: '卡片风格', routerLink: { name: 'ComponentTabsCard' } },
+          { title: '边框背景的卡片', routerLink: { name: 'ComponentTabsBorderCard' } },
+          { title: '设置高度', routerLink: { name: 'ComponentTabsHeight' } },
+          { title: '圆角边框背景的卡片', routerLink: { name: 'ComponentTabsRoundCard' } }
+        ]
+      },
+      {
+        title: 'Pulldown 下拉容器',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pulldown' } } },
+          { title: '基础', routerLink: { name: 'ComponentPulldownBase' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentPulldownTemplate' } },
+          { title: '可搜索的下拉框', routerLink: { name: 'ComponentPulldownSelect' } },
+          { title: '实现下拉表格', routerLink: { name: 'ComponentPulldownTable' } }
+        ]
+      },
       // { title: 'Carousel 走马灯' },
       // { title: 'Calendar 日历' },
       // { title: 'Collapse 折叠面板' },
@@ -155,9 +233,27 @@ export const navConfigList: NavVO[] = [
   {
     title: '数据组件',
     children: [
-      { title: 'Switch 开关', routerLink: { name: 'ComponentSwitch' } },
-      { title: 'Radio 单选框', routerLink: { name: 'ComponentRadio' } },
-      { title: 'Checkbox 复选框', routerLink: { name: 'ComponentCheckbox' } },
+      {
+        title: 'Switch 开关',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'switch' } } },
+          { title: '开关', routerLink: { name: 'ComponentSwitch' } }
+        ]
+      },
+      {
+        title: 'Radio 单选框',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'radio' } } },
+          { title: '单选框', routerLink: { name: 'ComponentRadio' } }
+        ]
+      },
+      {
+        title: 'Checkbox 复选框',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'checkbox' } } },
+          { title: '多选框', routerLink: { name: 'ComponentCheckbox' } }
+        ]
+      },
       {
         title: 'Input 输入框',
         children: [
@@ -179,9 +275,27 @@ export const navConfigList: NavVO[] = [
         ]
       },
       // { title: 'TextInput 单行文本输入' },
-      { title: 'Textarea 多行文本输入', routerLink: { name: 'ComponentTextarea' } },
-      { title: 'NumberInput 数值输入', routerLink: { name: 'ComponentNumberInput' } },
-      { title: 'PasswordInput 密码输入', routerLink: { name: 'ComponentPasswordInput' } },
+      {
+        title: 'Textarea 多行文本输入',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'textarea' } } },
+          { title: '多行输入', routerLink: { name: 'ComponentTextarea' } }
+        ]
+      },
+      {
+        title: 'NumberInput 数值输入',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'number-input' } } },
+          { title: '数值输入', routerLink: { name: 'ComponentNumberInput' } }
+        ]
+      },
+      {
+        title: 'PasswordInput 密码输入',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'password-input' } } },
+          { title: '密码输入', routerLink: { name: 'ComponentPasswordInput' } }
+        ]
+      },
       // { title: 'DatePicker 日期选择器' },
       // { title: 'WeekPicker 周选择器' },
       // { title: 'MonthPicker 月选择器' },
@@ -189,7 +303,13 @@ export const navConfigList: NavVO[] = [
       // { title: 'YearPicker 年选择器' },
       // { title: 'TimePicker 时间选择器' },
       // { title: 'DateTimePicker日期带时间选择器' },
-      { title: 'Select 下拉框', routerLink: { name: 'ComponentSelect' } },
+      {
+        title: 'Select 下拉框',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'select' } } },
+          { title: '单选', routerLink: { name: 'ComponentSelect' } }
+        ]
+      },
       {
         title: 'Tree 树形组件',
         children: [
@@ -387,21 +507,46 @@ export const navConfigList: NavVO[] = [
     title: '反馈组件',
     children: [
       // { title: 'Loading 加载中' },
-      { title: 'Tips 小贴士', routerLink: { name: 'ComponentTips' } },
-      { title: 'Alert 警告提示', routerLink: { name: 'ComponentAlert' } },
+      {
+        title: 'Tips 小贴士',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tips' } } },
+          { title: '基础', routerLink: { name: 'ComponentTips' } }
+        ]
+      },
+      {
+        title: 'Alert 警告提示',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'alert' } } },
+          { title: '基础', routerLink: { name: 'ComponentAlert' } }
+        ]
+      },
       // { title: 'Notification 通知提示框' },
       {
         title: 'Modal 模态窗',
         children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'modal' } } },
           { title: '轻提示框', routerLink: { name: 'ComponentModalMessage' } },
           { title: '提示框', routerLink: { name: 'ComponentModalAlert' } },
           { title: '确认框', routerLink: { name: 'ComponentModalConfirm' } },
           { title: '弹出窗口', routerLink: { name: 'ComponentModalOpen' } }
         ]
       },
-      { title: 'Drawer 抽屉', routerLink: { name: 'ComponentDrawer' } },
+      {
+        title: 'Drawer 抽屉',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'drawer' } } },
+          { title: '自定义方向', routerLink: { name: 'ComponentDrawer' } }
+        ]
+      },
       // { title: 'Popover 气泡提示框' },
-      { title: 'Tooltip 文字提示', routerLink: { name: 'ComponentTooltip' } }
+      {
+        title: 'Tooltip 文字提示',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tooltip' } } },
+          { title: '文字提示', routerLink: { name: 'ComponentTooltip' } }
+        ]
+      }
     ]
   },
   {
@@ -411,6 +556,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Print 打印',
         children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'print' } } },
           { title: '常规打印', routerLink: { name: 'ComponentPrintBase' } },
           {
             title: '分页打印',

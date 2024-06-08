@@ -113,8 +113,18 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'image',
-        name: 'ComponentImage',
-        component: () => import('@/views/image/CodeExample.vue')
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentImageBase',
+            component: () => import('@/views/image/base/CodeExample.vue')
+          },
+          {
+            path: 'lazy',
+            name: 'ComponentImageLazy',
+            component: () => import('@/views/image/lazy/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'image-preview',
@@ -333,13 +343,58 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'pulldown',
-        name: 'ComponentPulldown',
-        component: () => import('@/views/pulldown/CodeExample.vue')
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentPulldownBase',
+            component: () => import('@/views/pulldown/base/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentPulldownTemplate',
+            component: () => import('@/views/pulldown/template/CodeExample.vue')
+          },
+          {
+            path: 'select',
+            name: 'ComponentPulldownSelect',
+            component: () => import('@/views/pulldown/select/CodeExample.vue')
+          },
+          {
+            path: 'table',
+            name: 'ComponentPulldownTable',
+            component: () => import('@/views/pulldown/table/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'tabs',
-        name: 'ComponentTabs',
-        component: () => import('@/views/tabs/CodeExample.vue')
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentTabsBase',
+            component: () => import('@/views/tabs/base/CodeExample.vue')
+          },
+          {
+            path: 'borderCard',
+            name: 'ComponentTabsBorderCard',
+            component: () => import('@/views/tabs/borderCard/CodeExample.vue')
+          },
+          {
+            path: 'card',
+            name: 'ComponentTabsCard',
+            component: () => import('@/views/tabs/card/CodeExample.vue')
+          },
+          {
+            path: 'height',
+            name: 'ComponentTabsHeight',
+            component: () => import('@/views/tabs/height/CodeExample.vue')
+          },
+          {
+            path: 'roundCard',
+            name: 'ComponentTabsRoundCard',
+            component: () => import('@/views/tabs/roundCard/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'drawer',

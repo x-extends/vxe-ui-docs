@@ -46,23 +46,23 @@
       <div v-if="item1.children && item1.children.length" class="nav-subs">
         <div class="nav-item nav-level2" v-for="(item2, index2) in item1.children" :key="index2">
           <div class="nav-name" :title="item2.title">
-            <vxe-link v-if="item2.routerLink" :class="['nav-item-link', getApiClass(item2)]" :router-link="item2.routerLink">{{ item2.title }}</vxe-link>
-            <vxe-link v-else-if="item2.linkUrl" class="nav-item-link" :href="item2.linkUrl" target="_blank">{{ item2.title }}</vxe-link>
-            <span v-else class="nav-item-text">∞ {{ item2.title }}</span>
+            <vxe-link v-if="item2.routerLink" :class="['nav-item-link', getApiClass(item2)]" :router-link="item2.routerLink" :content="item2.title"></vxe-link>
+            <vxe-link v-else-if="item2.linkUrl" class="nav-item-link" :href="item2.linkUrl" target="_blank" :content="item2.title"></vxe-link>
+            <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-down" :content="item2.title"></vxe-text>
           </div>
           <div v-if="!['API'].includes(item1.title) && item2.children && item2.children.length" class="nav-subs">
             <div class="nav-item nav-level3" v-for="(item3, index3) in item2.children" :key="index3">
               <div class="nav-name" :title="item3.title">
-                <vxe-link v-if="item3.routerLink" :class="['nav-item-link', getApiClass(item3)]" :router-link="item3.routerLink">{{ item3.title }}</vxe-link>
-                <vxe-link v-else-if="item3.linkUrl" class="nav-item-link" :href="item3.linkUrl" target="_blank">{{ item3.title }}</vxe-link>
-                <span v-else class="nav-item-text">∞ {{ item3.title }}</span>
+                <vxe-link v-if="item3.routerLink" :class="['nav-item-link', getApiClass(item3)]" :router-link="item3.routerLink" :content="item3.title"></vxe-link>
+                <vxe-link v-else-if="item3.linkUrl" class="nav-item-link" :href="item3.linkUrl" target="_blank" :content="item3.title"></vxe-link>
+                <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-down" :content="item3.title"></vxe-text>
               </div>
               <div v-if="item3.children && item3.children.length" class="nav-subs">
                 <div class="nav-item nav-level4" v-for="(item4, index3) in item3.children" :key="index3">
                   <div class="nav-name" :title="item4.title">
-                    <vxe-link v-if="item4.routerLink" :class="['nav-item-link', getApiClass(item4)]" :router-link="item4.routerLink">{{ item4.title }}</vxe-link>
-                    <vxe-link v-else-if="item4.linkUrl" class="nav-item-link" :href="item4.linkUrl" target="_blank">{{ item4.title }}</vxe-link>
-                    <span v-else class="nav-item-text">{{ item4.title }}</span>
+                    <vxe-link v-if="item4.routerLink" :class="['nav-item-link', getApiClass(item4)]" :router-link="item4.routerLink" :content="item4.title"></vxe-link>
+                    <vxe-link v-else-if="item4.linkUrl" class="nav-item-link" :href="item4.linkUrl" target="_blank" :content="item4.title"></vxe-link>
+                    <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-down" :content="item4.title"></vxe-text>
                   </div>
                 </div>
               </div>
@@ -293,9 +293,7 @@ appStore.updateComponentApiJSON()
   .nav-level1 {
     & > .nav-name {
       padding: 0 1.2em 0.4em 1.2em;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 38px;
+      line-height: 40px;
       cursor: pointer;
       &::after {
         content: "";
@@ -304,6 +302,11 @@ appStore.updateComponentApiJSON()
         left: 1.2em;
         width: calc(100% - 2.4em);
         border-bottom: 1px solid var(--vxe-ui-docs-layout-border-color);
+      }
+      .nav-item-text,
+      .nav-item-link {
+        font-size: 17px;
+        font-weight: 700;
       }
     }
     & > .nav-subs {
@@ -322,26 +325,36 @@ appStore.updateComponentApiJSON()
   }
   .nav-level2 {
     & > .nav-name {
-      font-size: 15px;
-      line-height: 34px;
+      line-height: 36px;
       padding-left: 3.4em;
+      .nav-item-text,
+      .nav-item-link {
+        font-size: 15px;
+      }
     }
     .nav-item-text {
-      color: var(--vxe-ui-input-placeholder-color);
+      color: var(--vxe-ui-docs-layout-menu-color);
+      font-weight: 700;
     }
   }
   .nav-level3 {
     & > .nav-name {
-      font-size: 14px;
       line-height: 32px;
       padding-left: 5em;
+      .nav-item-text,
+      .nav-item-link {
+        font-size: 14px;
+      }
     }
   }
   .nav-level4 {
     & > .nav-name {
-      font-size: 12px;
       line-height: 28px;
       padding-left: 7.4em;
+      .nav-item-text,
+      .nav-item-link {
+        font-size: 13px;
+      }
     }
   }
 }

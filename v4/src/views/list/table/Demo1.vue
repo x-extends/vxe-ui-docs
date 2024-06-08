@@ -22,11 +22,11 @@
           </thead>
           <tbody>
             <tr class="my-tr" v-for="item in items" :key="item.id">
-              <td>{{ item.col1 }} - 列1</td>
-              <td>{{ item.col2 }} - 列2</td>
-              <td>{{ item.col3 }} - 列3</td>
-              <td>{{ item.col4 }} - 列4</td>
-              <td>{{ item.col5 }} - 列5</td>
+              <td>{{ item.col1 }}</td>
+              <td>{{ item.col2 }}</td>
+              <td>{{ item.col3 }}</td>
+              <td>{{ item.col4 }}</td>
+              <td>{{ item.col5 }}</td>
             </tr>
           </tbody>
         </table>
@@ -60,11 +60,11 @@ const getList = (size: number): Promise<ItemVO[]> => {
         for (let index = mockList.length; index < size; index++) {
           mockList.push({
             id: index,
-            col1: `row_${index}_col1`,
-            col2: `row_${index}_col2`,
-            col3: `row_${index}_col3`,
-            col4: `row_${index}_col4`,
-            col5: `row_${index}_col5`
+            col1: `row ${index} col1`,
+            col2: `row ${index} col2`,
+            col3: `row ${index} col3`,
+            col4: `row ${index} col4`,
+            col5: `row ${index} col5`
           })
         }
       }
