@@ -508,10 +508,10 @@ export const navConfigList: NavVO[] = [
     children: [
       // { title: 'Loading 加载中' },
       {
-        title: 'Tips 小贴士',
+        title: 'Tip 小贴士',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tips' } } },
-          { title: '基础', routerLink: { name: 'ComponentTips' } }
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tip' } } },
+          { title: '基础', routerLink: { name: 'ComponentTip' } }
         ]
       },
       {

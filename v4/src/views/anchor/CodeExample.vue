@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="anchor/Demo1">
       <template #tip>
-        <VxeTips status="primary" title="锚点"></VxeTips>
+        <vxe-tip status="primary" title="锚点"></vxe-tip>
       </template>
     </CodeLight>
   </div>

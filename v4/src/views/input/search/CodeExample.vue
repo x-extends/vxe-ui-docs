@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="input/search/Demo1">
       <template #tip>
-        <vxe-tips status="primary">搜索类型，设置 type=search</vxe-tips>
+        <vxe-tip status="primary">搜索类型，设置 type=search</vxe-tip>
       </template>
     </CodeLight>
   </div>

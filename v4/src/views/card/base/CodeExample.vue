@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="card/base/Demo1">
       <template #tip>
-        <VxeTips status="primary" title="卡片"></VxeTips>
+        <vxe-tip status="primary" title="卡片"></vxe-tip>
       </template>
     </CodeLight>
   </div>

@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="table/merge/all/Demo1">
       <template #tip>
-        <vxe-tips status="primary" title="将行与列进行合并"></vxe-tips>
+        <vxe-tip status="primary" title="将行与列进行合并"></vxe-tip>
       </template>
     </CodeLight>
   </div>

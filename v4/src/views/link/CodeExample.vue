@@ -2,13 +2,13 @@
   <div>
     <CodeLight path="link/Demo1">
       <template #tip>
-        <VxeTips status="primary" title="链接"></VxeTips>
+        <vxe-tip status="primary" title="链接"></vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="link/Demo2">
       <template #tip>
-        <VxeTips status="primary">状态</VxeTips>
+        <vxe-tip status="primary">状态</vxe-tip>
       </template>
     </CodeLight>
   </div>

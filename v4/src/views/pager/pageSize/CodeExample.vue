@@ -2,9 +2,9 @@
   <div>
     <CodeLight path="pager/pageSize/Demo1">
       <template #tip>
-        <vxe-tips status="primary" title="自定义每页大小">
+        <vxe-tip status="primary" title="自定义每页大小">
           通过参数 <ApiLink name="pager" prop="page-sizes"/> 自定义下拉列表选项
-        </vxe-tips>
+        </vxe-tip>
       </template>
 
       <template #describe>
@@ -23,7 +23,7 @@
 
     <CodeLight path="pager/pageSize/Demo2">
       <template #tip>
-        <vxe-tips status="primary">自定义每页大小下拉框的方向，通过参数 <ApiLink name="pager" prop="page-size-placement"/> 设置</vxe-tips>
+        <vxe-tip status="primary">自定义每页大小下拉框的方向，通过参数 <ApiLink name="pager" prop="page-size-placement"/> 设置</vxe-tip>
       </template>
     </CodeLight>
   </div>

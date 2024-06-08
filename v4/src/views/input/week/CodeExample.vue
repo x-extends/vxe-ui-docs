@@ -2,13 +2,13 @@
   <div>
     <CodeLight path="input/week/Demo1">
       <template #tip>
-        <vxe-tips status="primary">周类型，设置type=week</vxe-tips>
+        <vxe-tip status="primary">周类型，设置type=week</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="input/week/Demo2">
       <template #tip>
-        <vxe-tips status="primary">多选</vxe-tips>
+        <vxe-tip status="primary">多选</vxe-tip>
       </template>
     </CodeLight>
   </div>

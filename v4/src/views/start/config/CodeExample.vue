@@ -2,9 +2,9 @@
   <div>
     <CodeLight>
       <template #tip>
-        <VxeTips status="primary">
+        <vxe-tip status="primary">
           通过调用 VxeUI.setConfig({ ... }) 方法可以给组件设置全局默认参数
-        </VxeTips>
+        </vxe-tip>
       </template>
 
       <template #use>
@@ -147,7 +147,7 @@
               tabs: {},
               textarea: {},
               toolbar: {},
-              tips: {},
+              tip: {},
               tooltip: {
                 // size: null,
                 trigger: 'hover',

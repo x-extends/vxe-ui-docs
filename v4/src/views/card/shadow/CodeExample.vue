@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="card/shadow/Demo1">
       <template #tip>
-        <VxeTips status="primary" title="先边框阴影"></VxeTips>
+        <vxe-tip status="primary" title="先边框阴影"></vxe-tip>
       </template>
     </CodeLight>
   </div>

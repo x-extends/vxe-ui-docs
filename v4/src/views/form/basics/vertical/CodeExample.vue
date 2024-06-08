@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="form/basics/vertical/Demo1">
       <template #tip>
-        <vxe-tips status="primary">上下布局</vxe-tips>
+        <vxe-tip status="primary">上下布局</vxe-tip>
       </template>
     </CodeLight>
   </div>

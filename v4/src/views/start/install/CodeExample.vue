@@ -2,10 +2,10 @@
   <div>
     <CodeLight>
       <template #tip>
-        <VxeTips status="primary" title="NPM 方式">
+        <vxe-tip status="primary" title="NPM 方式">
           <div>可以配合 <vxe-link  href="https://webpack.js.org/">webpack</vxe-link>、<vxe-link  href="https://vitejs.dev/">vite</vxe-link> 等打包工具配合使用按需加载。</div>
           <div>依赖库： <vxe-link  href="https://cn.vuejs.org/v2/guide/components-slots.html#%E5%8A%A8%E6%80%81%E6%8F%92%E6%A7%BD%E5%90%8D">vue 3.2+</vxe-link></div>
-        </VxeTips>
+        </vxe-tip>
       </template>
 
       <template #use>
@@ -32,12 +32,12 @@
 
     <CodeLight>
       <template #tip>
-        <VxeTips status="primary" title="CDN 方式">
+        <vxe-tip status="primary" title="CDN 方式">
           <div>可以通过第三方开放的 CDN 来引用， <vxe-link href="https://unpkg.com/vxe-table/">unpkg</vxe-link> 或 <vxe-link href="https://cdn.jsdelivr.net/npm/vxe-table/">cdnjs</vxe-link> 获取到最新版本的资源，并在页面上引入即可</div>
-        </VxeTips>
-        <VxeTips status="error" title="">
+        </vxe-tip>
+        <vxe-tip status="error" title="">
           <div>不建议将不受信任的第三方 CDN 用于正式环境，如确实需要使用第三方 CDN 链接记得锁定版本号，锁定版本的方法请查看第三方的说明。</div>
-        </VxeTips>
+        </vxe-tip>
       </template>
 
       <template #use>

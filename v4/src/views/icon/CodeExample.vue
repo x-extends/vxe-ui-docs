@@ -2,9 +2,9 @@
   <div>
     <CodeLight path="icon/Demo1">
       <template #tip>
-        <VxeTips status="primary" title="字体图标">
+        <vxe-tip status="primary" title="字体图标">
           <div>内置图标，支持</div>
-        </VxeTips>
+        </vxe-tip>
       </template>
     </CodeLight>
 

@@ -648,7 +648,7 @@ export default {
       Methods_focus: '使输入框获取焦点',
       Methods_blur: '使输入框失去焦点'
     },
-    'vxe-tips': {
+    'vxe-tip': {
       Props_title: '',
       Props_content: '',
       Props_status: '',

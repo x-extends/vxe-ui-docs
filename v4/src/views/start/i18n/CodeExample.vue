@@ -2,9 +2,9 @@
   <div>
     <CodeLight>
       <template #tip>
-        <VxeTips status="primary" title="国际化">
+        <vxe-tip status="primary" title="国际化">
           通过调用 VxeUI.setLanguage('zh-CN') 方法可以切换组件语言
-        </VxeTips>
+        </vxe-tip>
       </template>
 
       <template #use>

@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="print/page/template/Demo1">
       <template #tip>
-        <VxeTips status="primary" title="自定义模板"></VxeTips>
+        <vxe-tip status="primary" title="自定义模板"></vxe-tip>
       </template>
     </CodeLight>
   </div>

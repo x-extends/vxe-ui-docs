@@ -2,9 +2,9 @@
   <div>
     <CodeLight path="form/basics/size/Demo1">
       <template #tip>
-        <vxe-tips status="primary" title="表单">
+        <vxe-tip status="primary" title="表单">
           尺寸设置
-        </vxe-tips>
+        </vxe-tip>
       </template>
     </CodeLight>
   </div>

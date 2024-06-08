@@ -2,9 +2,9 @@
   <div>
     <CodeLight path="form-design/base/Demo1">
       <template #tip>
-        <VxeTips status="primary">
+        <vxe-tip status="primary">
           零代码表单设计器，拖拉拽直接生成表单 JSON 数据
-        </VxeTips>
+        </vxe-tip>
       </template>
     </CodeLight>
   </div>

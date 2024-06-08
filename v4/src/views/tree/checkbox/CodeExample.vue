@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="tree/checkbox/Demo1">
       <template #tip>
-        <vxe-tips status="primary" title="复选框"></vxe-tips>
+        <vxe-tip status="primary" title="复选框"></vxe-tip>
       </template>
     </CodeLight>
   </div>

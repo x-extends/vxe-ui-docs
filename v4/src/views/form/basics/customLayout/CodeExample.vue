@@ -2,9 +2,9 @@
   <div>
     <CodeLight path="form/basics/customLayout/Demo1">
       <template #tip>
-        <vxe-tips status="primary" title="自定义布局">
+        <vxe-tip status="primary" title="自定义布局">
           通过设置 custom-layout 启用自定义布局功能
-        </vxe-tips>
+        </vxe-tip>
       </template>
     </CodeLight>
   </div>

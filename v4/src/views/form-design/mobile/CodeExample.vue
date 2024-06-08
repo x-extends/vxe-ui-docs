@@ -2,9 +2,9 @@
   <div>
     <CodeLight path="form-design/mobile/Demo1">
       <template #tip>
-        <VxeTips status="primary">
+        <vxe-tip status="primary">
           移动端设计器
-        </VxeTips>
+        </vxe-tip>
       </template>
     </CodeLight>
   </div>

@@ -2,9 +2,9 @@
   <div>
     <CodeLight>
       <template #tip>
-        <VxeTips status="primary" title="自定义图标">
+        <vxe-tip status="primary" title="自定义图标">
           通过调用 VxeUI.setIcon({ ... }) 方法可以全局替换组件内置的图标
-        </VxeTips>
+        </vxe-tip>
       </template>
 
       <template #use>

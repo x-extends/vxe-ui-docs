@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="tree/current/Demo1">
       <template #tip>
-        <vxe-tips status="primary" title="高亮当前行"></vxe-tips>
+        <vxe-tip status="primary" title="高亮当前行"></vxe-tip>
       </template>
     </CodeLight>
   </div>

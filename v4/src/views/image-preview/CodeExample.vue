@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="image-preview/Demo1">
       <template #tip>
-        <vxe-tips status="primary" title="图片预览"></vxe-tips>
+        <vxe-tip status="primary" title="图片预览"></vxe-tip>
       </template>
 
       <template #preview>

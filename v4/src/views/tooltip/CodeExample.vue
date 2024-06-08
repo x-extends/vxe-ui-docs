@@ -2,9 +2,9 @@
   <div>
     <CodeLight path="tooltip/Demo1">
       <template #tip>
-        <vxe-tips status="primary">
+        <vxe-tip status="primary">
          文字提示，默认会在
-        </vxe-tips>
+        </vxe-tip>
       </template>
     </CodeLight>
 

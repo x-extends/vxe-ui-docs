@@ -402,9 +402,9 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/drawer/CodeExample.vue')
       },
       {
-        path: 'tips',
-        name: 'ComponentTips',
-        component: () => import('@/views/tips/CodeExample.vue')
+        path: 'tip',
+        name: 'ComponentTip',
+        component: () => import('@/views/tip/CodeExample.vue')
       },
       {
         path: 'alert',

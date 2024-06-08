@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="tree/radio/Demo1">
       <template #tip>
-        <vxe-tips status="primary" title="单选框"></vxe-tips>
+        <vxe-tip status="primary" title="单选框"></vxe-tip>
       </template>
     </CodeLight>
   </div>

@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="select/Demo1">
       <template #tip>
-        <vxe-tips status="primary" title="下拉框"></vxe-tips>
+        <vxe-tip status="primary" title="下拉框"></vxe-tip>
       </template>
 
       <template #describe>
@@ -21,49 +21,49 @@
 
     <CodeLight path="select/Demo2">
       <template #tip>
-        <vxe-tips status="primary">可清除</vxe-tips>
+        <vxe-tip status="primary">可清除</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="select/Demo3">
       <template #tip>
-        <vxe-tips status="primary">禁用</vxe-tips>
+        <vxe-tip status="primary">禁用</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="select/Demo4">
       <template #tip>
-        <vxe-tips status="primary">多选</vxe-tips>
+        <vxe-tip status="primary">多选</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="select/Demo5">
       <template #tip>
-        <vxe-tips status="primary">可搜索</vxe-tips>
+        <vxe-tip status="primary">可搜索</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="select/Demo6">
       <template #tip>
-        <vxe-tips status="primary">分组</vxe-tips>
+        <vxe-tip status="primary">分组</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="select/Demo7">
       <template #tip>
-        <vxe-tips status="primary">自定义选项样式/自定义模板</vxe-tips>
+        <vxe-tip status="primary">自定义选项样式/自定义模板</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="select/Demo8">
       <template #tip>
-        <vxe-tips status="primary">配置式用法</vxe-tips>
+        <vxe-tip status="primary">配置式用法</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="select/Demo9">
       <template #tip>
-        <vxe-tips status="primary">配置式自定义模板</vxe-tips>
+        <vxe-tip status="primary">配置式自定义模板</vxe-tip>
       </template>
     </CodeLight>
   </div>

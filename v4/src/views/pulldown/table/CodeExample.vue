@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="pulldown/table/Demo1">
       <template #tip>
-        <vxe-tips status="primary" title="实现下拉表格"></vxe-tips>
+        <vxe-tip status="primary" title="实现下拉表格"></vxe-tip>
       </template>
     </CodeLight>
   </div>

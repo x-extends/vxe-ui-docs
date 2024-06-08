@@ -2,55 +2,55 @@
   <div>
     <CodeLight path="button/Demo1">
       <template #tip>
-        <vxe-tips status="primary" title="按钮"></vxe-tips>
+        <vxe-tip status="primary" title="按钮"></vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="button/Demo2">
       <template #tip>
-        <vxe-tips status="primary">带状态颜色</vxe-tips>
+        <vxe-tip status="primary">带状态颜色</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="button/Demo9">
       <template #tip>
-        <vxe-tips status="primary">自定义颜色</vxe-tips>
+        <vxe-tip status="primary">自定义颜色</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="button/Demo3">
       <template #tip>
-        <vxe-tips status="primary">圆角边框/圆角按钮</vxe-tips>
+        <vxe-tip status="primary">圆角边框/圆角按钮</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="button/Demo4">
       <template #tip>
-        <vxe-tips status="primary">禁用状态</vxe-tips>
+        <vxe-tip status="primary">禁用状态</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="button/Demo5">
       <template #tip>
-        <vxe-tips status="primary">加载中</vxe-tips>
+        <vxe-tip status="primary">加载中</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="button/Demo6">
       <template #tip>
-        <vxe-tips status="primary">图标</vxe-tips>
+        <vxe-tip status="primary">图标</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="button/Demo7">
       <template #tip>
-        <vxe-tips status="primary">按钮组</vxe-tips>
+        <vxe-tip status="primary">按钮组</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="button/Demo8">
       <template #tip>
-        <vxe-tips status="primary">下拉按钮</vxe-tips>
+        <vxe-tip status="primary">下拉按钮</vxe-tip>
       </template>
 
       <template #describe>

@@ -2,17 +2,17 @@
   <div>
     <CodeLight path="print/base/Demo1">
       <template #tip>
-        <VxeTips status="primary" title="打印">
+        <vxe-tip status="primary" title="打印">
           打印 Html 标签
-        </VxeTips>
+        </vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="print/base/Demo2">
       <template #tip>
-        <VxeTips status="primary">
+        <vxe-tip status="primary">
           打印图片
-        </VxeTips>
+        </vxe-tip>
       </template>
     </CodeLight>
   </div>

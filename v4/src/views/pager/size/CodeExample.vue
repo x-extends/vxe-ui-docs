@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="pager/size/Demo1">
       <template #tip>
-        <vxe-tips status="primary" title="尺寸"></vxe-tips>
+        <vxe-tip status="primary" title="尺寸"></vxe-tip>
       </template>
 
       <template #describe>

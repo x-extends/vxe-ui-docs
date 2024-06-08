@@ -2,13 +2,13 @@
   <div>
     <CodeLight path="table/custom/toolbar/Demo1">
       <template #tip>
-        <vxe-tips status="primary">通过 custom 启用表格自定义列功能 </vxe-tips>
+        <vxe-tip status="primary">通过 custom 启用表格自定义列功能 </vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="table/custom/toolbar/Demo2">
       <template #tip>
-        <vxe-tips status="primary">弹窗模式 </vxe-tips>
+        <vxe-tip status="primary">弹窗模式 </vxe-tip>
       </template>
     </CodeLight>
   </div>

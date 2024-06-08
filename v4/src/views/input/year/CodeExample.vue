@@ -2,13 +2,13 @@
   <div>
     <CodeLight path="input/year/Demo1">
       <template #tip>
-        <vxe-tips status="primary">年度类型，设置type=year</vxe-tips>
+        <vxe-tip status="primary">年度类型，设置type=year</vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="input/year/Demo2">
       <template #tip>
-        <vxe-tips status="primary">多选</vxe-tips>
+        <vxe-tip status="primary">多选</vxe-tip>
       </template>
     </CodeLight>
   </div>
