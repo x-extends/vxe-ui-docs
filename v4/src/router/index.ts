@@ -1081,6 +1081,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'footerMethod',
                 name: 'ComponentTableFooterFooterMethod',
                 component: () => import('@/views/table/footer/footerMethod/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                name: 'ComponentTableFooterTemplate',
+                component: () => import('@/views/table/footer/template/CodeExample.vue')
               }
             ]
           },
@@ -1101,6 +1106,31 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'all',
                 name: 'ComponentTableMergeAll',
                 component: () => import('@/views/table/merge/all/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'expand',
+            children: [
+              {
+                path: 'basic',
+                name: 'ComponentTableExpandBasic',
+                component: () => import('@/views/table/expand/basic/CodeExample.vue')
+              },
+              {
+                path: 'padding',
+                name: 'ComponentTableExpandPadding',
+                component: () => import('@/views/table/expand/padding/CodeExample.vue')
+              },
+              {
+                path: 'height',
+                name: 'ComponentTableExpandHeight',
+                component: () => import('@/views/table/expand/height/CodeExample.vue')
+              },
+              {
+                path: 'fixed',
+                name: 'ComponentTableExpandFixed',
+                component: () => import('@/views/table/expand/fixed/CodeExample.vue')
               }
             ]
           },

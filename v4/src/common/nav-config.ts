@@ -392,13 +392,19 @@ export const navConfigList: NavVO[] = [
             title: '表尾数据',
             children: [
               { title: '标准结构', routerLink: { name: 'ComponentTableFooterFooterData' } },
-              { title: '自定义数据方法', routerLink: { name: 'ComponentTableFooterFooterMethod' } }
+              { title: '自定义数据方法', routerLink: { name: 'ComponentTableFooterFooterMethod' } },
+              { title: '自定义插槽模板', routerLink: { name: 'ComponentTableFooterTemplate' } }
             ]
           },
-          // {
-          //   title: '展开行',
-          //   children: []
-          // },
+          {
+            title: '展开行',
+            children: [
+              { title: '基础使用', routerLink: { name: 'ComponentTableExpandBasic' } },
+              { title: '展开容器内间距', routerLink: { name: 'ComponentTableExpandPadding' } },
+              { title: '展开容器高度', routerLink: { name: 'ComponentTableExpandHeight' } },
+              { title: '使用冻结列', routerLink: { name: 'ComponentTableExpandFixed' } }
+            ]
+          },
           // {
           //   title: '右键菜单',
           //   children: []
