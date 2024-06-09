@@ -405,15 +405,20 @@ export const navConfigList: NavVO[] = [
               { title: '使用冻结列', routerLink: { name: 'ComponentTableExpandFixed' } }
             ]
           },
-          // {
-          //   title: '右键菜单',
-          //   children: []
-          // },
+          {
+            title: '右键菜单',
+            children: [
+              { title: '表头菜单', routerLink: { name: 'ComponentTableMenuHeader' } },
+              { title: '单元格菜单', routerLink: { name: 'ComponentTableMenuBody' } },
+              { title: '表尾菜单', routerLink: { name: 'ComponentTableMenuFooter' } }
+            ]
+          },
           {
             title: '工具栏',
             children: [
               { title: '工具栏布局', routerLink: { name: 'ComponentTableToolbarBasic' } },
-              { title: '自定义列', routerLink: { name: 'ComponentTableToolbarCustom' } }
+              { title: '自定义列功能', routerLink: { name: 'ComponentTableToolbarCustom' } },
+              { title: '打印功能', routerLink: { name: 'ComponentTableToolbarPrint' } }
             ]
           },
           {
@@ -429,19 +434,25 @@ export const navConfigList: NavVO[] = [
               { title: '本地保存列设置', routerLink: { name: 'ComponentTableCustomStorage' } },
               { title: '服务端保存列设置', routerLink: { name: 'ComponentTableCustomEvents' } }
             ]
-          }
+          },
           // {
           //   title: '数据分页',
           //   children: []
           // },
-          // {
-          //   title: '树形结构',
-          //   children: []
-          // },
-          // {
-          //   title: '可编辑',
-          //   children: []
-          // },
+          {
+            title: '树形',
+            children: [
+              { title: '平级结构', routerLink: { name: 'ComponentTableTreeLeveling' } },
+              { title: '层级结构', routerLink: { name: 'ComponentTableTreeHierarchy' } }
+            ]
+          },
+          {
+            title: '可编辑',
+            children: [
+              { title: '单击编辑', routerLink: { name: 'ComponentTableEditClick' } },
+              { title: '双击编辑', routerLink: { name: 'ComponentTableEditDblclick' } }
+            ]
+          },
           // {
           //   title: '导入/导出数据',
           //   children: []
@@ -450,10 +461,13 @@ export const navConfigList: NavVO[] = [
           //   title: '打印表格',
           //   children: []
           // },
-          // {
-          //   title: '虚拟滚动',
-          //   children: []
-          // }
+          {
+            title: '虚拟滚动',
+            children: [
+              { title: '基本使用', routerLink: { name: 'ComponentTableScrollBase' } },
+              { title: '分组表头', routerLink: { name: 'ComponentTableScrollGroup' } }
+            ]
+          }
         ]
       },
       {
@@ -622,7 +636,14 @@ export const navConfigList: NavVO[] = [
         title: 'Print 打印',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'print' } } },
-          { title: '常规打印', routerLink: { name: 'ComponentPrintBase' } },
+          {
+            title: '常规打印',
+            children: [
+              { title: '打印 HTML', routerLink: { name: 'ComponentPrintBaseHtml' } },
+              { title: '打印图片', routerLink: { name: 'ComponentPrintBaseImg' } },
+              { title: '打印表格', routerLink: { name: 'ComponentPrintBaseTable' } }
+            ]
+          },
           {
             title: '分页打印',
             children: [

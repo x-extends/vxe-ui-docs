@@ -646,8 +646,23 @@ const routes: Array<RouteRecordRaw> = [
         children: [
           {
             path: 'base',
-            name: 'ComponentPrintBase',
-            component: () => import('@/views/print/base/CodeExample.vue')
+            children: [
+              {
+                path: 'html',
+                name: 'ComponentPrintBaseHtml',
+                component: () => import('@/views/print/base/html/CodeExample.vue')
+              },
+              {
+                path: 'base',
+                name: 'ComponentPrintBaseImg',
+                component: () => import('@/views/print/base/img/CodeExample.vue')
+              },
+              {
+                path: 'table',
+                name: 'ComponentPrintBaseTable',
+                component: () => import('@/views/print/base/table/CodeExample.vue')
+              }
+            ]
           },
           {
             path: 'page',
@@ -1135,6 +1150,26 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'menu',
+            children: [
+              {
+                path: 'header',
+                name: 'ComponentTableMenuHeader',
+                component: () => import('@/views/table/menu/header/CodeExample.vue')
+              },
+              {
+                path: 'body',
+                name: 'ComponentTableMenuBody',
+                component: () => import('@/views/table/menu/body/CodeExample.vue')
+              },
+              {
+                path: 'footer',
+                name: 'ComponentTableMenuFooter',
+                component: () => import('@/views/table/menu/footer/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'toolbar',
             children: [
               {
@@ -1146,6 +1181,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'custom',
                 name: 'ComponentTableToolbarCustom',
                 component: () => import('@/views/table/toolbar/custom/CodeExample.vue')
+              },
+              {
+                path: 'print',
+                name: 'ComponentTableToolbarPrint',
+                component: () => import('@/views/table/toolbar/print/CodeExample.vue')
               }
             ]
           },
@@ -1196,6 +1236,51 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'events',
                 name: 'ComponentTableCustomEvents',
                 component: () => import('@/views/table/custom/events/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'tree',
+            children: [
+              {
+                path: 'leveling',
+                name: 'ComponentTableTreeLeveling',
+                component: () => import('@/views/table/tree/leveling/CodeExample.vue')
+              },
+              {
+                path: 'hierarchy',
+                name: 'ComponentTableTreeHierarchy',
+                component: () => import('@/views/table/tree/hierarchy/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'edit',
+            children: [
+              {
+                path: 'click',
+                name: 'ComponentTableEditClick',
+                component: () => import('@/views/table/edit/click/CodeExample.vue')
+              },
+              {
+                path: 'dblclick',
+                name: 'ComponentTableEditDblclick',
+                component: () => import('@/views/table/edit/dblclick/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'scroll',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentTableScrollBase',
+                component: () => import('@/views/table/scroll/base/CodeExample.vue')
+              },
+              {
+                path: 'group',
+                name: 'ComponentTableScrollGroup',
+                component: () => import('@/views/table/scroll/group/CodeExample.vue')
               }
             ]
           }

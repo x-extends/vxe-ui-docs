@@ -1,10 +1,10 @@
 <template>
   <div>
-    <vxe-toolbar ref="toolbarRef" custom></vxe-toolbar>
     <vxe-table
-      ref="tableRef"
-      :custom-config="{}"
-      :data="tableData">
+      border
+      :menu-config="menuConfig"
+      :data="tableData"
+      @menu-click="menuClickEvent">
       <vxe-column type="seq" width="60"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="sex" title="Sex"></vxe-column>
@@ -14,9 +14,8 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue'
-
-import { VxeToolbarInstance, VxeTableInstance } from 'vxe-pc-ui'
+import { ref, reactive } from 'vue'
+import { VxeUI, VxeTablePropTypes, VxeTableEvents } from 'vxe-pc-ui'
 
 interface RowVO {
   id: number
@@ -27,8 +26,16 @@ interface RowVO {
   address: string
 }
 
-const toolbarRef = ref<VxeToolbarInstance>()
-const tableRef = ref<VxeTableInstance>()
+const menuConfig = reactive<VxeTablePropTypes.MenuConfig>({
+  header: {
+    options: [
+      [
+        { code: 'myBtn1', name: '按钮1' },
+        { code: 'myBtn2', name: '按钮2' }
+      ]
+    ]
+  }
+})
 
 const tableData = ref<RowVO[]>([
   { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
@@ -37,11 +44,18 @@ const tableData = ref<RowVO[]>([
   { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
 ])
 
-onMounted(() => {
-  const $table = tableRef.value
-  const $toolbar = toolbarRef.value
-  if ($table && $toolbar) {
-    $table.connect($toolbar)
+const menuClickEvent: VxeTableEvents.MenuClick<RowVO> = ({ menu }) => {
+  switch (menu.code) {
+    case 'myBtn1':
+      VxeUI.modal.message({
+        content: '点击了按钮1'
+      })
+      break
+    case 'myBtn2':
+      VxeUI.modal.message({
+        content: '点击了按钮2'
+      })
+      break
   }
-})
+}
 </script>
