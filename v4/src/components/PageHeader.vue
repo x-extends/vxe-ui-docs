@@ -57,12 +57,7 @@ const siteBaseUrl = computed(() => appStore.siteBaseUrl)
 const appStore = useAppStore()
 
 const showSystemMenu = ref(false)
-const systemMenuList = ref<VxeLinkProps[]>([
-  { content: 'Vxe Print Web 打印', href: 'https://vxeui.com/#/component/print/base' },
-  { content: 'Vxe Table 表格', href: 'https://vxetable.cn' },
-  { content: 'Vxe Form 表单', href: 'https://vxeui.com/#/component/form/basics/base' },
-  { content: 'Vxe Form Design 表单设计器', href: 'https://vxeui.com/#/component/form-design/base' }
-])
+const systemMenuList = ref<VxeLinkProps[]>()
 
 const currTheme = computed({
   get () {
@@ -99,6 +94,12 @@ const currVersion = computed({
   set (value) {
 
   }
+})
+
+fetch(`${siteBaseUrl.value}component-api/system-list.json`).then(res => {
+  res.json().then(data => {
+    systemMenuList.value = data
+  })
 })
 </script>
 
