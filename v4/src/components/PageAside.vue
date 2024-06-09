@@ -9,7 +9,6 @@
             <div v-if="searchName && searchList.length">
               <vxe-tree
                 is-hover
-                is-current
                 ref="treeRef"
                 :data="searchList"
                 title-field="title"

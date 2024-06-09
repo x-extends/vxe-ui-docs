@@ -531,14 +531,19 @@ export const navConfigList: NavVO[] = [
         title: 'Tip 小贴士',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tip' } } },
-          { title: '基础', routerLink: { name: 'ComponentTip' } }
+          { title: '状态', routerLink: { name: 'ComponentTipBase' } },
+          { title: '图标', routerLink: { name: 'ComponentTipIcon' } },
+          { title: '带标题', routerLink: { name: 'ComponentTipTitle' } }
         ]
       },
       {
         title: 'Alert 警告提示',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'alert' } } },
-          { title: '基础', routerLink: { name: 'ComponentAlert' } }
+          { title: '状态', routerLink: { name: 'ComponentAlertBase' } },
+          { title: '图标', routerLink: { name: 'ComponentAlertIcon' } },
+          { title: '带标题', routerLink: { name: 'ComponentAlertTitle' } },
+          { title: '可关闭', routerLink: { name: 'ComponentAlertClose' } }
         ]
       },
       // { title: 'Notification 通知提示框' },
@@ -546,7 +551,9 @@ export const navConfigList: NavVO[] = [
         title: 'Drawer 抽屉',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'drawer' } } },
-          { title: '自定义方向', routerLink: { name: 'ComponentDrawer' } }
+          { title: '自定义方向', routerLink: { name: 'ComponentDrawerBase' } },
+          { title: '点击遮罩层关闭', routerLink: { name: 'ComponentDrawerMaskClosable' } },
+          { title: '自定义模板', routerLink: { name: 'ComponentDrawerTemplate' } }
         ]
       },
       // { title: 'Popover 气泡提示框' },

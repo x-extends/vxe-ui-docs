@@ -589,17 +589,68 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'drawer',
         name: 'ComponentDrawer',
-        component: () => import('@/views/drawer/CodeExample.vue')
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentDrawerBase',
+            component: () => import('@/views/drawer/base/CodeExample.vue')
+          },
+          {
+            path: 'maskClosable',
+            name: 'ComponentDrawerMaskClosable',
+            component: () => import('@/views/drawer/maskClosable/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentDrawerTemplate',
+            component: () => import('@/views/drawer/template/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'tip',
-        name: 'ComponentTip',
-        component: () => import('@/views/tip/CodeExample.vue')
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentTipBase',
+            component: () => import('@/views/tip/base/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentTipIcon',
+            component: () => import('@/views/tip/icon/CodeExample.vue')
+          },
+          {
+            path: 'title',
+            name: 'ComponentTipTitle',
+            component: () => import('@/views/tip/title/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'alert',
-        name: 'ComponentAlert',
-        component: () => import('@/views/alert/CodeExample.vue')
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentAlertBase',
+            component: () => import('@/views/alert/base/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentAlertIcon',
+            component: () => import('@/views/alert/icon/CodeExample.vue')
+          },
+          {
+            path: 'title',
+            name: 'ComponentAlertTitle',
+            component: () => import('@/views/alert/title/CodeExample.vue')
+          },
+          {
+            path: 'close',
+            name: 'ComponentAlertClose',
+            component: () => import('@/views/alert/close/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'card',

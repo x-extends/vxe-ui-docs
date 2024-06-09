@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-button content="自定义插槽模板" @click="showDrawer = true"></vxe-button>
-    <vxe-drawer v-model="showDrawer" title="标题" position="left">
+    <vxe-drawer v-model="showDrawer" title="标题">
       <template #default>
         <span>
           <vxe-icon name="question-circle-fill" />
@@ -22,7 +22,6 @@ const showDrawer = ref(false)
 
 const openSlotDrawer = () => {
   VxeUI.drawer.open({
-    position: 'left',
     title: '标题',
     slots: {
       default () {
