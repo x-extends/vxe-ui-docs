@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="modal/modal/Demo4">
       <template #tip>
-        <vxe-tip status="primary">弹窗</vxe-tip>
+        <vxe-tip status="primary">弹出窗口</vxe-tip>
       </template>
     </CodeLight>
 
@@ -20,7 +20,7 @@
 
     <CodeLight path="modal/modal/Demo7">
       <template #tip>
-        <vxe-tip status="primary">拖动窗口调整大小</vxe-tip>
+        <vxe-tip status="primary">拖动窗口调整大小、最大化窗口、最小化窗口</vxe-tip>
       </template>
     </CodeLight>
 

@@ -292,27 +292,217 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'alert',
+        children: [
+          {
+            path: 'global',
+            name: 'ComponentModalAlertGlobal',
+            component: () => import('@/views/modal/alert/global/CodeExample.vue')
+          },
+          {
+            path: 'draggable',
+            name: 'ComponentModalAlertDraggable',
+            component: () => import('@/views/modal/alert/draggable/CodeExample.vue')
+          },
+          {
+            path: 'escClosable',
+            name: 'ComponentModalAlertEscClosable',
+            component: () => import('@/views/modal/alert/escClosable/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentModalAlertStatus',
+            component: () => import('@/views/modal/alert/status/CodeExample.vue')
+          },
+          {
+            path: 'manual',
+            name: 'ComponentModalAlertManual',
+            component: () => import('@/views/modal/alert/manual/CodeExample.vue')
+          },
+          {
+            path: 'multiple',
+            name: 'ComponentModalAlertMultiple',
+            component: () => import('@/views/modal/alert/multiple/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentModalAlertTemplate',
+            component: () => import('@/views/modal/alert/template/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'confirm',
+        children: [
+          {
+            path: 'global',
+            name: 'ComponentModalConfirmGlobal',
+            component: () => import('@/views/modal/confirm/global/CodeExample.vue')
+          },
+          {
+            path: 'draggable',
+            name: 'ComponentModalConfirmDraggable',
+            component: () => import('@/views/modal/confirm/draggable/CodeExample.vue')
+          },
+          {
+            path: 'escClosable',
+            name: 'ComponentModalConfirmEscClosable',
+            component: () => import('@/views/modal/confirm/escClosable/CodeExample.vue')
+          },
+          {
+            path: 'manual',
+            name: 'ComponentModalConfirmManual',
+            component: () => import('@/views/modal/confirm/manual/CodeExample.vue')
+          },
+          {
+            path: 'multiple',
+            name: 'ComponentModalConfirmMultiple',
+            component: () => import('@/views/modal/confirm/multiple/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentModalConfirmTemplate',
+            component: () => import('@/views/modal/confirm/template/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'message',
+        children: [
+          {
+            path: 'global',
+            name: 'ComponentModalMessageGlobal',
+            component: () => import('@/views/modal/message/global/CodeExample.vue')
+          },
+          {
+            path: 'multiple',
+            name: 'ComponentModalMessageMultiple',
+            component: () => import('@/views/modal/message/multiple/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentModalMessageStatus',
+            component: () => import('@/views/modal/message/status/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentModalMessageTemplate',
+            component: () => import('@/views/modal/message/template/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'notification',
+        children: [
+          {
+            path: 'global',
+            name: 'ComponentModalNotificationGlobal',
+            component: () => import('@/views/modal/notification/global/CodeExample.vue')
+          },
+          {
+            path: 'multiple',
+            name: 'ComponentModalNotificationMultiple',
+            component: () => import('@/views/modal/notification/multiple/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentModalNotificationStatus',
+            component: () => import('@/views/modal/notification/status/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentModalNotificationTemplate',
+            component: () => import('@/views/modal/notification/template/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'modal',
         children: [
           {
-            path: 'message',
-            name: 'ComponentModalMessage',
-            component: () => import('@/views/modal/message/CodeExample.vue')
+            path: 'base',
+            name: 'ComponentModalModalBase',
+            component: () => import('@/views/modal/modal/base/CodeExample.vue')
           },
           {
-            path: 'alert',
-            name: 'ComponentModalAlert',
-            component: () => import('@/views/modal/alert/CodeExample.vue')
+            path: 'global',
+            name: 'ComponentModalModalGlobal',
+            component: () => import('@/views/modal/modal/global/CodeExample.vue')
           },
           {
-            path: 'confirm',
-            name: 'ComponentModalConfirm',
-            component: () => import('@/views/modal/confirm/CodeExample.vue')
+            path: 'size',
+            name: 'ComponentModalModalSize',
+            component: () => import('@/views/modal/modal/size/CodeExample.vue')
           },
           {
-            path: 'open',
-            name: 'ComponentModalOpen',
-            component: () => import('@/views/modal/modal/CodeExample.vue')
+            path: 'padding',
+            name: 'ComponentModalModalPadding',
+            component: () => import('@/views/modal/modal/padding/CodeExample.vue')
+          },
+          {
+            path: 'draggable',
+            name: 'ComponentModalModalDraggable',
+            component: () => import('@/views/modal/modal/draggable/CodeExample.vue')
+          },
+          {
+            path: 'mask',
+            name: 'ComponentModalModalMask',
+            component: () => import('@/views/modal/modal/mask/CodeExample.vue')
+          },
+          {
+            path: 'lockView',
+            name: 'ComponentModalModalLockView',
+            component: () => import('@/views/modal/modal/lockView/CodeExample.vue')
+          },
+          {
+            path: 'resize',
+            name: 'ComponentModalModalResize',
+            component: () => import('@/views/modal/modal/resize/CodeExample.vue')
+          },
+          {
+            path: 'multiple',
+            name: 'ComponentModalModalMultiple',
+            component: () => import('@/views/modal/modal/multiple/CodeExample.vue')
+          },
+          {
+            path: 'escClosable',
+            name: 'ComponentModalModalEscClosable',
+            component: () => import('@/views/modal/modal/escClosable/CodeExample.vue')
+          },
+          {
+            path: 'beforeHide',
+            name: 'ComponentModalModalBeforeHide',
+            component: () => import('@/views/modal/modal/beforeHide/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentModalModalTemplate',
+            component: () => import('@/views/modal/modal/template/CodeExample.vue')
+          },
+          {
+            path: 'button',
+            name: 'ComponentModalModalButton',
+            component: () => import('@/views/modal/modal/button/CodeExample.vue')
+          },
+          {
+            path: 'zoom',
+            name: 'ComponentModalModalZoom',
+            component: () => import('@/views/modal/modal/zoom/CodeExample.vue')
+          },
+          {
+            path: 'remember',
+            name: 'ComponentModalModalRemember',
+            component: () => import('@/views/modal/modal/remember/CodeExample.vue')
+          },
+          {
+            path: 'iframe',
+            name: 'ComponentModalModalIframe',
+            component: () => import('@/views/modal/modal/iframe/CodeExample.vue')
+          },
+          {
+            path: 'full',
+            name: 'ComponentModalModalFull',
+            component: () => import('@/views/modal/modal/full/CodeExample.vue')
           }
         ]
       },

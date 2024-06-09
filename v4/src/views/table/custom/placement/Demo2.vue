@@ -3,7 +3,7 @@
     <vxe-toolbar ref="toolbarRef" custom></vxe-toolbar>
     <vxe-table
       ref="tableRef"
-      :custom-config="{placement: 'topRight'}"
+      :custom-config="{placement: 'top-right'}"
       :data="tableData">
       <vxe-column type="seq" width="60"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>

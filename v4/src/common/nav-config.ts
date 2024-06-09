@@ -523,16 +523,6 @@ export const navConfigList: NavVO[] = [
       },
       // { title: 'Notification 通知提示框' },
       {
-        title: 'Modal 模态窗',
-        children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'modal' } } },
-          { title: '轻提示框', routerLink: { name: 'ComponentModalMessage' } },
-          { title: '提示框', routerLink: { name: 'ComponentModalAlert' } },
-          { title: '确认框', routerLink: { name: 'ComponentModalConfirm' } },
-          { title: '弹出窗口', routerLink: { name: 'ComponentModalOpen' } }
-        ]
-      },
-      {
         title: 'Drawer 抽屉',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'drawer' } } },
@@ -545,6 +535,75 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tooltip' } } },
           { title: '文字提示', routerLink: { name: 'ComponentTooltip' } }
+        ]
+      }
+    ]
+  },
+  {
+    title: '弹窗',
+    children: [
+      { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'modal' } } },
+      {
+        title: '消息框',
+        children: [
+          { title: '全局调用', routerLink: { name: 'ComponentModalMessageGlobal' } },
+          { title: '唯一', routerLink: { name: 'ComponentModalMessageMultiple' } },
+          { title: '状态提示', routerLink: { name: 'ComponentModalMessageStatus' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentModalMessageTemplate' } }
+        ]
+      },
+      {
+        title: '通知框',
+        children: [
+          { title: '全局调用', routerLink: { name: 'ComponentModalNotificationGlobal' } },
+          { title: '唯一', routerLink: { name: 'ComponentModalNotificationMultiple' } },
+          { title: '状态提示', routerLink: { name: 'ComponentModalNotificationStatus' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentModalNotificationTemplate' } }
+        ]
+      },
+      {
+        title: '提示框',
+        children: [
+          { title: '全局调用', routerLink: { name: 'ComponentModalAlertGlobal' } },
+          { title: '弹出多个', routerLink: { name: 'ComponentModalAlertMultiple' } },
+          { title: '禁止拖动', routerLink: { name: 'ComponentModalAlertDraggable' } },
+          { title: '按 Esc 键可关闭', routerLink: { name: 'ComponentModalAlertEscClosable' } },
+          { title: '状态提示', routerLink: { name: 'ComponentModalAlertStatus' } },
+          { title: '手动关闭', routerLink: { name: 'ComponentModalAlertManual' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentModalAlertTemplate' } }
+        ]
+      },
+      {
+        title: '确认框',
+        children: [
+          { title: '全局调用', routerLink: { name: 'ComponentModalConfirmGlobal' } },
+          { title: '弹出多个', routerLink: { name: 'ComponentModalConfirmMultiple' } },
+          { title: '禁止拖动', routerLink: { name: 'ComponentModalConfirmDraggable' } },
+          { title: '按 Esc 键可关闭', routerLink: { name: 'ComponentModalConfirmEscClosable' } },
+          { title: '手动关闭', routerLink: { name: 'ComponentModalConfirmManual' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentModalConfirmTemplate' } }
+        ]
+      },
+      {
+        title: '窗口模式',
+        children: [
+          { title: '基础', routerLink: { name: 'ComponentModalModalBase' } },
+          { title: '尺寸', routerLink: { name: 'ComponentModalModalSize' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentModalModalTemplate' } },
+          { title: '全局调用', routerLink: { name: 'ComponentModalModalGlobal' } },
+          { title: '内边距', routerLink: { name: 'ComponentModalModalPadding' } },
+          { title: '遮罩层', routerLink: { name: 'ComponentModalModalMask' } },
+          { title: '锁定页面', routerLink: { name: 'ComponentModalModalLockView' } },
+          { title: '拖动窗口', routerLink: { name: 'ComponentModalModalDraggable' } },
+          { title: '多窗口', routerLink: { name: 'ComponentModalModalMultiple' } },
+          { title: '按 Esc 键可关闭', routerLink: { name: 'ComponentModalModalEscClosable' } },
+          { title: '拦截关闭', routerLink: { name: 'ComponentModalModalBeforeHide' } },
+          { title: '操作按钮', routerLink: { name: 'ComponentModalModalButton' } },
+          { title: '拖动调整宽高', routerLink: { name: 'ComponentModalModalResize' } },
+          { title: '最大化与最小化', routerLink: { name: 'ComponentModalModalZoom' } },
+          { title: '记忆功能', routerLink: { name: 'ComponentModalModalRemember' } },
+          { title: '嵌入 iframe', routerLink: { name: 'ComponentModalModalIframe' } },
+          { title: '完整功能', routerLink: { name: 'ComponentModalModalFull' } }
         ]
       }
     ]
