@@ -27,7 +27,7 @@ const openEvent = () => {
                 content: `允许关闭 ${type}`,
                 status: 'success'
               })
-              resolve()
+              resolve(null)
             } else {
               VxeUI.modal.message({
                 content: `禁止关闭 ${type}`,
