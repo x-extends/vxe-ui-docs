@@ -12,24 +12,32 @@ export default {
         i18n: 'Internationalization',
         tools: 'Utility',
         clipboard: 'Clipboard',
-        formTitle: 'Table',
+        formTitle: 'Form',
         form: {
 
         },
-        tableTitle: '表格',
+        baseTitle: 'Base component',
+        navigationTitle: 'Navigation component',
+        layoutTitle: 'Layout component',
+        feedbackTitle: 'Feedback component',
+        dataTitle: 'Data component',
+        tableTitle: 'Table',
         table: {
-          name: '静态表格'
+          name: 'Static table'
         },
         grid: {
-          name: '配置式动态表格'
+          name: 'Configuration table'
         },
         modalTitle: 'Modal',
         modal: {
 
-        }
+        },
+        otherTitle: 'Other components',
+        designTitle: 'Visual'
       }
     },
     header: {
+      moreProducts: 'More products',
       supportUs: 'Support us'
     },
     base: {
@@ -37,6 +45,10 @@ export default {
       dark: 'Night'
     },
     layout: {},
+    version: {
+      v4: 'v4.x (vue 3.x Latest)',
+      v3: 'v3.x (vue 2.6+ LTS)'
+    },
     docs: {
       button: {
         viewCode: 'View code',

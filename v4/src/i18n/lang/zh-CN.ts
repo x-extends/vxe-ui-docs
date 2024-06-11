@@ -12,10 +12,15 @@ export default {
         i18n: '国际化',
         tools: '工具类',
         clipboard: '剪贴板',
-        formTitle: '表格',
+        formTitle: '表单',
         form: {
 
         },
+        baseTitle: '基础组件',
+        navigationTitle: '导航组件',
+        layoutTitle: '容器组件',
+        feedbackTitle: '反馈组件',
+        dataTitle: 'Data component',
         tableTitle: '表格',
         table: {
           name: '静态表格'
@@ -26,10 +31,13 @@ export default {
         modalTitle: '弹窗',
         modal: {
 
-        }
+        },
+        otherTitle: '其他组件',
+        designTitle: '可视化'
       }
     },
     header: {
+      moreProducts: '更多产品',
       supportUs: '支持我们'
     },
     base: {
@@ -37,6 +45,10 @@ export default {
       dark: '夜间'
     },
     layout: {},
+    version: {
+      v4: 'v4.x (vue 3.x 最新版)',
+      v3: 'v3.x (vue 2.6+ 长期维护版)'
+    },
     docs: {
       button: {
         viewCode: '查看代码',

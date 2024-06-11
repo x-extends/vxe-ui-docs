@@ -39,7 +39,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '基础组件',
+    i18nKey: 'app.aside.menu.baseTitle',
     children: [
       {
         title: 'Icon 图标',
@@ -79,44 +79,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '导航组件',
-    children: [
-      {
-        title: 'Breadcrumb 面包屑',
-        children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'breadcrumb' } } },
-          { title: '基础', routerLink: { name: 'ComponentBreadcrumb' } }
-        ]
-      },
-      {
-        title: 'Menu 菜单',
-        children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'menu' } } },
-          { title: '基础', routerLink: { name: 'ComponentMenu' } }
-        ]
-      },
-      {
-        title: 'Anchor 锚点',
-        children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'anchor' } } },
-          { title: '自定义容器', routerLink: { name: 'ComponentAnchor' } }
-        ]
-      },
-      {
-        title: 'Pager 分页',
-        children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pager' } } },
-          { title: '尺寸', routerLink: { name: 'ComponentPagerSize' } },
-          { title: '对齐方式', routerLink: { name: 'ComponentPagerAlign' } },
-          { title: '自定义页大小列表', routerLink: { name: 'ComponentPagerPageSize' } },
-          { title: '自定义布局', routerLink: { name: 'ComponentPagerLayout' } },
-          { title: '自定义模板', routerLink: { name: 'ComponentPagerTemplate' } }
-        ]
-      }
-    ]
-  },
-  {
-    title: '容器组件',
+    i18nKey: 'app.aside.menu.layoutTitle',
     children: [
       {
         title: 'Layout 页面布局',
@@ -194,6 +157,43 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
+    i18nKey: 'app.aside.menu.navigationTitle',
+    children: [
+      {
+        title: 'Breadcrumb 面包屑',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'breadcrumb' } } },
+          { title: '基础', routerLink: { name: 'ComponentBreadcrumb' } }
+        ]
+      },
+      {
+        title: 'Menu 菜单',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'menu' } } },
+          { title: '基础', routerLink: { name: 'ComponentMenu' } }
+        ]
+      },
+      {
+        title: 'Anchor 锚点',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'anchor' } } },
+          { title: '自定义容器', routerLink: { name: 'ComponentAnchor' } }
+        ]
+      },
+      {
+        title: 'Pager 分页',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pager' } } },
+          { title: '尺寸', routerLink: { name: 'ComponentPagerSize' } },
+          { title: '对齐方式', routerLink: { name: 'ComponentPagerAlign' } },
+          { title: '自定义页大小列表', routerLink: { name: 'ComponentPagerPageSize' } },
+          { title: '自定义布局', routerLink: { name: 'ComponentPagerLayout' } },
+          { title: '自定义模板', routerLink: { name: 'ComponentPagerTemplate' } }
+        ]
+      }
+    ]
+  },
+  {
     i18nKey: 'app.aside.menu.formTitle',
     children: [
       { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form' } } },
@@ -232,7 +232,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '数据组件',
+    i18nKey: 'app.aside.menu.dataTitle',
     children: [
       {
         title: 'Switch 开关',
@@ -576,7 +576,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '反馈组件',
+    i18nKey: 'app.aside.menu.feedbackTitle',
     children: [
       // { title: 'Loading 加载中' },
       {
@@ -688,7 +688,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '其他组件',
+    i18nKey: 'app.aside.menu.otherTitle',
     children: [
       // { title: 'Watermark 水印' },
       {
@@ -717,7 +717,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '可视化',
+    i18nKey: 'app.aside.menu.designTitle',
     children: [
       {
         title: 'FormDesign 表单设计器',

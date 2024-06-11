@@ -19,7 +19,7 @@
     <div class="header-right">
       <vxe-pulldown v-model="showSystemMenu">
         <vxe-button class="system-menu-btn" status="primary" mode="text" @click="showSystemMenu = !showSystemMenu">
-          <span style="padding-right: 8px;">更多产品</span>
+          <span style="padding-right: 8px;">{{ $t('app.header.moreProducts') }}</span>
           <vxe-icon name="arrow-down"></vxe-icon>
         </vxe-button>
 
@@ -51,6 +51,7 @@
 import { ref, computed } from 'vue'
 import { useAppStore } from '@/store/app'
 import { VxeLinkProps } from 'vxe-pc-ui'
+import i18n from '@/i18n'
 
 const siteBaseUrl = computed(() => appStore.siteBaseUrl)
 
@@ -82,10 +83,12 @@ const currLang = computed({
   }
 })
 
-const versionOptions = ref([
-  { value: '4', label: 'v4.x (vue 3.x 稳定版)' },
-  { value: '3', label: 'v3.x (vue 2.6+ 长期维护版)', disabled: true }
-])
+const versionOptions = computed(() => {
+  return [
+    { value: '4', label: i18n.global.t('app.version.v4') },
+    { value: '3', label: i18n.global.t('app.version.v3'), disabled: true }
+  ]
+})
 
 const currVersion = computed({
   get () {

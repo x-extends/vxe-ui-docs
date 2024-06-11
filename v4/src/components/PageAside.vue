@@ -104,6 +104,12 @@ const handleNavApiParams = (item: NavVO) => {
   }
 }
 
+const updateTitle = () => {
+  XEUtils.eachTree(navList.value, (item) => {
+    item.title = item.i18nKey ? i18n.global.t(item.i18nKey) : item.title
+  }, { children: 'children' })
+}
+
 const createNavList = () => {
   XEUtils.eachTree(navConfigList, item => {
     item.title = item.i18nKey ? i18n.global.t(item.i18nKey) : item.title
@@ -246,7 +252,7 @@ watch(() => appStore.compApiMaps, () => {
 })
 
 watch(() => i18n.global.locale, () => {
-  createNavList()
+  updateTitle()
 })
 
 createNavList()
