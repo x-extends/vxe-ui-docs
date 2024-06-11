@@ -54,7 +54,7 @@ const appStore = useAppStore()
 
 const gridRef = ref<VxeGridInstance>()
 
-const searchName = ref(route.query.q || '')
+const searchName = ref(`${route.query.q || ''}`)
 const tableData = ref<any[]>([])
 
 const apiName = computed(() => {
@@ -129,7 +129,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   columns: [
     {
       field: 'name',
-      title: i18n.global.t('app.api.title.prop'),
+      title: i18n.global.t('api.title.prop'),
       type: 'html',
       treeNode: true,
       minWidth: 280,
@@ -143,11 +143,11 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
         { label: 'Methods', value: 'Methods' }
       ]
     },
-    { field: 'i18nValue', title: i18n.global.t('app.api.title.desc'), type: 'html', minWidth: 300 },
-    { field: 'type', title: i18n.global.t('app.api.title.type'), type: 'html', minWidth: 140 },
-    { field: 'enum', title: i18n.global.t('app.api.title.enum'), type: 'html', minWidth: 150 },
-    { field: 'defVal', title: i18n.global.t('app.api.title.defVal'), type: 'html', minWidth: 160, titlePrefix: { message: '部分参数可支持全局设置，具体请查阅相关说明' } },
-    { field: 'version', title: i18n.global.t('app.api.title.version'), type: 'html', width: 120, titlePrefix: { message: '该文档与最新版本保持同步，如果遇到参数无效时，\n请检查当前使用的版本号是否支持该参数' }, slots: { default: 'default_version' } }
+    { field: 'i18nValue', title: i18n.global.t('api.title.desc'), type: 'html', minWidth: 300 },
+    { field: 'type', title: i18n.global.t('api.title.type'), type: 'html', minWidth: 140 },
+    { field: 'enum', title: i18n.global.t('api.title.enum'), type: 'html', minWidth: 150 },
+    { field: 'defVal', title: i18n.global.t('api.title.defVal'), type: 'html', minWidth: 160, titlePrefix: { message: '部分参数可支持全局设置，具体请查阅相关说明' } },
+    { field: 'version', title: i18n.global.t('api.title.version'), type: 'html', width: 120, titlePrefix: { message: '该文档与最新版本保持同步，如果遇到参数无效时，\n请检查当前使用的版本号是否支持该参数' }, slots: { default: 'default_version' } }
   ],
   data: []
 })
