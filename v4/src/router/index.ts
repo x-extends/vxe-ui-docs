@@ -88,8 +88,23 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: 'icon',
-        name: 'ComponentIcon',
-        component: () => import('@/views/icon/CodeExample.vue')
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentIconBase',
+            component: () => import('@/views/icon/base/CodeExample.vue')
+          },
+          {
+            path: 'animation',
+            name: 'ComponentIconAnimation',
+            component: () => import('@/views/icon/animation/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentIconStatus',
+            component: () => import('@/views/icon/status/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'layout',
@@ -138,23 +153,103 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'text',
-        name: 'ComponentText',
-        component: () => import('@/views/text/CodeExample.vue')
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentTextSize',
+            component: () => import('@/views/text/size/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentTextStatus',
+            component: () => import('@/views/text/status/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'link',
-        name: 'ComponentLink',
-        component: () => import('@/views/link/CodeExample.vue')
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentLinkSize',
+            component: () => import('@/views/link/size/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentLinkStatus',
+            component: () => import('@/views/link/status/CodeExample.vue')
+          },
+          {
+            path: 'router',
+            name: 'ComponentLinkRouter',
+            component: () => import('@/views/link/router/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'tag',
-        name: 'ComponentTag',
-        component: () => import('@/views/tag/CodeExample.vue')
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentTagSize',
+            component: () => import('@/views/tag/size/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentTagStatus',
+            component: () => import('@/views/tag/status/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentTagIcon',
+            component: () => import('@/views/tag/icon/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'button',
-        name: 'ComponentButton',
-        component: () => import('@/views/button/CodeExample.vue')
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentButtonSize',
+            component: () => import('@/views/button/size/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentButtonStatus',
+            component: () => import('@/views/button/status/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentButtonIcon',
+            component: () => import('@/views/button/icon/CodeExample.vue')
+          },
+          {
+            path: 'circle',
+            name: 'ComponentButtonCircle',
+            component: () => import('@/views/button/circle/CodeExample.vue')
+          },
+          {
+            path: 'round',
+            name: 'ComponentButtonRound',
+            component: () => import('@/views/button/round/CodeExample.vue')
+          },
+          {
+            path: 'loading',
+            name: 'ComponentButtonLoading',
+            component: () => import('@/views/button/loading/CodeExample.vue')
+          },
+          {
+            path: 'group',
+            name: 'ComponentButtonGroup',
+            component: () => import('@/views/button/group/CodeExample.vue')
+          },
+          {
+            path: 'dropdown',
+            name: 'ComponentButtonDropdown',
+            component: () => import('@/views/button/dropdown/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'radio',

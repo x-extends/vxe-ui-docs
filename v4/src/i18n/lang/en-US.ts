@@ -12,15 +12,15 @@ export default {
         i18n: 'Internationalization',
         tools: 'Utility',
         clipboard: 'Clipboard',
-        formTitle: 'Form',
-        form: {
-
-        },
         baseTitle: 'Base component',
         navigationTitle: 'Navigation component',
         layoutTitle: 'Layout component',
         feedbackTitle: 'Feedback component',
-        dataTitle: 'Data component',
+        formTitle: 'Form',
+        form: {
+
+        },
+        dataTitle: 'Form component',
         tableTitle: 'Table',
         table: {
           name: 'Static table'
@@ -44,7 +44,9 @@ export default {
       light: 'Daytime',
       dark: 'Night'
     },
-    layout: {},
+    layout: {
+      apiSearch: 'Search {0} API'
+    },
     version: {
       v4: 'v4.x (vue 3.x Latest)',
       v3: 'v3.x (vue 2.6+ LTS)'

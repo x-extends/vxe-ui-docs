@@ -15,10 +15,10 @@
                 children-field="searchResult"
                 trigger="row">
                 <template #title="{ row }">
-                  <vxe-link v-if="row.routerLink" :class="[getApiClass(row)]" :router-link="row.routerLink" @click="searchRowClickEvent">
+                  <vxe-link v-if="row.routerLink" status="primary" :class="[getApiClass(row)]" :router-link="row.routerLink" @click="searchRowClickEvent">
                     <span v-html="row.title"></span>
                   </vxe-link>
-                  <vxe-link v-else-if="row.linkUrl" :href="row.linkUrl" target="_blank">
+                  <vxe-link v-else-if="row.linkUrl" status="primary" :href="row.linkUrl" target="_blank">
                     <span v-html="row.title"></span>
                   </vxe-link>
                   <span v-else v-html="row.title"></span>

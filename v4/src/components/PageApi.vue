@@ -5,12 +5,12 @@
       class="api-table"
       v-bind="gridOptions">
       <template #toolbar_buttons>
-        <vxe-input clearable class="search-input" v-model="searchName" type="search" :placeholder="`vxe-${apiName} ${$t('app.api.apiSearch')}`" @keyup="searchEvent" @clear="searchEvent"></vxe-input>
+        <vxe-input clearable class="search-input" v-model="searchName" type="search" :placeholder="$t('app.layout.apiSearch', [apiName])" @keyup="searchEvent" @clear="searchEvent"></vxe-input>
       </template>
 
       <template #default_version="{ row }">
         <template v-if="row.version === 'extend-cell-area'">
-          <a class="link pro" :href="appStore.pluginApiUrl" target="_blank">企业版</a>
+          <a class="link enterprise-version" :href="appStore.pluginApiUrl" target="_blank">企业版</a>
         </template>
         <template v-else-if="row.disabled">
           <span class="disabled">已废弃</span>
@@ -219,5 +219,8 @@ nextTick(() => {
 }
 .search-input {
   width: 300px;
+}
+.enterprise-version {
+  background-color: #f6ca9d;
 }
 </style>

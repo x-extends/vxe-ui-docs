@@ -12,23 +12,23 @@ export default {
         i18n: '国际化',
         tools: '工具类',
         clipboard: '剪贴板',
-        formTitle: '表单',
-        form: {
-
-        },
         baseTitle: '基础组件',
         navigationTitle: '导航组件',
         layoutTitle: '容器组件',
         feedbackTitle: '反馈组件',
-        dataTitle: 'Data component',
+        formTitle: 'Form 表单',
+        form: {
+
+        },
+        dataTitle: '表单组件',
         tableTitle: '表格',
         table: {
-          name: '静态表格'
+          name: 'Table 静态表格'
         },
         grid: {
-          name: '配置式动态表格'
+          name: 'Grid 配置式表格'
         },
-        modalTitle: '弹窗',
+        modalTitle: 'Modal 弹窗',
         modal: {
 
         },
@@ -44,7 +44,9 @@ export default {
       light: '白天',
       dark: '夜间'
     },
-    layout: {},
+    layout: {
+      apiSearch: '搜索 {0} API'
+    },
     version: {
       v4: 'v4.x (vue 3.x 最新版)',
       v3: 'v3.x (vue 2.6+ 长期维护版)'

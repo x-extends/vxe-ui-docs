@@ -45,35 +45,49 @@ export const navConfigList: NavVO[] = [
         title: 'Icon 图标',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon' } } },
-          { title: '图标列表', routerLink: { name: 'ComponentIcon' } }
+          { title: '图标列表', routerLink: { name: 'ComponentIconBase' } },
+          { title: '效果', routerLink: { name: 'ComponentIconAnimation' } },
+          { title: '状态颜色', routerLink: { name: 'ComponentIconStatus' } }
         ]
       },
       {
         title: 'Text 文本',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'text' } } },
-          { title: '状态颜色', routerLink: { name: 'ComponentText' } }
+          { title: '尺寸大小', routerLink: { name: 'ComponentTextSize' } },
+          { title: '状态颜色', routerLink: { name: 'ComponentTextStatus' } }
         ]
       },
       {
         title: 'Link 链接',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'link' } } },
-          { title: '状态颜色', routerLink: { name: 'ComponentLink' } }
+          { title: '尺寸大小', routerLink: { name: 'ComponentLinkSize' } },
+          { title: '状态颜色', routerLink: { name: 'ComponentLinkStatus' } },
+          { title: '路由模式', routerLink: { name: 'ComponentLinkRouter' } }
         ]
       },
       {
         title: 'Tag 标签',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tag' } } },
-          { title: '状态颜色', routerLink: { name: 'ComponentTag' } }
+          { title: '尺寸大小', routerLink: { name: 'ComponentTagSize' } },
+          { title: '状态', routerLink: { name: 'ComponentTagStatus' } },
+          { title: '图标', routerLink: { name: 'ComponentTagIcon' } }
         ]
       },
       {
         title: 'Button 按钮',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'button' } } },
-          { title: '状态颜色', routerLink: { name: 'ComponentButton' } }
+          { title: '尺寸大小', routerLink: { name: 'ComponentButtonSize' } },
+          { title: '状态', routerLink: { name: 'ComponentButtonStatus' } },
+          { title: '圆角', routerLink: { name: 'ComponentButtonRound' } },
+          { title: '图标', routerLink: { name: 'ComponentButtonIcon' } },
+          { title: '圆形', routerLink: { name: 'ComponentButtonCircle' } },
+          { title: '加载中', routerLink: { name: 'ComponentButtonLoading' } },
+          { title: '按钮组', routerLink: { name: 'ComponentButtonGroup' } },
+          { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdown' } }
         ]
       }
     ]
@@ -184,7 +198,7 @@ export const navConfigList: NavVO[] = [
         title: 'Pager 分页',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pager' } } },
-          { title: '尺寸', routerLink: { name: 'ComponentPagerSize' } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentPagerSize' } },
           { title: '对齐方式', routerLink: { name: 'ComponentPagerAlign' } },
           { title: '自定义页大小列表', routerLink: { name: 'ComponentPagerPageSize' } },
           { title: '自定义布局', routerLink: { name: 'ComponentPagerLayout' } },
@@ -201,7 +215,7 @@ export const navConfigList: NavVO[] = [
         title: '基础表单',
         children: [
           { title: '基础功能', routerLink: { name: 'ComponentFormBasicsBase' } },
-          { title: '尺寸', routerLink: { name: 'ComponentFormBasicsSize' } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentFormBasicsSize' } },
           { title: '上下布局', routerLink: { name: 'ComponentFormBasicsVertical' } },
           { title: '标题冒号', routerLink: { name: 'ComponentFormBasicsColon' } },
           { title: '标题加粗', routerLink: { name: 'ComponentFormBasicsBold' } },
@@ -375,7 +389,7 @@ export const navConfigList: NavVO[] = [
             title: '基础功能',
             children: [
               { title: '基础', routerLink: { name: 'ComponentTableBaseBasic' } },
-              { title: '尺寸', routerLink: { name: 'ComponentTableBaseSize' } },
+              { title: '尺寸大小', routerLink: { name: 'ComponentTableBaseSize' } },
               { title: '数据类型', routerLink: { name: 'ComponentTableBaseData' } },
               { title: '空数据提示', routerLink: { name: 'ComponentTableBaseEmpty' } },
               { title: '边框', routerLink: { name: 'ComponentTableBaseBorder' } },
@@ -508,7 +522,7 @@ export const navConfigList: NavVO[] = [
             title: '基础功能',
             children: [
               { title: '基础', routerLink: { name: 'ComponentGridBaseBasic' } },
-              // { title: '尺寸', routerLink: { name: 'ComponentGridBaseSize' } },
+              // { title: '尺寸大小', routerLink: { name: 'ComponentGridBaseSize' } },
               { title: '数据类型', routerLink: { name: 'ComponentGridBaseData' } },
               { title: '空数据提示', routerLink: { name: 'ComponentGridBaseEmpty' } },
               { title: '边框', routerLink: { name: 'ComponentGridBaseBorder' } },
@@ -667,7 +681,7 @@ export const navConfigList: NavVO[] = [
         title: '窗口模式',
         children: [
           { title: '基础', routerLink: { name: 'ComponentModalModalBase' } },
-          { title: '尺寸', routerLink: { name: 'ComponentModalModalSize' } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentModalModalSize' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentModalModalTemplate' } },
           { title: '全局调用', routerLink: { name: 'ComponentModalModalGlobal' } },
           { title: '内边距', routerLink: { name: 'ComponentModalModalPadding' } },
