@@ -156,7 +156,7 @@
               VxeColgroup,
               VxeGrid,
               VxeToolbar
-            } from 'vxe-pc-ui'
+            } from 'vxe-table'
 
             // 导入主题变量，也可以重写主题变量
             import 'vxe-table/styles/cssvar.scss'

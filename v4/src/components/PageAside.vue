@@ -79,6 +79,7 @@ import { useRoute } from 'vue-router'
 import { useAppStore } from '@/store/app'
 import { navConfigList, NavVO } from '@/common/nav-config'
 import { VxeTreeInstance } from 'vxe-pc-ui'
+import i18n from '@/i18n'
 import XEUtils from 'xe-utils'
 
 const route = useRoute()
@@ -105,6 +106,7 @@ const handleNavApiParams = (item: NavVO) => {
 
 const createNavList = () => {
   XEUtils.eachTree(navConfigList, item => {
+    item.title = item.i18nKey ? i18n.global.t(item.i18nKey) : item.title
     item.isExpand = item.isExpand || false
     handleNavApiParams(item)
   }, { children: 'children' })
@@ -243,6 +245,10 @@ watch(() => appStore.compApiMaps, () => {
   createNavList()
 })
 
+watch(() => i18n.global.locale, () => {
+  createNavList()
+})
+
 createNavList()
 updateExpand()
 
@@ -258,7 +264,7 @@ appStore.updateComponentApiJSON()
     padding: 16px;
     text-align: center;
     background-color: var(--vxe-ui-docs-layout-background-color);
-    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0px 12px 8px -8px rgba(0,0,0,.12);
     z-index: 3;
   }
   .search-input {

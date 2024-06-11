@@ -1,5 +1,11 @@
 export default {
   app: {
+    aside: {
+      menu: {
+        guide: 'Development guide',
+        tools: 'Utility'
+      }
+    },
     base: {},
     layout: {},
     docs: {
@@ -14,7 +20,8 @@ export default {
         showJsCode: 'Show JS',
         hideCode: 'Hide code'
       }
-    },
-    components: {}
-  }
+    }
+  },
+  api: {},
+  components: {}
 }

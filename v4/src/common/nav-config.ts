@@ -1,6 +1,7 @@
 export interface NavVO {
   title: string
   name?: string
+  i18nKey?: string
   isAllAPI?: boolean
   isSelfAPI?: boolean
   isExpand?: boolean
@@ -19,6 +20,7 @@ export interface NavVO {
 export const navConfigList: NavVO[] = [
   {
     title: '开发指南',
+    i18nKey: 'app.aside.menu.guide',
     isExpand: true,
     children: [
       { title: '全局安装', routerLink: { name: 'StartInstall' } },
@@ -32,6 +34,7 @@ export const navConfigList: NavVO[] = [
   },
   {
     title: '工具类',
+    i18nKey: 'app.aside.menu.tools',
     children: [
       // { title: '函数库' },
       { title: '剪贴板', routerLink: { name: 'ToolClipboard' } }

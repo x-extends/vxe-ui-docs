@@ -1,18 +1,9 @@
 export default {
   app: {
-    api: {
-      apiSearch: 'API 搜索',
-      title: {
-        prop: '属性',
-        desc: '说明',
-        type: '类型 / 返回类型',
-        enum: '可选值',
-        defVal: '默认值 / 参数',
-        version: '兼容性',
-        Props: '参数',
-        Events: '事件',
-        Slots: '插槽',
-        Methods: '方法'
+    aside: {
+      menu: {
+        guide: '开发指南',
+        tools: '工具类'
       }
     },
     base: {},
@@ -29,6 +20,21 @@ export default {
         showJsCode: '显示JS',
         hideCode: '隐藏代码'
       }
+    }
+  },
+  api: {
+    apiSearch: 'API 搜索',
+    title: {
+      prop: '属性',
+      desc: '说明',
+      type: '类型 / 返回类型',
+      enum: '可选值',
+      defVal: '默认值 / 参数',
+      version: '兼容性',
+      Props: '参数',
+      Events: '事件',
+      Slots: '插槽',
+      Methods: '方法'
     }
   },
   components: {
