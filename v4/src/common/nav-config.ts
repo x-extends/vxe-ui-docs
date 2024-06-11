@@ -1,5 +1,5 @@
 export interface NavVO {
-  title: string
+  title?: string
   name?: string
   i18nKey?: string
   isAllAPI?: boolean
@@ -19,25 +19,23 @@ export interface NavVO {
 
 export const navConfigList: NavVO[] = [
   {
-    title: '开发指南',
     i18nKey: 'app.aside.menu.guide',
     isExpand: true,
     children: [
-      { title: '全局安装', routerLink: { name: 'StartInstall' } },
-      { title: '按需加载', routerLink: { name: 'StartUse' } },
-      { title: '全局参数', routerLink: { name: 'StartConfig' } },
-      { title: '全局主题', routerLink: { name: 'StartTheme' } },
-      { title: '全局图标', routerLink: { name: 'StartIcons' } },
-      { title: '全局 z-index', routerLink: { name: 'StartUseZIndex' } },
-      { title: '国际化', routerLink: { name: 'StartI18n' } }
+      { i18nKey: 'app.aside.menu.globalInstall', routerLink: { name: 'StartInstall' } },
+      { i18nKey: 'app.aside.menu.demandLoading', routerLink: { name: 'StartUse' } },
+      { i18nKey: 'app.aside.menu.globalConfig', routerLink: { name: 'StartConfig' } },
+      { i18nKey: 'app.aside.menu.globalTheme', routerLink: { name: 'StartTheme' } },
+      { i18nKey: 'app.aside.menu.globalIcon', routerLink: { name: 'StartIcons' } },
+      { i18nKey: 'app.aside.menu.GlobalZIndex', routerLink: { name: 'StartUseZIndex' } },
+      { i18nKey: 'app.aside.menu.i18n', routerLink: { name: 'StartI18n' } }
     ]
   },
   {
-    title: '工具类',
     i18nKey: 'app.aside.menu.tools',
     children: [
       // { title: '函数库' },
-      { title: '剪贴板', routerLink: { name: 'ToolClipboard' } }
+      { i18nKey: 'app.aside.menu.clipboard', routerLink: { name: 'ToolClipboard' } }
     ]
   },
   {
@@ -196,7 +194,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '表单',
+    i18nKey: 'app.aside.menu.formTitle',
     children: [
       { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form' } } },
       {
@@ -366,12 +364,12 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '表格',
+    i18nKey: 'app.aside.menu.tableTitle',
     children: [
       { title: '点击查看完整文档', linkUrl: 'https://vxetable.cn/v4.7/' },
       { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'table' } } },
       {
-        title: '静态表格',
+        i18nKey: 'app.aside.menu.table.name',
         children: [
           {
             title: '基础功能',
@@ -498,13 +496,13 @@ export const navConfigList: NavVO[] = [
             title: '虚拟滚动',
             children: [
               { title: '基本使用', routerLink: { name: 'ComponentTableScrollBase' } },
-              { title: '分组表头', routerLink: { name: 'ComponentTableScrollGroup' } }
+              { title: '使用分组表头', routerLink: { name: 'ComponentTableScrollGroup' } }
             ]
           }
         ]
       },
       {
-        title: '配置式动态表格',
+        i18nKey: 'app.aside.menu.grid.name',
         children: [
           {
             title: '基础功能',
@@ -600,7 +598,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '弹窗',
+    i18nKey: 'app.aside.menu.modalTitle',
     children: [
       { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'modal' } } },
       {

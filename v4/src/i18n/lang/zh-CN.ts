@@ -3,8 +3,34 @@ export default {
     aside: {
       menu: {
         guide: '开发指南',
-        tools: '工具类'
+        globalInstall: '全局安装',
+        demandLoading: '按需加载',
+        globalConfig: '全局参数',
+        globalTheme: '全局主题',
+        globalIcon: '全局图标',
+        GlobalZIndex: '全局 z-index',
+        i18n: '国际化',
+        tools: '工具类',
+        clipboard: '剪贴板',
+        formTitle: '表格',
+        form: {
+
+        },
+        tableTitle: '表格',
+        table: {
+          name: '静态表格'
+        },
+        grid: {
+          name: '配置式动态表格'
+        },
+        modalTitle: '弹窗',
+        modal: {
+
+        }
       }
+    },
+    header: {
+      supportUs: '支持我们'
     },
     base: {},
     layout: {},

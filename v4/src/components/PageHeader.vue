@@ -42,7 +42,7 @@
       </vxe-switch>
       <vxe-radio-group v-model="currLang" class="switch-lang" type="button" size="mini" :options="langOptions"></vxe-radio-group>
       <vxe-select v-model="currVersion" class="switch-version" size="mini" :options="versionOptions"></vxe-select>
-      <vxe-link class="free-donation" status="success" :router-link="{name: 'FreeDonation'}">支持我们</vxe-link>
+      <vxe-link class="free-donation" status="success" :router-link="{name: 'FreeDonation'}" :content="$t('app.header.supportUs')"></vxe-link>
     </div>
   </div>
 </template>
