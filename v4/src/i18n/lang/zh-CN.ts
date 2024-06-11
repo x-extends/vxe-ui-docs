@@ -32,7 +32,10 @@ export default {
     header: {
       supportUs: '支持我们'
     },
-    base: {},
+    base: {
+      light: '白天',
+      dark: '夜间'
+    },
     layout: {},
     docs: {
       button: {

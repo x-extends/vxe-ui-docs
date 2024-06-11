@@ -19,7 +19,7 @@
     <div class="header-right">
       <vxe-pulldown v-model="showSystemMenu">
         <vxe-button class="system-menu-btn" status="primary" mode="text" @click="showSystemMenu = !showSystemMenu">
-          <span style="padding-right: 8px;">生态系统</span>
+          <span style="padding-right: 8px;">更多产品</span>
           <vxe-icon name="arrow-down"></vxe-icon>
         </vxe-button>
 
@@ -36,9 +36,9 @@
         v-model="currTheme"
         size="mini"
         open-value="light"
-        open-label="白天"
+        :open-label="$t('app.base.light')"
         close-value="dark"
-        close-label="夜间">
+        :close-label="$t('app.base.dark')">
       </vxe-switch>
       <vxe-radio-group v-model="currLang" class="switch-lang" type="button" size="mini" :options="langOptions"></vxe-radio-group>
       <vxe-select v-model="currVersion" class="switch-version" size="mini" :options="versionOptions"></vxe-select>
@@ -70,7 +70,7 @@ const currTheme = computed({
 
 const langOptions = ref([
   { value: 'zh-CN', label: '中文' },
-  { value: 'en-US', label: '英文' }
+  { value: 'en-US', label: 'English' }
 ])
 
 const currLang = computed({

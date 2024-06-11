@@ -1634,6 +1634,51 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/grid/base/full/CodeExample.vue')
               }
             ]
+          },
+          {
+            path: 'tree',
+            children: [
+              {
+                path: 'leveling',
+                name: 'ComponentGridTreeLeveling',
+                component: () => import('@/views/grid/tree/leveling/CodeExample.vue')
+              },
+              {
+                path: 'hierarchy',
+                name: 'ComponentGridTreeHierarchy',
+                component: () => import('@/views/grid/tree/hierarchy/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'edit',
+            children: [
+              {
+                path: 'click',
+                name: 'ComponentGridEditClick',
+                component: () => import('@/views/grid/edit/click/CodeExample.vue')
+              },
+              {
+                path: 'dblclick',
+                name: 'ComponentGridEditDblclick',
+                component: () => import('@/views/grid/edit/dblclick/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'scroll',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentGridScrollBase',
+                component: () => import('@/views/grid/scroll/base/CodeExample.vue')
+              },
+              {
+                path: 'group',
+                name: 'ComponentGridScrollGroup',
+                component: () => import('@/views/grid/scroll/group/CodeExample.vue')
+              }
+            ]
           }
         ]
       }

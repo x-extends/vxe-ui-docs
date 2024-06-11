@@ -32,7 +32,10 @@ export default {
     header: {
       supportUs: 'Support us'
     },
-    base: {},
+    base: {
+      light: 'Daytime',
+      dark: 'Night'
+    },
     layout: {},
     docs: {
       button: {

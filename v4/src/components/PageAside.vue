@@ -49,7 +49,7 @@
             <vxe-link v-else-if="item2.linkUrl" class="nav-item-link" :href="item2.linkUrl" target="_blank" :content="item2.title"></vxe-link>
             <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-down" :content="item2.title"></vxe-text>
           </div>
-          <div v-if="!['API'].includes(item1.title) && item2.children && item2.children.length" class="nav-subs">
+          <div v-if="!['API'].includes(item1.title || '') && item2.children && item2.children.length" class="nav-subs">
             <div class="nav-item nav-level3" v-for="(item3, index3) in item2.children" :key="index3">
               <div class="nav-name" :title="item3.title">
                 <vxe-link v-if="item3.routerLink" :class="['nav-item-link', getApiClass(item3)]" :router-link="item3.routerLink" :content="item3.title"></vxe-link>
@@ -138,10 +138,10 @@ const handleSearch = () => {
   if (filterName) {
     const filterRE = new RegExp(`${filterName}|${XEUtils.camelCase(filterName)}|${XEUtils.kebabCase(filterName)}`, 'i')
     const rest = XEUtils.searchTree(navList.value, (item) => {
-      return filterRE.test(item.title)
+      return filterRE.test(item.title || '')
     }, { children: 'children', mapChildren: 'searchResult' })
     XEUtils.eachTree(rest, (item) => {
-      item.title = item.title.replace(filterRE, (match) => `<span class="keyword-lighten">${match}</span>`)
+      item.title = `${item.title || ''}`.replace(filterRE, (match) => `<span class="keyword-lighten">${match}</span>`)
     }, { children: 'searchResult' })
     searchList.value = rest
     searchList.value.forEach(group => {

@@ -544,6 +544,27 @@ export const navConfigList: NavVO[] = [
               // { title: 'HTML 类型', routerLink: { name: 'ComponentGridBaseHtml' } },
               { title: '完整案例', routerLink: { name: 'ComponentGridBaseFull' } }
             ]
+          },
+          {
+            title: '树形',
+            children: [
+              { title: '平级结构', routerLink: { name: 'ComponentGridTreeLeveling' } },
+              { title: '层级结构', routerLink: { name: 'ComponentGridTreeHierarchy' } }
+            ]
+          },
+          {
+            title: '可编辑',
+            children: [
+              { title: '单击编辑', routerLink: { name: 'ComponentGridEditClick' } },
+              { title: '双击编辑', routerLink: { name: 'ComponentGridEditDblclick' } }
+            ]
+          },
+          {
+            title: '虚拟滚动',
+            children: [
+              { title: '基本使用', routerLink: { name: 'ComponentGridScrollBase' } },
+              { title: '使用分组表头', routerLink: { name: 'ComponentGridScrollGroup' } }
+            ]
           }
         ]
       }
@@ -559,7 +580,7 @@ export const navConfigList: NavVO[] = [
     children: [
       // { title: 'Loading 加载中' },
       {
-        title: 'Tip 小贴士',
+        title: 'Tip 提示',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tip' } } },
           { title: '状态', routerLink: { name: 'ComponentTipBase' } },
