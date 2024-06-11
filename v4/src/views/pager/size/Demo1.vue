@@ -12,25 +12,25 @@ import { reactive } from 'vue'
 
 const pageVO1 = reactive({
   currentPage: 1,
-  pageSize: 30,
-  total: 8
+  pageSize: 20,
+  total: 88
 })
 
 const pageVO2 = reactive({
   currentPage: 1,
-  pageSize: 30,
-  total: 8
+  pageSize: 20,
+  total: 88
 })
 
 const pageVO3 = reactive({
   currentPage: 1,
-  pageSize: 30,
-  total: 8
+  pageSize: 20,
+  total: 88
 })
 
 const pageVO4 = reactive({
   currentPage: 1,
-  pageSize: 30,
-  total: 8
+  pageSize: 20,
+  total: 88
 })
 </script>

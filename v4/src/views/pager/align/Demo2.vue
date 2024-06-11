@@ -14,7 +14,7 @@ import { reactive } from 'vue'
 
 const pageVO = reactive({
   currentPage: 1,
-  pageSize: 30,
+  pageSize: 20,
   total: 8
 })
 </script>

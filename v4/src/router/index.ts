@@ -942,13 +942,123 @@ const routes: Array<RouteRecordRaw> = [
         children: [
           {
             path: 'file',
-            name: 'ComponentUploadFile',
-            component: () => import('@/views/upload/file/CodeExample.vue')
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentUploadFileBase',
+                component: () => import('@/views/upload/file/base/CodeExample.vue')
+              },
+              {
+                path: 'readonly',
+                name: 'ComponentUploadFileReadonly',
+                component: () => import('@/views/upload/file/readonly/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentUploadFileDisabled',
+                component: () => import('@/views/upload/file/disabled/CodeExample.vue')
+              },
+              {
+                path: 'multiple',
+                name: 'ComponentUploadFileMultiple',
+                component: () => import('@/views/upload/file/multiple/CodeExample.vue')
+              },
+              {
+                path: 'tip',
+                name: 'ComponentUploadFileTip',
+                component: () => import('@/views/upload/file/tip/CodeExample.vue')
+              },
+              {
+                path: 'progress',
+                name: 'ComponentUploadFileProgress',
+                component: () => import('@/views/upload/file/progress/CodeExample.vue')
+              },
+              {
+                path: 'types',
+                name: 'ComponentUploadFileTypes',
+                component: () => import('@/views/upload/file/types/CodeExample.vue')
+              },
+              {
+                path: 'limitCount',
+                name: 'ComponentUploadFileLimitCount',
+                component: () => import('@/views/upload/file/limitCount/CodeExample.vue')
+              },
+              {
+                path: 'limitSize',
+                name: 'ComponentUploadFileLimitSize',
+                component: () => import('@/views/upload/file/limitSize/CodeExample.vue')
+              },
+              {
+                path: 'autoHidden',
+                name: 'ComponentUploadFileAutoHidden',
+                component: () => import('@/views/upload/file/autoHidden/CodeExample.vue')
+              },
+              {
+                path: 'showError',
+                name: 'ComponentUploadFileShowError',
+                component: () => import('@/views/upload/file/showError/CodeExample.vue')
+              }
+            ]
           },
           {
             path: 'image',
-            name: 'ComponentUploadImage',
-            component: () => import('@/views/upload/image/CodeExample.vue')
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentUploadImageBase',
+                component: () => import('@/views/upload/image/base/CodeExample.vue')
+              },
+              {
+                path: 'readonly',
+                name: 'ComponentUploadImageReadonly',
+                component: () => import('@/views/upload/image/readonly/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentUploadImageDisabled',
+                component: () => import('@/views/upload/image/disabled/CodeExample.vue')
+              },
+              {
+                path: 'multiple',
+                name: 'ComponentUploadImageMultiple',
+                component: () => import('@/views/upload/image/multiple/CodeExample.vue')
+              },
+              {
+                path: 'tip',
+                name: 'ComponentUploadImageTip',
+                component: () => import('@/views/upload/image/tip/CodeExample.vue')
+              },
+              {
+                path: 'progress',
+                name: 'ComponentUploadImageProgress',
+                component: () => import('@/views/upload/image/progress/CodeExample.vue')
+              },
+              {
+                path: 'types',
+                name: 'ComponentUploadImageTypes',
+                component: () => import('@/views/upload/image/types/CodeExample.vue')
+              },
+              {
+                path: 'limitCount',
+                name: 'ComponentUploadImageLimitCount',
+                component: () => import('@/views/upload/image/limitCount/CodeExample.vue')
+              },
+              {
+                path: 'limitSize',
+                name: 'ComponentUploadImageLimitSize',
+                component: () => import('@/views/upload/image/limitSize/CodeExample.vue')
+              },
+              {
+                path: 'autoHidden',
+                name: 'ComponentUploadImageAutoHidden',
+                component: () => import('@/views/upload/image/autoHidden/CodeExample.vue')
+              },
+              {
+                path: 'showError',
+                name: 'ComponentUploadImageShowError',
+                component: () => import('@/views/upload/image/showError/CodeExample.vue')
+              }
+            ]
           }
         ]
       },

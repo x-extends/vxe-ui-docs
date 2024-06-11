@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-upload v-model="imgList" mode="image" :limit-count="3" :limit-size="15" multiple show-progress show-error-status auto-hidden-button :upload-method="uploadMethod"></vxe-upload>
+    <vxe-upload v-model="imgList" mode="image" :image-types="['png']" multiple :upload-method="uploadMethod"></vxe-upload>
   </div>
 </template>
 

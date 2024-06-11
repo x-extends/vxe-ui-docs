@@ -325,8 +325,38 @@ export const navConfigList: NavVO[] = [
         title: 'Upload 上传',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'upload' } } },
-          { title: '文件上传', routerLink: { name: 'ComponentUploadFile' } },
-          { title: '图片上传', routerLink: { name: 'ComponentUploadImage' } }
+          {
+            title: '文件上传',
+            children: [
+              { title: '基础', routerLink: { name: 'ComponentUploadFileBase' } },
+              { title: '只读状态', routerLink: { name: 'ComponentUploadFileReadonly' } },
+              { title: '禁用状态', routerLink: { name: 'ComponentUploadFileDisabled' } },
+              { title: '上传多个', routerLink: { name: 'ComponentUploadFileMultiple' } },
+              { title: '提示', routerLink: { name: 'ComponentUploadFileTip' } },
+              { title: '上传进度', routerLink: { name: 'ComponentUploadFileProgress' } },
+              { title: '指定文件类型', routerLink: { name: 'ComponentUploadFileTypes' } },
+              { title: '限制上传数量', routerLink: { name: 'ComponentUploadFileLimitCount' } },
+              { title: '限制附件大小', routerLink: { name: 'ComponentUploadFileLimitSize' } },
+              { title: '自动隐藏按钮', routerLink: { name: 'ComponentUploadFileAutoHidden' } },
+              { title: '失败重新上传', routerLink: { name: 'ComponentUploadFileShowError' } }
+            ]
+          },
+          {
+            title: '图片上传',
+            children: [
+              { title: '基础', routerLink: { name: 'ComponentUploadImageBase' } },
+              { title: '只读状态', routerLink: { name: 'ComponentUploadImageReadonly' } },
+              { title: '禁用状态', routerLink: { name: 'ComponentUploadImageDisabled' } },
+              { title: '上传多个', routerLink: { name: 'ComponentUploadImageMultiple' } },
+              { title: '提示', routerLink: { name: 'ComponentUploadImageTip' } },
+              { title: '上传进度', routerLink: { name: 'ComponentUploadImageProgress' } },
+              { title: '指定文件类型', routerLink: { name: 'ComponentUploadImageTypes' } },
+              { title: '限制上传数量', routerLink: { name: 'ComponentUploadImageLimitCount' } },
+              { title: '限制附件大小', routerLink: { name: 'ComponentUploadImageLimitSize' } },
+              { title: '自动隐藏按钮', routerLink: { name: 'ComponentUploadImageAutoHidden' } },
+              { title: '失败重新上传', routerLink: { name: 'ComponentUploadImageShowError' } }
+            ]
+          }
         ]
       }
       // { title: 'Transfer 穿梭框' }
