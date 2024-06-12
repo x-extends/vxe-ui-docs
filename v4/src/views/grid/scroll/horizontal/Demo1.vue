@@ -65,7 +65,17 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { title: '列39', field: 'col39', width: '360' },
     { title: '列40', field: 'col40', width: '420' },
     { title: '列41', field: 'col41', width: '100' },
-    { title: '列42', field: 'col42', width: '170' }
+    { title: '列42', field: 'col42', width: '120' },
+    { title: '列43', field: 'col43', width: '280' },
+    { title: '列44', field: 'col44', width: '170' },
+    { title: '列45', field: 'col45', width: '370' },
+    { title: '列46', field: 'col46', width: '120' },
+    { title: '列47', field: 'col47', width: '170' },
+    { title: '列48', field: 'col48', width: '400' },
+    { title: '列49', field: 'col49', width: '220' },
+    { title: '列50', field: 'col50', width: '170' },
+    { title: '列51', field: 'col51', width: '160' },
+    { title: '列52', field: 'col52', width: '100' }
   ],
   data: []
 })
@@ -73,7 +83,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
 // 模拟行与列数据
 const loadDataAndColumns = (rowSize: number) => {
   const colList: VxeGridPropTypes.Columns = []
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 60; i++) {
     colList.push({
       field: `col${i}`,
       title: `标题${i}`,
@@ -93,5 +103,5 @@ const loadDataAndColumns = (rowSize: number) => {
   gridOptions.data = dataList
 }
 
-loadDataAndColumns(20)
+loadDataAndColumns(50)
 </script>

@@ -50,7 +50,17 @@
       <vxe-column field="col39" title="列39" width="360"></vxe-column>
       <vxe-column field="col40" title="列40" width="420"></vxe-column>
       <vxe-column field="col41" title="列41" width="100"></vxe-column>
-      <vxe-column field="col42" title="列42" width="170"></vxe-column>
+      <vxe-column field="col42" title="列42" width="120"></vxe-column>
+      <vxe-column field="col43" title="列43" width="280"></vxe-column>
+      <vxe-column field="col44" title="列44" width="170"></vxe-column>
+      <vxe-column field="col45" title="列45" width="370"></vxe-column>
+      <vxe-column field="col46" title="列46" width="120"></vxe-column>
+      <vxe-column field="col47" title="列47" width="170"></vxe-column>
+      <vxe-column field="col48" title="列48" width="400"></vxe-column>
+      <vxe-column field="col49" title="列49" width="220"></vxe-column>
+      <vxe-column field="col50" title="列50" width="170"></vxe-column>
+      <vxe-column field="col51" title="列51" width="160"></vxe-column>
+      <vxe-column field="col52" title="列52" width="100"></vxe-column>
     </vxe-table>
   </div>
 </template>
@@ -70,7 +80,7 @@ const tableData = ref<VxeTablePropTypes.Data<RowVO>>([])
 // 模拟行与列数据
 const loadDataAndColumns = (rowSize: number) => {
   const colList: VxeColumnProps[] = []
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 60; i++) {
     colList.push({
       field: `col${i}`,
       title: `标题${i}`,
@@ -90,5 +100,5 @@ const loadDataAndColumns = (rowSize: number) => {
   tableData.value = dataList
 }
 
-loadDataAndColumns(20)
+loadDataAndColumns(50)
 </script>

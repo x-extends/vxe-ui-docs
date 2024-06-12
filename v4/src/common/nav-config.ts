@@ -509,7 +509,8 @@ export const navConfigList: NavVO[] = [
           {
             title: '虚拟滚动',
             children: [
-              { title: '基本使用', routerLink: { name: 'ComponentTableScrollBase' } },
+              { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTableScrollVertical' } },
+              { title: '横向虚拟滚动', routerLink: { name: 'ComponentTableScrollHorizontal' } },
               { title: '使用分组表头', routerLink: { name: 'ComponentTableScrollGroup' } }
             ]
           }
@@ -576,7 +577,8 @@ export const navConfigList: NavVO[] = [
           {
             title: '虚拟滚动',
             children: [
-              { title: '基本使用', routerLink: { name: 'ComponentGridScrollBase' } },
+              { title: '纵向虚拟滚动', routerLink: { name: 'ComponentGridScrollVertical' } },
+              { title: '横向虚拟滚动', routerLink: { name: 'ComponentGridScrollHorizontal' } },
               { title: '使用分组表头', routerLink: { name: 'ComponentGridScrollGroup' } }
             ]
           }

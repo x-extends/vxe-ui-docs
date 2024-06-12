@@ -1529,9 +1529,14 @@ const routes: Array<RouteRecordRaw> = [
             path: 'scroll',
             children: [
               {
-                path: 'base',
-                name: 'ComponentTableScrollBase',
-                component: () => import('@/views/table/scroll/base/CodeExample.vue')
+                path: 'vertical',
+                name: 'ComponentTableScrollVertical',
+                component: () => import('@/views/table/scroll/vertical/CodeExample.vue')
+              },
+              {
+                path: 'horizontal',
+                name: 'ComponentTableScrollHorizontal',
+                component: () => import('@/views/table/scroll/horizontal/CodeExample.vue')
               },
               {
                 path: 'group',
@@ -1764,9 +1769,14 @@ const routes: Array<RouteRecordRaw> = [
             path: 'scroll',
             children: [
               {
-                path: 'base',
-                name: 'ComponentGridScrollBase',
-                component: () => import('@/views/grid/scroll/base/CodeExample.vue')
+                path: 'vertical',
+                name: 'ComponentGridScrollVertical',
+                component: () => import('@/views/grid/scroll/vertical/CodeExample.vue')
+              },
+              {
+                path: 'horizontal',
+                name: 'ComponentGridScrollHorizontal',
+                component: () => import('@/views/grid/scroll/horizontal/CodeExample.vue')
               },
               {
                 path: 'group',
