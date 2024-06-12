@@ -736,6 +736,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'FormDesign 表单设计器',
         children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-design' } } },
           { title: '基础功能', routerLink: { name: 'ComponentFormDesignBase' } },
           { title: '自定义控件分组', routerLink: { name: 'ComponentFormDesignCustomGroup' } },
           { title: '移动端设计器', routerLink: { name: 'ComponentFormDesignMobile' } },
@@ -743,14 +744,13 @@ export const navConfigList: NavVO[] = [
           { title: '渲染视图', routerLink: { name: 'ComponentFormDesignRenderView' } }
           // { title: 'API' }
         ]
-        // },
-        // {
-        //   title: 'ListDesign 列表设计器',
-        //   children: [
-        //     { title: '基础功能', routerLink: { name: 'ComponentListDesignBase' } },
-        //     { title: '移动端设计器', routerLink: { name: 'ComponentListDesignMobile' } },
-        //     { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentListDesignPcAndMobile' } }
-
+      // },
+      // {
+      //   title: 'ListDesign 列表设计器',
+      //   children: [
+      //     { title: '基础功能', routerLink: { name: 'ComponentListDesignBase' } },
+      //     { title: '移动端设计器', routerLink: { name: 'ComponentListDesignMobile' } },
+      //     { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentListDesignPcAndMobile' } }
       //   ]
       }
       // { title: 'FlowDesign 流程设计器' },
