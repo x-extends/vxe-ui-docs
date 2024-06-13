@@ -302,6 +302,9 @@ appStore.updateComponentApiJSON()
   }
   .nav-item-link {
     display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     &.router-link-exact-active {
       color: var(--vxe-ui-docs-primary-color);
       font-weight: 700;
