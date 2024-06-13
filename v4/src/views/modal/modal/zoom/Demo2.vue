@@ -11,8 +11,8 @@ let num = 1
 
 const openEvent = () => {
   VxeUI.modal.open({
-    title: '标题2',
-    content: `我是第 ${num++} 个`,
+    title: `标题 ${num}`,
+    content: `我是第 ${num} 个`,
     mask: false,
     lockView: false,
     escClosable: true,
@@ -20,5 +20,6 @@ const openEvent = () => {
     height: 400,
     showZoom: true
   })
+  num++
 }
 </script>

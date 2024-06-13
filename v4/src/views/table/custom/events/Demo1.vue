@@ -16,7 +16,7 @@
 
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
-import { VxeUI, VxeToolbarInstance, VxeTableInstance, VxeTableEvents } from 'vxe-pc-ui'
+import { VxeToolbarInstance, VxeTableInstance, VxeTableEvents } from 'vxe-pc-ui'
 
 interface RowVO {
   id: number
@@ -38,16 +38,7 @@ const tableData = ref<RowVO[]>([
 ])
 
 const customEvent: VxeTableEvents.Custom = ({ type }) => {
-  const $table = tableRef.value
-  if ($table) {
-    if (type === 'confirm') {
-      console.log($table.getCustomStoreData())
-      VxeUI.modal.message({
-        status: 'success',
-        content: '保存成功'
-      })
-    }
-  }
+  console.log(`点击 ${type}`)
 }
 
 onMounted(() => {
