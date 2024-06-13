@@ -25,7 +25,7 @@ export default {
         dataTitle: 'Form component',
         tableTitle: 'Table',
         table: {
-          name: 'Static table'
+          name: 'Base table'
         },
         grid: {
           name: 'Configuration table'

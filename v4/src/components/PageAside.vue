@@ -44,25 +44,25 @@
         <span class="nav-item-text">{{ item1.title }}</span>
       </div>
       <div v-if="item1.children && item1.children.length" class="nav-subs">
-        <div class="nav-item nav-level2" v-for="(item2, index2) in item1.children" :key="index2">
-          <div class="nav-name" :title="item2.title">
+        <div class="nav-item nav-level2" v-for="(item2, index2) in item1.children" :key="index2" :class="[{'is-expand': item2.isExpand}]">
+          <div class="nav-name" :title="item2.title" @click="toggleExpand(item2)">
             <vxe-link v-if="item2.routerLink" :class="['nav-item-link', getApiClass(item2)]" :router-link="item2.routerLink" :content="item2.title"></vxe-link>
             <vxe-link v-else-if="item2.linkUrl" class="nav-item-link" :href="item2.linkUrl" target="_blank" :content="item2.title"></vxe-link>
-            <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-down" :content="item2.title"></vxe-text>
+            <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-right" :content="item2.title"></vxe-text>
           </div>
           <div v-if="!['API'].includes(item1.title || '') && item2.children && item2.children.length" class="nav-subs">
-            <div class="nav-item nav-level3" v-for="(item3, index3) in item2.children" :key="index3">
-              <div class="nav-name" :title="item3.title">
+            <div class="nav-item nav-level3" v-for="(item3, index3) in item2.children" :key="index3" :class="[{'is-expand': item3.isExpand}]">
+              <div class="nav-name" :title="item3.title" @click="toggleExpand(item3)">
                 <vxe-link v-if="item3.routerLink" :class="['nav-item-link', getApiClass(item3)]" :router-link="item3.routerLink" :content="item3.title"></vxe-link>
                 <vxe-link v-else-if="item3.linkUrl" class="nav-item-link" :href="item3.linkUrl" target="_blank" :content="item3.title"></vxe-link>
-                <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-down" :content="item3.title"></vxe-text>
+                <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-right" :content="item3.title"></vxe-text>
               </div>
               <div v-if="item3.children && item3.children.length" class="nav-subs">
-                <div class="nav-item nav-level4" v-for="(item4, index3) in item3.children" :key="index3">
-                  <div class="nav-name" :title="item4.title">
+                <div class="nav-item nav-level4" v-for="(item4, index3) in item3.children" :key="index3" :class="[{'is-expand': item4.isExpand}]">
+                  <div class="nav-name" :title="item4.title" @click="toggleExpand(item4)">
                     <vxe-link v-if="item4.routerLink" :class="['nav-item-link', getApiClass(item4)]" :router-link="item4.routerLink" :content="item4.title"></vxe-link>
                     <vxe-link v-else-if="item4.linkUrl" class="nav-item-link" :href="item4.linkUrl" target="_blank" :content="item4.title"></vxe-link>
-                    <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-down" :content="item4.title"></vxe-text>
+                    <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-right" :content="item4.title"></vxe-text>
                   </div>
                 </div>
               </div>
@@ -190,8 +190,10 @@ const expandAllApiTree = () => {
   }
 }
 
-const toggleExpand = (item1: NavVO) => {
-  item1.isExpand = !item1.isExpand
+const toggleExpand = (item: NavVO) => {
+  if (item.children && item.children.length) {
+    item.isExpand = !item.isExpand
+  }
 }
 
 const getApiClass = (item: NavVO) => {
@@ -240,7 +242,9 @@ const updateExpand = () => {
     return false
   }, { children: 'children' })
   if (rest) {
-    rest.nodes[0].isExpand = true
+    rest.nodes.forEach(item => {
+      item.isExpand = true
+    })
     scrollToNav(rest.item)
   }
 }
@@ -303,6 +307,32 @@ appStore.updateComponentApiJSON()
       font-weight: 700;
     }
   }
+  ::v-deep(.nav-item) {
+    & > .nav-subs {
+      display: none;
+    }
+    &.is-expand {
+      & > .nav-name {
+        .nav-link-icon {
+          transform: rotate(90deg);
+        }
+        .vxe-text--icon {
+          transform: rotate(90deg);
+        }
+      }
+      & > .nav-subs {
+        display: block;
+      }
+    }
+    .vxe-text--icon {
+      display: inline-block;
+      font-size: 13px;
+      transition: transform .2s ease-in-out;
+    }
+    .nav-item-text {
+      cursor: pointer;
+    }
+  }
   .nav-level1 {
     & > .nav-name {
       padding: 0 1.2em 0.4em 1.2em;
@@ -322,19 +352,6 @@ appStore.updateComponentApiJSON()
         font-weight: 700;
       }
     }
-    & > .nav-subs {
-      display: none;
-    }
-    &.is-expand {
-      & > .nav-name {
-        .nav-link-icon {
-          transform: rotate(90deg);
-        }
-      }
-      & > .nav-subs {
-        display: block;
-      }
-    }
   }
   .nav-level2 {
     & > .nav-name {
@@ -342,7 +359,7 @@ appStore.updateComponentApiJSON()
       padding-left: 3.4em;
       .nav-item-text,
       .nav-item-link {
-        font-size: 15px;
+        font-size: 16px;
       }
     }
     .nav-item-text {
@@ -356,7 +373,7 @@ appStore.updateComponentApiJSON()
       padding-left: 5em;
       .nav-item-text,
       .nav-item-link {
-        font-size: 14px;
+        font-size: 15px;
       }
     }
   }
@@ -366,7 +383,7 @@ appStore.updateComponentApiJSON()
       padding-left: 7.4em;
       .nav-item-text,
       .nav-item-link {
-        font-size: 13px;
+        font-size: 14px;
       }
     }
   }

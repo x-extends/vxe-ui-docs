@@ -23,9 +23,9 @@ export default {
 
         },
         dataTitle: '表单组件',
-        tableTitle: '表格',
+        tableTitle: 'Table 表格',
         table: {
-          name: 'Table 静态表格'
+          name: 'Table 基础表格'
         },
         grid: {
           name: 'Grid 配置式表格'
