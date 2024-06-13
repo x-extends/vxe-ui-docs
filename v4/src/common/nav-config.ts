@@ -473,7 +473,9 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '表头菜单', routerLink: { name: 'ComponentTableMenuHeader' } },
               { title: '单元格菜单', routerLink: { name: 'ComponentTableMenuBody' } },
-              { title: '表尾菜单', routerLink: { name: 'ComponentTableMenuFooter' } }
+              { title: '表尾菜单', routerLink: { name: 'ComponentTableMenuFooter' } },
+              { title: '完整右键菜单', routerLink: { name: 'ComponentTableMenuFull' } },
+              { title: '菜单权限控制', routerLink: { name: 'ComponentTableMenuPrivilege' } }
             ]
           },
           {
@@ -508,14 +510,43 @@ export const navConfigList: NavVO[] = [
             title: '树形',
             children: [
               { title: '平级结构', routerLink: { name: 'ComponentTableTreeLeveling' } },
-              { title: '层级结构', routerLink: { name: 'ComponentTableTreeHierarchy' } }
+              { title: '层级结构', routerLink: { name: 'ComponentTableTreeHierarchy' } },
+              { title: '自定义图标', routerLink: { name: 'ComponentTableTreeIcon' } },
+              { title: '显示连接线', routerLink: { name: 'ComponentTableTreeLine' } },
+              { title: '单选框', routerLink: { name: 'ComponentTableTreeRadio' } },
+              { title: '复选框', routerLink: { name: 'ComponentTableTreeCheckbox' } },
+              { title: '树形排序', routerLink: { name: 'ComponentTableTreeSort' } },
+              { title: '右键菜单', routerLink: { name: 'ComponentTableTreeMenu' } },
+              { title: '懒加载', routerLink: { name: 'ComponentTableTreeLazy' } },
+              { title: '懒加载与可编辑', routerLink: { name: 'ComponentTableTreeLazyEdit' } },
+              { title: '展开行', routerLink: { name: 'ComponentTableTreeExpand' } },
+              { title: '展开行懒加载', routerLink: { name: 'ComponentTableTreeExpandLazy' } }
             ]
           },
           {
             title: '可编辑',
             children: [
+              { title: '手动编辑', routerLink: { name: 'ComponentTableEditManual' } },
               { title: '单击编辑', routerLink: { name: 'ComponentTableEditClick' } },
-              { title: '双击编辑', routerLink: { name: 'ComponentTableEditDblclick' } }
+              { title: '双击编辑', routerLink: { name: 'ComponentTableEditDblclick' } },
+              { title: '插入数据', routerLink: { name: 'ComponentTableEditInsert' } },
+              { title: '删除数据', routerLink: { name: 'ComponentTableEditRemove' } },
+              { title: '标记为删除', routerLink: { name: 'ComponentTableEditPending' } },
+              { title: '单元格校验', routerLink: { name: 'ComponentTableEditCellValid' } },
+              { title: '行校验', routerLink: { name: 'ComponentTableEditRowValid' } }
+            ]
+          },
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '自定义单元格', routerLink: { name: 'ComponentTableTemplateDefault' } },
+              { title: '自定义表头', routerLink: { name: 'ComponentTableTemplateHeader' } },
+              { title: '自定义表尾', routerLink: { name: 'ComponentTableTemplateFooter' } },
+              { title: '自定义复选框', routerLink: { name: 'ComponentTableTemplateCheckbox' } },
+              { title: '自定义单选框', routerLink: { name: 'ComponentTableTemplateRadio' } },
+              { title: '自定义展开行', routerLink: { name: 'ComponentTableTemplateContent' } },
+              { title: '自定义筛选', routerLink: { name: 'ComponentTableTemplateFilter' } },
+              { title: '自定义编辑', routerLink: { name: 'ComponentTableTemplateEdit' } }
             ]
           },
           // {
@@ -532,7 +563,9 @@ export const navConfigList: NavVO[] = [
               { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTableScrollVertical' } },
               { title: '横向虚拟滚动', routerLink: { name: 'ComponentTableScrollHorizontal' } },
               { title: '纵向和横向虚拟滚动', routerLink: { name: 'ComponentTableScrollHV' } },
-              { title: '使用分组表头', routerLink: { name: 'ComponentTableScrollGroup' } }
+              { title: '设置行高', routerLink: { name: 'ComponentTableScrollRowHeight' } },
+              { title: '使用分组表头', routerLink: { name: 'ComponentTableScrollGroup' } },
+              { title: '树形虚拟滚动', routerLink: { name: 'ComponentTableScrollTree' } }
             ]
           }
         ]

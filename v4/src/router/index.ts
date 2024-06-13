@@ -1477,6 +1477,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'footer',
                 name: 'ComponentTableMenuFooter',
                 component: () => import('@/views/table/menu/footer/CodeExample.vue')
+              },
+              {
+                path: 'full',
+                name: 'ComponentTableMenuFull',
+                component: () => import('@/views/table/menu/full/CodeExample.vue')
+              },
+              {
+                path: 'privilege',
+                name: 'ComponentTableMenuPrivilege',
+                component: () => import('@/views/table/menu/privilege/CodeExample.vue')
               }
             ]
           },
@@ -1572,12 +1582,67 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'hierarchy',
                 name: 'ComponentTableTreeHierarchy',
                 component: () => import('@/views/table/tree/hierarchy/CodeExample.vue')
+              },
+              {
+                path: 'icon',
+                name: 'ComponentTableTreeIcon',
+                component: () => import('@/views/table/tree/icon/CodeExample.vue')
+              },
+              {
+                path: 'radio',
+                name: 'ComponentTableTreeRadio',
+                component: () => import('@/views/table/tree/radio/CodeExample.vue')
+              },
+              {
+                path: 'checkbox',
+                name: 'ComponentTableTreeCheckbox',
+                component: () => import('@/views/table/tree/checkbox/CodeExample.vue')
+              },
+              {
+                path: 'line',
+                name: 'ComponentTableTreeLine',
+                component: () => import('@/views/table/tree/line/CodeExample.vue')
+              },
+              {
+                path: 'menu',
+                name: 'ComponentTableTreeMenu',
+                component: () => import('@/views/table/tree/menu/CodeExample.vue')
+              },
+              {
+                path: 'sort',
+                name: 'ComponentTableTreeSort',
+                component: () => import('@/views/table/tree/sort/CodeExample.vue')
+              },
+              {
+                path: 'lazy',
+                name: 'ComponentTableTreeLazy',
+                component: () => import('@/views/table/tree/lazy/CodeExample.vue')
+              },
+              {
+                path: 'lazyEdit',
+                name: 'ComponentTableTreeLazyEdit',
+                component: () => import('@/views/table/tree/lazyEdit/CodeExample.vue')
+              },
+              {
+                path: 'expand',
+                name: 'ComponentTableTreeExpand',
+                component: () => import('@/views/table/tree/expand/CodeExample.vue')
+              },
+              {
+                path: 'expandLazy',
+                name: 'ComponentTableTreeExpandLazy',
+                component: () => import('@/views/table/tree/expandLazy/CodeExample.vue')
               }
             ]
           },
           {
             path: 'edit',
             children: [
+              {
+                path: 'manual',
+                name: 'ComponentTableEditManual',
+                component: () => import('@/views/table/edit/manual/CodeExample.vue')
+              },
               {
                 path: 'click',
                 name: 'ComponentTableEditClick',
@@ -1587,6 +1652,76 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'dblclick',
                 name: 'ComponentTableEditDblclick',
                 component: () => import('@/views/table/edit/dblclick/CodeExample.vue')
+              },
+              {
+                path: 'insert',
+                name: 'ComponentTableEditInsert',
+                component: () => import('@/views/table/edit/insert/CodeExample.vue')
+              },
+              {
+                path: 'remove',
+                name: 'ComponentTableEditRemove',
+                component: () => import('@/views/table/edit/remove/CodeExample.vue')
+              },
+              {
+                path: 'pending',
+                name: 'ComponentTableEditPending',
+                component: () => import('@/views/table/edit/pending/CodeExample.vue')
+              },
+              {
+                path: 'cellValid',
+                name: 'ComponentTableEditCellValid',
+                component: () => import('@/views/table/edit/cellValid/CodeExample.vue')
+              },
+              {
+                path: 'rowValid',
+                name: 'ComponentTableEditRowValid',
+                component: () => import('@/views/table/edit/rowValid/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'template',
+            children: [
+              {
+                path: 'default',
+                name: 'ComponentTableTemplateDefault',
+                component: () => import('@/views/table/template/default/CodeExample.vue')
+              },
+              {
+                path: 'header',
+                name: 'ComponentTableTemplateHeader',
+                component: () => import('@/views/table/template/header/CodeExample.vue')
+              },
+              {
+                path: 'footer',
+                name: 'ComponentTableTemplateFooter',
+                component: () => import('@/views/table/template/footer/CodeExample.vue')
+              },
+              {
+                path: 'checkbox',
+                name: 'ComponentTableTemplateCheckbox',
+                component: () => import('@/views/table/template/checkbox/CodeExample.vue')
+              },
+              {
+                path: 'radio',
+                name: 'ComponentTableTemplateRadio',
+                component: () => import('@/views/table/template/radio/CodeExample.vue')
+              },
+              {
+                path: 'content',
+                name: 'ComponentTableTemplateContent',
+                component: () => import('@/views/table/template/content/CodeExample.vue')
+              },
+              {
+                path: 'filter',
+                name: 'ComponentTableTemplateFilter',
+                component: () => import('@/views/table/template/filter/CodeExample.vue')
+              },
+              {
+                path: 'edit',
+                name: 'ComponentTableTemplateEdit',
+                component: () => import('@/views/table/template/edit/CodeExample.vue')
               }
             ]
           },
@@ -1609,9 +1744,19 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/table/scroll/hv/CodeExample.vue')
               },
               {
+                path: 'rowHeight',
+                name: 'ComponentTableScrollRowHeight',
+                component: () => import('@/views/table/scroll/rowHeight/CodeExample.vue')
+              },
+              {
                 path: 'group',
                 name: 'ComponentTableScrollGroup',
                 component: () => import('@/views/table/scroll/group/CodeExample.vue')
+              },
+              {
+                path: 'tree',
+                name: 'ComponentTableScrollTree',
+                component: () => import('@/views/table/scroll/tree/CodeExample.vue')
               }
             ]
           }
