@@ -17,6 +17,8 @@
             npm install vite-plugin-lazy-import -D
           </pre-code>
           <pre-code class="javascript">
+            // vue.config.js
+
             // ...
             import { lazyImport, VxeResolver } from 'vite-plugin-lazy-import'
 
@@ -41,42 +43,31 @@
       </template>
     </CodeLight>
 
-    <!-- <CodeLight>
+    <CodeLight>
       <template #tip>
         <vxe-tip status="primary" title="Webpack 方式">
-          如果您使用了 webpack，借助插件 <vxe-link  href="https://www.npmjs.com/package/unplugin-vue-components" target="_blank">unplugin-vue-components</vxe-link> 可以实现按需加载模块。
+          如果您使用了 webpack，借助插件 <vxe-link  href="https://www.npmjs.com/package/babel-plugin-import" target="_blank">babel-plugin-import</vxe-link> 可以实现按需加载模块。
         </vxe-tip>
       </template>
 
       <template #use>
         <pre>
+          <pre-code class="shell">
+            npm install babel-plugin-import
+          </pre-code>
           <pre-code class="javascript">
-            // ...
-            import Components from 'unplugin-vue-components/webpack'
-            import { VxeResolver } from '@vxecli/import-unplugin-vue-components'
+            // babel.config.js
 
-            export default defineConfig({
-              plugins: [
-                // ...,
-                Components({
-                  resolvers: [
-                    VxeResolver({
-                      libraryName: 'vxe-pc-ui'
-                      // importStyle: true
-                    }),
-                    VxeResolver({
-                      libraryName: 'vxe-pc-ui'
-                      // importStyle: true
-                    })
-                  ]
-                })
-                // ...
-              ]
-            })
+            // ...
+            plugins: [
+              ['import', { libraryName: 'vxe-table', style: true }, 'vxe-table'],
+              ['import', { libraryName: 'vxe-pc-ui', style: true }, 'vxe-pc-ui']
+            ]
+            // ...
           </pre-code>
         </pre>
       </template>
-    </CodeLight> -->
+    </CodeLight>
 
     <CodeLight>
       <template #tip>
