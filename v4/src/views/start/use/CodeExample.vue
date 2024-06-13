@@ -104,7 +104,7 @@
               VxeCol,
               VxeCollapse,
               VxeCollapsePane,
-              VxeDateInput,
+              VxeDatePicker,
               VxeDrawer,
               VxeFlowDesign,
               VxeFlowView,
@@ -182,7 +182,7 @@
               app.use(VxeCol)
               app.use(VxeCollapse)
               app.use(VxeCollapsePane)
-              app.use(VxeDateInput)
+              app.use(VxeDatePicker)
               app.use(VxeDrawer)
               app.use(VxeFlowDesign)
               app.use(VxeFlowView)

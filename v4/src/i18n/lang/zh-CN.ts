@@ -169,7 +169,7 @@ export default {
     'vxe-col': {},
     'vxe-collapse': {},
     'vxe-collapse-pane': {},
-    'vxe-date-input': {},
+    'vxe-date-picker': {},
     'vxe-drawer': {
       Props_modelValue: '',
       Props_size: '',
