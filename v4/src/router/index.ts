@@ -1492,6 +1492,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'events',
                 name: 'ComponentTableCustomEvents',
                 component: () => import('@/views/table/custom/events/CodeExample.vue')
+              },
+              {
+                path: 'remote',
+                name: 'ComponentTableCustomRemote',
+                component: () => import('@/views/table/custom/remote/CodeExample.vue')
               }
             ]
           },

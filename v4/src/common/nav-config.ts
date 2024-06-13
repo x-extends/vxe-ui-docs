@@ -476,8 +476,9 @@ export const navConfigList: NavVO[] = [
               { title: '允许拖拽列顺序', routerLink: { name: 'ComponentTableCustomSort' } },
               { title: '自定义触发弹出设置', routerLink: { name: 'ComponentTableCustomTemplate' } },
               { title: '自定义弹出位置', routerLink: { name: 'ComponentTableCustomPlacement' } },
+              { title: '事件监听', routerLink: { name: 'ComponentTableCustomEvents' } },
               { title: '本地保存列设置', routerLink: { name: 'ComponentTableCustomStorage' } },
-              { title: '服务端保存列设置', routerLink: { name: 'ComponentTableCustomEvents' } }
+              { title: '服务端保存与恢复', routerLink: { name: 'ComponentTableCustomRemote' } }
             ]
           },
           // {

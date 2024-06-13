@@ -37,7 +37,7 @@ export default {
       }
     },
     header: {
-      moreProducts: 'More products',
+      moreProducts: 'Resources',
       supportUs: 'Support us'
     },
     base: {

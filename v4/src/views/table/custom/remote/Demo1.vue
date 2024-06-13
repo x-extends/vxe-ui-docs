@@ -2,10 +2,10 @@
   <div>
     <vxe-toolbar ref="toolbarRef" custom></vxe-toolbar>
     <vxe-table
-      id=myCustomEvent
+      id="myCustomUpdate"
       ref="tableRef"
-      :data="tableData"
-      @custom="customEvent">
+      :custom-config="customConfig"
+      :data="tableData">
       <vxe-column type="seq" width="60"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="sex" title="Sex"></vxe-column>
@@ -15,8 +15,9 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue'
-import { VxeUI, VxeToolbarInstance, VxeTableInstance, VxeTableEvents } from 'vxe-pc-ui'
+import { onMounted, ref, reactive } from 'vue'
+
+import { VxeUI, VxeTablePropTypes, VxeTableDefines, VxeToolbarInstance, VxeTableInstance } from 'vxe-pc-ui'
 
 interface RowVO {
   id: number
@@ -37,18 +38,27 @@ const tableData = ref<RowVO[]>([
   { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
 ])
 
-const customEvent: VxeTableEvents.Custom = ({ type }) => {
-  const $table = tableRef.value
-  if ($table) {
-    if (type === 'confirm') {
-      console.log($table.getCustomStoreData())
+// 模拟保存接口
+const saveCustomSetting = (storeData: VxeTableDefines.CustomStoreData) => {
+  return new Promise<void>(resolve => {
+    setTimeout(() => {
+      console.log(storeData)
       VxeUI.modal.message({
         status: 'success',
         content: '保存成功'
       })
-    }
-  }
+      resolve()
+    }, 200)
+  })
 }
+
+const customConfig = reactive<VxeTablePropTypes.CustomConfig>({
+  storage: true,
+  updateStore ({ storeData }) {
+    // 模拟异步，实现服务端保存
+    return saveCustomSetting(storeData)
+  }
+})
 
 onMounted(() => {
   const $table = tableRef.value

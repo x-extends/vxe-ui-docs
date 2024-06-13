@@ -37,7 +37,7 @@ export default {
       }
     },
     header: {
-      moreProducts: '更多产品',
+      moreProducts: '生态',
       supportUs: '支持我们'
     },
     base: {
