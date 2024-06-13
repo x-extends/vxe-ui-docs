@@ -13,6 +13,8 @@ interface RowVO {
   name: string
   role: string
   sex: string
+  age: number
+  address: string
 }
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
@@ -37,7 +39,9 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
       children: [
         { field: 'sex', title: 'Sex' }
       ]
-    }
+    },
+    { field: 'age', title: 'age' },
+    { field: 'address', title: 'Address' }
   ],
   data: []
 })
@@ -50,7 +54,9 @@ const loadList = (size = 200) => {
       id: 10000 + i,
       name: 'Test' + i,
       role: 'Developer',
-      sex: '男'
+      sex: '男',
+      age: 40,
+      address: 'Address'
     })
   }
   gridOptions.data = dataList

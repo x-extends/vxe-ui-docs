@@ -322,7 +322,25 @@ export const navConfigList: NavVO[] = [
         title: 'Select 下拉框',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'select' } } },
-          { title: '单选', routerLink: { name: 'ComponentSelect' } }
+          {
+            title: '基础',
+            children: [
+              { title: '基础', routerLink: { name: 'ComponentSelectBaseSize' } },
+              { title: '可清除', routerLink: { name: 'ComponentSelectBaseClearable' } },
+              { title: '禁用', routerLink: { name: 'ComponentSelectBaseDisabled' } },
+              { title: '可筛选', routerLink: { name: 'ComponentSelectBaseFilterable' } },
+              { title: '分组', routerLink: { name: 'ComponentSelectBaseGroup' } },
+              { title: '多选', routerLink: { name: 'ComponentSelectBaseMultiple' } },
+              { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectBaseTemplate' } }
+            ]
+          },
+          {
+            title: '配置式',
+            children: [
+              { title: '使用', routerLink: { name: 'ComponentSelectBaseBasics' } },
+              { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectBaseTemplate' } }
+            ]
+          }
         ]
       },
       {

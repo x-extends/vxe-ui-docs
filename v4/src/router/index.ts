@@ -353,8 +353,63 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'select',
-        name: 'ComponentSelect',
-        component: () => import('@/views/select/CodeExample.vue')
+        children: [
+          {
+            path: 'base',
+            children: [
+              {
+                path: 'size',
+                name: 'ComponentSelectBaseSize',
+                component: () => import('@/views/select/base/size/CodeExample.vue')
+              },
+              {
+                path: 'clearable',
+                name: 'ComponentSelectBaseClearable',
+                component: () => import('@/views/select/base/clearable/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentSelectBaseDisabled',
+                component: () => import('@/views/select/base/disabled/CodeExample.vue')
+              },
+              {
+                path: 'filterable',
+                name: 'ComponentSelectBaseFilterable',
+                component: () => import('@/views/select/base/filterable/CodeExample.vue')
+              },
+              {
+                path: 'group',
+                name: 'ComponentSelectBaseGroup',
+                component: () => import('@/views/select/base/group/CodeExample.vue')
+              },
+              {
+                path: 'multiple',
+                name: 'ComponentSelectBaseMultiple',
+                component: () => import('@/views/select/base/multiple/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                name: 'ComponentSelectBaseTemplate',
+                component: () => import('@/views/select/base/template/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'config',
+            children: [
+              {
+                path: 'basics',
+                name: 'ComponentSelectBaseBasics',
+                component: () => import('@/views/select/config/basics/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                name: 'ComponentSelectBaseTemplate',
+                component: () => import('@/views/select/config/template/CodeExample.vue')
+              }
+            ]
+          }
+        ]
       },
       {
         path: 'pager',

@@ -14,6 +14,8 @@
       <vxe-colgroup title="分组2">
         <vxe-column field="sex" title="Sex"></vxe-column>
       </vxe-colgroup>
+      <vxe-column field="age" title="Age"></vxe-column>
+      <vxe-column field="address" title="Address"></vxe-column>
     </vxe-table>
   </div>
 </template>
@@ -27,6 +29,8 @@ interface RowVO {
   name: string
   role: string
   sex: string
+  age: number
+  address: string
 }
 
 const tableData = ref<VxeTablePropTypes.Data<RowVO>>([])
@@ -39,7 +43,9 @@ const loadList = (size = 200) => {
       id: 10000 + i,
       name: 'Test' + i,
       role: 'Developer',
-      sex: '男'
+      sex: '男',
+      age: 40,
+      address: 'Address'
     })
   }
   tableData.value = dataList
