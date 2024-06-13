@@ -1,6 +1,8 @@
 export default {
   app: {
     aside: {
+      stableVersion: '稳定版',
+      latestVersion: '尝鲜版',
       menu: {
         guide: '开发指南',
         globalInstall: '全局安装',

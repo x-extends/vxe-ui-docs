@@ -1,6 +1,8 @@
 export default {
   app: {
     aside: {
+      stableVersion: 'Stable',
+      latestVersion: 'Latest',
       menu: {
         guide: 'Development guide',
         globalInstall: 'Install',

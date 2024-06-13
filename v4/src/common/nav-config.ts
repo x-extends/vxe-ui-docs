@@ -478,7 +478,8 @@ export const navConfigList: NavVO[] = [
               { title: '自定义弹出位置', routerLink: { name: 'ComponentTableCustomPlacement' } },
               { title: '事件监听', routerLink: { name: 'ComponentTableCustomEvents' } },
               { title: '本地保存列设置', routerLink: { name: 'ComponentTableCustomStorage' } },
-              { title: '服务端保存与恢复', routerLink: { name: 'ComponentTableCustomRemote' } }
+              { title: '自定义服务端保存', routerLink: { name: 'ComponentTableCustomRemote' } },
+              { title: '实现服务端保存与恢复', routerLink: { name: 'ComponentTableCustomRemoteFull' } }
             ]
           },
           // {
@@ -512,6 +513,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTableScrollVertical' } },
               { title: '横向虚拟滚动', routerLink: { name: 'ComponentTableScrollHorizontal' } },
+              { title: '纵向和横向虚拟滚动', routerLink: { name: 'ComponentTableScrollHV' } },
               { title: '使用分组表头', routerLink: { name: 'ComponentTableScrollGroup' } }
             ]
           }
@@ -580,6 +582,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '纵向虚拟滚动', routerLink: { name: 'ComponentGridScrollVertical' } },
               { title: '横向虚拟滚动', routerLink: { name: 'ComponentGridScrollHorizontal' } },
+              { title: '纵向和横向虚拟滚动', routerLink: { name: 'ComponentGridScrollHV' } },
               { title: '使用分组表头', routerLink: { name: 'ComponentGridScrollGroup' } }
             ]
           }

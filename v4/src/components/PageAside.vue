@@ -1,6 +1,7 @@
 <template>
   <div ref="asideElemRef" class="page-aside">
     <div class="nav-top">
+      <VersionList />
       <vxe-pulldown v-model="showSearchList" transfer>
         <vxe-input v-model="searchName" class="search-input" type="search" placeholder="文档搜索" clearable @click="clickSearchEvent" @change="changeSearchEvent"></vxe-input>
 
@@ -81,6 +82,7 @@ import { navConfigList, NavVO } from '@/common/nav-config'
 import { VxeTreeInstance } from 'vxe-pc-ui'
 import i18n from '@/i18n'
 import XEUtils from 'xe-utils'
+import VersionList from './VersionList.vue'
 
 const route = useRoute()
 const appStore = useAppStore()

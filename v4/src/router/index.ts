@@ -1497,6 +1497,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'remote',
                 name: 'ComponentTableCustomRemote',
                 component: () => import('@/views/table/custom/remote/CodeExample.vue')
+              },
+              {
+                path: 'remoteFull',
+                name: 'ComponentTableCustomRemoteFull',
+                component: () => import('@/views/table/custom/remoteFull/CodeExample.vue')
               }
             ]
           },
@@ -1542,6 +1547,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'horizontal',
                 name: 'ComponentTableScrollHorizontal',
                 component: () => import('@/views/table/scroll/horizontal/CodeExample.vue')
+              },
+              {
+                path: 'hv',
+                name: 'ComponentTableScrollHV',
+                component: () => import('@/views/table/scroll/hv/CodeExample.vue')
               },
               {
                 path: 'group',
@@ -1782,6 +1792,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'horizontal',
                 name: 'ComponentGridScrollHorizontal',
                 component: () => import('@/views/grid/scroll/horizontal/CodeExample.vue')
+              },
+              {
+                path: 'hv',
+                name: 'ComponentGridScrollHV',
+                component: () => import('@/views/grid/scroll/hv/CodeExample.vue')
               },
               {
                 path: 'group',

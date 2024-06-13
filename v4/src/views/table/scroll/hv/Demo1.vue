@@ -1,13 +1,24 @@
 <template>
   <div>
+    <p>
+      <vxe-button @click="loadData(500)">加载500行</vxe-button>
+      <vxe-button @click="loadData(1000)">加载1k行</vxe-button>
+      <vxe-button @click="loadData(5000)">加载5k行</vxe-button>
+      <vxe-button @click="loadData(10000)">加载1w行</vxe-button>
+      <vxe-button @click="loadData(50000)">加载5w行</vxe-button>
+      <vxe-button @click="loadData(100000)">加载10w行</vxe-button>
+      <vxe-button @click="loadData(200000)">加载20w行</vxe-button>
+    </p>
     <vxe-table
       border
       show-overflow
       show-header-overflow
       show-footer-overflow
+      ref="tableRef"
       height="600"
-      :scroll-x="{enabled: true, gt: 0}"
-      :data="tableData">
+      :loading="loading"
+      :scroll-y="{enabled: true, gt: 0}"
+      :scroll-x="{enabled: true, gt: 0}">
       <vxe-column field="col0" title="列0" width="160"></vxe-column>
       <vxe-column field="col1" title="列1" width="100"></vxe-column>
       <vxe-column field="col2" title="列2" width="160"></vxe-column>
@@ -66,39 +77,49 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
-import { VxeTablePropTypes, VxeColumnProps } from 'vxe-pc-ui'
+import { VxeUI, VxeTableInstance } from 'vxe-pc-ui'
 
 interface RowVO {
   id: number
   [key: string]: string | number
 }
 
-const tableData = ref<VxeTablePropTypes.Data<RowVO>>([])
+const tableRef = ref<VxeTableInstance>()
 
-// 模拟行与列数据
-const loadDataAndColumns = (rowSize: number) => {
-  const colList: VxeColumnProps[] = []
-  for (let i = 0; i < 60; i++) {
-    colList.push({
-      field: `col${i}`,
-      title: `标题${i}`,
-      width: 160
-    })
-  }
-  const dataList: RowVO[] = []
-  for (let i = 0; i < rowSize; i++) {
-    const item: RowVO = {
-      id: 10000 + i
+const loading = ref(false)
+
+// 模拟行数据
+const loadData = (rowSize: number) => {
+  const $table = tableRef.value
+  loading.value = true
+  setTimeout(() => {
+    const startTime = Date.now()
+
+    const dataList: RowVO[] = []
+    for (let i = 0; i < rowSize; i++) {
+      const item: RowVO = {
+        id: 10000 + i
+      }
+      for (let j = 0; j < 60; j++) {
+        item[`col${j}`] = `值_${i}_${j}`
+      }
+      dataList.push(item)
     }
-    for (let j = 0; j < colList.length; j++) {
-      item[`col${j}`] = `值_${i}_${j}`
+    loading.value = false
+    if ($table) {
+      $table.loadData(dataList).then(() => {
+        VxeUI.modal.message({
+          content: `加载时间 ${Date.now() - startTime} 毫秒`,
+          status: 'success'
+        })
+      })
     }
-    dataList.push(item)
-  }
-  tableData.value = dataList
+  }, 50)
 }
 
-loadDataAndColumns(50)
+onMounted(() => {
+  loadData(50)
+})
 </script>

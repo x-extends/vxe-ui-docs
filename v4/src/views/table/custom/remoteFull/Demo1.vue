@@ -55,7 +55,7 @@ const findCustomSetting = (id: string) => {
       } catch (e) {
         resolve({})
       }
-    }, 5000)
+    }, 500)
   })
 }
 
