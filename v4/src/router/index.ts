@@ -2051,6 +2051,21 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'form',
+            children: [
+              {
+                path: 'search',
+                name: 'ComponentGridFormSearch',
+                component: () => import('@/views/grid/form/search/CodeExample.vue')
+              },
+              {
+                path: 'collapse',
+                name: 'ComponentGridFormCollapse',
+                component: () => import('@/views/grid/form/collapse/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'toolbar',
             children: [
               {
@@ -2147,6 +2162,21 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'remoteFull',
                 name: 'ComponentGridCustomRemoteFull',
                 component: () => import('@/views/grid/custom/remoteFull/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'pager',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentGridPagerBase',
+                component: () => import('@/views/grid/pager/base/CodeExample.vue')
+              },
+              {
+                path: 'pageSize',
+                name: 'ComponentGridPagerPageSize',
+                component: () => import('@/views/grid/pager/pageSize/CodeExample.vue')
               }
             ]
           },

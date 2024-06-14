@@ -648,6 +648,13 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
+            title: '查询表单',
+            children: [
+              { title: '查询表单', routerLink: { name: 'ComponentGridFormSearch' } },
+              { title: '带折叠的查询表单', routerLink: { name: 'ComponentGridFormCollapse' } }
+            ]
+          },
+          {
             title: '工具栏',
             children: [
               { title: '自定义列功能', routerLink: { name: 'ComponentGridToolbarCustom' } },
@@ -673,6 +680,13 @@ export const navConfigList: NavVO[] = [
               { title: '本地保存列设置', routerLink: { name: 'ComponentGridCustomStorage' } },
               { title: '自定义服务端保存', routerLink: { name: 'ComponentGridCustomRemote' } },
               { title: '实现服务端保存与恢复', routerLink: { name: 'ComponentGridCustomRemoteFull' } }
+            ]
+          },
+          {
+            title: '分页查询',
+            children: [
+              { title: '基础', routerLink: { name: 'ComponentGridPagerBase' } },
+              { title: '自定义每页大小', routerLink: { name: 'ComponentGridPagerPageSize' } }
             ]
           },
           {
