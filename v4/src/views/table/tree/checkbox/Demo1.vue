@@ -17,7 +17,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeTableEvents } from 'vxe-table'
+import { VxeTableEvents } from 'vxe-pc-ui'
 
 interface RowVO {
   id: number

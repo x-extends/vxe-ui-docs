@@ -69,6 +69,7 @@ export default {
   },
   api: {
     apiSearch: 'API 搜索',
+    enterpriseVersion: '企业版',
     title: {
       prop: '属性',
       desc: '说明',

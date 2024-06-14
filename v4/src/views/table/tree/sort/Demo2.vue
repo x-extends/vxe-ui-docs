@@ -18,7 +18,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeTablePropTypes, VxeTableEvents } from 'vxe-table'
+import { VxeTablePropTypes, VxeTableEvents } from 'vxe-pc-ui'
 import XEUtils from 'xe-utils'
 
 interface RowVO {
@@ -69,7 +69,7 @@ const findList = (order?: VxeTablePropTypes.SortOrder) => {
   }, 300)
 }
 
-const sortChangeEvent: VxeTableEvents.SortChange = ({ order }) => {
+const sortChangeEvent: VxeTableEvents.SortChange<RowVO> = ({ order }) => {
   findList(order)
 }
 

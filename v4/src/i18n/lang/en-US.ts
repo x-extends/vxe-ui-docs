@@ -67,6 +67,21 @@ export default {
       }
     }
   },
-  api: {},
+  api: {
+    apiSearch: 'API Search',
+    enterpriseVersion: 'Enterprise Edition',
+    title: {
+      prop: 'Property',
+      desc: 'Describe',
+      type: 'Type / Return',
+      enum: 'Enum',
+      defVal: 'Default / Params',
+      version: 'Compatibility',
+      Props: 'Props',
+      Events: 'Events',
+      Slots: 'Slots',
+      Methods: 'Methods'
+    }
+  },
   components: {}
 }

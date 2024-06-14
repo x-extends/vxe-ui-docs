@@ -39,7 +39,7 @@
 
 <script lang="ts" setup>
 import { ref, nextTick } from 'vue'
-import { VxeTableInstance, VxeTablePropTypes, VxeTableEvents, VxeToolbarInstance } from 'vxe-table'
+import { VxeTableInstance, VxeTablePropTypes, VxeTableEvents, VxeToolbarInstance } from 'vxe-pc-ui'
 
 interface RowVO {
   id: number

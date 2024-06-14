@@ -10,7 +10,7 @@
 
       <template #default_version="{ row }">
         <template v-if="row.version === 'extend-cell-area'">
-          <a class="link enterprise-version" :href="appStore.pluginApiUrl" target="_blank">企业版</a>
+          <a class="link enterprise-version" :href="appStore.pluginApiUrl" target="_blank">{{ $t('api.enterpriseVersion') }}</a>
         </template>
         <template v-else-if="row.disabled">
           <span class="disabled">已废弃</span>
@@ -19,7 +19,7 @@
           <span class="abandoned">评估阶段</span>
         </template>
         <template v-else>
-          <span v-show="row.version" class="compatibility">v{{  row.version }}</span>
+          <span v-show="row.version" class="compatibility">{{  getVersion(row.version) }}</span>
         </template>
       </template>
 
@@ -46,6 +46,8 @@ interface RowVO {
   version: string
   i18nKey: string
   i18nValue: string
+  disabled?: boolean
+  abandoned?: boolean
   list: RowVO[]
 }
 
@@ -74,7 +76,7 @@ const loadList = () => {
         if (parent) {
           item.i18nKey = nodes.map(item => `${item.name}`.replace(/\(.*/, '')).join('_')
         } else {
-          item.i18nKey = `app.api.title.${item.name}`
+          item.i18nKey = `api.title.${item.name}`
         }
         item.i18nValue = i18n.global.t(item.i18nKey)
       }, { children: 'list' })
@@ -103,6 +105,14 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     resizable: true,
     isHover: true,
     isCurrent: true
+  },
+  cellClassName ({ row, column }) {
+    return {
+      'api-enterprise': row.version === 'extend-cell-area',
+      'api-disabled': row.disabled,
+      'api-abandoned': row.abandoned,
+      'disabled-line-through': (row.disabled) && column.field === 'name'
+    }
   },
   customConfig: {
     storage: true,
@@ -147,7 +157,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { field: 'type', title: i18n.global.t('api.title.type'), type: 'html', minWidth: 140 },
     { field: 'enum', title: i18n.global.t('api.title.enum'), type: 'html', minWidth: 150 },
     { field: 'defVal', title: i18n.global.t('api.title.defVal'), type: 'html', minWidth: 160, titlePrefix: { message: '部分参数可支持全局设置，具体请查阅相关说明' } },
-    { field: 'version', title: i18n.global.t('api.title.version'), type: 'html', width: 120, titlePrefix: { message: '该文档与最新版本保持同步，如果遇到参数无效时，\n请检查当前使用的版本号是否支持该参数' }, slots: { default: 'default_version' } }
+    { field: 'version', title: i18n.global.t('api.title.version'), type: 'html', width: 180, titlePrefix: { message: '该文档与最新版本保持同步，如果遇到参数无效时，\n请检查当前使用的版本号是否支持该参数' }, slots: { default: 'default_version' } }
   ],
   data: []
 })
@@ -194,6 +204,25 @@ const handleSearch = () => {
 // 调用频率间隔 500 毫秒
 const searchEvent = XEUtils.debounce(handleSearch, 500, { leading: false, trailing: true })
 
+const tableComponents = [
+  'table',
+  'colgroup',
+  'column',
+  'grid',
+  'toolbar'
+]
+
+const getVersion = (version?: string) => {
+  if (version) {
+    if (tableComponents.includes(apiName.value)) {
+      if (/^\d{1,3}[.]\d{1,3}/.test(version)) {
+        return `vxe-table@${version}`
+      }
+    }
+  }
+  return version
+}
+
 watch(apiName, () => {
   const $grid = gridRef.value
   searchName.value = ''
@@ -222,5 +251,33 @@ nextTick(() => {
 }
 .enterprise-version {
   background-color: #f6ca9d;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 2px 8px;
+  color: #606266;
+}
+::v-deep(.vxe-body--row) {
+  .vxe-body--column {
+    &.api-abandoned {
+      cursor: help;
+      color: #70541C;
+      background-color: #FFFBE5;
+      .compatibility {
+        background-color: #70541C;
+      }
+    }
+    &.api-disabled {
+      cursor: help;
+      color: #cb2431;
+      background-color: #fbb1b1;
+      .compatibility {
+        background-color: #cb2431;
+      }
+    }
+    &.api-enterprise {
+      color: #409eff;
+      font-weight: 700;
+    }
+  }
 }
 </style>

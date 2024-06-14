@@ -1951,6 +1951,46 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'toolbar',
+            children: [
+              {
+                path: 'custom',
+                name: 'ComponentGridToolbarCustom',
+                component: () => import('@/views/grid/toolbar/custom/CodeExample.vue')
+              },
+              {
+                path: 'print',
+                name: 'ComponentGridToolbarPrint',
+                component: () => import('@/views/grid/toolbar/print/CodeExample.vue')
+              },
+              {
+                path: 'zoom',
+                name: 'ComponentGridToolbarZoom',
+                component: () => import('@/views/grid/toolbar/zoom/CodeExample.vue')
+              },
+              {
+                path: 'import',
+                name: 'ComponentGridToolbarImport',
+                component: () => import('@/views/grid/toolbar/import/CodeExample.vue')
+              },
+              {
+                path: 'export',
+                name: 'ComponentGridToolbarExport',
+                component: () => import('@/views/grid/toolbar/export/CodeExample.vue')
+              },
+              {
+                path: 'refresh',
+                name: 'ComponentGridToolbarRefresh',
+                component: () => import('@/views/grid/toolbar/refresh/CodeExample.vue')
+              },
+              {
+                path: 'icon',
+                name: 'ComponentGridToolbarIcon',
+                component: () => import('@/views/grid/toolbar/icon/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'tree',
             children: [
               {

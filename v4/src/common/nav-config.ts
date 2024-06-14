@@ -399,10 +399,10 @@ export const navConfigList: NavVO[] = [
     i18nKey: 'app.aside.menu.tableTitle',
     children: [
       { title: '点击查看完整文档', linkUrl: 'https://vxetable.cn/v4.7/' },
-      { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'table' } } },
       {
         i18nKey: 'app.aside.menu.table.name',
         children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'table' } } },
           {
             title: '基础功能',
             children: [
@@ -573,6 +573,7 @@ export const navConfigList: NavVO[] = [
       {
         i18nKey: 'app.aside.menu.grid.name',
         children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'grid' } } },
           {
             title: '基础功能',
             children: [
@@ -612,6 +613,18 @@ export const navConfigList: NavVO[] = [
               // { title: '复选框', routerLink: { name: 'ComponentGridBaseSelection' } },
               // { title: 'HTML 类型', routerLink: { name: 'ComponentGridBaseHtml' } },
               { title: '完整案例', routerLink: { name: 'ComponentGridBaseFull' } }
+            ]
+          },
+          {
+            title: '工具栏',
+            children: [
+              { title: '自定义列功能', routerLink: { name: 'ComponentGridToolbarCustom' } },
+              { title: '打印功能', routerLink: { name: 'ComponentGridToolbarPrint' } },
+              { title: '最大化显示', routerLink: { name: 'ComponentGridToolbarZoom' } },
+              { title: '导入数据', routerLink: { name: 'ComponentGridToolbarImport' } },
+              { title: '导出数据', routerLink: { name: 'ComponentGridToolbarExport' } },
+              { title: '刷新列表', routerLink: { name: 'ComponentGridToolbarRefresh' } },
+              { title: '自定义图标', routerLink: { name: 'ComponentGridToolbarIcon' } }
             ]
           },
           {
