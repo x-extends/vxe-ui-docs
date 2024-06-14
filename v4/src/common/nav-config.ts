@@ -658,6 +658,21 @@ export const navConfigList: NavVO[] = [
               { title: '纵向和横向虚拟滚动', routerLink: { name: 'ComponentGridScrollHV' } },
               { title: '使用分组表头', routerLink: { name: 'ComponentGridScrollGroup' } }
             ]
+          },
+          {
+            title: '数据代理',
+            children: [
+              { title: '查询接口', routerLink: { name: 'ComponentGridProxyQuery' } },
+              { title: '分页查询接口', routerLink: { name: 'ComponentGridProxyPager' } },
+              { title: '集成工具栏查询', routerLink: { name: 'ComponentGridProxyToolbarQuery' } },
+              { title: '手动调用查询', routerLink: { name: 'ComponentGridProxyManualQuery' } },
+              { title: '集成工具栏删除已选', routerLink: { name: 'ComponentGridProxyToolbarDelete' } },
+              { title: '手动调用删除已选', routerLink: { name: 'ComponentGridProxyManualDelete' } },
+              { title: '集成工具栏批量标记删除', routerLink: { name: 'ComponentGridProxyToolbarMark' } },
+              { title: '手动调用标记删除状态', routerLink: { name: 'ComponentGridProxyManualMark' } },
+              { title: '集成工具栏增删改查', routerLink: { name: 'ComponentGridProxyToolbarSave' } },
+              { title: '手动调用增删改查', routerLink: { name: 'ComponentGridProxyManualSave' } }
+            ]
           }
         ]
       }

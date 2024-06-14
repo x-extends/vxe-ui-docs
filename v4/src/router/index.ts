@@ -2074,6 +2074,61 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/grid/scroll/group/CodeExample.vue')
               }
             ]
+          },
+          {
+            path: 'proxy',
+            children: [
+              {
+                path: 'query',
+                name: 'ComponentGridProxyQuery',
+                component: () => import('@/views/grid/proxy/query/CodeExample.vue')
+              },
+              {
+                path: 'pager',
+                name: 'ComponentGridProxyPager',
+                component: () => import('@/views/grid/proxy/pager/CodeExample.vue')
+              },
+              {
+                path: 'toolbarQuery',
+                name: 'ComponentGridProxyToolbarQuery',
+                component: () => import('@/views/grid/proxy/toolbarQuery/CodeExample.vue')
+              },
+              {
+                path: 'manualQuery',
+                name: 'ComponentGridProxyManualQuery',
+                component: () => import('@/views/grid/proxy/manualQuery/CodeExample.vue')
+              },
+              {
+                path: 'toolbarDelete',
+                name: 'ComponentGridProxyToolbarDelete',
+                component: () => import('@/views/grid/proxy/toolbarDelete/CodeExample.vue')
+              },
+              {
+                path: 'manualDelete',
+                name: 'ComponentGridProxyManualDelete',
+                component: () => import('@/views/grid/proxy/manualDelete/CodeExample.vue')
+              },
+              {
+                path: 'toolbarMark',
+                name: 'ComponentGridProxyToolbarMark',
+                component: () => import('@/views/grid/proxy/toolbarMark/CodeExample.vue')
+              },
+              {
+                path: 'manualMark',
+                name: 'ComponentGridProxyManualMark',
+                component: () => import('@/views/grid/proxy/manualMark/CodeExample.vue')
+              },
+              {
+                path: 'toolbarSave',
+                name: 'ComponentGridProxyToolbarSave',
+                component: () => import('@/views/grid/proxy/toolbarSave/CodeExample.vue')
+              },
+              {
+                path: 'manualSave',
+                name: 'ComponentGridProxyManualSave',
+                component: () => import('@/views/grid/proxy/manualSave/CodeExample.vue')
+              }
+            ]
           }
         ]
       }

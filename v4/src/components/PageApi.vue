@@ -170,7 +170,7 @@ const handleSearch = () => {
   const filterName = XEUtils.toValueString(searchName.value).trim()
   if (filterName) {
     const options = { children: 'list' }
-    if (/pro/i.test(filterName)) {
+    if (filterName === 'pro') {
       const rest = XEUtils.searchTree(tableData.value, item => item.version === 'extend-cell-area', options)
       gridOptions.data = rest
     } else {
