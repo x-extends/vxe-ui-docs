@@ -490,6 +490,7 @@ export const navConfigList: NavVO[] = [
             title: '自定义列',
             children: [
               { title: '关联工具栏', routerLink: { name: 'ComponentTableCustomToolbar' } },
+              { title: '弹窗模式', routerLink: { name: 'ComponentTableCustomPopup' } },
               { title: '允许调整列显示隐藏', routerLink: { name: 'ComponentTableCustomVisible' } },
               { title: '允许调整列冻结', routerLink: { name: 'ComponentTableCustomFixed' } },
               { title: '允许调整列宽', routerLink: { name: 'ComponentTableCustomResizable' } },
@@ -616,6 +617,37 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
+            title: '单元格合并',
+            children: [
+              { title: '合并行', routerLink: { name: 'ComponentGridMergeRow' } },
+              { title: '合并列', routerLink: { name: 'ComponentGridMergeColumn' } },
+              { title: '合并行与列', routerLink: { name: 'ComponentGridMergeAll' } }
+            ]
+          },
+          {
+            title: '表尾数据',
+            children: [
+              { title: '标准结构', routerLink: { name: 'ComponentGridFooterFooterData' } },
+              { title: '自定义数据方法', routerLink: { name: 'ComponentGridFooterFooterMethod' } }
+            ]
+          },
+          {
+            title: '展开行',
+            children: [
+              { title: '基础使用', routerLink: { name: 'ComponentGridExpandBasic' } },
+              { title: '展开容器内间距', routerLink: { name: 'ComponentGridExpandPadding' } },
+              { title: '展开容器高度', routerLink: { name: 'ComponentGridExpandHeight' } },
+              { title: '使用冻结列', routerLink: { name: 'ComponentGridExpandFixed' } }
+            ]
+          },
+          {
+            title: '右键菜单',
+            children: [
+              { title: '完整右键菜单', routerLink: { name: 'ComponentGridMenuFull' } },
+              { title: '菜单权限控制', routerLink: { name: 'ComponentGridMenuPrivilege' } }
+            ]
+          },
+          {
             title: '工具栏',
             children: [
               { title: '自定义列功能', routerLink: { name: 'ComponentGridToolbarCustom' } },
@@ -628,7 +660,23 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
-            title: '位置布局',
+            title: '自定义列',
+            children: [
+              { title: '弹窗模式', routerLink: { name: 'ComponentGridCustomPopup' } },
+              // { title: '允许调整列显示隐藏', routerLink: { name: 'ComponentGridCustomVisible' } },
+              // { title: '允许调整列冻结', routerLink: { name: 'ComponentGridCustomFixed' } },
+              // { title: '允许调整列宽', routerLink: { name: 'ComponentGridCustomResizable' } },
+              // { title: '允许拖拽列顺序', routerLink: { name: 'ComponentGridCustomSort' } },
+              // { title: '自定义触发弹出设置', routerLink: { name: 'ComponentGridCustomTemplate' } },
+              { title: '自定义弹出位置', routerLink: { name: 'ComponentGridCustomPlacement' } },
+              // { title: '事件监听', routerLink: { name: 'ComponentGridCustomEvents' } },
+              { title: '本地保存列设置', routerLink: { name: 'ComponentGridCustomStorage' } },
+              { title: '自定义服务端保存', routerLink: { name: 'ComponentGridCustomRemote' } },
+              { title: '实现服务端保存与恢复', routerLink: { name: 'ComponentGridCustomRemoteFull' } }
+            ]
+          },
+          {
+            title: '功能布局',
             children: [
               { title: '调整分页位置', routerLink: { name: 'ComponentGridLayoutPager' } },
               { title: '调整工具栏位置', routerLink: { name: 'ComponentGridLayoutToolbar' } }
@@ -648,6 +696,21 @@ export const navConfigList: NavVO[] = [
               { title: '双击编辑', routerLink: { name: 'ComponentGridEditDblclick' } },
               { title: '禁用单元格编辑', routerLink: { name: 'ComponentGridEditCellDisable' } },
               { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRowDisable' } }
+            ]
+          },
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '自定义布局模板', routerLink: { name: 'ComponentGridTemplateLayout' } },
+              { title: '自定义单元格', routerLink: { name: 'ComponentGridTemplateDefault' } },
+              { title: '自定义表头', routerLink: { name: 'ComponentGridTemplateHeader' } },
+              { title: '自定义表尾', routerLink: { name: 'ComponentGridTemplateFooter' } },
+              { title: '自定义复选框', routerLink: { name: 'ComponentGridTemplateCheckbox' } },
+              { title: '自定义单选框', routerLink: { name: 'ComponentGridTemplateRadio' } },
+              { title: '自定义展开行', routerLink: { name: 'ComponentGridTemplateContent' } },
+              { title: '自定义筛选', routerLink: { name: 'ComponentGridTemplateFilter' } },
+              { title: '自定义编辑', routerLink: { name: 'ComponentGridTemplateEdit' } },
+              { title: '自定义单元格校验', routerLink: { name: 'ComponentGridTemplateValid' } }
             ]
           },
           {

@@ -17,7 +17,7 @@
             npm install vite-plugin-lazy-import -D
           </pre-code>
           <pre-code class="javascript">
-            // vue.config.js
+            // 修改文件 vue.config.js
 
             // ...
             import { lazyImport, VxeResolver } from 'vite-plugin-lazy-import'
@@ -53,7 +53,7 @@
             npm install babel-plugin-import
           </pre-code>
           <pre-code class="javascript">
-            // babel.config.js
+            // 修改文件 babel.config.js
 
             // ...
             plugins: [
