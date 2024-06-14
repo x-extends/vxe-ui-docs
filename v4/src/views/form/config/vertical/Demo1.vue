@@ -25,8 +25,8 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
-    { field: 'sex', title: '性别', span: 12, itemRender: { name: 'VxeInput' } },
-    { field: 'age', title: '年龄', span: 12, itemRender: { name: 'VxeInput' } },
+    { field: 'sex', title: '性别', span: 24, itemRender: { name: 'VxeInput' } },
+    { field: 'age', title: '年龄', span: 24, itemRender: { name: 'VxeInput' } },
     {
       align: 'center',
       span: 24,

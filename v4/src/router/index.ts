@@ -560,6 +560,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/modal/notification/status/CodeExample.vue')
           },
           {
+            path: 'footer',
+            name: 'ComponentModalNotificationFooter',
+            component: () => import('@/views/modal/notification/footer/CodeExample.vue')
+          },
+          {
             path: 'template',
             name: 'ComponentModalNotificationTemplate',
             component: () => import('@/views/modal/notification/template/CodeExample.vue')
@@ -1951,6 +1956,21 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'layout',
+            children: [
+              {
+                path: 'pager',
+                name: 'ComponentGridLayoutPager',
+                component: () => import('@/views/grid/layout/pager/CodeExample.vue')
+              },
+              {
+                path: 'toolbar',
+                name: 'ComponentGridLayoutToolbar',
+                component: () => import('@/views/grid/layout/toolbar/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'toolbar',
             children: [
               {
@@ -2017,6 +2037,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'dblclick',
                 name: 'ComponentGridEditDblclick',
                 component: () => import('@/views/grid/edit/dblclick/CodeExample.vue')
+              },
+              {
+                path: 'cellDisable',
+                name: 'ComponentGridEditCellDisable',
+                component: () => import('@/views/grid/edit/cellDisable/CodeExample.vue')
+              },
+              {
+                path: 'rowDisable',
+                name: 'ComponentGridEditRowDisable',
+                component: () => import('@/views/grid/edit/rowDisable/CodeExample.vue')
               }
             ]
           },

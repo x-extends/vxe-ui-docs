@@ -8,7 +8,7 @@
 import { VxeUI } from 'vxe-pc-ui'
 
 const openEvent = () => {
-  VxeUI.modal.message({
+  VxeUI.modal.notification({
     content: '我是通知框'
   }).then(type => {
     console.log(`操作类型 ${type}`)

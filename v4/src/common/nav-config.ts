@@ -628,6 +628,13 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
+            title: '位置布局',
+            children: [
+              { title: '调整分页位置', routerLink: { name: 'ComponentGridLayoutPager' } },
+              { title: '调整工具栏位置', routerLink: { name: 'ComponentGridLayoutToolbar' } }
+            ]
+          },
+          {
             title: '树形',
             children: [
               { title: '平级结构', routerLink: { name: 'ComponentGridTreeLeveling' } },
@@ -638,7 +645,9 @@ export const navConfigList: NavVO[] = [
             title: '可编辑',
             children: [
               { title: '单击编辑', routerLink: { name: 'ComponentGridEditClick' } },
-              { title: '双击编辑', routerLink: { name: 'ComponentGridEditDblclick' } }
+              { title: '双击编辑', routerLink: { name: 'ComponentGridEditDblclick' } },
+              { title: '禁用单元格编辑', routerLink: { name: 'ComponentGridEditCellDisable' } },
+              { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRowDisable' } }
             ]
           },
           {
@@ -721,6 +730,7 @@ export const navConfigList: NavVO[] = [
           { title: '全局调用', routerLink: { name: 'ComponentModalNotificationGlobal' } },
           { title: '唯一', routerLink: { name: 'ComponentModalNotificationMultiple' } },
           { title: '状态提示', routerLink: { name: 'ComponentModalNotificationStatus' } },
+          { title: '带操作按钮', routerLink: { name: 'ComponentModalNotificationFooter' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentModalNotificationTemplate' } }
         ]
       },
