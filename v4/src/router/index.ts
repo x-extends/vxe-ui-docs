@@ -1089,6 +1089,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'pcAndMobile',
             name: 'ComponentListDesignPcAndMobile',
             component: () => import('@/views/list-design/pcAndMobile/CodeExample.vue')
+          },
+          {
+            path: 'formAndList',
+            name: 'ComponentListDesignFormAndList',
+            component: () => import('@/views/list-design/formAndList/CodeExample.vue')
           }
         ]
       },

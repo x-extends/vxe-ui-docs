@@ -1,35 +1,43 @@
 <template>
   <div>
     <div class="row-wrapper">
-      <p>
-        <vxe-button status="primary" @click="clickEvent">点击生成表单</vxe-button>
-      </p>
-      <div class="design-demo">
-        <div class="design-preview">
+      <vxe-tip status="success" title="表单设计器步骤">
+        <div>第一步，拖拽创建可视化表单 JSON，再传给列表设计器</div>
+        <div>第二步，根据 Form JSON 生成表单视图</div>
+      </vxe-tip>
+
+      <vxe-tabs v-model="selectTab" padding>
+        <vxe-tab-pane title="第一步，创建JSON" name="1">
+          <vxe-form-design ref="formDesignRef" :height="800" show-mobile />
+        </vxe-tab-pane>
+
+        <vxe-tab-pane title="第二步，生成视图" name="2">
+          <vxe-button status="success" @click="formViewEvent">点击生成表单</vxe-button>
           <vxe-form-view v-model="formData" :config="designConfig" @submit="submitEvent">
             <template #footer>
-              <vxe-button type="submit" status="primary" content="提交"></vxe-button>
-              <vxe-button type="reset" content="重置"></vxe-button>
+              <div v-if="designConfig">
+                <vxe-button type="submit" status="primary" content="提交"></vxe-button>
+                <vxe-button type="reset" content="重置"></vxe-button>
+              </div>
             </template>
           </vxe-form-view>
-        </div>
-        <div>
-          <vxe-form-design ref="formDesignRef" :height="800" showMobile />
-        </div>
-      </div>
+        </vxe-tab-pane>
+      </vxe-tabs>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
 import { VxeFormDesignInstance, VxeFormViewPropTypes } from 'vxe-pc-ui'
 
 const formDesignRef = ref<VxeFormDesignInstance>()
 const designConfig = ref<VxeFormViewPropTypes.Config>()
 const formData = ref()
 
-const clickEvent = () => {
+const selectTab = ref('1')
+
+const formViewEvent = () => {
   const $formDesign = formDesignRef.value
   if ($formDesign) {
     designConfig.value = $formDesign.getConfig()
@@ -39,24 +47,12 @@ const clickEvent = () => {
 const submitEvent = () => {
   console.log('提交表单', formData.value)
 }
-</script>
 
-<style lang="scss" scoped>
-.design-demo {
-  display: flex;
-  flex-direction: row;
-  min-width: 1400px;
-  & > div {
-    width: 50%;
-    flex-shrink: 0;
-    padding: 0 10px;
-    height: 800px;
-    overflow: auto;
-    & > div {
-      min-height: 100%;
-      padding: 10px;
-      border: 5px solid #47494c;
-    }
+nextTick(() => {
+  const $formDesign = formDesignRef.value
+  if ($formDesign) {
+    const defaultConfigJSON = { formConfig: { title: '', pcVisible: true, pcVertical: true, pcTitleBold: false, pcTitleColon: false, pcTitleAlign: '', pcTitleWidth: '', pcTitleWidthUnit: '', mobileVisible: true, mobileVertical: true, mobileTitleBold: false, mobileTitleColon: false, mobileTitleAlign: '', mobileTitleWidth: '', mobileTitleWidthUnit: '' }, widgetData: [{ id: 100109, field: 'input100109', title: '输入框', name: 'input', required: false, options: { placeholder: '' }, children: [], model: { update: false, value: null } }, { id: 100110, field: 'textarea100110', title: '文本域', name: 'textarea', required: false, options: { placeholder: '' }, children: [], model: { update: false, value: null } }, { id: 100111, field: 'VxeInput100111', title: '输入框', name: 'VxeInput', required: false, options: { placeholder: '' }, children: [], model: { update: false, value: null } }, { id: 100112, field: 'VxeDatePicker100112', title: '日期', name: 'VxeDatePicker', required: false, options: { placeholder: '' }, children: [], model: { update: false, value: null } }] }
+    $formDesign.loadConfig(defaultConfigJSON)
   }
-}
-</style>
+})
+</script>

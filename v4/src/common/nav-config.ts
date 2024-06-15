@@ -914,16 +914,17 @@ export const navConfigList: NavVO[] = [
           { title: '移动端设计器', routerLink: { name: 'ComponentFormDesignMobile' } },
           { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentFormDesignPcAndMobile' } },
           { title: '渲染视图', routerLink: { name: 'ComponentFormDesignRenderView' } }
-          // { title: 'API' }
         ]
-      // },
-      // {
-      //   title: 'ListDesign 列表设计器',
-      //   children: [
-      //     { title: '基础功能', routerLink: { name: 'ComponentListDesignBase' } },
-      //     { title: '移动端设计器', routerLink: { name: 'ComponentListDesignMobile' } },
-      //     { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentListDesignPcAndMobile' } }
-      //   ]
+      },
+      {
+        title: 'ListDesign 列表设计器',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'list-design' } } },
+          { title: '基础功能', routerLink: { name: 'ComponentListDesignBase' } },
+          { title: '移动端设计器', routerLink: { name: 'ComponentListDesignMobile' } },
+          { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentListDesignPcAndMobile' } },
+          { title: '集成表单设计器', routerLink: { name: 'ComponentListDesignFormAndList' } }
+        ]
       }
       // { title: 'FlowDesign 流程设计器' },
       // { title: 'PrintDesign 打印设计器' }

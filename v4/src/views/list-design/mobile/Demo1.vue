@@ -2,7 +2,7 @@
   <div>
     <div class="row-wrapper">
       <vxe-button status="primary" @click="clickEvent">获取json</vxe-button>
-      <vxe-list-design ref="listDesignRef" :height="800" :showPC="false" showMobile />
+      <vxe-list-design ref="listDesignRef" :height="800" :show-pc="false" show-mobile />
     </div>
   </div>
 </template>
