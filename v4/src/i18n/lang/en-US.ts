@@ -40,6 +40,7 @@ export default {
     },
     header: {
       moreProducts: 'Resources',
+      enterpriseVersion: 'Enterprise Edition',
       supportUs: 'Support us'
     },
     base: {

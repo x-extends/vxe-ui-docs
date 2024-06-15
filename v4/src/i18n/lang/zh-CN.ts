@@ -40,6 +40,7 @@ export default {
     },
     header: {
       moreProducts: '生态',
+      enterpriseVersion: '企业版',
       supportUs: '支持我们'
     },
     base: {

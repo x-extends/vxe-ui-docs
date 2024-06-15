@@ -27,6 +27,7 @@
           <ul class="system-menu-wrapper">
             <li v-for="(item, index) in systemMenuList" :key="index">
               <vxe-link v-bind="item" target="_blank"></vxe-link>
+              <span v-if="item.isEnterprise" class="enterprise">{{ $t('app.header.enterpriseVersion') }}</span>
             </li>
           </ul>
         </template>
@@ -50,7 +51,6 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
 import { useAppStore } from '@/store/app'
-import { VxeLinkProps } from 'vxe-pc-ui'
 import i18n from '@/i18n'
 
 const siteBaseUrl = computed(() => appStore.siteBaseUrl)
@@ -58,7 +58,7 @@ const siteBaseUrl = computed(() => appStore.siteBaseUrl)
 const appStore = useAppStore()
 
 const showSystemMenu = ref(false)
-const systemMenuList = ref<VxeLinkProps[]>()
+const systemMenuList = ref<any[]>()
 
 const currTheme = computed({
   get () {
@@ -160,9 +160,21 @@ fetch(`${siteBaseUrl.value}component-api/system-list.json`).then(res => {
   width: 280px;
   border: 1px solid var(--vxe-ui-docs-layout-border-color);
   & > li {
+    position: relative;
     line-height: 28px;
     padding: 0 16px;
     font-size: 14px;
+    .enterprise {
+      display: inline-block;
+      height: 22px;
+      line-height: 22px;
+      background-color: #f6ca9d;
+      border-radius: 10px;
+      font-size: 12px;
+      padding: 0 8px;
+      color: #606266;
+      transform: scale(0.8);
+    }
   }
 }
 </style>
