@@ -1,4 +1,4 @@
-import { VxeUI } from 'vxe-table'
+import { VxeUI } from 'vxe-pc-ui'
 
 // 自定义导出指令
 VxeUI.commands.add('myExport', {

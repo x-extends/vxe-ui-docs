@@ -125,6 +125,26 @@ const routes: Array<RouteRecordRaw> = [
             ]
           }
         ]
+      },
+      {
+        path: 'renderer',
+        children: [
+          {
+            path: 'table',
+            children: [
+              {
+                path: 'api',
+                name: 'GlobalRendererTableAPI',
+                component: () => import('@/views/global/renderer/table/api/CodeExample.vue')
+              },
+              {
+                path: 'default',
+                name: 'GlobalRendererTableDefault',
+                component: () => import('@/views/global/renderer/table/default/CodeExample.vue')
+              }
+            ]
+          }
+        ]
       }
     ]
   },

@@ -99,7 +99,7 @@ const currVersion = computed({
   }
 })
 
-fetch(`${siteBaseUrl.value}component-api/system-list.json`).then(res => {
+fetch(`${siteBaseUrl.value}component-api/system-list.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
   res.json().then(data => {
     systemMenuList.value = data
   })

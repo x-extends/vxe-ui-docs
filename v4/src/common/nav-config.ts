@@ -766,6 +766,13 @@ export const navConfigList: NavVO[] = [
           { title: 'API', routerLink: { name: 'GlobalCommandsTableAPI' } },
           { title: '示例', routerLink: { name: 'GlobalCommandsTableBase' } }
         ]
+      },
+      {
+        title: '渲染器（高阶复用）',
+        children: [
+          { title: 'API', routerLink: { name: 'GlobalRendererTableAPI' } },
+          { title: '单元格', routerLink: { name: 'GlobalRendererTableDefault' } }
+        ]
       }
       // { title: '右键菜单（全局）' },
       // { title: '校验器（全局）' },

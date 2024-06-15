@@ -42,7 +42,7 @@ export const useAppStore = defineStore('app', {
     },
     updateComponentApiJSON () {
       if (!apiPromise) {
-        apiPromise = fetch(`${this.siteBaseUrl}component-api/ui-v${this.docsVersion}/apiMaps.json`).then(res => {
+        apiPromise = fetch(`${this.siteBaseUrl}component-api/ui-v${this.docsVersion}/apiMaps.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
           return res.json().then(data => {
             if (data) {
               this.compApiMaps = data

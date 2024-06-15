@@ -73,7 +73,8 @@ gulp.task('handle_vue_tstojs', gulp.series('handle_vue_tmpltojs', () => {
 
 gulp.task('handle_tstojs', () => {
   return gulp.src([
-    'src/views/**/demo*.ts'
+    'src/views/**/demo*.ts',
+    'src/views/**/demo*.tsx'
   ])
     .pipe(ts({
       target: 'esnext',
@@ -107,7 +108,8 @@ gulp.task('build_vue_tstojs', gulp.series('handle_vue_tstojs', 'handle_tstojs', 
 gulp.task('build_examples', gulp.series('build_vue_tstojs', () => {
   return gulp.src([
     'src/views/**/Demo*.vue',
-    'src/views/**/demo*.ts'
+    'src/views/**/demo*.ts',
+    'src/views/**/demo*.tsx'
   ])
     .pipe(gulp.dest('dist/example/ts'))
 }))

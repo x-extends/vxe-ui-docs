@@ -1,4 +1,4 @@
-import { VxeUI } from 'vxe-table'
+import { VxeUI } from 'vxe-pc-ui'
 import XEUtils from 'xe-utils'
 
 // 格式金额，默认2位数

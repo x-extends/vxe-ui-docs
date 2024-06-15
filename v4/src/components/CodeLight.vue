@@ -74,6 +74,7 @@ import { ref, computed, defineAsyncComponent, PropType } from 'vue'
 import { codeJsMaps, codeTsMaps } from '@/common/cache'
 import { VxeUI } from 'vxe-pc-ui'
 import { useAppStore } from '@/store/app'
+import XEUtils from 'xe-utils'
 
 const appStore = useAppStore()
 
@@ -134,19 +135,21 @@ const loadJsCode = () => {
           return '暂无示例'
         }),
         ...(props.extraImports?.map(impPath => {
-          return fetch(`${process.env.BASE_URL}example/js/${impPath}.js?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+          const opts = Object.assign({ type: 'js' }, XEUtils.isString(impPath) ? { path: impPath } : impPath)
+          const fileType = ['jsx', 'tsx'].includes(opts.type) ? 'jsx' : 'js'
+          return fetch(`${process.env.BASE_URL}example/js/${opts.path}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
             if (response.status >= 200 && response.status < 400) {
               return response.text().then(text => {
                 return {
-                  path: `${impPath}.js`,
-                  name: getFileName(`${impPath}.js`),
+                  path: `${opts.path}.${fileType}`,
+                  name: getFileName(`${opts.path}.${fileType}`),
                   text
                 }
               })
             }
             return {
-              path: `${impPath}.js`,
-              name: getFileName(`${impPath}.js`),
+              path: `${opts.path}.${fileType}`,
+              name: getFileName(`${opts.path}.${fileType}`),
               text: ''
             }
           })
@@ -182,19 +185,21 @@ const loadTsCode = () => {
           return '暂无示例'
         }),
         ...(props.extraImports?.map(impPath => {
-          return fetch(`${process.env.BASE_URL}example/ts/${impPath}.ts?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+          const opts = Object.assign({ type: 'ts' }, XEUtils.isString(impPath) ? { path: impPath } : impPath)
+          const fileType = ['jsx', 'tsx'].includes(opts.type) ? 'tsx' : 'ts'
+          return fetch(`${process.env.BASE_URL}example/ts/${opts.path}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
             if (response.status >= 200 && response.status < 400) {
               return response.text().then(text => {
                 return {
-                  path: `${impPath}.ts`,
-                  name: getFileName(`${impPath}.ts`),
+                  path: `${opts.path}.${fileType}`,
+                  name: getFileName(`${opts.path}.${fileType}`),
                   text
                 }
               })
             }
             return {
-              path: `${impPath}.ts`,
-              name: getFileName(`${impPath}.ts`),
+              path: `${opts.path}.${fileType}`,
+              name: getFileName(`${opts.path}.${fileType}`),
               text: ''
             }
           })

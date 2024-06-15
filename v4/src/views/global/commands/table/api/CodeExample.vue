@@ -6,7 +6,7 @@
     </vxe-tip>
 
     <vxe-table
-      :tree-config="{children: 'list'}"
+      :tree-config="{childrenField: 'list'}"
       :row-config="{isCurrent: true, isHover: true}"
       :column-config="{resizable: true, isCurrent: true}"
       :data="tableData">
