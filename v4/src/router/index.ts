@@ -84,6 +84,51 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
+    path: '/global',
+    children: [
+      {
+        path: 'formats',
+        children: [
+          {
+            path: 'table',
+            children: [
+              {
+                path: 'api',
+                name: 'GlobalFormatsTableAPI',
+                component: () => import('@/views/global/formats/table/api/CodeExample.vue')
+              },
+              {
+                path: 'table',
+                name: 'GlobalFormatsTableBase',
+                component: () => import('@/views/global/formats/table/base/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
+      {
+        path: 'commands',
+        children: [
+          {
+            path: 'table',
+            children: [
+              {
+                path: 'api',
+                name: 'GlobalCommandsTableAPI',
+                component: () => import('@/views/global/commands/table/api/CodeExample.vue')
+              },
+              {
+                path: 'table',
+                name: 'GlobalCommandsTableBase',
+                component: () => import('@/views/global/commands/table/base/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     path: '/component',
     children: [
       {

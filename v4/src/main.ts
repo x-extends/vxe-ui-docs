@@ -22,6 +22,9 @@ import VxeTable from 'vxe-table'
 import 'vxe-table/lib/style.css'
 
 import '@/views/table/base/format/demo2.format'
+import '@/views/global/formats/table/base/demo1.table.formats'
+
+import '@/views/global/commands/table/base/demo1.table.commands'
 
 import enUS from 'vxe-pc-ui/packages/language/en-US'
 
