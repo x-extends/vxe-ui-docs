@@ -139,13 +139,48 @@ const routes: Array<RouteRecordRaw> = [
               },
               {
                 path: 'default',
-                name: 'GlobalRendererTableDefault',
-                component: () => import('@/views/global/renderer/table/default/CodeExample.vue')
+                children: [
+                  {
+                    path: 'myLink',
+                    name: 'GlobalRendererTableDefaultMyLink',
+                    component: () => import('@/views/global/renderer/table/default/myLink/CodeExample.vue')
+                  },
+                  {
+                    path: 'myImg',
+                    name: 'GlobalRendererTableDefaultMyImg',
+                    component: () => import('@/views/global/renderer/table/default/myImg/CodeExample.vue')
+                  }
+                ]
               },
               {
                 path: 'edit',
-                name: 'GlobalRendererTableEdit',
-                component: () => import('@/views/global/renderer/table/edit/CodeExample.vue')
+                children: [
+                  {
+                    path: 'editInput',
+                    name: 'GlobalRendererTableEditEditInput',
+                    component: () => import('@/views/global/renderer/table/edit/editInput/CodeExample.vue')
+                  },
+                  {
+                    path: 'editDownTable',
+                    name: 'GlobalRendererTableEditEditDownTable',
+                    component: () => import('@/views/global/renderer/table/edit/editDownTable/CodeExample.vue')
+                  }
+                ]
+              },
+              {
+                path: 'toolbar',
+                children: [
+                  {
+                    path: 'btn',
+                    name: 'GlobalRendererTableToolbarBtn',
+                    component: () => import('@/views/global/renderer/table/toolbar/button/CodeExample.vue')
+                  },
+                  {
+                    path: 'tool',
+                    name: 'GlobalRendererTableToolbarTool',
+                    component: () => import('@/views/global/renderer/table/toolbar/tool/CodeExample.vue')
+                  }
+                ]
               },
               {
                 path: 'empty',
@@ -403,6 +438,16 @@ const routes: Array<RouteRecordRaw> = [
             path: 'float',
             name: 'ComponentInputFloat',
             component: () => import('@/views/input/float/CodeExample.vue')
+          },
+          {
+            path: 'prefix',
+            name: 'ComponentInputPrefix',
+            component: () => import('@/views/input/prefix/CodeExample.vue')
+          },
+          {
+            path: 'suffix',
+            name: 'ComponentInputSuffix',
+            component: () => import('@/views/input/suffix/CodeExample.vue')
           },
           {
             path: 'template',

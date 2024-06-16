@@ -12,7 +12,7 @@ interface RowVO {
   id: number
   name: string
   sex: string
-  age: number
+  num: number
 }
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
@@ -24,15 +24,15 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   },
   columns: [
     { type: 'seq', width: 50 },
-    { field: 'name', title: 'name', editRender: { name: 'MyInput' } },
+    { field: 'name', title: 'name' },
     { field: 'sex', title: 'sex' },
-    { field: 'age', title: 'Age' }
+    { field: 'num', title: 'Num', editRender: { name: 'EditAmount' } }
   ],
   data: [
-    { id: 10001, name: 'Test1', sex: 'Man', age: 28 },
-    { id: 10002, name: 'Test2', sex: 'Women', age: 22 },
-    { id: 10003, name: 'Test3', sex: 'Man', age: 32 },
-    { id: 10004, name: 'Test4', sex: 'Women', age: 23 }
+    { id: 10001, name: 'Test1', sex: 'Man', num: 28 },
+    { id: 10002, name: 'Test2', sex: 'Women', num: 22 },
+    { id: 10003, name: 'Test3', sex: 'Man', num: 32 },
+    { id: 10004, name: 'Test4', sex: 'Women', num: 23 }
   ]
 })
 </script>

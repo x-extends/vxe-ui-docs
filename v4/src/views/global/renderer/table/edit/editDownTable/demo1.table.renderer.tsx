@@ -1,11 +1,11 @@
 import { VxeUI } from 'vxe-pc-ui'
+import DownTable from './DownTable.vue'
 
-// 创建一个简单输入框渲染
-VxeUI.renderer.add('MyInput', {
+// 创建一个下拉表格渲染器
+VxeUI.renderer.add('EditDownTable', {
   // 可编辑激活模板
   renderTableEdit (renderOpts, params) {
-    const { row, column } = params
-    return <input class="my-cell" type="text" v-model={ row[column.field] } />
+    return <DownTable params={ params }></DownTable>
   },
   // 可编辑显示模板
   renderTableCell (renderOpts, params) {

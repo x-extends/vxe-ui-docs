@@ -6,7 +6,7 @@
     </vxe-tip>
 
     <vxe-table
-      :tree-config="{childrenField: 'list'}"
+      :tree-config="{childrenField: 'list', expandAll: true}"
       :row-config="{isCurrent: true, isHover: true}"
       :column-config="{resizable: true, isCurrent: true}"
       :data="tableData">
@@ -25,11 +25,11 @@ import { ref } from 'vue'
 
 const tableData = ref([
   {
-    name: 'add(code, options)',
-    desc: '添加一个',
+    name: 'add(code, option)',
+    desc: '添加',
     type: '',
     enum: '',
-    defVal: 'code: string, options: { cellFormatMethod }',
+    defVal: 'code: string, option: any',
     list: [
       {
         name: 'cellFormatMethod',
@@ -43,10 +43,11 @@ const tableData = ref([
   },
   {
     name: 'mixin(opts)',
-    desc: '添加多个',
+    desc: '添加多个，参数跟 add 一致',
+    version: '',
     type: '',
     enum: '',
-    defVal: 'opts: { [code: string]: { cellFormatMethod } }',
+    defVal: 'options: Record<string, option>',
     list: []
   },
   {

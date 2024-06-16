@@ -16,7 +16,7 @@
     </vxe-tip>
 
     <vxe-table
-      :tree-config="{childrenField: 'list'}"
+      :tree-config="{childrenField: 'list', expandAll: true}"
       :row-config="{isCurrent: true, isHover: true}"
       :column-config="{resizable: true, isCurrent: true}"
       :data="tableData">
@@ -35,21 +35,193 @@ import { ref } from 'vue'
 
 const tableData = ref([
   {
-    name: 'add(name, options)',
-    desc: '添加一个',
+    name: 'add(name, option)',
+    desc: '添加',
     version: '',
     type: '',
     enum: '',
-    defVal: 'name, options',
-    list: []
+    defVal: 'name: string, option: any',
+    list: [
+      {
+        name: 'tableFilterClassName',
+        desc: '设置筛选容器 class',
+        version: '',
+        type: 'string | ((params: { column, columnIndex, $columnIndex, $rowIndex }) => string)',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'showTableFilterFooter',
+        desc: '筛选容器是否显示尾部',
+        version: '',
+        type: 'boolean',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'renderTableFilter',
+        desc: '自定义筛选渲染内容',
+        version: '',
+        type: '(renderOpts, params: { column, columnIndex, $columnIndex, _columnIndex, $panel }) => JSX',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'tableFilterMethod',
+        desc: '自定义筛选逻辑方法',
+        version: '',
+        type: '(params: { value, option, cellValue, row, column, $table }) => boolean',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'tableFilterResetMethod',
+        desc: '自定义筛选还原逻辑方法',
+        version: '',
+        type: '(params: { options, column }) => void',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'tableFilterRecoverMethod',
+        desc: '自定义筛选还原逻辑方法',
+        version: '',
+        type: '(params: { options, column }) => void',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'tableCellClassName',
+        desc: '单元格设置 class',
+        version: '',
+        type: 'string | ((params: { row, rowIndex, $rowIndex, column, columnIndex, $columnIndex, _columnIndex, $table }) => string)',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'tableCellStyle',
+        desc: '单元格设置样式',
+        version: '',
+        type: 'Record<string, any> | ((params: { row, rowIndex, $rowIndex, column, columnIndex, $columnIndex, _columnIndex, $table }) => Record<string, any>)',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'renderTableHeader',
+        desc: '渲染头部',
+        version: '',
+        type: '(params: { column, columnIndex, $columnIndex, _columnIndex, $rowIndex, $table }) => JSX',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'renderTableDefault',
+        desc: '渲染单元格',
+        version: '',
+        type: '(params: { row, rowIndex, $rowIndex, column, columnIndex, $columnIndex, _columnIndex, $table }) => JSX',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'renderTableFooter',
+        desc: '渲染尾部',
+        version: '',
+        type: '(params: { row, rowIndex, $rowIndex, column, columnIndex, $columnIndex, _columnIndex, $rowIndex, items, itemIndex, $table }) => JSX',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'tableExportMethod',
+        desc: '自定义单元格导出逻辑',
+        version: '',
+        type: '(params: { row, column }) => string',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'tableFooterExportMethod',
+        desc: '自定义表尾单元格导出逻辑',
+        version: '',
+        type: '(params: { items, itemIndex, row, column, _columnIndex }) => string',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'tableAutofocus',
+        desc: '激活编辑状态时，设置自动聚焦的 class',
+        version: '',
+        type: 'string | ((params: { row, rowIndex, $rowIndex, column, columnIndex, $columnIndex, _columnIndex, $table }) => HTMLElement)',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'tableAutoSelect',
+        desc: '激活编辑状态时，设置是否自动选中 tableAutofocus 指定的元素',
+        version: '',
+        type: 'boolean',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'renderTableEdit',
+        desc: '渲染编辑状态时，与 renderTableCell 配合使用',
+        version: '',
+        type: '(renderOpts, params: { row, rowIndex, $rowIndex, column, columnIndex, $columnIndex, _columnIndex, $table }) => JSX',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'renderTableCell',
+        desc: '渲染非编辑状态时，与 renderTableEdit 配合使用',
+        version: '',
+        type: '(renderOpts, params: { row, rowIndex, $rowIndex, column, columnIndex, $columnIndex, _columnIndex, $table }) => JSX',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'renderTableExpand',
+        desc: '展开行渲染',
+        version: '',
+        type: '(renderOpts, params: { row, rowIndex, $rowIndex, column, columnIndex, $columnIndex, $table }) => JSX',
+        enum: '',
+        defVal: '',
+        list: []
+      },
+      {
+        name: 'renderTableEmptyView',
+        desc: '空数据时渲染',
+        version: '',
+        type: '(renderOpts, params: { $table }) => JSX',
+        enum: '',
+        defVal: '',
+        list: []
+      }
+    ]
   },
   {
     name: 'mixin(options)',
-    desc: '添加多个',
+    desc: '添加多个，参数跟 add 一致',
     version: '',
     type: '',
     enum: '',
-    defVal: 'options',
+    defVal: 'options: Record<string, option>',
     list: []
   },
   {

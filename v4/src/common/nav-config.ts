@@ -286,6 +286,8 @@ export const navConfigList: NavVO[] = [
           { title: '数值类型', routerLink: { name: 'ComponentInputNumber' } },
           { title: '整数类型', routerLink: { name: 'ComponentInputInteger' } },
           { title: '小数类型', routerLink: { name: 'ComponentInputFloat' } },
+          { title: '自定义前缀图标', routerLink: { name: 'ComponentInputPrefix' } },
+          { title: '自定义后缀图标', routerLink: { name: 'ComponentInputSuffix' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentInputTemplate' } }
         ]
       },
@@ -771,8 +773,27 @@ export const navConfigList: NavVO[] = [
         title: '渲染器（高阶复用）',
         children: [
           { title: 'API', routerLink: { name: 'GlobalRendererTableAPI' } },
-          { title: '单元格', routerLink: { name: 'GlobalRendererTableDefault' } },
-          { title: '可编辑', routerLink: { name: 'GlobalRendererTableEdit' } },
+          {
+            title: '单元格',
+            children: [
+              { title: '实现一个超链接', routerLink: { name: 'GlobalRendererTableDefaultMyLink' } },
+              { title: '实现一个图片预览', routerLink: { name: 'GlobalRendererTableDefaultMyImg' } }
+            ]
+          },
+          {
+            title: '可编辑',
+            children: [
+              { title: '实现一个金额输入', routerLink: { name: 'GlobalRendererTableEditEditInput' } },
+              { title: '实现一个下拉表格', routerLink: { name: 'GlobalRendererTableEditEditDownTable' } }
+            ]
+          },
+          {
+            title: '工具栏',
+            children: [
+              { title: '实现左侧操作按钮', routerLink: { name: 'GlobalRendererTableToolbarBtn' } },
+              { title: '实现右侧工具按钮', routerLink: { name: 'GlobalRendererTableToolbarTool' } }
+            ]
+          },
           { title: '空数据提示', routerLink: { name: 'GlobalRendererTableEmpty' } }
         ]
       }

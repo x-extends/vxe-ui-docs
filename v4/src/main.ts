@@ -26,8 +26,12 @@ import '@/views/global/formats/table/base/demo1.table.formats'
 
 import '@/views/global/commands/table/base/demo1.table.commands'
 
-import '@/views/global/renderer/table/default/demo1.table.renderer'
-import '@/views/global/renderer/table/edit/demo1.table.renderer'
+import '@/views/global/renderer/table/default/myLink/demo1.table.renderer'
+import '@/views/global/renderer/table/default/myImg/demo1.table.renderer'
+import '@/views/global/renderer/table/edit/editInput/demo1.table.renderer'
+import '@/views/global/renderer/table/edit/editDownTable/demo1.table.renderer'
+import '@/views/global/renderer/table/toolbar/button/demo1.table.renderer'
+import '@/views/global/renderer/table/toolbar/tool/demo1.table.renderer'
 import '@/views/global/renderer/table/empty/demo1.table.renderer'
 
 import enUS from 'vxe-pc-ui/packages/language/en-US'
