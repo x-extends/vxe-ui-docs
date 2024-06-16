@@ -98,7 +98,7 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/global/formats/table/api/CodeExample.vue')
               },
               {
-                path: 'table',
+                path: 'base',
                 name: 'GlobalFormatsTableBase',
                 component: () => import('@/views/global/formats/table/base/CodeExample.vue')
               }
@@ -118,7 +118,7 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/global/commands/table/api/CodeExample.vue')
               },
               {
-                path: 'table',
+                path: 'base',
                 name: 'GlobalCommandsTableBase',
                 component: () => import('@/views/global/commands/table/base/CodeExample.vue')
               }
@@ -141,6 +141,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'default',
                 name: 'GlobalRendererTableDefault',
                 component: () => import('@/views/global/renderer/table/default/CodeExample.vue')
+              },
+              {
+                path: 'edit',
+                name: 'GlobalRendererTableEdit',
+                component: () => import('@/views/global/renderer/table/edit/CodeExample.vue')
+              },
+              {
+                path: 'empty',
+                name: 'GlobalRendererTableEmpty',
+                component: () => import('@/views/global/renderer/table/empty/CodeExample.vue')
               }
             ]
           }

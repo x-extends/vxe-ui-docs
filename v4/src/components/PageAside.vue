@@ -273,7 +273,7 @@ appStore.updateComponentApiJSON()
     position: sticky;
     top: 0;
     left: 0;
-    padding: 16px;
+    padding: 16px 0;
     text-align: center;
     background-color: var(--vxe-ui-docs-layout-background-color);
     box-shadow: inset 0px 12px 8px -8px rgba(0,0,0,.12);

@@ -38,6 +38,8 @@ import { VxeGridProps, VxeGridInstance } from 'vxe-pc-ui'
 import i18n from '@/i18n'
 import XEUtils from 'xe-utils'
 
+// import newZh from '@/i18n/lang/zh-CN'
+
 interface RowVO {
   name: string
   enum: string
@@ -69,12 +71,29 @@ const apiConfig = computed(() => {
 
 const loadList = () => {
   gridOptions.loading = true
+
+  // 合并老数据
+  // XEUtils.each(appStore.compApiMaps, (list, name) => {
+  //   XEUtils.eachTree(list, (item, i, items, path, parent, nodes) => {
+  //     if (parent) {
+  //       item.i18nKey = `components.${name.replace('vxe-', '')}.${nodes.map(item => `${XEUtils.kebabCase(item.name)}`.replace(/\(.*/, '')).join('_')}`
+  //     } else {
+  //       item.i18nKey = `api.title.${item.name}`
+  //     }
+  //     item.i18nValue = XEUtils.get(newZh, item.i18nKey)
+  //     if (!item.i18nValue) {
+  //       XEUtils.set(newZh, item.i18nKey, item.desc || '')
+  //     }
+  //   }, { children: 'list' })
+  // })
+  // console.log(JSON.stringify(newZh.components, null, 2))
+
   return new Promise<void>(resolve => {
     setTimeout(() => {
       const list = XEUtils.clone(apiConfig.value, true) || []
       XEUtils.eachTree(list, (item, i, items, path, parent, nodes) => {
         if (parent) {
-          item.i18nKey = nodes.map(item => `${item.name}`.replace(/\(.*/, '')).join('_')
+          item.i18nKey = `components.${apiName.value}.${nodes.map(item => `${XEUtils.kebabCase(item.name)}`.replace(/\(.*/, '')).join('_')}`
         } else {
           item.i18nKey = `api.title.${item.name}`
         }

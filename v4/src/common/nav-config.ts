@@ -757,21 +757,23 @@ export const navConfigList: NavVO[] = [
         title: '格式化（全局复用）',
         children: [
           { title: 'API', routerLink: { name: 'GlobalFormatsTableAPI' } },
-          { title: '示例', routerLink: { name: 'GlobalFormatsTableBase' } }
+          { title: '单元格', routerLink: { name: 'GlobalFormatsTableBase' } }
         ]
       },
       {
         title: '指令注册（全局复用）',
         children: [
           { title: 'API', routerLink: { name: 'GlobalCommandsTableAPI' } },
-          { title: '示例', routerLink: { name: 'GlobalCommandsTableBase' } }
+          { title: '工具栏', routerLink: { name: 'GlobalCommandsTableBase' } }
         ]
       },
       {
         title: '渲染器（高阶复用）',
         children: [
           { title: 'API', routerLink: { name: 'GlobalRendererTableAPI' } },
-          { title: '单元格', routerLink: { name: 'GlobalRendererTableDefault' } }
+          { title: '单元格', routerLink: { name: 'GlobalRendererTableDefault' } },
+          { title: '可编辑', routerLink: { name: 'GlobalRendererTableEdit' } },
+          { title: '空数据提示', routerLink: { name: 'GlobalRendererTableEmpty' } }
         ]
       }
       // { title: '右键菜单（全局）' },

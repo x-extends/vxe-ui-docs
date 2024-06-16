@@ -1,8 +1,9 @@
 <template>
   <div>
-    <vxe-toolbar :buttons="toolbarButtons"></vxe-toolbar>
+    <vxe-toolbar ref="toolbarRef" :buttons="toolbarButtons"></vxe-toolbar>
     <vxe-table
       border
+      ref="tableRef"
       height="300"
       :data="tableData">
       <vxe-column type="seq" width="50"></vxe-column>
