@@ -401,7 +401,7 @@ export const navConfigList: NavVO[] = [
   {
     i18nKey: 'app.aside.menu.tableTitle',
     children: [
-      { title: '点击查看完整文档', linkUrl: 'https://vxetable.cn/v4.7/' },
+      { title: '点击查看完整文档', linkUrl: 'https://vxetable.cn/' },
       {
         i18nKey: 'app.aside.menu.table.name',
         children: [
@@ -553,14 +553,27 @@ export const navConfigList: NavVO[] = [
               { title: '自定义编辑', routerLink: { name: 'ComponentTableTemplateEdit' } }
             ]
           },
-          // {
-          //   title: '导入/导出数据',
-          //   children: []
-          // },
-          // {
-          //   title: '打印表格',
-          //   children: []
-          // },
+          {
+            title: '导出数据',
+            children: [
+              { title: '导出数据', routerLink: { name: 'ComponentTableExportBase' } },
+              { title: '高级导出', routerLink: { name: 'ComponentTableExportAdvanced' } }
+            ]
+          },
+          {
+            title: '导入数据',
+            children: [
+              { title: '导入数据', routerLink: { name: 'ComponentTableImportBase' } },
+              { title: '高级导入', routerLink: { name: 'ComponentTableImportAdvanced' } }
+            ]
+          },
+          {
+            title: '打印表格',
+            children: [
+              { title: '打印表格', routerLink: { name: 'ComponentTablePrintBase' } },
+              { title: '高级打印', routerLink: { name: 'ComponentTablePrintAdvanced' } }
+            ]
+          },
           {
             title: '虚拟滚动',
             children: [
@@ -728,6 +741,27 @@ export const navConfigList: NavVO[] = [
               { title: '自定义筛选', routerLink: { name: 'ComponentGridTemplateFilter' } },
               { title: '自定义编辑', routerLink: { name: 'ComponentGridTemplateEdit' } },
               { title: '自定义单元格校验', routerLink: { name: 'ComponentGridTemplateValid' } }
+            ]
+          },
+          {
+            title: '导出数据',
+            children: [
+              { title: '导出数据', routerLink: { name: 'ComponentGridExportBase' } },
+              { title: '高级导出', routerLink: { name: 'ComponentGridExportAdvanced' } }
+            ]
+          },
+          {
+            title: '导入数据',
+            children: [
+              { title: '导入数据', routerLink: { name: 'ComponentGridImportBase' } },
+              { title: '高级导入', routerLink: { name: 'ComponentGridImportAdvanced' } }
+            ]
+          },
+          {
+            title: '打印表格',
+            children: [
+              { title: '打印表格', routerLink: { name: 'ComponentGridPrintBase' } },
+              { title: '高级打印', routerLink: { name: 'ComponentGridPrintAdvanced' } }
             ]
           },
           {

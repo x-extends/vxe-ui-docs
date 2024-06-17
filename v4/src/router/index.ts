@@ -1877,6 +1877,51 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'import',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentTableImportBase',
+                component: () => import('@/views/table/import/base/CodeExample.vue')
+              },
+              {
+                path: 'advanced',
+                name: 'ComponentTableImportAdvanced',
+                component: () => import('@/views/table/import/advanced/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'export',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentTableExportBase',
+                component: () => import('@/views/table/export/base/CodeExample.vue')
+              },
+              {
+                path: 'advanced',
+                name: 'ComponentTableExportAdvanced',
+                component: () => import('@/views/table/export/advanced/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'print',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentTablePrintBase',
+                component: () => import('@/views/table/print/base/CodeExample.vue')
+              },
+              {
+                path: 'advanced',
+                name: 'ComponentTablePrintAdvanced',
+                component: () => import('@/views/table/print/advanced/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'scroll',
             children: [
               {
@@ -2413,6 +2458,51 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'valid',
                 name: 'ComponentGridTemplateValid',
                 component: () => import('@/views/grid/template/valid/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'import',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentGridImportBase',
+                component: () => import('@/views/grid/import/base/CodeExample.vue')
+              },
+              {
+                path: 'advanced',
+                name: 'ComponentGridImportAdvanced',
+                component: () => import('@/views/grid/import/advanced/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'export',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentGridExportBase',
+                component: () => import('@/views/grid/export/base/CodeExample.vue')
+              },
+              {
+                path: 'advanced',
+                name: 'ComponentGridExportAdvanced',
+                component: () => import('@/views/grid/export/advanced/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'print',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentGridPrintBase',
+                component: () => import('@/views/grid/print/base/CodeExample.vue')
+              },
+              {
+                path: 'advanced',
+                name: 'ComponentGridPrintAdvanced',
+                component: () => import('@/views/grid/print/advanced/CodeExample.vue')
               }
             ]
           },
