@@ -5,21 +5,21 @@
       height="300"
       :loading="loading"
       :data="tableData"
-      :sort-config="{remote: true}"
-      @sort-change="sortChangeEvent">
+      :filter-config="{remote: true}"
+      @filter-change="filterChangeEvent">
       <vxe-column type="seq" width="60"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
-      <vxe-column field="role" title="Role" sortable></vxe-column>
-      <vxe-column field="sex" title="Sex" sortable></vxe-column>
-      <vxe-column field="age" title="Age" sortable></vxe-column>
-      <vxe-column field="address" title="Address" sortable></vxe-column>
+      <vxe-column field="role" title="Role" :filters="roleOptions"></vxe-column>
+      <vxe-column field="sex" title="Sex"></vxe-column>
+      <vxe-column field="age" title="Age"></vxe-column>
+      <vxe-column field="address" title="Address"></vxe-column>
     </vxe-table>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeTablePropTypes, VxeTableEvents, VxeColumnPropTypes } from 'vxe-pc-ui'
+import { VxeTableDefines, VxeTableEvents } from 'vxe-pc-ui'
 import XEUtils from 'xe-utils'
 
 interface RowVO {
@@ -36,7 +36,14 @@ interface RowVO {
 const loading = ref(false)
 const tableData = ref<RowVO[]>()
 
-const findList = (field?: VxeColumnPropTypes.Field, order?: VxeTablePropTypes.SortOrder) => {
+const roleOptions = ref([
+  { label: 'Develop', value: 'Develop' },
+  { label: 'Test', value: 'Test' },
+  { label: 'PM', value: 'PM' },
+  { label: 'Designer', value: 'Designer' }
+])
+
+const findList = (filterList?: VxeTableDefines.FilterCheckedParams<RowVO>[]) => {
   loading.value = true
   // 模拟接口
   return new Promise<RowVO[]>(resolve => {
@@ -52,8 +59,10 @@ const findList = (field?: VxeColumnPropTypes.Field, order?: VxeTablePropTypes.So
         { id: 10007, name: 'Test7', role: 'Test', sex: 'Man', age: 29, num: '400.9', num2: '400.9', address: 'test abc' },
         { id: 10008, name: 'Test8', role: 'Develop', sex: 'Man', age: 35, num: '5000', num2: '5000', address: 'test abc' }
       ]
-      if (field && order) {
-        const rest = XEUtils.orderBy(mockList, { field, order })
+      if (filterList && filterList.length) {
+        const firstItem = filterList[0]
+        const values = firstItem.values
+        const rest = mockList.filter(item => values.includes(item.role))
         tableData.value = rest
         resolve(rest)
       } else {
@@ -64,8 +73,8 @@ const findList = (field?: VxeColumnPropTypes.Field, order?: VxeTablePropTypes.So
   })
 }
 
-const sortChangeEvent: VxeTableEvents.SortChange<RowVO> = ({ field, order }) => {
-  findList(field, order)
+const filterChangeEvent: VxeTableEvents.FilterChange<RowVO> = ({ filterList }) => {
+  findList(filterList)
 }
 
 findList()

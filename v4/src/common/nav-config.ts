@@ -470,6 +470,13 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
+            title: '筛选',
+            children: [
+              { title: '修改筛选选项', routerLink: { name: 'ComponentTableFilterOptions' } },
+              { title: '服务端筛选', routerLink: { name: 'ComponentTableFilterRemote' } }
+            ]
+          },
+          {
             title: '展开行',
             children: [
               { title: '基础使用', routerLink: { name: 'ComponentTableExpandBasic' } },

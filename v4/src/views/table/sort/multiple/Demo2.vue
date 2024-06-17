@@ -3,7 +3,7 @@
     <vxe-table
       border
       height="300"
-      :sort-config="{multiple: true}"
+      :sort-config="{multiple: true, chronological: true}"
       :data="tableData"
       @sort-change="sortChangeEvent">
       <vxe-column type="seq" width="60"></vxe-column>

@@ -1577,6 +1577,21 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'filter',
+            children: [
+              {
+                path: 'options',
+                name: 'ComponentTableFilterOptions',
+                component: () => import('@/views/table/filter/options/CodeExample.vue')
+              },
+              {
+                path: 'remote',
+                name: 'ComponentTableFilterRemote',
+                component: () => import('@/views/table/filter/remote/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'merge',
             children: [
               {
