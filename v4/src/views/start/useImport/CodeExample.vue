@@ -156,6 +156,9 @@
             VxeUI.setI18n('zh-CN', zhCN)
             VxeUI.setLanguage('zh-CN')
 
+            // 注册组件
+            // 如果页面中已经被显性导入了，则可以不用调用注册
+            // 如果是配置式的，没有在页面中显性导入，则需要逐个注册
             VxeUI.component(VxeAnchor)
             VxeUI.component(VxeAnchorLink)
             VxeUI.component(VxeBreadcrumb)
