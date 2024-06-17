@@ -2,7 +2,7 @@
   <div>
     <vxe-table
       border
-      height="300"
+      height="500"
       :loading="loading"
       :data="tableData"
       :filter-config="{remote: true}"

@@ -35,11 +35,5 @@
         <vxe-tip status="primary">点击表头排序，通过 <ApiLink name="table" prop="defaultSort"/> 默认排序、<ApiLink name="table" prop="orders"/> 自定义轮转顺序、通过配置 <ApiLink name="table" prop="trigger"/> 设置触发源</vxe-tip>
       </template>
     </CodeLight>
-
-    <CodeLight path="table/base/sort/Demo6">
-      <template #tip>
-        <vxe-tip status="primary">配置 <ApiLink name="table" prop="sort-config"/>.<ApiLink name="table" prop="remote"/> 和 <ApiLink name="table" prop="sort-change"/> 事件，实现服务端排序</vxe-tip>
-      </template>
-    </CodeLight>
   </div>
 </template>

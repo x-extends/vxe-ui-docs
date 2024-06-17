@@ -1,11 +1,13 @@
 <template>
   <div>
     <p>
-      <vxe-button @click="updateNameFilterOpts">更新name筛选条件</vxe-button>
+      <vxe-button @click="updateNameOpts">修改选项</vxe-button>
+      <vxe-button @click="updateNameDefaultOpts">修改选项并设置默认值</vxe-button>
     </p>
 
     <vxe-table
       border
+      height="500"
       :data="tableData">
       <vxe-column field="id" title="ID"></vxe-column>
       <vxe-column field="name" title="Name" :filters="nameOptions"></vxe-column>
@@ -18,6 +20,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { VxeColumnPropTypes } from 'vxe-pc-ui'
 
 interface RowVO {
   id: number
@@ -37,15 +40,20 @@ const tableData = ref<RowVO[]>([
   { id: 10006, name: 'Test6', role: 'Designer', sex: '0', age: 28, address: 'Shanghai' }
 ])
 
-const nameOptions = ref<{
-  label: string
-  value: number
-}[]>([])
+const nameOptions = ref<VxeColumnPropTypes.Filters>([])
 
-const updateNameFilterOpts = () => {
+const updateNameOpts = () => {
   nameOptions.value = [
-    { label: 'id大于10002', value: 10002 },
-    { label: 'id大于10003', value: 10003 }
+    { label: 'Test2', value: 'Test2' },
+    { label: 'Test3', value: 'Test3' }
+  ]
+}
+
+const updateNameDefaultOpts = () => {
+  nameOptions.value = [
+    { label: 'Test2', value: 'Test2', checked: false },
+    { label: 'Test3', value: 'Test3', checked: true },
+    { label: 'Test4', value: 'Test4', checked: true }
   ]
 }
 </script>
