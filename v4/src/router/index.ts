@@ -1009,6 +1009,16 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/print/page/footer/CodeExample.vue')
               },
               {
+                path: 'image',
+                name: 'ComponentPrintPageImage',
+                component: () => import('@/views/print/page/image/CodeExample.vue')
+              },
+              {
+                path: 'table',
+                name: 'ComponentPrintPageTable',
+                component: () => import('@/views/print/page/table/CodeExample.vue')
+              },
+              {
                 path: 'template',
                 name: 'ComponentPrintPageTemplate',
                 component: () => import('@/views/print/page/template/CodeExample.vue')

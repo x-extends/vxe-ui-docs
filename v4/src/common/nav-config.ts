@@ -937,6 +937,8 @@ export const navConfigList: NavVO[] = [
               { title: '基础', routerLink: { name: 'ComponentPrintPageBasics' } },
               { title: '页眉/标题', routerLink: { name: 'ComponentPrintPageHeader' } },
               { title: '页尾/页码', routerLink: { name: 'ComponentPrintPageFooter' } },
+              { title: '批量打印图片', routerLink: { name: 'ComponentPrintPageImage' } },
+              { title: '分页打印表格', routerLink: { name: 'ComponentPrintPageTable' } },
               { title: '自定义模板', routerLink: { name: 'ComponentPrintPageTemplate' } }
             ]
           }
