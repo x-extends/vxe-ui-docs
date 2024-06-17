@@ -1,12 +1,12 @@
 <template>
   <div>
-    <CodeLight path="global/renderer/table/empty/Demo1" :extraImports="[{type:'jsx', path: 'global/renderer/table/empty/demo1.table.renderer'}]">
+    <CodeLight path="global/renderer/table/empty/Demo1" :extraImports="['./demo1.table.renderer.ts']">
       <template #tip>
         <vxe-tip status="primary" title="Table 使用"></vxe-tip>
       </template>
     </CodeLight>
 
-    <CodeLight path="global/renderer/table/empty/Demo2" :extraImports="[{type:'jsx', path: 'global/renderer/table/empty/demo1.table.renderer'}]">
+    <CodeLight path="global/renderer/table/empty/Demo2" :extraImports="['./demo1.table.renderer.ts']">
       <template #tip>
         <vxe-tip status="primary" title="Grid 使用"></vxe-tip>
       </template>

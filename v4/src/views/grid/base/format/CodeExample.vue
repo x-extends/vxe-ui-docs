@@ -9,7 +9,7 @@
       </template>
     </CodeLight>
 
-    <CodeLight path="grid/base/format/Demo2" :extraImports="['grid/base/format/demo2.format']">
+    <CodeLight path="grid/base/format/Demo2" :extraImports="['./demo2.format.ts']">
       <template #tip>
         <vxe-tip status="primary">
           全局格式化内容，使用 formats 添加格式函数，单元格会在渲染的时候自动调用<br>

@@ -39,28 +39,32 @@
       </div>
       <div class="example-code-warpper" v-show="showJsCode">
         <div v-for="(item, index) in importJsCodes" :key="index" class="example-code-item">
-          <div class="example-code-file">
-            <vxe-link :href="`${compDir}/${item.name}`" title="点击查看" target="_blank">{{ item.name }}</vxe-link>
+          <div class="example-code-file" :class="{'is-expand': item.isExpand}" @click="toggleItemExpand(item)">
+            <vxe-icon name="arrow-right" class="example-code-file-icon"></vxe-icon>
+            <span class="example-code-file-name">{{ item.name }}</span>
           </div>
-          <CodeRender language="javascript" :code="item.text"></CodeRender>
+          <CodeRender v-if="item.isExpand" :language="item.lang" :code="item.text"></CodeRender>
         </div>
         <div class="example-code-item">
           <div class="example-code-file">
-            <vxe-link :href="`${compDir}/${getFileName(`${path}.vue`)}`" title="点击查看" target="_blank">{{ getFileName(`${path}.vue`) }}</vxe-link>
+            <vxe-link icon="vxe-icon-link" :href="`${gitDir}/${getFileName(`${path}.vue`)}`" title="点击查看" target="_blank"></vxe-link>
+            <span class="example-code-file-name">{{ getFileName(`${path}.vue`) }}</span>
           </div>
           <CodeRender language="html" :code="jsCodeText"></CodeRender>
         </div>
       </div>
       <div class="example-code-warpper" v-show="showTsCode">
         <div v-for="(item, index) in importTsCodes" :key="index" class="example-code-item">
-          <div class="example-code-file">
-            <vxe-link :href="`${compDir}/${item.name}`" title="点击查看" target="_blank">{{ item.name }}</vxe-link>
+          <div class="example-code-file" :class="{'is-expand': item.isExpand}" @click="toggleItemExpand(item)">
+            <vxe-icon name="arrow-right" class="example-code-file-icon"></vxe-icon>
+            <span class="example-code-file-name">{{ item.name }}</span>
           </div>
-          <CodeRender language="javascript" :code="item.text"></CodeRender>
+          <CodeRender v-if="item.isExpand" :language="item.lang" :code="item.text"></CodeRender>
         </div>
         <div class="example-code-item">
           <div class="example-code-file">
-            <vxe-link :href="`${compDir}/${getFileName(`${path}.vue`)}`" title="点击查看" target="_blank">{{ getFileName(`${path}.vue`) }}</vxe-link>
+            <vxe-link icon="vxe-icon-link" :href="`${gitDir}/${getFileName(`${path}.vue`)}`" title="点击查看" target="_blank"></vxe-link>
+            <span class="example-code-file-name">{{ getFileName(`${path}.vue`) }}</span>
           </div>
           <CodeRender language="html" :code="tsCodeText"></CodeRender>
         </div>
@@ -74,7 +78,14 @@ import { ref, computed, defineAsyncComponent, PropType } from 'vue'
 import { codeJsMaps, codeTsMaps } from '@/common/cache'
 import { VxeUI } from 'vxe-pc-ui'
 import { useAppStore } from '@/store/app'
-import XEUtils from 'xe-utils'
+
+interface ImportItemVO {
+  path: string
+  name: string
+  lang: string
+  text: string
+  isExpand: boolean
+}
 
 const appStore = useAppStore()
 
@@ -97,45 +108,47 @@ const showTsCode = ref(false)
 const jsLoading = ref(false)
 const tsLoading = ref(false)
 
-const importTsCodes = ref<{
-  path: string
-  name: string
-  text: string
-}[]>([])
-const importJsCodes = ref<{
-  path: string
-  name: string
-  text: string
-}[]>([])
+const importTsCodes = ref<ImportItemVO[]>([])
+const importJsCodes = ref<ImportItemVO[]>([])
 
 const DemoCode = props.path ? defineAsyncComponent(() => import(`@/views/${props.path}`)) : null
 
+const gitDir = computed(() => {
+  return `${appStore.docsGithubUrl}/src/views/${compDir.value}`
+})
+
 const compDir = computed(() => {
   const paths = props.path?.split('/') || []
-  return `${appStore.docsGithubUrl}/src/views/${paths.slice(0, paths.length - 1).join('/')}`
+  return paths.slice(0, paths.length - 1).join('/')
 })
 
 const getFileName = (path: string) => {
   return path.split('/').slice(-1)[0]
 }
 
+const transformFilePath = (path: string) => {
+  return path.replace(/^\.\//, `${compDir.value}/`)
+}
+
 const parseFilePath = (path: string) => {
-  if (/\.(jsx|tsx)$/.test(path)) {
-    return {
-      filePath: path.replace(/\.(jsx|tsx)$/, ''),
-      fileType: 'jsx'
-    }
-  }
-  if (/\.(js|ts)$/.test(path)) {
-    return {
-      filePath: path.replace(/\.(js|ts)$/, ''),
-      fileType: 'js'
-    }
-  }
+  const [fullPath, filePath, fileType] = path.match(/(.*)\.(vue|js|jsx|ts|tsx)$/) || [path, '.vue', 'vue']
   return {
-    filePath: path.replace(/\.(vue)$/, ''),
-    fileType: 'vue'
+    filePath: transformFilePath(filePath),
+    codeLang: ['js', 'ts', 'jsx', 'tsx'].includes(fileType) ? 'javascript' : 'html',
+    fileType: fileType
   }
+}
+
+const parseJsFilePath = (path: string) => {
+  const rest = parseFilePath(path)
+  rest.fileType = rest.fileType.replace('ts', 'js')
+  return rest
+}
+
+const parseTsFilePath = (path: string) => {
+  const rest = parseFilePath(path)
+  rest.fileType = rest.fileType.replace('js', 'ts')
+  return rest
 }
 
 const loadJsCode = () => {
@@ -154,21 +167,25 @@ const loadJsCode = () => {
           return '暂无示例'
         }),
         ...(props.extraImports?.map(impPath => {
-          const { filePath, fileType } = parseFilePath(impPath)
+          const { filePath, fileType, codeLang } = parseJsFilePath(impPath)
           return fetch(`${process.env.BASE_URL}example/js/${filePath}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
             if (response.status >= 200 && response.status < 400) {
               return response.text().then(text => {
                 return {
                   path: `${filePath}.${fileType}`,
-                  name: getFileName(`$filePath}.${fileType}`),
-                  text
+                  name: getFileName(`${filePath}.${fileType}`),
+                  lang: codeLang,
+                  text,
+                  isExpand: false
                 }
               })
             }
             return {
               path: `${filePath}.${fileType}`,
               name: getFileName(`${filePath}.${fileType}`),
-              text: ''
+              lang: codeLang,
+              text: '',
+              isExpand: false
             }
           })
         }) || [])
@@ -203,21 +220,25 @@ const loadTsCode = () => {
           return '暂无示例'
         }),
         ...(props.extraImports?.map(impPath => {
-          const { filePath, fileType } = parseFilePath(impPath)
+          const { filePath, fileType, codeLang } = parseTsFilePath(impPath)
           return fetch(`${process.env.BASE_URL}example/ts/${filePath}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
             if (response.status >= 200 && response.status < 400) {
               return response.text().then(text => {
                 return {
                   path: `${filePath}.${fileType}`,
                   name: getFileName(`${filePath}.${fileType}`),
-                  text
+                  lang: codeLang,
+                  text,
+                  isExpand: false
                 }
               })
             }
             return {
               path: `${filePath}.${fileType}`,
               name: getFileName(`${filePath}.${fileType}`),
-              text: ''
+              lang: codeLang,
+              text: '',
+              isExpand: false
             }
           })
         }) || [])
@@ -266,6 +287,10 @@ const copyCode = () => {
   }
 }
 
+const toggleItemExpand = (item: ImportItemVO) => {
+  item.isExpand = !item.isExpand
+}
+
 const openDocs = () => {
   open(`${appStore.docsGithubUrl}/src/views/${props.path}.vue`)
 }
@@ -307,8 +332,12 @@ const openDocs = () => {
   padding: 0 30px;
   margin: 0;
   pre {
+    display: flex;
     margin: 0;
-    padding: 0;
+    padding: 0 0 30px 0;
+    code {
+      flex-grow: 1;
+    }
   }
 }
 .example-code-item {
@@ -316,11 +345,19 @@ const openDocs = () => {
   position: relative;
 }
 .example-code-file {
-  position: absolute;
-  top: -6px;
-  left: 0;
-  a {
-    font-size: 12px;
+  line-height: 28px;
+  cursor: pointer;
+  user-select: none;
+  margin: 6px 0;
+  &.is-expand {
+    .example-code-file-icon {
+      transform: rotate(90deg);
+    }
+  }
+  .example-code-file-icon {
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+    margin-right: 8px;
   }
 }
 
