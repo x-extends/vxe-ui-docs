@@ -6,7 +6,8 @@ export default {
       menu: {
         guide: '开发指南',
         globalInstall: '全局安装',
-        demandLoading: '按需加载',
+        lazyUseGlobal: '按需加载 - 全局使用',
+        lazyUseImport: '按需加载 - 局部导入',
         globalConfig: '全局参数',
         globalTheme: '全局主题',
         globalIcon: '全局图标',

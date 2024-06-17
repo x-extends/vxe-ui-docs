@@ -2,7 +2,7 @@
   <div>
     <CodeLight>
       <template #tip>
-        <vxe-tip status="primary" title="按需加载">
+        <vxe-tip status="primary" title="配置按需加载 - 全局使用方式">
           当只用得到部分组件时，只需两步，通过按需加载插件可以去掉未被使用的组件。
         </vxe-tip>
         <vxe-tip status="success" title="步骤 1. 插件配置"></vxe-tip>
@@ -68,7 +68,7 @@
 
     <CodeLight>
       <template #tip>
-        <vxe-tip status="success" title="步骤 2. 导入使用" content="根据需要选择引入就可以实现按需加载模块，减少文件体积，以下是全量的组件及模块安装列表。"></vxe-tip>
+        <vxe-tip status="success" title="步骤 2. 全局导入" content="根据需要选择引入就可以实现按需加载模块，减少文件体积，以下是全量的组件及模块安装列表。"></vxe-tip>
         <vxe-tip status="error" title="" content="组件按需加载是不带语言包和主题的，需要手动导入语言包和主题变量。"></vxe-tip>
       </template>
 
@@ -229,5 +229,34 @@
         </pre>
       </template>
     </CodeLight>
+
+    <CodeLight>
+      <template #tip>
+        <vxe-tip status="success" title="步骤 3. 开始使用" content="由于是全局安装，直接就可以使用"></vxe-tip>
+      </template>
+
+      <template #use>
+        <pre>
+          <pre-code class="html">
+            {{ demoCode }}
+          </pre-code>
+        </pre>
+      </template>
+    </CodeLight>
   </div>
 </template>
+
+<script lang="ts" setup>
+const demoCode = `
+<template>
+  <div>
+    <vxe-table :data="tableData">
+      <vxe-column type="seq" width="60"></vxe-column>
+      <vxe-column field="name" title="Name"></vxe-column>
+      <vxe-column field="sex" title="Sex"></vxe-column>
+      <vxe-column field="age" title="Age"></vxe-column>
+    </vxe-table>
+  </div>
+</template>
+`
+</script>

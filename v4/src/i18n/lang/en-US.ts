@@ -6,7 +6,8 @@ export default {
       menu: {
         guide: 'Development guide',
         globalInstall: 'Install',
-        demandLoading: 'Import',
+        lazyUseGlobal: 'On demand load - Global use',
+        lazyUseImport: 'On demand load - Import use',
         globalConfig: 'Global config',
         globalTheme: 'Global theme',
         globalIcon: 'Global icon',

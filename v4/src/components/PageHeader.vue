@@ -18,9 +18,9 @@
     <div class="header-middle"></div>
     <div class="header-right">
       <vxe-pulldown v-model="showSystemMenu">
-        <vxe-button class="system-menu-btn" status="primary" mode="text" @click="showSystemMenu = !showSystemMenu">
-          <span style="padding-right: 8px;">{{ $t('app.header.moreProducts') }}</span>
-          <vxe-icon name="arrow-down"></vxe-icon>
+        <vxe-button class="system-menu-btn" mode="text" @click="showSystemMenu = !showSystemMenu">
+          <vxe-icon class="system-menu-btn-icon" name="arrow-down"></vxe-icon>
+          <span class="system-menu-btn-text">{{ $t('app.header.moreProducts') }}</span>
         </vxe-button>
 
         <template #dropdown>
@@ -152,6 +152,24 @@ fetch(`${siteBaseUrl.value}component-api/system-list.json?v=?v=${process.env.VUE
       vertical-align: middle;
     }
   }
+}
+.system-menu-btn-text {
+  display: inline-block;
+  position: relative;
+  padding: 4px 8px 4px 8px;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: red;
+  }
+}
+.system-menu-btn-icon {
+  font-size: 12px;
 }
 .system-menu-wrapper {
   padding: 8px 0;

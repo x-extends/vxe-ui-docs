@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
 import StartInstall from '@/views/start/install/CodeExample.vue'
-import StartUse from '@/views/start/use/CodeExample.vue'
+import StartUseGlobal from '@/views/start/useGlobal/CodeExample.vue'
+import StartUseImport from '@/views/start/useImport/CodeExample.vue'
 import StartIcons from '@/views/start/icon/CodeExample.vue'
 import StartConfig from '@/views/start/config/CodeExample.vue'
 import StartTheme from '@/views/start/theme/CodeExample.vue'
@@ -32,9 +33,14 @@ const routes: Array<RouteRecordRaw> = [
         component: StartInstall
       },
       {
-        path: 'use',
-        name: 'StartUse',
-        component: StartUse
+        path: 'useGlobal',
+        name: 'StartUseGlobal',
+        component: StartUseGlobal
+      },
+      {
+        path: 'useImport',
+        name: 'StartUseImport',
+        component: StartUseImport
       },
       {
         path: 'global',
