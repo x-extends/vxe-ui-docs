@@ -32,8 +32,8 @@ const tableData = ref([
     defVal: 'code: string, option: any',
     list: [
       {
-        name: 'commandMethod',
-        desc: '指令方法',
+        name: 'tableCommandMethod',
+        desc: '表格 - 自定义工具栏或数据代理的指令方法',
         type: '',
         enum: '',
         defVal: '({ code, button, $table }) => void',

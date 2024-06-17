@@ -32,8 +32,8 @@ const tableData = ref([
     defVal: 'code: string, option: any',
     list: [
       {
-        name: 'cellFormatMethod',
-        desc: '格式化方法',
+        name: 'tableCellFormatMethod',
+        desc: '表格 - 自定义单元格格式化方法',
         type: '',
         enum: '',
         defVal: '({ cellValue, row, column }) => string | number',
