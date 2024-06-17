@@ -3,7 +3,7 @@
     <CodeLight>
       <template #tip>
         <vxe-tip status="primary" title="配置按需加载 - 局部手动导入使用方式">
-          当只用得到部分组件时，只需两步，通过按需加载插件可以去掉未被使用的组件。
+          当只用得到部分组件时，只需三步，通过按需加载插件可以去掉未被使用的组件。
         </vxe-tip>
         <vxe-tip status="success" title="步骤 1. 插件配置"></vxe-tip>
       </template>
@@ -76,7 +76,75 @@
         <pre>
           <pre-code class="javascript">
             // ...
-            import { VxeUI } from 'vxe-pc-ui'
+            import {
+              VxeUI,
+
+              VxeAnchor,
+              VxeAnchorLink,
+              VxeBreadcrumb,
+              VxeBreadcrumbItem,
+              VxeButton,
+              VxeButtonGroup,
+              VxeCalendar,
+              VxeCard,
+              VxeCheckbox,
+              VxeCheckboxGroup,
+              VxeCol,
+              VxeCollapse,
+              VxeCollapsePane,
+              VxeDatePicker,
+              VxeDrawer,
+              VxeFlowDesign,
+              VxeFlowView,
+              VxeForm,
+              VxeFormDesign,
+              VxeFormGather,
+              VxeFormItem,
+              VxeFormView,
+              VxeIcon,
+              VxeInput,
+              VxeLayoutAside,
+              VxeLayoutBody,
+              VxeLayoutContainer,
+              VxeLayoutFooter,
+              VxeLayoutHeader,
+              VxeLink,
+              VxeListDesign,
+              VxeListView,
+              VxeList,
+              VxeLoading,
+              VxeMenu,
+              VxeModal,
+              VxeNumberInput,
+              VxeOptgroup,
+              VxeOption,
+              VxePager,
+              VxePasswordInput,
+              VxePrint,
+              VxePulldown,
+              VxeRadio,
+              VxeRadioButton,
+              VxeRadioGroup,
+              VxeRow,
+              VxeSelect,
+              VxeSwitch,
+              VxeTabPane,
+              VxeTabs,
+              VxeTextarea,
+              VxeTip,
+              VxeTooltip,
+              VxeTree,
+              VxeTreeSelect,
+              VxeUpload,
+            } from 'vxe-pc-ui'
+
+            import {
+              VxeTable,
+              VxeColumn,
+              VxeColgroup,
+              VxeGrid,
+              VxeToolbar
+            } from 'vxe-table'
 
             // 导入主题变量，也可以重写主题变量
             import 'vxe-table/styles/cssvar.scss'
@@ -88,7 +156,75 @@
             VxeUI.setI18n('zh-CN', zhCN)
             VxeUI.setLanguage('zh-CN')
 
-            createApp(App).mount('#app')
+            function LazyVxeUI () {
+              VxeUI.component(VxeAnchor)
+              VxeUI.component(VxeAnchorLink)
+              VxeUI.component(VxeBreadcrumb)
+              VxeUI.component(VxeBreadcrumbItem)
+              VxeUI.component(VxeButton)
+              VxeUI.component(VxeButtonGroup)
+              VxeUI.component(VxeCalendar)
+              VxeUI.component(VxeCard)
+              VxeUI.component(VxeCheckbox)
+              VxeUI.component(VxeCheckboxGroup)
+              VxeUI.component(VxeCol)
+              VxeUI.component(VxeCollapse)
+              VxeUI.component(VxeCollapsePane)
+              VxeUI.component(VxeDatePicker)
+              VxeUI.component(VxeDrawer)
+              VxeUI.component(VxeFlowDesign)
+              VxeUI.component(VxeFlowView)
+              VxeUI.component(VxeForm)
+              VxeUI.component(VxeFormDesign)
+              VxeUI.component(VxeFormGather)
+              VxeUI.component(VxeFormItem)
+              VxeUI.component(VxeFormView)
+              VxeUI.component(VxeIcon)
+              VxeUI.component(VxeInput)
+              VxeUI.component(VxeLayoutAside)
+              VxeUI.component(VxeLayoutBody)
+              VxeUI.component(VxeLayoutContainer)
+              VxeUI.component(VxeLayoutFooter)
+              VxeUI.component(VxeLayoutHeader)
+              VxeUI.component(VxeLink)
+              VxeUI.component(VxeListDesign)
+              VxeUI.component(VxeListView)
+              VxeUI.component(VxeList)
+              VxeUI.component(VxeLoading)
+              VxeUI.component(VxeMenu)
+              VxeUI.component(VxeModal)
+              VxeUI.component(VxeNumberInput)
+              VxeUI.component(VxeOptgroup)
+              VxeUI.component(VxeOption)
+              VxeUI.component(VxePager)
+              VxeUI.component(VxePasswordInput)
+              VxeUI.component(VxePrint)
+              VxeUI.component(VxePulldown)
+              VxeUI.component(VxeRadio)
+              VxeUI.component(VxeRadioButton)
+              VxeUI.component(VxeRadioGroup)
+              VxeUI.component(VxeRow)
+              VxeUI.component(VxeSelect)
+              VxeUI.component(VxeSwitch)
+              VxeUI.component(VxeTabPane)
+              VxeUI.component(VxeTabs)
+              VxeUI.component(VxeTextarea)
+              VxeUI.component(VxeTip)
+              VxeUI.component(VxeTooltip)
+              VxeUI.component(VxeTree)
+              VxeUI.component(VxeTreeSelect)
+              VxeUI.component(VxeUpload)
+            }
+
+            function LazyVxeTable () {
+              VxeUI.component(VxeTable)
+              VxeUI.component(VxeColumn)
+              VxeUI.component(VxeColgroup)
+              VxeUI.component(VxeGrid)
+              VxeUI.component(VxeToolbar)
+            }
+
+            createApp(App).use(LazyVxeUI).use(LazyVxeTable).mount('#app')
           </pre-code>
         </pre>
       </template>
@@ -96,7 +232,7 @@
 
     <CodeLight>
       <template #tip>
-        <vxe-tip status="success" title="步骤 3. 开始使用" content="由于没有全局安装，所以用到哪个就导入哪个"></vxe-tip>
+        <vxe-tip status="success" title="步骤 3. 开始使用" content="由于没有安装，所以用到哪个就导入哪个"></vxe-tip>
       </template>
 
       <template #use>

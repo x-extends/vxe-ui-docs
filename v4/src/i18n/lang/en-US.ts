@@ -5,9 +5,9 @@ export default {
       latestVersion: 'Latest',
       menu: {
         guide: 'Development guide',
-        globalInstall: 'Install',
-        lazyUseGlobal: 'On demand load - Global use',
-        lazyUseImport: 'On demand load - Import use',
+        globalInstall: 'Global install - Full import',
+        lazyUseGlobal: 'Global install - Lazy import',
+        lazyUseImport: 'Lazy install - Use import',
         globalConfig: 'Global config',
         globalTheme: 'Global theme',
         globalIcon: 'Global icon',

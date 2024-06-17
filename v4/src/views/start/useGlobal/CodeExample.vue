@@ -3,7 +3,7 @@
     <CodeLight>
       <template #tip>
         <vxe-tip status="primary" title="配置按需加载 - 全局使用方式">
-          当只用得到部分组件时，只需两步，通过按需加载插件可以去掉未被使用的组件。
+          当只用得到部分组件时，只需三步，通过按需加载插件可以去掉未被使用的组件。
         </vxe-tip>
         <vxe-tip status="success" title="步骤 1. 插件配置"></vxe-tip>
       </template>
@@ -238,25 +238,10 @@
       <template #use>
         <pre>
           <pre-code class="html">
-            {{ demoCode }}
+            {{ decodeURIComponent('%0A%3Ctemplate%3E%0A%20%20%3Cdiv%3E%0A%20%20%20%20%3Cvxe-table%20%3Adata%3D%22tableData%22%3E%0A%20%20%20%20%20%20%3Cvxe-column%20type%3D%22seq%22%20width%3D%2260%22%3E%3C%2Fvxe-column%3E%0A%20%20%20%20%20%20%3Cvxe-column%20field%3D%22name%22%20title%3D%22Name%22%3E%3C%2Fvxe-column%3E%0A%20%20%20%20%20%20%3Cvxe-column%20field%3D%22sex%22%20title%3D%22Sex%22%3E%3C%2Fvxe-column%3E%0A%20%20%20%20%20%20%3Cvxe-column%20field%3D%22age%22%20title%3D%22Age%22%3E%3C%2Fvxe-column%3E%0A%20%20%20%20%3C%2Fvxe-table%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Ftemplate%3E%0A') }}
           </pre-code>
         </pre>
       </template>
     </CodeLight>
   </div>
 </template>
-
-<script lang="ts" setup>
-const demoCode = `
-<template>
-  <div>
-    <vxe-table :data="tableData">
-      <vxe-column type="seq" width="60"></vxe-column>
-      <vxe-column field="name" title="Name"></vxe-column>
-      <vxe-column field="sex" title="Sex"></vxe-column>
-      <vxe-column field="age" title="Age"></vxe-column>
-    </vxe-table>
-  </div>
-</template>
-`
-</script>
