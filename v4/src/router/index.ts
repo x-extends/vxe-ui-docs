@@ -369,13 +369,68 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'radio',
-        name: 'ComponentRadio',
-        component: () => import('@/views/radio/CodeExample.vue')
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentRadioSize',
+            component: () => import('@/views/radio/size/CodeExample.vue')
+          },
+          {
+            path: 'disabled',
+            name: 'ComponentRadioDisabled',
+            component: () => import('@/views/radio/disabled/CodeExample.vue')
+          },
+          {
+            path: 'strict',
+            name: 'ComponentRadioStrict',
+            component: () => import('@/views/radio/strict/CodeExample.vue')
+          },
+          {
+            path: 'group',
+            name: 'ComponentRadioGroup',
+            component: () => import('@/views/radio/group/CodeExample.vue')
+          },
+          {
+            path: 'button',
+            name: 'ComponentRadioButton',
+            component: () => import('@/views/radio/button/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'checkbox',
-        name: 'ComponentCheckbox',
-        component: () => import('@/views/checkbox/CodeExample.vue')
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentCheckboxSize',
+            component: () => import('@/views/checkbox/size/CodeExample.vue')
+          },
+          {
+            path: 'indeterminate',
+            name: 'ComponentCheckboxIndeterminate',
+            component: () => import('@/views/checkbox/indeterminate/CodeExample.vue')
+          },
+          {
+            path: 'disabled',
+            name: 'ComponentCheckboxDisabled',
+            component: () => import('@/views/checkbox/disabled/CodeExample.vue')
+          },
+          {
+            path: 'value',
+            name: 'ComponentCheckboxValue',
+            component: () => import('@/views/checkbox/value/CodeExample.vue')
+          },
+          {
+            path: 'group',
+            name: 'ComponentCheckboxGroup',
+            component: () => import('@/views/checkbox/group/CodeExample.vue')
+          },
+          {
+            path: 'max',
+            name: 'ComponentCheckboxMax',
+            component: () => import('@/views/checkbox/max/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'input',
@@ -474,8 +529,38 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'textarea',
-        name: 'ComponentTextarea',
-        component: () => import('@/views/textarea/CodeExample.vue')
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentTextareaSize',
+            component: () => import('@/views/textarea/size/CodeExample.vue')
+          },
+          {
+            path: 'disabled',
+            name: 'ComponentTextareaDisabled',
+            component: () => import('@/views/textarea/disabled/CodeExample.vue')
+          },
+          {
+            path: 'readonly',
+            name: 'ComponentTextareaReadonly',
+            component: () => import('@/views/textarea/readonly/CodeExample.vue')
+          },
+          {
+            path: 'count',
+            name: 'ComponentTextareaCount',
+            component: () => import('@/views/textarea/count/CodeExample.vue')
+          },
+          {
+            path: 'autosize',
+            name: 'ComponentTextareaAutosize',
+            component: () => import('@/views/textarea/autosize/CodeExample.vue')
+          },
+          {
+            path: 'resize',
+            name: 'ComponentTextareaResize',
+            component: () => import('@/views/textarea/resize/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'select',
@@ -794,8 +879,33 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'switch',
-        name: 'ComponentSwitch',
-        component: () => import('@/views/switch/CodeExample.vue')
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentSwitchSize',
+            component: () => import('@/views/switch/size/CodeExample.vue')
+          },
+          {
+            path: 'disabled',
+            name: 'ComponentSwitchDisabled',
+            component: () => import('@/views/switch/disabled/CodeExample.vue')
+          },
+          {
+            path: 'label',
+            name: 'ComponentSwitchLabel',
+            component: () => import('@/views/switch/label/CodeExample.vue')
+          },
+          {
+            path: 'value',
+            name: 'ComponentSwitchValue',
+            component: () => import('@/views/switch/value/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentSwitchIcon',
+            component: () => import('@/views/switch/icon/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'list',

@@ -253,21 +253,34 @@ export const navConfigList: NavVO[] = [
         title: 'Switch 开关',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'switch' } } },
-          { title: '开关', routerLink: { name: 'ComponentSwitch' } }
+          { title: '尺寸大小', routerLink: { name: 'ComponentSwitchSize' } },
+          { title: '禁用状态', routerLink: { name: 'ComponentSwitchDisabled' } },
+          { title: '自定义显示值', routerLink: { name: 'ComponentSwitchLabel' } },
+          { title: '自定义实际值', routerLink: { name: 'ComponentSwitchValue' } },
+          { title: '自定义图标', routerLink: { name: 'ComponentSwitchIcon' } }
         ]
       },
       {
         title: 'Radio 单选框',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'radio' } } },
-          { title: '单选框', routerLink: { name: 'ComponentRadio' } }
+          { title: '尺寸大小', routerLink: { name: 'ComponentRadioSize' } },
+          { title: '禁用状态', routerLink: { name: 'ComponentRadioDisabled' } },
+          { title: '允许取消', routerLink: { name: 'ComponentRadioStrict' } },
+          { title: '单选组', routerLink: { name: 'ComponentRadioGroup' } },
+          { title: '单选按钮', routerLink: { name: 'ComponentRadioButton' } }
         ]
       },
       {
         title: 'Checkbox 复选框',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'checkbox' } } },
-          { title: '多选框', routerLink: { name: 'ComponentCheckbox' } }
+          { title: '尺寸大小', routerLink: { name: 'ComponentCheckboxSize' } },
+          { title: '半选状态', routerLink: { name: 'ComponentCheckboxIndeterminate' } },
+          { title: '禁用状态', routerLink: { name: 'ComponentCheckboxDisabled' } },
+          { title: '自定义值', routerLink: { name: 'ComponentCheckboxValue' } },
+          { title: '复选组', routerLink: { name: 'ComponentCheckboxGroup' } },
+          { title: '限制最大数量', routerLink: { name: 'ComponentCheckboxMax' } }
         ]
       },
       {
@@ -297,7 +310,12 @@ export const navConfigList: NavVO[] = [
         title: 'Textarea 多行文本输入',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'textarea' } } },
-          { title: '多行输入', routerLink: { name: 'ComponentTextarea' } }
+          { title: '尺寸大小', routerLink: { name: 'ComponentTextareaSize' } },
+          { title: '禁用状态', routerLink: { name: 'ComponentTextareaDisabled' } },
+          { title: '只读状态', routerLink: { name: 'ComponentTextareaReadonly' } },
+          { title: '字数统计', routerLink: { name: 'ComponentTextareaCount' } },
+          { title: '自适应高度', routerLink: { name: 'ComponentTextareaAutosize' } },
+          { title: '可调节高度', routerLink: { name: 'ComponentTextareaResize' } }
         ]
       },
       {

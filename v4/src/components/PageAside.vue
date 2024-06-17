@@ -296,7 +296,7 @@ appStore.updateComponentApiJSON()
     }
   }
   .nav-link-icon {
-    font-size: 14px;
+    font-size: 13px;
     margin-right: 8px;
     transition: transform .2s ease-in-out;
   }
@@ -329,7 +329,7 @@ appStore.updateComponentApiJSON()
     }
     .vxe-text--icon {
       display: inline-block;
-      font-size: 13px;
+      font-size: 12px;
       transition: transform .2s ease-in-out;
     }
     .nav-item-text {
@@ -351,7 +351,7 @@ appStore.updateComponentApiJSON()
       }
       .nav-item-text,
       .nav-item-link {
-        font-size: 17px;
+        font-size: 15px;
         font-weight: 700;
       }
     }
@@ -362,7 +362,7 @@ appStore.updateComponentApiJSON()
       padding-left: 3.4em;
       .nav-item-text,
       .nav-item-link {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
     .nav-item-text {
@@ -376,7 +376,7 @@ appStore.updateComponentApiJSON()
       padding-left: 5em;
       .nav-item-text,
       .nav-item-link {
-        font-size: 15px;
+        font-size: 13px;
       }
     }
   }
@@ -386,7 +386,7 @@ appStore.updateComponentApiJSON()
       padding-left: 7.4em;
       .nav-item-text,
       .nav-item-link {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }

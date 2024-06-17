@@ -1,30 +1,6 @@
 <template>
   <div>
-    <CodeLight path="radio/Demo1">
-      <template #tip>
-        <vxe-tip status="primary" title="单选框"></vxe-tip>
-      </template>
-    </CodeLight>
-
-    <CodeLight path="radio/Demo2">
-      <template #tip>
-        <vxe-tip status="primary">禁用状态</vxe-tip>
-      </template>
-    </CodeLight>
-
-    <CodeLight path="radio/Demo3">
-      <template #tip>
-        <vxe-tip status="primary">单选组</vxe-tip>
-      </template>
-    </CodeLight>
-
-    <CodeLight path="radio/Demo4">
-      <template #tip>
-        <vxe-tip status="primary">支持取消，如果为选择状态，再次点击则取消</vxe-tip>
-      </template>
-    </CodeLight>
-
-    <CodeLight path="radio/Demo5">
+    <CodeLight path="radio/button/Demo1">
       <template #tip>
         <vxe-tip status="primary">单选按钮</vxe-tip>
       </template>
