@@ -463,6 +463,13 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
+            title: '排序',
+            children: [
+              { title: '多字段排序', routerLink: { name: 'ComponentTableSortMultiple' } },
+              { title: '服务端排序', routerLink: { name: 'ComponentTableSortRemote' } }
+            ]
+          },
+          {
             title: '展开行',
             children: [
               { title: '基础使用', routerLink: { name: 'ComponentTableExpandBasic' } },

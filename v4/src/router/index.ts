@@ -1562,6 +1562,21 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'sort',
+            children: [
+              {
+                path: 'multiple',
+                name: 'ComponentTableSortMultiple',
+                component: () => import('@/views/table/sort/multiple/CodeExample.vue')
+              },
+              {
+                path: 'remote',
+                name: 'ComponentTableSortRemote',
+                component: () => import('@/views/table/sort/remote/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'merge',
             children: [
               {
