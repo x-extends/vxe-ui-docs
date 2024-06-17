@@ -119,6 +119,25 @@ const getFileName = (path: string) => {
   return path.split('/').slice(-1)[0]
 }
 
+const parseFilePath = (path: string) => {
+  if (/\.(jsx|tsx)$/.test(path)) {
+    return {
+      filePath: path.replace(/\.(jsx|tsx)$/, ''),
+      fileType: 'jsx'
+    }
+  }
+  if (/\.(js|ts)$/.test(path)) {
+    return {
+      filePath: path.replace(/\.(js|ts)$/, ''),
+      fileType: 'js'
+    }
+  }
+  return {
+    filePath: path.replace(/\.(vue)$/, ''),
+    fileType: 'vue'
+  }
+}
+
 const loadJsCode = () => {
   const compPath = props.path
   if (compPath) {
@@ -135,21 +154,20 @@ const loadJsCode = () => {
           return '暂无示例'
         }),
         ...(props.extraImports?.map(impPath => {
-          const opts = Object.assign({ type: 'js' }, XEUtils.isString(impPath) ? { path: impPath } : impPath)
-          const fileType = ['jsx', 'tsx'].includes(opts.type) ? 'jsx' : 'js'
-          return fetch(`${process.env.BASE_URL}example/js/${opts.path}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+          const { filePath, fileType } = parseFilePath(impPath)
+          return fetch(`${process.env.BASE_URL}example/js/${filePath}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
             if (response.status >= 200 && response.status < 400) {
               return response.text().then(text => {
                 return {
-                  path: `${opts.path}.${fileType}`,
-                  name: getFileName(`${opts.path}.${fileType}`),
+                  path: `${filePath}.${fileType}`,
+                  name: getFileName(`$filePath}.${fileType}`),
                   text
                 }
               })
             }
             return {
-              path: `${opts.path}.${fileType}`,
-              name: getFileName(`${opts.path}.${fileType}`),
+              path: `${filePath}.${fileType}`,
+              name: getFileName(`${filePath}.${fileType}`),
               text: ''
             }
           })
@@ -185,21 +203,20 @@ const loadTsCode = () => {
           return '暂无示例'
         }),
         ...(props.extraImports?.map(impPath => {
-          const opts = Object.assign({ type: 'ts' }, XEUtils.isString(impPath) ? { path: impPath } : impPath)
-          const fileType = ['jsx', 'tsx'].includes(opts.type) ? 'tsx' : 'ts'
-          return fetch(`${process.env.BASE_URL}example/ts/${opts.path}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+          const { filePath, fileType } = parseFilePath(impPath)
+          return fetch(`${process.env.BASE_URL}example/ts/${filePath}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
             if (response.status >= 200 && response.status < 400) {
               return response.text().then(text => {
                 return {
-                  path: `${opts.path}.${fileType}`,
-                  name: getFileName(`${opts.path}.${fileType}`),
+                  path: `${filePath}.${fileType}`,
+                  name: getFileName(`${filePath}.${fileType}`),
                   text
                 }
               })
             }
             return {
-              path: `${opts.path}.${fileType}`,
-              name: getFileName(`${opts.path}.${fileType}`),
+              path: `${filePath}.${fileType}`,
+              name: getFileName(`${filePath}.${fileType}`),
               text: ''
             }
           })

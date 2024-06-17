@@ -73,13 +73,14 @@ gulp.task('handle_vue_tstojs', gulp.series('handle_vue_tmpltojs', () => {
 
 gulp.task('handle_tstojs', () => {
   return gulp.src([
+    'src/**/*.d.ts',
     'src/views/**/demo*.ts',
     'src/views/**/demo*.tsx'
   ])
     .pipe(ts({
       target: 'esnext',
       module: 'esnext',
-      strict: true,
+      strict: false,
       jsx: 'preserve',
       importHelpers: true,
       moduleResolution: 'node',
