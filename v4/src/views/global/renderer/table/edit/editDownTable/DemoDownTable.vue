@@ -126,7 +126,6 @@ const selectEvent: VxeTableEvents.CellClick = (params) => {
 }
 
 load()
-
 </script>
 
 <style lang="scss" scoped>
