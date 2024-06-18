@@ -24,6 +24,7 @@ import 'vxe-table/lib/style.css'
 import enUS from 'vxe-pc-ui/packages/language/en-US'
 
 import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
+import VxeUIPluginExportPDF from '@vxe-ui/plugin-export-pdf'
 
 declare global {
   interface Window {
@@ -38,6 +39,16 @@ axios.defaults.baseURL = 'https://api.vxetable.cn'
 VxeUI.setI18n('en-US', enUS)
 
 VxeUI.use(VxeUIPluginExportXLSX)
+VxeUI.use(VxeUIPluginExportPDF, {
+  // 支持中文字体
+  fontName: 'SourceHanSans-Normal',
+  fonts: [
+    {
+      fontName: 'SourceHanSans-Normal',
+      fontUrl: 'https://cdn.jsdelivr.net/npm/vxe-table-plugin-export-pdf/fonts/source-han-sans-normal.js'
+    }
+  ]
+})
 
 const app = createApp(App)
 

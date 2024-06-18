@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button @click="exportEvent">高级导出</vxe-button>
+    <vxe-button @click="exportEvent">直接导出</vxe-button>
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
@@ -21,9 +21,6 @@ interface RowVO {
 const gridRef = ref<VxeGridInstance>()
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
-  exportConfig: {
-    type: 'xlsx'
-  },
   columns: [
     { type: 'seq', width: 60 },
     { field: 'name', title: 'Name' },
@@ -41,7 +38,9 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
 const exportEvent = () => {
   const $grid = gridRef.value
   if ($grid) {
-    $grid.openExport()
+    $grid.exportData({
+      type: 'pdf'
+    })
   }
 }
 </script>

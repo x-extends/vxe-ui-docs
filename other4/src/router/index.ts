@@ -90,6 +90,56 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
+    path: '/plugin-export-pdf',
+    children: [
+      {
+        path: 'install',
+        name: 'PluginExportPdfInstall',
+        component: () => import('@/views/plugin-export-pdf/install/CodeExample.vue')
+      },
+      {
+        path: 'table',
+        children: [
+          {
+            path: 'export',
+            name: 'PluginExportPdfTableExport',
+            component: () => import('@/views/plugin-export-pdf/table/export/CodeExample.vue')
+          },
+          {
+            path: 'toolbar',
+            name: 'PluginExportPdfTableToolbar',
+            component: () => import('@/views/plugin-export-pdf/table/toolbar/CodeExample.vue')
+          },
+          {
+            path: 'advanced',
+            name: 'PluginExportPdfTableAdvanced',
+            component: () => import('@/views/plugin-export-pdf/table/advanced/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'grid',
+        children: [
+          {
+            path: 'export',
+            name: 'PluginExportPdfGridExport',
+            component: () => import('@/views/plugin-export-pdf/grid/export/CodeExample.vue')
+          },
+          {
+            path: 'toolbar',
+            name: 'PluginExportPdfGridToolbar',
+            component: () => import('@/views/plugin-export-pdf/grid/toolbar/CodeExample.vue')
+          },
+          {
+            path: 'advanced',
+            name: 'PluginExportPdfGridAdvanced',
+            component: () => import('@/views/plugin-export-pdf/grid/advanced/CodeExample.vue')
+          }
+        ]
+      }
+    ]
+  },
+  {
     path: '/:name/api',
     name: 'DocsApi',
     component: () => import('@/views/api/DocsApi.vue')

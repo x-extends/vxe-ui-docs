@@ -47,6 +47,34 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
+    title: '导出 PDF',
+    isExpand: true,
+    children: [
+      {
+        title: '开发指南',
+        children: [
+          { title: '安装插件', routerLink: { name: 'PluginExportPdfInstall' } }
+        ]
+      },
+      {
+        title: 'Table 基础表格',
+        children: [
+          { title: '导出 pdf', routerLink: { name: 'PluginExportPdfTableExport' } },
+          { title: '使用工具栏', routerLink: { name: 'PluginExportPdfTableToolbar' } },
+          { title: '高级导出', routerLink: { name: 'PluginExportPdfTableAdvanced' } }
+        ]
+      },
+      {
+        title: 'Grid 配置式表格',
+        children: [
+          { title: '导出 pdf', routerLink: { name: 'PluginExportPdfGridExport' } },
+          { title: '使用工具栏', routerLink: { name: 'PluginExportPdfGridToolbar' } },
+          { title: '高级导出', routerLink: { name: 'PluginExportPdfGridAdvanced' } }
+        ]
+      }
+    ]
+  },
+  {
     title: 'API',
     isExpand: false,
     children: []

@@ -3,7 +3,7 @@
     <vxe-button @click="exportEvent">高级导出</vxe-button>
     <vxe-table
       ref="tableRef"
-      :export-config="{type: 'xlsx'}"
+      :export-config="{type: 'pdf'}"
       :data="tableData">
       <vxe-column type="seq" width="60"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>

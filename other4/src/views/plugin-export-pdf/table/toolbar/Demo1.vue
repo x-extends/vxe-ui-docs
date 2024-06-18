@@ -1,9 +1,9 @@
 <template>
   <div>
-    <vxe-button @click="exportEvent">高级导出</vxe-button>
+    <vxe-toolbar ref="toolbarRef" export></vxe-toolbar>
     <vxe-table
       ref="tableRef"
-      :export-config="{type: 'xlsx'}"
+      :export-config="{type: 'pdf'}"
       :data="tableData">
       <vxe-column type="seq" width="60"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
@@ -13,9 +13,9 @@
   </div>
 </template>
 
-<script lang="tsx" setup>
-import { ref } from 'vue'
-import { VxeTableInstance } from 'vxe-pc-ui'
+<script lang="ts" setup>
+import { onMounted, ref } from 'vue'
+import { VxeToolbarInstance, VxeTableInstance } from 'vxe-pc-ui'
 
 interface RowVO {
   id: number
@@ -26,7 +26,8 @@ interface RowVO {
   address: string
 }
 
-const tableRef = ref<VxeTableInstance<RowVO>>()
+const toolbarRef = ref<VxeToolbarInstance>()
+const tableRef = ref<VxeTableInstance>()
 
 const tableData = ref<RowVO[]>([
   { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
@@ -35,10 +36,11 @@ const tableData = ref<RowVO[]>([
   { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
 ])
 
-const exportEvent = () => {
+onMounted(() => {
   const $table = tableRef.value
-  if ($table) {
-    $table.openExport()
+  const $toolbar = toolbarRef.value
+  if ($table && $toolbar) {
+    $table.connect($toolbar)
   }
-}
+})
 </script>

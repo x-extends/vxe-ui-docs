@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-button @click="exportEvent">直接导出</vxe-button>
-    <vxe-grid v-bind="gridOptions"></vxe-grid>
+    <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
 
@@ -38,7 +38,9 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
 const exportEvent = () => {
   const $grid = gridRef.value
   if ($grid) {
-    $grid.exportData()
+    $grid.exportData({
+      type: 'xlsx'
+    })
   }
 }
 </script>

@@ -1,9 +1,8 @@
 <template>
   <div>
-    <vxe-button @click="exportEvent">高级导出</vxe-button>
+    <vxe-button @click="exportEvent">直接导出 PDF 文件</vxe-button>
     <vxe-table
       ref="tableRef"
-      :export-config="{type: 'xlsx'}"
       :data="tableData">
       <vxe-column type="seq" width="60"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
@@ -13,7 +12,7 @@
   </div>
 </template>
 
-<script lang="tsx" setup>
+<script lang="ts" setup>
 import { ref } from 'vue'
 import { VxeTableInstance } from 'vxe-pc-ui'
 
@@ -26,7 +25,7 @@ interface RowVO {
   address: string
 }
 
-const tableRef = ref<VxeTableInstance<RowVO>>()
+const tableRef = ref<VxeTableInstance>()
 
 const tableData = ref<RowVO[]>([
   { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
@@ -38,7 +37,9 @@ const tableData = ref<RowVO[]>([
 const exportEvent = () => {
   const $table = tableRef.value
   if ($table) {
-    $table.openExport()
+    $table.exportData({
+      type: 'pdf'
+    })
   }
 }
 </script>

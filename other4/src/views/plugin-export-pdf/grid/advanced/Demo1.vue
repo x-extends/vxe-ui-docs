@@ -22,7 +22,7 @@ const gridRef = ref<VxeGridInstance>()
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   exportConfig: {
-    type: 'xlsx'
+    type: 'pdf'
   },
   columns: [
     { type: 'seq', width: 60 },
