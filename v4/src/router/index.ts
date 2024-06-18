@@ -136,6 +136,31 @@ const routes: Array<RouteRecordRaw> = [
         path: 'renderer',
         children: [
           {
+            path: 'form',
+            children: [
+              {
+                path: 'api',
+                name: 'GlobalRendererFormAPI',
+                component: () => import('@/views/global/renderer/form/api/CodeExample.vue')
+              },
+              {
+                path: 'item',
+                children: [
+                  {
+                    path: 'editInput',
+                    name: 'GlobalRendererFormItemEditInput',
+                    component: () => import('@/views/global/renderer/form/item/editInput/CodeExample.vue')
+                  },
+                  {
+                    path: 'editUpload',
+                    name: 'GlobalRendererFormItemEditUpload',
+                    component: () => import('@/views/global/renderer/form/item/editUpload/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
+          },
+          {
             path: 'table',
             children: [
               {

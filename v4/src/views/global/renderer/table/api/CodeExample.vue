@@ -80,7 +80,7 @@ const tableData = ref([
       },
       {
         name: 'tableFilterResetMethod',
-        desc: '自定义筛选还原逻辑方法',
+        desc: '自定义筛选重置逻辑方法',
         version: '',
         type: '(params: { options, column }) => void',
         enum: '',
@@ -96,6 +96,15 @@ const tableData = ref([
         defVal: '',
         list: []
       },
+      // {
+      //   name: 'tableFilterDefaultMethod',
+      //   desc: '默认筛选处理方法，如果同时存在，会被 tableFilterMethod 覆盖',
+      //   version: '',
+      //   type: '(params: { value, option, cellValue, row, column, $table  }) => boolean',
+      //   enum: '',
+      //   defVal: '',
+      //   list: []
+      // },
       {
         name: 'tableCellClassName',
         desc: '单元格设置 class',
@@ -160,7 +169,7 @@ const tableData = ref([
         list: []
       },
       {
-        name: 'tableAutofocus',
+        name: 'tableAutoFocus',
         desc: '激活编辑状态时，设置自动聚焦的 class',
         version: '',
         type: 'string | ((params: { row, rowIndex, $rowIndex, column, columnIndex, $columnIndex, _columnIndex, $table }) => HTMLElement)',

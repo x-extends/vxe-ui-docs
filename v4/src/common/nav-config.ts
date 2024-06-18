@@ -242,8 +242,20 @@ export const navConfigList: NavVO[] = [
           { title: '折叠表单', routerLink: { name: 'ComponentFormConfigCollapse' } },
           { title: '表单校验', routerLink: { name: 'ComponentFormConfigValid' } }
         ]
+      },
+      {
+        title: '渲染器（高阶复用）',
+        children: [
+          { title: 'API', routerLink: { name: 'GlobalRendererFormAPI' } },
+          {
+            title: '表单项',
+            children: [
+              { title: '实现一个输入框', routerLink: { name: 'GlobalRendererFormItemEditInput' } },
+              { title: '实现一个附件上传', routerLink: { name: 'GlobalRendererFormItemEditUpload' } }
+            ]
+          }
+        ]
       }
-      // { title: '校验器（全局）' }
     ]
   },
   {

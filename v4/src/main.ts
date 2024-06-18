@@ -22,6 +22,7 @@ import VxeTable from 'vxe-table'
 import 'vxe-table/lib/style.css'
 
 import '@/views/table/base/format/demo2.format'
+
 import '@/views/global/formats/table/base/demo1.table.formats'
 
 import '@/views/global/commands/table/base/demo1.table.commands'
@@ -33,6 +34,9 @@ import '@/views/global/renderer/table/edit/editDownTable/demo1.table.renderer'
 import '@/views/global/renderer/table/toolbar/button/demo1.table.renderer'
 import '@/views/global/renderer/table/toolbar/tool/demo1.table.renderer'
 import '@/views/global/renderer/table/empty/demo1.table.renderer'
+
+import '@/views/global/renderer/form/item/editInput/demo1.form.renderer'
+import '@/views/global/renderer/form/item/editUpload/demo1.form.renderer'
 
 import enUS from 'vxe-pc-ui/packages/language/en-US'
 

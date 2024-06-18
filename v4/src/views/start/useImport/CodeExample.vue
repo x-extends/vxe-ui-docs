@@ -222,8 +222,6 @@
             VxeUI.component(VxeColgroup)
             VxeUI.component(VxeGrid)
             VxeUI.component(VxeToolbar)
-
-            createApp(App).mount('#app')
           </pre-code>
         </pre>
       </template>
