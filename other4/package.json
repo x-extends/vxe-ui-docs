@@ -10,7 +10,7 @@
     "format:examples": "eslint --fix dist/example/**/*.{js,ts,vue}"
   },
   "dependencies": {
-    "@vxe-ui/plugin-export-xlsx": "^4.0.0-beta.0",
+    "@vxe-ui/plugin-export-xlsx": "^4.0.0",
     "axios": "^1.7.2",
     "core-js": "^3.8.3",
     "highlight.js": "^11.9.0",
