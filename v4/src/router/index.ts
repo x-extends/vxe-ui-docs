@@ -2710,6 +2710,26 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/grid/export/base/CodeExample.vue')
               },
               {
+                path: 'txt',
+                name: 'ComponentGridExportTxt',
+                component: () => import('@/views/grid/export/txt/CodeExample.vue')
+              },
+              {
+                path: 'xml',
+                name: 'ComponentGridExportXml',
+                component: () => import('@/views/grid/export/xml/CodeExample.vue')
+              },
+              {
+                path: 'html',
+                name: 'ComponentGridExportHtml',
+                component: () => import('@/views/grid/export/html/CodeExample.vue')
+              },
+              {
+                path: 'csv',
+                name: 'ComponentGridExportCsv',
+                component: () => import('@/views/grid/export/csv/CodeExample.vue')
+              },
+              {
                 path: 'advanced',
                 name: 'ComponentGridExportAdvanced',
                 component: () => import('@/views/grid/export/advanced/CodeExample.vue')
