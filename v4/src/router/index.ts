@@ -2105,6 +2105,26 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/table/export/base/CodeExample.vue')
               },
               {
+                path: 'txt',
+                name: 'ComponentTableExportTxt',
+                component: () => import('@/views/table/export/txt/CodeExample.vue')
+              },
+              {
+                path: 'xml',
+                name: 'ComponentTableExportXml',
+                component: () => import('@/views/table/export/xml/CodeExample.vue')
+              },
+              {
+                path: 'html',
+                name: 'ComponentTableExportHtml',
+                component: () => import('@/views/table/export/html/CodeExample.vue')
+              },
+              {
+                path: 'csv',
+                name: 'ComponentTableExportCsv',
+                component: () => import('@/views/table/export/csv/CodeExample.vue')
+              },
+              {
                 path: 'advanced',
                 name: 'ComponentTableExportAdvanced',
                 component: () => import('@/views/table/export/advanced/CodeExample.vue')
