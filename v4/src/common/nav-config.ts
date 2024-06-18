@@ -873,7 +873,20 @@ export const navConfigList: NavVO[] = [
               { title: '实现右侧工具按钮', routerLink: { name: 'GlobalRendererTableToolbarTool' } }
             ]
           },
-          { title: '空数据提示', routerLink: { name: 'GlobalRendererTableEmpty' } }
+          {
+            title: '筛选',
+            children: [
+              { title: '实现一个输入筛选', routerLink: { name: 'GlobalRendererTableFilterFilterInput' } },
+              { title: '实现一个多条件筛选', routerLink: { name: 'GlobalRendererTableFilterFilterComplex' } }
+            ]
+          },
+          {
+            title: '空数据提示',
+            children: [
+              { title: '实现空数据提示1', routerLink: { name: 'GlobalRendererTableMyEmpty' } },
+              { title: '实现空数据提示2', routerLink: { name: 'GlobalRendererTableMyNotData' } }
+            ]
+          }
         ]
       }
       // { title: '右键菜单（全局）' },

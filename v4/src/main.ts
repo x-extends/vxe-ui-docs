@@ -29,11 +29,18 @@ import '@/views/global/commands/table/base/demo1.table.commands'
 
 import '@/views/global/renderer/table/default/myLink/demo1.table.renderer'
 import '@/views/global/renderer/table/default/myImg/demo1.table.renderer'
+
 import '@/views/global/renderer/table/edit/editInput/demo1.table.renderer'
 import '@/views/global/renderer/table/edit/editDownTable/demo1.table.renderer'
+
 import '@/views/global/renderer/table/toolbar/button/demo1.table.renderer'
 import '@/views/global/renderer/table/toolbar/tool/demo1.table.renderer'
-import '@/views/global/renderer/table/empty/demo1.table.renderer'
+
+import '@/views/global/renderer/table/filter/filterInput/demo1.table.renderer'
+import '@/views/global/renderer/table/filter/filterComplex/demo1.table.renderer'
+
+import '@/views/global/renderer/table/empty/myEmpty/demo1.table.renderer'
+import '@/views/global/renderer/table/empty/myNotData/demo1.table.renderer'
 
 import '@/views/global/renderer/form/item/editInput/demo1.form.renderer'
 import '@/views/global/renderer/form/item/editUpload/demo1.form.renderer'

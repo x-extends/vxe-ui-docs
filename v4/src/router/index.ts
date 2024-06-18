@@ -214,9 +214,34 @@ const routes: Array<RouteRecordRaw> = [
                 ]
               },
               {
+                path: 'filter',
+                children: [
+                  {
+                    path: 'filterInput',
+                    name: 'GlobalRendererTableFilterFilterInput',
+                    component: () => import('@/views/global/renderer/table/filter/filterInput/CodeExample.vue')
+                  },
+                  {
+                    path: 'filterComplex',
+                    name: 'GlobalRendererTableFilterFilterComplex',
+                    component: () => import('@/views/global/renderer/table/filter/filterComplex/CodeExample.vue')
+                  }
+                ]
+              },
+              {
                 path: 'empty',
-                name: 'GlobalRendererTableEmpty',
-                component: () => import('@/views/global/renderer/table/empty/CodeExample.vue')
+                children: [
+                  {
+                    path: 'myEmpty',
+                    name: 'GlobalRendererTableMyEmpty',
+                    component: () => import('@/views/global/renderer/table/empty/myEmpty/CodeExample.vue')
+                  },
+                  {
+                    path: 'myNotData',
+                    name: 'GlobalRendererTableMyNotData',
+                    component: () => import('@/views/global/renderer/table/empty/myNotData/CodeExample.vue')
+                  }
+                ]
               }
             ]
           }
