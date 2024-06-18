@@ -867,6 +867,13 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
+            title: '展开行',
+            children: [
+              { title: '实现一个展开列表', routerLink: { name: 'GlobalRendererTableExpandMyExpandList' } },
+              { title: '实现一个展开表格', routerLink: { name: 'GlobalRendererTableExpandMyExpandTable' } }
+            ]
+          },
+          {
             title: '工具栏',
             children: [
               { title: '实现左侧操作按钮', routerLink: { name: 'GlobalRendererTableToolbarBtn' } },

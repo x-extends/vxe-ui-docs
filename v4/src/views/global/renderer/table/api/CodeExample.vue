@@ -214,7 +214,7 @@ const tableData = ref([
         list: []
       },
       {
-        name: 'renderTableEmptyView',
+        name: 'renderTableEmpty',
         desc: '空数据时渲染',
         version: '',
         type: '(renderOpts, params: { $table }) => JSX',

@@ -5,7 +5,7 @@ import DemoDownTable from './DemoDownTable.vue'
 VxeUI.renderer.add('EditDownTable', {
   // 可编辑激活模板
   renderTableEdit (renderOpts, params) {
-    return <DemoDownTable params={ params }></DemoDownTable>
+    return <DemoDownTable params={ params } />
   },
   // 可编辑显示模板
   renderTableCell (renderOpts, params) {

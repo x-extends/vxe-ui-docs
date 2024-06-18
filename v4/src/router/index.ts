@@ -199,6 +199,21 @@ const routes: Array<RouteRecordRaw> = [
                 ]
               },
               {
+                path: 'expand',
+                children: [
+                  {
+                    path: 'myExpandList',
+                    name: 'GlobalRendererTableExpandMyExpandList',
+                    component: () => import('@/views/global/renderer/table/expand/myExpandList/CodeExample.vue')
+                  },
+                  {
+                    path: 'myExpandTable',
+                    name: 'GlobalRendererTableExpandMyExpandTable',
+                    component: () => import('@/views/global/renderer/table/expand/myExpandTable/CodeExample.vue')
+                  }
+                ]
+              },
+              {
                 path: 'toolbar',
                 children: [
                   {

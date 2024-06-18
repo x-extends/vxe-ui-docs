@@ -33,6 +33,9 @@ import '@/views/global/renderer/table/default/myImg/demo1.table.renderer'
 import '@/views/global/renderer/table/edit/editInput/demo1.table.renderer'
 import '@/views/global/renderer/table/edit/editDownTable/demo1.table.renderer'
 
+import '@/views/global/renderer/table/expand/myExpandList/demo1.table.renderer'
+import '@/views/global/renderer/table/expand/myExpandTable/demo1.table.renderer'
+
 import '@/views/global/renderer/table/toolbar/button/demo1.table.renderer'
 import '@/views/global/renderer/table/toolbar/tool/demo1.table.renderer'
 
