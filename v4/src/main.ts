@@ -78,6 +78,5 @@ app.use(router)
 app.use(i18n)
 
 app.config.globalProperties.$t = i18n.global.t
-app.config.globalProperties.$i18n = i18n.global
 
 app.mount('#app')

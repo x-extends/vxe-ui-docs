@@ -605,6 +605,7 @@ export const navConfigList: NavVO[] = [
               { title: '导出 XML', routerLink: { name: 'ComponentTableExportXml' } },
               { title: '导出 HTML', routerLink: { name: 'ComponentTableExportHtml' } },
               { title: '导出 CSV', routerLink: { name: 'ComponentTableExportCsv' } },
+              { title: '导出 XLSX', linkUrl: '/other4/#/plugin-export-xlsx/table/export' },
               { title: '高级导出', routerLink: { name: 'ComponentTableExportAdvanced' } }
             ]
           },
@@ -795,6 +796,7 @@ export const navConfigList: NavVO[] = [
             title: '导出数据',
             children: [
               { title: '导出数据', routerLink: { name: 'ComponentGridExportBase' } },
+              { title: '导出 XLSX', linkUrl: '/other4/#/plugin-export-xlsx/grid/export' },
               { title: '高级导出', routerLink: { name: 'ComponentGridExportAdvanced' } }
             ]
           },
