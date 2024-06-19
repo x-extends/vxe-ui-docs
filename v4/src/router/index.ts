@@ -2195,6 +2195,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/table/scroll/group/CodeExample.vue')
               },
               {
+                path: 'keyboard',
+                name: 'ComponentTableScrollKeyboard',
+                component: () => import('@/views/table/scroll/keyboard/CodeExample.vue')
+              },
+              {
                 path: 'tree',
                 name: 'ComponentTableScrollTree',
                 component: () => import('@/views/table/scroll/tree/CodeExample.vue')
@@ -2793,6 +2798,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'group',
                 name: 'ComponentGridScrollGroup',
                 component: () => import('@/views/grid/scroll/group/CodeExample.vue')
+              },
+              {
+                path: 'footer',
+                name: 'ComponentGridScrollFooter',
+                component: () => import('@/views/grid/scroll/footer/CodeExample.vue')
               }
             ]
           },

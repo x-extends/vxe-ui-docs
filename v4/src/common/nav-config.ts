@@ -632,6 +632,7 @@ export const navConfigList: NavVO[] = [
               { title: '纵向和横向虚拟滚动', routerLink: { name: 'ComponentTableScrollHV' } },
               { title: '设置行高', routerLink: { name: 'ComponentTableScrollRowHeight' } },
               { title: '使用分组表头', routerLink: { name: 'ComponentTableScrollGroup' } },
+              { title: '按键导航', routerLink: { name: 'ComponentTableScrollKeyboard' } },
               { title: '树形虚拟滚动', routerLink: { name: 'ComponentTableScrollTree' } }
             ]
           }
@@ -826,7 +827,8 @@ export const navConfigList: NavVO[] = [
               { title: '纵向虚拟滚动', routerLink: { name: 'ComponentGridScrollVertical' } },
               { title: '横向虚拟滚动', routerLink: { name: 'ComponentGridScrollHorizontal' } },
               { title: '纵向和横向虚拟滚动', routerLink: { name: 'ComponentGridScrollHV' } },
-              { title: '使用分组表头', routerLink: { name: 'ComponentGridScrollGroup' } }
+              { title: '使用分组表头', routerLink: { name: 'ComponentGridScrollGroup' } },
+              { title: '使用表尾', routerLink: { name: 'ComponentGridScrollFooter' } }
             ]
           },
           {
