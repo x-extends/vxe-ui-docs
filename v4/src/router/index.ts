@@ -1878,6 +1878,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'print',
                 name: 'ComponentTableToolbarPrint',
                 component: () => import('@/views/table/toolbar/print/CodeExample.vue')
+              },
+              {
+                path: 'import',
+                name: 'ComponentTableToolbarImport',
+                component: () => import('@/views/table/toolbar/import/CodeExample.vue')
+              },
+              {
+                path: 'export',
+                name: 'ComponentTableToolbarExport',
+                component: () => import('@/views/table/toolbar/export/CodeExample.vue')
               }
             ]
           },
@@ -2198,6 +2208,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'keyboard',
                 name: 'ComponentTableScrollKeyboard',
                 component: () => import('@/views/table/scroll/keyboard/CodeExample.vue')
+              },
+              {
+                path: 'merge',
+                name: 'ComponentTableScrollMerge',
+                component: () => import('@/views/table/scroll/merge/CodeExample.vue')
               },
               {
                 path: 'tree',

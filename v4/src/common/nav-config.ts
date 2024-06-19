@@ -530,7 +530,9 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '工具栏布局', routerLink: { name: 'ComponentTableToolbarBasic' } },
               { title: '自定义列功能', routerLink: { name: 'ComponentTableToolbarCustom' } },
-              { title: '打印功能', routerLink: { name: 'ComponentTableToolbarPrint' } }
+              { title: '打印功能', routerLink: { name: 'ComponentTableToolbarPrint' } },
+              { title: '导入功能', routerLink: { name: 'ComponentTableToolbarImport' } },
+              { title: '导出功能', routerLink: { name: 'ComponentTableToolbarExport' } }
             ]
           },
           {
@@ -633,6 +635,7 @@ export const navConfigList: NavVO[] = [
               { title: '设置行高', routerLink: { name: 'ComponentTableScrollRowHeight' } },
               { title: '使用分组表头', routerLink: { name: 'ComponentTableScrollGroup' } },
               { title: '按键导航', routerLink: { name: 'ComponentTableScrollKeyboard' } },
+              { title: '单元格合并', routerLink: { name: 'ComponentTableScrollMerge' } },
               { title: '树形虚拟滚动', routerLink: { name: 'ComponentTableScrollTree' } }
             ]
           }

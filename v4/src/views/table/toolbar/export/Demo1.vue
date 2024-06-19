@@ -1,9 +1,9 @@
 <template>
   <div>
-    <vxe-toolbar ref="toolbarRef" print></vxe-toolbar>
+    <vxe-toolbar ref="toolbarRef" export></vxe-toolbar>
     <vxe-table
       ref="tableRef"
-      :print-config="{}"
+      :export-config="{}"
       :data="tableData">
       <vxe-column type="seq" width="60"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
