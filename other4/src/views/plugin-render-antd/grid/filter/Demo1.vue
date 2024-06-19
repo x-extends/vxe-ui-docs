@@ -1,13 +1,13 @@
 <template>
   <div>
-    <vxe-button @click="insertEvent">新增</vxe-button>
-    <vxe-button @click="saveEvent">保存</vxe-button>
+    <el-button @click="insertEvent">新增</el-button>
+    <el-button @click="saveEvent">保存</el-button>
 
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts">
 import { reactive, ref } from 'vue'
 import { ElMessageBox } from 'element-plus'
 import { VxeGridInstance, VxeGridProps } from 'vxe-table'
@@ -187,5 +187,5 @@ setTimeout(() => {
     { id: 100010, name: 'Test10', nickname: 'T10', role: 'Develop', sex: '1', sex1: [], state: '', region: [], age: 20, date: '', date1: '', date2: '', date3: '', date4: [], date5: '', date7: '', color1: '', tree1: '', tree2: [], rate: 4, rate1: 83, flag: false, address: 'Guangzhou' }
   ]
   gridOptions.loading = false
-}, 300)
+}, 500)
 </script>

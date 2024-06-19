@@ -202,6 +202,26 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
+    path: '/plugin-render-antd',
+    children: [
+      {
+        path: 'install',
+        name: 'PluginRenderAntdInstall',
+        component: () => import('@/views/plugin-render-antd/install/CodeExample.vue')
+      },
+      {
+        path: 'grid',
+        children: [
+          {
+            path: 'edit',
+            name: 'PluginRenderAntdGridEdit',
+            component: () => import('@/views/plugin-render-antd/grid/edit/CodeExample.vue')
+          }
+        ]
+      }
+    ]
+  },
+  {
     path: '/:name/api',
     name: 'DocsApi',
     component: () => import('@/views/api/DocsApi.vue')

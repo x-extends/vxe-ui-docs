@@ -29,9 +29,14 @@ import VxeUIPluginRenderChart from '@vxe-ui/plugin-render-chart'
 import '@vxe-ui/plugin-render-chart/dist/style.css'
 import VxeUIPluginRenderElement from '@vxe-ui/plugin-render-element'
 import '@vxe-ui/plugin-render-element/dist/style.css'
+import VxeUIPluginRenderAntd from '@vxe-ui/plugin-render-antd'
+import '@vxe-ui/plugin-render-antd/dist/style.css'
 
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
+
+import Antd from 'ant-design-vue'
+import 'ant-design-vue/dist/reset.css'
 
 declare global {
   interface Window {
@@ -58,6 +63,7 @@ VxeUI.use(VxeUIPluginExportPDF, {
 })
 VxeUI.use(VxeUIPluginRenderChart)
 VxeUI.use(VxeUIPluginRenderElement)
+VxeUI.use(VxeUIPluginRenderAntd)
 
 const app = createApp(App)
 
@@ -70,6 +76,7 @@ app.component('ApiLink', ApiLink)
 app.use(VxeUI)
 app.use(VxeTable)
 app.use(ElementPlus)
+app.use(Antd)
 
 app.use(store)
 app.use(router)

@@ -127,6 +127,30 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
+    title: '渲染 ant-design-vue 组件',
+    isExpand: false,
+    children: [
+      {
+        title: '开发指南',
+        children: [
+          { title: '安装插件', routerLink: { name: 'PluginRenderAntdInstall' } }
+        ]
+      },
+      // {
+      //   title: 'Table 基础表格',
+      //   children: [
+      //     // { title: '单元格可编辑', routerLink: { name: 'PluginRenderAntdTableEdit' } }
+      //   ]
+      // },
+      {
+        title: 'Grid 配置式表格',
+        children: [
+          { title: '单元格可编辑', routerLink: { name: 'PluginRenderAntdGridEdit' } }
+        ]
+      }
+    ]
+  },
+  {
     title: 'API',
     isExpand: false,
     children: []
