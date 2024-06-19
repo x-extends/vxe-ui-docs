@@ -25,6 +25,8 @@ import enUS from 'vxe-pc-ui/packages/language/en-US'
 
 import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
 import VxeUIPluginExportPDF from '@vxe-ui/plugin-export-pdf'
+import VxeUIPluginRenderer from '@vxe-ui/plugin-render-chart'
+import '@vxe-ui/plugin-render-chart/dist/style.css'
 
 declare global {
   interface Window {
@@ -49,6 +51,7 @@ VxeUI.use(VxeUIPluginExportPDF, {
     }
   ]
 })
+VxeUI.use(VxeUIPluginRenderer)
 
 const app = createApp(App)
 

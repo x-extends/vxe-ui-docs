@@ -15,13 +15,13 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/*',
     redirect: {
-      name: 'PluginExportXlsxTableExport'
+      name: 'PluginRenderChartGridBar'
     }
   },
   {
     path: '/',
     redirect: {
-      name: 'PluginExportXlsxTableExport'
+      name: 'PluginRenderChartGridBar'
     }
   },
   {
@@ -36,6 +36,46 @@ const routes: Array<RouteRecordRaw> = [
         path: 'joinSponsor',
         name: 'JoinSponsor',
         component: JoinSponsor
+      }
+    ]
+  },
+  {
+    path: '/plugin-render-chart',
+    children: [
+      {
+        path: 'install',
+        name: 'PluginRenderChartInstall',
+        component: () => import('@/views/plugin-render-chart/install/CodeExample.vue')
+      },
+      {
+        path: 'table',
+        children: [
+          {
+            path: 'bar',
+            name: 'PluginRenderChartTableBar',
+            component: () => import('@/views/plugin-render-chart/table/bar/CodeExample.vue')
+          },
+          {
+            path: 'pie',
+            name: 'PluginRenderChartTablePie',
+            component: () => import('@/views/plugin-render-chart/table/pie/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'grid',
+        children: [
+          {
+            path: 'bar',
+            name: 'PluginRenderChartGridBar',
+            component: () => import('@/views/plugin-render-chart/grid/bar/CodeExample.vue')
+          },
+          {
+            path: 'pie',
+            name: 'PluginRenderChartGridPie',
+            component: () => import('@/views/plugin-render-chart/grid/pie/CodeExample.vue')
+          }
+        ]
       }
     ]
   },

@@ -19,8 +19,34 @@ export interface NavVO {
 
 export const navConfigList: NavVO[] = [
   {
+    title: '轻量级图表',
+    isExpand: false,
+    children: [
+      {
+        title: '开发指南',
+        children: [
+          { title: '安装插件', routerLink: { name: 'PluginRenderChartInstall' } }
+        ]
+      },
+      {
+        title: 'Table 基础表格',
+        children: [
+          { title: '柱状图', routerLink: { name: 'PluginRenderChartTableBar' } },
+          { title: '饼图', routerLink: { name: 'PluginRenderChartTablePie' } }
+        ]
+      },
+      {
+        title: 'Grid 配置式表格',
+        children: [
+          { title: '柱状图', routerLink: { name: 'PluginRenderChartGridBar' } },
+          { title: '饼图', routerLink: { name: 'PluginRenderChartGridPie' } }
+        ]
+      }
+    ]
+  },
+  {
     title: '导入/导出 XLSX',
-    isExpand: true,
+    isExpand: false,
     children: [
       {
         title: '开发指南',
@@ -48,7 +74,7 @@ export const navConfigList: NavVO[] = [
   },
   {
     title: '导出 PDF',
-    isExpand: true,
+    isExpand: false,
     children: [
       {
         title: '开发指南',

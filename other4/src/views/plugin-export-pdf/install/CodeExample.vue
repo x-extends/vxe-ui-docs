@@ -3,7 +3,7 @@
     <CodeLight>
       <template #tip>
         <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-export-pdf">
-          该插件用于支持在表格中导出导入导出 PDF 文件
+          该插件用于支持在表格中导出导入导出 PDF 文件，基于 <vxe-link href="https://github.com/MrRio/jsPDF" target="_blank">jspdf</vxe-link> 实现
         </vxe-tip>
       </template>
 
