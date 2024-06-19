@@ -18,7 +18,10 @@
           <pre-code class="javascript">
             // main.js
             // ...
+            // 如果完整使用
             import { VxeUI } from 'vxe-pc-ui'
+            // 如果只使用表格
+            // import { VxeUI } from 'vxe-table'
             import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
             import ExcelJS from 'exceljs'
             // ...

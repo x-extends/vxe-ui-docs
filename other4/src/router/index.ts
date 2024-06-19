@@ -182,6 +182,26 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
+    path: '/plugin-render-element',
+    children: [
+      {
+        path: 'install',
+        name: 'PluginRenderElementInstall',
+        component: () => import('@/views/plugin-render-element/install/CodeExample.vue')
+      },
+      {
+        path: 'grid',
+        children: [
+          {
+            path: 'edit',
+            name: 'PluginRenderElementGridEdit',
+            component: () => import('@/views/plugin-render-element/grid/edit/CodeExample.vue')
+          }
+        ]
+      }
+    ]
+  },
+  {
     path: '/:name/api',
     name: 'DocsApi',
     component: () => import('@/views/api/DocsApi.vue')

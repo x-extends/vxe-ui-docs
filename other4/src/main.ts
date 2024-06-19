@@ -25,8 +25,13 @@ import enUS from 'vxe-pc-ui/packages/language/en-US'
 
 import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
 import VxeUIPluginExportPDF from '@vxe-ui/plugin-export-pdf'
-import VxeUIPluginRenderer from '@vxe-ui/plugin-render-chart'
+import VxeUIPluginRenderChart from '@vxe-ui/plugin-render-chart'
 import '@vxe-ui/plugin-render-chart/dist/style.css'
+import VxeUIPluginRenderElement from '@vxe-ui/plugin-render-element'
+import '@vxe-ui/plugin-render-element/dist/style.css'
+
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 
 declare global {
   interface Window {
@@ -51,7 +56,8 @@ VxeUI.use(VxeUIPluginExportPDF, {
     }
   ]
 })
-VxeUI.use(VxeUIPluginRenderer)
+VxeUI.use(VxeUIPluginRenderChart)
+VxeUI.use(VxeUIPluginRenderElement)
 
 const app = createApp(App)
 
@@ -63,6 +69,7 @@ app.component('ApiLink', ApiLink)
 
 app.use(VxeUI)
 app.use(VxeTable)
+app.use(ElementPlus)
 
 app.use(store)
 app.use(router)
