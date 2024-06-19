@@ -1,13 +1,5 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
-import StartInstall from '@/views/start/install/CodeExample.vue'
-import StartUseGlobal from '@/views/start/useGlobal/CodeExample.vue'
-import StartUseImport from '@/views/start/useImport/CodeExample.vue'
-import StartIcons from '@/views/start/icon/CodeExample.vue'
-import StartConfig from '@/views/start/config/CodeExample.vue'
-import StartTheme from '@/views/start/theme/CodeExample.vue'
-import StartI18n from '@/views/start/i18n/CodeExample.vue'
-import StartUseZIndex from '@/views/start/z-index/CodeExample.vue'
 import FreeDonation from '@/views/start/FreeDonation.vue'
 import JoinSponsor from '@/views/start/JoinSponsor.vue'
 
@@ -51,6 +43,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'table',
         children: [
           {
+            path: 'rate',
+            name: 'PluginRenderChartTableRate',
+            component: () => import('@/views/plugin-render-chart/table/rate/CodeExample.vue')
+          },
+          {
             path: 'bar',
             name: 'PluginRenderChartTableBar',
             component: () => import('@/views/plugin-render-chart/table/bar/CodeExample.vue')
@@ -65,6 +62,11 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'grid',
         children: [
+          {
+            path: 'rate',
+            name: 'PluginRenderChartGridRate',
+            component: () => import('@/views/plugin-render-chart/grid/rate/CodeExample.vue')
+          },
           {
             path: 'bar',
             name: 'PluginRenderChartGridBar',
