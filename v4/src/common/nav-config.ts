@@ -854,12 +854,19 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: '指令注册（全局复用）',
+        title: '右键菜单（全局复用）',
         children: [
-          { title: 'API', routerLink: { name: 'GlobalCommandsTableAPI' } },
-          { title: '工具栏', routerLink: { name: 'GlobalCommandsTableBase' } }
+          { title: 'API', routerLink: { name: 'GlobalMenusTableAPI' } },
+          { title: '右键菜单', routerLink: { name: 'GlobalMenusTableBase' } }
         ]
       },
+      // {
+      //   title: '指令注册（全局复用）',
+      //   children: [
+      //     { title: 'API', routerLink: { name: 'GlobalCommandsTableAPI' } },
+      //     { title: '工具栏', routerLink: { name: 'GlobalCommandsTableBase' } }
+      //   ]
+      // },
       {
         title: '渲染器（高阶复用）',
         children: [

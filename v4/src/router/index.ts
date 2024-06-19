@@ -113,6 +113,26 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'menus',
+        children: [
+          {
+            path: 'table',
+            children: [
+              {
+                path: 'api',
+                name: 'GlobalMenusTableAPI',
+                component: () => import('@/views/global/menus/table/api/CodeExample.vue')
+              },
+              {
+                path: 'base',
+                name: 'GlobalMenusTableBase',
+                component: () => import('@/views/global/menus/table/base/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
+      {
         path: 'commands',
         children: [
           {

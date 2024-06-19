@@ -3,8 +3,6 @@
     <vxe-table
       border
       show-footer
-      :row-config="{isCurrent: true}"
-      :column-config="{isCurrent: true}"
       :footer-method="footerMethod"
       :data="tableData"
       :menu-config="menuConfig"
