@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button @click="exportEvent">直接导出</vxe-button>
+    <vxe-button @click="exportEvent">直接导出 XLSX 文件</vxe-button>
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
@@ -14,8 +14,8 @@ interface RowVO {
   name: string
   role: string
   sex: string
-  age: number
-  address: string
+  no1: string
+  no2: string
 }
 
 const gridRef = ref<VxeGridInstance>()
@@ -25,13 +25,14 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { type: 'seq', width: 70 },
     { field: 'name', title: 'Name' },
     { field: 'sex', title: 'Sex' },
-    { field: 'age', title: 'Age' }
+    { field: 'no1', title: 'NO1' },
+    { field: 'no2', title: 'NO2 String', cellType: 'string' }
   ],
   data: [
-    { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
-    { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },
-    { id: 10003, name: 'Test3', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai' },
-    { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
+    { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', no1: '028', no2: '028' },
+    { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', no1: '220', no2: '220' },
+    { id: 10003, name: 'Test3', role: 'PM', sex: 'Man', no1: '003200', no2: '003200' },
+    { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', no1: '02040', no2: '02040' }
   ]
 })
 
