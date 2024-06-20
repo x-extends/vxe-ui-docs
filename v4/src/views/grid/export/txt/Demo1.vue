@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-button @click="exportEvent">直接导出 TXT 文件</vxe-button>
-    <vxe-grid v-bind="gridOptions"></vxe-grid>
+    <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
 

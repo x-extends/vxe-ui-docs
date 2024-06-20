@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="table/import/advanced/Demo1">
+    <CodeLight path="grid/import/advanced/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="高级导入">
           必须设置参数 print-config 才能启用高级导入功能

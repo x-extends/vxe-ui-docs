@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-button @click="exportEvent">高级导出</vxe-button>
-    <vxe-grid v-bind="gridOptions"></vxe-grid>
+    <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
 
