@@ -2850,6 +2850,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/grid/proxy/manualQuery/CodeExample.vue')
               },
               {
+                path: 'toolbarExport',
+                name: 'ComponentGridProxyToolbarExport',
+                component: () => import('@/views/grid/proxy/toolbarExport/CodeExample.vue')
+              },
+              {
                 path: 'toolbarDelete',
                 name: 'ComponentGridProxyToolbarDelete',
                 component: () => import('@/views/grid/proxy/toolbarDelete/CodeExample.vue')

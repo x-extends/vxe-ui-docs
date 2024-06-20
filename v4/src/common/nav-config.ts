@@ -840,14 +840,15 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '查询接口', routerLink: { name: 'ComponentGridProxyQuery' } },
               { title: '分页查询接口', routerLink: { name: 'ComponentGridProxyPager' } },
-              { title: '集成工具栏查询', routerLink: { name: 'ComponentGridProxyToolbarQuery' } },
-              { title: '手动调用查询', routerLink: { name: 'ComponentGridProxyManualQuery' } },
-              { title: '集成工具栏删除已选', routerLink: { name: 'ComponentGridProxyToolbarDelete' } },
-              { title: '手动调用删除已选', routerLink: { name: 'ComponentGridProxyManualDelete' } },
-              { title: '集成工具栏批量标记删除', routerLink: { name: 'ComponentGridProxyToolbarMark' } },
-              { title: '手动调用标记删除状态', routerLink: { name: 'ComponentGridProxyManualMark' } },
-              { title: '集成工具栏增删改查', routerLink: { name: 'ComponentGridProxyToolbarSave' } },
-              { title: '手动调用增删改查', routerLink: { name: 'ComponentGridProxyManualSave' } }
+              { title: '工具栏 - 查询', routerLink: { name: 'ComponentGridProxyToolbarQuery' } },
+              { title: '手动调用 - 查询', routerLink: { name: 'ComponentGridProxyManualQuery' } },
+              { title: '工具栏 - 全量数据导出', routerLink: { name: 'ComponentGridProxyToolbarExport' } },
+              { title: '工具栏 - 删除已选', routerLink: { name: 'ComponentGridProxyToolbarDelete' } },
+              { title: '手动调用 - 删除已选', routerLink: { name: 'ComponentGridProxyManualDelete' } },
+              { title: '工具栏 - 批量标记删除', routerLink: { name: 'ComponentGridProxyToolbarMark' } },
+              { title: '手动调用 - 标记删除状态', routerLink: { name: 'ComponentGridProxyManualMark' } },
+              { title: '工具栏 - 增删改查', routerLink: { name: 'ComponentGridProxyToolbarSave' } },
+              { title: '手动调用 - 增删改查', routerLink: { name: 'ComponentGridProxyManualSave' } }
             ]
           }
         ]
