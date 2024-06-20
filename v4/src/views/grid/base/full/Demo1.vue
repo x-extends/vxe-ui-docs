@@ -45,7 +45,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     range: true
   },
   columns: [
-    { type: 'seq', width: 60 },
+    { type: 'seq', width: 70 },
     { type: 'checkbox', title: 'ID', width: 140 },
     { field: 'name', title: 'Name', sortable: true },
     {

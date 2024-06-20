@@ -4,7 +4,7 @@
       border
       :tree-config="{rowField: 'id', childrenField: 'children'}"
       :data="tableData">
-      <vxe-column type="seq" width="60"></vxe-column>
+      <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name" min-width="300" tree-node></vxe-column>
       <vxe-column field="size" title="Size"></vxe-column>
       <vxe-column field="type" title="Type"></vxe-column>

@@ -28,7 +28,7 @@ interface RowVO {
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   showOverflow: true,
   columns: [
-    { type: 'seq', width: 60, fixed: 'left' },
+    { type: 'seq', width: 70, fixed: 'left' },
     { type: 'expand', width: 60, fixed: 'left', slots: { content: 'expand_content' } },
     { field: 'name', title: 'Name', minWidth: 400 },
     { field: 'role', title: 'Role', minWidth: 300 },

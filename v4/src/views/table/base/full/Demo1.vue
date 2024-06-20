@@ -9,7 +9,7 @@
       :row-config="{isHover: true}"
       :checkbox-config="{labelField: 'id', highlight: true, range: true}"
       :data="tableData">
-      <vxe-column type="seq" width="60"></vxe-column>
+      <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column type="checkbox" title="ID" width="140"></vxe-column>
       <vxe-column field="name" title="Name" sortable></vxe-column>
       <vxe-column field="sex" title="Sex" :filters="sexOptions" :filter-multiple="false" :formatter="formatterSex"></vxe-column>

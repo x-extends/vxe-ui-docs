@@ -26,7 +26,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     gt: 0
   },
   columns: [
-    { type: 'seq', width: 60 },
+    { type: 'seq', width: 70 },
     {
       title: '分组1',
       children: [

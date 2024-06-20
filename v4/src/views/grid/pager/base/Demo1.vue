@@ -25,7 +25,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     enabled: true
   },
   columns: [
-    { type: 'seq', width: 60, fixed: 'left' },
+    { type: 'seq', width: 70, fixed: 'left' },
     { field: 'name', title: 'Name', minWidth: 160 },
     { field: 'email', title: 'Email', minWidth: 160 },
     { field: 'nickname', title: 'Nickname', minWidth: 160 },

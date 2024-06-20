@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-table border :data="tableData">
-      <vxe-column type="seq" width="60"></vxe-column>
+      <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name" width="160">
         <template #header>
           <div class="first-col">

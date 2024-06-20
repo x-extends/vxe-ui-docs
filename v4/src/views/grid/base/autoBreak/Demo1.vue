@@ -19,7 +19,7 @@ interface RowVO {
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   columns: [
-    { type: 'seq', width: 60 },
+    { type: 'seq', width: 70 },
     { field: 'name', title: 'Name' },
     { field: 'sex', title: '列头自动换行列头自动换行', width: 120 },
     { field: 'age', title: 'Age' }

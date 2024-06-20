@@ -6,7 +6,7 @@
       height="500"
       :column-config="{resizable: true}"
       :data="tableData">
-      <vxe-column type="seq" width="60"></vxe-column>
+      <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="num20" title="饼图 - 环形" width="100" :cell-render="{ name: 'pie',  props: { ring: { diameter: '60%' } } }"></vxe-column>
       <vxe-column field="num21" title="饼图 - 自定义环形" width="140" :cell-render="{ name: 'pie', props: { colors: ['#FFDB5C', '#F0F0F0'], ring: { diameter: '60%' }, label: { formatter: '{value[0]}%' } } }"></vxe-column>

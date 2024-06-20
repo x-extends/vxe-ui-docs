@@ -6,7 +6,7 @@
       height="300"
       :data="tableData"
       :footer-data="footerData">
-      <vxe-column field="seq" type="seq" width="60" fixed="left"></vxe-column>
+      <vxe-column field="seq" type="seq" width="70" fixed="left"></vxe-column>
       <vxe-column field="name" title="Name" width="400"></vxe-column>
       <vxe-column field="role" title="Role" width="300"></vxe-column>
       <vxe-column field="sex" title="Sex" width="100"></vxe-column>

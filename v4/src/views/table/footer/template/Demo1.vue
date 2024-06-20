@@ -6,7 +6,7 @@
       height="300"
       :data="tableData"
       :footer-data="footerData">
-      <vxe-column field="seq" type="seq" width="60" fixed="left">
+      <vxe-column field="seq" type="seq" width="70" fixed="left">
         <template #footer="{ row }">
           <span style="color: blue;">{{ row.seq }}</span>
         </template>

@@ -35,7 +35,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
   showFooter: true,
   columns: [
-    { field: 'seq', type: 'seq', width: 60 },
+    { field: 'seq', type: 'seq', width: 70 },
     { field: 'name', title: 'Name' },
     { field: 'sex', title: 'Sex' },
     { field: 'num', title: 'Number', slots: { footer: 'num_footer' } },

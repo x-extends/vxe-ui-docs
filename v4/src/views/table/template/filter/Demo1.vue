@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-table border :data="tableData">
-      <vxe-column type="seq" width="60"></vxe-column>
+      <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name" width="160"></vxe-column>
       <vxe-column field="sex" title="Sex" :filters="sexOptions" :filter-method="sexFilterMethod">
         <template #filter="{ $panel, column }">

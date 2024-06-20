@@ -3,7 +3,7 @@
     <vxe-table
       show-overflow
       :data="tableData">
-      <vxe-column type="seq" width="60" fixed="left"></vxe-column>
+      <vxe-column type="seq" width="70" fixed="left"></vxe-column>
       <vxe-column type="expand" width="60" fixed="left">
         <template #content="{ row }">
           <div>Name：{{ row.name }}</div>

@@ -2,7 +2,7 @@
   <div>
     <vxe-table
       :data="tableData">
-      <vxe-column type="seq" width="60"></vxe-column>
+      <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column type="expand" width="60">
         <template #content="{ row }">
           <div style="padding: 16px;">

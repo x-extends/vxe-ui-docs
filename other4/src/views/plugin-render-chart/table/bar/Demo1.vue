@@ -6,7 +6,7 @@
       height="500"
       :column-config="{resizable: true}"
       :data="tableData">
-      <vxe-column type="seq" width="60"></vxe-column>
+      <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="num10" title="柱状图" width="200" :cell-render="{ name: 'bar', props: { bar: { max: 100 }, label: { formatter: '{value}%' } } }"></vxe-column>
       <vxe-column field="num11" title="柱状图 - 显示值" width="200" :cell-render="{ name: 'bar',  props: { label: { formatter: '{value}' }  } }"></vxe-column>

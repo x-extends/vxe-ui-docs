@@ -147,7 +147,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   },
   columns: [
     { type: 'checkbox', width: 50 },
-    { type: 'seq', width: 60 },
+    { type: 'seq', width: 70 },
     { field: 'name', title: 'Name', editRender: { autofocus: '.vxe-input--inner' }, slots: { edit: 'name_edit' } },
     { field: 'nickname', title: 'Nickname', editRender: {}, slots: { edit: 'nickname_edit' } },
     { field: 'role', title: 'Role', editRender: {}, slots: { edit: 'role_edit' } },

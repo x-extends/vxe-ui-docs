@@ -29,7 +29,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   height: 300,
   loading: false,
   columns: [
-    { type: 'seq', width: 60 },
+    { type: 'seq', width: 70 },
     { field: 'name', title: 'Name', width: 300 },
     { field: 'sex', title: 'Sex', width: 300 },
     { field: 'age', title: 'Age', width: 300 },

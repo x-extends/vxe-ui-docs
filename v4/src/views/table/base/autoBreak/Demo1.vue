@@ -2,7 +2,7 @@
   <div>
     <vxe-table
       :data="tableData">
-      <vxe-column type="seq" width="60"></vxe-column>
+      <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="role" title="列头自动换行列头自动换行" width="120"></vxe-column>
       <vxe-column field="age" title="Age"></vxe-column>

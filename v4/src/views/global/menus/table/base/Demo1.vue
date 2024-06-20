@@ -6,7 +6,7 @@
       :footer-data="footerData"
       :data="tableData"
       :menu-config="menuConfig">
-      <vxe-column field="seq" type="seq" width="60"></vxe-column>
+      <vxe-column field="seq" type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="sex" title="Sex"></vxe-column>
       <vxe-column field="num" title="Num"></vxe-column>

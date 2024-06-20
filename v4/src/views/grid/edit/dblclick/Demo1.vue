@@ -24,7 +24,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     mode: 'cell'
   },
   columns: [
-    { type: 'seq', width: 60 },
+    { type: 'seq', width: 70 },
     { field: 'name', title: 'Name', editRender: { name: 'input' } },
     { field: 'sex', title: 'Sex', editRender: { name: 'input' } },
     { field: 'age', title: 'Age', editRender: { name: 'input' } }

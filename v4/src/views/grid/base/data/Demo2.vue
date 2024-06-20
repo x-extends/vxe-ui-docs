@@ -30,7 +30,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     useKey: true
   },
   columns: [
-    { type: 'seq', width: 60 },
+    { type: 'seq', width: 70 },
     { field: 'userInfo.name', title: 'Name' },
     { field: 'other[0].sex', title: 'Sex' },
     { field: 'userInfo.age', title: 'Age' },

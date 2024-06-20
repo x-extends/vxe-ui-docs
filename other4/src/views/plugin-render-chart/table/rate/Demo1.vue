@@ -6,7 +6,7 @@
       height="500"
       :column-config="{resizable: true}"
       :data="tableData">
-      <vxe-column type="seq" width="60"></vxe-column>
+      <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="num41" title="评分" width="180" :cell-render="{ name: 'rate' }"></vxe-column>
       <vxe-column field="num42" title="评分 - 自定义颜色" width="180" :cell-render="{ name: 'rate', props: { colors: ['#91C7AE', '#D48265'] } }"></vxe-column>

@@ -7,7 +7,7 @@
       :data="tableData"
       :menu-config="menuConfig"
       @menu-click="contextMenuClickEvent">
-      <vxe-column type="seq" width="60"></vxe-column>
+      <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name" sortable></vxe-column>
       <vxe-column field="sex" title="Sex"></vxe-column>
       <vxe-column field="age" title="Age"></vxe-column>
