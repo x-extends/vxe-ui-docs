@@ -43,7 +43,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeTableInstance, VxeColumnPropTypes, VxeTableEvents } from 'vxe-table'
+import { VxeTableInstance, VxeColumnPropTypes, VxeTableEvents } from 'vxe-pc-ui'
 import XEUtils from 'xe-utils'
 
 interface RowVO {

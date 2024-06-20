@@ -481,7 +481,9 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '合并行', routerLink: { name: 'ComponentTableMergeRow' } },
               { title: '合并列', routerLink: { name: 'ComponentTableMergeColumn' } },
-              { title: '合并行与列', routerLink: { name: 'ComponentTableMergeAll' } }
+              { title: '合并行与列', routerLink: { name: 'ComponentTableMergeAll' } },
+              { title: '表尾合并', routerLink: { name: 'ComponentTableMergeFooter' } },
+              { title: '实现横向树', routerLink: { name: 'ComponentTableMergeHorizontal' } }
             ]
           },
           {
@@ -504,7 +506,8 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '修改筛选选项', routerLink: { name: 'ComponentTableFilterOptions' } },
               { title: '服务端筛选', routerLink: { name: 'ComponentTableFilterRemote' } },
-              { title: '实现列头筛选', routerLink: { name: 'ComponentTableFilterHeader' } }
+              { title: '实现列头筛选', routerLink: { name: 'ComponentTableFilterHeader' } },
+              { title: '手动操作筛选', routerLink: { name: 'ComponentTableFilterManual' } }
             ]
           },
           {
@@ -550,7 +553,9 @@ export const navConfigList: NavVO[] = [
               { title: '事件监听', routerLink: { name: 'ComponentTableCustomEvents' } },
               { title: '本地保存列设置', routerLink: { name: 'ComponentTableCustomStorage' } },
               { title: '自定义服务端保存', routerLink: { name: 'ComponentTableCustomRemote' } },
-              { title: '实现服务端保存与恢复', routerLink: { name: 'ComponentTableCustomRemoteFull' } }
+              { title: '实现服务端保存与恢复', routerLink: { name: 'ComponentTableCustomRemoteFull' } },
+              { title: '实现显示/隐藏列', routerLink: { name: 'ComponentTableCustomManual' } },
+              { title: '实现折叠列', routerLink: { name: 'ComponentTableCustomCollapseColumn' } }
             ]
           },
           // {
@@ -602,7 +607,8 @@ export const navConfigList: NavVO[] = [
               { title: '实现唯一下拉选项', routerLink: { name: 'ComponentTableEditUniqueSelect' } },
               { title: '实现多列下拉联动', routerLink: { name: 'ComponentTableEditCascadingSelect' } },
               { title: '实现表尾实时合计', routerLink: { name: 'ComponentTableEditFooterImmediately' } },
-              { title: '实现单元格实时保存', routerLink: { name: 'ComponentTableEditRealtimeSave' } }
+              { title: '实现单元格实时保存', routerLink: { name: 'ComponentTableEditRealtimeSave' } },
+              { title: '使用第三方组件', linkUrl: '/other4/#/plugin-render-element/grid/edit' }
             ]
           },
           {
@@ -656,6 +662,13 @@ export const navConfigList: NavVO[] = [
               { title: '按键导航', routerLink: { name: 'ComponentTableScrollKeyboard' } },
               { title: '单元格合并', routerLink: { name: 'ComponentTableScrollMerge' } },
               { title: '树形虚拟滚动', routerLink: { name: 'ComponentTableScrollTree' } }
+            ]
+          },
+          {
+            title: '表格搜索',
+            children: [
+              { title: '实现表格搜索', routerLink: { name: 'ComponentTableSearchList' } },
+              { title: '实现树形表格搜索', routerLink: { name: 'ComponentTableSearchTree' } }
             ]
           }
         ]
@@ -798,7 +811,8 @@ export const navConfigList: NavVO[] = [
               { title: '单击编辑', routerLink: { name: 'ComponentGridEditClick' } },
               { title: '双击编辑', routerLink: { name: 'ComponentGridEditDblclick' } },
               { title: '禁用单元格编辑', routerLink: { name: 'ComponentGridEditCellDisable' } },
-              { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRowDisable' } }
+              { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRowDisable' } },
+              { title: '使用第三方组件', linkUrl: '/other4/#/plugin-render-element/grid/edit' }
             ]
           },
           {
@@ -1103,7 +1117,8 @@ export const navConfigList: NavVO[] = [
           { title: '自定义控件分组', routerLink: { name: 'ComponentFormDesignCustomGroup' } },
           { title: '移动端设计器', routerLink: { name: 'ComponentFormDesignMobile' } },
           { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentFormDesignPcAndMobile' } },
-          { title: '渲染视图', routerLink: { name: 'ComponentFormDesignRenderView' } }
+          { title: '渲染视图', routerLink: { name: 'ComponentFormDesignRenderView' } },
+          { title: '使用第三方组件', linkUrl: '/other4/#/plugin-render-element/form-design/renderView' }
         ]
       },
       {

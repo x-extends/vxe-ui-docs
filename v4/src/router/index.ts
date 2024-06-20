@@ -1788,6 +1788,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'header',
                 name: 'ComponentTableFilterHeader',
                 component: () => import('@/views/table/filter/header/CodeExample.vue')
+              },
+              {
+                path: 'manual',
+                name: 'ComponentTableFilterManual',
+                component: () => import('@/views/table/filter/manual/CodeExample.vue')
               }
             ]
           },
@@ -1808,6 +1813,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'all',
                 name: 'ComponentTableMergeAll',
                 component: () => import('@/views/table/merge/all/CodeExample.vue')
+              },
+              {
+                path: 'footer',
+                name: 'ComponentTableMergeFooter',
+                component: () => import('@/views/table/merge/footer/CodeExample.vue')
+              },
+              {
+                path: 'horizontal',
+                name: 'ComponentTableMergeHorizontal',
+                component: () => import('@/views/table/merge/horizontal/CodeExample.vue')
               }
             ]
           },
@@ -1958,6 +1973,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'remoteFull',
                 name: 'ComponentTableCustomRemoteFull',
                 component: () => import('@/views/table/custom/remoteFull/CodeExample.vue')
+              },
+              {
+                path: 'manual',
+                name: 'ComponentTableCustomManual',
+                component: () => import('@/views/table/custom/manual/CodeExample.vue')
+              },
+              {
+                path: 'collapseColumn',
+                name: 'ComponentTableCustomCollapseColumn',
+                component: () => import('@/views/table/custom/collapseColumn/CodeExample.vue')
               }
             ]
           },
@@ -2313,6 +2338,21 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'tree',
                 name: 'ComponentTableScrollTree',
                 component: () => import('@/views/table/scroll/tree/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'search',
+            children: [
+              {
+                path: 'list',
+                name: 'ComponentTableSearchList',
+                component: () => import('@/views/table/search/list/CodeExample.vue')
+              },
+              {
+                path: 'tree',
+                name: 'ComponentTableSearchTree',
+                component: () => import('@/views/table/search/tree/CodeExample.vue')
               }
             ]
           }
