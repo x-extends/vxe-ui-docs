@@ -2050,6 +2050,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/table/edit/status/CodeExample.vue')
               },
               {
+                path: 'cellPlaceholder',
+                name: 'ComponentTableEditCellPlaceholder',
+                component: () => import('@/views/table/edit/cellPlaceholder/CodeExample.vue')
+              },
+              {
                 path: 'insert',
                 name: 'ComponentTableEditInsert',
                 component: () => import('@/views/table/edit/insert/CodeExample.vue')
@@ -2080,6 +2085,31 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/table/edit/rowValid/CodeExample.vue')
               },
               {
+                path: 'span',
+                name: 'ComponentTableEditSpan',
+                component: () => import('@/views/table/edit/span/CodeExample.vue')
+              },
+              {
+                path: 'menu',
+                name: 'ComponentTableEditMenu',
+                component: () => import('@/views/table/edit/menu/CodeExample.vue')
+              },
+              {
+                path: 'fileList',
+                name: 'ComponentTableEditFileList',
+                component: () => import('@/views/table/edit/fileList/CodeExample.vue')
+              },
+              {
+                path: 'modalForm',
+                name: 'ComponentTableEditModalForm',
+                component: () => import('@/views/table/edit/modalForm/CodeExample.vue')
+              },
+              {
+                path: 'drawerForm',
+                name: 'ComponentTableEditDrawerForm',
+                component: () => import('@/views/table/edit/drawerForm/CodeExample.vue')
+              },
+              {
                 path: 'uniqueSelect',
                 name: 'ComponentTableEditUniqueSelect',
                 component: () => import('@/views/table/edit/uniqueSelect/CodeExample.vue')
@@ -2088,6 +2118,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'cascadingSelect',
                 name: 'ComponentTableEditCascadingSelect',
                 component: () => import('@/views/table/edit/cascadingSelect/CodeExample.vue')
+              },
+              {
+                path: 'footerImmediately',
+                name: 'ComponentTableEditFooterImmediately',
+                component: () => import('@/views/table/edit/footerImmediately/CodeExample.vue')
               },
               {
                 path: 'realtimeSave',
