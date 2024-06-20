@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="height: 400px;">
+    <div style="height: 400px;overflow: hidden;">
       <vxe-table
         border
         max-height="100%"

@@ -9,7 +9,7 @@
       <vxe-button @click="tableHeight = '800px'">高800px</vxe-button>
     </p>
 
-    <div style="overflow: hidden;" :style="{width: tableWidth, height: tableHeight}">
+    <div :style="{overflow: 'hidden', width: tableWidth, height: tableHeight}">
       <vxe-grid v-bind="gridOptions"></vxe-grid>
     </div>
   </div>
