@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { reactive, ref } from 'vue'
 import { ElMessageBox } from 'element-plus'
 import { VxeGridInstance, VxeGridProps } from 'vxe-table'

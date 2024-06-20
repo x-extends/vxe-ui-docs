@@ -198,6 +198,16 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/plugin-render-element/grid/edit/CodeExample.vue')
           }
         ]
+      },
+      {
+        path: 'form-design',
+        children: [
+          {
+            path: 'renderView',
+            name: 'PluginRenderElementFormDesignRenderView',
+            component: () => import('@/views/plugin-render-element/form-design/renderView/CodeExample.vue')
+          }
+        ]
       }
     ]
   },
@@ -216,6 +226,16 @@ const routes: Array<RouteRecordRaw> = [
             path: 'edit',
             name: 'PluginRenderAntdGridEdit',
             component: () => import('@/views/plugin-render-antd/grid/edit/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'form-design',
+        children: [
+          {
+            path: 'renderView',
+            name: 'PluginRenderAntdFormDesignRenderView',
+            component: () => import('@/views/plugin-render-antd/form-design/renderView/CodeExample.vue')
           }
         ]
       }

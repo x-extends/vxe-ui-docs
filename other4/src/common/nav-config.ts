@@ -123,6 +123,12 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: '单元格可编辑', routerLink: { name: 'PluginRenderElementGridEdit' } }
         ]
+      },
+      {
+        title: 'FormDesign 表单设计器',
+        children: [
+          { title: '渲染视图', routerLink: { name: 'PluginRenderElementFormDesignRenderView' } }
+        ]
       }
     ]
   },
@@ -146,6 +152,12 @@ export const navConfigList: NavVO[] = [
         title: 'Grid 配置式表格',
         children: [
           { title: '单元格可编辑', routerLink: { name: 'PluginRenderAntdGridEdit' } }
+        ]
+      },
+      {
+        title: 'FormDesign 表单设计器',
+        children: [
+          { title: '渲染视图', routerLink: { name: 'PluginRenderAntdFormDesignRenderView' } }
         ]
       }
     ]
