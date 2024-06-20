@@ -2040,6 +2040,16 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/table/edit/dblclick/CodeExample.vue')
               },
               {
+                path: 'autoClear',
+                name: 'ComponentTableEditAutoClear',
+                component: () => import('@/views/table/edit/autoClear/CodeExample.vue')
+              },
+              {
+                path: 'status',
+                name: 'ComponentTableEditStatus',
+                component: () => import('@/views/table/edit/status/CodeExample.vue')
+              },
+              {
                 path: 'insert',
                 name: 'ComponentTableEditInsert',
                 component: () => import('@/views/table/edit/insert/CodeExample.vue')
@@ -2055,6 +2065,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/table/edit/pending/CodeExample.vue')
               },
               {
+                path: 'revert',
+                name: 'ComponentTableEditRevert',
+                component: () => import('@/views/table/edit/revert/CodeExample.vue')
+              },
+              {
                 path: 'cellValid',
                 name: 'ComponentTableEditCellValid',
                 component: () => import('@/views/table/edit/cellValid/CodeExample.vue')
@@ -2063,6 +2078,21 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'rowValid',
                 name: 'ComponentTableEditRowValid',
                 component: () => import('@/views/table/edit/rowValid/CodeExample.vue')
+              },
+              {
+                path: 'uniqueSelect',
+                name: 'ComponentTableEditUniqueSelect',
+                component: () => import('@/views/table/edit/uniqueSelect/CodeExample.vue')
+              },
+              {
+                path: 'cascadingSelect',
+                name: 'ComponentTableEditCascadingSelect',
+                component: () => import('@/views/table/edit/cascadingSelect/CodeExample.vue')
+              },
+              {
+                path: 'realtimeSave',
+                name: 'ComponentTableEditRealtimeSave',
+                component: () => import('@/views/table/edit/realtimeSave/CodeExample.vue')
               }
             ]
           },

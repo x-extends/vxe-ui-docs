@@ -579,11 +579,17 @@ export const navConfigList: NavVO[] = [
               { title: '手动编辑', routerLink: { name: 'ComponentTableEditManual' } },
               { title: '单击编辑', routerLink: { name: 'ComponentTableEditClick' } },
               { title: '双击编辑', routerLink: { name: 'ComponentTableEditDblclick' } },
+              { title: '关闭自动清除编辑状态', routerLink: { name: 'ComponentTableEditAutoClear' } },
+              { title: '编辑状态', routerLink: { name: 'ComponentTableEditStatus' } },
               { title: '插入数据', routerLink: { name: 'ComponentTableEditInsert' } },
               { title: '删除数据', routerLink: { name: 'ComponentTableEditRemove' } },
               { title: '标记为删除', routerLink: { name: 'ComponentTableEditPending' } },
+              { title: '还原数据', routerLink: { name: 'ComponentTableEditRevert' } },
               { title: '单元格校验', routerLink: { name: 'ComponentTableEditCellValid' } },
-              { title: '行校验', routerLink: { name: 'ComponentTableEditRowValid' } }
+              { title: '行校验', routerLink: { name: 'ComponentTableEditRowValid' } },
+              { title: '实现唯一下拉选项', routerLink: { name: 'ComponentTableEditUniqueSelect' } },
+              { title: '实现多列下拉联动', routerLink: { name: 'ComponentTableEditCascadingSelect' } },
+              { title: '实现单元格实时保存', routerLink: { name: 'ComponentTableEditRealtimeSave' } }
             ]
           },
           {
