@@ -503,7 +503,8 @@ export const navConfigList: NavVO[] = [
             title: '筛选',
             children: [
               { title: '修改筛选选项', routerLink: { name: 'ComponentTableFilterOptions' } },
-              { title: '服务端筛选', routerLink: { name: 'ComponentTableFilterRemote' } }
+              { title: '服务端筛选', routerLink: { name: 'ComponentTableFilterRemote' } },
+              { title: '实现列头筛选', routerLink: { name: 'ComponentTableFilterHeader' } }
             ]
           },
           {
@@ -559,18 +560,23 @@ export const navConfigList: NavVO[] = [
           {
             title: '树形',
             children: [
+              { title: '基础使用', routerLink: { name: 'ComponentTableTreeBasic' } },
               { title: '平级结构', routerLink: { name: 'ComponentTableTreeLeveling' } },
               { title: '层级结构', routerLink: { name: 'ComponentTableTreeHierarchy' } },
               { title: '自定义图标', routerLink: { name: 'ComponentTableTreeIcon' } },
               { title: '显示连接线', routerLink: { name: 'ComponentTableTreeLine' } },
+              { title: '最大高度', routerLink: { name: 'ComponentTableTreeMaxHeight' } },
+              { title: '手风琴效果', routerLink: { name: 'ComponentTableTreeAccordion' } },
               { title: '单选框', routerLink: { name: 'ComponentTableTreeRadio' } },
               { title: '复选框', routerLink: { name: 'ComponentTableTreeCheckbox' } },
               { title: '树形排序', routerLink: { name: 'ComponentTableTreeSort' } },
+              { title: '树形筛选', routerLink: { name: 'ComponentTableTreeFilter' } },
+              { title: '冻结列', routerLink: { name: 'ComponentTableTreeFixed' } },
               { title: '右键菜单', routerLink: { name: 'ComponentTableTreeMenu' } },
               { title: '懒加载', routerLink: { name: 'ComponentTableTreeLazy' } },
-              { title: '懒加载与可编辑', routerLink: { name: 'ComponentTableTreeLazyEdit' } },
-              { title: '展开行', routerLink: { name: 'ComponentTableTreeExpand' } },
-              { title: '展开行懒加载', routerLink: { name: 'ComponentTableTreeExpandLazy' } }
+              { title: '懒加载 - 可编辑', routerLink: { name: 'ComponentTableTreeLazyEdit' } },
+              { title: '同时使用展开行', routerLink: { name: 'ComponentTableTreeExpand' } },
+              { title: '同时使用展开行 - 懒加载', routerLink: { name: 'ComponentTableTreeExpandLazy' } }
             ]
           },
           {

@@ -1783,6 +1783,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'remote',
                 name: 'ComponentTableFilterRemote',
                 component: () => import('@/views/table/filter/remote/CodeExample.vue')
+              },
+              {
+                path: 'header',
+                name: 'ComponentTableFilterHeader',
+                component: () => import('@/views/table/filter/header/CodeExample.vue')
               }
             ]
           },
@@ -1960,6 +1965,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'tree',
             children: [
               {
+                path: 'basic',
+                name: 'ComponentTableTreeBasic',
+                component: () => import('@/views/table/tree/basic/CodeExample.vue')
+              },
+              {
                 path: 'leveling',
                 name: 'ComponentTableTreeLeveling',
                 component: () => import('@/views/table/tree/leveling/CodeExample.vue')
@@ -1973,6 +1983,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'icon',
                 name: 'ComponentTableTreeIcon',
                 component: () => import('@/views/table/tree/icon/CodeExample.vue')
+              },
+              {
+                path: 'accordion',
+                name: 'ComponentTableTreeAccordion',
+                component: () => import('@/views/table/tree/accordion/CodeExample.vue')
               },
               {
                 path: 'radio',
@@ -1990,6 +2005,16 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/table/tree/line/CodeExample.vue')
               },
               {
+                path: 'maxHeight',
+                name: 'ComponentTableTreeMaxHeight',
+                component: () => import('@/views/table/tree/maxHeight/CodeExample.vue')
+              },
+              {
+                path: 'fixed',
+                name: 'ComponentTableTreeFixed',
+                component: () => import('@/views/table/tree/fixed/CodeExample.vue')
+              },
+              {
                 path: 'menu',
                 name: 'ComponentTableTreeMenu',
                 component: () => import('@/views/table/tree/menu/CodeExample.vue')
@@ -1998,6 +2023,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'sort',
                 name: 'ComponentTableTreeSort',
                 component: () => import('@/views/table/tree/sort/CodeExample.vue')
+              },
+              {
+                path: 'filter',
+                name: 'ComponentTableTreeFilter',
+                component: () => import('@/views/table/tree/filter/CodeExample.vue')
               },
               {
                 path: 'lazy',
