@@ -956,10 +956,14 @@ export const navConfigList: NavVO[] = [
             ]
           }
         ]
+      },
+      {
+        title: '事件拦截（高级用法）',
+        children: [
+          { title: 'API', routerLink: { name: 'GlobalInterceptorTableAPI' } },
+          { title: '可编辑 - 兼容性处理', routerLink: { name: 'GlobalInterceptorTableBase' } }
+        ]
       }
-      // { title: '右键菜单（全局）' },
-      // { title: '校验器（全局）' },
-      // { title: '事件拦截（高级）' }
     ]
   },
   {

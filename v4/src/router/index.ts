@@ -153,6 +153,26 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'interceptor',
+        children: [
+          {
+            path: 'table',
+            children: [
+              {
+                path: 'api',
+                name: 'GlobalInterceptorTableAPI',
+                component: () => import('@/views/global/interceptor/table/api/CodeExample.vue')
+              },
+              {
+                path: 'base',
+                name: 'GlobalInterceptorTableBase',
+                component: () => import('@/views/global/interceptor/table/base/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
+      {
         path: 'renderer',
         children: [
           {
