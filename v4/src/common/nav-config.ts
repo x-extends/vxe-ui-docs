@@ -807,6 +807,7 @@ export const navConfigList: NavVO[] = [
               { title: '导出 CSV', routerLink: { name: 'ComponentGridExportCsv' } },
               { title: '导出 XLSX', linkUrl: '/other4/#/plugin-export-xlsx/grid/export' },
               { title: '导出 PDF', linkUrl: '/other4/#/plugin-export-pdf/grid/export' },
+              { title: '自定义数据', routerLink: { name: 'ComponentGridExportData' } },
               { title: '高级导出', routerLink: { name: 'ComponentGridExportAdvanced' } }
             ]
           },
@@ -843,6 +844,7 @@ export const navConfigList: NavVO[] = [
               { title: '工具栏 - 查询', routerLink: { name: 'ComponentGridProxyToolbarQuery' } },
               { title: '手动调用 - 查询', routerLink: { name: 'ComponentGridProxyManualQuery' } },
               { title: '工具栏 - 全量数据导出', routerLink: { name: 'ComponentGridProxyToolbarExport' } },
+              { title: '工具栏 - 服务端导出', routerLink: { name: 'ComponentGridProxyToolbarRemoteExport' } },
               { title: '工具栏 - 删除已选', routerLink: { name: 'ComponentGridProxyToolbarDelete' } },
               { title: '手动调用 - 删除已选', routerLink: { name: 'ComponentGridProxyManualDelete' } },
               { title: '工具栏 - 批量标记删除', routerLink: { name: 'ComponentGridProxyToolbarMark' } },

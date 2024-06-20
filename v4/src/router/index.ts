@@ -2770,6 +2770,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/grid/export/csv/CodeExample.vue')
               },
               {
+                path: 'data',
+                name: 'ComponentGridExportData',
+                component: () => import('@/views/grid/export/data/CodeExample.vue')
+              },
+              {
                 path: 'advanced',
                 name: 'ComponentGridExportAdvanced',
                 component: () => import('@/views/grid/export/advanced/CodeExample.vue')
@@ -2853,6 +2858,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'toolbarExport',
                 name: 'ComponentGridProxyToolbarExport',
                 component: () => import('@/views/grid/proxy/toolbarExport/CodeExample.vue')
+              },
+              {
+                path: 'toolbarRemoteExport',
+                name: 'ComponentGridProxyToolbarRemoteExport',
+                component: () => import('@/views/grid/proxy/toolbarRemoteExport/CodeExample.vue')
               },
               {
                 path: 'toolbarDelete',
