@@ -4,11 +4,11 @@
       border
       :edit-config="{mode: 'cell', trigger: 'click'}"
       :data="tableData">
-      <vxe-column type="seq" width="70"></vxe-column>
+      <vxe-column type="seq" width="60"></vxe-column>
       <vxe-column field="name" title="Name" width="160"></vxe-column>
       <vxe-column field="sex" title="Sex" :edit-render="{}">
         <template #edit="{ row }">
-          <vxe-select v-model="row.sex" :options="sexOptions" transfer></vxe-select>
+          <vxe-select v-model="row.sex" :options="sexOptions"></vxe-select>
         </template>
         <template #default="{ row }">
           <span>{{ formatSex(row) }}</span>

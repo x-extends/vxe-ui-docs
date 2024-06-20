@@ -1,6 +1,6 @@
 <template>
   <div v-if="currRow && currColumn" class="edit-down-table">
-    <vxe-pulldown v-model="showPopup" class="edit-down-pulldown" transfer>
+    <vxe-pulldown v-model="showPopup" class="edit-down-pulldown">
       <template #default>
         <vxe-input class="edit-down-input" v-model="currRow[currColumn.field]" @keyup="keyupEvent" @click="clickEvent" @suffix-click="suffixClick"></vxe-input>
       </template>

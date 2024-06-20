@@ -2,7 +2,7 @@
   <div>
     <vxe-grid v-bind="gridOptions">
       <template #sex_edit="{ row }">
-        <vxe-select v-model="row.sex" :options="sexOptions" transfer></vxe-select>
+        <vxe-select v-model="row.sex" :options="sexOptions"></vxe-select>
       </template>
       <template #sex_default="{ row }">
         <span>{{ formatSex(row) }}</span>

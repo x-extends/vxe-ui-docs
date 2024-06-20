@@ -33,7 +33,7 @@
           <span>{{ formatSex(row.sex) }}</span>
         </template>
         <template #edit="{ row }">
-          <vxe-select v-model="row.sex" transfer>
+          <vxe-select v-model="row.sex">
             <vxe-option v-for="item in sexList" :key="item.value" :value="item.value" :label="item.label"></vxe-option>
           </vxe-select>
         </template>
@@ -45,7 +45,7 @@
       </vxe-column>
       <vxe-column field="date12" title="Date" sortable :edit-render="{}">
         <template #edit="{ row }">
-          <vxe-input v-model="row.date12" type="date" transfer></vxe-input>
+          <vxe-input v-model="row.date12" type="date"></vxe-input>
         </template>
       </vxe-column>
     </vxe-table>
