@@ -821,6 +821,7 @@ export const navConfigList: NavVO[] = [
             title: '打印表格',
             children: [
               { title: '打印表格', routerLink: { name: 'ComponentGridPrintBase' } },
+              { title: '自定义头部和底部', routerLink: { name: 'ComponentGridPrintBeforeMethod' } },
               { title: '高级打印', routerLink: { name: 'ComponentGridPrintAdvanced' } }
             ]
           },

@@ -2785,6 +2785,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/grid/print/base/CodeExample.vue')
               },
               {
+                path: 'beforeMethod',
+                name: 'ComponentGridPrintBeforeMethod',
+                component: () => import('@/views/grid/print/beforeMethod/CodeExample.vue')
+              },
+              {
                 path: 'advanced',
                 name: 'ComponentGridPrintAdvanced',
                 component: () => import('@/views/grid/print/advanced/CodeExample.vue')
