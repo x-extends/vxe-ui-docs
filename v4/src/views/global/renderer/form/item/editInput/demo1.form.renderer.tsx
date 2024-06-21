@@ -1,3 +1,5 @@
+// main.js
+
 import { VxeUI } from 'vxe-pc-ui'
 
 // 创建一个输入框渲染器

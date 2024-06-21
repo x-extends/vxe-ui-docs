@@ -1,3 +1,5 @@
+// main.js
+
 import { VxeUI } from 'vxe-pc-ui'
 import DemoEditUpload from './DemoEditUpload.vue'
 

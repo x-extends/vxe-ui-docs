@@ -1,4 +1,5 @@
 // main.js
+
 import { VxeUI, VxeInput } from 'vxe-pc-ui'
 
 // 创建一个金额输入渲染器

@@ -1,3 +1,5 @@
+// main.js
+
 import { VxeUI } from 'vxe-pc-ui'
 
 // 拦截单元格清除事件，解决渲染第三方组件被关闭导致无法操作问题

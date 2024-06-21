@@ -1,3 +1,5 @@
+// main.js
+
 import { VxeUI } from 'vxe-pc-ui'
 
 // 注册一个导出菜单

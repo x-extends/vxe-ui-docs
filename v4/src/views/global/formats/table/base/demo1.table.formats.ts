@@ -1,3 +1,5 @@
+// main.js
+
 import { VxeUI } from 'vxe-pc-ui'
 import XEUtils from 'xe-utils'
 

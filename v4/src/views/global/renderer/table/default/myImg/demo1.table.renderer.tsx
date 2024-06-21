@@ -1,4 +1,5 @@
 // main.js
+
 import { VxeUI, VxeImage } from 'vxe-pc-ui'
 
 // 创建一个图片预览渲染器
