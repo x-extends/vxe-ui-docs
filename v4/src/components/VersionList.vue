@@ -101,7 +101,7 @@ const getVersion = () => {
       stableVersionList.value = stableList
       betaVersionList.value = betaList
       if (stableList.length) {
-        selectStableVersion.value = tags[`v${appStore.docsVersion}-legacy`] || stableList[0].value
+        selectStableVersion.value = tags[`v${appStore.docsVersion}-latest`] || stableList[0].value
       }
       if (betaList.length) {
         selectBetaVersion.value = betaList[0].value
