@@ -52,8 +52,18 @@ export default {
       apiSearch: 'Search {0} API'
     },
     version: {
-      v4: 'v4.x (vue 3.x Latest)',
-      v3: 'v3.x (vue 2.6+ LTS)'
+      'vxe-table': {
+        v1: 'v1.x (vue 2.6 Stop) ~ 2020-04 Stop updating',
+        v2: 'v2.x (vue 2.6 Stop) ~ 2021-12 Stop updating',
+        v3: 'v3.x (vue 2.6 LTS)',
+        v3d9: 'v3.9.x (vue 2.6 ?)',
+        v4: 'v4.x (vue 3.x LTS) ~ 2024-12 Stop updating',
+        v4d7: 'v4.7.x (vue 3.x Stable)'
+      },
+      'vxe-pc-ui': {
+        v4: 'v4.x (vue 3.x Latest)',
+        v3: 'v3.x (vue 2.6+ LTS)'
+      }
     },
     docs: {
       button: {
@@ -137,7 +147,8 @@ export default {
       props_disabled: '是否禁用',
       props_loading: '是否加载中',
       props_placement: '固定显示下拉面板的方向',
-      props_transfer: '是否将弹框容器插入于 body 内（对于嵌入到表格或者弹窗中被遮挡时需要设置为 true）'
+      props_transfer: '是否将弹框容器插入于 body 内（对于嵌入到表格或者弹窗中被遮挡时需要设置为 true）',
+      props_title: ''
     },
     'button-group': {
       props_round: '圆角边框',
@@ -160,7 +171,8 @@ export default {
       props_options_icon: '前缀图标',
       props_options_status: '按钮的图标',
       props_options_disabled: '是否禁用',
-      props_options_loading: '是否加载中'
+      props_options_loading: '是否加载中',
+      props_options_title: ''
     },
     card: {
       props_title: '',
@@ -923,7 +935,8 @@ export default {
       events_add: '',
       events_remove: '',
       'events_upload-success': '',
-      'events_upload-error': ''
+      'events_upload-error': '',
+      'props_show-list': ''
     },
     table: {
       'props_min-height': '表格最小高度',
@@ -1668,7 +1681,9 @@ export default {
       'events_edit-activated': '只对 edit-config 配置时有效，单元格被激活编辑时会触发该事件',
       'events_edit-disabled': '只对 edit-config 配置时有效，当单元格激活时如果是禁用状态时会触发该事件',
       'events_valid-error': '只对 edit-rules 配置时有效，当数据校验不通过时会触发该事件',
-      events_scroll: '表格滚动时会触发该事件'
+      events_scroll: '表格滚动时会触发该事件',
+      'methods_get-cell-element': '获取单元格对应的 TD 元素，如果是非可视区，则需要先滚动到可视区后再进行获取',
+      'methods_get-cell-label': '获取单元格的显示值，支持 formatter（除了插槽之外）'
     },
     colgroup: {
       slots_header: '自定义表头内容的模板',
@@ -2878,7 +2893,9 @@ export default {
       'events_edit-activated': '只对 edit-config 配置时有效，单元格被激活编辑时会触发该事件',
       'events_edit-disabled': '只对 edit-config 配置时有效，当单元格激活时如果是禁用状态时会触发该事件',
       'events_valid-error': '只对 edit-rules 配置时有效，当数据校验不通过时会触发该事件',
-      events_scroll: '表格滚动时会触发该事件'
+      events_scroll: '表格滚动时会触发该事件',
+      'methods_get-cell-element': '获取单元格对应的 TD 元素，如果是非可视区，则需要先滚动到可视区后再进行获取',
+      'methods_get-cell-label': '获取单元格的显示值，支持 formatter（除了插槽之外）'
     },
     toolbar: {
       'props_class-name': '给工具栏 className',

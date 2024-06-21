@@ -25,9 +25,8 @@ import { VxeFormPropTypes } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
-  nickname: string
-  sex: string
-  address: string
+  mobile: string
+  email: string
 }
 
 const formData = ref<FormDataVO>({
