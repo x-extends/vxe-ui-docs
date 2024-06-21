@@ -22,7 +22,7 @@ export const useAppStore = defineStore('app', {
       serveTY: new Date().getFullYear(),
       language: currLanguage,
       siteBaseUrl: process.env.VUE_APP_SITE_BASE_URL,
-      pluginApiUrl: `${process.env.VUE_APP_SITE_BASE_URL}plugins/`,
+      pluginApiUrl: 'https://vxetable.cn/plugins/',
       compApiMaps: null as any
     }
   },
