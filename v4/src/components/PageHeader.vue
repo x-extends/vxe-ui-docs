@@ -26,7 +26,7 @@
         <template #dropdown>
           <ul class="system-menu-wrapper">
             <li v-for="(item, index) in systemMenuList" :key="index">
-              <vxe-link v-bind="item" target="_blank"></vxe-link>
+              <vxe-link target="_blank" :href="item.href" :content="item.content"></vxe-link>
               <span v-if="item.isEnterprise" class="enterprise">{{ $t('app.header.enterpriseVersion') }}</span>
             </li>
           </ul>

@@ -1,4 +1,5 @@
-import { VxeUI } from 'vxe-pc-ui'
+// main.js
+import { VxeUI, VxeInput } from 'vxe-pc-ui'
 
 // 创建一个金额输入渲染器
 VxeUI.renderer.add('EditAmount', {
@@ -7,7 +8,7 @@ VxeUI.renderer.add('EditAmount', {
   // 可编辑激活模板
   renderTableEdit (renderOpts, params) {
     const { row, column } = params
-    return <vxe-input type="float" digits="2" prefix-icon="vxe-icon-rmb" v-model={ row[column.field] } />
+    return <VxeInput type="float" digits="2" prefix-icon="vxe-icon-rmb" v-model={ row[column.field] } />
   },
   // 可编辑显示模板
   renderTableCell (renderOpts, params) {

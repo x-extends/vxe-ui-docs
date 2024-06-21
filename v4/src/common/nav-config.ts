@@ -431,7 +431,6 @@ export const navConfigList: NavVO[] = [
   {
     i18nKey: 'app.aside.menu.tableTitle',
     children: [
-      { title: '点击查看完整文档', linkUrl: 'https://vxetable.cn/' },
       {
         i18nKey: 'app.aside.menu.table.name',
         children: [

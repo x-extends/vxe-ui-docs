@@ -1,21 +1,21 @@
 <template>
   <div v-if="currRow && currColumn" class="edit-down-table">
-    <vxe-pulldown v-model="showPopup" class="edit-down-pulldown">
+    <VxePulldown v-model="showPopup" class="edit-down-pulldown">
       <template #default>
-        <vxe-input class="edit-down-input" v-model="currRow[currColumn.field]" @keyup="keyupEvent" @click="clickEvent" @suffix-click="suffixClick"></vxe-input>
+        <VxeInput class="edit-down-input" v-model="currRow[currColumn.field]" @keyup="keyupEvent" @click="clickEvent" @suffix-click="suffixClick"></VxeInput>
       </template>
       <template #dropdown>
         <div class="edit-down-wrapper">
-          <vxe-grid v-bind="gridOptions" @cell-click="selectEvent" @page-change="pageChangeEvent"></vxe-grid>
+          <VxeGrid v-bind="gridOptions" @cell-click="selectEvent" @page-change="pageChangeEvent"></VxeGrid>
         </div>
       </template>
-    </vxe-pulldown>
+    </VxePulldown>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { PropType, reactive, ref } from 'vue'
-import { VxeTableDefines, VxeTableEvents, VxeGridProps, VxePagerEvents, VxeGlobalRendererHandles } from 'vxe-pc-ui'
+import { VxeGrid, VxeInput, VxePulldown, VxeTableDefines, VxeTableEvents, VxeGridProps, VxePagerEvents, VxeGlobalRendererHandles } from 'vxe-pc-ui'
 
 const props = defineProps({
   params: {
