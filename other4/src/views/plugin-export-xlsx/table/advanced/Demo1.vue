@@ -15,7 +15,7 @@
 
 <script lang="tsx" setup>
 import { ref } from 'vue'
-import { VxeTableInstance } from 'vxe-pc-ui'
+import { VxeTableInstance } from 'vxe-table'
 
 interface RowVO {
   id: number

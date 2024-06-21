@@ -1,22 +1,23 @@
 <template>
   <div v-if="currOption" class="my-filter-complex">
     <div class="my-fc-type">
-      <vxe-radio v-model="currOption.data.type" name="fType" label="has">包含</vxe-radio>
-      <vxe-radio v-model="currOption.data.type" name="fType" label="eq">等于</vxe-radio>
+      <VxeRadio v-model="currOption.data.type" name="fType" label="has">包含</VxeRadio>
+      <VxeRadio v-model="currOption.data.type" name="fType" label="eq">等于</VxeRadio>
     </div>
     <div class="my-fc-name">
-      <vxe-input v-model="currOption.data.name" mode="text" placeholder="请输入名称" @input="changeOptionEvent()"></vxe-input>
+      <VxeInput v-model="currOption.data.name" mode="text" placeholder="请输入名称" @input="changeOptionEvent()"></VxeInput>
     </div>
     <div class="my-fc-footer">
-      <vxe-button @click="resetEvent">重置</vxe-button>
-      <vxe-button status="primary" @click="confirmEvent">确认</vxe-button>
+      <VxeButton @click="resetEvent">重置</VxeButton>
+      <VxeButton status="primary" @click="confirmEvent">确认</VxeButton>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { PropType, ref } from 'vue'
-import { VxeGlobalRendererHandles, VxeTableDefines } from 'vxe-pc-ui'
+import { VxeInput, VxeRadio, VxeButton, VxeGlobalRendererHandles } from 'vxe-pc-ui'
+import { VxeTableDefines } from 'vxe-table'
 
 const props = defineProps({
   params: {

@@ -21,7 +21,8 @@
 
 <script lang="ts" setup>
 import { PropType, ref } from 'vue'
-import { VxeTableDefines, VxeGlobalRendererHandles } from 'vxe-pc-ui'
+import { VxeGlobalRendererHandles } from 'vxe-pc-ui'
+import { VxeTableDefines } from 'vxe-table'
 
 const props = defineProps({
   params: {

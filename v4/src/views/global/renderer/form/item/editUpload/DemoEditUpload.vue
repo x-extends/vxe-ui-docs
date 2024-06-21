@@ -1,16 +1,16 @@
 <template>
-  <vxe-upload
+  <VxeUpload
     v-if="currData && currField"
     v-model="currData[currField]"
     multiple
     show-progress
     :upload-method="uploadMethod">
-  </vxe-upload>
+  </VxeUpload>
 </template>
 
 <script lang="ts" setup>
 import { ref, PropType } from 'vue'
-import { VxeGlobalRendererHandles, VxeUploadPropTypes, VxeFormItemPropTypes } from 'vxe-pc-ui'
+import { VxeUpload, VxeGlobalRendererHandles, VxeUploadPropTypes, VxeFormItemPropTypes } from 'vxe-pc-ui'
 import axios from 'axios'
 
 const props = defineProps({

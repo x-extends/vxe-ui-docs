@@ -29,7 +29,7 @@
 
 <script lang="tsx" setup>
 import { ref } from 'vue'
-import { VxeTableInstance } from 'vxe-pc-ui'
+import { VxeTableInstance } from 'vxe-table'
 
 const tableRef = ref<VxeTableInstance>()
 

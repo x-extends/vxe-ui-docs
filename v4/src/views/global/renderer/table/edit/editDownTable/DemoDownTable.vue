@@ -15,7 +15,8 @@
 
 <script lang="ts" setup>
 import { PropType, reactive, ref } from 'vue'
-import { VxeGrid, VxeInput, VxePulldown, VxeTableDefines, VxeTableEvents, VxeGridProps, VxePagerEvents, VxeGlobalRendererHandles } from 'vxe-pc-ui'
+import { VxeInput, VxePulldown, VxePagerEvents, VxeGlobalRendererHandles } from 'vxe-pc-ui'
+import { VxeTableDefines, VxeTableEvents, VxeGridProps, VxeGrid } from 'vxe-table'
 
 const props = defineProps({
   params: {

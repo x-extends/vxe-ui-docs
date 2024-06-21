@@ -16,7 +16,8 @@
 
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-import { VxePulldownInstance, VxeGridProps, VxeGridListeners } from 'vxe-pc-ui'
+import { VxeGridProps, VxeGridListeners } from 'vxe-table'
+import { VxePulldownInstance } from 'vxe-pc-ui'
 
 interface RowVO {
   name: string

@@ -17,7 +17,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeUI, VxeTableInstance } from 'vxe-pc-ui'
+import { VxeUI, VxeTableInstance } from 'vxe-table'
 import XEUtils from 'xe-utils'
 
 interface RowVO {

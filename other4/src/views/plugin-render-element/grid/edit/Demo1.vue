@@ -21,7 +21,7 @@ const restaurants = [
   { value: 'PM', name: 'PM' }
 ]
 
-const gridOptions = reactive({
+const gridOptions = reactive<VxeGridProps>({
   border: true,
   showOverflow: true,
   keepSource: true,
@@ -63,7 +63,7 @@ const gridOptions = reactive({
     { field: 'flag', title: 'ElSwitch', width: 100, cellRender: { name: 'ElSwitch' } },
     { field: 'rate', title: 'ElRate', width: 200, cellRender: { name: 'ElRate' } }
   ]
-} as VxeGridProps)
+})
 
 const findSexList = () => {
   const sexList = [

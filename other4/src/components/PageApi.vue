@@ -34,7 +34,7 @@
 import { ref, watch, nextTick, computed, reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import { useAppStore } from '@/store/app'
-import { VxeGridProps, VxeGridInstance } from 'vxe-pc-ui'
+import { VxeGridProps, VxeGridInstance } from 'vxe-table'
 import i18n from '@/i18n'
 import XEUtils from 'xe-utils'
 

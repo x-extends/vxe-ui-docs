@@ -16,7 +16,7 @@
 
 <script lang="tsx" setup>
 import { ref, onMounted } from 'vue'
-import { VxeTableInstance, VxeToolbarInstance, VxeToolbarPropTypes } from 'vxe-pc-ui'
+import { VxeTableInstance, VxeToolbarInstance, VxeToolbarPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number

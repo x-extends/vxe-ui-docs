@@ -23,7 +23,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeTableEvents } from 'vxe-pc-ui'
+import { VxeTableEvents } from 'vxe-table'
 
 interface RowVO {
   name: string

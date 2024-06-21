@@ -23,7 +23,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeTablePropTypes, VxeColumnProps } from 'vxe-pc-ui'
+import { VxeTablePropTypes, VxeColumnProps } from 'vxe-table'
 import XEUtils from 'xe-utils'
 
 interface ChildVO {

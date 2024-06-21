@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-import { VxeUI, VxeGridInstance, VxeGridProps, VxeGridListeners } from 'vxe-pc-ui'
+import { VxeUI, VxeGridInstance, VxeGridProps, VxeGridListeners } from 'vxe-table'
 
 interface RowVO {
   name: string
