@@ -52,8 +52,18 @@ export default {
       apiSearch: 'Search {0} API'
     },
     version: {
-      v4: 'v4.x (vue 3.x Latest)',
-      v3: 'v3.x (vue 2.6+ LTS)'
+      'vxe-table': {
+        v1: 'v1.x (vue 2.6 Stop) ~ 2020-04 Stop updating',
+        v2: 'v2.x (vue 2.6 Stop) ~ 2021-12 Stop updating',
+        v3: 'v3.x (vue 2.6 LTS)',
+        v3d9: 'v3.9.x (vue 2.6 ?)',
+        v4: 'v4.x (vue 3.x LTS) ~ 2024-12 Stop updating',
+        v4d7: 'v4.7.x (vue 3.x Stable)'
+      },
+      'vxe-pc-ui': {
+        v4: 'v4.x (vue 3.x Latest)',
+        v3: 'v3.x (vue 2.6+ LTS)'
+      }
     },
     docs: {
       button: {

@@ -15,15 +15,14 @@ let apiPromise: Promise<any> | null = null
 export const useAppStore = defineStore('app', {
   state () {
     return {
+      pageTitle: process.env.VUE_APP_PAGE_TITLE,
+      packName: process.env.VUE_APP_PACKAGE_NAME,
       theme: currTheme,
       docsVersion: '4',
       serveTY: new Date().getFullYear(),
       language: currLanguage,
       siteBaseUrl: process.env.VUE_APP_SITE_BASE_URL,
-      pluginDocsUrl: `${process.env.VUE_APP_SITE_BASE_URL}pluginDocs/`,
       pluginApiUrl: `${process.env.VUE_APP_SITE_BASE_URL}plugins/`,
-      docsGithubUrl: 'https://github.com/x-extends/vxe-ui-docs/tree/main/other4',
-      serveApiUrl: 'https://api.vxetable.cn/demo',
       compApiMaps: null as any
     }
   },
@@ -42,7 +41,7 @@ export const useAppStore = defineStore('app', {
     },
     updateComponentApiJSON () {
       if (!apiPromise) {
-        apiPromise = fetch(`${this.siteBaseUrl}component-api/ui-v${this.docsVersion}/apiMaps.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+        apiPromise = fetch(`${this.siteBaseUrl}component-api/${process.env.VUE_APP_PACKAGE_NAME}-v${process.env.VUE_APP_VXE_VERSION}/apiMaps.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
           return res.json().then(data => {
             if (data) {
               this.compApiMaps = data

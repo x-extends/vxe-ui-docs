@@ -114,7 +114,7 @@ const importJsCodes = ref<ImportItemVO[]>([])
 const DemoCode = props.path ? defineAsyncComponent(() => import(`@/views/${props.path}`)) : null
 
 const gitDir = computed(() => {
-  return `${appStore.docsGithubUrl}/src/views/${compDir.value}`
+  return `${process.env.VUE_APP_DOCS_GITHUB_URL}/src/views/${compDir.value}`
 })
 
 const compDir = computed(() => {
@@ -292,7 +292,7 @@ const toggleItemExpand = (item: ImportItemVO) => {
 }
 
 const openDocs = () => {
-  open(`${appStore.docsGithubUrl}/src/views/${props.path}.vue`)
+  open(`${process.env.VUE_APP_DOCS_GITHUB_URL}/src/views/${props.path}.vue`)
 }
 </script>
 

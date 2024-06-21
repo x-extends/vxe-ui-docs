@@ -60,7 +60,7 @@ declare global {
 
 window.XEUtils = XEUtils
 
-axios.defaults.baseURL = 'https://api.vxetable.cn'
+axios.defaults.baseURL = 'https://api.vxetable.cn/demo'
 
 VxeUI.setI18n('en-US', enUS)
 

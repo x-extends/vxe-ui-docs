@@ -13,6 +13,7 @@ export interface NavVO {
     query?: Record<string, string | number>
   }
   linkUrl?: string
+  linkTarget?: '_self' | '_blank'
   keywords?: string[]
   children?: NavVO[]
 }

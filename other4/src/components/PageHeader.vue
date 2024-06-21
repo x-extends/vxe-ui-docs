@@ -3,16 +3,19 @@
     <div class="header-left">
       <a class="logo" :href="siteBaseUrl">
         <img :src="`${siteBaseUrl}logo.png`">
-        <span class="title">Vxe UI</span>
+        <span class="title">{{ appStore.pageTitle }}</span>
       </a>
-      <a href='https://gitee.com/x-extends/vxe-pc-ui/stargazers'>
-        <img src='https://gitee.com/x-extends/vxe-pc-ui/badge/star.svg?theme=gvp' alt='star'>
+      <a v-if="appStore.packName === 'vxe-table'" href='https://gitee.com/xuliangzhan_admin/vxe-table/stargazers'>
+        <img src='https://gitee.com/xuliangzhan_admin/vxe-table/badge/star.svg?theme=gvp' alt='star'>
       </a>
-      <a href="http://npm-stat.com/charts.html?package=vxe-pc-ui">
-        <img src="https://img.shields.io/npm/dm/vxe-pc-ui.svg">
+      <a v-else :href='`https://gitee.com/x-extends/${appStore.packName}/stargazers`'>
+        <img :src='`https://gitee.com/x-extends/${appStore.packName}/badge/star.svg?theme=gvp`' alt='star'>
       </a>
-      <a href="https://github.com/x-extends/vxe-pc-ui/stargazers">
-        <img src="https://img.shields.io/github/stars/x-extends/vxe-pc-ui.svg">
+      <a :href="`http://npm-stat.com/charts.html?package=${appStore.packName}`">
+        <img :src="`https://img.shields.io/npm/dm/${appStore.packName}.svg`">
+      </a>
+      <a :href="`https://github.com/x-extends/${appStore.packName}/stargazers`">
+        <img :src="`https://img.shields.io/github/stars/x-extends/${appStore.packName}.svg`">
       </a>
     </div>
     <div class="header-middle"></div>
@@ -26,7 +29,7 @@
         <template #dropdown>
           <ul class="system-menu-wrapper">
             <li v-for="(item, index) in systemMenuList" :key="index">
-              <vxe-link v-bind="item" target="_blank"></vxe-link>
+              <vxe-link target="_blank" :href="item.href" :content="item.content"></vxe-link>
               <span v-if="item.isEnterprise" class="enterprise">{{ $t('app.header.enterpriseVersion') }}</span>
             </li>
           </ul>
@@ -42,7 +45,7 @@
         :close-label="$t('app.base.dark')">
       </vxe-switch>
       <vxe-radio-group v-model="currLang" class="switch-lang" type="button" size="mini" :options="langOptions"></vxe-radio-group>
-      <vxe-select v-model="currVersion" class="switch-version" size="mini" :options="versionOptions"></vxe-select>
+      <vxe-select v-model="currSysVersion" class="switch-version" size="mini" :options="sysVersionOptions" @change="vChangeEvent"></vxe-select>
       <vxe-link class="free-donation" status="success" :router-link="{name: 'FreeDonation'}" :content="$t('app.header.supportUs')"></vxe-link>
     </div>
   </div>
@@ -59,6 +62,9 @@ const appStore = useAppStore()
 
 const showSystemMenu = ref(false)
 const systemMenuList = ref<any[]>()
+
+const currSysVersion = ref(process.env.VUE_APP_VXE_VERSION)
+const systemVersionList = ref<any[]>([])
 
 const currTheme = computed({
   get () {
@@ -83,25 +89,37 @@ const currLang = computed({
   }
 })
 
-const versionOptions = computed(() => {
-  return [
-    { value: '4', label: i18n.global.t('app.version.v4') },
-    { value: '3', label: i18n.global.t('app.version.v3'), disabled: true }
-  ]
+const sysVersionOptions = computed(() => {
+  return systemVersionList.value.map(item => {
+    return {
+      label: i18n.global.t(`app.version.${process.env.VUE_APP_PACKAGE_NAME}.v${item.version.replace('.', 'd')}`),
+      value: item.version,
+      disabled: !!item.isDisabled,
+      className: item.isStop ? 'due-to-stop' : ''
+    }
+  })
 })
 
-const currVersion = computed({
-  get () {
-    return appStore.docsVersion
-  },
-  set (value) {
+const selectSysVersion = computed(() => {
+  return systemVersionList.value.find(item => item.version === currSysVersion.value)
+})
 
+const vChangeEvent = () => {
+  const selectSysItem = selectSysVersion.value
+  if (selectSysItem) {
+    location.href = selectSysItem.url
   }
-})
+}
 
 fetch(`${siteBaseUrl.value}component-api/system-list.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
   res.json().then(data => {
     systemMenuList.value = data
+  })
+})
+
+fetch(`${siteBaseUrl.value}component-api/${process.env.VUE_APP_PACKAGE_NAME}-version.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+  res.json().then(data => {
+    systemVersionList.value = data
   })
 })
 </script>

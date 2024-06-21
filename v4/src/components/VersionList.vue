@@ -92,7 +92,7 @@ const newBetsVersionList = computed(() => {
 })
 
 const getVersion = () => {
-  fetch(`${appStore.serveApiUrl}/api/npm/versions/vxe-pc-ui`, { method: 'GET' })
+  fetch(`${process.env.VUE_APP_SERVE_API_URL}/api/npm/versions/${process.env.VUE_APP_PACKAGE_NAME}`, { method: 'GET' })
     .then(response => response.json())
     .then((data) => {
       const { sp, dp, ss, time, tags } = data
