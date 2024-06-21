@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { VxeUI } from 'vxe-pc-ui'
+import axios from 'axios'
 import i18n from '@/i18n'
 
 const currTheme = (localStorage.getItem('VXE_DOCS_THEME') || 'light') as 'dark' | 'light'
@@ -11,22 +12,32 @@ VxeUI.setLanguage(currLanguage)
 document.documentElement.setAttribute('vxe-docs-theme', currTheme)
 
 let apiPromise: Promise<any> | null = null
+const i18nPromise: Record<string, Promise<any> | null> = {}
+const i18nStatus: Record<string, boolean> = {
+  [currLanguage]: true
+}
 
 export const useAppStore = defineStore('app', {
   state () {
     return {
+      pageLoading: false,
       pageTitle: process.env.VUE_APP_PAGE_TITLE,
       packName: process.env.VUE_APP_PACKAGE_NAME,
+      isPluginDocs: process.env.VUE_APP_IS_PLUGIN_DOCS === 'true',
       theme: currTheme,
       docsVersion: '4',
       serveTY: new Date().getFullYear(),
       language: currLanguage,
       siteBaseUrl: process.env.VUE_APP_SITE_BASE_URL,
-      pluginApiUrl: 'https://vxetable.cn/plugins/',
+      pluginBuyUrl: process.env.VUE_APP_PLUGIN_BUY_URL,
+      pluginDocsUrl: process.env.VUE_APP_PLUGIN_DOCS_URL,
       compApiMaps: null as any
     }
   },
   actions: {
+    setPageLoading (status: boolean) {
+      this.pageLoading = status
+    },
     setTheme (name: 'dark' | 'light') {
       this.theme = name || 'light'
       VxeUI.setTheme(name)
@@ -34,10 +45,28 @@ export const useAppStore = defineStore('app', {
       localStorage.setItem('VXE_DOCS_THEME', name)
     },
     setLanguage (language: 'zh-CN' | 'zh-TC' | 'en-US') {
-      this.language = language || 'zh-CN'
-      VxeUI.setLanguage(language)
-      i18n.global.locale = language
-      localStorage.setItem('VXE_DOCS_LANGUAGE', language)
+      if (i18nStatus[language]) {
+        this.language = language || 'zh-CN'
+        VxeUI.setLanguage(language)
+        i18n.global.locale = language
+        localStorage.setItem('VXE_DOCS_LANGUAGE', language)
+      } else {
+        if (!i18nPromise[language]) {
+          this.pageLoading = true
+          i18nPromise[language] = axios.get(`https://vxeui.com/i18n/${language}.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+            i18n.global.setLocaleMessage(language, res.data)
+            this.language = language || 'zh-CN'
+            VxeUI.setLanguage(language)
+            i18n.global.locale = language
+            localStorage.setItem('VXE_DOCS_LANGUAGE', language)
+            i18nStatus[language] = true
+            this.pageLoading = false
+          }).catch(() => {
+            i18nPromise[language] = null
+            this.pageLoading = false
+          })
+        }
+      }
     },
     updateComponentApiJSON () {
       if (!apiPromise) {

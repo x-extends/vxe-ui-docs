@@ -10,10 +10,10 @@ import PreCode from './components/PreCode.vue'
 import CodeLight from './components/CodeLight.vue'
 import CodeList from './components/CodeList.vue'
 import CodeRender from './components/CodeRender.vue'
+import CodeUseVersion from './components/CodeUseVersion.vue'
 import ApiLink from './components/ApiLink.vue'
 
 import axios from 'axios'
-import XEUtils from 'xe-utils'
 
 import VxeUI from 'vxe-pc-ui'
 import 'vxe-pc-ui/lib/style.css'
@@ -37,14 +37,6 @@ import 'element-plus/dist/index.css'
 
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/reset.css'
-
-declare global {
-  interface Window {
-    XEUtils: typeof XEUtils;
-  }
-}
-
-window.XEUtils = XEUtils
 
 axios.defaults.baseURL = 'https://api.vxetable.cn'
 
@@ -71,6 +63,7 @@ app.component('PreCode', PreCode)
 app.component('CodeLight', CodeLight)
 app.component('CodeList', CodeList)
 app.component('CodeRender', CodeRender)
+app.component('CodeUseVersion', CodeUseVersion)
 app.component('ApiLink', ApiLink)
 
 app.use(VxeUI)
@@ -84,4 +77,8 @@ app.use(i18n)
 
 app.config.globalProperties.$t = i18n.global.t
 
-app.mount('#app')
+axios.get(`https://vxeui.com/i18n/${i18n.global.locale}.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+  i18n.global.setLocaleMessage(i18n.global.locale, res.data)
+}).catch(e => e).then(() => {
+  app.mount('#app')
+})

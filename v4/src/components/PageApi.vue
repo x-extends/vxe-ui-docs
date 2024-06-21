@@ -10,7 +10,7 @@
 
       <template #default_version="{ row }">
         <template v-if="row.version === 'extend-cell-area'">
-          <a class="link enterprise-version" :href="appStore.pluginApiUrl" target="_blank">{{ $t('api.enterpriseVersion') }}</a>
+          <a class="link enterprise-version" :href="appStore.pluginBuyUrl" target="_blank">{{ $t('api.enterpriseVersion') }}</a>
         </template>
         <template v-else-if="row.disabled">
           <span class="disabled">已废弃</span>

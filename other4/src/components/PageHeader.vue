@@ -45,8 +45,10 @@
         :close-label="$t('app.base.dark')">
       </vxe-switch>
       <vxe-radio-group v-model="currLang" class="switch-lang" type="button" size="mini" :options="langOptions"></vxe-radio-group>
-      <vxe-select v-model="currSysVersion" class="switch-version" size="mini" :options="sysVersionOptions" @change="vChangeEvent"></vxe-select>
-      <vxe-link class="free-donation" status="success" :router-link="{name: 'FreeDonation'}" :content="$t('app.header.supportUs')"></vxe-link>
+      <vxe-select v-if="!appStore.isPluginDocs" v-model="currSysVersion" class="switch-version" size="mini" :options="sysVersionOptions" @change="vChangeEvent"></vxe-select>
+      <vxe-link v-if="!appStore.isPluginDocs" class="free-donation" status="success" :router-link="{name: 'FreeDonation'}" :content="$t('app.header.supportUs')"></vxe-link>
+      <a v-if="appStore.isPluginDocs" class="plugin-shopping" :href="appStore.pluginBuyUrl" target="_blank">{{ $t('app.header.buyPlugin') }}</a>
+      <a v-else class="plugin-shopping" :href="appStore.pluginDocsUrl" target="_blank">{{ $t('app.header.enterpriseVersion') }}</a>
     </div>
   </div>
 </template>
@@ -148,9 +150,32 @@ fetch(`${siteBaseUrl.value}component-api/${process.env.VUE_APP_PACKAGE_NAME}-ver
   .switch-theme,
   .switch-lang,
   .switch-version,
-  .free-donation {
+  .free-donation,
+  .plugin-shopping {
     flex-shrink: 0;
     margin-right: 20px;
+  }
+  .plugin-shopping {
+    position: relative;
+    color: #333;
+    padding: 2px 15px;
+    border-radius: 15px;
+    background-color: #f6ca9d;
+    user-select: none;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 8px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: red;
+    }
   }
 }
 .header-left {
