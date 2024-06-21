@@ -1,8 +1,8 @@
 <template>
   <div>
-    <vxe-tip status="primary" title="全局格式化">将表格中单元格的格式化函数注册成全局可复用，对于实现低代码/零代码平台时非常有用，可以实现完全配置化。</vxe-tip>
+    <vxe-tip status="primary" title="全局校验">将表单项的校验函数注册成全局可复用，对于实现低代码/零代码平台时非常有用，可以实现完全配置化。</vxe-tip>
     <vxe-tip status="success">
-      <div>调用方式： VxeUI.formats.add(code, options)</div>
+      <div>调用方式： VxeUI.validators.add(code, options)</div>
     </vxe-tip>
 
     <vxe-table
@@ -25,24 +25,26 @@ import { ref } from 'vue'
 
 const tableData = ref([
   {
-    name: 'add(code, option)',
+    name: 'add(name, option)',
     desc: '添加',
+    version: '',
     type: '',
     enum: '',
-    defVal: 'code: string, option: any',
+    defVal: 'name: string, option: any',
     list: [
       {
-        name: 'tableCellFormatMethod',
-        desc: '表格 - 自定义单元格格式化方法',
-        type: '',
+        name: 'formItemValidatorMethod',
+        desc: '自定义表单项校验方法',
+        version: '',
+        type: '(params: { itemValue, data, field, rule, rules, $form }) => void | Error | Promise<any>',
         enum: '',
-        defVal: '({ cellValue, row, column }) => string | number',
+        defVal: '',
         list: []
       }
     ]
   },
   {
-    name: 'mixin(opts)',
+    name: 'mixin(options)',
     desc: '添加多个，参数跟 add 一致',
     version: '',
     type: '',
@@ -51,11 +53,12 @@ const tableData = ref([
     list: []
   },
   {
-    name: 'delete(code)',
+    name: 'delete(name)',
     desc: '删除',
+    version: '',
     type: '',
     enum: '',
-    defVal: 'code: string',
+    defVal: 'name',
     list: []
   }
 ])

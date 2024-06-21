@@ -245,6 +245,13 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: '校验（全局复用）',
+        children: [
+          { title: 'API', routerLink: { name: 'GlobalValidatorsFormAPI' } },
+          { title: '表单项校验', routerLink: { name: 'GlobalValidatorsFormBase' } }
+        ]
+      },
+      {
         title: '渲染器（高阶复用）',
         children: [
           { title: 'API', routerLink: { name: 'GlobalRendererFormAPI' } },
@@ -608,7 +615,7 @@ export const navConfigList: NavVO[] = [
               { title: '实现多列下拉联动', routerLink: { name: 'ComponentTableEditCascadingSelect' } },
               { title: '实现表尾实时合计', routerLink: { name: 'ComponentTableEditFooterImmediately' } },
               { title: '实现单元格实时保存', routerLink: { name: 'ComponentTableEditRealtimeSave' } },
-              { title: '使用第三方组件', linkUrl: '/other4/#/plugin-render-element/grid/edit' }
+              { title: '使用第三方组件', linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/grid/edit' }
             ]
           },
           {
@@ -632,8 +639,8 @@ export const navConfigList: NavVO[] = [
               { title: '导出 XML', routerLink: { name: 'ComponentTableExportXml' } },
               { title: '导出 HTML', routerLink: { name: 'ComponentTableExportHtml' } },
               { title: '导出 CSV', routerLink: { name: 'ComponentTableExportCsv' } },
-              { title: '导出 XLSX', linkUrl: '/other4/#/plugin-export-xlsx/table/export' },
-              { title: '导出 PDF', linkUrl: '/other4/#/plugin-export-pdf/table/export' },
+              { title: '导出 XLSX', linkUrl: 'https://vxeui.com/other4/#/plugin-export-xlsx/table/export' },
+              { title: '导出 PDF', linkUrl: 'https://vxeui.com/other4/#/plugin-export-pdf/table/export' },
               { title: '高级导出', routerLink: { name: 'ComponentTableExportAdvanced' } }
             ]
           },
@@ -812,7 +819,7 @@ export const navConfigList: NavVO[] = [
               { title: '双击编辑', routerLink: { name: 'ComponentGridEditDblclick' } },
               { title: '禁用单元格编辑', routerLink: { name: 'ComponentGridEditCellDisable' } },
               { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRowDisable' } },
-              { title: '使用第三方组件', linkUrl: '/other4/#/plugin-render-element/grid/edit' }
+              { title: '使用第三方组件', linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/grid/edit' }
             ]
           },
           {
@@ -838,8 +845,8 @@ export const navConfigList: NavVO[] = [
               { title: '导出 XML', routerLink: { name: 'ComponentGridExportXml' } },
               { title: '导出 HTML', routerLink: { name: 'ComponentGridExportHtml' } },
               { title: '导出 CSV', routerLink: { name: 'ComponentGridExportCsv' } },
-              { title: '导出 XLSX', linkUrl: '/other4/#/plugin-export-xlsx/grid/export' },
-              { title: '导出 PDF', linkUrl: '/other4/#/plugin-export-pdf/grid/export' },
+              { title: '导出 XLSX', linkUrl: 'https://vxeui.com/other4/#/plugin-export-xlsx/grid/export' },
+              { title: '导出 PDF', linkUrl: 'https://vxeui.com/other4/#/plugin-export-pdf/grid/export' },
               { title: '自定义数据', routerLink: { name: 'ComponentGridExportData' } },
               { title: '高级导出', routerLink: { name: 'ComponentGridExportAdvanced' } }
             ]
@@ -909,6 +916,13 @@ export const navConfigList: NavVO[] = [
       //     { title: '工具栏', routerLink: { name: 'GlobalCommandsTableBase' } }
       //   ]
       // },
+      {
+        title: '校验（全局复用）',
+        children: [
+          { title: 'API', routerLink: { name: 'GlobalValidatorsTableAPI' } },
+          { title: '单元格校验', routerLink: { name: 'GlobalValidatorsTableBase' } }
+        ]
+      },
       {
         title: '渲染器（高阶复用）',
         children: [
@@ -1122,7 +1136,7 @@ export const navConfigList: NavVO[] = [
           { title: '移动端设计器', routerLink: { name: 'ComponentFormDesignMobile' } },
           { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentFormDesignPcAndMobile' } },
           { title: '渲染视图', routerLink: { name: 'ComponentFormDesignRenderView' } },
-          { title: '使用第三方组件', linkUrl: '/other4/#/plugin-render-element/form-design/renderView' }
+          { title: '使用第三方组件', linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/form-design/renderView' }
         ]
       },
       {

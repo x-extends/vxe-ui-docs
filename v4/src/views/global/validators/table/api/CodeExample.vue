@@ -1,8 +1,8 @@
 <template>
   <div>
-    <vxe-tip status="primary" title="全局格式化">将表格中单元格的格式化函数注册成全局可复用，对于实现低代码/零代码平台时非常有用，可以实现完全配置化。</vxe-tip>
+    <vxe-tip status="primary" title="全局校验">将表格中单元格的校验函数注册成全局可复用，对于实现低代码/零代码平台时非常有用，可以实现完全配置化。</vxe-tip>
     <vxe-tip status="success">
-      <div>调用方式： VxeUI.formats.add(code, options)</div>
+      <div>调用方式： VxeUI.validators.add(code, options)</div>
     </vxe-tip>
 
     <vxe-table
@@ -32,11 +32,11 @@ const tableData = ref([
     defVal: 'code: string, option: any',
     list: [
       {
-        name: 'tableCellFormatMethod',
-        desc: '表格 - 自定义单元格格式化方法',
+        name: 'tableCellValidatorMethod',
+        desc: '自定义单元格校验方法',
         type: '',
         enum: '',
-        defVal: '({ cellValue, row, column }) => string | number',
+        defVal: '(params: { cellValue, field, row, rowIndex, column, columnIndex, rule, rules, $table })  => void | Error | Promise<any>',
         list: []
       }
     ]

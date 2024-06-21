@@ -153,6 +153,41 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'validators',
+        children: [
+          {
+            path: 'form',
+            children: [
+              {
+                path: 'api',
+                name: 'GlobalValidatorsFormAPI',
+                component: () => import('@/views/global/validators/form/api/CodeExample.vue')
+              },
+              {
+                path: 'base',
+                name: 'GlobalValidatorsFormBase',
+                component: () => import('@/views/global/validators/form/base/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'table',
+            children: [
+              {
+                path: 'api',
+                name: 'GlobalValidatorsTableAPI',
+                component: () => import('@/views/global/validators/table/api/CodeExample.vue')
+              },
+              {
+                path: 'base',
+                name: 'GlobalValidatorsTableBase',
+                component: () => import('@/views/global/validators/table/base/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
+      {
         path: 'interceptor',
         children: [
           {

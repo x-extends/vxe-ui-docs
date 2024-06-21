@@ -29,6 +29,9 @@ import '@/views/global/commands/table/base/demo1.table.commands'
 
 import '@/views/global/menus/table/base/demo1.table.menus'
 
+import '@/views/global/validators/form/base/demo1.form.validators'
+import '@/views/global/validators/table/base/demo1.table.validators'
+
 import '@/views/global/renderer/table/default/myLink/demo1.table.renderer'
 import '@/views/global/renderer/table/default/myImg/demo1.table.renderer'
 
