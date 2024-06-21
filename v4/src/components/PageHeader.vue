@@ -2,7 +2,7 @@
   <div class="page-header">
     <div class="header-left">
       <a class="logo" :href="siteBaseUrl">
-        <img :src="`${siteBaseUrl}logo.png`">
+        <img src="/logo.png">
         <span class="title">{{ appStore.pageTitle }}</span>
       </a>
       <a v-if="appStore.packName === 'vxe-table'" href='https://gitee.com/xuliangzhan_admin/vxe-table/stargazers'>

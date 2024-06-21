@@ -7,7 +7,7 @@
     </VxeLink>
     <span style="margin-left: 20px;">
       <span>©</span>
-      <span><VxeLink status="primary" :href="siteBaseUrl" target="_blank">vxe-ui</VxeLink> 2018-{{serveTY}}</span>
+      <span><VxeLink status="primary" :href="siteBaseUrl" target="_blank">{{ appStore.packName }}</VxeLink> 2018-{{serveTY}}</span>
     </span>
   </div>
 </template>
