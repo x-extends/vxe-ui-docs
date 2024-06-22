@@ -7,6 +7,8 @@ export interface NavVO {
   isExpand?: boolean
   isNew?: boolean
   isUnpublished?: boolean
+  isEnterprise?: boolean
+  isPlugin?: boolean
   routerLink?: {
     name: string
     params?: Record<string, string | number>
@@ -14,6 +16,7 @@ export interface NavVO {
   }
   linkUrl?: string
   linkTarget?: '_self' | '_blank'
+  linkStatus?: 'warning' | 'success' | 'error'
   keywords?: string[]
   children?: NavVO[]
 }

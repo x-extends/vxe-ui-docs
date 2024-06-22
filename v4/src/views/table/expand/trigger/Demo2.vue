@@ -1,13 +1,18 @@
 <template>
   <div>
-    <vxe-button @click="exportEvent">高级导出</vxe-button>
-    <vxe-button @click="importEvent">高级导入</vxe-button>
     <vxe-table
-      ref="tableRef"
-      :export-config="{}"
-      :import-config="{}"
+      :expand-config="expandConfig"
       :data="tableData">
       <vxe-column type="seq" width="70"></vxe-column>
+      <vxe-column type="expand" width="60">
+        <template #content="{ row }">
+          <div>Name：{{ row.name }}</div>
+          <div>Role：{{ row.role }}</div>
+          <div>Age：{{ row.age }}</div>
+          <div>Sex：{{ row.sex }}</div>
+          <div>Address：{{ row.address }}</div>
+        </template>
+      </vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="sex" title="Sex"></vxe-column>
       <vxe-column field="age" title="Age"></vxe-column>
@@ -16,8 +21,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { VxeTableInstance } from 'vxe-table'
+import { ref, reactive } from 'vue'
+import { VxeTablePropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -28,8 +33,6 @@ interface RowVO {
   address: string
 }
 
-const tableRef = ref<VxeTableInstance>()
-
 const tableData = ref<RowVO[]>([
   { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
   { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },
@@ -37,17 +40,7 @@ const tableData = ref<RowVO[]>([
   { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
 ])
 
-const exportEvent = () => {
-  const $table = tableRef.value
-  if ($table) {
-    $table.openExport()
-  }
-}
-
-const importEvent = () => {
-  const $table = tableRef.value
-  if ($table) {
-    $table.openImport()
-  }
-}
+const expandConfig = reactive<VxeTablePropTypes.ExpandConfig<RowVO>>({
+  trigger: 'cell'
+})
 </script>

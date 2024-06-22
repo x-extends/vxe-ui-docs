@@ -1,23 +1,35 @@
 <template>
   <div>
-    <vxe-button @click="exportEvent">高级导出</vxe-button>
-    <vxe-button @click="importEvent">高级导入</vxe-button>
     <vxe-table
+      border
       ref="tableRef"
-      :export-config="{}"
-      :import-config="{}"
+      :expand-config="expandConfig"
       :data="tableData">
       <vxe-column type="seq" width="70"></vxe-column>
+      <vxe-column type="expand" width="60">
+        <template #content="{ row }">
+          <div>Name：{{ row.name }}</div>
+          <div>Role：{{ row.role }}</div>
+          <div>Age：{{ row.age }}</div>
+          <div>Sex：{{ row.sex }}</div>
+          <div>Address：{{ row.address }}</div>
+        </template>
+      </vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="sex" title="Sex"></vxe-column>
       <vxe-column field="age" title="Age"></vxe-column>
+      <vxe-column title="操作">
+        <template #default="{ row }">
+          <vxe-button mode="text" @click="toggleExpand(row)">切换展开</vxe-button>
+        </template>
+      </vxe-column>
     </vxe-table>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { VxeTableInstance } from 'vxe-table'
+import { ref, reactive } from 'vue'
+import { VxeTableInstance, VxeTablePropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -28,7 +40,7 @@ interface RowVO {
   address: string
 }
 
-const tableRef = ref<VxeTableInstance>()
+const tableRef = ref<VxeTableInstance<RowVO>>()
 
 const tableData = ref<RowVO[]>([
   { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
@@ -37,17 +49,14 @@ const tableData = ref<RowVO[]>([
   { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
 ])
 
-const exportEvent = () => {
-  const $table = tableRef.value
-  if ($table) {
-    $table.openExport()
-  }
-}
+const expandConfig = reactive<VxeTablePropTypes.ExpandConfig<RowVO>>({
+  trigger: 'manual'
+})
 
-const importEvent = () => {
+const toggleExpand = (row) => {
   const $table = tableRef.value
   if ($table) {
-    $table.openImport()
+    $table.toggleRowExpand(row)
   }
 }
 </script>
