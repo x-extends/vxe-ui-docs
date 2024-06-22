@@ -2408,6 +2408,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'advanced',
                 name: 'ComponentTablePrintAdvanced',
                 component: () => import('@/views/table/print/advanced/CodeExample.vue')
+              },
+              {
+                path: 'page',
+                name: 'ComponentTablePrintPage',
+                component: () => import('@/views/table/print/page/CodeExample.vue')
+              },
+              {
+                path: 'multilist',
+                name: 'ComponentTablePrintMultilist',
+                component: () => import('@/views/table/print/multilist/CodeExample.vue')
               }
             ]
           },

@@ -675,7 +675,9 @@ export const navConfigList: NavVO[] = [
             title: '打印表格',
             children: [
               { title: '打印表格', routerLink: { name: 'ComponentTablePrintBase' } },
-              { title: '高级打印', routerLink: { name: 'ComponentTablePrintAdvanced' } }
+              { title: '高级打印', routerLink: { name: 'ComponentTablePrintAdvanced' } },
+              { title: '实现将表格切割为多页打印', routerLink: { name: 'ComponentTablePrintPage' } },
+              { title: '实现打印多张表格', routerLink: { name: 'ComponentTablePrintMultilist' } }
             ]
           },
           {
