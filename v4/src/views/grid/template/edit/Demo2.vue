@@ -1,15 +1,11 @@
 <template>
   <div>
-    <vxe-grid v-bind="gridOptions">
-      <template #sex_filter="{ $panel, column }">
-        <vxe-input v-model="option.data" v-for="(option, index) in column.filters" :key="index" @change="changeFilterEvent($event, option, $panel)"></vxe-input>
-      </template>
-    </vxe-grid>
+    <vxe-grid v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
 
-<script lang="ts" setup>
-import { reactive } from 'vue'
+<script lang="tsx" setup>
+import { ref, reactive } from 'vue'
 import { VxeGridProps } from 'vxe-table'
 
 interface RowVO {
@@ -19,28 +15,51 @@ interface RowVO {
   sex: string
   age: number
   num: number
-  address: string,
+  address: string
+}
+
+const sexOptions = ref([
+  { label: '男', value: '1' },
+  { label: '女', value: '0' }
+])
+
+const formatSex = (row: RowVO) => {
+  return row.sex === '1' ? '男' : '女'
 }
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
+  editConfig: {
+    mode: 'cell',
+    trigger: 'click'
+  },
   columns: [
     { type: 'checkbox', width: 60 },
     { field: 'name', title: 'Name' },
     {
       field: 'sex',
       title: 'Sex',
-      filters: [
-        { data: '' }
-      ],
-      filterMethod ({ option, cellValue }) {
-        return option.data === cellValue
-      },
+      editRender: {},
+      slots:
+        {
+          edit ({ row }) {
+            return <vxe-select v-model={row.sex} options={sexOptions.value}></vxe-select>
+          },
+          default ({ row }) {
+            return <span>{ formatSex(row) }</span>
+          }
+        }
+    },
+    {
+      field: 'num',
+      title: 'Number',
+      editRender: {},
       slots: {
-        filter: 'sex_filter'
+        edit ({ row }) {
+          return <vxe-input v-model={row.num}></vxe-input>
+        }
       }
     },
-    { field: 'num', title: 'Number' },
     { field: 'age', title: 'Age' },
     { field: 'address', title: 'Address' }
   ],
@@ -50,8 +69,4 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { id: 10003, name: 'Test3', role: 'PM', sex: '0', age: 32, num: 12, address: 'Shanghai' }
   ]
 })
-
-const changeFilterEvent = (params: any, option: any, $panel: any) => {
-  $panel.changeOption(params.$event, !!option.data, option)
-}
 </script>

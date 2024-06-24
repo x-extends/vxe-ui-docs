@@ -1,16 +1,13 @@
 <template>
   <div>
-    <vxe-grid v-bind="gridOptions">
-      <template #sex_filter="{ $panel, column }">
-        <vxe-input v-model="option.data" v-for="(option, index) in column.filters" :key="index" @change="changeFilterEvent($event, option, $panel)"></vxe-input>
-      </template>
-    </vxe-grid>
+    <vxe-grid v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="tsx" setup>
 import { reactive } from 'vue'
 import { VxeGridProps } from 'vxe-table'
+import { VxeInput } from 'vxe-pc-ui'
 
 interface RowVO {
   id: number
@@ -37,7 +34,11 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
         return option.data === cellValue
       },
       slots: {
-        filter: 'sex_filter'
+        filter ({ $panel, column }) {
+          return column.filters.map((option, index) => {
+            return <VxeInput v-model={option.data} key={index} onChange={ (params) => changeFilterEvent(params, option, $panel) }></VxeInput>
+          })
+        }
       }
     },
     { field: 'num', title: 'Number' },

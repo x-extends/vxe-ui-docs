@@ -1,26 +1,10 @@
 <template>
   <div>
-    <vxe-grid ref="gridRef" v-bind="gridOptions">
-      <template #checkbox_header="{ checked, indeterminate }">
-        <span class="custom-checkbox" @click.stop="toggleAllCheckboxEvent">
-          <i v-if="indeterminate" class="vxe-icon-square-minus-fill"></i>
-          <i v-else-if="checked" class="vxe-icon-square-checked-fill"></i>
-          <i v-else class="vxe-icon-checkbox-unchecked"></i>
-        </span>
-      </template>
-
-      <template #checkbox_cell="{ row, checked, indeterminate }">
-        <span class="custom-checkbox" @click.stop="toggleCheckboxEvent(row)">
-          <i v-if="indeterminate" class="vxe-icon-square-minus-fill"></i>
-          <i v-else-if="checked" class="vxe-icon-square-checked-fill"></i>
-          <i v-else class="vxe-icon-checkbox-unchecked"></i>
-        </span>
-      </template>
-    </vxe-grid>
+    <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="tsx" setup>
 import { ref, reactive } from 'vue'
 import { VxeGridInstance, VxeGridProps } from 'vxe-table'
 
@@ -53,7 +37,39 @@ const toggleCheckboxEvent = (row) => {
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
   columns: [
-    { type: 'checkbox', width: 60, slots: { header: 'checkbox_header', checkbox: 'checkbox_cell' } },
+    {
+      type: 'checkbox',
+      width: 60,
+      slots: {
+        header ({ checked, indeterminate }) {
+          return <span class="custom-checkbox" onClick={ toggleAllCheckboxEvent }>
+            {
+              indeterminate
+                ? <i class="vxe-icon-square-minus-fill"></i>
+                : (
+                    checked
+                      ? <i class="vxe-icon-square-checked-fill"></i>
+                      : <i class="vxe-icon-checkbox-unchecked"></i>
+                  )
+            }
+          </span>
+        },
+        checkbox ({ row, checked, indeterminate }) {
+          return <span class="custom-checkbox" onClick={ () => toggleCheckboxEvent(row) }>
+            {
+              indeterminate
+                ? <i class="vxe-icon-square-minus-fill"></i>
+                : (
+                    checked
+                      ? <i class="vxe-icon-square-checked-fill"></i>
+                      : <i class="vxe-icon-checkbox-unchecked"></i>
+
+                  )
+            }
+          </span>
+        }
+      }
+    },
     { field: 'name', title: 'Name' },
     { field: 'sex', title: 'Sex' },
     { field: 'num', title: 'Number' },

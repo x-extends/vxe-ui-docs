@@ -841,7 +841,16 @@ export const navConfigList: NavVO[] = [
               { title: '单击编辑', routerLink: { name: 'ComponentGridEditClick' } },
               { title: '双击编辑', routerLink: { name: 'ComponentGridEditDblclick' } },
               { title: '禁用单元格编辑', routerLink: { name: 'ComponentGridEditCellDisable' } },
-              { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRowDisable' } },
+              { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRowDisable' } }
+            ]
+          },
+          {
+            title: '可编辑 - 渲染控件',
+            children: [
+              { title: 'input', routerLink: { name: 'ComponentGridEditRenderInput' } },
+              { title: 'select', routerLink: { name: 'ComponentGridEditRenderSelect' } },
+              { title: 'vxe-input', routerLink: { name: 'ComponentGridEditRenderVxeInput' } },
+              { title: 'vxe-select', routerLink: { name: 'ComponentGridEditRenderVxeSelect' } },
               { title: '使用第三方组件', isPlugin: true, linkStatus: 'success', linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/grid/edit' }
             ]
           },

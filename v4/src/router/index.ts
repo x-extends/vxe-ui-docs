@@ -2937,6 +2937,31 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'editRender',
+            children: [
+              {
+                path: 'input',
+                name: 'ComponentGridEditRenderInput',
+                component: () => import('@/views/grid/editRender/input/CodeExample.vue')
+              },
+              {
+                path: 'select',
+                name: 'ComponentGridEditRenderSelect',
+                component: () => import('@/views/grid/editRender/select/CodeExample.vue')
+              },
+              {
+                path: 'vxe-input',
+                name: 'ComponentGridEditRenderVxeInput',
+                component: () => import('@/views/grid/editRender/vxe-input/CodeExample.vue')
+              },
+              {
+                path: 'vxe-select',
+                name: 'ComponentGridEditRenderVxeSelect',
+                component: () => import('@/views/grid/editRender/vxe-select/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'template',
             children: [
               {
