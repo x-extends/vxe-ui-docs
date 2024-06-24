@@ -330,12 +330,122 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/plugin-render-antd/install/CodeExample.vue')
       },
       {
+        path: 'table',
+        children: [
+          {
+            path: 'cell',
+            children: [
+              {
+                path: 'a-switch',
+                name: 'PluginRenderAntdTableCellElSwitch',
+                component: () => import('@/views/plugin-render-antd/table/cell/a-switch/CodeExample.vue')
+              },
+              {
+                path: 'a-rate',
+                name: 'PluginRenderAntdTableCellElRate',
+                component: () => import('@/views/plugin-render-antd/table/cell/a-rate/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'edit',
+            children: [
+              {
+                path: 'a-input',
+                name: 'PluginRenderAntdTableEditElInput',
+                component: () => import('@/views/plugin-render-antd/table/edit/a-input/CodeExample.vue')
+              },
+              {
+                path: 'a-input-number',
+                name: 'PluginRenderAntdTableEditElInputNumber',
+                component: () => import('@/views/plugin-render-antd/table/edit/a-input-number/CodeExample.vue')
+              }
+              // {
+              //   path: 'a-autocomplete',
+              //   name: 'PluginRenderAntdTableEditElAutocomplete',
+              //   component: () => import('@/views/plugin-render-antd/table/edit/a-autocomplete/CodeExample.vue')
+              // },
+              // {
+              //   path: 'a-select',
+              //   name: 'PluginRenderAntdTableEditElSelect',
+              //   component: () => import('@/views/plugin-render-antd/table/edit/a-select/CodeExample.vue')
+              // },
+              // {
+              //   path: 'a-cascader',
+              //   name: 'PluginRenderAntdTableEditElCascader',
+              //   component: () => import('@/views/plugin-render-antd/table/edit/a-cascader/CodeExample.vue')
+              // },
+              // {
+              //   path: 'a-date-picker',
+              //   name: 'PluginRenderAntdTableEditElDatePicker',
+              //   component: () => import('@/views/plugin-render-antd/table/edit/a-date-picker/CodeExample.vue')
+              // },
+              // {
+              //   path: 'a-time-select',
+              //   name: 'PluginRenderAntdTableEditElTimePicker',
+              //   component: () => import('@/views/plugin-render-antd/table/edit/a-time-select/CodeExample.vue')
+              // }
+            ]
+          }
+        ]
+      },
+      {
         path: 'grid',
         children: [
           {
+            path: 'cell',
+            children: [
+              {
+                path: 'a-switch',
+                name: 'PluginRenderAntdGridCellElSwitch',
+                component: () => import('@/views/plugin-render-antd/grid/cell/a-switch/CodeExample.vue')
+              },
+              {
+                path: 'a-rate',
+                name: 'PluginRenderAntdGridCellElRate',
+                component: () => import('@/views/plugin-render-antd/grid/cell/a-rate/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'edit',
-            name: 'PluginRenderAntdGridEdit',
-            component: () => import('@/views/plugin-render-antd/grid/edit/CodeExample.vue')
+            children: [
+              {
+                path: 'a-input',
+                name: 'PluginRenderAntdGridEditElInput',
+                component: () => import('@/views/plugin-render-antd/grid/edit/a-input/CodeExample.vue')
+              },
+              {
+                path: 'a-input-number',
+                name: 'PluginRenderAntdGridEditElInputNumber',
+                component: () => import('@/views/plugin-render-antd/grid/edit/a-input-number/CodeExample.vue')
+              }
+              // {
+              //   path: 'a-autocomplete',
+              //   name: 'PluginRenderAntdGridEditElAutocomplete',
+              //   component: () => import('@/views/plugin-render-antd/grid/edit/a-autocomplete/CodeExample.vue')
+              // },
+              // {
+              //   path: 'a-select',
+              //   name: 'PluginRenderAntdGridEditElSelect',
+              //   component: () => import('@/views/plugin-render-antd/grid/edit/a-select/CodeExample.vue')
+              // },
+              // {
+              //   path: 'a-cascader',
+              //   name: 'PluginRenderAntdGridEditElCascader',
+              //   component: () => import('@/views/plugin-render-antd/grid/edit/a-cascader/CodeExample.vue')
+              // },
+              // {
+              //   path: 'a-date-picker',
+              //   name: 'PluginRenderAntdGridEditElDatePicker',
+              //   component: () => import('@/views/plugin-render-antd/grid/edit/a-date-picker/CodeExample.vue')
+              // },
+              // {
+              //   path: 'a-time-select',
+              //   name: 'PluginRenderAntdGridEditElTimePicker',
+              //   component: () => import('@/views/plugin-render-antd/grid/edit/a-time-select/CodeExample.vue')
+              // }
+            ]
           }
         ]
       },

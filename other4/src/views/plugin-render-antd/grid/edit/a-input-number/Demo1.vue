@@ -15,7 +15,7 @@ import { VxeGridInstance, VxeGridProps } from 'vxe-table'
 interface RowVO {
   id: number
   name: string
-  num: number
+  num: number | null
 }
 
 const gridRef = ref<VxeGridInstance<RowVO>>()
@@ -31,12 +31,12 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   columns: [
     { type: 'checkbox', width: 60 },
     { type: 'seq', title: 'Number', width: 80 },
-    { field: 'name', title: 'Name', minWidth: 140 },
-    { field: 'num', title: '评分', width: 200, cellRender: { name: 'ElRate' } }
+    { field: 'name', title: 'Name', minWidth: 140, editRender: { name: 'AInput' } },
+    { field: 'num', title: '数字输入框', width: 200, editRender: { name: 'AInputNumber' } }
   ],
   data: [
-    { id: 10001, name: 'Test1', num: 3 },
-    { id: 10002, name: 'Test2', num: 2 }
+    { id: 10001, name: 'Test1', num: null },
+    { id: 10002, name: 'Test2', num: 3 }
   ]
 })
 
@@ -44,7 +44,7 @@ const insertEvent = async () => {
   const $grid = gridRef.value
   if ($grid) {
     const record = {
-      flag: false
+      nickname: ''
     }
     const { row: newRow } = await $grid.insert(record)
     $grid.setEditRow(newRow)

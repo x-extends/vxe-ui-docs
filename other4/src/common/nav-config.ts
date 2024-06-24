@@ -182,16 +182,52 @@ export const navConfigList: NavVO[] = [
           { title: '安装插件', routerLink: { name: 'PluginRenderAntdInstall' } }
         ]
       },
-      // {
-      //   title: 'Table 基础表格',
-      //   children: [
-      //     // { title: '单元格可编辑', routerLink: { name: 'PluginRenderAntdTableEdit' } }
-      //   ]
-      // },
+      {
+        title: 'Table 基础表格',
+        children: [
+          {
+            title: '列表模式',
+            children: [
+              { title: 'a-switch', routerLink: { name: 'PluginRenderAntdTableCellElSwitch' } },
+              { title: 'a-rate', routerLink: { name: 'PluginRenderAntdTableCellElRate' } }
+            ]
+          },
+          {
+            title: '编辑模式',
+            children: [
+              { title: 'a-input', routerLink: { name: 'PluginRenderAntdTableEditElInput' } },
+              { title: 'a-input-number', routerLink: { name: 'PluginRenderAntdTableEditElInputNumber' } }
+              // { title: 'a-autocomplete', routerLink: { name: 'PluginRenderAntdTableEditElAutocomplete' } },
+              // { title: 'a-select', routerLink: { name: 'PluginRenderAntdTableEditElSelect' } },
+              // { title: 'a-cascader', routerLink: { name: 'PluginRenderAntdTableEditElCascader' } },
+              // { title: 'a-date-picker', routerLink: { name: 'PluginRenderAntdTableEditElDatePicker' } },
+              // { title: 'a-time-picker', routerLink: { name: 'PluginRenderAntdTableEditElTimePicker' } }
+            ]
+          }
+        ]
+      },
       {
         title: 'Grid 配置式表格',
         children: [
-          { title: '单元格可编辑', routerLink: { name: 'PluginRenderAntdGridEdit' } }
+          {
+            title: '列表模式',
+            children: [
+              { title: 'a-switch', routerLink: { name: 'PluginRenderAntdGridCellElSwitch' } },
+              { title: 'a-rate', routerLink: { name: 'PluginRenderAntdGridCellElRate' } }
+            ]
+          },
+          {
+            title: '编辑模式',
+            children: [
+              { title: 'a-input', routerLink: { name: 'PluginRenderAntdGridEditElInput' } },
+              { title: 'a-input-number', routerLink: { name: 'PluginRenderAntdGridEditElInputNumber' } }
+              // { title: 'a-autocomplete', routerLink: { name: 'PluginRenderAntdGridEditElAutocomplete' } },
+              // { title: 'a-select', routerLink: { name: 'PluginRenderAntdGridEditElSelect' } },
+              // { title: 'a-cascader', routerLink: { name: 'PluginRenderAntdGridEditElCascader' } },
+              // { title: 'a-date-picker', routerLink: { name: 'PluginRenderAntdGridEditElDatePicker' } },
+              // { title: 'a-time-picker', routerLink: { name: 'PluginRenderAntdGridEditElTimePicker' } }
+            ]
+          }
         ]
       },
       {
