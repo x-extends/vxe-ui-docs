@@ -10,15 +10,34 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 import { Modal } from 'ant-design-vue'
-import { VxeGridInstance, VxeGridProps } from 'vxe-table'
+import { VxeGridInstance, VxeGridProps, VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
   name: string
-  nickname: string
+  role: string
 }
 
 const gridRef = ref<VxeGridInstance<RowVO>>()
+
+const restaurants = [
+  { value: 'Designer', name: 'Designer' },
+  { value: 'Develop', name: 'Develop' },
+  { value: 'Test', name: 'Test' },
+  { value: 'PM', name: 'PM' }
+]
+
+const roleEditRender = reactive<VxeColumnPropTypes.EditRender & { props: any }>({
+  name: 'AAutoComplete',
+  props: {
+    options: restaurants
+  },
+  events: {
+    search (params, queryString: any) {
+      roleEditRender.props.options = queryString ? restaurants.filter(item => (item.name.toLowerCase().indexOf(queryString.toLowerCase()) === 0)) : restaurants
+    }
+  }
+})
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
@@ -32,11 +51,11 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { type: 'checkbox', width: 60 },
     { type: 'seq', title: 'Number', width: 80 },
     { field: 'name', title: 'Name', minWidth: 140, editRender: { name: 'AInput' } },
-    { field: 'nickname', title: '输入框', width: 200, editRender: { name: 'AInput' } }
+    { field: 'role', title: '自动补全输入', width: 200, editRender: roleEditRender }
   ],
   data: [
-    { id: 10001, name: 'Test1', nickname: 'Nickname11' },
-    { id: 10002, name: 'Test2', nickname: '' }
+    { id: 10001, name: 'Test1', role: '' },
+    { id: 10002, name: 'Test2', role: 'Develop' }
   ]
 })
 

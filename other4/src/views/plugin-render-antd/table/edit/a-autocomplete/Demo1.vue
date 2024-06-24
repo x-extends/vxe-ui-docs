@@ -13,27 +13,46 @@
       <vxe-column type="checkbox" width="60"></vxe-column>
       <vxe-column type="seq" title="Number" width="80"></vxe-column>
       <vxe-column title="Name" field="name" min-width="140" :edit-render="{ name: 'AInput' }"></vxe-column>
-      <vxe-column title="输入框" field="nickname" width="200" :edit-render="{ name: 'AInput' }"></vxe-column>
+      <vxe-column title="自动补全输入" field="role" width="200" :edit-render="roleEditRender"></vxe-column>
     </vxe-table>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 import { Modal } from 'ant-design-vue'
-import { VxeTableInstance } from 'vxe-table'
+import { VxeTableInstance, VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
   name: string
-  nickname: string
+  role: string
 }
 
 const tableRef = ref<VxeTableInstance<RowVO>>()
 
+const restaurants = [
+  { value: 'Designer', name: 'Designer' },
+  { value: 'Develop', name: 'Develop' },
+  { value: 'Test', name: 'Test' },
+  { value: 'PM', name: 'PM' }
+]
+
+const roleEditRender = reactive<VxeColumnPropTypes.EditRender & { props: any }>({
+  name: 'AAutoComplete',
+  props: {
+    options: restaurants
+  },
+  events: {
+    search (params, queryString: any) {
+      roleEditRender.props.options = queryString ? restaurants.filter(item => (item.name.toLowerCase().indexOf(queryString.toLowerCase()) === 0)) : restaurants
+    }
+  }
+})
+
 const tableData = ref<RowVO[]>([
-  { id: 10001, name: 'Test1', nickname: 'Nickname11' },
-  { id: 10002, name: 'Test2', nickname: '' }
+  { id: 10001, name: 'Test1', role: '' },
+  { id: 10002, name: 'Test2', role: 'Develop' }
 ])
 
 const insertEvent = async () => {

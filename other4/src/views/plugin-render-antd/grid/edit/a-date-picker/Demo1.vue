@@ -15,7 +15,10 @@ import { VxeGridInstance, VxeGridProps } from 'vxe-table'
 interface RowVO {
   id: number
   name: string
-  nickname: string
+  date1: string
+  date2: string
+  date3: string
+  date4: string
 }
 
 const gridRef = ref<VxeGridInstance<RowVO>>()
@@ -32,11 +35,15 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { type: 'checkbox', width: 60 },
     { type: 'seq', title: 'Number', width: 80 },
     { field: 'name', title: 'Name', minWidth: 140, editRender: { name: 'AInput' } },
-    { field: 'nickname', title: '输入框', width: 200, editRender: { name: 'AInput' } }
+    { field: 'date1', title: '日期', width: 200, editRender: { name: 'ADatePicker', props: { valueFormat: 'YYYY-MM-DD' } } },
+    { field: 'date2', title: '日期带时间', width: 200, editRender: { name: 'ADatePicker', props: { showTime: true, valueFormat: 'YYYY-MM-DD HH:mm:ss' } } },
+    { field: 'date3', title: '月份', width: 200, editRender: { name: 'ADatePicker', props: { picker: 'month', valueFormat: 'YYYY-MM' } } },
+    { field: 'date4', title: '年份', width: 200, editRender: { name: 'ADatePicker', props: { picker: 'year', valueFormat: 'YYYY' } } }
+
   ],
   data: [
-    { id: 10001, name: 'Test1', nickname: 'Nickname11' },
-    { id: 10002, name: 'Test2', nickname: '' }
+    { id: 10001, name: 'Test1', date1: '', date2: '', date3: '', date4: '' },
+    { id: 10002, name: 'Test2', date1: '2018-01-01', date2: '2018-01-01 10:10:30', date3: '2018-01', date4: '2018' }
   ]
 })
 

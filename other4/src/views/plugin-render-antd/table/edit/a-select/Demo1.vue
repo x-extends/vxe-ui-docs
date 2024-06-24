@@ -13,27 +13,48 @@
       <vxe-column type="checkbox" width="60"></vxe-column>
       <vxe-column type="seq" title="Number" width="80"></vxe-column>
       <vxe-column title="Name" field="name" min-width="140" :edit-render="{ name: 'AInput' }"></vxe-column>
-      <vxe-column title="输入框" field="nickname" width="200" :edit-render="{ name: 'AInput' }"></vxe-column>
+      <vxe-column title="下拉框" field="sex" width="200" :edit-render="sexEditRender"></vxe-column>
+      <vxe-column title="下拉框多选" field="sexList" width="200" :edit-render="sexListEditRender"></vxe-column>
     </vxe-table>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 import { Modal } from 'ant-design-vue'
-import { VxeTableInstance } from 'vxe-table'
+import { VxeTableInstance, VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
   name: string
-  nickname: string
+  sex: string
+  sexList: string[]
 }
 
 const tableRef = ref<VxeTableInstance<RowVO>>()
 
+const sexEditRender = reactive<VxeColumnPropTypes.EditRender>({
+  name: 'ASelect',
+  options: [
+    { label: '男', value: '1' },
+    { label: '女', value: '0' }
+  ]
+})
+
+const sexListEditRender = reactive<VxeColumnPropTypes.EditRender>({
+  name: 'ASelect',
+  props: {
+    mode: 'multiple'
+  },
+  options: [
+    { label: '男', value: '1' },
+    { label: '女', value: '0' }
+  ]
+})
+
 const tableData = ref<RowVO[]>([
-  { id: 10001, name: 'Test1', nickname: 'Nickname11' },
-  { id: 10002, name: 'Test2', nickname: '' }
+  { id: 10001, name: 'Test1', sex: '1', sexList: [] },
+  { id: 10002, name: 'Test2', sex: '', sexList: ['0', '1'] }
 ])
 
 const insertEvent = async () => {

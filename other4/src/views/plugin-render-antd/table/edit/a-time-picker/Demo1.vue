@@ -13,7 +13,7 @@
       <vxe-column type="checkbox" width="60"></vxe-column>
       <vxe-column type="seq" title="Number" width="80"></vxe-column>
       <vxe-column title="Name" field="name" min-width="140" :edit-render="{ name: 'AInput' }"></vxe-column>
-      <vxe-column title="输入框" field="nickname" width="200" :edit-render="{ name: 'AInput' }"></vxe-column>
+      <vxe-column title="时间选择" field="time" width="200" :edit-render="{ name: 'ATimePicker', props: { valueFormat: 'HH:mm:ss' } }"></vxe-column>
     </vxe-table>
   </div>
 </template>
@@ -26,14 +26,14 @@ import { VxeTableInstance } from 'vxe-table'
 interface RowVO {
   id: number
   name: string
-  nickname: string
+  time: string
 }
 
 const tableRef = ref<VxeTableInstance<RowVO>>()
 
 const tableData = ref<RowVO[]>([
-  { id: 10001, name: 'Test1', nickname: 'Nickname11' },
-  { id: 10002, name: 'Test2', nickname: '' }
+  { id: 10001, name: 'Test1', time: '' },
+  { id: 10002, name: 'Test2', time: '10:30:20' }
 ])
 
 const insertEvent = async () => {

@@ -10,15 +10,49 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 import { Modal } from 'ant-design-vue'
-import { VxeGridInstance, VxeGridProps } from 'vxe-table'
+import { VxeGridInstance, VxeGridProps, VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
   name: string
-  nickname: string
+  region: number[]
 }
 
 const gridRef = ref<VxeGridInstance<RowVO>>()
+
+const regionList = [
+  {
+    label: '北京',
+    value: 1,
+    children: [
+      { value: 3, label: '东城区' },
+      { value: 4, label: '西城区' }
+    ]
+  },
+  {
+    label: '上海',
+    value: 21,
+    children: [
+      { value: 23, label: '黄浦区' },
+      { value: 24, label: '卢湾区' }
+    ]
+  },
+  {
+    label: '广东',
+    value: 42,
+    children: [
+      { value: 43, label: '广州市' },
+      { value: 67, label: '深圳市' }
+    ]
+  }
+]
+
+const regionEditRender = reactive<VxeColumnPropTypes.EditRender>({
+  name: 'ACascader',
+  props: {
+    options: regionList
+  }
+})
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
@@ -32,11 +66,11 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { type: 'checkbox', width: 60 },
     { type: 'seq', title: 'Number', width: 80 },
     { field: 'name', title: 'Name', minWidth: 140, editRender: { name: 'AInput' } },
-    { field: 'nickname', title: '输入框', width: 200, editRender: { name: 'AInput' } }
+    { field: 'region', title: '级联选择', width: 200, editRender: regionEditRender }
   ],
   data: [
-    { id: 10001, name: 'Test1', nickname: 'Nickname11' },
-    { id: 10002, name: 'Test2', nickname: '' }
+    { id: 10001, name: 'Test1', region: [] },
+    { id: 10002, name: 'Test2', region: [21, 24] }
   ]
 })
 

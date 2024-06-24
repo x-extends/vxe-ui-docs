@@ -10,15 +10,35 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 import { Modal } from 'ant-design-vue'
-import { VxeGridInstance, VxeGridProps } from 'vxe-table'
+import { VxeGridInstance, VxeGridProps, VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
   name: string
-  nickname: string
+  sex: string
+  sexList: string[]
 }
 
 const gridRef = ref<VxeGridInstance<RowVO>>()
+
+const sexEditRender = reactive<VxeColumnPropTypes.EditRender>({
+  name: 'ASelect',
+  options: [
+    { label: '男', value: '1' },
+    { label: '女', value: '0' }
+  ]
+})
+
+const sexListEditRender = reactive<VxeColumnPropTypes.EditRender>({
+  name: 'ASelect',
+  props: {
+    mode: 'multiple'
+  },
+  options: [
+    { label: '男', value: '1' },
+    { label: '女', value: '0' }
+  ]
+})
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
@@ -32,11 +52,12 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { type: 'checkbox', width: 60 },
     { type: 'seq', title: 'Number', width: 80 },
     { field: 'name', title: 'Name', minWidth: 140, editRender: { name: 'AInput' } },
-    { field: 'nickname', title: '输入框', width: 200, editRender: { name: 'AInput' } }
+    { field: 'sex', title: '下拉框', width: 200, editRender: sexEditRender },
+    { field: 'sexList', title: '下拉框多选', width: 200, editRender: sexListEditRender }
   ],
   data: [
-    { id: 10001, name: 'Test1', nickname: 'Nickname11' },
-    { id: 10002, name: 'Test2', nickname: '' }
+    { id: 10001, name: 'Test1', sex: '1', sexList: [] },
+    { id: 10002, name: 'Test2', sex: '', sexList: ['0', '1'] }
   ]
 })
 

@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import { ElMessageBox } from 'element-plus'
+import { Modal } from 'ant-design-vue'
 import { VxeGridInstance, VxeGridProps } from 'vxe-table'
 
 const gridRef = ref<VxeGridInstance>()
@@ -161,9 +161,15 @@ const saveEvent = () => {
   if ($grid) {
     const { insertRecords, removeRecords, updateRecords } = $grid.getRecordset()
     if (insertRecords.length || removeRecords.length || updateRecords.length) {
-      ElMessageBox.alert(`insertRecords=${insertRecords.length}; removeRecords=${removeRecords.length}; updateRecords=${updateRecords.length}`)
+      Modal.success({
+        title: '提示',
+        content: `insertRecords=${insertRecords.length}; removeRecords=${removeRecords.length}; updateRecords=${updateRecords.length}`
+      })
     } else {
-      ElMessageBox.alert('数据未改动！')
+      Modal.info({
+        title: '提示',
+        content: '数据未改动！'
+      })
     }
   }
 }

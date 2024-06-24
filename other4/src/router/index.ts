@@ -242,7 +242,7 @@ const routes: Array<RouteRecordRaw> = [
               },
               {
                 path: 'el-time-select',
-                name: 'PluginRenderElementTableEditElTimePicker',
+                name: 'PluginRenderElementTableEditElTimeSelect',
                 component: () => import('@/views/plugin-render-element/table/edit/el-time-select/CodeExample.vue')
               }
             ]
@@ -302,7 +302,7 @@ const routes: Array<RouteRecordRaw> = [
               },
               {
                 path: 'el-time-select',
-                name: 'PluginRenderElementGridEditElTimePicker',
+                name: 'PluginRenderElementGridEditElTimeSelect',
                 component: () => import('@/views/plugin-render-element/grid/edit/el-time-select/CodeExample.vue')
               }
             ]
@@ -359,32 +359,32 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'a-input-number',
                 name: 'PluginRenderAntdTableEditElInputNumber',
                 component: () => import('@/views/plugin-render-antd/table/edit/a-input-number/CodeExample.vue')
+              },
+              {
+                path: 'a-autocomplete',
+                name: 'PluginRenderAntdTableEditElAutocomplete',
+                component: () => import('@/views/plugin-render-antd/table/edit/a-autocomplete/CodeExample.vue')
+              },
+              {
+                path: 'a-select',
+                name: 'PluginRenderAntdTableEditElSelect',
+                component: () => import('@/views/plugin-render-antd/table/edit/a-select/CodeExample.vue')
+              },
+              {
+                path: 'a-cascader',
+                name: 'PluginRenderAntdTableEditElCascader',
+                component: () => import('@/views/plugin-render-antd/table/edit/a-cascader/CodeExample.vue')
+              },
+              {
+                path: 'a-date-picker',
+                name: 'PluginRenderAntdTableEditElDatePicker',
+                component: () => import('@/views/plugin-render-antd/table/edit/a-date-picker/CodeExample.vue')
+              },
+              {
+                path: 'a-time-picker',
+                name: 'PluginRenderAntdTableEditElTimePicker',
+                component: () => import('@/views/plugin-render-antd/table/edit/a-time-picker/CodeExample.vue')
               }
-              // {
-              //   path: 'a-autocomplete',
-              //   name: 'PluginRenderAntdTableEditElAutocomplete',
-              //   component: () => import('@/views/plugin-render-antd/table/edit/a-autocomplete/CodeExample.vue')
-              // },
-              // {
-              //   path: 'a-select',
-              //   name: 'PluginRenderAntdTableEditElSelect',
-              //   component: () => import('@/views/plugin-render-antd/table/edit/a-select/CodeExample.vue')
-              // },
-              // {
-              //   path: 'a-cascader',
-              //   name: 'PluginRenderAntdTableEditElCascader',
-              //   component: () => import('@/views/plugin-render-antd/table/edit/a-cascader/CodeExample.vue')
-              // },
-              // {
-              //   path: 'a-date-picker',
-              //   name: 'PluginRenderAntdTableEditElDatePicker',
-              //   component: () => import('@/views/plugin-render-antd/table/edit/a-date-picker/CodeExample.vue')
-              // },
-              // {
-              //   path: 'a-time-select',
-              //   name: 'PluginRenderAntdTableEditElTimePicker',
-              //   component: () => import('@/views/plugin-render-antd/table/edit/a-time-select/CodeExample.vue')
-              // }
             ]
           }
         ]
@@ -419,32 +419,32 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'a-input-number',
                 name: 'PluginRenderAntdGridEditElInputNumber',
                 component: () => import('@/views/plugin-render-antd/grid/edit/a-input-number/CodeExample.vue')
+              },
+              {
+                path: 'a-autocomplete',
+                name: 'PluginRenderAntdGridEditElAutocomplete',
+                component: () => import('@/views/plugin-render-antd/grid/edit/a-autocomplete/CodeExample.vue')
+              },
+              {
+                path: 'a-select',
+                name: 'PluginRenderAntdGridEditElSelect',
+                component: () => import('@/views/plugin-render-antd/grid/edit/a-select/CodeExample.vue')
+              },
+              {
+                path: 'a-cascader',
+                name: 'PluginRenderAntdGridEditElCascader',
+                component: () => import('@/views/plugin-render-antd/grid/edit/a-cascader/CodeExample.vue')
+              },
+              {
+                path: 'a-date-picker',
+                name: 'PluginRenderAntdGridEditElDatePicker',
+                component: () => import('@/views/plugin-render-antd/grid/edit/a-date-picker/CodeExample.vue')
+              },
+              {
+                path: 'a-time-picker',
+                name: 'PluginRenderAntdGridEditElTimePicker',
+                component: () => import('@/views/plugin-render-antd/grid/edit/a-time-picker/CodeExample.vue')
               }
-              // {
-              //   path: 'a-autocomplete',
-              //   name: 'PluginRenderAntdGridEditElAutocomplete',
-              //   component: () => import('@/views/plugin-render-antd/grid/edit/a-autocomplete/CodeExample.vue')
-              // },
-              // {
-              //   path: 'a-select',
-              //   name: 'PluginRenderAntdGridEditElSelect',
-              //   component: () => import('@/views/plugin-render-antd/grid/edit/a-select/CodeExample.vue')
-              // },
-              // {
-              //   path: 'a-cascader',
-              //   name: 'PluginRenderAntdGridEditElCascader',
-              //   component: () => import('@/views/plugin-render-antd/grid/edit/a-cascader/CodeExample.vue')
-              // },
-              // {
-              //   path: 'a-date-picker',
-              //   name: 'PluginRenderAntdGridEditElDatePicker',
-              //   component: () => import('@/views/plugin-render-antd/grid/edit/a-date-picker/CodeExample.vue')
-              // },
-              // {
-              //   path: 'a-time-select',
-              //   name: 'PluginRenderAntdGridEditElTimePicker',
-              //   component: () => import('@/views/plugin-render-antd/grid/edit/a-time-select/CodeExample.vue')
-              // }
             ]
           }
         ]
