@@ -491,6 +491,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/button/round/CodeExample.vue')
           },
           {
+            path: 'trigger',
+            name: 'ComponentButtonTrigger',
+            component: () => import('@/views/button/trigger/CodeExample.vue')
+          },
+          {
             path: 'loading',
             name: 'ComponentButtonLoading',
             component: () => import('@/views/button/loading/CodeExample.vue')
