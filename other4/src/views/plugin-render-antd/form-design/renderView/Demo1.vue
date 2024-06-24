@@ -41,8 +41,14 @@ const formDesignWidgets = ref<VxeFormDesignPropTypes.Widgets>([
   {
     group: 'base',
     children: [
-      'AInput',
-      'ADatePicker'
+      'AInputWidget',
+      'ATextareaWidget',
+      'ANumberInputWidget',
+      'ADatePickerWidget',
+      'ASelectWidget',
+      'ARadioWidget',
+      'ACheckboxWidget',
+      'ASwitchWidget'
     ]
   },
   {
