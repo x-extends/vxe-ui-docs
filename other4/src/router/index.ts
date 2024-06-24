@@ -190,12 +190,122 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/plugin-render-element/install/CodeExample.vue')
       },
       {
+        path: 'table',
+        children: [
+          {
+            path: 'cell',
+            children: [
+              {
+                path: 'el-switch',
+                name: 'PluginRenderElementTableCellElSwitch',
+                component: () => import('@/views/plugin-render-element/table/cell/el-switch/CodeExample.vue')
+              },
+              {
+                path: 'el-rate',
+                name: 'PluginRenderElementTableCellElRate',
+                component: () => import('@/views/plugin-render-element/table/cell/el-rate/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'edit',
+            children: [
+              {
+                path: 'el-input',
+                name: 'PluginRenderElementTableEditElInput',
+                component: () => import('@/views/plugin-render-element/table/edit/el-input/CodeExample.vue')
+              },
+              {
+                path: 'el-input-number',
+                name: 'PluginRenderElementTableEditElInputNumber',
+                component: () => import('@/views/plugin-render-element/table/edit/el-input-number/CodeExample.vue')
+              },
+              {
+                path: 'el-autocomplete',
+                name: 'PluginRenderElementTableEditElAutocomplete',
+                component: () => import('@/views/plugin-render-element/table/edit/el-autocomplete/CodeExample.vue')
+              },
+              {
+                path: 'el-select',
+                name: 'PluginRenderElementTableEditElSelect',
+                component: () => import('@/views/plugin-render-element/table/edit/el-select/CodeExample.vue')
+              },
+              {
+                path: 'el-cascader',
+                name: 'PluginRenderElementTableEditElCascader',
+                component: () => import('@/views/plugin-render-element/table/edit/el-cascader/CodeExample.vue')
+              },
+              {
+                path: 'el-date-picker',
+                name: 'PluginRenderElementTableEditElDatePicker',
+                component: () => import('@/views/plugin-render-element/table/edit/el-date-picker/CodeExample.vue')
+              },
+              {
+                path: 'el-time-select',
+                name: 'PluginRenderElementTableEditElTimePicker',
+                component: () => import('@/views/plugin-render-element/table/edit/el-time-select/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
+      {
         path: 'grid',
         children: [
           {
+            path: 'cell',
+            children: [
+              {
+                path: 'el-switch',
+                name: 'PluginRenderElementGridCellElSwitch',
+                component: () => import('@/views/plugin-render-element/grid/cell/el-switch/CodeExample.vue')
+              },
+              {
+                path: 'el-rate',
+                name: 'PluginRenderElementGridCellElRate',
+                component: () => import('@/views/plugin-render-element/grid/cell/el-rate/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'edit',
-            name: 'PluginRenderElementGridEdit',
-            component: () => import('@/views/plugin-render-element/grid/edit/CodeExample.vue')
+            children: [
+              {
+                path: 'el-input',
+                name: 'PluginRenderElementGridEditElInput',
+                component: () => import('@/views/plugin-render-element/grid/edit/el-input/CodeExample.vue')
+              },
+              {
+                path: 'el-input-number',
+                name: 'PluginRenderElementGridEditElInputNumber',
+                component: () => import('@/views/plugin-render-element/grid/edit/el-input-number/CodeExample.vue')
+              },
+              {
+                path: 'el-autocomplete',
+                name: 'PluginRenderElementGridEditElAutocomplete',
+                component: () => import('@/views/plugin-render-element/grid/edit/el-autocomplete/CodeExample.vue')
+              },
+              {
+                path: 'el-select',
+                name: 'PluginRenderElementGridEditElSelect',
+                component: () => import('@/views/plugin-render-element/grid/edit/el-select/CodeExample.vue')
+              },
+              {
+                path: 'el-cascader',
+                name: 'PluginRenderElementGridEditElCascader',
+                component: () => import('@/views/plugin-render-element/grid/edit/el-cascader/CodeExample.vue')
+              },
+              {
+                path: 'el-date-picker',
+                name: 'PluginRenderElementGridEditElDatePicker',
+                component: () => import('@/views/plugin-render-element/grid/edit/el-date-picker/CodeExample.vue')
+              },
+              {
+                path: 'el-time-select',
+                name: 'PluginRenderElementGridEditElTimePicker',
+                component: () => import('@/views/plugin-render-element/grid/edit/el-time-select/CodeExample.vue')
+              }
+            ]
           }
         ]
       },

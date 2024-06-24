@@ -116,16 +116,52 @@ export const navConfigList: NavVO[] = [
           { title: '安装插件', routerLink: { name: 'PluginRenderElementInstall' } }
         ]
       },
-      // {
-      //   title: 'Table 基础表格',
-      //   children: [
-      //     // { title: '单元格可编辑', routerLink: { name: 'PluginRenderElementTableEdit' } }
-      //   ]
-      // },
+      {
+        title: 'Table 基础表格',
+        children: [
+          {
+            title: '列表模式',
+            children: [
+              { title: 'el-switch', routerLink: { name: 'PluginRenderElementTableCellElSwitch' } },
+              { title: 'el-rate', routerLink: { name: 'PluginRenderElementTableCellElRate' } }
+            ]
+          },
+          {
+            title: '编辑模式',
+            children: [
+              { title: 'el-input', routerLink: { name: 'PluginRenderElementTableEditElInput' } },
+              { title: 'el-input-number', routerLink: { name: 'PluginRenderElementTableEditElInputNumber' } },
+              { title: 'el-autocomplete', routerLink: { name: 'PluginRenderElementTableEditElAutocomplete' } },
+              { title: 'el-select', routerLink: { name: 'PluginRenderElementTableEditElSelect' } },
+              { title: 'el-cascader', routerLink: { name: 'PluginRenderElementTableEditElCascader' } },
+              { title: 'el-date-picker', routerLink: { name: 'PluginRenderElementTableEditElDatePicker' } },
+              { title: 'el-time-picker', routerLink: { name: 'PluginRenderElementTableEditElTimePicker' } }
+            ]
+          }
+        ]
+      },
       {
         title: 'Grid 配置式表格',
         children: [
-          { title: '单元格可编辑', routerLink: { name: 'PluginRenderElementGridEdit' } }
+          {
+            title: '列表模式',
+            children: [
+              { title: 'el-switch', routerLink: { name: 'PluginRenderElementGridCellElSwitch' } },
+              { title: 'el-rate', routerLink: { name: 'PluginRenderElementGridCellElRate' } }
+            ]
+          },
+          {
+            title: '编辑模式',
+            children: [
+              { title: 'el-input', routerLink: { name: 'PluginRenderElementGridEditElInput' } },
+              { title: 'el-input-number', routerLink: { name: 'PluginRenderElementGridEditElInputNumber' } },
+              { title: 'el-autocomplete', routerLink: { name: 'PluginRenderElementGridEditElAutocomplete' } },
+              { title: 'el-select', routerLink: { name: 'PluginRenderElementGridEditElSelect' } },
+              { title: 'el-cascader', routerLink: { name: 'PluginRenderElementGridEditElCascader' } },
+              { title: 'el-date-picker', routerLink: { name: 'PluginRenderElementGridEditElDatePicker' } },
+              { title: 'el-time-picker', routerLink: { name: 'PluginRenderElementGridEditElTimePicker' } }
+            ]
+          }
         ]
       },
       {
