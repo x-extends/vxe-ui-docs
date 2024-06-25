@@ -346,7 +346,34 @@ export const navConfigList: NavVO[] = [
         title: 'NumberInput 数值输入',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'number-input' } } },
-          { title: '数值输入', routerLink: { name: 'ComponentNumberInput' } }
+          {
+            title: '数值',
+            children: [
+              { title: '基础', routerLink: { name: 'ComponentNumberInputNumberBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentNumberInputNumberClearable' } },
+              { title: '设置步数', routerLink: { name: 'ComponentNumberInputNumberStep' } },
+              { title: '控制按钮', routerLink: { name: 'ComponentNumberInputNumberControls' } }
+            ]
+          },
+          {
+            title: '整数',
+            children: [
+              { title: '基础', routerLink: { name: 'ComponentNumberInputIntegerBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentNumberInputIntegerClearable' } },
+              { title: '设置步数', routerLink: { name: 'ComponentNumberInputIntegerStep' } },
+              { title: '控制按钮', routerLink: { name: 'ComponentNumberInputIntegerControls' } }
+            ]
+          },
+          {
+            title: '小数',
+            children: [
+              { title: '基础', routerLink: { name: 'ComponentNumberInputFloatBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentNumberInputFloatClearable' } },
+              { title: '设置步数', routerLink: { name: 'ComponentNumberInputFloatStep' } },
+              { title: '小数位数', routerLink: { name: 'ComponentNumberInputFloatDigits' } },
+              { title: '控制按钮', routerLink: { name: 'ComponentNumberInputFloatControls' } }
+            ]
+          }
         ]
       },
       {
@@ -845,11 +872,13 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
-            title: '可编辑 - 渲染控件',
+            title: '可编辑 - 渲染单元格',
             children: [
               { title: 'input', routerLink: { name: 'ComponentGridEditRenderInput' } },
               { title: 'select', routerLink: { name: 'ComponentGridEditRenderSelect' } },
               { title: 'vxe-input', routerLink: { name: 'ComponentGridEditRenderVxeInput' } },
+              { title: 'vxe-number-picker', routerLink: { name: 'ComponentGridEditRenderVxeNumberPicker' } },
+              { title: 'vxe-date-picker', routerLink: { name: 'ComponentGridEditRenderVxeDatePicker' } },
               { title: 'vxe-select', routerLink: { name: 'ComponentGridEditRenderVxeSelect' } },
               { title: '使用第三方组件', isPlugin: true, linkStatus: 'success', linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/grid/edit' }
             ]

@@ -669,8 +669,88 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'number-input',
-        name: 'ComponentNumberInput',
-        component: () => import('@/views/number-input/CodeExample.vue')
+        children: [
+          {
+            path: 'number',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentNumberInputNumberBase',
+                component: () => import('@/views/number-input/number/base/CodeExample.vue')
+              },
+              {
+                path: 'clearable',
+                name: 'ComponentNumberInputNumberClearable',
+                component: () => import('@/views/number-input/number/clearable/CodeExample.vue')
+              },
+              {
+                path: 'step',
+                name: 'ComponentNumberInputNumberStep',
+                component: () => import('@/views/number-input/number/step/CodeExample.vue')
+              },
+              {
+                path: 'controls',
+                name: 'ComponentNumberInputNumberControls',
+                component: () => import('@/views/number-input/number/controls/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'integer',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentNumberInputIntegerBase',
+                component: () => import('@/views/number-input/integer/base/CodeExample.vue')
+              },
+              {
+                path: 'clearable',
+                name: 'ComponentNumberInputIntegerClearable',
+                component: () => import('@/views/number-input/integer/clearable/CodeExample.vue')
+              },
+              {
+                path: 'step',
+                name: 'ComponentNumberInputIntegerStep',
+                component: () => import('@/views/number-input/integer/step/CodeExample.vue')
+              },
+              {
+                path: 'controls',
+                name: 'ComponentNumberInputIntegerControls',
+                component: () => import('@/views/number-input/integer/controls/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'float',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentNumberInputFloatBase',
+                component: () => import('@/views/number-input/float/base/CodeExample.vue')
+              },
+              {
+                path: 'clearable',
+                name: 'ComponentNumberInputFloatClearable',
+                component: () => import('@/views/number-input/float/clearable/CodeExample.vue')
+              },
+              {
+                path: 'digits',
+                name: 'ComponentNumberInputFloatDigits',
+                component: () => import('@/views/number-input/float/digits/CodeExample.vue')
+              },
+              {
+                path: 'step',
+                name: 'ComponentNumberInputFloatStep',
+                component: () => import('@/views/number-input/float/step/CodeExample.vue')
+              },
+              {
+                path: 'controls',
+                name: 'ComponentNumberInputFloatControls',
+                component: () => import('@/views/number-input/float/controls/CodeExample.vue')
+              }
+            ]
+          }
+        ]
       },
       {
         path: 'textarea',
@@ -2953,6 +3033,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'vxe-input',
                 name: 'ComponentGridEditRenderVxeInput',
                 component: () => import('@/views/grid/editRender/vxe-input/CodeExample.vue')
+              },
+              {
+                path: 'vxe-number-picker',
+                name: 'ComponentGridEditRenderVxeNumberPicker',
+                component: () => import('@/views/grid/editRender/vxe-number-picker/CodeExample.vue')
+              },
+              {
+                path: 'vxe-date-picker',
+                name: 'ComponentGridEditRenderVxeDatePicker',
+                component: () => import('@/views/grid/editRender/vxe-date-picker/CodeExample.vue')
               },
               {
                 path: 'vxe-select',
