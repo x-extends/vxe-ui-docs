@@ -234,7 +234,7 @@ export const navConfigList: NavVO[] = [
           { title: '折叠表单', routerLink: { name: 'ComponentFormBasicsCollapse' } },
           { title: '表单校验', routerLink: { name: 'ComponentFormBasicsValid' } },
           {
-            title: '渲染配置式',
+            title: '渲染 - 配置式',
             children: [
               { title: 'input', routerLink: { name: 'ComponentFormBasicsItemRenderInput' } },
               { title: 'textarea', routerLink: { name: 'ComponentFormBasicsItemRenderTextarea' } },
@@ -244,7 +244,7 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
-            title: '渲染插槽式',
+            title: '渲染 - 插槽式',
             children: [
               { title: 'vxe-input', routerLink: { name: 'ComponentFormBasicsTemplateVxeInput' } },
               { title: 'vxe-number-input', routerLink: { name: 'ComponentFormBasicsTemplateVxeNumberInput' } },
@@ -266,7 +266,7 @@ export const navConfigList: NavVO[] = [
           { title: '折叠表单', routerLink: { name: 'ComponentFormConfigCollapse' } },
           { title: '表单校验', routerLink: { name: 'ComponentFormConfigValid' } },
           {
-            title: '渲染插槽式',
+            title: '渲染 - 配置式',
             children: [
               { title: 'input', routerLink: { name: 'ComponentFormConfigItemRenderInput' } },
               { title: 'textarea', routerLink: { name: 'ComponentFormConfigItemRenderTextarea' } },
@@ -276,7 +276,7 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
-            title: '渲染插槽式',
+            title: '渲染 - 插槽式',
             children: [
               { title: 'vxe-input', routerLink: { name: 'ComponentFormConfigTemplateVxeInput' } },
               { title: 'vxe-number-input', routerLink: { name: 'ComponentFormConfigTemplateVxeNumberInput' } },
@@ -910,7 +910,7 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
-            title: '可编辑 - 渲染单元格',
+            title: '可编辑 - 渲染 - 配置式',
             children: [
               { title: 'input', routerLink: { name: 'ComponentGridEditRenderInput' } },
               { title: 'select', routerLink: { name: 'ComponentGridEditRenderSelect' } },
@@ -919,6 +919,13 @@ export const navConfigList: NavVO[] = [
               { title: 'vxe-date-picker', routerLink: { name: 'ComponentGridEditRenderVxeDatePicker' } },
               { title: 'vxe-select', routerLink: { name: 'ComponentGridEditRenderVxeSelect' } },
               { title: '使用第三方组件', isPlugin: true, linkStatus: 'success', linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/grid/edit' }
+            ]
+          },
+          {
+            title: '可编辑 - 渲染 - 插槽式',
+            children: [
+              { title: 'vxe-input', routerLink: { name: 'ComponentGridEditTemplateVxeInput' } },
+              { title: 'vxe-select', routerLink: { name: 'ComponentGridEditTemplateVxeSelect' } }
             ]
           },
           {
