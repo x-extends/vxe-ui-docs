@@ -1463,6 +1463,61 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'valid',
                 name: 'ComponentFormBasicsValid',
                 component: () => import('@/views/form/basics/valid/CodeExample.vue')
+              },
+              {
+                path: 'itemRender',
+                children: [
+                  {
+                    path: 'input',
+                    name: 'ComponentFormBasicsItemRenderInput',
+                    component: () => import('@/views/form/basics/itemRender/input/CodeExample.vue')
+                  },
+                  {
+                    path: 'textarea',
+                    name: 'ComponentFormBasicsItemRenderTextarea',
+                    component: () => import('@/views/form/basics/itemRender/textarea/CodeExample.vue')
+                  },
+                  {
+                    path: 'select',
+                    name: 'ComponentFormBasicsItemRenderSelect',
+                    component: () => import('@/views/form/basics/itemRender/select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-input',
+                    name: 'ComponentFormBasicsItemRenderVxeInput',
+                    component: () => import('@/views/form/basics/itemRender/vxe-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-select',
+                    name: 'ComponentFormBasicsItemRenderVxeSelect',
+                    component: () => import('@/views/form/basics/itemRender/vxe-select/CodeExample.vue')
+                  }
+                ]
+              },
+              {
+                path: 'template',
+                children: [
+                  {
+                    path: 'vxe-input',
+                    name: 'ComponentFormBasicsTemplateVxeInput',
+                    component: () => import('@/views/form/basics/template/vxe-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-number-input',
+                    name: 'ComponentFormBasicsTemplateVxeNumberInput',
+                    component: () => import('@/views/form/basics/template/vxe-number-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-select',
+                    name: 'ComponentFormBasicsTemplateVxeSelect',
+                    component: () => import('@/views/form/basics/template/vxe-select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-date-picker',
+                    name: 'ComponentFormBasicsTemplateVxeDatePicker',
+                    component: () => import('@/views/form/basics/template/vxe-date-picker/CodeExample.vue')
+                  }
+                ]
               }
             ]
           },
@@ -1516,6 +1571,51 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'input',
                     name: 'ComponentFormConfigItemRenderInput',
                     component: () => import('@/views/form/config/itemRender/input/CodeExample.vue')
+                  },
+                  {
+                    path: 'textarea',
+                    name: 'ComponentFormConfigItemRenderTextarea',
+                    component: () => import('@/views/form/config/itemRender/textarea/CodeExample.vue')
+                  },
+                  {
+                    path: 'select',
+                    name: 'ComponentFormConfigItemRenderSelect',
+                    component: () => import('@/views/form/config/itemRender/select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-input',
+                    name: 'ComponentFormConfigItemRenderVxeInput',
+                    component: () => import('@/views/form/config/itemRender/vxe-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-select',
+                    name: 'ComponentFormConfigItemRenderVxeSelect',
+                    component: () => import('@/views/form/config/itemRender/vxe-select/CodeExample.vue')
+                  }
+                ]
+              },
+              {
+                path: 'template',
+                children: [
+                  {
+                    path: 'vxe-input',
+                    name: 'ComponentFormConfigTemplateVxeInput',
+                    component: () => import('@/views/form/config/template/vxe-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-number-input',
+                    name: 'ComponentFormConfigTemplateVxeNumberInput',
+                    component: () => import('@/views/form/config/template/vxe-number-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-select',
+                    name: 'ComponentFormConfigTemplateVxeSelect',
+                    component: () => import('@/views/form/config/template/vxe-select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-date-picker',
+                    name: 'ComponentFormConfigTemplateVxeDatePicker',
+                    component: () => import('@/views/form/config/template/vxe-date-picker/CodeExample.vue')
                   }
                 ]
               }

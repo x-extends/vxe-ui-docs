@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="form/config/itemRender/input/Demo1">
+    <CodeLight path="form/basics/itemRender/input/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="input">原生输入框</vxe-tip>
       </template>

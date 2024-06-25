@@ -232,7 +232,26 @@ export const navConfigList: NavVO[] = [
           { title: '分行/分列', routerLink: { name: 'ComponentFormBasicsGather' } },
           { title: '自定义布局', routerLink: { name: 'ComponentFormBasicsCustomLayout' } },
           { title: '折叠表单', routerLink: { name: 'ComponentFormBasicsCollapse' } },
-          { title: '表单校验', routerLink: { name: 'ComponentFormBasicsValid' } }
+          { title: '表单校验', routerLink: { name: 'ComponentFormBasicsValid' } },
+          {
+            title: '渲染配置式',
+            children: [
+              { title: 'input', routerLink: { name: 'ComponentFormBasicsItemRenderInput' } },
+              { title: 'textarea', routerLink: { name: 'ComponentFormBasicsItemRenderTextarea' } },
+              { title: 'select', routerLink: { name: 'ComponentFormBasicsItemRenderSelect' } },
+              { title: 'vxe-input', routerLink: { name: 'ComponentFormBasicsItemRenderVxeInput' } },
+              { title: 'vxe-select', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSelect' } }
+            ]
+          },
+          {
+            title: '渲染插槽式',
+            children: [
+              { title: 'vxe-input', routerLink: { name: 'ComponentFormBasicsTemplateVxeInput' } },
+              { title: 'vxe-number-input', routerLink: { name: 'ComponentFormBasicsTemplateVxeNumberInput' } },
+              { title: 'vxe-select', routerLink: { name: 'ComponentFormBasicsTemplateVxeSelect' } },
+              { title: 'vxe-date-picker', routerLink: { name: 'ComponentFormBasicsTemplateVxeDatePicker' } }
+            ]
+          }
         ]
       },
       {
@@ -247,9 +266,22 @@ export const navConfigList: NavVO[] = [
           { title: '折叠表单', routerLink: { name: 'ComponentFormConfigCollapse' } },
           { title: '表单校验', routerLink: { name: 'ComponentFormConfigValid' } },
           {
-            title: '渲染表单项',
+            title: '渲染插槽式',
             children: [
-              { title: 'input', routerLink: { name: 'ComponentFormConfigItemRenderInput' } }
+              { title: 'input', routerLink: { name: 'ComponentFormConfigItemRenderInput' } },
+              { title: 'textarea', routerLink: { name: 'ComponentFormConfigItemRenderTextarea' } },
+              { title: 'select', routerLink: { name: 'ComponentFormConfigItemRenderSelect' } },
+              { title: 'vxe-input', routerLink: { name: 'ComponentFormConfigItemRenderVxeInput' } },
+              { title: 'vxe-select', routerLink: { name: 'ComponentFormConfigItemRenderVxeSelect' } }
+            ]
+          },
+          {
+            title: '渲染插槽式',
+            children: [
+              { title: 'vxe-input', routerLink: { name: 'ComponentFormConfigTemplateVxeInput' } },
+              { title: 'vxe-number-input', routerLink: { name: 'ComponentFormConfigTemplateVxeNumberInput' } },
+              { title: 'vxe-select', routerLink: { name: 'ComponentFormConfigTemplateVxeSelect' } },
+              { title: 'vxe-date-picker', routerLink: { name: 'ComponentFormConfigTemplateVxeDatePicker' } }
             ]
           }
         ]

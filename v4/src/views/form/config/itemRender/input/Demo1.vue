@@ -10,27 +10,45 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive, ref } from 'vue'
+import { reactive } from 'vue'
 import { VxeFormProps } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
-  nickname: string
+  role: string
   sex: string
   age: string
+  date: string
+  time: string
+  month: string
+  week: string
+  color: string
+  address: string
 }
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
-  titleWidth: 80,
+  titleWidth: 120,
   data: {
     name: 'test1',
-    nickname: 'Testing',
+    role: '',
     sex: '',
-    age: ''
+    age: '',
+    date: '',
+    time: '',
+    month: '',
+    week: '',
+    color: '',
+    address: ''
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'input' } },
-    { field: 'name', title: '输入框', span: 24, itemRender: { name: 'input' } },
+    { field: 'nickname', title: '文本框', span: 24, itemRender: { name: 'input' } },
+    { field: 'age', title: '数字', span: 24, itemRender: { name: 'input', attrs: { type: 'number' } } },
+    { field: 'date', title: '日期', span: 24, itemRender: { name: 'input', attrs: { type: 'date' } } },
+    { field: 'month', title: '月份', span: 24, itemRender: { name: 'input', attrs: { type: 'month' } } },
+    { field: 'week', title: '周', span: 24, itemRender: { name: 'input', attrs: { type: 'week' } } },
+    { field: 'time', title: '时间', span: 24, itemRender: { name: 'input', attrs: { type: 'time' } } },
+    { field: 'color', title: '颜色', span: 24, itemRender: { name: 'input', attrs: { type: 'color' } } },
     { align: 'center', span: 24, slots: { default: 'active' } }
   ]
 })
