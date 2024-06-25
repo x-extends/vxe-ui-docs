@@ -11,6 +11,8 @@
         <pre>
           <pre-code>
             npm install @vxe-ui/plugin-export-pdf jspdf
+            # 或者
+            yarn add @vxe-ui/plugin-export-pdf jspdf
           </pre-code>
         </pre>
 

@@ -11,6 +11,8 @@
         <pre>
           <pre-code>
             npm install @vxe-ui/plugin-render-antd
+            # 或者
+            yarn add @vxe-ui/plugin-render-antd
           </pre-code>
         </pre>
 

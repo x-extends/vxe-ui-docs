@@ -245,7 +245,13 @@ export const navConfigList: NavVO[] = [
           { title: '文字提示', routerLink: { name: 'ComponentFormConfigTooltip' } },
           { title: '分行/分列', routerLink: { name: 'ComponentFormConfigGather' } },
           { title: '折叠表单', routerLink: { name: 'ComponentFormConfigCollapse' } },
-          { title: '表单校验', routerLink: { name: 'ComponentFormConfigValid' } }
+          { title: '表单校验', routerLink: { name: 'ComponentFormConfigValid' } },
+          {
+            title: '渲染表单项',
+            children: [
+              { title: 'input', routerLink: { name: 'ComponentFormConfigItemRenderInput' } }
+            ]
+          }
         ]
       },
       {

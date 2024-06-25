@@ -11,6 +11,8 @@
         <pre>
           <pre-code>
             npm install @vxe-ui/plugin-render-chart
+            # 或者
+            yarn add @vxe-ui/plugin-render-chart
           </pre-code>
         </pre>
 

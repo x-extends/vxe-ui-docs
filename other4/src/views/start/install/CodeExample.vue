@@ -12,6 +12,8 @@
         <pre>
           <pre-code class="shell">
             npm install vxe-table vxe-pc-ui
+            # 或者
+            yarn add vxe-table vxe-pc-ui
           </pre-code>
           <pre-code class="javascript">
             // ...

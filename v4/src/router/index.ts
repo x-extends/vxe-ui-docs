@@ -1508,6 +1508,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'valid',
                 name: 'ComponentFormConfigValid',
                 component: () => import('@/views/form/config/valid/CodeExample.vue')
+              },
+              {
+                path: 'itemRender',
+                children: [
+                  {
+                    path: 'input',
+                    name: 'ComponentFormConfigItemRenderInput',
+                    component: () => import('@/views/form/config/itemRender/input/CodeExample.vue')
+                  }
+                ]
               }
             ]
           }
