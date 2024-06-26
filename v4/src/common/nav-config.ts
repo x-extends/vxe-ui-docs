@@ -721,12 +721,12 @@ export const navConfigList: NavVO[] = [
             title: '导出数据',
             children: [
               { title: '导出数据', routerLink: { name: 'ComponentTableExportBase' } },
-              { title: '导出 TXT', routerLink: { name: 'ComponentTableExportTxt' } },
-              { title: '导出 XML', routerLink: { name: 'ComponentTableExportXml' } },
-              { title: '导出 HTML', routerLink: { name: 'ComponentTableExportHtml' } },
-              { title: '导出 CSV', routerLink: { name: 'ComponentTableExportCsv' } },
-              { title: '导出 XLSX', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-xlsx/table/export' },
-              { title: '导出 PDF', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-pdf/table/export' },
+              { title: '导出 TXT 格式', routerLink: { name: 'ComponentTableExportTxt' } },
+              { title: '导出 XML 格式', routerLink: { name: 'ComponentTableExportXml' } },
+              { title: '导出 HTML 格式', routerLink: { name: 'ComponentTableExportHtml' } },
+              { title: '导出 CSV 格式', routerLink: { name: 'ComponentTableExportCsv' } },
+              { title: '导出 XLSX 格式', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-xlsx/table/export' },
+              { title: '导出 PDF 格式', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-pdf/table/export' },
               { title: '高级导出', routerLink: { name: 'ComponentTableExportAdvanced' } }
             ]
           },
@@ -734,6 +734,7 @@ export const navConfigList: NavVO[] = [
             title: '导入数据',
             children: [
               { title: '导入数据', routerLink: { name: 'ComponentTableImportBase' } },
+              { title: '导入 XLSX 格式', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-xlsx/table/import' },
               { title: '高级导入', routerLink: { name: 'ComponentTableImportAdvanced' } }
             ]
           },
@@ -947,12 +948,12 @@ export const navConfigList: NavVO[] = [
             title: '导出数据',
             children: [
               { title: '导出数据', routerLink: { name: 'ComponentGridExportBase' } },
-              { title: '导出 TXT', routerLink: { name: 'ComponentGridExportTxt' } },
-              { title: '导出 XML', routerLink: { name: 'ComponentGridExportXml' } },
-              { title: '导出 HTML', routerLink: { name: 'ComponentGridExportHtml' } },
-              { title: '导出 CSV', routerLink: { name: 'ComponentGridExportCsv' } },
-              { title: '导出 XLSX', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-xlsx/grid/export' },
-              { title: '导出 PDF', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-pdf/grid/export' },
+              { title: '导出 TXT 格式', routerLink: { name: 'ComponentGridExportTxt' } },
+              { title: '导出 XML 格式', routerLink: { name: 'ComponentGridExportXml' } },
+              { title: '导出 HTML 格式', routerLink: { name: 'ComponentGridExportHtml' } },
+              { title: '导出 CSV 格式', routerLink: { name: 'ComponentGridExportCsv' } },
+              { title: '导出 XLSX 格式', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-xlsx/grid/export' },
+              { title: '导出 PDF 格式', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-pdf/grid/export' },
               { title: '自定义数据', routerLink: { name: 'ComponentGridExportData' } },
               { title: '高级导出', routerLink: { name: 'ComponentGridExportAdvanced' } }
             ]
@@ -961,6 +962,11 @@ export const navConfigList: NavVO[] = [
             title: '导入数据',
             children: [
               { title: '导入数据', routerLink: { name: 'ComponentGridImportBase' } },
+              { title: '导入 TXT 格式', routerLink: { name: 'ComponentGridImportTxt' } },
+              { title: '导入 XML 格式', routerLink: { name: 'ComponentGridImportXml' } },
+              { title: '导入 HTML 格式', routerLink: { name: 'ComponentGridImportHtml' } },
+              { title: '导入 CSV 格式', routerLink: { name: 'ComponentGridImportCsv' } },
+              { title: '导入 XLSX 格式', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-xlsx/grid/import' },
               { title: '高级导入', routerLink: { name: 'ComponentGridImportAdvanced' } }
             ]
           },

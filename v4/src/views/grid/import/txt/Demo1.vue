@@ -1,7 +1,7 @@
 <template>
   <div>
-    <vxe-button @click="exportEvent">直接导出</vxe-button>
-    <vxe-button @click="importEvent">直接导入</vxe-button>
+    <vxe-button @click="exportEvent">直接导出 TXT 文件</vxe-button>
+    <vxe-button @click="importEvent">直接导入 TXT 文件</vxe-button>
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
@@ -40,6 +40,7 @@ const exportEvent = () => {
   const $grid = gridRef.value
   if ($grid) {
     $grid.exportData({
+      type: 'txt',
       original: true
     })
   }
@@ -48,7 +49,9 @@ const exportEvent = () => {
 const importEvent = () => {
   const $grid = gridRef.value
   if ($grid) {
-    $grid.importData()
+    $grid.importData({
+      types: ['txt']
+    })
   }
 }
 </script>
