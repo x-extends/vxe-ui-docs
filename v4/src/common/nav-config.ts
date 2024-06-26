@@ -1021,13 +1021,13 @@ export const navConfigList: NavVO[] = [
           { title: '右键菜单', routerLink: { name: 'GlobalMenusTableBase' } }
         ]
       },
-      // {
-      //   title: '指令注册（全局复用）',
-      //   children: [
-      //     { title: 'API', routerLink: { name: 'GlobalCommandsTableAPI' } },
-      //     { title: '工具栏', routerLink: { name: 'GlobalCommandsTableBase' } }
-      //   ]
-      // },
+      {
+        title: '工具栏指令（全局复用）',
+        children: [
+          { title: 'API', routerLink: { name: 'GlobalCommandsTableAPI' } },
+          { title: '工具栏', routerLink: { name: 'GlobalCommandsTableBase' } }
+        ]
+      },
       {
         title: '校验（全局复用）',
         children: [
@@ -1115,7 +1115,6 @@ export const navConfigList: NavVO[] = [
           { title: '可关闭', routerLink: { name: 'ComponentAlertClose' } }
         ]
       },
-      // { title: 'Notification 通知提示框' },
       {
         title: 'Drawer 抽屉',
         children: [
@@ -1265,26 +1264,6 @@ export const navConfigList: NavVO[] = [
       // { title: 'PrintDesign 打印设计器' }
     ]
   },
-  // {
-  //   title: '渲染器（高级用法）',
-  //   children: [
-  //     { title: '表格-筛选渲染' },
-  //     { title: '表格-单元格渲染' },
-  //     { title: '表格-可编辑渲染' },
-  //     { title: '表格-工具栏渲染' },
-  //     { title: '表格-空数据渲染' },
-  //     { title: '表单-项渲染' },
-  //     { title: '表单设计器-控件渲染' },
-  //     { title: '列表设计器-控件渲染' },
-  //     { title: '打印设计器-控件渲染' }
-  //   ]
-  // },
-  // {
-  //   title: '扩展插件',
-  //   children: [
-  //     { title: '集成第三方适配器' }
-  //   ]
-  // },
   {
     title: 'API',
     isExpand: true,
