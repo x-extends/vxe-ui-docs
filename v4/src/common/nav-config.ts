@@ -1071,7 +1071,9 @@ export const navConfigList: NavVO[] = [
             title: '筛选',
             children: [
               { title: '实现一个输入筛选', routerLink: { name: 'GlobalRendererTableFilterFilterInput' } },
-              { title: '实现一个多条件筛选', routerLink: { name: 'GlobalRendererTableFilterFilterComplex' } }
+              { title: '实现一个多条件筛选', routerLink: { name: 'GlobalRendererTableFilterFilterComplex' } },
+              { title: '实现一个显示列表的筛选', routerLink: { name: 'GlobalRendererTableFilterFilterContent' } },
+              { title: '更多筛选插件', isEnterprise: true, linkUrl: 'https://vxetable.cn/plugins/' }
             ]
           },
           {

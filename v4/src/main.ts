@@ -47,6 +47,7 @@ import '@/views/global/renderer/table/toolbar/tool/demo1.table.renderer'
 
 import '@/views/global/renderer/table/filter/filterInput/demo1.table.renderer'
 import '@/views/global/renderer/table/filter/filterComplex/demo1.table.renderer'
+import '@/views/global/renderer/table/filter/filterContent/demo1.table.renderer'
 
 import '@/views/global/renderer/table/empty/myEmpty/demo1.table.renderer'
 import '@/views/global/renderer/table/empty/myNotData/demo1.table.renderer'

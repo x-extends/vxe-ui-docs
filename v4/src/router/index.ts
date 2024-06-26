@@ -315,6 +315,11 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'filterComplex',
                     name: 'GlobalRendererTableFilterFilterComplex',
                     component: () => import('@/views/global/renderer/table/filter/filterComplex/CodeExample.vue')
+                  },
+                  {
+                    path: 'filterContent',
+                    name: 'GlobalRendererTableFilterFilterContent',
+                    component: () => import('@/views/global/renderer/table/filter/filterContent/CodeExample.vue')
                   }
                 ]
               },
