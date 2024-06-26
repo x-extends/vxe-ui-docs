@@ -1247,22 +1247,45 @@ export const navConfigList: NavVO[] = [
         title: 'FormDesign 表单设计器',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-design' } } },
-          { title: '基础功能', routerLink: { name: 'ComponentFormDesignBase' } },
-          { title: '自定义控件分组', routerLink: { name: 'ComponentFormDesignCustomGroup' } },
-          { title: '移动端设计器', routerLink: { name: 'ComponentFormDesignMobile' } },
-          { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentFormDesignPcAndMobile' } },
-          { title: '渲染视图', routerLink: { name: 'ComponentFormDesignRenderView' } },
-          { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/form-design/renderView' }
+          {
+            title: '使用设计器',
+            children: [
+              { title: '基础功能', routerLink: { name: 'ComponentFormDesignBase' } },
+              { title: '自定义控件分组', routerLink: { name: 'ComponentFormDesignCustomGroup' } },
+              { title: '移动端设计器', routerLink: { name: 'ComponentFormDesignMobile' } },
+              { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentFormDesignPcAndMobile' } },
+              { title: '渲染视图', routerLink: { name: 'ComponentFormDesignRenderView' } },
+              { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/form-design/renderView' }
+            ]
+          },
+          {
+            title: '渲染器（高阶复用）',
+            children: [
+              { title: 'API', routerLink: { name: 'GlobalRendererFormDesignAPI' } },
+              {
+                title: '控件',
+                children: [
+                  { title: '实现一个单行输入控件', routerLink: { name: 'GlobalRendererFormDesignWidgetMyInputWidget' } },
+                  { title: '实现一个多行输入控件', routerLink: { name: 'GlobalRendererFormDesignWidgetMyTextareaWidget' } }
+                ]
+              }
+            ]
+          }
         ]
       },
       {
         title: 'ListDesign 列表设计器',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'list-design' } } },
-          { title: '基础功能', routerLink: { name: 'ComponentListDesignBase' } },
-          { title: '移动端设计器', routerLink: { name: 'ComponentListDesignMobile' } },
-          { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentListDesignPcAndMobile' } },
-          { title: '集成表单设计器', routerLink: { name: 'ComponentListDesignFormAndList' } }
+          {
+            title: '使用设计器',
+            children: [
+              { title: '基础功能', routerLink: { name: 'ComponentListDesignBase' } },
+              { title: '移动端设计器', routerLink: { name: 'ComponentListDesignMobile' } },
+              { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentListDesignPcAndMobile' } },
+              { title: '集成表单设计器', routerLink: { name: 'ComponentListDesignFormAndList' } }
+            ]
+          }
         ]
       }
       // { title: 'FlowDesign 流程设计器' },

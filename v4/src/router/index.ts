@@ -339,6 +339,31 @@ const routes: Array<RouteRecordRaw> = [
                 ]
               }
             ]
+          },
+          {
+            path: 'form-design',
+            children: [
+              {
+                path: 'api',
+                name: 'GlobalRendererFormDesignAPI',
+                component: () => import('@/views/global/renderer/form-design/api/CodeExample.vue')
+              },
+              {
+                path: 'widget',
+                children: [
+                  {
+                    path: 'myInputWidget',
+                    name: 'GlobalRendererFormDesignWidgetMyInputWidget',
+                    component: () => import('@/views/global/renderer/form-design/widget/myInputWidget/CodeExample.vue')
+                  },
+                  {
+                    path: 'myTextareaWidget',
+                    name: 'GlobalRendererFormDesignWidgetMyTextareaWidget',
+                    component: () => import('@/views/global/renderer/form-design/widget/myTextareaWidget/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
