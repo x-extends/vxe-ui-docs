@@ -701,7 +701,7 @@ export const navConfigList: NavVO[] = [
               { title: '实现多列下拉联动', routerLink: { name: 'ComponentTableEditCascadingSelect' } },
               { title: '实现表尾实时合计', routerLink: { name: 'ComponentTableEditFooterImmediately' } },
               { title: '实现单元格实时保存', routerLink: { name: 'ComponentTableEditRealtimeSave' } },
-              { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/grid/edit' }
+              { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/table/edit/el-input' }
             ]
           },
           {
@@ -919,7 +919,7 @@ export const navConfigList: NavVO[] = [
               { title: 'vxe-number-picker', routerLink: { name: 'ComponentGridEditRenderVxeNumberPicker' } },
               { title: 'vxe-date-picker', routerLink: { name: 'ComponentGridEditRenderVxeDatePicker' } },
               { title: 'vxe-select', routerLink: { name: 'ComponentGridEditRenderVxeSelect' } },
-              { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/grid/edit' }
+              { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/grid/edit/el-input' }
             ]
           },
           {
