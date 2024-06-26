@@ -12,8 +12,12 @@
       :data="tableData">
       <vxe-column type="checkbox" width="60"></vxe-column>
       <vxe-column type="seq" title="Number" width="80"></vxe-column>
-      <vxe-column title="Name" field="name" min-width="140" :edit-render="{ name: 'ElInput' }"></vxe-column>
-      <vxe-column title="数字输入框" field="num" width="200" align="center" :edit-render="{ name: 'ElInputNumber' }"></vxe-column>
+      <vxe-column title="Name" field="name" min-width="140"></vxe-column>
+      <vxe-column title="Num" field="num" width="200">
+        <template #default="{ row }">
+          <el-rate v-model="row.num"></el-rate>
+        </template>
+      </vxe-column>
     </vxe-table>
   </div>
 </template>
@@ -26,14 +30,14 @@ import { VxeTableInstance } from 'vxe-table'
 interface RowVO {
   id: number
   name: string
-  num: number | null
+  num: number
 }
 
 const tableRef = ref<VxeTableInstance<RowVO>>()
 
 const tableData = ref<RowVO[]>([
-  { id: 10001, name: 'Test1', num: null },
-  { id: 10002, name: 'Test2', num: 3 }
+  { id: 10001, name: 'Test1', num: 3 },
+  { id: 10002, name: 'Test2', num: 2 }
 ])
 
 const insertEvent = async () => {

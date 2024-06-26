@@ -898,7 +898,10 @@ export const navConfigList: NavVO[] = [
             title: '树形',
             children: [
               { title: '平级结构', routerLink: { name: 'ComponentGridTreeLeveling' } },
-              { title: '层级结构', routerLink: { name: 'ComponentGridTreeHierarchy' } }
+              { title: '层级结构', routerLink: { name: 'ComponentGridTreeHierarchy' } },
+              { title: '显示连接线', routerLink: { name: 'ComponentGridTreeLine' } },
+              { title: '单选框', routerLink: { name: 'ComponentGridTreeRadio' } },
+              { title: '复选框', routerLink: { name: 'ComponentGridTreeCheckbox' } }
             ]
           },
           {

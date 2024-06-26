@@ -3103,6 +3103,21 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'hierarchy',
                 name: 'ComponentGridTreeHierarchy',
                 component: () => import('@/views/grid/tree/hierarchy/CodeExample.vue')
+              },
+              {
+                path: 'line',
+                name: 'ComponentGridTreeLine',
+                component: () => import('@/views/grid/tree/line/CodeExample.vue')
+              },
+              {
+                path: 'radio',
+                name: 'ComponentGridTreeRadio',
+                component: () => import('@/views/grid/tree/radio/CodeExample.vue')
+              },
+              {
+                path: 'checkbox',
+                name: 'ComponentGridTreeCheckbox',
+                component: () => import('@/views/grid/tree/checkbox/CodeExample.vue')
               }
             ]
           },
