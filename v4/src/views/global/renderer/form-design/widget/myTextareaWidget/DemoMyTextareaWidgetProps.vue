@@ -29,7 +29,7 @@
 <script lang="ts" setup>
 import { computed, PropType } from 'vue'
 import { VxeGlobalRendererHandles } from 'vxe-pc-ui'
-import { MyWidgetTextareaProps } from './demoMyTextareaWidgetdget'
+import { MyWidgetTextareaProps } from './demoMyTextareaWidget'
 
 const props = defineProps({
   renderOpts: {
