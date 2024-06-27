@@ -33,6 +33,9 @@
 
             // 切换语言
             VxeUI.setLanguage('zh-CN')
+
+            // 获取当前使用的语言
+            VxeUI.getLanguage()
           </pre-code>
         </pre>
       </template>

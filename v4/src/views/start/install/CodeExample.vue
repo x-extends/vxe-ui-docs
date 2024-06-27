@@ -14,6 +14,8 @@
             npm install vxe-table vxe-pc-ui
             # 或者
             yarn add vxe-table vxe-pc-ui
+            # 或者
+            pnpm add vxe-table@next vxe-pc-ui
           </pre-code>
           <pre-code class="javascript">
             // ...
