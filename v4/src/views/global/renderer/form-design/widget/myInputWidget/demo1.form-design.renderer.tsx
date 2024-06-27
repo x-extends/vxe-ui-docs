@@ -1,7 +1,7 @@
 // main.js
 
 import { VxeUI } from 'vxe-pc-ui'
-import { getMyWidgetInputConfig } from './myInputWidget'
+import { getMyWidgetInputConfig } from './demoMyInputWidget'
 import DemoMyInputWidgetView from './DemoMyInputWidgetView.vue'
 import DemoMyInputWidgetProps from './DemoMyInputWidgetProps.vue'
 

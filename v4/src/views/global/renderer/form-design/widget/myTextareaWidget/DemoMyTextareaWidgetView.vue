@@ -11,7 +11,7 @@
 <script lang="ts" setup>
 import { PropType } from 'vue'
 import { VxeUI, VxeGlobalRendererHandles } from 'vxe-pc-ui'
-import { MyWidgetTextareaProps } from './myTextareaWidget'
+import { MyWidgetTextareaProps } from './demoMyTextareaWidgetdget'
 
 const props = defineProps({
   renderOpts: {

@@ -26,7 +26,7 @@
 <script lang="ts" setup>
 import { computed, PropType } from 'vue'
 import { VxeGlobalRendererHandles } from 'vxe-pc-ui'
-import { MyWidgetInputProps } from './myInputWidget'
+import { MyWidgetInputProps } from './demoMyInputWidgetdget'
 
 const props = defineProps({
   renderOpts: {

@@ -1,7 +1,7 @@
 // main.js
 
 import { VxeUI } from 'vxe-pc-ui'
-import { getMyWidgetTextareaConfig } from './myTextareaWidget'
+import { getMyWidgetTextareaConfig } from './demoMyTextareaWidget'
 import DemoMyTextareaWidgetView from './DemoMyTextareaWidgetView.vue'
 import DemoMyTextareaWidgetProps from './DemoMyTextareaWidgetProps.vue'
 
