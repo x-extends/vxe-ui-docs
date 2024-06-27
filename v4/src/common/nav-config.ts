@@ -791,6 +791,7 @@ export const navConfigList: NavVO[] = [
               { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTableScrollVertical' } },
               { title: '横向虚拟滚动', routerLink: { name: 'ComponentTableScrollHorizontal' } },
               { title: '纵向和横向虚拟滚动', routerLink: { name: 'ComponentTableScrollHV' } },
+              { title: '函数式加载数据', routerLink: { name: 'ComponentTableScrollLoadData' } },
               { title: '设置行高', routerLink: { name: 'ComponentTableScrollRowHeight' } },
               { title: '使用分组表头', routerLink: { name: 'ComponentTableScrollGroup' } },
               { title: '按键导航', routerLink: { name: 'ComponentTableScrollKeyboard' } },
@@ -943,6 +944,24 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
+            title: '单元格 - 渲染 - 配置式',
+            children: [
+              { title: 'VxeSwitch', routerLink: { name: 'ComponentGridCellRenderVxeSwitch' } },
+              { title: 'VxeButtonGroup', routerLink: { name: 'ComponentGridCellRenderVxeButtonGroup' } },
+              { title: 'VxeUpload', routerLink: { name: 'ComponentGridCellRenderVxeUpload' } }
+            ]
+          },
+          {
+            title: '单元格 - 渲染 - 插槽式',
+            children: [
+              { title: 'VxeSwitch', routerLink: { name: 'ComponentGridCellTemplateVxeSwitch' } },
+              { title: 'VxeButtonGroup', routerLink: { name: 'ComponentGridCellTemplateVxeButtonGroup' } },
+              { title: 'VxeButton', routerLink: { name: 'ComponentGridCellTemplateVxeButton' } },
+              { title: 'VxeUpload', routerLink: { name: 'ComponentGridCellTemplateVxeUpload' } },
+              { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/grid/cell/el-switch' }
+            ]
+          },
+          {
             title: '可编辑',
             children: [
               { title: '单击编辑', routerLink: { name: 'ComponentGridEditClick' } },
@@ -956,18 +975,18 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: 'input', routerLink: { name: 'ComponentGridEditRenderInput' } },
               { title: 'select', routerLink: { name: 'ComponentGridEditRenderSelect' } },
-              { title: 'vxe-input', routerLink: { name: 'ComponentGridEditRenderVxeInput' } },
-              { title: 'vxe-number-picker', routerLink: { name: 'ComponentGridEditRenderVxeNumberPicker' } },
-              { title: 'vxe-date-picker', routerLink: { name: 'ComponentGridEditRenderVxeDatePicker' } },
-              { title: 'vxe-select', routerLink: { name: 'ComponentGridEditRenderVxeSelect' } },
+              { title: 'VxeInput', routerLink: { name: 'ComponentGridEditRenderVxeInput' } },
+              { title: 'VxeNumberPicker', routerLink: { name: 'ComponentGridEditRenderVxeNumberPicker' } },
+              { title: 'VxeDatePicker', routerLink: { name: 'ComponentGridEditRenderVxeDatePicker' } },
+              { title: 'VxeSelect', routerLink: { name: 'ComponentGridEditRenderVxeSelect' } },
               { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/grid/edit/el-input' }
             ]
           },
           {
             title: '可编辑 - 渲染 - 插槽式',
             children: [
-              { title: 'vxe-input', routerLink: { name: 'ComponentGridEditTemplateVxeInput' } },
-              { title: 'vxe-select', routerLink: { name: 'ComponentGridEditTemplateVxeSelect' } },
+              { title: 'VxeInput', routerLink: { name: 'ComponentGridEditTemplateVxeInput' } },
+              { title: 'VxeSelect', routerLink: { name: 'ComponentGridEditTemplateVxeSelect' } },
               { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/grid/edit/el-input' }
             ]
           },
@@ -1029,8 +1048,11 @@ export const navConfigList: NavVO[] = [
               { title: '纵向虚拟滚动', routerLink: { name: 'ComponentGridScrollVertical' } },
               { title: '横向虚拟滚动', routerLink: { name: 'ComponentGridScrollHorizontal' } },
               { title: '纵向和横向虚拟滚动', routerLink: { name: 'ComponentGridScrollHV' } },
+              { title: '函数式加载数据', routerLink: { name: 'ComponentGridScrollLoadData' } },
+              { title: '设置行高', routerLink: { name: 'ComponentGridScrollRowHeight' } },
               { title: '使用分组表头', routerLink: { name: 'ComponentGridScrollGroup' } },
-              { title: '使用表尾', routerLink: { name: 'ComponentGridScrollFooter' } }
+              { title: '使用表尾', routerLink: { name: 'ComponentGridScrollFooter' } },
+              { title: '树形虚拟滚动', routerLink: { name: 'ComponentGridScrollTree' } }
             ]
           },
           {

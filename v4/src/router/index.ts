@@ -2805,6 +2805,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/table/scroll/hv/CodeExample.vue')
               },
               {
+                path: 'loadData',
+                name: 'ComponentTableScrollLoadData',
+                component: () => import('@/views/table/scroll/loadData/CodeExample.vue')
+              },
+              {
                 path: 'rowHeight',
                 name: 'ComponentTableScrollRowHeight',
                 component: () => import('@/views/table/scroll/rowHeight/CodeExample.vue')
@@ -3287,6 +3292,51 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'cellRender',
+            children: [
+              {
+                path: 'vxe-switch',
+                name: 'ComponentGridCellRenderVxeSwitch',
+                component: () => import('@/views/grid/cellRender/vxe-switch/CodeExample.vue')
+              },
+              {
+                path: 'vxe-button-group',
+                name: 'ComponentGridCellRenderVxeButtonGroup',
+                component: () => import('@/views/grid/cellRender/vxe-button-group/CodeExample.vue')
+              },
+              {
+                path: 'vxe-upload',
+                name: 'ComponentGridCellRenderVxeUpload',
+                component: () => import('@/views/grid/cellRender/vxe-upload/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'cellTemplate',
+            children: [
+              {
+                path: 'vxe-switch',
+                name: 'ComponentGridCellTemplateVxeSwitch',
+                component: () => import('@/views/grid/cellTemplate/vxe-switch/CodeExample.vue')
+              },
+              {
+                path: 'vxe-button-group',
+                name: 'ComponentGridCellTemplateVxeButtonGroup',
+                component: () => import('@/views/grid/cellTemplate/vxe-button-group/CodeExample.vue')
+              },
+              {
+                path: 'vxe-button',
+                name: 'ComponentGridCellTemplateVxeButton',
+                component: () => import('@/views/grid/cellTemplate/vxe-button/CodeExample.vue')
+              },
+              {
+                path: 'vxe-upload',
+                name: 'ComponentGridCellTemplateVxeUpload',
+                component: () => import('@/views/grid/cellTemplate/vxe-upload/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'edit',
             children: [
               {
@@ -3545,6 +3595,16 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/grid/scroll/hv/CodeExample.vue')
               },
               {
+                path: 'loadData',
+                name: 'ComponentGridScrollLoadData',
+                component: () => import('@/views/grid/scroll/loadData/CodeExample.vue')
+              },
+              {
+                path: 'rowHeight',
+                name: 'ComponentGridScrollRowHeight',
+                component: () => import('@/views/grid/scroll/rowHeight/CodeExample.vue')
+              },
+              {
                 path: 'group',
                 name: 'ComponentGridScrollGroup',
                 component: () => import('@/views/grid/scroll/group/CodeExample.vue')
@@ -3553,6 +3613,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'footer',
                 name: 'ComponentGridScrollFooter',
                 component: () => import('@/views/grid/scroll/footer/CodeExample.vue')
+              },
+              {
+                path: 'tree',
+                name: 'ComponentGridScrollTree',
+                component: () => import('@/views/grid/scroll/tree/CodeExample.vue')
               }
             ]
           },

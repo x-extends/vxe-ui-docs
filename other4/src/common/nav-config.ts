@@ -122,14 +122,14 @@ export const navConfigList: NavVO[] = [
         title: 'Table 基础表格',
         children: [
           {
-            title: '列表模式',
+            title: '单元格 - 渲染',
             children: [
               { title: 'el-switch', routerLink: { name: 'PluginRenderElementTableCellElSwitch' } },
               { title: 'el-rate', routerLink: { name: 'PluginRenderElementTableCellElRate' } }
             ]
           },
           {
-            title: '编辑模式',
+            title: '可编辑 - 渲染',
             children: [
               { title: 'el-input', routerLink: { name: 'PluginRenderElementTableEditElInput' } },
               { title: 'el-input-number', routerLink: { name: 'PluginRenderElementTableEditElInputNumber' } },
@@ -146,14 +146,14 @@ export const navConfigList: NavVO[] = [
         title: 'Grid 配置式表格',
         children: [
           {
-            title: '列表模式',
+            title: '单元格 - 渲染',
             children: [
               { title: 'el-switch', routerLink: { name: 'PluginRenderElementGridCellElSwitch' } },
               { title: 'el-rate', routerLink: { name: 'PluginRenderElementGridCellElRate' } }
             ]
           },
           {
-            title: '编辑模式',
+            title: '可编辑 - 渲染',
             children: [
               { title: 'el-input', routerLink: { name: 'PluginRenderElementGridEditElInput' } },
               { title: 'el-input-number', routerLink: { name: 'PluginRenderElementGridEditElInputNumber' } },
@@ -188,14 +188,14 @@ export const navConfigList: NavVO[] = [
         title: 'Table 基础表格',
         children: [
           {
-            title: '列表模式',
+            title: '单元格 - 渲染',
             children: [
               { title: 'a-switch', routerLink: { name: 'PluginRenderAntdTableCellElSwitch' } },
               { title: 'a-rate', routerLink: { name: 'PluginRenderAntdTableCellElRate' } }
             ]
           },
           {
-            title: '编辑模式',
+            title: '可编辑 - 渲染',
             children: [
               { title: 'a-input', routerLink: { name: 'PluginRenderAntdTableEditElInput' } },
               { title: 'a-input-number', routerLink: { name: 'PluginRenderAntdTableEditElInputNumber' } },
@@ -212,14 +212,14 @@ export const navConfigList: NavVO[] = [
         title: 'Grid 配置式表格',
         children: [
           {
-            title: '列表模式',
+            title: '单元格 - 渲染',
             children: [
               { title: 'a-switch', routerLink: { name: 'PluginRenderAntdGridCellElSwitch' } },
               { title: 'a-rate', routerLink: { name: 'PluginRenderAntdGridCellElRate' } }
             ]
           },
           {
-            title: '编辑模式',
+            title: '可编辑 - 渲染',
             children: [
               { title: 'a-input', routerLink: { name: 'PluginRenderAntdGridEditElInput' } },
               { title: 'a-input-number', routerLink: { name: 'PluginRenderAntdGridEditElInputNumber' } },

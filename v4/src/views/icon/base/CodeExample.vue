@@ -3,7 +3,7 @@
     <CodeLight path="icon/base/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="字体图标">
-          <div>内置图标，支持</div>
+          <div>支持通过组件方式渲染，也支持直接使用 class 方式</div>
         </vxe-tip>
       </template>
     </CodeLight>
