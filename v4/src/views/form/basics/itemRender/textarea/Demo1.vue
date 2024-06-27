@@ -16,8 +16,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive } from 'vue'
-import { VxeFormItemPropTypes } from 'vxe-pc-ui'
+import { ref } from 'vue'
 
 interface FormDataVO {
   name: string

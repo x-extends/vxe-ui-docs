@@ -1,7 +1,10 @@
 <template>
   <div>
     <vxe-select v-model="val1" placeholder="禁用状态" disabled>
-      <vxe-option v-for="num in 15" :key="num" :value="num" :label="`选项${num}`"></vxe-option>
+      <vxe-option value="1" label="选项1"></vxe-option>
+      <vxe-option value="2" label="选项2"></vxe-option>
+      <vxe-option value="3" label="选项3"></vxe-option>
+      <vxe-option value="4" label="选项4"></vxe-option>
     </vxe-select>
   </div>
 </template>

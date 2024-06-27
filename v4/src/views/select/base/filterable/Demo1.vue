@@ -10,8 +10,6 @@
       <vxe-option value="7" label="选项7"></vxe-option>
       <vxe-option value="8" label="选项8"></vxe-option>
     </vxe-select>
-
-    <vxe-select v-model="val2" placeholder="可搜索" :options="opts2" clearable filterable></vxe-select>
   </div>
 </template>
 
@@ -19,19 +17,4 @@
 import { ref } from 'vue'
 
 const val1 = ref()
-const val2 = ref()
-const opts2 = ref([
-  { value: 1001, label: 'table' },
-  { value: 1002, label: 'grid' },
-  { value: 1003, label: 'button' },
-  { value: 1004, label: 'toolbar' },
-  { value: 1005, label: 'tooltip' },
-  { value: 1006, label: 'pager' },
-  { value: 1007, label: 'print' },
-  { value: 1008, label: 'export' },
-  { value: 1009, label: 'import' },
-  { value: 1010, label: 'select' },
-  { value: 1012, label: 'checkbox' },
-  { value: 1013, label: 'group' }
-])
 </script>
