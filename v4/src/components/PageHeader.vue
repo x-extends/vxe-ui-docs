@@ -47,8 +47,8 @@
       <vxe-radio-group v-model="currLang" class="switch-lang" type="button" size="mini" :options="langOptions"></vxe-radio-group>
       <vxe-select v-if="!appStore.isPluginDocs" v-model="currSysVersion" class="switch-version" size="mini" :options="sysVersionOptions" @change="vChangeEvent"></vxe-select>
       <vxe-link v-if="!appStore.isPluginDocs" class="free-donation" status="success" :router-link="{name: 'FreeDonation'}" :content="$t('app.header.supportUs')"></vxe-link>
-      <a v-if="appStore.isPluginDocs" class="plugin-shopping" :href="appStore.pluginBuyUrl" target="_blank">{{ $t('app.header.buyPlugin') }}</a>
-      <a v-else class="plugin-shopping" :href="appStore.pluginDocsUrl" target="_blank">{{ $t('app.header.enterpriseVersion') }}</a>
+      <!-- <a v-if="appStore.isPluginDocs" class="plugin-shopping" :href="appStore.pluginBuyUrl" target="_blank">{{ $t('app.header.buyPlugin') }}</a> -->
+      <!-- <a v-else class="plugin-shopping" :href="appStore.pluginDocsUrl" target="_blank">{{ $t('app.header.enterpriseVersion') }}</a> -->
     </div>
   </div>
 </template>
