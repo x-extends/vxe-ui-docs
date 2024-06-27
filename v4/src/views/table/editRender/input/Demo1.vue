@@ -5,7 +5,7 @@
       :edit-config="{mode: 'row', trigger: 'click'}"
       :data="tableData">
       <vxe-column type="seq" width="60"></vxe-column>
-      <vxe-column field="name" title="Name" width="200" :edit-render="{ name: 'input' }"></vxe-column>
+      <vxe-column field="name" title="Name" min-width="200" :edit-render="{ name: 'input' }"></vxe-column>
       <vxe-column field="age" title="数字" width="200" :edit-render="{ name: 'input', attrs: { type: 'number' } }"></vxe-column>
       <vxe-column field="date" title="日期" width="200" :edit-render="{ name: 'input', attrs: { type: 'date' } }"></vxe-column>
       <vxe-column field="month" title="月份" width="200" :edit-render="{ name: 'input', attrs: { type: 'month' } }"></vxe-column>

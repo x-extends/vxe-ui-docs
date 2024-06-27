@@ -5,7 +5,7 @@
       :edit-config="{mode: 'row', trigger: 'click'}"
       :data="tableData">
       <vxe-column type="seq" width="60"></vxe-column>
-      <vxe-column field="name" title="Name" width="180" :edit-render="{ name: 'VxeInput' }"></vxe-column>
+      <vxe-column field="name" title="Name" min-width="180" :edit-render="{ name: 'VxeInput' }"></vxe-column>
       <vxe-column field="date" title="日期" width="180" :edit-render="{ name: 'VxeInput', props: { type: 'date' } }"></vxe-column>
       <vxe-column field="year" title="年份" width="180" :edit-render="{ name: 'VxeInput', props: { type: 'year' } }"></vxe-column>
       <vxe-column field="quarter" title="季度" width="180" :edit-render="{ name: 'VxeInput', props: { type: 'quarter' } }"></vxe-column>

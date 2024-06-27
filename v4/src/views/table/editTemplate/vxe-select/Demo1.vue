@@ -5,8 +5,8 @@
       :edit-config="{mode: 'row', trigger: 'click'}"
       :data="tableData">
       <vxe-column type="seq" width="60"></vxe-column>
-      <vxe-column field="name" title="Name" width="160"></vxe-column>
-      <vxe-column field="sex" title="下拉框" :edit-render="{}">
+      <vxe-column field="name" title="Name" min-width="200"></vxe-column>
+      <vxe-column field="sex" title="下拉框" width="200" :edit-render="{}">
         <template #edit="{ row }">
           <vxe-select v-model="row.sex" :options="sexOptions"></vxe-select>
         </template>
@@ -14,7 +14,7 @@
           <span>{{ formatSexLabel([row.sex]) }}</span>
         </template>
       </vxe-column>
-      <vxe-column field="sexList" title="下拉框多选" :edit-render="{}">
+      <vxe-column field="sexList" title="下拉框多选" width="200" :edit-render="{}">
         <template #edit="{ row }">
           <vxe-select v-model="row.sexList" :options="sexOptions" multiple></vxe-select>
         </template>
@@ -22,7 +22,7 @@
           <span>{{ formatSexLabel(row.sexList) }}</span>
         </template>
       </vxe-column>
-      <vxe-column field="type" title="下拉框分组" :edit-render="{}">
+      <vxe-column field="type" title="下拉框分组" width="200" :edit-render="{}">
         <template #edit="{ row }">
           <vxe-select v-model="row.type" :optionGroups="typeOptions"></vxe-select>
         </template>
@@ -30,7 +30,7 @@
           <span>{{ formatTypeLabel([row.type]) }}</span>
         </template>
       </vxe-column>
-      <vxe-column field="typeList" title="下拉框分组多选" :edit-render="{}">
+      <vxe-column field="typeList" title="下拉框分组多选" width="200" :edit-render="{}">
         <template #edit="{ row }">
           <vxe-select v-model="row.typeList" :optionGroups="typeOptions" multiple></vxe-select>
         </template>

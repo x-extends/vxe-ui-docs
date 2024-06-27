@@ -5,11 +5,11 @@
       :edit-config="{mode: 'row', trigger: 'click'}"
       :data="tableData">
       <vxe-column type="seq" width="60"></vxe-column>
-      <vxe-column field="name" title="Name" width="160" :edit-render="{ name: 'VxeInput' }"></vxe-column>
-      <vxe-column field="sex" title="下拉框" :edit-render="sexEditRender"></vxe-column>
-      <vxe-column field="sexList" title="下拉框多选" :edit-render="sexListEditRender"></vxe-column>
-      <vxe-column field="type" title="下拉框分组" :edit-render="typeEditRender"> </vxe-column>
-      <vxe-column field="typeList" title="下拉框分组多选" :edit-render="typeListEditRender"></vxe-column>
+      <vxe-column field="name" title="Name" min-width="200" :edit-render="{ name: 'VxeInput' }"></vxe-column>
+      <vxe-column field="sex" title="下拉框" width="200" :edit-render="sexEditRender"></vxe-column>
+      <vxe-column field="sexList" title="下拉框多选" width="200" :edit-render="sexListEditRender"></vxe-column>
+      <vxe-column field="type" title="下拉框分组" width="200" :edit-render="typeEditRender"> </vxe-column>
+      <vxe-column field="typeList" title="下拉框分组多选" width="200" :edit-render="typeListEditRender"></vxe-column>
     </vxe-table>
   </div>
 </template>
