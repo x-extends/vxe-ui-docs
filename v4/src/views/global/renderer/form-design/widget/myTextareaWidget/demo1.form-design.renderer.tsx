@@ -2,8 +2,8 @@
 
 import { VxeUI } from 'vxe-pc-ui'
 import { getMyWidgetTextareaConfig } from './myTextareaWidget'
-import MyTextareaWidgetView from './MyTextareaWidgetView.vue'
-import MyTextareaWidgetProps from './MyTextareaWidgetProps.vue'
+import DemoMyTextareaWidgetView from './DemoMyTextareaWidgetView.vue'
+import DemoMyTextareaWidgetProps from './DemoMyTextareaWidgetProps.vue'
 
 // 创建表单设计器控件 - 多行输入
 VxeUI.renderer.add('MyTextareaWidget', {
@@ -11,10 +11,10 @@ VxeUI.renderer.add('MyTextareaWidget', {
   createFormDesignWidgetConfig: getMyWidgetTextareaConfig,
   // 渲染控件的表单视图
   renderFormDesignWidgetView (renderOpts, renderParams) {
-    return <MyTextareaWidgetView renderOpts={renderOpts} renderParams={renderParams} />
+    return <DemoMyTextareaWidgetView renderOpts={renderOpts} renderParams={renderParams} />
   },
   // 渲染控件右侧的属性配置视图
   renderFormDesignWidgetFormView (renderOpts, renderParams) {
-    return <MyTextareaWidgetProps renderOpts={renderOpts} renderParams={renderParams} />
+    return <DemoMyTextareaWidgetProps renderOpts={renderOpts} renderParams={renderParams} />
   }
 })
