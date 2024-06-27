@@ -958,7 +958,10 @@ export const navConfigList: NavVO[] = [
               { title: '导出 XLSX 格式', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-xlsx/grid/export' },
               { title: '导出 PDF 格式', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-pdf/grid/export' },
               { title: '自定义数据', routerLink: { name: 'ComponentGridExportData' } },
-              { title: '高级导出', routerLink: { name: 'ComponentGridExportAdvanced' } }
+              { title: '高级导出', routerLink: { name: 'ComponentGridExportAdvanced' } },
+              { title: '自定义导出类型', routerLink: { name: 'ComponentGridExportTypes' } },
+              { title: '服务端导出', routerLink: { name: 'ComponentGridExportRemote' } },
+              { title: '自定义导出模式', routerLink: { name: 'ComponentGridExportModes' } }
             ]
           },
           {

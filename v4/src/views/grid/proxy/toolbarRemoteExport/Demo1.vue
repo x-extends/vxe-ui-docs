@@ -74,7 +74,7 @@ const exportFileApi = (body: any) => {
         content: '导出成功，开始下载',
         status: 'success'
       })
-      open(res.data.url)
+      location.href = res.data.url
     }
   }).catch(() => {
     VxeUI.modal.message({

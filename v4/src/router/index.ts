@@ -3348,6 +3348,21 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'advanced',
                 name: 'ComponentGridExportAdvanced',
                 component: () => import('@/views/grid/export/advanced/CodeExample.vue')
+              },
+              {
+                path: 'types',
+                name: 'ComponentGridExportTypes',
+                component: () => import('@/views/grid/export/types/CodeExample.vue')
+              },
+              {
+                path: 'remote',
+                name: 'ComponentGridExportRemote',
+                component: () => import('@/views/grid/export/remote/CodeExample.vue')
+              },
+              {
+                path: 'modes',
+                name: 'ComponentGridExportModes',
+                component: () => import('@/views/grid/export/modes/CodeExample.vue')
               }
             ]
           },
