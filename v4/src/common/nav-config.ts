@@ -691,7 +691,8 @@ export const navConfigList: NavVO[] = [
               { title: '可编辑按键操作', routerLink: { name: 'ComponentTableKeyboardEdit' } },
               { title: '树结构按键操作', routerLink: { name: 'ComponentTableKeyboardTree' } },
               { title: '树结构可编辑', routerLink: { name: 'ComponentTableKeyboardTreeEdit' } },
-              { title: '区域选取', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/table/singleArea' }
+              { title: '区域选取', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/table/singleArea' },
+              { title: '复制粘贴', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/table/areaClip' }
             ]
           },
           {
@@ -718,8 +719,7 @@ export const navConfigList: NavVO[] = [
               { title: '实现唯一下拉选项', routerLink: { name: 'ComponentTableEditUniqueSelect' } },
               { title: '实现多列下拉联动', routerLink: { name: 'ComponentTableEditCascadingSelect' } },
               { title: '实现表尾实时合计', routerLink: { name: 'ComponentTableEditFooterImmediately' } },
-              { title: '实现单元格实时保存', routerLink: { name: 'ComponentTableEditRealtimeSave' } },
-              { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/table/edit/el-input' }
+              { title: '实现单元格实时保存', routerLink: { name: 'ComponentTableEditRealtimeSave' } }
             ]
           },
           {
