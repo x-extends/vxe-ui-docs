@@ -5,18 +5,6 @@
         <vxe-input v-model="row.name"></vxe-input>
       </template>
 
-      <template #edit_num="{ row }">
-        <vxe-input v-model="row.num" type="number"></vxe-input>
-      </template>
-
-      <template #edit_integer="{ row }">
-        <vxe-input v-model="row.integer" type="integer"></vxe-input>
-      </template>
-
-      <template #edit_float="{ row }">
-        <vxe-input v-model="row.float" type="float"></vxe-input>
-      </template>
-
       <template #edit_date="{ row }">
         <vxe-input v-model="row.date" type="date"></vxe-input>
       </template>
@@ -64,9 +52,6 @@ interface RowVO {
   name: string
   role: string
   sex: string
-  num: string
-  float: string
-  integer: string
   date: string
   time: string
   year: string
@@ -86,9 +71,6 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   columns: [
     { type: 'seq', width: 70 },
     { field: 'name', title: 'Name', minWidth: 180, editRender: { }, slots: { edit: 'edit_name' } },
-    { field: 'num', title: '数字', width: 180, editRender: { }, slots: { edit: 'edit_num' } },
-    { field: 'integer', title: '整数', width: 180, editRender: { }, slots: { edit: 'edit_integer' } },
-    { field: 'float', title: '小数', width: 180, editRender: { }, slots: { edit: 'edit_float' } },
     { field: 'date', title: '日期', width: 180, editRender: { }, slots: { edit: 'edit_date' } },
     { field: 'year', title: '年份', width: 180, editRender: { }, slots: { edit: 'edit_year' } },
     { field: 'quarter', title: '季度', width: 180, editRender: { }, slots: { edit: 'edit_quarter', default: 'default_quarter' } },
@@ -98,9 +80,9 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { field: 'datetime', title: '日期带时间', width: 180, editRender: { }, slots: { edit: 'edit_datetime' } }
   ],
   data: [
-    { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', num: '', integer: '', float: '', date: '', time: '', year: '', quarter: '', month: '', week: '', datetime: '', address: 'test abc' },
-    { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', num: '22', integer: '23', float: '22.35', date: '', time: '', year: '', quarter: '', month: '', week: '', datetime: '', address: 'Guangzhou' },
-    { id: 10003, name: 'Test3', role: 'PM', sex: 'Man', num: '32', integer: '', float: '', date: '2024-06-06', time: '10:30:45', year: '2024', quarter: '2024-01-01', month: '2024-06', week: '2024-06-03', datetime: '2024-06-06 10:30:45', address: 'Shanghai' }
+    { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', date: '', time: '', year: '', quarter: '', month: '', week: '', datetime: '', address: 'test abc' },
+    { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', date: '', time: '', year: '', quarter: '', month: '', week: '', datetime: '', address: 'Guangzhou' },
+    { id: 10003, name: 'Test3', role: 'PM', sex: 'Man', date: '2024-06-06', time: '10:30:45', year: '2024', quarter: '2024-01-01', month: '2024-06', week: '2024-06-03', datetime: '2024-06-06 10:30:45', address: 'Shanghai' }
   ]
 })
 

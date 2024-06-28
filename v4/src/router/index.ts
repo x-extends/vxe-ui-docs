@@ -3380,9 +3380,9 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/grid/editRender/vxe-input/CodeExample.vue')
               },
               {
-                path: 'vxe-number-picker',
-                name: 'ComponentGridEditRenderVxeNumberPicker',
-                component: () => import('@/views/grid/editRender/vxe-number-picker/CodeExample.vue')
+                path: 'vxe-number-input',
+                name: 'ComponentGridEditRenderVxeNumberInput',
+                component: () => import('@/views/grid/editRender/vxe-number-input/CodeExample.vue')
               },
               {
                 path: 'vxe-date-picker',
@@ -3403,6 +3403,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'vxe-input',
                 name: 'ComponentGridEditTemplateVxeInput',
                 component: () => import('@/views/grid/editTemplate/vxe-input/CodeExample.vue')
+              },
+              {
+                path: 'vxe-number-input',
+                name: 'ComponentGridEditTemplateVxeNumberInput',
+                component: () => import('@/views/grid/editTemplate/vxe-number-input/CodeExample.vue')
+              },
+              {
+                path: 'vxe-date-picker',
+                name: 'ComponentGridEditTemplateVxeDatePicker',
+                component: () => import('@/views/grid/editTemplate/vxe-date-picker/CodeExample.vue')
               },
               {
                 path: 'vxe-select',
