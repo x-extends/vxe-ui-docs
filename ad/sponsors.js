@@ -2,7 +2,7 @@ window.joinSponorEvent = function () {
   location.href = 'https://vxeui.com/#/joinSponsor'
 }
 
-fetch('https://api.vxeui.com/vxe/api/pub/vxetable/sponsors', { method: 'GET' })
+fetch('https://api.vxetable.cn/vxe/api/pub/vxeui/sponsors', { method: 'GET' })
   .then(response => response.json())
   .then(rest => {
     let data = []
