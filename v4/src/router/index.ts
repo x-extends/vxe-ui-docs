@@ -8,6 +8,7 @@ import StartConfig from '@/views/start/config/CodeExample.vue'
 import StartTheme from '@/views/start/theme/CodeExample.vue'
 import StartI18n from '@/views/start/i18n/CodeExample.vue'
 import StartUseZIndex from '@/views/start/z-index/CodeExample.vue'
+import StartPermission from '@/views/start/permission/CodeExample.vue'
 import FreeDonation from '@/views/start/FreeDonation.vue'
 import JoinSponsor from '@/views/start/JoinSponsor.vue'
 
@@ -66,6 +67,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'z-index',
         name: 'StartUseZIndex',
         component: StartUseZIndex
+      },
+      {
+        path: 'permission',
+        name: 'StartPermission',
+        component: StartPermission
       },
       {
         path: 'freeDonation',

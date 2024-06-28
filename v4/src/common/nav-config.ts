@@ -33,7 +33,8 @@ export const navConfigList: NavVO[] = [
       { i18nKey: 'app.aside.menu.globalTheme', routerLink: { name: 'StartTheme' } },
       { i18nKey: 'app.aside.menu.globalIcon', routerLink: { name: 'StartIcons' } },
       { i18nKey: 'app.aside.menu.GlobalZIndex', routerLink: { name: 'StartUseZIndex' } },
-      { i18nKey: 'app.aside.menu.i18n', routerLink: { name: 'StartI18n' } }
+      { i18nKey: 'app.aside.menu.i18n', routerLink: { name: 'StartI18n' } },
+      { i18nKey: 'app.aside.menu.GlobalPermission', routerLink: { name: 'StartPermission' } }
     ]
   },
   {
