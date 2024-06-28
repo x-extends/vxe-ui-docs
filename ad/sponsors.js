@@ -1,5 +1,5 @@
 window.joinSponorEvent = function () {
-  location.href = 'https://vxeui.com/#/joinSponsor'
+  location.href = 'https://vxeui.com/#/start/joinSponsor'
 }
 
 fetch('https://api.vxetable.cn/vxe/api/pub/vxeui/sponsors', { method: 'GET' })
