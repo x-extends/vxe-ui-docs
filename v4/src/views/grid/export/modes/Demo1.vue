@@ -19,7 +19,7 @@ interface RowVO {
   no2: string
 }
 
-const gridRef = ref<VxeGridInstance>()
+const gridRef = ref<VxeGridInstance<RowVO>>()
 
 // 模拟接口导出
 const exportFileApi = (body: any) => {

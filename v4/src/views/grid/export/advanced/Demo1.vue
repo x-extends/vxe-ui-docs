@@ -18,7 +18,7 @@ interface RowVO {
   address: string
 }
 
-const gridRef = ref<VxeGridInstance>()
+const gridRef = ref<VxeGridInstance<RowVO>>()
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   exportConfig: {},
@@ -39,7 +39,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
 const exportEvent = () => {
   const $grid = gridRef.value
   if ($grid) {
-    $grid.openExport()
+    $grid.getTableData()
   }
 }
 </script>
