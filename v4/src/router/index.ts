@@ -2850,6 +2850,21 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/table/search/tree/CodeExample.vue')
               }
             ]
+          },
+          {
+            path: 'events',
+            children: [
+              {
+                path: 'click',
+                name: 'ComponentTableEventsClick',
+                component: () => import('@/views/table/events/click/CodeExample.vue')
+              },
+              {
+                path: 'scroll',
+                name: 'ComponentTableEventsScroll',
+                component: () => import('@/views/table/events/scroll/CodeExample.vue')
+              }
+            ]
           }
         ]
       },
@@ -3693,6 +3708,21 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'manualSave',
                 name: 'ComponentGridProxyManualSave',
                 component: () => import('@/views/grid/proxy/manualSave/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'events',
+            children: [
+              {
+                path: 'click',
+                name: 'ComponentGridEventsClick',
+                component: () => import('@/views/grid/events/click/CodeExample.vue')
+              },
+              {
+                path: 'scroll',
+                name: 'ComponentGridEventsScroll',
+                component: () => import('@/views/grid/events/scroll/CodeExample.vue')
               }
             ]
           }

@@ -805,6 +805,13 @@ export const navConfigList: NavVO[] = [
               { title: '实现表格搜索', routerLink: { name: 'ComponentTableSearchList' } },
               { title: '实现树形表格搜索', routerLink: { name: 'ComponentTableSearchTree' } }
             ]
+          },
+          {
+            title: '事件监听',
+            children: [
+              { title: '点击/双击事件', routerLink: { name: 'ComponentTableEventsClick' } },
+              { title: '滚动事件', routerLink: { name: 'ComponentTableEventsScroll' } }
+            ]
           }
         ]
       },
@@ -1072,6 +1079,13 @@ export const navConfigList: NavVO[] = [
               { title: '手动调用 - 标记删除状态', routerLink: { name: 'ComponentGridProxyManualMark' } },
               { title: '工具栏 - 增删改查', routerLink: { name: 'ComponentGridProxyToolbarSave' } },
               { title: '手动调用 - 增删改查', routerLink: { name: 'ComponentGridProxyManualSave' } }
+            ]
+          },
+          {
+            title: '事件监听',
+            children: [
+              { title: '点击/双击事件', routerLink: { name: 'ComponentGridEventsClick' } },
+              { title: '滚动事件', routerLink: { name: 'ComponentGridEventsScroll' } }
             ]
           }
         ]
