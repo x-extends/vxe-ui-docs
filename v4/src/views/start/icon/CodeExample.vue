@@ -49,14 +49,22 @@
 
               // input
               INPUT_CLEAR: 'vxe-icon-error-circle-fill',
-              INPUT_PWD: 'vxe-icon-eye-fill',
-              INPUT_SHOW_PWD: 'vxe-icon-eye-fill-close',
-              INPUT_PREV_NUM: 'vxe-icon-caret-up',
-              INPUT_NEXT_NUM: 'vxe-icon-caret-down',
-              INPUT_DATE: 'vxe-icon-calendar',
               INPUT_SEARCH: 'vxe-icon-search',
 
+              // number-picker
+              NUMBER_INPUT_PREV_NUM: 'vxe-icon-caret-up',
+              NUMBER_INPUT_NEXT_NUM: 'vxe-icon-caret-down',
+
+              // date-picker
+              DATE_PICKER_DATE: 'vxe-icon-calendar',
+
+              // password-input
+              PASSWORD_INPUT_SHOW_PWD: 'vxe-icon-eye-fill-close',
+              PASSWORD_INPUT_HIDE_PWD: 'vxe-icon-eye-fill',
+
               // modal
+              MODAL_ZOOM_MIN: 'vxe-icon-minus',
+              MODAL_ZOOM_REVERT: 'vxe-icon-recover',
               MODAL_ZOOM_IN: 'vxe-icon-square',
               MODAL_ZOOM_OUT: 'vxe-icon-maximize',
               MODAL_CLOSE: 'vxe-icon-close',
@@ -122,13 +130,18 @@
               IMAGE_PREVIEW_ROTATE_LEFT: 'vxe-icon-rotate-left',
               IMAGE_PREVIEW_ROTATE_RIGHT: 'vxe-icon-rotate-right',
               IMAGE_PREVIEW_PRINT: 'vxe-icon-print',
+              IMAGE_PREVIEW_DOWNLOAD: 'vxe-icon-download',
 
               // alert
               ALERT_CLOSE: 'vxe-icon-close',
               ALERT_INFO: 'vxe-icon-info-circle-fill',
               ALERT_SUCCESS: 'vxe-icon-success-circle-fill',
               ALERT_WARNING: 'vxe-icon-warning-circle-fill',
-              ALERT_ERROR: 'vxe-icon-error-circle-fill'
+              ALERT_ERROR: 'vxe-icon-error-circle-fill',
+
+              // tree
+              TREE_NODE_OPEN: 'vxe-icon-caret-right rotate90',
+              TREE_NODE_CLOSE: 'vxe-icon-caret-right'
             })
           </pre-code>
         </pre>

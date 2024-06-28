@@ -20,8 +20,14 @@
                 separator: '/'
               },
               breadcrumbItem: {},
-              button: {},
+              button: {
+                trigger: 'hover'
+              },
               buttonGroup: {},
+              card: {
+                border: true,
+                padding: true
+              },
               checkbox: {},
               checkboxGroup: {},
               col: {},
@@ -29,9 +35,20 @@
               collapse: {},
               collapsePane: {},
               column: {},
+              datePicker: {
+                // size: null,
+                // transfer: false
+                // parseFormat: 'yyyy-MM-dd HH:mm:ss.SSS',
+                // labelFormat: '',
+                // valueFormat: '',
+                startDate: new Date(1900, 0, 1),
+                endDate: new Date(2100, 0, 1),
+                startDay: 1,
+                selectDay: 1
+              },
               drawer: {
                 // size: null,
-                position: 'left',
+                position: 'right',
                 showHeader: true,
                 lockView: true,
                 mask: true,
@@ -50,7 +67,8 @@
                 tooltipConfig: {
                   enterable: true
                 },
-                titleAsterisk: true
+                titleAsterisk: true,
+                titleOverflow: false
               },
               formDesign: {
                 height: 400,
@@ -99,7 +117,7 @@
               loading: {},
               modal: {
                 // size: null,
-                top: 15,
+                top: 16,
                 showHeader: true,
                 minWidth: 340,
                 minHeight: 140,
@@ -112,13 +130,18 @@
                 showClose: true,
                 padding: true,
                 draggable: true,
-                showConfirmButton: null,
-                // storage: false,
-                storageKey: 'VXE_MODAL_POSITION'
+                showConfirmButton: null
+              },
+              numberInput: {
+                // size: null,
+                // transfer: false
+                digits: 2,
+                controls: true
               },
               optgroup: {},
               option: {},
               pager: {
+                pageSizePlacement: 'top'
                 // size: null,
                 // autoHidden: false,
                 // perfect: true,
@@ -127,6 +150,9 @@
                 // pageSizes: [10, 15, 20, 50, 100],
                 // layouts: ['PrevJump', 'PrevPage', 'Jump', 'PageCount', 'NextPage', 'NextJump', 'Sizes', 'Total']
               },
+              print: {},
+              passwordInput: {},
+              printPageBreak: {},
               pulldown: {},
               radio: {
                 strict: true
@@ -155,11 +181,17 @@
                 enterDelay: 500,
                 leaveDelay: 300
               },
-              tree: {},
+              tree: {
+                indent: 20,
+                radioConfig: {
+                  strict: true
+                }
+              },
               treeSelect: {},
               upload: {
                 mode: 'all',
-                imageTypes: ['jpg', 'jpeg', 'png', 'gif']
+                imageTypes: ['jpg', 'jpeg', 'png', 'gif'],
+                showList: true
               }
             })
           </pre-code>
