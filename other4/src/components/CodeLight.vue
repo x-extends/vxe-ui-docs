@@ -6,6 +6,16 @@
       </div>
     </div>
 
+    <div v-if="$slots.install" class="example-install">
+      <h2 class="example-install-header" :class="{active: showInstall}" @click="showInstall = !showInstall">
+        <vxe-icon class="example-install-icon" name="arrow-right"></vxe-icon>
+        <span class="example-install-title">安装&使用</span>
+      </h2>
+      <div v-show="showInstall" class="example-install-body">
+        <slot name="install"></slot>
+      </div>
+    </div>
+
     <div v-if="$slots.use" class="example-use">
       <slot name="use"></slot>
     </div>
@@ -97,7 +107,7 @@ const props = defineProps({
   }
 })
 
-const showUse = ref(false)
+const showInstall = ref(false)
 const showPreview = ref(true)
 
 const jsCodeText = ref('')
@@ -416,6 +426,40 @@ const openDocs = () => {
 .example-preview-body {
   padding: 20px 64px 0 64px;
   text-align: center;
+  & > img {
+    max-width: 100%;
+    max-height: 300px;
+  }
+}
+
+.example-install {
+  padding: 8px 24px 8px 24px;
+}
+.example-install-header {
+  cursor: pointer;
+  margin: 30px 0 0.8em;
+  padding-bottom: 0.7em;
+  border-bottom: 1px solid var(--vxe-ui-docs-layout-border-color);
+  .example-install-icon,
+  .example-install-title {
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+  }
+  .example-install-icon {
+    transition: transform 0.2s ease-in-out;
+  }
+  .example-install-title {
+    padding-left: 10px;
+  }
+  &.active {
+    .example-install-icon {
+      transform: rotate(90deg);
+    }
+  }
+}
+.example-install-body {
+  padding: 20px 64px 0 64px;
   & > img {
     max-width: 100%;
     max-height: 300px;
