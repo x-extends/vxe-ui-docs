@@ -11,7 +11,7 @@ import { VxeFormProps } from 'vxe-pc-ui'
 interface FormDataVO {
   name: string
   nickname: string
-  sex: string
+  amount: string
   address: string
 }
 
@@ -22,13 +22,12 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
   data: {
     name: 'test1',
     nickname: 'Testing',
-    sex: '',
+    amount: '',
     address: ''
   },
   items: [
-    { field: 'name', title: 'Name', span: 12, itemRender: { name: 'EditInput' } },
-    { field: 'sex', title: 'Sex', span: 12, itemRender: { name: 'EditInput' } },
-    { field: 'address', title: 'Address', span: 24, itemRender: { name: 'EditInput' } },
+    { field: 'name', title: 'Name', span: 24, itemRender: { name: 'VxeInput' } },
+    { field: 'amount', title: 'Amount', span: 24, itemRender: { name: 'MyFormItemAmount' } },
     {
       align: 'center',
       span: 24,

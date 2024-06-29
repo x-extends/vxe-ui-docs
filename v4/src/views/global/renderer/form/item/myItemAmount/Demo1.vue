@@ -5,9 +5,8 @@
       title-width="80"
       title-align="right"
       :data="formData">
-      <vxe-form-item title="Name" field="name" span="12" :item-render="{ name: 'EditInput'}"></vxe-form-item>
-      <vxe-form-item title="Sex" field="sex" span="12" :item-render="{ name: 'EditInput'}"></vxe-form-item>
-      <vxe-form-item title="File" field="fileList" span="24" :item-render="{ name: 'EditUpload'}"></vxe-form-item>
+      <vxe-form-item title="Name" field="name" span="24" :item-render="{ name: 'VxeInput'}"></vxe-form-item>
+      <vxe-form-item title="Amount" field="amount" span="24" :item-render="{ name: 'MyFormItemAmount'}"></vxe-form-item>
       <vxe-form-item align="center" span="24">
         <template #default>
           <vxe-button type="submit" status="primary" content="Submit"></vxe-button>
@@ -20,19 +19,18 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeUploadPropTypes } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
   nickname: string
-  sex: string
-  fileList: VxeUploadPropTypes.ModelValue
+  amount: string
+  address: string
 }
 
 const formData = ref<FormDataVO>({
   name: 'test1',
   nickname: 'Testing',
-  sex: '',
-  fileList: []
+  amount: '',
+  address: ''
 })
 </script>

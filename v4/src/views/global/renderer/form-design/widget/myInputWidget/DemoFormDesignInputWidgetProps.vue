@@ -26,7 +26,7 @@
 <script lang="ts" setup>
 import { computed, PropType } from 'vue'
 import { VxeGlobalRendererHandles } from 'vxe-pc-ui'
-import { MyWidgetInputProps } from './demoMyInputWidget'
+import { FormDesignWidgetInputProps } from './demoFormDesignInputWidget'
 
 const props = defineProps({
   renderOpts: {
@@ -34,7 +34,7 @@ const props = defineProps({
     default: () => ({})
   },
   renderParams: {
-    type: Object as PropType<VxeGlobalRendererHandles.RenderFormDesignWidgetFormViewParams<MyWidgetInputProps>>,
+    type: Object as PropType<VxeGlobalRendererHandles.RenderFormDesignWidgetFormViewParams<FormDesignWidgetInputProps>>,
     default: () => ({})
   }
 })

@@ -29,7 +29,7 @@
 <script lang="ts" setup>
 import { computed, PropType } from 'vue'
 import { VxeGlobalRendererHandles } from 'vxe-pc-ui'
-import { MyWidgetTextareaProps } from './demoMyTextareaWidget'
+import { FormDesignWidgetTextareaProps } from './demoFormDesignTextareaWidget'
 
 const props = defineProps({
   renderOpts: {
@@ -37,7 +37,7 @@ const props = defineProps({
     default: () => ({})
   },
   renderParams: {
-    type: Object as PropType<VxeGlobalRendererHandles.RenderFormDesignWidgetFormViewParams<MyWidgetTextareaProps>>,
+    type: Object as PropType<VxeGlobalRendererHandles.RenderFormDesignWidgetFormViewParams<FormDesignWidgetTextareaProps>>,
     default: () => ({})
   }
 })

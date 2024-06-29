@@ -12,7 +12,9 @@
 <script lang="ts" setup>
 import { PropType } from 'vue'
 import { VxeUI, VxeGlobalRendererHandles } from 'vxe-pc-ui'
-import { MyWidgetInputProps } from './demoMyInputWidget'
+import { FormDesignWidgetInputProps } from './demoFormDesignInputWidget'
+
+const { useWidgetView } = VxeUI.formDesign
 
 const props = defineProps({
   renderOpts: {
@@ -20,10 +22,10 @@ const props = defineProps({
     default: () => ({})
   },
   renderParams: {
-    type: Object as PropType<VxeGlobalRendererHandles.RenderFormDesignWidgetViewParams<MyWidgetInputProps>>,
+    type: Object as PropType<VxeGlobalRendererHandles.RenderFormDesignWidgetViewParams<FormDesignWidgetInputProps>>,
     default: () => ({})
   }
 })
 
-const { currWidget, widgetModel } = VxeUI.formDesign.useWidgetView<MyWidgetInputProps>(props)
+const { currWidget, widgetModel } = useWidgetView<FormDesignWidgetInputProps>(props)
 </script>

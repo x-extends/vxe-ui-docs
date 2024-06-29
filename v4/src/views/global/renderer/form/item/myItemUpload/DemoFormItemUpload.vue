@@ -4,16 +4,21 @@
     v-model="currData[currField]"
     multiple
     show-progress
+    :mode="renderProps.mode"
     :upload-method="uploadMethod">
   </VxeUpload>
 </template>
 
 <script lang="ts" setup>
-import { ref, PropType } from 'vue'
+import { ref, PropType, computed } from 'vue'
 import { VxeUpload, VxeGlobalRendererHandles, VxeUploadPropTypes, VxeFormItemPropTypes } from 'vxe-pc-ui'
 import axios from 'axios'
 
 const props = defineProps({
+  renderOpts: {
+    type: Object as PropType<VxeGlobalRendererHandles.RenderFormItemContentOptions>,
+    default: () => ({})
+  },
   params: {
     type: Object as PropType<VxeGlobalRendererHandles.RenderFormItemContentParams>,
     default: () => ({})
@@ -22,6 +27,11 @@ const props = defineProps({
 
 const currData = ref<any>()
 const currField = ref<VxeFormItemPropTypes.Field>()
+
+const renderProps = computed(() => {
+  const { renderOpts } = props
+  return Object.assign({ mode: 'file' }, renderOpts.props)
+})
 
 const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress }) => {
   const formData = new FormData()

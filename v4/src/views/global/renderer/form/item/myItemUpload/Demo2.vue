@@ -13,6 +13,7 @@ interface FormDataVO {
   nickname: string
   sex: string
   fileList: VxeUploadPropTypes.ModelValue
+  imgList: VxeUploadPropTypes.ModelValue
 }
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
@@ -23,12 +24,13 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     name: 'test1',
     nickname: 'Testing',
     sex: '',
-    fileList: []
+    fileList: [],
+    imgList: []
   },
   items: [
-    { field: 'name', title: 'Name', span: 12, itemRender: { name: 'EditInput' } },
-    { field: 'sex', title: 'Sex', span: 12, itemRender: { name: 'EditInput' } },
-    { field: 'fileList', title: 'fileList', span: 24, itemRender: { name: 'EditUpload' } },
+    { field: 'name', title: 'Name', span: 24, itemRender: { name: 'VxeInput' } },
+    { field: 'fileList', title: '上传附件', span: 24, itemRender: { name: 'MyFormItemUpload' } },
+    { field: 'imgList', title: '上传图片', span: 24, itemRender: { name: 'MyFormItemUpload', props: { mode: 'image' } } },
     {
       align: 'center',
       span: 24,

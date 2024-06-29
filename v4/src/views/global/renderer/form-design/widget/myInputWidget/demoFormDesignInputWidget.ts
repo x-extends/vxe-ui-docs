@@ -1,12 +1,12 @@
 import type { VxeGlobalRendererHandles } from 'vxe-pc-ui'
 
-export interface MyWidgetInputProps {
+export interface FormDesignWidgetInputProps {
   placeholder: string
   maxLength: string
   showWordCount: boolean
 }
 
-export const getMyWidgetInputConfig = (): VxeGlobalRendererHandles.CreateFormDesignWidgetConfigObj<MyWidgetInputProps> => {
+export const getFormDesignWidgetInputConfig = (): VxeGlobalRendererHandles.CreateFormDesignWidgetConfigObj<FormDesignWidgetInputProps> => {
   return {
     // 控件名称
     title: '单行输入',

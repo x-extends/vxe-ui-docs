@@ -11,7 +11,9 @@
 <script lang="ts" setup>
 import { PropType } from 'vue'
 import { VxeUI, VxeGlobalRendererHandles } from 'vxe-pc-ui'
-import { MyWidgetTextareaProps } from './demoMyTextareaWidget'
+import { FormDesignWidgetTextareaProps } from './demoFormDesignTextareaWidget'
+
+const { useWidgetView } = VxeUI.formDesign
 
 const props = defineProps({
   renderOpts: {
@@ -19,10 +21,10 @@ const props = defineProps({
     default: () => ({})
   },
   renderParams: {
-    type: Object as PropType<VxeGlobalRendererHandles.RenderFormDesignWidgetViewParams<MyWidgetTextareaProps>>,
+    type: Object as PropType<VxeGlobalRendererHandles.RenderFormDesignWidgetViewParams<FormDesignWidgetTextareaProps>>,
     default: () => ({})
   }
 })
 
-const { currWidget, widgetModel } = VxeUI.formDesign.useWidgetView<MyWidgetTextareaProps>(props)
+const { currWidget, widgetModel } = useWidgetView<FormDesignWidgetTextareaProps>(props)
 </script>

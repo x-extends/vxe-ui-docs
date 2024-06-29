@@ -978,8 +978,8 @@ export const navConfigList: NavVO[] = [
           {
             title: '表单项',
             children: [
-              { title: '实现一个输入框', routerLink: { name: 'GlobalRendererFormItemEditInput' } },
-              { title: '实现一个附件上传', routerLink: { name: 'GlobalRendererFormItemEditUpload' } }
+              { title: '实现一个金额输入', routerLink: { name: 'GlobalRendererFormItemMyItemAmount' } },
+              { title: '实现一个附件上传', routerLink: { name: 'GlobalRendererFormItemMyItemUpload' } }
             ]
           }
         ]
