@@ -3186,6 +3186,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/grid/form/search/CodeExample.vue')
               },
               {
+                path: 'formData',
+                name: 'ComponentGridFormFormData',
+                component: () => import('@/views/grid/form/formData/CodeExample.vue')
+              },
+              {
                 path: 'collapse',
                 name: 'ComponentGridFormCollapse',
                 component: () => import('@/views/grid/form/collapse/CodeExample.vue')

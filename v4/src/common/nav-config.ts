@@ -907,6 +907,7 @@ export const navConfigList: NavVO[] = [
             title: '查询表单',
             children: [
               { title: '查询表单', routerLink: { name: 'ComponentGridFormSearch' } },
+              { title: '绑定表单数据', routerLink: { name: 'ComponentGridFormFormData' } },
               { title: '带折叠的查询表单', routerLink: { name: 'ComponentGridFormCollapse' } }
             ]
           },
