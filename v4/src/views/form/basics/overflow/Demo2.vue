@@ -1,7 +1,6 @@
 <template>
   <div>
     <vxe-form
-      ref="formRef"
       title-overflow
       title-colon
       title-width="120"
@@ -10,18 +9,18 @@
       @submit="submitEvent"
       @reset="resetEvent">
       <vxe-form-item title="太长，超出自动隐藏太长，超出自动隐藏" field="name" span="24" :item-render="{}">
-        <template #default="params">
-          <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>
+        <template #default>
+          <vxe-input v-model="formData.name"></vxe-input>
         </template>
       </vxe-form-item>
       <vxe-form-item title="性别" field="sex" span="12" :item-render="{}">
-        <template #default="params">
-          <vxe-input v-model="formData.sex" @change="changeEvent(params)"></vxe-input>
+        <template #default>
+          <vxe-input v-model="formData.sex"></vxe-input>
         </template>
       </vxe-form-item>
       <vxe-form-item title="年龄" field="age" span="12" :item-render="{}">
-        <template #default="params">
-          <vxe-input v-model="formData.age" @change="changeEvent(params)"></vxe-input>
+        <template #default>
+          <vxe-input v-model="formData.age"></vxe-input>
         </template>
       </vxe-form-item>
       <vxe-form-item align="center" span="24" :item-render="{}">
@@ -36,7 +35,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeUI, VxeFormInstance, VxeFormEvents } from 'vxe-pc-ui'
+import { VxeUI, VxeFormEvents } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -45,21 +44,12 @@ interface FormDataVO {
   age: string
 }
 
-const formRef = ref<VxeFormInstance<FormDataVO>>()
-
 const formData = ref<FormDataVO>({
   name: 'test1',
   nickname: 'Testing',
   sex: '',
   age: ''
 })
-
-const changeEvent = (params: any) => {
-  const $form = formRef.value
-  if ($form) {
-    $form.updateStatus(params)
-  }
-}
 
 const submitEvent: VxeFormEvents.Submit = () => {
   VxeUI.modal.message({ content: '保存成功', status: 'success' })

@@ -200,6 +200,41 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/plugin-render-element/install/CodeExample.vue')
       },
       {
+        path: 'form',
+        children: [
+          {
+            path: 'itemTemplate',
+            children: [
+              {
+                path: 'el-input',
+                name: 'PluginRenderElementFormItemTemplateElInput',
+                component: () => import('@/views/plugin-render-element/form/itemTemplate/el-input/CodeExample.vue')
+              },
+              {
+                path: 'el-select',
+                name: 'PluginRenderElementFormItemTemplateElSelect',
+                component: () => import('@/views/plugin-render-element/form/itemTemplate/el-select/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'itemRender',
+            children: [
+              {
+                path: 'el-input',
+                name: 'PluginRenderElementFormItemRenderElInput',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-input/CodeExample.vue')
+              },
+              {
+                path: 'el-select',
+                name: 'PluginRenderElementFormItemRenderElSelect',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-select/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
+      {
         path: 'table',
         children: [
           {

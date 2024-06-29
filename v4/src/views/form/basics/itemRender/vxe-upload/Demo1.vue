@@ -8,7 +8,7 @@
       <vxe-form-item title="上传附件多选" field="fileList2" span="24" :item-render="{ name: 'VxeUpload', props: { multiple: true } }"></vxe-form-item>
       <vxe-form-item title="上传图片" field="imgList1" span="24" :item-render="{ name: 'VxeUpload', props: { mode: 'image' } }"></vxe-form-item>
       <vxe-form-item title="上传图片多选" field="imgList2" span="24" :item-render="{ name: 'VxeUpload', props: { mode: 'image', multiple: true } }"></vxe-form-item>
-      <vxe-form-item align="center" span="24">
+      <vxe-form-item default="center" span="24">
         <template #active>
           <vxe-button type="reset">重置</vxe-button>
           <vxe-button type="submit" status="primary">提交</vxe-button>

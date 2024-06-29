@@ -15,7 +15,7 @@
       <vxe-form-item title="时间" field="time" span="24" :item-render="{ name: 'VxeInput', props: { type: 'time' } }"></vxe-form-item>
       <vxe-form-item title="日期带时间" field="datetime" span="24" :item-render="{ name: 'VxeInput', props: { type: 'datetime' } }"></vxe-form-item>
       <vxe-form-item align="center" span="24">
-        <template #active>
+        <template #default>
           <vxe-button type="reset">重置</vxe-button>
           <vxe-button type="submit" status="primary">提交</vxe-button>
         </template>

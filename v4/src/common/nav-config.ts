@@ -223,6 +223,7 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: '基础功能', routerLink: { name: 'ComponentFormBasicsBase' } },
           { title: '尺寸大小', routerLink: { name: 'ComponentFormBasicsSize' } },
+          { title: '横向排列', routerLink: { name: 'ComponentFormBasicsHorizontal' } },
           { title: '上下布局', routerLink: { name: 'ComponentFormBasicsVertical' } },
           { title: '标题冒号', routerLink: { name: 'ComponentFormBasicsColon' } },
           { title: '标题加粗', routerLink: { name: 'ComponentFormBasicsBold' } },
@@ -249,10 +250,17 @@ export const navConfigList: NavVO[] = [
           {
             title: '渲染 - 插槽式',
             children: [
-              { title: 'VxeInput', routerLink: { name: 'ComponentFormBasicsTemplateVxeInput' } },
-              { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormBasicsTemplateVxeNumberInput' } },
-              { title: 'VxeSelect', routerLink: { name: 'ComponentFormBasicsTemplateVxeSelect' } },
-              { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormBasicsTemplateVxeDatePicker' } }
+              { title: 'VxeInput', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeInput' } },
+              { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeNumberInput' } },
+              { title: 'VxeSelect', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSelect' } },
+              { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDatePicker' } }
+            ]
+          },
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '自定义项标题模板', routerLink: { name: 'ComponentFormBasicsTemplateTitle' } },
+              { title: '自定义项内容模板', routerLink: { name: 'ComponentFormBasicsTemplateContent' } }
             ]
           }
         ]
@@ -261,6 +269,7 @@ export const navConfigList: NavVO[] = [
         title: '配置式表单',
         children: [
           { title: '基础功能', routerLink: { name: 'ComponentFormConfigBase' } },
+          { title: '横向排列', routerLink: { name: 'ComponentFormConfigHorizontal' } },
           { title: '上下布局', routerLink: { name: 'ComponentFormConfigVertical' } },
           { title: '标题冒号', routerLink: { name: 'ComponentFormConfigColon' } },
           { title: '标题加粗', routerLink: { name: 'ComponentFormConfigBold' } },
@@ -282,16 +291,18 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeSwitch', routerLink: { name: 'ComponentFormConfigItemRenderVxeSwitch' } },
               { title: 'VxeRadioGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeRadioGroup' } },
               { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeCheckboxGroup' } },
-              { title: 'VxeUpload', routerLink: { name: 'ComponentFormConfigItemRenderVxeUpload' } }
+              { title: 'VxeUpload', routerLink: { name: 'ComponentFormConfigItemRenderVxeUpload' } },
+              { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/form/itemRender/el-input' }
             ]
           },
           {
             title: '渲染 - 插槽式',
             children: [
-              { title: 'VxeInput', routerLink: { name: 'ComponentFormConfigTemplateVxeInput' } },
-              { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormConfigTemplateVxeNumberInput' } },
-              { title: 'VxeSelect', routerLink: { name: 'ComponentFormConfigTemplateVxeSelect' } },
-              { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormConfigTemplateVxeDatePicker' } }
+              { title: 'VxeInput', routerLink: { name: 'ComponentFormConfigItemTemplateVxeInput' } },
+              { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormConfigItemTemplateVxeNumberInput' } },
+              { title: 'VxeSelect', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSelect' } },
+              { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormConfigItemTemplateVxeDatePicker' } },
+              { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/form/itemRender/el-input' }
             ]
           }
         ]
@@ -746,14 +757,14 @@ export const navConfigList: NavVO[] = [
           {
             title: '自定义插槽模板',
             children: [
-              { title: '自定义单元格', routerLink: { name: 'ComponentTableTemplateDefault' } },
-              { title: '自定义表头', routerLink: { name: 'ComponentTableTemplateHeader' } },
-              { title: '自定义表尾', routerLink: { name: 'ComponentTableTemplateFooter' } },
-              { title: '自定义复选框', routerLink: { name: 'ComponentTableTemplateCheckbox' } },
-              { title: '自定义单选框', routerLink: { name: 'ComponentTableTemplateRadio' } },
-              { title: '自定义展开行', routerLink: { name: 'ComponentTableTemplateContent' } },
-              { title: '自定义筛选', routerLink: { name: 'ComponentTableTemplateFilter' } },
-              { title: '自定义编辑', routerLink: { name: 'ComponentTableTemplateEdit' } }
+              { title: '自定义单元格模板', routerLink: { name: 'ComponentTableTemplateDefault' } },
+              { title: '自定义表头模板', routerLink: { name: 'ComponentTableTemplateHeader' } },
+              { title: '自定义表尾模板', routerLink: { name: 'ComponentTableTemplateFooter' } },
+              { title: '自定义复选框模板', routerLink: { name: 'ComponentTableTemplateCheckbox' } },
+              { title: '自定义单选框模板', routerLink: { name: 'ComponentTableTemplateRadio' } },
+              { title: '自定义展开行模板', routerLink: { name: 'ComponentTableTemplateContent' } },
+              { title: '自定义筛选模板', routerLink: { name: 'ComponentTableTemplateFilter' } },
+              { title: '自定义编辑模板', routerLink: { name: 'ComponentTableTemplateEdit' } }
             ]
           },
           {
@@ -1004,15 +1015,15 @@ export const navConfigList: NavVO[] = [
             title: '自定义插槽模板',
             children: [
               { title: '自定义布局模板', routerLink: { name: 'ComponentGridTemplateLayout' } },
-              { title: '自定义单元格', routerLink: { name: 'ComponentGridTemplateDefault' } },
-              { title: '自定义表头', routerLink: { name: 'ComponentGridTemplateHeader' } },
-              { title: '自定义表尾', routerLink: { name: 'ComponentGridTemplateFooter' } },
-              { title: '自定义复选框', routerLink: { name: 'ComponentGridTemplateCheckbox' } },
-              { title: '自定义单选框', routerLink: { name: 'ComponentGridTemplateRadio' } },
-              { title: '自定义展开行', routerLink: { name: 'ComponentGridTemplateContent' } },
-              { title: '自定义筛选', routerLink: { name: 'ComponentGridTemplateFilter' } },
-              { title: '自定义编辑', routerLink: { name: 'ComponentGridTemplateEdit' } },
-              { title: '自定义单元格校验', routerLink: { name: 'ComponentGridTemplateValid' } }
+              { title: '自定义单元格模板', routerLink: { name: 'ComponentGridTemplateDefault' } },
+              { title: '自定义表头模板', routerLink: { name: 'ComponentGridTemplateHeader' } },
+              { title: '自定义表尾模板', routerLink: { name: 'ComponentGridTemplateFooter' } },
+              { title: '自定义复选框模板', routerLink: { name: 'ComponentGridTemplateCheckbox' } },
+              { title: '自定义单选框模板', routerLink: { name: 'ComponentGridTemplateRadio' } },
+              { title: '自定义展开行模板', routerLink: { name: 'ComponentGridTemplateContent' } },
+              { title: '自定义筛选模板', routerLink: { name: 'ComponentGridTemplateFilter' } },
+              { title: '自定义编辑模板', routerLink: { name: 'ComponentGridTemplateEdit' } },
+              { title: '自定义单元格校验模板', routerLink: { name: 'ComponentGridTemplateValid' } }
             ]
           },
           {
@@ -1133,8 +1144,8 @@ export const navConfigList: NavVO[] = [
           {
             title: '可编辑',
             children: [
-              { title: '实现一个金额输入', routerLink: { name: 'GlobalRendererTableEditEditInput' } },
-              { title: '实现一个下拉表格', routerLink: { name: 'GlobalRendererTableEditEditDownTable' } }
+              { title: '实现一个金额输入', routerLink: { name: 'GlobalRendererTableEditMyEditAmount' } },
+              { title: '实现一个下拉表格', routerLink: { name: 'GlobalRendererTableEditMyEditPulldown' } }
             ]
           },
           {
@@ -1154,17 +1165,17 @@ export const navConfigList: NavVO[] = [
           {
             title: '筛选',
             children: [
-              { title: '实现一个输入筛选', routerLink: { name: 'GlobalRendererTableFilterFilterInput' } },
-              { title: '实现一个多条件筛选', routerLink: { name: 'GlobalRendererTableFilterFilterComplex' } },
-              { title: '实现一个显示列表的筛选', routerLink: { name: 'GlobalRendererTableFilterFilterContent' } },
+              { title: '实现一个输入筛选', routerLink: { name: 'GlobalRendererTableFilterMyFilterInput' } },
+              { title: '实现一个多条件筛选', routerLink: { name: 'GlobalRendererTableFilterMyFilterComplex' } },
+              { title: '实现一个显示列表的筛选', routerLink: { name: 'GlobalRendererTableFilterMyFilterContent' } },
               { title: '更多筛选插件', isEnterprise: true, linkUrl: 'https://vxetable.cn/plugins/' }
             ]
           },
           {
             title: '空数据提示',
             children: [
-              { title: '实现空数据提示1', routerLink: { name: 'GlobalRendererTableMyEmpty' } },
-              { title: '实现空数据提示2', routerLink: { name: 'GlobalRendererTableMyNotData' } }
+              { title: '实现一个空数据显示文字', routerLink: { name: 'GlobalRendererTableMyEmptyImg' } },
+              { title: '实现一个空数据显示图片', routerLink: { name: 'GlobalRendererTableMyEmptyText' } }
             ]
           }
         ]

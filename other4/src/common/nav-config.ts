@@ -119,6 +119,25 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: 'Form 表单',
+        children: [
+          {
+            title: '基础表单',
+            children: [
+              { title: 'el-input', routerLink: { name: 'PluginRenderElementFormItemTemplateElInput' } },
+              { title: 'el-select', routerLink: { name: 'PluginRenderElementFormItemTemplateElSelect' } }
+            ]
+          },
+          {
+            title: '配置式表单',
+            children: [
+              { title: 'el-input', routerLink: { name: 'PluginRenderElementFormItemRenderElInput' } },
+              { title: 'el-select', routerLink: { name: 'PluginRenderElementFormItemRenderElSelect' } }
+            ]
+          }
+        ]
+      },
+      {
         title: 'Table 基础表格',
         children: [
           {

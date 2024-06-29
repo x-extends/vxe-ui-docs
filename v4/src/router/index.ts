@@ -253,14 +253,14 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'default',
                 children: [
                   {
-                    path: 'myLink',
+                    path: 'myCellLink',
                     name: 'GlobalRendererTableDefaultMyLink',
-                    component: () => import('@/views/global/renderer/table/default/myLink/CodeExample.vue')
+                    component: () => import('@/views/global/renderer/table/default/myCellLink/CodeExample.vue')
                   },
                   {
-                    path: 'myImg',
+                    path: 'myCellImg',
                     name: 'GlobalRendererTableDefaultMyImg',
-                    component: () => import('@/views/global/renderer/table/default/myImg/CodeExample.vue')
+                    component: () => import('@/views/global/renderer/table/default/myCellImg/CodeExample.vue')
                   }
                 ]
               },
@@ -268,14 +268,14 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'edit',
                 children: [
                   {
-                    path: 'editInput',
-                    name: 'GlobalRendererTableEditEditInput',
-                    component: () => import('@/views/global/renderer/table/edit/editInput/CodeExample.vue')
+                    path: 'myEditAmount',
+                    name: 'GlobalRendererTableEditMyEditAmount',
+                    component: () => import('@/views/global/renderer/table/edit/myEditAmount/CodeExample.vue')
                   },
                   {
-                    path: 'editDownTable',
-                    name: 'GlobalRendererTableEditEditDownTable',
-                    component: () => import('@/views/global/renderer/table/edit/editDownTable/CodeExample.vue')
+                    path: 'myEditPulldown',
+                    name: 'GlobalRendererTableEditMyEditPulldown',
+                    component: () => import('@/views/global/renderer/table/edit/myEditPulldown/CodeExample.vue')
                   }
                 ]
               },
@@ -313,19 +313,19 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'filter',
                 children: [
                   {
-                    path: 'filterInput',
-                    name: 'GlobalRendererTableFilterFilterInput',
-                    component: () => import('@/views/global/renderer/table/filter/filterInput/CodeExample.vue')
+                    path: 'myFilterInput',
+                    name: 'GlobalRendererTableFilterMyFilterInput',
+                    component: () => import('@/views/global/renderer/table/filter/myFilterInput/CodeExample.vue')
                   },
                   {
-                    path: 'filterComplex',
-                    name: 'GlobalRendererTableFilterFilterComplex',
-                    component: () => import('@/views/global/renderer/table/filter/filterComplex/CodeExample.vue')
+                    path: 'myFilterComplex',
+                    name: 'GlobalRendererTableFilterMyFilterComplex',
+                    component: () => import('@/views/global/renderer/table/filter/myFilterComplex/CodeExample.vue')
                   },
                   {
-                    path: 'filterContent',
-                    name: 'GlobalRendererTableFilterFilterContent',
-                    component: () => import('@/views/global/renderer/table/filter/filterContent/CodeExample.vue')
+                    path: 'myFilterContent',
+                    name: 'GlobalRendererTableFilterMyFilterContent',
+                    component: () => import('@/views/global/renderer/table/filter/myFilterContent/CodeExample.vue')
                   }
                 ]
               },
@@ -333,14 +333,14 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'empty',
                 children: [
                   {
-                    path: 'myEmpty',
-                    name: 'GlobalRendererTableMyEmpty',
-                    component: () => import('@/views/global/renderer/table/empty/myEmpty/CodeExample.vue')
+                    path: 'myEmptyImg',
+                    name: 'GlobalRendererTableMyEmptyImg',
+                    component: () => import('@/views/global/renderer/table/empty/myEmptyImg/CodeExample.vue')
                   },
                   {
-                    path: 'myNotData',
-                    name: 'GlobalRendererTableMyNotData',
-                    component: () => import('@/views/global/renderer/table/empty/myNotData/CodeExample.vue')
+                    path: 'myEmptyText',
+                    name: 'GlobalRendererTableMyEmptyText',
+                    component: () => import('@/views/global/renderer/table/empty/myEmptyText/CodeExample.vue')
                   }
                 ]
               }
@@ -1531,6 +1531,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/form/basics/customLayout/CodeExample.vue')
               },
               {
+                path: 'horizontal',
+                name: 'ComponentFormBasicsHorizontal',
+                component: () => import('@/views/form/basics/horizontal/CodeExample.vue')
+              },
+              {
                 path: 'vertical',
                 name: 'ComponentFormBasicsVertical',
                 component: () => import('@/views/form/basics/vertical/CodeExample.vue')
@@ -1586,27 +1591,42 @@ const routes: Array<RouteRecordRaw> = [
                 ]
               },
               {
-                path: 'template',
+                path: 'itemTemplate',
                 children: [
                   {
                     path: 'vxe-input',
-                    name: 'ComponentFormBasicsTemplateVxeInput',
-                    component: () => import('@/views/form/basics/template/vxe-input/CodeExample.vue')
+                    name: 'ComponentFormBasicsItemTemplateVxeInput',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-input/CodeExample.vue')
                   },
                   {
                     path: 'vxe-number-input',
-                    name: 'ComponentFormBasicsTemplateVxeNumberInput',
-                    component: () => import('@/views/form/basics/template/vxe-number-input/CodeExample.vue')
+                    name: 'ComponentFormBasicsItemTemplateVxeNumberInput',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-number-input/CodeExample.vue')
                   },
                   {
                     path: 'vxe-select',
-                    name: 'ComponentFormBasicsTemplateVxeSelect',
-                    component: () => import('@/views/form/basics/template/vxe-select/CodeExample.vue')
+                    name: 'ComponentFormBasicsItemTemplateVxeSelect',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-select/CodeExample.vue')
                   },
                   {
                     path: 'vxe-date-picker',
-                    name: 'ComponentFormBasicsTemplateVxeDatePicker',
-                    component: () => import('@/views/form/basics/template/vxe-date-picker/CodeExample.vue')
+                    name: 'ComponentFormBasicsItemTemplateVxeDatePicker',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-date-picker/CodeExample.vue')
+                  }
+                ]
+              },
+              {
+                path: 'template',
+                children: [
+                  {
+                    path: 'title',
+                    name: 'ComponentFormBasicsTemplateTitle',
+                    component: () => import('@/views/form/basics/template/title/CodeExample.vue')
+                  },
+                  {
+                    path: 'content',
+                    name: 'ComponentFormBasicsTemplateContent',
+                    component: () => import('@/views/form/basics/template/content/CodeExample.vue')
                   }
                 ]
               }
@@ -1639,6 +1659,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'gather',
                 name: 'ComponentFormConfigGather',
                 component: () => import('@/views/form/config/gather/CodeExample.vue')
+              },
+              {
+                path: 'horizontal',
+                name: 'ComponentFormConfigHorizontal',
+                component: () => import('@/views/form/config/horizontal/CodeExample.vue')
               },
               {
                 path: 'vertical',
@@ -1721,27 +1746,27 @@ const routes: Array<RouteRecordRaw> = [
                 ]
               },
               {
-                path: 'template',
+                path: 'itemTemplate',
                 children: [
                   {
                     path: 'vxe-input',
-                    name: 'ComponentFormConfigTemplateVxeInput',
-                    component: () => import('@/views/form/config/template/vxe-input/CodeExample.vue')
+                    name: 'ComponentFormConfigItemTemplateVxeInput',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-input/CodeExample.vue')
                   },
                   {
                     path: 'vxe-number-input',
-                    name: 'ComponentFormConfigTemplateVxeNumberInput',
-                    component: () => import('@/views/form/config/template/vxe-number-input/CodeExample.vue')
+                    name: 'ComponentFormConfigItemTemplateVxeNumberInput',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-number-input/CodeExample.vue')
                   },
                   {
                     path: 'vxe-select',
-                    name: 'ComponentFormConfigTemplateVxeSelect',
-                    component: () => import('@/views/form/config/template/vxe-select/CodeExample.vue')
+                    name: 'ComponentFormConfigItemTemplateVxeSelect',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-select/CodeExample.vue')
                   },
                   {
                     path: 'vxe-date-picker',
-                    name: 'ComponentFormConfigTemplateVxeDatePicker',
-                    component: () => import('@/views/form/config/template/vxe-date-picker/CodeExample.vue')
+                    name: 'ComponentFormConfigItemTemplateVxeDatePicker',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-date-picker/CodeExample.vue')
                   }
                 ]
               }

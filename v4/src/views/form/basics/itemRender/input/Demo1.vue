@@ -12,7 +12,7 @@
       <vxe-form-item title="时间" field="time" span="24" :item-render="{ name: 'input', attrs: { type: 'time' } }"></vxe-form-item>
       <vxe-form-item title="颜色" field="color" span="24" :item-render="{ name: 'input', attrs: { type: 'color' } }"></vxe-form-item>
       <vxe-form-item align="center" span="24">
-        <template #active>
+        <template #default>
           <vxe-button type="reset">重置</vxe-button>
           <vxe-button type="submit" status="primary">提交</vxe-button>
         </template>

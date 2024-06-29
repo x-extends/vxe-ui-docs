@@ -9,7 +9,7 @@
       <vxe-form-item title="下拉框分组" field="type" span="24" :item-render="typeItemRender"></vxe-form-item>
       <vxe-form-item title="下拉框分组多选" field="typeList" span="24" :item-render="typeListItemRender"></vxe-form-item>
       <vxe-form-item align="center" span="24">
-        <template #active>
+        <template #default>
           <vxe-button type="reset">重置</vxe-button>
           <vxe-button type="submit" status="primary">提交</vxe-button>
         </template>
