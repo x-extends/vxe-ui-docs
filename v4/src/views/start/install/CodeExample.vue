@@ -11,20 +11,20 @@
       <template #use>
         <pre>
           <pre-code class="shell">
-            npm install vxe-table vxe-pc-ui
+            npm install vxe-table@next vxe-pc-ui
             # 或者
-            yarn add vxe-table vxe-pc-ui
+            yarn add vxe-table@next vxe-pc-ui
             # 或者
             pnpm add vxe-table@next vxe-pc-ui
           </pre-code>
           <pre-code class="javascript">
             // ...
-            import VxeTable from 'vxe-table'
-            import 'vxe-table/lib/style.css'
-            // ...
-
             import VxeUI from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
+            // ...
+
+            import VxeTable from 'vxe-table'
+            import 'vxe-table/lib/style.css'
             // ...
 
             createApp(App).use(VxeUI).use(VxeTable).mount('#app')
