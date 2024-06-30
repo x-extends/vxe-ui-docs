@@ -11,8 +11,9 @@
     "build:v4": "cd v4 && npm run build",
     "build:all": "npm run build:other4 && npm run build:v4",
     "build": "npm run build:all",
-    "pack:other4": "npm run build:other4 && gulp build_all_docs && gulp build_other4_zip",
-    "pack:v4": "npm run build:v4 && gulp build_all_docs && gulp build_v4_zip",
+    "pack:other4": "npm run build:other4 && gulp build_other4_docs && gulp build_other4_zip",
+    "pack:v3": "npm run build:v3 && gulp build_v3_docs && gulp build_v3_zip",
+    "pack:v4": "npm run build:v4 && gulp build_v4_docs && gulp build_v4_zip",
     "pack:all": "npm run build:all && gulp build_all_docs && gulp build_all_zip"
   },
   "devDependencies": {
