@@ -4,7 +4,7 @@ process.env.VUE_APP_PAGE_TITLE = 'Vxe UI'
 process.env.VUE_APP_DATE_NOW = Date.now()
 
 module.exports = defineConfig({
-  publicPath: '/renderer/v4.7/',
+  publicPath: `/v${process.env.VUE_APP_VXE_VERSION}/`,
   assetsDir: 'static',
   productionSourceMap: false,
   devServer: {
