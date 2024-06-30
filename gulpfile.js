@@ -72,8 +72,8 @@ gulp.task('copy_other3_index', gulp.series('copy_other3_temp', () => {
 }))
 
 gulp.task('copy_other3_docs', gulp.series('copy_other3_index', () => {
-  return gulp.src('_temp/other3')
-    .pipe(gulp.dest('docs'))
+  return gulp.src('_temp/other3/**')
+    .pipe(gulp.dest('docs/other3'))
 }, () => {
   return gulp.src([
     '_temp/other3/**/*.html',
@@ -99,8 +99,8 @@ gulp.task('copy_other4_index', gulp.series('copy_other4_temp', () => {
 }))
 
 gulp.task('copy_other4_docs', gulp.series('copy_other4_index', () => {
-  return gulp.src('_temp/other4')
-    .pipe(gulp.dest('docs'))
+  return gulp.src('_temp/other4/**')
+    .pipe(gulp.dest('docs/other4'))
 }, () => {
   return gulp.src([
     '_temp/other4/**/*.html',
@@ -126,8 +126,8 @@ gulp.task('copy_v1_index', gulp.series('copy_v1_temp', () => {
 }))
 
 gulp.task('copy_v1_docs', gulp.series('copy_v1_index', () => {
-  return gulp.src('_temp/v1')
-    .pipe(gulp.dest('docs'))
+  return gulp.src('_temp/v1/**')
+    .pipe(gulp.dest('docs/v1'))
 }, () => {
   return gulp.src([
     '_temp/v1/**/*.html',
@@ -153,8 +153,8 @@ gulp.task('copy_v2_index', gulp.series('copy_v2_temp', () => {
 }))
 
 gulp.task('copy_v2_docs', gulp.series('copy_v2_index', () => {
-  return gulp.src('_temp/v2')
-    .pipe(gulp.dest('docs'))
+  return gulp.src('_temp/v2/**')
+    .pipe(gulp.dest('docs/v2'))
 }, () => {
   return gulp.src([
     '_temp/v2/**/*.html',
@@ -180,8 +180,8 @@ gulp.task('copy_v3_index', gulp.series('copy_v3_temp', () => {
 }))
 
 gulp.task('copy_v3_docs', gulp.series('copy_v3_index', () => {
-  return gulp.src('_temp/v3')
-    .pipe(gulp.dest('docs'))
+  return gulp.src('_temp/v3/**')
+    .pipe(gulp.dest('docs/v3'))
 }, () => {
   return gulp.src([
     '_temp/v3/**/*.html',
@@ -207,8 +207,8 @@ gulp.task('copy_v4_index', gulp.series('copy_v4_temp', () => {
 }))
 
 gulp.task('copy_v4_docs', gulp.series('copy_v4_index', () => {
-  return gulp.src('_temp/v4')
-    .pipe(gulp.dest('docs'))
+  return gulp.src('_temp/v4/**')
+    .pipe(gulp.dest('docs/v4'))
 }, () => {
   return gulp.src([
     '_temp/v4/**/*.html',
