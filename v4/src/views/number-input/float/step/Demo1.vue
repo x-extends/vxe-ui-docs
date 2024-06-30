@@ -1,7 +1,7 @@
 <template>
   <div>
-    <vxe-input v-model="val1" placeholder="整数步数 1" type="float" step="4"></vxe-input>
-    <vxe-input v-model="val2" placeholder="小数步数 5.5" type="float" step="3.5"></vxe-input>
+    <vxe-number-input v-model="val1" placeholder="整数步数 1" type="float" step="4"></vxe-number-input>
+    <vxe-number-input v-model="val2" placeholder="小数步数 5.5" type="float" step="3.5"></vxe-number-input>
   </div>
 </template>
 

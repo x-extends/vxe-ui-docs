@@ -1,7 +1,7 @@
 <template>
   <div>
-    <vxe-input v-model="val1" placeholder="默认2为小数" type="float"></vxe-input>
-    <vxe-input v-model="val2" placeholder="设置为4为小数" type="float" digits="4"></vxe-input>
+    <vxe-number-input v-model="val1" placeholder="默认2为小数" type="float"></vxe-number-input>
+    <vxe-number-input v-model="val2" placeholder="设置为4为小数" type="float" digits="4"></vxe-number-input>
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <vxe-input v-model="val1" placeholder="默认带控制按钮" type="number"></vxe-input>
-    <vxe-input v-model="val2" placeholder="关闭控制按钮" type="number" :controls="false"></vxe-input>
+    <vxe-number-input v-model="val1" placeholder="默认带控制按钮" type="number"></vxe-number-input>
+    <vxe-number-input v-model="val2" placeholder="关闭控制按钮" type="number" :controls="false"></vxe-number-input>
   </div>
 </template>
 

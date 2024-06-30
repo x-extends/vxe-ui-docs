@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-input v-model="val1" placeholder="可清除" type="integer" clearable></vxe-input>
+    <vxe-number-input v-model="val1" placeholder="可清除" type="integer" clearable></vxe-number-input>
   </div>
 </template>
 

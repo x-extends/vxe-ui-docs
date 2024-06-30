@@ -2646,6 +2646,46 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'date-picker',
+        children: [
+          {
+            path: 'date',
+            name: 'ComponentDatePickerDate',
+            component: () => import('@/views/date-picker/date/CodeExample.vue')
+          },
+          {
+            path: 'week',
+            name: 'ComponentDatePickerWeek',
+            component: () => import('@/views/date-picker/week/CodeExample.vue')
+          },
+          {
+            path: 'month',
+            name: 'ComponentDatePickerMonth',
+            component: () => import('@/views/date-picker/month/CodeExample.vue')
+          },
+          {
+            path: 'quarter',
+            name: 'ComponentDatePickerQuarter',
+            component: () => import('@/views/date-picker/quarter/CodeExample.vue')
+          },
+          {
+            path: 'year',
+            name: 'ComponentDatePickerYear',
+            component: () => import('@/views/date-picker/year/CodeExample.vue')
+          },
+          {
+            path: 'time',
+            name: 'ComponentDatePickerTime',
+            component: () => import('@/views/date-picker/time/CodeExample.vue')
+          },
+          {
+            path: 'datetime',
+            name: 'ComponentDatePickerDatetime',
+            component: () => import('@/views/date-picker/datetime/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'select',
         children: [
           {

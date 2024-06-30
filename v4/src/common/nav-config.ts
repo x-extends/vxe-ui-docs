@@ -1100,13 +1100,18 @@ export const navConfigList: NavVO[] = [
           { title: '密码输入', routerLink: { name: 'ComponentPasswordInput' } }
         ]
       },
-      // { title: 'DatePicker 日期选择器' },
-      // { title: 'WeekPicker 周选择器' },
-      // { title: 'MonthPicker 月选择器' },
-      // { title: 'QuarterPicker 季度选择' },
-      // { title: 'YearPicker 年选择器' },
-      // { title: 'TimePicker 时间选择器' },
-      // { title: 'DateTimePicker日期带时间选择器' },
+      {
+        title: 'DatePicker 日期选择',
+        children: [
+          { title: '日期类型', routerLink: { name: 'ComponentDatePickerDate' } },
+          { title: '时间类型', routerLink: { name: 'ComponentDatePickerTime' } },
+          { title: '日期带时间类型', routerLink: { name: 'ComponentDatePickerDatetime' } },
+          { title: '周类型', routerLink: { name: 'ComponentDatePickerWeek' } },
+          { title: '月度类型', routerLink: { name: 'ComponentDatePickerMonth' } },
+          { title: '季度类型', routerLink: { name: 'ComponentDatePickerQuarter' } },
+          { title: '年度类型', routerLink: { name: 'ComponentDatePickerYear' } }
+        ]
+      },
       {
         title: 'Select 下拉框',
         children: [
