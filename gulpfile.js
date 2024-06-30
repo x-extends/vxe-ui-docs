@@ -51,35 +51,9 @@ gulp.task('clear_docs_temp', () => {
   return del([
     '_temp',
     'docs',
-    'docs.zip'
+    '*.zip'
   ], { force: true })
 })
-
-gulp.task('copy_plugins_docs', () => {
-  return gulp.src('plugins/**')
-    .pipe(gulp.dest('docs/plugins'))
-})
-
-gulp.task('build_plugins_docs', gulp.series('copy_plugins_docs', () => {
-  return gulp.src('plugins/index.html')
-    .pipe(replace('</head>', `${hmScript}</head>`))
-    .pipe(gulp.dest('docs/plugins'))
-}))
-
-gulp.task('copy_pluginDocs_docs', () => {
-  return gulp.src('pluginDocs/**')
-    .pipe(gulp.dest('docs/pluginDocs'))
-})
-
-gulp.task('build_pluginDocs_docs', gulp.series('copy_pluginDocs_docs', () => {
-  return gulp.src('pluginDocs/index.html')
-    .pipe(replace('</head>', `${hmScript}</head>`))
-    .pipe(replace('</head>', enableAd ? `${adScript}${isForceAd ? adCheckScript : ''}</head>`: '</head>'))
-    .pipe(replace('</body>', `${ssTmplScript}${sponsorsTmplScript}${enableAd ? adTmplScript : ''}</body>`))
-    .pipe(gulp.dest('docs/pluginDocs'))
-}))
-
-gulp.task('build_vxe_docs', gulp.series('build_plugins_docs', 'build_pluginDocs_docs'))
 
 gulp.task('copy_other3_docs', () => {
   return gulp.src('other3/dist/**')
@@ -218,14 +192,30 @@ gulp.task('build_latest_docs', () => {
     .pipe(gulp.dest('docs'))
 })
 
-gulp.task('build_docs', gulp.series('clear_docs_temp', 'copy_docs_index', 'build_css_unicode', 'build_latest_docs', () => {
+gulp.task('build_all_docs', gulp.series('clear_docs_temp', 'copy_docs_index', 'build_css_unicode', 'build_latest_docs', () => {
   return del([
     '_temp'
   ], { force: true })
 }))
 
-gulp.task('build_zip', () => {
+gulp.task('build_other4_zip', () => {
+  return gulp.src([
+    'docs/other4/**'
+  ], { base: './docs/' })
+    .pipe(zip('docs_other4.zip'))
+    .pipe(gulp.dest('./'))
+})
+
+gulp.task('build_v4_zip', () => {
+  return gulp.src([
+    'docs/v4/**'
+  ], { base: './docs/' })
+    .pipe(zip('docs_v4.zip'))
+    .pipe(gulp.dest('./'))
+})
+
+gulp.task('build_all_zip', () => {
   return gulp.src('docs/**')
-    .pipe(zip('docs.zip'))
+    .pipe(zip('docs_all.zip'))
     .pipe(gulp.dest('./'))
 })
