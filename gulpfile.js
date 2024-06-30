@@ -234,9 +234,9 @@ gulp.task('build_css_unicode', () => {
 
 gulp.task('build_latest_docs', () => {
   return gulp.src([
-    'docs/v4/favicon.ico',
-    'docs/v4/index.html',
-    'docs/v4/logo.png'
+    '_temp/v4/*.html',
+    '_temp/v4/*.ico',
+    '_temp/v4/*.png'
   ])
     .pipe(gulp.dest('docs'))
 })
@@ -259,14 +259,14 @@ gulp.task('build_v3_docs', gulp.series('clear_docs_temp', 'copy_v3_docs', 'build
   ], { force: true })
 }))
 
-gulp.task('build_v4_docs', gulp.series('clear_docs_temp', 'copy_v4_docs', 'build_css_unicode', 'build_latest_docs', () => {
+gulp.task('build_v4_docs', gulp.series('clear_docs_temp', 'copy_v4_docs', 'build_latest_docs', 'build_css_unicode', () => {
   return del([
     '_temp'
   ], { force: true })
 }))
 
-gulp.task('copy_all_docs', gulp.parallel('copy_v4_docs', 'copy_other4_index'))
-gulp.task('build_all_docs', gulp.series('clear_docs_temp', 'copy_all_docs', 'build_css_unicode', 'build_latest_docs', () => {
+gulp.task('copy_all_docs', gulp.parallel('copy_v4_docs', 'copy_other4_index', 'build_latest_docs'))
+gulp.task('build_all_docs', gulp.series('clear_docs_temp', 'copy_all_docs', 'build_css_unicode', () => {
   return del([
     '_temp'
   ], { force: true })
