@@ -298,7 +298,8 @@ gulp.task('build_v3_zip', () => {
 
 gulp.task('build_v4_zip', () => {
   return gulp.src([
-    'docs/v4/**'
+    'docs/v4/**',
+    'docs/*'
   ], { base: './docs/' })
     .pipe(zip('docs_v4.zip'))
     .pipe(gulp.dest('./'))
