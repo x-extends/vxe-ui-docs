@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "update": "npm install --legacy-peer-deps && npm run update:all",
+    "update:other3": "cd other3 && npm install --legacy-peer-deps",
     "update:other4": "cd other4 && npm install --legacy-peer-deps",
+    "update:v3": "cd v3 && npm install --legacy-peer-deps",
     "update:v4": "cd v4 && npm install --legacy-peer-deps",
     "update:all": "npm run update:other4 && npm run update:v4",
     "build:other4": "cd other4 && npm run build",
+    "build:v3": "cd v3 && npm run build",
     "build:v4": "cd v4 && npm run build",
     "build:all": "npm run build:other4 && npm run build:v4",
     "build": "npm run build:all",
