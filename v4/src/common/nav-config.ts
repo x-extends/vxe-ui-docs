@@ -348,7 +348,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             // { title: '分组表头', routerLink: { name: 'ComponentGridBaseGroup' } },
             { title: '高亮行与列', routerLink: { name: 'ComponentGridBaseCurrent' } },
             // { title: '排序', routerLink: { name: 'ComponentGridBaseSort' } },
-            // { title: '筛选', routerLink: { name: 'ComponentGridBaseFilter' } },
+            { title: '筛选', routerLink: { name: 'ComponentGridBaseFilter' } },
             // { title: '加载中', routerLink: { name: 'ComponentGridBaseLoading' } },
             // { title: '格式化内容', routerLink: { name: 'ComponentGridBaseFormat' } },
             // { title: '序号', routerLink: { name: 'ComponentGridBaseSeq' } },
