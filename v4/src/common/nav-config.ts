@@ -336,7 +336,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '动态样式', routerLink: { name: 'ComponentGridBaseDynamicStyle' } },
             // { title: '隐藏表头', routerLink: { name: 'ComponentGridBaseHeader' } },
             // { title: '高亮列', routerLink: { name: 'ComponentGridBaseHeaderHighlight' } },
-            // { title: '拖拽调整列宽', routerLink: { name: 'ComponentGridBaseHeaderResizable' } },
+            { title: '拖拽调整列宽', routerLink: { name: 'ComponentGridBaseHeaderResizable' } },
             // { title: '表格最小高度', routerLink: { name: 'ComponentGridBaseHeaderMinHeight' } },
             // { title: '表格高度', routerLink: { name: 'ComponentGridBaseHeight' } },
             // { title: '表格最大高度', routerLink: { name: 'ComponentGridBaseMaxHeight' } },
