@@ -3,10 +3,8 @@
     <vxe-table
       border
       height="300"
-      :row-config="{isCurrent: true, isHover: true}"
       :data="tableData"
-      :sort-config="{trigger: 'cell', defaultSort: {field: 'age', order: 'desc'}, orders: ['desc', 'asc', null]}"
-      @sort-change="sortChangeEvent">
+      :sort-config="sortConfig">
       <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="role" title="Role" sortable></vxe-column>
@@ -19,7 +17,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeTableEvents } from 'vxe-table'
+import { VxeTablePropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -32,6 +30,10 @@ interface RowVO {
   address: string
 }
 
+const sortConfig = ref<VxeTablePropTypes.SortConfig<RowVO>>({
+  trigger: 'cell'
+})
+
 const tableData = ref<RowVO[]>([
   { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, num: '3.8', num2: '3.8', address: 'test abc' },
   { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', age: 22, num: '511', num2: '511', address: 'Guangzhou' },
@@ -42,8 +44,4 @@ const tableData = ref<RowVO[]>([
   { id: 10007, name: 'Test7', role: 'Test', sex: 'Man', age: 29, num: '400.9', num2: '400.9', address: 'test abc' },
   { id: 10008, name: 'Test8', role: 'Develop', sex: 'Man', age: 35, num: '5000', num2: '5000', address: 'test abc' }
 ])
-
-const sortChangeEvent: VxeTableEvents.SortChange<RowVO> = ({ field, order }) => {
-  console.info(field, order)
-}
 </script>

@@ -90,7 +90,12 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '排序',
           children: [
             { title: '多字段排序', routerLink: { name: 'ComponentTableSortMultiple' } },
-            { title: '服务端排序', routerLink: { name: 'ComponentTableSortRemote' } }
+            { title: '触发方式', routerLink: { name: 'ComponentTableSortTrigger' } },
+            { title: '自定义轮询', routerLink: { name: 'ComponentTableSortOrders' } },
+            { title: '设置默认排序', routerLink: { name: 'ComponentTableSortDefaultSort' } },
+            { title: '服务端排序', routerLink: { name: 'ComponentTableSortRemote' } },
+            { title: '设置值的类型', routerLink: { name: 'ComponentTableSortSortType' } },
+            { title: '自定义排序方法', routerLink: { name: 'ComponentTableSortSortMethod' } }
           ]
         },
         {
@@ -351,11 +356,25 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '筛选', routerLink: { name: 'ComponentGridBaseFilter' } },
             // { title: '加载中', routerLink: { name: 'ComponentGridBaseLoading' } },
             // { title: '格式化内容', routerLink: { name: 'ComponentGridBaseFormat' } },
-            // { title: '序号', routerLink: { name: 'ComponentGridBaseSeq' } },
+            { title: '序号', routerLink: { name: 'ComponentGridBaseSeq' } },
             // { title: '单选框', routerLink: { name: 'ComponentGridBaseRadio' } },
             // { title: '复选框', routerLink: { name: 'ComponentGridBaseSelection' } },
             // { title: 'HTML 类型', routerLink: { name: 'ComponentGridBaseHtml' } },
             { title: '完整案例', routerLink: { name: 'ComponentGridBaseFull' } }
+          ]
+        },
+        {
+          title: '排序',
+          children: [
+            { title: '多字段排序', routerLink: { name: 'ComponentGridSortMultiple' } },
+            { title: '服务端排序', routerLink: { name: 'ComponentGridSortRemote' } }
+          ]
+        },
+        {
+          title: '筛选',
+          children: [
+            { title: '修改筛选选项', routerLink: { name: 'ComponentGridFilterOptions' } },
+            { title: '服务端筛选', routerLink: { name: 'ComponentGridFilterRemote' } }
           ]
         },
         {

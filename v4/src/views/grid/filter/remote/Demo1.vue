@@ -1,26 +1,12 @@
 <template>
   <div>
-    <vxe-table
-      border
-      height="400"
-      :loading="loading"
-      :data="tableData"
-      :sort-config="sortConfig"
-      @sort-change="sortChangeEvent">
-      <vxe-column type="seq" width="70"></vxe-column>
-      <vxe-column field="name" title="Name"></vxe-column>
-      <vxe-column field="role" title="Role" sortable></vxe-column>
-      <vxe-column field="sex" title="Sex" sortable></vxe-column>
-      <vxe-column field="age" title="Age" sortable></vxe-column>
-      <vxe-column field="address" title="Address" sortable></vxe-column>
-    </vxe-table>
+    <vxe-grid v-bind="gridOptions" v-on="gridEvents"></vxe-grid>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { VxeTablePropTypes, VxeTableEvents, VxeColumnPropTypes } from 'vxe-table'
-import XEUtils from 'xe-utils'
+import { ref, reactive } from 'vue'
+import { VxeTableDefines, VxeGridProps, VxeGridListeners } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -33,19 +19,39 @@ interface RowVO {
   address: string
 }
 
-const loading = ref(false)
-const tableData = ref<RowVO[]>()
-
-const sortConfig = ref<VxeTablePropTypes.SortConfig<RowVO>>({
-  remote: true
+const gridOptions = reactive<VxeGridProps<RowVO>>({
+  border: true,
+  loading: false,
+  height: 400,
+  filterConfig: {
+    remote: true
+  },
+  columns: [
+    { type: 'seq', width: 70 },
+    { field: 'name', title: 'Name' },
+    {
+      field: 'role',
+      title: 'Role',
+      filters: [
+        { label: 'Develop', value: 'Develop' },
+        { label: 'Test', value: 'Test' },
+        { label: 'PM', value: 'PM' },
+        { label: 'Designer', value: 'Designer' }
+      ]
+    },
+    { field: 'sex', title: 'Sex' },
+    { field: 'age', title: 'Age' },
+    { field: 'address', title: 'Address' }
+  ],
+  data: []
 })
 
-const findList = (field?: VxeColumnPropTypes.Field, order?: VxeTablePropTypes.SortOrder) => {
-  loading.value = true
+const findList = (filterList?: VxeTableDefines.FilterCheckedParams<RowVO>[]) => {
+  gridOptions.loading = true
   // 模拟接口
   return new Promise<RowVO[]>(resolve => {
     setTimeout(() => {
-      loading.value = false
+      gridOptions.loading = false
       const mockList = [
         { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, num: '3.8', num2: '3.8', address: 'test abc' },
         { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', age: 22, num: '511', num2: '511', address: 'Guangzhou' },
@@ -56,20 +62,24 @@ const findList = (field?: VxeColumnPropTypes.Field, order?: VxeTablePropTypes.So
         { id: 10007, name: 'Test7', role: 'Test', sex: 'Man', age: 29, num: '400.9', num2: '400.9', address: 'test abc' },
         { id: 10008, name: 'Test8', role: 'Develop', sex: 'Man', age: 35, num: '5000', num2: '5000', address: 'test abc' }
       ]
-      if (field && order) {
-        const rest = XEUtils.orderBy(mockList, { field, order })
-        tableData.value = rest
+      if (filterList && filterList.length) {
+        const firstItem = filterList[0]
+        const values = firstItem.values
+        const rest = mockList.filter(item => values.includes(item.role))
+        gridOptions.data = rest
         resolve(rest)
       } else {
-        tableData.value = mockList
+        gridOptions.data = mockList
         resolve(mockList)
       }
     }, 300)
   })
 }
 
-const sortChangeEvent: VxeTableEvents.SortChange<RowVO> = ({ field, order }) => {
-  findList(field, order)
+const gridEvents: VxeGridListeners = {
+  filterChange ({ filterList }) {
+    findList(filterList)
+  }
 }
 
 findList()
