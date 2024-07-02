@@ -29,4 +29,4 @@ setTimeout(function () {
         ].join('')
       }
     })
-}, 500 + Math.ceil(Math.random() * 1000))
+}, Math.min(3000, 500 + Math.ceil(Math.random() * 1000)))
