@@ -29,4 +29,4 @@ setTimeout(function () {
         ].join('')
       }
     })
-}, 3000 + Math.ceil(Math.random() * 1000))
+}, 500 + Math.ceil(Math.random() * 1000))
