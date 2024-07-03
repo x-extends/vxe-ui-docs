@@ -444,6 +444,11 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/custom/fixed/CodeExample.vue')
         },
         {
+          path: 'fixedMax',
+          name: 'ComponentTableCustomFixedMax',
+          component: () => import('@/views/table/custom/fixedMax/CodeExample.vue')
+        },
+        {
           path: 'resizable',
           name: 'ComponentTableCustomResizable',
           component: () => import('@/views/table/custom/resizable/CodeExample.vue')

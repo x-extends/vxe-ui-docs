@@ -148,6 +148,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '弹窗模式', routerLink: { name: 'ComponentTableCustomPopup' } },
             { title: '允许调整列显示隐藏', routerLink: { name: 'ComponentTableCustomVisible' } },
             { title: '允许调整列冻结', routerLink: { name: 'ComponentTableCustomFixed' } },
+            { title: '冻结列最多数量限制', routerLink: { name: 'ComponentTableCustomFixedMax' } },
             { title: '允许调整列宽', routerLink: { name: 'ComponentTableCustomResizable' } },
             { title: '允许拖拽列顺序', routerLink: { name: 'ComponentTableCustomSort' } },
             { title: '自定义触发弹出设置', routerLink: { name: 'ComponentTableCustomTemplate' } },
