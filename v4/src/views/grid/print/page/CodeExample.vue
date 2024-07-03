@@ -10,5 +10,13 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="grid/print/page/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          只在第一页显示表头，其余页不显示
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>

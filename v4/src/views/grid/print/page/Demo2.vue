@@ -38,8 +38,9 @@ const printEvent = () => {
   if ($grid) {
     // 分割每页26条
     Promise.all(
-      XEUtils.chunk(gridOptions.data, 26).map(pageData => {
+      XEUtils.chunk(gridOptions.data, 26).map((pageData, index) => {
         return $grid.getPrintHtml({
+          isHeader: index === 0,
           data: pageData
         }).then(({ html }) => {
           return {

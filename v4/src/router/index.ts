@@ -1793,6 +1793,16 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'multilist',
           name: 'ComponentGridPrintMultilist',
           component: () => import('@/views/grid/print/multilist/CodeExample.vue')
+        },
+        {
+          path: 'header',
+          name: 'ComponentGridPrintHeader',
+          component: () => import('@/views/grid/print/header/CodeExample.vue')
+        },
+        {
+          path: 'footer',
+          name: 'ComponentGridPrintFooter',
+          component: () => import('@/views/grid/print/footer/CodeExample.vue')
         }
       ]
     },

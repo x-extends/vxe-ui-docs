@@ -289,7 +289,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           ]
         },
         {
-          title: '虚拟滚动',
+          title: '虚拟滚动（超大数据量表格）',
           children: [
             { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTableScrollVertical' } },
             { title: '横向虚拟滚动', routerLink: { name: 'ComponentTableScrollHorizontal' } },
@@ -578,14 +578,16 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '打印表格',
           children: [
             { title: '打印表格', routerLink: { name: 'ComponentGridPrintBase' } },
-            { title: '自定义头部和底部', routerLink: { name: 'ComponentGridPrintBeforeMethod' } },
+            { title: '自定义顶部和底部', routerLink: { name: 'ComponentGridPrintBeforeMethod' } },
             { title: '高级打印', routerLink: { name: 'ComponentGridPrintAdvanced' } },
+            { title: '自定义页眉/标题', routerLink: { name: 'ComponentGridPrintHeader' } },
+            { title: '自定义页尾/页码', routerLink: { name: 'ComponentGridPrintFooter' } },
             { title: '实现将表格切割为多页打印', routerLink: { name: 'ComponentGridPrintPage' } },
             { title: '实现打印多张表格', routerLink: { name: 'ComponentGridPrintMultilist' } }
           ]
         },
         {
-          title: '虚拟滚动',
+          title: '虚拟滚动（超大数据量表格）',
           children: [
             { title: '纵向虚拟滚动', routerLink: { name: 'ComponentGridScrollVertical' } },
             { title: '横向虚拟滚动', routerLink: { name: 'ComponentGridScrollHorizontal' } },

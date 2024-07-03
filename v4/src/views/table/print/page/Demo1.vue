@@ -37,7 +37,7 @@ for (let i = 0; i < 100; i++) {
     id: 10001 + i,
     name: 'Test1',
     role: 'Develop',
-    ge: 66,
+    age: 66,
     sex: 'Man',
     address: 'test abc'
   })
