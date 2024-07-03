@@ -187,18 +187,6 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           ]
         },
         {
-          title: '按键导航',
-          children: [
-            { title: '单元格选中', routerLink: { name: 'ComponentTableKeyboardSelected' } },
-            { title: '按键操作', routerLink: { name: 'ComponentTableKeyboardKeyboard' } },
-            { title: '可编辑按键操作', routerLink: { name: 'ComponentTableKeyboardEdit' } },
-            { title: '树结构按键操作', routerLink: { name: 'ComponentTableKeyboardTree' } },
-            { title: '树结构可编辑', routerLink: { name: 'ComponentTableKeyboardTreeEdit' } },
-            { title: '区域选取', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/table/singleArea' },
-            { title: '复制粘贴', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/table/areaClip' }
-          ]
-        },
-        {
           title: '可编辑',
           children: [
             { title: '手动编辑', routerLink: { name: 'ComponentTableEditManual' } },
@@ -256,6 +244,18 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '自定义展开行模板', routerLink: { name: 'ComponentTableTemplateContent' } },
             { title: '自定义筛选模板', routerLink: { name: 'ComponentTableTemplateFilter' } },
             { title: '自定义编辑模板', routerLink: { name: 'ComponentTableTemplateEdit' } }
+          ]
+        },
+        {
+          title: '按键导航',
+          children: [
+            { title: '单元格选中', routerLink: { name: 'ComponentTableKeyboardSelected' } },
+            { title: '按键操作', routerLink: { name: 'ComponentTableKeyboardKeyboard' } },
+            { title: '可编辑按键操作', routerLink: { name: 'ComponentTableKeyboardEdit' } },
+            { title: '树结构按键操作', routerLink: { name: 'ComponentTableKeyboardTree' } },
+            { title: '树结构可编辑', routerLink: { name: 'ComponentTableKeyboardTreeEdit' } },
+            { title: 'Excel 单元格选取', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/table/singleArea' },
+            { title: 'Excel 复制与粘贴', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/table/areaClip' }
           ]
         },
         {
@@ -534,6 +534,18 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           ]
         },
         {
+          title: '按键导航',
+          children: [
+            { title: '单元格选中', routerLink: { name: 'ComponentGridKeyboardSelected' } },
+            { title: '按键操作', routerLink: { name: 'ComponentGridKeyboardKeyboard' } },
+            { title: '可编辑按键操作', routerLink: { name: 'ComponentGridKeyboardEdit' } },
+            { title: '树结构按键操作', routerLink: { name: 'ComponentGridKeyboardTree' } },
+            { title: '树结构可编辑', routerLink: { name: 'ComponentGridKeyboardTreeEdit' } },
+            { title: 'Excel 单元格选取', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/singleArea' },
+            { title: 'Excel 复制与粘贴', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaClip' }
+          ]
+        },
+        {
           title: '导出数据',
           children: [
             { title: '导出数据', routerLink: { name: 'ComponentGridExportBase' } },
@@ -567,7 +579,9 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           children: [
             { title: '打印表格', routerLink: { name: 'ComponentGridPrintBase' } },
             { title: '自定义头部和底部', routerLink: { name: 'ComponentGridPrintBeforeMethod' } },
-            { title: '高级打印', routerLink: { name: 'ComponentGridPrintAdvanced' } }
+            { title: '高级打印', routerLink: { name: 'ComponentGridPrintAdvanced' } },
+            { title: '实现将表格切割为多页打印', routerLink: { name: 'ComponentGridPrintPage' } },
+            { title: '实现打印多张表格', routerLink: { name: 'ComponentGridPrintMultilist' } }
           ]
         },
         {
@@ -598,6 +612,14 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '手动调用 - 标记删除状态', routerLink: { name: 'ComponentGridProxyManualMark' } },
             { title: '工具栏 - 增删改查', routerLink: { name: 'ComponentGridProxyToolbarSave' } },
             { title: '手动调用 - 增删改查', routerLink: { name: 'ComponentGridProxyManualSave' } }
+          ]
+        },
+        {
+          title: '表格搜索',
+          children: [
+            { title: '实现表格搜索', routerLink: { name: 'ComponentGridSearchList' } },
+            { title: '实现树形表格搜索', routerLink: { name: 'ComponentGridSearchTree' } },
+            { title: '查找与替换', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaFNR' }
           ]
         },
         {

@@ -4,26 +4,13 @@
       <vxe-input v-model="filterName" type="search" placeholder="试试全表搜索" @keyup="searchEvent"></vxe-input>
     </p>
 
-    <vxe-table
-      ref="tableRef"
-      class="mytree-table"
-      height="400"
-      :column-config="{useKey: true}"
-      :row-config="{useKey: true}"
-      :tree-config="{}"
-      :data="list">
-      <vxe-column type="seq" width="220" title="序号" tree-node></vxe-column>
-      <vxe-column field="name" title="Name" type="html"></vxe-column>
-      <vxe-column field="size" title="Size" type="html"></vxe-column>
-      <vxe-column field="type" title="Type" type="html"></vxe-column>
-      <vxe-column field="date" title="Date" type="html"></vxe-column>
-    </vxe-table>
+    <vxe-grid ref="gridRef" v-bind="gridOptions" class="mytree-grid"></vxe-grid>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, nextTick } from 'vue'
-import { VxeTableInstance } from 'vxe-table'
+import { ref, reactive, nextTick } from 'vue'
+import { VxeGridProps, VxeGridInstance } from 'vxe-table'
 import XEUtils from 'xe-utils'
 
 interface RowVO {
@@ -35,12 +22,10 @@ interface RowVO {
   children?: RowVO[]
 }
 
-const tableRef = ref<VxeTableInstance<RowVO>>()
+const gridRef = ref<VxeGridInstance<RowVO>>()
 
 const filterName = ref('')
-const list = ref<RowVO[]>([])
-
-const tableData = ref<RowVO[]>([
+const tableAllData = ref<RowVO[]>([
   { id: 1000, name: 'Test1', type: 'mp3', size: 1024, date: '2020-08-01' },
   {
     id: 1005,
@@ -69,28 +54,48 @@ const tableData = ref<RowVO[]>([
   { id: 24555, name: 'Test9', type: 'avi', size: 224, date: '2020-10-01' }
 ])
 
+const gridOptions = reactive<VxeGridProps<RowVO>>({
+  border: true,
+  height: 400,
+  columnConfig: {
+    useKey: true
+  },
+  rowConfig: {
+    useKey: true
+  },
+  treeConfig: {},
+  columns: [
+    { type: 'seq', title: '序号', width: 220, treeNode: true },
+    { field: 'name', title: 'Name', type: 'html' },
+    { field: 'size', title: 'Size', type: 'html' },
+    { field: 'type', title: 'Type', type: 'html' },
+    { field: 'date', title: 'Date', type: 'html' }
+  ],
+  data: []
+})
+
 const searchEvent = () => {
   const filterVal = XEUtils.toValueString(filterName.value).trim().toLowerCase()
   if (filterVal) {
     const filterRE = new RegExp(filterVal, 'gi')
     const options = { children: 'children' }
     const searchProps = ['name', 'size', 'type', 'date']
-    const rest = XEUtils.searchTree(tableData.value, item => searchProps.some(key => String(item[key]).toLowerCase().indexOf(filterVal) > -1), options)
+    const rest = XEUtils.searchTree(tableAllData.value, item => searchProps.some(key => String(item[key]).toLowerCase().indexOf(filterVal) > -1), options)
     XEUtils.eachTree(rest, item => {
       searchProps.forEach(key => {
         item[key] = String(item[key]).replace(filterRE, match => `<span class="keyword-highlight">${match}</span>`)
       })
     }, options)
-    list.value = rest
+    gridOptions.data = rest
     // 搜索之后默认展开所有子节点
     nextTick(() => {
-      const $table = tableRef.value
-      if ($table) {
-        $table.setAllTreeExpand(true)
+      const $grid = gridRef.value
+      if ($grid) {
+        $grid.setAllTreeExpand(true)
       }
     })
   } else {
-    list.value = tableData.value
+    gridOptions.data = tableAllData.value
   }
 }
 
@@ -98,7 +103,7 @@ searchEvent()
 </script>
 
 <style lang="scss" scoped>
-.mytree-table {
+.mytree-grid {
   ::v-deep(.keyword-highlight)  {
     background-color: #FFFF00;
   }

@@ -1507,6 +1507,36 @@ const gridRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'keyboard',
+      children: [
+        {
+          path: 'selected',
+          name: 'ComponentGridKeyboardSelected',
+          component: () => import('@/views/grid/keyboard/selected/CodeExample.vue')
+        },
+        {
+          path: 'keyboard',
+          name: 'ComponentGridKeyboardKeyboard',
+          component: () => import('@/views/grid/keyboard/keyboard/CodeExample.vue')
+        },
+        {
+          path: 'edit',
+          name: 'ComponentGridKeyboardEdit',
+          component: () => import('@/views/grid/keyboard/edit/CodeExample.vue')
+        },
+        {
+          path: 'tree',
+          name: 'ComponentGridKeyboardTree',
+          component: () => import('@/views/grid/keyboard/tree/CodeExample.vue')
+        },
+        {
+          path: 'treeEdit',
+          name: 'ComponentGridKeyboardTreeEdit',
+          component: () => import('@/views/grid/keyboard/treeEdit/CodeExample.vue')
+        }
+      ]
+    },
+    {
       path: 'edit',
       children: [
         {
@@ -1753,6 +1783,16 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'advanced',
           name: 'ComponentGridPrintAdvanced',
           component: () => import('@/views/grid/print/advanced/CodeExample.vue')
+        },
+        {
+          path: 'page',
+          name: 'ComponentGridPrintPage',
+          component: () => import('@/views/grid/print/page/CodeExample.vue')
+        },
+        {
+          path: 'multilist',
+          name: 'ComponentGridPrintMultilist',
+          component: () => import('@/views/grid/print/multilist/CodeExample.vue')
         }
       ]
     },
@@ -1863,6 +1903,21 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'manualSave',
           name: 'ComponentGridProxyManualSave',
           component: () => import('@/views/grid/proxy/manualSave/CodeExample.vue')
+        }
+      ]
+    },
+    {
+      path: 'search',
+      children: [
+        {
+          path: 'list',
+          name: 'ComponentGridSearchList',
+          component: () => import('@/views/grid/search/list/CodeExample.vue')
+        },
+        {
+          path: 'tree',
+          name: 'ComponentGridSearchTree',
+          component: () => import('@/views/grid/search/tree/CodeExample.vue')
         }
       ]
     },

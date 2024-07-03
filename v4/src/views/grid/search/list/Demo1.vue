@@ -4,24 +4,13 @@
       <vxe-input v-model="filterName" type="search" placeholder="试试全表搜索" @keyup="searchEvent"></vxe-input>
     </p>
 
-    <vxe-table
-      border
-      class="mylist-table"
-      height="400"
-      :column-config="{useKey: true}"
-      :row-config="{useKey: true}"
-      :data="list">
-      <vxe-column type="seq" width="80"></vxe-column>
-      <vxe-column field="name" title="Name" type="html"></vxe-column>
-      <vxe-column field="role" title="Role" type="html"></vxe-column>
-      <vxe-column field="age" title="Age" type="html"></vxe-column>
-      <vxe-column field="address" title="Address" type="html"></vxe-column>
-    </vxe-table>
+    <vxe-grid v-bind="gridOptions" class="mylist-grid"></vxe-grid>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
+import { VxeGridProps } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -34,9 +23,7 @@ interface RowVO {
 }
 
 const filterName = ref('')
-const list = ref<RowVO[]>([])
-
-const tableData = ref<RowVO[]>([
+const tableAllData = ref<RowVO[]>([
   { id: 10001, name: 'Test1', role: 'Develop', sex: '0', age: 28, amount: 888, address: 'test abc' },
   { id: 10002, name: 'Test2', role: 'Test', sex: '1', age: 22, amount: 666, address: 'Guangzhou' },
   { id: 10003, name: 'Test3', role: 'PM', sex: '1', age: 32, amount: 89, address: 'Shanghai' },
@@ -49,13 +36,32 @@ const tableData = ref<RowVO[]>([
   { id: 100010, name: 'Test10', role: 'Develop', sex: '1', age: 21, amount: 666, address: 'test abc' }
 ])
 
+const gridOptions = reactive<VxeGridProps<RowVO>>({
+  border: true,
+  height: 400,
+  columnConfig: {
+    useKey: true
+  },
+  rowConfig: {
+    useKey: true
+  },
+  columns: [
+    { type: 'seq', width: 70 },
+    { field: 'name', title: 'Name', type: 'html' },
+    { field: 'sex', title: 'Sex', type: 'html' },
+    { field: 'age', title: 'Age', type: 'html' },
+    { field: 'address', title: 'Address', type: 'html' }
+  ],
+  data: []
+})
+
 const searchEvent = () => {
   const filterVal = String(filterName.value).trim().toLowerCase()
   if (filterVal) {
     const filterRE = new RegExp(filterVal, 'gi')
     const searchProps = ['name', 'role', 'age', 'address']
-    const rest = tableData.value.filter(item => searchProps.some(key => String(item[key]).toLowerCase().indexOf(filterVal) > -1))
-    list.value = rest.map(row => {
+    const rest = tableAllData.value.filter(item => searchProps.some(key => String(item[key]).toLowerCase().indexOf(filterVal) > -1))
+    gridOptions.data = rest.map(row => {
       const item = Object.assign({}, row)
       searchProps.forEach(key => {
         item[key] = String(item[key]).replace(filterRE, match => `<span class="keyword-highlight">${match}</span>`)
@@ -63,7 +69,7 @@ const searchEvent = () => {
       return item
     })
   } else {
-    list.value = tableData.value
+    gridOptions.data = tableAllData.value
   }
 }
 
@@ -71,7 +77,7 @@ searchEvent()
 </script>
 
 <style lang="scss" scoped>
-.mylist-table {
+.mylist-grid {
   ::v-deep(.keyword-highlight)  {
     background-color: #FFFF00;
   }
