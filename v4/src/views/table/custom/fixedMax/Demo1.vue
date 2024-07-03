@@ -39,6 +39,7 @@ const tableData = ref<RowVO[]>([
 ])
 
 const customConfig = reactive<VxeTablePropTypes.CustomConfig>({
+  mode: 'popup',
   allowVisible: false,
   allowFixed: true,
   allowResizable: false,
