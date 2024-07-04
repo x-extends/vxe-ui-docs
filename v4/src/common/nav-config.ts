@@ -25,7 +25,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
   i18nKey: 'app.aside.menu.tableTitle',
   children: [
     {
-      i18nKey: 'app.aside.menu.table.name',
+      i18nKey: 'app.aside.menu.tableTableTitle',
       children: [
         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'table' } } },
         {
@@ -333,7 +333,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
-      i18nKey: 'app.aside.menu.grid.name',
+      i18nKey: 'app.aside.menu.tableGridTitle',
       children: [
         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'grid' } } },
         {
@@ -651,35 +651,35 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
-      title: '格式化（全局复用）',
+      i18nKey: 'app.aside.menu.tableGlobalFormats',
       children: [
         { title: 'API', routerLink: { name: 'GlobalFormatsTableAPI' } },
         { title: '单元格', routerLink: { name: 'GlobalFormatsTableBase' } }
       ]
     },
     {
-      title: '右键菜单（全局复用）',
+      i18nKey: 'app.aside.menu.tableGlobalMenus',
       children: [
         { title: 'API', routerLink: { name: 'GlobalMenusTableAPI' } },
         { title: '右键菜单', routerLink: { name: 'GlobalMenusTableBase' } }
       ]
     },
     {
-      title: '工具栏指令（全局复用）',
+      i18nKey: 'app.aside.menu.tableGlobalCommands',
       children: [
         { title: 'API', routerLink: { name: 'GlobalCommandsTableAPI' } },
         { title: '工具栏', routerLink: { name: 'GlobalCommandsTableBase' } }
       ]
     },
     {
-      title: '校验（全局复用）',
+      i18nKey: 'app.aside.menu.tableGlobalValidators',
       children: [
         { title: 'API', routerLink: { name: 'GlobalValidatorsTableAPI' } },
         { title: '单元格校验', routerLink: { name: 'GlobalValidatorsTableBase' } }
       ]
     },
     {
-      title: '渲染器（高阶复用）',
+      i18nKey: 'app.aside.menu.tableGlobalRenderer',
       children: [
         { title: 'API', routerLink: { name: 'GlobalRendererTableAPI' } },
         {
@@ -729,7 +729,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
-      title: '事件拦截（高级用法）',
+      i18nKey: 'app.aside.menu.tableGlobalInterceptor',
       children: [
         { title: 'API', routerLink: { name: 'GlobalInterceptorTableAPI' } },
         { title: '可编辑 - 兼容性处理', routerLink: { name: 'GlobalInterceptorTableBase' } }
@@ -765,7 +765,7 @@ export const navConfigList: NavVO[] = [
     i18nKey: 'app.aside.menu.baseTitle',
     children: [
       {
-        title: 'Icon 图标',
+        i18nKey: 'app.aside.menu.iconTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon' } } },
           { title: '图标列表', routerLink: { name: 'ComponentIconBase' } },
@@ -774,7 +774,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'Text 文本',
+        i18nKey: 'app.aside.menu.textTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'text' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentTextSize' } },
@@ -782,7 +782,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'Link 链接',
+        i18nKey: 'app.aside.menu.linkTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'link' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentLinkSize' } },
@@ -791,7 +791,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'Tag 标签',
+        i18nKey: 'app.aside.menu.tagTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tag' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentTagSize' } },
@@ -800,7 +800,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'Button 按钮',
+        i18nKey: 'app.aside.menu.buttonTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'button' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentButtonSize' } },
@@ -936,7 +936,7 @@ export const navConfigList: NavVO[] = [
     children: [
       { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form' } } },
       {
-        title: '基础表单',
+        i18nKey: 'app.aside.menu.formBaseTitle',
         children: [
           { title: '基础功能', routerLink: { name: 'ComponentFormBasicsBase' } },
           { title: '尺寸大小', routerLink: { name: 'ComponentFormBasicsSize' } },
@@ -983,7 +983,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: '配置式表单',
+        i18nKey: 'app.aside.menu.formConfigTitle',
         children: [
           { title: '基础功能', routerLink: { name: 'ComponentFormConfigBase' } },
           { title: '横向排列', routerLink: { name: 'ComponentFormConfigHorizontal' } },
@@ -1025,14 +1025,14 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: '校验（全局复用）',
+        i18nKey: 'app.aside.menu.formGlobalValidators',
         children: [
           { title: 'API', routerLink: { name: 'GlobalValidatorsFormAPI' } },
           { title: '表单项校验', routerLink: { name: 'GlobalValidatorsFormBase' } }
         ]
       },
       {
-        title: '渲染器（高阶复用）',
+        i18nKey: 'app.aside.menu.formGlobalRenderer',
         children: [
           { title: 'API', routerLink: { name: 'GlobalRendererFormAPI' } },
           {
@@ -1305,7 +1305,7 @@ export const navConfigList: NavVO[] = [
     children: [
       { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'modal' } } },
       {
-        title: '消息框',
+        i18nKey: 'app.aside.menu.modalMessageTitle',
         children: [
           { title: '全局调用', routerLink: { name: 'ComponentModalMessageGlobal' } },
           { title: '唯一', routerLink: { name: 'ComponentModalMessageMultiple' } },
@@ -1314,7 +1314,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: '通知框',
+        i18nKey: 'app.aside.menu.modalNotificationTitle',
         children: [
           { title: '全局调用', routerLink: { name: 'ComponentModalNotificationGlobal' } },
           { title: '唯一', routerLink: { name: 'ComponentModalNotificationMultiple' } },
@@ -1324,7 +1324,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: '提示框',
+        i18nKey: 'app.aside.menu.modalAlertTitle',
         children: [
           { title: '全局调用', routerLink: { name: 'ComponentModalAlertGlobal' } },
           { title: '弹出多个', routerLink: { name: 'ComponentModalAlertMultiple' } },
@@ -1336,7 +1336,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: '确认框',
+        i18nKey: 'app.aside.menu.modalConfirmTitle',
         children: [
           { title: '全局调用', routerLink: { name: 'ComponentModalConfirmGlobal' } },
           { title: '弹出多个', routerLink: { name: 'ComponentModalConfirmMultiple' } },
@@ -1347,7 +1347,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: '窗口模式',
+        i18nKey: 'app.aside.menu.modalModalTitle',
         children: [
           { title: '基础', routerLink: { name: 'ComponentModalModalBase' } },
           { title: '尺寸大小', routerLink: { name: 'ComponentModalModalSize' } },
@@ -1375,7 +1375,7 @@ export const navConfigList: NavVO[] = [
     children: [
       // { title: 'Watermark 水印' },
       {
-        title: 'Print 打印',
+        i18nKey: 'app.aside.menu.printTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'print' } } },
           {
@@ -1405,11 +1405,11 @@ export const navConfigList: NavVO[] = [
     i18nKey: 'app.aside.menu.designTitle',
     children: [
       {
-        title: 'FormDesign 表单设计器',
+        i18nKey: 'app.aside.menu.formDesignTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-design' } } },
           {
-            title: '使用设计器',
+            i18nKey: 'app.aside.menu.formDesignUse',
             children: [
               { title: '基础功能', routerLink: { name: 'ComponentFormDesignBase' } },
               { title: '自定义控件分组', routerLink: { name: 'ComponentFormDesignCustomGroup' } },
@@ -1420,7 +1420,7 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
-            title: '渲染器（高阶复用）',
+            i18nKey: 'app.aside.menu.formDesignGlobalRenderer',
             children: [
               { title: 'API', routerLink: { name: 'GlobalRendererFormDesignAPI' } },
               {
@@ -1435,11 +1435,11 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'ListDesign 列表设计器',
+        i18nKey: 'app.aside.menu.listDesignTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'list-design' } } },
           {
-            title: '使用设计器',
+            i18nKey: 'app.aside.menu.listDesignUse',
             children: [
               { title: '基础功能', routerLink: { name: 'ComponentListDesignBase' } },
               { title: '移动端设计器', routerLink: { name: 'ComponentListDesignMobile' } },
