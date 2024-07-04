@@ -12,14 +12,19 @@ interface RowVO {
   id: number
   name: string
   role: string
-  flag: boolean
+  hobby: string
 }
 
-const flagCellRender = reactive<VxeColumnPropTypes.CellRender>({
-  name: 'VxeSwitch',
+const hobbyCellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'VxeRadioGroup',
   props: {
     disabled: true
-  }
+  },
+  options: [
+    { label: '爬山', value: '1' },
+    { label: '游泳', value: '2' },
+    { label: '干饭', value: '3' }
+  ]
 })
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
@@ -28,12 +33,12 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   columns: [
     { type: 'seq', width: 70 },
     { field: 'name', title: 'Name', minWidth: 200 },
-    { field: 'flag', title: '开关', width: 200, cellRender: flagCellRender }
+    { field: 'hobby', title: '兴趣爱好', width: 300, cellRender: hobbyCellRender }
   ],
   data: [
-    { id: 10001, name: 'Test1', role: 'Develop', flag: false },
-    { id: 10002, name: 'Test2', role: 'Test', flag: true },
-    { id: 10003, name: 'Test3', role: 'PM', flag: false }
+    { id: 10001, name: 'Test1', role: 'Develop', hobby: '' },
+    { id: 10002, name: 'Test2', role: 'Test', hobby: '2' },
+    { id: 10003, name: 'Test3', role: 'PM', hobby: '1' }
   ]
 })
 </script>

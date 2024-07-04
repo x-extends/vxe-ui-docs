@@ -19,7 +19,7 @@ interface RowVO {
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   customConfig: {
-    mode: 'popup'
+    mode: 'drawer'
   },
   toolbarConfig: {
     custom: true

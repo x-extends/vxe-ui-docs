@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="table/custom/fixedMax/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="冻结列数量限制">默认最多只能冻结4列</vxe-tip>
+        <vxe-tip status="primary" title="冻结列最大数量限制">默认最大只能冻结4列</vxe-tip>
       </template>
     </CodeLight>
 

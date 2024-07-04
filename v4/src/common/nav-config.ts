@@ -145,12 +145,13 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '自定义列',
           children: [
             { title: '关联工具栏', routerLink: { name: 'ComponentTableCustomToolbar' } },
-            { title: '弹窗模式', routerLink: { name: 'ComponentTableCustomPopup' } },
+            { title: '窗口模式', routerLink: { name: 'ComponentTableCustomModal' } },
+            { title: '抽屉模式', routerLink: { name: 'ComponentTableCustomDrawer' } },
             { title: '允许调整列显示隐藏', routerLink: { name: 'ComponentTableCustomVisible' } },
             { title: '允许调整列冻结', routerLink: { name: 'ComponentTableCustomFixed' } },
-            { title: '冻结列最多数量限制', routerLink: { name: 'ComponentTableCustomFixedMax' } },
             { title: '允许调整列宽', routerLink: { name: 'ComponentTableCustomResizable' } },
             { title: '允许拖拽列顺序', routerLink: { name: 'ComponentTableCustomSort' } },
+            { title: '冻结列最大数量限制', routerLink: { name: 'ComponentTableCustomFixedMax' } },
             { title: '自定义触发弹出设置', routerLink: { name: 'ComponentTableCustomTemplate' } },
             { title: '自定义弹出位置', routerLink: { name: 'ComponentTableCustomPlacement' } },
             { title: '事件监听', routerLink: { name: 'ComponentTableCustomEvents' } },
@@ -185,6 +186,16 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '懒加载 - 可编辑', routerLink: { name: 'ComponentTableTreeLazyEdit' } },
             { title: '同时使用展开行', routerLink: { name: 'ComponentTableTreeExpand' } },
             { title: '同时使用展开行 - 懒加载', routerLink: { name: 'ComponentTableTreeExpandLazy' } }
+          ]
+        },
+        {
+          title: '单元格 - 渲染 - 配置式',
+          children: [
+            { title: 'VxeSwitch', routerLink: { name: 'ComponentTableCellRenderVxeSwitch' } },
+            { title: 'VxeRadioGroup', routerLink: { name: 'ComponentTableCellRenderVxeRadioGroup' } },
+            { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentTableCellRenderVxeCheckboxGroup' } },
+            { title: 'VxeButtonGroup', routerLink: { name: 'ComponentTableCellRenderVxeButtonGroup' } },
+            { title: 'VxeUpload', routerLink: { name: 'ComponentTableCellRenderVxeUpload' } }
           ]
         },
         {
@@ -230,6 +241,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '可编辑 - 渲染 - 插槽式',
           children: [
             { title: 'VxeInput', routerLink: { name: 'ComponentTableEditTemplateVxeInput' } },
+            { title: 'VxeNumberInput', routerLink: { name: 'ComponentTableEditTemplateVxeNumberInput' } },
+            { title: 'VxeDatePicker', routerLink: { name: 'ComponentTableEditTemplateVxeDatePicker' } },
             { title: 'VxeSelect', routerLink: { name: 'ComponentTableEditTemplateVxeSelect' } },
             { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/table/edit/el-input' }
           ]
@@ -433,14 +446,15 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '自定义列',
           children: [
-            { title: '弹窗模式', routerLink: { name: 'ComponentGridCustomPopup' } },
+            { title: '窗口模式', routerLink: { name: 'ComponentGridCustomModal' } },
+            { title: '抽屉模式', routerLink: { name: 'ComponentGridCustomDrawer' } },
             // { title: '允许调整列显示隐藏', routerLink: { name: 'ComponentGridCustomVisible' } },
             // { title: '允许调整列冻结', routerLink: { name: 'ComponentGridCustomFixed' } },
             // { title: '允许调整列宽', routerLink: { name: 'ComponentGridCustomResizable' } },
             // { title: '允许拖拽列顺序', routerLink: { name: 'ComponentGridCustomSort' } },
             // { title: '自定义触发弹出设置', routerLink: { name: 'ComponentGridCustomTemplate' } },
             { title: '自定义弹出位置', routerLink: { name: 'ComponentGridCustomPlacement' } },
-            // { title: '事件监听', routerLink: { name: 'ComponentGridCustomEvents' } },
+            { title: '事件监听', routerLink: { name: 'ComponentGridCustomEvents' } },
             { title: '本地保存列设置', routerLink: { name: 'ComponentGridCustomStorage' } },
             { title: '自定义服务端保存', routerLink: { name: 'ComponentGridCustomRemote' } },
             { title: '实现服务端保存与恢复', routerLink: { name: 'ComponentGridCustomRemoteFull' } }
@@ -474,6 +488,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '单元格 - 渲染 - 配置式',
           children: [
             { title: 'VxeSwitch', routerLink: { name: 'ComponentGridCellRenderVxeSwitch' } },
+            { title: 'VxeRadioGroup', routerLink: { name: 'ComponentGridCellRenderVxeRadioGroup' } },
+            { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentGridCellRenderVxeCheckboxGroup' } },
             { title: 'VxeButtonGroup', routerLink: { name: 'ComponentGridCellRenderVxeButtonGroup' } },
             { title: 'VxeUpload', routerLink: { name: 'ComponentGridCellRenderVxeUpload' } }
           ]
