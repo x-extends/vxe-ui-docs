@@ -3,7 +3,7 @@
     <CodeLight>
       <template #tip>
         <vxe-tip status="primary">
-          通过调用 VxeUI.setConfig({ ... }) 方法可以给组件设置全局默认参数
+          通过调用 setConfig({ ... }) 方法可以给组件设置全局默认参数
         </vxe-tip>
       </template>
 
@@ -13,6 +13,10 @@
             import { VxeUI } from 'vxe-pc-ui'
 
             VxeUI.setConfig({
+              // size: null, // 全局尺寸
+              // zIndex: 999, // 全局 zIndex 起始值，如果项目的的 z-index 样式值过大时就需要跟随设置更大，避免被遮挡；新版本可以使用 dom-zindex 共享配置
+              // version: 1, // 版本号，对于某些带数据缓存的功能有用到，上升版本号可以用于重置数据
+
               alert: {},
               anchor: {},
               anchorLink: {},
@@ -130,7 +134,9 @@
                 showClose: true,
                 padding: true,
                 draggable: true,
-                showConfirmButton: null
+                showConfirmButton: null,
+                // storage: false,
+                storageKey: 'VXE_MODAL_POSITION'
               },
               numberInput: {
                 // size: null,
@@ -192,7 +198,7 @@
                 mode: 'all',
                 imageTypes: ['jpg', 'jpeg', 'png', 'gif'],
                 showList: true
-              }
+  }
             })
           </pre-code>
         </pre>
