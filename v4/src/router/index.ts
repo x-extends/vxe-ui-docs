@@ -3784,6 +3784,16 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'vxe-upload',
                     name: 'ComponentFormConfigItemRenderVxeUpload',
                     component: () => import('@/views/form/config/itemRender/vxe-upload/CodeExample.vue')
+                  },
+                  {
+                    path: 'readonly',
+                    name: 'ComponentFormConfigItemRenderReadonly',
+                    component: () => import('@/views/form/config/itemRender/readonly/CodeExample.vue')
+                  },
+                  {
+                    path: 'disabled',
+                    name: 'ComponentFormConfigItemRenderDisabled',
+                    component: () => import('@/views/form/config/itemRender/disabled/CodeExample.vue')
                   }
                 ]
               },

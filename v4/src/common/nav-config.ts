@@ -1009,6 +1009,8 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeRadioGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeRadioGroup' } },
               { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeCheckboxGroup' } },
               { title: 'VxeUpload', routerLink: { name: 'ComponentFormConfigItemRenderVxeUpload' } },
+              { title: '只读模式', routerLink: { name: 'ComponentFormConfigItemRenderReadonly' } },
+              { title: '禁用模式', routerLink: { name: 'ComponentFormConfigItemRenderDisabled' } },
               { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/form/itemRender/el-input' }
             ]
           },
