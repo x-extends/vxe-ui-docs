@@ -214,6 +214,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'el-select',
                 name: 'PluginRenderElementFormItemTemplateElSelect',
                 component: () => import('@/views/plugin-render-element/form/itemTemplate/el-select/CodeExample.vue')
+              },
+              {
+                path: 'el-switch',
+                name: 'PluginRenderElementFormItemTemplateElSwitch',
+                component: () => import('@/views/plugin-render-element/form/itemTemplate/el-switch/CodeExample.vue')
+              },
+              {
+                path: 'el-rate',
+                name: 'PluginRenderElementFormItemTemplateElRate',
+                component: () => import('@/views/plugin-render-element/form/itemTemplate/el-rate/CodeExample.vue')
               }
             ]
           },
@@ -221,14 +231,59 @@ const routes: Array<RouteRecordRaw> = [
             path: 'itemRender',
             children: [
               {
+                path: 'el-autocomplete',
+                name: 'PluginRenderElementFormItemRenderElAutocomplete',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-autocomplete/CodeExample.vue')
+              },
+              {
                 path: 'el-input',
                 name: 'PluginRenderElementFormItemRenderElInput',
                 component: () => import('@/views/plugin-render-element/form/itemRender/el-input/CodeExample.vue')
               },
               {
+                path: 'el-input-number',
+                name: 'PluginRenderElementFormItemRenderElInputNumber',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-input-number/CodeExample.vue')
+              },
+              {
                 path: 'el-select',
                 name: 'PluginRenderElementFormItemRenderElSelect',
                 component: () => import('@/views/plugin-render-element/form/itemRender/el-select/CodeExample.vue')
+              },
+              {
+                path: 'el-date-picker',
+                name: 'PluginRenderElementFormItemRenderElDatePicker',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-date-picker/CodeExample.vue')
+              },
+              {
+                path: 'el-time-select',
+                name: 'PluginRenderElementFormItemRenderElTimePicker',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-time-select/CodeExample.vue')
+              },
+              {
+                path: 'el-cascader',
+                name: 'PluginRenderElementFormItemRenderElCascader',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-cascader/CodeExample.vue')
+              },
+              {
+                path: 'el-switch',
+                name: 'PluginRenderElementFormItemRenderElSwitch',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-switch/CodeExample.vue')
+              },
+              {
+                path: 'el-radio-group',
+                name: 'PluginRenderElementFormItemRenderElRadioGroup',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-radio-group/CodeExample.vue')
+              },
+              {
+                path: 'el-checkbox-group',
+                name: 'PluginRenderElementFormItemRenderElCheckboxGroup',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-checkbox-group/CodeExample.vue')
+              },
+              {
+                path: 'el-rate',
+                name: 'PluginRenderElementFormItemRenderElRate',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-rate/CodeExample.vue')
               }
             ]
           }

@@ -10,7 +10,7 @@
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="性别" field="sex" span="12" :item-render="{}" :title-prefix="{ message: '左边图标', icon: 'vxe-icon-user-fill' }">
+      <vxe-form-item title="性别" field="sex" span="12" :item-render="{}" :title-prefix="{ content: '左边图标', icon: 'vxe-icon-user-fill' }">
         <template #default="params">
           <vxe-input v-model="formData.sex" @change="changeEvent(params)"></vxe-input>
         </template>

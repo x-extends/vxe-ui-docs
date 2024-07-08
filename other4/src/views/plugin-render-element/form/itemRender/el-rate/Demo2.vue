@@ -5,8 +5,8 @@
         <el-input v-model="data.name"></el-input>
       </template>
 
-      <template #nickname="{ data }">
-        <el-input v-model="data.nickname"></el-input>
+      <template #num="{ data }">
+        <el-rate v-model="data.num"></el-rate>
       </template>
 
       <template #active>
@@ -23,18 +23,18 @@ import { VxeFormProps } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
-  nickname: string
+  num: number
 }
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
   titleWidth: 120,
   data: {
     name: 'test1',
-    nickname: ''
+    num: 4
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-    { field: 'nickname', title: '输入框', span: 24, itemRender: { }, slots: { default: 'nickname' } },
+    { field: 'num', title: '评分', span: 24, itemRender: { }, slots: { default: 'num' } },
     { align: 'center', span: 24, slots: { default: 'active' } }
   ]
 })

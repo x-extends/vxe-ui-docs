@@ -64,6 +64,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '序号', routerLink: { name: 'ComponentTableBaseSeq' } },
             { title: '单选框', routerLink: { name: 'ComponentTableBaseRadio' } },
             { title: '复选框', routerLink: { name: 'ComponentTableBaseSelection' } },
+            { title: '标题前缀图标', routerLink: { name: 'ComponentTableBaseTitlePrefix' } },
+            { title: '标题后缀图标', routerLink: { name: 'ComponentTableBaseTitleSuffix' } },
             { title: 'HTML 类型', routerLink: { name: 'ComponentTableBaseHtml' } },
             { title: '完整案例', routerLink: { name: 'ComponentTableBaseFull' } }
           ]
@@ -195,7 +197,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'VxeRadioGroup', routerLink: { name: 'ComponentTableCellRenderVxeRadioGroup' } },
             { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentTableCellRenderVxeCheckboxGroup' } },
             { title: 'VxeButtonGroup', routerLink: { name: 'ComponentTableCellRenderVxeButtonGroup' } },
-            { title: 'VxeUpload', routerLink: { name: 'ComponentTableCellRenderVxeUpload' } }
+            { title: 'VxeUpload', routerLink: { name: 'ComponentTableCellRenderVxeUpload' } },
+            { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/table/cell/el-switch' }
           ]
         },
         {
@@ -492,7 +495,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'VxeRadioGroup', routerLink: { name: 'ComponentGridCellRenderVxeRadioGroup' } },
             { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentGridCellRenderVxeCheckboxGroup' } },
             { title: 'VxeButtonGroup', routerLink: { name: 'ComponentGridCellRenderVxeButtonGroup' } },
-            { title: 'VxeUpload', routerLink: { name: 'ComponentGridCellRenderVxeUpload' } }
+            { title: 'VxeUpload', routerLink: { name: 'ComponentGridCellRenderVxeUpload' } },
+            { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/grid/cell/el-switch' }
           ]
         },
         {
@@ -962,7 +966,8 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeInput', routerLink: { name: 'ComponentFormBasicsItemRenderVxeInput' } },
               { title: 'VxeTextarea', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTextarea' } },
               { title: 'VxeSelect', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSelect' } },
-              { title: 'VxeUpload', routerLink: { name: 'ComponentFormBasicsItemRenderVxeUpload' } }
+              { title: 'VxeUpload', routerLink: { name: 'ComponentFormBasicsItemRenderVxeUpload' } },
+              { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/form/itemTemplate/el-input' }
             ]
           },
           {
@@ -971,7 +976,8 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeInput', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeInput' } },
               { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeNumberInput' } },
               { title: 'VxeSelect', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSelect' } },
-              { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDatePicker' } }
+              { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDatePicker' } },
+              { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/form/itemTemplate/el-input' }
             ]
           },
           {

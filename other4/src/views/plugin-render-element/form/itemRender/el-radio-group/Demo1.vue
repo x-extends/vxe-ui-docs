@@ -11,22 +11,33 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import { VxeFormProps } from 'vxe-pc-ui'
+import { VxeFormProps, VxeFormItemPropTypes } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
-  nickname: string
+  hobbies1: string
 }
+
+const hobbies1ItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
+  name: 'VxeRadioGroup',
+  options: [
+    { label: '爬山', value: '1' },
+    { label: '干架', value: '2' },
+    { label: '干饭', value: '3' },
+    { label: '游泳', value: '4' },
+    { label: '跑步', value: '5' }
+  ]
+})
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
   titleWidth: 120,
   data: {
     name: 'test1',
-    nickname: ''
+    hobbies1: ''
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'ElInput' } },
-    { field: 'nickname', title: '输入框', span: 24, itemRender: { name: 'ElInput' } },
+    { field: 'hobbies1', title: '单选框', span: 24, itemRender: hobbies1ItemRender },
     { align: 'center', span: 24, slots: { default: 'active' } }
   ]
 })

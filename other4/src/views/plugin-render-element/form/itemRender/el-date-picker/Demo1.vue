@@ -1,14 +1,6 @@
 <template>
   <div>
     <vxe-form v-bind="formOptions" >
-      <template #name="{ data }">
-        <el-input v-model="data.name"></el-input>
-      </template>
-
-      <template #nickname="{ data }">
-        <el-input v-model="data.nickname"></el-input>
-      </template>
-
       <template #active>
         <el-button native-type="reset">重置</el-button>
         <el-button native-type="submit" type="primary">提交</el-button>
@@ -23,18 +15,21 @@ import { VxeFormProps } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
-  nickname: string
+  date1: string
+  date2: string
 }
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
   titleWidth: 120,
   data: {
     name: 'test1',
-    nickname: ''
+    date1: '',
+    date2: ''
   },
   items: [
-    { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-    { field: 'nickname', title: '输入框', span: 24, itemRender: { }, slots: { default: 'nickname' } },
+    { field: 'name', title: '名称', span: 24, itemRender: { name: 'ElInput' } },
+    { field: 'nickname', title: '日期', span: 24, itemRender: { name: 'ElDatePicker', props: { type: 'date', valueFormat: 'YYYY-MM-DD' } } },
+    { field: 'nickname', title: '日期带时间', span: 24, itemRender: { name: 'ElDatePicker', props: { type: 'datetime', valueFormat: 'YYYY-MM-DD HH:mm:ss' } } },
     { align: 'center', span: 24, slots: { default: 'active' } }
   ]
 })

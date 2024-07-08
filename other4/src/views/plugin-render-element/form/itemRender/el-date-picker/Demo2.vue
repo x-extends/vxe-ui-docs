@@ -5,8 +5,12 @@
         <el-input v-model="data.name"></el-input>
       </template>
 
-      <template #nickname="{ data }">
-        <el-input v-model="data.nickname"></el-input>
+      <template #date1="{ data }">
+        <el-date-picker v-model="data.date1" type="date" value-format="YYYY-MM-DD"></el-date-picker>
+      </template>
+
+      <template #date2="{ data }">
+        <el-date-picker v-model="data.date2" type="datetime" value-format="YYYY-MM-DD HH:mm:ss"></el-date-picker>
       </template>
 
       <template #active>
@@ -23,18 +27,21 @@ import { VxeFormProps } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
-  nickname: string
+  date1: string
+  date2: string
 }
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
   titleWidth: 120,
   data: {
     name: 'test1',
-    nickname: ''
+    date1: '',
+    date2: ''
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-    { field: 'nickname', title: '输入框', span: 24, itemRender: { }, slots: { default: 'nickname' } },
+    { field: 'date1', title: '日期', span: 24, itemRender: { }, slots: { default: 'date1' } },
+    { field: 'date2', title: '日期带时间', span: 24, itemRender: { }, slots: { default: 'date2' } },
     { align: 'center', span: 24, slots: { default: 'active' } }
   ]
 })

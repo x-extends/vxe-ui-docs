@@ -124,15 +124,26 @@ export const navConfigList: NavVO[] = [
           {
             title: '基础表单',
             children: [
-              { title: 'el-input', routerLink: { name: 'PluginRenderElementFormItemTemplateElInput' } },
-              { title: 'el-select', routerLink: { name: 'PluginRenderElementFormItemTemplateElSelect' } }
+              { title: 'ElInput', routerLink: { name: 'PluginRenderElementFormItemTemplateElInput' } },
+              { title: 'ElSelect', routerLink: { name: 'PluginRenderElementFormItemTemplateElSelect' } },
+              { title: 'ElSwitch', routerLink: { name: 'PluginRenderElementFormItemTemplateElSwitch' } },
+              { title: 'ElRate', routerLink: { name: 'PluginRenderElementFormItemTemplateElRate' } }
             ]
           },
           {
             title: '配置式表单',
             children: [
-              { title: 'el-input', routerLink: { name: 'PluginRenderElementFormItemRenderElInput' } },
-              { title: 'el-select', routerLink: { name: 'PluginRenderElementFormItemRenderElSelect' } }
+              { title: 'ElAutocomplete', routerLink: { name: 'PluginRenderElementFormItemRenderElAutocomplete' } },
+              { title: 'ElInput', routerLink: { name: 'PluginRenderElementFormItemRenderElInput' } },
+              { title: 'ElInputNumber', routerLink: { name: 'PluginRenderElementFormItemRenderElInputNumber' } },
+              { title: 'ElSelect', routerLink: { name: 'PluginRenderElementFormItemRenderElSelect' } },
+              { title: 'ElDatePicker', routerLink: { name: 'PluginRenderElementFormItemRenderElDatePicker' } },
+              { title: 'ElTimePicker', routerLink: { name: 'PluginRenderElementFormItemRenderElTimePicker' } },
+              { title: 'ElCascader', routerLink: { name: 'PluginRenderElementFormItemRenderElCascader' } },
+              { title: 'ElSwitch', routerLink: { name: 'PluginRenderElementFormItemRenderElSwitch' } },
+              { title: 'ElRadioGroup', routerLink: { name: 'PluginRenderElementFormItemRenderElRadioGroup' } },
+              { title: 'ElCheckboxGroup', routerLink: { name: 'PluginRenderElementFormItemRenderElCheckboxGroup' } },
+              { title: 'ElRate', routerLink: { name: 'PluginRenderElementFormItemRenderElRate' } }
             ]
           }
         ]
@@ -143,20 +154,20 @@ export const navConfigList: NavVO[] = [
           {
             title: '单元格 - 渲染',
             children: [
-              { title: 'el-switch', routerLink: { name: 'PluginRenderElementTableCellElSwitch' } },
-              { title: 'el-rate', routerLink: { name: 'PluginRenderElementTableCellElRate' } }
+              { title: 'ElSwitch', routerLink: { name: 'PluginRenderElementTableCellElSwitch' } },
+              { title: 'ElRate', routerLink: { name: 'PluginRenderElementTableCellElRate' } }
             ]
           },
           {
             title: '可编辑 - 渲染',
             children: [
-              { title: 'el-input', routerLink: { name: 'PluginRenderElementTableEditElInput' } },
-              { title: 'el-input-number', routerLink: { name: 'PluginRenderElementTableEditElInputNumber' } },
-              { title: 'el-autocomplete', routerLink: { name: 'PluginRenderElementTableEditElAutocomplete' } },
-              { title: 'el-select', routerLink: { name: 'PluginRenderElementTableEditElSelect' } },
-              { title: 'el-cascader', routerLink: { name: 'PluginRenderElementTableEditElCascader' } },
-              { title: 'el-date-picker', routerLink: { name: 'PluginRenderElementTableEditElDatePicker' } },
-              { title: 'el-time-picker', routerLink: { name: 'PluginRenderElementTableEditElTimeSelect' } }
+              { title: 'ElInput', routerLink: { name: 'PluginRenderElementTableEditElInput' } },
+              { title: 'ElInputNumber', routerLink: { name: 'PluginRenderElementTableEditElInputNumber' } },
+              { title: 'ElAutocomplete', routerLink: { name: 'PluginRenderElementTableEditElAutocomplete' } },
+              { title: 'ElSelect', routerLink: { name: 'PluginRenderElementTableEditElSelect' } },
+              { title: 'ElCascader', routerLink: { name: 'PluginRenderElementTableEditElCascader' } },
+              { title: 'ElDatePicker', routerLink: { name: 'PluginRenderElementTableEditElDatePicker' } },
+              { title: 'ElTimePicker', routerLink: { name: 'PluginRenderElementTableEditElTimeSelect' } }
             ]
           }
         ]
@@ -167,20 +178,20 @@ export const navConfigList: NavVO[] = [
           {
             title: '单元格 - 渲染',
             children: [
-              { title: 'el-switch', routerLink: { name: 'PluginRenderElementGridCellElSwitch' } },
-              { title: 'el-rate', routerLink: { name: 'PluginRenderElementGridCellElRate' } }
+              { title: 'ElSwitch', routerLink: { name: 'PluginRenderElementGridCellElSwitch' } },
+              { title: 'ElRate', routerLink: { name: 'PluginRenderElementGridCellElRate' } }
             ]
           },
           {
             title: '可编辑 - 渲染',
             children: [
-              { title: 'el-input', routerLink: { name: 'PluginRenderElementGridEditElInput' } },
-              { title: 'el-input-number', routerLink: { name: 'PluginRenderElementGridEditElInputNumber' } },
-              { title: 'el-autocomplete', routerLink: { name: 'PluginRenderElementGridEditElAutocomplete' } },
-              { title: 'el-select', routerLink: { name: 'PluginRenderElementGridEditElSelect' } },
-              { title: 'el-cascader', routerLink: { name: 'PluginRenderElementGridEditElCascader' } },
-              { title: 'el-date-picker', routerLink: { name: 'PluginRenderElementGridEditElDatePicker' } },
-              { title: 'el-time-picker', routerLink: { name: 'PluginRenderElementGridEditElTimeSelect' } }
+              { title: 'ElInput', routerLink: { name: 'PluginRenderElementGridEditElInput' } },
+              { title: 'ElInputNumber', routerLink: { name: 'PluginRenderElementGridEditElInputNumber' } },
+              { title: 'ElAutocomplete', routerLink: { name: 'PluginRenderElementGridEditElAutocomplete' } },
+              { title: 'ElSelect', routerLink: { name: 'PluginRenderElementGridEditElSelect' } },
+              { title: 'ElCascader', routerLink: { name: 'PluginRenderElementGridEditElCascader' } },
+              { title: 'ElDatePicker', routerLink: { name: 'PluginRenderElementGridEditElDatePicker' } },
+              { title: 'ElTimePicker', routerLink: { name: 'PluginRenderElementGridEditElTimeSelect' } }
             ]
           }
         ]
@@ -209,20 +220,20 @@ export const navConfigList: NavVO[] = [
           {
             title: '单元格 - 渲染',
             children: [
-              { title: 'a-switch', routerLink: { name: 'PluginRenderAntdTableCellElSwitch' } },
-              { title: 'a-rate', routerLink: { name: 'PluginRenderAntdTableCellElRate' } }
+              { title: 'ASwitch', routerLink: { name: 'PluginRenderAntdTableCellElSwitch' } },
+              { title: 'ARate', routerLink: { name: 'PluginRenderAntdTableCellElRate' } }
             ]
           },
           {
             title: '可编辑 - 渲染',
             children: [
-              { title: 'a-input', routerLink: { name: 'PluginRenderAntdTableEditElInput' } },
-              { title: 'a-input-number', routerLink: { name: 'PluginRenderAntdTableEditElInputNumber' } },
-              { title: 'a-autocomplete', routerLink: { name: 'PluginRenderAntdTableEditElAutocomplete' } },
-              { title: 'a-select', routerLink: { name: 'PluginRenderAntdTableEditElSelect' } },
-              { title: 'a-cascader', routerLink: { name: 'PluginRenderAntdTableEditElCascader' } },
-              { title: 'a-date-picker', routerLink: { name: 'PluginRenderAntdTableEditElDatePicker' } },
-              { title: 'a-time-picker', routerLink: { name: 'PluginRenderAntdTableEditElTimePicker' } }
+              { title: 'AInput', routerLink: { name: 'PluginRenderAntdTableEditElInput' } },
+              { title: 'AInputNumber', routerLink: { name: 'PluginRenderAntdTableEditElInputNumber' } },
+              { title: 'AAAutocomplete', routerLink: { name: 'PluginRenderAntdTableEditElAutocomplete' } },
+              { title: 'ASelect', routerLink: { name: 'PluginRenderAntdTableEditElSelect' } },
+              { title: 'ACascader', routerLink: { name: 'PluginRenderAntdTableEditElCascader' } },
+              { title: 'ADate-Picker', routerLink: { name: 'PluginRenderAntdTableEditElDatePicker' } },
+              { title: 'ATimePicker', routerLink: { name: 'PluginRenderAntdTableEditElTimePicker' } }
             ]
           }
         ]
@@ -233,20 +244,20 @@ export const navConfigList: NavVO[] = [
           {
             title: '单元格 - 渲染',
             children: [
-              { title: 'a-switch', routerLink: { name: 'PluginRenderAntdGridCellElSwitch' } },
-              { title: 'a-rate', routerLink: { name: 'PluginRenderAntdGridCellElRate' } }
+              { title: 'ASwitch', routerLink: { name: 'PluginRenderAntdGridCellElSwitch' } },
+              { title: 'ARate', routerLink: { name: 'PluginRenderAntdGridCellElRate' } }
             ]
           },
           {
             title: '可编辑 - 渲染',
             children: [
-              { title: 'a-input', routerLink: { name: 'PluginRenderAntdGridEditElInput' } },
-              { title: 'a-input-number', routerLink: { name: 'PluginRenderAntdGridEditElInputNumber' } },
-              { title: 'a-autocomplete', routerLink: { name: 'PluginRenderAntdGridEditElAutocomplete' } },
-              { title: 'a-select', routerLink: { name: 'PluginRenderAntdGridEditElSelect' } },
-              { title: 'a-cascader', routerLink: { name: 'PluginRenderAntdGridEditElCascader' } },
-              { title: 'a-date-picker', routerLink: { name: 'PluginRenderAntdGridEditElDatePicker' } },
-              { title: 'a-time-picker', routerLink: { name: 'PluginRenderAntdGridEditElTimePicker' } }
+              { title: 'AInput', routerLink: { name: 'PluginRenderAntdGridEditElInput' } },
+              { title: 'AInputNumber', routerLink: { name: 'PluginRenderAntdGridEditElInputNumber' } },
+              { title: 'AAutocomplete', routerLink: { name: 'PluginRenderAntdGridEditElAutocomplete' } },
+              { title: 'ASelect', routerLink: { name: 'PluginRenderAntdGridEditElSelect' } },
+              { title: 'ACascader', routerLink: { name: 'PluginRenderAntdGridEditElCascader' } },
+              { title: 'ADatePicker', routerLink: { name: 'PluginRenderAntdGridEditElDatePicker' } },
+              { title: 'ATimePicker', routerLink: { name: 'PluginRenderAntdGridEditElTimePicker' } }
             ]
           }
         ]

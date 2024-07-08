@@ -184,6 +184,16 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/base/data/CodeExample.vue')
         },
         {
+          path: 'titlePrefix',
+          name: 'ComponentTableBaseTitlePrefix',
+          component: () => import('@/views/table/base/titlePrefix/CodeExample.vue')
+        },
+        {
+          path: 'titleSuffix',
+          name: 'ComponentTableBaseTitleSuffix',
+          component: () => import('@/views/table/base/titleSuffix/CodeExample.vue')
+        },
+        {
           path: 'html',
           name: 'ComponentTableBaseHtml',
           component: () => import('@/views/table/base/html/CodeExample.vue')
