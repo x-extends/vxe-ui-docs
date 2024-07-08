@@ -15,7 +15,7 @@
           <vxe-input v-model="formData.sex" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="年龄" field="age" span="12" :item-render="{}">
+      <vxe-form-item title="年龄" field="age" span="12" :item-render="{}" :title-prefix="{ content: '右边图标', icon: 'vxe-icon-warning-triangle', iconStatus: 'error' }">
         <template #default="params">
           <vxe-input v-model="formData.age" @change="changeEvent(params)"></vxe-input>
         </template>

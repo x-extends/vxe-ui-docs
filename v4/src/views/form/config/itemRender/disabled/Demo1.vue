@@ -4,8 +4,8 @@
 
     <vxe-form v-bind="formOptions" >
       <template #active>
-        <vxe-button type="reset">重置</vxe-button>
-        <vxe-button type="submit" status="primary">提交</vxe-button>
+        <vxe-button :disabled="formOptions.disabled" type="reset">重置</vxe-button>
+        <vxe-button :disabled="formOptions.disabled" type="submit" status="primary">提交</vxe-button>
       </template>
     </vxe-form>
   </div>
@@ -18,6 +18,16 @@ import { VxeFormProps, VxeUploadPropTypes, VxeFormItemPropTypes } from 'vxe-pc-u
 interface FormDataVO {
   name: string
   nickname: string
+  num: string
+  float: string
+  integer: string
+  date: string
+  time: string
+  year: string
+  quarter: string
+  month: string
+  week: string
+  datetime: string
   sex: string
   sexList: string[]
   type: string
@@ -139,6 +149,16 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
   data: {
     name: 'test1',
     nickname: 'Testing',
+    num: '',
+    integer: '',
+    float: '',
+    date: '',
+    time: '',
+    year: '',
+    quarter: '',
+    month: '',
+    week: '',
+    datetime: '',
     sex: 'Man',
     sexList: ['Man', 'Women'],
     type: '1-1',
@@ -159,6 +179,17 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
+    { field: 'nickname', title: '输入框', span: 24, itemRender: { name: 'VxeInput' } },
+    { field: 'num', title: '数字', span: 12, itemRender: { name: 'VxeInput', props: { type: 'number' } } },
+    { field: 'integer', title: '整数', span: 12, itemRender: { name: 'VxeInput', props: { type: 'integer' } } },
+    { field: 'float', title: '小数', span: 24, itemRender: { name: 'VxeInput', props: { type: 'float' } } },
+    { field: 'date', title: '日期', span: 8, itemRender: { name: 'VxeInput', props: { type: 'date' } } },
+    { field: 'year', title: '年份', span: 8, itemRender: { name: 'VxeInput', props: { type: 'year' } } },
+    { field: 'quarter', title: '季度', span: 8, itemRender: { name: 'VxeInput', props: { type: 'quarter' } } },
+    { field: 'month', title: '月份', span: 8, itemRender: { name: 'VxeInput', props: { type: 'month' } } },
+    { field: 'week', title: '周', span: 8, itemRender: { name: 'VxeInput', props: { type: 'week' } } },
+    { field: 'time', title: '时间', span: 8, itemRender: { name: 'VxeInput', props: { type: 'time' } } },
+    { field: 'datetime', title: '日期带时间', span: 24, itemRender: { name: 'VxeInput', props: { type: 'datetime' } } },
     { field: 'sex', title: '下拉框', span: 12, itemRender: sexItemRender },
     { field: 'sexList', title: '下拉框多选', span: 12, itemRender: sexListItemRender },
     { field: 'type', title: '下拉框分组', span: 12, itemRender: typeItemRender },
@@ -173,7 +204,24 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { field: 'imgList2', title: '上传图片多选', span: 24, itemRender: { name: 'VxeUpload', props: { mode: 'image', multiple: true } } },
     { field: 'address', title: '文本域', span: 24, itemRender: { name: 'VxeTextarea' } },
     { align: 'center', span: 24, slots: { default: 'active' } }
-  ]
+  ],
+  rules: {
+    num: [
+      { required: true, message: '必填' }
+    ],
+    date: [
+      { required: true, message: '必填' }
+    ],
+    type: [
+      { required: true, message: '必填' }
+    ],
+    fileList2: [
+      { required: true, message: '必填' }
+    ],
+    imgList1: [
+      { required: true, message: '必填' }
+    ]
+  }
 })
 
 const toggleDisabled = () => {

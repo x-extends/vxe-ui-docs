@@ -3558,9 +3558,14 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/form/basics/align/CodeExample.vue')
               },
               {
-                path: 'tooltip',
-                name: 'ComponentFormBasicsTooltip',
-                component: () => import('@/views/form/basics/tooltip/CodeExample.vue')
+                path: 'titlePrefix',
+                name: 'ComponentFormBasicsTitlePrefix',
+                component: () => import('@/views/form/basics/titlePrefix/CodeExample.vue')
+              },
+              {
+                path: 'titleSuffix',
+                name: 'ComponentFormBasicsTitleSuffix',
+                component: () => import('@/views/form/basics/titleSuffix/CodeExample.vue')
               },
               {
                 path: 'width',
@@ -3626,6 +3631,11 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/basics/itemRender/vxe-input/CodeExample.vue')
                   },
                   {
+                    path: 'vxe-number-input',
+                    name: 'ComponentFormBasicsItemRenderVxeNumberInput',
+                    component: () => import('@/views/form/basics/itemRender/number-input/CodeExample.vue')
+                  },
+                  {
                     path: 'vxe-textarea',
                     name: 'ComponentFormBasicsItemRenderVxeTextarea',
                     component: () => import('@/views/form/basics/itemRender/vxe-textarea/CodeExample.vue')
@@ -3636,9 +3646,39 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/basics/itemRender/vxe-select/CodeExample.vue')
                   },
                   {
+                    path: 'vxe-date-picker',
+                    name: 'ComponentFormBasicsItemRenderVxeDatePicker',
+                    component: () => import('@/views/form/basics/itemRender/vxe-date-picker/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-switch',
+                    name: 'ComponentFormBasicsItemRenderVxeSwitch',
+                    component: () => import('@/views/form/basics/itemRender/vxe-switch/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-radio-group',
+                    name: 'ComponentFormBasicsItemRenderVxeRadioGroup',
+                    component: () => import('@/views/form/basics/itemRender/vxe-radio-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-checkbox-group',
+                    name: 'ComponentFormBasicsItemRenderVxeCheckboxGroup',
+                    component: () => import('@/views/form/basics/itemRender/vxe-checkbox-group/CodeExample.vue')
+                  },
+                  {
                     path: 'vxe-upload',
                     name: 'ComponentFormBasicsItemRenderVxeUpload',
                     component: () => import('@/views/form/basics/itemRender/vxe-upload/CodeExample.vue')
+                  },
+                  {
+                    path: 'readonly',
+                    name: 'ComponentFormBasicsItemRenderReadonly',
+                    component: () => import('@/views/form/basics/itemRender/readonly/CodeExample.vue')
+                  },
+                  {
+                    path: 'disabled',
+                    name: 'ComponentFormBasicsItemRenderDisabled',
+                    component: () => import('@/views/form/basics/itemRender/disabled/CodeExample.vue')
                   }
                 ]
               },
