@@ -320,7 +320,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '表格搜索',
           children: [
             { title: '实现表格搜索', routerLink: { name: 'ComponentTableSearchList' } },
-            { title: '实现树形表格搜索', routerLink: { name: 'ComponentTableSearchTree' } }
+            { title: '实现树形表格搜索', routerLink: { name: 'ComponentTableSearchTree' } },
+            { title: '查找与替换', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/table/areaFNR' }
           ]
         },
         {
