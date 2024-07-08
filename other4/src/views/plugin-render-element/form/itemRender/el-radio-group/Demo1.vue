@@ -19,7 +19,7 @@ interface FormDataVO {
 }
 
 const hobbies1ItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
-  name: 'VxeRadioGroup',
+  name: 'ElRadioGroup',
   options: [
     { label: '爬山', value: '1' },
     { label: '干架', value: '2' },
