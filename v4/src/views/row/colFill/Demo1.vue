@@ -1,15 +1,15 @@
 <template>
   <div>
     <div class="row-wrapper">
-      <vxe-row :gutter="10">
-        <vxe-col span="8">
-          <div class="mybg">平分1</div>
+      <vxe-row gutter="10">
+        <vxe-col width="100">
+          <div class="mybg">宽度100</div>
         </vxe-col>
-        <vxe-col span="8">
-          <div class="mybg">平分1</div>
+        <vxe-col fill>
+          <div class="mybg">铺满剩余宽度</div>
         </vxe-col>
-        <vxe-col span="8">
-          <div class="mybg">平分1</div>
+        <vxe-col width="200">
+          <div class="mybg">宽度200</div>
         </vxe-col>
       </vxe-row>
     </div>

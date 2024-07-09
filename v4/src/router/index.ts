@@ -2412,13 +2412,78 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'layout',
-        name: 'ComponentLayout',
-        component: () => import('@/views/layout/CodeExample.vue')
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentLayoutBase',
+            component: () => import('@/views/layout/base/CodeExample.vue')
+          },
+          {
+            path: 'fixed',
+            name: 'ComponentLayoutFixed',
+            component: () => import('@/views/layout/fixed/CodeExample.vue')
+          },
+          {
+            path: 'aside',
+            name: 'ComponentLayoutAside',
+            component: () => import('@/views/layout/aside/CodeExample.vue')
+          },
+          {
+            path: 'header',
+            name: 'ComponentLayoutHeader',
+            component: () => import('@/views/layout/header/CodeExample.vue')
+          },
+          {
+            path: 'body',
+            name: 'ComponentLayoutBody',
+            component: () => import('@/views/layout/body/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'row',
-        name: 'ComponentRow',
-        component: () => import('@/views/row/CodeExample.vue')
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentRowBase',
+            component: () => import('@/views/row/base/CodeExample.vue')
+          },
+          {
+            path: 'gutter',
+            name: 'ComponentRowGutter',
+            component: () => import('@/views/row/gutter/CodeExample.vue')
+          },
+          {
+            path: 'vertical',
+            name: 'ComponentRowVertical',
+            component: () => import('@/views/row/vertical/CodeExample.vue')
+          },
+          {
+            path: 'wrap',
+            name: 'ComponentRowWrap',
+            component: () => import('@/views/row/wrap/CodeExample.vue')
+          },
+          {
+            path: 'colWidth',
+            name: 'ComponentRowColWidth',
+            component: () => import('@/views/row/colWidth/CodeExample.vue')
+          },
+          {
+            path: 'colFill',
+            name: 'ComponentRowColFill',
+            component: () => import('@/views/row/colFill/CodeExample.vue')
+          },
+          {
+            path: 'colAlign',
+            name: 'ComponentRowColAlign',
+            component: () => import('@/views/row/colAlign/CodeExample.vue')
+          },
+          {
+            path: 'colEllipsis',
+            name: 'ComponentRowColEllipsis',
+            component: () => import('@/views/row/colEllipsis/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'breadcrumb',
@@ -2427,8 +2492,23 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'menu',
-        name: 'ComponentMenu',
-        component: () => import('@/views/menu/CodeExample.vue')
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentMenuBase',
+            component: () => import('@/views/menu/base/CodeExample.vue')
+          },
+          {
+            path: 'routerLink',
+            name: 'ComponentMenuRouterLink',
+            component: () => import('@/views/menu/routerLink/CodeExample.vue')
+          },
+          {
+            path: 'permissionCode',
+            name: 'ComponentMenuPermissionCode',
+            component: () => import('@/views/menu/permissionCode/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'image',
@@ -2467,6 +2547,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'status',
             name: 'ComponentTextStatus',
             component: () => import('@/views/text/status/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentTextIcon',
+            component: () => import('@/views/text/icon/CodeExample.vue')
           }
         ]
       },
@@ -2484,9 +2569,29 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/link/status/CodeExample.vue')
           },
           {
+            path: 'icon',
+            name: 'ComponentLinkIcon',
+            component: () => import('@/views/link/icon/CodeExample.vue')
+          },
+          {
+            path: 'underline',
+            name: 'ComponentLinkUnderline',
+            component: () => import('@/views/link/underline/CodeExample.vue')
+          },
+          {
+            path: 'href',
+            name: 'ComponentLinkHref',
+            component: () => import('@/views/link/href/CodeExample.vue')
+          },
+          {
             path: 'router',
             name: 'ComponentLinkRouter',
             component: () => import('@/views/link/router/CodeExample.vue')
+          },
+          {
+            path: 'permissionCode',
+            name: 'ComponentLinkPermissionCode',
+            component: () => import('@/views/link/permissionCode/CodeExample.vue')
           }
         ]
       },
@@ -2557,6 +2662,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'dropdown',
             name: 'ComponentButtonDropdown',
             component: () => import('@/views/button/dropdown/CodeExample.vue')
+          },
+          {
+            path: 'permissionCode',
+            name: 'ComponentButtonPermissionCode',
+            component: () => import('@/views/button/permissionCode/CodeExample.vue')
           }
         ]
       },
@@ -3332,6 +3442,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'roundCard',
             name: 'ComponentTabsRoundCard',
             component: () => import('@/views/tabs/roundCard/CodeExample.vue')
+          },
+          {
+            path: 'permissionCode',
+            name: 'ComponentTabsPermissionCode',
+            component: () => import('@/views/tabs/permissionCode/CodeExample.vue')
           }
         ]
       },

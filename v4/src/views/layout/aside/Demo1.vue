@@ -3,22 +3,23 @@
     <div class="page-wrapper">
       <vxe-layout-container>
         <vxe-layout-aside class="bg2">
-          <div>左侧</div>
-          <div>左侧</div>
-          <div>左侧</div>
-          <div>左侧</div>
-          <div>左侧</div>
-          <div>左侧</div>
+          <div style="height: 400px">菜单</div>
+          <div style="height: 400px">菜单</div>
         </vxe-layout-aside>
+
         <vxe-layout-container vertical>
+          <vxe-layout-header fixed class="bg1">
+            <div style="height: 50px">头部</div>
+          </vxe-layout-header>
+
           <vxe-layout-body class="bg3">
-            <div>内容</div>
-            <div>内容</div>
-            <div>内容</div>
-            <div>内容</div>
-            <div>内容</div>
-            <div>内容</div>
+            <div style="height: 400px">内容</div>
+            <div style="height: 400px">内容</div>
           </vxe-layout-body>
+
+          <vxe-layout-footer class="bg4">
+            <div style="height: 30px">底部</div>
+          </vxe-layout-footer>
         </vxe-layout-container>
       </vxe-layout-container>
     </div>
@@ -30,9 +31,7 @@
 
 <style lang="scss" scoped>
 .page-wrapper {
-  position: relative;
-  height: 100px;
-  margin: 20px 0;
+  height: 300px;
 }
 .bg1 {
   background-color: #a6c9ed;

@@ -8,9 +8,10 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { VxeMenuPropTypes } from 'vxe-pc-ui'
 
 const selectNav = ref('user')
-const navList = ref([
+const navList = ref<VxeMenuPropTypes.Options>([
   { name: 'home', title: '首页', icon: 'vxe-icon-home' },
   {
     name: 'user',

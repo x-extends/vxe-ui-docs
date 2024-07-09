@@ -28,7 +28,7 @@
       <template #default>信息颜色</template>
       <template #dropdowns>
         <vxe-button mode="text" content="下拉按钮1"></vxe-button>
-        <vxe-button mode="text" content="下拉按钮2" status="my-purple"></vxe-button>
+        <vxe-button mode="text" content="下拉按钮2" status="info"></vxe-button>
         <vxe-button mode="text" content="下拉按钮3"></vxe-button>
       </template>
     </vxe-button>

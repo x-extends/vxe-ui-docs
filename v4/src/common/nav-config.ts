@@ -783,7 +783,8 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'text' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentTextSize' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentTextStatus' } }
+          { title: '状态颜色', routerLink: { name: 'ComponentTextStatus' } },
+          { title: '图标', routerLink: { name: 'ComponentTextIcon' } }
         ]
       },
       {
@@ -792,7 +793,11 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'link' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentLinkSize' } },
           { title: '状态颜色', routerLink: { name: 'ComponentLinkStatus' } },
-          { title: '路由模式', routerLink: { name: 'ComponentLinkRouter' } }
+          { title: '图标', routerLink: { name: 'ComponentLinkIcon' } },
+          { title: '下划线', routerLink: { name: 'ComponentLinkUnderline' } },
+          { title: '超链接', routerLink: { name: 'ComponentLinkHref' } },
+          { title: '路由模式', routerLink: { name: 'ComponentLinkRouter' } },
+          { title: '权限码', routerLink: { name: 'ComponentLinkPermissionCode' } }
         ]
       },
       {
@@ -816,7 +821,8 @@ export const navConfigList: NavVO[] = [
           { title: '加载中', routerLink: { name: 'ComponentButtonLoading' } },
           { title: '触发方式', routerLink: { name: 'ComponentButtonTrigger' } },
           { title: '按钮组', routerLink: { name: 'ComponentButtonGroup' } },
-          { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdown' } }
+          { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdown' } },
+          { title: '权限码', routerLink: { name: 'ComponentButtonPermissionCode' } }
         ]
       }
     ]
@@ -827,13 +833,26 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Layout 页面布局',
         children: [
-          { title: '页面布局', routerLink: { name: 'ComponentLayout' } }
+          { title: '基础布局', routerLink: { name: 'ComponentLayoutBase' } },
+          { title: '固定头部和底部', routerLink: { name: 'ComponentLayoutFixed' } },
+          { title: '侧边栏，内容区滚动条', routerLink: { name: 'ComponentLayoutAside' } },
+          { title: '头部固定，中间内容区滚动', routerLink: { name: 'ComponentLayoutHeader' } },
+          { title: '左侧与内容区滚动', routerLink: { name: 'ComponentLayoutBody' } }
         ]
       },
       {
         title: 'Row 行与列',
         children: [
-          { title: '行列排版', routerLink: { name: 'ComponentRow' } }
+          { title: 'Row API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'row' } } },
+          { title: 'Col API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'col' } } },
+          { title: '占比', routerLink: { name: 'ComponentRowBase' } },
+          { title: '垂直布局', routerLink: { name: 'ComponentRowVertical' } },
+          { title: '自动换行', routerLink: { name: 'ComponentRowWrap' } },
+          { title: '间距', routerLink: { name: 'ComponentRowGutter' } },
+          { title: '固定宽度', routerLink: { name: 'ComponentRowColWidth' } },
+          { title: '铺满宽度', routerLink: { name: 'ComponentRowColFill' } },
+          { title: '对齐方式', routerLink: { name: 'ComponentRowColAlign' } },
+          { title: '溢出隐藏', routerLink: { name: 'ComponentRowColEllipsis' } }
         ]
       },
       // { title: 'Progress 进度条' },
@@ -873,7 +892,8 @@ export const navConfigList: NavVO[] = [
           { title: '卡片风格', routerLink: { name: 'ComponentTabsCard' } },
           { title: '边框背景的卡片', routerLink: { name: 'ComponentTabsBorderCard' } },
           { title: '设置高度', routerLink: { name: 'ComponentTabsHeight' } },
-          { title: '圆角边框背景的卡片', routerLink: { name: 'ComponentTabsRoundCard' } }
+          { title: '圆角边框背景的卡片', routerLink: { name: 'ComponentTabsRoundCard' } },
+          { title: '权限码', routerLink: { name: 'ComponentTabsPermissionCode' } }
         ]
       },
       {
@@ -913,7 +933,9 @@ export const navConfigList: NavVO[] = [
         title: 'Menu 菜单',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'menu' } } },
-          { title: '基础', routerLink: { name: 'ComponentMenu' } }
+          { title: '基础', routerLink: { name: 'ComponentMenuBase' } },
+          { title: '路由模式', routerLink: { name: 'ComponentMenuRouterLink' } },
+          { title: '权限码', routerLink: { name: 'ComponentMenuPermissionCode' } }
         ]
       },
       {
