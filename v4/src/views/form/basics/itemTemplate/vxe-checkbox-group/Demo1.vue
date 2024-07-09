@@ -8,19 +8,9 @@
           <vxe-input v-model="formData.name"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="数值" field="num" span="24" :item-render="{}">
+      <vxe-form-item title="复选框" field="hobbiesList" span="24" :item-render="{}">
         <template #default>
-          <vxe-number-input v-model="formData.num" type="number"></vxe-number-input>
-        </template>
-      </vxe-form-item>
-      <vxe-form-item title="整数" field="integer" span="24" :item-render="{}">
-        <template #default>
-          <vxe-number-input v-model="formData.integer" type="integer"></vxe-number-input>
-        </template>
-      </vxe-form-item>
-      <vxe-form-item title="小数" field="float" span="24" :item-render="{}">
-        <template #default>
-          <vxe-number-input v-model="formData.float" type="float"></vxe-number-input>
+          <vxe-checkbox-group v-model="formData.hobbiesList" :options="hobbiesListOptions"></vxe-checkbox-group>
         </template>
       </vxe-form-item>
       <vxe-form-item align="center" span="24">
@@ -39,16 +29,22 @@ import { ref } from 'vue'
 interface FormDataVO {
   name: string
   nickname: string
-  num: number | null
-  float: number | null
-  integer: number | null
+  hobbiesList: string[]
+  address: string
 }
+
+const hobbiesListOptions = ref([
+  { label: '爬山', value: '1' },
+  { label: '干架', value: '2' },
+  { label: '干饭', value: '3' },
+  { label: '游泳', value: '4' },
+  { label: '跑步', value: '5' }
+])
 
 const formData = ref<FormDataVO>({
   name: 'test1',
   nickname: 'Testing',
-  num: null,
-  integer: null,
-  float: null
+  hobbiesList: ['3'],
+  address: ''
 })
 </script>

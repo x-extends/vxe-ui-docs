@@ -8,19 +8,14 @@
           <vxe-input v-model="formData.name"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="数值" field="num" span="24" :item-render="{}">
+      <vxe-form-item title="开关" field="flag1" span="24" :item-render="{}">
         <template #default>
-          <vxe-number-input v-model="formData.num" type="number"></vxe-number-input>
+          <vxe-switch v-model="formData.flag1"></vxe-switch>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="整数" field="integer" span="24" :item-render="{}">
+      <vxe-form-item title="开关默认值" field="flag2" span="24" :item-render="{}">
         <template #default>
-          <vxe-number-input v-model="formData.integer" type="integer"></vxe-number-input>
-        </template>
-      </vxe-form-item>
-      <vxe-form-item title="小数" field="float" span="24" :item-render="{}">
-        <template #default>
-          <vxe-number-input v-model="formData.float" type="float"></vxe-number-input>
+          <vxe-switch v-model="formData.flag2"></vxe-switch>
         </template>
       </vxe-form-item>
       <vxe-form-item align="center" span="24">
@@ -39,16 +34,16 @@ import { ref } from 'vue'
 interface FormDataVO {
   name: string
   nickname: string
-  num: number | null
-  float: number | null
-  integer: number | null
+  flag1: boolean
+  flag2: boolean
+  address: string
 }
 
 const formData = ref<FormDataVO>({
   name: 'test1',
   nickname: 'Testing',
-  num: null,
-  integer: null,
-  float: null
+  flag1: false,
+  flag2: true,
+  address: ''
 })
 </script>

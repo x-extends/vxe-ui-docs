@@ -985,6 +985,10 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeNumberInput' } },
               { title: 'VxeSelect', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSelect' } },
               { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDatePicker' } },
+              { title: 'VxeSwitch', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSwitch' } },
+              { title: 'VxeRadioGroup', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeRadioGroup' } },
+              { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeCheckboxGroup' } },
+              { title: 'VxeUpload', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeUpload' } },
               { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/form/itemTemplate/el-input' }
             ]
           },
@@ -1036,6 +1040,10 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormConfigItemTemplateVxeNumberInput' } },
               { title: 'VxeSelect', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSelect' } },
               { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormConfigItemTemplateVxeDatePicker' } },
+              { title: 'VxeSwitch', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSwitch' } },
+              { title: 'VxeRadioGroup', routerLink: { name: 'ComponentFormConfigItemTemplateVxeRadioGroup' } },
+              { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentFormConfigItemTemplateVxeCheckboxGroup' } },
+              { title: 'VxeUpload', routerLink: { name: 'ComponentFormConfigItemTemplateVxeUpload' } },
               { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/form/itemRender/el-input' }
             ]
           }

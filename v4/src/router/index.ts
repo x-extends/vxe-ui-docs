@@ -3704,6 +3704,26 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'vxe-date-picker',
                     name: 'ComponentFormBasicsItemTemplateVxeDatePicker',
                     component: () => import('@/views/form/basics/itemTemplate/vxe-date-picker/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-switch',
+                    name: 'ComponentFormBasicsItemTemplateVxeSwitch',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-switch/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-radio-group',
+                    name: 'ComponentFormBasicsItemTemplateVxeRadioGroup',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-radio-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-checkbox-group',
+                    name: 'ComponentFormBasicsItemTemplateVxeCheckboxGroup',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-checkbox-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-upload',
+                    name: 'ComponentFormBasicsItemTemplateVxeUpload',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-upload/CodeExample.vue')
                   }
                 ]
               },
@@ -3869,6 +3889,26 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'vxe-date-picker',
                     name: 'ComponentFormConfigItemTemplateVxeDatePicker',
                     component: () => import('@/views/form/config/itemTemplate/vxe-date-picker/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-switch',
+                    name: 'ComponentFormConfigItemTemplateVxeSwitch',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-switch/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-radio-group',
+                    name: 'ComponentFormConfigItemTemplateVxeRadioGroup',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-radio-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-checkbox-group',
+                    name: 'ComponentFormConfigItemTemplateVxeCheckboxGroup',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-checkbox-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-upload',
+                    name: 'ComponentFormConfigItemTemplateVxeUpload',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-upload/CodeExample.vue')
                   }
                 ]
               }
