@@ -3543,6 +3543,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/form/basics/size/CodeExample.vue')
               },
               {
+                path: 'field',
+                name: 'ComponentFormBasicsField',
+                component: () => import('@/views/form/basics/field/CodeExample.vue')
+              },
+              {
                 path: 'colon',
                 name: 'ComponentFormBasicsColon',
                 component: () => import('@/views/form/basics/colon/CodeExample.vue')
@@ -3751,6 +3756,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'base',
                 name: 'ComponentFormConfigBase',
                 component: () => import('@/views/form/config/base/CodeExample.vue')
+              },
+              {
+                path: 'field',
+                name: 'ComponentFormConfigField',
+                component: () => import('@/views/form/config/field/CodeExample.vue')
               },
               {
                 path: 'colon',

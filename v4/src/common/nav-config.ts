@@ -945,6 +945,7 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: '基础功能', routerLink: { name: 'ComponentFormBasicsBase' } },
           { title: '尺寸大小', routerLink: { name: 'ComponentFormBasicsSize' } },
+          { title: '数据类型', routerLink: { name: 'ComponentFormBasicsField' } },
           { title: '横向排列', routerLink: { name: 'ComponentFormBasicsHorizontal' } },
           { title: '上下布局', routerLink: { name: 'ComponentFormBasicsVertical' } },
           { title: '标题冒号', routerLink: { name: 'ComponentFormBasicsColon' } },
@@ -1005,6 +1006,7 @@ export const navConfigList: NavVO[] = [
         i18nKey: 'app.aside.menu.formConfigTitle',
         children: [
           { title: '基础功能', routerLink: { name: 'ComponentFormConfigBase' } },
+          { title: '数据类型', routerLink: { name: 'ComponentFormConfigField' } },
           { title: '横向排列', routerLink: { name: 'ComponentFormConfigHorizontal' } },
           { title: '上下布局', routerLink: { name: 'ComponentFormConfigVertical' } },
           { title: '标题冒号', routerLink: { name: 'ComponentFormConfigColon' } },
