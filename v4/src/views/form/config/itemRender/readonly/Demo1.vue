@@ -180,16 +180,24 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
     { field: 'nickname', title: '输入框', span: 24, itemRender: { name: 'VxeInput' } },
-    { field: 'num', title: '数字', span: 12, itemRender: { name: 'VxeInput', props: { type: 'number' } } },
-    { field: 'integer', title: '整数', span: 12, itemRender: { name: 'VxeInput', props: { type: 'integer' } } },
-    { field: 'float', title: '小数', span: 24, itemRender: { name: 'VxeInput', props: { type: 'float' } } },
-    { field: 'date', title: '日期', span: 8, itemRender: { name: 'VxeInput', props: { type: 'date' } } },
-    { field: 'year', title: '年份', span: 8, itemRender: { name: 'VxeInput', props: { type: 'year' } } },
-    { field: 'quarter', title: '季度', span: 8, itemRender: { name: 'VxeInput', props: { type: 'quarter' } } },
-    { field: 'month', title: '月份', span: 8, itemRender: { name: 'VxeInput', props: { type: 'month' } } },
-    { field: 'week', title: '周', span: 8, itemRender: { name: 'VxeInput', props: { type: 'week' } } },
-    { field: 'time', title: '时间', span: 8, itemRender: { name: 'VxeInput', props: { type: 'time' } } },
-    { field: 'datetime', title: '日期带时间', span: 24, itemRender: { name: 'VxeInput', props: { type: 'datetime' } } },
+    {
+      children: [
+        { field: 'num', title: '数字', span: 12, itemRender: { name: 'VxeInput', props: { type: 'number' } } },
+        { field: 'integer', title: '整数', span: 12, itemRender: { name: 'VxeInput', props: { type: 'integer' } } },
+        { field: 'float', title: '小数', span: 24, itemRender: { name: 'VxeInput', props: { type: 'float' } } }
+      ]
+    },
+    {
+      children: [
+        { field: 'date', title: '日期', span: 8, itemRender: { name: 'VxeInput', props: { type: 'date' } } },
+        { field: 'year', title: '年份', span: 8, itemRender: { name: 'VxeInput', props: { type: 'year' } } },
+        { field: 'quarter', title: '季度', span: 8, itemRender: { name: 'VxeInput', props: { type: 'quarter' } } },
+        { field: 'month', title: '月份', span: 8, itemRender: { name: 'VxeInput', props: { type: 'month' } } },
+        { field: 'week', title: '周', span: 8, itemRender: { name: 'VxeInput', props: { type: 'week' } } },
+        { field: 'time', title: '时间', span: 8, itemRender: { name: 'VxeInput', props: { type: 'time' } } },
+        { field: 'datetime', title: '日期带时间', span: 24, itemRender: { name: 'VxeInput', props: { type: 'datetime' } } }
+      ]
+    },
     { field: 'sex', title: '下拉框', span: 12, itemRender: sexItemRender },
     { field: 'sexList', title: '下拉框多选', span: 12, itemRender: sexListItemRender },
     { field: 'type', title: '下拉框分组', span: 12, itemRender: typeItemRender },
