@@ -1,5 +1,7 @@
-setTimeout(function () {
-  var isZH = ['zh-CN', 'zh-HK', 'zh-MO', 'zh-TW'].includes(navigator.language)
+setTimeout(function () {var isZH = true
+  try {
+    var isZH = ['zh-CN', 'zh-HK', 'zh-MO', 'zh-TW'].includes(localStorage.getItem('VXE_DOCS_LANGUAGE') || navigator.language)
+  } catch(e){}
 
   window.joinSponorEvent = function () {
     location.href = 'https://vxeui.com/#/start/joinSponsor'
