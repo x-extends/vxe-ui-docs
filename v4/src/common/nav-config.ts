@@ -934,6 +934,7 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'menu' } } },
           { title: '基础', routerLink: { name: 'ComponentMenuBase' } },
+          { title: '图标', routerLink: { name: 'ComponentMenuIcon' } },
           { title: '路由模式', routerLink: { name: 'ComponentMenuRouterLink' } },
           { title: '权限码', routerLink: { name: 'ComponentMenuPermissionCode' } }
         ]
