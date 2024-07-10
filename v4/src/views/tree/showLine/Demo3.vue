@@ -8,7 +8,6 @@
 import { ref } from 'vue'
 import { VxeTreePropTypes } from 'vxe-pc-ui'
 
-const showLine = ref(true)
 const treeList = ref<VxeTreePropTypes.Data>([
   { title: '节点2' },
   {

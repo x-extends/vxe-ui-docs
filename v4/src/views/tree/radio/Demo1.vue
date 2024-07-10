@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-tree :data="treeList" v-model:radio-check-row-key="checkboxCheckRowKey" show-radio></vxe-tree>
+    <vxe-tree :data="treeList" v-model:radio-check-node-key="checkboxCheckNodeKey" show-radio></vxe-tree>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 import { ref } from 'vue'
 import { VxeTreePropTypes } from 'vxe-pc-ui'
 
-const checkboxCheckRowKey = ref()
+const checkboxCheckNodeKey = ref()
 
 const treeList = ref<VxeTreePropTypes.Data>([
   { title: '节点2' },
