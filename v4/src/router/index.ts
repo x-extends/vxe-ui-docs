@@ -226,6 +226,56 @@ const tableRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'radio',
+      children: [
+        {
+          path: 'highlight',
+          name: 'ComponentTableRadioHighlight',
+          component: () => import('@/views/table/radio/highlight/CodeExample.vue')
+        },
+        {
+          path: 'checkMethod',
+          name: 'ComponentTableRadioCheckMethod',
+          component: () => import('@/views/table/radio/checkMethod/CodeExample.vue')
+        },
+        {
+          path: 'visibleMethod',
+          name: 'ComponentTableRadioVisibleMethod',
+          component: () => import('@/views/table/radio/visibleMethod/CodeExample.vue')
+        }
+      ]
+    },
+    {
+      path: 'checkbox',
+      children: [
+        {
+          path: 'highlight',
+          name: 'ComponentTableCheckboxHighlight',
+          component: () => import('@/views/table/checkbox/highlight/CodeExample.vue')
+        },
+        {
+          path: 'field',
+          name: 'ComponentTableCheckboxField',
+          component: () => import('@/views/table/checkbox/field/CodeExample.vue')
+        },
+        {
+          path: 'checkMethod',
+          name: 'ComponentTableCheckboxCheckMethod',
+          component: () => import('@/views/table/checkbox/checkMethod/CodeExample.vue')
+        },
+        {
+          path: 'visibleMethod',
+          name: 'ComponentTableCheckboxVisibleMethod',
+          component: () => import('@/views/table/checkbox/visibleMethod/CodeExample.vue')
+        },
+        {
+          path: 'range',
+          name: 'ComponentTableCheckboxRange',
+          component: () => import('@/views/table/checkbox/range/CodeExample.vue')
+        }
+      ]
+    },
+    {
       path: 'sort',
       children: [
         {
@@ -687,6 +737,16 @@ const tableRouteConfig: RouteRecordRaw = {
           path: 'revert',
           name: 'ComponentTableEditRevert',
           component: () => import('@/views/table/edit/revert/CodeExample.vue')
+        },
+        {
+          path: 'cellDisable',
+          name: 'ComponentTableEditCellDisable',
+          component: () => import('@/views/table/edit/cellDisable/CodeExample.vue')
+        },
+        {
+          path: 'rowDisable',
+          name: 'ComponentTableEditRowDisable',
+          component: () => import('@/views/table/edit/rowDisable/CodeExample.vue')
         },
         {
           path: 'cellValid',

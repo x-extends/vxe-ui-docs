@@ -2,13 +2,12 @@
   <div>
     <vxe-table
       border
-      :row-config="{keyField: 'id', isHover: true}"
+      height="500"
+      :row-config="{isHover: true}"
       :data="tableData"
-      :checkbox-config="{checkRowKeys: defaultSelecteRowKeys}"
-      :radio-config="{labelField: 'name'}">
-      <vxe-column type="checkbox" width="60"></vxe-column>
+      :radio-config="{labelField: 'name', highlight: true}">
+      <vxe-column type="radio" title="Name" width="300"></vxe-column>
       <vxe-column field="id" title="ID"></vxe-column>
-      <vxe-column type="radio" width="300" title="Name"></vxe-column>
       <vxe-column field="age" title="Age"></vxe-column>
       <vxe-column field="address" title="Address" show-overflow></vxe-column>
     </vxe-table>

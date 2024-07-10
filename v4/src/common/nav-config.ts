@@ -89,6 +89,24 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           ]
         },
         {
+          title: '单选框',
+          children: [
+            { title: '高亮选择行', routerLink: { name: 'ComponentTableRadioHighlight' } },
+            { title: '禁用', routerLink: { name: 'ComponentTableRadioCheckMethod' } },
+            { title: '显示隐藏', routerLink: { name: 'ComponentTableRadioVisibleMethod' } }
+          ]
+        },
+        {
+          title: '复选框',
+          children: [
+            { title: '高亮选择行', routerLink: { name: 'ComponentTableCheckboxHighlight' } },
+            { title: '绑定字段', routerLink: { name: 'ComponentTableCheckboxField' } },
+            { title: '禁用', routerLink: { name: 'ComponentTableCheckboxCheckMethod' } },
+            { title: '显示隐藏', routerLink: { name: 'ComponentTableCheckboxVisibleMethod' } },
+            { title: '鼠标滑动范围选择', routerLink: { name: 'ComponentTableCheckboxRange' } }
+          ]
+        },
+        {
           title: '排序',
           children: [
             { title: '多字段排序', routerLink: { name: 'ComponentTableSortMultiple' } },
@@ -214,6 +232,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '删除数据', routerLink: { name: 'ComponentTableEditRemove' } },
             { title: '标记为删除', routerLink: { name: 'ComponentTableEditPending' } },
             { title: '还原数据', routerLink: { name: 'ComponentTableEditRevert' } },
+            { title: '禁用单元格编辑', routerLink: { name: 'ComponentTableEditCellDisable' } },
+            { title: '禁用行编辑', routerLink: { name: 'ComponentTableEditRowDisable' } },
             { title: '单元格校验', routerLink: { name: 'ComponentTableEditCellValid' } },
             { title: '行校验', routerLink: { name: 'ComponentTableEditRowValid' } },
             { title: '树结构', routerLink: { name: 'ComponentTableEditTree' } },

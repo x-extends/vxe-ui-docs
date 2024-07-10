@@ -2,7 +2,7 @@
   <div>
     <vxe-table
       border
-      height="300"
+      height="500"
       :column-config="{resizable: true}"
       :row-config="{isCurrent: true, isHover: true}"
       :data="tableData"

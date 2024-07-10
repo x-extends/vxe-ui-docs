@@ -2,13 +2,12 @@
   <div>
     <vxe-table
       border
-      :row-config="{keyField: 'id', isHover: true}"
+      height="500"
+      :row-config="{isHover: true}"
       :data="tableData"
-      :checkbox-config="{checkRowKeys: defaultSelecteRowKeys}"
-      :radio-config="{labelField: 'name'}">
-      <vxe-column type="checkbox" width="60"></vxe-column>
+      :checkbox-config="{labelField: 'name', highlight: true}">
+      <vxe-column type="checkbox" title="Name" width="300"></vxe-column>
       <vxe-column field="id" title="ID"></vxe-column>
-      <vxe-column type="radio" width="300" title="Name"></vxe-column>
       <vxe-column field="age" title="Age"></vxe-column>
       <vxe-column field="address" title="Address" show-overflow></vxe-column>
     </vxe-table>
@@ -26,8 +25,6 @@ interface RowVO {
   age: number
   address: string
 }
-
-const defaultSelecteRowKeys = ref([10002, 10003])
 
 const tableData = ref<RowVO[]>([
   { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
