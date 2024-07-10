@@ -2464,6 +2464,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'icon',
         children: [
           {
+            path: 'size',
+            name: 'ComponentIconSize',
+            component: () => import('@/views/icon/size/CodeExample.vue')
+          },
+          {
             path: 'base',
             name: 'ComponentIconBase',
             component: () => import('@/views/icon/base/CodeExample.vue')
@@ -3695,9 +3700,14 @@ const routes: Array<RouteRecordRaw> = [
         path: 'tree',
         children: [
           {
-            path: 'base',
-            name: 'ComponentTreeBase',
-            component: () => import('@/views/tree/base/CodeExample.vue')
+            path: 'size',
+            name: 'ComponentTreeSize',
+            component: () => import('@/views/tree/size/CodeExample.vue')
+          },
+          {
+            path: 'trigger',
+            name: 'ComponentTreeTrigger',
+            component: () => import('@/views/tree/trigger/CodeExample.vue')
           },
           {
             path: 'current',
@@ -3713,6 +3723,21 @@ const routes: Array<RouteRecordRaw> = [
             path: 'checkbox',
             name: 'ComponentTreeCheckbox',
             component: () => import('@/views/tree/checkbox/CodeExample.vue')
+          },
+          {
+            path: 'showIcon',
+            name: 'ComponentTreeShowIcon',
+            component: () => import('@/views/tree/showIcon/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentTreeIcon',
+            component: () => import('@/views/tree/icon/CodeExample.vue')
+          },
+          {
+            path: 'showLine',
+            name: 'ComponentTreeShowLine',
+            component: () => import('@/views/tree/showLine/CodeExample.vue')
           }
         ]
       },

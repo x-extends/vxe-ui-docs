@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-tree :data="treeList" is-hover></vxe-tree>
+    <vxe-tree :data="treeList" show-checkbox show-line></vxe-tree>
   </div>
 </template>
 
@@ -8,6 +8,7 @@
 import { ref } from 'vue'
 import { VxeTreePropTypes } from 'vxe-pc-ui'
 
+const showLine = ref(true)
 const treeList = ref<VxeTreePropTypes.Data>([
   { title: '节点2' },
   {

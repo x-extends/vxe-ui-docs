@@ -4,9 +4,10 @@
       show-overflow
       border="outer"
       :column-config="{resizable: true}"
+      :checkbox-config="{labelField: 'name'}"
       :tree-config="{transform: true, rowField: 'id', parentField: 'parentId', showLine: true}"
       :data="tableData">
-      <vxe-column field="name" title="Name" tree-node></vxe-column>
+      <vxe-column type="checkbox" tree-node></vxe-column>
       <vxe-column field="size" title="Size"></vxe-column>
       <vxe-column field="type" title="Type"></vxe-column>
       <vxe-column field="date" title="Date"></vxe-column>

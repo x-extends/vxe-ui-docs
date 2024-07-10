@@ -1,6 +1,6 @@
 <template>
   <div>
     <vxe-icon name="print"></vxe-icon>
-    <vxe-icon icon="vxe-icon-edit"></vxe-icon>
+    <i class="vxe-icon-print"></i>
   </div>
 </template>

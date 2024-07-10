@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-tree :data="treeList"></vxe-tree>
+    <vxe-tree :data="treeList" icon-open="vxe-icon-square-minus" icon-close="vxe-icon-square-plus"></vxe-tree>
   </div>
 </template>
 

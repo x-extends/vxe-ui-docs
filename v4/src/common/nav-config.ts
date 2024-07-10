@@ -796,6 +796,7 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon' } } },
           { title: '图标列表', routerLink: { name: 'ComponentIconBase' } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentIconSize' } },
           { title: '效果', routerLink: { name: 'ComponentIconAnimation' } },
           { title: '状态颜色', routerLink: { name: 'ComponentIconStatus' } }
         ]
@@ -1277,16 +1278,6 @@ export const navConfigList: NavVO[] = [
           }
         ]
       },
-      {
-        title: 'Tree 树形组件',
-        children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tree' } } },
-          { title: '基础树', routerLink: { name: 'ComponentTreeBase' } },
-          { title: '高亮行', routerLink: { name: 'ComponentTreeCurrent' } },
-          { title: '单选框', routerLink: { name: 'ComponentTreeRadio' } },
-          { title: '复选框', routerLink: { name: 'ComponentTreeCheckbox' } }
-        ]
-      },
       // { title: 'TreeSelect 树形下拉框' },
       {
         title: 'Upload 上传',
@@ -1330,6 +1321,20 @@ export const navConfigList: NavVO[] = [
     ]
   },
   tableNavConfig,
+  {
+    title: 'Tree 树形组件',
+    children: [
+      { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tree' } } },
+      { title: '尺寸大小', routerLink: { name: 'ComponentTreeSize' } },
+      { title: '触发方式', routerLink: { name: 'ComponentTreeTrigger' } },
+      { title: '高亮行', routerLink: { name: 'ComponentTreeCurrent' } },
+      { title: '单选框', routerLink: { name: 'ComponentTreeRadio' } },
+      { title: '复选框', routerLink: { name: 'ComponentTreeCheckbox' } },
+      { title: '隐藏图标', routerLink: { name: 'ComponentTreeShowIcon' } },
+      { title: '自定义图标', routerLink: { name: 'ComponentTreeIcon' } },
+      { title: '连接线', routerLink: { name: 'ComponentTreeShowLine' } }
+    ]
+  },
   {
     i18nKey: 'app.aside.menu.feedbackTitle',
     children: [
