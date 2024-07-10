@@ -8,8 +8,8 @@
       <template #describe>
         <pre>
           <pre-code>
-            | Mouse Left | 按住复选框的列，向上或向下滑动选取 |
-            | Mouse Left + Ctrl | 局部选取/取消 |
+            | MouseLeft | 按住复选框的列，向上或向下滑动选取 |
+            | MouseLeft + Ctrl | 局部选取/取消 |
           </pre-code>
         </pre>
       </template>
