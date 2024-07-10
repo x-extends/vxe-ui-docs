@@ -1668,6 +1668,16 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'vxe-select',
           name: 'ComponentGridEditRenderVxeSelect',
           component: () => import('@/views/grid/editRender/vxe-select/CodeExample.vue')
+        },
+        {
+          path: 'cellDisable',
+          name: 'ComponentGridEditRenderCellDisable',
+          component: () => import('@/views/grid/editRender/cellDisable/CodeExample.vue')
+        },
+        {
+          path: 'rowDisable',
+          name: 'ComponentGridEditRenderRowDisable',
+          component: () => import('@/views/grid/editRender/rowDisable/CodeExample.vue')
         }
       ]
     },
