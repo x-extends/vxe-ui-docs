@@ -257,6 +257,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'VxeNumberInput', routerLink: { name: 'ComponentTableEditRenderVxeNumberInput' } },
             { title: 'VxeDatePicker', routerLink: { name: 'ComponentTableEditRenderVxeDatePicker' } },
             { title: 'VxeSelect', routerLink: { name: 'ComponentTableEditRenderVxeSelect' } },
+            { title: 'VxeTreeSelect', routerLink: { name: 'ComponentTableEditRenderVxeTreeSelect' } },
             { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/table/edit/el-input' }
           ]
         },
@@ -547,6 +548,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'VxeNumberInput', routerLink: { name: 'ComponentGridEditRenderVxeNumberInput' } },
             { title: 'VxeDatePicker', routerLink: { name: 'ComponentGridEditRenderVxeDatePicker' } },
             { title: 'VxeSelect', routerLink: { name: 'ComponentGridEditRenderVxeSelect' } },
+            { title: 'VxeTreeSelect', routerLink: { name: 'ComponentGridEditRenderVxeTreeSelect' } },
             { title: '禁用单元格编辑', routerLink: { name: 'ComponentGridEditRenderCellDisable' } },
             { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRenderRowDisable' } },
             { title: '使用第三方组件', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-render-element/grid/edit/el-input' }
@@ -1278,7 +1280,19 @@ export const navConfigList: NavVO[] = [
           }
         ]
       },
-      // { title: 'TreeSelect 树形下拉框' },
+      {
+        title: 'TreeSelect 树形下拉框',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'treeSelect' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentTreeSelectSize' } },
+          { title: '基础', routerLink: { name: 'ComponentTreeSelectBase' } },
+          { title: '多选', routerLink: { name: 'ComponentTreeSelectMultiple' } },
+          { title: '自定义图标', routerLink: { name: 'ComponentTreeSelectIcon' } },
+          { title: '单选框', routerLink: { name: 'ComponentTreeSelectRadio' } },
+          { title: '复选框', routerLink: { name: 'ComponentTreeSelectCheckbox' } },
+          { title: '连接线', routerLink: { name: 'ComponentTreeSelectShowLine' } }
+        ]
+      },
       {
         title: 'Upload 上传',
         children: [
@@ -1322,17 +1336,40 @@ export const navConfigList: NavVO[] = [
   },
   tableNavConfig,
   {
-    title: 'Tree 树形组件',
+    i18nKey: 'app.aside.menu.treeTitle',
     children: [
       { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tree' } } },
-      { title: '尺寸大小', routerLink: { name: 'ComponentTreeSize' } },
-      { title: '触发方式', routerLink: { name: 'ComponentTreeTrigger' } },
-      { title: '高亮行', routerLink: { name: 'ComponentTreeCurrent' } },
-      { title: '单选框', routerLink: { name: 'ComponentTreeRadio' } },
-      { title: '复选框', routerLink: { name: 'ComponentTreeCheckbox' } },
-      { title: '隐藏图标', routerLink: { name: 'ComponentTreeShowIcon' } },
-      { title: '自定义图标', routerLink: { name: 'ComponentTreeIcon' } },
-      { title: '连接线', routerLink: { name: 'ComponentTreeShowLine' } }
+      {
+        title: '基础',
+        children: [
+          { title: '尺寸大小', routerLink: { name: 'ComponentTreeBaseSize' } },
+          { title: '自定义字段', routerLink: { name: 'ComponentTreeBaseField' } },
+          { title: '触发方式', routerLink: { name: 'ComponentTreeBaseTrigger' } },
+          { title: '高亮行', routerLink: { name: 'ComponentTreeBaseCurrent' } },
+          { title: '隐藏图标', routerLink: { name: 'ComponentTreeBaseShowIcon' } },
+          { title: '自定义图标', routerLink: { name: 'ComponentTreeBaseIcon' } },
+          { title: '连接线', routerLink: { name: 'ComponentTreeBaseShowLine' } }
+        ]
+      },
+      {
+        title: '单选框',
+        children: [
+          { title: '单选', routerLink: { name: 'ComponentTreeRadioBase' } },
+          { title: '禁用', routerLink: { name: 'ComponentTreeRadioCheckMethod' } },
+          { title: '显示隐藏', routerLink: { name: 'ComponentTreeRadioVisibleMethod' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeRadioTemplate' } }
+        ]
+      },
+      {
+        title: '复选框',
+        children: [
+          { title: '多选', routerLink: { name: 'ComponentTreeCheckboxBase' } },
+          { title: '节点不关联', routerLink: { name: 'ComponentTreeCheckboxCheckStrictly' } },
+          { title: '禁用', routerLink: { name: 'ComponentTreeCheckboxCheckMethod' } },
+          { title: '显示隐藏', routerLink: { name: 'ComponentTreeCheckboxVisibleMethod' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeCheckboxTemplate' } }
+        ]
+      }
     ]
   },
   {
@@ -1426,10 +1463,10 @@ export const navConfigList: NavVO[] = [
       {
         i18nKey: 'app.aside.menu.modalModalTitle',
         children: [
-          { title: '基础', routerLink: { name: 'ComponentModalModalBase' } },
+          { title: '全局调用', routerLink: { name: 'ComponentModalModalGlobal' } },
+          { title: '弹窗', routerLink: { name: 'ComponentModalModalBase' } },
           { title: '尺寸大小', routerLink: { name: 'ComponentModalModalSize' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentModalModalTemplate' } },
-          { title: '全局调用', routerLink: { name: 'ComponentModalModalGlobal' } },
           { title: '内边距', routerLink: { name: 'ComponentModalModalPadding' } },
           { title: '遮罩层', routerLink: { name: 'ComponentModalModalMask' } },
           { title: '锁定页面', routerLink: { name: 'ComponentModalModalLockView' } },
@@ -1440,6 +1477,7 @@ export const navConfigList: NavVO[] = [
           { title: '操作按钮', routerLink: { name: 'ComponentModalModalButton' } },
           { title: '拖动调整宽高', routerLink: { name: 'ComponentModalModalResize' } },
           { title: '最大化与最小化', routerLink: { name: 'ComponentModalModalZoom' } },
+          { title: '全屏展示', routerLink: { name: 'ComponentModalModalFullscreen' } },
           { title: '记忆功能', routerLink: { name: 'ComponentModalModalRemember' } },
           { title: '嵌入 iframe', routerLink: { name: 'ComponentModalModalIframe' } },
           { title: '完整功能', routerLink: { name: 'ComponentModalModalFull' } }
@@ -1455,6 +1493,7 @@ export const navConfigList: NavVO[] = [
         i18nKey: 'app.aside.menu.printTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'print' } } },
+          { title: '全局调用', routerLink: { name: 'ComponentPrintGlobal' } },
           {
             title: '常规打印',
             children: [

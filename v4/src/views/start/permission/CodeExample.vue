@@ -5,8 +5,8 @@
         <vxe-tip status="primary" title="组件权限控制">
           <div>通过权限控制，您可以轻松对各类组件进行精确的控制。例如：菜单、表格按钮等...</div>
         </vxe-tip>
-        <vxe-tip status="success">
-          支持权限码的组件：vxe-button、vxe-button-group、vxe-link、vxe-menu、vxe-tabs
+        <vxe-tip status="error">
+          只对支持权限码的组件有效
         </vxe-tip>
       </template>
 

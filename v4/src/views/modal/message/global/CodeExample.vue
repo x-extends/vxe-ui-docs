@@ -1,9 +1,13 @@
 <template>
   <div>
-    <CodeLight path="modal/message/global/Demo1">
+    <CodeLight>
       <template #tip>
-        <vxe-tip status="primary" title="消息框">
-          通过全局函数调用 VxeUI.modal.message({}) 可以很灵活的用于各种场景。
+        <vxe-tip status="primary" title="全局调用"></vxe-tip>
+        <vxe-tip status="success">
+          <div>弹出消息框：VxeUI.modal.message({})</div>
+          <div>根据ID获取指定弹框：VxeUI.modal.get(id)</div>
+          <div>根据ID关闭指定弹框：VxeUI.modal.close(id)</div>
+          <div>关闭全部弹框：VxeUI.modal.close()</div>
         </vxe-tip>
       </template>
     </CodeLight>

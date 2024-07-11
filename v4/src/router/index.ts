@@ -872,6 +872,11 @@ const tableRouteConfig: RouteRecordRaw = {
           path: 'vxe-select',
           name: 'ComponentTableEditRenderVxeSelect',
           component: () => import('@/views/table/editRender/vxe-select/CodeExample.vue')
+        },
+        {
+          path: 'vxe-tree-select',
+          name: 'ComponentTableEditRenderVxeTreeSelect',
+          component: () => import('@/views/table/editRender/vxe-tree-select/CodeExample.vue')
         }
       ]
     },
@@ -1728,6 +1733,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'vxe-select',
           name: 'ComponentGridEditRenderVxeSelect',
           component: () => import('@/views/grid/editRender/vxe-select/CodeExample.vue')
+        },
+        {
+          path: 'vxe-tree-select',
+          name: 'ComponentGridEditRenderVxeTreeSelect',
+          component: () => import('@/views/grid/editRender/vxe-tree-select/CodeExample.vue')
         },
         {
           path: 'cellDisable',
@@ -3404,6 +3414,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/modal/modal/zoom/CodeExample.vue')
           },
           {
+            path: 'fullscreen',
+            name: 'ComponentModalModalFullscreen',
+            component: () => import('@/views/modal/modal/fullscreen/CodeExample.vue')
+          },
+          {
             path: 'remember',
             name: 'ComponentModalModalRemember',
             component: () => import('@/views/modal/modal/remember/CodeExample.vue')
@@ -3640,6 +3655,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'print',
         children: [
           {
+            path: 'global',
+            name: 'ComponentPrintGlobal',
+            component: () => import('@/views/print/global/CodeExample.vue')
+          },
+          {
             path: 'base',
             children: [
               {
@@ -3700,44 +3720,139 @@ const routes: Array<RouteRecordRaw> = [
         path: 'tree',
         children: [
           {
-            path: 'size',
-            name: 'ComponentTreeSize',
-            component: () => import('@/views/tree/size/CodeExample.vue')
-          },
-          {
-            path: 'trigger',
-            name: 'ComponentTreeTrigger',
-            component: () => import('@/views/tree/trigger/CodeExample.vue')
-          },
-          {
-            path: 'current',
-            name: 'ComponentTreeCurrent',
-            component: () => import('@/views/tree/current/CodeExample.vue')
-          },
-          {
-            path: 'radio',
-            name: 'ComponentTreeRadio',
-            component: () => import('@/views/tree/radio/CodeExample.vue')
+            path: 'base',
+            children: [
+              {
+                path: 'size',
+                name: 'ComponentTreeBaseSize',
+                component: () => import('@/views/tree/base/size/CodeExample.vue')
+              },
+              {
+                path: 'field',
+                name: 'ComponentTreeBaseField',
+                component: () => import('@/views/tree/base/field/CodeExample.vue')
+              },
+              {
+                path: 'trigger',
+                name: 'ComponentTreeBaseTrigger',
+                component: () => import('@/views/tree/base/trigger/CodeExample.vue')
+              },
+              {
+                path: 'current',
+                name: 'ComponentTreeBaseCurrent',
+                component: () => import('@/views/tree/base/current/CodeExample.vue')
+              },
+              {
+                path: 'showIcon',
+                name: 'ComponentTreeBaseShowIcon',
+                component: () => import('@/views/tree/base/showIcon/CodeExample.vue')
+              },
+              {
+                path: 'icon',
+                name: 'ComponentTreeBaseIcon',
+                component: () => import('@/views/tree/base/icon/CodeExample.vue')
+              },
+              {
+                path: 'showLine',
+                name: 'ComponentTreeBaseShowLine',
+                component: () => import('@/views/tree/base/showLine/CodeExample.vue')
+              }
+            ]
           },
           {
             path: 'checkbox',
-            name: 'ComponentTreeCheckbox',
-            component: () => import('@/views/tree/checkbox/CodeExample.vue')
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentTreeCheckboxBase',
+                component: () => import('@/views/tree/checkbox/base/CodeExample.vue')
+              },
+              {
+                path: 'checkStrictly',
+                name: 'ComponentTreeCheckboxCheckStrictly',
+                component: () => import('@/views/tree/checkbox/checkStrictly/CodeExample.vue')
+              },
+              {
+                path: 'checkMethod',
+                name: 'ComponentTreeCheckboxCheckMethod',
+                component: () => import('@/views/tree/checkbox/checkMethod/CodeExample.vue')
+              },
+              {
+                path: 'visibleMethod',
+                name: 'ComponentTreeCheckboxVisibleMethod',
+                component: () => import('@/views/tree/checkbox/visibleMethod/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                name: 'ComponentTreeCheckboxTemplate',
+                component: () => import('@/views/tree/checkbox/template/CodeExample.vue')
+              }
+            ]
           },
           {
-            path: 'showIcon',
-            name: 'ComponentTreeShowIcon',
-            component: () => import('@/views/tree/showIcon/CodeExample.vue')
+            path: 'radio',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentTreeRadioBase',
+                component: () => import('@/views/tree/radio/base/CodeExample.vue')
+              },
+              {
+                path: 'checkMethod',
+                name: 'ComponentTreeRadioCheckMethod',
+                component: () => import('@/views/tree/radio/checkMethod/CodeExample.vue')
+              },
+              {
+                path: 'visibleMethod',
+                name: 'ComponentTreeRadioVisibleMethod',
+                component: () => import('@/views/tree/radio/visibleMethod/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                name: 'ComponentTreeRadioTemplate',
+                component: () => import('@/views/tree/radio/template/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
+      {
+        path: 'treeSelect',
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentTreeSelectSize',
+            component: () => import('@/views/treeSelect/size/CodeExample.vue')
+          },
+          {
+            path: 'base',
+            name: 'ComponentTreeSelectBase',
+            component: () => import('@/views/treeSelect/base/CodeExample.vue')
+          },
+          {
+            path: 'multiple',
+            name: 'ComponentTreeSelectMultiple',
+            component: () => import('@/views/treeSelect/multiple/CodeExample.vue')
           },
           {
             path: 'icon',
-            name: 'ComponentTreeIcon',
-            component: () => import('@/views/tree/icon/CodeExample.vue')
+            name: 'ComponentTreeSelectIcon',
+            component: () => import('@/views/treeSelect/icon/CodeExample.vue')
+          },
+          {
+            path: 'radio',
+            name: 'ComponentTreeSelectRadio',
+            component: () => import('@/views/treeSelect/radio/CodeExample.vue')
+          },
+          {
+            path: 'checkbox',
+            name: 'ComponentTreeSelectCheckbox',
+            component: () => import('@/views/treeSelect/checkbox/CodeExample.vue')
           },
           {
             path: 'showLine',
-            name: 'ComponentTreeShowLine',
-            component: () => import('@/views/tree/showLine/CodeExample.vue')
+            name: 'ComponentTreeSelectShowLine',
+            component: () => import('@/views/treeSelect/showLine/CodeExample.vue')
           }
         ]
       },
