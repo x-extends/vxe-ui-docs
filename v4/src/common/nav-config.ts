@@ -38,7 +38,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '边框', routerLink: { name: 'ComponentTableBaseBorder' } },
             { title: '圆角', routerLink: { name: 'ComponentTableBaseRound' } },
             { title: '对齐方式', routerLink: { name: 'ComponentTableBaseAlign' } },
-            { title: '列宽设置', routerLink: { name: 'ComponentTableBaseWidth' } },
+            { title: '列宽', routerLink: { name: 'ComponentTableBaseWidth' } },
             { title: '自动换行', routerLink: { name: 'ComponentTableBaseAutoBreak' } },
             { title: '溢出隐藏', routerLink: { name: 'ComponentTableBaseOverflow' } },
             { title: '文本提示', routerLink: { name: 'ComponentTableBaseTooltip' } },
@@ -371,7 +371,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '边框', routerLink: { name: 'ComponentGridBaseBorder' } },
             { title: '圆角', routerLink: { name: 'ComponentGridBaseRound' } },
             { title: '对齐方式', routerLink: { name: 'ComponentGridBaseAlign' } },
-            { title: '列宽设置', routerLink: { name: 'ComponentGridBaseWidth' } },
+            { title: '列宽', routerLink: { name: 'ComponentGridBaseWidth' } },
             { title: '自动换行', routerLink: { name: 'ComponentGridBaseAutoBreak' } },
             // { title: '溢出隐藏', routerLink: { name: 'ComponentGridBaseOverflow' } },
             // { title: '文本提示', routerLink: { name: 'ComponentGridBaseTooltip' } },
@@ -1375,6 +1375,13 @@ export const navConfigList: NavVO[] = [
           { title: '禁用', routerLink: { name: 'ComponentTreeCheckboxCheckMethod' } },
           { title: '显示隐藏', routerLink: { name: 'ComponentTreeCheckboxVisibleMethod' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeCheckboxTemplate' } }
+        ]
+      },
+      {
+        title: '懒加载',
+        children: [
+          { title: '懒加载子节点', routerLink: { name: 'ComponentTreeLazyLoadMethod' } },
+          { title: '加载失败', routerLink: { name: 'ComponentTreeLazyError' } }
         ]
       }
     ]

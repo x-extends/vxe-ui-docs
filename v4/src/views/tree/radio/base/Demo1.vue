@@ -11,11 +11,16 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeTreePropTypes } from 'vxe-pc-ui'
+
+interface NodeVO {
+  title: string
+  id: string
+  parentId?: string | null
+}
 
 const checkNodeKey = ref(3)
 
-const treeList = ref<VxeTreePropTypes.Data>([
+const treeList = ref<NodeVO[]>([
   { title: '节点2', id: '2', parentId: null },
   { title: '节点3', id: '3', parentId: null },
   { title: '节点3-1', id: '31', parentId: '3' },

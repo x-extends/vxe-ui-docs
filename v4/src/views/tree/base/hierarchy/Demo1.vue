@@ -9,9 +9,14 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeTreePropTypes } from 'vxe-pc-ui'
 
-const treeList = ref<VxeTreePropTypes.Data>([
+interface NodeVO {
+  title: string
+  id: string
+  children?: NodeVO[]
+}
+
+const treeList = ref<NodeVO[]>([
   { title: '节点2', id: '2' },
   {
     title: '节点3',

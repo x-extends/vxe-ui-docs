@@ -3848,6 +3848,21 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/tree/radio/template/CodeExample.vue')
               }
             ]
+          },
+          {
+            path: 'lazy',
+            children: [
+              {
+                path: 'loadMethod',
+                name: 'ComponentTreeLazyLoadMethod',
+                component: () => import('@/views/tree/lazy/loadMethod/CodeExample.vue')
+              },
+              {
+                path: 'error',
+                name: 'ComponentTreeLazyError',
+                component: () => import('@/views/tree/lazy/error/CodeExample.vue')
+              }
+            ]
           }
         ]
       },
