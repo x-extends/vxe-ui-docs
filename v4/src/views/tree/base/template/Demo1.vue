@@ -1,6 +1,18 @@
 <template>
   <div>
-    <vxe-tree :data="treeList" transform is-hover></vxe-tree>
+    <vxe-tree
+      transform
+      is-hover
+      :data="treeList">
+      <template #title="{ node }">
+        <span>{{ node.title }}</span>
+        <vxe-icon status="error" name="warning-triangle"></vxe-icon>
+      </template>
+      <template #extra>
+        <vxe-link href="https://vxeui.com/" status="primary">查看</vxe-link>
+        <vxe-button mode="text" status="error" icon="vxe-icon-delete-fill">删除</vxe-button>
+      </template>
+    </vxe-tree>
   </div>
 </template>
 

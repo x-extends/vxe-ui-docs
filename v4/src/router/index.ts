@@ -3728,9 +3728,29 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/tree/base/size/CodeExample.vue')
               },
               {
+                path: 'height',
+                name: 'ComponentTreeBaseHeight',
+                component: () => import('@/views/tree/base/height/CodeExample.vue')
+              },
+              {
+                path: 'loading',
+                name: 'ComponentTreeBaseLoading',
+                component: () => import('@/views/tree/base/loading/CodeExample.vue')
+              },
+              {
                 path: 'field',
                 name: 'ComponentTreeBaseField',
                 component: () => import('@/views/tree/base/field/CodeExample.vue')
+              },
+              {
+                path: 'hierarchy',
+                name: 'ComponentTreeBaseHierarchy',
+                component: () => import('@/views/tree/base/hierarchy/CodeExample.vue')
+              },
+              {
+                path: 'leveling',
+                name: 'ComponentTreeBaseLeveling',
+                component: () => import('@/views/tree/base/leveling/CodeExample.vue')
               },
               {
                 path: 'trigger',
@@ -3756,6 +3776,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'showLine',
                 name: 'ComponentTreeBaseShowLine',
                 component: () => import('@/views/tree/base/showLine/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                name: 'ComponentTreeBaseTemplate',
+                component: () => import('@/views/tree/base/template/CodeExample.vue')
               }
             ]
           },
@@ -3766,6 +3791,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'base',
                 name: 'ComponentTreeCheckboxBase',
                 component: () => import('@/views/tree/checkbox/base/CodeExample.vue')
+              },
+              {
+                path: 'highlight',
+                name: 'ComponentTreeCheckboxHighlight',
+                component: () => import('@/views/tree/checkbox/highlight/CodeExample.vue')
               },
               {
                 path: 'checkStrictly',
@@ -3796,6 +3826,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'base',
                 name: 'ComponentTreeRadioBase',
                 component: () => import('@/views/tree/radio/base/CodeExample.vue')
+              },
+              {
+                path: 'highlight',
+                name: 'ComponentTreeRadioHighlight',
+                component: () => import('@/views/tree/radio/highlight/CodeExample.vue')
               },
               {
                 path: 'checkMethod',

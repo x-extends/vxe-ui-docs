@@ -1343,18 +1343,24 @@ export const navConfigList: NavVO[] = [
         title: '基础',
         children: [
           { title: '尺寸大小', routerLink: { name: 'ComponentTreeBaseSize' } },
+          { title: '层级结构', routerLink: { name: 'ComponentTreeBaseHierarchy' } },
+          { title: '平级结构', routerLink: { name: 'ComponentTreeBaseLeveling' } },
+          { title: '高度', routerLink: { name: 'ComponentTreeBaseHeight' } },
+          { title: '加载中', routerLink: { name: 'ComponentTreeBaseLoading' } },
           { title: '自定义字段', routerLink: { name: 'ComponentTreeBaseField' } },
           { title: '触发方式', routerLink: { name: 'ComponentTreeBaseTrigger' } },
-          { title: '高亮行', routerLink: { name: 'ComponentTreeBaseCurrent' } },
+          { title: '高亮当前节点', routerLink: { name: 'ComponentTreeBaseCurrent' } },
           { title: '隐藏图标', routerLink: { name: 'ComponentTreeBaseShowIcon' } },
           { title: '自定义图标', routerLink: { name: 'ComponentTreeBaseIcon' } },
-          { title: '连接线', routerLink: { name: 'ComponentTreeBaseShowLine' } }
+          { title: '连接线', routerLink: { name: 'ComponentTreeBaseShowLine' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeBaseTemplate' } }
         ]
       },
       {
         title: '单选框',
         children: [
           { title: '单选', routerLink: { name: 'ComponentTreeRadioBase' } },
+          { title: '高亮选中节点', routerLink: { name: 'ComponentTreeRadioHighlight' } },
           { title: '禁用', routerLink: { name: 'ComponentTreeRadioCheckMethod' } },
           { title: '显示隐藏', routerLink: { name: 'ComponentTreeRadioVisibleMethod' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeRadioTemplate' } }
@@ -1364,6 +1370,7 @@ export const navConfigList: NavVO[] = [
         title: '复选框',
         children: [
           { title: '多选', routerLink: { name: 'ComponentTreeCheckboxBase' } },
+          { title: '高亮选中节点', routerLink: { name: 'ComponentTreeCheckboxHighlight' } },
           { title: '节点不关联', routerLink: { name: 'ComponentTreeCheckboxCheckStrictly' } },
           { title: '禁用', routerLink: { name: 'ComponentTreeCheckboxCheckMethod' } },
           { title: '显示隐藏', routerLink: { name: 'ComponentTreeCheckboxVisibleMethod' } },
