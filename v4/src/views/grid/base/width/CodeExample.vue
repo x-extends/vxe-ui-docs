@@ -26,5 +26,11 @@
         <vxe-tip status="primary">设置百分比</vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="grid/base/width/Demo5">
+      <template #tip>
+        <vxe-tip status="primary">根据内容自适应宽度</vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>
