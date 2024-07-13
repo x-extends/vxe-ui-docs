@@ -43,7 +43,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { VxeTableInstance, VxeColumnPropTypes } from 'vxe-table'
-import XEUtils from 'xe-utils'
 
 interface RowVO {
   id: number
@@ -72,11 +71,7 @@ const toggleFixedColumn = (field: string, type: VxeColumnPropTypes.Fixed) => {
   if ($table) {
     const column = $table.getColumnByField(field)
     if (column) {
-      const groupFixed = column.fixed ? null : type
-      // 将分组整体设置固定列
-      XEUtils.eachTree([column], column => {
-        column.fixed = groupFixed
-      })
+      $table.setColumnFixed(column, column.fixed ? null : type)
     }
   }
 }

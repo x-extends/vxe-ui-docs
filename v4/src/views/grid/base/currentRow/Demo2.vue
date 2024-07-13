@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-grid v-bind="gridOptions"></vxe-grid>
+    <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
 
@@ -18,35 +18,22 @@ interface RowVO {
 }
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
-  border: true,
-  height: 400,
+  height: 300,
+  rowConfig: {
+    isCurrent: true,
+    isHover: true,
+    currentMethod ({ row }) {
+      if (row.age > 30) {
+        return false
+      }
+      return true
+    }
+  },
   columns: [
-    {
-      title: '基本信息',
-      children: [
-        { type: 'seq', width: 70 },
-        { field: 'name', title: 'Name' }
-      ]
-    },
-    {
-      title: '更多信息',
-      children: [
-        { field: 'role', title: 'Role' },
-        {
-          title: '详细信息',
-          children: [
-            { field: 'sex', title: 'Sex' },
-            { field: 'age', title: 'Age' }
-          ]
-        }
-      ]
-    },
-    {
-      title: '分类信息',
-      children: [
-        { field: 'date3', title: 'Date' }
-      ]
-    },
+    { type: 'seq', width: 70 },
+    { field: 'name', title: 'Name' },
+    { field: 'sex', title: 'Sex' },
+    { field: 'age', title: 'Age' },
     { field: 'address', title: 'Address', showOverflow: true }
   ],
   data: [
