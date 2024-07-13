@@ -85,6 +85,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           children: [
             { title: '标准结构', routerLink: { name: 'ComponentTableFooterFooterData' } },
             { title: '自定义数据方法', routerLink: { name: 'ComponentTableFooterFooterMethod' } },
+            { title: '格式化表尾内容', routerLink: { name: 'ComponentTableFooterFooterFooterFormat' } },
             { title: '自定义插槽模板', routerLink: { name: 'ComponentTableFooterTemplate' } }
           ]
         },
@@ -305,7 +306,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '导出 HTML 格式', routerLink: { name: 'ComponentTableExportHtml' } },
             { title: '导出 CSV 格式', routerLink: { name: 'ComponentTableExportCsv' } },
             { title: '导出 XLSX 格式', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-xlsx/table/export' },
-            { title: '导出 PDF 格式', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-pdf/table/export' },
+            { title: '格式化单元格内容', routerLink: { name: 'ComponentTableExportExportMethod' } },
             { title: '高级导出', routerLink: { name: 'ComponentTableExportAdvanced' } }
           ]
         },
@@ -602,6 +603,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '导出 XLSX 格式', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-xlsx/grid/export' },
             { title: '导出 PDF 格式', isPlugin: true, linkUrl: 'https://vxeui.com/other4/#/plugin-export-pdf/grid/export' },
             { title: '自定义数据', routerLink: { name: 'ComponentGridExportData' } },
+            { title: '格式化导出内容', routerLink: { name: 'ComponentGridExportExportMethod' } },
             { title: '高级导出', routerLink: { name: 'ComponentGridExportAdvanced' } },
             { title: '自定义导出类型', routerLink: { name: 'ComponentGridExportTypes' } },
             { title: '服务端导出', routerLink: { name: 'ComponentGridExportRemote' } },
@@ -1352,6 +1354,7 @@ export const navConfigList: NavVO[] = [
           { title: '高亮当前节点', routerLink: { name: 'ComponentTreeBaseCurrent' } },
           { title: '隐藏图标', routerLink: { name: 'ComponentTreeBaseShowIcon' } },
           { title: '自定义图标', routerLink: { name: 'ComponentTreeBaseIcon' } },
+          { title: '手风琴展开效果', routerLink: { name: 'ComponentTreeBaseAccordion' } },
           { title: '连接线', routerLink: { name: 'ComponentTreeBaseShowLine' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeBaseTemplate' } }
         ]
@@ -1381,7 +1384,8 @@ export const navConfigList: NavVO[] = [
         title: '懒加载',
         children: [
           { title: '懒加载子节点', routerLink: { name: 'ComponentTreeLazyLoadMethod' } },
-          { title: '加载失败', routerLink: { name: 'ComponentTreeLazyError' } }
+          { title: '加载失败', routerLink: { name: 'ComponentTreeLazyError' } },
+          { title: '显示连接线', routerLink: { name: 'ComponentTreeLazyShowLine' } }
         ]
       }
     ]

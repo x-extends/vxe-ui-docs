@@ -219,6 +219,11 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/footer/footerMethod/CodeExample.vue')
         },
         {
+          path: 'footerFormat',
+          name: 'ComponentTableFooterFooterFooterFormat',
+          component: () => import('@/views/table/footer/footerFormat/CodeExample.vue')
+        },
+        {
           path: 'template',
           name: 'ComponentTableFooterTemplate',
           component: () => import('@/views/table/footer/template/CodeExample.vue')
@@ -992,6 +997,11 @@ const tableRouteConfig: RouteRecordRaw = {
           path: 'csv',
           name: 'ComponentTableExportCsv',
           component: () => import('@/views/table/export/csv/CodeExample.vue')
+        },
+        {
+          path: 'exportMethod',
+          name: 'ComponentTableExportExportMethod',
+          component: () => import('@/views/table/export/exportMethod/CodeExample.vue')
         },
         {
           path: 'advanced',
@@ -1898,6 +1908,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'data',
           name: 'ComponentGridExportData',
           component: () => import('@/views/grid/export/data/CodeExample.vue')
+        },
+        {
+          path: 'exportMethod',
+          name: 'ComponentGridExportExportMethod',
+          component: () => import('@/views/grid/export/exportMethod/CodeExample.vue')
         },
         {
           path: 'advanced',
@@ -3773,6 +3788,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/tree/base/icon/CodeExample.vue')
               },
               {
+                path: 'accordion',
+                name: 'ComponentTreeBaseAccordion',
+                component: () => import('@/views/tree/base/accordion/CodeExample.vue')
+              },
+              {
                 path: 'showLine',
                 name: 'ComponentTreeBaseShowLine',
                 component: () => import('@/views/tree/base/showLine/CodeExample.vue')
@@ -3861,6 +3881,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'error',
                 name: 'ComponentTreeLazyError',
                 component: () => import('@/views/tree/lazy/error/CodeExample.vue')
+              },
+              {
+                path: 'showLine',
+                name: 'ComponentTreeLazyShowLine',
+                component: () => import('@/views/tree/lazy/showLine/CodeExample.vue')
               }
             ]
           }

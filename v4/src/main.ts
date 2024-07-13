@@ -23,6 +23,7 @@ import VxeTable from 'vxe-table'
 import 'vxe-table/es/style.css'
 
 import '@/views/table/base/format/demo2.format'
+import '@/views/table/footer/footerFormat/demo2.footerFormat'
 
 import '@/views/global/formats/table/base/demo1.table.formats'
 

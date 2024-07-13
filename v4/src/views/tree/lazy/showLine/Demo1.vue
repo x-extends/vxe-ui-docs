@@ -4,7 +4,9 @@
       is-hover
       lazy
       show-checkbox
-      has-child-field="hasChild"
+      show-line
+      icon-open="vxe-icon-square-minus"
+      icon-close="vxe-icon-square-plus"
       :load-method="loadMethod"
       :data="treeList">
     </vxe-tree>

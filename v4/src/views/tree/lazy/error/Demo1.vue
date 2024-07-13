@@ -3,16 +3,19 @@
     <vxe-tree
       is-hover
       lazy
+      show-checkbox
       has-child-field="hasChild"
       :load-method="loadMethod"
-      :data="treeList">
+      :data="treeList"
+      @load-success="loadSuccess"
+      @load-error="loadError">
     </vxe-tree>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeTreePropTypes } from 'vxe-pc-ui'
+import { VxeUI, VxeTreePropTypes, VxeTreeEvents } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
@@ -45,5 +48,19 @@ const getNodeListApi = (node: any) => {
 
 const loadMethod: VxeTreePropTypes.LoadMethod<NodeVO> = ({ node }) => {
   return getNodeListApi(node)
+}
+
+const loadSuccess: VxeTreeEvents.LoadSuccess = () => {
+  VxeUI.modal.message({
+    content: '加载成功',
+    status: 'success'
+  })
+}
+
+const loadError: VxeTreeEvents.LoadError = () => {
+  VxeUI.modal.message({
+    content: '加载失败',
+    status: 'error'
+  })
 }
 </script>
