@@ -85,7 +85,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           children: [
             { title: '标准结构', routerLink: { name: 'ComponentTableFooterFooterData' } },
             { title: '自定义数据方法', routerLink: { name: 'ComponentTableFooterFooterMethod' } },
-            { title: '格式化表尾内容', routerLink: { name: 'ComponentTableFooterFooterFooterFormat' } },
+            { title: '格式化表尾内容', routerLink: { name: 'ComponentTableFooterFooterFormat' } },
             { title: '自定义插槽模板', routerLink: { name: 'ComponentTableFooterTemplate' } }
           ]
         },
@@ -104,7 +104,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '绑定字段', routerLink: { name: 'ComponentTableCheckboxField' } },
             { title: '禁用', routerLink: { name: 'ComponentTableCheckboxCheckMethod' } },
             { title: '显示隐藏', routerLink: { name: 'ComponentTableCheckboxVisibleMethod' } },
-            { title: '鼠标滑动范围选择', routerLink: { name: 'ComponentTableCheckboxRange' } }
+            { title: '鼠标滑动范围选择', routerLink: { name: 'ComponentTableCheckboxRange' } },
+            { title: '范围选择与单元格选取', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaCheckbox' }
           ]
         },
         {
@@ -399,7 +400,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '序号', routerLink: { name: 'ComponentGridBaseSeq' } },
             // { title: '单选框', routerLink: { name: 'ComponentGridBaseRadio' } },
             // { title: '复选框', routerLink: { name: 'ComponentGridBaseSelection' } },
-            // { title: 'HTML 类型', routerLink: { name: 'ComponentGridBaseHtml' } },
+            { title: 'HTML 类型', routerLink: { name: 'ComponentGridBaseHtml' } },
             { title: '完整案例', routerLink: { name: 'ComponentGridBaseFull' } }
           ]
         },
@@ -429,7 +430,28 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '表尾数据',
           children: [
             { title: '标准结构', routerLink: { name: 'ComponentGridFooterFooterData' } },
-            { title: '自定义数据方法', routerLink: { name: 'ComponentGridFooterFooterMethod' } }
+            { title: '自定义数据方法', routerLink: { name: 'ComponentGridFooterFooterMethod' } },
+            { title: '格式化表尾内容', routerLink: { name: 'ComponentGridFooterFooterFormat' } },
+            { title: '自定义插槽模板', routerLink: { name: 'ComponentGridFooterTemplate' } }
+          ]
+        },
+        {
+          title: '单选框',
+          children: [
+            { title: '高亮选择行', routerLink: { name: 'ComponentGridRadioHighlight' } },
+            { title: '禁用', routerLink: { name: 'ComponentGridRadioCheckMethod' } },
+            { title: '显示隐藏', routerLink: { name: 'ComponentGridRadioVisibleMethod' } }
+          ]
+        },
+        {
+          title: '复选框',
+          children: [
+            { title: '高亮选择行', routerLink: { name: 'ComponentGridCheckboxHighlight' } },
+            { title: '绑定字段', routerLink: { name: 'ComponentGridCheckboxField' } },
+            { title: '禁用', routerLink: { name: 'ComponentGridCheckboxCheckMethod' } },
+            { title: '显示隐藏', routerLink: { name: 'ComponentGridCheckboxVisibleMethod' } },
+            { title: '鼠标滑动范围选择', routerLink: { name: 'ComponentGridCheckboxRange' } },
+            { title: '范围选择与单元格选取', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaCheckbox' }
           ]
         },
         {

@@ -26,8 +26,6 @@ interface RowVO {
   address: string
 }
 
-const defaultSelecteRowKeys = ref([10002, 10003])
-
 const tableData = ref<RowVO[]>([
   { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
   { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },

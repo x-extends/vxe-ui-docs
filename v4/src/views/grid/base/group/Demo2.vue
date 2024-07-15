@@ -57,7 +57,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
           title: '详细信息',
           children: [
             { field: 'sex', title: 'Sex', width: 200 },
-            { field: 'age', title: 'Age', width: 200 }
+            { field: 'age', title: 'Age', width: 300 }
           ]
         }
       ]
@@ -66,7 +66,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
       field: 'group3',
       title: '分类信息2',
       children: [
-        { field: 'attr6', title: 'Attr6', width: 120 }
+        { field: 'attr6', title: 'Attr6', width: 2000 }
       ]
     },
     {

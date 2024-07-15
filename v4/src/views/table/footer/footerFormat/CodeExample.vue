@@ -11,7 +11,7 @@
     <CodeLight path="table/footer/footerFormat/Demo2" :extraImports="['./demo2.footerFormat.ts']">
       <template #tip>
         <vxe-tip status="primary">
-          全局格式化内容，使用 footer-formatter 添加格式函数，会在渲染的时候自动调用<br>
+          全局格式化内容，使用 <ApiLink name="column" prop="footer-formatter"/> 添加格式函数，会在渲染的时候自动调用<br>
         </vxe-tip>
       </template>
     </CodeLight>

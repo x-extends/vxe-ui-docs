@@ -220,7 +220,7 @@ const tableRouteConfig: RouteRecordRaw = {
         },
         {
           path: 'footerFormat',
-          name: 'ComponentTableFooterFooterFooterFormat',
+          name: 'ComponentTableFooterFooterFormat',
           component: () => import('@/views/table/footer/footerFormat/CodeExample.vue')
         },
         {
@@ -1363,6 +1363,66 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'footerMethod',
           name: 'ComponentGridFooterFooterMethod',
           component: () => import('@/views/grid/footer/footerMethod/CodeExample.vue')
+        },
+        {
+          path: 'footerFormat',
+          name: 'ComponentGridFooterFooterFormat',
+          component: () => import('@/views/grid/footer/footerFormat/CodeExample.vue')
+        },
+        {
+          path: 'template',
+          name: 'ComponentGridFooterTemplate',
+          component: () => import('@/views/grid/footer/template/CodeExample.vue')
+        }
+      ]
+    },
+    {
+      path: 'radio',
+      children: [
+        {
+          path: 'highlight',
+          name: 'ComponentGridRadioHighlight',
+          component: () => import('@/views/grid/radio/highlight/CodeExample.vue')
+        },
+        {
+          path: 'checkMethod',
+          name: 'ComponentGridRadioCheckMethod',
+          component: () => import('@/views/grid/radio/checkMethod/CodeExample.vue')
+        },
+        {
+          path: 'visibleMethod',
+          name: 'ComponentGridRadioVisibleMethod',
+          component: () => import('@/views/grid/radio/visibleMethod/CodeExample.vue')
+        }
+      ]
+    },
+    {
+      path: 'checkbox',
+      children: [
+        {
+          path: 'highlight',
+          name: 'ComponentGridCheckboxHighlight',
+          component: () => import('@/views/grid/checkbox/highlight/CodeExample.vue')
+        },
+        {
+          path: 'field',
+          name: 'ComponentGridCheckboxField',
+          component: () => import('@/views/grid/checkbox/field/CodeExample.vue')
+        },
+        {
+          path: 'checkMethod',
+          name: 'ComponentGridCheckboxCheckMethod',
+          component: () => import('@/views/grid/checkbox/checkMethod/CodeExample.vue')
+        },
+        {
+          path: 'visibleMethod',
+          name: 'ComponentGridCheckboxVisibleMethod',
+          component: () => import('@/views/grid/checkbox/visibleMethod/CodeExample.vue')
+        },
+        {
+          path: 'range',
+          name: 'ComponentGridCheckboxRange',
+          component: () => import('@/views/grid/checkbox/range/CodeExample.vue')
         }
       ]
     },
