@@ -1314,13 +1314,21 @@ export const navConfigList: NavVO[] = [
           { title: '自定义图标', routerLink: { name: 'ComponentTreeSelectIcon' } },
           { title: '单选框', routerLink: { name: 'ComponentTreeSelectRadio' } },
           { title: '复选框', routerLink: { name: 'ComponentTreeSelectCheckbox' } },
-          { title: '连接线', routerLink: { name: 'ComponentTreeSelectShowLine' } }
+          { title: '连接线', routerLink: { name: 'ComponentTreeSelectShowLine' } },
+          { title: '懒加载子节点', routerLink: { name: 'ComponentTreeSelectLazy' } }
         ]
       },
       {
         title: 'Upload 上传',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'upload' } } },
+          {
+            title: '文件操作',
+            children: [
+              { title: '读取文件', routerLink: { name: 'ComponentUploadGlobalReadFile' } },
+              { title: '下载文件', routerLink: { name: 'ComponentUploadGlobalSaveFile' } }
+            ]
+          },
           {
             title: '文件上传',
             children: [

@@ -3988,6 +3988,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'showLine',
             name: 'ComponentTreeSelectShowLine',
             component: () => import('@/views/treeSelect/showLine/CodeExample.vue')
+          },
+          {
+            path: 'lazy',
+            name: 'ComponentTreeSelectLazy',
+            component: () => import('@/views/treeSelect/lazy/CodeExample.vue')
           }
         ]
       },
@@ -4449,6 +4454,21 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'upload',
         children: [
+          {
+            path: 'global',
+            children: [
+              {
+                path: 'readFile',
+                name: 'ComponentUploadGlobalReadFile',
+                component: () => import('@/views/upload/global/readFile/CodeExample.vue')
+              },
+              {
+                path: 'saveFile',
+                name: 'ComponentUploadGlobalSaveFile',
+                component: () => import('@/views/upload/global/saveFile/CodeExample.vue')
+              }
+            ]
+          },
           {
             path: 'file',
             children: [

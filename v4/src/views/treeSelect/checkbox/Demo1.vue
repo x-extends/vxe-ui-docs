@@ -13,13 +13,13 @@
 import { reactive, ref } from 'vue'
 import { VxeTreeSelectPropTypes } from 'vxe-pc-ui'
 
+const val1 = ref([])
+
 const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig>({
   checkboxConfig: {
     showIcon: true
   }
 })
-
-const val1 = ref([])
 
 const treeList = ref<VxeTreeSelectPropTypes.Options>([
   { label: '节点2', value: '2' },
