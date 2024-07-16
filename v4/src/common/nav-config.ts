@@ -1541,7 +1541,12 @@ export const navConfigList: NavVO[] = [
         i18nKey: 'app.aside.menu.printTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'print' } } },
-          { title: '全局调用', routerLink: { name: 'ComponentPrintGlobal' } },
+          {
+            title: '全局调用',
+            children: [
+              { title: '打印', routerLink: { name: 'ComponentPrintGlobalPrint' } }
+            ]
+          },
           {
             title: '常规打印',
             children: [

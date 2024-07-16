@@ -3731,8 +3731,8 @@ const routes: Array<RouteRecordRaw> = [
         children: [
           {
             path: 'global',
-            name: 'ComponentPrintGlobal',
-            component: () => import('@/views/print/global/CodeExample.vue')
+            name: 'ComponentPrintGlobalPrint',
+            component: () => import('@/views/print/global/print/CodeExample.vue')
           },
           {
             path: 'base',
