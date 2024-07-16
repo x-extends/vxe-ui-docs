@@ -1323,7 +1323,7 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'upload' } } },
           {
-            title: '文件操作',
+            title: '全局调用',
             children: [
               { title: '读取文件', routerLink: { name: 'ComponentUploadGlobalReadFile' } },
               { title: '下载文件', routerLink: { name: 'ComponentUploadGlobalSaveFile' } }
