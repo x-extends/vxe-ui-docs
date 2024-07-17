@@ -37,10 +37,6 @@ const showPull = ref(false)
 const toggleEvent = () => {
   showPull.value = !showPull.value
 }
-
-const hideEvent = () => {
-  showPull.value = false
-}
 </script>
 
 <style lang="scss">

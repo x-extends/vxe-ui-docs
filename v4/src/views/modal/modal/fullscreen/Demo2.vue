@@ -12,7 +12,7 @@ let num = 1
 const openEvent = () => {
   VxeUI.modal.open({
     title: '标题',
-    content: '全屏展示',
+    content: `全屏展示 ${num}`,
     mask: false,
     lockView: false,
     escClosable: true,

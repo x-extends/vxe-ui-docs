@@ -8,6 +8,4 @@
 import { ref } from 'vue'
 
 const val1 = ref('')
-const val2 = ref('')
-const val3 = ref(false)
 </script>

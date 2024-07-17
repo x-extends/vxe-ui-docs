@@ -25,11 +25,4 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-
-const btnList = ref([
-  { content: '按钮1', status: 'warning', name: 1 },
-  { content: '按钮1', status: 'success', name: 2 },
-  { content: '按钮1', status: 'error', name: 3 }
-])
 </script>

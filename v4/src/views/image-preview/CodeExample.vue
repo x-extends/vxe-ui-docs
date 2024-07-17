@@ -32,7 +32,6 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
 import { useAppStore } from '@/store/app'
 
 const appStore = useAppStore()
