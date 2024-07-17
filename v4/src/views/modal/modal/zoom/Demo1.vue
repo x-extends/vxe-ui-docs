@@ -2,7 +2,7 @@
   <div>
     <vxe-button content="点击弹出" @click="showPopup = true"></vxe-button>
     <vxe-modal v-model="showPopup" :width="600" :height="400" show-zoom>
-      <div>窗口最大化和最小化</div>
+      <div>窗口最大化与最小化</div>
     </vxe-modal>
   </div>
 </template>

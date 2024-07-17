@@ -1,9 +1,9 @@
 <template>
   <div>
     <vxe-button content="点击弹出" @click="showPopup = true"></vxe-button>
-    <vxe-modal v-model="showPopup" title="标题" :width="600" :height="400" esc-closable>
-      <div>按 Esc 键可关闭</div>
-    </vxe-modal>
+    <vxe-drawer v-model="showPopup" :width="600" :show-close="false">
+      <vxe-button status="primary" @click="showPopup = false">自定义关闭按钮</vxe-button>
+    </vxe-drawer>
   </div>
 </template>
 

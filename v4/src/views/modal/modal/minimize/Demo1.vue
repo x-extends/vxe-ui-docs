@@ -1,8 +1,8 @@
 <template>
   <div>
     <vxe-button content="点击弹出" @click="showPopup = true"></vxe-button>
-    <vxe-modal v-model="showPopup" title="标题" :width="600" :height="400" esc-closable>
-      <div>按 Esc 键可关闭</div>
+    <vxe-modal v-model="showPopup" :width="600" :height="400" show-minimize>
+      <div>窗口最小化</div>
     </vxe-modal>
   </div>
 </template>

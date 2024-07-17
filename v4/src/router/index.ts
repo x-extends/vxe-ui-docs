@@ -54,6 +54,11 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/base/tooltip/CodeExample.vue')
         },
         {
+          path: 'scrollStyle',
+          name: 'ComponentTableBaseScrollStyle',
+          component: () => import('@/views/table/base/scrollStyle/CodeExample.vue')
+        },
+        {
           path: 'stripe',
           name: 'ComponentTableBaseStripe',
           component: () => import('@/views/table/base/stripe/CodeExample.vue')
@@ -3439,6 +3444,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/modal/modal/padding/CodeExample.vue')
           },
           {
+            path: 'loading',
+            name: 'ComponentModalModalLoading',
+            component: () => import('@/views/modal/modal/loading/CodeExample.vue')
+          },
+          {
             path: 'draggable',
             name: 'ComponentModalModalDraggable',
             component: () => import('@/views/modal/modal/draggable/CodeExample.vue')
@@ -3475,8 +3485,18 @@ const routes: Array<RouteRecordRaw> = [
           },
           {
             path: 'template',
-            name: 'ComponentModalModalTemplate',
-            component: () => import('@/views/modal/modal/template/CodeExample.vue')
+            children: [
+              {
+                path: 'layout',
+                name: 'ComponentModalModalTemplateLayout',
+                component: () => import('@/views/modal/modal/template/layout/CodeExample.vue')
+              },
+              {
+                path: 'footer',
+                name: 'ComponentModalModalTemplateFooter',
+                component: () => import('@/views/modal/modal/template/footer/CodeExample.vue')
+              }
+            ]
           },
           {
             path: 'button',
@@ -3484,9 +3504,24 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/modal/modal/button/CodeExample.vue')
           },
           {
+            path: 'maximize',
+            name: 'ComponentModalModalMaximize',
+            component: () => import('@/views/modal/modal/maximize/CodeExample.vue')
+          },
+          {
+            path: 'minimize',
+            name: 'ComponentModalModalMinimize',
+            component: () => import('@/views/modal/modal/minimize/CodeExample.vue')
+          },
+          {
             path: 'zoom',
             name: 'ComponentModalModalZoom',
             component: () => import('@/views/modal/modal/zoom/CodeExample.vue')
+          },
+          {
+            path: 'minimizeLayout',
+            name: 'ComponentModalModalMinimizeLayout',
+            component: () => import('@/views/modal/modal/minimizeLayout/CodeExample.vue')
           },
           {
             path: 'fullscreen',
@@ -3625,6 +3660,11 @@ const routes: Array<RouteRecordRaw> = [
         name: 'ComponentDrawer',
         children: [
           {
+            path: 'size',
+            name: 'ComponentDrawerSize',
+            component: () => import('@/views/drawer/size/CodeExample.vue')
+          },
+          {
             path: 'base',
             name: 'ComponentDrawerBase',
             component: () => import('@/views/drawer/base/CodeExample.vue')
@@ -3635,9 +3675,54 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/drawer/maskClosable/CodeExample.vue')
           },
           {
+            path: 'padding',
+            name: 'ComponentDrawerPadding',
+            component: () => import('@/views/drawer/padding/CodeExample.vue')
+          },
+          {
+            path: 'loading',
+            name: 'ComponentDrawerLoading',
+            component: () => import('@/views/drawer/loading/CodeExample.vue')
+          },
+          {
+            path: 'button',
+            name: 'ComponentDrawerButton',
+            component: () => import('@/views/drawer/button/CodeExample.vue')
+          },
+          {
+            path: 'multiple',
+            name: 'ComponentDrawerMultiple',
+            component: () => import('@/views/drawer/multiple/CodeExample.vue')
+          },
+          {
+            path: 'escClosable',
+            name: 'ComponentDrawerEscClosable',
+            component: () => import('@/views/drawer/escClosable/CodeExample.vue')
+          },
+          {
+            path: 'beforeHide',
+            name: 'ComponentDrawerBeforeHide',
+            component: () => import('@/views/drawer/beforeHide/CodeExample.vue')
+          },
+          {
             path: 'template',
-            name: 'ComponentDrawerTemplate',
-            component: () => import('@/views/drawer/template/CodeExample.vue')
+            children: [
+              {
+                path: 'layout',
+                name: 'ComponentDrawerTemplateLayout',
+                component: () => import('@/views/drawer/template/layout/CodeExample.vue')
+              },
+              {
+                path: 'footer',
+                name: 'ComponentDrawerTemplateFooter',
+                component: () => import('@/views/drawer/template/footer/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'iframe',
+            name: 'ComponentDrawerIframe',
+            component: () => import('@/views/drawer/iframe/CodeExample.vue')
           }
         ]
       },

@@ -15,18 +15,13 @@ const openSlotModal = () => {
     height: 400,
     slots: {
       title () {
-        return <span style="color: red">自定义标题</span>
-      },
-      corner () {
-        return <span style="color: orange">自定义右侧</span>
+        return <div style="background: turquoise">标题</div>
       },
       default () {
-        return <span>
-          <a href="https://vxeui.com/" target="_blank">自定义一个链接</a>
-        </span>
+        return <div style="height:600px;background: beige">内容区</div>
       },
       footer () {
-        return <span style="color: blue">自定义底部</span>
+        return <div style="background: burlywood">底部区</div>
       }
     }
   })
