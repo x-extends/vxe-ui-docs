@@ -20,6 +20,9 @@ const openSlotModal = () => {
       corner () {
         return <div style="background: darkkhaki">标题右侧</div>
       },
+      aside () {
+        return <div style="height:1400px;background: darkorchid">侧边栏</div>
+      },
       default () {
         return <div style="height:1400px;background: burlywood">内容区</div>
       },
