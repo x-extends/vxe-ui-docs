@@ -11,10 +11,14 @@ const openSlotModal = () => {
   VxeUI.modal.open({
     title: '标题',
     showFooter: true,
+    showZoom: true,
     width: 600,
     height: 400,
     slots: {
-      title () {
+      title ({ minimized }) {
+        if (minimized) {
+          return <div style="background: turquoise">窗口最小化</div>
+        }
         return <div style="background: turquoise">标题</div>
       },
       corner () {

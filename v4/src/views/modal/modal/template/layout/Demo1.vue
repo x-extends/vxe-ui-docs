@@ -1,8 +1,9 @@
 <template>
   <div>
-    <vxe-modal v-model="showPopup" title="标题" :width="600" :height="400" show-footer>
-      <template #title>
-        <div style="background: turquoise">标题</div>
+    <vxe-modal v-model="showPopup" title="标题" :width="600" :height="400" show-footer show-zoom>
+      <template #title="{ minimized }">
+        <div v-if="minimized" style="background: turquoise">窗口最小化</div>
+        <div v-else style="background: turquoise">标题</div>
       </template>
       <template #corner>
         <div style="background: darkkhaki">标题右侧</div>
