@@ -234,9 +234,9 @@ gulp.task('build_css_unicode', () => {
 
 gulp.task('build_latest_docs', () => {
   return gulp.src([
-    '_temp/v4/*.html',
-    '_temp/v4/*.ico',
-    '_temp/v4/*.png'
+    'docs/v4/*.html',
+    'docs/v4/*.ico',
+    'docs/v4/*.png'
   ])
     .pipe(gulp.dest('docs'))
 })
@@ -265,7 +265,7 @@ gulp.task('build_v4_docs', gulp.series('clear_docs_temp', 'copy_v4_docs', 'build
   ], { force: true })
 }))
 
-gulp.task('copy_all_docs', gulp.parallel('copy_v4_docs', 'copy_other4_index', 'build_latest_docs'))
+gulp.task('copy_all_docs', gulp.parallel('copy_v4_docs', 'copy_other4_docs', 'build_latest_docs'))
 gulp.task('build_all_docs', gulp.series('clear_docs_temp', 'copy_all_docs', 'build_css_unicode', () => {
   return del([
     '_temp'
