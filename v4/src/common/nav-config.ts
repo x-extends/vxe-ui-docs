@@ -483,6 +483,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '工具栏',
           children: [
+            { title: '左侧按钮', routerLink: { name: 'ComponentGridToolbarButtons' } },
+            { title: '右侧按钮', routerLink: { name: 'ComponentGridToolbarTools' } },
             { title: '自定义列功能', routerLink: { name: 'ComponentGridToolbarCustom' } },
             { title: '打印功能', routerLink: { name: 'ComponentGridToolbarPrint' } },
             { title: '最大化显示', routerLink: { name: 'ComponentGridToolbarZoom' } },

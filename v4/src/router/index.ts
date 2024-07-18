@@ -1520,6 +1520,16 @@ const gridRouteConfig: RouteRecordRaw = {
       path: 'toolbar',
       children: [
         {
+          path: 'buttons',
+          name: 'ComponentGridToolbarButtons',
+          component: () => import('@/views/grid/toolbar/buttons/CodeExample.vue')
+        },
+        {
+          path: 'tools',
+          name: 'ComponentGridToolbarTools',
+          component: () => import('@/views/grid/toolbar/tools/CodeExample.vue')
+        },
+        {
           path: 'custom',
           name: 'ComponentGridToolbarCustom',
           component: () => import('@/views/grid/toolbar/custom/CodeExample.vue')
