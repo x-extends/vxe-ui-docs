@@ -1,8 +1,8 @@
 <template>
   <div>
-    <CodeLight path="grid/pager/base/Demo1">
+    <CodeLight path="grid/pager/mockPage/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="集成表单搜索">
+        <vxe-tip status="primary" title="集成分页">
           通过设置 <ApiLink name="grid" prop="pager-config"/> 开启表格分页
         </vxe-tip>
         <vxe-tip status="error">

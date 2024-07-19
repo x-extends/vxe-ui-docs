@@ -185,10 +185,13 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '实现折叠列', routerLink: { name: 'ComponentTableCustomCollapseColumn' } }
           ]
         },
-        // {
-        //   title: '数据分页',
-        //   children: []
-        // },
+        {
+          title: '数据分页',
+          children: [
+            { title: '实现前端分页', routerLink: { name: 'ComponentTablePagerMockPage' } },
+            { title: '自定义分页布局', routerLink: { name: 'ComponentTablePagerLayouts' } }
+          ]
+        },
         {
           title: '树形',
           children: [
@@ -529,10 +532,11 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           ]
         },
         {
-          title: '分页查询',
+          title: '数据分页',
           children: [
-            { title: '基础', routerLink: { name: 'ComponentGridPagerBase' } },
-            { title: '自定义每页大小', routerLink: { name: 'ComponentGridPagerPageSize' } }
+            { title: '实现前端分页', routerLink: { name: 'ComponentGridPagerMockPage' } },
+            { title: '自定义分页布局', routerLink: { name: 'ComponentGridPagerLayouts' } },
+            { title: '自定义分页模板', routerLink: { name: 'ComponentGridPagerTemplate' } }
           ]
         },
         {
