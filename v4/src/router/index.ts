@@ -587,6 +587,11 @@ const tableRouteConfig: RouteRecordRaw = {
           path: 'layouts',
           name: 'ComponentTablePagerLayouts',
           component: () => import('@/views/table/pager/layouts/CodeExample.vue')
+        },
+        {
+          path: 'start',
+          name: 'ComponentTablePagerStart',
+          component: () => import('@/views/table/pager/start/CodeExample.vue')
         }
       ]
     },
@@ -1703,6 +1708,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'layouts',
           name: 'ComponentGridPagerLayouts',
           component: () => import('@/views/grid/pager/layouts/CodeExample.vue')
+        },
+        {
+          path: 'start',
+          name: 'ComponentGridPagerStart',
+          component: () => import('@/views/grid/pager/start/CodeExample.vue')
         },
         {
           path: 'template',

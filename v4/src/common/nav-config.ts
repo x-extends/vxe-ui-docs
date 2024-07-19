@@ -189,7 +189,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '数据分页',
           children: [
             { title: '实现前端分页', routerLink: { name: 'ComponentTablePagerMockPage' } },
-            { title: '自定义分页布局', routerLink: { name: 'ComponentTablePagerLayouts' } }
+            { title: '自定义布局', routerLink: { name: 'ComponentTablePagerLayouts' } },
+            { title: '自定义序号', routerLink: { name: 'ComponentTablePagerStart' } }
           ]
         },
         {
@@ -535,8 +536,9 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '数据分页',
           children: [
             { title: '实现前端分页', routerLink: { name: 'ComponentGridPagerMockPage' } },
-            { title: '自定义分页布局', routerLink: { name: 'ComponentGridPagerLayouts' } },
-            { title: '自定义分页模板', routerLink: { name: 'ComponentGridPagerTemplate' } }
+            { title: '自定义布局', routerLink: { name: 'ComponentGridPagerLayouts' } },
+            { title: '自定义序号', routerLink: { name: 'ComponentGridPagerStart' } },
+            { title: '自定义插槽模板', routerLink: { name: 'ComponentGridPagerTemplate' } }
           ]
         },
         {
