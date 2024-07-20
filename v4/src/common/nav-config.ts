@@ -1449,7 +1449,18 @@ export const navConfigList: NavVO[] = [
   {
     i18nKey: 'app.aside.menu.feedbackTitle',
     children: [
-      // { title: 'Loading 加载中' },
+      {
+        title: 'Loading 加载中',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'loading' } } },
+          { title: '全局调用', routerLink: { name: 'ComponentLoadingGlobalLoading' } },
+          { title: '加载中', routerLink: { name: 'ComponentLoadingBase' } },
+          { title: '状态', routerLink: { name: 'ComponentLoadingStatus' } },
+          { title: '自定义图标', routerLink: { name: 'ComponentLoadingIcon' } },
+          { title: '自定义提示', routerLink: { name: 'ComponentLoadingText' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentLoadingTemplate' } }
+        ]
+      },
       {
         title: 'Tip 提示',
         children: [

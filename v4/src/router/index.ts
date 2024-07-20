@@ -3812,6 +3812,41 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'loading',
+        children: [
+          {
+            path: 'global',
+            name: 'ComponentLoadingGlobalLoading',
+            component: () => import('@/views/loading/global/loading/CodeExample.vue')
+          },
+          {
+            path: 'base',
+            name: 'ComponentLoadingBase',
+            component: () => import('@/views/loading/base/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentLoadingStatus',
+            component: () => import('@/views/loading/status/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentLoadingIcon',
+            component: () => import('@/views/loading/icon/CodeExample.vue')
+          },
+          {
+            path: 'text',
+            name: 'ComponentLoadingText',
+            component: () => import('@/views/loading/text/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentLoadingTemplate',
+            component: () => import('@/views/loading/template/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'tip',
         children: [
           {
