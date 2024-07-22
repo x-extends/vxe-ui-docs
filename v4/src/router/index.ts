@@ -1775,6 +1775,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/cellRender/vxe-button-group/CodeExample.vue')
         },
         {
+          path: 'vxe-image',
+          name: 'ComponentGridCellRenderVxeImage',
+          component: () => import('@/views/grid/cellRender/vxe-image/CodeExample.vue')
+        },
+        {
           path: 'vxe-upload',
           name: 'ComponentGridCellRenderVxeUpload',
           component: () => import('@/views/grid/cellRender/vxe-upload/CodeExample.vue')
@@ -1798,6 +1803,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'vxe-button',
           name: 'ComponentGridCellTemplateVxeButton',
           component: () => import('@/views/grid/cellTemplate/vxe-button/CodeExample.vue')
+        },
+        {
+          path: 'vxe-image',
+          name: 'ComponentGridCellTemplateVxeImage',
+          component: () => import('@/views/grid/cellTemplate/vxe-image/CodeExample.vue')
         },
         {
           path: 'vxe-upload',
