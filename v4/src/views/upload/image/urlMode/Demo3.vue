@@ -1,6 +1,8 @@
 <template>
   <div>
-    <vxe-upload v-model="fileList" multiple :limit-count="6" :limit-size="50" show-progress show-error-status auto-hidden-button :upload-method="uploadMethod"></vxe-upload>
+    <p>
+      <vxe-upload v-model="imgList1" mode="image" url-mode single-mode show-progress :upload-method="uploadMethod"></vxe-upload>
+    </p>
   </div>
 </template>
 
@@ -9,14 +11,15 @@ import { ref } from 'vue'
 import axios from 'axios'
 import { VxeUploadPropTypes } from 'vxe-pc-ui'
 
-const fileList = ref([])
+const imgList1 = ref('https://vxeui.com/resource/img/fj577.jpg')
 
 const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress }) => {
   const formData = new FormData()
   formData.append('file', file)
-  return axios.post('/api/pub/upload/single?randomError=1', formData, {
+  return axios.post('/api/pub/upload/single', formData, {
     onUploadProgress (progressEvent) {
       const percentCompleted = Math.round((progressEvent.loaded * 100) / (progressEvent.total || 0))
+      // 更新进度
       updateProgress(percentCompleted)
     }
   }).then((res) => {

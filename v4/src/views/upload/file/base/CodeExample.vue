@@ -2,7 +2,9 @@
   <div>
     <CodeLight path="upload/file/base/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="文件上传"></vxe-tip>
+        <vxe-tip status="primary" title="文件上传">
+          默认单选模式下，新选择的文件将会替换旧的文件。
+        </vxe-tip>
         <vxe-tip status="success">
           <div>全局函数对象： </div>
           <div>读取本地文件：VxeUI.readFile({}) </div>

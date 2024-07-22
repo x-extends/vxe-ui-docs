@@ -949,6 +949,7 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image' } } },
           { title: '设置宽高', routerLink: { name: 'ComponentImageBase' } },
+          { title: '预览多选图片', routerLink: { name: 'ComponentImageMultiple' } },
           { title: '懒加载', routerLink: { name: 'ComponentImageLazy' } }
         ]
       },
@@ -1358,12 +1359,15 @@ export const navConfigList: NavVO[] = [
           {
             title: '文件上传',
             children: [
-              { title: '基础', routerLink: { name: 'ComponentUploadFileBase' } },
+              { title: '尺寸大小', routerLink: { name: 'ComponentUploadFileSize' } },
+              { title: '单选模式', routerLink: { name: 'ComponentUploadFileBase' } },
               { title: '只读状态', routerLink: { name: 'ComponentUploadFileReadonly' } },
               { title: '禁用状态', routerLink: { name: 'ComponentUploadFileDisabled' } },
-              { title: '上传多个', routerLink: { name: 'ComponentUploadFileMultiple' } },
+              { title: '多选模式', routerLink: { name: 'ComponentUploadFileMultiple' } },
               { title: '提示', routerLink: { name: 'ComponentUploadFileTip' } },
               { title: '上传进度', routerLink: { name: 'ComponentUploadFileProgress' } },
+              { title: '唯一值模式', routerLink: { name: 'ComponentUploadFileSingleMode' } },
+              { title: 'URL 模式', routerLink: { name: 'ComponentUploadFileUrlMode' } },
               { title: '指定文件类型', routerLink: { name: 'ComponentUploadFileTypes' } },
               { title: '限制上传数量', routerLink: { name: 'ComponentUploadFileLimitCount' } },
               { title: '限制附件大小', routerLink: { name: 'ComponentUploadFileLimitSize' } },
@@ -1374,12 +1378,16 @@ export const navConfigList: NavVO[] = [
           {
             title: '图片上传',
             children: [
-              { title: '基础', routerLink: { name: 'ComponentUploadImageBase' } },
+              { title: '尺寸大小', routerLink: { name: 'ComponentUploadImageSize' } },
+              { title: '单选模式', routerLink: { name: 'ComponentUploadImageBase' } },
               { title: '只读状态', routerLink: { name: 'ComponentUploadImageReadonly' } },
               { title: '禁用状态', routerLink: { name: 'ComponentUploadImageDisabled' } },
-              { title: '上传多个', routerLink: { name: 'ComponentUploadImageMultiple' } },
+              { title: '自定义图片宽高', routerLink: { name: 'ComponentUploadImageImgStyle' } },
+              { title: '多选模式', routerLink: { name: 'ComponentUploadImageMultiple' } },
               { title: '提示', routerLink: { name: 'ComponentUploadImageTip' } },
               { title: '上传进度', routerLink: { name: 'ComponentUploadImageProgress' } },
+              { title: '唯一值模式', routerLink: { name: 'ComponentUploadImageSingleMode' } },
+              { title: 'URL 模式', routerLink: { name: 'ComponentUploadImageUrlMode' } },
               { title: '指定文件类型', routerLink: { name: 'ComponentUploadImageTypes' } },
               { title: '限制上传数量', routerLink: { name: 'ComponentUploadImageLimitCount' } },
               { title: '限制附件大小', routerLink: { name: 'ComponentUploadImageLimitSize' } },

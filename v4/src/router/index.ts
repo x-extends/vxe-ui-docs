@@ -2774,6 +2774,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/image/base/CodeExample.vue')
           },
           {
+            path: 'multiple',
+            name: 'ComponentImageMultiple',
+            component: () => import('@/views/image/multiple/CodeExample.vue')
+          },
+          {
             path: 'lazy',
             name: 'ComponentImageLazy',
             component: () => import('@/views/image/lazy/CodeExample.vue')
@@ -4678,6 +4683,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'file',
             children: [
               {
+                path: 'size',
+                name: 'ComponentUploadFileSize',
+                component: () => import('@/views/upload/file/size/CodeExample.vue')
+              },
+              {
                 path: 'base',
                 name: 'ComponentUploadFileBase',
                 component: () => import('@/views/upload/file/base/CodeExample.vue')
@@ -4696,6 +4706,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'multiple',
                 name: 'ComponentUploadFileMultiple',
                 component: () => import('@/views/upload/file/multiple/CodeExample.vue')
+              },
+              {
+                path: 'singleMode',
+                name: 'ComponentUploadFileSingleMode',
+                component: () => import('@/views/upload/file/singleMode/CodeExample.vue')
+              },
+              {
+                path: 'urlMode',
+                name: 'ComponentUploadFileUrlMode',
+                component: () => import('@/views/upload/file/urlMode/CodeExample.vue')
               },
               {
                 path: 'tip',
@@ -4738,9 +4758,19 @@ const routes: Array<RouteRecordRaw> = [
             path: 'image',
             children: [
               {
+                path: 'size',
+                name: 'ComponentUploadImageSize',
+                component: () => import('@/views/upload/image/size/CodeExample.vue')
+              },
+              {
                 path: 'base',
                 name: 'ComponentUploadImageBase',
                 component: () => import('@/views/upload/image/base/CodeExample.vue')
+              },
+              {
+                path: 'imgStyle',
+                name: 'ComponentUploadImageImgStyle',
+                component: () => import('@/views/upload/image/imgStyle/CodeExample.vue')
               },
               {
                 path: 'readonly',
@@ -4756,6 +4786,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'multiple',
                 name: 'ComponentUploadImageMultiple',
                 component: () => import('@/views/upload/image/multiple/CodeExample.vue')
+              },
+              {
+                path: 'singleMode',
+                name: 'ComponentUploadImageSingleMode',
+                component: () => import('@/views/upload/image/singleMode/CodeExample.vue')
+              },
+              {
+                path: 'urlMode',
+                name: 'ComponentUploadImageUrlMode',
+                component: () => import('@/views/upload/image/urlMode/CodeExample.vue')
               },
               {
                 path: 'tip',

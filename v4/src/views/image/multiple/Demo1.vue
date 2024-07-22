@@ -1,0 +1,15 @@
+<template>
+  <div>
+    <vxe-image :src="imgList1" :width="200"></vxe-image>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { ref } from 'vue'
+
+const imgList1 = ref([
+  'https://vxeui.com/resource/img/fj577.jpg',
+  'https://vxeui.com/resource/img/fj581.jpeg',
+  'https://vxeui.com/resource/img/fj573.jpeg'
+])
+</script>
