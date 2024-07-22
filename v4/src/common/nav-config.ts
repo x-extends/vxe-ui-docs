@@ -1130,6 +1130,8 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeSwitch', routerLink: { name: 'ComponentFormConfigItemRenderVxeSwitch' } },
               { title: 'VxeRadioGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeRadioGroup' } },
               { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeCheckboxGroup' } },
+              { title: 'VxeImage', routerLink: { name: 'ComponentFormConfigItemRenderVxeImage' } },
+              { title: 'VxeImageGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeImageGroup' } },
               { title: 'VxeUpload', routerLink: { name: 'ComponentFormConfigItemRenderVxeUpload' } },
               { title: '只读模式', routerLink: { name: 'ComponentFormConfigItemRenderReadonly' } },
               { title: '禁用模式', routerLink: { name: 'ComponentFormConfigItemRenderDisabled' } },

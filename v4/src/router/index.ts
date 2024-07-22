@@ -4551,6 +4551,16 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/config/itemRender/vxe-checkbox-group/CodeExample.vue')
                   },
                   {
+                    path: 'vxe-image',
+                    name: 'ComponentFormConfigItemRenderVxeImage',
+                    component: () => import('@/views/form/config/itemRender/vxe-image/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-image-group',
+                    name: 'ComponentFormConfigItemRenderVxeImageGroup',
+                    component: () => import('@/views/form/config/itemRender/vxe-image-group/CodeExample.vue')
+                  },
+                  {
                     path: 'vxe-upload',
                     name: 'ComponentFormConfigItemRenderVxeUpload',
                     component: () => import('@/views/form/config/itemRender/vxe-upload/CodeExample.vue')
