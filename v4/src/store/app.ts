@@ -6,8 +6,10 @@ import i18n from '@/i18n'
 const currTheme = (localStorage.getItem('VXE_DOCS_THEME') || 'light') as 'dark' | 'light'
 const currLanguage = (localStorage.getItem('VXE_DOCS_LANGUAGE') || 'zh-CN') as 'zh-CN' | 'zh-TC' | 'en-US'
 
-VxeUI.setTheme(currTheme)
 VxeUI.setLanguage(currLanguage)
+setTimeout(() => {
+  VxeUI.setTheme(currTheme)
+})
 
 document.documentElement.setAttribute('vxe-docs-theme', currTheme)
 

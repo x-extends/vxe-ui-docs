@@ -3014,6 +3014,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'input',
         children: [
           {
+            path: 'size',
+            name: 'ComponentInputSize',
+            component: () => import('@/views/input/size/CodeExample.vue')
+          },
+          {
             path: 'text',
             name: 'ComponentInputText',
             component: () => import('@/views/input/text/CodeExample.vue')

@@ -1220,6 +1220,7 @@ export const navConfigList: NavVO[] = [
         title: 'Input 输入框',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'input' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentInputSize' } },
           { title: '文本类型', routerLink: { name: 'ComponentInputText' } },
           { title: '搜索类型', routerLink: { name: 'ComponentInputSearch' } },
           { title: '密码类型', routerLink: { name: 'ComponentInputPassword' } },
