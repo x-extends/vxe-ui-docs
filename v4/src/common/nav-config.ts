@@ -862,7 +862,8 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'text' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentTextSize' } },
           { title: '状态颜色', routerLink: { name: 'ComponentTextStatus' } },
-          { title: '图标', routerLink: { name: 'ComponentTextIcon' } }
+          { title: '图标', routerLink: { name: 'ComponentTextIcon' } },
+          { title: '点击复制内容', routerLink: { name: 'ComponentTextClickToCopy' } }
         ]
       },
       {

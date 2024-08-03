@@ -2827,6 +2827,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'icon',
             name: 'ComponentTextIcon',
             component: () => import('@/views/text/icon/CodeExample.vue')
+          },
+          {
+            path: 'clickToCopy',
+            name: 'ComponentTextClickToCopy',
+            component: () => import('@/views/text/clickToCopy/CodeExample.vue')
           }
         ]
       },
