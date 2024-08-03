@@ -3754,6 +3754,16 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/tabs/roundCard/CodeExample.vue')
           },
           {
+            path: 'options',
+            name: 'ComponentTabsOptions',
+            component: () => import('@/views/tabs/options/CodeExample.vue')
+          },
+          {
+            path: 'showClose',
+            name: 'ComponentTabsShowClose',
+            component: () => import('@/views/tabs/showClose/CodeExample.vue')
+          },
+          {
             path: 'permissionCode',
             name: 'ComponentTabsPermissionCode',
             component: () => import('@/views/tabs/permissionCode/CodeExample.vue')
@@ -4821,6 +4831,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'urlMode',
                 name: 'ComponentUploadImageUrlMode',
                 component: () => import('@/views/upload/image/urlMode/CodeExample.vue')
+              },
+              {
+                path: 'thumbnailUrl',
+                name: 'ComponentUploadImageThumbnailUrl',
+                component: () => import('@/views/upload/image/thumbnailUrl/CodeExample.vue')
               },
               {
                 path: 'tip',

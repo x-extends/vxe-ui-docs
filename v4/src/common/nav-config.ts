@@ -972,6 +972,8 @@ export const navConfigList: NavVO[] = [
           { title: '边框背景的卡片', routerLink: { name: 'ComponentTabsBorderCard' } },
           { title: '设置高度', routerLink: { name: 'ComponentTabsHeight' } },
           { title: '圆角边框背景的卡片', routerLink: { name: 'ComponentTabsRoundCard' } },
+          { title: '配置式', routerLink: { name: 'ComponentTabsOptions' } },
+          { title: '可关闭', routerLink: { name: 'ComponentTabsShowClose' } },
           { title: '权限码', routerLink: { name: 'ComponentTabsPermissionCode' } }
         ]
       },
@@ -1393,6 +1395,7 @@ export const navConfigList: NavVO[] = [
               { title: '上传进度', routerLink: { name: 'ComponentUploadImageProgress' } },
               { title: '唯一值模式', routerLink: { name: 'ComponentUploadImageSingleMode' } },
               { title: 'URL 模式', routerLink: { name: 'ComponentUploadImageUrlMode' } },
+              { title: '缩略图链接地址', routerLink: { name: 'ComponentUploadImageThumbnailUrl' } },
               { title: '指定文件类型', routerLink: { name: 'ComponentUploadImageTypes' } },
               { title: '限制上传数量', routerLink: { name: 'ComponentUploadImageLimitCount' } },
               { title: '限制附件大小', routerLink: { name: 'ComponentUploadImageLimitSize' } },

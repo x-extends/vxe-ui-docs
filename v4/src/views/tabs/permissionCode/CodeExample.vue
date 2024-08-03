@@ -8,5 +8,11 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="tabs/permissionCode/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">配置式</vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>
