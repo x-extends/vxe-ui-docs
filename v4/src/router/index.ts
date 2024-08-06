@@ -3769,6 +3769,16 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/tabs/options/CodeExample.vue')
           },
           {
+            path: 'over',
+            name: 'ComponentTabsOver',
+            component: () => import('@/views/tabs/over/CodeExample.vue')
+          },
+          {
+            path: 'extra',
+            name: 'ComponentTabsExtra',
+            component: () => import('@/views/tabs/extra/CodeExample.vue')
+          },
+          {
             path: 'showClose',
             name: 'ComponentTabsShowClose',
             component: () => import('@/views/tabs/showClose/CodeExample.vue')

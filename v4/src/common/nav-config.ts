@@ -974,6 +974,8 @@ export const navConfigList: NavVO[] = [
           { title: '设置高度', routerLink: { name: 'ComponentTabsHeight' } },
           { title: '圆角边框背景的卡片', routerLink: { name: 'ComponentTabsRoundCard' } },
           { title: '配置式', routerLink: { name: 'ComponentTabsOptions' } },
+          { title: '页签超出可滚动', routerLink: { name: 'ComponentTabsOver' } },
+          { title: '右侧操作按钮', routerLink: { name: 'ComponentTabsExtra' } },
           { title: '可关闭', routerLink: { name: 'ComponentTabsShowClose' } },
           { title: '权限码', routerLink: { name: 'ComponentTabsPermissionCode' } }
         ]
