@@ -953,7 +953,7 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image' } } },
           { title: '设置宽高', routerLink: { name: 'ComponentImageBase' } },
-          { title: '预览多选图片', routerLink: { name: 'ComponentImageMultiple' } },
+          { title: '多张图片', routerLink: { name: 'ComponentImageMultiple' } },
           { title: '懒加载', routerLink: { name: 'ComponentImageLazy' } }
         ]
       },
@@ -974,6 +974,8 @@ export const navConfigList: NavVO[] = [
           { title: '设置高度', routerLink: { name: 'ComponentTabsHeight' } },
           { title: '圆角边框背景的卡片', routerLink: { name: 'ComponentTabsRoundCard' } },
           { title: '配置式', routerLink: { name: 'ComponentTabsOptions' } },
+          { title: '页签触发方式', routerLink: { name: 'ComponentTabsRoundTrigger' } },
+          { title: '预加载页签', routerLink: { name: 'ComponentTabsRoundPreload' } },
           { title: '页签超出可滚动', routerLink: { name: 'ComponentTabsOver' } },
           { title: '右侧操作按钮', routerLink: { name: 'ComponentTabsExtra' } },
           { title: '可关闭', routerLink: { name: 'ComponentTabsShowClose' } },

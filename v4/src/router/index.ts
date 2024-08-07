@@ -3769,6 +3769,16 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/tabs/options/CodeExample.vue')
           },
           {
+            path: 'trigger',
+            name: 'ComponentTabsRoundTrigger',
+            component: () => import('@/views/tabs/trigger/CodeExample.vue')
+          },
+          {
+            path: 'preload',
+            name: 'ComponentTabsRoundPreload',
+            component: () => import('@/views/tabs/preload/CodeExample.vue')
+          },
+          {
             path: 'over',
             name: 'ComponentTabsOver',
             component: () => import('@/views/tabs/over/CodeExample.vue')
