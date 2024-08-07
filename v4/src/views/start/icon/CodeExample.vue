@@ -14,7 +14,7 @@
 
             VxeUI.setIcon({
               // loading
-              LOADING: 'vxe-icon-spinner roll vxe-loading--default-icon',
+              LOADING: 'vxe-icon-spinner roll',
 
               // button
               BUTTON_DROPDOWN: 'vxe-icon-arrow-down',
@@ -75,6 +75,9 @@
               MODAL_QUESTION: 'vxe-icon-question-circle-fill',
               MODAL_LOADING: 'vxe-icon-spinner roll',
 
+              // drawer
+              DRAWER_CLOSE: 'vxe-icon-close',
+
               // form
               FORM_PREFIX: 'vxe-icon-question-circle-fill',
               FORM_SUFFIX: 'vxe-icon-question-circle-fill',
@@ -99,10 +102,10 @@
               // upload
               UPLOAD_FILE_ERROR: 'vxe-icon-warning-circle-fill',
               UPLOAD_FILE_ADD: 'vxe-icon-upload',
-              UPLOAD_FILE_DELETE: 'vxe-icon-delete',
+              UPLOAD_FILE_REMOVE: 'vxe-icon-delete',
               UPLOAD_IMAGE_RE_UPLOAD: 'vxe-icon-repeat',
               UPLOAD_IMAGE_ADD: 'vxe-icon-add',
-              UPLOAD_IMAGE_DELETE: 'vxe-icon-close',
+              UPLOAD_IMAGE_REMOVE: 'vxe-icon-close',
               UPLOAD_LOADING: 'vxe-icon-spinner roll vxe-loading--default-icon',
               UPLOAD_FILE_TYPE_DEFAULT: 'vxe-icon-file',
               UPLOAD_FILE_TYPE_XLSX: 'vxe-icon-file-excel',
@@ -141,7 +144,21 @@
 
               // tree
               TREE_NODE_OPEN: 'vxe-icon-caret-right rotate90',
-              TREE_NODE_CLOSE: 'vxe-icon-caret-right'
+              TREE_NODE_CLOSE: 'vxe-icon-caret-right',
+              TREE_NODE_LOADED: 'vxe-icon-spinner roll',
+
+              // tree-select
+              TREE_SELECT_LOADED: 'vxe-icon-spinner roll',
+              TREE_SELECT_OPEN: 'vxe-icon-caret-down rotate180',
+              TREE_SELECT_CLOSE: 'vxe-icon-caret-down',
+
+              // tabs
+              TABS_TAB_BUTTON_LEFT: 'vxe-icon-arrow-left',
+              TABS_TAB_BUTTON_RIGHT: 'vxe-icon-arrow-right',
+              TABS_TAB_CLOSE: 'vxe-icon-close',
+
+              // text
+              TEXT_COPY: 'vxe-icon-copy'
             })
           </pre-code>
         </pre>
