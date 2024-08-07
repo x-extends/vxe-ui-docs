@@ -11,7 +11,7 @@
     <CodeLight path="form/basics/overflow/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          启用 title-overflow 之后，标题会自动显示超出隐藏
+          启用 <ApiLink name="form" prop="title-overflow"/> 之后，标题会自动显示超出隐藏
         </vxe-tip>
       </template>
     </CodeLight>

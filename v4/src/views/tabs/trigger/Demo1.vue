@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-tabs v-model="selectTab" :height="140" :options="tabList" trigger="manual">
+    <vxe-tabs ref="tabsRef" v-model="selectTab" :height="140" :options="tabList" trigger="manual">
       <template #default1>
         <div>内容1</div>
         <div>内容1</div>
@@ -31,7 +31,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeTabsPropTypes } from 'vxe-pc-ui'
+import { VxeTabsPropTypes, VxeTabsInstance } from 'vxe-pc-ui'
+
+const tabsRef = ref<VxeTabsInstance>()
 
 const selectTab = ref('1')
 
@@ -43,30 +45,16 @@ const tabList = ref<VxeTabsPropTypes.Options>([
 ])
 
 const prevEvent = () => {
-  switch (selectTab.value) {
-    case '2':
-      selectTab.value = '1'
-      break
-    case '3':
-      selectTab.value = '2'
-      break
-    case '4':
-      selectTab.value = '3'
-      break
+  const $tabs = tabsRef.value
+  if ($tabs) {
+    $tabs.prevTab()
   }
 }
 
 const nextEvent = () => {
-  switch (selectTab.value) {
-    case '1':
-      selectTab.value = '2'
-      break
-    case '2':
-      selectTab.value = '3'
-      break
-    case '3':
-      selectTab.value = '4'
-      break
+  const $tabs = tabsRef.value
+  if ($tabs) {
+    $tabs.nextTab()
   }
 }
 </script>

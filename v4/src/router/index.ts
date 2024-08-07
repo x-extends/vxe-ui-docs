@@ -4476,6 +4476,11 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/basics/template/title/CodeExample.vue')
                   },
                   {
+                    path: 'extra',
+                    name: 'ComponentFormBasicsTemplateExtra',
+                    component: () => import('@/views/form/basics/template/extra/CodeExample.vue')
+                  },
+                  {
                     path: 'content',
                     name: 'ComponentFormBasicsTemplateContent',
                     component: () => import('@/views/form/basics/template/content/CodeExample.vue')
