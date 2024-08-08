@@ -22,7 +22,7 @@ interface RowVO {
 const gridRef = ref<VxeGridInstance<RowVO>>()
 
 const gridOptions = reactive<VxeGridProps<RowVO> & {
-  menuConfig: VxeTablePropTypes.MenuConfig
+  menuConfig: VxeTablePropTypes.MenuConfig<RowVO>
 }>({
   border: true,
   showFooter: true,
