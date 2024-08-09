@@ -2,9 +2,9 @@
   <div>
     <vxe-tree
       show-radio
-      is-hover
       :data="treeList"
       v-model:check-node-key="checkNodeKey"
+      :node-config="nodeConfig"
       :radio-config="radioConfig">
     </vxe-tree>
   </div>
@@ -18,6 +18,10 @@ const checkNodeKey = ref(3)
 
 const radioConfig = reactive<VxeTreePropTypes.RadioConfig>({
   highlight: true
+})
+
+const nodeConfig = reactive<VxeTreePropTypes.NodeConfig>({
+  isHover: true
 })
 
 const treeList = ref<VxeTreePropTypes.Data>([

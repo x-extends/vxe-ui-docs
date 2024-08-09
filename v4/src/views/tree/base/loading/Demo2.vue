@@ -2,21 +2,25 @@
   <div>
     <vxe-tree
       transform
-      is-hover
       height="300"
       :loading="loading"
       :loading-config="{icon: 'vxe-icon-indicator roll', text: '正在拼命加载中...'}"
+      :node-config="nodeConfig"
       :data="treeList">
     </vxe-tree>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 import { VxeTreePropTypes } from 'vxe-pc-ui'
 
 const loading = ref(false)
 const treeList = ref<VxeTreePropTypes.Data>()
+
+const nodeConfig = reactive<VxeTreePropTypes.NodeConfig>({
+  isHover: true
+})
 
 loading.value = true
 setTimeout(() => {

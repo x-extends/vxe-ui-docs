@@ -1,17 +1,24 @@
 <template>
   <div>
-    <vxe-tree :data="treeList" transform is-hover is-current></vxe-tree>
+    <vxe-tree :data="treeList" :node-config="nodeConfig" transform></vxe-tree>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
+import { VxeTreePropTypes } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
   id: string
   parentId?: string | null
 }
+
+const nodeConfig = reactive<VxeTreePropTypes.NodeConfig>({
+  isHover: true,
+  isCurrent: true,
+  trigger: 'parent'
+})
 
 const treeList = ref<NodeVO[]>([
   { title: '节点2', id: '2', parentId: null },

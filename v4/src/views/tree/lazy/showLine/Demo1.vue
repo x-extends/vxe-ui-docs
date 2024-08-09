@@ -1,12 +1,12 @@
 <template>
   <div>
     <vxe-tree
-      is-hover
       lazy
       show-checkbox
       show-line
       icon-open="vxe-icon-square-minus"
       icon-close="vxe-icon-square-plus"
+      :node-config="nodeConfig"
       :load-method="loadMethod"
       :data="treeList">
     </vxe-tree>
@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 import { VxeTreePropTypes } from 'vxe-pc-ui'
 
 interface NodeVO {
@@ -22,6 +22,10 @@ interface NodeVO {
   id: string
   hasChild?: boolean
 }
+
+const nodeConfig = reactive<VxeTreePropTypes.NodeConfig>({
+  isHover: true
+})
 
 const treeList = ref<NodeVO[]>([
   { title: '节点2', id: '2', hasChild: true },

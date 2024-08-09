@@ -2,9 +2,9 @@
   <div>
     <vxe-tree
       transform
-      is-hover
       height="300"
       :loading="loading"
+      :node-config="nodeConfig"
       :data="treeList">
       <template #loading>
         <img src="https://pic2.zhimg.com/50/v2-f7031359103859e1ed38559715ef5f3f_hd.gif" style="width: 100px;">
@@ -15,11 +15,15 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 import { VxeTreePropTypes } from 'vxe-pc-ui'
 
 const loading = ref(false)
 const treeList = ref<VxeTreePropTypes.Data>()
+
+const nodeConfig = reactive<VxeTreePropTypes.NodeConfig>({
+  isHover: true
+})
 
 loading.value = true
 setTimeout(() => {

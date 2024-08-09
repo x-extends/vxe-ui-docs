@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-tree :data="treeList" transform is-hover></vxe-tree>
+    <vxe-tree :data="treeList" transform></vxe-tree>
   </div>
 </template>
 

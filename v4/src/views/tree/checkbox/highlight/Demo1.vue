@@ -2,9 +2,9 @@
   <div>
     <vxe-tree
       show-checkbox
-      is-hover
-      :data="treeList"
       v-model:check-node-keys="checkNodeKeys"
+      :data="treeList"
+      :node-config="nodeConfig"
       :checkboxConfig="checkboxConfig">
     </vxe-tree>
   </div>
@@ -18,6 +18,10 @@ const checkNodeKeys = ref([3, 31, 331])
 
 const checkboxConfig = reactive<VxeTreePropTypes.CheckboxConfig>({
   highlight: true
+})
+
+const nodeConfig = reactive<VxeTreePropTypes.NodeConfig>({
+  isHover: true
 })
 
 const treeList = ref<VxeTreePropTypes.Data>([

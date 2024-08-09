@@ -1430,12 +1430,19 @@ export const navConfigList: NavVO[] = [
           { title: '加载中', routerLink: { name: 'ComponentTreeBaseLoading' } },
           { title: '自定义字段', routerLink: { name: 'ComponentTreeBaseField' } },
           { title: '触发方式', routerLink: { name: 'ComponentTreeBaseTrigger' } },
-          { title: '高亮当前节点', routerLink: { name: 'ComponentTreeBaseCurrent' } },
           { title: '隐藏图标', routerLink: { name: 'ComponentTreeBaseShowIcon' } },
           { title: '自定义图标', routerLink: { name: 'ComponentTreeBaseIcon' } },
           { title: '手风琴展开效果', routerLink: { name: 'ComponentTreeBaseAccordion' } },
           { title: '连接线', routerLink: { name: 'ComponentTreeBaseShowLine' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeBaseTemplate' } }
+        ]
+      },
+      {
+        title: '高亮节点',
+        children: [
+          { title: '当前节点', routerLink: { name: 'ComponentTreeCurrentBase' } },
+          { title: '触发方式', routerLink: { name: 'ComponentTreeCurrentTrigger' } },
+          { title: '禁用', routerLink: { name: 'ComponentTreeCurrentCurrentMethod' } }
         ]
       },
       {

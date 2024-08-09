@@ -4098,11 +4098,6 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/tree/base/trigger/CodeExample.vue')
               },
               {
-                path: 'current',
-                name: 'ComponentTreeBaseCurrent',
-                component: () => import('@/views/tree/base/current/CodeExample.vue')
-              },
-              {
                 path: 'showIcon',
                 name: 'ComponentTreeBaseShowIcon',
                 component: () => import('@/views/tree/base/showIcon/CodeExample.vue')
@@ -4126,6 +4121,26 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'template',
                 name: 'ComponentTreeBaseTemplate',
                 component: () => import('@/views/tree/base/template/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'current',
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentTreeCurrentBase',
+                component: () => import('@/views/tree/current/base/CodeExample.vue')
+              },
+              {
+                path: 'trigger',
+                name: 'ComponentTreeCurrentTrigger',
+                component: () => import('@/views/tree/current/trigger/CodeExample.vue')
+              },
+              {
+                path: 'currentMethod',
+                name: 'ComponentTreeCurrentCurrentMethod',
+                component: () => import('@/views/tree/current/currentMethod/CodeExample.vue')
               }
             ]
           },
