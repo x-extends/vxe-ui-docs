@@ -1350,14 +1350,34 @@ export const navConfigList: NavVO[] = [
         title: 'TreeSelect 树形下拉框',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'treeSelect' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentTreeSelectSize' } },
-          { title: '基础', routerLink: { name: 'ComponentTreeSelectBase' } },
-          { title: '多选', routerLink: { name: 'ComponentTreeSelectMultiple' } },
-          { title: '自定义图标', routerLink: { name: 'ComponentTreeSelectIcon' } },
-          { title: '单选框', routerLink: { name: 'ComponentTreeSelectRadio' } },
-          { title: '复选框', routerLink: { name: 'ComponentTreeSelectCheckbox' } },
-          { title: '连接线', routerLink: { name: 'ComponentTreeSelectShowLine' } },
-          { title: '懒加载子节点', routerLink: { name: 'ComponentTreeSelectLazy' } }
+          {
+            title: '基础',
+            children: [
+              { title: '尺寸大小', routerLink: { name: 'ComponentTreeSelectBaseSize' } },
+              { title: '层级结构', routerLink: { name: 'ComponentTreeSelectBaseHierarchy' } },
+              { title: '平级结构', routerLink: { name: 'ComponentTreeSelectBaseLeveling' } },
+              { title: '多选', routerLink: { name: 'ComponentTreeSelectBaseMultiple' } },
+              { title: '自定义图标', routerLink: { name: 'ComponentTreeSelectBaseIcon' } },
+              { title: '连接线', routerLink: { name: 'ComponentTreeSelectBaseShowLine' } },
+              { title: '懒加载子节点', routerLink: { name: 'ComponentTreeSelectBaseLazy' } },
+              { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectBaseTrigger' } }
+            ]
+          },
+          {
+            title: '单选框',
+            children: [
+              { title: '显示单选框', routerLink: { name: 'ComponentTreeSelectRadioBase' } },
+              { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectRadioTrigger' } }
+            ]
+          },
+          {
+            title: '复选框',
+            children: [
+              { title: '显示复选框', routerLink: { name: 'ComponentTreeSelectCheckboxBase' } },
+              { title: '节点不关联', routerLink: { name: 'ComponentTreeSelectCheckboxCheckStrictly' } },
+              { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectCheckboxTrigger' } }
+            ]
+          }
         ]
       },
       {

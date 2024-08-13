@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="treeSelect/size/Demo1">
+    <CodeLight path="treeSelect/base/size/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="尺寸大小"></vxe-tip>
       </template>

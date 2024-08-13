@@ -1,14 +1,40 @@
 <template>
   <div>
-    <vxe-tree-select v-model="val1" :options="treeList" clearable></vxe-tree-select>
+    <vxe-tree-select
+      v-model="val1"
+      multiple
+      :tree-config="treeConfig"
+      :options="treeList">
+    </vxe-tree-select>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 import { VxeTreeSelectPropTypes } from 'vxe-pc-ui'
 
-const val1 = ref()
+interface RowVO {
+  label: string
+  value: string
+  children?: RowVO[]
+}
+
+const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig<RowVO>>({
+  trigger: 'node',
+  checkboxConfig: {
+    showIcon: true,
+    checkStrictly: true,
+    visibleMethod ({ node }) {
+      return !(node.children && node.children.length)
+    },
+    checkMethod ({ node }) {
+      return !node.children || !node.children.length
+    }
+  }
+})
+
+const val1 = ref([])
+
 const treeList = ref<VxeTreeSelectPropTypes.Options>([
   { label: '节点2', value: '2' },
   {

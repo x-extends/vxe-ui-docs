@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="treeSelect/multiple/Demo1">
+    <CodeLight path="treeSelect/base/multiple/Demo1">
       <template #tip>
         <vxe-tip status="primary">多选</vxe-tip>
       </template>
