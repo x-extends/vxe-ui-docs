@@ -89,7 +89,8 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     ]
   },
   proxyConfig: {
-    // 启用表单代理
+    // 开启分页序号
+    seq: true,
     form: true,
     ajax: {
       query: ({ page, form }) => {

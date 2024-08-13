@@ -45,7 +45,7 @@ const list = [
 
 // 模拟接口
 const findPageList = (pageSize: number, currentPage: number) => {
-  console.log(`调用接口 pageSize=${pageSize} currentPage=${currentPage}`)
+  console.log(`调用查询接口 pageSize=${pageSize} currentPage=${currentPage}`)
   return new Promise<{
     result: RowVO[]
     page: {
