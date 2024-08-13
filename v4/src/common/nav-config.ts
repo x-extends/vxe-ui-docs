@@ -497,7 +497,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '查询表单',
           children: [
             { title: '查询表单', routerLink: { name: 'ComponentGridFormSearch' } },
-            { title: '绑定表单数据', routerLink: { name: 'ComponentGridFormFormData' } },
+            { title: '表单的默认值', routerLink: { name: 'ComponentGridFormFormData' } },
             { title: '带折叠的查询表单', routerLink: { name: 'ComponentGridFormCollapse' } },
             { title: '自定义表单插槽模板', routerLink: { name: 'ComponentGridFormTemplate' } }
           ]
