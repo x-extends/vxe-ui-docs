@@ -212,7 +212,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '懒加载', routerLink: { name: 'ComponentTableTreeLazy' } },
             { title: '懒加载 - 可编辑', routerLink: { name: 'ComponentTableTreeLazyEdit' } },
             { title: '同时使用展开行', routerLink: { name: 'ComponentTableTreeExpand' } },
-            { title: '同时使用展开行 - 懒加载', routerLink: { name: 'ComponentTableTreeExpandLazy' } }
+            { title: '同时使用展开行 - 懒加载', routerLink: { name: 'ComponentTableTreeExpandLazy' } },
+            { title: '实现数据分组', routerLink: { name: 'ComponentTableTreeGroup' } }
           ]
         },
         {
