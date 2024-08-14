@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="date-picker/week/Demo1">
       <template #tip>
-        <vxe-tip status="primary">周类型，设置type=week</vxe-tip>
+        <vxe-tip status="primary">周类型，设置 <ApiLink name="date-picker" prop="type"/>=week</vxe-tip>
       </template>
     </CodeLight>
 

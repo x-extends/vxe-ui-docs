@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="date-picker/month/Demo1">
       <template #tip>
-        <vxe-tip status="primary">月类型，设置type=month</vxe-tip>
+        <vxe-tip status="primary">月类型，设置 <ApiLink name="date-picker" prop="type"/>=month</vxe-tip>
       </template>
     </CodeLight>
 

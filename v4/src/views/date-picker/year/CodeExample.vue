@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="date-picker/year/Demo1">
       <template #tip>
-        <vxe-tip status="primary">年度类型，设置type=year</vxe-tip>
+        <vxe-tip status="primary">年度类型，设置 <ApiLink name="date-picker" prop="type"/>=year</vxe-tip>
       </template>
     </CodeLight>
 
