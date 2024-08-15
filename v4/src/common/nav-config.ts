@@ -1400,6 +1400,7 @@ export const navConfigList: NavVO[] = [
               { title: '单选模式', routerLink: { name: 'ComponentUploadFileBase' } },
               { title: '只读状态', routerLink: { name: 'ComponentUploadFileReadonly' } },
               { title: '禁用状态', routerLink: { name: 'ComponentUploadFileDisabled' } },
+              { title: '下载按钮', routerLink: { name: 'ComponentUploadFileDownload' } },
               { title: '多选模式', routerLink: { name: 'ComponentUploadFileMultiple' } },
               { title: '提示', routerLink: { name: 'ComponentUploadFileTip' } },
               { title: '上传进度', routerLink: { name: 'ComponentUploadFileProgress' } },
@@ -1409,6 +1410,7 @@ export const navConfigList: NavVO[] = [
               { title: '限制上传数量', routerLink: { name: 'ComponentUploadFileLimitCount' } },
               { title: '限制附件大小', routerLink: { name: 'ComponentUploadFileLimitSize' } },
               { title: '自动隐藏按钮', routerLink: { name: 'ComponentUploadFileAutoHidden' } },
+              { title: '显示更多', routerLink: { name: 'ComponentUploadFileMoreBtn' } },
               { title: '失败重新上传', routerLink: { name: 'ComponentUploadFileShowError' } }
             ]
           },
@@ -1430,6 +1432,7 @@ export const navConfigList: NavVO[] = [
               { title: '限制上传数量', routerLink: { name: 'ComponentUploadImageLimitCount' } },
               { title: '限制附件大小', routerLink: { name: 'ComponentUploadImageLimitSize' } },
               { title: '自动隐藏按钮', routerLink: { name: 'ComponentUploadImageAutoHidden' } },
+              { title: '显示更多', routerLink: { name: 'ComponentUploadImageMoreBtn' } },
               { title: '失败重新上传', routerLink: { name: 'ComponentUploadImageShowError' } }
             ]
           }

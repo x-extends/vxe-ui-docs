@@ -4843,6 +4843,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/upload/file/disabled/CodeExample.vue')
               },
               {
+                path: 'download',
+                name: 'ComponentUploadFileDownload',
+                component: () => import('@/views/upload/file/download/CodeExample.vue')
+              },
+              {
                 path: 'multiple',
                 name: 'ComponentUploadFileMultiple',
                 component: () => import('@/views/upload/file/multiple/CodeExample.vue')
@@ -4886,6 +4891,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'autoHidden',
                 name: 'ComponentUploadFileAutoHidden',
                 component: () => import('@/views/upload/file/autoHidden/CodeExample.vue')
+              },
+              {
+                path: 'moreBtn',
+                name: 'ComponentUploadFileMoreBtn',
+                component: () => import('@/views/upload/file/moreBtn/CodeExample.vue')
               },
               {
                 path: 'showError',
@@ -4971,6 +4981,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'autoHidden',
                 name: 'ComponentUploadImageAutoHidden',
                 component: () => import('@/views/upload/image/autoHidden/CodeExample.vue')
+              },
+              {
+                path: 'moreBtn',
+                name: 'ComponentUploadImageMoreBtn',
+                component: () => import('@/views/upload/image/moreBtn/CodeExample.vue')
               },
               {
                 path: 'showError',
