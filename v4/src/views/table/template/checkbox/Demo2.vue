@@ -1,12 +1,12 @@
 <template>
   <div>
     <vxe-table border :data="tableData">
-      <vxe-column field="checked1" title="列1" width="80">
+      <vxe-column field="checked1" title="列1" width="60">
         <template #default="{ row }">
           <vxe-checkbox v-model="row.checked1"></vxe-checkbox>
         </template>
       </vxe-column>
-      <vxe-column field="checked2" title="列2" width="80">
+      <vxe-column field="checked2" title="列2" width="100">
         <template #default="{ row }">
           <vxe-checkbox v-model="row.checked2"></vxe-checkbox>
           <vxe-checkbox v-model="row.checked3"></vxe-checkbox>

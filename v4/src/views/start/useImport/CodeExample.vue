@@ -79,6 +79,7 @@
             import {
               VxeUI,
 
+              VxeAlert,
               VxeAnchor,
               VxeAnchorLink,
               VxeBreadcrumb,
@@ -87,6 +88,7 @@
               VxeButtonGroup,
               VxeCalendar,
               VxeCard,
+              VxeCarousel,
               VxeCheckbox,
               VxeCheckboxGroup,
               VxeCol,
@@ -94,14 +96,16 @@
               VxeCollapsePane,
               VxeDatePicker,
               VxeDrawer,
-              VxeFlowDesign,
-              VxeFlowView,
               VxeForm,
               VxeFormDesign,
               VxeFormGather,
               VxeFormItem,
               VxeFormView,
               VxeIcon,
+              VxeIconPicker,
+              VxeImage,
+              VxeImageGroup,
+              VxeImagePreview,
               VxeInput,
               VxeLayoutAside,
               VxeLayoutBody,
@@ -120,6 +124,7 @@
               VxeOption,
               VxePager,
               VxePasswordInput,
+              VxePrintPageBreak,
               VxePrint,
               VxePulldown,
               VxeRadio,
@@ -130,12 +135,14 @@
               VxeSwitch,
               VxeTabPane,
               VxeTabs,
+              VxeTag,
+              VxeText,
               VxeTextarea,
               VxeTip,
               VxeTooltip,
               VxeTree,
               VxeTreeSelect,
-              VxeUpload,
+              VxeUpload
             } from 'vxe-pc-ui'
 
             import {
@@ -159,6 +166,7 @@
             // 注册组件
             // 如果页面中已经被显性导入了，则可以不用调用注册
             // 如果是配置式的，没有在页面中显性导入，则需要逐个注册
+            VxeUI.component(VxeAlert)
             VxeUI.component(VxeAnchor)
             VxeUI.component(VxeAnchorLink)
             VxeUI.component(VxeBreadcrumb)
@@ -167,6 +175,7 @@
             VxeUI.component(VxeButtonGroup)
             VxeUI.component(VxeCalendar)
             VxeUI.component(VxeCard)
+            VxeUI.component(VxeCarousel)
             VxeUI.component(VxeCheckbox)
             VxeUI.component(VxeCheckboxGroup)
             VxeUI.component(VxeCol)
@@ -174,14 +183,16 @@
             VxeUI.component(VxeCollapsePane)
             VxeUI.component(VxeDatePicker)
             VxeUI.component(VxeDrawer)
-            VxeUI.component(VxeFlowDesign)
-            VxeUI.component(VxeFlowView)
             VxeUI.component(VxeForm)
             VxeUI.component(VxeFormDesign)
             VxeUI.component(VxeFormGather)
             VxeUI.component(VxeFormItem)
             VxeUI.component(VxeFormView)
             VxeUI.component(VxeIcon)
+            VxeUI.component(VxeIconPicker)
+            VxeUI.component(VxeImage)
+            VxeUI.component(VxeImageGroup)
+            VxeUI.component(VxeImagePreview)
             VxeUI.component(VxeInput)
             VxeUI.component(VxeLayoutAside)
             VxeUI.component(VxeLayoutBody)
@@ -200,6 +211,7 @@
             VxeUI.component(VxeOption)
             VxeUI.component(VxePager)
             VxeUI.component(VxePasswordInput)
+            VxeUI.component(VxePrintPageBreak)
             VxeUI.component(VxePrint)
             VxeUI.component(VxePulldown)
             VxeUI.component(VxeRadio)
@@ -210,6 +222,8 @@
             VxeUI.component(VxeSwitch)
             VxeUI.component(VxeTabPane)
             VxeUI.component(VxeTabs)
+            VxeUI.component(VxeTag)
+            VxeUI.component(VxeText)
             VxeUI.component(VxeTextarea)
             VxeUI.component(VxeTip)
             VxeUI.component(VxeTooltip)

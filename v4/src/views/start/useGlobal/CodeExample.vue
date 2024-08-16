@@ -79,6 +79,7 @@
             import {
               VxeUI,
 
+              VxeAlert,
               VxeAnchor,
               VxeAnchorLink,
               VxeBreadcrumb,
@@ -87,6 +88,7 @@
               VxeButtonGroup,
               VxeCalendar,
               VxeCard,
+              VxeCarousel,
               VxeCheckbox,
               VxeCheckboxGroup,
               VxeCol,
@@ -94,14 +96,16 @@
               VxeCollapsePane,
               VxeDatePicker,
               VxeDrawer,
-              VxeFlowDesign,
-              VxeFlowView,
               VxeForm,
               VxeFormDesign,
               VxeFormGather,
               VxeFormItem,
               VxeFormView,
               VxeIcon,
+              VxeIconPicker,
+              VxeImage,
+              VxeImageGroup,
+              VxeImagePreview,
               VxeInput,
               VxeLayoutAside,
               VxeLayoutBody,
@@ -120,6 +124,7 @@
               VxeOption,
               VxePager,
               VxePasswordInput,
+              VxePrintPageBreak,
               VxePrint,
               VxePulldown,
               VxeRadio,
@@ -130,12 +135,14 @@
               VxeSwitch,
               VxeTabPane,
               VxeTabs,
+              VxeTag,
+              VxeText,
               VxeTextarea,
               VxeTip,
               VxeTooltip,
               VxeTree,
               VxeTreeSelect,
-              VxeUpload,
+              VxeUpload
             } from 'vxe-pc-ui'
 
             import {
@@ -156,67 +163,74 @@
             VxeUI.setI18n('zh-CN', zhCN)
             VxeUI.setLanguage('zh-CN')
 
-            function LazyVxeUI (app) {
-              app.use(VxeAnchor)
-              app.use(VxeAnchorLink)
-              app.use(VxeBreadcrumb)
-              app.use(VxeBreadcrumbItem)
-              app.use(VxeButton)
-              app.use(VxeButtonGroup)
-              app.use(VxeCalendar)
-              app.use(VxeCard)
-              app.use(VxeCheckbox)
-              app.use(VxeCheckboxGroup)
-              app.use(VxeCol)
-              app.use(VxeCollapse)
-              app.use(VxeCollapsePane)
-              app.use(VxeDatePicker)
-              app.use(VxeDrawer)
-              app.use(VxeFlowDesign)
-              app.use(VxeFlowView)
-              app.use(VxeForm)
-              app.use(VxeFormDesign)
-              app.use(VxeFormGather)
-              app.use(VxeFormItem)
-              app.use(VxeFormView)
-              app.use(VxeIcon)
-              app.use(VxeInput)
-              app.use(VxeLayoutAside)
-              app.use(VxeLayoutBody)
-              app.use(VxeLayoutContainer)
-              app.use(VxeLayoutFooter)
-              app.use(VxeLayoutHeader)
-              app.use(VxeLink)
-              app.use(VxeListDesign)
-              app.use(VxeListView)
-              app.use(VxeList)
-              app.use(VxeLoading)
-              app.use(VxeMenu)
-              app.use(VxeModal)
-              app.use(VxeNumberInput)
-              app.use(VxeOptgroup)
-              app.use(VxeOption)
-              app.use(VxePager)
-              app.use(VxePasswordInput)
-              app.use(VxePrint)
-              app.use(VxePulldown)
-              app.use(VxeRadio)
-              app.use(VxeRadioButton)
-              app.use(VxeRadioGroup)
-              app.use(VxeRow)
-              app.use(VxeSelect)
-              app.use(VxeSwitch)
-              app.use(VxeTabPane)
-              app.use(VxeTabs)
-              app.use(VxeTextarea)
-              app.use(VxeTip)
-              app.use(VxeTooltip)
-              app.use(VxeTree)
-              app.use(VxeTreeSelect)
-              app.use(VxeUpload)
+            function lazyVxeUI (app) {
+              app.component(VxeAlert)
+              app.component(VxeAnchor)
+              app.component(VxeAnchorLink)
+              app.component(VxeBreadcrumb)
+              app.component(VxeBreadcrumbItem)
+              app.component(VxeButton)
+              app.component(VxeButtonGroup)
+              app.component(VxeCalendar)
+              app.component(VxeCard)
+              app.component(VxeCarousel)
+              app.component(VxeCheckbox)
+              app.component(VxeCheckboxGroup)
+              app.component(VxeCol)
+              app.component(VxeCollapse)
+              app.component(VxeCollapsePane)
+              app.component(VxeDatePicker)
+              app.component(VxeDrawer)
+              app.component(VxeForm)
+              app.component(VxeFormDesign)
+              app.component(VxeFormGather)
+              app.component(VxeFormItem)
+              app.component(VxeFormView)
+              app.component(VxeIcon)
+              app.component(VxeIconPicker)
+              app.component(VxeImage)
+              app.component(VxeImageGroup)
+              app.component(VxeImagePreview)
+              app.component(VxeInput)
+              app.component(VxeLayoutAside)
+              app.component(VxeLayoutBody)
+              app.component(VxeLayoutContainer)
+              app.component(VxeLayoutFooter)
+              app.component(VxeLayoutHeader)
+              app.component(VxeLink)
+              app.component(VxeListDesign)
+              app.component(VxeListView)
+              app.component(VxeList)
+              app.component(VxeLoading)
+              app.component(VxeMenu)
+              app.component(VxeModal)
+              app.component(VxeNumberInput)
+              app.component(VxeOptgroup)
+              app.component(VxeOption)
+              app.component(VxePager)
+              app.component(VxePasswordInput)
+              app.component(VxePrintPageBreak)
+              app.component(VxePrint)
+              app.component(VxePulldown)
+              app.component(VxeRadio)
+              app.component(VxeRadioButton)
+              app.component(VxeRadioGroup)
+              app.component(VxeRow)
+              app.component(VxeSelect)
+              app.component(VxeSwitch)
+              app.component(VxeTabPane)
+              app.component(VxeTabs)
+              app.component(VxeTag)
+              app.component(VxeText)
+              app.component(VxeTextarea)
+              app.component(VxeTip)
+              app.component(VxeTooltip)
+              app.component(VxeTree)
+              app.component(VxeTreeSelect)
+              app.component(VxeUpload)
             }
 
-            function LazyVxeTable (app) {
+            function lazyVxeTable (app) {
               app.use(VxeTable)
               app.use(VxeColumn)
               app.use(VxeColgroup)
@@ -224,7 +238,7 @@
               app.use(VxeToolbar)
             }
 
-            createApp(App).use(LazyVxeUI).use(LazyVxeTable).mount('#app')
+            createApp(App).use(lazyVxeUI).use(lazyVxeTable).mount('#app')
           </pre-code>
         </pre>
       </template>

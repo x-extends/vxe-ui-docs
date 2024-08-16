@@ -1478,6 +1478,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'visibleMethod',
           name: 'ComponentGridRadioVisibleMethod',
           component: () => import('@/views/grid/radio/visibleMethod/CodeExample.vue')
+        },
+        {
+          path: 'template',
+          name: 'ComponentGridRadioTemplate',
+          component: () => import('@/views/grid/radio/template/CodeExample.vue')
         }
       ]
     },
@@ -1508,6 +1513,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'range',
           name: 'ComponentGridCheckboxRange',
           component: () => import('@/views/grid/checkbox/range/CodeExample.vue')
+        },
+        {
+          path: 'template',
+          name: 'ComponentGridCheckboxTemplate',
+          component: () => import('@/views/grid/checkbox/template/CodeExample.vue')
         }
       ]
     },
