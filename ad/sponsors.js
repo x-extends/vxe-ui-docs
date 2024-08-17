@@ -27,13 +27,26 @@ setTimeout(function () {var isZH = true
           '<div style="display: block !important;">',
           data.map(function (item) {
             if (item) {
-              return '<a href="' + (item ? item.url : '') + '" style="display: block !important;margin:8px 0 !important;width:200px !important;max-height:100px !important;text-align: center !important;background-color: rgba(0, 0, 0, 0.05) !important;border-radius: 2px !important;cursor: pointer !important;" target="_blank"><img src="' + item.img + '" alt="" style="display: inline-block !important;max-width:100% !important;max-height:100% !important;vertical-align: middle !important;"></a>'
+              if (item.img) {
+                return [
+                  '<a href="' + (item ? item.url : '') + '" style="display: block !important;margin:8px 0 !important;width:200px !important;max-height:100px !important;text-align: center !important;background-color: rgba(0, 0, 0, 0.05) !important;border-radius: 2px !important;cursor: pointer !important;' + (item.a || '') + '" target="_blank">',
+                    '<img src="' + item.img + '" alt="" style="display: inline-block !important;max-width:100% !important;max-height:100% !important;vertical-align: middle !important;">',
+                  '</a>'
+                ].join('')
+              }
+              return [
+                '<a href="' + (item ? item.url : '') + '" style="display: block !important;margin:8px 0 !important;width:200px !important;max-height:100px !important;text-align: center !important;background-color: rgba(0, 0, 0, 0.05) !important;border-radius: 2px !important;cursor: pointer !important;' + (item.a || '') + '" target="_blank">',
+                  '<span style="font-size: 13px !important;line-height: 50px !important;' + (item.span || '') + '">', 
+                    item.title || '', 
+                  '</span>',
+                '</a>'
+              ].join('')
             }
             return [
               '<a style="display: block !important;margin:8px 0 !important;width:200px !important;max-height:100px !important;text-align: center !important;background-color: rgba(0, 0, 0, 0.05) !important;border-radius: 2px !important;cursor: pointer !important;" onclick="joinSponorEvent()">',
-              '<span style="font-size: 13px !important;line-height: 50p !important;">', 
-              isZH ? '点击成为赞助商' : 'Click become a Sponsor', 
-              '</span>',
+                '<span style="font-size: 13px !important;line-height: 50px !important;">', 
+                  isZH ? '点击成为赞助商' : 'Click become a Sponsor', 
+                '</span>',
               '</a>'
             ].join('')
           }).join(''),
