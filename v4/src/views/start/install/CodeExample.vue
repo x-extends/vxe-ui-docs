@@ -16,16 +16,17 @@
             yarn add vxe-table@next vxe-pc-ui
           </pre-code>
           <pre-code class="javascript">
-            // ...
+            // 完整导入 UI 组件库
             import VxeUI from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
             // ...
 
-            import VxeTable from 'vxe-table'
+            // 完整导入 表格库
+            import VxeUITable from 'vxe-table'
             import 'vxe-table/lib/style.css'
             // ...
 
-            createApp(App).use(VxeUI).use(VxeTable).mount('#app')
+            createApp(App).use(VxeUI).use(VxeUITable).mount('#app')
             // ...
           </pre-code>
         </pre>
