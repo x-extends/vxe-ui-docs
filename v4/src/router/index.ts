@@ -3271,6 +3271,21 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'icon-picker',
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentIconPickerSize',
+            component: () => import('@/views/icon-picker/size/CodeExample.vue')
+          },
+          {
+            path: 'clearable',
+            name: 'ComponentIconPickerClearable',
+            component: () => import('@/views/icon-picker/clearable/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'date-picker',
         children: [
           {

@@ -1308,8 +1308,17 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: 'IconPicker 图标选择',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon-picker' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentIconPickerSize' } },
+          { title: '可清除', routerLink: { name: 'ComponentIconPickerClearable' } }
+        ]
+      },
+      {
         title: 'DatePicker 日期选择',
         children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'date-picker' } } },
           { title: '日期类型', routerLink: { name: 'ComponentDatePickerDate' } },
           { title: '时间类型', routerLink: { name: 'ComponentDatePickerTime' } },
           { title: '日期带时间类型', routerLink: { name: 'ComponentDatePickerDatetime' } },
