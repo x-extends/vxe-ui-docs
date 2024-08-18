@@ -23,6 +23,7 @@ const formRef = ref<VxeFormInstance<FormDataVO>>()
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
   preventSubmit: true,
+  vertical: true,
   data: {
     name: 'test1',
     nickname: 'Testing',

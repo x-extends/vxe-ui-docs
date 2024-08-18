@@ -4398,6 +4398,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/form/basics/colon/CodeExample.vue')
               },
               {
+                path: 'padding',
+                name: 'ComponentFormBasicsPadding',
+                component: () => import('@/views/form/basics/padding/CodeExample.vue')
+              },
+              {
                 path: 'bold',
                 name: 'ComponentFormBasicsBold',
                 component: () => import('@/views/form/basics/bold/CodeExample.vue')
@@ -4611,6 +4616,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'field',
                 name: 'ComponentFormConfigField',
                 component: () => import('@/views/form/config/field/CodeExample.vue')
+              },
+              {
+                path: 'padding',
+                name: 'ComponentFormConfigPadding',
+                component: () => import('@/views/form/config/padding/CodeExample.vue')
               },
               {
                 path: 'colon',
