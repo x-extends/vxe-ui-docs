@@ -41,6 +41,7 @@ const formViewEvent = () => {
   const $formDesign = formDesignRef.value
   if ($formDesign) {
     designConfig.value = $formDesign.getConfig()
+    console.log(JSON.stringify(designConfig.value))
   }
 }
 
@@ -51,7 +52,7 @@ const submitEvent = () => {
 nextTick(() => {
   const $formDesign = formDesignRef.value
   if ($formDesign) {
-    const defaultConfigJSON = { formConfig: { title: '', pcVisible: true, pcVertical: true, pcTitleBold: false, pcTitleColon: false, pcTitleAlign: '', pcTitleWidth: '', pcTitleWidthUnit: '', mobileVisible: true, mobileVertical: true, mobileTitleBold: false, mobileTitleColon: false, mobileTitleAlign: '', mobileTitleWidth: '', mobileTitleWidthUnit: '' }, widgetData: [{ id: 100109, field: 'input100109', title: '输入框', name: 'input', required: false, options: { placeholder: '' }, children: [], model: { update: false, value: null } }, { id: 100110, field: 'textarea100110', title: '文本域', name: 'textarea', required: false, options: { placeholder: '' }, children: [], model: { update: false, value: null } }, { id: 100111, field: 'VxeInput100111', title: '输入框', name: 'VxeInput', required: false, options: { placeholder: '' }, children: [], model: { update: false, value: null } }, { id: 100112, field: 'VxeDatePicker100112', title: '日期', name: 'VxeDatePicker', required: false, options: { placeholder: '' }, children: [], model: { update: false, value: null } }] }
+    const defaultConfigJSON = { formConfig: { title: '', pcVisible: true, pcVertical: true, pcTitleBold: false, pcTitleColon: false, pcTitleAlign: '', pcTitleWidth: '', pcTitleWidthUnit: '', mobileVisible: true, mobileVertical: true, mobileTitleBold: false, mobileTitleColon: false, mobileTitleAlign: '', mobileTitleWidth: '', mobileTitleWidthUnit: '' }, widgetData: [{ id: 100109, field: 'input100109', title: '输入框', name: 'input', required: false, hidden: false, options: { placeholder: '' }, children: [], model: { update: false, value: null } }, { id: 100110, field: 'textarea100110', title: '文本域', name: 'textarea', required: false, hidden: false, options: { placeholder: '' }, children: [], model: { update: false, value: null } }, { id: 100111, field: 'VxeInput100111', title: '输入框', name: 'VxeInput', required: false, hidden: false, options: { placeholder: '' }, children: [], model: { update: false, value: null } }, { id: 100112, field: 'VxeDatePicker100112', title: '日期', name: 'VxeDatePicker', required: false, hidden: false, options: { placeholder: '', defaultValue: { type: '', value: '' } }, children: [], model: { update: false, value: null } }] }
     $formDesign.loadConfig(defaultConfigJSON)
   }
 })
