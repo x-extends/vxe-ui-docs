@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-form v-bind="formOptions"></vxe-form>
+    <vxe-form v-bind="formOptions" ></vxe-form>
   </div>
 </template>
 
@@ -11,8 +11,9 @@ import { VxeFormProps, VxeFormItemPropTypes } from 'vxe-pc-ui'
 interface FormDataVO {
   name: string
   nickname: string
-  sex: string
-  imgList: string[]
+  hobbies1: string
+  hobbies2: string
+  address: string
 }
 
 const actionItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
@@ -28,17 +29,12 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
   data: {
     name: 'test1',
     nickname: 'Testing',
-    sex: '',
-    imgList: [
-      'https://vxeui.com/resource/img/fj577.jpg',
-      'https://vxeui.com/resource/img/fj581.jpeg',
-      'https://vxeui.com/resource/img/fj573.jpeg',
-      'https://vxeui.com/resource/img/fj562.png'
-    ]
+    hobbies1: '5',
+    hobbies2: '3',
+    address: ''
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
-    { field: 'imgList', title: '查看图片组', span: 24, itemRender: { name: 'VxeImageGroup', props: { imageStyle: { width: 100, height: 100 } } } },
     { align: 'center', span: 24, itemRender: actionItemRender }
   ]
 })

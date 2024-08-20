@@ -3,7 +3,7 @@
     <vxe-form
       title-width="120"
       :data="formData">
-      <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'input' }"></vxe-form-item>
+      <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-item title="下拉框" field="sex" span="24" :item-render="sexItemRender"></vxe-form-item>
       <vxe-form-item title="下拉框多选" field="sexList" span="24" :item-render="sexListItemRender"></vxe-form-item>
       <vxe-form-item title="下拉框分组" field="type" span="24" :item-render="typeItemRender"></vxe-form-item>

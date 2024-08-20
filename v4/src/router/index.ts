@@ -2804,6 +2804,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/menu/base/CodeExample.vue')
           },
           {
+            path: 'loading',
+            name: 'ComponentMenuLoading',
+            component: () => import('@/views/menu/loading/CodeExample.vue')
+          },
+          {
             path: 'icon',
             name: 'ComponentMenuIcon',
             component: () => import('@/views/menu/icon/CodeExample.vue')
@@ -4506,6 +4511,11 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/basics/itemRender/vxe-date-picker/CodeExample.vue')
                   },
                   {
+                    path: 'vxe-tree-select',
+                    name: 'ComponentFormBasicsItemRenderVxeTreeSelect',
+                    component: () => import('@/views/form/basics/itemRender/vxe-tree-select/CodeExample.vue')
+                  },
+                  {
                     path: 'vxe-switch',
                     name: 'ComponentFormBasicsItemRenderVxeSwitch',
                     component: () => import('@/views/form/basics/itemRender/vxe-switch/CodeExample.vue')
@@ -4559,6 +4569,11 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'vxe-date-picker',
                     name: 'ComponentFormBasicsItemTemplateVxeDatePicker',
                     component: () => import('@/views/form/basics/itemTemplate/vxe-date-picker/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-tree-select',
+                    name: 'ComponentFormBasicsItemTemplateVxeTreeSelect',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-tree-select/CodeExample.vue')
                   },
                   {
                     path: 'vxe-switch',
@@ -4681,6 +4696,11 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/config/itemRender/select/CodeExample.vue')
                   },
                   {
+                    path: 'vxe-button-group',
+                    name: 'ComponentFormConfigItemRenderVxeButtonGroup',
+                    component: () => import('@/views/form/config/itemRender/vxe-button-group/CodeExample.vue')
+                  },
+                  {
                     path: 'vxe-input',
                     name: 'ComponentFormConfigItemRenderVxeInput',
                     component: () => import('@/views/form/config/itemRender/vxe-input/CodeExample.vue')
@@ -4704,6 +4724,11 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'vxe-date-picker',
                     name: 'ComponentFormConfigItemRenderVxeDatePicker',
                     component: () => import('@/views/form/config/itemRender/vxe-date-picker/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-tree-select',
+                    name: 'ComponentFormConfigItemRenderVxeTreeSelect',
+                    component: () => import('@/views/form/config/itemRender/vxe-tree-select/CodeExample.vue')
                   },
                   {
                     path: 'vxe-switch',
@@ -4769,6 +4794,11 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'vxe-date-picker',
                     name: 'ComponentFormConfigItemTemplateVxeDatePicker',
                     component: () => import('@/views/form/config/itemTemplate/vxe-date-picker/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-tree-select',
+                    name: 'ComponentFormConfigItemTemplateVxeTreeSelect',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-tree-select/CodeExample.vue')
                   },
                   {
                     path: 'vxe-switch',

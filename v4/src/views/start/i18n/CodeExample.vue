@@ -2,7 +2,7 @@
   <div>
     <CodeLight>
       <template #tip>
-        <vxe-tip status="primary" title="国际化">
+        <vxe-tip status="primary" title="国际化语言">
           通过调用 VxeUI.setLanguage('zh-CN') 方法可以切换组件语言
         </vxe-tip>
       </template>
@@ -20,8 +20,12 @@
             // import jaJP from 'vxe-pc-ui/lib/language/ja-JP'
             // import esES from 'vxe-pc-ui/lib/language/es-ES'
             // import ptBR from 'vxe-pc-ui/lib/language/pt-BR'
+            // import viVN from 'vxe-pc-ui/lib/language/vi-VN'
+            // import koKR from 'vxe-pc-ui/lib/language/ko-KR'
+            // import huHU from 'vxe-pc-ui/lib/language/hu-HU'
+            // import ruRU from 'vxe-pc-ui/lib/language/ru-RU'
 
-            // 增加语言
+            // 注册语言
             VxeUI.setI18n('zh-CN', zhCN)
             // VxeUI.setI18n('zh-HK', zhHK)
             // VxeUI.setI18n('zh-TW', zhTW)
@@ -30,6 +34,10 @@
             // VxeUI.setI18n('ja-JP', jaJP)
             // VxeUI.setI18n('es-ES', esES)
             // VxeUI.setI18n('pt-BR', ptBR)
+            // VxeUI.setI18n('vi-VN', viVN)
+            // VxeUI.setI18n('ko-KR', koKR)
+            // VxeUI.setI18n('hu-HU', huHU)
+            // VxeUI.setI18n('ru-RU', ruRU)
 
             // 切换语言
             VxeUI.setLanguage('zh-CN')

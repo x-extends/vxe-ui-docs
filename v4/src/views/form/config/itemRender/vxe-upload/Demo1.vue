@@ -1,17 +1,12 @@
 <template>
   <div>
-    <vxe-form v-bind="formOptions">
-      <template #active>
-        <vxe-button type="reset">重置</vxe-button>
-        <vxe-button type="submit" status="primary">提交</vxe-button>
-      </template>
-    </vxe-form>
+    <vxe-form v-bind="formOptions"></vxe-form>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import { VxeFormProps, VxeUploadPropTypes } from 'vxe-pc-ui'
+import { VxeFormProps, VxeUploadPropTypes, VxeFormItemPropTypes } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -22,6 +17,14 @@ interface FormDataVO {
   imgList1: VxeUploadPropTypes.ModelValue
   imgList2: VxeUploadPropTypes.ModelValue
 }
+
+const actionItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
+  name: 'VxeButtonGroup',
+  options: [
+    { content: '重置', type: 'reset' },
+    { content: '保存', type: 'submit', status: 'primary', icon: 'vxe-icon-save' }
+  ]
+})
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
   titleWidth: 120,
@@ -44,7 +47,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { field: 'fileList2', title: '上传附件多选', span: 24, itemRender: { name: 'VxeUpload', props: { multiple: true } } },
     { field: 'imgList1', title: '上传图片', span: 24, itemRender: { name: 'VxeUpload', props: { mode: 'image' } } },
     { field: 'imgList2', title: '上传图片多选', span: 24, itemRender: { name: 'VxeUpload', props: { mode: 'image', multiple: true } } },
-    { align: 'center', span: 24, slots: { default: 'active' } }
+    { align: 'center', span: 24, itemRender: actionItemRender }
   ]
 })
 </script>

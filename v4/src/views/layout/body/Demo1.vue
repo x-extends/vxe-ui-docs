@@ -13,7 +13,8 @@
           </vxe-layout-aside>
 
           <vxe-layout-container vertical>
-            <vxe-layout-body class="bg3">
+            <vxe-layout-body class="bg3" :loading="loading">
+              <vxe-button mode="text" @click="openLoading">点击加载中</vxe-button>
               <div style="height: 400px">内容</div>
               <div style="height: 400px">内容</div>
             </vxe-layout-body>
@@ -29,6 +30,16 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
+
+const loading = ref(false)
+
+const openLoading = () => {
+  loading.value = true
+  setTimeout(() => {
+    loading.value = false
+  }, 3000)
+}
 </script>
 
 <style lang="scss" scoped>
