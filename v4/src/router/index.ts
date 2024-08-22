@@ -4052,6 +4052,21 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'carousel',
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentCarouselBase',
+            component: () => import('@/views/carousel/base/CodeExample.vue')
+          },
+          {
+            path: 'height',
+            name: 'ComponentCarouselHeight',
+            component: () => import('@/views/carousel/height/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'print',
         children: [
           {

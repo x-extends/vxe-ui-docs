@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-tabs v-model="selectTab" type="border-card" :height="140" padding>
+    <vxe-tabs type="border-card" :height="140" padding>
       <vxe-tab-pane title="标题1" name="1">
         <div>内容1</div>
         <div>内容1</div>
@@ -30,7 +30,4 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-
-const selectTab = ref('1')
 </script>

@@ -957,6 +957,14 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: 'Carousel 轮播图',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'carousel' } } },
+          { title: '基础', routerLink: { name: 'ComponentCarouselBase' } },
+          { title: '高度', routerLink: { name: 'ComponentCarouselHeight' } }
+        ]
+      },
+      {
         title: 'Image 图片',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image' } } },

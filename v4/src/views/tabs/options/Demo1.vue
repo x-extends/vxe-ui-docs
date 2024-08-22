@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-tabs v-model="selectTab" :height="140" :options="tabList">
+    <vxe-tabs :height="140" :options="tabList">
       <template #default1>
         <div>内容1</div>
         <div>内容1</div>
@@ -34,8 +34,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { VxeTabsPropTypes } from 'vxe-pc-ui'
-
-const selectTab = ref('1')
 
 const tabList = ref<VxeTabsPropTypes.Options>([
   { name: '1', title: '标题1', slots: { default: 'default1' } },
