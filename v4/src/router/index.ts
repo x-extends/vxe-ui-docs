@@ -4063,6 +4063,31 @@ const routes: Array<RouteRecordRaw> = [
             path: 'height',
             name: 'ComponentCarouselHeight',
             component: () => import('@/views/carousel/height/CodeExample.vue')
+          },
+          {
+            path: 'autoPlay',
+            name: 'ComponentCarouselAutoPlay',
+            component: () => import('@/views/carousel/autoPlay/CodeExample.vue')
+          },
+          {
+            path: 'showIndicators',
+            name: 'ComponentCarouselShowIndicators',
+            component: () => import('@/views/carousel/showIndicators/CodeExample.vue')
+          },
+          {
+            path: 'vertical',
+            name: 'ComponentCarouselVertical',
+            component: () => import('@/views/carousel/vertical/CodeExample.vue')
+          },
+          {
+            path: 'options',
+            name: 'ComponentCarouselOptions',
+            component: () => import('@/views/carousel/options/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentCarouselTemplate',
+            component: () => import('@/views/carousel/template/CodeExample.vue')
           }
         ]
       },

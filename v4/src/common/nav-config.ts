@@ -961,7 +961,12 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'carousel' } } },
           { title: '基础', routerLink: { name: 'ComponentCarouselBase' } },
-          { title: '高度', routerLink: { name: 'ComponentCarouselHeight' } }
+          { title: '高度', routerLink: { name: 'ComponentCarouselHeight' } },
+          { title: '纵向排版', routerLink: { name: 'ComponentCarouselVertical' } },
+          { title: '配置式', routerLink: { name: 'ComponentCarouselOptions' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentCarouselTemplate' } },
+          { title: '自动切换', routerLink: { name: 'ComponentCarouselAutoPlay' } },
+          { title: '指示器', routerLink: { name: 'ComponentCarouselShowIndicators' } }
         ]
       },
       {
