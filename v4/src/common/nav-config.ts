@@ -9,6 +9,7 @@ export interface NavVO {
   isUnpublished?: boolean
   isEnterprise?: boolean
   isPlugin?: boolean
+  isTemplate?: boolean
   routerLink?: {
     name: string
     params?: Record<string, string | number>
@@ -1004,6 +1005,19 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: 'Calendar 日历',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'calendar' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentCalendarSize' } },
+          { title: '高度', routerLink: { name: 'ComponentCalendarHeight' } },
+          { title: '日期视图', routerLink: { name: 'ComponentCalendarDate' } },
+          { title: '周视图', routerLink: { name: 'ComponentCalendarWeek' } },
+          { title: '月度图', routerLink: { name: 'ComponentCalendarMonth' } },
+          { title: '季度图', routerLink: { name: 'ComponentCalendarQuarter' } },
+          { title: '年度视图', routerLink: { name: 'ComponentCalendarYear' } }
+        ]
+      },
+      {
         title: 'Pulldown 下拉容器',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pulldown' } } },
@@ -1013,8 +1027,6 @@ export const navConfigList: NavVO[] = [
           { title: '实现下拉表格', routerLink: { name: 'ComponentPulldownTable' } }
         ]
       },
-      // { title: 'Carousel 走马灯' },
-      // { title: 'Calendar 日历' },
       // { title: 'Collapse 折叠面板' },
       {
         title: 'List 虚拟列表',
@@ -1759,9 +1771,10 @@ export const navConfigList: NavVO[] = [
             ]
           }
         ]
-      }
+      },
       // { title: 'FlowDesign 流程设计器' },
-      // { title: 'PrintDesign 打印设计器' }
+      // { title: 'PrintDesign 打印设计器' },
+      { title: '搭建可视化配套模板', isTemplate: true, linkUrl: 'https://vxeui.com/zero-code/' }
     ]
   },
   {

@@ -4092,6 +4092,46 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'calendar',
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentCalendarSize',
+            component: () => import('@/views/calendar/size/CodeExample.vue')
+          },
+          {
+            path: 'height',
+            name: 'ComponentCalendarHeight',
+            component: () => import('@/views/calendar/height/CodeExample.vue')
+          },
+          {
+            path: 'date',
+            name: 'ComponentCalendarDate',
+            component: () => import('@/views/calendar/date/CodeExample.vue')
+          },
+          {
+            path: 'week',
+            name: 'ComponentCalendarWeek',
+            component: () => import('@/views/calendar/week/CodeExample.vue')
+          },
+          {
+            path: 'month',
+            name: 'ComponentCalendarMonth',
+            component: () => import('@/views/calendar/month/CodeExample.vue')
+          },
+          {
+            path: 'quarter',
+            name: 'ComponentCalendarQuarter',
+            component: () => import('@/views/calendar/quarter/CodeExample.vue')
+          },
+          {
+            path: 'year',
+            name: 'ComponentCalendarYear',
+            component: () => import('@/views/calendar/year/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'print',
         children: [
           {
