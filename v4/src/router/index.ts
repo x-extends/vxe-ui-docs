@@ -4197,6 +4197,31 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'countdown',
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentCountdownSize',
+            component: () => import('@/views/countdown/size/CodeExample.vue')
+          },
+          {
+            path: 'base',
+            name: 'ComponentCountdownBase',
+            component: () => import('@/views/countdown/base/CodeExample.vue')
+          },
+          {
+            path: 'format',
+            name: 'ComponentCountdownFormat',
+            component: () => import('@/views/countdown/format/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentCountdownTemplate',
+            component: () => import('@/views/countdown/template/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'tree',
         children: [
           {

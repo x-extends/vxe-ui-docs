@@ -1692,6 +1692,16 @@ export const navConfigList: NavVO[] = [
     children: [
       // { title: 'Watermark 水印' },
       {
+        title: 'Countdown 倒计时',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'countdown' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentCountdownSize' } },
+          { title: '基础', routerLink: { name: 'ComponentCountdownBase' } },
+          { title: '格式化', routerLink: { name: 'ComponentCountdownFormat' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentCountdownTemplate' } }
+        ]
+      },
+      {
         i18nKey: 'app.aside.menu.printTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'print' } } },
