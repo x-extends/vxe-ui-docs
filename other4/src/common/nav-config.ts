@@ -153,6 +153,13 @@ export const navConfigList: NavVO[] = [
         title: 'Table 基础表格',
         children: [
           {
+            title: '筛选 - 渲染',
+            children: [
+              { title: 'ElInput', routerLink: { name: 'PluginRenderElementTableFilterElInput' } },
+              { title: 'ElDatePicker', routerLink: { name: 'PluginRenderElementTableFilterElDatePicker' } }
+            ]
+          },
+          {
             title: '单元格 - 渲染',
             children: [
               { title: 'ElSwitch', routerLink: { name: 'PluginRenderElementTableCellElSwitch' } },
@@ -176,6 +183,13 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Grid 配置式表格',
         children: [
+          {
+            title: '筛选 - 渲染',
+            children: [
+              { title: 'ElInput', routerLink: { name: 'PluginRenderElementGridFilterElInput' } },
+              { title: 'ElDatePicker', routerLink: { name: 'PluginRenderElementGridFilterElDatePicker' } }
+            ]
+          },
           {
             title: '单元格 - 渲染',
             children: [

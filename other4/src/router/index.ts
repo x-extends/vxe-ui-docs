@@ -293,6 +293,21 @@ const routes: Array<RouteRecordRaw> = [
         path: 'table',
         children: [
           {
+            path: 'filter',
+            children: [
+              {
+                path: 'el-input',
+                name: 'PluginRenderElementTableFilterElInput',
+                component: () => import('@/views/plugin-render-element/table/filter/el-input/CodeExample.vue')
+              },
+              {
+                path: 'el-date-picker',
+                name: 'PluginRenderElementTableFilterElDatePicker',
+                component: () => import('@/views/plugin-render-element/table/filter/el-date-picker/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'cell',
             children: [
               {
@@ -352,6 +367,21 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'grid',
         children: [
+          {
+            path: 'filter',
+            children: [
+              {
+                path: 'el-input',
+                name: 'PluginRenderElementGridFilterElInput',
+                component: () => import('@/views/plugin-render-element/grid/filter/el-input/CodeExample.vue')
+              },
+              {
+                path: 'el-date-picker',
+                name: 'PluginRenderElementGridFilterElDatePicker',
+                component: () => import('@/views/plugin-render-element/grid/filter/el-date-picker/CodeExample.vue')
+              }
+            ]
+          },
           {
             path: 'cell',
             children: [

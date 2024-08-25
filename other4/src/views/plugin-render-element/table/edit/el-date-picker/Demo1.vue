@@ -13,8 +13,8 @@
       <vxe-column type="checkbox" width="60"></vxe-column>
       <vxe-column type="seq" title="Number" width="80"></vxe-column>
       <vxe-column title="Name" field="name" min-width="140" :edit-render="{ name: 'ElInput' }"></vxe-column>
-      <vxe-column title="日期" field="date1" width="200" :edit-render="{ name: 'ElDatePicker', props: { type: 'date', format: 'YYYY-MM-DD' } }"></vxe-column>
-      <vxe-column title="日期带时间" field="date2" width="200" :edit-render="{ name: 'ElDatePicker', props: { type: 'datetime', format: 'YYYY-MM-DD HH:mm:ss' } }"></vxe-column>
+      <vxe-column title="日期" field="date1" width="200" :edit-render="{ name: 'ElDatePicker', props: { type: 'date', valueFormat: 'YYYY-MM-DD' } }"></vxe-column>
+      <vxe-column title="日期带时间" field="date2" width="200" :edit-render="{ name: 'ElDatePicker', props: { type: 'datetime', valueFormat: 'YYYY-MM-DD HH:mm:ss' } }"></vxe-column>
     </vxe-table>
   </div>
 </template>
