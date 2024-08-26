@@ -1352,7 +1352,8 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon-picker' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentIconPickerSize' } },
-          { title: '可清除', routerLink: { name: 'ComponentIconPickerClearable' } }
+          { title: '可清除', routerLink: { name: 'ComponentIconPickerClearable' } },
+          { title: '自定义列表', routerLink: { name: 'ComponentIconPickerIcons' } }
         ]
       },
       {

@@ -3312,6 +3312,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'clearable',
             name: 'ComponentIconPickerClearable',
             component: () => import('@/views/icon-picker/clearable/CodeExample.vue')
+          },
+          {
+            path: 'icons',
+            name: 'ComponentIconPickerIcons',
+            component: () => import('@/views/icon-picker/icons/CodeExample.vue')
           }
         ]
       },
