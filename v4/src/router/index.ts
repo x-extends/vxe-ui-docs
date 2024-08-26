@@ -3659,6 +3659,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/modal/modal/mask/CodeExample.vue')
           },
           {
+            path: 'lockScroll',
+            name: 'ComponentModalModalLockScroll',
+            component: () => import('@/views/modal/modal/lockScroll/CodeExample.vue')
+          },
+          {
             path: 'lockView',
             name: 'ComponentModalModalLockView',
             component: () => import('@/views/modal/modal/lockView/CodeExample.vue')
