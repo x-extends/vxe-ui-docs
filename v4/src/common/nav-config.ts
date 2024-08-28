@@ -982,7 +982,10 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image' } } },
           { title: '设置宽高', routerLink: { name: 'ComponentImageBase' } },
           { title: '多张图片', routerLink: { name: 'ComponentImageMultiple' } },
-          { title: '懒加载', routerLink: { name: 'ComponentImageLazy' } }
+          { title: '懒加载', routerLink: { name: 'ComponentImageLazy' } },
+          { title: '预览', routerLink: { name: 'ComponentImageShowPreview' } },
+          { title: '打印按钮', routerLink: { name: 'ComponentImageShowPrintButton' } },
+          { title: '下载按钮', routerLink: { name: 'ComponentImageShowDownloadButton' } }
         ]
       },
       {
@@ -1029,6 +1032,7 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pulldown' } } },
           { title: '基础', routerLink: { name: 'ComponentPulldownBase' } },
+          { title: '配置列表', routerLink: { name: 'ComponentPulldownOptions' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentPulldownTemplate' } },
           { title: '可搜索的下拉框', routerLink: { name: 'ComponentPulldownSelect' } },
           { title: '实现下拉表格', routerLink: { name: 'ComponentPulldownTable' } }

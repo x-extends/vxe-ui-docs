@@ -2862,6 +2862,21 @@ const routes: Array<RouteRecordRaw> = [
             path: 'lazy',
             name: 'ComponentImageLazy',
             component: () => import('@/views/image/lazy/CodeExample.vue')
+          },
+          {
+            path: 'showPreview',
+            name: 'ComponentImageShowPreview',
+            component: () => import('@/views/image/showPreview/CodeExample.vue')
+          },
+          {
+            path: 'showPrintButton',
+            name: 'ComponentImageShowPrintButton',
+            component: () => import('@/views/image/showPrintButton/CodeExample.vue')
+          },
+          {
+            path: 'showDownloadButton',
+            name: 'ComponentImageShowDownloadButton',
+            component: () => import('@/views/image/showDownloadButton/CodeExample.vue')
           }
         ]
       },
@@ -3807,6 +3822,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'base',
             name: 'ComponentPulldownBase',
             component: () => import('@/views/pulldown/base/CodeExample.vue')
+          },
+          {
+            path: 'options',
+            name: 'ComponentPulldownOptions',
+            component: () => import('@/views/pulldown/options/CodeExample.vue')
           },
           {
             path: 'template',
