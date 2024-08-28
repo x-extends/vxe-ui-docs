@@ -4158,6 +4158,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'year',
             name: 'ComponentCalendarYear',
             component: () => import('@/views/calendar/year/CodeExample.vue')
+          },
+          {
+            path: 'festivalMethod',
+            name: 'ComponentCalendarFestivalMethod',
+            component: () => import('@/views/calendar/festivalMethod/CodeExample.vue')
           }
         ]
       },
@@ -5058,14 +5063,19 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/upload/file/disabled/CodeExample.vue')
               },
               {
-                path: 'download',
-                name: 'ComponentUploadFileDownload',
-                component: () => import('@/views/upload/file/download/CodeExample.vue')
-              },
-              {
                 path: 'multiple',
                 name: 'ComponentUploadFileMultiple',
                 component: () => import('@/views/upload/file/multiple/CodeExample.vue')
+              },
+              {
+                path: 'downloadMethod',
+                name: 'ComponentUploadFileDownloadMethod',
+                component: () => import('@/views/upload/file/downloadMethod/CodeExample.vue')
+              },
+              {
+                path: 'beforeDownloadMethod',
+                name: 'ComponentUploadFileBeforeDownloadMethod',
+                component: () => import('@/views/upload/file/beforeDownloadMethod/CodeExample.vue')
               },
               {
                 path: 'singleMode',
@@ -5101,6 +5111,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'limitSize',
                 name: 'ComponentUploadFileLimitSize',
                 component: () => import('@/views/upload/file/limitSize/CodeExample.vue')
+              },
+              {
+                path: 'removeMethod',
+                name: 'ComponentUploadFileRemoveMethod',
+                component: () => import('@/views/upload/file/removeMethod/CodeExample.vue')
+              },
+              {
+                path: 'beforeRemoveMethod',
+                name: 'ComponentUploadFileBeforeRemoveMethod',
+                component: () => import('@/views/upload/file/beforeRemoveMethod/CodeExample.vue')
               },
               {
                 path: 'autoHidden',
@@ -5153,6 +5173,16 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/upload/image/multiple/CodeExample.vue')
               },
               {
+                path: 'downloadMethod',
+                name: 'ComponentUploadImageDownloadMethod',
+                component: () => import('@/views/upload/image/downloadMethod/CodeExample.vue')
+              },
+              {
+                path: 'beforeDownloadMethod',
+                name: 'ComponentUploadImageBeforeDownloadMethod',
+                component: () => import('@/views/upload/image/beforeDownloadMethod/CodeExample.vue')
+              },
+              {
                 path: 'singleMode',
                 name: 'ComponentUploadImageSingleMode',
                 component: () => import('@/views/upload/image/singleMode/CodeExample.vue')
@@ -5191,6 +5221,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'limitSize',
                 name: 'ComponentUploadImageLimitSize',
                 component: () => import('@/views/upload/image/limitSize/CodeExample.vue')
+              },
+              {
+                path: 'removeMethod',
+                name: 'ComponentUploadImageRemoveMethod',
+                component: () => import('@/views/upload/image/removeMethod/CodeExample.vue')
+              },
+              {
+                path: 'beforeRemoveMethod',
+                name: 'ComponentUploadImageBeforeRemoveMethod',
+                component: () => import('@/views/upload/image/beforeRemoveMethod/CodeExample.vue')
               },
               {
                 path: 'autoHidden',
