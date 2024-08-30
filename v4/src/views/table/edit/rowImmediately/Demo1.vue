@@ -4,7 +4,7 @@
 
     <vxe-table
       border
-      show-footer
+      show-overflow
       ref="tableRef"
       height="400"
       :row-config="{isHover: true}"
