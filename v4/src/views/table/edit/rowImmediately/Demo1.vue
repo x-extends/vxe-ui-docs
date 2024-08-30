@@ -23,9 +23,9 @@
             <vxe-input v-model="row.num1" type="number"></vxe-input>
           </template>
         </vxe-column>
-        <vxe-column field="num2" title="Num2" :edit-render="{}">
+        <vxe-column field="num2" title="Num2" :edit-render="{name: 'VxeInput'}">
           <template #edit="{ row }">
-            <vxe-input v-model="row.Num1" type="number"></vxe-input>
+            <vxe-input v-model="row.num2" type="number"></vxe-input>
           </template>
         </vxe-column>
         <vxe-column field="sum" title="合计">
