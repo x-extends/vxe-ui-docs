@@ -1,14 +1,9 @@
 <template>
   <div>
-    <vxe-button status="primary" @click="insertEvent">新增</vxe-button>
-
     <vxe-table
       border
       show-overflow
-      ref="tableRef"
       height="400"
-      :row-config="{isHover: true}"
-      :export-config="{}"
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'row'}">
       <vxe-column type="seq" width="60"></vxe-column>
@@ -18,19 +13,19 @@
             <vxe-input v-model="row.name"></vxe-input>
           </template>
         </vxe-column>
-        <vxe-column field="num1" title="Num1" :edit-render="{name: 'VxeInput'}">
+        <vxe-column field="num1" title="Num1" :edit-render="{name: 'VxeNumberInput'}">
           <template #edit="{ row }">
-            <vxe-input v-model="row.num1" type="number"></vxe-input>
+            <vxe-number-input v-model="row.num1"></vxe-number-input>
           </template>
         </vxe-column>
-        <vxe-column field="num2" title="Num2" :edit-render="{name: 'VxeInput'}">
+        <vxe-column field="num2" title="Num2" :edit-render="{name: 'VxeNumberInput'}">
           <template #edit="{ row }">
-            <vxe-input v-model="row.num2" type="number"></vxe-input>
+            <vxe-number-input v-model="row.num2"></vxe-number-input>
           </template>
         </vxe-column>
         <vxe-column field="sum" title="合计">
           <template #default="{ row }">
-            <span>{{ sumRowNum(row) }}</span>
+            <span>￥{{ sumRowNum(row) }}</span>
           </template>
         </vxe-column>
       </vxe-colgroup>
@@ -40,7 +35,6 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeTableInstance } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -51,8 +45,6 @@ interface RowVO {
   num2: number
   address: string
 }
-
-const tableRef = ref<VxeTableInstance<RowVO>>()
 
 const tableData = ref<RowVO[]>([
   { id: 10001, name: 'Test1', role: 'Develop', age: 10, num1: 28, num2: 5, address: 'test abc' },
@@ -65,16 +57,5 @@ const tableData = ref<RowVO[]>([
 
 const sumRowNum = (row: RowVO) => {
   return row.num1 + row.num2
-}
-
-const insertEvent = async () => {
-  const record = {
-    name: 'New name'
-  }
-  const $table = tableRef.value
-  if ($table) {
-    const { row: newRow } = await $table.insert(record)
-    $table.setEditCell(newRow, 'age')
-  }
 }
 </script>

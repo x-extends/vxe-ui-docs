@@ -1963,6 +1963,26 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'rowDisable',
           name: 'ComponentGridEditRowDisable',
           component: () => import('@/views/grid/edit/rowDisable/CodeExample.vue')
+        },
+        {
+          path: 'cellValid',
+          name: 'ComponentGridEditCellValid',
+          component: () => import('@/views/grid/edit/cellValid/CodeExample.vue')
+        },
+        {
+          path: 'rowValid',
+          name: 'ComponentGridEditRowValid',
+          component: () => import('@/views/grid/edit/rowValid/CodeExample.vue')
+        },
+        {
+          path: 'rowImmediately',
+          name: 'ComponentGridEditRowImmediately',
+          component: () => import('@/views/grid/edit/rowImmediately/CodeExample.vue')
+        },
+        {
+          path: 'footerImmediately',
+          name: 'ComponentGridEditFooterImmediately',
+          component: () => import('@/views/grid/edit/footerImmediately/CodeExample.vue')
         }
       ]
     },
@@ -5201,6 +5221,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'showError',
                 name: 'ComponentUploadFileShowError',
                 component: () => import('@/views/upload/file/showError/CodeExample.vue')
+              },
+              {
+                path: 'corner',
+                name: 'ComponentUploadFileCorner',
+                component: () => import('@/views/upload/file/corner/CodeExample.vue')
               }
             ]
           },
@@ -5316,6 +5341,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'showError',
                 name: 'ComponentUploadImageShowError',
                 component: () => import('@/views/upload/image/showError/CodeExample.vue')
+              },
+              {
+                path: 'corner',
+                name: 'ComponentUploadImageCorner',
+                component: () => import('@/views/upload/image/corner/CodeExample.vue')
               }
             ]
           }

@@ -614,7 +614,11 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '单击编辑', routerLink: { name: 'ComponentGridEditClick' } },
             { title: '双击编辑', routerLink: { name: 'ComponentGridEditDblclick' } },
             { title: '禁用单元格编辑', routerLink: { name: 'ComponentGridEditCellDisable' } },
-            { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRowDisable' } }
+            { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRowDisable' } },
+            { title: '单元格校验', routerLink: { name: 'ComponentGridEditCellValid' } },
+            { title: '行编辑', routerLink: { name: 'ComponentGridEditRowValid' } },
+            { title: '实现行字段的合计', routerLink: { name: 'ComponentGridEditRowImmediately' } },
+            { title: '实现表尾实时合计', routerLink: { name: 'ComponentGridEditFooterImmediately' } }
           ]
         },
         {
@@ -1487,7 +1491,8 @@ export const navConfigList: NavVO[] = [
               { title: '自定义上传按钮', routerLink: { name: 'ComponentUploadFileShowUploadButton' } },
               { title: '自动隐藏上传按钮', routerLink: { name: 'ComponentUploadFileAutoHidden' } },
               { title: '显示更多', routerLink: { name: 'ComponentUploadFileMoreBtn' } },
-              { title: '失败重新上传', routerLink: { name: 'ComponentUploadFileShowError' } }
+              { title: '失败重新上传', routerLink: { name: 'ComponentUploadFileShowError' } },
+              { title: '自定义操作按钮', routerLink: { name: 'ComponentUploadFileCorner' } }
             ]
           },
           {
@@ -1514,7 +1519,8 @@ export const navConfigList: NavVO[] = [
               { title: '自定义上传按钮', routerLink: { name: 'ComponentUploadImageShowUploadButton' } },
               { title: '自动隐藏按钮', routerLink: { name: 'ComponentUploadImageAutoHidden' } },
               { title: '显示更多', routerLink: { name: 'ComponentUploadImageMoreBtn' } },
-              { title: '失败重新上传', routerLink: { name: 'ComponentUploadImageShowError' } }
+              { title: '失败重新上传', routerLink: { name: 'ComponentUploadImageShowError' } },
+              { title: '自定义操作按钮', routerLink: { name: 'ComponentUploadImageCorner' } }
             ]
           }
         ]

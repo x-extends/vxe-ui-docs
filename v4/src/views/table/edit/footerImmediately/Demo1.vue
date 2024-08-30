@@ -8,8 +8,6 @@
       show-overflow
       ref="tableRef"
       height="400"
-      :row-config="{isHover: true}"
-      :export-config="{}"
       :footer-method="footerMethod"
       :data="tableData"
       :edit-config="{trigger: 'click', mode: 'row'}">
@@ -20,19 +18,19 @@
             <vxe-input v-model="row.name"></vxe-input>
           </template>
         </vxe-column>
-        <vxe-column field="age" title="Age" :edit-render="{name: 'VxeInput'}">
+        <vxe-column field="age" title="Age" :edit-render="{name: 'VxeNumberInput'}">
           <template #edit="{ row }">
-            <vxe-input v-model="row.age" type="integer" :min="1" :max="120" @change="updateFooterEvent"></vxe-input>
+            <vxe-number-input v-model="row.age" type="integer" :min="1" :max="120" @change="updateFooterEvent"></vxe-number-input>
           </template>
         </vxe-column>
-        <vxe-column field="num" title="Num" :edit-render="{name: 'VxeInput'}">
+        <vxe-column field="num" title="Num" :edit-render="{name: 'VxeNumberInput'}">
           <template #edit="{ row }">
-            <vxe-input v-model="row.num" type="number" @input="updateFooterEvent"></vxe-input>
+            <vxe-number-input v-model="row.num" @change="updateFooterEvent"></vxe-number-input>
           </template>
         </vxe-column>
-        <vxe-column field="rate" title="Rate" :edit-render="{}">
+        <vxe-column field="rate" title="Rate" :edit-render="{name: 'VxeNumberInput'}">
           <template #edit="{ row }">
-            <vxe-input v-model="row.rate" type="number" @input="updateFooterEvent"></vxe-input>
+            <vxe-number-input v-model="row.rate" @change="updateFooterEvent"></vxe-number-input>
           </template>
         </vxe-column>
       </vxe-colgroup>
@@ -99,7 +97,7 @@ const footerMethod: VxeTablePropTypes.FooterMethod<RowVO> = ({ columns, data }) 
         return '和值'
       }
       if (['rate', 'num'].includes(column.field)) {
-        return sumNum(data, column.field)
+        return `￥${sumNum(data, column.field)}`
       }
       return null
     })
