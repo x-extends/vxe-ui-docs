@@ -14,7 +14,6 @@ const fileList = ref([
 ])
 
 const moreConfig = reactive<VxeUploadPropTypes.MoreConfig>({
-  maxCount: 1,
-  layout: 'horizontal'
+  maxCount: 1
 })
 </script>

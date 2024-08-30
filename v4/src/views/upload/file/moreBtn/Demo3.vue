@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-upload v-model="fileList" mode="image" :more-config="moreConfig" readonly></vxe-upload>
+    <vxe-upload v-model="fileList" :more-config="moreConfig" readonly></vxe-upload>
   </div>
 </template>
 
@@ -14,6 +14,7 @@ const fileList = ref([
 ])
 
 const moreConfig = reactive<VxeUploadPropTypes.MoreConfig>({
-  maxCount: 1
+  maxCount: 1,
+  layout: 'horizontal'
 })
 </script>

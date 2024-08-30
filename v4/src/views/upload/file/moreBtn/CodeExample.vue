@@ -11,6 +11,14 @@
     <CodeLight path="upload/file/moreBtn/Demo2">
       <template #tip>
         <vxe-tip status="primary">
+          只读模式
+        </vxe-tip>
+      </template>
+    </CodeLight>
+
+    <CodeLight path="upload/file/moreBtn/Demo3">
+      <template #tip>
+        <vxe-tip status="primary">
           显示横向布局
         </vxe-tip>
       </template>

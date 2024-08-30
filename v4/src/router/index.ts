@@ -5153,6 +5153,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/upload/file/beforeRemoveMethod/CodeExample.vue')
               },
               {
+                path: 'showUploadButton',
+                name: 'ComponentUploadFileShowUploadButton',
+                component: () => import('@/views/upload/file/showUploadButton/CodeExample.vue')
+              },
+              {
                 path: 'autoHidden',
                 name: 'ComponentUploadFileAutoHidden',
                 component: () => import('@/views/upload/file/autoHidden/CodeExample.vue')
@@ -5261,6 +5266,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'beforeRemoveMethod',
                 name: 'ComponentUploadImageBeforeRemoveMethod',
                 component: () => import('@/views/upload/image/beforeRemoveMethod/CodeExample.vue')
+              },
+              {
+                path: 'showUploadButton',
+                name: 'ComponentUploadImageShowUploadButton',
+                component: () => import('@/views/upload/image/showUploadButton/CodeExample.vue')
               },
               {
                 path: 'autoHidden',

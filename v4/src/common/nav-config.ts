@@ -1473,7 +1473,8 @@ export const navConfigList: NavVO[] = [
               { title: '限制附件大小', routerLink: { name: 'ComponentUploadFileLimitSize' } },
               { title: '删除文件', routerLink: { name: 'ComponentUploadFileRemoveMethod' } },
               { title: '阻止删除', routerLink: { name: 'ComponentUploadFileBeforeRemoveMethod' } },
-              { title: '自动隐藏按钮', routerLink: { name: 'ComponentUploadFileAutoHidden' } },
+              { title: '自定义上传按钮', routerLink: { name: 'ComponentUploadFileShowUploadButton' } },
+              { title: '自动隐藏上传按钮', routerLink: { name: 'ComponentUploadFileAutoHidden' } },
               { title: '显示更多', routerLink: { name: 'ComponentUploadFileMoreBtn' } },
               { title: '失败重新上传', routerLink: { name: 'ComponentUploadFileShowError' } }
             ]
@@ -1499,6 +1500,7 @@ export const navConfigList: NavVO[] = [
               { title: '限制附件大小', routerLink: { name: 'ComponentUploadImageLimitSize' } },
               { title: '删除图片', routerLink: { name: 'ComponentUploadImageRemoveMethod' } },
               { title: '阻止删除', routerLink: { name: 'ComponentUploadImageBeforeRemoveMethod' } },
+              { title: '自定义上传按钮', routerLink: { name: 'ComponentUploadImageShowUploadButton' } },
               { title: '自动隐藏按钮', routerLink: { name: 'ComponentUploadImageAutoHidden' } },
               { title: '显示更多', routerLink: { name: 'ComponentUploadImageMoreBtn' } },
               { title: '失败重新上传', routerLink: { name: 'ComponentUploadImageShowError' } }

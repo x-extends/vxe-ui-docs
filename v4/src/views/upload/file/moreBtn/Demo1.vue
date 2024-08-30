@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-upload v-model="fileList" :more-config="moreConfig" readonly></vxe-upload>
+    <vxe-upload v-model="fileList" :more-config="moreConfig" multiple></vxe-upload>
   </div>
 </template>
 

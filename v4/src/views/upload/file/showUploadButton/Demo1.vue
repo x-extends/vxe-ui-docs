@@ -1,28 +1,25 @@
 <template>
   <div>
+    <vxe-button type="primary" @click="selectEvent">点击上传</vxe-button>
     <vxe-upload
       multiple
+      show-progress
+      ref="uploadRef"
       v-model="fileList"
-      mode="image"
-      :more-config="moreConfig"
+      :showUploadButton="false"
       :upload-method="uploadMethod">
     </vxe-upload>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive } from 'vue'
+import { ref } from 'vue'
 import axios from 'axios'
-import { VxeUploadPropTypes } from 'vxe-pc-ui'
+import { VxeUploadInstance, VxeUploadPropTypes } from 'vxe-pc-ui'
 
-const fileList = ref([
-  { name: 'fj577.jpg', url: 'https://vxeui.com/resource/img/fj577.jpg' },
-  { name: 'fj581.jpeg', url: 'https://vxeui.com/resource/img/fj581.jpeg' }
-])
+const uploadRef = ref<VxeUploadInstance>()
 
-const moreConfig = reactive<VxeUploadPropTypes.MoreConfig>({
-  maxCount: 1
-})
+const fileList = ref([])
 
 const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress }) => {
   const formData = new FormData()
@@ -37,5 +34,12 @@ const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress })
       ...res.data
     }
   })
+}
+
+const selectEvent = () => {
+  const $upload = uploadRef.value
+  if ($upload) {
+    $upload.choose()
+  }
 }
 </script>
