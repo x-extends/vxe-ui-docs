@@ -268,6 +268,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '实现抽屉编辑表单', routerLink: { name: 'ComponentTableEditDrawerForm' } },
             { title: '实现唯一下拉选项', routerLink: { name: 'ComponentTableEditUniqueSelect' } },
             { title: '实现多列下拉联动', routerLink: { name: 'ComponentTableEditCascadingSelect' } },
+            { title: '实现行字段的合计', routerLink: { name: 'ComponentTableEditRowImmediately' } },
             { title: '实现表尾实时合计', routerLink: { name: 'ComponentTableEditFooterImmediately' } },
             { title: '实现单元格实时保存', routerLink: { name: 'ComponentTableEditRealtimeSave' } }
           ]

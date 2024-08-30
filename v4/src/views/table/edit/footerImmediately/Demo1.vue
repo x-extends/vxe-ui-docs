@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button @click="insertEvent">新增</vxe-button>
+    <vxe-button status="primary" @click="insertEvent">新增</vxe-button>
 
     <vxe-table
       border
@@ -15,17 +15,17 @@
       :edit-config="{trigger: 'click', mode: 'row'}">
       <vxe-column type="seq" width="60"></vxe-column>
       <vxe-colgroup title="统计信息">
-        <vxe-column field="name" title="Name" :edit-render="{}">
+        <vxe-column field="name" title="Name" :edit-render="{name: 'VxeInput'}">
           <template #edit="{ row }">
             <vxe-input v-model="row.name"></vxe-input>
           </template>
         </vxe-column>
-        <vxe-column field="age" title="Age" :edit-render="{autofocus: '.vxe-input--inner'}">
+        <vxe-column field="age" title="Age" :edit-render="{name: 'VxeInput'}">
           <template #edit="{ row }">
             <vxe-input v-model="row.age" type="integer" :min="1" :max="120" @change="updateFooterEvent"></vxe-input>
           </template>
         </vxe-column>
-        <vxe-column field="num" title="Num" :edit-render="{autofocus: '.vxe-input--inner'}">
+        <vxe-column field="num" title="Num" :edit-render="{name: 'VxeInput'}">
           <template #edit="{ row }">
             <vxe-input v-model="row.num" type="number" @input="updateFooterEvent"></vxe-input>
           </template>

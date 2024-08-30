@@ -1,9 +1,9 @@
 <template>
   <div>
     <vxe-tooltip ref="tooltipRef"></vxe-tooltip>
-    <a @mouseenter="mouseenterEvent" @mouseleave="mouseleaveEvent">只创建一个实例1</a>
-    <a @mouseenter="mouseenterEvent" @mouseleave="mouseleaveEvent">只创建一个实例2</a>
-    <a @mouseenter="mouseenterEvent" @mouseleave="mouseleaveEvent">只创建一个实例3</a>
+    <button @mouseenter="mouseenterEvent" @mouseleave="mouseleaveEvent">共用一个实例1</button>
+    <button @mouseenter="mouseenterEvent" @mouseleave="mouseleaveEvent">共用一个实例2</button>
+    <button @mouseenter="mouseenterEvent" @mouseleave="mouseleaveEvent">共用一个实例3</button>
   </div>
 </template>
 

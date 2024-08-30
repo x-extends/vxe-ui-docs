@@ -859,6 +859,11 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/edit/cascadingSelect/CodeExample.vue')
         },
         {
+          path: 'rowImmediately',
+          name: 'ComponentTableEditRowImmediately',
+          component: () => import('@/views/table/edit/rowImmediately/CodeExample.vue')
+        },
+        {
           path: 'footerImmediately',
           name: 'ComponentTableEditFooterImmediately',
           component: () => import('@/views/table/edit/footerImmediately/CodeExample.vue')
