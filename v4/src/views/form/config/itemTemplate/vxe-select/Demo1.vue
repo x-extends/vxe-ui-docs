@@ -21,7 +21,7 @@
         <vxe-select v-model="data.typeList" :optionGroups="typeOptions" multiple></vxe-select>
       </template>
 
-      <template #active>
+      <template #action>
         <vxe-button type="reset">重置</vxe-button>
         <vxe-button type="submit" status="primary">提交</vxe-button>
       </template>
@@ -78,7 +78,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { field: 'sexList', title: '下拉框多选', span: 24, itemRender: { }, slots: { default: 'sexList' } },
     { field: 'type', title: '下拉框分组', span: 24, itemRender: { }, slots: { default: 'type' } },
     { field: 'typeList', title: '下拉框分组多选', span: 24, itemRender: { }, slots: { default: 'typeList' } },
-    { align: 'center', span: 24, slots: { default: 'active' } }
+    { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-form v-bind="formOptions" >
-      <template #active>
+      <template #action>
         <vxe-button type="reset">重置</vxe-button>
         <vxe-button type="submit" status="primary">提交</vxe-button>
       </template>
@@ -34,7 +34,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
     { field: 'flag1', title: '开关', span: 24, itemRender: { name: 'VxeSwitch' } },
     { field: 'flag2', title: '开关默认值', span: 24, itemRender: { name: 'VxeSwitch' } },
-    { align: 'center', span: 24, slots: { default: 'active' } }
+    { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-form v-bind="formOptions" >
-      <template #active>
+      <template #action>
         <el-button native-type="reset">重置</el-button>
         <el-button native-type="submit" type="primary">提交</el-button>
       </template>

@@ -21,7 +21,7 @@
         <vxe-upload v-model="data.imgList2" mode="image" multiple></vxe-upload>
       </template>
 
-      <template #active>
+      <template #action>
         <vxe-button type="reset">重置</vxe-button>
         <vxe-button type="submit" status="primary">提交</vxe-button>
       </template>
@@ -64,7 +64,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { field: 'fileList2', title: '上传附件多选', span: 24, itemRender: { }, slots: { default: 'fileList2' } },
     { field: 'imgList1', title: '上传图片', span: 24, itemRender: { }, slots: { default: 'imgList1' } },
     { field: 'imgList2', title: '上传图片多选', span: 24, itemRender: { }, slots: { default: 'imgList2' } },
-    { align: 'center', span: 24, slots: { default: 'active' } }
+    { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
 </script>

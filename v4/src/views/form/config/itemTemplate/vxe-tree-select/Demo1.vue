@@ -13,7 +13,7 @@
         <vxe-tree-select v-model="data.regionList" :options="regionOptions" multiple></vxe-tree-select>
       </template>
 
-      <template #active>
+      <template #action>
         <vxe-button type="reset">重置</vxe-button>
         <vxe-button type="submit" status="primary">提交</vxe-button>
       </template>
@@ -59,7 +59,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
     { field: 'region', title: '下拉树单选', span: 24, itemRender: { }, slots: { default: 'region' } },
     { field: 'regionList', title: '下拉树多选', span: 24, itemRender: { }, slots: { default: 'regionList' } },
-    { align: 'center', span: 24, slots: { default: 'active' } }
+    { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
 </script>

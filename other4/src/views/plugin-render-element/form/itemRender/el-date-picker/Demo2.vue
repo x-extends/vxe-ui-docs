@@ -13,7 +13,7 @@
         <el-date-picker v-model="data.date2" type="datetime" value-format="YYYY-MM-DD HH:mm:ss"></el-date-picker>
       </template>
 
-      <template #active>
+      <template #action>
         <el-button native-type="reset">重置</el-button>
         <el-button native-type="submit" type="primary">提交</el-button>
       </template>
@@ -42,7 +42,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
     { field: 'date1', title: '日期', span: 24, itemRender: { }, slots: { default: 'date1' } },
     { field: 'date2', title: '日期带时间', span: 24, itemRender: { }, slots: { default: 'date2' } },
-    { align: 'center', span: 24, slots: { default: 'active' } }
+    { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-form v-bind="formOptions" >
-      <template #active>
+      <template #action>
         <el-button native-type="reset">重置</el-button>
         <el-button native-type="submit" type="primary">提交</el-button>
       </template>
@@ -100,7 +100,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { field: 'sexList', title: '下拉框多选', span: 24, itemRender: sexListItemRender },
     { field: 'type', title: '下拉框分组', span: 24, itemRender: typeItemRender },
     { field: 'typeList', title: '下拉框分组多选', span: 24, itemRender: typeListItemRender },
-    { align: 'center', span: 24, slots: { default: 'active' } }
+    { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
 </script>

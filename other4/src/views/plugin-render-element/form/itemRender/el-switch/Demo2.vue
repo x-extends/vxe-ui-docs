@@ -9,7 +9,7 @@
         <el-switch v-model="data.flag"></el-switch>
       </template>
 
-      <template #active>
+      <template #action>
         <el-button native-type="reset">重置</el-button>
         <el-button native-type="submit" type="primary">提交</el-button>
       </template>
@@ -35,7 +35,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
     { field: 'flag', title: '开关', span: 24, itemRender: { }, slots: { default: 'flag' } },
-    { align: 'center', span: 24, slots: { default: 'active' } }
+    { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
 </script>

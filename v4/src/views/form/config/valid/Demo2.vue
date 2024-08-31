@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-form ref="formRef" v-bind="formOptions" >
-      <template #active>
+      <template #action>
         <vxe-button status="primary" content="提交" @click="submitEvent"></vxe-button>
       </template>
     </vxe-form>
@@ -54,7 +54,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
     { field: 'sex', title: '性别', span: 12, itemRender: { name: 'VxeInput' } },
     { field: 'age', title: '年龄', span: 12, itemRender: { name: 'VxeInput' } },
-    { align: 'center', span: 24, slots: { default: 'active' } }
+    { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
 

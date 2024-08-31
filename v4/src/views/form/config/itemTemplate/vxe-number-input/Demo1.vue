@@ -17,7 +17,7 @@
         <vxe-number-input v-model="data.float" type="float"></vxe-number-input>
       </template>
 
-      <template #active>
+      <template #action>
         <vxe-button type="reset">重置</vxe-button>
         <vxe-button type="submit" status="primary">提交</vxe-button>
       </template>
@@ -49,7 +49,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { field: 'num', title: '数字', span: 24, itemRender: { }, slots: { default: 'num' } },
     { field: 'integer', title: '整数', span: 24, itemRender: { }, slots: { default: 'integer' } },
     { field: 'float', title: '小数', span: 24, itemRender: { }, slots: { default: 'float' } },
-    { align: 'center', span: 24, slots: { default: 'active' } }
+    { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
 </script>

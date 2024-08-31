@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-form v-bind="formOptions" >
-      <template #active>
+      <template #action>
         <el-button native-type="reset">重置</el-button>
         <el-button native-type="submit" type="primary">提交</el-button>
       </template>
@@ -47,7 +47,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'ElInput' } },
     { field: 'nickname', title: '自动补全输入', span: 24, itemRender: roleEditRender },
-    { align: 'center', span: 24, slots: { default: 'active' } }
+    { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
 </script>

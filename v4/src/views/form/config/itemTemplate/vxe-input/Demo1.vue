@@ -49,7 +49,7 @@
         <vxe-input v-model="data.date" type="datetime"></vxe-input>
       </template>
 
-      <template #active>
+      <template #action>
         <vxe-button type="reset">重置</vxe-button>
         <vxe-button type="submit" status="primary">提交</vxe-button>
       </template>
@@ -109,7 +109,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { field: 'week', title: '周', span: 24, itemRender: { }, slots: { default: 'week' } },
     { field: 'time', title: '时间', span: 24, itemRender: { }, slots: { default: 'time' } },
     { field: 'datetime', title: '日期带时间', span: 24, itemRender: { }, slots: { default: 'datetime' } },
-    { align: 'center', span: 24, slots: { default: 'active' } }
+    { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
 </script>

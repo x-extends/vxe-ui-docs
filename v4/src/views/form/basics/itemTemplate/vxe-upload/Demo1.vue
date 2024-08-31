@@ -29,7 +29,7 @@
         </template>
       </vxe-form-item>
       <vxe-form-item default="center" span="24">
-        <template #active>
+        <template #action>
           <vxe-button type="reset">重置</vxe-button>
           <vxe-button type="submit" status="primary">提交</vxe-button>
         </template>

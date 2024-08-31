@@ -9,7 +9,7 @@
         <vxe-checkbox-group v-model="data.hobbiesList" :options="hobbiesListOptions"></vxe-checkbox-group>
       </template>
 
-      <template #active>
+      <template #action>
         <vxe-button type="reset">重置</vxe-button>
         <vxe-button type="submit" status="primary">提交</vxe-button>
       </template>
@@ -47,7 +47,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
     { field: 'hobbiesList', title: '复选框', span: 24, itemRender: { }, slots: { default: 'hobbiesList' } },
-    { align: 'center', span: 24, slots: { default: 'active' } }
+    { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
 </script>

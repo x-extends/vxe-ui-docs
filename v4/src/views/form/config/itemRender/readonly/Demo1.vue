@@ -3,7 +3,7 @@
     <vxe-button status="primary" @click="toggleReadonly">切换只读</vxe-button>
 
     <vxe-form v-bind="formOptions" >
-      <template #active>
+      <template #action>
         <vxe-button v-if="!formOptions.readonly" type="reset">重置</vxe-button>
         <vxe-button v-if="!formOptions.readonly" type="submit" status="primary">提交</vxe-button>
       </template>
@@ -211,7 +211,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { field: 'imgList1', title: '上传图片', span: 24, itemRender: { name: 'VxeUpload', props: { mode: 'image' } } },
     { field: 'imgList2', title: '上传图片多选', span: 24, itemRender: { name: 'VxeUpload', props: { mode: 'image', multiple: true } } },
     { field: 'address', title: '文本域', span: 24, itemRender: { name: 'VxeTextarea' } },
-    { align: 'center', span: 24, slots: { default: 'active' } }
+    { align: 'center', span: 24, slots: { default: 'action' } }
   ],
   rules: {
     num: [
