@@ -6,7 +6,7 @@
       </template>
 
       <template #nickname="{ data }">
-        <vxe-input v-model="data.nickname"></vxe-input>
+        <vxe-input v-model="data.nickname" clearable></vxe-input>
       </template>
 
       <template #num="{ data }">

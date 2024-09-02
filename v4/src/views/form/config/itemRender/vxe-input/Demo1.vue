@@ -50,7 +50,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
-    { field: 'nickname', title: '输入框', span: 24, itemRender: { name: 'VxeInput' } },
+    { field: 'nickname', title: '输入框', span: 24, itemRender: { name: 'VxeInput', props: { clearable: true } } },
     { field: 'num', title: '数字', span: 24, itemRender: { name: 'VxeInput', props: { type: 'number' } } },
     { field: 'integer', title: '整数', span: 24, itemRender: { name: 'VxeInput', props: { type: 'integer' } } },
     { field: 'float', title: '小数', span: 24, itemRender: { name: 'VxeInput', props: { type: 'float' } } },

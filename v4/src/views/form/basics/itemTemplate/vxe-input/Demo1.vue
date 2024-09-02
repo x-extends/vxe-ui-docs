@@ -10,7 +10,7 @@
       </vxe-form-item>
       <vxe-form-item title="输入框" field="nickname" span="24" :item-render="{}">
         <template #default>
-          <vxe-input v-model="formData.nickname"></vxe-input>
+          <vxe-input v-model="formData.nickname" clearable></vxe-input>
         </template>
       </vxe-form-item>
       <vxe-form-item title="整数" field="integer" span="24" :item-render="{}">

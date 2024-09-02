@@ -4,7 +4,7 @@
       title-width="120"
       :data="formData">
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
-      <vxe-form-item title="输入框" field="nickname" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
+      <vxe-form-item title="输入框" field="nickname" span="24" :item-render="{ name: 'VxeInput', props: { clearable: true } }"></vxe-form-item>
       <vxe-form-item title="数字" field="num" span="24" :item-render="{ name: 'VxeInput', props: { type: 'number' } }"></vxe-form-item>
       <vxe-form-item title="整数" field="integer" span="24" :item-render="{ name: 'VxeInput', props: { type: 'integer' } }"></vxe-form-item>
       <vxe-form-item title="小数" field="float" span="24" :item-render="{ name: 'VxeInput', props: { type: 'float' } }"></vxe-form-item>
