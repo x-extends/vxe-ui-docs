@@ -10,7 +10,7 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 import { Modal } from 'ant-design-vue'
-import { VxeGridInstance, VxeGridProps } from 'vxe-table'
+import type { VxeGridInstance, VxeGridProps } from 'vxe-table'
 
 const gridRef = ref<VxeGridInstance>()
 

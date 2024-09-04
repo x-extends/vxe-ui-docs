@@ -22,7 +22,7 @@
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
 import { Modal } from 'ant-design-vue'
-import { VxeTableInstance, VxeColumnPropTypes } from 'vxe-table'
+import type { VxeTableInstance, VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
