@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { VxeUI } from 'vxe-pc-ui'
 import axios from 'axios'
 import i18n from '@/i18n'
+import XEUtils from 'xe-utils'
 
 const currTheme = (localStorage.getItem('VXE_DOCS_THEME') || 'light') as 'dark' | 'light'
 const currLanguage = (localStorage.getItem('VXE_DOCS_LANGUAGE') || 'zh-CN') as 'zh-CN' | 'zh-TC' | 'en-US'
@@ -33,7 +34,9 @@ export const useAppStore = defineStore('app', {
       siteBaseUrl: process.env.VUE_APP_SITE_BASE_URL,
       pluginBuyUrl: process.env.VUE_APP_PLUGIN_BUY_URL,
       pluginDocsUrl: process.env.VUE_APP_PLUGIN_DOCS_URL,
-      compApiMaps: null as any
+      compApiMaps: null as any,
+      showAuthMsgFlag: localStorage.getItem('SHOW_AUTH_MSG_FLAG') !== XEUtils.toDateString(new Date(), 'yyyy-MM-dd'),
+      showTopMenuMsgFlag: localStorage.getItem('SHOW_TOP_MENU_MSG_FLAG') !== XEUtils.toDateString(new Date(), 'yyyy-MM-dd')
     }
   },
   actions: {
@@ -83,6 +86,14 @@ export const useAppStore = defineStore('app', {
         })
       }
       return apiPromise
+    },
+    readAuthMsgFlagVisible () {
+      this.showAuthMsgFlag = false
+      localStorage.setItem('SHOW_AUTH_MSG_FLAG', XEUtils.toDateString(new Date(), 'yyyy-MM-dd'))
+    },
+    readTopMenuMsgFlagVisible () {
+      this.showTopMenuMsgFlag = false
+      localStorage.setItem('SHOW_TOP_MENU_MSG_FLAG', XEUtils.toDateString(new Date(), 'yyyy-MM-dd'))
     }
   }
 })
