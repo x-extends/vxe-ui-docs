@@ -649,6 +649,16 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/tree/accordion/CodeExample.vue')
         },
         {
+          path: 'currentRow',
+          name: 'ComponentTableTreeCurrentRow',
+          component: () => import('@/views/table/tree/currentRow/CodeExample.vue')
+        },
+        {
+          path: 'currentColumn',
+          name: 'ComponentTableTreeCurrentColumn',
+          component: () => import('@/views/table/tree/currentColumn/CodeExample.vue')
+        },
+        {
           path: 'radio',
           name: 'ComponentTableTreeRadio',
           component: () => import('@/views/table/tree/radio/CodeExample.vue')

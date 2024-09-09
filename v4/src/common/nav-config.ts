@@ -209,6 +209,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '显示连接线', routerLink: { name: 'ComponentTableTreeLine' } },
             { title: '最大高度', routerLink: { name: 'ComponentTableTreeMaxHeight' } },
             { title: '手风琴效果', routerLink: { name: 'ComponentTableTreeAccordion' } },
+            { title: '高亮行', routerLink: { name: 'ComponentTableTreeCurrentRow' } },
+            { title: '高亮列', routerLink: { name: 'ComponentTableTreeCurrentColumn' } },
             { title: '单选框', routerLink: { name: 'ComponentTableTreeRadio' } },
             { title: '复选框', routerLink: { name: 'ComponentTableTreeCheckbox' } },
             { title: '树形排序', routerLink: { name: 'ComponentTableTreeSort' } },
