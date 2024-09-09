@@ -31,7 +31,7 @@
     </div>
 
     <div v-if="path" class="example-demo">
-      <DemoCode />
+      <AsyncDemo :path="path" :key="path" />
     </div>
 
     <div v-if="$slots.describe" class="example-describe">
@@ -83,10 +83,11 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref, computed, defineAsyncComponent, PropType } from 'vue'
+<script lang="ts">
+import Vue, { PropType } from 'vue'
 import { codeJsMaps, codeTsMaps } from '@/common/cache'
 import { VxeUI } from 'vxe-pc-ui'
+import AsyncDemo from './AsyncDemo.vue'
 
 interface ImportItemVO {
   path: string
@@ -96,211 +97,204 @@ interface ImportItemVO {
   isExpand: boolean
 }
 
-const props = defineProps({
-  path: String,
-  extraImports: {
-    type: Array as PropType<string[]>,
-    default: () => []
-  }
-})
-
-const showInstall = ref(false)
-const showPreview = ref(true)
-
-const jsCodeText = ref('')
-const tsCodeText = ref('')
-
-const showJsCode = ref(false)
-const showTsCode = ref(false)
-const jsLoading = ref(false)
-const tsLoading = ref(false)
-
-const importTsCodes = ref<ImportItemVO[]>([])
-const importJsCodes = ref<ImportItemVO[]>([])
-
-const DemoCode = props.path ? defineAsyncComponent(() => import(`@/views/${props.path}`)) : null
-
-const gitDir = computed(() => {
-  return `${process.env.VUE_APP_DOCS_GITHUB_URL}/src/views/${compDir.value}`
-})
-
-const compDir = computed(() => {
-  const paths = props.path?.split('/') || []
-  return paths.slice(0, paths.length - 1).join('/')
-})
-
-const getFileName = (path: string) => {
-  return path.split('/').slice(-1)[0]
-}
-
-const transformFilePath = (path: string) => {
-  return path.replace(/^\.\//, `${compDir.value}/`)
-}
-
-const parseFilePath = (path: string) => {
-  const [fullPath, filePath, fileType] = path.match(/(.*)\.(vue|js|jsx|ts|tsx)$/) || [path, '.vue', 'vue']
-  return {
-    filePath: transformFilePath(filePath),
-    codeLang: ['js', 'ts', 'jsx', 'tsx'].includes(fileType) ? 'javascript' : 'html',
-    fileType: fileType
-  }
-}
-
-const parseJsFilePath = (path: string) => {
-  const rest = parseFilePath(path)
-  rest.fileType = rest.fileType.replace('ts', 'js')
-  return rest
-}
-
-const parseTsFilePath = (path: string) => {
-  const rest = parseFilePath(path)
-  rest.fileType = rest.fileType.replace('js', 'ts')
-  return rest
-}
-
-const loadJsCode = () => {
-  const compPath = props.path
-  if (compPath) {
-    if (codeJsMaps[compPath]) {
-      jsCodeText.value = codeJsMaps[compPath]
-      jsLoading.value = false
-    } else {
-      jsLoading.value = true
-      Promise.all([
-        fetch(`${process.env.BASE_URL}example/js/${compPath}.vue?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
-          if (response.status >= 200 && response.status < 400) {
-            return response.text()
-          }
-          return '暂无示例'
-        }),
-        ...(props.extraImports?.map(impPath => {
-          const { filePath, fileType, codeLang } = parseJsFilePath(impPath)
-          return fetch(`${process.env.BASE_URL}example/js/${filePath}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
-            if (response.status >= 200 && response.status < 400) {
-              return response.text().then(text => {
+export default Vue.extend({
+  props: {
+    path: String,
+    extraImports: {
+      type: Array as PropType<string[]>,
+      default: () => []
+    }
+  },
+  components: {
+    AsyncDemo
+  },
+  data () {
+    return {
+      showInstall: false,
+      showPreview: true,
+      jsCodeText: '',
+      tsCodeText: '',
+      showJsCode: false,
+      showTsCode: false,
+      jsLoading: false,
+      tsLoading: false,
+      importTsCodes: [] as ImportItemVO[],
+      importJsCodes: [] as ImportItemVO[]
+    }
+  },
+  computed: {
+    gitDir () {
+      return `${process.env.VUE_APP_DOCS_GITHUB_URL}/src/views/${(this as any).compDir}`
+    },
+    compDir () {
+      const paths = this.path?.split('/') || []
+      return paths.slice(0, paths.length - 1).join('/')
+    }
+  },
+  methods: {
+    getFileName  (path: string) {
+      return path.split('/').slice(-1)[0]
+    },
+    transformFilePath  (path: string) {
+      return path.replace(/^\.\//, `${this.compDir}/`)
+    },
+    parseFilePath  (path: string) {
+      const [fullPath, filePath, fileType] = path.match(/(.*)\.(vue|js|jsx|ts|tsx)$/) || [path, '.vue', 'vue']
+      return {
+        filePath: this.transformFilePath(filePath),
+        codeLang: ['js', 'ts', 'jsx', 'tsx'].includes(fileType) ? 'javascript' : 'html',
+        fileType: fileType
+      }
+    },
+    parseJsFilePath  (path: string) {
+      const rest = this.parseFilePath(path)
+      rest.fileType = rest.fileType.replace('ts', 'js')
+      return rest
+    },
+    parseTsFilePath (path: string) {
+      const rest = this.parseFilePath(path)
+      rest.fileType = rest.fileType.replace('js', 'ts')
+      return rest
+    },
+    loadJsCode () {
+      const compPath = this.path
+      if (compPath) {
+        if (codeJsMaps[compPath]) {
+          this.jsCodeText = codeJsMaps[compPath]
+          this.jsLoading = false
+        } else {
+          this.jsLoading = true
+          Promise.all([
+            fetch(`${process.env.BASE_URL}example/js/${compPath}.vue?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+              if (response.status >= 200 && response.status < 400) {
+                return response.text()
+              }
+              return '暂无示例'
+            }),
+            ...(this.extraImports?.map(impPath => {
+              const { filePath, fileType, codeLang } = this.parseJsFilePath(impPath)
+              return fetch(`${process.env.BASE_URL}example/js/${filePath}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+                if (response.status >= 200 && response.status < 400) {
+                  return response.text().then(text => {
+                    return {
+                      path: `${filePath}.${fileType}`,
+                      name: this.getFileName(`${filePath}.${fileType}`),
+                      lang: codeLang,
+                      text,
+                      isExpand: false
+                    }
+                  })
+                }
                 return {
                   path: `${filePath}.${fileType}`,
-                  name: getFileName(`${filePath}.${fileType}`),
+                  name: this.getFileName(`${filePath}.${fileType}`),
                   lang: codeLang,
-                  text,
+                  text: '',
                   isExpand: false
                 }
               })
-            }
-            return {
-              path: `${filePath}.${fileType}`,
-              name: getFileName(`${filePath}.${fileType}`),
-              lang: codeLang,
-              text: '',
-              isExpand: false
-            }
+            }) || [])
+          ]).then(([text1, ...impTexts]) => {
+            this.jsCodeText = text1 || ''
+            codeJsMaps[compPath] = this.jsCodeText
+            this.importJsCodes = impTexts || '暂无'
+            this.jsLoading = false
+          }).catch(() => {
+            this.jsLoading = false
           })
-        }) || [])
-      ]).then(([text1, ...impTexts]) => {
-        jsCodeText.value = text1 || ''
-        codeJsMaps[compPath] = jsCodeText.value
-        importJsCodes.value = impTexts || '暂无'
-        jsLoading.value = false
-      }).catch(() => {
-        jsLoading.value = false
-      })
-    }
-  } else if (jsCodeText.value) {
-    jsLoading.value = false
-  }
-  return Promise.resolve()
-}
-
-const loadTsCode = () => {
-  const compPath = props.path
-  if (compPath) {
-    if (codeTsMaps[compPath]) {
-      tsCodeText.value = codeTsMaps[compPath]
-      tsLoading.value = false
-    } else {
-      tsLoading.value = true
-      Promise.all([
-        fetch(`${process.env.BASE_URL}example/ts/${compPath}.vue?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
-          if (response.status >= 200 && response.status < 400) {
-            return response.text()
-          }
-          return '暂无示例'
-        }),
-        ...(props.extraImports?.map(impPath => {
-          const { filePath, fileType, codeLang } = parseTsFilePath(impPath)
-          return fetch(`${process.env.BASE_URL}example/ts/${filePath}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
-            if (response.status >= 200 && response.status < 400) {
-              return response.text().then(text => {
+        }
+      } else if (this.jsCodeText) {
+        this.jsLoading = false
+      }
+      return Promise.resolve()
+    },
+    loadTsCode () {
+      const compPath = this.path
+      if (compPath) {
+        if (codeTsMaps[compPath]) {
+          this.tsCodeText = codeTsMaps[compPath]
+          this.tsLoading = false
+        } else {
+          this.tsLoading = true
+          Promise.all([
+            fetch(`${process.env.BASE_URL}example/ts/${compPath}.vue?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+              if (response.status >= 200 && response.status < 400) {
+                return response.text()
+              }
+              return '暂无示例'
+            }),
+            ...(this.extraImports?.map(impPath => {
+              const { filePath, fileType, codeLang } = this.parseTsFilePath(impPath)
+              return fetch(`${process.env.BASE_URL}example/ts/${filePath}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+                if (response.status >= 200 && response.status < 400) {
+                  return response.text().then(text => {
+                    return {
+                      path: `${filePath}.${fileType}`,
+                      name: this.getFileName(`${filePath}.${fileType}`),
+                      lang: codeLang,
+                      text,
+                      isExpand: false
+                    }
+                  })
+                }
                 return {
                   path: `${filePath}.${fileType}`,
-                  name: getFileName(`${filePath}.${fileType}`),
+                  name: this.getFileName(`${filePath}.${fileType}`),
                   lang: codeLang,
-                  text,
+                  text: '',
                   isExpand: false
                 }
               })
-            }
-            return {
-              path: `${filePath}.${fileType}`,
-              name: getFileName(`${filePath}.${fileType}`),
-              lang: codeLang,
-              text: '',
-              isExpand: false
-            }
+            }) || [])
+          ]).then(([text1, ...impTexts]) => {
+            this.tsCodeText = text1 || ''
+            codeTsMaps[compPath] = this.tsCodeText
+            this.importTsCodes = impTexts || '暂无'
+            this.tsLoading = false
+          }).catch(() => {
+            this.tsLoading = false
           })
-        }) || [])
-      ]).then(([text1, ...impTexts]) => {
-        tsCodeText.value = text1 || ''
-        codeTsMaps[compPath] = tsCodeText.value
-        importTsCodes.value = impTexts || '暂无'
-        tsLoading.value = false
-      }).catch(() => {
-        tsLoading.value = false
-      })
-    }
-  } else if (tsCodeText.value) {
-    tsLoading.value = false
-  }
-  return Promise.resolve()
-}
-
-const toggleJsVisible = () => {
-  showTsCode.value = false
-  showJsCode.value = !showJsCode.value
-  if (showJsCode.value) {
-    loadJsCode()
-  }
-}
-
-const toggleTsVisible = () => {
-  showJsCode.value = false
-  showTsCode.value = !showTsCode.value
-  if (showTsCode.value) {
-    loadTsCode()
-  }
-}
-
-const copyCode = () => {
-  let codeContent = ''
-  if (showJsCode.value) {
-    codeContent = jsCodeText.value
-  } else if (showTsCode.value) {
-    codeContent = tsCodeText.value
-  }
-  if (codeContent) {
-    if (VxeUI.clipboard.copy(codeContent)) {
-      VxeUI.modal.message({ content: '已复制到剪贴板！', status: 'success' })
+        }
+      } else if (this.tsCodeText) {
+        this.tsLoading = false
+      }
+      return Promise.resolve()
+    },
+    toggleJsVisible  () {
+      this.showTsCode = false
+      this.showJsCode = !this.showJsCode
+      if (this.showJsCode) {
+        this.loadJsCode()
+      }
+    },
+    toggleTsVisible  () {
+      this.showJsCode = false
+      this.showTsCode = !this.showTsCode
+      if (this.showTsCode) {
+        this.loadTsCode()
+      }
+    },
+    copyCode () {
+      let codeContent = ''
+      if (this.showJsCode) {
+        codeContent = this.jsCodeText
+      } else if (this.showTsCode) {
+        codeContent = this.tsCodeText
+      }
+      if (codeContent) {
+        if (VxeUI.clipboard.copy(codeContent)) {
+          VxeUI.modal.message({ content: '已复制到剪贴板！', status: 'success' })
+        }
+      }
+    },
+    toggleItemExpand (item: ImportItemVO) {
+      item.isExpand = !item.isExpand
+    },
+    openDocs () {
+      open(`${process.env.VUE_APP_DOCS_GITHUB_URL}/src/views/${this.path}.vue`)
     }
   }
-}
-
-const toggleItemExpand = (item: ImportItemVO) => {
-  item.isExpand = !item.isExpand
-}
-
-const openDocs = () => {
-  open(`${process.env.VUE_APP_DOCS_GITHUB_URL}/src/views/${props.path}.vue`)
-}
+})
 </script>
 
 <style lang="scss">

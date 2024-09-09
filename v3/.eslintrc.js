@@ -4,18 +4,12 @@ module.exports = {
     node: true
   },
   extends: [
-    'plugin:vue/vue3-essential',
+    'plugin:vue/essential',
     '@vue/standard',
     '@vue/typescript/recommended'
   ],
   parserOptions: {
     ecmaVersion: 2020
-  },
-  globals: {
-    defineProps: true,
-    defineEmits: true,
-    defineExpose: true,
-    defineSlots: true
   },
   rules: {
     'no-console': 'off',

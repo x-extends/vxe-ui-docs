@@ -12,14 +12,19 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { computed } from 'vue'
-import { useAppStore } from '@/store/app'
+<script lang="ts">
+import Vue from 'vue'
+import { mapState } from 'vuex'
 
-const appStore = useAppStore()
-const packName = computed(() => appStore.packName)
-const serveTY = computed(() => appStore.serveTY)
-const siteBaseUrl = computed(() => appStore.siteBaseUrl)
+export default Vue.extend({
+  computed: {
+    ...mapState([
+      'serveTY',
+      'packName',
+      'siteBaseUrl'
+    ])
+  }
+})
 </script>
 
 <style lang="scss">
