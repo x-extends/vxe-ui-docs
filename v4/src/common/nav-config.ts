@@ -410,7 +410,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '高亮列', routerLink: { name: 'ComponentGridBaseCurrentColumn' } },
             { title: '高亮行', routerLink: { name: 'ComponentGridBaseCurrentRow' } },
             { title: '拖拽调整列宽', routerLink: { name: 'ComponentGridBaseHeaderResizable' } },
-            // { title: '表格最小高度', routerLink: { name: 'ComponentGridBaseHeaderMinHeight' } },
+            { title: '表格最小高度', routerLink: { name: 'ComponentGridBaseHeaderMinHeight' } },
             // { title: '表格高度', routerLink: { name: 'ComponentGridBaseHeight' } },
             // { title: '表格最大高度', routerLink: { name: 'ComponentGridBaseMaxHeight' } },
             { title: '表格响应式高度', routerLink: { name: 'ComponentGridBaseAutoHeight' } },
