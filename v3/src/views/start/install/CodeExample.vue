@@ -4,16 +4,16 @@
       <template #tip>
         <vxe-tip status="primary" title="NPM 方式">
           <div>可以配合 <vxe-link  href="https://webpack.js.org/">webpack</vxe-link>、<vxe-link  href="https://vitejs.dev/">vite</vxe-link> 等打包工具配合使用按需加载。</div>
-          <div>依赖库： <vxe-link  href="https://cn.vuejs.org/v2/guide/components-slots.html#%E5%8A%A8%E6%80%81%E6%8F%92%E6%A7%BD%E5%90%8D">vue 3.2+</vxe-link></div>
+          <div>依赖库： <vxe-link  href="https://v2.cn.vuejs.org/">vue 2.6+</vxe-link></div>
         </vxe-tip>
       </template>
 
       <template #use>
         <pre>
           <pre-code class="shell">
-            npm install vxe-table@next vxe-pc-ui
+            npm install vxe-table@rc vxe-pc-ui@3
             # 或者
-            yarn add vxe-table@next vxe-pc-ui
+            yarn add vxe-table@rc vxe-pc-ui@3
           </pre-code>
           <pre-code class="javascript">
             // 完整导入 UI 组件库
@@ -47,14 +47,14 @@
         <pre>
           <pre-code class="html">
             &lt;!-- 引入样式 --&gt;
-            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vxe-pc-ui/lib/style.css"&gt;
-            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vxe-table/lib/style.css"&gt;
+            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vxe-pc-ui@3/lib/style.css"&gt;
+            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vxe-table@rc/lib/style.css"&gt;
             &lt;!-- 引入vue --&gt;
             &lt;script src="https://cdn.jsdelivr.net/npm/vue"&gt;&lt;/script&gt;
             &lt;!-- 引入组件 --&gt;
             &lt;script src="https://cdn.jsdelivr.net/npm/xe-utils"&gt;&lt;/script&gt;
-            &lt;script src="https://cdn.jsdelivr.net/npm/vxe-pc-ui"&gt;&lt;/script&gt;
-            &lt;script src="https://cdn.jsdelivr.net/npm/vxe-table"&gt;&lt;/script&gt;
+            &lt;script src="https://cdn.jsdelivr.net/npm/vxe-pc-ui@3"&gt;&lt;/script&gt;
+            &lt;script src="https://cdn.jsdelivr.net/npm/vxe-table@rc"&gt;&lt;/script&gt;
           </pre-code>
         </pre>
       </template>
