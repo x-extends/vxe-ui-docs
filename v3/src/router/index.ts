@@ -24,6 +24,7 @@ const tableRouteConfig: RouteConfig = {
   children: [
     // {
     //   path: 'base',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'basic',
@@ -219,6 +220,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'footer',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'footerData',
@@ -244,6 +246,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'radio',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'highlight',
@@ -269,6 +272,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'checkbox',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'highlight',
@@ -304,6 +308,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'sort',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'multiple',
@@ -344,6 +349,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'filter',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'options',
@@ -369,6 +375,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'merge',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'row',
@@ -399,6 +406,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'expand',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'basic',
@@ -449,6 +457,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'menu',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'header',
@@ -489,6 +498,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'toolbar',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'basic',
@@ -519,6 +529,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'custom',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'toolbar',
@@ -609,6 +620,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'pager',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'mockPage',
@@ -629,6 +641,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'tree',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'basic',
@@ -654,6 +667,16 @@ const tableRouteConfig: RouteConfig = {
     //       path: 'accordion',
     //       name: 'ComponentTableTreeAccordion',
     //       component: () => import('@/views/table/tree/accordion/CodeExample.vue')
+    //     },
+    //     {
+    //       path: 'currentRow',
+    //       name: 'ComponentTableTreeCurrentRow',
+    //       component: () => import('@/views/table/tree/currentRow/CodeExample.vue')
+    //     },
+    //     {
+    //       path: 'currentColumn',
+    //       name: 'ComponentTableTreeCurrentColumn',
+    //       component: () => import('@/views/table/tree/currentColumn/CodeExample.vue')
     //     },
     //     {
     //       path: 'radio',
@@ -724,6 +747,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'keyboard',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'selected',
@@ -754,6 +778,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'edit',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'manual',
@@ -884,6 +909,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'cellRender',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'vxe-switch',
@@ -924,6 +950,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'cellTemplate',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'vxe-switch',
@@ -939,6 +966,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'editRender',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'input',
@@ -979,6 +1007,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'editTemplate',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'vxe-input',
@@ -1004,6 +1033,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'template',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'default',
@@ -1049,6 +1079,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'import',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'base',
@@ -1064,6 +1095,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'export',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'base',
@@ -1104,6 +1136,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'print',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'base',
@@ -1129,6 +1162,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'scroll',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'vertical',
@@ -1179,6 +1213,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'search',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'list',
@@ -1194,6 +1229,7 @@ const tableRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'events',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'click',
@@ -1216,6 +1252,7 @@ const gridRouteConfig: RouteConfig = {
   children: [
     // {
     //   path: 'base',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'basic',
@@ -1406,6 +1443,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'sort',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'multiple',
@@ -1421,6 +1459,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'filter',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'options',
@@ -1441,6 +1480,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'filterRender',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'vxe-input',
@@ -1466,6 +1506,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'filterTemplate',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'vxe-input',
@@ -1481,6 +1522,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'layout',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'pager',
@@ -1496,6 +1538,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'footer',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'footerData',
@@ -1521,6 +1564,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'radio',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'highlight',
@@ -1546,6 +1590,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'checkbox',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'highlight',
@@ -1581,6 +1626,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'merge',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'row',
@@ -1601,6 +1647,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'expand',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'basic',
@@ -1626,6 +1673,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'menu',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'prefixConfig',
@@ -1651,6 +1699,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'form',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'search',
@@ -1681,6 +1730,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'toolbar',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'buttons',
@@ -1731,6 +1781,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'custom',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'modal',
@@ -1801,6 +1852,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'pager',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'mockPage',
@@ -1826,6 +1878,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'tree',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'leveling',
@@ -1861,6 +1914,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'cellRender',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'vxe-switch',
@@ -1901,6 +1955,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'cellTemplate',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'vxe-switch',
@@ -1931,6 +1986,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'keyboard',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'selected',
@@ -1961,6 +2017,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'edit',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'manual',
@@ -2011,6 +2068,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'editRender',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'input',
@@ -2061,6 +2119,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'editTemplate',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'vxe-input',
@@ -2086,6 +2145,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'template',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'layout',
@@ -2141,6 +2201,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'import',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'base',
@@ -2176,6 +2237,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'export',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'base',
@@ -2236,6 +2298,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'print',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'base',
@@ -2276,6 +2339,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'scroll',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'vertical',
@@ -2321,6 +2385,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'proxy',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'query',
@@ -2396,6 +2461,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'search',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'list',
@@ -2411,6 +2477,7 @@ const gridRouteConfig: RouteConfig = {
     // },
     // {
     //   path: 'events',
+    //   component: RouteLayout,
     //   children: [
     //     {
     //       path: 'click',
@@ -2512,286 +2579,310 @@ const routes: Array<RouteConfig> = [
       }
     ]
   },
-  // {
-  //   path: '/global',
-  //   children: [
-  //     {
-  //       path: 'formats',
-  //       children: [
-  //         {
-  //           path: 'table',
-  //           children: [
-  //             {
-  //               path: 'api',
-  //               name: 'GlobalFormatsTableAPI',
-  //               component: () => import('@/views/global/formats/table/api/CodeExample.vue')
-  //             },
-  //             {
-  //               path: 'base',
-  //               name: 'GlobalFormatsTableBase',
-  //               component: () => import('@/views/global/formats/table/base/CodeExample.vue')
-  //             }
-  //           ]
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       path: 'menus',
-  //       children: [
-  //         {
-  //           path: 'table',
-  //           children: [
-  //             {
-  //               path: 'api',
-  //               name: 'GlobalMenusTableAPI',
-  //               component: () => import('@/views/global/menus/table/api/CodeExample.vue')
-  //             },
-  //             {
-  //               path: 'base',
-  //               name: 'GlobalMenusTableBase',
-  //               component: () => import('@/views/global/menus/table/base/CodeExample.vue')
-  //             }
-  //           ]
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       path: 'commands',
-  //       children: [
-  //         {
-  //           path: 'table',
-  //           children: [
-  //             {
-  //               path: 'api',
-  //               name: 'GlobalCommandsTableAPI',
-  //               component: () => import('@/views/global/commands/table/api/CodeExample.vue')
-  //             },
-  //             {
-  //               path: 'base',
-  //               name: 'GlobalCommandsTableBase',
-  //               component: () => import('@/views/global/commands/table/base/CodeExample.vue')
-  //             }
-  //           ]
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       path: 'validators',
-  //       children: [
-  //         {
-  //           path: 'form',
-  //           children: [
-  //             {
-  //               path: 'api',
-  //               name: 'GlobalValidatorsFormAPI',
-  //               component: () => import('@/views/global/validators/form/api/CodeExample.vue')
-  //             },
-  //             {
-  //               path: 'base',
-  //               name: 'GlobalValidatorsFormBase',
-  //               component: () => import('@/views/global/validators/form/base/CodeExample.vue')
-  //             }
-  //           ]
-  //         },
-  //         {
-  //           path: 'table',
-  //           children: [
-  //             {
-  //               path: 'api',
-  //               name: 'GlobalValidatorsTableAPI',
-  //               component: () => import('@/views/global/validators/table/api/CodeExample.vue')
-  //             },
-  //             {
-  //               path: 'base',
-  //               name: 'GlobalValidatorsTableBase',
-  //               component: () => import('@/views/global/validators/table/base/CodeExample.vue')
-  //             }
-  //           ]
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       path: 'interceptor',
-  //       children: [
-  //         {
-  //           path: 'table',
-  //           children: [
-  //             {
-  //               path: 'api',
-  //               name: 'GlobalInterceptorTableAPI',
-  //               component: () => import('@/views/global/interceptor/table/api/CodeExample.vue')
-  //             },
-  //             {
-  //               path: 'base',
-  //               name: 'GlobalInterceptorTableBase',
-  //               component: () => import('@/views/global/interceptor/table/base/CodeExample.vue')
-  //             }
-  //           ]
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       path: 'renderer',
-  //       children: [
-  //         {
-  //           path: 'form',
-  //           children: [
-  //             {
-  //               path: 'api',
-  //               name: 'GlobalRendererFormAPI',
-  //               component: () => import('@/views/global/renderer/form/api/CodeExample.vue')
-  //             },
-  //             {
-  //               path: 'item',
-  //               children: [
-  //                 {
-  //                   path: 'myItemAmount',
-  //                   name: 'GlobalRendererFormItemMyItemAmount',
-  //                   component: () => import('@/views/global/renderer/form/item/myItemAmount/CodeExample.vue')
-  //                 },
-  //                 {
-  //                   path: 'myItemUpload',
-  //                   name: 'GlobalRendererFormItemMyItemUpload',
-  //                   component: () => import('@/views/global/renderer/form/item/myItemUpload/CodeExample.vue')
-  //                 }
-  //               ]
-  //             }
-  //           ]
-  //         },
-  //         {
-  //           path: 'table',
-  //           children: [
-  //             {
-  //               path: 'api',
-  //               name: 'GlobalRendererTableAPI',
-  //               component: () => import('@/views/global/renderer/table/api/CodeExample.vue')
-  //             },
-  //             {
-  //               path: 'default',
-  //               children: [
-  //                 {
-  //                   path: 'myCellLink',
-  //                   name: 'GlobalRendererTableDefaultMyLink',
-  //                   component: () => import('@/views/global/renderer/table/default/myCellLink/CodeExample.vue')
-  //                 },
-  //                 {
-  //                   path: 'myCellImg',
-  //                   name: 'GlobalRendererTableDefaultMyImg',
-  //                   component: () => import('@/views/global/renderer/table/default/myCellImg/CodeExample.vue')
-  //                 }
-  //               ]
-  //             },
-  //             {
-  //               path: 'edit',
-  //               children: [
-  //                 {
-  //                   path: 'myEditAmount',
-  //                   name: 'GlobalRendererTableEditMyEditAmount',
-  //                   component: () => import('@/views/global/renderer/table/edit/myEditAmount/CodeExample.vue')
-  //                 },
-  //                 {
-  //                   path: 'myEditPulldown',
-  //                   name: 'GlobalRendererTableEditMyEditPulldown',
-  //                   component: () => import('@/views/global/renderer/table/edit/myEditPulldown/CodeExample.vue')
-  //                 }
-  //               ]
-  //             },
-  //             {
-  //               path: 'expand',
-  //               children: [
-  //                 {
-  //                   path: 'myExpandList',
-  //                   name: 'GlobalRendererTableExpandMyExpandList',
-  //                   component: () => import('@/views/global/renderer/table/expand/myExpandList/CodeExample.vue')
-  //                 },
-  //                 {
-  //                   path: 'myExpandTable',
-  //                   name: 'GlobalRendererTableExpandMyExpandTable',
-  //                   component: () => import('@/views/global/renderer/table/expand/myExpandTable/CodeExample.vue')
-  //                 }
-  //               ]
-  //             },
-  //             {
-  //               path: 'toolbar',
-  //               children: [
-  //                 {
-  //                   path: 'btn',
-  //                   name: 'GlobalRendererTableToolbarBtn',
-  //                   component: () => import('@/views/global/renderer/table/toolbar/button/CodeExample.vue')
-  //                 },
-  //                 {
-  //                   path: 'tool',
-  //                   name: 'GlobalRendererTableToolbarTool',
-  //                   component: () => import('@/views/global/renderer/table/toolbar/tool/CodeExample.vue')
-  //                 }
-  //               ]
-  //             },
-  //             {
-  //               path: 'filter',
-  //               children: [
-  //                 {
-  //                   path: 'myFilterInput',
-  //                   name: 'GlobalRendererTableFilterMyFilterInput',
-  //                   component: () => import('@/views/global/renderer/table/filter/myFilterInput/CodeExample.vue')
-  //                 },
-  //                 {
-  //                   path: 'myFilterComplex',
-  //                   name: 'GlobalRendererTableFilterMyFilterComplex',
-  //                   component: () => import('@/views/global/renderer/table/filter/myFilterComplex/CodeExample.vue')
-  //                 },
-  //                 {
-  //                   path: 'myFilterContent',
-  //                   name: 'GlobalRendererTableFilterMyFilterContent',
-  //                   component: () => import('@/views/global/renderer/table/filter/myFilterContent/CodeExample.vue')
-  //                 }
-  //               ]
-  //             },
-  //             {
-  //               path: 'empty',
-  //               children: [
-  //                 {
-  //                   path: 'myEmptyImg',
-  //                   name: 'GlobalRendererTableMyEmptyImg',
-  //                   component: () => import('@/views/global/renderer/table/empty/myEmptyImg/CodeExample.vue')
-  //                 },
-  //                 {
-  //                   path: 'myEmptyText',
-  //                   name: 'GlobalRendererTableMyEmptyText',
-  //                   component: () => import('@/views/global/renderer/table/empty/myEmptyText/CodeExample.vue')
-  //                 }
-  //               ]
-  //             }
-  //           ]
-  //         },
-  //         {
-  //           path: 'form-design',
-  //           children: [
-  //             {
-  //               path: 'api',
-  //               name: 'GlobalRendererFormDesignAPI',
-  //               component: () => import('@/views/global/renderer/form-design/api/CodeExample.vue')
-  //             },
-  //             {
-  //               path: 'widget',
-  //               children: [
-  //                 {
-  //                   path: 'myInputWidget',
-  //                   name: 'GlobalRendererFormDesignWidgetMyInputWidget',
-  //                   component: () => import('@/views/global/renderer/form-design/widget/myInputWidget/CodeExample.vue')
-  //                 },
-  //                 {
-  //                   path: 'myTextareaWidget',
-  //                   name: 'GlobalRendererFormDesignWidgetMyTextareaWidget',
-  //                   component: () => import('@/views/global/renderer/form-design/widget/myTextareaWidget/CodeExample.vue')
-  //                 }
-  //               ]
-  //             }
-  //           ]
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // },
+  {
+    path: '/global',
+    component: PageLayout,
+    children: [
+      // {
+      //   path: 'formats',
+      //   component: RouteLayout,
+      //   children: [
+      //     {
+      //       path: 'table',
+      //       component: RouteLayout,
+      //       children: [
+      //         {
+      //           path: 'api',
+      //           name: 'GlobalFormatsTableAPI',
+      //           component: () => import('@/views/global/formats/table/api/CodeExample.vue')
+      //         },
+      //         {
+      //           path: 'base',
+      //           name: 'GlobalFormatsTableBase',
+      //           component: () => import('@/views/global/formats/table/base/CodeExample.vue')
+      //         }
+      //       ]
+      //     }
+      //   ]
+      // },
+      // {
+      //   path: 'menus',
+      //   component: RouteLayout,
+      //   children: [
+      //     {
+      //       path: 'table',
+      //       component: RouteLayout,
+      //       children: [
+      //         {
+      //           path: 'api',
+      //           name: 'GlobalMenusTableAPI',
+      //           component: () => import('@/views/global/menus/table/api/CodeExample.vue')
+      //         },
+      //         {
+      //           path: 'base',
+      //           name: 'GlobalMenusTableBase',
+      //           component: () => import('@/views/global/menus/table/base/CodeExample.vue')
+      //         }
+      //       ]
+      //     }
+      //   ]
+      // },
+      // {
+      //   path: 'commands',
+      //   component: RouteLayout,
+      //   children: [
+      //     {
+      //       path: 'table',
+      //       component: RouteLayout,
+      //       children: [
+      //         {
+      //           path: 'api',
+      //           name: 'GlobalCommandsTableAPI',
+      //           component: () => import('@/views/global/commands/table/api/CodeExample.vue')
+      //         },
+      //         {
+      //           path: 'base',
+      //           name: 'GlobalCommandsTableBase',
+      //           component: () => import('@/views/global/commands/table/base/CodeExample.vue')
+      //         }
+      //       ]
+      //     }
+      //   ]
+      // },
+      // {
+      //   path: 'validators',
+      //   component: RouteLayout,
+      //   children: [
+      //     {
+      //       path: 'form',
+      //       component: RouteLayout,
+      //       children: [
+      //         {
+      //           path: 'api',
+      //           name: 'GlobalValidatorsFormAPI',
+      //           component: () => import('@/views/global/validators/form/api/CodeExample.vue')
+      //         },
+      //         {
+      //           path: 'base',
+      //           name: 'GlobalValidatorsFormBase',
+      //           component: () => import('@/views/global/validators/form/base/CodeExample.vue')
+      //         }
+      //       ]
+      //     },
+      //     {
+      //       path: 'table',
+      //       component: RouteLayout,
+      //       children: [
+      //         {
+      //           path: 'api',
+      //           name: 'GlobalValidatorsTableAPI',
+      //           component: () => import('@/views/global/validators/table/api/CodeExample.vue')
+      //         },
+      //         {
+      //           path: 'base',
+      //           name: 'GlobalValidatorsTableBase',
+      //           component: () => import('@/views/global/validators/table/base/CodeExample.vue')
+      //         }
+      //       ]
+      //     }
+      //   ]
+      // },
+      // {
+      //   path: 'interceptor',
+      //   component: RouteLayout,
+      //   children: [
+      //     {
+      //       path: 'table',
+      //       component: RouteLayout,
+      //       children: [
+      //         {
+      //           path: 'api',
+      //           name: 'GlobalInterceptorTableAPI',
+      //           component: () => import('@/views/global/interceptor/table/api/CodeExample.vue')
+      //         },
+      //         {
+      //           path: 'base',
+      //           name: 'GlobalInterceptorTableBase',
+      //           component: () => import('@/views/global/interceptor/table/base/CodeExample.vue')
+      //         }
+      //       ]
+      //     }
+      //   ]
+      // },
+      // {
+      //   path: 'renderer',
+      //   component: RouteLayout,
+      //   children: [
+      //     {
+      //       path: 'form',
+      //       component: RouteLayout,
+      //       children: [
+      //         {
+      //           path: 'api',
+      //           name: 'GlobalRendererFormAPI',
+      //           component: () => import('@/views/global/renderer/form/api/CodeExample.vue')
+      //         },
+      //         {
+      //           path: 'item',
+      //           component: RouteLayout,
+      //           children: [
+      //             {
+      //               path: 'myItemAmount',
+      //               name: 'GlobalRendererFormItemMyItemAmount',
+      //               component: () => import('@/views/global/renderer/form/item/myItemAmount/CodeExample.vue')
+      //             },
+      //             {
+      //               path: 'myItemUpload',
+      //               name: 'GlobalRendererFormItemMyItemUpload',
+      //               component: () => import('@/views/global/renderer/form/item/myItemUpload/CodeExample.vue')
+      //             }
+      //           ]
+      //         }
+      //       ]
+      //     },
+      //     {
+      //       path: 'table',
+      //       component: RouteLayout,
+      //       children: [
+      //         {
+      //           path: 'api',
+      //           name: 'GlobalRendererTableAPI',
+      //           component: () => import('@/views/global/renderer/table/api/CodeExample.vue')
+      //         },
+      //         {
+      //           path: 'default',
+      //           component: RouteLayout,
+      //           children: [
+      //             {
+      //               path: 'myCellLink',
+      //               name: 'GlobalRendererTableDefaultMyLink',
+      //               component: () => import('@/views/global/renderer/table/default/myCellLink/CodeExample.vue')
+      //             },
+      //             {
+      //               path: 'myCellImg',
+      //               name: 'GlobalRendererTableDefaultMyImg',
+      //               component: () => import('@/views/global/renderer/table/default/myCellImg/CodeExample.vue')
+      //             }
+      //           ]
+      //         },
+      //         {
+      //           path: 'edit',
+      //           component: RouteLayout,
+      //           children: [
+      //             {
+      //               path: 'myEditAmount',
+      //               name: 'GlobalRendererTableEditMyEditAmount',
+      //               component: () => import('@/views/global/renderer/table/edit/myEditAmount/CodeExample.vue')
+      //             },
+      //             {
+      //               path: 'myEditPulldown',
+      //               name: 'GlobalRendererTableEditMyEditPulldown',
+      //               component: () => import('@/views/global/renderer/table/edit/myEditPulldown/CodeExample.vue')
+      //             }
+      //           ]
+      //         },
+      //         {
+      //           path: 'expand',
+      //           component: RouteLayout,
+      //           children: [
+      //             {
+      //               path: 'myExpandList',
+      //               name: 'GlobalRendererTableExpandMyExpandList',
+      //               component: () => import('@/views/global/renderer/table/expand/myExpandList/CodeExample.vue')
+      //             },
+      //             {
+      //               path: 'myExpandTable',
+      //               name: 'GlobalRendererTableExpandMyExpandTable',
+      //               component: () => import('@/views/global/renderer/table/expand/myExpandTable/CodeExample.vue')
+      //             }
+      //           ]
+      //         },
+      //         {
+      //           path: 'toolbar',
+      //           component: RouteLayout,
+      //           children: [
+      //             {
+      //               path: 'btn',
+      //               name: 'GlobalRendererTableToolbarBtn',
+      //               component: () => import('@/views/global/renderer/table/toolbar/button/CodeExample.vue')
+      //             },
+      //             {
+      //               path: 'tool',
+      //               name: 'GlobalRendererTableToolbarTool',
+      //               component: () => import('@/views/global/renderer/table/toolbar/tool/CodeExample.vue')
+      //             }
+      //           ]
+      //         },
+      //         {
+      //           path: 'filter',
+      //           component: RouteLayout,
+      //           children: [
+      //             {
+      //               path: 'myFilterInput',
+      //               name: 'GlobalRendererTableFilterMyFilterInput',
+      //               component: () => import('@/views/global/renderer/table/filter/myFilterInput/CodeExample.vue')
+      //             },
+      //             {
+      //               path: 'myFilterComplex',
+      //               name: 'GlobalRendererTableFilterMyFilterComplex',
+      //               component: () => import('@/views/global/renderer/table/filter/myFilterComplex/CodeExample.vue')
+      //             },
+      //             {
+      //               path: 'myFilterContent',
+      //               name: 'GlobalRendererTableFilterMyFilterContent',
+      //               component: () => import('@/views/global/renderer/table/filter/myFilterContent/CodeExample.vue')
+      //             }
+      //           ]
+      //         },
+      //         {
+      //           path: 'empty',
+      //           component: RouteLayout,
+      //           children: [
+      //             {
+      //               path: 'myEmptyImg',
+      //               name: 'GlobalRendererTableMyEmptyImg',
+      //               component: () => import('@/views/global/renderer/table/empty/myEmptyImg/CodeExample.vue')
+      //             },
+      //             {
+      //               path: 'myEmptyText',
+      //               name: 'GlobalRendererTableMyEmptyText',
+      //               component: () => import('@/views/global/renderer/table/empty/myEmptyText/CodeExample.vue')
+      //             }
+      //           ]
+      //         }
+      //       ]
+      //     },
+      //     {
+      //       path: 'form-design',
+      //       component: RouteLayout,
+      //       children: [
+      //         {
+      //           path: 'api',
+      //           name: 'GlobalRendererFormDesignAPI',
+      //           component: () => import('@/views/global/renderer/form-design/api/CodeExample.vue')
+      //         },
+      //         {
+      //           path: 'widget',
+      //           component: RouteLayout,
+      //           children: [
+      //             {
+      //               path: 'myInputWidget',
+      //               name: 'GlobalRendererFormDesignWidgetMyInputWidget',
+      //               component: () => import('@/views/global/renderer/form-design/widget/myInputWidget/CodeExample.vue')
+      //             },
+      //             {
+      //               path: 'myTextareaWidget',
+      //               name: 'GlobalRendererFormDesignWidgetMyTextareaWidget',
+      //               component: () => import('@/views/global/renderer/form-design/widget/myTextareaWidget/CodeExample.vue')
+      //             }
+      //           ]
+      //         }
+      //       ]
+      //     }
+      //   ]
+      // }
+    ]
+  },
   {
     path: '/component',
     component: PageLayout,
@@ -2822,88 +2913,91 @@ const routes: Array<RouteConfig> = [
           }
         ]
       },
-      // {
-      //   path: 'layout',
-      //   children: [
-      //     {
-      //       path: 'base',
-      //       name: 'ComponentLayoutBase',
-      //       component: () => import('@/views/layout/base/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'fixed',
-      //       name: 'ComponentLayoutFixed',
-      //       component: () => import('@/views/layout/fixed/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'aside',
-      //       name: 'ComponentLayoutAside',
-      //       component: () => import('@/views/layout/aside/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'header',
-      //       name: 'ComponentLayoutHeader',
-      //       component: () => import('@/views/layout/header/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'body',
-      //       name: 'ComponentLayoutBody',
-      //       component: () => import('@/views/layout/body/CodeExample.vue')
-      //     }
-      //   ]
-      // },
-      // {
-      //   path: 'row',
-      //   children: [
-      //     {
-      //       path: 'base',
-      //       name: 'ComponentRowBase',
-      //       component: () => import('@/views/row/base/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'gutter',
-      //       name: 'ComponentRowGutter',
-      //       component: () => import('@/views/row/gutter/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'vertical',
-      //       name: 'ComponentRowVertical',
-      //       component: () => import('@/views/row/vertical/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'wrap',
-      //       name: 'ComponentRowWrap',
-      //       component: () => import('@/views/row/wrap/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'colWidth',
-      //       name: 'ComponentRowColWidth',
-      //       component: () => import('@/views/row/colWidth/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'colFill',
-      //       name: 'ComponentRowColFill',
-      //       component: () => import('@/views/row/colFill/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'colAlign',
-      //       name: 'ComponentRowColAlign',
-      //       component: () => import('@/views/row/colAlign/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'colEllipsis',
-      //       name: 'ComponentRowColEllipsis',
-      //       component: () => import('@/views/row/colEllipsis/CodeExample.vue')
-      //     }
-      //   ]
-      // },
-      // {
-      //   path: 'breadcrumb',
-      //   name: 'ComponentBreadcrumb',
-      //   component: () => import('@/views/breadcrumb/CodeExample.vue')
-      // },
+      {
+        path: 'layout',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentLayoutBase',
+            component: () => import('@/views/layout/base/CodeExample.vue')
+          },
+          {
+            path: 'fixed',
+            name: 'ComponentLayoutFixed',
+            component: () => import('@/views/layout/fixed/CodeExample.vue')
+          },
+          {
+            path: 'aside',
+            name: 'ComponentLayoutAside',
+            component: () => import('@/views/layout/aside/CodeExample.vue')
+          },
+          {
+            path: 'header',
+            name: 'ComponentLayoutHeader',
+            component: () => import('@/views/layout/header/CodeExample.vue')
+          },
+          {
+            path: 'body',
+            name: 'ComponentLayoutBody',
+            component: () => import('@/views/layout/body/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'row',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentRowBase',
+            component: () => import('@/views/row/base/CodeExample.vue')
+          },
+          {
+            path: 'gutter',
+            name: 'ComponentRowGutter',
+            component: () => import('@/views/row/gutter/CodeExample.vue')
+          },
+          {
+            path: 'vertical',
+            name: 'ComponentRowVertical',
+            component: () => import('@/views/row/vertical/CodeExample.vue')
+          },
+          {
+            path: 'wrap',
+            name: 'ComponentRowWrap',
+            component: () => import('@/views/row/wrap/CodeExample.vue')
+          },
+          {
+            path: 'colWidth',
+            name: 'ComponentRowColWidth',
+            component: () => import('@/views/row/colWidth/CodeExample.vue')
+          },
+          {
+            path: 'colFill',
+            name: 'ComponentRowColFill',
+            component: () => import('@/views/row/colFill/CodeExample.vue')
+          },
+          {
+            path: 'colAlign',
+            name: 'ComponentRowColAlign',
+            component: () => import('@/views/row/colAlign/CodeExample.vue')
+          },
+          {
+            path: 'colEllipsis',
+            name: 'ComponentRowColEllipsis',
+            component: () => import('@/views/row/colEllipsis/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'breadcrumb',
+        name: 'ComponentBreadcrumb',
+        component: () => import('@/views/breadcrumb/CodeExample.vue')
+      },
       // {
       //   path: 'menu',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'base',
@@ -2934,6 +3028,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'image',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'base',
@@ -2977,73 +3072,76 @@ const routes: Array<RouteConfig> = [
       //   name: 'ComponentAnchor',
       //   component: () => import('@/views/anchor/CodeExample.vue')
       // },
-      // {
-      //   path: 'text',
-      //   children: [
-      //     {
-      //       path: 'size',
-      //       name: 'ComponentTextSize',
-      //       component: () => import('@/views/text/size/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'status',
-      //       name: 'ComponentTextStatus',
-      //       component: () => import('@/views/text/status/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'icon',
-      //       name: 'ComponentTextIcon',
-      //       component: () => import('@/views/text/icon/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'clickToCopy',
-      //       name: 'ComponentTextClickToCopy',
-      //       component: () => import('@/views/text/clickToCopy/CodeExample.vue')
-      //     }
-      //   ]
-      // },
-      // {
-      //   path: 'link',
-      //   children: [
-      //     {
-      //       path: 'size',
-      //       name: 'ComponentLinkSize',
-      //       component: () => import('@/views/link/size/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'status',
-      //       name: 'ComponentLinkStatus',
-      //       component: () => import('@/views/link/status/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'icon',
-      //       name: 'ComponentLinkIcon',
-      //       component: () => import('@/views/link/icon/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'underline',
-      //       name: 'ComponentLinkUnderline',
-      //       component: () => import('@/views/link/underline/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'href',
-      //       name: 'ComponentLinkHref',
-      //       component: () => import('@/views/link/href/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'router',
-      //       name: 'ComponentLinkRouter',
-      //       component: () => import('@/views/link/router/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'permissionCode',
-      //       name: 'ComponentLinkPermissionCode',
-      //       component: () => import('@/views/link/permissionCode/CodeExample.vue')
-      //     }
-      //   ]
-      // },
+      {
+        path: 'text',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentTextSize',
+            component: () => import('@/views/text/size/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentTextStatus',
+            component: () => import('@/views/text/status/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentTextIcon',
+            component: () => import('@/views/text/icon/CodeExample.vue')
+          },
+          {
+            path: 'clickToCopy',
+            name: 'ComponentTextClickToCopy',
+            component: () => import('@/views/text/clickToCopy/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'link',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentLinkSize',
+            component: () => import('@/views/link/size/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentLinkStatus',
+            component: () => import('@/views/link/status/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentLinkIcon',
+            component: () => import('@/views/link/icon/CodeExample.vue')
+          },
+          {
+            path: 'underline',
+            name: 'ComponentLinkUnderline',
+            component: () => import('@/views/link/underline/CodeExample.vue')
+          },
+          {
+            path: 'href',
+            name: 'ComponentLinkHref',
+            component: () => import('@/views/link/href/CodeExample.vue')
+          },
+          {
+            path: 'router',
+            name: 'ComponentLinkRouter',
+            component: () => import('@/views/link/router/CodeExample.vue')
+          },
+          {
+            path: 'permissionCode',
+            name: 'ComponentLinkPermissionCode',
+            component: () => import('@/views/link/permissionCode/CodeExample.vue')
+          }
+        ]
+      },
       // {
       //   path: 'tag',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'size',
@@ -3064,6 +3162,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'button',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'size',
@@ -3119,6 +3218,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'radio',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'size',
@@ -3149,6 +3249,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'checkbox',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'size',
@@ -3184,6 +3285,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'input',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'size',
@@ -3284,9 +3386,11 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'number-input',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'number',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'base',
@@ -3312,6 +3416,7 @@ const routes: Array<RouteConfig> = [
       //     },
       //     {
       //       path: 'integer',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'base',
@@ -3337,6 +3442,7 @@ const routes: Array<RouteConfig> = [
       //     },
       //     {
       //       path: 'float',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'base',
@@ -3369,6 +3475,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'textarea',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'size',
@@ -3404,6 +3511,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'icon-picker',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'size',
@@ -3424,6 +3532,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'date-picker',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'date',
@@ -3464,6 +3573,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'select',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'base',
@@ -3522,6 +3632,7 @@ const routes: Array<RouteConfig> = [
       //     },
       //     {
       //       path: 'config',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'clearable',
@@ -3564,6 +3675,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'pager',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'size',
@@ -3594,6 +3706,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'alert',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'global',
@@ -3634,6 +3747,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'confirm',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'global',
@@ -3669,6 +3783,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'message',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'global',
@@ -3694,6 +3809,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'notification',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'global',
@@ -3724,6 +3840,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'modal',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'base',
@@ -3792,6 +3909,7 @@ const routes: Array<RouteConfig> = [
       //     },
       //     {
       //       path: 'template',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'layout',
@@ -3859,6 +3977,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'switch',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'size',
@@ -3889,6 +4008,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'list',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'base',
@@ -3904,6 +4024,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'pulldown',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'base',
@@ -3934,6 +4055,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'tabs',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'base',
@@ -3999,7 +4121,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'drawer',
-      //   name: 'ComponentDrawer',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'size',
@@ -4048,6 +4170,7 @@ const routes: Array<RouteConfig> = [
       //     },
       //     {
       //       path: 'template',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'layout',
@@ -4068,43 +4191,45 @@ const routes: Array<RouteConfig> = [
       //     }
       //   ]
       // },
-      // {
-      //   path: 'loading',
-      //   children: [
-      //     {
-      //       path: 'global',
-      //       name: 'ComponentLoadingGlobalLoading',
-      //       component: () => import('@/views/loading/global/loading/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'base',
-      //       name: 'ComponentLoadingBase',
-      //       component: () => import('@/views/loading/base/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'status',
-      //       name: 'ComponentLoadingStatus',
-      //       component: () => import('@/views/loading/status/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'icon',
-      //       name: 'ComponentLoadingIcon',
-      //       component: () => import('@/views/loading/icon/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'text',
-      //       name: 'ComponentLoadingText',
-      //       component: () => import('@/views/loading/text/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'template',
-      //       name: 'ComponentLoadingTemplate',
-      //       component: () => import('@/views/loading/template/CodeExample.vue')
-      //     }
-      //   ]
-      // },
+      {
+        path: 'loading',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'global',
+            name: 'ComponentLoadingGlobalLoading',
+            component: () => import('@/views/loading/global/loading/CodeExample.vue')
+          },
+          {
+            path: 'base',
+            name: 'ComponentLoadingBase',
+            component: () => import('@/views/loading/base/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentLoadingStatus',
+            component: () => import('@/views/loading/status/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentLoadingIcon',
+            component: () => import('@/views/loading/icon/CodeExample.vue')
+          },
+          {
+            path: 'text',
+            name: 'ComponentLoadingText',
+            component: () => import('@/views/loading/text/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentLoadingTemplate',
+            component: () => import('@/views/loading/template/CodeExample.vue')
+          }
+        ]
+      },
       // {
       //   path: 'tip',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'base',
@@ -4125,6 +4250,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'alert',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'base',
@@ -4150,6 +4276,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'card',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'base',
@@ -4190,6 +4317,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'carousel',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'base',
@@ -4230,6 +4358,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'calendar',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'size',
@@ -4273,98 +4402,103 @@ const routes: Array<RouteConfig> = [
       //     }
       //   ]
       // },
-      // {
-      //   path: 'print',
-      //   children: [
-      //     {
-      //       path: 'global',
-      //       name: 'ComponentPrintGlobalPrint',
-      //       component: () => import('@/views/print/global/print/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'base',
-      //       children: [
-      //         {
-      //           path: 'html',
-      //           name: 'ComponentPrintBaseHtml',
-      //           component: () => import('@/views/print/base/html/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'base',
-      //           name: 'ComponentPrintBaseImg',
-      //           component: () => import('@/views/print/base/img/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'table',
-      //           name: 'ComponentPrintBaseTable',
-      //           component: () => import('@/views/print/base/table/CodeExample.vue')
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       path: 'page',
-      //       children: [
-      //         {
-      //           path: 'basics',
-      //           name: 'ComponentPrintPageBasics',
-      //           component: () => import('@/views/print/page/basics/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'header',
-      //           name: 'ComponentPrintPageHeader',
-      //           component: () => import('@/views/print/page/header/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'footer',
-      //           name: 'ComponentPrintPageFooter',
-      //           component: () => import('@/views/print/page/footer/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'image',
-      //           name: 'ComponentPrintPageImage',
-      //           component: () => import('@/views/print/page/image/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'table',
-      //           name: 'ComponentPrintPageTable',
-      //           component: () => import('@/views/print/page/table/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'template',
-      //           name: 'ComponentPrintPageTemplate',
-      //           component: () => import('@/views/print/page/template/CodeExample.vue')
-      //         }
-      //       ]
-      //     }
-      //   ]
-      // },
-      // {
-      //   path: 'countdown',
-      //   children: [
-      //     {
-      //       path: 'size',
-      //       name: 'ComponentCountdownSize',
-      //       component: () => import('@/views/countdown/size/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'base',
-      //       name: 'ComponentCountdownBase',
-      //       component: () => import('@/views/countdown/base/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'format',
-      //       name: 'ComponentCountdownFormat',
-      //       component: () => import('@/views/countdown/format/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'template',
-      //       name: 'ComponentCountdownTemplate',
-      //       component: () => import('@/views/countdown/template/CodeExample.vue')
-      //     }
-      //   ]
-      // },
+      {
+        path: 'print',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'global',
+            name: 'ComponentPrintGlobalPrint',
+            component: () => import('@/views/print/global/print/CodeExample.vue')
+          },
+          {
+            path: 'base',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'html',
+                name: 'ComponentPrintBaseHtml',
+                component: () => import('@/views/print/base/html/CodeExample.vue')
+              },
+              {
+                path: 'base',
+                name: 'ComponentPrintBaseImg',
+                component: () => import('@/views/print/base/img/CodeExample.vue')
+              },
+              {
+                path: 'table',
+                name: 'ComponentPrintBaseTable',
+                component: () => import('@/views/print/base/table/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'page',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'basics',
+                name: 'ComponentPrintPageBasics',
+                component: () => import('@/views/print/page/basics/CodeExample.vue')
+              },
+              {
+                path: 'header',
+                name: 'ComponentPrintPageHeader',
+                component: () => import('@/views/print/page/header/CodeExample.vue')
+              },
+              {
+                path: 'footer',
+                name: 'ComponentPrintPageFooter',
+                component: () => import('@/views/print/page/footer/CodeExample.vue')
+              },
+              {
+                path: 'image',
+                name: 'ComponentPrintPageImage',
+                component: () => import('@/views/print/page/image/CodeExample.vue')
+              },
+              {
+                path: 'table',
+                name: 'ComponentPrintPageTable',
+                component: () => import('@/views/print/page/table/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                name: 'ComponentPrintPageTemplate',
+                component: () => import('@/views/print/page/template/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
+      {
+        path: 'countdown',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentCountdownSize',
+            component: () => import('@/views/countdown/size/CodeExample.vue')
+          },
+          {
+            path: 'base',
+            name: 'ComponentCountdownBase',
+            component: () => import('@/views/countdown/base/CodeExample.vue')
+          },
+          {
+            path: 'format',
+            name: 'ComponentCountdownFormat',
+            component: () => import('@/views/countdown/format/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentCountdownTemplate',
+            component: () => import('@/views/countdown/template/CodeExample.vue')
+          }
+        ]
+      },
       // {
       //   path: 'tree',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'base',
@@ -4433,6 +4567,7 @@ const routes: Array<RouteConfig> = [
       //     },
       //     {
       //       path: 'current',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'base',
@@ -4453,6 +4588,7 @@ const routes: Array<RouteConfig> = [
       //     },
       //     {
       //       path: 'checkbox',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'base',
@@ -4488,6 +4624,7 @@ const routes: Array<RouteConfig> = [
       //     },
       //     {
       //       path: 'radio',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'base',
@@ -4518,6 +4655,7 @@ const routes: Array<RouteConfig> = [
       //     },
       //     {
       //       path: 'lazy',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'loadMethod',
@@ -4540,9 +4678,11 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'treeSelect',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'basics',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'size',
@@ -4588,6 +4728,7 @@ const routes: Array<RouteConfig> = [
       //     },
       //     {
       //       path: 'radio',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'base',
@@ -4603,6 +4744,7 @@ const routes: Array<RouteConfig> = [
       //     },
       //     {
       //       path: 'checkbox',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'base',
@@ -4625,9 +4767,11 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'form',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'basics',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'base',
@@ -4716,6 +4860,7 @@ const routes: Array<RouteConfig> = [
       //         },
       //         {
       //           path: 'itemRender',
+      //           component: RouteLayout,
       //           children: [
       //             {
       //               path: 'input',
@@ -4796,6 +4941,7 @@ const routes: Array<RouteConfig> = [
       //         },
       //         {
       //           path: 'itemTemplate',
+      //           component: RouteLayout,
       //           children: [
       //             {
       //               path: 'vxe-input',
@@ -4846,6 +4992,7 @@ const routes: Array<RouteConfig> = [
       //         },
       //         {
       //           path: 'template',
+      //           component: RouteLayout,
       //           children: [
       //             {
       //               path: 'title',
@@ -4868,6 +5015,7 @@ const routes: Array<RouteConfig> = [
       //     },
       //     {
       //       path: 'config',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'base',
@@ -4926,6 +5074,7 @@ const routes: Array<RouteConfig> = [
       //         },
       //         {
       //           path: 'itemRender',
+      //           component: RouteLayout,
       //           children: [
       //             {
       //               path: 'input',
@@ -5021,6 +5170,7 @@ const routes: Array<RouteConfig> = [
       //         },
       //         {
       //           path: 'itemTemplate',
+      //           component: RouteLayout,
       //           children: [
       //             {
       //               path: 'vxe-input',
@@ -5075,6 +5225,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'form-design',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'base',
@@ -5105,6 +5256,7 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'list-design',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'base',
@@ -5130,9 +5282,11 @@ const routes: Array<RouteConfig> = [
       // },
       // {
       //   path: 'upload',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'global',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'readFile',
@@ -5148,6 +5302,7 @@ const routes: Array<RouteConfig> = [
       //     },
       //     {
       //       path: 'file',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'size',
@@ -5258,6 +5413,7 @@ const routes: Array<RouteConfig> = [
       //     },
       //     {
       //       path: 'image',
+      //       component: RouteLayout,
       //       children: [
       //         {
       //           path: 'size',

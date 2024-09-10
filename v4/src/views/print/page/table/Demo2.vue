@@ -19,7 +19,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeUI, VxeTableInstance } from 'vxe-table'
+import { VxeUI, VxeTableInstance, VxeTablePropTypes } from 'vxe-table'
 import XEUtils from 'xe-utils'
 
 interface RowVO {
@@ -49,7 +49,7 @@ for (let i = 0; i < 100; i++) {
 
 const tableData = ref(list)
 
-const footerData = ref([
+const footerData = ref<VxeTablePropTypes.FooterData>([
   { id: '合计', num: countNum }
 ])
 
