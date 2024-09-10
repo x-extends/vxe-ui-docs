@@ -1,5 +1,8 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
+import RouteLayout from '@/components/RouteLayout.vue'
+import PageLayout from '@/components/PageLayout.vue'
+
 import FreeDonation from '@/views/start/FreeDonation.vue'
 import JoinSponsor from '@/views/start/JoinSponsor.vue'
 
@@ -18,6 +21,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/start',
+    component: PageLayout,
     children: [
       {
         path: 'freeDonation',
@@ -33,6 +37,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/plugin-render-chart',
+    component: PageLayout,
     children: [
       {
         path: 'install',
@@ -41,6 +46,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'table',
+        component: RouteLayout,
         children: [
           {
             path: 'rate',
@@ -61,6 +67,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'grid',
+        component: RouteLayout,
         children: [
           {
             path: 'rate',
@@ -83,6 +90,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/plugin-export-xlsx',
+    component: PageLayout,
     children: [
       {
         path: 'install',
@@ -91,6 +99,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'table',
+        component: RouteLayout,
         children: [
           {
             path: 'export',
@@ -116,6 +125,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'grid',
+        component: RouteLayout,
         children: [
           {
             path: 'export',
@@ -143,6 +153,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/plugin-export-pdf',
+    component: PageLayout,
     children: [
       {
         path: 'install',
@@ -151,6 +162,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'table',
+        component: RouteLayout,
         children: [
           {
             path: 'export',
@@ -171,6 +183,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'grid',
+        component: RouteLayout,
         children: [
           {
             path: 'export',
@@ -193,6 +206,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/plugin-render-element',
+    component: PageLayout,
     children: [
       {
         path: 'install',
@@ -201,9 +215,11 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'form',
+        component: RouteLayout,
         children: [
           {
             path: 'itemTemplate',
+            component: RouteLayout,
             children: [
               {
                 path: 'el-input',
@@ -229,6 +245,7 @@ const routes: Array<RouteRecordRaw> = [
           },
           {
             path: 'itemRender',
+            component: RouteLayout,
             children: [
               {
                 path: 'el-autocomplete',
@@ -291,9 +308,11 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'table',
+        component: RouteLayout,
         children: [
           {
             path: 'filter',
+            component: RouteLayout,
             children: [
               {
                 path: 'el-input',
@@ -309,6 +328,7 @@ const routes: Array<RouteRecordRaw> = [
           },
           {
             path: 'cell',
+            component: RouteLayout,
             children: [
               {
                 path: 'el-switch',
@@ -324,6 +344,7 @@ const routes: Array<RouteRecordRaw> = [
           },
           {
             path: 'edit',
+            component: RouteLayout,
             children: [
               {
                 path: 'el-input',
@@ -366,9 +387,11 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'grid',
+        component: RouteLayout,
         children: [
           {
             path: 'filter',
+            component: RouteLayout,
             children: [
               {
                 path: 'el-input',
@@ -384,6 +407,7 @@ const routes: Array<RouteRecordRaw> = [
           },
           {
             path: 'cell',
+            component: RouteLayout,
             children: [
               {
                 path: 'el-switch',
@@ -399,6 +423,7 @@ const routes: Array<RouteRecordRaw> = [
           },
           {
             path: 'edit',
+            component: RouteLayout,
             children: [
               {
                 path: 'el-input',
@@ -441,6 +466,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'form-design',
+        component: RouteLayout,
         children: [
           {
             path: 'renderView',
@@ -453,6 +479,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/plugin-render-antd',
+    component: PageLayout,
     children: [
       {
         path: 'install',
@@ -461,9 +488,11 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'table',
+        component: RouteLayout,
         children: [
           {
             path: 'cell',
+            component: RouteLayout,
             children: [
               {
                 path: 'a-switch',
@@ -479,6 +508,7 @@ const routes: Array<RouteRecordRaw> = [
           },
           {
             path: 'edit',
+            component: RouteLayout,
             children: [
               {
                 path: 'a-input',
@@ -521,9 +551,11 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'grid',
+        component: RouteLayout,
         children: [
           {
             path: 'cell',
+            component: RouteLayout,
             children: [
               {
                 path: 'a-switch',
@@ -539,6 +571,7 @@ const routes: Array<RouteRecordRaw> = [
           },
           {
             path: 'edit',
+            component: RouteLayout,
             children: [
               {
                 path: 'a-input',
@@ -581,6 +614,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'form-design',
+        component: RouteLayout,
         children: [
           {
             path: 'renderView',
@@ -592,9 +626,15 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
-    path: '/:name/api',
-    name: 'DocsApi',
-    component: () => import('@/views/api/DocsApi.vue')
+    path: '/',
+    component: PageLayout,
+    children: [
+      {
+        path: ':name/api',
+        name: 'DocsApi',
+        component: () => import('@/views/api/DocsApi.vue')
+      }
+    ]
   }
 ]
 

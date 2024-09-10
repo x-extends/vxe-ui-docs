@@ -10,9 +10,9 @@
       <template #use>
         <pre>
           <pre-code>
-            npm install @vxe-ui/plugin-render-chart
+            npm install @vxe-ui/plugin-render-chart@3
             # 或者
-            yarn add @vxe-ui/plugin-render-chart
+            yarn add @vxe-ui/plugin-render-chart@3
           </pre-code>
         </pre>
 
@@ -35,10 +35,3 @@
     </CodeLight>
   </div>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
-})
-</script>

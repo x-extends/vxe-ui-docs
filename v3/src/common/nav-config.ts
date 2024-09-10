@@ -882,69 +882,69 @@ export const navConfigList: NavVO[] = [
       { i18nKey: 'app.aside.menu.clipboard', routerLink: { name: 'ToolClipboard' } }
     ]
   },
-  // {
-  //   i18nKey: 'app.aside.menu.baseTitle',
-  //   children: [
-  //     {
-  //       i18nKey: 'app.aside.menu.iconTitle',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon' } } },
-  //         { title: '图标列表', routerLink: { name: 'ComponentIconBase' } },
-  //         { title: '尺寸大小', routerLink: { name: 'ComponentIconSize' } },
-  //         { title: '效果', routerLink: { name: 'ComponentIconAnimation' } },
-  //         { title: '状态颜色', routerLink: { name: 'ComponentIconStatus' } }
-  //       ]
-  //     },
-  //     {
-  //       i18nKey: 'app.aside.menu.textTitle',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'text' } } },
-  //         { title: '尺寸大小', routerLink: { name: 'ComponentTextSize' } },
-  //         { title: '状态颜色', routerLink: { name: 'ComponentTextStatus' } },
-  //         { title: '图标', routerLink: { name: 'ComponentTextIcon' } },
-  //         { title: '点击复制内容', routerLink: { name: 'ComponentTextClickToCopy' } }
-  //       ]
-  //     },
-  //     {
-  //       i18nKey: 'app.aside.menu.linkTitle',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'link' } } },
-  //         { title: '尺寸大小', routerLink: { name: 'ComponentLinkSize' } },
-  //         { title: '状态颜色', routerLink: { name: 'ComponentLinkStatus' } },
-  //         { title: '图标', routerLink: { name: 'ComponentLinkIcon' } },
-  //         { title: '下划线', routerLink: { name: 'ComponentLinkUnderline' } },
-  //         { title: '超链接', routerLink: { name: 'ComponentLinkHref' } },
-  //         { title: '路由模式', routerLink: { name: 'ComponentLinkRouter' } },
-  //         { title: '权限码', routerLink: { name: 'ComponentLinkPermissionCode' } }
-  //       ]
-  //     },
-  //     {
-  //       i18nKey: 'app.aside.menu.tagTitle',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tag' } } },
-  //         { title: '尺寸大小', routerLink: { name: 'ComponentTagSize' } },
-  //         { title: '状态', routerLink: { name: 'ComponentTagStatus' } },
-  //         { title: '图标', routerLink: { name: 'ComponentTagIcon' } }
-  //       ]
-  //     },
-  //     {
-  //       i18nKey: 'app.aside.menu.buttonTitle',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'button' } } },
-  //         { title: '尺寸大小', routerLink: { name: 'ComponentButtonSize' } },
-  //         { title: '状态', routerLink: { name: 'ComponentButtonStatus' } },
-  //         { title: '圆角', routerLink: { name: 'ComponentButtonRound' } },
-  //         { title: '图标', routerLink: { name: 'ComponentButtonIcon' } },
-  //         { title: '圆形', routerLink: { name: 'ComponentButtonCircle' } },
-  //         { title: '加载中', routerLink: { name: 'ComponentButtonLoading' } },
-  //         { title: '触发方式', routerLink: { name: 'ComponentButtonTrigger' } },
-  //         { title: '按钮组', routerLink: { name: 'ComponentButtonGroup' } },
-  //         { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdown' } },
-  //         { title: '权限码', routerLink: { name: 'ComponentButtonPermissionCode' } }
-  //       ]
-  //     }
-  //   ]
-  // },
+  {
+    i18nKey: 'app.aside.menu.baseTitle',
+    children: [
+      {
+        i18nKey: 'app.aside.menu.iconTitle',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon' } } },
+          { title: '图标列表', routerLink: { name: 'ComponentIconBase' } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentIconSize' } },
+          { title: '效果', routerLink: { name: 'ComponentIconAnimation' } },
+          { title: '状态颜色', routerLink: { name: 'ComponentIconStatus' } }
+        ]
+      }
+      // {
+      //   i18nKey: 'app.aside.menu.textTitle',
+      //   children: [
+      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'text' } } },
+      //     { title: '尺寸大小', routerLink: { name: 'ComponentTextSize' } },
+      //     { title: '状态颜色', routerLink: { name: 'ComponentTextStatus' } },
+      //     { title: '图标', routerLink: { name: 'ComponentTextIcon' } },
+      //     { title: '点击复制内容', routerLink: { name: 'ComponentTextClickToCopy' } }
+      //   ]
+      // },
+      // {
+      //   i18nKey: 'app.aside.menu.linkTitle',
+      //   children: [
+      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'link' } } },
+      //     { title: '尺寸大小', routerLink: { name: 'ComponentLinkSize' } },
+      //     { title: '状态颜色', routerLink: { name: 'ComponentLinkStatus' } },
+      //     { title: '图标', routerLink: { name: 'ComponentLinkIcon' } },
+      //     { title: '下划线', routerLink: { name: 'ComponentLinkUnderline' } },
+      //     { title: '超链接', routerLink: { name: 'ComponentLinkHref' } },
+      //     { title: '路由模式', routerLink: { name: 'ComponentLinkRouter' } },
+      //     { title: '权限码', routerLink: { name: 'ComponentLinkPermissionCode' } }
+      //   ]
+      // },
+      // {
+      //   i18nKey: 'app.aside.menu.tagTitle',
+      //   children: [
+      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tag' } } },
+      //     { title: '尺寸大小', routerLink: { name: 'ComponentTagSize' } },
+      //     { title: '状态', routerLink: { name: 'ComponentTagStatus' } },
+      //     { title: '图标', routerLink: { name: 'ComponentTagIcon' } }
+      //   ]
+      // },
+      // {
+      //   i18nKey: 'app.aside.menu.buttonTitle',
+      //   children: [
+      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'button' } } },
+      //     { title: '尺寸大小', routerLink: { name: 'ComponentButtonSize' } },
+      //     { title: '状态', routerLink: { name: 'ComponentButtonStatus' } },
+      //     { title: '圆角', routerLink: { name: 'ComponentButtonRound' } },
+      //     { title: '图标', routerLink: { name: 'ComponentButtonIcon' } },
+      //     { title: '圆形', routerLink: { name: 'ComponentButtonCircle' } },
+      //     { title: '加载中', routerLink: { name: 'ComponentButtonLoading' } },
+      //     { title: '触发方式', routerLink: { name: 'ComponentButtonTrigger' } },
+      //     { title: '按钮组', routerLink: { name: 'ComponentButtonGroup' } },
+      //     { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdown' } },
+      //     { title: '权限码', routerLink: { name: 'ComponentButtonPermissionCode' } }
+      //   ]
+      // }
+    ]
+  },
   // {
   //   i18nKey: 'app.aside.menu.layoutTitle',
   //   children: [

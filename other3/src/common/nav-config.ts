@@ -27,12 +27,12 @@ export const navConfigList: NavVO[] = [
     title: '轻量级图表',
     isExpand: false,
     children: [
-      // {
-      //   title: '开发指南',
-      //   children: [
-      //     { title: '安装插件', routerLink: { name: 'PluginRenderChartInstall' } }
-      //   ]
-      // },
+      {
+        title: '开发指南',
+        children: [
+          { title: '安装插件', routerLink: { name: 'PluginRenderChartInstall' } }
+        ]
+      },
       // {
       //   title: 'Table 基础表格',
       //   children: [

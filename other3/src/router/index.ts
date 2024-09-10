@@ -11,7 +11,7 @@ Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
-    path: '/*',
+    path: '*',
     redirect: {
       name: 'PluginRenderChartGridBar'
     }
@@ -49,6 +49,7 @@ const routes: Array<RouteConfig> = [
       },
       // {
       //   path: 'table',
+      //   component: RouteLayout,
       //   children: [
       //     {
       //       path: 'rate',
@@ -101,6 +102,7 @@ const routes: Array<RouteConfig> = [
   //     },
   //     {
   //       path: 'table',
+  //       component: RouteLayout,
   //       children: [
   //         {
   //           path: 'export',
@@ -126,6 +128,7 @@ const routes: Array<RouteConfig> = [
   //     },
   //     {
   //       path: 'grid',
+  //       component: RouteLayout,
   //       children: [
   //         {
   //           path: 'export',
@@ -162,6 +165,7 @@ const routes: Array<RouteConfig> = [
   //     },
   //     {
   //       path: 'table',
+  //       component: RouteLayout,
   //       children: [
   //         {
   //           path: 'export',
@@ -182,6 +186,7 @@ const routes: Array<RouteConfig> = [
   //     },
   //     {
   //       path: 'grid',
+  //       component: RouteLayout,
   //       children: [
   //         {
   //           path: 'export',
@@ -213,9 +218,11 @@ const routes: Array<RouteConfig> = [
   //     },
   //     {
   //       path: 'form',
+  //       component: RouteLayout,
   //       children: [
   //         {
   //           path: 'itemTemplate',
+  //           component: RouteLayout,
   //           children: [
   //             {
   //               path: 'el-input',
@@ -241,6 +248,7 @@ const routes: Array<RouteConfig> = [
   //         },
   //         {
   //           path: 'itemRender',
+  //           component: RouteLayout,
   //           children: [
   //             {
   //               path: 'el-autocomplete',
@@ -303,9 +311,11 @@ const routes: Array<RouteConfig> = [
   //     },
   //     {
   //       path: 'table',
+  //       component: RouteLayout,
   //       children: [
   //         {
   //           path: 'filter',
+  //           component: RouteLayout,
   //           children: [
   //             {
   //               path: 'el-input',
@@ -321,6 +331,7 @@ const routes: Array<RouteConfig> = [
   //         },
   //         {
   //           path: 'cell',
+  //           component: RouteLayout,
   //           children: [
   //             {
   //               path: 'el-switch',
@@ -336,6 +347,7 @@ const routes: Array<RouteConfig> = [
   //         },
   //         {
   //           path: 'edit',
+  //           component: RouteLayout,
   //           children: [
   //             {
   //               path: 'el-input',
@@ -378,9 +390,11 @@ const routes: Array<RouteConfig> = [
   //     },
   //     {
   //       path: 'grid',
+  //       component: RouteLayout,
   //       children: [
   //         {
   //           path: 'filter',
+  //           component: RouteLayout,
   //           children: [
   //             {
   //               path: 'el-input',
@@ -396,6 +410,7 @@ const routes: Array<RouteConfig> = [
   //         },
   //         {
   //           path: 'cell',
+  //           component: RouteLayout,
   //           children: [
   //             {
   //               path: 'el-switch',
@@ -411,6 +426,7 @@ const routes: Array<RouteConfig> = [
   //         },
   //         {
   //           path: 'edit',
+  //           component: RouteLayout,
   //           children: [
   //             {
   //               path: 'el-input',
@@ -453,6 +469,7 @@ const routes: Array<RouteConfig> = [
   //     },
   //     {
   //       path: 'form-design',
+  //       component: RouteLayout,
   //       children: [
   //         {
   //           path: 'renderView',
@@ -474,9 +491,11 @@ const routes: Array<RouteConfig> = [
   //     },
   //     {
   //       path: 'table',
+  //       component: RouteLayout,
   //       children: [
   //         {
   //           path: 'cell',
+  //           component: RouteLayout,
   //           children: [
   //             {
   //               path: 'a-switch',
@@ -492,6 +511,7 @@ const routes: Array<RouteConfig> = [
   //         },
   //         {
   //           path: 'edit',
+  //           component: RouteLayout,
   //           children: [
   //             {
   //               path: 'a-input',
@@ -534,9 +554,11 @@ const routes: Array<RouteConfig> = [
   //     },
   //     {
   //       path: 'grid',
+  //       component: RouteLayout,
   //       children: [
   //         {
   //           path: 'cell',
+  //           component: RouteLayout,
   //           children: [
   //             {
   //               path: 'a-switch',
@@ -552,6 +574,7 @@ const routes: Array<RouteConfig> = [
   //         },
   //         {
   //           path: 'edit',
+  //           component: RouteLayout,
   //           children: [
   //             {
   //               path: 'a-input',
@@ -594,6 +617,7 @@ const routes: Array<RouteConfig> = [
   //     },
   //     {
   //       path: 'form-design',
+  //       component: RouteLayout,
   //       children: [
   //         {
   //           path: 'renderView',
@@ -609,7 +633,7 @@ const routes: Array<RouteConfig> = [
     component: PageLayout,
     children: [
       {
-        path: '/:name/api',
+        path: ':name/api',
         name: 'DocsApi',
         component: () => import('@/views/api/DocsApi.vue')
       }
