@@ -149,13 +149,13 @@ export default Vue.extend({
     }
   },
   created () {
-    fetch(`${this.siteBaseUrl}component-api/system-list.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+    fetch(`${this.siteBaseUrl}/component-api/system-list.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
       res.json().then(data => {
         this.systemMenuList = data
       })
     })
 
-    fetch(`${this.siteBaseUrl}component-api/${process.env.VUE_APP_PACKAGE_NAME}-version.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+    fetch(`${this.siteBaseUrl}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-version.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
       res.json().then(data => {
         this.systemVersionList = data
       })

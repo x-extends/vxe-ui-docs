@@ -58,7 +58,7 @@ export const useAppStore = defineStore('app', {
       } else {
         if (!i18nPromise[language]) {
           this.pageLoading = true
-          i18nPromise[language] = axios.get(`${process.env.VUE_APP_SITE_BASE_URL}i18n/${language}.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+          i18nPromise[language] = axios.get(`${process.env.VUE_APP_SITE_BASE_URL}/i18n/${language}.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
             i18n.global.setLocaleMessage(language, res.data)
             this.language = language || 'zh-CN'
             VxeUI.setLanguage(language)
@@ -75,7 +75,7 @@ export const useAppStore = defineStore('app', {
     },
     updateComponentApiJSON () {
       if (!apiPromise) {
-        apiPromise = fetch(`${this.siteBaseUrl}component-api/${process.env.VUE_APP_PACKAGE_NAME}-v${process.env.VUE_APP_VXE_VERSION}/apiMaps.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+        apiPromise = fetch(`${this.siteBaseUrl}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-v${process.env.VUE_APP_VXE_VERSION}/apiMaps.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
           return res.json().then(data => {
             if (data) {
               this.compApiMaps = data

@@ -19,8 +19,8 @@ import XEUtils from 'xe-utils'
 import VxeUI from 'vxe-pc-ui'
 import 'vxe-pc-ui/es/style.css'
 
-// import VxeTable from 'vxe-table'
-// import 'vxe-table/es/style.css'
+import VxeTable from 'vxe-table'
+import 'vxe-table/es/style.css'
 
 // import '@/views/table/base/format/demo2.format'
 // import '@/views/table/footer/footerFormat/demo2.footerFormat'
@@ -82,11 +82,11 @@ Vue.component('CodeUseVersion', CodeUseVersion)
 Vue.component('ApiLink', ApiLink)
 
 Vue.use(VxeUI)
-// Vue.use(VxeTable)
+Vue.use(VxeTable)
 
 Vue.config.productionTip = false
 
-axios.get(`${process.env.VUE_APP_SITE_BASE_URL}i18n/${i18n.locale}.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+axios.get(`${process.env.VUE_APP_SITE_BASE_URL}/i18n/${i18n.locale}.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
   i18n.setLocaleMessage(i18n.locale, res.data)
 }).catch(e => e).then(() => {
   new Vue({

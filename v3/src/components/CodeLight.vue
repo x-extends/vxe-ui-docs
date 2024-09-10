@@ -85,6 +85,7 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
+import { mapState } from 'vuex'
 import { codeJsMaps, codeTsMaps } from '@/common/cache'
 import { VxeUI } from 'vxe-pc-ui'
 import AsyncDemo from './AsyncDemo.vue'
@@ -123,6 +124,9 @@ export default Vue.extend({
     }
   },
   computed: {
+    ...mapState([
+      'siteBaseUrl'
+    ]),
     gitDir () {
       return `${process.env.VUE_APP_DOCS_GITHUB_URL}/src/views/${(this as any).compDir}`
     },
@@ -138,7 +142,7 @@ export default Vue.extend({
     transformFilePath  (path: string) {
       return path.replace(/^\.\//, `${this.compDir}/`)
     },
-    parseFilePath  (path: string) {
+    parseFilePath  (this: any, path: string) {
       const [fullPath, filePath, fileType] = path.match(/(.*)\.(vue|js|jsx|ts|tsx)$/) || [path, '.vue', 'vue']
       return {
         filePath: this.transformFilePath(filePath),
@@ -146,17 +150,17 @@ export default Vue.extend({
         fileType: fileType
       }
     },
-    parseJsFilePath  (path: string) {
+    parseJsFilePath  (this: any, path: string) {
       const rest = this.parseFilePath(path)
       rest.fileType = rest.fileType.replace('ts', 'js')
       return rest
     },
-    parseTsFilePath (path: string) {
+    parseTsFilePath (this: any, path: string) {
       const rest = this.parseFilePath(path)
       rest.fileType = rest.fileType.replace('js', 'ts')
       return rest
     },
-    loadJsCode () {
+    loadJsCode (this: any) {
       const compPath = this.path
       if (compPath) {
         if (codeJsMaps[compPath]) {
@@ -165,7 +169,7 @@ export default Vue.extend({
         } else {
           this.jsLoading = true
           Promise.all([
-            fetch(`${process.env.BASE_URL}example/js/${compPath}.vue?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+            fetch(`${this.siteBaseUrl}${process.env.BASE_URL}example/js/${compPath}.vue?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
               if (response.status >= 200 && response.status < 400) {
                 return response.text()
               }
@@ -173,7 +177,7 @@ export default Vue.extend({
             }),
             ...(this.extraImports?.map(impPath => {
               const { filePath, fileType, codeLang } = this.parseJsFilePath(impPath)
-              return fetch(`${process.env.BASE_URL}example/js/${filePath}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+              return fetch(`${this.siteBaseUrl}${process.env.BASE_URL}example/js/${filePath}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
                 if (response.status >= 200 && response.status < 400) {
                   return response.text().then(text => {
                     return {
@@ -208,7 +212,7 @@ export default Vue.extend({
       }
       return Promise.resolve()
     },
-    loadTsCode () {
+    loadTsCode (this: any) {
       const compPath = this.path
       if (compPath) {
         if (codeTsMaps[compPath]) {
@@ -217,7 +221,7 @@ export default Vue.extend({
         } else {
           this.tsLoading = true
           Promise.all([
-            fetch(`${process.env.BASE_URL}example/ts/${compPath}.vue?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+            fetch(`${this.siteBaseUrl}${process.env.BASE_URL}example/ts/${compPath}.vue?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
               if (response.status >= 200 && response.status < 400) {
                 return response.text()
               }
@@ -225,7 +229,7 @@ export default Vue.extend({
             }),
             ...(this.extraImports?.map(impPath => {
               const { filePath, fileType, codeLang } = this.parseTsFilePath(impPath)
-              return fetch(`${process.env.BASE_URL}example/ts/${filePath}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+              return fetch(`${this.siteBaseUrl}${process.env.BASE_URL}example/ts/${filePath}.${fileType}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
                 if (response.status >= 200 && response.status < 400) {
                   return response.text().then(text => {
                     return {
@@ -260,14 +264,14 @@ export default Vue.extend({
       }
       return Promise.resolve()
     },
-    toggleJsVisible  () {
+    toggleJsVisible  (this: any) {
       this.showTsCode = false
       this.showJsCode = !this.showJsCode
       if (this.showJsCode) {
         this.loadJsCode()
       }
     },
-    toggleTsVisible  () {
+    toggleTsVisible  (this: any) {
       this.showJsCode = false
       this.showTsCode = !this.showTsCode
       if (this.showTsCode) {

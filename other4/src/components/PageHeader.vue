@@ -122,13 +122,13 @@ const openPluginEvent = () => {
   appStore.readAuthMsgFlagVisible()
 }
 
-fetch(`${siteBaseUrl.value}component-api/system-list.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+fetch(`${siteBaseUrl.value}/component-api/system-list.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
   res.json().then(data => {
     systemMenuList.value = data
   })
 })
 
-fetch(`${siteBaseUrl.value}component-api/${process.env.VUE_APP_PACKAGE_NAME}-version.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+fetch(`${siteBaseUrl.value}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-version.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
   res.json().then(data => {
     systemVersionList.value = data
   })

@@ -59,7 +59,7 @@ export default new Vuex.Store({
       } else {
         if (!i18nPromise[language]) {
           state.pageLoading = true
-          i18nPromise[language] = axios.get(`${process.env.VUE_APP_SITE_BASE_URL}i18n/${language}.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+          i18nPromise[language] = axios.get(`${process.env.VUE_APP_SITE_BASE_URL}/i18n/${language}.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
             i18n.setLocaleMessage(language, res.data)
             state.language = language || 'zh-CN'
             VxeUI.setLanguage(language)
@@ -76,7 +76,7 @@ export default new Vuex.Store({
     },
     updateComponentApiJSON (state) {
       if (!apiPromise) {
-        apiPromise = fetch(`${state.siteBaseUrl}component-api/${process.env.VUE_APP_PACKAGE_NAME}-v${process.env.VUE_APP_VXE_VERSION}/apiMaps.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+        apiPromise = fetch(`${state.siteBaseUrl}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-v${process.env.VUE_APP_VXE_VERSION}/apiMaps.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
           return res.json().then(data => {
             if (data) {
               state.compApiMaps = data

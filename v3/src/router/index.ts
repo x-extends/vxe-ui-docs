@@ -2426,7 +2426,7 @@ Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
-    path: '/*',
+    path: '*',
     redirect: {
       name: 'StartInstall'
     }
@@ -2500,6 +2500,7 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: '/tool',
+    component: PageLayout,
     children: [
       {
         path: 'clipboard',
@@ -5377,9 +5378,15 @@ const routes: Array<RouteConfig> = [
   //   ]
   // },
   {
-    path: '/:name/api',
-    name: 'DocsApi',
-    component: () => import('@/views/api/DocsApi.vue')
+    path: '/',
+    component: PageLayout,
+    children: [
+      {
+        path: ':name/api',
+        name: 'DocsApi',
+        component: () => import('@/views/api/DocsApi.vue')
+      }
+    ]
   }
 ]
 

@@ -150,7 +150,7 @@ export default Vue.extend({
   },
   methods: {
     loadList (this: any) {
-      this.gridOptions = true
+      this.gridOptions.loading = true
       return new Promise<void>(resolve => {
         setTimeout(() => {
           const list = XEUtils.clone(this.apiConfig, true) || []
