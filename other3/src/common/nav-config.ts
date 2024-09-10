@@ -23,34 +23,34 @@ export interface NavVO {
 }
 
 export const navConfigList: NavVO[] = [
-  // {
-  //   title: '轻量级图表',
-  //   isExpand: false,
-  //   children: [
-  //     {
-  //       title: '开发指南',
-  //       children: [
-  //         { title: '安装插件', routerLink: { name: 'PluginRenderChartInstall' } }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Table 基础表格',
-  //       children: [
-  //         { title: '评分', routerLink: { name: 'PluginRenderChartTableRate' } },
-  //         { title: '柱状图', routerLink: { name: 'PluginRenderChartTableBar' } },
-  //         { title: '饼图', routerLink: { name: 'PluginRenderChartTablePie' } }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Grid 配置式表格',
-  //       children: [
-  //         { title: '评分', routerLink: { name: 'PluginRenderChartGridRate' } },
-  //         { title: '柱状图', routerLink: { name: 'PluginRenderChartGridBar' } },
-  //         { title: '饼图', routerLink: { name: 'PluginRenderChartGridPie' } }
-  //       ]
-  //     }
-  //   ]
-  // },
+  {
+    title: '轻量级图表',
+    isExpand: false,
+    children: [
+      // {
+      //   title: '开发指南',
+      //   children: [
+      //     { title: '安装插件', routerLink: { name: 'PluginRenderChartInstall' } }
+      //   ]
+      // },
+      // {
+      //   title: 'Table 基础表格',
+      //   children: [
+      //     { title: '评分', routerLink: { name: 'PluginRenderChartTableRate' } },
+      //     { title: '柱状图', routerLink: { name: 'PluginRenderChartTableBar' } },
+      //     { title: '饼图', routerLink: { name: 'PluginRenderChartTablePie' } }
+      //   ]
+      // },
+      {
+        title: 'Grid 配置式表格',
+        children: [
+          { title: '评分', routerLink: { name: 'PluginRenderChartGridRate' } },
+          { title: '柱状图', routerLink: { name: 'PluginRenderChartGridBar' } },
+          { title: '饼图', routerLink: { name: 'PluginRenderChartGridPie' } }
+        ]
+      }
+    ]
+  },
   // {
   //   title: '导入/导出 XLSX',
   //   isExpand: false,

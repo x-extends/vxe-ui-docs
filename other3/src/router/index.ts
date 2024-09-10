@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 
 import PageLayout from '@/components/PageLayout.vue'
+import RouteLayout from '@/components/RouteLayout.vue'
 
 import FreeDonation from '@/views/start/FreeDonation.vue'
 import JoinSponsor from '@/views/start/JoinSponsor.vue'
@@ -37,57 +38,58 @@ const routes: Array<RouteConfig> = [
       }
     ]
   },
-  // {
-  //   path: '/plugin-render-chart',
-  //   component: PageLayout,
-  //   children: [
-  //     {
-  //       path: 'install',
-  //       name: 'PluginRenderChartInstall',
-  //       component: () => import('@/views/plugin-render-chart/install/CodeExample.vue')
-  //     },
-  //     {
-  //       path: 'table',
-  //       children: [
-  //         {
-  //           path: 'rate',
-  //           name: 'PluginRenderChartTableRate',
-  //           component: () => import('@/views/plugin-render-chart/table/rate/CodeExample.vue')
-  //         },
-  //         {
-  //           path: 'bar',
-  //           name: 'PluginRenderChartTableBar',
-  //           component: () => import('@/views/plugin-render-chart/table/bar/CodeExample.vue')
-  //         },
-  //         {
-  //           path: 'pie',
-  //           name: 'PluginRenderChartTablePie',
-  //           component: () => import('@/views/plugin-render-chart/table/pie/CodeExample.vue')
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       path: 'grid',
-  //       children: [
-  //         {
-  //           path: 'rate',
-  //           name: 'PluginRenderChartGridRate',
-  //           component: () => import('@/views/plugin-render-chart/grid/rate/CodeExample.vue')
-  //         },
-  //         {
-  //           path: 'bar',
-  //           name: 'PluginRenderChartGridBar',
-  //           component: () => import('@/views/plugin-render-chart/grid/bar/CodeExample.vue')
-  //         },
-  //         {
-  //           path: 'pie',
-  //           name: 'PluginRenderChartGridPie',
-  //           component: () => import('@/views/plugin-render-chart/grid/pie/CodeExample.vue')
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // },
+  {
+    path: '/plugin-render-chart',
+    component: PageLayout,
+    children: [
+      {
+        path: 'install',
+        name: 'PluginRenderChartInstall',
+        component: () => import('@/views/plugin-render-chart/install/CodeExample.vue')
+      },
+      // {
+      //   path: 'table',
+      //   children: [
+      //     {
+      //       path: 'rate',
+      //       name: 'PluginRenderChartTableRate',
+      //       component: () => import('@/views/plugin-render-chart/table/rate/CodeExample.vue')
+      //     },
+      //     {
+      //       path: 'bar',
+      //       name: 'PluginRenderChartTableBar',
+      //       component: () => import('@/views/plugin-render-chart/table/bar/CodeExample.vue')
+      //     },
+      //     {
+      //       path: 'pie',
+      //       name: 'PluginRenderChartTablePie',
+      //       component: () => import('@/views/plugin-render-chart/table/pie/CodeExample.vue')
+      //     }
+      //   ]
+      // },
+      {
+        path: 'grid',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'rate',
+            name: 'PluginRenderChartGridRate',
+            component: () => import('@/views/plugin-render-chart/grid/rate/CodeExample.vue')
+          },
+          {
+            path: 'bar',
+            name: 'PluginRenderChartGridBar',
+            component: () => import('@/views/plugin-render-chart/grid/bar/CodeExample.vue')
+          },
+          {
+            path: 'pie',
+            name: 'PluginRenderChartGridPie',
+            component: () => import('@/views/plugin-render-chart/grid/pie/CodeExample.vue')
+          }
+        ]
+      }
+    ]
+  },
   // {
   //   path: '/plugin-export-xlsx',
   //   component: PageLayout,
@@ -603,7 +605,7 @@ const routes: Array<RouteConfig> = [
   //   ]
   // },
   {
-    path:'/',
+    path: '/',
     component: PageLayout,
     children: [
       {
