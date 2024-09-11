@@ -18,6 +18,6 @@ const openEvent = () => {
   loading.value = true
   setTimeout(() => {
     loading.value = false
-  }, 1000)
+  }, 10000)
 }
 </script>

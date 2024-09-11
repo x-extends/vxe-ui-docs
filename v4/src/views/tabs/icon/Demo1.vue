@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-tabs v-model="selectTab" type="round-card" :height="140" :options="tabList" show-close @tabClose="tabCloseEvent">
+    <vxe-tabs :height="140" :options="tabList">
       <template #default1>
         <div>内容1</div>
         <div>内容1</div>
@@ -33,18 +33,11 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeTabsPropTypes, VxeTabsEvents } from 'vxe-pc-ui'
-
-const selectTab = ref<VxeTabsPropTypes.ModelValue>('1')
+import { VxeTabsPropTypes } from 'vxe-pc-ui'
 
 const tabList = ref<VxeTabsPropTypes.Options>([
-  { name: '1', title: '标题1', slots: { default: 'default1' } },
-  { name: '2', title: '标题2', slots: { default: 'default2' } },
-  { name: '3', title: '标题3', slots: { default: 'default3' } }
+  { name: '1', title: '标题1', icon: 'vxe-icon-home', slots: { default: 'default1' } },
+  { name: '2', title: '标题2', icon: 'vxe-icon-envelope', slots: { default: 'default2' } },
+  { name: '3', title: '标题3', icon: 'vxe-icon-setting', slots: { default: 'default3' } }
 ])
-
-const tabCloseEvent: VxeTabsEvents.TabClose = ({ name, nextName }) => {
-  tabList.value = tabList.value.filter(item => item.name !== name)
-  selectTab.value = nextName
-}
 </script>

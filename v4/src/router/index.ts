@@ -2001,6 +2001,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/keyboard/edit/CodeExample.vue')
         },
         {
+          path: 'editMethod',
+          name: 'ComponentGridKeyboardEditMethod',
+          component: () => import('@/views/grid/keyboard/editMethod/CodeExample.vue')
+        },
+        {
           path: 'tree',
           name: 'ComponentGridKeyboardTree',
           component: () => import('@/views/grid/keyboard/tree/CodeExample.vue')
@@ -4085,6 +4090,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/tabs/options/CodeExample.vue')
           },
           {
+            path: 'icon',
+            name: 'ComponentTabsIcon',
+            component: () => import('@/views/tabs/icon/CodeExample.vue')
+          },
+          {
             path: 'trigger',
             name: 'ComponentTabsRoundTrigger',
             component: () => import('@/views/tabs/trigger/CodeExample.vue')
@@ -4105,9 +4115,14 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/tabs/extra/CodeExample.vue')
           },
           {
-            path: 'showClose',
-            name: 'ComponentTabsShowClose',
-            component: () => import('@/views/tabs/showClose/CodeExample.vue')
+            path: 'closeConfig',
+            name: 'ComponentTabsCloseConfig',
+            component: () => import('@/views/tabs/closeConfig/CodeExample.vue')
+          },
+          {
+            path: 'refreshConfig',
+            name: 'ComponentTabsRefreshConfig',
+            component: () => import('@/views/tabs/refreshConfig/CodeExample.vue')
           },
           {
             path: 'permissionCode',

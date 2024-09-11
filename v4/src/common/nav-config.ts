@@ -674,6 +674,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '单元格选中', routerLink: { name: 'ComponentGridKeyboardSelected' } },
             { title: '按键操作', routerLink: { name: 'ComponentGridKeyboardKeyboard' } },
             { title: '可编辑按键操作', routerLink: { name: 'ComponentGridKeyboardEdit' } },
+            { title: '重写默认编辑行为', routerLink: { name: 'ComponentGridKeyboardEditMethod' } },
             { title: '树结构按键操作', routerLink: { name: 'ComponentGridKeyboardTree' } },
             { title: '树结构可编辑', routerLink: { name: 'ComponentGridKeyboardTreeEdit' } },
             { title: 'Excel 单元格选取', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/singleArea' },
@@ -1029,11 +1030,13 @@ export const navConfigList: NavVO[] = [
           { title: '设置高度', routerLink: { name: 'ComponentTabsHeight' } },
           { title: '圆角边框背景的卡片', routerLink: { name: 'ComponentTabsRoundCard' } },
           { title: '配置式', routerLink: { name: 'ComponentTabsOptions' } },
+          { title: '页签图标', routerLink: { name: 'ComponentTabsIcon' } },
           { title: '页签触发方式', routerLink: { name: 'ComponentTabsRoundTrigger' } },
           { title: '预加载页签', routerLink: { name: 'ComponentTabsRoundPreload' } },
           { title: '页签超出可滚动', routerLink: { name: 'ComponentTabsOver' } },
           { title: '右侧操作按钮', routerLink: { name: 'ComponentTabsExtra' } },
-          { title: '可关闭', routerLink: { name: 'ComponentTabsShowClose' } },
+          { title: '可关闭', routerLink: { name: 'ComponentTabsCloseConfig' } },
+          { title: '可刷新', routerLink: { name: 'ComponentTabsRefreshConfig' } },
           { title: '权限码', routerLink: { name: 'ComponentTabsPermissionCode' } }
         ]
       },
