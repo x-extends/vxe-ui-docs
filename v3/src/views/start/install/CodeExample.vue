@@ -16,6 +16,9 @@
             yarn add vxe-table@rc vxe-pc-ui@3
           </pre-code>
           <pre-code class="javascript">
+            import Vue from 'vue'
+            // ...
+
             // 完整导入 UI 组件库
             import VxeUI from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
@@ -26,8 +29,9 @@
             import 'vxe-table/lib/style.css'
             // ...
 
-            createApp(App).use(VxeUI).use(VxeUITable).mount('#app')
-            // ...
+            Vue.use(VxeUI)
+            Vue.use(VxeUITable)
+            //...
           </pre-code>
         </pre>
       </template>

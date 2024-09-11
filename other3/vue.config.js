@@ -37,7 +37,7 @@ module.exports = defineConfig({
       entry: 'src/main.ts',
       template: 'public/index.html',
       filename: 'index.html',
-      title: `Vxe UI v${process.env.VUE_APP_VXE_VERSION} Plugins`
+      title: `${process.env.VUE_APP_PAGE_TITLE} v${process.env.VUE_APP_VXE_VERSION} Plugins`
     }
   },
   configureWebpack: {
