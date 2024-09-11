@@ -319,6 +319,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '单元格选中', routerLink: { name: 'ComponentTableKeyboardSelected' } },
             { title: '按键操作', routerLink: { name: 'ComponentTableKeyboardKeyboard' } },
             { title: '可编辑按键操作', routerLink: { name: 'ComponentTableKeyboardEdit' } },
+            { title: '重写默认编辑行为', routerLink: { name: 'ComponentTableKeyboardEditMethod' } },
             { title: '树结构按键操作', routerLink: { name: 'ComponentTableKeyboardTree' } },
             { title: '树结构可编辑', routerLink: { name: 'ComponentTableKeyboardTreeEdit' } },
             { title: 'Excel 单元格选取', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/table/singleArea' },

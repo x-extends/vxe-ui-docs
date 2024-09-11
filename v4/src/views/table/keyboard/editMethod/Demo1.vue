@@ -67,6 +67,10 @@ const keyboardConfig = ref<VxeTablePropTypes.KeyboardConfig<RowVO>>({
   isTab: true,
   isDel: true,
   isBack: true,
-  isEsc: true
+  isEsc: true,
+  editMethod ({ $table, row, column }) {
+    // 重写默认的覆盖式，改为追加式
+    $table.setEditCell(row, column)
+  }
 })
 </script>

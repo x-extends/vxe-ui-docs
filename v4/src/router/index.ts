@@ -762,6 +762,11 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/keyboard/edit/CodeExample.vue')
         },
         {
+          path: 'editMethod',
+          name: 'ComponentTableKeyboardEditMethod',
+          component: () => import('@/views/table/keyboard/editMethod/CodeExample.vue')
+        },
+        {
           path: 'tree',
           name: 'ComponentTableKeyboardTree',
           component: () => import('@/views/table/keyboard/tree/CodeExample.vue')
