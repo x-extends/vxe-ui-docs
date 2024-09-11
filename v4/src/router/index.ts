@@ -2497,6 +2497,17 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/events/scroll/CodeExample.vue')
         }
       ]
+    },
+    {
+      path: 'other',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'reverse',
+          name: 'ComponentGridOtherReverse',
+          component: () => import('@/views/grid/other/reverse/CodeExample.vue')
+        }
+      ]
     }
   ]
 }

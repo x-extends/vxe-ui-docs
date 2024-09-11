@@ -770,6 +770,12 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '点击/双击事件', routerLink: { name: 'ComponentGridEventsClick' } },
             { title: '滚动事件', routerLink: { name: 'ComponentGridEventsScroll' } }
           ]
+        },
+        {
+          title: '其他',
+          children: [
+            { title: '反转列与行', routerLink: { name: 'ComponentGridOtherReverse' } }
+          ]
         }
       ]
     },
