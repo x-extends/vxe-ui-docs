@@ -59,7 +59,6 @@ gulp.task('copy_other3_temp', () => {
   return gulp.src('other3/dist/**')
     .pipe(gulp.dest('_temp/other3'))
 })
-
 gulp.task('copy_other3_index', gulp.series('copy_other3_temp', () => {
   return gulp.src('other3/dist/index.html')
     .pipe(replace('</head>', enableAd ? `${adScript}${isForceAd ? adCheckScript : ''}</head>`: '</head>'))
@@ -70,7 +69,6 @@ gulp.task('copy_other3_index', gulp.series('copy_other3_temp', () => {
     }))
     .pipe(gulp.dest('_temp/other3'))
 }))
-
 gulp.task('copy_other3_docs', gulp.series('copy_other3_index', () => {
   return gulp.src('_temp/other3/**')
     .pipe(gulp.dest('docs/other3'))
@@ -86,7 +84,6 @@ gulp.task('copy_other4_temp', () => {
   return gulp.src('other4/dist/**')
     .pipe(gulp.dest('_temp/other4'))
 })
-
 gulp.task('copy_other4_index', gulp.series('copy_other4_temp', () => {
   return gulp.src('other4/dist/index.html')
     .pipe(replace('</head>', enableAd ? `${adScript}${isForceAd ? adCheckScript : ''}</head>`: '</head>'))
@@ -97,7 +94,6 @@ gulp.task('copy_other4_index', gulp.series('copy_other4_temp', () => {
     }))
     .pipe(gulp.dest('_temp/other4'))
 }))
-
 gulp.task('copy_other4_docs', gulp.series('copy_other4_index', () => {
   return gulp.src('_temp/other4/**')
     .pipe(gulp.dest('docs/other4'))
@@ -113,7 +109,6 @@ gulp.task('copy_v1_temp', () => {
   return gulp.src('v1/dist/**')
     .pipe(gulp.dest('_temp/v1'))
 })
-
 gulp.task('copy_v1_index', gulp.series('copy_v1_temp', () => {
   return gulp.src('v1/dist/index.html')
   .pipe(replace('</head>', enableAd ? `${adScript}${isForceAd ? adCheckScript : ''}</head>`: '</head>'))
@@ -124,7 +119,6 @@ gulp.task('copy_v1_index', gulp.series('copy_v1_temp', () => {
     }))
     .pipe(gulp.dest('_temp/v1'))
 }))
-
 gulp.task('copy_v1_docs', gulp.series('copy_v1_index', () => {
   return gulp.src('_temp/v1/**')
     .pipe(gulp.dest('docs/v1'))
@@ -136,11 +130,11 @@ gulp.task('copy_v1_docs', gulp.series('copy_v1_index', () => {
     .pipe(gulp.dest('docs'))
 }))
 
+
 gulp.task('copy_v2_temp', () => {
   return gulp.src('v2/dist/**')
     .pipe(gulp.dest('_temp/v2'))
 })
-
 gulp.task('copy_v2_index', gulp.series('copy_v2_temp', () => {
   return gulp.src('v2/dist/index.html')
   .pipe(replace('</head>', enableAd ? `${adScript}${isForceAd ? adCheckScript : ''}</head>`: '</head>'))
@@ -151,7 +145,6 @@ gulp.task('copy_v2_index', gulp.series('copy_v2_temp', () => {
     }))
     .pipe(gulp.dest('_temp/v2'))
 }))
-
 gulp.task('copy_v2_docs', gulp.series('copy_v2_index', () => {
   return gulp.src('_temp/v2/**')
     .pipe(gulp.dest('docs/v2'))
@@ -163,11 +156,11 @@ gulp.task('copy_v2_docs', gulp.series('copy_v2_index', () => {
     .pipe(gulp.dest('docs'))
 }))
 
+
 gulp.task('copy_v3_temp', () => {
   return gulp.src('v3/dist/**')
     .pipe(gulp.dest('_temp/v3'))
 })
-
 gulp.task('copy_v3_index', gulp.series('copy_v3_temp', () => {
   return gulp.src('v3/dist/index.html')
     .pipe(replace('</head>', enableAd ? `${adScript}${isForceAd ? adCheckScript : ''}</head>`: '</head>'))
@@ -178,7 +171,6 @@ gulp.task('copy_v3_index', gulp.series('copy_v3_temp', () => {
     }))
     .pipe(gulp.dest('_temp/v3'))
 }))
-
 gulp.task('copy_v3_docs', gulp.series('copy_v3_index', () => {
   return gulp.src('_temp/v3/**')
     .pipe(gulp.dest('docs/v3'))
@@ -190,11 +182,11 @@ gulp.task('copy_v3_docs', gulp.series('copy_v3_index', () => {
     .pipe(gulp.dest('docs'))
 }))
 
+
 gulp.task('copy_v4_temp', () => {
   return gulp.src('v4/dist/**')
     .pipe(gulp.dest('_temp/v4'))
 })
-
 gulp.task('copy_v4_index', gulp.series('copy_v4_temp', () => {
   return gulp.src('v4/dist/index.html')
     .pipe(replace('</head>', enableAd ? `${adScript}${isForceAd ? adCheckScript : ''}</head>`: '</head>'))
@@ -205,7 +197,6 @@ gulp.task('copy_v4_index', gulp.series('copy_v4_temp', () => {
     }))
     .pipe(gulp.dest('_temp/v4'))
 }))
-
 gulp.task('copy_v4_docs', gulp.series('copy_v4_index', () => {
   return gulp.src('_temp/v4/**')
     .pipe(gulp.dest('docs/v4'))
@@ -216,6 +207,7 @@ gulp.task('copy_v4_docs', gulp.series('copy_v4_index', () => {
     .pipe(replace('</head>', `${hmScript}</head>`))
     .pipe(gulp.dest('docs'))
 }))
+
 
 const unicodeRE = /[^\x00-\xff]/g
 const contentRE = /(?<!-)content\s*:\s*([^;}]+)/g
