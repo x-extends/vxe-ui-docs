@@ -1,7 +1,14 @@
 <template>
   <div>
     <vxe-button content="点击弹出" @click="openEvent"></vxe-button>
-    <vxe-modal v-model="showPopup" :width="600" :height="400" :loading="loading">
+    <vxe-modal
+      show-footer
+      show-cancel-button
+      show-confirm-button
+      v-model="showPopup"
+      :width="600"
+      :height="400"
+      :loading="loading">
       <div>显示加载中</div>
     </vxe-modal>
   </div>
@@ -18,6 +25,6 @@ const openEvent = () => {
   loading.value = true
   setTimeout(() => {
     loading.value = false
-  }, 10000)
+  }, 3000)
 }
 </script>
