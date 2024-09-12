@@ -112,8 +112,8 @@ const typeItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
     {
       label: '分类2',
       options: [
-        { label: '香蕉', value: '2-1' },
-        { label: '茄子', value: '2-2' }
+        { label: '草莓', value: '2-1' },
+        { label: '猕猴桃', value: '2-2' }
       ]
     }
   ]
@@ -135,8 +135,8 @@ const typeListItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
     {
       label: '分类2',
       options: [
-        { label: '香蕉', value: '2-1' },
-        { label: '茄子', value: '2-2' }
+        { label: '草莓', value: '2-1' },
+        { label: '猕猴桃', value: '2-2' }
       ]
     }
   ]
