@@ -389,7 +389,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
     {
       i18nKey: 'app.aside.menu.tableGridTitle',
       children: [
-        { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'grid' } } }
+        { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'grid' } } },
         //     {
         //       title: '基础功能',
         //       children: [
@@ -762,13 +762,13 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         //         { title: '查找与替换', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaFNR' }
         //       ]
         //     },
-        //     {
-        //       title: '事件监听',
-        //       children: [
-        //         { title: '点击/双击事件', routerLink: { name: 'ComponentGridEventsClick' } },
-        //         { title: '滚动事件', routerLink: { name: 'ComponentGridEventsScroll' } }
-        //       ]
-        //     }
+        {
+          title: '事件监听',
+          children: [
+            { title: '点击/双击事件', routerLink: { name: 'ComponentGridEventsClick' } },
+            { title: '滚动事件', routerLink: { name: 'ComponentGridEventsScroll' } }
+          ]
+        }
       ]
     },
     {

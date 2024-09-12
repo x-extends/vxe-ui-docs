@@ -2475,22 +2475,22 @@ const gridRouteConfig: RouteConfig = {
     //     }
     //   ]
     // },
-    // {
-    //   path: 'events',
-    //   component: RouteLayout,
-    //   children: [
-    //     {
-    //       path: 'click',
-    //       name: 'ComponentGridEventsClick',
-    //       component: () => import('@/views/grid/events/click/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'scroll',
-    //       name: 'ComponentGridEventsScroll',
-    //       component: () => import('@/views/grid/events/scroll/CodeExample.vue')
-    //     }
-    //   ]
-    // }
+    {
+      path: 'events',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'click',
+          name: 'ComponentGridEventsClick',
+          component: () => import('@/views/grid/events/click/CodeExample.vue')
+        },
+        {
+          path: 'scroll',
+          name: 'ComponentGridEventsScroll',
+          component: () => import('@/views/grid/events/scroll/CodeExample.vue')
+        }
+      ]
+    }
   ]
 }
 
