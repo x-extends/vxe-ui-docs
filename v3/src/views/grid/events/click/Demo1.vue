@@ -1,12 +1,16 @@
 <template>
   <div>
-    <vxe-grid v-bind="gridOptions" v-on="gridEvents"></vxe-grid>
+    <vxe-grid
+      v-bind="gridOptions"
+      @cell-click="cellClickEvent"
+      @cell-dblclick="cellDblclickEvent">
+    </vxe-grid>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import type { VxeGridProps, VxeGridListeners } from 'vxe-table'
+import type { VxeGridProps, VxeGridEvents } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -38,12 +42,12 @@ export default Vue.extend({
     }
   },
   methods: {
-    cellClick ({ row, column }) {
+    cellClickEvent: function ({ row, column }) {
       console.log(`单击行：${row.id} 单击列：${column.title}`)
-    },
-    cellDblclick ({ row, column }) {
+    } as VxeGridEvents.CellClick,
+    cellDblclickEvent: function ({ row, column }) {
       console.log(`双击行：${row.id} 双击列：${column.title}`)
-    }
+    } as VxeGridEvents.CellDblclick
   }
 })
 </script>

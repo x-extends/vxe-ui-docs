@@ -2066,57 +2066,57 @@ const gridRouteConfig: RouteConfig = {
     //     }
     //   ]
     // },
-    // {
-    //   path: 'editRender',
-    //   component: RouteLayout,
-    //   children: [
-    //     {
-    //       path: 'input',
-    //       name: 'ComponentGridEditRenderInput',
-    //       component: () => import('@/views/grid/editRender/input/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'select',
-    //       name: 'ComponentGridEditRenderSelect',
-    //       component: () => import('@/views/grid/editRender/select/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'vxe-input',
-    //       name: 'ComponentGridEditRenderVxeInput',
-    //       component: () => import('@/views/grid/editRender/vxe-input/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'vxe-number-input',
-    //       name: 'ComponentGridEditRenderVxeNumberInput',
-    //       component: () => import('@/views/grid/editRender/vxe-number-input/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'vxe-date-picker',
-    //       name: 'ComponentGridEditRenderVxeDatePicker',
-    //       component: () => import('@/views/grid/editRender/vxe-date-picker/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'vxe-select',
-    //       name: 'ComponentGridEditRenderVxeSelect',
-    //       component: () => import('@/views/grid/editRender/vxe-select/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'vxe-tree-select',
-    //       name: 'ComponentGridEditRenderVxeTreeSelect',
-    //       component: () => import('@/views/grid/editRender/vxe-tree-select/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'cellDisable',
-    //       name: 'ComponentGridEditRenderCellDisable',
-    //       component: () => import('@/views/grid/editRender/cellDisable/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'rowDisable',
-    //       name: 'ComponentGridEditRenderRowDisable',
-    //       component: () => import('@/views/grid/editRender/rowDisable/CodeExample.vue')
-    //     }
-    //   ]
-    // },
+    {
+      path: 'editRender',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'input',
+          name: 'ComponentGridEditRenderInput',
+          component: () => import('@/views/grid/editRender/input/CodeExample.vue')
+        },
+        {
+          path: 'select',
+          name: 'ComponentGridEditRenderSelect',
+          component: () => import('@/views/grid/editRender/select/CodeExample.vue')
+        },
+        {
+          path: 'vxe-input',
+          name: 'ComponentGridEditRenderVxeInput',
+          component: () => import('@/views/grid/editRender/vxe-input/CodeExample.vue')
+        },
+        {
+          path: 'vxe-number-input',
+          name: 'ComponentGridEditRenderVxeNumberInput',
+          component: () => import('@/views/grid/editRender/vxe-number-input/CodeExample.vue')
+        },
+        {
+          path: 'vxe-date-picker',
+          name: 'ComponentGridEditRenderVxeDatePicker',
+          component: () => import('@/views/grid/editRender/vxe-date-picker/CodeExample.vue')
+        },
+        {
+          path: 'vxe-select',
+          name: 'ComponentGridEditRenderVxeSelect',
+          component: () => import('@/views/grid/editRender/vxe-select/CodeExample.vue')
+        },
+        {
+          path: 'vxe-tree-select',
+          name: 'ComponentGridEditRenderVxeTreeSelect',
+          component: () => import('@/views/grid/editRender/vxe-tree-select/CodeExample.vue')
+        },
+        {
+          path: 'cellDisable',
+          name: 'ComponentGridEditRenderCellDisable',
+          component: () => import('@/views/grid/editRender/cellDisable/CodeExample.vue')
+        },
+        {
+          path: 'rowDisable',
+          name: 'ComponentGridEditRenderRowDisable',
+          component: () => import('@/views/grid/editRender/rowDisable/CodeExample.vue')
+        }
+      ]
+    },
     // {
     //   path: 'editTemplate',
     //   component: RouteLayout,

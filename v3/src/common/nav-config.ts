@@ -628,21 +628,21 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         //         { title: '实现表尾实时合计', routerLink: { name: 'ComponentGridEditFooterImmediately' } }
         //       ]
         //     },
-        //     {
-        //       title: '可编辑 - 渲染 - 配置式',
-        //       children: [
-        //         { title: 'input', routerLink: { name: 'ComponentGridEditRenderInput' } },
-        //         { title: 'select', routerLink: { name: 'ComponentGridEditRenderSelect' } },
-        //         { title: 'VxeInput', routerLink: { name: 'ComponentGridEditRenderVxeInput' } },
-        //         { title: 'VxeNumberInput', routerLink: { name: 'ComponentGridEditRenderVxeNumberInput' } },
-        //         { title: 'VxeDatePicker', routerLink: { name: 'ComponentGridEditRenderVxeDatePicker' } },
-        //         { title: 'VxeSelect', routerLink: { name: 'ComponentGridEditRenderVxeSelect' } },
-        //         { title: 'VxeTreeSelect', routerLink: { name: 'ComponentGridEditRenderVxeTreeSelect' } },
-        //         { title: '禁用单元格编辑', routerLink: { name: 'ComponentGridEditRenderCellDisable' } },
-        //         { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRenderRowDisable' } },
-        //         { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/edit/el-input` }
-        //       ]
-        //     },
+        {
+          title: '可编辑 - 渲染 - 配置式',
+          children: [
+            { title: 'input', routerLink: { name: 'ComponentGridEditRenderInput' } },
+            { title: 'select', routerLink: { name: 'ComponentGridEditRenderSelect' } },
+            { title: 'VxeInput', routerLink: { name: 'ComponentGridEditRenderVxeInput' } },
+            { title: 'VxeNumberInput', routerLink: { name: 'ComponentGridEditRenderVxeNumberInput' } },
+            { title: 'VxeDatePicker', routerLink: { name: 'ComponentGridEditRenderVxeDatePicker' } },
+            { title: 'VxeSelect', routerLink: { name: 'ComponentGridEditRenderVxeSelect' } },
+            { title: 'VxeTreeSelect', routerLink: { name: 'ComponentGridEditRenderVxeTreeSelect' } },
+            { title: '禁用单元格编辑', routerLink: { name: 'ComponentGridEditRenderCellDisable' } },
+            { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRenderRowDisable' } },
+            { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/edit/el-input` }
+          ]
+        },
         //     {
         //       title: '可编辑 - 渲染 - 插槽式',
         //       children: [

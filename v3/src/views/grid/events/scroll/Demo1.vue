@@ -1,12 +1,15 @@
 <template>
   <div>
-    <vxe-grid v-bind="gridOptions" v-on="gridEvents"></vxe-grid>
+    <vxe-grid
+      v-bind="gridOptions"
+      @scroll="scrollEvent">
+    </vxe-grid>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import type { VxeGridProps, VxeGridListeners } from 'vxe-table'
+import type { VxeGridProps, VxeGridEvents } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -61,22 +64,19 @@ export default Vue.extend({
         { id: 100028, name: 'Test28', role: 'Test', sex: 'Man', age: 46, address: 'test abc' }
       ]
     }
-
-    const gridEvents: VxeGridListeners<RowVO> = {
-      scroll: (params) => {
-        console.log(`纵向：${params.isY} 横向：${params.isX} 滚动距离：X：${params.scrollLeft}Y：${params.scrollTop} 滚动条宽高：${params.scrollWidth}*${params.scrollHeight} 滚动容器宽高：${params.bodyWidth}*${params.bodyHeight}`)
-        if (params.scrollTop <= 0) {
-          console.log('已经到顶部了')
-        } else if (params.scrollTop + params.bodyHeight >= params.scrollHeight) {
-          console.log('已经到底部了')
-        }
-      }
-    }
-
     return {
-      gridOptions,
-      gridEvents
+      gridOptions
     }
+  },
+  methods: {
+    scrollEvent: function (params) {
+      console.log(`纵向：${params.isY} 横向：${params.isX} 滚动距离：X：${params.scrollLeft}Y：${params.scrollTop} 滚动条宽高：${params.scrollWidth}*${params.scrollHeight} 滚动容器宽高：${params.bodyWidth}*${params.bodyHeight}`)
+      if (params.scrollTop <= 0) {
+        console.log('已经到顶部了')
+      } else if (params.scrollTop + params.bodyHeight >= params.scrollHeight) {
+        console.log('已经到底部了')
+      }
+    } as VxeGridEvents.Scroll
   }
 })
 </script>
