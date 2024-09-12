@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import type { VxeGridProps, VxeGridEvents } from 'vxe-table'
+import type { VxeGridProps } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -76,7 +76,7 @@ export default Vue.extend({
       } else if (params.scrollTop + params.bodyHeight >= params.scrollHeight) {
         console.log('已经到底部了')
       }
-    } as VxeGridEvents.Scroll
+    }
   }
 })
 </script>

@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import type { VxeGridProps, VxeGridEvents } from 'vxe-table'
+import type { VxeGridProps } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -44,10 +44,10 @@ export default Vue.extend({
   methods: {
     cellClickEvent: function ({ row, column }) {
       console.log(`单击行：${row.id} 单击列：${column.title}`)
-    } as VxeGridEvents.CellClick,
+    },
     cellDblclickEvent: function ({ row, column }) {
       console.log(`双击行：${row.id} 双击列：${column.title}`)
-    } as VxeGridEvents.CellDblclick
+    }
   }
 })
 </script>
