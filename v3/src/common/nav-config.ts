@@ -918,32 +918,32 @@ export const navConfigList: NavVO[] = [
           { title: '路由模式', routerLink: { name: 'ComponentLinkRouter' } },
           { title: '权限码', routerLink: { name: 'ComponentLinkPermissionCode' } }
         ]
+      },
+      {
+        i18nKey: 'app.aside.menu.tagTitle',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tag' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentTagSize' } },
+          { title: '状态', routerLink: { name: 'ComponentTagStatus' } },
+          { title: '图标', routerLink: { name: 'ComponentTagIcon' } }
+        ]
+      },
+      {
+        i18nKey: 'app.aside.menu.buttonTitle',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'button' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentButtonSize' } },
+          { title: '状态', routerLink: { name: 'ComponentButtonStatus' } },
+          { title: '圆角', routerLink: { name: 'ComponentButtonRound' } },
+          { title: '图标', routerLink: { name: 'ComponentButtonIcon' } },
+          { title: '圆形', routerLink: { name: 'ComponentButtonCircle' } },
+          { title: '加载中', routerLink: { name: 'ComponentButtonLoading' } },
+          { title: '触发方式', routerLink: { name: 'ComponentButtonTrigger' } },
+          { title: '按钮组', routerLink: { name: 'ComponentButtonGroup' } },
+          { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdown' } },
+          { title: '权限码', routerLink: { name: 'ComponentButtonPermissionCode' } }
+        ]
       }
-      // {
-      //   i18nKey: 'app.aside.menu.tagTitle',
-      //   children: [
-      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tag' } } },
-      //     { title: '尺寸大小', routerLink: { name: 'ComponentTagSize' } },
-      //     { title: '状态', routerLink: { name: 'ComponentTagStatus' } },
-      //     { title: '图标', routerLink: { name: 'ComponentTagIcon' } }
-      //   ]
-      // },
-      // {
-      //   i18nKey: 'app.aside.menu.buttonTitle',
-      //   children: [
-      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'button' } } },
-      //     { title: '尺寸大小', routerLink: { name: 'ComponentButtonSize' } },
-      //     { title: '状态', routerLink: { name: 'ComponentButtonStatus' } },
-      //     { title: '圆角', routerLink: { name: 'ComponentButtonRound' } },
-      //     { title: '图标', routerLink: { name: 'ComponentButtonIcon' } },
-      //     { title: '圆形', routerLink: { name: 'ComponentButtonCircle' } },
-      //     { title: '加载中', routerLink: { name: 'ComponentButtonLoading' } },
-      //     { title: '触发方式', routerLink: { name: 'ComponentButtonTrigger' } },
-      //     { title: '按钮组', routerLink: { name: 'ComponentButtonGroup' } },
-      //     { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdown' } },
-      //     { title: '权限码', routerLink: { name: 'ComponentButtonPermissionCode' } }
-      //   ]
-      // }
     ]
   },
   {
@@ -973,71 +973,71 @@ export const navConfigList: NavVO[] = [
           { title: '对齐方式', routerLink: { name: 'ComponentRowColAlign' } },
           { title: '溢出隐藏', routerLink: { name: 'ComponentRowColEllipsis' } }
         ]
-      }
+      },
       // { title: 'Progress 进度条' },
-      // {
-      //   title: 'Card 卡片',
-      //   children: [
-      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'card' } } },
-      //     { title: '基础', routerLink: { name: 'ComponentCardBase' } },
-      //     { title: '宽度', routerLink: { name: 'ComponentCardWidth' } },
-      //     { title: '高度', routerLink: { name: 'ComponentCardHeight' } },
-      //     { title: '显示/隐藏边框', routerLink: { name: 'ComponentCardBorder' } },
-      //     { title: '显示/隐藏边距', routerLink: { name: 'ComponentCardPadding' } },
-      //     { title: '边框阴影', routerLink: { name: 'ComponentCardShadow' } },
-      //     { title: '自定义模板', routerLink: { name: 'ComponentCardTemplate' } }
-      //   ]
-      // },
-      // {
-      //   title: 'Carousel 轮播图',
-      //   children: [
-      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'carousel' } } },
-      //     { title: '基础', routerLink: { name: 'ComponentCarouselBase' } },
-      //     { title: '高度', routerLink: { name: 'ComponentCarouselHeight' } },
-      //     { title: '纵向排版', routerLink: { name: 'ComponentCarouselVertical' } },
-      //     { title: '配置式', routerLink: { name: 'ComponentCarouselOptions' } },
-      //     { title: '自定义插槽模板', routerLink: { name: 'ComponentCarouselTemplate' } },
-      //     { title: '自动切换', routerLink: { name: 'ComponentCarouselAutoPlay' } },
-      //     { title: '指示器', routerLink: { name: 'ComponentCarouselShowIndicators' } }
-      //   ]
-      // },
-      // {
-      //   title: 'Image 图片',
-      //   children: [
-      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image' } } },
-      //     { title: '设置宽高', routerLink: { name: 'ComponentImageBase' } },
-      //     { title: '多张图片', routerLink: { name: 'ComponentImageMultiple' } },
-      //     { title: '懒加载', routerLink: { name: 'ComponentImageLazy' } },
-      //     { title: '预览', routerLink: { name: 'ComponentImageShowPreview' } },
-      //     { title: '打印按钮', routerLink: { name: 'ComponentImageShowPrintButton' } },
-      //     { title: '下载按钮', routerLink: { name: 'ComponentImageShowDownloadButton' } }
-      //   ]
-      // },
-      // {
-      //   title: 'ImagePreview 图片预览',
-      //   children: [
-      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image-preview' } } },
-      //     { title: '打开预览', routerLink: { name: 'ComponentImagePreview' } }
-      //   ]
-      // },
-      // {
-      //   title: 'Tabs 页签',
-      //   children: [
-      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tabs' } } },
-      //     { title: '基础', routerLink: { name: 'ComponentTabsBase' } },
-      //     { title: '卡片风格', routerLink: { name: 'ComponentTabsCard' } },
-      //     { title: '边框背景的卡片', routerLink: { name: 'ComponentTabsBorderCard' } },
-      //     { title: '设置高度', routerLink: { name: 'ComponentTabsHeight' } },
-      //     { title: '圆角边框背景的卡片', routerLink: { name: 'ComponentTabsRoundCard' } },
-      //     { title: '配置式', routerLink: { name: 'ComponentTabsOptions' } },
-      //     { title: '页签触发方式', routerLink: { name: 'ComponentTabsRoundTrigger' } },
-      //     { title: '预加载页签', routerLink: { name: 'ComponentTabsRoundPreload' } },
-      //     { title: '页签超出可滚动', routerLink: { name: 'ComponentTabsOver' } },
-      //     { title: '右侧操作按钮', routerLink: { name: 'ComponentTabsExtra' } },
-      //     { title: '可关闭', routerLink: { name: 'ComponentTabsShowClose' } },
-      //     { title: '权限码', routerLink: { name: 'ComponentTabsPermissionCode' } }
-      //   ]
-      // },
+      {
+        title: 'Card 卡片',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'card' } } },
+          { title: '基础', routerLink: { name: 'ComponentCardBase' } },
+          { title: '宽度', routerLink: { name: 'ComponentCardWidth' } },
+          { title: '高度', routerLink: { name: 'ComponentCardHeight' } },
+          { title: '显示/隐藏边框', routerLink: { name: 'ComponentCardBorder' } },
+          { title: '显示/隐藏边距', routerLink: { name: 'ComponentCardPadding' } },
+          { title: '边框阴影', routerLink: { name: 'ComponentCardShadow' } },
+          { title: '自定义模板', routerLink: { name: 'ComponentCardTemplate' } }
+        ]
+      },
+      {
+        title: 'Carousel 轮播图',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'carousel' } } },
+          { title: '基础', routerLink: { name: 'ComponentCarouselBase' } },
+          { title: '高度', routerLink: { name: 'ComponentCarouselHeight' } },
+          { title: '纵向排版', routerLink: { name: 'ComponentCarouselVertical' } },
+          { title: '配置式', routerLink: { name: 'ComponentCarouselOptions' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentCarouselTemplate' } },
+          { title: '自动切换', routerLink: { name: 'ComponentCarouselAutoPlay' } },
+          { title: '指示器', routerLink: { name: 'ComponentCarouselShowIndicators' } }
+        ]
+      },
+      {
+        title: 'Image 图片',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image' } } },
+          { title: '设置宽高', routerLink: { name: 'ComponentImageBase' } },
+          { title: '多张图片', routerLink: { name: 'ComponentImageMultiple' } },
+          { title: '懒加载', routerLink: { name: 'ComponentImageLazy' } },
+          { title: '预览', routerLink: { name: 'ComponentImageShowPreview' } },
+          { title: '打印按钮', routerLink: { name: 'ComponentImageShowPrintButton' } },
+          { title: '下载按钮', routerLink: { name: 'ComponentImageShowDownloadButton' } }
+        ]
+      },
+      {
+        title: 'ImagePreview 图片预览',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image-preview' } } },
+          { title: '打开预览', routerLink: { name: 'ComponentImagePreview' } }
+        ]
+      },
+      {
+        title: 'Tabs 页签',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tabs' } } },
+          { title: '基础', routerLink: { name: 'ComponentTabsBase' } },
+          { title: '卡片风格', routerLink: { name: 'ComponentTabsCard' } },
+          { title: '边框背景的卡片', routerLink: { name: 'ComponentTabsBorderCard' } },
+          { title: '设置高度', routerLink: { name: 'ComponentTabsHeight' } },
+          { title: '圆角边框背景的卡片', routerLink: { name: 'ComponentTabsRoundCard' } },
+          { title: '配置式', routerLink: { name: 'ComponentTabsOptions' } },
+          { title: '页签触发方式', routerLink: { name: 'ComponentTabsRoundTrigger' } },
+          { title: '预加载页签', routerLink: { name: 'ComponentTabsRoundPreload' } },
+          { title: '页签超出可滚动', routerLink: { name: 'ComponentTabsOver' } },
+          { title: '右侧操作按钮', routerLink: { name: 'ComponentTabsExtra' } },
+          { title: '可关闭', routerLink: { name: 'ComponentTabsCloseConfig' } },
+          { title: '权限码', routerLink: { name: 'ComponentTabsPermissionCode' } }
+        ]
+      }
       // {
       //   title: 'Calendar 日历',
       //   children: [
@@ -1083,36 +1083,36 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'breadcrumb' } } },
           { title: '基础', routerLink: { name: 'ComponentBreadcrumb' } }
         ]
+      },
+      {
+        title: 'Menu 菜单',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'menu' } } },
+          { title: '基础', routerLink: { name: 'ComponentMenuBase' } },
+          { title: '加载中', routerLink: { name: 'ComponentMenuLoading' } },
+          { title: '图标', routerLink: { name: 'ComponentMenuIcon' } },
+          { title: '路由模式', routerLink: { name: 'ComponentMenuRouterLink' } },
+          { title: '权限码', routerLink: { name: 'ComponentMenuPermissionCode' } }
+        ]
+      },
+      {
+        title: 'Anchor 锚点',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'anchor' } } },
+          { title: '自定义容器', routerLink: { name: 'ComponentAnchor' } }
+        ]
+      },
+      {
+        title: 'Pager 分页',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pager' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentPagerSize' } },
+          { title: '对齐方式', routerLink: { name: 'ComponentPagerAlign' } },
+          { title: '自定义页大小列表', routerLink: { name: 'ComponentPagerPageSize' } },
+          { title: '自定义布局', routerLink: { name: 'ComponentPagerLayout' } },
+          { title: '自定义模板', routerLink: { name: 'ComponentPagerTemplate' } }
+        ]
       }
-      // {
-      //   title: 'Menu 菜单',
-      //   children: [
-      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'menu' } } },
-      //     { title: '基础', routerLink: { name: 'ComponentMenuBase' } },
-      //     { title: '加载中', routerLink: { name: 'ComponentMenuLoading' } },
-      //     { title: '图标', routerLink: { name: 'ComponentMenuIcon' } },
-      //     { title: '路由模式', routerLink: { name: 'ComponentMenuRouterLink' } },
-      //     { title: '权限码', routerLink: { name: 'ComponentMenuPermissionCode' } }
-      //   ]
-      // },
-      // {
-      //   title: 'Anchor 锚点',
-      //   children: [
-      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'anchor' } } },
-      //     { title: '自定义容器', routerLink: { name: 'ComponentAnchor' } }
-      //   ]
-      // },
-      // {
-      //   title: 'Pager 分页',
-      //   children: [
-      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pager' } } },
-      //     { title: '尺寸大小', routerLink: { name: 'ComponentPagerSize' } },
-      //     { title: '对齐方式', routerLink: { name: 'ComponentPagerAlign' } },
-      //     { title: '自定义页大小列表', routerLink: { name: 'ComponentPagerPageSize' } },
-      //     { title: '自定义布局', routerLink: { name: 'ComponentPagerLayout' } },
-      //     { title: '自定义模板', routerLink: { name: 'ComponentPagerTemplate' } }
-      //   ]
-      // }
     ]
   },
   {

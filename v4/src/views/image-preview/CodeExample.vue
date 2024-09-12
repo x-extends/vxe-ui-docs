@@ -6,7 +6,7 @@
       </template>
 
       <template #preview>
-        <img :src="`${appStore.siteBaseUrl}resource/ui/image-preview.gif`">
+        <img :src="`${siteBaseUrl}/resource/ui/image-preview.gif`">
       </template>
 
       <template #describe>
@@ -32,7 +32,9 @@
 </template>
 
 <script lang="ts" setup>
+import { computed } from 'vue'
 import { useAppStore } from '@/store/app'
 
 const appStore = useAppStore()
+const siteBaseUrl = computed(() => appStore.siteBaseUrl)
 </script>
