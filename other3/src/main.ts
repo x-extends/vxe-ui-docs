@@ -24,6 +24,9 @@ import 'vxe-table/es/style.css'
 
 import enUS from 'vxe-pc-ui/packages/language/en-US'
 
+import VxeUIPluginRenderChart from '@vxe-ui/plugin-render-chart'
+import '@vxe-ui/plugin-render-chart/dist/style.css'
+
 declare global {
   interface Window {
     XEUtils: typeof XEUtils;
@@ -42,6 +45,8 @@ Vue.component('CodeList', CodeList)
 Vue.component('CodeRender', CodeRender)
 Vue.component('CodeUseVersion', CodeUseVersion)
 Vue.component('ApiLink', ApiLink)
+
+VxeUI.use(VxeUIPluginRenderChart)
 
 Vue.use(VxeUI)
 Vue.use(VxeTable)
