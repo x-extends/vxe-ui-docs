@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-textarea v-model="val1" placeholder="字数统计" maxlength="100" show-word-count></vxe-textarea>
+    <vxe-textarea v-model="val1" placeholder="字数统计" max-length="100" show-word-count></vxe-textarea>
   </div>
 </template>
 

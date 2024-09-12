@@ -4,7 +4,7 @@
       show-download-button
       readonly
       mode="image"
-      v-model="fileList"
+      v-model="imgList"
       :download-method="downloadMethod"
       :before-download-method="beforeDownloadMethod">
     </vxe-upload>
@@ -15,7 +15,7 @@
 import { ref } from 'vue'
 import { VxeUI, VxeUploadPropTypes } from 'vxe-pc-ui'
 
-const fileList = ref([
+const imgList = ref([
   { name: 'fj577.jpg', url: 'https://vxeui.com/resource/img/fj577.jpg' },
   { name: 'fj581.jpeg', url: 'https://vxeui.com/resource/img/fj581.jpeg' }
 ])

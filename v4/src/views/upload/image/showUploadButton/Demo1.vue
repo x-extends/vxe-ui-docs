@@ -6,7 +6,7 @@
       show-progress
       mode="image"
       ref="uploadRef"
-      v-model="fileList"
+      v-model="imgList"
       :showUploadButton="false"
       :upload-method="uploadMethod">
     </vxe-upload>
@@ -20,7 +20,7 @@ import { VxeUploadInstance, VxeUploadPropTypes } from 'vxe-pc-ui'
 
 const uploadRef = ref<VxeUploadInstance>()
 
-const fileList = ref([])
+const imgList = ref([])
 
 const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress }) => {
   const formData = new FormData()

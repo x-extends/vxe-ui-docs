@@ -2,7 +2,7 @@
   <div>
     <vxe-upload
       multiple
-      v-model="fileList"
+      v-model="imgList"
       mode="image"
       :more-config="moreConfig"
       :upload-method="uploadMethod">
@@ -15,7 +15,7 @@ import { ref, reactive } from 'vue'
 import axios from 'axios'
 import { VxeUploadPropTypes } from 'vxe-pc-ui'
 
-const fileList = ref([
+const imgList = ref([
   { name: 'fj577.jpg', url: 'https://vxeui.com/resource/img/fj577.jpg' },
   { name: 'fj581.jpeg', url: 'https://vxeui.com/resource/img/fj581.jpeg' }
 ])

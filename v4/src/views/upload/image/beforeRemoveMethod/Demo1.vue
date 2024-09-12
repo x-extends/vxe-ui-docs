@@ -4,7 +4,7 @@
       show-progress
       multiple
       mode="image"
-      v-model="fileList"
+      v-model="imgList"
       :limit-count="6"
       :limit-size="5"
       :upload-method="uploadMethod"
@@ -19,7 +19,7 @@ import { ref } from 'vue'
 import axios from 'axios'
 import { VxeUI, VxeUploadPropTypes } from 'vxe-pc-ui'
 
-const fileList = ref([
+const imgList = ref([
   { name: 'fj577.jpg', url: 'https://vxeui.com/resource/img/fj577.jpg' },
   { name: 'fj581.jpeg', url: 'https://vxeui.com/resource/img/fj581.jpeg' }
 ])

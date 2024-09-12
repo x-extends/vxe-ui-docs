@@ -60,6 +60,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '设置行度', routerLink: { name: 'ComponentTableBaseRowHeight' } },
             { title: '冻结列', routerLink: { name: 'ComponentTableBaseFixed' } },
             { title: '冻结表头和列', routerLink: { name: 'ComponentTableBaseFixedFull' } },
+            { title: '表尾数据', routerLink: { name: 'ComponentTableBaseFooter' } },
             { title: '分组表头', routerLink: { name: 'ComponentTableBaseGroup' } },
             { title: '排序', routerLink: { name: 'ComponentTableBaseSort' } },
             { title: '筛选', routerLink: { name: 'ComponentTableBaseFilter' } },
@@ -1261,280 +1262,280 @@ export const navConfigList: NavVO[] = [
       //     }
     ]
   },
-  // {
-  //   i18nKey: 'app.aside.menu.dataTitle',
-  //   children: [
-  //     {
-  //       title: 'Switch 开关',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'switch' } } },
-  //         { title: '尺寸大小', routerLink: { name: 'ComponentSwitchSize' } },
-  //         { title: '禁用状态', routerLink: { name: 'ComponentSwitchDisabled' } },
-  //         { title: '自定义显示值', routerLink: { name: 'ComponentSwitchLabel' } },
-  //         { title: '自定义实际值', routerLink: { name: 'ComponentSwitchValue' } },
-  //         { title: '自定义图标', routerLink: { name: 'ComponentSwitchIcon' } }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Radio 单选框',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'radio' } } },
-  //         { title: '尺寸大小', routerLink: { name: 'ComponentRadioSize' } },
-  //         { title: '禁用状态', routerLink: { name: 'ComponentRadioDisabled' } },
-  //         { title: '允许取消', routerLink: { name: 'ComponentRadioStrict' } },
-  //         { title: '单选组', routerLink: { name: 'ComponentRadioGroup' } },
-  //         { title: '单选按钮', routerLink: { name: 'ComponentRadioButton' } }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Checkbox 复选框',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'checkbox' } } },
-  //         { title: '尺寸大小', routerLink: { name: 'ComponentCheckboxSize' } },
-  //         { title: '半选状态', routerLink: { name: 'ComponentCheckboxIndeterminate' } },
-  //         { title: '禁用状态', routerLink: { name: 'ComponentCheckboxDisabled' } },
-  //         { title: '自定义值', routerLink: { name: 'ComponentCheckboxValue' } },
-  //         { title: '复选组', routerLink: { name: 'ComponentCheckboxGroup' } },
-  //         { title: '限制最大数量', routerLink: { name: 'ComponentCheckboxMax' } }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Input 输入框',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'input' } } },
-  //         { title: '尺寸大小', routerLink: { name: 'ComponentInputSize' } },
-  //         { title: '文本类型', routerLink: { name: 'ComponentInputText' } },
-  //         { title: '搜索类型', routerLink: { name: 'ComponentInputSearch' } },
-  //         { title: '密码类型', routerLink: { name: 'ComponentInputPassword' } },
-  //         { title: '时间类型', routerLink: { name: 'ComponentInputTime' } },
-  //         { title: '日期类型', routerLink: { name: 'ComponentInputDate' } },
-  //         { title: '日期带时间类型', routerLink: { name: 'ComponentInputDatetime' } },
-  //         { title: '周类型', routerLink: { name: 'ComponentInputWeek' } },
-  //         { title: '月度类型', routerLink: { name: 'ComponentInputMonth' } },
-  //         { title: '季度类型', routerLink: { name: 'ComponentInputQuarter' } },
-  //         { title: '年度类型', routerLink: { name: 'ComponentInputYear' } },
-  //         { title: '数值类型', routerLink: { name: 'ComponentInputNumber' } },
-  //         { title: '整数类型', routerLink: { name: 'ComponentInputInteger' } },
-  //         { title: '小数类型', routerLink: { name: 'ComponentInputFloat' } },
-  //         { title: '显示字数统计', routerLink: { name: 'ComponentInputCount' } },
-  //         { title: '自定义前缀图标', routerLink: { name: 'ComponentInputPrefix' } },
-  //         { title: '自定义后缀图标', routerLink: { name: 'ComponentInputSuffix' } },
-  //         { title: '自定义插槽模板', routerLink: { name: 'ComponentInputTemplate' } }
-  //       ]
-  //     },
-  //     // { title: 'TextInput 单行文本输入' },
-  //     {
-  //       title: 'Textarea 多行文本输入',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'textarea' } } },
-  //         { title: '尺寸大小', routerLink: { name: 'ComponentTextareaSize' } },
-  //         { title: '禁用状态', routerLink: { name: 'ComponentTextareaDisabled' } },
-  //         { title: '只读状态', routerLink: { name: 'ComponentTextareaReadonly' } },
-  //         { title: '字数统计', routerLink: { name: 'ComponentTextareaCount' } },
-  //         { title: '自适应高度', routerLink: { name: 'ComponentTextareaAutosize' } },
-  //         { title: '可调节高度', routerLink: { name: 'ComponentTextareaResize' } }
-  //       ]
-  //     },
-  //     {
-  //       title: 'NumberInput 数值输入',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'number-input' } } },
-  //         {
-  //           title: '数值',
-  //           children: [
-  //             { title: '基础', routerLink: { name: 'ComponentNumberInputNumberBase' } },
-  //             { title: '可清除', routerLink: { name: 'ComponentNumberInputNumberClearable' } },
-  //             { title: '设置步数', routerLink: { name: 'ComponentNumberInputNumberStep' } },
-  //             { title: '控制按钮', routerLink: { name: 'ComponentNumberInputNumberControls' } }
-  //           ]
-  //         },
-  //         {
-  //           title: '整数',
-  //           children: [
-  //             { title: '基础', routerLink: { name: 'ComponentNumberInputIntegerBase' } },
-  //             { title: '可清除', routerLink: { name: 'ComponentNumberInputIntegerClearable' } },
-  //             { title: '设置步数', routerLink: { name: 'ComponentNumberInputIntegerStep' } },
-  //             { title: '控制按钮', routerLink: { name: 'ComponentNumberInputIntegerControls' } }
-  //           ]
-  //         },
-  //         {
-  //           title: '小数',
-  //           children: [
-  //             { title: '基础', routerLink: { name: 'ComponentNumberInputFloatBase' } },
-  //             { title: '可清除', routerLink: { name: 'ComponentNumberInputFloatClearable' } },
-  //             { title: '设置步数', routerLink: { name: 'ComponentNumberInputFloatStep' } },
-  //             { title: '小数位数', routerLink: { name: 'ComponentNumberInputFloatDigits' } },
-  //             { title: '控制按钮', routerLink: { name: 'ComponentNumberInputFloatControls' } }
-  //           ]
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       title: 'PasswordInput 密码输入',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'password-input' } } },
-  //         { title: '密码输入', routerLink: { name: 'ComponentPasswordInput' } }
-  //       ]
-  //     },
-  //     {
-  //       title: 'IconPicker 图标选择',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon-picker' } } },
-  //         { title: '尺寸大小', routerLink: { name: 'ComponentIconPickerSize' } },
-  //         { title: '可清除', routerLink: { name: 'ComponentIconPickerClearable' } },
-  //         { title: '自定义列表', routerLink: { name: 'ComponentIconPickerIcons' } }
-  //       ]
-  //     },
-  //     {
-  //       title: 'DatePicker 日期选择',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'date-picker' } } },
-  //         { title: '日期类型', routerLink: { name: 'ComponentDatePickerDate' } },
-  //         { title: '时间类型', routerLink: { name: 'ComponentDatePickerTime' } },
-  //         { title: '日期带时间类型', routerLink: { name: 'ComponentDatePickerDatetime' } },
-  //         { title: '周类型', routerLink: { name: 'ComponentDatePickerWeek' } },
-  //         { title: '月度类型', routerLink: { name: 'ComponentDatePickerMonth' } },
-  //         { title: '季度类型', routerLink: { name: 'ComponentDatePickerQuarter' } },
-  //         { title: '年度类型', routerLink: { name: 'ComponentDatePickerYear' } }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Select 下拉框',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'select' } } },
-  //         {
-  //           title: '基础',
-  //           children: [
-  //             { title: '尺寸大小', routerLink: { name: 'ComponentSelectBaseSize' } },
-  //             { title: '可清除', routerLink: { name: 'ComponentSelectBaseClearable' } },
-  //             { title: '禁用', routerLink: { name: 'ComponentSelectBaseDisabled' } },
-  //             { title: '自定义图标', routerLink: { name: 'ComponentSelectBaseIcon' } },
-  //             { title: '加载中', routerLink: { name: 'ComponentSelectBaseLoading' } },
-  //             { title: '可筛选', routerLink: { name: 'ComponentSelectBaseFilterable' } },
-  //             { title: '分组', routerLink: { name: 'ComponentSelectBaseGroup' } },
-  //             { title: '多选', routerLink: { name: 'ComponentSelectBaseMultiple' } },
-  //             { title: '限制最大数量', routerLink: { name: 'ComponentSelectBaseMax' } },
-  //             { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectBaseTemplate' } }
-  //           ]
-  //         },
-  //         {
-  //           title: '配置式',
-  //           children: [
-  //             { title: '可清除', routerLink: { name: 'ComponentSelectConfigClearable' } },
-  //             { title: '禁用', routerLink: { name: 'ComponentSelectConfigDisabled' } },
-  //             { title: '加载中', routerLink: { name: 'ComponentSelectConfigLoading' } },
-  //             { title: '可筛选', routerLink: { name: 'ComponentSelectConfigFilterable' } },
-  //             { title: '分组', routerLink: { name: 'ComponentSelectConfigGroup' } },
-  //             { title: '多选', routerLink: { name: 'ComponentSelectConfigMultiple' } },
-  //             { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectConfigTemplate' } }
-  //           ]
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       title: 'TreeSelect 树形下拉框',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'treeSelect' } } },
-  //         {
-  //           title: '基础',
-  //           children: [
-  //             { title: '尺寸大小', routerLink: { name: 'ComponentTreeSelectBaseSize' } },
-  //             { title: '层级结构', routerLink: { name: 'ComponentTreeSelectBaseHierarchy' } },
-  //             { title: '平级结构', routerLink: { name: 'ComponentTreeSelectBaseLeveling' } },
-  //             { title: '多选', routerLink: { name: 'ComponentTreeSelectBaseMultiple' } },
-  //             { title: '自定义图标', routerLink: { name: 'ComponentTreeSelectBaseIcon' } },
-  //             { title: '连接线', routerLink: { name: 'ComponentTreeSelectBaseShowLine' } },
-  //             { title: '懒加载子节点', routerLink: { name: 'ComponentTreeSelectBaseLazy' } },
-  //             { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectBaseTrigger' } }
-  //           ]
-  //         },
-  //         {
-  //           title: '单选框',
-  //           children: [
-  //             { title: '显示单选框', routerLink: { name: 'ComponentTreeSelectRadioBase' } },
-  //             { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectRadioTrigger' } }
-  //           ]
-  //         },
-  //         {
-  //           title: '复选框',
-  //           children: [
-  //             { title: '显示复选框', routerLink: { name: 'ComponentTreeSelectCheckboxBase' } },
-  //             { title: '节点不关联', routerLink: { name: 'ComponentTreeSelectCheckboxCheckStrictly' } },
-  //             { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectCheckboxTrigger' } }
-  //           ]
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Upload 上传',
-  //       children: [
-  //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'upload' } } },
-  //         {
-  //           title: '全局调用',
-  //           children: [
-  //             { title: '读取文件', routerLink: { name: 'ComponentUploadGlobalReadFile' } },
-  //             { title: '下载文件', routerLink: { name: 'ComponentUploadGlobalSaveFile' } }
-  //           ]
-  //         },
-  //         {
-  //           title: '文件上传',
-  //           children: [
-  //             { title: '尺寸大小', routerLink: { name: 'ComponentUploadFileSize' } },
-  //             { title: '单选模式', routerLink: { name: 'ComponentUploadFileBase' } },
-  //             { title: '只读状态', routerLink: { name: 'ComponentUploadFileReadonly' } },
-  //             { title: '禁用状态', routerLink: { name: 'ComponentUploadFileDisabled' } },
-  //             { title: '下载文件', routerLink: { name: 'ComponentUploadFileDownloadMethod' } },
-  //             { title: '阻止下载', routerLink: { name: 'ComponentUploadFileBeforeDownloadMethod' } },
-  //             { title: '多选模式', routerLink: { name: 'ComponentUploadFileMultiple' } },
-  //             { title: '提示', routerLink: { name: 'ComponentUploadFileTip' } },
-  //             { title: '上传进度', routerLink: { name: 'ComponentUploadFileProgress' } },
-  //             { title: '唯一值模式', routerLink: { name: 'ComponentUploadFileSingleMode' } },
-  //             { title: 'URL 模式', routerLink: { name: 'ComponentUploadFileUrlMode' } },
-  //             { title: '指定文件类型', routerLink: { name: 'ComponentUploadFileTypes' } },
-  //             { title: '限制上传数量', routerLink: { name: 'ComponentUploadFileLimitCount' } },
-  //             { title: '限制附件大小', routerLink: { name: 'ComponentUploadFileLimitSize' } },
-  //             { title: '删除文件', routerLink: { name: 'ComponentUploadFileRemoveMethod' } },
-  //             { title: '阻止删除', routerLink: { name: 'ComponentUploadFileBeforeRemoveMethod' } },
-  //             { title: '自定义上传按钮', routerLink: { name: 'ComponentUploadFileShowUploadButton' } },
-  //             { title: '自动隐藏上传按钮', routerLink: { name: 'ComponentUploadFileAutoHidden' } },
-  //             { title: '显示更多', routerLink: { name: 'ComponentUploadFileMoreBtn' } },
-  //             { title: '失败重新上传', routerLink: { name: 'ComponentUploadFileShowError' } },
-  //             { title: '自定义操作按钮', routerLink: { name: 'ComponentUploadFileCorner' } }
-  //           ]
-  //         },
-  //         {
-  //           title: '图片上传',
-  //           children: [
-  //             { title: '尺寸大小', routerLink: { name: 'ComponentUploadImageSize' } },
-  //             { title: '单选模式', routerLink: { name: 'ComponentUploadImageBase' } },
-  //             { title: '只读状态', routerLink: { name: 'ComponentUploadImageReadonly' } },
-  //             { title: '禁用状态', routerLink: { name: 'ComponentUploadImageDisabled' } },
-  //             { title: '自定义图片宽高', routerLink: { name: 'ComponentUploadImageImgStyle' } },
-  //             { title: '下载文件', routerLink: { name: 'ComponentUploadImageDownloadMethod' } },
-  //             { title: '阻止下载', routerLink: { name: 'ComponentUploadImageBeforeDownloadMethod' } },
-  //             { title: '多选模式', routerLink: { name: 'ComponentUploadImageMultiple' } },
-  //             { title: '提示', routerLink: { name: 'ComponentUploadImageTip' } },
-  //             { title: '上传进度', routerLink: { name: 'ComponentUploadImageProgress' } },
-  //             { title: '唯一值模式', routerLink: { name: 'ComponentUploadImageSingleMode' } },
-  //             { title: 'URL 模式', routerLink: { name: 'ComponentUploadImageUrlMode' } },
-  //             { title: '缩略图链接地址', routerLink: { name: 'ComponentUploadImageThumbnailUrl' } },
-  //             { title: '指定文件类型', routerLink: { name: 'ComponentUploadImageTypes' } },
-  //             { title: '限制上传数量', routerLink: { name: 'ComponentUploadImageLimitCount' } },
-  //             { title: '限制附件大小', routerLink: { name: 'ComponentUploadImageLimitSize' } },
-  //             { title: '删除图片', routerLink: { name: 'ComponentUploadImageRemoveMethod' } },
-  //             { title: '阻止删除', routerLink: { name: 'ComponentUploadImageBeforeRemoveMethod' } },
-  //             { title: '自定义上传按钮', routerLink: { name: 'ComponentUploadImageShowUploadButton' } },
-  //             { title: '自动隐藏按钮', routerLink: { name: 'ComponentUploadImageAutoHidden' } },
-  //             { title: '显示更多', routerLink: { name: 'ComponentUploadImageMoreBtn' } },
-  //             { title: '失败重新上传', routerLink: { name: 'ComponentUploadImageShowError' } },
-  //             { title: '自定义操作按钮', routerLink: { name: 'ComponentUploadImageCorner' } }
-  //           ]
-  //         }
-  //       ]
-  //     }
-  //     // { title: 'Transfer 穿梭框' }
-  //   ]
-  // },
+  {
+    i18nKey: 'app.aside.menu.dataTitle',
+    children: [
+      {
+        title: 'Switch 开关',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'switch' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentSwitchSize' } },
+          { title: '禁用状态', routerLink: { name: 'ComponentSwitchDisabled' } },
+          { title: '自定义显示值', routerLink: { name: 'ComponentSwitchLabel' } },
+          { title: '自定义实际值', routerLink: { name: 'ComponentSwitchValue' } },
+          { title: '自定义图标', routerLink: { name: 'ComponentSwitchIcon' } }
+        ]
+      },
+      //     {
+      //       title: 'Radio 单选框',
+      //       children: [
+      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'radio' } } },
+      //         { title: '尺寸大小', routerLink: { name: 'ComponentRadioSize' } },
+      //         { title: '禁用状态', routerLink: { name: 'ComponentRadioDisabled' } },
+      //         { title: '允许取消', routerLink: { name: 'ComponentRadioStrict' } },
+      //         { title: '单选组', routerLink: { name: 'ComponentRadioGroup' } },
+      //         { title: '单选按钮', routerLink: { name: 'ComponentRadioButton' } }
+      //       ]
+      //     },
+      //     {
+      //       title: 'Checkbox 复选框',
+      //       children: [
+      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'checkbox' } } },
+      //         { title: '尺寸大小', routerLink: { name: 'ComponentCheckboxSize' } },
+      //         { title: '半选状态', routerLink: { name: 'ComponentCheckboxIndeterminate' } },
+      //         { title: '禁用状态', routerLink: { name: 'ComponentCheckboxDisabled' } },
+      //         { title: '自定义值', routerLink: { name: 'ComponentCheckboxValue' } },
+      //         { title: '复选组', routerLink: { name: 'ComponentCheckboxGroup' } },
+      //         { title: '限制最大数量', routerLink: { name: 'ComponentCheckboxMax' } }
+      //       ]
+      //     },
+      //     {
+      //       title: 'Input 输入框',
+      //       children: [
+      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'input' } } },
+      //         { title: '尺寸大小', routerLink: { name: 'ComponentInputSize' } },
+      //         { title: '文本类型', routerLink: { name: 'ComponentInputText' } },
+      //         { title: '搜索类型', routerLink: { name: 'ComponentInputSearch' } },
+      //         { title: '密码类型', routerLink: { name: 'ComponentInputPassword' } },
+      //         { title: '时间类型', routerLink: { name: 'ComponentInputTime' } },
+      //         { title: '日期类型', routerLink: { name: 'ComponentInputDate' } },
+      //         { title: '日期带时间类型', routerLink: { name: 'ComponentInputDatetime' } },
+      //         { title: '周类型', routerLink: { name: 'ComponentInputWeek' } },
+      //         { title: '月度类型', routerLink: { name: 'ComponentInputMonth' } },
+      //         { title: '季度类型', routerLink: { name: 'ComponentInputQuarter' } },
+      //         { title: '年度类型', routerLink: { name: 'ComponentInputYear' } },
+      //         { title: '数值类型', routerLink: { name: 'ComponentInputNumber' } },
+      //         { title: '整数类型', routerLink: { name: 'ComponentInputInteger' } },
+      //         { title: '小数类型', routerLink: { name: 'ComponentInputFloat' } },
+      //         { title: '显示字数统计', routerLink: { name: 'ComponentInputCount' } },
+      //         { title: '自定义前缀图标', routerLink: { name: 'ComponentInputPrefix' } },
+      //         { title: '自定义后缀图标', routerLink: { name: 'ComponentInputSuffix' } },
+      //         { title: '自定义插槽模板', routerLink: { name: 'ComponentInputTemplate' } }
+      //       ]
+      //     },
+      //     // { title: 'TextInput 单行文本输入' },
+      {
+        title: 'Textarea 多行文本输入',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'textarea' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentTextareaSize' } },
+          { title: '禁用状态', routerLink: { name: 'ComponentTextareaDisabled' } },
+          { title: '只读状态', routerLink: { name: 'ComponentTextareaReadonly' } },
+          { title: '字数统计', routerLink: { name: 'ComponentTextareaCount' } },
+          { title: '自适应高度', routerLink: { name: 'ComponentTextareaAutosize' } },
+          { title: '可调节高度', routerLink: { name: 'ComponentTextareaResize' } }
+        ]
+      },
+      //     {
+      //       title: 'NumberInput 数值输入',
+      //       children: [
+      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'number-input' } } },
+      //         {
+      //           title: '数值',
+      //           children: [
+      //             { title: '基础', routerLink: { name: 'ComponentNumberInputNumberBase' } },
+      //             { title: '可清除', routerLink: { name: 'ComponentNumberInputNumberClearable' } },
+      //             { title: '设置步数', routerLink: { name: 'ComponentNumberInputNumberStep' } },
+      //             { title: '控制按钮', routerLink: { name: 'ComponentNumberInputNumberControls' } }
+      //           ]
+      //         },
+      //         {
+      //           title: '整数',
+      //           children: [
+      //             { title: '基础', routerLink: { name: 'ComponentNumberInputIntegerBase' } },
+      //             { title: '可清除', routerLink: { name: 'ComponentNumberInputIntegerClearable' } },
+      //             { title: '设置步数', routerLink: { name: 'ComponentNumberInputIntegerStep' } },
+      //             { title: '控制按钮', routerLink: { name: 'ComponentNumberInputIntegerControls' } }
+      //           ]
+      //         },
+      //         {
+      //           title: '小数',
+      //           children: [
+      //             { title: '基础', routerLink: { name: 'ComponentNumberInputFloatBase' } },
+      //             { title: '可清除', routerLink: { name: 'ComponentNumberInputFloatClearable' } },
+      //             { title: '设置步数', routerLink: { name: 'ComponentNumberInputFloatStep' } },
+      //             { title: '小数位数', routerLink: { name: 'ComponentNumberInputFloatDigits' } },
+      //             { title: '控制按钮', routerLink: { name: 'ComponentNumberInputFloatControls' } }
+      //           ]
+      //         }
+      //       ]
+      //     },
+      //     {
+      //       title: 'PasswordInput 密码输入',
+      //       children: [
+      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'password-input' } } },
+      //         { title: '密码输入', routerLink: { name: 'ComponentPasswordInput' } }
+      //       ]
+      //     },
+      //     {
+      //       title: 'IconPicker 图标选择',
+      //       children: [
+      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon-picker' } } },
+      //         { title: '尺寸大小', routerLink: { name: 'ComponentIconPickerSize' } },
+      //         { title: '可清除', routerLink: { name: 'ComponentIconPickerClearable' } },
+      //         { title: '自定义列表', routerLink: { name: 'ComponentIconPickerIcons' } }
+      //       ]
+      //     },
+      //     {
+      //       title: 'DatePicker 日期选择',
+      //       children: [
+      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'date-picker' } } },
+      //         { title: '日期类型', routerLink: { name: 'ComponentDatePickerDate' } },
+      //         { title: '时间类型', routerLink: { name: 'ComponentDatePickerTime' } },
+      //         { title: '日期带时间类型', routerLink: { name: 'ComponentDatePickerDatetime' } },
+      //         { title: '周类型', routerLink: { name: 'ComponentDatePickerWeek' } },
+      //         { title: '月度类型', routerLink: { name: 'ComponentDatePickerMonth' } },
+      //         { title: '季度类型', routerLink: { name: 'ComponentDatePickerQuarter' } },
+      //         { title: '年度类型', routerLink: { name: 'ComponentDatePickerYear' } }
+      //       ]
+      //     },
+      //     {
+      //       title: 'Select 下拉框',
+      //       children: [
+      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'select' } } },
+      //         {
+      //           title: '基础',
+      //           children: [
+      //             { title: '尺寸大小', routerLink: { name: 'ComponentSelectBaseSize' } },
+      //             { title: '可清除', routerLink: { name: 'ComponentSelectBaseClearable' } },
+      //             { title: '禁用', routerLink: { name: 'ComponentSelectBaseDisabled' } },
+      //             { title: '自定义图标', routerLink: { name: 'ComponentSelectBaseIcon' } },
+      //             { title: '加载中', routerLink: { name: 'ComponentSelectBaseLoading' } },
+      //             { title: '可筛选', routerLink: { name: 'ComponentSelectBaseFilterable' } },
+      //             { title: '分组', routerLink: { name: 'ComponentSelectBaseGroup' } },
+      //             { title: '多选', routerLink: { name: 'ComponentSelectBaseMultiple' } },
+      //             { title: '限制最大数量', routerLink: { name: 'ComponentSelectBaseMax' } },
+      //             { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectBaseTemplate' } }
+      //           ]
+      //         },
+      //         {
+      //           title: '配置式',
+      //           children: [
+      //             { title: '可清除', routerLink: { name: 'ComponentSelectConfigClearable' } },
+      //             { title: '禁用', routerLink: { name: 'ComponentSelectConfigDisabled' } },
+      //             { title: '加载中', routerLink: { name: 'ComponentSelectConfigLoading' } },
+      //             { title: '可筛选', routerLink: { name: 'ComponentSelectConfigFilterable' } },
+      //             { title: '分组', routerLink: { name: 'ComponentSelectConfigGroup' } },
+      //             { title: '多选', routerLink: { name: 'ComponentSelectConfigMultiple' } },
+      //             { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectConfigTemplate' } }
+      //           ]
+      //         }
+      //       ]
+      //     },
+      //     {
+      //       title: 'TreeSelect 树形下拉框',
+      //       children: [
+      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'treeSelect' } } },
+      //         {
+      //           title: '基础',
+      //           children: [
+      //             { title: '尺寸大小', routerLink: { name: 'ComponentTreeSelectBaseSize' } },
+      //             { title: '层级结构', routerLink: { name: 'ComponentTreeSelectBaseHierarchy' } },
+      //             { title: '平级结构', routerLink: { name: 'ComponentTreeSelectBaseLeveling' } },
+      //             { title: '多选', routerLink: { name: 'ComponentTreeSelectBaseMultiple' } },
+      //             { title: '自定义图标', routerLink: { name: 'ComponentTreeSelectBaseIcon' } },
+      //             { title: '连接线', routerLink: { name: 'ComponentTreeSelectBaseShowLine' } },
+      //             { title: '懒加载子节点', routerLink: { name: 'ComponentTreeSelectBaseLazy' } },
+      //             { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectBaseTrigger' } }
+      //           ]
+      //         },
+      //         {
+      //           title: '单选框',
+      //           children: [
+      //             { title: '显示单选框', routerLink: { name: 'ComponentTreeSelectRadioBase' } },
+      //             { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectRadioTrigger' } }
+      //           ]
+      //         },
+      //         {
+      //           title: '复选框',
+      //           children: [
+      //             { title: '显示复选框', routerLink: { name: 'ComponentTreeSelectCheckboxBase' } },
+      //             { title: '节点不关联', routerLink: { name: 'ComponentTreeSelectCheckboxCheckStrictly' } },
+      //             { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectCheckboxTrigger' } }
+      //           ]
+      //         }
+      //       ]
+      //     },
+      {
+        title: 'Upload 上传',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'upload' } } },
+          {
+            title: '全局调用',
+            children: [
+              { title: '读取文件', routerLink: { name: 'ComponentUploadGlobalReadFile' } },
+              { title: '下载文件', routerLink: { name: 'ComponentUploadGlobalSaveFile' } }
+            ]
+          },
+          {
+            title: '文件上传',
+            children: [
+              { title: '尺寸大小', routerLink: { name: 'ComponentUploadFileSize' } },
+              { title: '单选模式', routerLink: { name: 'ComponentUploadFileBase' } },
+              { title: '只读状态', routerLink: { name: 'ComponentUploadFileReadonly' } },
+              { title: '禁用状态', routerLink: { name: 'ComponentUploadFileDisabled' } },
+              { title: '下载文件', routerLink: { name: 'ComponentUploadFileDownloadMethod' } },
+              { title: '阻止下载', routerLink: { name: 'ComponentUploadFileBeforeDownloadMethod' } },
+              { title: '多选模式', routerLink: { name: 'ComponentUploadFileMultiple' } },
+              { title: '提示', routerLink: { name: 'ComponentUploadFileTip' } },
+              { title: '上传进度', routerLink: { name: 'ComponentUploadFileProgress' } },
+              { title: '唯一值模式', routerLink: { name: 'ComponentUploadFileSingleMode' } },
+              { title: 'URL 模式', routerLink: { name: 'ComponentUploadFileUrlMode' } },
+              { title: '指定文件类型', routerLink: { name: 'ComponentUploadFileTypes' } },
+              { title: '限制上传数量', routerLink: { name: 'ComponentUploadFileLimitCount' } },
+              { title: '限制附件大小', routerLink: { name: 'ComponentUploadFileLimitSize' } },
+              { title: '删除文件', routerLink: { name: 'ComponentUploadFileRemoveMethod' } },
+              { title: '阻止删除', routerLink: { name: 'ComponentUploadFileBeforeRemoveMethod' } },
+              { title: '自定义上传按钮', routerLink: { name: 'ComponentUploadFileShowUploadButton' } },
+              { title: '自动隐藏上传按钮', routerLink: { name: 'ComponentUploadFileAutoHidden' } },
+              { title: '显示更多', routerLink: { name: 'ComponentUploadFileMoreBtn' } },
+              { title: '失败重新上传', routerLink: { name: 'ComponentUploadFileShowError' } },
+              { title: '自定义操作按钮', routerLink: { name: 'ComponentUploadFileCorner' } }
+            ]
+          },
+          {
+            title: '图片上传',
+            children: [
+              { title: '尺寸大小', routerLink: { name: 'ComponentUploadImageSize' } },
+              { title: '单选模式', routerLink: { name: 'ComponentUploadImageBase' } },
+              { title: '只读状态', routerLink: { name: 'ComponentUploadImageReadonly' } },
+              { title: '禁用状态', routerLink: { name: 'ComponentUploadImageDisabled' } },
+              { title: '自定义图片宽高', routerLink: { name: 'ComponentUploadImageImgStyle' } },
+              { title: '下载文件', routerLink: { name: 'ComponentUploadImageDownloadMethod' } },
+              { title: '阻止下载', routerLink: { name: 'ComponentUploadImageBeforeDownloadMethod' } },
+              { title: '多选模式', routerLink: { name: 'ComponentUploadImageMultiple' } },
+              { title: '提示', routerLink: { name: 'ComponentUploadImageTip' } },
+              { title: '上传进度', routerLink: { name: 'ComponentUploadImageProgress' } },
+              { title: '唯一值模式', routerLink: { name: 'ComponentUploadImageSingleMode' } },
+              { title: 'URL 模式', routerLink: { name: 'ComponentUploadImageUrlMode' } },
+              { title: '缩略图链接地址', routerLink: { name: 'ComponentUploadImageThumbnailUrl' } },
+              { title: '指定文件类型', routerLink: { name: 'ComponentUploadImageTypes' } },
+              { title: '限制上传数量', routerLink: { name: 'ComponentUploadImageLimitCount' } },
+              { title: '限制附件大小', routerLink: { name: 'ComponentUploadImageLimitSize' } },
+              { title: '删除图片', routerLink: { name: 'ComponentUploadImageRemoveMethod' } },
+              { title: '阻止删除', routerLink: { name: 'ComponentUploadImageBeforeRemoveMethod' } },
+              { title: '自定义上传按钮', routerLink: { name: 'ComponentUploadImageShowUploadButton' } },
+              { title: '自动隐藏按钮', routerLink: { name: 'ComponentUploadImageAutoHidden' } },
+              { title: '显示更多', routerLink: { name: 'ComponentUploadImageMoreBtn' } },
+              { title: '失败重新上传', routerLink: { name: 'ComponentUploadImageShowError' } },
+              { title: '自定义操作按钮', routerLink: { name: 'ComponentUploadImageCorner' } }
+            ]
+          }
+        ]
+      }
+      //     // { title: 'Transfer 穿梭框' }
+    ]
+  },
   tableNavConfig,
   {
     i18nKey: 'app.aside.menu.treeTitle',

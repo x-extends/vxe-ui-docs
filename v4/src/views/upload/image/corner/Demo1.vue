@@ -4,7 +4,7 @@
       multiple
       show-progress
       mode="image"
-      v-model="fileList"
+      v-model="imgList"
       :upload-method="uploadMethod">
       <template #corner>
         <vxe-button mode="text" icon="vxe-icon-edit" status="primary"></vxe-button>
@@ -19,7 +19,7 @@ import { ref } from 'vue'
 import axios from 'axios'
 import { VxeUploadPropTypes } from 'vxe-pc-ui'
 
-const fileList = ref([
+const imgList = ref([
   { name: 'fj577.jpg', url: 'https://vxeui.com/resource/img/fj577.jpg' },
   { name: 'fj581.jpeg', url: 'https://vxeui.com/resource/img/fj581.jpeg' }
 ])

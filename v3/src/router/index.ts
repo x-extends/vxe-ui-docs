@@ -97,6 +97,11 @@ const tableRouteConfig: RouteConfig = {
           component: () => import('@/views/table/base/header/CodeExample.vue')
         },
         {
+          path: 'footer',
+          name: 'ComponentTableBaseFooter',
+          component: () => import('@/views/table/base/footer/CodeExample.vue')
+        },
+        {
           path: 'currentColumn',
           name: 'ComponentTableBaseCurrentColumn',
           component: () => import('@/views/table/base/currentColumn/CodeExample.vue')
@@ -3473,42 +3478,42 @@ const routes: Array<RouteConfig> = [
       //     }
       //   ]
       // },
-      // {
-      //   path: 'textarea',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'size',
-      //       name: 'ComponentTextareaSize',
-      //       component: () => import('@/views/textarea/size/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'disabled',
-      //       name: 'ComponentTextareaDisabled',
-      //       component: () => import('@/views/textarea/disabled/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'readonly',
-      //       name: 'ComponentTextareaReadonly',
-      //       component: () => import('@/views/textarea/readonly/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'count',
-      //       name: 'ComponentTextareaCount',
-      //       component: () => import('@/views/textarea/count/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'autosize',
-      //       name: 'ComponentTextareaAutosize',
-      //       component: () => import('@/views/textarea/autosize/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'resize',
-      //       name: 'ComponentTextareaResize',
-      //       component: () => import('@/views/textarea/resize/CodeExample.vue')
-      //     }
-      //   ]
-      // },
+      {
+        path: 'textarea',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentTextareaSize',
+            component: () => import('@/views/textarea/size/CodeExample.vue')
+          },
+          {
+            path: 'disabled',
+            name: 'ComponentTextareaDisabled',
+            component: () => import('@/views/textarea/disabled/CodeExample.vue')
+          },
+          {
+            path: 'readonly',
+            name: 'ComponentTextareaReadonly',
+            component: () => import('@/views/textarea/readonly/CodeExample.vue')
+          },
+          {
+            path: 'count',
+            name: 'ComponentTextareaCount',
+            component: () => import('@/views/textarea/count/CodeExample.vue')
+          },
+          {
+            path: 'autosize',
+            name: 'ComponentTextareaAutosize',
+            component: () => import('@/views/textarea/autosize/CodeExample.vue')
+          },
+          {
+            path: 'resize',
+            name: 'ComponentTextareaResize',
+            component: () => import('@/views/textarea/resize/CodeExample.vue')
+          }
+        ]
+      },
       // {
       //   path: 'icon-picker',
       //   component: RouteLayout,
@@ -3975,37 +3980,37 @@ const routes: Array<RouteConfig> = [
       //   name: 'ComponentTooltip',
       //   component: () => import('@/views/tooltip/CodeExample.vue')
       // },
-      // {
-      //   path: 'switch',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'size',
-      //       name: 'ComponentSwitchSize',
-      //       component: () => import('@/views/switch/size/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'disabled',
-      //       name: 'ComponentSwitchDisabled',
-      //       component: () => import('@/views/switch/disabled/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'label',
-      //       name: 'ComponentSwitchLabel',
-      //       component: () => import('@/views/switch/label/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'value',
-      //       name: 'ComponentSwitchValue',
-      //       component: () => import('@/views/switch/value/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'icon',
-      //       name: 'ComponentSwitchIcon',
-      //       component: () => import('@/views/switch/icon/CodeExample.vue')
-      //     }
-      //   ]
-      // },
+      {
+        path: 'switch',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentSwitchSize',
+            component: () => import('@/views/switch/size/CodeExample.vue')
+          },
+          {
+            path: 'disabled',
+            name: 'ComponentSwitchDisabled',
+            component: () => import('@/views/switch/disabled/CodeExample.vue')
+          },
+          {
+            path: 'label',
+            name: 'ComponentSwitchLabel',
+            component: () => import('@/views/switch/label/CodeExample.vue')
+          },
+          {
+            path: 'value',
+            name: 'ComponentSwitchValue',
+            component: () => import('@/views/switch/value/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentSwitchIcon',
+            component: () => import('@/views/switch/icon/CodeExample.vue')
+          }
+        ]
+      },
       // {
       //   path: 'list',
       //   component: RouteLayout,
@@ -5280,260 +5285,260 @@ const routes: Array<RouteConfig> = [
       //     }
       //   ]
       // },
-      // {
-      //   path: 'upload',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'global',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'readFile',
-      //           name: 'ComponentUploadGlobalReadFile',
-      //           component: () => import('@/views/upload/global/readFile/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'saveFile',
-      //           name: 'ComponentUploadGlobalSaveFile',
-      //           component: () => import('@/views/upload/global/saveFile/CodeExample.vue')
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       path: 'file',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'size',
-      //           name: 'ComponentUploadFileSize',
-      //           component: () => import('@/views/upload/file/size/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'base',
-      //           name: 'ComponentUploadFileBase',
-      //           component: () => import('@/views/upload/file/base/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'readonly',
-      //           name: 'ComponentUploadFileReadonly',
-      //           component: () => import('@/views/upload/file/readonly/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'disabled',
-      //           name: 'ComponentUploadFileDisabled',
-      //           component: () => import('@/views/upload/file/disabled/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'multiple',
-      //           name: 'ComponentUploadFileMultiple',
-      //           component: () => import('@/views/upload/file/multiple/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'downloadMethod',
-      //           name: 'ComponentUploadFileDownloadMethod',
-      //           component: () => import('@/views/upload/file/downloadMethod/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'beforeDownloadMethod',
-      //           name: 'ComponentUploadFileBeforeDownloadMethod',
-      //           component: () => import('@/views/upload/file/beforeDownloadMethod/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'singleMode',
-      //           name: 'ComponentUploadFileSingleMode',
-      //           component: () => import('@/views/upload/file/singleMode/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'urlMode',
-      //           name: 'ComponentUploadFileUrlMode',
-      //           component: () => import('@/views/upload/file/urlMode/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'tip',
-      //           name: 'ComponentUploadFileTip',
-      //           component: () => import('@/views/upload/file/tip/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'progress',
-      //           name: 'ComponentUploadFileProgress',
-      //           component: () => import('@/views/upload/file/progress/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'types',
-      //           name: 'ComponentUploadFileTypes',
-      //           component: () => import('@/views/upload/file/types/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'limitCount',
-      //           name: 'ComponentUploadFileLimitCount',
-      //           component: () => import('@/views/upload/file/limitCount/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'limitSize',
-      //           name: 'ComponentUploadFileLimitSize',
-      //           component: () => import('@/views/upload/file/limitSize/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'removeMethod',
-      //           name: 'ComponentUploadFileRemoveMethod',
-      //           component: () => import('@/views/upload/file/removeMethod/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'beforeRemoveMethod',
-      //           name: 'ComponentUploadFileBeforeRemoveMethod',
-      //           component: () => import('@/views/upload/file/beforeRemoveMethod/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'showUploadButton',
-      //           name: 'ComponentUploadFileShowUploadButton',
-      //           component: () => import('@/views/upload/file/showUploadButton/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'autoHidden',
-      //           name: 'ComponentUploadFileAutoHidden',
-      //           component: () => import('@/views/upload/file/autoHidden/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'moreBtn',
-      //           name: 'ComponentUploadFileMoreBtn',
-      //           component: () => import('@/views/upload/file/moreBtn/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'showError',
-      //           name: 'ComponentUploadFileShowError',
-      //           component: () => import('@/views/upload/file/showError/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'corner',
-      //           name: 'ComponentUploadFileCorner',
-      //           component: () => import('@/views/upload/file/corner/CodeExample.vue')
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       path: 'image',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'size',
-      //           name: 'ComponentUploadImageSize',
-      //           component: () => import('@/views/upload/image/size/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'base',
-      //           name: 'ComponentUploadImageBase',
-      //           component: () => import('@/views/upload/image/base/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'imgStyle',
-      //           name: 'ComponentUploadImageImgStyle',
-      //           component: () => import('@/views/upload/image/imgStyle/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'readonly',
-      //           name: 'ComponentUploadImageReadonly',
-      //           component: () => import('@/views/upload/image/readonly/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'disabled',
-      //           name: 'ComponentUploadImageDisabled',
-      //           component: () => import('@/views/upload/image/disabled/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'multiple',
-      //           name: 'ComponentUploadImageMultiple',
-      //           component: () => import('@/views/upload/image/multiple/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'downloadMethod',
-      //           name: 'ComponentUploadImageDownloadMethod',
-      //           component: () => import('@/views/upload/image/downloadMethod/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'beforeDownloadMethod',
-      //           name: 'ComponentUploadImageBeforeDownloadMethod',
-      //           component: () => import('@/views/upload/image/beforeDownloadMethod/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'singleMode',
-      //           name: 'ComponentUploadImageSingleMode',
-      //           component: () => import('@/views/upload/image/singleMode/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'urlMode',
-      //           name: 'ComponentUploadImageUrlMode',
-      //           component: () => import('@/views/upload/image/urlMode/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'thumbnailUrl',
-      //           name: 'ComponentUploadImageThumbnailUrl',
-      //           component: () => import('@/views/upload/image/thumbnailUrl/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'tip',
-      //           name: 'ComponentUploadImageTip',
-      //           component: () => import('@/views/upload/image/tip/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'progress',
-      //           name: 'ComponentUploadImageProgress',
-      //           component: () => import('@/views/upload/image/progress/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'types',
-      //           name: 'ComponentUploadImageTypes',
-      //           component: () => import('@/views/upload/image/types/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'limitCount',
-      //           name: 'ComponentUploadImageLimitCount',
-      //           component: () => import('@/views/upload/image/limitCount/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'limitSize',
-      //           name: 'ComponentUploadImageLimitSize',
-      //           component: () => import('@/views/upload/image/limitSize/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'removeMethod',
-      //           name: 'ComponentUploadImageRemoveMethod',
-      //           component: () => import('@/views/upload/image/removeMethod/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'beforeRemoveMethod',
-      //           name: 'ComponentUploadImageBeforeRemoveMethod',
-      //           component: () => import('@/views/upload/image/beforeRemoveMethod/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'showUploadButton',
-      //           name: 'ComponentUploadImageShowUploadButton',
-      //           component: () => import('@/views/upload/image/showUploadButton/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'autoHidden',
-      //           name: 'ComponentUploadImageAutoHidden',
-      //           component: () => import('@/views/upload/image/autoHidden/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'moreBtn',
-      //           name: 'ComponentUploadImageMoreBtn',
-      //           component: () => import('@/views/upload/image/moreBtn/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'showError',
-      //           name: 'ComponentUploadImageShowError',
-      //           component: () => import('@/views/upload/image/showError/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'corner',
-      //           name: 'ComponentUploadImageCorner',
-      //           component: () => import('@/views/upload/image/corner/CodeExample.vue')
-      //         }
-      //       ]
-      //     }
-      //   ]
-      // },
+      {
+        path: 'upload',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'global',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'readFile',
+                name: 'ComponentUploadGlobalReadFile',
+                component: () => import('@/views/upload/global/readFile/CodeExample.vue')
+              },
+              {
+                path: 'saveFile',
+                name: 'ComponentUploadGlobalSaveFile',
+                component: () => import('@/views/upload/global/saveFile/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'file',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'size',
+                name: 'ComponentUploadFileSize',
+                component: () => import('@/views/upload/file/size/CodeExample.vue')
+              },
+              {
+                path: 'base',
+                name: 'ComponentUploadFileBase',
+                component: () => import('@/views/upload/file/base/CodeExample.vue')
+              },
+              {
+                path: 'readonly',
+                name: 'ComponentUploadFileReadonly',
+                component: () => import('@/views/upload/file/readonly/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentUploadFileDisabled',
+                component: () => import('@/views/upload/file/disabled/CodeExample.vue')
+              },
+              {
+                path: 'multiple',
+                name: 'ComponentUploadFileMultiple',
+                component: () => import('@/views/upload/file/multiple/CodeExample.vue')
+              },
+              {
+                path: 'downloadMethod',
+                name: 'ComponentUploadFileDownloadMethod',
+                component: () => import('@/views/upload/file/downloadMethod/CodeExample.vue')
+              },
+              {
+                path: 'beforeDownloadMethod',
+                name: 'ComponentUploadFileBeforeDownloadMethod',
+                component: () => import('@/views/upload/file/beforeDownloadMethod/CodeExample.vue')
+              },
+              {
+                path: 'singleMode',
+                name: 'ComponentUploadFileSingleMode',
+                component: () => import('@/views/upload/file/singleMode/CodeExample.vue')
+              },
+              {
+                path: 'urlMode',
+                name: 'ComponentUploadFileUrlMode',
+                component: () => import('@/views/upload/file/urlMode/CodeExample.vue')
+              },
+              {
+                path: 'tip',
+                name: 'ComponentUploadFileTip',
+                component: () => import('@/views/upload/file/tip/CodeExample.vue')
+              },
+              {
+                path: 'progress',
+                name: 'ComponentUploadFileProgress',
+                component: () => import('@/views/upload/file/progress/CodeExample.vue')
+              },
+              {
+                path: 'types',
+                name: 'ComponentUploadFileTypes',
+                component: () => import('@/views/upload/file/types/CodeExample.vue')
+              },
+              {
+                path: 'limitCount',
+                name: 'ComponentUploadFileLimitCount',
+                component: () => import('@/views/upload/file/limitCount/CodeExample.vue')
+              },
+              {
+                path: 'limitSize',
+                name: 'ComponentUploadFileLimitSize',
+                component: () => import('@/views/upload/file/limitSize/CodeExample.vue')
+              },
+              {
+                path: 'removeMethod',
+                name: 'ComponentUploadFileRemoveMethod',
+                component: () => import('@/views/upload/file/removeMethod/CodeExample.vue')
+              },
+              {
+                path: 'beforeRemoveMethod',
+                name: 'ComponentUploadFileBeforeRemoveMethod',
+                component: () => import('@/views/upload/file/beforeRemoveMethod/CodeExample.vue')
+              },
+              {
+                path: 'showUploadButton',
+                name: 'ComponentUploadFileShowUploadButton',
+                component: () => import('@/views/upload/file/showUploadButton/CodeExample.vue')
+              },
+              {
+                path: 'autoHidden',
+                name: 'ComponentUploadFileAutoHidden',
+                component: () => import('@/views/upload/file/autoHidden/CodeExample.vue')
+              },
+              {
+                path: 'moreBtn',
+                name: 'ComponentUploadFileMoreBtn',
+                component: () => import('@/views/upload/file/moreBtn/CodeExample.vue')
+              },
+              {
+                path: 'showError',
+                name: 'ComponentUploadFileShowError',
+                component: () => import('@/views/upload/file/showError/CodeExample.vue')
+              },
+              {
+                path: 'corner',
+                name: 'ComponentUploadFileCorner',
+                component: () => import('@/views/upload/file/corner/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'image',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'size',
+                name: 'ComponentUploadImageSize',
+                component: () => import('@/views/upload/image/size/CodeExample.vue')
+              },
+              {
+                path: 'base',
+                name: 'ComponentUploadImageBase',
+                component: () => import('@/views/upload/image/base/CodeExample.vue')
+              },
+              {
+                path: 'imgStyle',
+                name: 'ComponentUploadImageImgStyle',
+                component: () => import('@/views/upload/image/imgStyle/CodeExample.vue')
+              },
+              {
+                path: 'readonly',
+                name: 'ComponentUploadImageReadonly',
+                component: () => import('@/views/upload/image/readonly/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentUploadImageDisabled',
+                component: () => import('@/views/upload/image/disabled/CodeExample.vue')
+              },
+              {
+                path: 'multiple',
+                name: 'ComponentUploadImageMultiple',
+                component: () => import('@/views/upload/image/multiple/CodeExample.vue')
+              },
+              {
+                path: 'downloadMethod',
+                name: 'ComponentUploadImageDownloadMethod',
+                component: () => import('@/views/upload/image/downloadMethod/CodeExample.vue')
+              },
+              {
+                path: 'beforeDownloadMethod',
+                name: 'ComponentUploadImageBeforeDownloadMethod',
+                component: () => import('@/views/upload/image/beforeDownloadMethod/CodeExample.vue')
+              },
+              {
+                path: 'singleMode',
+                name: 'ComponentUploadImageSingleMode',
+                component: () => import('@/views/upload/image/singleMode/CodeExample.vue')
+              },
+              {
+                path: 'urlMode',
+                name: 'ComponentUploadImageUrlMode',
+                component: () => import('@/views/upload/image/urlMode/CodeExample.vue')
+              },
+              {
+                path: 'thumbnailUrl',
+                name: 'ComponentUploadImageThumbnailUrl',
+                component: () => import('@/views/upload/image/thumbnailUrl/CodeExample.vue')
+              },
+              {
+                path: 'tip',
+                name: 'ComponentUploadImageTip',
+                component: () => import('@/views/upload/image/tip/CodeExample.vue')
+              },
+              {
+                path: 'progress',
+                name: 'ComponentUploadImageProgress',
+                component: () => import('@/views/upload/image/progress/CodeExample.vue')
+              },
+              {
+                path: 'types',
+                name: 'ComponentUploadImageTypes',
+                component: () => import('@/views/upload/image/types/CodeExample.vue')
+              },
+              {
+                path: 'limitCount',
+                name: 'ComponentUploadImageLimitCount',
+                component: () => import('@/views/upload/image/limitCount/CodeExample.vue')
+              },
+              {
+                path: 'limitSize',
+                name: 'ComponentUploadImageLimitSize',
+                component: () => import('@/views/upload/image/limitSize/CodeExample.vue')
+              },
+              {
+                path: 'removeMethod',
+                name: 'ComponentUploadImageRemoveMethod',
+                component: () => import('@/views/upload/image/removeMethod/CodeExample.vue')
+              },
+              {
+                path: 'beforeRemoveMethod',
+                name: 'ComponentUploadImageBeforeRemoveMethod',
+                component: () => import('@/views/upload/image/beforeRemoveMethod/CodeExample.vue')
+              },
+              {
+                path: 'showUploadButton',
+                name: 'ComponentUploadImageShowUploadButton',
+                component: () => import('@/views/upload/image/showUploadButton/CodeExample.vue')
+              },
+              {
+                path: 'autoHidden',
+                name: 'ComponentUploadImageAutoHidden',
+                component: () => import('@/views/upload/image/autoHidden/CodeExample.vue')
+              },
+              {
+                path: 'moreBtn',
+                name: 'ComponentUploadImageMoreBtn',
+                component: () => import('@/views/upload/image/moreBtn/CodeExample.vue')
+              },
+              {
+                path: 'showError',
+                name: 'ComponentUploadImageShowError',
+                component: () => import('@/views/upload/image/showError/CodeExample.vue')
+              },
+              {
+                path: 'corner',
+                name: 'ComponentUploadImageCorner',
+                component: () => import('@/views/upload/image/corner/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
       tableRouteConfig,
       gridRouteConfig
     ]
