@@ -4770,464 +4770,464 @@ const routes: Array<RouteConfig> = [
       //     }
       //   ]
       // },
-      // {
-      //   path: 'form',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'basics',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'base',
-      //           name: 'ComponentFormBasicsBase',
-      //           component: () => import('@/views/form/basics/base/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'size',
-      //           name: 'ComponentFormBasicsSize',
-      //           component: () => import('@/views/form/basics/size/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'field',
-      //           name: 'ComponentFormBasicsField',
-      //           component: () => import('@/views/form/basics/field/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'colon',
-      //           name: 'ComponentFormBasicsColon',
-      //           component: () => import('@/views/form/basics/colon/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'padding',
-      //           name: 'ComponentFormBasicsPadding',
-      //           component: () => import('@/views/form/basics/padding/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'bold',
-      //           name: 'ComponentFormBasicsBold',
-      //           component: () => import('@/views/form/basics/bold/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'align',
-      //           name: 'ComponentFormBasicsAlign',
-      //           component: () => import('@/views/form/basics/align/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'titlePrefix',
-      //           name: 'ComponentFormBasicsTitlePrefix',
-      //           component: () => import('@/views/form/basics/titlePrefix/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'titleSuffix',
-      //           name: 'ComponentFormBasicsTitleSuffix',
-      //           component: () => import('@/views/form/basics/titleSuffix/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'width',
-      //           name: 'ComponentFormBasicsWidth',
-      //           component: () => import('@/views/form/basics/width/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'overflow',
-      //           name: 'ComponentFormBasicsOverflow',
-      //           component: () => import('@/views/form/basics/overflow/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'gather',
-      //           name: 'ComponentFormBasicsGather',
-      //           component: () => import('@/views/form/basics/gather/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'customLayout',
-      //           name: 'ComponentFormBasicsCustomLayout',
-      //           component: () => import('@/views/form/basics/customLayout/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'horizontal',
-      //           name: 'ComponentFormBasicsHorizontal',
-      //           component: () => import('@/views/form/basics/horizontal/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'vertical',
-      //           name: 'ComponentFormBasicsVertical',
-      //           component: () => import('@/views/form/basics/vertical/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'collapse',
-      //           name: 'ComponentFormBasicsCollapse',
-      //           component: () => import('@/views/form/basics/collapse/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'valid',
-      //           name: 'ComponentFormBasicsValid',
-      //           component: () => import('@/views/form/basics/valid/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'itemRender',
-      //           component: RouteLayout,
-      //           children: [
-      //             {
-      //               path: 'input',
-      //               name: 'ComponentFormBasicsItemRenderInput',
-      //               component: () => import('@/views/form/basics/itemRender/input/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'textarea',
-      //               name: 'ComponentFormBasicsItemRenderTextarea',
-      //               component: () => import('@/views/form/basics/itemRender/textarea/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'select',
-      //               name: 'ComponentFormBasicsItemRenderSelect',
-      //               component: () => import('@/views/form/basics/itemRender/select/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-input',
-      //               name: 'ComponentFormBasicsItemRenderVxeInput',
-      //               component: () => import('@/views/form/basics/itemRender/vxe-input/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-number-input',
-      //               name: 'ComponentFormBasicsItemRenderVxeNumberInput',
-      //               component: () => import('@/views/form/basics/itemRender/number-input/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-textarea',
-      //               name: 'ComponentFormBasicsItemRenderVxeTextarea',
-      //               component: () => import('@/views/form/basics/itemRender/vxe-textarea/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-select',
-      //               name: 'ComponentFormBasicsItemRenderVxeSelect',
-      //               component: () => import('@/views/form/basics/itemRender/vxe-select/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-date-picker',
-      //               name: 'ComponentFormBasicsItemRenderVxeDatePicker',
-      //               component: () => import('@/views/form/basics/itemRender/vxe-date-picker/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-tree-select',
-      //               name: 'ComponentFormBasicsItemRenderVxeTreeSelect',
-      //               component: () => import('@/views/form/basics/itemRender/vxe-tree-select/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-switch',
-      //               name: 'ComponentFormBasicsItemRenderVxeSwitch',
-      //               component: () => import('@/views/form/basics/itemRender/vxe-switch/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-radio-group',
-      //               name: 'ComponentFormBasicsItemRenderVxeRadioGroup',
-      //               component: () => import('@/views/form/basics/itemRender/vxe-radio-group/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-checkbox-group',
-      //               name: 'ComponentFormBasicsItemRenderVxeCheckboxGroup',
-      //               component: () => import('@/views/form/basics/itemRender/vxe-checkbox-group/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-upload',
-      //               name: 'ComponentFormBasicsItemRenderVxeUpload',
-      //               component: () => import('@/views/form/basics/itemRender/vxe-upload/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'readonly',
-      //               name: 'ComponentFormBasicsItemRenderReadonly',
-      //               component: () => import('@/views/form/basics/itemRender/readonly/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'disabled',
-      //               name: 'ComponentFormBasicsItemRenderDisabled',
-      //               component: () => import('@/views/form/basics/itemRender/disabled/CodeExample.vue')
-      //             }
-      //           ]
-      //         },
-      //         {
-      //           path: 'itemTemplate',
-      //           component: RouteLayout,
-      //           children: [
-      //             {
-      //               path: 'vxe-input',
-      //               name: 'ComponentFormBasicsItemTemplateVxeInput',
-      //               component: () => import('@/views/form/basics/itemTemplate/vxe-input/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-number-input',
-      //               name: 'ComponentFormBasicsItemTemplateVxeNumberInput',
-      //               component: () => import('@/views/form/basics/itemTemplate/vxe-number-input/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-select',
-      //               name: 'ComponentFormBasicsItemTemplateVxeSelect',
-      //               component: () => import('@/views/form/basics/itemTemplate/vxe-select/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-date-picker',
-      //               name: 'ComponentFormBasicsItemTemplateVxeDatePicker',
-      //               component: () => import('@/views/form/basics/itemTemplate/vxe-date-picker/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-tree-select',
-      //               name: 'ComponentFormBasicsItemTemplateVxeTreeSelect',
-      //               component: () => import('@/views/form/basics/itemTemplate/vxe-tree-select/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-switch',
-      //               name: 'ComponentFormBasicsItemTemplateVxeSwitch',
-      //               component: () => import('@/views/form/basics/itemTemplate/vxe-switch/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-radio-group',
-      //               name: 'ComponentFormBasicsItemTemplateVxeRadioGroup',
-      //               component: () => import('@/views/form/basics/itemTemplate/vxe-radio-group/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-checkbox-group',
-      //               name: 'ComponentFormBasicsItemTemplateVxeCheckboxGroup',
-      //               component: () => import('@/views/form/basics/itemTemplate/vxe-checkbox-group/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-upload',
-      //               name: 'ComponentFormBasicsItemTemplateVxeUpload',
-      //               component: () => import('@/views/form/basics/itemTemplate/vxe-upload/CodeExample.vue')
-      //             }
-      //           ]
-      //         },
-      //         {
-      //           path: 'template',
-      //           component: RouteLayout,
-      //           children: [
-      //             {
-      //               path: 'title',
-      //               name: 'ComponentFormBasicsTemplateTitle',
-      //               component: () => import('@/views/form/basics/template/title/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'extra',
-      //               name: 'ComponentFormBasicsTemplateExtra',
-      //               component: () => import('@/views/form/basics/template/extra/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'content',
-      //               name: 'ComponentFormBasicsTemplateContent',
-      //               component: () => import('@/views/form/basics/template/content/CodeExample.vue')
-      //             }
-      //           ]
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       path: 'config',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'base',
-      //           name: 'ComponentFormConfigBase',
-      //           component: () => import('@/views/form/config/base/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'field',
-      //           name: 'ComponentFormConfigField',
-      //           component: () => import('@/views/form/config/field/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'padding',
-      //           name: 'ComponentFormConfigPadding',
-      //           component: () => import('@/views/form/config/padding/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'colon',
-      //           name: 'ComponentFormConfigColon',
-      //           component: () => import('@/views/form/config/colon/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'bold',
-      //           name: 'ComponentFormConfigBold',
-      //           component: () => import('@/views/form/config/bold/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'tooltip',
-      //           name: 'ComponentFormConfigTooltip',
-      //           component: () => import('@/views/form/config/tooltip/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'gather',
-      //           name: 'ComponentFormConfigGather',
-      //           component: () => import('@/views/form/config/gather/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'horizontal',
-      //           name: 'ComponentFormConfigHorizontal',
-      //           component: () => import('@/views/form/config/horizontal/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'vertical',
-      //           name: 'ComponentFormConfigVertical',
-      //           component: () => import('@/views/form/config/vertical/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'collapse',
-      //           name: 'ComponentFormConfigCollapse',
-      //           component: () => import('@/views/form/config/collapse/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'valid',
-      //           name: 'ComponentFormConfigValid',
-      //           component: () => import('@/views/form/config/valid/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'itemRender',
-      //           component: RouteLayout,
-      //           children: [
-      //             {
-      //               path: 'input',
-      //               name: 'ComponentFormConfigItemRenderInput',
-      //               component: () => import('@/views/form/config/itemRender/input/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'textarea',
-      //               name: 'ComponentFormConfigItemRenderTextarea',
-      //               component: () => import('@/views/form/config/itemRender/textarea/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'select',
-      //               name: 'ComponentFormConfigItemRenderSelect',
-      //               component: () => import('@/views/form/config/itemRender/select/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-button-group',
-      //               name: 'ComponentFormConfigItemRenderVxeButtonGroup',
-      //               component: () => import('@/views/form/config/itemRender/vxe-button-group/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-input',
-      //               name: 'ComponentFormConfigItemRenderVxeInput',
-      //               component: () => import('@/views/form/config/itemRender/vxe-input/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-textarea',
-      //               name: 'ComponentFormConfigItemRenderVxeTextarea',
-      //               component: () => import('@/views/form/config/itemRender/vxe-textarea/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-number-input',
-      //               name: 'ComponentFormConfigItemRenderVxeNumberInput',
-      //               component: () => import('@/views/form/config/itemRender/vxe-number-input/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-select',
-      //               name: 'ComponentFormConfigItemRenderVxeSelect',
-      //               component: () => import('@/views/form/config/itemRender/vxe-select/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-date-picker',
-      //               name: 'ComponentFormConfigItemRenderVxeDatePicker',
-      //               component: () => import('@/views/form/config/itemRender/vxe-date-picker/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-tree-select',
-      //               name: 'ComponentFormConfigItemRenderVxeTreeSelect',
-      //               component: () => import('@/views/form/config/itemRender/vxe-tree-select/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-switch',
-      //               name: 'ComponentFormConfigItemRenderVxeSwitch',
-      //               component: () => import('@/views/form/config/itemRender/vxe-switch/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-radio-group',
-      //               name: 'ComponentFormConfigItemRenderVxeRadioGroup',
-      //               component: () => import('@/views/form/config/itemRender/vxe-radio-group/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-checkbox-group',
-      //               name: 'ComponentFormConfigItemRenderVxeCheckboxGroup',
-      //               component: () => import('@/views/form/config/itemRender/vxe-checkbox-group/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-image',
-      //               name: 'ComponentFormConfigItemRenderVxeImage',
-      //               component: () => import('@/views/form/config/itemRender/vxe-image/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-image-group',
-      //               name: 'ComponentFormConfigItemRenderVxeImageGroup',
-      //               component: () => import('@/views/form/config/itemRender/vxe-image-group/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-upload',
-      //               name: 'ComponentFormConfigItemRenderVxeUpload',
-      //               component: () => import('@/views/form/config/itemRender/vxe-upload/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'readonly',
-      //               name: 'ComponentFormConfigItemRenderReadonly',
-      //               component: () => import('@/views/form/config/itemRender/readonly/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'disabled',
-      //               name: 'ComponentFormConfigItemRenderDisabled',
-      //               component: () => import('@/views/form/config/itemRender/disabled/CodeExample.vue')
-      //             }
-      //           ]
-      //         },
-      //         {
-      //           path: 'itemTemplate',
-      //           component: RouteLayout,
-      //           children: [
-      //             {
-      //               path: 'vxe-input',
-      //               name: 'ComponentFormConfigItemTemplateVxeInput',
-      //               component: () => import('@/views/form/config/itemTemplate/vxe-input/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-number-input',
-      //               name: 'ComponentFormConfigItemTemplateVxeNumberInput',
-      //               component: () => import('@/views/form/config/itemTemplate/vxe-number-input/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-select',
-      //               name: 'ComponentFormConfigItemTemplateVxeSelect',
-      //               component: () => import('@/views/form/config/itemTemplate/vxe-select/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-date-picker',
-      //               name: 'ComponentFormConfigItemTemplateVxeDatePicker',
-      //               component: () => import('@/views/form/config/itemTemplate/vxe-date-picker/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-tree-select',
-      //               name: 'ComponentFormConfigItemTemplateVxeTreeSelect',
-      //               component: () => import('@/views/form/config/itemTemplate/vxe-tree-select/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-switch',
-      //               name: 'ComponentFormConfigItemTemplateVxeSwitch',
-      //               component: () => import('@/views/form/config/itemTemplate/vxe-switch/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-radio-group',
-      //               name: 'ComponentFormConfigItemTemplateVxeRadioGroup',
-      //               component: () => import('@/views/form/config/itemTemplate/vxe-radio-group/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-checkbox-group',
-      //               name: 'ComponentFormConfigItemTemplateVxeCheckboxGroup',
-      //               component: () => import('@/views/form/config/itemTemplate/vxe-checkbox-group/CodeExample.vue')
-      //             },
-      //             {
-      //               path: 'vxe-upload',
-      //               name: 'ComponentFormConfigItemTemplateVxeUpload',
-      //               component: () => import('@/views/form/config/itemTemplate/vxe-upload/CodeExample.vue')
-      //             }
-      //           ]
-      //         }
-      //       ]
-      //     }
-      //   ]
-      // },
+      {
+        path: 'form',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'basics',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentFormBasicsBase',
+                component: () => import('@/views/form/basics/base/CodeExample.vue')
+              },
+              {
+                path: 'size',
+                name: 'ComponentFormBasicsSize',
+                component: () => import('@/views/form/basics/size/CodeExample.vue')
+              },
+              {
+                path: 'field',
+                name: 'ComponentFormBasicsField',
+                component: () => import('@/views/form/basics/field/CodeExample.vue')
+              },
+              {
+                path: 'colon',
+                name: 'ComponentFormBasicsColon',
+                component: () => import('@/views/form/basics/colon/CodeExample.vue')
+              },
+              {
+                path: 'padding',
+                name: 'ComponentFormBasicsPadding',
+                component: () => import('@/views/form/basics/padding/CodeExample.vue')
+              },
+              {
+                path: 'bold',
+                name: 'ComponentFormBasicsBold',
+                component: () => import('@/views/form/basics/bold/CodeExample.vue')
+              },
+              {
+                path: 'align',
+                name: 'ComponentFormBasicsAlign',
+                component: () => import('@/views/form/basics/align/CodeExample.vue')
+              },
+              {
+                path: 'titlePrefix',
+                name: 'ComponentFormBasicsTitlePrefix',
+                component: () => import('@/views/form/basics/titlePrefix/CodeExample.vue')
+              },
+              {
+                path: 'titleSuffix',
+                name: 'ComponentFormBasicsTitleSuffix',
+                component: () => import('@/views/form/basics/titleSuffix/CodeExample.vue')
+              },
+              {
+                path: 'width',
+                name: 'ComponentFormBasicsWidth',
+                component: () => import('@/views/form/basics/width/CodeExample.vue')
+              },
+              {
+                path: 'overflow',
+                name: 'ComponentFormBasicsOverflow',
+                component: () => import('@/views/form/basics/overflow/CodeExample.vue')
+              },
+              {
+                path: 'gather',
+                name: 'ComponentFormBasicsGather',
+                component: () => import('@/views/form/basics/gather/CodeExample.vue')
+              },
+              {
+                path: 'customLayout',
+                name: 'ComponentFormBasicsCustomLayout',
+                component: () => import('@/views/form/basics/customLayout/CodeExample.vue')
+              },
+              {
+                path: 'horizontal',
+                name: 'ComponentFormBasicsHorizontal',
+                component: () => import('@/views/form/basics/horizontal/CodeExample.vue')
+              },
+              {
+                path: 'vertical',
+                name: 'ComponentFormBasicsVertical',
+                component: () => import('@/views/form/basics/vertical/CodeExample.vue')
+              },
+              {
+                path: 'collapse',
+                name: 'ComponentFormBasicsCollapse',
+                component: () => import('@/views/form/basics/collapse/CodeExample.vue')
+              },
+              {
+                path: 'valid',
+                name: 'ComponentFormBasicsValid',
+                component: () => import('@/views/form/basics/valid/CodeExample.vue')
+              },
+              {
+                path: 'itemRender',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'input',
+                    name: 'ComponentFormBasicsItemRenderInput',
+                    component: () => import('@/views/form/basics/itemRender/input/CodeExample.vue')
+                  },
+                  {
+                    path: 'textarea',
+                    name: 'ComponentFormBasicsItemRenderTextarea',
+                    component: () => import('@/views/form/basics/itemRender/textarea/CodeExample.vue')
+                  },
+                  {
+                    path: 'select',
+                    name: 'ComponentFormBasicsItemRenderSelect',
+                    component: () => import('@/views/form/basics/itemRender/select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-input',
+                    name: 'ComponentFormBasicsItemRenderVxeInput',
+                    component: () => import('@/views/form/basics/itemRender/vxe-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-number-input',
+                    name: 'ComponentFormBasicsItemRenderVxeNumberInput',
+                    component: () => import('@/views/form/basics/itemRender/number-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-textarea',
+                    name: 'ComponentFormBasicsItemRenderVxeTextarea',
+                    component: () => import('@/views/form/basics/itemRender/vxe-textarea/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-select',
+                    name: 'ComponentFormBasicsItemRenderVxeSelect',
+                    component: () => import('@/views/form/basics/itemRender/vxe-select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-date-picker',
+                    name: 'ComponentFormBasicsItemRenderVxeDatePicker',
+                    component: () => import('@/views/form/basics/itemRender/vxe-date-picker/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-tree-select',
+                    name: 'ComponentFormBasicsItemRenderVxeTreeSelect',
+                    component: () => import('@/views/form/basics/itemRender/vxe-tree-select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-switch',
+                    name: 'ComponentFormBasicsItemRenderVxeSwitch',
+                    component: () => import('@/views/form/basics/itemRender/vxe-switch/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-radio-group',
+                    name: 'ComponentFormBasicsItemRenderVxeRadioGroup',
+                    component: () => import('@/views/form/basics/itemRender/vxe-radio-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-checkbox-group',
+                    name: 'ComponentFormBasicsItemRenderVxeCheckboxGroup',
+                    component: () => import('@/views/form/basics/itemRender/vxe-checkbox-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-upload',
+                    name: 'ComponentFormBasicsItemRenderVxeUpload',
+                    component: () => import('@/views/form/basics/itemRender/vxe-upload/CodeExample.vue')
+                  },
+                  {
+                    path: 'readonly',
+                    name: 'ComponentFormBasicsItemRenderReadonly',
+                    component: () => import('@/views/form/basics/itemRender/readonly/CodeExample.vue')
+                  },
+                  {
+                    path: 'disabled',
+                    name: 'ComponentFormBasicsItemRenderDisabled',
+                    component: () => import('@/views/form/basics/itemRender/disabled/CodeExample.vue')
+                  }
+                ]
+              },
+              {
+                path: 'itemTemplate',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'vxe-input',
+                    name: 'ComponentFormBasicsItemTemplateVxeInput',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-number-input',
+                    name: 'ComponentFormBasicsItemTemplateVxeNumberInput',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-number-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-select',
+                    name: 'ComponentFormBasicsItemTemplateVxeSelect',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-date-picker',
+                    name: 'ComponentFormBasicsItemTemplateVxeDatePicker',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-date-picker/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-tree-select',
+                    name: 'ComponentFormBasicsItemTemplateVxeTreeSelect',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-tree-select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-switch',
+                    name: 'ComponentFormBasicsItemTemplateVxeSwitch',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-switch/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-radio-group',
+                    name: 'ComponentFormBasicsItemTemplateVxeRadioGroup',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-radio-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-checkbox-group',
+                    name: 'ComponentFormBasicsItemTemplateVxeCheckboxGroup',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-checkbox-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-upload',
+                    name: 'ComponentFormBasicsItemTemplateVxeUpload',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-upload/CodeExample.vue')
+                  }
+                ]
+              },
+              {
+                path: 'template',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'title',
+                    name: 'ComponentFormBasicsTemplateTitle',
+                    component: () => import('@/views/form/basics/template/title/CodeExample.vue')
+                  },
+                  {
+                    path: 'extra',
+                    name: 'ComponentFormBasicsTemplateExtra',
+                    component: () => import('@/views/form/basics/template/extra/CodeExample.vue')
+                  },
+                  {
+                    path: 'content',
+                    name: 'ComponentFormBasicsTemplateContent',
+                    component: () => import('@/views/form/basics/template/content/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            path: 'config',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentFormConfigBase',
+                component: () => import('@/views/form/config/base/CodeExample.vue')
+              },
+              {
+                path: 'field',
+                name: 'ComponentFormConfigField',
+                component: () => import('@/views/form/config/field/CodeExample.vue')
+              },
+              {
+                path: 'padding',
+                name: 'ComponentFormConfigPadding',
+                component: () => import('@/views/form/config/padding/CodeExample.vue')
+              },
+              {
+                path: 'colon',
+                name: 'ComponentFormConfigColon',
+                component: () => import('@/views/form/config/colon/CodeExample.vue')
+              },
+              {
+                path: 'bold',
+                name: 'ComponentFormConfigBold',
+                component: () => import('@/views/form/config/bold/CodeExample.vue')
+              },
+              {
+                path: 'tooltip',
+                name: 'ComponentFormConfigTooltip',
+                component: () => import('@/views/form/config/tooltip/CodeExample.vue')
+              },
+              {
+                path: 'gather',
+                name: 'ComponentFormConfigGather',
+                component: () => import('@/views/form/config/gather/CodeExample.vue')
+              },
+              {
+                path: 'horizontal',
+                name: 'ComponentFormConfigHorizontal',
+                component: () => import('@/views/form/config/horizontal/CodeExample.vue')
+              },
+              {
+                path: 'vertical',
+                name: 'ComponentFormConfigVertical',
+                component: () => import('@/views/form/config/vertical/CodeExample.vue')
+              },
+              {
+                path: 'collapse',
+                name: 'ComponentFormConfigCollapse',
+                component: () => import('@/views/form/config/collapse/CodeExample.vue')
+              },
+              {
+                path: 'valid',
+                name: 'ComponentFormConfigValid',
+                component: () => import('@/views/form/config/valid/CodeExample.vue')
+              },
+              {
+                path: 'itemRender',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'input',
+                    name: 'ComponentFormConfigItemRenderInput',
+                    component: () => import('@/views/form/config/itemRender/input/CodeExample.vue')
+                  },
+                  {
+                    path: 'textarea',
+                    name: 'ComponentFormConfigItemRenderTextarea',
+                    component: () => import('@/views/form/config/itemRender/textarea/CodeExample.vue')
+                  },
+                  {
+                    path: 'select',
+                    name: 'ComponentFormConfigItemRenderSelect',
+                    component: () => import('@/views/form/config/itemRender/select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-button-group',
+                    name: 'ComponentFormConfigItemRenderVxeButtonGroup',
+                    component: () => import('@/views/form/config/itemRender/vxe-button-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-input',
+                    name: 'ComponentFormConfigItemRenderVxeInput',
+                    component: () => import('@/views/form/config/itemRender/vxe-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-textarea',
+                    name: 'ComponentFormConfigItemRenderVxeTextarea',
+                    component: () => import('@/views/form/config/itemRender/vxe-textarea/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-number-input',
+                    name: 'ComponentFormConfigItemRenderVxeNumberInput',
+                    component: () => import('@/views/form/config/itemRender/vxe-number-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-select',
+                    name: 'ComponentFormConfigItemRenderVxeSelect',
+                    component: () => import('@/views/form/config/itemRender/vxe-select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-date-picker',
+                    name: 'ComponentFormConfigItemRenderVxeDatePicker',
+                    component: () => import('@/views/form/config/itemRender/vxe-date-picker/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-tree-select',
+                    name: 'ComponentFormConfigItemRenderVxeTreeSelect',
+                    component: () => import('@/views/form/config/itemRender/vxe-tree-select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-switch',
+                    name: 'ComponentFormConfigItemRenderVxeSwitch',
+                    component: () => import('@/views/form/config/itemRender/vxe-switch/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-radio-group',
+                    name: 'ComponentFormConfigItemRenderVxeRadioGroup',
+                    component: () => import('@/views/form/config/itemRender/vxe-radio-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-checkbox-group',
+                    name: 'ComponentFormConfigItemRenderVxeCheckboxGroup',
+                    component: () => import('@/views/form/config/itemRender/vxe-checkbox-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-image',
+                    name: 'ComponentFormConfigItemRenderVxeImage',
+                    component: () => import('@/views/form/config/itemRender/vxe-image/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-image-group',
+                    name: 'ComponentFormConfigItemRenderVxeImageGroup',
+                    component: () => import('@/views/form/config/itemRender/vxe-image-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-upload',
+                    name: 'ComponentFormConfigItemRenderVxeUpload',
+                    component: () => import('@/views/form/config/itemRender/vxe-upload/CodeExample.vue')
+                  },
+                  {
+                    path: 'readonly',
+                    name: 'ComponentFormConfigItemRenderReadonly',
+                    component: () => import('@/views/form/config/itemRender/readonly/CodeExample.vue')
+                  },
+                  {
+                    path: 'disabled',
+                    name: 'ComponentFormConfigItemRenderDisabled',
+                    component: () => import('@/views/form/config/itemRender/disabled/CodeExample.vue')
+                  }
+                ]
+              },
+              {
+                path: 'itemTemplate',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'vxe-input',
+                    name: 'ComponentFormConfigItemTemplateVxeInput',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-number-input',
+                    name: 'ComponentFormConfigItemTemplateVxeNumberInput',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-number-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-select',
+                    name: 'ComponentFormConfigItemTemplateVxeSelect',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-date-picker',
+                    name: 'ComponentFormConfigItemTemplateVxeDatePicker',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-date-picker/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-tree-select',
+                    name: 'ComponentFormConfigItemTemplateVxeTreeSelect',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-tree-select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-switch',
+                    name: 'ComponentFormConfigItemTemplateVxeSwitch',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-switch/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-radio-group',
+                    name: 'ComponentFormConfigItemTemplateVxeRadioGroup',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-radio-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-checkbox-group',
+                    name: 'ComponentFormConfigItemTemplateVxeCheckboxGroup',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-checkbox-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-upload',
+                    name: 'ComponentFormConfigItemTemplateVxeUpload',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-upload/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
       // {
       //   path: 'form-design',
       //   component: RouteLayout,

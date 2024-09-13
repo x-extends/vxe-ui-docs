@@ -1118,148 +1118,148 @@ export const navConfigList: NavVO[] = [
   {
     i18nKey: 'app.aside.menu.formTitle',
     children: [
-      { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form' } } }
+      { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form' } } },
+      {
+        i18nKey: 'app.aside.menu.formBaseTitle',
+        children: [
+          { title: '基础功能', routerLink: { name: 'ComponentFormBasicsBase' } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentFormBasicsSize' } },
+          { title: '数据类型', routerLink: { name: 'ComponentFormBasicsField' } },
+          { title: '横向排列', routerLink: { name: 'ComponentFormBasicsHorizontal' } },
+          { title: '上下布局', routerLink: { name: 'ComponentFormBasicsVertical' } },
+          { title: '边距', routerLink: { name: 'ComponentFormBasicsPadding' } },
+          { title: '标题冒号', routerLink: { name: 'ComponentFormBasicsColon' } },
+          { title: '标题加粗', routerLink: { name: 'ComponentFormBasicsBold' } },
+          { title: '标题宽度', routerLink: { name: 'ComponentFormBasicsWidth' } },
+          { title: '对齐方式', routerLink: { name: 'ComponentFormBasicsAlign' } },
+          { title: '溢出隐藏', routerLink: { name: 'ComponentFormBasicsOverflow' } },
+          { title: '标题前缀图标', routerLink: { name: 'ComponentFormBasicsTitlePrefix' } },
+          { title: '标题后缀图标', routerLink: { name: 'ComponentFormBasicsTitleSuffix' } },
+          { title: '分行/分列', routerLink: { name: 'ComponentFormBasicsGather' } },
+          { title: '自定义布局', routerLink: { name: 'ComponentFormBasicsCustomLayout' } },
+          { title: '折叠表单', routerLink: { name: 'ComponentFormBasicsCollapse' } },
+          { title: '表单校验', routerLink: { name: 'ComponentFormBasicsValid' } },
+          {
+            title: '渲染 - 配置式',
+            children: [
+              { title: 'input', routerLink: { name: 'ComponentFormBasicsItemRenderInput' } },
+              { title: 'textarea', routerLink: { name: 'ComponentFormBasicsItemRenderTextarea' } },
+              { title: 'select', routerLink: { name: 'ComponentFormBasicsItemRenderSelect' } },
+              { title: 'VxeInput', routerLink: { name: 'ComponentFormBasicsItemRenderVxeInput' } },
+              { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormBasicsItemRenderVxeNumberInput' } },
+              { title: 'VxeTextarea', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTextarea' } },
+              { title: 'VxeSelect', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSelect' } },
+              { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormBasicsItemRenderVxeDatePicker' } },
+              { title: 'VxeTreeSelect', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTreeSelect' } },
+              { title: 'VxeSwitch', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSwitch' } },
+              { title: 'VxeRadioGroup', routerLink: { name: 'ComponentFormBasicsItemRenderVxeRadioGroup' } },
+              { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentFormBasicsItemRenderVxeCheckboxGroup' } },
+              { title: 'VxeUpload', routerLink: { name: 'ComponentFormBasicsItemRenderVxeUpload' } },
+              { title: '只读模式', routerLink: { name: 'ComponentFormBasicsItemRenderReadonly' } },
+              { title: '禁用模式', routerLink: { name: 'ComponentFormBasicsItemRenderDisabled' } },
+              { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemTemplate/el-input` }
+            ]
+          },
+          {
+            title: '渲染 - 插槽式',
+            children: [
+              { title: 'VxeInput', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeInput' } },
+              { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeNumberInput' } },
+              { title: 'VxeSelect', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSelect' } },
+              { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDatePicker' } },
+              { title: 'VxeTreeSelect', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeTreeSelect' } },
+              { title: 'VxeSwitch', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSwitch' } },
+              { title: 'VxeRadioGroup', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeRadioGroup' } },
+              { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeCheckboxGroup' } },
+              { title: 'VxeUpload', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeUpload' } },
+              { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemTemplate/el-input` }
+            ]
+          },
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '自定义标题模板', routerLink: { name: 'ComponentFormBasicsTemplateTitle' } },
+              { title: '自定义标题右侧模板', routerLink: { name: 'ComponentFormBasicsTemplateExtra' } },
+              { title: '自定义内容模板', routerLink: { name: 'ComponentFormBasicsTemplateContent' } }
+            ]
+          }
+        ]
+      },
+      {
+        i18nKey: 'app.aside.menu.formConfigTitle',
+        children: [
+          { title: '基础功能', routerLink: { name: 'ComponentFormConfigBase' } },
+          { title: '数据类型', routerLink: { name: 'ComponentFormConfigField' } },
+          { title: '横向排列', routerLink: { name: 'ComponentFormConfigHorizontal' } },
+          { title: '上下布局', routerLink: { name: 'ComponentFormConfigVertical' } },
+          { title: '边距', routerLink: { name: 'ComponentFormConfigPadding' } },
+          { title: '标题冒号', routerLink: { name: 'ComponentFormConfigColon' } },
+          { title: '标题加粗', routerLink: { name: 'ComponentFormConfigBold' } },
+          { title: '文字提示', routerLink: { name: 'ComponentFormConfigTooltip' } },
+          { title: '分行/分列', routerLink: { name: 'ComponentFormConfigGather' } },
+          { title: '折叠表单', routerLink: { name: 'ComponentFormConfigCollapse' } },
+          { title: '表单校验', routerLink: { name: 'ComponentFormConfigValid' } },
+          {
+            title: '渲染 - 配置式',
+            children: [
+              { title: 'input', routerLink: { name: 'ComponentFormConfigItemRenderInput' } },
+              { title: 'textarea', routerLink: { name: 'ComponentFormConfigItemRenderTextarea' } },
+              { title: 'select', routerLink: { name: 'ComponentFormConfigItemRenderSelect' } },
+              { title: 'VxeInput', routerLink: { name: 'ComponentFormConfigItemRenderVxeInput' } },
+              { title: 'VxeButtonGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeButtonGroup' } },
+              { title: 'VxeTextarea', routerLink: { name: 'ComponentFormConfigItemRenderVxeTextarea' } },
+              { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormConfigItemRenderVxeNumberInput' } },
+              { title: 'VxeSelect', routerLink: { name: 'ComponentFormConfigItemRenderVxeSelect' } },
+              { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormConfigItemRenderVxeDatePicker' } },
+              { title: 'VxeTreeSelect', routerLink: { name: 'ComponentFormConfigItemRenderVxeTreeSelect' } },
+              { title: 'VxeSwitch', routerLink: { name: 'ComponentFormConfigItemRenderVxeSwitch' } },
+              { title: 'VxeRadioGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeRadioGroup' } },
+              { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeCheckboxGroup' } },
+              { title: 'VxeImage', routerLink: { name: 'ComponentFormConfigItemRenderVxeImage' } },
+              { title: 'VxeImageGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeImageGroup' } },
+              { title: 'VxeUpload', routerLink: { name: 'ComponentFormConfigItemRenderVxeUpload' } },
+              { title: '只读模式', routerLink: { name: 'ComponentFormConfigItemRenderReadonly' } },
+              { title: '禁用模式', routerLink: { name: 'ComponentFormConfigItemRenderDisabled' } },
+              { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemRender/el-input` }
+            ]
+          },
+          {
+            title: '渲染 - 插槽式',
+            children: [
+              { title: 'VxeInput', routerLink: { name: 'ComponentFormConfigItemTemplateVxeInput' } },
+              { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormConfigItemTemplateVxeNumberInput' } },
+              { title: 'VxeSelect', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSelect' } },
+              { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormConfigItemTemplateVxeDatePicker' } },
+              { title: 'VxeTreeSelect', routerLink: { name: 'ComponentFormConfigItemTemplateVxeTreeSelect' } },
+              { title: 'VxeSwitch', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSwitch' } },
+              { title: 'VxeRadioGroup', routerLink: { name: 'ComponentFormConfigItemTemplateVxeRadioGroup' } },
+              { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentFormConfigItemTemplateVxeCheckboxGroup' } },
+              { title: 'VxeUpload', routerLink: { name: 'ComponentFormConfigItemTemplateVxeUpload' } },
+              { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemRender/el-input` }
+            ]
+          }
+        ]
+      }
+      // {
+      //   i18nKey: 'app.aside.menu.formGlobalValidators',
+      //   children: [
+      //     { title: 'API', routerLink: { name: 'GlobalValidatorsFormAPI' } },
+      //     { title: '表单项校验', routerLink: { name: 'GlobalValidatorsFormBase' } }
+      //   ]
+      // },
+      // {
+      //   i18nKey: 'app.aside.menu.formGlobalRenderer',
+      //   children: [
+      //     { title: 'API', routerLink: { name: 'GlobalRendererFormAPI' } },
       //     {
-      //       i18nKey: 'app.aside.menu.formBaseTitle',
+      //       title: '表单项',
       //       children: [
-      //         { title: '基础功能', routerLink: { name: 'ComponentFormBasicsBase' } },
-      //         { title: '尺寸大小', routerLink: { name: 'ComponentFormBasicsSize' } },
-      //         { title: '数据类型', routerLink: { name: 'ComponentFormBasicsField' } },
-      //         { title: '横向排列', routerLink: { name: 'ComponentFormBasicsHorizontal' } },
-      //         { title: '上下布局', routerLink: { name: 'ComponentFormBasicsVertical' } },
-      //         { title: '边距', routerLink: { name: 'ComponentFormBasicsPadding' } },
-      //         { title: '标题冒号', routerLink: { name: 'ComponentFormBasicsColon' } },
-      //         { title: '标题加粗', routerLink: { name: 'ComponentFormBasicsBold' } },
-      //         { title: '标题宽度', routerLink: { name: 'ComponentFormBasicsWidth' } },
-      //         { title: '对齐方式', routerLink: { name: 'ComponentFormBasicsAlign' } },
-      //         { title: '溢出隐藏', routerLink: { name: 'ComponentFormBasicsOverflow' } },
-      //         { title: '标题前缀图标', routerLink: { name: 'ComponentFormBasicsTitlePrefix' } },
-      //         { title: '标题后缀图标', routerLink: { name: 'ComponentFormBasicsTitleSuffix' } },
-      //         { title: '分行/分列', routerLink: { name: 'ComponentFormBasicsGather' } },
-      //         { title: '自定义布局', routerLink: { name: 'ComponentFormBasicsCustomLayout' } },
-      //         { title: '折叠表单', routerLink: { name: 'ComponentFormBasicsCollapse' } },
-      //         { title: '表单校验', routerLink: { name: 'ComponentFormBasicsValid' } },
-      //         {
-      //           title: '渲染 - 配置式',
-      //           children: [
-      //             { title: 'input', routerLink: { name: 'ComponentFormBasicsItemRenderInput' } },
-      //             { title: 'textarea', routerLink: { name: 'ComponentFormBasicsItemRenderTextarea' } },
-      //             { title: 'select', routerLink: { name: 'ComponentFormBasicsItemRenderSelect' } },
-      //             { title: 'VxeInput', routerLink: { name: 'ComponentFormBasicsItemRenderVxeInput' } },
-      //             { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormBasicsItemRenderVxeNumberInput' } },
-      //             { title: 'VxeTextarea', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTextarea' } },
-      //             { title: 'VxeSelect', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSelect' } },
-      //             { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormBasicsItemRenderVxeDatePicker' } },
-      //             { title: 'VxeTreeSelect', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTreeSelect' } },
-      //             { title: 'VxeSwitch', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSwitch' } },
-      //             { title: 'VxeRadioGroup', routerLink: { name: 'ComponentFormBasicsItemRenderVxeRadioGroup' } },
-      //             { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentFormBasicsItemRenderVxeCheckboxGroup' } },
-      //             { title: 'VxeUpload', routerLink: { name: 'ComponentFormBasicsItemRenderVxeUpload' } },
-      //             { title: '只读模式', routerLink: { name: 'ComponentFormBasicsItemRenderReadonly' } },
-      //             { title: '禁用模式', routerLink: { name: 'ComponentFormBasicsItemRenderDisabled' } },
-      //             { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemTemplate/el-input` }
-      //           ]
-      //         },
-      //         {
-      //           title: '渲染 - 插槽式',
-      //           children: [
-      //             { title: 'VxeInput', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeInput' } },
-      //             { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeNumberInput' } },
-      //             { title: 'VxeSelect', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSelect' } },
-      //             { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDatePicker' } },
-      //             { title: 'VxeTreeSelect', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeTreeSelect' } },
-      //             { title: 'VxeSwitch', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSwitch' } },
-      //             { title: 'VxeRadioGroup', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeRadioGroup' } },
-      //             { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeCheckboxGroup' } },
-      //             { title: 'VxeUpload', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeUpload' } },
-      //             { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemTemplate/el-input` }
-      //           ]
-      //         },
-      //         {
-      //           title: '自定义插槽模板',
-      //           children: [
-      //             { title: '自定义标题模板', routerLink: { name: 'ComponentFormBasicsTemplateTitle' } },
-      //             { title: '自定义标题右侧模板', routerLink: { name: 'ComponentFormBasicsTemplateExtra' } },
-      //             { title: '自定义内容模板', routerLink: { name: 'ComponentFormBasicsTemplateContent' } }
-      //           ]
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       i18nKey: 'app.aside.menu.formConfigTitle',
-      //       children: [
-      //         { title: '基础功能', routerLink: { name: 'ComponentFormConfigBase' } },
-      //         { title: '数据类型', routerLink: { name: 'ComponentFormConfigField' } },
-      //         { title: '横向排列', routerLink: { name: 'ComponentFormConfigHorizontal' } },
-      //         { title: '上下布局', routerLink: { name: 'ComponentFormConfigVertical' } },
-      //         { title: '边距', routerLink: { name: 'ComponentFormConfigPadding' } },
-      //         { title: '标题冒号', routerLink: { name: 'ComponentFormConfigColon' } },
-      //         { title: '标题加粗', routerLink: { name: 'ComponentFormConfigBold' } },
-      //         { title: '文字提示', routerLink: { name: 'ComponentFormConfigTooltip' } },
-      //         { title: '分行/分列', routerLink: { name: 'ComponentFormConfigGather' } },
-      //         { title: '折叠表单', routerLink: { name: 'ComponentFormConfigCollapse' } },
-      //         { title: '表单校验', routerLink: { name: 'ComponentFormConfigValid' } },
-      //         {
-      //           title: '渲染 - 配置式',
-      //           children: [
-      //             { title: 'input', routerLink: { name: 'ComponentFormConfigItemRenderInput' } },
-      //             { title: 'textarea', routerLink: { name: 'ComponentFormConfigItemRenderTextarea' } },
-      //             { title: 'select', routerLink: { name: 'ComponentFormConfigItemRenderSelect' } },
-      //             { title: 'VxeInput', routerLink: { name: 'ComponentFormConfigItemRenderVxeInput' } },
-      //             { title: 'VxeButtonGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeButtonGroup' } },
-      //             { title: 'VxeTextarea', routerLink: { name: 'ComponentFormConfigItemRenderVxeTextarea' } },
-      //             { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormConfigItemRenderVxeNumberInput' } },
-      //             { title: 'VxeSelect', routerLink: { name: 'ComponentFormConfigItemRenderVxeSelect' } },
-      //             { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormConfigItemRenderVxeDatePicker' } },
-      //             { title: 'VxeTreeSelect', routerLink: { name: 'ComponentFormConfigItemRenderVxeTreeSelect' } },
-      //             { title: 'VxeSwitch', routerLink: { name: 'ComponentFormConfigItemRenderVxeSwitch' } },
-      //             { title: 'VxeRadioGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeRadioGroup' } },
-      //             { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeCheckboxGroup' } },
-      //             { title: 'VxeImage', routerLink: { name: 'ComponentFormConfigItemRenderVxeImage' } },
-      //             { title: 'VxeImageGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeImageGroup' } },
-      //             { title: 'VxeUpload', routerLink: { name: 'ComponentFormConfigItemRenderVxeUpload' } },
-      //             { title: '只读模式', routerLink: { name: 'ComponentFormConfigItemRenderReadonly' } },
-      //             { title: '禁用模式', routerLink: { name: 'ComponentFormConfigItemRenderDisabled' } },
-      //             { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemRender/el-input` }
-      //           ]
-      //         },
-      //         {
-      //           title: '渲染 - 插槽式',
-      //           children: [
-      //             { title: 'VxeInput', routerLink: { name: 'ComponentFormConfigItemTemplateVxeInput' } },
-      //             { title: 'VxeNumberInput', routerLink: { name: 'ComponentFormConfigItemTemplateVxeNumberInput' } },
-      //             { title: 'VxeSelect', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSelect' } },
-      //             { title: 'VxeDatePicker', routerLink: { name: 'ComponentFormConfigItemTemplateVxeDatePicker' } },
-      //             { title: 'VxeTreeSelect', routerLink: { name: 'ComponentFormConfigItemTemplateVxeTreeSelect' } },
-      //             { title: 'VxeSwitch', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSwitch' } },
-      //             { title: 'VxeRadioGroup', routerLink: { name: 'ComponentFormConfigItemTemplateVxeRadioGroup' } },
-      //             { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentFormConfigItemTemplateVxeCheckboxGroup' } },
-      //             { title: 'VxeUpload', routerLink: { name: 'ComponentFormConfigItemTemplateVxeUpload' } },
-      //             { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemRender/el-input` }
-      //           ]
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       i18nKey: 'app.aside.menu.formGlobalValidators',
-      //       children: [
-      //         { title: 'API', routerLink: { name: 'GlobalValidatorsFormAPI' } },
-      //         { title: '表单项校验', routerLink: { name: 'GlobalValidatorsFormBase' } }
-      //       ]
-      //     },
-      //     {
-      //       i18nKey: 'app.aside.menu.formGlobalRenderer',
-      //       children: [
-      //         { title: 'API', routerLink: { name: 'GlobalRendererFormAPI' } },
-      //         {
-      //           title: '表单项',
-      //           children: [
-      //             { title: '实现一个金额输入', routerLink: { name: 'GlobalRendererFormItemMyItemAmount' } },
-      //             { title: '实现一个附件上传', routerLink: { name: 'GlobalRendererFormItemMyItemUpload' } }
-      //           ]
-      //         }
+      //         { title: '实现一个金额输入', routerLink: { name: 'GlobalRendererFormItemMyItemAmount' } },
+      //         { title: '实现一个附件上传', routerLink: { name: 'GlobalRendererFormItemMyItemUpload' } }
       //       ]
       //     }
+      //   ]
+      // }
     ]
   },
   {

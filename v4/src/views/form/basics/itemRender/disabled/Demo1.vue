@@ -6,7 +6,7 @@
       titleColon
       title-width="120"
       title-align="right"
-      :disabled="disabled"
+      :disabled="isDisabled"
       :data="formData"
       :rules="formRules">
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
@@ -178,7 +178,7 @@ const hobbiesItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
   ]
 })
 
-const disabled = ref(false)
+const isDisabled = ref(false)
 const formData = ref<FormDataVO>({
   name: 'test1',
   nickname: 'Testing',
@@ -230,6 +230,6 @@ const formRules = ref<VxeFormPropTypes.Rules>({
 })
 
 const toggleDisabled = () => {
-  disabled.value = !disabled.value
+  isDisabled.value = !isDisabled.value
 }
 </script>
