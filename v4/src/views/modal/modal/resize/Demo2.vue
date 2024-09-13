@@ -15,7 +15,7 @@ const openEvent = () => {
     resize: true,
     slots: {
       default () {
-        return <>
+        return <div>
           <div>鼠标点击窗口边缘，按住边缘拖拽调整窗口宽和高</div>
           <div>按住头部移动！</div>
           <div>按住左边距拖动！</div>
@@ -23,7 +23,7 @@ const openEvent = () => {
           <div>按住底边距拖动！</div>
           <div>按住左下角拖动 ！</div>
           <div>按住右下角拖动！</div>
-        </>
+        </div>
       }
     }
   })

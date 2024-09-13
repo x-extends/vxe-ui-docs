@@ -3995,8 +3995,34 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'tooltip',
-        name: 'ComponentTooltip',
-        component: () => import('@/views/tooltip/CodeExample.vue')
+        component: RouteLayout,
+        children: [
+          {
+            path: 'trigger',
+            name: 'ComponentTooltipTrigger',
+            component: () => import('@/views/tooltip/trigger/CodeExample.vue')
+          },
+          {
+            path: 'enterable',
+            name: 'ComponentTooltipEnterable',
+            component: () => import('@/views/tooltip/enterable/CodeExample.vue')
+          },
+          {
+            path: 'manual',
+            name: 'ComponentTooltipManual',
+            component: () => import('@/views/tooltip/manual/CodeExample.vue')
+          },
+          {
+            path: 'single',
+            name: 'ComponentTooltipSingle',
+            component: () => import('@/views/tooltip/single/CodeExample.vue')
+          },
+          {
+            path: 'table',
+            name: 'ComponentTooltipTable',
+            component: () => import('@/views/tooltip/table/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'switch',

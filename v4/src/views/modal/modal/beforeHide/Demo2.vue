@@ -42,10 +42,10 @@ const openEvent = () => {
     },
     slots: {
       default () {
-        return <>
+        return <div>
           <div>阻止关闭</div>
           <vxe-loading modelValue={loading.value}></vxe-loading>
-        </>
+        </div>
       }
     }
   })

@@ -13,7 +13,7 @@ let num = 1
 
 const openEvent = () => {
   VxeUI.modal.confirm({
-    title: '标题1',
+    title: '标题2',
     content: `我是第 ${num++} 个`,
     mask: false,
     lockView: false,

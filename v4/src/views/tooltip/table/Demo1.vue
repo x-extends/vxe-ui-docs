@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-tooltip ref="tooltipRef" :enter-delay="150"></vxe-tooltip>
+    <vxe-tooltip ref="tooltipRef"></vxe-tooltip>
     <vxe-table
       border
       height="200"

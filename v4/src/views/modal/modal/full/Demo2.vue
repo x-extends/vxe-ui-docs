@@ -26,11 +26,11 @@ const openEvent = () => {
     cancelButtonText: '自定义取消',
     slots: {
       default () {
-        return <>
+        return <div>
           <div>支持移动窗口</div>
           <div>支持调整宽高</div>
           <div>支持最大化、最小化</div>
-        </>
+        </div>
       }
     }
   })
