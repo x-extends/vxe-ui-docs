@@ -14,7 +14,7 @@
 import { ref, reactive } from 'vue'
 import { VxeTreePropTypes } from 'vxe-pc-ui'
 
-const checkNodeKeys = ref([])
+const checkNodeKeys = ref<VxeTreePropTypes.CheckNodeKeys>([])
 
 const checkboxConfig = reactive<VxeTreePropTypes.CheckboxConfig>({
   checkStrictly: true

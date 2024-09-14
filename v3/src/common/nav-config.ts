@@ -1433,40 +1433,40 @@ export const navConfigList: NavVO[] = [
       //         }
       //       ]
       //     },
-      //     {
-      //       title: 'TreeSelect 树形下拉框',
-      //       children: [
-      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'treeSelect' } } },
-      //         {
-      //           title: '基础',
-      //           children: [
-      //             { title: '尺寸大小', routerLink: { name: 'ComponentTreeSelectBaseSize' } },
-      //             { title: '层级结构', routerLink: { name: 'ComponentTreeSelectBaseHierarchy' } },
-      //             { title: '平级结构', routerLink: { name: 'ComponentTreeSelectBaseLeveling' } },
-      //             { title: '多选', routerLink: { name: 'ComponentTreeSelectBaseMultiple' } },
-      //             { title: '自定义图标', routerLink: { name: 'ComponentTreeSelectBaseIcon' } },
-      //             { title: '连接线', routerLink: { name: 'ComponentTreeSelectBaseShowLine' } },
-      //             { title: '懒加载子节点', routerLink: { name: 'ComponentTreeSelectBaseLazy' } },
-      //             { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectBaseTrigger' } }
-      //           ]
-      //         },
-      //         {
-      //           title: '单选框',
-      //           children: [
-      //             { title: '显示单选框', routerLink: { name: 'ComponentTreeSelectRadioBase' } },
-      //             { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectRadioTrigger' } }
-      //           ]
-      //         },
-      //         {
-      //           title: '复选框',
-      //           children: [
-      //             { title: '显示复选框', routerLink: { name: 'ComponentTreeSelectCheckboxBase' } },
-      //             { title: '节点不关联', routerLink: { name: 'ComponentTreeSelectCheckboxCheckStrictly' } },
-      //             { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectCheckboxTrigger' } }
-      //           ]
-      //         }
-      //       ]
-      //     },
+      {
+        title: 'TreeSelect 树形下拉框',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'treeSelect' } } },
+          {
+            title: '基础',
+            children: [
+              { title: '尺寸大小', routerLink: { name: 'ComponentTreeSelectBaseSize' } },
+              { title: '层级结构', routerLink: { name: 'ComponentTreeSelectBaseHierarchy' } },
+              { title: '平级结构', routerLink: { name: 'ComponentTreeSelectBaseLeveling' } },
+              { title: '多选', routerLink: { name: 'ComponentTreeSelectBaseMultiple' } },
+              { title: '自定义图标', routerLink: { name: 'ComponentTreeSelectBaseIcon' } },
+              { title: '连接线', routerLink: { name: 'ComponentTreeSelectBaseShowLine' } },
+              { title: '懒加载子节点', routerLink: { name: 'ComponentTreeSelectBaseLazy' } },
+              { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectBaseTrigger' } }
+            ]
+          },
+          {
+            title: '单选框',
+            children: [
+              { title: '显示单选框', routerLink: { name: 'ComponentTreeSelectRadioBase' } },
+              { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectRadioTrigger' } }
+            ]
+          },
+          {
+            title: '复选框',
+            children: [
+              { title: '显示复选框', routerLink: { name: 'ComponentTreeSelectCheckboxBase' } },
+              { title: '节点不关联', routerLink: { name: 'ComponentTreeSelectCheckboxCheckStrictly' } },
+              { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectCheckboxTrigger' } }
+            ]
+          }
+        ]
+      },
       {
         title: 'Upload 上传',
         children: [
@@ -1541,61 +1541,61 @@ export const navConfigList: NavVO[] = [
   {
     i18nKey: 'app.aside.menu.treeTitle',
     children: [
-      { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tree' } } }
-      //     {
-      //       title: '基础',
-      //       children: [
-      //         { title: '尺寸大小', routerLink: { name: 'ComponentTreeBaseSize' } },
-      //         { title: '层级结构', routerLink: { name: 'ComponentTreeBaseHierarchy' } },
-      //         { title: '平级结构', routerLink: { name: 'ComponentTreeBaseLeveling' } },
-      //         { title: '高度', routerLink: { name: 'ComponentTreeBaseHeight' } },
-      //         { title: '加载中', routerLink: { name: 'ComponentTreeBaseLoading' } },
-      //         { title: '自定义字段', routerLink: { name: 'ComponentTreeBaseField' } },
-      //         { title: '触发方式', routerLink: { name: 'ComponentTreeBaseTrigger' } },
-      //         { title: '隐藏图标', routerLink: { name: 'ComponentTreeBaseShowIcon' } },
-      //         { title: '自定义图标', routerLink: { name: 'ComponentTreeBaseIcon' } },
-      //         { title: '手风琴展开效果', routerLink: { name: 'ComponentTreeBaseAccordion' } },
-      //         { title: '连接线', routerLink: { name: 'ComponentTreeBaseShowLine' } },
-      //         { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeBaseTemplate' } }
-      //       ]
-      //     },
-      //     {
-      //       title: '高亮节点',
-      //       children: [
-      //         { title: '当前节点', routerLink: { name: 'ComponentTreeCurrentBase' } },
-      //         { title: '触发方式', routerLink: { name: 'ComponentTreeCurrentTrigger' } },
-      //         { title: '禁用', routerLink: { name: 'ComponentTreeCurrentCurrentMethod' } }
-      //       ]
-      //     },
-      //     {
-      //       title: '单选框',
-      //       children: [
-      //         { title: '单选', routerLink: { name: 'ComponentTreeRadioBase' } },
-      //         { title: '高亮选中节点', routerLink: { name: 'ComponentTreeRadioHighlight' } },
-      //         { title: '禁用', routerLink: { name: 'ComponentTreeRadioCheckMethod' } },
-      //         { title: '显示隐藏', routerLink: { name: 'ComponentTreeRadioVisibleMethod' } },
-      //         { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeRadioTemplate' } }
-      //       ]
-      //     },
-      //     {
-      //       title: '复选框',
-      //       children: [
-      //         { title: '多选', routerLink: { name: 'ComponentTreeCheckboxBase' } },
-      //         { title: '高亮选中节点', routerLink: { name: 'ComponentTreeCheckboxHighlight' } },
-      //         { title: '节点不关联', routerLink: { name: 'ComponentTreeCheckboxCheckStrictly' } },
-      //         { title: '禁用', routerLink: { name: 'ComponentTreeCheckboxCheckMethod' } },
-      //         { title: '显示隐藏', routerLink: { name: 'ComponentTreeCheckboxVisibleMethod' } },
-      //         { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeCheckboxTemplate' } }
-      //       ]
-      //     },
-      //     {
-      //       title: '懒加载',
-      //       children: [
-      //         { title: '懒加载子节点', routerLink: { name: 'ComponentTreeLazyLoadMethod' } },
-      //         { title: '加载失败', routerLink: { name: 'ComponentTreeLazyError' } },
-      //         { title: '显示连接线', routerLink: { name: 'ComponentTreeLazyShowLine' } }
-      //       ]
-      //     }
+      { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tree' } } },
+      {
+        title: '基础',
+        children: [
+          { title: '尺寸大小', routerLink: { name: 'ComponentTreeBaseSize' } },
+          { title: '层级结构', routerLink: { name: 'ComponentTreeBaseHierarchy' } },
+          { title: '平级结构', routerLink: { name: 'ComponentTreeBaseLeveling' } },
+          { title: '高度', routerLink: { name: 'ComponentTreeBaseHeight' } },
+          { title: '加载中', routerLink: { name: 'ComponentTreeBaseLoading' } },
+          { title: '自定义字段', routerLink: { name: 'ComponentTreeBaseField' } },
+          { title: '触发方式', routerLink: { name: 'ComponentTreeBaseTrigger' } },
+          { title: '隐藏图标', routerLink: { name: 'ComponentTreeBaseShowIcon' } },
+          { title: '自定义图标', routerLink: { name: 'ComponentTreeBaseIcon' } },
+          { title: '手风琴展开效果', routerLink: { name: 'ComponentTreeBaseAccordion' } },
+          { title: '连接线', routerLink: { name: 'ComponentTreeBaseShowLine' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeBaseTemplate' } }
+        ]
+      },
+      {
+        title: '高亮节点',
+        children: [
+          { title: '当前节点', routerLink: { name: 'ComponentTreeCurrentBase' } },
+          { title: '触发方式', routerLink: { name: 'ComponentTreeCurrentTrigger' } },
+          { title: '禁用', routerLink: { name: 'ComponentTreeCurrentCurrentMethod' } }
+        ]
+      },
+      {
+        title: '单选框',
+        children: [
+          { title: '单选', routerLink: { name: 'ComponentTreeRadioBase' } },
+          { title: '高亮选中节点', routerLink: { name: 'ComponentTreeRadioHighlight' } },
+          { title: '禁用', routerLink: { name: 'ComponentTreeRadioCheckMethod' } },
+          { title: '显示隐藏', routerLink: { name: 'ComponentTreeRadioVisibleMethod' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeRadioTemplate' } }
+        ]
+      },
+      {
+        title: '复选框',
+        children: [
+          { title: '多选', routerLink: { name: 'ComponentTreeCheckboxBase' } },
+          { title: '高亮选中节点', routerLink: { name: 'ComponentTreeCheckboxHighlight' } },
+          { title: '节点不关联', routerLink: { name: 'ComponentTreeCheckboxCheckStrictly' } },
+          { title: '禁用', routerLink: { name: 'ComponentTreeCheckboxCheckMethod' } },
+          { title: '显示隐藏', routerLink: { name: 'ComponentTreeCheckboxVisibleMethod' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeCheckboxTemplate' } }
+        ]
+      },
+      {
+        title: '懒加载',
+        children: [
+          { title: '懒加载子节点', routerLink: { name: 'ComponentTreeLazyLoadMethod' } },
+          { title: '加载失败', routerLink: { name: 'ComponentTreeLazyError' } },
+          { title: '显示连接线', routerLink: { name: 'ComponentTreeLazyShowLine' } }
+        ]
+      }
     ]
   },
   {

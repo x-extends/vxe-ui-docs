@@ -21,7 +21,7 @@
 import { ref } from 'vue'
 import { VxeTreePropTypes } from 'vxe-pc-ui'
 
-const checkNodeKeys = ref([])
+const checkNodeKeys = ref<VxeTreePropTypes.CheckNodeKeys>([])
 
 const treeList = ref<VxeTreePropTypes.Data>([
   { title: '节点2', id: '2' },
