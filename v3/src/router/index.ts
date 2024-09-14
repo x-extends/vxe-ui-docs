@@ -4544,6 +4544,7 @@ const routes: Array<RouteConfig> = [
         children: [
           {
             path: 'base',
+            component: RouteLayout,
             children: [
               {
                 path: 'size',

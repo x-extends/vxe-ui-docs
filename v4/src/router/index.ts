@@ -4572,6 +4572,7 @@ const routes: Array<RouteRecordRaw> = [
         children: [
           {
             path: 'base',
+            component: RouteLayout,
             children: [
               {
                 path: 'size',
