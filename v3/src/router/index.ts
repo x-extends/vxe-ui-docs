@@ -3384,11 +3384,22 @@ const routes: Array<RouteConfig> = [
       //     }
       //   ]
       // },
-      // {
-      //   path: 'password-input',
-      //   name: 'ComponentPasswordInput',
-      //   component: () => import('@/views/password-input/CodeExample.vue')
-      // },
+      {
+        path: 'password-input',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentPasswordInputSize',
+            component: () => import('@/views/password-input/size/CodeExample.vue')
+          },
+          {
+            path: 'clearable',
+            name: 'ComponentPasswordInputClearable',
+            component: () => import('@/views/password-input/clearable/CodeExample.vue')
+          }
+        ]
+      },
       // {
       //   path: 'number-input',
       //   component: RouteLayout,
@@ -3514,27 +3525,27 @@ const routes: Array<RouteConfig> = [
           }
         ]
       },
-      // {
-      //   path: 'icon-picker',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'size',
-      //       name: 'ComponentIconPickerSize',
-      //       component: () => import('@/views/icon-picker/size/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'clearable',
-      //       name: 'ComponentIconPickerClearable',
-      //       component: () => import('@/views/icon-picker/clearable/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'icons',
-      //       name: 'ComponentIconPickerIcons',
-      //       component: () => import('@/views/icon-picker/icons/CodeExample.vue')
-      //     }
-      //   ]
-      // },
+      {
+        path: 'icon-picker',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentIconPickerSize',
+            component: () => import('@/views/icon-picker/size/CodeExample.vue')
+          },
+          {
+            path: 'clearable',
+            name: 'ComponentIconPickerClearable',
+            component: () => import('@/views/icon-picker/clearable/CodeExample.vue')
+          },
+          {
+            path: 'icons',
+            name: 'ComponentIconPickerIcons',
+            component: () => import('@/views/icon-picker/icons/CodeExample.vue')
+          }
+        ]
+      },
       // {
       //   path: 'date-picker',
       //   component: RouteLayout,
@@ -4037,53 +4048,53 @@ const routes: Array<RouteConfig> = [
           }
         ]
       },
-      // {
-      //   path: 'list',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'base',
-      //       name: 'ComponentListBase',
-      //       component: () => import('@/views/list/base/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'table',
-      //       name: 'ComponentListTable',
-      //       component: () => import('@/views/list/table/CodeExample.vue')
-      //     }
-      //   ]
-      // },
-      // {
-      //   path: 'pulldown',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'base',
-      //       name: 'ComponentPulldownBase',
-      //       component: () => import('@/views/pulldown/base/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'options',
-      //       name: 'ComponentPulldownOptions',
-      //       component: () => import('@/views/pulldown/options/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'template',
-      //       name: 'ComponentPulldownTemplate',
-      //       component: () => import('@/views/pulldown/template/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'select',
-      //       name: 'ComponentPulldownSelect',
-      //       component: () => import('@/views/pulldown/select/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'table',
-      //       name: 'ComponentPulldownTable',
-      //       component: () => import('@/views/pulldown/table/CodeExample.vue')
-      //     }
-      //   ]
-      // },
+      {
+        path: 'list',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentListBase',
+            component: () => import('@/views/list/base/CodeExample.vue')
+          },
+          {
+            path: 'table',
+            name: 'ComponentListTable',
+            component: () => import('@/views/list/table/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'pulldown',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentPulldownBase',
+            component: () => import('@/views/pulldown/base/CodeExample.vue')
+          },
+          {
+            path: 'options',
+            name: 'ComponentPulldownOptions',
+            component: () => import('@/views/pulldown/options/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentPulldownTemplate',
+            component: () => import('@/views/pulldown/template/CodeExample.vue')
+          },
+          {
+            path: 'select',
+            name: 'ComponentPulldownSelect',
+            component: () => import('@/views/pulldown/select/CodeExample.vue')
+          },
+          {
+            path: 'table',
+            name: 'ComponentPulldownTable',
+            component: () => import('@/views/pulldown/table/CodeExample.vue')
+          }
+        ]
+      },
       {
         path: 'tabs',
         component: RouteLayout,

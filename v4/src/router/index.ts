@@ -3404,8 +3404,19 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'password-input',
-        name: 'ComponentPasswordInput',
-        component: () => import('@/views/password-input/CodeExample.vue')
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentPasswordInputSize',
+            component: () => import('@/views/password-input/size/CodeExample.vue')
+          },
+          {
+            path: 'clearable',
+            name: 'ComponentPasswordInputClearable',
+            component: () => import('@/views/password-input/clearable/CodeExample.vue')
+          }
+        ]
       },
       {
         path: 'number-input',

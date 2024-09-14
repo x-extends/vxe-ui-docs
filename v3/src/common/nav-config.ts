@@ -1037,7 +1037,7 @@ export const navConfigList: NavVO[] = [
           { title: '可关闭', routerLink: { name: 'ComponentTabsCloseConfig' } },
           { title: '权限码', routerLink: { name: 'ComponentTabsPermissionCode' } }
         ]
-      }
+      },
       // {
       //   title: 'Calendar 日历',
       //   children: [
@@ -1052,26 +1052,26 @@ export const navConfigList: NavVO[] = [
       //     { title: '显示节假日', routerLink: { name: 'ComponentCalendarFestivalMethod' } }
       //   ]
       // },
-      // {
-      //   title: 'Pulldown 下拉容器',
-      //   children: [
-      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pulldown' } } },
-      //     { title: '基础', routerLink: { name: 'ComponentPulldownBase' } },
-      //     { title: '配置列表', routerLink: { name: 'ComponentPulldownOptions' } },
-      //     { title: '自定义插槽模板', routerLink: { name: 'ComponentPulldownTemplate' } },
-      //     { title: '可搜索的下拉框', routerLink: { name: 'ComponentPulldownSelect' } },
-      //     { title: '实现下拉表格', routerLink: { name: 'ComponentPulldownTable' } }
-      //   ]
-      // },
+      {
+        title: 'Pulldown 下拉容器',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pulldown' } } },
+          { title: '基础', routerLink: { name: 'ComponentPulldownBase' } },
+          { title: '配置列表', routerLink: { name: 'ComponentPulldownOptions' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentPulldownTemplate' } },
+          { title: '可搜索的下拉框', routerLink: { name: 'ComponentPulldownSelect' } },
+          { title: '实现下拉表格', routerLink: { name: 'ComponentPulldownTable' } }
+        ]
+      },
       // { title: 'Collapse 折叠面板' },
-      // {
-      //   title: 'List 虚拟列表',
-      //   children: [
-      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'list' } } },
-      //     { title: '实现大量数据列表', routerLink: { name: 'ComponentListBase' } },
-      //     { title: '实现大量数据表格', routerLink: { name: 'ComponentListTable' } }
-      //   ]
-      // }
+      {
+        title: 'List 虚拟列表',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'list' } } },
+          { title: '实现大量数据列表', routerLink: { name: 'ComponentListBase' } },
+          { title: '实现大量数据表格', routerLink: { name: 'ComponentListTable' } }
+        ]
+      }
     ]
   },
   {
@@ -1370,22 +1370,23 @@ export const navConfigList: NavVO[] = [
       //         }
       //       ]
       //     },
-      //     {
-      //       title: 'PasswordInput 密码输入',
-      //       children: [
-      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'password-input' } } },
-      //         { title: '密码输入', routerLink: { name: 'ComponentPasswordInput' } }
-      //       ]
-      //     },
-      //     {
-      //       title: 'IconPicker 图标选择',
-      //       children: [
-      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon-picker' } } },
-      //         { title: '尺寸大小', routerLink: { name: 'ComponentIconPickerSize' } },
-      //         { title: '可清除', routerLink: { name: 'ComponentIconPickerClearable' } },
-      //         { title: '自定义列表', routerLink: { name: 'ComponentIconPickerIcons' } }
-      //       ]
-      //     },
+      {
+        title: 'PasswordInput 密码输入',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'password-input' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentPasswordInputSize' } },
+          { title: '可清除', routerLink: { name: 'ComponentPasswordInputClearable' } }
+        ]
+      },
+      {
+        title: 'IconPicker 图标选择',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon-picker' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentIconPickerSize' } },
+          { title: '可清除', routerLink: { name: 'ComponentIconPickerClearable' } },
+          { title: '自定义列表', routerLink: { name: 'ComponentIconPickerIcons' } }
+        ]
+      },
       //     {
       //       title: 'DatePicker 日期选择',
       //       children: [

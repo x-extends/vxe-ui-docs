@@ -19,17 +19,14 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref, onMounted, nextTick } from 'vue'
+<script lang="ts">
+import Vue from 'vue'
 import { VxeUI } from 'vxe-pc-ui'
 
 interface ItemVO {
   id: number
   label: string
 }
-
-const loading = ref(false)
-const list = ref<ItemVO[]>([])
 
 // 模拟后台
 const mockList: ItemVO[] = []
@@ -49,20 +46,30 @@ const getList = (size: number) => {
   })
 }
 
-const loadData = async (size: number) => {
-  loading.value = true
-  list.value = await getList(size)
-  loading.value = false
-  const startTime = Date.now()
-  await nextTick()
-  await VxeUI.modal.message({
-    content: `渲染 ${size} 行，用时 ${Date.now() - startTime}毫秒`,
-    status: 'info'
-  })
-}
+export default Vue.extend({
+  data () {
+    return {
+      loading: false,
+      list: [] as ItemVO[]
+    }
+  },
+  methods: {
+    async loadData (size: number) {
+      this.loading = true
+      this.list = await getList(size)
+      this.loading = false
+      const startTime = Date.now()
+      await this.$nextTick()
+      await VxeUI.modal.message({
+        content: `渲染 ${size} 行，用时 ${Date.now() - startTime}毫秒`,
+        status: 'info'
+      })
+    }
 
-onMounted(async () => {
-  loadData(200)
+  },
+  mounted () {
+    this.loadData(200)
+  }
 })
 </script>
 
