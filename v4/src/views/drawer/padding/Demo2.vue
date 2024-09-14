@@ -14,9 +14,9 @@ const openEvent = () => {
     padding: false,
     slots: {
       default () {
-        return <>
+        return <div>
           <div>显示区无边距</div>
-        </>
+        </div>
       }
     }
   })

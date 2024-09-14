@@ -4150,78 +4150,78 @@ const routes: Array<RouteConfig> = [
           }
         ]
       },
-      // {
-      //   path: 'drawer',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'size',
-      //       name: 'ComponentDrawerSize',
-      //       component: () => import('@/views/drawer/size/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'base',
-      //       name: 'ComponentDrawerBase',
-      //       component: () => import('@/views/drawer/base/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'maskClosable',
-      //       name: 'ComponentDrawerMaskClosable',
-      //       component: () => import('@/views/drawer/maskClosable/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'padding',
-      //       name: 'ComponentDrawerPadding',
-      //       component: () => import('@/views/drawer/padding/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'loading',
-      //       name: 'ComponentDrawerLoading',
-      //       component: () => import('@/views/drawer/loading/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'button',
-      //       name: 'ComponentDrawerButton',
-      //       component: () => import('@/views/drawer/button/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'multiple',
-      //       name: 'ComponentDrawerMultiple',
-      //       component: () => import('@/views/drawer/multiple/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'escClosable',
-      //       name: 'ComponentDrawerEscClosable',
-      //       component: () => import('@/views/drawer/escClosable/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'beforeHide',
-      //       name: 'ComponentDrawerBeforeHide',
-      //       component: () => import('@/views/drawer/beforeHide/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'template',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'layout',
-      //           name: 'ComponentDrawerTemplateLayout',
-      //           component: () => import('@/views/drawer/template/layout/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'footer',
-      //           name: 'ComponentDrawerTemplateFooter',
-      //           component: () => import('@/views/drawer/template/footer/CodeExample.vue')
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       path: 'iframe',
-      //       name: 'ComponentDrawerIframe',
-      //       component: () => import('@/views/drawer/iframe/CodeExample.vue')
-      //     }
-      //   ]
-      // },
+      {
+        path: 'drawer',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentDrawerSize',
+            component: () => import('@/views/drawer/size/CodeExample.vue')
+          },
+          {
+            path: 'base',
+            name: 'ComponentDrawerBase',
+            component: () => import('@/views/drawer/base/CodeExample.vue')
+          },
+          {
+            path: 'maskClosable',
+            name: 'ComponentDrawerMaskClosable',
+            component: () => import('@/views/drawer/maskClosable/CodeExample.vue')
+          },
+          {
+            path: 'padding',
+            name: 'ComponentDrawerPadding',
+            component: () => import('@/views/drawer/padding/CodeExample.vue')
+          },
+          {
+            path: 'loading',
+            name: 'ComponentDrawerLoading',
+            component: () => import('@/views/drawer/loading/CodeExample.vue')
+          },
+          {
+            path: 'button',
+            name: 'ComponentDrawerButton',
+            component: () => import('@/views/drawer/button/CodeExample.vue')
+          },
+          {
+            path: 'multiple',
+            name: 'ComponentDrawerMultiple',
+            component: () => import('@/views/drawer/multiple/CodeExample.vue')
+          },
+          {
+            path: 'escClosable',
+            name: 'ComponentDrawerEscClosable',
+            component: () => import('@/views/drawer/escClosable/CodeExample.vue')
+          },
+          {
+            path: 'beforeHide',
+            name: 'ComponentDrawerBeforeHide',
+            component: () => import('@/views/drawer/beforeHide/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'layout',
+                name: 'ComponentDrawerTemplateLayout',
+                component: () => import('@/views/drawer/template/layout/CodeExample.vue')
+              },
+              {
+                path: 'footer',
+                name: 'ComponentDrawerTemplateFooter',
+                component: () => import('@/views/drawer/template/footer/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'iframe',
+            name: 'ComponentDrawerIframe',
+            component: () => import('@/views/drawer/iframe/CodeExample.vue')
+          }
+        ]
+      },
       {
         path: 'loading',
         component: RouteLayout,
@@ -4258,53 +4258,53 @@ const routes: Array<RouteConfig> = [
           }
         ]
       },
-      // {
-      //   path: 'tip',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'base',
-      //       name: 'ComponentTipBase',
-      //       component: () => import('@/views/tip/base/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'icon',
-      //       name: 'ComponentTipIcon',
-      //       component: () => import('@/views/tip/icon/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'title',
-      //       name: 'ComponentTipTitle',
-      //       component: () => import('@/views/tip/title/CodeExample.vue')
-      //     }
-      //   ]
-      // },
-      // {
-      //   path: 'alert',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'base',
-      //       name: 'ComponentAlertBase',
-      //       component: () => import('@/views/alert/base/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'icon',
-      //       name: 'ComponentAlertIcon',
-      //       component: () => import('@/views/alert/icon/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'title',
-      //       name: 'ComponentAlertTitle',
-      //       component: () => import('@/views/alert/title/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'close',
-      //       name: 'ComponentAlertClose',
-      //       component: () => import('@/views/alert/close/CodeExample.vue')
-      //     }
-      //   ]
-      // },
+      {
+        path: 'tip',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentTipBase',
+            component: () => import('@/views/tip/base/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentTipIcon',
+            component: () => import('@/views/tip/icon/CodeExample.vue')
+          },
+          {
+            path: 'title',
+            name: 'ComponentTipTitle',
+            component: () => import('@/views/tip/title/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'alert',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentAlertBase',
+            component: () => import('@/views/alert/base/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentAlertIcon',
+            component: () => import('@/views/alert/icon/CodeExample.vue')
+          },
+          {
+            path: 'title',
+            name: 'ComponentAlertTitle',
+            component: () => import('@/views/alert/title/CodeExample.vue')
+          },
+          {
+            path: 'close',
+            name: 'ComponentAlertClose',
+            component: () => import('@/views/alert/close/CodeExample.vue')
+          }
+        ]
+      },
       {
         path: 'card',
         component: RouteLayout,

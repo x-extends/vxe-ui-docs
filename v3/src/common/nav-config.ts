@@ -1612,43 +1612,43 @@ export const navConfigList: NavVO[] = [
           { title: '自定义插槽模板', routerLink: { name: 'ComponentLoadingTemplate' } }
         ]
       },
-      //     {
-      //       title: 'Tip 提示',
-      //       children: [
-      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tip' } } },
-      //         { title: '状态', routerLink: { name: 'ComponentTipBase' } },
-      //         { title: '图标', routerLink: { name: 'ComponentTipIcon' } },
-      //         { title: '带标题', routerLink: { name: 'ComponentTipTitle' } }
-      //       ]
-      //     },
-      //     {
-      //       title: 'Alert 警告提示',
-      //       children: [
-      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'alert' } } },
-      //         { title: '状态', routerLink: { name: 'ComponentAlertBase' } },
-      //         { title: '图标', routerLink: { name: 'ComponentAlertIcon' } },
-      //         { title: '带标题', routerLink: { name: 'ComponentAlertTitle' } },
-      //         { title: '可关闭', routerLink: { name: 'ComponentAlertClose' } }
-      //       ]
-      //     },
-      //     {
-      //       title: 'Drawer 抽屉',
-      //       children: [
-      //         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'drawer' } } },
-      //         { title: '尺寸大小', routerLink: { name: 'ComponentDrawerSize' } },
-      //         { title: '自定义弹出方向', routerLink: { name: 'ComponentDrawerBase' } },
-      //         { title: '内边距', routerLink: { name: 'ComponentDrawerPadding' } },
-      //         { title: '加载中', routerLink: { name: 'ComponentDrawerLoading' } },
-      //         { title: '点击遮罩层关闭', routerLink: { name: 'ComponentDrawerMaskClosable' } },
-      //         { title: '操作按钮', routerLink: { name: 'ComponentDrawerButton' } },
-      //         { title: '同时弹出多个抽屉', routerLink: { name: 'ComponentDrawerMultiple' } },
-      //         { title: '按 Esc 键可关闭', routerLink: { name: 'ComponentDrawerEscClosable' } },
-      //         { title: '拦截关闭', routerLink: { name: 'ComponentDrawerBeforeHide' } },
-      //         { title: '自定义模板', routerLink: { name: 'ComponentDrawerTemplateFooter' } },
-      //         { title: '完整插槽模板', routerLink: { name: 'ComponentDrawerTemplateLayout' } },
-      //         { title: '嵌入 iframe', routerLink: { name: 'ComponentDrawerIframe' } }
-      //       ]
-      //     },
+      {
+        title: 'Tip 提示',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tip' } } },
+          { title: '状态', routerLink: { name: 'ComponentTipBase' } },
+          { title: '图标', routerLink: { name: 'ComponentTipIcon' } },
+          { title: '带标题', routerLink: { name: 'ComponentTipTitle' } }
+        ]
+      },
+      {
+        title: 'Alert 警告提示',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'alert' } } },
+          { title: '状态', routerLink: { name: 'ComponentAlertBase' } },
+          { title: '图标', routerLink: { name: 'ComponentAlertIcon' } },
+          { title: '带标题', routerLink: { name: 'ComponentAlertTitle' } },
+          { title: '可关闭', routerLink: { name: 'ComponentAlertClose' } }
+        ]
+      },
+      {
+        title: 'Drawer 抽屉',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'drawer' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentDrawerSize' } },
+          { title: '自定义弹出方向', routerLink: { name: 'ComponentDrawerBase' } },
+          { title: '内边距', routerLink: { name: 'ComponentDrawerPadding' } },
+          { title: '加载中', routerLink: { name: 'ComponentDrawerLoading' } },
+          { title: '点击遮罩层关闭', routerLink: { name: 'ComponentDrawerMaskClosable' } },
+          { title: '操作按钮', routerLink: { name: 'ComponentDrawerButton' } },
+          { title: '同时弹出多个抽屉', routerLink: { name: 'ComponentDrawerMultiple' } },
+          { title: '按 Esc 键可关闭', routerLink: { name: 'ComponentDrawerEscClosable' } },
+          { title: '拦截关闭', routerLink: { name: 'ComponentDrawerBeforeHide' } },
+          { title: '自定义模板', routerLink: { name: 'ComponentDrawerTemplateFooter' } },
+          { title: '完整插槽模板', routerLink: { name: 'ComponentDrawerTemplateLayout' } },
+          { title: '嵌入 iframe', routerLink: { name: 'ComponentDrawerIframe' } }
+        ]
+      },
       //     // { title: 'Popover 气泡提示框' },
       {
         title: 'Tooltip 文字提示',
