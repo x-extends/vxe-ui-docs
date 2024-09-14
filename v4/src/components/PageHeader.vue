@@ -96,7 +96,7 @@ const sysVersionOptions = computed(() => {
       label: i18n.global.t(`app.version.${process.env.VUE_APP_PACKAGE_NAME}.v${item.version.replace('.', 'd')}`),
       value: item.version,
       disabled: !!item.isDisabled,
-      className: item.isStop ? 'due-to-stop' : ''
+      className: item.isStop ? 'due-to-stop' : (item.isAbandoned ? 'about-to-stop' : '')
     }
   })
 })
