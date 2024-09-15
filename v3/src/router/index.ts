@@ -3397,6 +3397,11 @@ const routes: Array<RouteConfig> = [
             path: 'clearable',
             name: 'ComponentPasswordInputClearable',
             component: () => import('@/views/password-input/clearable/CodeExample.vue')
+          },
+          {
+            path: 'controls',
+            name: 'ComponentPasswordInputControls',
+            component: () => import('@/views/password-input/controls/CodeExample.vue')
           }
         ]
       },

@@ -1375,7 +1375,8 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'password-input' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentPasswordInputSize' } },
-          { title: '可清除', routerLink: { name: 'ComponentPasswordInputClearable' } }
+          { title: '可清除', routerLink: { name: 'ComponentPasswordInputClearable' } },
+          { title: '控制按钮', routerLink: { name: 'ComponentPasswordInputControls' } }
         ]
       },
       {
