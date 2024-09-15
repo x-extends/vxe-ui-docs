@@ -55,7 +55,7 @@
           <div class="switch-lang-item">
             <div class="switch-lang-name">{{ option.label }}</div>
             <div class="switch-lang-icon">
-              <vxe-link class="github" :href="`https://github.com/x-extends/vxe-ui-docs/tree/main/language/${option.value}.json`" icon="vxe-icon-github-fill" target="_blank"></vxe-link>
+              <vxe-link class="github" :href="`https://github.com/x-extends/vxe-ui-docs/tree/main/i18n/${option.value}.json`" icon="vxe-icon-github-fill" target="_blank"></vxe-link>
             </div>
           </div>
         </template>
