@@ -91,122 +91,122 @@ const routes: Array<RouteConfig> = [
       }
     ]
   },
-  // {
-  //   path: '/plugin-export-xlsx',
-  //   component: PageLayout,
-  //   children: [
-  //     {
-  //       path: 'install',
-  //       name: 'PluginExportXlsxInstall',
-  //       component: () => import('@/views/plugin-export-xlsx/install/CodeExample.vue')
-  //     },
-  //     {
-  //       path: 'table',
-  //       component: RouteLayout,
-  //       children: [
-  //         {
-  //           path: 'export',
-  //           name: 'PluginExportXlsxTableExport',
-  //           component: () => import('@/views/plugin-export-xlsx/table/export/CodeExample.vue')
-  //         },
-  //         {
-  //           path: 'import',
-  //           name: 'PluginExportXlsxTableImport',
-  //           component: () => import('@/views/plugin-export-xlsx/table/import/CodeExample.vue')
-  //         },
-  //         {
-  //           path: 'toolbar',
-  //           name: 'PluginExportXlsxTableToolbar',
-  //           component: () => import('@/views/plugin-export-xlsx/table/toolbar/CodeExample.vue')
-  //         },
-  //         {
-  //           path: 'advanced',
-  //           name: 'PluginExportXlsxTableAdvanced',
-  //           component: () => import('@/views/plugin-export-xlsx/table/advanced/CodeExample.vue')
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       path: 'grid',
-  //       component: RouteLayout,
-  //       children: [
-  //         {
-  //           path: 'export',
-  //           name: 'PluginExportXlsxGridExport',
-  //           component: () => import('@/views/plugin-export-xlsx/grid/export/CodeExample.vue')
-  //         },
-  //         {
-  //           path: 'import',
-  //           name: 'PluginExportXlsxGridImport',
-  //           component: () => import('@/views/plugin-export-xlsx/table/import/CodeExample.vue')
-  //         },
-  //         {
-  //           path: 'toolbar',
-  //           name: 'PluginExportXlsxGridToolbar',
-  //           component: () => import('@/views/plugin-export-xlsx/grid/toolbar/CodeExample.vue')
-  //         },
-  //         {
-  //           path: 'advanced',
-  //           name: 'PluginExportXlsxGridAdvanced',
-  //           component: () => import('@/views/plugin-export-xlsx/grid/advanced/CodeExample.vue')
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // },
-  // {
-  //   path: '/plugin-export-pdf',
-  //   component: PageLayout,
-  //   children: [
-  //     {
-  //       path: 'install',
-  //       name: 'PluginExportPdfInstall',
-  //       component: () => import('@/views/plugin-export-pdf/install/CodeExample.vue')
-  //     },
-  //     {
-  //       path: 'table',
-  //       component: RouteLayout,
-  //       children: [
-  //         {
-  //           path: 'export',
-  //           name: 'PluginExportPdfTableExport',
-  //           component: () => import('@/views/plugin-export-pdf/table/export/CodeExample.vue')
-  //         },
-  //         {
-  //           path: 'toolbar',
-  //           name: 'PluginExportPdfTableToolbar',
-  //           component: () => import('@/views/plugin-export-pdf/table/toolbar/CodeExample.vue')
-  //         },
-  //         {
-  //           path: 'advanced',
-  //           name: 'PluginExportPdfTableAdvanced',
-  //           component: () => import('@/views/plugin-export-pdf/table/advanced/CodeExample.vue')
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       path: 'grid',
-  //       component: RouteLayout,
-  //       children: [
-  //         {
-  //           path: 'export',
-  //           name: 'PluginExportPdfGridExport',
-  //           component: () => import('@/views/plugin-export-pdf/grid/export/CodeExample.vue')
-  //         },
-  //         {
-  //           path: 'toolbar',
-  //           name: 'PluginExportPdfGridToolbar',
-  //           component: () => import('@/views/plugin-export-pdf/grid/toolbar/CodeExample.vue')
-  //         },
-  //         {
-  //           path: 'advanced',
-  //           name: 'PluginExportPdfGridAdvanced',
-  //           component: () => import('@/views/plugin-export-pdf/grid/advanced/CodeExample.vue')
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // },
+  {
+    path: '/plugin-export-xlsx',
+    component: PageLayout,
+    children: [
+      {
+        path: 'install',
+        name: 'PluginExportXlsxInstall',
+        component: () => import('@/views/plugin-export-xlsx/install/CodeExample.vue')
+      },
+      // {
+      //   path: 'table',
+      //   component: RouteLayout,
+      //   children: [
+      //     {
+      //       path: 'export',
+      //       name: 'PluginExportXlsxTableExport',
+      //       component: () => import('@/views/plugin-export-xlsx/table/export/CodeExample.vue')
+      //     },
+      //     {
+      //       path: 'import',
+      //       name: 'PluginExportXlsxTableImport',
+      //       component: () => import('@/views/plugin-export-xlsx/table/import/CodeExample.vue')
+      //     },
+      //     {
+      //       path: 'toolbar',
+      //       name: 'PluginExportXlsxTableToolbar',
+      //       component: () => import('@/views/plugin-export-xlsx/table/toolbar/CodeExample.vue')
+      //     },
+      //     {
+      //       path: 'advanced',
+      //       name: 'PluginExportXlsxTableAdvanced',
+      //       component: () => import('@/views/plugin-export-xlsx/table/advanced/CodeExample.vue')
+      //     }
+      //   ]
+      // },
+      {
+        path: 'grid',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'export',
+            name: 'PluginExportXlsxGridExport',
+            component: () => import('@/views/plugin-export-xlsx/grid/export/CodeExample.vue')
+          },
+          {
+            path: 'import',
+            name: 'PluginExportXlsxGridImport',
+            component: () => import('@/views/plugin-export-xlsx/grid/import/CodeExample.vue')
+          },
+          {
+            path: 'toolbar',
+            name: 'PluginExportXlsxGridToolbar',
+            component: () => import('@/views/plugin-export-xlsx/grid/toolbar/CodeExample.vue')
+          },
+          {
+            path: 'advanced',
+            name: 'PluginExportXlsxGridAdvanced',
+            component: () => import('@/views/plugin-export-xlsx/grid/advanced/CodeExample.vue')
+          }
+        ]
+      }
+    ]
+  },
+  {
+    path: '/plugin-export-pdf',
+    component: PageLayout,
+    children: [
+      {
+        path: 'install',
+        name: 'PluginExportPdfInstall',
+        component: () => import('@/views/plugin-export-pdf/install/CodeExample.vue')
+      },
+      // {
+      //   path: 'table',
+      //   component: RouteLayout,
+      //   children: [
+      //     {
+      //       path: 'export',
+      //       name: 'PluginExportPdfTableExport',
+      //       component: () => import('@/views/plugin-export-pdf/table/export/CodeExample.vue')
+      //     },
+      //     {
+      //       path: 'toolbar',
+      //       name: 'PluginExportPdfTableToolbar',
+      //       component: () => import('@/views/plugin-export-pdf/table/toolbar/CodeExample.vue')
+      //     },
+      //     {
+      //       path: 'advanced',
+      //       name: 'PluginExportPdfTableAdvanced',
+      //       component: () => import('@/views/plugin-export-pdf/table/advanced/CodeExample.vue')
+      //     }
+      //   ]
+      // },
+      {
+        path: 'grid',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'export',
+            name: 'PluginExportPdfGridExport',
+            component: () => import('@/views/plugin-export-pdf/grid/export/CodeExample.vue')
+          },
+          {
+            path: 'toolbar',
+            name: 'PluginExportPdfGridToolbar',
+            component: () => import('@/views/plugin-export-pdf/grid/toolbar/CodeExample.vue')
+          },
+          {
+            path: 'advanced',
+            name: 'PluginExportPdfGridAdvanced',
+            component: () => import('@/views/plugin-export-pdf/grid/advanced/CodeExample.vue')
+          }
+        ]
+      }
+    ]
+  },
   // {
   //   path: '/plugin-render-element',
   //   component: PageLayout,

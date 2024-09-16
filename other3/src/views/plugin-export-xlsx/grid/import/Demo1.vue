@@ -1,12 +1,14 @@
 <template>
   <div>
-    <vxe-grid v-bind="gridOptions"></vxe-grid>
+    <vxe-button @click="exportEvent">直接导出 XLSX 文件</vxe-button>
+    <vxe-button @click="importEvent">直接导入 XLSX 文件</vxe-button>
+    <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { reactive } from 'vue'
-import type { VxeGridProps } from 'vxe-table'
+import { ref, reactive } from 'vue'
+import type { VxeGridInstance, VxeGridProps } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -17,13 +19,9 @@ interface RowVO {
   address: string
 }
 
+const gridRef = ref<VxeGridInstance>()
+
 const gridOptions = reactive<VxeGridProps<RowVO>>({
-  toolbarConfig: {
-    export: true
-  },
-  exportConfig: {
-    type: 'pdf'
-  },
   columns: [
     { type: 'seq', width: 70 },
     { field: 'name', title: 'Name' },
@@ -37,4 +35,23 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
   ]
 })
+
+const exportEvent = () => {
+  const $grid = gridRef.value
+  if ($grid) {
+    $grid.exportData({
+      type: 'xlsx',
+      original: true
+    })
+  }
+}
+
+const importEvent = () => {
+  const $grid = gridRef.value
+  if ($grid) {
+    $grid.importData({
+      types: ['xlsx']
+    })
+  }
+}
 </script>

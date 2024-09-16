@@ -51,64 +51,64 @@ export const navConfigList: NavVO[] = [
       }
     ]
   },
-  // {
-  //   title: '导入/导出 XLSX',
-  //   isExpand: false,
-  //   children: [
-  //     {
-  //       title: '开发指南',
-  //       children: [
-  //         { title: '安装插件', routerLink: { name: 'PluginExportXlsxInstall' } }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Table 基础表格',
-  //       children: [
-  //         { title: '导出 XLSX 文件', routerLink: { name: 'PluginExportXlsxTableExport' } },
-  //         { title: '导入 XLSX 格式', routerLink: { name: 'PluginExportXlsxTableImport' } },
-  //         { title: '使用工具栏', routerLink: { name: 'PluginExportXlsxTableToolbar' } },
-  //         { title: '高级导出', routerLink: { name: 'PluginExportXlsxTableAdvanced' } }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Grid 配置式表格',
-  //       children: [
-  //         { title: '导出 XLSX 文件', routerLink: { name: 'PluginExportXlsxGridExport' } },
-  //         { title: '导入 XLSX 格式', routerLink: { name: 'PluginExportXlsxGridImport' } },
-  //         { title: '使用工具栏', routerLink: { name: 'PluginExportXlsxGridToolbar' } },
-  //         { title: '高级导出', routerLink: { name: 'PluginExportXlsxGridAdvanced' } }
-  //       ]
-  //     }
-  //   ]
-  // },
-  // {
-  //   title: '导出 PDF',
-  //   isExpand: false,
-  //   children: [
-  //     {
-  //       title: '开发指南',
-  //       children: [
-  //         { title: '安装插件', routerLink: { name: 'PluginExportPdfInstall' } }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Table 基础表格',
-  //       children: [
-  //         { title: '导出 PDF 文件', routerLink: { name: 'PluginExportPdfTableExport' } },
-  //         { title: '使用工具栏', routerLink: { name: 'PluginExportPdfTableToolbar' } },
-  //         { title: '高级导出', routerLink: { name: 'PluginExportPdfTableAdvanced' } }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Grid 配置式表格',
-  //       children: [
-  //         { title: '导出 PDF 文件', routerLink: { name: 'PluginExportPdfGridExport' } },
-  //         { title: '使用工具栏', routerLink: { name: 'PluginExportPdfGridToolbar' } },
-  //         { title: '高级导出', routerLink: { name: 'PluginExportPdfGridAdvanced' } }
-  //       ]
-  //     }
-  //   ]
-  // },
+  {
+    title: '导入/导出 XLSX',
+    isExpand: false,
+    children: [
+      {
+        title: '开发指南',
+        children: [
+          { title: '安装插件', routerLink: { name: 'PluginExportXlsxInstall' } }
+        ]
+      },
+      // {
+      //   title: 'Table 基础表格',
+      //   children: [
+      //     { title: '导出 XLSX 文件', routerLink: { name: 'PluginExportXlsxTableExport' } },
+      //     { title: '导入 XLSX 格式', routerLink: { name: 'PluginExportXlsxTableImport' } },
+      //     { title: '使用工具栏', routerLink: { name: 'PluginExportXlsxTableToolbar' } },
+      //     { title: '高级导出', routerLink: { name: 'PluginExportXlsxTableAdvanced' } }
+      //   ]
+      // }
+      {
+        title: 'Grid 配置式表格',
+        children: [
+          { title: '导出 XLSX 文件', routerLink: { name: 'PluginExportXlsxGridExport' } },
+          { title: '导入 XLSX 格式', routerLink: { name: 'PluginExportXlsxGridImport' } },
+          { title: '使用工具栏', routerLink: { name: 'PluginExportXlsxGridToolbar' } },
+          { title: '高级导出', routerLink: { name: 'PluginExportXlsxGridAdvanced' } }
+        ]
+      }
+    ]
+  },
+  {
+    title: '导出 PDF',
+    isExpand: false,
+    children: [
+      {
+        title: '开发指南',
+        children: [
+          { title: '安装插件', routerLink: { name: 'PluginExportPdfInstall' } }
+        ]
+      },
+      // {
+      //   title: 'Table 基础表格',
+      //   children: [
+      //     { title: '导出 PDF 文件', routerLink: { name: 'PluginExportPdfTableExport' } },
+      //     { title: '使用工具栏', routerLink: { name: 'PluginExportPdfTableToolbar' } },
+      //     { title: '高级导出', routerLink: { name: 'PluginExportPdfTableAdvanced' } }
+      //   ]
+      // }
+      {
+        title: 'Grid 配置式表格',
+        children: [
+          { title: '导出 PDF 文件', routerLink: { name: 'PluginExportPdfGridExport' } },
+          { title: '使用工具栏', routerLink: { name: 'PluginExportPdfGridToolbar' } },
+          { title: '高级导出', routerLink: { name: 'PluginExportPdfGridAdvanced' } }
+        ]
+      }
+    ]
+  },
   // {
   //   title: '渲染 element-plus 组件',
   //   isExpand: false,

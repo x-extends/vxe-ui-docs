@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive } from 'vue'
-import type { VxeGridInstance, VxeGridProps } from 'vxe-table'
+import { reactive } from 'vue'
+import type { VxeGridProps } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -16,8 +16,6 @@ interface RowVO {
   age: number
   address: string
 }
-
-const gridRef = ref<VxeGridInstance>()
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   toolbarConfig: {
@@ -39,11 +37,4 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
   ]
 })
-
-const exportEvent = () => {
-  const $grid = gridRef.value
-  if ($grid) {
-    $grid.exportData()
-  }
-}
 </script>

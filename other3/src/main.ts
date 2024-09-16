@@ -24,6 +24,8 @@ import 'vxe-table/es/style.css'
 
 import enUS from 'vxe-pc-ui/packages/language/en-US'
 
+import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
+import VxeUIPluginExportPDF from '@vxe-ui/plugin-export-pdf'
 import VxeUIPluginRenderChart from '@vxe-ui/plugin-render-chart'
 import '@vxe-ui/plugin-render-chart/dist/style.css'
 
@@ -39,17 +41,28 @@ axios.defaults.baseURL = 'https://api.vxetable.cn/demo'
 
 VxeUI.setI18n('en-US', enUS)
 
+VxeUI.use(VxeUIPluginExportXLSX)
+VxeUI.use(VxeUIPluginExportPDF, {
+  // 支持中文字体
+  fontName: 'SourceHanSans-Normal',
+  fonts: [
+    {
+      fontName: 'SourceHanSans-Normal',
+      fontUrl: 'https://cdn.jsdelivr.net/npm/vxe-table-plugin-export-pdf/fonts/source-han-sans-normal.js'
+    }
+  ]
+})
+VxeUI.use(VxeUIPluginRenderChart)
+
+Vue.use(VxeUI)
+Vue.use(VxeTable)
+
 Vue.component('PreCode', PreCode)
 Vue.component('CodeLight', CodeLight)
 Vue.component('CodeList', CodeList)
 Vue.component('CodeRender', CodeRender)
 Vue.component('CodeUseVersion', CodeUseVersion)
 Vue.component('ApiLink', ApiLink)
-
-VxeUI.use(VxeUIPluginRenderChart)
-
-Vue.use(VxeUI)
-Vue.use(VxeTable)
 
 Vue.config.productionTip = false
 

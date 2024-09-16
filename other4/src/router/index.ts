@@ -135,7 +135,7 @@ const routes: Array<RouteRecordRaw> = [
           {
             path: 'import',
             name: 'PluginExportXlsxGridImport',
-            component: () => import('@/views/plugin-export-xlsx/table/import/CodeExample.vue')
+            component: () => import('@/views/plugin-export-xlsx/grid/import/CodeExample.vue')
           },
           {
             path: 'toolbar',
