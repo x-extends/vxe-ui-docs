@@ -420,7 +420,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '表格响应式高度', routerLink: { name: 'ComponentGridBaseAutoHeight' } },
             // { title: '设置行度', routerLink: { name: 'ComponentGridBaseRowHeight' } },
             { title: '冻结列', routerLink: { name: 'ComponentGridBaseFixed' } },
-            // { title: '冻结表头和列', routerLink: { name: 'ComponentGridBaseFixedFull' } },
+            { title: '冻结表头和列', routerLink: { name: 'ComponentGridBaseFixedFull' } },
             { title: '表尾', routerLink: { name: 'ComponentGridBaseFooter' } },
             { title: '分组表头', routerLink: { name: 'ComponentGridBaseGroup' } },
             // { title: '排序', routerLink: { name: 'ComponentGridBaseSort' } },
