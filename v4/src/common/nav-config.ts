@@ -408,7 +408,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             // { title: '文本提示', routerLink: { name: 'ComponentGridBaseTooltip' } },
             { title: '滚动条样式', routerLink: { name: 'ComponentGridBaseScrollStyle' } },
             { title: '斑马线样式', routerLink: { name: 'ComponentGridBaseStripe' } },
-            // { title: '单元格样式', routerLink: { name: 'ComponentGridBaseStyle' } },
+            { title: '单元格样式', routerLink: { name: 'ComponentGridBaseStyle' } },
             { title: '动态样式', routerLink: { name: 'ComponentGridBaseDynamicStyle' } },
             { title: '隐藏表头', routerLink: { name: 'ComponentGridBaseHeader' } },
             { title: '高亮列', routerLink: { name: 'ComponentGridBaseCurrentColumn' } },
