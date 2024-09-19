@@ -431,6 +431,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             // { title: '单选框', routerLink: { name: 'ComponentGridBaseRadio' } },
             // { title: '复选框', routerLink: { name: 'ComponentGridBaseSelection' } },
             { title: 'HTML 类型', routerLink: { name: 'ComponentGridBaseHtml' } },
+            { title: '更新列配置', routerLink: { name: 'ComponentGridBaseColumns' } },
             { title: '完整案例', routerLink: { name: 'ComponentGridBaseFull' } }
           ]
         },
