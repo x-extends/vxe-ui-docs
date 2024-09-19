@@ -7,11 +7,17 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue'
+<script lang="ts">
+import Vue from 'vue'
 
-const val1 = ref()
-const val2 = ref()
-const val3 = ref()
-const val4 = ref()
+export default Vue.extend({
+  data () {
+    return {
+      val1: null,
+      val2: null,
+      val3: null,
+      val4: null
+    }
+  }
+})
 </script>

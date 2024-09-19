@@ -3221,169 +3221,169 @@ const routes: Array<RouteConfig> = [
           }
         ]
       },
-      // {
-      //   path: 'radio',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'size',
-      //       name: 'ComponentRadioSize',
-      //       component: () => import('@/views/radio/size/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'disabled',
-      //       name: 'ComponentRadioDisabled',
-      //       component: () => import('@/views/radio/disabled/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'strict',
-      //       name: 'ComponentRadioStrict',
-      //       component: () => import('@/views/radio/strict/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'group',
-      //       name: 'ComponentRadioGroup',
-      //       component: () => import('@/views/radio/group/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'button',
-      //       name: 'ComponentRadioButton',
-      //       component: () => import('@/views/radio/button/CodeExample.vue')
-      //     }
-      //   ]
-      // },
-      // {
-      //   path: 'checkbox',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'size',
-      //       name: 'ComponentCheckboxSize',
-      //       component: () => import('@/views/checkbox/size/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'indeterminate',
-      //       name: 'ComponentCheckboxIndeterminate',
-      //       component: () => import('@/views/checkbox/indeterminate/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'disabled',
-      //       name: 'ComponentCheckboxDisabled',
-      //       component: () => import('@/views/checkbox/disabled/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'value',
-      //       name: 'ComponentCheckboxValue',
-      //       component: () => import('@/views/checkbox/value/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'group',
-      //       name: 'ComponentCheckboxGroup',
-      //       component: () => import('@/views/checkbox/group/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'max',
-      //       name: 'ComponentCheckboxMax',
-      //       component: () => import('@/views/checkbox/max/CodeExample.vue')
-      //     }
-      //   ]
-      // },
-      // {
-      //   path: 'input',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'size',
-      //       name: 'ComponentInputSize',
-      //       component: () => import('@/views/input/size/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'text',
-      //       name: 'ComponentInputText',
-      //       component: () => import('@/views/input/text/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'search',
-      //       name: 'ComponentInputSearch',
-      //       component: () => import('@/views/input/search/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'password',
-      //       name: 'ComponentInputPassword',
-      //       component: () => import('@/views/input/password/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'date',
-      //       name: 'ComponentInputDate',
-      //       component: () => import('@/views/input/date/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'week',
-      //       name: 'ComponentInputWeek',
-      //       component: () => import('@/views/input/week/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'month',
-      //       name: 'ComponentInputMonth',
-      //       component: () => import('@/views/input/month/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'quarter',
-      //       name: 'ComponentInputQuarter',
-      //       component: () => import('@/views/input/quarter/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'year',
-      //       name: 'ComponentInputYear',
-      //       component: () => import('@/views/input/year/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'time',
-      //       name: 'ComponentInputTime',
-      //       component: () => import('@/views/input/time/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'datetime',
-      //       name: 'ComponentInputDatetime',
-      //       component: () => import('@/views/input/datetime/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'number',
-      //       name: 'ComponentInputNumber',
-      //       component: () => import('@/views/input/number/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'integer',
-      //       name: 'ComponentInputInteger',
-      //       component: () => import('@/views/input/integer/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'float',
-      //       name: 'ComponentInputFloat',
-      //       component: () => import('@/views/input/float/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'count',
-      //       name: 'ComponentInputCount',
-      //       component: () => import('@/views/input/count/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'prefix',
-      //       name: 'ComponentInputPrefix',
-      //       component: () => import('@/views/input/prefix/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'suffix',
-      //       name: 'ComponentInputSuffix',
-      //       component: () => import('@/views/input/suffix/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'template',
-      //       name: 'ComponentInputTemplate',
-      //       component: () => import('@/views/input/template/CodeExample.vue')
-      //     }
-      //   ]
-      // },
+      {
+        path: 'radio',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentRadioSize',
+            component: () => import('@/views/radio/size/CodeExample.vue')
+          },
+          {
+            path: 'disabled',
+            name: 'ComponentRadioDisabled',
+            component: () => import('@/views/radio/disabled/CodeExample.vue')
+          },
+          {
+            path: 'strict',
+            name: 'ComponentRadioStrict',
+            component: () => import('@/views/radio/strict/CodeExample.vue')
+          },
+          {
+            path: 'group',
+            name: 'ComponentRadioGroup',
+            component: () => import('@/views/radio/group/CodeExample.vue')
+          },
+          {
+            path: 'button',
+            name: 'ComponentRadioButton',
+            component: () => import('@/views/radio/button/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'checkbox',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentCheckboxSize',
+            component: () => import('@/views/checkbox/size/CodeExample.vue')
+          },
+          {
+            path: 'indeterminate',
+            name: 'ComponentCheckboxIndeterminate',
+            component: () => import('@/views/checkbox/indeterminate/CodeExample.vue')
+          },
+          {
+            path: 'disabled',
+            name: 'ComponentCheckboxDisabled',
+            component: () => import('@/views/checkbox/disabled/CodeExample.vue')
+          },
+          {
+            path: 'value',
+            name: 'ComponentCheckboxValue',
+            component: () => import('@/views/checkbox/value/CodeExample.vue')
+          },
+          {
+            path: 'group',
+            name: 'ComponentCheckboxGroup',
+            component: () => import('@/views/checkbox/group/CodeExample.vue')
+          },
+          {
+            path: 'max',
+            name: 'ComponentCheckboxMax',
+            component: () => import('@/views/checkbox/max/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'input',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentInputSize',
+            component: () => import('@/views/input/size/CodeExample.vue')
+          },
+          {
+            path: 'text',
+            name: 'ComponentInputText',
+            component: () => import('@/views/input/text/CodeExample.vue')
+          },
+          {
+            path: 'search',
+            name: 'ComponentInputSearch',
+            component: () => import('@/views/input/search/CodeExample.vue')
+          },
+          {
+            path: 'password',
+            name: 'ComponentInputPassword',
+            component: () => import('@/views/input/password/CodeExample.vue')
+          },
+          {
+            path: 'date',
+            name: 'ComponentInputDate',
+            component: () => import('@/views/input/date/CodeExample.vue')
+          },
+          {
+            path: 'week',
+            name: 'ComponentInputWeek',
+            component: () => import('@/views/input/week/CodeExample.vue')
+          },
+          {
+            path: 'month',
+            name: 'ComponentInputMonth',
+            component: () => import('@/views/input/month/CodeExample.vue')
+          },
+          {
+            path: 'quarter',
+            name: 'ComponentInputQuarter',
+            component: () => import('@/views/input/quarter/CodeExample.vue')
+          },
+          {
+            path: 'year',
+            name: 'ComponentInputYear',
+            component: () => import('@/views/input/year/CodeExample.vue')
+          },
+          {
+            path: 'time',
+            name: 'ComponentInputTime',
+            component: () => import('@/views/input/time/CodeExample.vue')
+          },
+          {
+            path: 'datetime',
+            name: 'ComponentInputDatetime',
+            component: () => import('@/views/input/datetime/CodeExample.vue')
+          },
+          {
+            path: 'number',
+            name: 'ComponentInputNumber',
+            component: () => import('@/views/input/number/CodeExample.vue')
+          },
+          {
+            path: 'integer',
+            name: 'ComponentInputInteger',
+            component: () => import('@/views/input/integer/CodeExample.vue')
+          },
+          {
+            path: 'float',
+            name: 'ComponentInputFloat',
+            component: () => import('@/views/input/float/CodeExample.vue')
+          },
+          {
+            path: 'count',
+            name: 'ComponentInputCount',
+            component: () => import('@/views/input/count/CodeExample.vue')
+          },
+          {
+            path: 'prefix',
+            name: 'ComponentInputPrefix',
+            component: () => import('@/views/input/prefix/CodeExample.vue')
+          },
+          {
+            path: 'suffix',
+            name: 'ComponentInputSuffix',
+            component: () => import('@/views/input/suffix/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentInputTemplate',
+            component: () => import('@/views/input/template/CodeExample.vue')
+          }
+        ]
+      },
       {
         path: 'password-input',
         component: RouteLayout,
@@ -3405,95 +3405,95 @@ const routes: Array<RouteConfig> = [
           }
         ]
       },
-      // {
-      //   path: 'number-input',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'number',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'base',
-      //           name: 'ComponentNumberInputNumberBase',
-      //           component: () => import('@/views/number-input/number/base/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'clearable',
-      //           name: 'ComponentNumberInputNumberClearable',
-      //           component: () => import('@/views/number-input/number/clearable/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'step',
-      //           name: 'ComponentNumberInputNumberStep',
-      //           component: () => import('@/views/number-input/number/step/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'controls',
-      //           name: 'ComponentNumberInputNumberControls',
-      //           component: () => import('@/views/number-input/number/controls/CodeExample.vue')
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       path: 'integer',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'base',
-      //           name: 'ComponentNumberInputIntegerBase',
-      //           component: () => import('@/views/number-input/integer/base/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'clearable',
-      //           name: 'ComponentNumberInputIntegerClearable',
-      //           component: () => import('@/views/number-input/integer/clearable/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'step',
-      //           name: 'ComponentNumberInputIntegerStep',
-      //           component: () => import('@/views/number-input/integer/step/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'controls',
-      //           name: 'ComponentNumberInputIntegerControls',
-      //           component: () => import('@/views/number-input/integer/controls/CodeExample.vue')
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       path: 'float',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'base',
-      //           name: 'ComponentNumberInputFloatBase',
-      //           component: () => import('@/views/number-input/float/base/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'clearable',
-      //           name: 'ComponentNumberInputFloatClearable',
-      //           component: () => import('@/views/number-input/float/clearable/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'digits',
-      //           name: 'ComponentNumberInputFloatDigits',
-      //           component: () => import('@/views/number-input/float/digits/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'step',
-      //           name: 'ComponentNumberInputFloatStep',
-      //           component: () => import('@/views/number-input/float/step/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'controls',
-      //           name: 'ComponentNumberInputFloatControls',
-      //           component: () => import('@/views/number-input/float/controls/CodeExample.vue')
-      //         }
-      //       ]
-      //     }
-      //   ]
-      // },
+      {
+        path: 'number-input',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'number',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentNumberInputNumberBase',
+                component: () => import('@/views/number-input/number/base/CodeExample.vue')
+              },
+              {
+                path: 'clearable',
+                name: 'ComponentNumberInputNumberClearable',
+                component: () => import('@/views/number-input/number/clearable/CodeExample.vue')
+              },
+              {
+                path: 'step',
+                name: 'ComponentNumberInputNumberStep',
+                component: () => import('@/views/number-input/number/step/CodeExample.vue')
+              },
+              {
+                path: 'controls',
+                name: 'ComponentNumberInputNumberControls',
+                component: () => import('@/views/number-input/number/controls/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'integer',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentNumberInputIntegerBase',
+                component: () => import('@/views/number-input/integer/base/CodeExample.vue')
+              },
+              {
+                path: 'clearable',
+                name: 'ComponentNumberInputIntegerClearable',
+                component: () => import('@/views/number-input/integer/clearable/CodeExample.vue')
+              },
+              {
+                path: 'step',
+                name: 'ComponentNumberInputIntegerStep',
+                component: () => import('@/views/number-input/integer/step/CodeExample.vue')
+              },
+              {
+                path: 'controls',
+                name: 'ComponentNumberInputIntegerControls',
+                component: () => import('@/views/number-input/integer/controls/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'float',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentNumberInputFloatBase',
+                component: () => import('@/views/number-input/float/base/CodeExample.vue')
+              },
+              {
+                path: 'clearable',
+                name: 'ComponentNumberInputFloatClearable',
+                component: () => import('@/views/number-input/float/clearable/CodeExample.vue')
+              },
+              {
+                path: 'digits',
+                name: 'ComponentNumberInputFloatDigits',
+                component: () => import('@/views/number-input/float/digits/CodeExample.vue')
+              },
+              {
+                path: 'step',
+                name: 'ComponentNumberInputFloatStep',
+                component: () => import('@/views/number-input/float/step/CodeExample.vue')
+              },
+              {
+                path: 'controls',
+                name: 'ComponentNumberInputFloatControls',
+                component: () => import('@/views/number-input/float/controls/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
       {
         path: 'textarea',
         component: RouteLayout,
@@ -3551,149 +3551,150 @@ const routes: Array<RouteConfig> = [
           }
         ]
       },
-      // {
-      //   path: 'date-picker',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'date',
-      //       name: 'ComponentDatePickerDate',
-      //       component: () => import('@/views/date-picker/date/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'week',
-      //       name: 'ComponentDatePickerWeek',
-      //       component: () => import('@/views/date-picker/week/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'month',
-      //       name: 'ComponentDatePickerMonth',
-      //       component: () => import('@/views/date-picker/month/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'quarter',
-      //       name: 'ComponentDatePickerQuarter',
-      //       component: () => import('@/views/date-picker/quarter/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'year',
-      //       name: 'ComponentDatePickerYear',
-      //       component: () => import('@/views/date-picker/year/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'time',
-      //       name: 'ComponentDatePickerTime',
-      //       component: () => import('@/views/date-picker/time/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'datetime',
-      //       name: 'ComponentDatePickerDatetime',
-      //       component: () => import('@/views/date-picker/datetime/CodeExample.vue')
-      //     }
-      //   ]
-      // },
-      // {
-      //   path: 'select',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'base',
-      //       children: [
-      //         {
-      //           path: 'size',
-      //           name: 'ComponentSelectBaseSize',
-      //           component: () => import('@/views/select/base/size/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'clearable',
-      //           name: 'ComponentSelectBaseClearable',
-      //           component: () => import('@/views/select/base/clearable/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'disabled',
-      //           name: 'ComponentSelectBaseDisabled',
-      //           component: () => import('@/views/select/base/disabled/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'icon',
-      //           name: 'ComponentSelectBaseIcon',
-      //           component: () => import('@/views/select/base/icon/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'loading',
-      //           name: 'ComponentSelectBaseLoading',
-      //           component: () => import('@/views/select/base/loading/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'filterable',
-      //           name: 'ComponentSelectBaseFilterable',
-      //           component: () => import('@/views/select/base/filterable/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'group',
-      //           name: 'ComponentSelectBaseGroup',
-      //           component: () => import('@/views/select/base/group/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'multiple',
-      //           name: 'ComponentSelectBaseMultiple',
-      //           component: () => import('@/views/select/base/multiple/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'max',
-      //           name: 'ComponentSelectBaseMax',
-      //           component: () => import('@/views/select/base/max/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'template',
-      //           name: 'ComponentSelectBaseTemplate',
-      //           component: () => import('@/views/select/base/template/CodeExample.vue')
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       path: 'config',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'clearable',
-      //           name: 'ComponentSelectConfigClearable',
-      //           component: () => import('@/views/select/config/clearable/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'disabled',
-      //           name: 'ComponentSelectConfigDisabled',
-      //           component: () => import('@/views/select/config/disabled/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'loading',
-      //           name: 'ComponentSelectConfigLoading',
-      //           component: () => import('@/views/select/config/loading/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'filterable',
-      //           name: 'ComponentSelectConfigFilterable',
-      //           component: () => import('@/views/select/config/filterable/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'group',
-      //           name: 'ComponentSelectConfigGroup',
-      //           component: () => import('@/views/select/config/group/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'multiple',
-      //           name: 'ComponentSelectConfigMultiple',
-      //           component: () => import('@/views/select/config/multiple/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'template',
-      //           name: 'ComponentSelectConfigTemplate',
-      //           component: () => import('@/views/select/config/template/CodeExample.vue')
-      //         }
-      //       ]
-      //     }
-      //   ]
-      // },
+      {
+        path: 'date-picker',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'date',
+            name: 'ComponentDatePickerDate',
+            component: () => import('@/views/date-picker/date/CodeExample.vue')
+          },
+          {
+            path: 'week',
+            name: 'ComponentDatePickerWeek',
+            component: () => import('@/views/date-picker/week/CodeExample.vue')
+          },
+          {
+            path: 'month',
+            name: 'ComponentDatePickerMonth',
+            component: () => import('@/views/date-picker/month/CodeExample.vue')
+          },
+          {
+            path: 'quarter',
+            name: 'ComponentDatePickerQuarter',
+            component: () => import('@/views/date-picker/quarter/CodeExample.vue')
+          },
+          {
+            path: 'year',
+            name: 'ComponentDatePickerYear',
+            component: () => import('@/views/date-picker/year/CodeExample.vue')
+          },
+          {
+            path: 'time',
+            name: 'ComponentDatePickerTime',
+            component: () => import('@/views/date-picker/time/CodeExample.vue')
+          },
+          {
+            path: 'datetime',
+            name: 'ComponentDatePickerDatetime',
+            component: () => import('@/views/date-picker/datetime/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'select',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'size',
+                name: 'ComponentSelectBaseSize',
+                component: () => import('@/views/select/base/size/CodeExample.vue')
+              },
+              {
+                path: 'clearable',
+                name: 'ComponentSelectBaseClearable',
+                component: () => import('@/views/select/base/clearable/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentSelectBaseDisabled',
+                component: () => import('@/views/select/base/disabled/CodeExample.vue')
+              },
+              {
+                path: 'icon',
+                name: 'ComponentSelectBaseIcon',
+                component: () => import('@/views/select/base/icon/CodeExample.vue')
+              },
+              {
+                path: 'loading',
+                name: 'ComponentSelectBaseLoading',
+                component: () => import('@/views/select/base/loading/CodeExample.vue')
+              },
+              {
+                path: 'filterable',
+                name: 'ComponentSelectBaseFilterable',
+                component: () => import('@/views/select/base/filterable/CodeExample.vue')
+              },
+              {
+                path: 'group',
+                name: 'ComponentSelectBaseGroup',
+                component: () => import('@/views/select/base/group/CodeExample.vue')
+              },
+              {
+                path: 'multiple',
+                name: 'ComponentSelectBaseMultiple',
+                component: () => import('@/views/select/base/multiple/CodeExample.vue')
+              },
+              {
+                path: 'max',
+                name: 'ComponentSelectBaseMax',
+                component: () => import('@/views/select/base/max/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                name: 'ComponentSelectBaseTemplate',
+                component: () => import('@/views/select/base/template/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'config',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'clearable',
+                name: 'ComponentSelectConfigClearable',
+                component: () => import('@/views/select/config/clearable/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentSelectConfigDisabled',
+                component: () => import('@/views/select/config/disabled/CodeExample.vue')
+              },
+              {
+                path: 'loading',
+                name: 'ComponentSelectConfigLoading',
+                component: () => import('@/views/select/config/loading/CodeExample.vue')
+              },
+              {
+                path: 'filterable',
+                name: 'ComponentSelectConfigFilterable',
+                component: () => import('@/views/select/config/filterable/CodeExample.vue')
+              },
+              {
+                path: 'group',
+                name: 'ComponentSelectConfigGroup',
+                component: () => import('@/views/select/config/group/CodeExample.vue')
+              },
+              {
+                path: 'multiple',
+                name: 'ComponentSelectConfigMultiple',
+                component: () => import('@/views/select/config/multiple/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                name: 'ComponentSelectConfigTemplate',
+                component: () => import('@/views/select/config/template/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
       {
         path: 'pager',
         component: RouteLayout,
