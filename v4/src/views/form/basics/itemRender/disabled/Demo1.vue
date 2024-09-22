@@ -11,12 +11,12 @@
       :rules="formRules">
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-item title="输入框" field="nickname" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
-      <vxe-form-gather span="24">
+      <vxe-form-group span="24">
         <vxe-form-item title="数字" field="num" span="8" :item-render="{ name: 'VxeInput', props: { type: 'number' } }"></vxe-form-item>
         <vxe-form-item title="整数" field="integer" span="8" :item-render="{ name: 'VxeInput', props: { type: 'integer' } }"></vxe-form-item>
         <vxe-form-item title="小数" field="float" span="8" :item-render="{ name: 'VxeInput', props: { type: 'float' } }"></vxe-form-item>
-      </vxe-form-gather>
-      <vxe-form-gather span="24">
+      </vxe-form-group>
+      <vxe-form-group span="24">
         <vxe-form-item title="日期" field="date" span="8" :item-render="{ name: 'VxeInput', props: { type: 'date' } }"></vxe-form-item>
         <vxe-form-item title="年份" field="year" span="8" :item-render="{ name: 'VxeInput', props: { type: 'year' } }"></vxe-form-item>
         <vxe-form-item title="季度" field="quarter" span="8" :item-render="{ name: 'VxeInput', props: { type: 'quarter' } }"></vxe-form-item>
@@ -24,7 +24,7 @@
         <vxe-form-item title="周" field="week" span="8" :item-render="{ name: 'VxeInput', props: { type: 'week' } }"></vxe-form-item>
         <vxe-form-item title="时间" field="time" span="8" :item-render="{ name: 'VxeInput', props: { type: 'time' } }"></vxe-form-item>
         <vxe-form-item title="日期带时间" field="datetime" span="8" :item-render="{ name: 'VxeInput', props: { type: 'datetime' } }"></vxe-form-item>
-      </vxe-form-gather>
+      </vxe-form-group>
       <vxe-form-item title="下拉框" field="sex" span="12" :item-render="sexItemRender"></vxe-form-item>
       <vxe-form-item title="下拉框多选" field="sexList" span="12" :item-render="sexListItemRender"></vxe-form-item>
       <vxe-form-item title="下拉框分组" field="type" span="12" :item-render="typeItemRender"></vxe-form-item>

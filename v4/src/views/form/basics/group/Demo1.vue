@@ -5,30 +5,42 @@
       :data="formData"
       @submit="submitEvent"
       @reset="resetEvent">
-      <vxe-form-gather span="12">
-        <vxe-form-item title="名称" field="name" span="8" :item-render="{}">
+      <vxe-form-group span="24" title="分组1" title-bold vertical>
+        <vxe-form-item title="名称" field="name" span="12" :item-render="{}">
           <template #default="params">
             <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>
           </template>
         </vxe-form-item>
-        <vxe-form-item title="性别" field="sex" span="8" :item-render="{}">
+        <vxe-form-item title="性别" field="sex" span="12" :item-render="{}">
           <template #default="params">
             <vxe-input v-model="formData.sex" @change="changeEvent(params)"></vxe-input>
           </template>
         </vxe-form-item>
         <vxe-form-item title="年龄" field="age" span="24" :item-render="{}">
           <template #default="params">
-            <vxe-input v-model="formData.age" @change="changeEvent(params)"></vxe-input>
+            <vxe-number-input v-model="formData.age" @change="changeEvent(params)"></vxe-number-input>
           </template>
         </vxe-form-item>
-      </vxe-form-gather>
-      <vxe-form-gather span="12">
+        <vxe-form-item title="生日" field="birthday" span="24" :item-render="{}">
+          <template #default="params">
+            <vxe-date-picker v-model="formData.birthday" @change="changeEvent(params)"></vxe-date-picker>
+          </template>
+        </vxe-form-item>
+      </vxe-form-group>
+      <vxe-form-group span="24" title="分组2" title-bold vertical>
         <vxe-form-item title="昵称" field="nickname" span="24" :item-render="{}">
           <template #default="params">
             <vxe-input v-model="formData.nickname" @change="changeEvent(params)"></vxe-input>
           </template>
         </vxe-form-item>
-      </vxe-form-gather>
+      </vxe-form-group>
+      <vxe-form-group span="24" title="分组3" title-bold vertical>
+        <vxe-form-item title="描述" field="describe" span="24" :item-render="{}">
+          <template #default="params">
+            <vxe-textarea v-model="formData.describe" @change="changeEvent(params)"></vxe-textarea>
+          </template>
+        </vxe-form-item>
+      </vxe-form-group>
       <vxe-form-item align="center" span="24" :item-render="{}">
         <template #default>
           <vxe-button type="submit" status="primary" content="提交"></vxe-button>
@@ -48,6 +60,8 @@ interface FormDataVO {
   nickname: string
   sex: string
   age: number
+  birthday: string
+  describe: string
 }
 
 const formRef = ref<VxeFormInstance<FormDataVO>>()
@@ -56,7 +70,9 @@ const formData = ref<FormDataVO>({
   name: '',
   nickname: '',
   sex: '0',
-  age: 22
+  age: 22,
+  birthday: '',
+  describe: ''
 })
 
 const changeEvent = (params: any) => {

@@ -4858,6 +4858,11 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/form/basics/bold/CodeExample.vue')
               },
               {
+                path: 'titleAlign',
+                name: 'ComponentFormBasicsTitleAlign',
+                component: () => import('@/views/form/basics/titleAlign/CodeExample.vue')
+              },
+              {
                 path: 'align',
                 name: 'ComponentFormBasicsAlign',
                 component: () => import('@/views/form/basics/align/CodeExample.vue')
@@ -4883,9 +4888,19 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/form/basics/overflow/CodeExample.vue')
               },
               {
-                path: 'gather',
-                name: 'ComponentFormBasicsGather',
-                component: () => import('@/views/form/basics/gather/CodeExample.vue')
+                path: 'border',
+                name: 'ComponentFormBasicsBorder',
+                component: () => import('@/views/form/basics/border/CodeExample.vue')
+              },
+              {
+                path: 'titleBackground',
+                name: 'ComponentFormBasicsTitleBackground',
+                component: () => import('@/views/form/basics/titleBackground/CodeExample.vue')
+              },
+              {
+                path: 'group',
+                name: 'ComponentFormBasicsGroup',
+                component: () => import('@/views/form/basics/group/CodeExample.vue')
               },
               {
                 path: 'customLayout',
@@ -5064,6 +5079,11 @@ const routes: Array<RouteConfig> = [
                     component: () => import('@/views/form/basics/template/content/CodeExample.vue')
                   }
                 ]
+              },
+              {
+                path: 'resumeTemplate',
+                name: 'ComponentFormBasicsResumeTemplate',
+                component: () => import('@/views/form/basics/resumeTemplate/CodeExample.vue')
               }
             ]
           },
@@ -5102,9 +5122,14 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/form/config/tooltip/CodeExample.vue')
               },
               {
-                path: 'gather',
-                name: 'ComponentFormConfigGather',
-                component: () => import('@/views/form/config/gather/CodeExample.vue')
+                path: 'border',
+                name: 'ComponentFormConfigBorder',
+                component: () => import('@/views/form/config/border/CodeExample.vue')
+              },
+              {
+                path: 'group',
+                name: 'ComponentFormConfigGroup',
+                component: () => import('@/views/form/config/group/CodeExample.vue')
               },
               {
                 path: 'horizontal',
@@ -5272,6 +5297,11 @@ const routes: Array<RouteConfig> = [
                     component: () => import('@/views/form/config/itemTemplate/vxe-upload/CodeExample.vue')
                   }
                 ]
+              },
+              {
+                path: 'resumeTemplate',
+                name: 'ComponentFormConfigResumeTemplate',
+                component: () => import('@/views/form/config/resumeTemplate/CodeExample.vue')
               }
             ]
           }

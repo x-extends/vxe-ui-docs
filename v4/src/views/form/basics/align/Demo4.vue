@@ -1,6 +1,7 @@
 <template>
   <div>
     <vxe-form
+      vertical-align="center"
       :data="formData">
       <vxe-form-item title="名称" field="name" span="24">
         <template #default>
@@ -11,8 +12,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script lang="ts" setup>
+import { ref } from 'vue'
 
 interface FormDataVO {
   name: string
@@ -21,18 +22,10 @@ interface FormDataVO {
   age: string
 }
 
-export default Vue.extend({
-  data () {
-    const formData: FormDataVO = {
-      name: 'test1',
-      nickname: 'Testing',
-      sex: '',
-      age: ''
-    }
-
-    return {
-      formData
-    }
-  }
+const formData = ref<FormDataVO>({
+  name: 'test1',
+  nickname: 'Testing',
+  sex: '',
+  age: ''
 })
 </script>

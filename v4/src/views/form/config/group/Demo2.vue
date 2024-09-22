@@ -13,6 +13,8 @@ interface FormDataVO {
   nickname: string
   sex: string
   age: number
+  birthday: string
+  describe: string
 }
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
@@ -20,21 +22,30 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     name: '',
     nickname: '',
     sex: '0',
-    age: 22
+    age: 22,
+    birthday: '',
+    describe: ''
   },
   items: [
     {
       span: 12,
       children: [
-        { field: 'name', title: '名称', span: 8, itemRender: { name: 'VxeInput' } },
-        { field: 'sex', title: '性别', span: 8, itemRender: { name: 'VxeInput' } },
-        { field: 'age', title: '年龄', span: 24, itemRender: { name: 'VxeInput' } }
+        { field: 'name', title: '名称', span: 12, itemRender: { name: 'VxeInput' } },
+        { field: 'sex', title: '性别', span: 12, itemRender: { name: 'VxeInput' } },
+        { field: 'age', title: '年龄', span: 24, itemRender: { name: 'VxeNumberInput' } },
+        { field: 'birthday', title: '生日', span: 24, itemRender: { name: 'VxeDatePicker' } }
       ]
     },
     {
       span: 12,
       children: [
         { field: 'nickname', title: '昵称', span: 24, itemRender: { name: 'VxeInput' } }
+      ]
+    },
+    {
+      span: 24,
+      children: [
+        { field: 'describe', title: '描述', span: 24, itemRender: { name: 'VxeTextarea' } }
       ]
     },
     {

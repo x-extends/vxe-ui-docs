@@ -1132,11 +1132,14 @@ export const navConfigList: NavVO[] = [
           { title: '标题冒号', routerLink: { name: 'ComponentFormBasicsColon' } },
           { title: '标题加粗', routerLink: { name: 'ComponentFormBasicsBold' } },
           { title: '标题宽度', routerLink: { name: 'ComponentFormBasicsWidth' } },
-          { title: '对齐方式', routerLink: { name: 'ComponentFormBasicsAlign' } },
+          { title: '标题对齐方式', routerLink: { name: 'ComponentFormBasicsTitleAlign' } },
+          { title: '内容对齐方式', routerLink: { name: 'ComponentFormBasicsAlign' } },
           { title: '溢出隐藏', routerLink: { name: 'ComponentFormBasicsOverflow' } },
           { title: '标题前缀图标', routerLink: { name: 'ComponentFormBasicsTitlePrefix' } },
           { title: '标题后缀图标', routerLink: { name: 'ComponentFormBasicsTitleSuffix' } },
-          { title: '分行/分列', routerLink: { name: 'ComponentFormBasicsGather' } },
+          { title: '边框', routerLink: { name: 'ComponentFormBasicsBorder' } },
+          { title: '标题背景', routerLink: { name: 'ComponentFormBasicsTitleBackground' } },
+          { title: '分组/分行/分列', routerLink: { name: 'ComponentFormBasicsGroup' } },
           { title: '自定义布局', routerLink: { name: 'ComponentFormBasicsCustomLayout' } },
           { title: '折叠表单', routerLink: { name: 'ComponentFormBasicsCollapse' } },
           { title: '表单校验', routerLink: { name: 'ComponentFormBasicsValid' } },
@@ -1183,7 +1186,8 @@ export const navConfigList: NavVO[] = [
               { title: '自定义标题右侧模板', routerLink: { name: 'ComponentFormBasicsTemplateExtra' } },
               { title: '自定义内容模板', routerLink: { name: 'ComponentFormBasicsTemplateContent' } }
             ]
-          }
+          },
+          { title: '实现简历模板', routerLink: { name: 'ComponentFormBasicsResumeTemplate' } }
         ]
       },
       {
@@ -1197,7 +1201,8 @@ export const navConfigList: NavVO[] = [
           { title: '标题冒号', routerLink: { name: 'ComponentFormConfigColon' } },
           { title: '标题加粗', routerLink: { name: 'ComponentFormConfigBold' } },
           { title: '文字提示', routerLink: { name: 'ComponentFormConfigTooltip' } },
-          { title: '分行/分列', routerLink: { name: 'ComponentFormConfigGather' } },
+          { title: '边框', routerLink: { name: 'ComponentFormConfigBorder' } },
+          { title: '分组/分行/分列', routerLink: { name: 'ComponentFormConfigGroup' } },
           { title: '折叠表单', routerLink: { name: 'ComponentFormConfigCollapse' } },
           { title: '表单校验', routerLink: { name: 'ComponentFormConfigValid' } },
           {
@@ -1238,29 +1243,30 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeUpload', routerLink: { name: 'ComponentFormConfigItemTemplateVxeUpload' } },
               { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemRender/el-input` }
             ]
+          },
+          { title: '实现简历模板', routerLink: { name: 'ComponentFormConfigResumeTemplate' } }
+        ]
+      },
+      {
+        i18nKey: 'app.aside.menu.formGlobalValidators',
+        children: [
+          { title: 'API', routerLink: { name: 'GlobalValidatorsFormAPI' } },
+          { title: '表单项校验', routerLink: { name: 'GlobalValidatorsFormBase' } }
+        ]
+      },
+      {
+        i18nKey: 'app.aside.menu.formGlobalRenderer',
+        children: [
+          { title: 'API', routerLink: { name: 'GlobalRendererFormAPI' } },
+          {
+            title: '表单项',
+            children: [
+              { title: '实现一个金额输入', routerLink: { name: 'GlobalRendererFormItemMyItemAmount' } },
+              { title: '实现一个附件上传', routerLink: { name: 'GlobalRendererFormItemMyItemUpload' } }
+            ]
           }
         ]
       }
-      // {
-      //   i18nKey: 'app.aside.menu.formGlobalValidators',
-      //   children: [
-      //     { title: 'API', routerLink: { name: 'GlobalValidatorsFormAPI' } },
-      //     { title: '表单项校验', routerLink: { name: 'GlobalValidatorsFormBase' } }
-      //   ]
-      // },
-      // {
-      //   i18nKey: 'app.aside.menu.formGlobalRenderer',
-      //   children: [
-      //     { title: 'API', routerLink: { name: 'GlobalRendererFormAPI' } },
-      //     {
-      //       title: '表单项',
-      //       children: [
-      //         { title: '实现一个金额输入', routerLink: { name: 'GlobalRendererFormItemMyItemAmount' } },
-      //         { title: '实现一个附件上传', routerLink: { name: 'GlobalRendererFormItemMyItemUpload' } }
-      //       ]
-      //     }
-      //   ]
-      // }
     ]
   },
   {
