@@ -4405,6 +4405,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/card/height/CodeExample.vue')
           },
           {
+            path: 'loading',
+            name: 'ComponentCardLoading',
+            component: () => import('@/views/card/loading/CodeExample.vue')
+          },
+          {
             path: 'border',
             name: 'ComponentCardBorder',
             component: () => import('@/views/card/border/CodeExample.vue')
@@ -4423,6 +4428,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'template',
             name: 'ComponentCardTemplate',
             component: () => import('@/views/card/template/CodeExample.vue')
+          },
+          {
+            path: 'refresh',
+            name: 'ComponentCardRefresh',
+            component: () => import('@/views/card/refresh/CodeExample.vue')
           }
         ]
       },

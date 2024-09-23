@@ -983,10 +983,12 @@ export const navConfigList: NavVO[] = [
           { title: '基础', routerLink: { name: 'ComponentCardBase' } },
           { title: '宽度', routerLink: { name: 'ComponentCardWidth' } },
           { title: '高度', routerLink: { name: 'ComponentCardHeight' } },
+          { title: '加载中', routerLink: { name: 'ComponentCardLoading' } },
           { title: '显示/隐藏边框', routerLink: { name: 'ComponentCardBorder' } },
           { title: '显示/隐藏边距', routerLink: { name: 'ComponentCardPadding' } },
           { title: '边框阴影', routerLink: { name: 'ComponentCardShadow' } },
-          { title: '自定义模板', routerLink: { name: 'ComponentCardTemplate' } }
+          { title: '自定义模板', routerLink: { name: 'ComponentCardTemplate' } },
+          { title: '实现可刷新', routerLink: { name: 'ComponentCardRefresh' } }
         ]
       },
       {
