@@ -629,8 +629,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '行编辑', routerLink: { name: 'ComponentGridEditRowValid' } },
             { title: '实现行字段的合计', routerLink: { name: 'ComponentGridEditRowImmediately' } },
             { title: '实现表尾实时合计', routerLink: { name: 'ComponentGridEditFooterImmediately' } },
-            { title: '实现弹窗编辑', routerLink: { name: 'ComponentGridEditModal' } },
-            { title: '实现抽屉编辑', routerLink: { name: 'ComponentGridEditDrawer' } }
+            { title: '实现弹窗编辑', routerLink: { name: 'ComponentGridEditModalForm' } },
+            { title: '实现抽屉编辑', routerLink: { name: 'ComponentGridEditDrawerForm' } }
           ]
         },
         {

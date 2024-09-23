@@ -2083,13 +2083,13 @@ const gridRouteConfig: RouteRecordRaw = {
         },
         {
           path: 'modal',
-          name: 'ComponentGridEditModal',
-          component: () => import('@/views/grid/edit/modal/CodeExample.vue')
+          name: 'ComponentGridEditModalForm',
+          component: () => import('@/views/grid/edit/modalForm/CodeExample.vue')
         },
         {
           path: 'drawer',
-          name: 'ComponentGridEditDrawer',
-          component: () => import('@/views/grid/edit/drawer/CodeExample.vue')
+          name: 'ComponentGridEditDrawerForm',
+          component: () => import('@/views/grid/edit/drawerForm/CodeExample.vue')
         }
       ]
     },

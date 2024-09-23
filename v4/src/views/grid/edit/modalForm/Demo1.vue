@@ -1,16 +1,17 @@
 <template>
   <div>
-    <vxe-grid v-bind="gridOptions">
-      <template #toolbarButtons>
-        <vxe-button status="primary" icon="vxe-icon-add" @click="addEvent">新增</vxe-button>
-      </template>
+    <p>
+      <vxe-button status="primary" icon="vxe-icon-add" @click="addEvent">新增</vxe-button>
+    </p>
 
+    <vxe-grid v-bind="gridOptions">
       <template #action="{ row }">
         <vxe-button mode="text" status="primary" icon="vxe-icon-edit" @click="editRow(row)">编辑</vxe-button>
       </template>
     </vxe-grid>
 
-    <vxe-drawer
+    <vxe-modal
+      resize
       destroy-on-close
       show-footer
       show-confirm-button
@@ -18,18 +19,19 @@
       v-model="showEditPopup"
       :title="selectRow ? '编辑' : '新增'"
       width="60vw"
+      height="60vh"
       :loading="loading"
       :confirm-closable="false"
       @confirm="confirmEvent">
       <vxe-form ref="formRef" v-bind="formOptions"></vxe-form>
-    </vxe-drawer>
+    </vxe-modal>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
 import { VxeGridProps } from 'vxe-table'
-import { VxeUI, VxeFormInstance, VxeFormProps } from 'vxe-pc-ui'
+import { VxeUI, VxeFormInstance, VxeFormProps, VxeFormItemPropTypes, VxeSelectProps } from 'vxe-pc-ui'
 import XEUtils from 'xe-utils'
 
 interface RowVO {
@@ -58,6 +60,14 @@ const defaultData: RowVO = {
   address: ''
 }
 
+const sexItemRender = reactive<VxeFormItemPropTypes.ItemRender<RowVO, VxeSelectProps>>({
+  name: 'VxeSelect',
+  options: [
+    { label: '女', value: 'Women' },
+    { label: '男', value: 'Man' }
+  ]
+})
+
 const formOptions = reactive<VxeFormProps<RowVO>>({
   titleWidth: 80,
   titleAlign: 'right',
@@ -78,7 +88,7 @@ const formOptions = reactive<VxeFormProps<RowVO>>({
   items: [
     { field: 'name', title: '名称', span: 12, itemRender: { name: 'VxeInput' } },
     { field: 'nickname', title: '昵称', span: 12, itemRender: { name: 'VxeInput' } },
-    { field: 'sex', title: '性别', span: 12, itemRender: { name: 'VxeInput' } },
+    { field: 'sex', title: '性别', span: 12, itemRender: sexItemRender },
     { field: 'age', title: '年龄', span: 12, itemRender: { name: 'VxeNumberInput' } },
     { field: 'address', title: '地址', span: 24, itemRender: { name: 'VxeTextarea', props: { autosize: { minRows: 2, maxRows: 4 } } } }
   ]
@@ -87,11 +97,7 @@ const formOptions = reactive<VxeFormProps<RowVO>>({
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
   showOverflow: true,
-  toolbarConfig: {
-    slots: {
-      buttons: 'toolbarButtons'
-    }
-  },
+  height: 400,
   columns: [
     { type: 'seq', width: 70 },
     { field: 'name', title: 'Name' },
