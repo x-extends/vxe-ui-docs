@@ -2080,6 +2080,16 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'footerImmediately',
           name: 'ComponentGridEditFooterImmediately',
           component: () => import('@/views/grid/edit/footerImmediately/CodeExample.vue')
+        },
+        {
+          path: 'modal',
+          name: 'ComponentGridEditModal',
+          component: () => import('@/views/grid/edit/modal/CodeExample.vue')
+        },
+        {
+          path: 'drawer',
+          name: 'ComponentGridEditDrawer',
+          component: () => import('@/views/grid/edit/drawer/CodeExample.vue')
         }
       ]
     },
@@ -3974,6 +3984,16 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/modal/modal/button/CodeExample.vue')
           },
           {
+            path: 'confirmClosable',
+            name: 'ComponentModalModalConfirmClosable',
+            component: () => import('@/views/modal/modal/confirmClosable/CodeExample.vue')
+          },
+          {
+            path: 'cancelClosable',
+            name: 'ComponentModalModalCancelClosable',
+            component: () => import('@/views/modal/modal/cancelClosable/CodeExample.vue')
+          },
+          {
             path: 'maximize',
             name: 'ComponentModalModalMaximize',
             component: () => import('@/views/modal/modal/maximize/CodeExample.vue')
@@ -4233,6 +4253,16 @@ const routes: Array<RouteRecordRaw> = [
             path: 'button',
             name: 'ComponentDrawerButton',
             component: () => import('@/views/drawer/button/CodeExample.vue')
+          },
+          {
+            path: 'confirmClosable',
+            name: 'ComponentDrawerConfirmClosable',
+            component: () => import('@/views/drawer/confirmClosable/CodeExample.vue')
+          },
+          {
+            path: 'cancelClosable',
+            name: 'ComponentDrawerCancelClosable',
+            component: () => import('@/views/drawer/cancelClosable/CodeExample.vue')
           },
           {
             path: 'multiple',

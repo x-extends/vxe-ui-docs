@@ -11,7 +11,7 @@
     <CodeLight path="modal/modal/draggable/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          默认是允许拖动的，可以通过设置 draggable 参数禁止拖动
+          默认是允许拖动的，可以通过设置 <ApiLink name="modal" prop="draggable"/> 参数禁止拖动
         </vxe-tip>
       </template>
     </CodeLight>

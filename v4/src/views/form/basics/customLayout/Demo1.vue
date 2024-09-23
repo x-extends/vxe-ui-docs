@@ -6,7 +6,7 @@
       :data="formData"
       @submit="submitEvent"
       @reset="resetEvent">
-      <div>
+      <div style="width: 100%">
         <div style="color: red;">自定义内容</div>
         <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
           <template #default="params">
@@ -14,7 +14,7 @@
           </template>
         </vxe-form-item>
       </div>
-      <div style="height: 100px;">
+      <div style="width: 100%;height: 100px;">
         <vxe-form-item title="性别" field="sex" span="12" :item-render="{}">
           <template #default="params">
             <vxe-input v-model="formData.sex" @change="changeEvent(params)"></vxe-input>

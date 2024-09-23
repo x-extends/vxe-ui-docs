@@ -3,7 +3,7 @@
     <CodeLight path="modal/modal/escClosable/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="按 Esc 键可关闭">
-          可以通过设置 escClosable 参数启用
+          可以通过设置 <ApiLink name="modal" prop="esc-closable"/> 参数启用
         </vxe-tip>
       </template>
     </CodeLight>

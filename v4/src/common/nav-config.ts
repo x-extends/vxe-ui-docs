@@ -628,7 +628,9 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '单元格校验', routerLink: { name: 'ComponentGridEditCellValid' } },
             { title: '行编辑', routerLink: { name: 'ComponentGridEditRowValid' } },
             { title: '实现行字段的合计', routerLink: { name: 'ComponentGridEditRowImmediately' } },
-            { title: '实现表尾实时合计', routerLink: { name: 'ComponentGridEditFooterImmediately' } }
+            { title: '实现表尾实时合计', routerLink: { name: 'ComponentGridEditFooterImmediately' } },
+            { title: '实现弹窗编辑', routerLink: { name: 'ComponentGridEditModal' } },
+            { title: '实现抽屉编辑', routerLink: { name: 'ComponentGridEditDrawer' } }
           ]
         },
         {
@@ -1660,6 +1662,8 @@ export const navConfigList: NavVO[] = [
           { title: '加载中', routerLink: { name: 'ComponentDrawerLoading' } },
           { title: '点击遮罩层关闭', routerLink: { name: 'ComponentDrawerMaskClosable' } },
           { title: '操作按钮', routerLink: { name: 'ComponentDrawerButton' } },
+          { title: '点击确认按钮不可关闭', routerLink: { name: 'ComponentDrawerConfirmClosable' } },
+          { title: '点击取消按钮不可关闭', routerLink: { name: 'ComponentDrawerCancelClosable' } },
           { title: '同时弹出多个抽屉', routerLink: { name: 'ComponentDrawerMultiple' } },
           { title: '按 Esc 键可关闭', routerLink: { name: 'ComponentDrawerEscClosable' } },
           { title: '拦截关闭', routerLink: { name: 'ComponentDrawerBeforeHide' } },
@@ -1746,6 +1750,8 @@ export const navConfigList: NavVO[] = [
           { title: '按 Esc 键可关闭', routerLink: { name: 'ComponentModalModalEscClosable' } },
           { title: '拦截关闭', routerLink: { name: 'ComponentModalModalBeforeHide' } },
           { title: '操作按钮', routerLink: { name: 'ComponentModalModalButton' } },
+          { title: '点击确认按钮不可关闭', routerLink: { name: 'ComponentModalModalConfirmClosable' } },
+          { title: '点击取消按钮不可关闭', routerLink: { name: 'ComponentModalModalCancelClosable' } },
           { title: '拖动调整宽高', routerLink: { name: 'ComponentModalModalResize' } },
           { title: '全屏展示', routerLink: { name: 'ComponentModalModalFullscreen' } },
           { title: '窗口最大化', routerLink: { name: 'ComponentModalModalMaximize' } },
