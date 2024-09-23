@@ -487,6 +487,54 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/plugin-render-antd/install/CodeExample.vue')
       },
       {
+        path: 'form',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'itemTemplate',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'a-input',
+                name: 'PluginRenderAntdFormItemTemplateAInput',
+                component: () => import('@/views/plugin-render-antd/form/itemTemplate/a-input/CodeExample.vue')
+              },
+              {
+                path: 'a-select',
+                name: 'PluginRenderAntdFormItemTemplateASelect',
+                component: () => import('@/views/plugin-render-antd/form/itemTemplate/a-select/CodeExample.vue')
+              },
+              {
+                path: 'a-switch',
+                name: 'PluginRenderAntdFormItemTemplateASwitch',
+                component: () => import('@/views/plugin-render-antd/form/itemTemplate/a-switch/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'itemRender',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'a-input',
+                name: 'PluginRenderAntdFormItemRenderAInput',
+                component: () => import('@/views/plugin-render-antd/form/itemRender/a-input/CodeExample.vue')
+              },
+              {
+                path: 'a-select',
+                name: 'PluginRenderAntdFormItemRenderASelect',
+                component: () => import('@/views/plugin-render-antd/form/itemRender/a-select/CodeExample.vue')
+              },
+              {
+                path: 'a-switch',
+                name: 'PluginRenderAntdFormItemRenderASwitch',
+                component: () => import('@/views/plugin-render-antd/form/itemRender/a-switch/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
+      {
         path: 'table',
         component: RouteLayout,
         children: [

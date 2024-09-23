@@ -1,26 +1,17 @@
 <template>
   <div>
-    <vxe-form
-      title-width="120"
-      :data="formData">
-      <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'AInput' }"></vxe-form-item>
-      <vxe-form-item title="下拉框" field="sex" span="24" :item-render="sexItemRender"></vxe-form-item>
-      <vxe-form-item title="下拉框多选" field="sexList" span="24" :item-render="sexListItemRender"></vxe-form-item>
-      <vxe-form-item title="下拉框分组" field="type" span="24" :item-render="typeItemRender"></vxe-form-item>
-      <vxe-form-item title="下拉框分组多选" field="typeList" span="24" :item-render="typeListItemRender"></vxe-form-item>
-      <vxe-form-item align="center" span="24">
-        <template #default>
-          <el-button native-type="reset">重置</el-button>
-          <el-button native-type="submit" type="primary">提交</el-button>
-        </template>
-      </vxe-form-item>
+    <vxe-form v-bind="formOptions" >
+      <template #action>
+        <a-button html-type="reset">重置</a-button>
+        <a-button html-type="submit" type="primary">提交</a-button>
+      </template>
     </vxe-form>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive } from 'vue'
-import { VxeFormItemPropTypes } from 'vxe-pc-ui'
+import { reactive } from 'vue'
+import { VxeFormProps, VxeFormItemPropTypes } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -32,7 +23,7 @@ interface FormDataVO {
 }
 
 const sexItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
-  name: 'ElSelect',
+  name: 'ASelect',
   options: [
     { label: '女', value: 'Women' },
     { label: '男', value: 'Man' }
@@ -40,7 +31,7 @@ const sexItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
 })
 
 const sexListItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
-  name: 'ElSelect',
+  name: 'ASelect',
   props: {
     multiple: true
   },
@@ -51,7 +42,7 @@ const sexListItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
 })
 
 const typeItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
-  name: 'ElSelect',
+  name: 'ASelect',
   optionGroups: [
     {
       label: '分类1',
@@ -71,7 +62,7 @@ const typeItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
 })
 
 const typeListItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
-  name: 'ElSelect',
+  name: 'ASelect',
   props: {
     multiple: true
   },
@@ -93,12 +84,23 @@ const typeListItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
   ]
 })
 
-const formData = ref<FormDataVO>({
-  name: 'test1',
-  nickname: 'Testing',
-  sex: '',
-  sexList: [],
-  type: '',
-  typeList: []
+const formOptions = reactive<VxeFormProps<FormDataVO>>({
+  titleWidth: 120,
+  data: {
+    name: 'test1',
+    nickname: 'Testing',
+    sex: '',
+    sexList: [],
+    type: '',
+    typeList: []
+  },
+  items: [
+    { field: 'name', title: '名称', span: 24, itemRender: { name: 'AInput' } },
+    { field: 'sex', title: '下拉框', span: 24, itemRender: sexItemRender },
+    { field: 'sexList', title: '下拉框多选', span: 24, itemRender: sexListItemRender },
+    { field: 'type', title: '下拉框分组', span: 24, itemRender: typeItemRender },
+    { field: 'typeList', title: '下拉框分组多选', span: 24, itemRender: typeListItemRender },
+    { align: 'center', span: 24, slots: { default: 'action' } }
+  ]
 })
 </script>

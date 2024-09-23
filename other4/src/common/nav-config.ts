@@ -230,6 +230,27 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: 'Form 表单',
+        children: [
+          {
+            title: '基础表单',
+            children: [
+              { title: 'AInput', routerLink: { name: 'PluginRenderAntdFormItemTemplateAInput' } },
+              { title: 'ASelect', routerLink: { name: 'PluginRenderAntdFormItemTemplateASelect' } },
+              { title: 'ASwitch', routerLink: { name: 'PluginRenderAntdFormItemTemplateASwitch' } }
+            ]
+          },
+          {
+            title: '配置式表单',
+            children: [
+              { title: 'AInput', routerLink: { name: 'PluginRenderAntdFormItemRenderAInput' } },
+              { title: 'ASelect', routerLink: { name: 'PluginRenderAntdFormItemRenderASelect' } },
+              { title: 'ASwitch', routerLink: { name: 'PluginRenderAntdFormItemRenderASwitch' } }
+            ]
+          }
+        ]
+      },
+      {
         title: 'Table 基础表格',
         children: [
           {

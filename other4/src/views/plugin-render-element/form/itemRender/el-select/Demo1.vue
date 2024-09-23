@@ -95,7 +95,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     typeList: []
   },
   items: [
-    { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
+    { field: 'name', title: '名称', span: 24, itemRender: { name: 'AInput' } },
     { field: 'sex', title: '下拉框', span: 24, itemRender: sexItemRender },
     { field: 'sexList', title: '下拉框多选', span: 24, itemRender: sexListItemRender },
     { field: 'type', title: '下拉框分组', span: 24, itemRender: typeItemRender },
