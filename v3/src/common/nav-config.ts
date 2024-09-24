@@ -684,24 +684,24 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         //         { title: 'Excel 复制与粘贴', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaClip' }
         //       ]
         //     },
-        //     {
-        //       title: '导出数据',
-        //       children: [
-        //         { title: '导出数据', routerLink: { name: 'ComponentGridExportBase' } },
-        //         { title: '导出 TXT 格式', routerLink: { name: 'ComponentGridExportTxt' } },
-        //         { title: '导出 XML 格式', routerLink: { name: 'ComponentGridExportXml' } },
-        //         { title: '导出 HTML 格式', routerLink: { name: 'ComponentGridExportHtml' } },
-        //         { title: '导出 CSV 格式', routerLink: { name: 'ComponentGridExportCsv' } },
-        //         { title: '导出 XLSX 格式', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-export-xlsx/grid/export` },
-        //         { title: '导出 PDF 格式', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-export-pdf/grid/export` },
-        //         { title: '自定义数据', routerLink: { name: 'ComponentGridExportData' } },
-        //         { title: '格式化导出内容', routerLink: { name: 'ComponentGridExportExportMethod' } },
-        //         { title: '高级导出', routerLink: { name: 'ComponentGridExportAdvanced' } },
-        //         { title: '自定义导出类型', routerLink: { name: 'ComponentGridExportTypes' } },
-        //         { title: '服务端导出', routerLink: { name: 'ComponentGridExportRemote' } },
-        //         { title: '自定义导出模式', routerLink: { name: 'ComponentGridExportModes' } }
-        //       ]
-        //     },
+        {
+          title: '导出数据',
+          children: [
+            { title: '导出数据', routerLink: { name: 'ComponentGridExportBase' } },
+            { title: '导出 TXT 格式', routerLink: { name: 'ComponentGridExportTxt' } },
+            { title: '导出 XML 格式', routerLink: { name: 'ComponentGridExportXml' } },
+            { title: '导出 HTML 格式', routerLink: { name: 'ComponentGridExportHtml' } },
+            { title: '导出 CSV 格式', routerLink: { name: 'ComponentGridExportCsv' } },
+            { title: '导出 XLSX 格式', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-export-xlsx/grid/export` },
+            { title: '导出 PDF 格式', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-export-pdf/grid/export` },
+            { title: '自定义数据', routerLink: { name: 'ComponentGridExportData' } },
+            { title: '格式化导出内容', routerLink: { name: 'ComponentGridExportExportMethod' } },
+            { title: '高级导出', routerLink: { name: 'ComponentGridExportAdvanced' } },
+            { title: '自定义导出类型', routerLink: { name: 'ComponentGridExportTypes' } },
+            { title: '服务端导出', routerLink: { name: 'ComponentGridExportRemote' } },
+            { title: '自定义导出模式', routerLink: { name: 'ComponentGridExportModes' } }
+          ]
+        },
         //     {
         //       title: '导入数据',
         //       children: [

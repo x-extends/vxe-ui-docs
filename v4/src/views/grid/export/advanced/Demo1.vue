@@ -39,7 +39,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
 const exportEvent = () => {
   const $grid = gridRef.value
   if ($grid) {
-    $grid.getTableData()
+    $grid.openExport()
   }
 }
 </script>

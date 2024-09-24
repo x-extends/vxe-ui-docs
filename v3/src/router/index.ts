@@ -2255,67 +2255,67 @@ const gridRouteConfig: RouteConfig = {
     //     }
     //   ]
     // },
-    // {
-    //   path: 'export',
-    //   component: RouteLayout,
-    //   children: [
-    //     {
-    //       path: 'base',
-    //       name: 'ComponentGridExportBase',
-    //       component: () => import('@/views/grid/export/base/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'txt',
-    //       name: 'ComponentGridExportTxt',
-    //       component: () => import('@/views/grid/export/txt/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'xml',
-    //       name: 'ComponentGridExportXml',
-    //       component: () => import('@/views/grid/export/xml/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'html',
-    //       name: 'ComponentGridExportHtml',
-    //       component: () => import('@/views/grid/export/html/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'csv',
-    //       name: 'ComponentGridExportCsv',
-    //       component: () => import('@/views/grid/export/csv/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'data',
-    //       name: 'ComponentGridExportData',
-    //       component: () => import('@/views/grid/export/data/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'exportMethod',
-    //       name: 'ComponentGridExportExportMethod',
-    //       component: () => import('@/views/grid/export/exportMethod/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'advanced',
-    //       name: 'ComponentGridExportAdvanced',
-    //       component: () => import('@/views/grid/export/advanced/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'types',
-    //       name: 'ComponentGridExportTypes',
-    //       component: () => import('@/views/grid/export/types/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'remote',
-    //       name: 'ComponentGridExportRemote',
-    //       component: () => import('@/views/grid/export/remote/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'modes',
-    //       name: 'ComponentGridExportModes',
-    //       component: () => import('@/views/grid/export/modes/CodeExample.vue')
-    //     }
-    //   ]
-    // },
+    {
+      path: 'export',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'base',
+          name: 'ComponentGridExportBase',
+          component: () => import('@/views/grid/export/base/CodeExample.vue')
+        },
+        {
+          path: 'txt',
+          name: 'ComponentGridExportTxt',
+          component: () => import('@/views/grid/export/txt/CodeExample.vue')
+        },
+        {
+          path: 'xml',
+          name: 'ComponentGridExportXml',
+          component: () => import('@/views/grid/export/xml/CodeExample.vue')
+        },
+        {
+          path: 'html',
+          name: 'ComponentGridExportHtml',
+          component: () => import('@/views/grid/export/html/CodeExample.vue')
+        },
+        {
+          path: 'csv',
+          name: 'ComponentGridExportCsv',
+          component: () => import('@/views/grid/export/csv/CodeExample.vue')
+        },
+        {
+          path: 'data',
+          name: 'ComponentGridExportData',
+          component: () => import('@/views/grid/export/data/CodeExample.vue')
+        },
+        {
+          path: 'exportMethod',
+          name: 'ComponentGridExportExportMethod',
+          component: () => import('@/views/grid/export/exportMethod/CodeExample.vue')
+        },
+        {
+          path: 'advanced',
+          name: 'ComponentGridExportAdvanced',
+          component: () => import('@/views/grid/export/advanced/CodeExample.vue')
+        },
+        {
+          path: 'types',
+          name: 'ComponentGridExportTypes',
+          component: () => import('@/views/grid/export/types/CodeExample.vue')
+        },
+        {
+          path: 'remote',
+          name: 'ComponentGridExportRemote',
+          component: () => import('@/views/grid/export/remote/CodeExample.vue')
+        },
+        {
+          path: 'modes',
+          name: 'ComponentGridExportModes',
+          component: () => import('@/views/grid/export/modes/CodeExample.vue')
+        }
+      ]
+    },
     // {
     //   path: 'print',
     //   component: RouteLayout,
