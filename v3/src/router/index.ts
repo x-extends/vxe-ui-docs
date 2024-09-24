@@ -82,6 +82,11 @@ const tableRouteConfig: RouteConfig = {
           component: () => import('@/views/table/base/round/CodeExample.vue')
         },
         {
+          path: 'padding',
+          name: 'ComponentTableBasePadding',
+          component: () => import('@/views/table/base/padding/CodeExample.vue')
+        },
+        {
           path: 'style',
           name: 'ComponentTableBaseStyle',
           component: () => import('@/views/table/base/style/CodeExample.vue')
@@ -1313,6 +1318,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'round',
           name: 'ComponentGridBaseRound',
           component: () => import('@/views/grid/base/round/CodeExample.vue')
+        },
+        {
+          path: 'padding',
+          name: 'ComponentGridBasePadding',
+          component: () => import('@/views/grid/base/padding/CodeExample.vue')
         },
         {
           path: 'style',
