@@ -951,6 +951,7 @@ export const navConfigList: NavVO[] = [
           { title: '圆角', routerLink: { name: 'ComponentButtonRound' } },
           { title: '图标', routerLink: { name: 'ComponentButtonIcon' } },
           { title: '圆形', routerLink: { name: 'ComponentButtonCircle' } },
+          { title: '前缀、后缀提示', routerLink: { name: 'ComponentButtonTipIcon' } },
           { title: '加载中', routerLink: { name: 'ComponentButtonLoading' } },
           { title: '触发方式', routerLink: { name: 'ComponentButtonTrigger' } },
           { title: '按钮组', routerLink: { name: 'ComponentButtonGroup' } },

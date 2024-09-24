@@ -3243,6 +3243,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/button/round/CodeExample.vue')
           },
           {
+            path: 'tipIcon',
+            name: 'ComponentButtonTipIcon',
+            component: () => import('@/views/button/tipIcon/CodeExample.vue')
+          },
+          {
             path: 'trigger',
             name: 'ComponentButtonTrigger',
             component: () => import('@/views/button/trigger/CodeExample.vue')
