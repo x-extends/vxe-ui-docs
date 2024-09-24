@@ -657,21 +657,21 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         //         { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/edit/el-input` }
         //       ]
         //     },
-        //     {
-        //       title: '自定义插槽模板',
-        //       children: [
-        //         { title: '自定义布局模板', routerLink: { name: 'ComponentGridTemplateLayout' } },
-        //         { title: '自定义单元格模板', routerLink: { name: 'ComponentGridTemplateDefault' } },
-        //         { title: '自定义表头模板', routerLink: { name: 'ComponentGridTemplateHeader' } },
-        //         { title: '自定义表尾模板', routerLink: { name: 'ComponentGridTemplateFooter' } },
-        //         { title: '自定义复选框模板', routerLink: { name: 'ComponentGridTemplateCheckbox' } },
-        //         { title: '自定义单选框模板', routerLink: { name: 'ComponentGridTemplateRadio' } },
-        //         { title: '自定义展开行模板', routerLink: { name: 'ComponentGridTemplateContent' } },
-        //         { title: '自定义筛选模板', routerLink: { name: 'ComponentGridTemplateFilter' } },
-        //         { title: '自定义编辑模板', routerLink: { name: 'ComponentGridTemplateEdit' } },
-        //         { title: '自定义单元格校验模板', routerLink: { name: 'ComponentGridTemplateValid' } }
-        //       ]
-        //     },
+        {
+          title: '自定义插槽模板',
+          children: [
+            { title: '自定义布局模板', routerLink: { name: 'ComponentGridTemplateLayout' } },
+            { title: '自定义单元格模板', routerLink: { name: 'ComponentGridTemplateDefault' } },
+            { title: '自定义表头模板', routerLink: { name: 'ComponentGridTemplateHeader' } },
+            { title: '自定义表尾模板', routerLink: { name: 'ComponentGridTemplateFooter' } },
+            { title: '自定义复选框模板', routerLink: { name: 'ComponentGridTemplateCheckbox' } },
+            { title: '自定义单选框模板', routerLink: { name: 'ComponentGridTemplateRadio' } },
+            { title: '自定义展开行模板', routerLink: { name: 'ComponentGridTemplateContent' } },
+            { title: '自定义筛选模板', routerLink: { name: 'ComponentGridTemplateFilter' } },
+            { title: '自定义编辑模板', routerLink: { name: 'ComponentGridTemplateEdit' } },
+            { title: '自定义单元格校验模板', routerLink: { name: 'ComponentGridTemplateValid' } }
+          ]
+        },
         //     {
         //       title: '按键导航',
         //       children: [

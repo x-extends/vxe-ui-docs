@@ -17,8 +17,8 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { reactive } from 'vue'
+<script lang="ts">
+import Vue from 'vue'
 import type { VxeGridProps } from 'vxe-table'
 
 interface RowVO {
@@ -31,28 +31,35 @@ interface RowVO {
   address: string
 }
 
-const gridOptions = reactive<VxeGridProps<RowVO>>({
-  border: true,
-  columns: [
-    { type: 'seq', width: 70 },
-    { field: 'name', title: 'Name', slots: { header: 'header_name' } },
-    {
-      title: 'Group1',
-      field: 'group1',
-      children: [
-        { field: 'sex', title: 'Sex', slots: { header: 'header_sex' } },
-        { field: 'num', title: 'Number' },
-        { field: 'age', title: 'Age' }
+export default Vue.extend({
+  data () {
+    const gridOptions: VxeGridProps<RowVO> = {
+      border: true,
+      columns: [
+        { type: 'seq', width: 70 },
+        { field: 'name', title: 'Name', slots: { header: 'header_name' } },
+        {
+          title: 'Group1',
+          children: [
+            { field: 'sex', title: 'Sex', slots: { header: 'header_sex' } },
+            { field: 'num', title: 'Number' },
+            { field: 'age', title: 'Age' }
+          ],
+          slots: { header: 'header_group1' }
+        },
+        { field: 'address', title: 'Address' }
       ],
-      slots: { header: 'header_group1' }
-    },
-    { field: 'address', title: 'Address' }
-  ],
-  data: [
-    { id: 10001, name: 'Test1', role: 'Develop', sex: '0', age: 28, num: 234, address: 'test abc' },
-    { id: 10002, name: 'Test2', role: 'Test', sex: '1', age: 22, num: 34, address: 'Guangzhou' },
-    { id: 10003, name: 'Test3', role: 'PM', sex: '0', age: 32, num: 12, address: 'Shanghai' }
-  ]
+      data: [
+        { id: 10001, name: 'Test1', role: 'Develop', sex: '0', age: 28, num: 234, address: 'test abc' },
+        { id: 10002, name: 'Test2', role: 'Test', sex: '1', age: 22, num: 34, address: 'Guangzhou' },
+        { id: 10003, name: 'Test3', role: 'PM', sex: '0', age: 32, num: 12, address: 'Shanghai' }
+      ]
+    }
+
+    return {
+      gridOptions
+    }
+  }
 })
 </script>
 

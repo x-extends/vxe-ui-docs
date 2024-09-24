@@ -2163,62 +2163,62 @@ const gridRouteConfig: RouteConfig = {
     //     }
     //   ]
     // },
-    // {
-    //   path: 'template',
-    //   component: RouteLayout,
-    //   children: [
-    //     {
-    //       path: 'layout',
-    //       name: 'ComponentGridTemplateLayout',
-    //       component: () => import('@/views/grid/template/layout/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'default',
-    //       name: 'ComponentGridTemplateDefault',
-    //       component: () => import('@/views/grid/template/default/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'header',
-    //       name: 'ComponentGridTemplateHeader',
-    //       component: () => import('@/views/grid/template/header/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'footer',
-    //       name: 'ComponentGridTemplateFooter',
-    //       component: () => import('@/views/grid/template/footer/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'checkbox',
-    //       name: 'ComponentGridTemplateCheckbox',
-    //       component: () => import('@/views/grid/template/checkbox/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'radio',
-    //       name: 'ComponentGridTemplateRadio',
-    //       component: () => import('@/views/grid/template/radio/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'content',
-    //       name: 'ComponentGridTemplateContent',
-    //       component: () => import('@/views/grid/template/content/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'filter',
-    //       name: 'ComponentGridTemplateFilter',
-    //       component: () => import('@/views/grid/template/filter/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'edit',
-    //       name: 'ComponentGridTemplateEdit',
-    //       component: () => import('@/views/grid/template/edit/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'valid',
-    //       name: 'ComponentGridTemplateValid',
-    //       component: () => import('@/views/grid/template/valid/CodeExample.vue')
-    //     }
-    //   ]
-    // },
+    {
+      path: 'template',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'layout',
+          name: 'ComponentGridTemplateLayout',
+          component: () => import('@/views/grid/template/layout/CodeExample.vue')
+        },
+        {
+          path: 'default',
+          name: 'ComponentGridTemplateDefault',
+          component: () => import('@/views/grid/template/default/CodeExample.vue')
+        },
+        {
+          path: 'header',
+          name: 'ComponentGridTemplateHeader',
+          component: () => import('@/views/grid/template/header/CodeExample.vue')
+        },
+        {
+          path: 'footer',
+          name: 'ComponentGridTemplateFooter',
+          component: () => import('@/views/grid/template/footer/CodeExample.vue')
+        },
+        {
+          path: 'checkbox',
+          name: 'ComponentGridTemplateCheckbox',
+          component: () => import('@/views/grid/template/checkbox/CodeExample.vue')
+        },
+        {
+          path: 'radio',
+          name: 'ComponentGridTemplateRadio',
+          component: () => import('@/views/grid/template/radio/CodeExample.vue')
+        },
+        {
+          path: 'content',
+          name: 'ComponentGridTemplateContent',
+          component: () => import('@/views/grid/template/content/CodeExample.vue')
+        },
+        {
+          path: 'filter',
+          name: 'ComponentGridTemplateFilter',
+          component: () => import('@/views/grid/template/filter/CodeExample.vue')
+        },
+        {
+          path: 'edit',
+          name: 'ComponentGridTemplateEdit',
+          component: () => import('@/views/grid/template/edit/CodeExample.vue')
+        },
+        {
+          path: 'valid',
+          name: 'ComponentGridTemplateValid',
+          component: () => import('@/views/grid/template/valid/CodeExample.vue')
+        }
+      ]
+    },
     // {
     //   path: 'import',
     //   component: RouteLayout,
