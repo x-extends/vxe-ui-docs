@@ -1462,7 +1462,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'TreeSelect 树形下拉框',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'treeSelect' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tree-select' } } },
           {
             title: '基础',
             children: [
