@@ -148,7 +148,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '触发方式', routerLink: { name: 'ComponentTableExpandTrigger' } },
             { title: '懒加载', routerLink: { name: 'ComponentTableExpandLazy' } },
             { title: '展开按钮的显示隐藏', routerLink: { name: 'ComponentTableExpandVisibleMethod' } },
-            { title: '展开与关闭的控制', routerLink: { name: 'ComponentTableExpandToggleMethod' } }
+            { title: '展开与关闭的控制', routerLink: { name: 'ComponentTableExpandToggleMethod' } },
+            { title: '实现展开子表格', routerLink: { name: 'ComponentTableExpandChildTable' } }
           ]
         },
         {
@@ -489,7 +490,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '基础使用', routerLink: { name: 'ComponentGridExpandBasic' } },
             { title: '展开容器内间距', routerLink: { name: 'ComponentGridExpandPadding' } },
             { title: '展开容器高度', routerLink: { name: 'ComponentGridExpandHeight' } },
-            { title: '使用冻结列', routerLink: { name: 'ComponentGridExpandFixed' } }
+            { title: '使用冻结列', routerLink: { name: 'ComponentGridExpandFixed' } },
+            { title: '实现展开子表格', routerLink: { name: 'ComponentGridExpandChildTable' } }
           ]
         },
         {

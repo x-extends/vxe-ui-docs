@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive } from 'vue'
+import { ref } from 'vue'
 
 interface RowVO {
   id: number

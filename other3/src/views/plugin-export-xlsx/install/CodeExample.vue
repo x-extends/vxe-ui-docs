@@ -10,9 +10,9 @@
       <template #use>
         <pre>
           <pre-code>
-            npm install @vxe-ui/plugin-export-xlsx exceljs
+            npm install @vxe-ui/plugin-export-xlsx@3 exceljs
             # 或者
-            yarn add @vxe-ui/plugin-export-xlsx exceljs
+            yarn add @vxe-ui/plugin-export-xlsx@3 exceljs
           </pre-code>
         </pre>
 

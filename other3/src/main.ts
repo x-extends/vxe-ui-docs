@@ -28,6 +28,16 @@ import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
 import VxeUIPluginExportPDF from '@vxe-ui/plugin-export-pdf'
 import VxeUIPluginRenderChart from '@vxe-ui/plugin-render-chart'
 import '@vxe-ui/plugin-render-chart/dist/style.css'
+import VxeUIPluginRenderElement from '@vxe-ui/plugin-render-element'
+import '@vxe-ui/plugin-render-element/dist/style.css'
+import VxeUIPluginRenderAntd from '@vxe-ui/plugin-render-antd'
+import '@vxe-ui/plugin-render-antd/dist/style.css'
+
+import Element from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
+import Antd from 'ant-design-vue'
+import 'ant-design-vue/dist/antd.css'
 
 declare global {
   interface Window {
@@ -53,9 +63,13 @@ VxeUI.use(VxeUIPluginExportPDF, {
   ]
 })
 VxeUI.use(VxeUIPluginRenderChart)
+VxeUI.use(VxeUIPluginRenderElement)
+VxeUI.use(VxeUIPluginRenderAntd)
 
 Vue.use(VxeUI)
 Vue.use(VxeTable)
+Vue.use(Element)
+Vue.use(Antd)
 
 Vue.component('PreCode', PreCode)
 Vue.component('CodeLight', CodeLight)

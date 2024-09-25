@@ -459,6 +459,11 @@ const tableRouteConfig: RouteRecordRaw = {
           path: 'toggleMethod',
           name: 'ComponentTableExpandToggleMethod',
           component: () => import('@/views/table/expand/toggleMethod/CodeExample.vue')
+        },
+        {
+          path: 'childTable',
+          name: 'ComponentTableExpandChildTable',
+          component: () => import('@/views/table/expand/childTable/CodeExample.vue')
         }
       ]
     },
@@ -1695,6 +1700,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'fixed',
           name: 'ComponentGridExpandFixed',
           component: () => import('@/views/grid/expand/fixed/CodeExample.vue')
+        },
+        {
+          path: 'childTable',
+          name: 'ComponentGridExpandChildTable',
+          component: () => import('@/views/grid/expand/childTable/CodeExample.vue')
         }
       ]
     },
