@@ -618,20 +618,22 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         //         { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/cell/el-switch` }
         //       ]
         //     },
-        //     {
-        //       title: '可编辑',
-        //       children: [
-        //         { title: '手动编辑', routerLink: { name: 'ComponentGridEditManual' } },
-        //         { title: '单击编辑', routerLink: { name: 'ComponentGridEditClick' } },
-        //         { title: '双击编辑', routerLink: { name: 'ComponentGridEditDblclick' } },
-        //         { title: '禁用单元格编辑', routerLink: { name: 'ComponentGridEditCellDisable' } },
-        //         { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRowDisable' } },
-        //         { title: '单元格校验', routerLink: { name: 'ComponentGridEditCellValid' } },
-        //         { title: '行编辑', routerLink: { name: 'ComponentGridEditRowValid' } },
-        //         { title: '实现行字段的合计', routerLink: { name: 'ComponentGridEditRowImmediately' } },
-        //         { title: '实现表尾实时合计', routerLink: { name: 'ComponentGridEditFooterImmediately' } }
-        //       ]
-        //     },
+        {
+          title: '可编辑',
+          children: [
+            { title: '手动编辑', routerLink: { name: 'ComponentGridEditManual' } },
+            { title: '单击编辑', routerLink: { name: 'ComponentGridEditClick' } },
+            { title: '双击编辑', routerLink: { name: 'ComponentGridEditDblclick' } },
+            { title: '禁用单元格编辑', routerLink: { name: 'ComponentGridEditCellDisable' } },
+            { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRowDisable' } },
+            { title: '单元格校验', routerLink: { name: 'ComponentGridEditCellValid' } },
+            { title: '行编辑', routerLink: { name: 'ComponentGridEditRowValid' } },
+            { title: '实现行字段的合计', routerLink: { name: 'ComponentGridEditRowImmediately' } },
+            { title: '实现表尾实时合计', routerLink: { name: 'ComponentGridEditFooterImmediately' } },
+            { title: '实现弹窗编辑', routerLink: { name: 'ComponentGridEditModalForm' } },
+            { title: '实现抽屉编辑', routerLink: { name: 'ComponentGridEditDrawerForm' } }
+          ]
+        },
         {
           title: '可编辑 - 渲染 - 配置式',
           children: [
@@ -1044,20 +1046,20 @@ export const navConfigList: NavVO[] = [
           { title: '权限码', routerLink: { name: 'ComponentTabsPermissionCode' } }
         ]
       },
-      // {
-      //   title: 'Calendar 日历',
-      //   children: [
-      //     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'calendar' } } },
-      //     { title: '尺寸大小', routerLink: { name: 'ComponentCalendarSize' } },
-      //     { title: '高度', routerLink: { name: 'ComponentCalendarHeight' } },
-      //     { title: '日期视图', routerLink: { name: 'ComponentCalendarDate' } },
-      //     { title: '周视图', routerLink: { name: 'ComponentCalendarWeek' } },
-      //     { title: '月度图', routerLink: { name: 'ComponentCalendarMonth' } },
-      //     { title: '季度图', routerLink: { name: 'ComponentCalendarQuarter' } },
-      //     { title: '年度视图', routerLink: { name: 'ComponentCalendarYear' } },
-      //     { title: '显示节假日', routerLink: { name: 'ComponentCalendarFestivalMethod' } }
-      //   ]
-      // },
+      {
+        title: 'Calendar 日历',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'calendar' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentCalendarSize' } },
+          { title: '高度', routerLink: { name: 'ComponentCalendarHeight' } },
+          { title: '日期视图', routerLink: { name: 'ComponentCalendarDate' } },
+          { title: '周视图', routerLink: { name: 'ComponentCalendarWeek' } },
+          { title: '月度图', routerLink: { name: 'ComponentCalendarMonth' } },
+          { title: '季度图', routerLink: { name: 'ComponentCalendarQuarter' } },
+          { title: '年度视图', routerLink: { name: 'ComponentCalendarYear' } },
+          { title: '显示节假日', routerLink: { name: 'ComponentCalendarFestivalMethod' } }
+        ]
+      },
       {
         title: 'Pulldown 下拉容器',
         children: [

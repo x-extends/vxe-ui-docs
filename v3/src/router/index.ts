@@ -2035,57 +2035,67 @@ const gridRouteConfig: RouteConfig = {
     //     }
     //   ]
     // },
-    // {
-    //   path: 'edit',
-    //   component: RouteLayout,
-    //   children: [
-    //     {
-    //       path: 'manual',
-    //       name: 'ComponentGridEditManual',
-    //       component: () => import('@/views/grid/edit/manual/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'click',
-    //       name: 'ComponentGridEditClick',
-    //       component: () => import('@/views/grid/edit/click/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'dblclick',
-    //       name: 'ComponentGridEditDblclick',
-    //       component: () => import('@/views/grid/edit/dblclick/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'cellDisable',
-    //       name: 'ComponentGridEditCellDisable',
-    //       component: () => import('@/views/grid/edit/cellDisable/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'rowDisable',
-    //       name: 'ComponentGridEditRowDisable',
-    //       component: () => import('@/views/grid/edit/rowDisable/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'cellValid',
-    //       name: 'ComponentGridEditCellValid',
-    //       component: () => import('@/views/grid/edit/cellValid/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'rowValid',
-    //       name: 'ComponentGridEditRowValid',
-    //       component: () => import('@/views/grid/edit/rowValid/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'rowImmediately',
-    //       name: 'ComponentGridEditRowImmediately',
-    //       component: () => import('@/views/grid/edit/rowImmediately/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'footerImmediately',
-    //       name: 'ComponentGridEditFooterImmediately',
-    //       component: () => import('@/views/grid/edit/footerImmediately/CodeExample.vue')
-    //     }
-    //   ]
-    // },
+    {
+      path: 'edit',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'manual',
+          name: 'ComponentGridEditManual',
+          component: () => import('@/views/grid/edit/manual/CodeExample.vue')
+        },
+        {
+          path: 'click',
+          name: 'ComponentGridEditClick',
+          component: () => import('@/views/grid/edit/click/CodeExample.vue')
+        },
+        {
+          path: 'dblclick',
+          name: 'ComponentGridEditDblclick',
+          component: () => import('@/views/grid/edit/dblclick/CodeExample.vue')
+        },
+        {
+          path: 'cellDisable',
+          name: 'ComponentGridEditCellDisable',
+          component: () => import('@/views/grid/edit/cellDisable/CodeExample.vue')
+        },
+        {
+          path: 'rowDisable',
+          name: 'ComponentGridEditRowDisable',
+          component: () => import('@/views/grid/edit/rowDisable/CodeExample.vue')
+        },
+        {
+          path: 'cellValid',
+          name: 'ComponentGridEditCellValid',
+          component: () => import('@/views/grid/edit/cellValid/CodeExample.vue')
+        },
+        {
+          path: 'rowValid',
+          name: 'ComponentGridEditRowValid',
+          component: () => import('@/views/grid/edit/rowValid/CodeExample.vue')
+        },
+        {
+          path: 'rowImmediately',
+          name: 'ComponentGridEditRowImmediately',
+          component: () => import('@/views/grid/edit/rowImmediately/CodeExample.vue')
+        },
+        {
+          path: 'footerImmediately',
+          name: 'ComponentGridEditFooterImmediately',
+          component: () => import('@/views/grid/edit/footerImmediately/CodeExample.vue')
+        },
+        {
+          path: 'modal',
+          name: 'ComponentGridEditModalForm',
+          component: () => import('@/views/grid/edit/modalForm/CodeExample.vue')
+        },
+        {
+          path: 'drawer',
+          name: 'ComponentGridEditDrawerForm',
+          component: () => import('@/views/grid/edit/drawerForm/CodeExample.vue')
+        }
+      ]
+    },
     {
       path: 'editRender',
       component: RouteLayout,
@@ -4454,52 +4464,52 @@ const routes: Array<RouteConfig> = [
           }
         ]
       },
-      // {
-      //   path: 'calendar',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'size',
-      //       name: 'ComponentCalendarSize',
-      //       component: () => import('@/views/calendar/size/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'height',
-      //       name: 'ComponentCalendarHeight',
-      //       component: () => import('@/views/calendar/height/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'date',
-      //       name: 'ComponentCalendarDate',
-      //       component: () => import('@/views/calendar/date/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'week',
-      //       name: 'ComponentCalendarWeek',
-      //       component: () => import('@/views/calendar/week/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'month',
-      //       name: 'ComponentCalendarMonth',
-      //       component: () => import('@/views/calendar/month/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'quarter',
-      //       name: 'ComponentCalendarQuarter',
-      //       component: () => import('@/views/calendar/quarter/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'year',
-      //       name: 'ComponentCalendarYear',
-      //       component: () => import('@/views/calendar/year/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'festivalMethod',
-      //       name: 'ComponentCalendarFestivalMethod',
-      //       component: () => import('@/views/calendar/festivalMethod/CodeExample.vue')
-      //     }
-      //   ]
-      // },
+      {
+        path: 'calendar',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentCalendarSize',
+            component: () => import('@/views/calendar/size/CodeExample.vue')
+          },
+          {
+            path: 'height',
+            name: 'ComponentCalendarHeight',
+            component: () => import('@/views/calendar/height/CodeExample.vue')
+          },
+          {
+            path: 'date',
+            name: 'ComponentCalendarDate',
+            component: () => import('@/views/calendar/date/CodeExample.vue')
+          },
+          {
+            path: 'week',
+            name: 'ComponentCalendarWeek',
+            component: () => import('@/views/calendar/week/CodeExample.vue')
+          },
+          {
+            path: 'month',
+            name: 'ComponentCalendarMonth',
+            component: () => import('@/views/calendar/month/CodeExample.vue')
+          },
+          {
+            path: 'quarter',
+            name: 'ComponentCalendarQuarter',
+            component: () => import('@/views/calendar/quarter/CodeExample.vue')
+          },
+          {
+            path: 'year',
+            name: 'ComponentCalendarYear',
+            component: () => import('@/views/calendar/year/CodeExample.vue')
+          },
+          {
+            path: 'festivalMethod',
+            name: 'ComponentCalendarFestivalMethod',
+            component: () => import('@/views/calendar/festivalMethod/CodeExample.vue')
+          }
+        ]
+      },
       {
         path: 'print',
         component: RouteLayout,
