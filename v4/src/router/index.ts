@@ -2143,6 +2143,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/editRender/vxe-number-input/CodeExample.vue')
         },
         {
+          path: 'vxe-icon-picker',
+          name: 'ComponentGridEditRenderVxeIconPicker',
+          component: () => import('@/views/grid/editRender/vxe-icon-picker/CodeExample.vue')
+        },
+        {
           path: 'vxe-date-picker',
           name: 'ComponentGridEditRenderVxeDatePicker',
           component: () => import('@/views/grid/editRender/vxe-date-picker/CodeExample.vue')

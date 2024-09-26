@@ -643,6 +643,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'select', routerLink: { name: 'ComponentGridEditRenderSelect' } },
             { title: 'VxeInput', routerLink: { name: 'ComponentGridEditRenderVxeInput' } },
             { title: 'VxeNumberInput', routerLink: { name: 'ComponentGridEditRenderVxeNumberInput' } },
+            { title: 'VxeIconPicker', routerLink: { name: 'ComponentGridEditRenderVxeIconPicker' } },
             { title: 'VxeDatePicker', routerLink: { name: 'ComponentGridEditRenderVxeDatePicker' } },
             { title: 'VxeSelect', routerLink: { name: 'ComponentGridEditRenderVxeSelect' } },
             { title: 'VxeTreeSelect', routerLink: { name: 'ComponentGridEditRenderVxeTreeSelect' } },
