@@ -4,8 +4,14 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue'
+<script lang="ts">
+import Vue from 'vue'
 
-const val1 = ref('')
+export default Vue.extend({
+  data () {
+    return {
+      val1: ''
+    }
+  }
+})
 </script>

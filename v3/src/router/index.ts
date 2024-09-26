@@ -3767,6 +3767,53 @@ const routes: Array<RouteConfig> = [
         ]
       },
       {
+        path: 'notice-bar',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentNoticeBarSize',
+            component: () => import('@/views/notice-bar/size/CodeExample.vue')
+          },
+          {
+            path: 'horizontal',
+            name: 'ComponentNoticeBarHorizontal',
+            component: () => import('@/views/notice-bar/horizontal/CodeExample.vue')
+          },
+          {
+            path: 'direction',
+            name: 'ComponentNoticeBarDirection',
+            component: () => import('@/views/notice-bar/direction/CodeExample.vue')
+          },
+          {
+            path: 'speed',
+            name: 'ComponentNoticeBarSpeed',
+            component: () => import('@/views/notice-bar/speed/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'default',
+                name: 'ComponentNoticeBarTemplateDefault',
+                component: () => import('@/views/notice-bar/template/default/CodeExample.vue')
+              },
+              {
+                path: 'prefix',
+                name: 'ComponentNoticeBarTemplatePrefix',
+                component: () => import('@/views/notice-bar/template/prefix/CodeExample.vue')
+              },
+              {
+                path: 'suffix',
+                name: 'ComponentNoticeBarTemplateSuffix',
+                component: () => import('@/views/notice-bar/template/suffix/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
+      {
         path: 'alert',
         component: RouteLayout,
         children: [
@@ -4148,6 +4195,27 @@ const routes: Array<RouteConfig> = [
             path: 'table',
             name: 'ComponentPulldownTable',
             component: () => import('@/views/pulldown/table/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'collapse',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentCollapseBase',
+            component: () => import('@/views/collapse/base/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentCollapseIon',
+            component: () => import('@/views/collapse/icon/CodeExample.vue')
+          },
+          {
+            path: 'options',
+            name: 'ComponentCollapseOptions',
+            component: () => import('@/views/collapse/options/CodeExample.vue')
           }
         ]
       },

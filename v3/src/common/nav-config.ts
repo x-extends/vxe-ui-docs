@@ -1031,6 +1031,15 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: 'Collapse 折叠面板',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'collapse' } } },
+          { title: '基础', routerLink: { name: 'ComponentCollapseBase' } },
+          { title: '图标', routerLink: { name: 'ComponentCollapseIon' } },
+          { title: '配置式', routerLink: { name: 'ComponentCollapseOptions' } }
+        ]
+      },
+      {
         title: 'Tabs 页签',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tabs' } } },
@@ -1073,7 +1082,6 @@ export const navConfigList: NavVO[] = [
           { title: '实现下拉表格', routerLink: { name: 'ComponentPulldownTable' } }
         ]
       },
-      // { title: 'Collapse 折叠面板' },
       {
         title: 'List 虚拟列表',
         children: [
@@ -1618,6 +1626,24 @@ export const navConfigList: NavVO[] = [
   {
     i18nKey: 'app.aside.menu.feedbackTitle',
     children: [
+      {
+        title: 'NoticeBar 通知栏',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'notice-bar' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentNoticeBarSize' } },
+          { title: '横向滚动', routerLink: { name: 'ComponentNoticeBarHorizontal' } },
+          { title: '滚动方向', routerLink: { name: 'ComponentNoticeBarDirection' } },
+          { title: '速度', routerLink: { name: 'ComponentNoticeBarSpeed' } },
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '自定义内容模板', routerLink: { name: 'ComponentNoticeBarTemplateDefault' } },
+              { title: '自定义前缀模板', routerLink: { name: 'ComponentNoticeBarTemplatePrefix' } },
+              { title: '自定义后缀模板', routerLink: { name: 'ComponentNoticeBarTemplateSuffix' } }
+            ]
+          }
+        ]
+      },
       {
         title: 'Loading 加载中',
         children: [
