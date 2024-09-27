@@ -87,9 +87,9 @@
       "vxe-table": {
         "v1": "v1.x (vue 2.6+ stops maintenance) ~ 2020-04 stops updating",
         "v2": "v2.x (vue 2.6+ stops maintenance) ~ 2021-12 stops updating",
-        "v3d8": "v3.0~3.8 (vue 2.6+ old version) ~ 2024-12 Stop updating",
+        "v3d8": "v3.0~3.8 (vue 2.6+ stops maintenance) ~ 2024-12 Stop updating",
         "v3": "v3.9+ (vue 2.6+ long-term maintenance version)",
-        "v4d6": "v4.0~4.6 (vue 3.x old version) ~ 2024-12 Stop updating",
+        "v4d6": "v4.0~4.6 (vue 3.x stops maintenance) ~ 2024-12 Stop updating",
         "v4": "v4.7+ (vue 3.x latest version)"
       },
       "vxe-pc-ui": {
