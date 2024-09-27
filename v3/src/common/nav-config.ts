@@ -952,6 +952,16 @@ export const navConfigList: NavVO[] = [
           { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdown' } },
           { title: '权限码', routerLink: { name: 'ComponentButtonPermissionCode' } }
         ]
+      },
+      {
+        i18nKey: 'app.aside.menu.textEllipsisTitle',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'text-ellipsis' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentTextEllipsisSize' } },
+          { title: '状态', routerLink: { name: 'ComponentTextEllipsisStatus' } },
+          { title: '单行溢出省略', routerLink: { name: 'ComponentTextEllipsisIconLineSingle' } },
+          { title: '多行溢出省略', routerLink: { name: 'ComponentTextEllipsisLineClamp' } }
+        ]
       }
     ]
   },
@@ -1628,7 +1638,7 @@ export const navConfigList: NavVO[] = [
     i18nKey: 'app.aside.menu.feedbackTitle',
     children: [
       {
-        title: 'NoticeBar 通知栏',
+        i18nKey: 'app.aside.menu.noticeBarTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'notice-bar' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentNoticeBarSize' } },
@@ -1646,7 +1656,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'Loading 加载中',
+        i18nKey: 'app.aside.menu.loadingTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'loading' } } },
           { title: '全局调用', routerLink: { name: 'ComponentLoadingGlobalLoading' } },

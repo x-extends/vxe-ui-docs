@@ -3167,6 +3167,32 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'text-ellipsis',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentTextEllipsisSize',
+            component: () => import('@/views/text-ellipsis/size/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentTextEllipsisStatus',
+            component: () => import('@/views/text-ellipsis/status/CodeExample.vue')
+          },
+          {
+            path: 'line-single',
+            name: 'ComponentTextEllipsisIconLineSingle',
+            component: () => import('@/views/text-ellipsis/line-single/CodeExample.vue')
+          },
+          {
+            path: 'line-clamp',
+            name: 'ComponentTextEllipsisLineClamp',
+            component: () => import('@/views/text-ellipsis/line-clamp/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'link',
         component: RouteLayout,
         children: [

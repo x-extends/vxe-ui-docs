@@ -29,6 +29,9 @@
         "linkTitle": "Link 链接",
         "tagTitle": "Tag 标签",
         "buttonTitle": "Button 按钮",
+        "textEllipsisTitle": "TextEllipsis 文本溢出省略",
+        "noticeBarTitle": "NoticeBar 通知栏",
+        "loadingTitle": "Loading 加载中",
         "navigationTitle": "导航组件",
         "layoutTitle": "容器组件",
         "treeTitle": "Tree 树",
@@ -732,7 +735,7 @@
       "methods_parse-config": "解析配置",
       "methods_get-table-record": "获取表格行记录对象",
       "methods_clear-config": "清除配置",
-      "props_size": "尺寸"
+      "props_size": "尺寸大小"
     },
     "list": {
       "props_loading": "是否加载中",
@@ -753,17 +756,28 @@
       "methods_refresh-scroll": "刷新滚动操作，手动同步滚动相关位置",
       "methods_clear-scroll": "手动清除滚动相关信息，还原到初始状态",
       "props_data": "列表数据",
-      "props_size": "尺寸"
+      "props_size": "尺寸大小"
+    },
+    "notice-bar": {
+      "props_size": "尺寸大小",
+      "props_vertical": "是否垂直滚动",
+      "props_direction": "滚动方向",
+      "props_loop": "是否循环滚动",
+      "props_speed": "滚动速度",
+      "props_duration": "自定义动画时间（例如：'15s'）",
+      "slots_default": "自定义内容插槽模板",
+      "slots_prefix": "自定义前缀模板",
+      "slots_suffix": "自定义后缀模板"
     },
     "loading": {
-      "props_size": "尺寸",
+      "props_size": "尺寸大小",
       "props_model-value": "v-model 绑定值",
       "props_icon": "图标",
       "props_text": "内容",
       "props_status": "状态颜色"
     },
     "menu": {
-      "props_size": "尺寸",
+      "props_size": "尺寸大小",
       "props_model-value": "v-model 绑定值",
       "props_expand-all": "默认展开全部",
       "props_options": "菜单配置",
@@ -1111,6 +1125,15 @@
       "props_icon": "图标",
       "props_content": "内容",
       "slots_default": "自定义内容模板"
+    },
+    "text-ellipsis": {
+      "props_size": "尺寸",
+      "props_status": "状态颜色",
+      "props_title": "标题",
+      "props_icon": "图标",
+      "props_content": "内容",
+      "props_line-clamp": "指定显示行数，当文字超出指定行数时自动截断省略",
+      "props_offset-length": "省略字数偏移量，可用于给末端预留指定字数宽度"
     },
     "text": {
       "props_size": "尺寸",
