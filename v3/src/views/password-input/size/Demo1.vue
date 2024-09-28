@@ -1,5 +1,6 @@
 <template>
   <div>
+    <vxe-input v-model="userName" placeholder="用户名"></vxe-input>
     <vxe-password-input v-model="val1" placeholder="默认尺寸"></vxe-password-input>
     <vxe-password-input v-model="val2" size="medium" placeholder="中等尺寸"></vxe-password-input>
     <vxe-password-input v-model="val3" size="small" placeholder="小型尺寸"></vxe-password-input>
@@ -13,6 +14,7 @@ import Vue from 'vue'
 export default Vue.extend({
   data () {
     return {
+      userName: '',
       val1: '',
       val2: '',
       val3: '',
