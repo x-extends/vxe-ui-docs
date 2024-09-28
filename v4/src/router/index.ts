@@ -2602,6 +2602,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'lineEllipsis',
           name: 'ComponentGridOtherLineEllipsis',
           component: () => import('@/views/grid/other/lineEllipsis/CodeExample.vue')
+        },
+        {
+          path: 'yearMonth',
+          name: 'ComponentGridOtherYearMonth',
+          component: () => import('@/views/grid/other/yearMonth/CodeExample.vue')
         }
       ]
     }
