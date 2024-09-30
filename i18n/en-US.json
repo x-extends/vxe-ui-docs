@@ -30,6 +30,8 @@
         "tagTitle": "Tag",
         "buttonTitle": "Button",
         "textEllipsisTitle": "TextEllipsis",
+        "emptyTitle": "Empty",
+        "resultTitle": "Result",
         "noticeBarTitle": "NoticeBar",
         "loadingTitle": "Loading",
         "navigationTitle": "Navigation component",

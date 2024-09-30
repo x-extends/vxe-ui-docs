@@ -30,6 +30,8 @@
         "tagTitle": "タグタグ",
         "buttonTitle": "ボタン ボタン",
         "textEllipsisTitle": "TextEllipsis 文本溢出省略",
+        "emptyTitle": "Empty 空状态",
+        "resultTitle": "Result 结果",
         "noticeBarTitle": "NoticeBar 通知栏",
         "loadingTitle": "Loading 加载中",
         "navigationTitle": "ナビゲーションコンポーネント",

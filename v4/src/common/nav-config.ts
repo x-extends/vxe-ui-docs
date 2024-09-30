@@ -1663,6 +1663,26 @@ export const navConfigList: NavVO[] = [
     i18nKey: 'app.aside.menu.feedbackTitle',
     children: [
       {
+        i18nKey: 'app.aside.menu.emptyTitle',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'empty' } } },
+          { title: '基础', routerLink: { name: 'ComponentEmptyBase' } },
+          { title: '自定义图标', routerLink: { name: 'ComponentEmptyIcon' } },
+          { title: '状态颜色', routerLink: { name: 'ComponentEmptyStatus' } },
+          { title: '自定义图片', routerLink: { name: 'ComponentEmptyImageUrl' } }
+        ]
+      },
+      {
+        i18nKey: 'app.aside.menu.resultTitle',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'result' } } },
+          { title: '基础', routerLink: { name: 'ComponentResultBase' } },
+          { title: '自定义图标', routerLink: { name: 'ComponentResultIcon' } },
+          { title: '状态颜色', routerLink: { name: 'ComponentResultStatus' } },
+          { title: '自定义图片', routerLink: { name: 'ComponentResultImageUrl' } }
+        ]
+      },
+      {
         i18nKey: 'app.aside.menu.noticeBarTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'notice-bar' } } },

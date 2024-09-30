@@ -3835,6 +3835,58 @@ const routes: Array<RouteConfig> = [
         ]
       },
       {
+        path: 'empty',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentEmptyBase',
+            component: () => import('@/views/empty/base/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentEmptyIcon',
+            component: () => import('@/views/empty/icon/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentEmptyStatus',
+            component: () => import('@/views/empty/status/CodeExample.vue')
+          },
+          {
+            path: 'imageUrl',
+            name: 'ComponentEmptyImageUrl',
+            component: () => import('@/views/empty/imageUrl/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'result',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentResultBase',
+            component: () => import('@/views/result/base/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentResultIcon',
+            component: () => import('@/views/result/icon/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentResultStatus',
+            component: () => import('@/views/result/status/CodeExample.vue')
+          },
+          {
+            path: 'imageUrl',
+            name: 'ComponentResultImageUrl',
+            component: () => import('@/views/result/imageUrl/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'notice-bar',
         component: RouteLayout,
         children: [
