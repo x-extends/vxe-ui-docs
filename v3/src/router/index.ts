@@ -3883,6 +3883,11 @@ const routes: Array<RouteConfig> = [
             path: 'imageUrl',
             name: 'ComponentResultImageUrl',
             component: () => import('@/views/result/imageUrl/CodeExample.vue')
+          },
+          {
+            path: 'extra',
+            name: 'ComponentResultExtra',
+            component: () => import('@/views/result/extra/CodeExample.vue')
           }
         ]
       },

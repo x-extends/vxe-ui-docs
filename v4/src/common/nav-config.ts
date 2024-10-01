@@ -1679,7 +1679,8 @@ export const navConfigList: NavVO[] = [
           { title: '基础', routerLink: { name: 'ComponentResultBase' } },
           { title: '自定义图标', routerLink: { name: 'ComponentResultIcon' } },
           { title: '状态颜色', routerLink: { name: 'ComponentResultStatus' } },
-          { title: '自定义图片', routerLink: { name: 'ComponentResultImageUrl' } }
+          { title: '自定义图片', routerLink: { name: 'ComponentResultImageUrl' } },
+          { title: '自定义操作按钮', routerLink: { name: 'ComponentResultExtra' } }
         ]
       },
       {
