@@ -229,27 +229,28 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         //         { title: '实现数据分组', routerLink: { name: 'ComponentTableTreeGroup' } }
         //       ]
         //     },
-        //     {
-        //       title: '单元格 - 渲染 - 配置式',
-        //       children: [
-        //         { title: 'VxeSwitch', routerLink: { name: 'ComponentTableCellRenderVxeSwitch' } },
-        //         { title: 'VxeRadioGroup', routerLink: { name: 'ComponentTableCellRenderVxeRadioGroup' } },
-        //         { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentTableCellRenderVxeCheckboxGroup' } },
-        //         { title: 'VxeButtonGroup', routerLink: { name: 'ComponentTableCellRenderVxeButtonGroup' } },
-        //         { title: 'VxeImage', routerLink: { name: 'ComponentTableCellRenderVxeImage' } },
-        //         { title: 'VxeImageGroup', routerLink: { name: 'ComponentTableCellRenderVxeImageGroup' } },
-        //         { title: 'VxeUpload', routerLink: { name: 'ComponentTableCellRenderVxeUpload' } },
-        //         { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/table/cell/el-switch` }
-        //       ]
-        //     },
-        //     {
-        //       title: '单元格 - 渲染 - 插槽式',
-        //       children: [
-        //         { title: 'VxeSwitch', routerLink: { name: 'ComponentTableCellTemplateVxeSwitch' } },
-        //         { title: 'VxeButton', routerLink: { name: 'ComponentTableCellTemplateVxeButton' } },
-        //         { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/table/cell/el-switch` }
-        //       ]
-        //     },
+        {
+          title: '单元格 - 渲染 - 配置式',
+          children: [
+            { title: 'VxeSwitch', routerLink: { name: 'ComponentTableCellRenderVxeSwitch' } },
+            { title: 'VxeRadioGroup', routerLink: { name: 'ComponentTableCellRenderVxeRadioGroup' } },
+            { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentTableCellRenderVxeCheckboxGroup' } },
+            { title: 'VxeButtonGroup', routerLink: { name: 'ComponentTableCellRenderVxeButtonGroup' } },
+            { title: 'VxeImage', routerLink: { name: 'ComponentTableCellRenderVxeImage' } },
+            { title: 'VxeImageGroup', routerLink: { name: 'ComponentTableCellRenderVxeImageGroup' } },
+            { title: 'VxeTextEllipsis', routerLink: { name: 'ComponentTableCellRenderVxeTextEllipsis' } },
+            { title: 'VxeUpload', routerLink: { name: 'ComponentTableCellRenderVxeUpload' } },
+            { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/table/cell/el-switch` }
+          ]
+        },
+        {
+          title: '单元格 - 渲染 - 插槽式',
+          children: [
+            { title: 'VxeSwitch', routerLink: { name: 'ComponentTableCellTemplateVxeSwitch' } },
+            { title: 'VxeButton', routerLink: { name: 'ComponentTableCellTemplateVxeButton' } },
+            { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/table/cell/el-switch` }
+          ]
+        },
         {
           title: '可编辑',
           children: [
@@ -605,30 +606,30 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '实现数据分组', routerLink: { name: 'ComponentGridTreeGroup' } }
           ]
         },
-        //     {
-        //       title: '单元格 - 渲染 - 配置式',
-        //       children: [
-        //         { title: 'VxeSwitch', routerLink: { name: 'ComponentGridCellRenderVxeSwitch' } },
-        //         { title: 'VxeRadioGroup', routerLink: { name: 'ComponentGridCellRenderVxeRadioGroup' } },
-        //         { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentGridCellRenderVxeCheckboxGroup' } },
-        //         { title: 'VxeButtonGroup', routerLink: { name: 'ComponentGridCellRenderVxeButtonGroup' } },
-        //         { title: 'VxeImage', routerLink: { name: 'ComponentGridCellRenderVxeImage' } },
-        //         { title: 'VxeImageGroup', routerLink: { name: 'ComponentGridCellRenderVxeImageGroup' } },
-        //         { title: 'VxeUpload', routerLink: { name: 'ComponentGridCellRenderVxeUpload' } },
-        //         { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/cell/el-switch` }
-        //       ]
-        //     },
-        //     {
-        //       title: '单元格 - 渲染 - 插槽式',
-        //       children: [
-        //         { title: 'VxeSwitch', routerLink: { name: 'ComponentGridCellTemplateVxeSwitch' } },
-        //         { title: 'VxeButtonGroup', routerLink: { name: 'ComponentGridCellTemplateVxeButtonGroup' } },
-        //         { title: 'VxeButton', routerLink: { name: 'ComponentGridCellTemplateVxeButton' } },
-        //         { title: 'VxeImage', routerLink: { name: 'ComponentGridCellTemplateVxeImage' } },
-        //         { title: 'VxeUpload', routerLink: { name: 'ComponentGridCellTemplateVxeUpload' } },
-        //         { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/cell/el-switch` }
-        //       ]
-        //     },
+        {
+          title: '单元格 - 渲染 - 配置式',
+          children: [
+            { title: 'VxeSwitch', routerLink: { name: 'ComponentGridCellRenderVxeSwitch' } },
+            { title: 'VxeRadioGroup', routerLink: { name: 'ComponentGridCellRenderVxeRadioGroup' } },
+            { title: 'VxeCheckboxGroup', routerLink: { name: 'ComponentGridCellRenderVxeCheckboxGroup' } },
+            { title: 'VxeButtonGroup', routerLink: { name: 'ComponentGridCellRenderVxeButtonGroup' } },
+            { title: 'VxeImage', routerLink: { name: 'ComponentGridCellRenderVxeImage' } },
+            { title: 'VxeImageGroup', routerLink: { name: 'ComponentGridCellRenderVxeImageGroup' } },
+            { title: 'VxeUpload', routerLink: { name: 'ComponentGridCellRenderVxeUpload' } },
+            { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/cell/el-switch` }
+          ]
+        },
+        {
+          title: '单元格 - 渲染 - 插槽式',
+          children: [
+            { title: 'VxeSwitch', routerLink: { name: 'ComponentGridCellTemplateVxeSwitch' } },
+            { title: 'VxeButtonGroup', routerLink: { name: 'ComponentGridCellTemplateVxeButtonGroup' } },
+            { title: 'VxeButton', routerLink: { name: 'ComponentGridCellTemplateVxeButton' } },
+            { title: 'VxeImage', routerLink: { name: 'ComponentGridCellTemplateVxeImage' } },
+            { title: 'VxeUpload', routerLink: { name: 'ComponentGridCellTemplateVxeUpload' } },
+            { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/cell/el-switch` }
+          ]
+        },
         {
           title: '可编辑',
           children: [
@@ -661,16 +662,16 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/edit/el-input` }
           ]
         },
-        //     {
-        //       title: '可编辑 - 渲染 - 插槽式',
-        //       children: [
-        //         { title: 'VxeInput', routerLink: { name: 'ComponentGridEditTemplateVxeInput' } },
-        //         { title: 'VxeNumberInput', routerLink: { name: 'ComponentGridEditTemplateVxeNumberInput' } },
-        //         { title: 'VxeDatePicker', routerLink: { name: 'ComponentGridEditTemplateVxeDatePicker' } },
-        //         { title: 'VxeSelect', routerLink: { name: 'ComponentGridEditTemplateVxeSelect' } },
-        //         { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/edit/el-input` }
-        //       ]
-        //     },
+        {
+          title: '可编辑 - 渲染 - 插槽式',
+          children: [
+            { title: 'VxeInput', routerLink: { name: 'ComponentGridEditTemplateVxeInput' } },
+            { title: 'VxeNumberInput', routerLink: { name: 'ComponentGridEditTemplateVxeNumberInput' } },
+            { title: 'VxeDatePicker', routerLink: { name: 'ComponentGridEditTemplateVxeDatePicker' } },
+            { title: 'VxeSelect', routerLink: { name: 'ComponentGridEditTemplateVxeSelect' } },
+            { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/edit/el-input` }
+          ]
+        },
         {
           title: '自定义插槽模板',
           children: [
@@ -1840,7 +1841,18 @@ export const navConfigList: NavVO[] = [
   {
     i18nKey: 'app.aside.menu.otherTitle',
     children: [
-      // { title: 'Watermark 水印' },
+      {
+        title: 'Watermark 水印',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'watermark' } } },
+          { title: '全局调用', routerLink: { name: 'ComponentWatermarkGlobal' } },
+          { title: '基础', routerLink: { name: 'ComponentWatermarkBase' } },
+          { title: '字体颜色', routerLink: { name: 'ComponentWatermarkColor' } },
+          { title: '字体大小', routerLink: { name: 'ComponentWatermarkFontSize' } },
+          { title: '表格水印', routerLink: { name: 'ComponentWatermarkTable' } },
+          { title: '表单水印', routerLink: { name: 'ComponentWatermarkForm' } }
+        ]
+      },
       {
         title: 'Countdown 倒计时',
         children: [
