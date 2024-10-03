@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, PropType, computed } from 'vue'
+import { ref, PropType, watch, computed } from 'vue'
 import { VxeUpload, VxeGlobalRendererHandles, VxeUploadPropTypes, VxeUploadProps, VxeFormItemPropTypes } from 'vxe-pc-ui'
 import axios from 'axios'
 
@@ -26,7 +26,7 @@ const props = defineProps({
 })
 
 const currData = ref<any>()
-const currField = ref<VxeFormItemPropTypes.Field>()
+const currField = ref<VxeFormItemPropTypes.Field>('')
 
 const renderProps = computed(() => {
   const { renderOpts } = props
@@ -55,6 +55,10 @@ const load = () => {
   currData.value = data
   currField.value = field
 }
+
+watch(() => props.params, () => {
+  load()
+})
 
 load()
 </script>
