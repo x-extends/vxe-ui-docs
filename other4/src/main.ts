@@ -21,7 +21,7 @@ import 'vxe-pc-ui/lib/style.css'
 import VxeTable from 'vxe-table'
 import 'vxe-table/lib/style.css'
 
-import enUS from 'vxe-pc-ui/packages/language/en-US'
+import enUS from 'vxe-pc-ui/es/language/en-US'
 
 import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
 import VxeUIPluginExportPDF from '@vxe-ui/plugin-export-pdf'

@@ -773,14 +773,14 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '手动调用 - 增删改查', routerLink: { name: 'ComponentGridProxyManualSave' } }
           ]
         },
-        //     {
-        //       title: '表格搜索',
-        //       children: [
-        //         { title: '实现表格搜索', routerLink: { name: 'ComponentGridSearchList' } },
-        //         { title: '实现树形表格搜索', routerLink: { name: 'ComponentGridSearchTree' } },
-        //         { title: '查找与替换', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaFNR' }
-        //       ]
-        //     },
+        {
+          title: '表格搜索',
+          children: [
+            { title: '实现表格搜索', routerLink: { name: 'ComponentGridSearchList' } },
+            { title: '实现树形表格搜索', routerLink: { name: 'ComponentGridSearchTree' } },
+            { title: '查找与替换', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaFNR' }
+          ]
+        },
         {
           title: '事件监听',
           children: [
@@ -792,7 +792,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '其他',
           children: [
             { title: '反转列与行', routerLink: { name: 'ComponentGridOtherReverse' } },
-            { title: '多行文本溢出省略', routerLink: { name: 'ComponentGridOtherLineEllipsis' } }
+            { title: '多行文本溢出省略', routerLink: { name: 'ComponentGridOtherLineEllipsis' } },
+            { title: '动态生成月份表头', routerLink: { name: 'ComponentGridOtherYearMonth' } }
           ]
         }
       ]

@@ -2535,22 +2535,22 @@ const gridRouteConfig: RouteConfig = {
         }
       ]
     },
-    // {
-    //   path: 'search',
-    //   component: RouteLayout,
-    //   children: [
-    //     {
-    //       path: 'list',
-    //       name: 'ComponentGridSearchList',
-    //       component: () => import('@/views/grid/search/list/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'tree',
-    //       name: 'ComponentGridSearchTree',
-    //       component: () => import('@/views/grid/search/tree/CodeExample.vue')
-    //     }
-    //   ]
-    // },
+    {
+      path: 'search',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'list',
+          name: 'ComponentGridSearchList',
+          component: () => import('@/views/grid/search/list/CodeExample.vue')
+        },
+        {
+          path: 'tree',
+          name: 'ComponentGridSearchTree',
+          component: () => import('@/views/grid/search/tree/CodeExample.vue')
+        }
+      ]
+    },
     {
       path: 'events',
       component: RouteLayout,
@@ -2580,6 +2580,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'lineEllipsis',
           name: 'ComponentGridOtherLineEllipsis',
           component: () => import('@/views/grid/other/lineEllipsis/CodeExample.vue')
+        },
+        {
+          path: 'yearMonth',
+          name: 'ComponentGridOtherYearMonth',
+          component: () => import('@/views/grid/other/yearMonth/CodeExample.vue')
         }
       ]
     }

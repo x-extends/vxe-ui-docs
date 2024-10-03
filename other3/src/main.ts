@@ -22,7 +22,7 @@ import 'vxe-pc-ui/es/style.css'
 import VxeTable from 'vxe-table'
 import 'vxe-table/es/style.css'
 
-import enUS from 'vxe-pc-ui/packages/language/en-US'
+import enUS from 'vxe-pc-ui/lib/language/en-US'
 
 import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
 import VxeUIPluginExportPDF from '@vxe-ui/plugin-export-pdf'
