@@ -3360,6 +3360,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/button/dropdown/CodeExample.vue')
           },
           {
+            path: 'disabled',
+            name: 'ComponentButtonDisabled',
+            component: () => import('@/views/button/disabled/CodeExample.vue')
+          },
+          {
             path: 'permissionCode',
             name: 'ComponentButtonPermissionCode',
             component: () => import('@/views/button/permissionCode/CodeExample.vue')
@@ -4825,6 +4830,42 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/print/page/template/CodeExample.vue')
               }
             ]
+          }
+        ]
+      },
+      {
+        path: 'watermark',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'global',
+            name: 'ComponentWatermarkGlobal',
+            component: () => import('@/views/watermark/global/watermark/CodeExample.vue')
+          },
+          {
+            path: 'base',
+            name: 'ComponentWatermarkBase',
+            component: () => import('@/views/watermark/base/CodeExample.vue')
+          },
+          {
+            path: 'color',
+            name: 'ComponentWatermarkColor',
+            component: () => import('@/views/watermark/color/CodeExample.vue')
+          },
+          {
+            path: 'fontSize',
+            name: 'ComponentWatermarkFontSize',
+            component: () => import('@/views/watermark/fontSize/CodeExample.vue')
+          },
+          {
+            path: 'table',
+            name: 'ComponentWatermarkTable',
+            component: () => import('@/views/watermark/table/CodeExample.vue')
+          },
+          {
+            path: 'form',
+            name: 'ComponentWatermarkForm',
+            component: () => import('@/views/watermark/form/CodeExample.vue')
           }
         ]
       },

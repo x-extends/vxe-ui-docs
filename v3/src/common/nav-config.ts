@@ -965,6 +965,7 @@ export const navConfigList: NavVO[] = [
           { title: '触发方式', routerLink: { name: 'ComponentButtonTrigger' } },
           { title: '按钮组', routerLink: { name: 'ComponentButtonGroup' } },
           { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdown' } },
+          { title: '禁用', routerLink: { name: 'ComponentButtonDisabled' } },
           { title: '权限码', routerLink: { name: 'ComponentButtonPermissionCode' } }
         ]
       },

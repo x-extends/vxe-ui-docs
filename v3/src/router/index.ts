@@ -3323,6 +3323,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/button/dropdown/CodeExample.vue')
           },
           {
+            path: 'disabled',
+            name: 'ComponentButtonDisabled',
+            component: () => import('@/views/button/disabled/CodeExample.vue')
+          },
+          {
             path: 'permissionCode',
             name: 'ComponentButtonPermissionCode',
             component: () => import('@/views/button/permissionCode/CodeExample.vue')

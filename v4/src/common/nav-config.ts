@@ -973,6 +973,7 @@ export const navConfigList: NavVO[] = [
           { title: '触发方式', routerLink: { name: 'ComponentButtonTrigger' } },
           { title: '按钮组', routerLink: { name: 'ComponentButtonGroup' } },
           { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdown' } },
+          { title: '禁用', routerLink: { name: 'ComponentButtonDisabled' } },
           { title: '权限码', routerLink: { name: 'ComponentButtonPermissionCode' } }
         ]
       },
@@ -1848,7 +1849,18 @@ export const navConfigList: NavVO[] = [
   {
     i18nKey: 'app.aside.menu.otherTitle',
     children: [
-      // { title: 'Watermark 水印' },
+      {
+        title: 'Watermark 水印',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'watermark' } } },
+          { title: '全局调用', routerLink: { name: 'ComponentWatermarkGlobal' } },
+          { title: '基础', routerLink: { name: 'ComponentWatermarkBase' } },
+          { title: '字体颜色', routerLink: { name: 'ComponentWatermarkColor' } },
+          { title: '字体大小', routerLink: { name: 'ComponentWatermarkFontSize' } },
+          { title: '表格水印', routerLink: { name: 'ComponentWatermarkTable' } },
+          { title: '表单水印', routerLink: { name: 'ComponentWatermarkForm' } }
+        ]
+      },
       {
         title: 'Countdown 倒计时',
         children: [
