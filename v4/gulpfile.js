@@ -28,7 +28,7 @@ gulp.task('handle_vue_tmpltojs', () => {
     .pipe(ts({
       target: 'esnext',
       module: 'esnext',
-      strict: true,
+      strict: false,
       jsx: 'preserve',
       importHelpers: true,
       moduleResolution: 'node',
@@ -37,7 +37,7 @@ gulp.task('handle_vue_tmpltojs', () => {
       resolveJsonModule: true,
       allowSyntheticDefaultImports: true,
       noImplicitAny: false,
-      sourceMap: true,
+      sourceMap: false,
       lib: [
         'esnext',
         'dom',
@@ -93,7 +93,7 @@ gulp.task('handle_tstojs', () => {
       resolveJsonModule: true,
       allowSyntheticDefaultImports: true,
       noImplicitAny: false,
-      sourceMap: true,
+      sourceMap: false,
       lib: [
         'esnext',
         'dom',

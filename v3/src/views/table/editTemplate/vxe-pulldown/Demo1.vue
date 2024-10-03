@@ -29,8 +29,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import DemoUserSelectPulldown from './DemoDemoUserSelectPulldown.vue'
-import DemoRoleSelectPulldown from './DemoRoleSelectPulldown.vue'
+// import DemoUserSelectPulldown from './DemoUserSelectPulldown.vue'
+// import DemoRoleSelectPulldown from './DemoRoleSelectPulldown.vue'
 
 interface RowVO {
   id: number
@@ -40,10 +40,10 @@ interface RowVO {
 }
 
 export default Vue.extend({
-  components: {
-    DemoUserSelectPulldown,
-    DemoRoleSelectPulldown
-  },
+  // components: {
+  //   DemoUserSelectPulldown,
+  //   DemoRoleSelectPulldown
+  // },
   data () {
     const tableData: RowVO[] = [
       { id: 10001, name: 'Test1', role: 'Develop', userName: 'test6' },

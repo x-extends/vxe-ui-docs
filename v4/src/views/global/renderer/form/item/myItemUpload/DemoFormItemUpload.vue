@@ -30,7 +30,7 @@ const currField = ref<VxeFormItemPropTypes.Field>()
 
 const renderProps = computed(() => {
   const { renderOpts } = props
-  return Object.assign({ mode: 'file' }, renderOpts.props)
+  return Object.assign({ mode: 'file' as VxeUploadPropTypes.Mode }, renderOpts.props)
 })
 
 const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress }) => {

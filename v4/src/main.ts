@@ -62,6 +62,9 @@ import '@/views/global/renderer/form-design/widget/myTextareaWidget/demo1.form-d
 
 import enUS from 'vxe-pc-ui/packages/language/en-US'
 
+import DemoUserSelectPulldown from '@/views/table/editTemplate/vxe-pulldown/DemoUserSelectPulldown.vue'
+import DemoRoleSelectPulldown from '@/views/table/editTemplate/vxe-pulldown/DemoRoleSelectPulldown.vue'
+
 declare global {
   interface Window {
     XEUtils: typeof XEUtils;
@@ -82,6 +85,9 @@ app.component('CodeList', CodeList)
 app.component('CodeRender', CodeRender)
 app.component('CodeUseVersion', CodeUseVersion)
 app.component('ApiLink', ApiLink)
+
+app.component('DemoUserSelectPulldown', DemoUserSelectPulldown)
+app.component('DemoRoleSelectPulldown', DemoRoleSelectPulldown)
 
 app.use(VxeUI)
 app.use(VxeTable)
