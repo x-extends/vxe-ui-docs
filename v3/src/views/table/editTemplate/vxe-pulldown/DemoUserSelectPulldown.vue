@@ -1,7 +1,7 @@
 <template>
   <vxe-pulldown class="user-select-pulldown" v-model="showPopup" trigger="manual" show-popup-shadow>
     <template #default>
-      <vxe-input :value="value" @focus="focusEvent"></vxe-input>
+      <vxe-input :value="value" prefix-icon="vxe-icon-user" @focus="focusEvent"></vxe-input>
     </template>
     <template #dropdown>
       <ul class="user-list">

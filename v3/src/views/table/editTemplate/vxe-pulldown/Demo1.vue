@@ -20,6 +20,7 @@
           <DemoRoleSelectPulldown v-model="row.role" />
         </template>
         <template #default="{ row }">
+          <vxe-icon name="company"></vxe-icon>
           <span>{{ row.role }}</span>
         </template>
       </vxe-column>

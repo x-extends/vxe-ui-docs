@@ -1,7 +1,7 @@
 <template>
   <vxe-pulldown class="role-select-pulldown" v-model="showPopup" trigger="manual" show-popup-shadow>
     <template #default>
-      <vxe-input :value="value" @focus="focusEvent"></vxe-input>
+      <vxe-input :value="value" prefix-icon="vxe-icon-company" @focus="focusEvent"></vxe-input>
     </template>
     <template #dropdown>
       <div class="dropdown-table-body">
