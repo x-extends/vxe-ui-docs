@@ -11,17 +11,17 @@
 
 <script lang="ts" setup>
 import { ref, PropType, computed } from 'vue'
-import { VxeUpload, VxeGlobalRendererHandles, VxeUploadPropTypes, VxeFormItemPropTypes } from 'vxe-pc-ui'
+import { VxeUpload, VxeGlobalRendererHandles, VxeUploadPropTypes, VxeUploadProps, VxeFormItemPropTypes } from 'vxe-pc-ui'
 import axios from 'axios'
 
 const props = defineProps({
   renderOpts: {
     type: Object as PropType<VxeGlobalRendererHandles.RenderFormItemContentOptions>,
-    default: () => ({})
+    default: () => ({} as VxeGlobalRendererHandles.RenderFormItemContentOptions)
   },
   params: {
     type: Object as PropType<VxeGlobalRendererHandles.RenderFormItemContentParams>,
-    default: () => ({})
+    default: () => ({} as VxeGlobalRendererHandles.RenderFormItemContentParams)
   }
 })
 
@@ -30,7 +30,7 @@ const currField = ref<VxeFormItemPropTypes.Field>()
 
 const renderProps = computed(() => {
   const { renderOpts } = props
-  return Object.assign({ mode: 'file' as VxeUploadPropTypes.Mode }, renderOpts.props)
+  return Object.assign({ mode: 'file' }, renderOpts.props) as VxeUploadProps
 })
 
 const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress }) => {
