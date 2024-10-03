@@ -2216,6 +2216,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'vxe-select',
           name: 'ComponentGridEditTemplateVxeSelect',
           component: () => import('@/views/grid/editTemplate/vxe-select/CodeExample.vue')
+        },
+        {
+          path: 'vxe-pulldown',
+          name: 'ComponentGridEditTemplateVxePulldown',
+          component: () => import('@/views/grid/editTemplate/vxe-pulldown/CodeExample.vue')
         }
       ]
     },
