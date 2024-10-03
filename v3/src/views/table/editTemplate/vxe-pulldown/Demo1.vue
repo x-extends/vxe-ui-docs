@@ -8,7 +8,7 @@
       <vxe-column field="name" title="Name" min-width="200"></vxe-column>
       <vxe-column field="userName" title="下拉列表" width="200" :edit-render="{autoFocus: 'input'}">
         <template #edit="{ row }">
-          <UserSelectPulldown v-model="row.userName" />
+          <DemoUserSelectPulldown v-model="row.userName" />
         </template>
         <template #default="{ row }">
           <vxe-icon name="user"></vxe-icon>
@@ -17,7 +17,7 @@
       </vxe-column>
       <vxe-column field="role" title="下拉表格" width="200" :edit-render="{autoFocus: 'input'}">
         <template #edit="{ row }">
-          <RoleSelectPulldown v-model="row.role" />
+          <DemoRoleSelectPulldown v-model="row.role" />
         </template>
         <template #default="{ row }">
           <span>{{ row.role }}</span>
@@ -29,8 +29,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import UserSelectPulldown from './UserSelectPulldown.vue'
-import RoleSelectPulldown from './RoleSelectPulldown.vue'
+import DemoUserSelectPulldown from './DemoDemoUserSelectPulldown.vue'
+import DemoRoleSelectPulldown from './DemoRoleSelectPulldown.vue'
 
 interface RowVO {
   id: number
@@ -41,8 +41,8 @@ interface RowVO {
 
 export default Vue.extend({
   components: {
-    UserSelectPulldown,
-    RoleSelectPulldown
+    DemoUserSelectPulldown,
+    DemoRoleSelectPulldown
   },
   data () {
     const tableData: RowVO[] = [
