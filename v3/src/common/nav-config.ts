@@ -293,16 +293,17 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/table/edit/el-input` }
           ]
         },
-        //     {
-        //       title: '可编辑 - 渲染 - 插槽式',
-        //       children: [
-        //         { title: 'VxeInput', routerLink: { name: 'ComponentTableEditTemplateVxeInput' } },
-        //         { title: 'VxeNumberInput', routerLink: { name: 'ComponentTableEditTemplateVxeNumberInput' } },
-        //         { title: 'VxeDatePicker', routerLink: { name: 'ComponentTableEditTemplateVxeDatePicker' } },
-        //         { title: 'VxeSelect', routerLink: { name: 'ComponentTableEditTemplateVxeSelect' } },
-        //         { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/table/edit/el-input` }
-        //       ]
-        //     },
+        {
+          title: '可编辑 - 渲染 - 插槽式',
+          children: [
+            { title: 'VxeInput', routerLink: { name: 'ComponentTableEditTemplateVxeInput' } },
+            { title: 'VxeNumberInput', routerLink: { name: 'ComponentTableEditTemplateVxeNumberInput' } },
+            { title: 'VxeDatePicker', routerLink: { name: 'ComponentTableEditTemplateVxeDatePicker' } },
+            { title: 'VxeSelect', routerLink: { name: 'ComponentTableEditTemplateVxeSelect' } },
+            { title: 'VxePulldown', routerLink: { name: 'ComponentTableEditTemplateVxePulldown' } },
+            { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/table/edit/el-input` }
+          ]
+        },
         //     {
         //       title: '自定义插槽模板',
         //       children: [

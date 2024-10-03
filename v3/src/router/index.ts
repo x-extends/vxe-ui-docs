@@ -1020,32 +1020,37 @@ const tableRouteConfig: RouteConfig = {
         }
       ]
     },
-    // {
-    //   path: 'editTemplate',
-    //   component: RouteLayout,
-    //   children: [
-    //     {
-    //       path: 'vxe-input',
-    //       name: 'ComponentTableEditTemplateVxeInput',
-    //       component: () => import('@/views/table/editTemplate/vxe-input/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'vxe-number-input',
-    //       name: 'ComponentTableEditTemplateVxeNumberInput',
-    //       component: () => import('@/views/table/editTemplate/vxe-number-input/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'vxe-date-picker',
-    //       name: 'ComponentTableEditTemplateVxeDatePicker',
-    //       component: () => import('@/views/table/editTemplate/vxe-date-picker/CodeExample.vue')
-    //     },
-    //     {
-    //       path: 'vxe-select',
-    //       name: 'ComponentTableEditTemplateVxeSelect',
-    //       component: () => import('@/views/table/editTemplate/vxe-select/CodeExample.vue')
-    //     }
-    //   ]
-    // },
+    {
+      path: 'editTemplate',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'vxe-input',
+          name: 'ComponentTableEditTemplateVxeInput',
+          component: () => import('@/views/table/editTemplate/vxe-input/CodeExample.vue')
+        },
+        {
+          path: 'vxe-number-input',
+          name: 'ComponentTableEditTemplateVxeNumberInput',
+          component: () => import('@/views/table/editTemplate/vxe-number-input/CodeExample.vue')
+        },
+        {
+          path: 'vxe-date-picker',
+          name: 'ComponentTableEditTemplateVxeDatePicker',
+          component: () => import('@/views/table/editTemplate/vxe-date-picker/CodeExample.vue')
+        },
+        {
+          path: 'vxe-select',
+          name: 'ComponentTableEditTemplateVxeSelect',
+          component: () => import('@/views/table/editTemplate/vxe-select/CodeExample.vue')
+        },
+        {
+          path: 'vxe-pulldown',
+          name: 'ComponentTableEditTemplateVxePulldown',
+          component: () => import('@/views/table/editTemplate/vxe-pulldown/CodeExample.vue')
+        }
+      ]
+    },
     // {
     //   path: 'template',
     //   component: RouteLayout,

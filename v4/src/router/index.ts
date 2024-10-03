@@ -1055,6 +1055,11 @@ const tableRouteConfig: RouteRecordRaw = {
           path: 'vxe-select',
           name: 'ComponentTableEditTemplateVxeSelect',
           component: () => import('@/views/table/editTemplate/vxe-select/CodeExample.vue')
+        },
+        {
+          path: 'vxe-pulldown',
+          name: 'ComponentTableEditTemplateVxePulldown',
+          component: () => import('@/views/table/editTemplate/vxe-pulldown/CodeExample.vue')
         }
       ]
     },
