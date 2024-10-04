@@ -36,6 +36,7 @@
         "loadingTitle": "Loading 加载中",
         "navigationTitle": "Компонент навигации",
         "layoutTitle": "Контейнерный компонент",
+        "displayTitle": "展示组件",
         "treeTitle": "Дерево дерево",
         "feedbackTitle": "компонент обратной связи",
         "formTitle": "Форма формы",

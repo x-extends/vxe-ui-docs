@@ -36,6 +36,7 @@
         "loadingTitle": "Loading 加载中",
         "navigationTitle": "ナビゲーションコンポーネント",
         "layoutTitle": "コンテナコンポーネント",
+        "displayTitle": "展示组件",
         "treeTitle": "木 木",
         "feedbackTitle": "フィードバックコンポーネント",
         "formTitle": "フォームフォーム",

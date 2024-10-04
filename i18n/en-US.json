@@ -36,6 +36,7 @@
         "loadingTitle": "Loading",
         "navigationTitle": "Navigation component",
         "layoutTitle": "Container component",
+        "displayTitle": "Display component",
         "treeTitle": "Tree",
         "feedbackTitle": "feedback component",
         "formTitle": "Form",

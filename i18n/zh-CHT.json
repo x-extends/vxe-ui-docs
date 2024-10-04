@@ -36,6 +36,7 @@
         "loadingTitle": "Loading 加载中",
         "navigationTitle": "導航組件",
         "layoutTitle": "容器組件",
+        "displayTitle": "展示组件",
         "treeTitle": "Tree 樹",
         "feedbackTitle": "回饋組件",
         "formTitle": "Form 表單",

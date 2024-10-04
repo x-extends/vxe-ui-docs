@@ -3093,6 +3093,68 @@ const routes: Array<RouteConfig> = [
         ]
       },
       {
+        path: 'avatar',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentAvatarBase',
+            component: () => import('@/views/avatar/base/CodeExample.vue')
+          },
+          {
+            path: 'size',
+            name: 'ComponentAvatarSize',
+            component: () => import('@/views/avatar/size/CodeExample.vue')
+          },
+          {
+            path: 'icon',
+            name: 'ComponentAvatarIcon',
+            component: () => import('@/views/avatar/icon/CodeExample.vue')
+          },
+          {
+            path: 'circle',
+            name: 'ComponentAvatarCircle',
+            component: () => import('@/views/avatar/circle/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentAvatarStatus',
+            component: () => import('@/views/avatar/status/CodeExample.vue')
+          },
+          {
+            path: 'dot',
+            name: 'ComponentAvatarDot',
+            component: () => import('@/views/avatar/dot/CodeExample.vue')
+          },
+          {
+            path: 'count',
+            name: 'ComponentAvatarCount',
+            component: () => import('@/views/avatar/count/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'badge',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentBadgeBase',
+            component: () => import('@/views/badge/base/CodeExample.vue')
+          },
+          {
+            path: 'size',
+            name: 'ComponentBadgerSize',
+            component: () => import('@/views/badge/size/CodeExample.vue')
+          },
+          {
+            path: 'dot',
+            name: 'ComponentBadgerDot',
+            component: () => import('@/views/badge/dot/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'breadcrumb',
         name: 'ComponentBreadcrumb',
         component: () => import('@/views/breadcrumb/CodeExample.vue')
