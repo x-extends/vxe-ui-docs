@@ -4,40 +4,13 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref, reactive } from 'vue'
+<script lang="ts">
+import Vue from 'vue'
 import { VxeGridInstance, VxeTableDefines, VxeGridPropTypes, VxeGridProps } from 'vxe-table'
 
 interface RowVO {
   [key: string]: any
 }
-
-const gridRef = ref<VxeGridInstance<RowVO>>()
-
-const gridOptions = reactive<VxeGridProps<RowVO>>({
-  border: true,
-  showOverflow: true,
-  showHeaderOverflow: true,
-  showFooterOverflow: true,
-  showFooter: true,
-  height: 500,
-  loading: false,
-  scrollX: {
-    enabled: true
-  },
-  scrollY: {
-    enabled: true
-  },
-  rowConfig: {
-    keyField: 'id'
-  },
-  checkboxConfig: {
-    labelField: 'id'
-  },
-  footerData: [
-    { col_0: '合计' }
-  ]
-})
 
 let colIndex = 0
 let rowIndex = 1
@@ -86,27 +59,62 @@ const findDataList = (size: number) => {
   })
 }
 
-const init = async () => {
-  let tableColumn: VxeGridPropTypes.Columns = []
-  gridOptions.loading = true
-  await Promise.all([
-    findColumnList(200).then(columns => {
-      const $grid = gridRef.value
-      if ($grid) {
-        tableColumn = columns
-        $grid.loadColumn(columns)
-      }
-    }),
-    findDataList(600).then(data => {
-      const $grid = gridRef.value
-      if ($grid) {
-        $grid.loadData(data)
-      }
-    })
-  ])
+export default Vue.extend({
+  data () {
+    const gridOptions: VxeGridProps<RowVO> = {
+      border: true,
+      showOverflow: true,
+      showHeaderOverflow: true,
+      showFooterOverflow: true,
+      showFooter: true,
+      height: 500,
+      loading: false,
+      scrollX: {
+        enabled: true
+      },
+      scrollY: {
+        enabled: true
+      },
+      rowConfig: {
+        keyField: 'id'
+      },
+      checkboxConfig: {
+        labelField: 'id'
+      },
+      footerData: [
+        { id: '合计', col_0: '56', col_1: '300', col_2: '4987' }
+      ]
+    }
 
-  gridOptions.loading = false
-}
+    return {
+      gridOptions
+    }
+  },
+  methods: {
+    async init () {
+      let tableColumn: VxeGridPropTypes.Columns = []
+      this.gridOptions.loading = true
+      await Promise.all([
+        findColumnList(200).then(columns => {
+          const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
+          if ($grid) {
+            tableColumn = columns
+            $grid.loadColumn(columns)
+          }
+        }),
+        findDataList(600).then(data => {
+          const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
+          if ($grid) {
+            $grid.loadData(data)
+          }
+        })
+      ])
+      this.gridOptions.loading = false
+    }
 
-init()
+  },
+  created () {
+    this.init()
+  }
+})
 </script>
