@@ -1390,6 +1390,17 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: 'Slider 滑动输入',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'slider' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentSliderSize' } },
+          { title: '基本', routerLink: { name: 'ComponentSliderBase' } },
+          { title: '范围滑动', routerLink: { name: 'ComponentSliderRange' } },
+          { title: '只读', routerLink: { name: 'ComponentSliderReadonly' } },
+          { title: '禁用', routerLink: { name: 'ComponentSliderDisabled' } }
+        ]
+      },
+      {
         title: 'Input 输入框',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'input' } } },

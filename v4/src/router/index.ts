@@ -3511,6 +3511,37 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'slider',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentSliderSize',
+            component: () => import('@/views/slider/size/CodeExample.vue')
+          },
+          {
+            path: 'base',
+            name: 'ComponentSliderBase',
+            component: () => import('@/views/slider/base/CodeExample.vue')
+          },
+          {
+            path: 'range',
+            name: 'ComponentSliderRange',
+            component: () => import('@/views/slider/range/CodeExample.vue')
+          },
+          {
+            path: 'readonly',
+            name: 'ComponentSliderReadonly',
+            component: () => import('@/views/slider/readonly/CodeExample.vue')
+          },
+          {
+            path: 'disabled',
+            name: 'ComponentSliderDisabled',
+            component: () => import('@/views/slider/disabled/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'input',
         component: RouteLayout,
         children: [
