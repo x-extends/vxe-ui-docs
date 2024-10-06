@@ -1055,7 +1055,9 @@ export const navConfigList: NavVO[] = [
           { title: '预加载页签', routerLink: { name: 'ComponentTabsRoundPreload' } },
           { title: '页签超出可滚动', routerLink: { name: 'ComponentTabsOver' } },
           { title: '右侧操作按钮', routerLink: { name: 'ComponentTabsExtra' } },
+          { title: '拦截页签切换', routerLink: { name: 'ComponentTabsBeforeChangeMethod' } },
           { title: '可关闭', routerLink: { name: 'ComponentTabsCloseConfig' } },
+          { title: '拦截页签关闭', routerLink: { name: 'ComponentTabsBeforeClose' } },
           { title: '权限码', routerLink: { name: 'ComponentTabsPermissionCode' } }
         ]
       },

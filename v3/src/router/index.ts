@@ -4517,9 +4517,19 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/tabs/extra/CodeExample.vue')
           },
           {
+            path: 'beforeChangeMethod',
+            name: 'ComponentTabsBeforeChangeMethod',
+            component: () => import('@/views/tabs/beforeChangeMethod/CodeExample.vue')
+          },
+          {
             path: 'closeConfig',
             name: 'ComponentTabsCloseConfig',
             component: () => import('@/views/tabs/closeConfig/CodeExample.vue')
+          },
+          {
+            path: 'beforeClose',
+            name: 'ComponentTabsBeforeClose',
+            component: () => import('@/views/tabs/beforeClose/CodeExample.vue')
           },
           {
             path: 'permissionCode',

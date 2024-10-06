@@ -5,8 +5,8 @@
       type="round-card"
       :height="140"
       :options="tabList"
-      :close-config="closeConfig"
-      @tab-close="tabCloseEvent">
+      :before-change-method="beforeChangeMethod"
+      @tab-change="tabChangeEvent">
       <template #default1>
         <div>内容1</div>
         <div>内容1</div>
@@ -39,7 +39,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeTabsPropTypes, VxeTabsEvents } from 'vxe-pc-ui'
+import { VxeUI, VxeTabsPropTypes, VxeTabsEvents } from 'vxe-pc-ui'
 
 const selectTab = ref<VxeTabsPropTypes.ModelValue>('1')
 
@@ -49,12 +49,29 @@ const tabList = ref<VxeTabsPropTypes.Options>([
   { name: '3', title: '标题3', slots: { default: 'default3' } }
 ])
 
-const closeConfig = ref<VxeTabsPropTypes.CloseConfig>({
-  enabled: true
-})
+const beforeChangeMethod: VxeTabsPropTypes.BeforeChangeMethod = () => {
+  // 支持同步或异步
+  return VxeUI.modal.confirm({
+    content: '请确认是否关闭？'
+  }).then(type => {
+    if (type === 'confirm') {
+      return true
+    }
+    return false
+  })
+}
 
-const tabCloseEvent: VxeTabsEvents.TabClose = ({ name, nextName }) => {
-  tabList.value = tabList.value.filter(item => item.name !== name)
-  selectTab.value = nextName
+const tabChangeEvent: VxeTabsEvents.TabChange = ({ name }) => {
+  VxeUI.modal.message({
+    content: `已切换到新页签 name=${name}`,
+    status: 'success'
+  })
+}
+
+const tabChangeFailEvent: VxeTabsEvents.TabChangeFail = ({ name }) => {
+  VxeUI.modal.message({
+    content: '阻止切换',
+    status: 'warning'
+  })
 }
 </script>

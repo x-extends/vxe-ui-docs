@@ -5,8 +5,9 @@
       type="round-card"
       :height="140"
       :options="tabList"
-      :close-config="closeConfig"
-      @tab-close="tabCloseEvent">
+      :before-change-method="beforeChangeMethod"
+      @tab-change="tabChangeEvent"
+      @tab-change-fail="tabChangeFailEvent">
       <template #default1>
         <div>内容1</div>
         <div>内容1</div>
@@ -39,7 +40,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeTabsPropTypes } from 'vxe-pc-ui'
+import { VxeUI, VxeTabsPropTypes } from 'vxe-pc-ui'
 
 export default Vue.extend({
   data () {
@@ -49,26 +50,36 @@ export default Vue.extend({
       { name: '3', title: '标题3', slots: { default: 'default3' } }
     ]
 
-    const closeConfig: VxeTabsPropTypes.CloseConfig = {
-      enabled: true,
-      visibleMethod ({ name }) {
-        if (name === '1' || name === '3') {
-          return false
+    const beforeChangeMethod: VxeTabsPropTypes.BeforeChangeMethod = () => {
+      // 支持同步或异步
+      return VxeUI.modal.confirm({
+        content: '请确认是否允许切换？'
+      }).then(type => {
+        if (type === 'confirm') {
+          return true
         }
-        return true
-      }
+        return false
+      })
     }
 
     return {
       selectTab: '1',
       tabList,
-      closeConfig
+      beforeChangeMethod
     }
   },
   methods: {
-    tabCloseEvent ({ name, nextName }) {
-      this.tabList = this.tabList.filter(item => item.name !== name)
-      this.selectTab = nextName
+    tabChangeEvent ({ name }) {
+      VxeUI.modal.message({
+        content: `已切换到新页签 name=${name}`,
+        status: 'success'
+      })
+    },
+    tabChangeFailEvent () {
+      VxeUI.modal.message({
+        content: '阻止切换',
+        status: 'warning'
+      })
     }
   }
 })
