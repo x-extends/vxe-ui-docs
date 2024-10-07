@@ -250,7 +250,11 @@ const scrollToNav = (item: NavVO) => {
     if (asideElem && item.routerLink) {
       const linkEl = asideElem.querySelector(`.nav-item-link.${getApiClass(item)}`)
       if (linkEl) {
-        (linkEl as any).scrollIntoViewIfNeeded()
+        if ((linkEl as any).scrollIntoViewIfNeeded) {
+          (linkEl as any).scrollIntoViewIfNeeded()
+        } else if ((linkEl as any).scrollIntoView) {
+          (linkEl as any).scrollIntoView()
+        }
       }
     }
   })

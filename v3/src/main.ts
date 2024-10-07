@@ -17,10 +17,10 @@ import axios from 'axios'
 import XEUtils from 'xe-utils'
 
 import VxeUI from 'vxe-pc-ui'
-import 'vxe-pc-ui/es/style.css'
+import 'vxe-pc-ui/lib/style.css'
 
 import VxeTable from 'vxe-table'
-import 'vxe-table/es/style.css'
+import 'vxe-table/lib/style.css'
 
 import enUS from 'vxe-pc-ui/lib/language/en-US'
 

@@ -8,6 +8,7 @@ process.env.VUE_APP_DATE_DATE = XEUtils.toDateString(process.env.VUE_APP_DATE_NO
 module.exports = defineConfig({
   publicPath: `/other${process.env.VUE_APP_VXE_VERSION}/`,
   assetsDir: 'static',
+  transpileDependencies: true,
   productionSourceMap: false,
   devServer: {
     port: 8084,
