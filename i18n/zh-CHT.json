@@ -15,6 +15,7 @@
         "globalInstall": "全域安裝 - 全量導入",
         "lazyUseGlobal": "全域安裝 - 按需導入",
         "lazyUseImport": "局部安裝 - 單獨導入",
+        "useCDN": "全局安装 - CDN 引入",
         "globalConfig": "全域參數",
         "globalTheme": "全局主題",
         "globalIcon": "全域圖示",

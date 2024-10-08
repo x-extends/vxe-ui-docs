@@ -15,6 +15,7 @@
         "globalInstall": "Global installation - full import",
         "lazyUseGlobal": "Global installation - import on demand",
         "lazyUseImport": "Partial installation - import separately",
+        "useCDN": "全局安装 - CDN 引入",
         "globalConfig": "global parameters",
         "globalTheme": "global theme",
         "globalIcon": "global icon",
