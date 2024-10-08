@@ -191,6 +191,24 @@
       "props_title": "タイトル",
       "props_href": "リンク"
     },
+    "avatar": {
+      "props_content": "内容",
+      "props_icon": "图标",
+      "props_count": "显示微标数量",
+      "props_dot": "显示小圆点",
+      "props_src": "图片链接",
+      "props_circle": "圆形",
+      "props_status": "状态颜色",
+      "props_width": "宽度",
+      "props_height": "高度",
+      "props_size": "尺寸大小"
+    },
+    "badge": {
+      "props_content": "内容",
+      "props_count": "显示微标数量",
+      "props_dot": "显示小圆点",
+      "props_size": "尺寸大小"
+    },
     "breadcrumb": {
       "props_separator": "デリミタ",
       "props_options": "構成リスト",
@@ -250,6 +268,9 @@
       "props_options_icon": "接頭辞アイコン",
       "props_options_status": "ボタンアイコン",
       "props_options_disabled": "無効にするかどうか",
+      "props_options_permission-code": "权限码",
+      "props_options_router-link": "对应 vue-router 路由配置",
+      "props_options_trigger": "只对 router-lin 有效，链接打开方式",
       "props_options_loading": "読み込み中です",
       "props_options_title": "",
       "props_permission-code": "許可コード"
@@ -283,6 +304,9 @@
     "carousel": {
       "props_model-value": "v-model バインディング値",
       "props_options": "画像リストの構成",
+      "props_options_name": "用来标识这一项",
+      "props_options_url": "图片链接",
+      "props_options_class-name": "给图片附加 className",
       "props_height": "高い",
       "props_width": "幅",
       "props_show-indicators": "インジケーターを表示するかどうか",
@@ -314,6 +338,7 @@
     "checkbox-group": {
       "props_max": "オプションの最大数を制限します。デフォルトでは制限はありません",
       "props_disabled": "無効にするかどうか",
+      "props_readonly": "是否只读",
       "props_options": "オプション一覧",
       "props_option-props": "オプション属性パラメータの設定",
       "props_model-value": "v-model バインディング値",
@@ -325,6 +350,30 @@
       "props_width": "幅を指定してください",
       "props_fill": "適応残幅",
       "props_ellipsis": "隠れることを超えて"
+    },
+    "collapse": {
+      "props_model-value": "v-model 绑定值",
+      "props_size": "尺寸大小",
+      "props_padding": "显示边距",
+      "props_options": "列表配置",
+      "props_options_title": "标题",
+      "props_options_name": "用来标识这一项",
+      "props_options_icon": "图标",
+      "props_options_title-width": "标题宽度",
+      "props_options_title-align": "对齐方式",
+      "props_options_preload": "是否预加载",
+      "props_options_permission-code": "权限码"
+    },
+    "collapse-pane": {
+      "props_title": "标题",
+      "props_name": "唯一 Name",
+      "props_icon": "图标",
+      "props_permission-code": "权限码"
+    },
+    "countdown": {
+      "props_model-value": "v-model 绑定值",
+      "props_format": "显示格式",
+      "props_size": "尺寸大小"
     },
     "date-picker": {
       "props_model-value": "v-model バインディング値",
@@ -374,7 +423,20 @@
       "props_position": "type=modal の場合にのみ有効です。ウィンドウのデフォルト位置を center に設定すると、中央に表示されます。",
       "props_z-index": "スタック順序をカスタマイズします (ブロックされている場合など、一部の特殊なシナリオで使用される可能性があります)",
       "props_show-title-overflow": "タイトルの内容が長すぎる場合に省略記号で表示されるように設定します",
-      "props_destroy-on-close": "ウィンドウを閉じるときにコンテンツを破棄する"
+      "props_destroy-on-close": "ウィンドウを閉じるときにコンテンツを破棄する",
+      "props_confirm-closable": "点击确认按钮时自动关闭窗口",
+      "props_cancel-closable": "点击取消按钮时自动关闭窗口",
+      "slots_left": "自定义左侧模板",
+      "slots_right": "自定义右侧模板",
+      "slots_aside": "窗口侧边栏的模板",
+      "slots_leftfoot": "窗口底部左侧的模板",
+      "slots_rightfoot": "窗口底部右侧的模板"
+    },
+    "empty": {
+      "props_image-url": "图片链接",
+      "props_image-style": "图片样式",
+      "props_icon": "图标",
+      "props_content": "内容"
     },
     "form": {
       "props_vertical": "すべての項目に垂直レイアウトを使用する",
@@ -470,7 +532,12 @@
       "props_items_item-render": "アイテムレンダラー構成アイテム",
       "props_items_slots_extra": "カスタムタイトル権テンプレート",
       "props_items_slots": "スロット",
-      "props_rules": "検証ルールの設定項目"
+      "props_rules": "検証ルールの設定項目",
+      "props_vertical-align": "所有项垂直的对齐方式",
+      "props_border": "显示边框",
+      "props_title-background": "所有项显示标题背景",
+      "props_items_vertical-align": "垂直的对齐方式",
+      "props_items_title-background": "显示标题背景"
     },
     "form-design": {
       "props_size": "サイズ",
@@ -497,6 +564,58 @@
     "form-gather": {
       "props_class-name": "classNameをフォーム項目に追加します",
       "props_span": "グリッドが占める列の数 (合計 24 列)"
+    },
+    "form-group": {
+      "props_title-colon": "タイトルのコロンを表示するかどうか",
+      "props_title-asterisk": "必須フィールドに赤いアスタリスクを表示するかどうか",
+      "props_show-title": "タイトルを表示するかどうか",
+      "props_padding": "余白を表示",
+      "props_vertical": "縦型レイアウトを使用する",
+      "props_class-name": "classNameをフォーム項目に追加します",
+      "props_content-class-name": "className をフォーム項目コンテンツに追加します",
+      "props_content-style": "フォーム項目コンテンツにスタイルを添付する",
+      "props_title-prefix_content": "プロンプトメッセージ (国際化の有効化をサポート)",
+      "props_title-prefix_message": "コンテンツをご利用ください",
+      "props_title-prefix_enterable": "メッセージが設定された後にのみ有効で、マウスがツールチップに入ることができるかどうか",
+      "props_title-prefix_theme": "メッセージの設定後にのみ有効です。ツールチップのテーマ スタイルを設定します。",
+      "props_title-prefix_icon": "カスタムアイコン",
+      "props_title-prefix_icon-status": "アイコンのステータスの色",
+      "props_title-suffix_content": "プロンプトメッセージ (国際化の有効化をサポート)",
+      "props_title-suffix_message": "コンテンツをご利用ください",
+      "props_title-suffix_enterable": "メッセージが設定された後にのみ有効で、マウスがツールチップに入ることができるかどうか",
+      "props_title-suffix_theme": "メッセージの設定後にのみ有効です。ツールチップのテーマ スタイルを設定します。",
+      "props_title-suffix_icon": "カスタムアイコン",
+      "props_title-suffix_icon-status": "アイコンのステータスの色",
+      "props_item-render_name": "レンダラー名",
+      "props_item-render_enabled": "有効にするかどうか",
+      "props_item-render_props": "レンダリングパラメータ(カスタムPropsを参照)",
+      "props_item-render_options": "name=select、ドロップダウン オプション リストにのみ有効です",
+      "props_item-render_option-props": "name=select、ドロップダウン オプション属性パラメータ設定の場合にのみ有効です",
+      "props_item-render_option-groups": "name=select、ドロップダウン グループ化オプション リストにのみ有効です",
+      "props_item-render_option-group-props": "name=select、ドロップダウン グループ化オプション属性パラメータ設定にのみ有効です。",
+      "props_item-render_events": "レンダリングコンポーネントイベント (「カスタムイベント」を参照)",
+      "props_item-render_content": "コンポーネントのコンテンツをレンダリングします (特殊なコンポーネントの場合のみ)",
+      "props_item-render_default-value": "項目のデフォルト値",
+      "slots_default": "カスタムフォーム項目",
+      "slots_title": "カスタムタイトル",
+      "slots_extra": "カスタムタイトル権テンプレート",
+      "props_field": "フィールド名",
+      "props_title": "タイトル (国際化の有効化をサポート)",
+      "props_span": "グリッドが占める列の数 (合計 24 列)",
+      "props_align": "コンテンツの配置",
+      "props_title-align": "タイトルの配置",
+      "props_title-width": "タイトルの幅",
+      "props_title-overflow": "タイトルの内容が長すぎる場合は省略記号で表示されます。",
+      "props_visible": "デフォルトで表示するかどうか",
+      "props_visible-method": "このメソッドの戻り値は、項目が表示されるかどうかを決定するために使用されます。",
+      "props_folding": "デフォルトで折りたたむ",
+      "props_collapse-node": "ノードを折りたたむ",
+      "props_title-prefix": "プレフィックス設定項目",
+      "props_title-suffix": "サフィックス設定項目",
+      "props_reset-value": "リセット時のデフォルト値",
+      "props_item-render": "アイテムレンダラー構成アイテム",
+      "props_vertical-align": "项垂直的对齐方式",
+      "props_title-background": "显示标题背景"
     },
     "form-item": {
       "props_title-colon": "タイトルのコロンを表示するかどうか",
@@ -546,7 +665,9 @@
       "props_title-prefix": "プレフィックス設定項目",
       "props_title-suffix": "サフィックス設定項目",
       "props_reset-value": "リセット時のデフォルト値",
-      "props_item-render": "アイテムレンダラー構成アイテム"
+      "props_item-render": "アイテムレンダラー構成アイテム",
+      "props_vertical-align": "项垂直的对齐方式",
+      "props_title-background": "显示标题背景"
     },
     "form-view": {
       "props_model-value": "v-model バインディング値",
@@ -738,7 +859,11 @@
       "methods_parse-config": "構成を解析する",
       "methods_get-table-record": "テーブル行レコードオブジェクトを取得する",
       "methods_clear-config": "明確な構成",
-      "props_size": "サイズ"
+      "props_size": "サイズ",
+      "props_action-buttons": "操作按钮列表",
+      "props_grid-events": "事件配置",
+      "slots_cell-action": "自定义单元格操作按钮插槽项目",
+      "slots_footer-cell": "自定义表尾单元格操作按钮插槽项目"
     },
     "list": {
       "props_loading": "読み込み中です",
@@ -875,7 +1000,9 @@
       "props_dblclick-zoom": "type=modal の場合のみ有効で、ヘッドのダブルクリックによるウィンドウの拡大または復元を許可するかどうか",
       "props_remember": "メモリ機能により、最後の操作状態が記憶され、再度ウィンドウを開くとウィンドウの状態が復元されます。",
       "props_destroy-on-close": "ウィンドウを閉じるときにコンテンツを破棄する",
-      "props_storage": "localStorageのローカル保存を有効にするかどうか、ウィンドウのドラッグ状態がローカルに保存されます(IDが必要です)"
+      "props_storage": "localStorageのローカル保存を有効にするかどうか、ウィンドウのドラッグ状態がローカルに保存されます(IDが必要です)",
+      "props_confirm-closable": "点击确认按钮时自动关闭窗口",
+      "props_cancel-closable": "点击取消按钮时自动关闭窗口"
     },
     "number-input": {
       "props_model-value": "v-model バインディング値",
@@ -942,7 +1069,8 @@
       "props_clearable": "値がある場合、右側にクリアボタンを表示するかどうか",
       "props_placeholder": "値が空の場合に表示されるプレースホルダー",
       "props_readonly": "読み取り専用ですか?",
-      "props_disabled": "無効にするかどうか"
+      "props_disabled": "無効にするかどうか",
+      "props_controls": "是否显示控制按钮"
     },
     "print": {
       "props_align": "位置合わせ",
@@ -1013,6 +1141,15 @@
       "props_model-value": "v-model バインディング値",
       "props_size": "サイズ"
     },
+    "result": {
+      "props_image-url": "图片链接",
+      "props_image-style": "图片样式",
+      "props_icon": "图标",
+      "props_type": "类型",
+      "props_status": "状态颜色",
+      "props_title": "标题",
+      "props_content": "内容"
+    },
     "row": {
       "props_gutter": "間隔",
       "props_wrap": "自動的に行を折り返すかどうか",
@@ -1059,6 +1196,20 @@
       "props_prefix-icon": "頭のアイコン",
       "props_placement": "ドロップダウンパネルの表示方向を修正",
       "props_transfer": "ポップアップ コンテナーを本文に挿入するかどうか (テーブルに埋め込まれている場合、またはポップアップ ウィンドウでブロックされている場合は true に設定する必要があります)"
+    },
+    "slider": {
+      "props_model-value": "v-model 绑定值",
+      "props_range": "范围拖动",
+      "props_vertical": "使用垂直布局",
+      "props_min": "最小值",
+      "props_max": "最大值",
+      "props_disabled": "是否禁用",
+      "props_readonly": "是否只读",
+      "props_size": "尺寸大小"
+    },
+    "steps": {
+      "props_model-value": "v-model 绑定值",
+      "props_vertical": "使用垂直布局"
     },
     "switch": {
       "props_open-active-icon": "開くときのアクションアイコンをカスタマイズする",
@@ -1113,6 +1264,7 @@
       "props_refresh-config_visible-method": "更新ボタンの表示メソッド。このメソッドの戻り値は、現在のタブの更新ボタンが表示されるかどうかを決定するために使用されます。",
       "props_refresh-config_query-method": "クエリ方法",
       "events_change": "このイベントは、クリックされたタブが変更されるとトリガーされます",
+      "events_tab-change": "在点击页签发生改变时触发该事件",
       "events_tab-change-fail": "beforeChangeMethod に使用されるこのイベントは、タブをクリックして切り替えに失敗したときにトリガーされます。",
       "events_tab-close": "このイベントは、タブをクリックして閉じるとトリガーされます。",
       "events_tab-close-fail": "beforeCloseMethod に使用されるこのイベントは、タブのクリックが閉じられなかったときにトリガーされます。",
@@ -1181,7 +1333,8 @@
       "props_icon": "アイコン",
       "props_permission-code": "許可コード",
       "slots_default": "カスタムコンテンツスロット",
-      "slots_icon": "カスタムアイコンスロット"
+      "slots_icon": "カスタムアイコンスロット",
+      "props_size": "尺寸大小"
     },
     "tooltip": {
       "props_popup-class-name": "classNameをドロップダウンコンテナに追加します",
@@ -1251,7 +1404,30 @@
       "methods_set-checkbox-by-node-id": "showCheckbox チェックボックスに使用され、指定されたノード キーを選択状態に設定します。2 番目のパラメーターは選択されているかどうかです。",
       "methods_set-expand-by-node-id": "指定されたノードキーを展開状態に設定し、2 番目のパラメータが選択されているかどうかを確認します。",
       "methods_clear-expand-node": "非推奨です。clearAllExpandNode() を使用してください。",
-      "methods_clear-all-expand-node": "すべてのツリー ノードの展開ステータスを手動でクリアします"
+      "methods_clear-all-expand-node": "すべてのツリー ノードの展開ステータスを手動でクリアします",
+      "props_radio-config_strict": "严格模式，选中后不能取消",
+      "props_radio-config_highlight": "高亮选中行",
+      "props_radio-config_show-icon": "显示图标",
+      "props_radio-config_trigger": "触发方式（注：当多种功能重叠时，会同时触发）",
+      "props_radio-config_visible-method": "是否允许勾选的方法，该方法，的返回值用来决定这一行的 radio 是否显示",
+      "props_radio-config_check-method": "是否允许选中的方法，该方法，的返回值用来决定这一行的 radio 是否可以选中",
+      "props_checkbox-config_strict": "严格模式，当数据为空或全部禁用时，列头的复选框为禁用状态",
+      "props_checkbox-config_highlight": "高亮勾选行",
+      "props_checkbox-config_show-icon": "显示图标",
+      "props_checkbox-config_trigger": "触发方式（注：当多种功能重叠时，会同时触发）",
+      "props_checkbox-config_visible-method": "是否允许勾选的方法，该方法，的返回值用来决定这一行的 checkbox 是否显示",
+      "props_checkbox-config_check-method": "是否允许勾选的方法，该方法，的返回值用来决定这一行的 checkbox 是否可以勾选",
+      "methods_set-expand-node": "设置指定节点为展开状态",
+      "methods_toggle-expand-by-node-id": "根据节点主键切换指定节点为展开状态",
+      "methods_toggle-expand-node": "切换指定节点为展开状态",
+      "methods_set-all-expand-node": "设置全部节点为展开状态",
+      "methods_clear-expand-loaded": "清除指定节点的懒加载状态，恢复成未加载之前状态",
+      "methods_is-expand-by-node": "判断指定节点是否为展开状态",
+      "methods_is-checked-by-radio-node-id": "用于 show-radio，根据节点主键判断指定节点是否为选中状态",
+      "methods_is-checked-by-radio-node": "用于 show-radio，判断指定节点是否为选中状态",
+      "methods_is-checked-by-checkbox-node-id": "用于 show-checkbox，根据节点主键判断指定节点是否为选中状态",
+      "methods_is-checked-by-checkbox-node": "用于 show-checkbox，判断指定节点是否为选中状态",
+      "methods_is-indeterminate-by-checkbox-node": "用于 show-checkbox，判断指定节点是否为半选状态"
     },
     "tree-select": {
       "props_model-value": "v-model バインディング値",
@@ -1323,7 +1499,23 @@
       "events_upload-error": "このイベントは、upload-method メソッドがファイルのアップロードに失敗したときにトリガーされます。",
       "events_download": "このイベントは、ファイルをクリックしてダウンロードするとトリガーされます",
       "events_download-fail": "ダウンロード前メソッドに使用され、ダウンロードがブロックされたときにこのイベントがトリガーされます。",
-      "methods_choose": "選択したファイルを手動で呼び出します"
+      "methods_choose": "選択したファイルを手動で呼び出します",
+      "props_key-field": "主键字段名",
+      "props_progress-text": "上传进度中显示的内容"
+    },
+    "watermark": {
+      "props_width": "宽度",
+      "props_height": "高度",
+      "props_content": "内容",
+      "props_rotate": "旋转角度",
+      "props_gap": "间隔",
+      "props_font": "字体配置",
+      "props_font_font-size": "字体大小",
+      "props_font_color": "字体颜色",
+      "props_font_font-weight": "字体加粗",
+      "props_font_font-style": "字体样式",
+      "props_font_font-family": "字体类型",
+      "props_z-index": "自定义堆叠顺序（对于某些特殊场景，比如被遮挡时可能会用到）"
     },
     "table": {
       "props_min-height": "テーブルの最小高さ",
@@ -2072,7 +2264,54 @@
       "events_valid-error": "このイベントは、編集ルールが設定されている場合にのみ有効で、データ検証が失敗したときにトリガーされます。",
       "events_scroll": "このイベントは、テーブルがスクロールされるとトリガーされます",
       "methods_get-cell-element": "セルに対応する TD 要素を取得します。それが非表示領域である場合は、取得する前に表示領域までスクロールする必要があります。",
-      "methods_get-cell-label": "セルの表示値を取得、フォーマッタをサポート (スロットを除く)"
+      "methods_get-cell-label": "セルの表示値を取得、フォーマッタをサポート (スロットを除く)",
+      "props_padding": "显示边距",
+      "props_menu-config_header_options_prefix-config": "菜单前缀配置项",
+      "props_menu-config_header_options_prefix-config_ico": "前缀图标",
+      "props_menu-config_header_options_prefix-config_content": "前缀内容",
+      "props_menu-config_header_options_prefix-config_class-name": "给前缀附加 className",
+      "props_menu-config_header_options_suffix-config": "菜单后缀配置项",
+      "props_menu-config_header_options_suffix-config_icon": "后缀图标",
+      "props_menu-config_header_options_suffix-config_content": "后缀内容",
+      "props_menu-config_header_options_suffix-config_class-name":  "给后缀附加 className",
+      "props_menu-config_header_options_children_prefix-config": "二级菜单前缀配置项",
+      "props_menu-config_header_options_children_suffix-config": "二级菜单后缀配置项",
+      "props_menu-config_body_options_prefix-config": "菜单前缀配置项",
+      "props_menu-config_body_options_prefix-config_icon": "前缀图标",
+      "props_menu-config_body_options_prefix-config_content": "前缀内容",
+      "props_menu-config_body_options_prefix-config_class-nam": "给前缀附加 className",
+      "props_menu-config_body_options_suffix-config": "菜单后缀配置项",
+      "props_menu-config_body_options_suffix-config_icon": "后缀图标",
+      "props_menu-config_body_options_suffix-config_content": "后缀内容",
+      "props_menu-config_body_options_suffix-config_class-name":  "给后缀附加 className",
+      "props_menu-config_body_options_children_prefix-config": "二级菜单前缀配置项",
+      "props_menu-config_body_options_children_suffix-config": "二级菜单后缀配置项",
+      "props_menu-config_footer_options_prefix-config": "菜单前缀配置项",
+      "props_menu-config_footer_options_prefix-config_ico": "前缀图标",
+      "props_menu-config_footer_options_prefix-config_content": "前缀内容",
+      "props_menu-config_footer_options_prefix-config_class-name": "给前缀附加 className",
+      "props_menu-config_footer_options_suffix-config": "菜单后缀配置项",
+      "props_menu-config_footer_options_suffix-config_icon": "后缀图标",
+      "props_menu-config_footer_options_suffix-config_content": "后缀内容",
+      "props_menu-config_footer_options_suffix-config_class-name":  "给后缀附加 className",
+      "props_menu-config_footer_options_children_prefix-config": "二级菜单前缀配置项",
+      "props_menu-config_footer_options_children_suffix-config": "二级菜单后缀配置项",
+      "props_area-config_show-column-status": "显示列选取状态",
+      "props_area-config_show-row-status": "显示行选取状态",
+      "props_keyboard-config_is-back": "是否启用 Backspace 键功能",
+      "props_edit-config_auto-focus": "当单元格被激活为编辑状态时自动聚焦",
+      "props_edit-config_auto-pos": "当单元格被激活为编辑状态时自动定位",
+      "props_custom-config_modal-options_show-zoom": "是否显示最大化与最小化按钮",
+      "props_custom-config_modal-options_show-maximize": "是否显示最大化按钮",
+      "props_custom-config_modal-options_show-minimize": "是否显示最小化按钮",
+      "props_custom-config_modal-options_mask": "是否显示遮罩层",
+      "props_custom-config_modal-options_lock-view": "是否锁住页面，不允许窗口之外的任何操作",
+      "props_custom-config_modal-options_resize": "是否允许窗口边缘拖动调整窗口大小",
+      "props_custom-config_modal-options_esc-closable": "是否允许按 Esc 键关闭窗口",
+      "events_clear-cell-area-selection": "当单元格选取区域被清除时会被触发该事件",
+      "methods_get-params": "用于 params，获取自定义的参数",
+      "methods_get-parent-column": "当存在多级表头时，用于获取父列配置",
+      "methods_update-filter-option-status": "手动更新筛选选项的状态，当使用自定义筛选时会用到"
     },
     "colgroup": {
       "slots_header": "カスタムヘッダーコンテンツテンプレート",
@@ -2187,7 +2426,9 @@
       "props_edit-render": "編集可能なレンダラ設定項目",
       "props_content-render": "コンテンツレンダリング設定項目",
       "props_tree-node": "Tree-config で構成され、ツリー ノードとして指定された場合にのみ有効です",
-      "props_params": "追加パラメータ (いくつかのプライベートパラメータを保存するために使用できます)"
+      "props_params": "追加パラメータ (いくつかのプライベートパラメータを保存するために使用できます)",
+      "props_edit-render_auto-focus": "设置激活编辑之后自动聚焦的元素",
+      "props_edit-render_auto-select": "是否在激活编辑之后自动选中输入框内容"
     },
     "grid": {
       "props_columns_filters_label": "表示値",

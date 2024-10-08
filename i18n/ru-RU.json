@@ -191,6 +191,24 @@
       "props_title": "заголовок",
       "props_href": "Связь"
     },
+    "avatar": {
+      "props_content": "内容",
+      "props_icon": "图标",
+      "props_count": "显示微标数量",
+      "props_dot": "显示小圆点",
+      "props_src": "图片链接",
+      "props_circle": "圆形",
+      "props_status": "状态颜色",
+      "props_width": "宽度",
+      "props_height": "高度",
+      "props_size": "尺寸大小"
+    },
+    "badge": {
+      "props_content": "内容",
+      "props_count": "显示微标数量",
+      "props_dot": "显示小圆点",
+      "props_size": "尺寸大小"
+    },
     "breadcrumb": {
       "props_separator": "разделитель",
       "props_options": "Список конфигурации",
@@ -250,6 +268,9 @@
       "props_options_icon": "значок префикса",
       "props_options_status": "значок кнопки",
       "props_options_disabled": "Стоит ли отключать",
+      "props_options_permission-code": "权限码",
+      "props_options_router-link": "对应 vue-router 路由配置",
+      "props_options_trigger": "只对 router-lin 有效，链接打开方式",
       "props_options_loading": "Загружается",
       "props_options_title": "",
       "props_permission-code": "Код разрешения"
@@ -283,6 +304,9 @@
     "carousel": {
       "props_model-value": "значение привязки v-модели",
       "props_options": "Конфигурация списка изображений",
+      "props_options_name": "用来标识这一项",
+      "props_options_url": "图片链接",
+      "props_options_class-name": "给图片附加 className",
       "props_height": "высокий",
       "props_width": "ширина",
       "props_show-indicators": "Показывать ли индикатор",
@@ -314,6 +338,7 @@
     "checkbox-group": {
       "props_max": "Ограничить максимальное количество опций, по умолчанию ограничений нет.",
       "props_disabled": "Стоит ли отключать",
+      "props_readonly": "是否只读",
       "props_options": "Список опций",
       "props_option-props": "Конфигурация параметра атрибута опции",
       "props_model-value": "значение привязки v-модели",
@@ -325,6 +350,30 @@
       "props_width": "Укажите ширину",
       "props_fill": "Адаптивная остаточная ширина",
       "props_ellipsis": "за пределами сокрытия"
+    },
+    "collapse": {
+      "props_model-value": "v-model 绑定值",
+      "props_size": "尺寸大小",
+      "props_padding": "显示边距",
+      "props_options": "列表配置",
+      "props_options_title": "标题",
+      "props_options_name": "用来标识这一项",
+      "props_options_icon": "图标",
+      "props_options_title-width": "标题宽度",
+      "props_options_title-align": "对齐方式",
+      "props_options_preload": "是否预加载",
+      "props_options_permission-code": "权限码"
+    },
+    "collapse-pane": {
+      "props_title": "标题",
+      "props_name": "唯一 Name",
+      "props_icon": "图标",
+      "props_permission-code": "权限码"
+    },
+    "countdown": {
+      "props_model-value": "v-model 绑定值",
+      "props_format": "显示格式",
+      "props_size": "尺寸大小"
     },
     "date-picker": {
       "props_model-value": "значение привязки v-модели",
@@ -374,7 +423,20 @@
       "props_position": "Действительно только для type=modal. Положение окна по умолчанию можно установить в центр, чтобы оно отображалось в центре.",
       "props_z-index": "Настройте порядок наложения (может использоваться в некоторых особых сценариях, например, когда он заблокирован)",
       "props_show-title-overflow": "Настройте отображение содержимого заголовка в виде многоточия, если оно слишком длинное.",
-      "props_destroy-on-close": "Уничтожить контент при закрытии окна"
+      "props_destroy-on-close": "Уничтожить контент при закрытии окна",
+      "props_confirm-closable": "点击确认按钮时自动关闭窗口",
+      "props_cancel-closable": "点击取消按钮时自动关闭窗口",
+      "slots_left": "自定义左侧模板",
+      "slots_right": "自定义右侧模板",
+      "slots_aside": "窗口侧边栏的模板",
+      "slots_leftfoot": "窗口底部左侧的模板",
+      "slots_rightfoot": "窗口底部右侧的模板"
+    },
+    "empty": {
+      "props_image-url": "图片链接",
+      "props_image-style": "图片样式",
+      "props_icon": "图标",
+      "props_content": "内容"
     },
     "form": {
       "props_vertical": "Используйте вертикальное расположение для всех элементов.",
@@ -470,7 +532,12 @@
       "props_items_item-render": "Элемент конфигурации средства рендеринга элементов",
       "props_items_slots_extra": "Пользовательский шаблон правого заголовка",
       "props_items_slots": "слот",
-      "props_rules": "Элементы конфигурации правила проверки"
+      "props_rules": "Элементы конфигурации правила проверки",
+      "props_vertical-align": "所有项垂直的对齐方式",
+      "props_border": "显示边框",
+      "props_title-background": "所有项显示标题背景",
+      "props_items_vertical-align": "垂直的对齐方式",
+      "props_items_title-background": "显示标题背景"
     },
     "form-design": {
       "props_size": "размер",
@@ -497,6 +564,58 @@
     "form-gather": {
       "props_class-name": "Добавить имя класса для формирования элемента",
       "props_span": "Количество столбцов, занимаемых сеткой (всего 24 столбца)"
+    },
+    "form-group": {
+      "props_title-colon": "Отображать ли двоеточие заголовка",
+      "props_title-asterisk": "Отображать ли красные звездочки для обязательных полей",
+      "props_show-title": "Отображать ли заголовок",
+      "props_padding": "показать поля",
+      "props_vertical": "Используйте вертикальную компоновку",
+      "props_class-name": "Добавить имя класса для формирования элемента",
+      "props_content-class-name": "Добавить имя класса для формирования содержимого элемента",
+      "props_content-style": "Прикрепите стили для формирования содержимого элемента",
+      "props_title-prefix_content": "Быстрое сообщение (поддерживает включение интернационализации)",
+      "props_title-prefix_message": "Пожалуйста, используйте контент",
+      "props_title-prefix_enterable": "Действительно только после установки сообщения, может ли мышь войти во всплывающую подсказку",
+      "props_title-prefix_theme": "Действует только после установки сообщения. Установите стиль темы всплывающей подсказки.",
+      "props_title-prefix_icon": "Пользовательский значок",
+      "props_title-prefix_icon-status": "Цвет статуса значка",
+      "props_title-suffix_content": "Быстрое сообщение (поддерживает включение интернационализации)",
+      "props_title-suffix_message": "Пожалуйста, используйте контент",
+      "props_title-suffix_enterable": "Действительно только после установки сообщения, может ли мышь войти во всплывающую подсказку",
+      "props_title-suffix_theme": "Действует только после установки сообщения. Установите стиль темы всплывающей подсказки.",
+      "props_title-suffix_icon": "Пользовательский значок",
+      "props_title-suffix_icon-status": "Цвет статуса значка",
+      "props_item-render_name": "Имя рендерера",
+      "props_item-render_enabled": "Включить ли",
+      "props_item-render_props": "Параметры рендеринга (см. пользовательские реквизиты)",
+      "props_item-render_options": "Действительно только для name=select, раскрывающийся список опций",
+      "props_item-render_option-props": "Действительно только для name=select, конфигурация параметра атрибута раскрывающегося списка.",
+      "props_item-render_option-groups": "Действительно только для name=select, раскрывающегося списка вариантов группировки.",
+      "props_item-render_option-group-props": "Действительно только для name=select, конфигурации параметра атрибута раскрывающегося списка группировки.",
+      "props_item-render_events": "События компонента рендеринга (см. пользовательские события)",
+      "props_item-render_content": "Отображение содержимого компонента (только для специальных компонентов)",
+      "props_item-render_default-value": "значение элемента по умолчанию",
+      "slots_default": "Пользовательские элементы формы",
+      "slots_title": "Пользовательский заголовок",
+      "slots_extra": "Пользовательский шаблон правого заголовка",
+      "props_field": "Имя поля",
+      "props_title": "Название (поддерживает включение интернационализации)",
+      "props_span": "Количество столбцов, занимаемых сеткой (всего 24 столбца)",
+      "props_align": "Выравнивание контента",
+      "props_title-align": "Выравнивание заголовка",
+      "props_title-width": "ширина заголовка",
+      "props_title-overflow": "Если содержимое заголовка слишком длинное, оно будет отображаться в виде многоточия.",
+      "props_visible": "Отображать ли по умолчанию",
+      "props_visible-method": "Возвращаемое значение этого метода используется для определения того, отображается ли элемент.",
+      "props_folding": "Свернуть по умолчанию",
+      "props_collapse-node": "Свернуть узел",
+      "props_title-prefix": "Элемент конфигурации префикса",
+      "props_title-suffix": "Суффикс элементов конфигурации",
+      "props_reset-value": "Значение по умолчанию при сбросе",
+      "props_item-render": "Элемент конфигурации средства рендеринга элементов",
+      "props_vertical-align": "项垂直的对齐方式",
+      "props_title-background": "显示标题背景"
     },
     "form-item": {
       "props_title-colon": "Отображать ли двоеточие заголовка",
@@ -546,7 +665,9 @@
       "props_title-prefix": "Элемент конфигурации префикса",
       "props_title-suffix": "Суффикс элементов конфигурации",
       "props_reset-value": "Значение по умолчанию при сбросе",
-      "props_item-render": "Элемент конфигурации средства рендеринга элементов"
+      "props_item-render": "Элемент конфигурации средства рендеринга элементов",
+      "props_vertical-align": "项垂直的对齐方式",
+      "props_title-background": "显示标题背景"
     },
     "form-view": {
       "props_model-value": "значение привязки v-модели",
@@ -738,7 +859,11 @@
       "methods_parse-config": "Разбор конфигурации",
       "methods_get-table-record": "Получить объект записи строки таблицы",
       "methods_clear-config": "очистить конфигурацию",
-      "props_size": "размер"
+      "props_size": "размер",
+      "props_action-buttons": "操作按钮列表",
+      "props_grid-events": "事件配置",
+      "slots_cell-action": "自定义单元格操作按钮插槽项目",
+      "slots_footer-cell": "自定义表尾单元格操作按钮插槽项目"
     },
     "list": {
       "props_loading": "Загружается",
@@ -875,7 +1000,9 @@
       "props_dblclick-zoom": "Действует только для type=modal, разрешать ли увеличивать или восстанавливать окно двойным щелчком мыши по заголовку.",
       "props_remember": "Функция памяти запомнит последний статус операции и восстановит статус окна при повторном открытии окна.",
       "props_destroy-on-close": "Уничтожить контент при закрытии окна",
-      "props_storage": "Включить ли локальное сохранение localStorage, состояние перетаскивания окна будет сохраняться локально (требуется идентификатор)"
+      "props_storage": "Включить ли локальное сохранение localStorage, состояние перетаскивания окна будет сохраняться локально (требуется идентификатор)",
+      "props_confirm-closable": "点击确认按钮时自动关闭窗口",
+      "props_cancel-closable": "点击取消按钮时自动关闭窗口"
     },
     "number-input": {
       "props_model-value": "значение привязки v-модели",
@@ -942,7 +1069,8 @@
       "props_clearable": "Когда есть значение, отображать ли кнопку очистки справа",
       "props_placeholder": "Заполнитель, отображаемый, когда значение пусто",
       "props_readonly": "Это только для чтения?",
-      "props_disabled": "Стоит ли отключать"
+      "props_disabled": "Стоит ли отключать",
+      "props_controls": "是否显示控制按钮"
     },
     "print": {
       "props_align": "Выравнивание",
@@ -1013,6 +1141,15 @@
       "props_model-value": "значение привязки v-модели",
       "props_size": "размер"
     },
+    "result": {
+      "props_image-url": "图片链接",
+      "props_image-style": "图片样式",
+      "props_icon": "图标",
+      "props_type": "类型",
+      "props_status": "状态颜色",
+      "props_title": "标题",
+      "props_content": "内容"
+    },
     "row": {
       "props_gutter": "расстояние",
       "props_wrap": "Переносить ли строки автоматически",
@@ -1059,6 +1196,20 @@
       "props_prefix-icon": "Значок головы",
       "props_placement": "Исправлено направление отображения выпадающей панели.",
       "props_transfer": "Вставлять ли всплывающий контейнер в тело (для него должно быть установлено значение true, когда он встроен в таблицу или заблокирован во всплывающем окне)"
+    },
+    "slider": {
+      "props_model-value": "v-model 绑定值",
+      "props_range": "范围拖动",
+      "props_vertical": "使用垂直布局",
+      "props_min": "最小值",
+      "props_max": "最大值",
+      "props_disabled": "是否禁用",
+      "props_readonly": "是否只读",
+      "props_size": "尺寸大小"
+    },
+    "steps": {
+      "props_model-value": "v-model 绑定值",
+      "props_vertical": "使用垂直布局"
     },
     "switch": {
       "props_open-active-icon": "Настройте значок действия при открытии",
@@ -1113,6 +1264,7 @@
       "props_refresh-config_visible-method": "Отображение метода кнопки обновления. Возвращаемое значение этого метода используется для определения того, отображается ли кнопка обновления текущей вкладки.",
       "props_refresh-config_query-method": "Метод запроса",
       "events_change": "Это событие срабатывает при изменении выбранной вкладки.",
+      "events_tab-change": "在点击页签发生改变时触发该事件",
       "events_tab-change-fail": "Это событие, используемое для beforeChangeMethod, будет срабатывать, когда при нажатии на вкладку не удается переключиться.",
       "events_tab-close": "Это событие срабатывает при нажатии на вкладку, чтобы закрыть ее.",
       "events_tab-close-fail": "Это событие, используемое для beforeCloseMethod, будет вызвано, когда при нажатии на вкладку не удастся закрыться.",
@@ -1181,7 +1333,8 @@
       "props_icon": "икона",
       "props_permission-code": "Код разрешения",
       "slots_default": "Пользовательский слот контента",
-      "slots_icon": "Пользовательский слот для значков"
+      "slots_icon": "Пользовательский слот для значков",
+      "props_size": "尺寸大小"
     },
     "tooltip": {
       "props_popup-class-name": "Добавить имя класса в раскрывающийся контейнер",
@@ -1251,7 +1404,30 @@
       "methods_set-checkbox-by-node-id": "Используется для флажка showCheckbox, устанавливает указанный ключ узла в выбранное состояние, а второй параметр определяет, выбран он или нет.",
       "methods_set-expand-by-node-id": "Установите указанный ключ узла в развернутое состояние, а второй параметр выбран или нет.",
       "methods_clear-expand-node": "Устарело, используйтеclearAllExpandNode().",
-      "methods_clear-all-expand-node": "Вручную очистите расширенный статус всех узлов дерева."
+      "methods_clear-all-expand-node": "Вручную очистите расширенный статус всех узлов дерева.",
+      "props_radio-config_strict": "严格模式，选中后不能取消",
+      "props_radio-config_highlight": "高亮选中行",
+      "props_radio-config_show-icon": "显示图标",
+      "props_radio-config_trigger": "触发方式（注：当多种功能重叠时，会同时触发）",
+      "props_radio-config_visible-method": "是否允许勾选的方法，该方法，的返回值用来决定这一行的 radio 是否显示",
+      "props_radio-config_check-method": "是否允许选中的方法，该方法，的返回值用来决定这一行的 radio 是否可以选中",
+      "props_checkbox-config_strict": "严格模式，当数据为空或全部禁用时，列头的复选框为禁用状态",
+      "props_checkbox-config_highlight": "高亮勾选行",
+      "props_checkbox-config_show-icon": "显示图标",
+      "props_checkbox-config_trigger": "触发方式（注：当多种功能重叠时，会同时触发）",
+      "props_checkbox-config_visible-method": "是否允许勾选的方法，该方法，的返回值用来决定这一行的 checkbox 是否显示",
+      "props_checkbox-config_check-method": "是否允许勾选的方法，该方法，的返回值用来决定这一行的 checkbox 是否可以勾选",
+      "methods_set-expand-node": "设置指定节点为展开状态",
+      "methods_toggle-expand-by-node-id": "根据节点主键切换指定节点为展开状态",
+      "methods_toggle-expand-node": "切换指定节点为展开状态",
+      "methods_set-all-expand-node": "设置全部节点为展开状态",
+      "methods_clear-expand-loaded": "清除指定节点的懒加载状态，恢复成未加载之前状态",
+      "methods_is-expand-by-node": "判断指定节点是否为展开状态",
+      "methods_is-checked-by-radio-node-id": "用于 show-radio，根据节点主键判断指定节点是否为选中状态",
+      "methods_is-checked-by-radio-node": "用于 show-radio，判断指定节点是否为选中状态",
+      "methods_is-checked-by-checkbox-node-id": "用于 show-checkbox，根据节点主键判断指定节点是否为选中状态",
+      "methods_is-checked-by-checkbox-node": "用于 show-checkbox，判断指定节点是否为选中状态",
+      "methods_is-indeterminate-by-checkbox-node": "用于 show-checkbox，判断指定节点是否为半选状态"
     },
     "tree-select": {
       "props_model-value": "значение привязки v-модели",
@@ -1323,7 +1499,23 @@
       "events_upload-error": "Это событие срабатывает, когда методу загрузки не удается загрузить файл.",
       "events_download": "Это событие срабатывает, когда файл щелкается для загрузки.",
       "events_download-fail": "Используется для метода перед загрузкой. Это событие срабатывает, когда загрузка блокируется.",
-      "methods_choose": "Вручную вызвать выбранный файл"
+      "methods_choose": "Вручную вызвать выбранный файл",
+      "props_key-field": "主键字段名",
+      "props_progress-text": "上传进度中显示的内容"
+    },
+    "watermark": {
+      "props_width": "宽度",
+      "props_height": "高度",
+      "props_content": "内容",
+      "props_rotate": "旋转角度",
+      "props_gap": "间隔",
+      "props_font": "字体配置",
+      "props_font_font-size": "字体大小",
+      "props_font_color": "字体颜色",
+      "props_font_font-weight": "字体加粗",
+      "props_font_font-style": "字体样式",
+      "props_font_font-family": "字体类型",
+      "props_z-index": "自定义堆叠顺序（对于某些特殊场景，比如被遮挡时可能会用到）"
     },
     "table": {
       "props_min-height": "минимальная высота стола",
@@ -2072,7 +2264,54 @@
       "events_valid-error": "Это действительно только в том случае, если настроены правила редактирования. Это событие будет вызвано при сбое проверки данных.",
       "events_scroll": "Это событие срабатывает при прокрутке таблицы",
       "methods_get-cell-element": "Получите элемент TD, соответствующий ячейке. Если это невидимая область, вам необходимо прокрутить до видимой области, прежде чем получить ее.",
-      "methods_get-cell-label": "Получить отображаемое значение ячейки, поддерживает форматтер (кроме слотов)"
+      "methods_get-cell-label": "Получить отображаемое значение ячейки, поддерживает форматтер (кроме слотов)",
+      "props_padding": "显示边距",
+      "props_menu-config_header_options_prefix-config": "菜单前缀配置项",
+      "props_menu-config_header_options_prefix-config_ico": "前缀图标",
+      "props_menu-config_header_options_prefix-config_content": "前缀内容",
+      "props_menu-config_header_options_prefix-config_class-name": "给前缀附加 className",
+      "props_menu-config_header_options_suffix-config": "菜单后缀配置项",
+      "props_menu-config_header_options_suffix-config_icon": "后缀图标",
+      "props_menu-config_header_options_suffix-config_content": "后缀内容",
+      "props_menu-config_header_options_suffix-config_class-name":  "给后缀附加 className",
+      "props_menu-config_header_options_children_prefix-config": "二级菜单前缀配置项",
+      "props_menu-config_header_options_children_suffix-config": "二级菜单后缀配置项",
+      "props_menu-config_body_options_prefix-config": "菜单前缀配置项",
+      "props_menu-config_body_options_prefix-config_icon": "前缀图标",
+      "props_menu-config_body_options_prefix-config_content": "前缀内容",
+      "props_menu-config_body_options_prefix-config_class-nam": "给前缀附加 className",
+      "props_menu-config_body_options_suffix-config": "菜单后缀配置项",
+      "props_menu-config_body_options_suffix-config_icon": "后缀图标",
+      "props_menu-config_body_options_suffix-config_content": "后缀内容",
+      "props_menu-config_body_options_suffix-config_class-name":  "给后缀附加 className",
+      "props_menu-config_body_options_children_prefix-config": "二级菜单前缀配置项",
+      "props_menu-config_body_options_children_suffix-config": "二级菜单后缀配置项",
+      "props_menu-config_footer_options_prefix-config": "菜单前缀配置项",
+      "props_menu-config_footer_options_prefix-config_ico": "前缀图标",
+      "props_menu-config_footer_options_prefix-config_content": "前缀内容",
+      "props_menu-config_footer_options_prefix-config_class-name": "给前缀附加 className",
+      "props_menu-config_footer_options_suffix-config": "菜单后缀配置项",
+      "props_menu-config_footer_options_suffix-config_icon": "后缀图标",
+      "props_menu-config_footer_options_suffix-config_content": "后缀内容",
+      "props_menu-config_footer_options_suffix-config_class-name":  "给后缀附加 className",
+      "props_menu-config_footer_options_children_prefix-config": "二级菜单前缀配置项",
+      "props_menu-config_footer_options_children_suffix-config": "二级菜单后缀配置项",
+      "props_area-config_show-column-status": "显示列选取状态",
+      "props_area-config_show-row-status": "显示行选取状态",
+      "props_keyboard-config_is-back": "是否启用 Backspace 键功能",
+      "props_edit-config_auto-focus": "当单元格被激活为编辑状态时自动聚焦",
+      "props_edit-config_auto-pos": "当单元格被激活为编辑状态时自动定位",
+      "props_custom-config_modal-options_show-zoom": "是否显示最大化与最小化按钮",
+      "props_custom-config_modal-options_show-maximize": "是否显示最大化按钮",
+      "props_custom-config_modal-options_show-minimize": "是否显示最小化按钮",
+      "props_custom-config_modal-options_mask": "是否显示遮罩层",
+      "props_custom-config_modal-options_lock-view": "是否锁住页面，不允许窗口之外的任何操作",
+      "props_custom-config_modal-options_resize": "是否允许窗口边缘拖动调整窗口大小",
+      "props_custom-config_modal-options_esc-closable": "是否允许按 Esc 键关闭窗口",
+      "events_clear-cell-area-selection": "当单元格选取区域被清除时会被触发该事件",
+      "methods_get-params": "用于 params，获取自定义的参数",
+      "methods_get-parent-column": "当存在多级表头时，用于获取父列配置",
+      "methods_update-filter-option-status": "手动更新筛选选项的状态，当使用自定义筛选时会用到"
     },
     "colgroup": {
       "slots_header": "Пользовательский шаблон содержимого заголовка",
@@ -2187,7 +2426,9 @@
       "props_edit-render": "Редактируемые элементы конфигурации рендерера",
       "props_content-render": "Элементы конфигурации рендеринга контента",
       "props_tree-node": "Действует только при настройке с помощью Tree-config, указанного как узел дерева.",
-      "props_params": "Дополнительные параметры (можно использовать для хранения некоторых частных параметров)"
+      "props_params": "Дополнительные параметры (можно использовать для хранения некоторых частных параметров)",
+      "props_edit-render_auto-focus": "设置激活编辑之后自动聚焦的元素",
+      "props_edit-render_auto-select": "是否在激活编辑之后自动选中输入框内容"
     },
     "grid": {
       "props_columns_filters_label": "отображаемое значение",

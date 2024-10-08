@@ -191,6 +191,24 @@
       "props_title": "标题",
       "props_href": "链接"
     },
+    "avatar": {
+      "props_content": "内容",
+      "props_icon": "图标",
+      "props_count": "显示微标数量",
+      "props_dot": "显示小圆点",
+      "props_src": "图片链接",
+      "props_circle": "圆形",
+      "props_status": "状态颜色",
+      "props_width": "宽度",
+      "props_height": "高度",
+      "props_size": "尺寸大小"
+    },
+    "badge": {
+      "props_content": "内容",
+      "props_count": "显示微标数量",
+      "props_dot": "显示小圆点",
+      "props_size": "尺寸大小"
+    },
     "breadcrumb": {
       "props_separator": "分隔符",
       "props_options": "配置列表",
@@ -250,6 +268,9 @@
       "props_options_icon": "前缀图标",
       "props_options_status": "按钮的图标",
       "props_options_disabled": "是否禁用",
+      "props_options_permission-code": "权限码",
+      "props_options_router-link": "对应 vue-router 路由配置",
+      "props_options_trigger": "只对 router-lin 有效，链接打开方式",
       "props_options_loading": "是否加载中",
       "props_options_title": "",
       "props_permission-code": "权限码"
@@ -280,9 +301,12 @@
       "slots_left": "自定义左侧模板",
       "slots_right": "自定义右侧模板"
     },
-    "carousel":{
+    "carousel": {
       "props_model-value": "v-model 绑定值",
       "props_options": "图片列表配置",
+      "props_options_name": "用来标识这一项",
+      "props_options_url": "图片链接",
+      "props_options_class-name": "给图片附加 className",
       "props_height": "高度",
       "props_width": "宽度",
       "props_show-indicators": "是否显示指示器",
@@ -293,7 +317,7 @@
       "methods_prev": "手动切换上一张",
       "methods_next": "手动切换下一张"
     },
-    "carousel-item":{
+    "carousel-item": {
       "props_name": "唯一 name",
       "props_url": "图片路径",
       "props_class-name": "自定义 class",
@@ -314,6 +338,7 @@
     "checkbox-group": {
       "props_max": "限制最大可选数量，默认无限制",
       "props_disabled": "是否禁用",
+      "props_readonly": "是否只读",
       "props_options": "选项列表",
       "props_option-props": "选项属性参数配置",
       "props_model-value": "v-model 绑定值",
@@ -325,6 +350,30 @@
       "props_width": "指定宽度",
       "props_fill": "自适应剩余宽度",
       "props_ellipsis": "超出隐藏"
+    },
+    "collapse": {
+      "props_model-value": "v-model 绑定值",
+      "props_size": "尺寸大小",
+      "props_padding": "显示边距",
+      "props_options": "列表配置",
+      "props_options_title": "标题",
+      "props_options_name": "唯一 Name",
+      "props_options_icon": "图标",
+      "props_options_title-width": "标题宽度",
+      "props_options_title-align": "对齐方式",
+      "props_options_preload": "是否预加载",
+      "props_options_permission-code": "权限码"
+    },
+    "collapse-pane": {
+      "props_title": "标题",
+      "props_name": "唯一 Name",
+      "props_icon": "图标",
+      "props_permission-code": "权限码"
+    },
+    "countdown": {
+      "props_model-value": "v-model 绑定值",
+      "props_format": "显示格式",
+      "props_size": "尺寸大小"
     },
     "date-picker": {
       "props_model-value": "v-model 绑定值",
@@ -374,7 +423,20 @@
       "props_position": "只对 type=modal 有效，窗口的默认位置，可以设置为 center 居中显示",
       "props_z-index": "自定义堆叠顺序（对于某些特殊场景，比如被遮挡时可能会用到）",
       "props_show-title-overflow": "设置标题内容过长时显示为省略号",
-      "props_destroy-on-close": "在窗口关闭时销毁内容"
+      "props_destroy-on-close": "在窗口关闭时销毁内容",
+      "props_confirm-closable": "点击确认按钮时自动关闭窗口",
+      "props_cancel-closable": "点击取消按钮时自动关闭窗口",
+      "slots_left": "自定义左侧模板",
+      "slots_right": "自定义右侧模板",
+      "slots_aside": "窗口侧边栏的模板",
+      "slots_leftfoot": "窗口底部左侧的模板",
+      "slots_rightfoot": "窗口底部右侧的模板"
+    },
+    "empty": {
+      "props_image-url": "图片链接",
+      "props_image-style": "图片样式",
+      "props_icon": "图标",
+      "props_content": "内容"
     },
     "form": {
       "props_vertical": "所有项使用垂直布局",
@@ -470,7 +532,12 @@
       "props_items_item-render": "项渲染器配置项",
       "props_items_slots_extra": "自定义标题右侧模板",
       "props_items_slots": "插槽",
-      "props_rules": "校验规则配置项"
+      "props_rules": "校验规则配置项",
+      "props_vertical-align": "所有项垂直的对齐方式",
+      "props_border": "显示边框",
+      "props_title-background": "所有项显示标题背景",
+      "props_items_vertical-align": "垂直的对齐方式",
+      "props_items_title-background": "显示标题背景"
     },
     "form-design": {
       "props_size": "尺寸",
@@ -497,6 +564,58 @@
     "form-gather": {
       "props_class-name": "给表单项附加 className",
       "props_span": "栅格占据的列数（共 24 分栏）"
+    },
+    "form-group": {
+      "props_title-colon": "是否显示标题冒号",
+      "props_title-asterisk": "是否显示必填字段的红色星号",
+      "props_show-title": "是否显示标题",
+      "props_padding": "显示边距",
+      "props_vertical": "使用垂直布局",
+      "props_class-name": "给表单项附加 className",
+      "props_content-class-name": "给表单项内容附加 className",
+      "props_content-style": "给表单项内容附加样式",
+      "props_title-prefix_content": "提示消息（支持开启国际化）",
+      "props_title-prefix_message": "请使用 content",
+      "props_title-prefix_enterable": "只对 message 设置后有效，鼠标是否可进入到 tooltip 中",
+      "props_title-prefix_theme": "只对 message 设置后有效，设置 tooltip 的主题样式",
+      "props_title-prefix_icon": "自定义图标",
+      "props_title-prefix_icon-status": "图标状态颜色",
+      "props_title-suffix_content": "提示消息（支持开启国际化）",
+      "props_title-suffix_message": "请使用 content",
+      "props_title-suffix_enterable": "只对 message 设置后有效，鼠标是否可进入到 tooltip 中",
+      "props_title-suffix_theme": "只对 message 设置后有效，设置 tooltip 的主题样式",
+      "props_title-suffix_icon": "自定义图标",
+      "props_title-suffix_icon-status": "图标状态颜色",
+      "props_item-render_name": "渲染器名称",
+      "props_item-render_enabled": "是否启用",
+      "props_item-render_props": "渲染的参数（请查看自定义的 Props）",
+      "props_item-render_options": "只对 name=select 有效，下拉选项列表",
+      "props_item-render_option-props": "只对 name=select 有效，下拉选项属性参数配置",
+      "props_item-render_option-groups": "只对 name=select 有效，下拉分组选项列表",
+      "props_item-render_option-group-props": "只对 name=select 有效，下拉分组选项属性参数配置",
+      "props_item-render_events": "渲染组件的事件（请查看自定义的 Events）",
+      "props_item-render_content": "渲染组件的内容（仅用于特殊组件）",
+      "props_item-render_default-value": "项默认值",
+      "slots_default": "自定义表单项",
+      "slots_title": "自定义标题",
+      "slots_extra": "自定义标题右侧模板",
+      "props_field": "字段名",
+      "props_title": "标题（支持开启国际化）",
+      "props_span": "栅格占据的列数（共 24 分栏）",
+      "props_align": "内容对齐方式",
+      "props_title-align": "标题对齐方式",
+      "props_title-width": "标题宽度",
+      "props_title-overflow": "标题内容过长时显示为省略号",
+      "props_visible": "默认是否显示",
+      "props_visible-method": "该方法的返回值用来决定该项是否显示",
+      "props_folding": "默认收起",
+      "props_collapse-node": "折叠节点",
+      "props_title-prefix": "前缀配置项",
+      "props_title-suffix": "后缀配置项",
+      "props_reset-value": "重置时的默认值",
+      "props_item-render": "项渲染器配置项",
+      "props_vertical-align": "项垂直的对齐方式",
+      "props_title-background": "显示标题背景"
     },
     "form-item": {
       "props_title-colon": "是否显示标题冒号",
@@ -546,7 +665,9 @@
       "props_title-prefix": "前缀配置项",
       "props_title-suffix": "后缀配置项",
       "props_reset-value": "重置时的默认值",
-      "props_item-render": "项渲染器配置项"
+      "props_item-render": "项渲染器配置项",
+      "props_vertical-align": "项垂直的对齐方式",
+      "props_title-background": "显示标题背景"
     },
     "form-view": {
       "props_model-value": "v-model 绑定值",
@@ -738,7 +859,11 @@
       "methods_parse-config": "解析配置",
       "methods_get-table-record": "获取表格行记录对象",
       "methods_clear-config": "清除配置",
-      "props_size": "尺寸大小"
+      "props_size": "尺寸大小",
+      "props_action-buttons": "操作按钮列表",
+      "props_grid-events": "事件配置",
+      "slots_cell-action": "自定义单元格操作按钮插槽项目",
+      "slots_footer-cell": "自定义表尾单元格操作按钮插槽项目"
     },
     "list": {
       "props_loading": "是否加载中",
@@ -811,7 +936,7 @@
       "slots_header": "窗口头部的模板（如果使用了，则 solt title 无效）",
       "slots_title": "窗口标题的模板",
       "slots_corner": "窗口右上角的模板",
-      "slots_aside": "窗口左侧的模板",
+      "slots_aside": "窗口侧边栏的模板",
       "slots_footer": "窗口底部的模板",
       "slots_leftfoot": "窗口底部左侧的模板",
       "slots_rightfoot": "窗口底部右侧的模板",
@@ -875,7 +1000,9 @@
       "props_dblclick-zoom": "只对 type=modal 有效，是否允许通过双击头部放大或还原窗口",
       "props_remember": "记忆功能，会记住最后操作状态，再次打开窗口时还原窗口状态",
       "props_destroy-on-close": "在窗口关闭时销毁内容",
-      "props_storage": "是否启用 localStorage 本地保存，会将窗口拖动的状态保存到本地（需要有 id）"
+      "props_storage": "是否启用 localStorage 本地保存，会将窗口拖动的状态保存到本地（需要有 id）",
+      "props_confirm-closable": "点击确认按钮时自动关闭窗口",
+      "props_cancel-closable": "点击取消按钮时自动关闭窗口"
     },
     "number-input": {
       "props_model-value": "v-model 绑定值",
@@ -942,7 +1069,8 @@
       "props_clearable": "当有值时，是否在右侧显示清除按钮",
       "props_placeholder": "当值为空时，显示的占位符",
       "props_readonly": "是否只读",
-      "props_disabled": "是否禁用"
+      "props_disabled": "是否禁用",
+      "props_controls": "是否显示控制按钮"
     },
     "print": {
       "props_align": "对齐方式",
@@ -1013,6 +1141,15 @@
       "props_model-value": "v-model 绑定值",
       "props_size": "尺寸"
     },
+    "result": {
+      "props_image-url": "图片链接",
+      "props_image-style": "图片样式",
+      "props_icon": "图标",
+      "props_type": "类型",
+      "props_status": "状态颜色",
+      "props_title": "标题",
+      "props_content": "内容"
+    },
     "row": {
       "props_gutter": "间距",
       "props_wrap": "是否自动换行",
@@ -1059,6 +1196,20 @@
       "props_prefix-icon": "头部图标",
       "props_placement": "固定显示下拉面板的方向",
       "props_transfer": "是否将弹框容器插入于 body 内（对于嵌入到表格或者弹窗中被遮挡时需要设置为 true）"
+    },
+    "slider": {
+      "props_model-value": "v-model 绑定值",
+      "props_range": "范围拖动",
+      "props_vertical": "使用垂直布局",
+      "props_min": "最小值",
+      "props_max": "最大值",
+      "props_disabled": "是否禁用",
+      "props_readonly": "是否只读",
+      "props_size": "尺寸大小"
+    },
+    "steps": {
+      "props_model-value": "v-model 绑定值",
+      "props_vertical": "使用垂直布局"
     },
     "switch": {
       "props_open-active-icon": "自定义打开时动作图标",
@@ -1113,6 +1264,7 @@
       "props_refresh-config_visible-method": "显示刷新按钮方法，该方法的返回值用来决定当前页签的刷新按钮是否显示",
       "props_refresh-config_query-method": "查询方法",
       "events_change": "在点击页签发生改变时触发该事件",
+      "events_tab-change": "在点击页签发生改变时触发该事件",
       "events_tab-change-fail": "用于 beforeChangeMethod，在点击页签切换失败是会触发该事件",
       "events_tab-close": "在点击页签关闭时触发该事件",
       "events_tab-close-fail": "用于 beforeCloseMethod，在点击页签关闭失败是会触发该事件",
@@ -1181,7 +1333,8 @@
       "props_icon": "图标",
       "props_permission-code": "权限码",
       "slots_default": "自定义内容插槽",
-      "slots_icon": "自定义图标插槽"
+      "slots_icon": "自定义图标插槽",
+      "props_size": "尺寸大小"
     },
     "tooltip": {
       "props_popup-class-name": "给下拉容器附加 className",
@@ -1251,7 +1404,30 @@
       "methods_set-checkbox-by-node-id": "用于 showCheckbox 复选框，设置指定节点 key 为选中状态，第二个参数为选中与否",
       "methods_set-expand-by-node-id": "设置指定节点 key 为展开状态，第二个参数为选中与否",
       "methods_clear-expand-node": "已废弃，请使用 clearAllExpandNode()",
-      "methods_clear-all-expand-node": "手动清除所有树节点的展开状态"
+      "methods_clear-all-expand-node": "手动清除所有树节点的展开状态",
+      "props_radio-config_strict": "严格模式，选中后不能取消",
+      "props_radio-config_highlight": "高亮选中行",
+      "props_radio-config_show-icon": "显示图标",
+      "props_radio-config_trigger": "触发方式（注：当多种功能重叠时，会同时触发）",
+      "props_radio-config_visible-method": "是否允许勾选的方法，该方法，的返回值用来决定这一行的 radio 是否显示",
+      "props_radio-config_check-method": "是否允许选中的方法，该方法，的返回值用来决定这一行的 radio 是否可以选中",
+      "props_checkbox-config_strict": "严格模式，当数据为空或全部禁用时，列头的复选框为禁用状态",
+      "props_checkbox-config_highlight": "高亮勾选行",
+      "props_checkbox-config_show-icon": "显示图标",
+      "props_checkbox-config_trigger": "触发方式（注：当多种功能重叠时，会同时触发）",
+      "props_checkbox-config_visible-method": "是否允许勾选的方法，该方法，的返回值用来决定这一行的 checkbox 是否显示",
+      "props_checkbox-config_check-method": "是否允许勾选的方法，该方法，的返回值用来决定这一行的 checkbox 是否可以勾选",
+      "methods_set-expand-node": "设置指定节点为展开状态",
+      "methods_toggle-expand-by-node-id": "根据节点主键切换指定节点为展开状态",
+      "methods_toggle-expand-node": "切换指定节点为展开状态",
+      "methods_set-all-expand-node": "设置全部节点为展开状态",
+      "methods_clear-expand-loaded": "清除指定节点的懒加载状态，恢复成未加载之前状态",
+      "methods_is-expand-by-node": "判断指定节点是否为展开状态",
+      "methods_is-checked-by-radio-node-id": "用于 show-radio，根据节点主键判断指定节点是否为选中状态",
+      "methods_is-checked-by-radio-node": "用于 show-radio，判断指定节点是否为选中状态",
+      "methods_is-checked-by-checkbox-node-id": "用于 show-checkbox，根据节点主键判断指定节点是否为选中状态",
+      "methods_is-checked-by-checkbox-node": "用于 show-checkbox，判断指定节点是否为选中状态",
+      "methods_is-indeterminate-by-checkbox-node": "用于 show-checkbox，判断指定节点是否为半选状态"
     },
     "tree-select": {
       "props_model-value": "v-model 绑定值",
@@ -1323,7 +1499,23 @@
       "events_upload-error": "当 upload-method 方法上传文件失败时会触发该事件",
       "events_download": "当文件被点击下载时会触发该事件",
       "events_download-fail": "用于 before-download-method ，当阻止下载时会触发该事件",
-      "methods_choose": "手动调用选择文件"
+      "methods_choose": "手动调用选择文件",
+      "props_key-field": "主键字段名",
+      "props_progress-text": "上传进度中显示的内容"
+    },
+    "watermark": {
+      "props_width": "宽度",
+      "props_height": "高度",
+      "props_content": "内容",
+      "props_rotate": "旋转角度",
+      "props_gap": "间隔",
+      "props_font": "字体配置",
+      "props_font_font-size": "字体大小",
+      "props_font_color": "字体颜色",
+      "props_font_font-weight": "字体加粗",
+      "props_font_font-style": "字体样式",
+      "props_font_font-family": "字体类型",
+      "props_z-index": "自定义堆叠顺序（对于某些特殊场景，比如被遮挡时可能会用到）"
     },
     "table": {
       "props_min-height": "表格最小高度",
@@ -2072,7 +2264,54 @@
       "events_valid-error": "只对 edit-rules 配置时有效，当数据校验不通过时会触发该事件",
       "events_scroll": "表格滚动时会触发该事件",
       "methods_get-cell-element": "获取单元格对应的 TD 元素，如果是非可视区，则需要先滚动到可视区后再进行获取",
-      "methods_get-cell-label": "获取单元格的显示值，支持 formatter（除了插槽之外）"
+      "methods_get-cell-label": "获取单元格的显示值，支持 formatter（除了插槽之外）",
+      "props_padding": "显示边距",
+      "props_menu-config_header_options_prefix-config": "菜单前缀配置项",
+      "props_menu-config_header_options_prefix-config_ico": "前缀图标",
+      "props_menu-config_header_options_prefix-config_content": "前缀内容",
+      "props_menu-config_header_options_prefix-config_class-name": "给前缀附加 className",
+      "props_menu-config_header_options_suffix-config": "菜单后缀配置项",
+      "props_menu-config_header_options_suffix-config_icon": "后缀图标",
+      "props_menu-config_header_options_suffix-config_content": "后缀内容",
+      "props_menu-config_header_options_suffix-config_class-name":  "给后缀附加 className",
+      "props_menu-config_header_options_children_prefix-config": "二级菜单前缀配置项",
+      "props_menu-config_header_options_children_suffix-config": "二级菜单后缀配置项",
+      "props_menu-config_body_options_prefix-config": "菜单前缀配置项",
+      "props_menu-config_body_options_prefix-config_icon": "前缀图标",
+      "props_menu-config_body_options_prefix-config_content": "前缀内容",
+      "props_menu-config_body_options_prefix-config_class-nam": "给前缀附加 className",
+      "props_menu-config_body_options_suffix-config": "菜单后缀配置项",
+      "props_menu-config_body_options_suffix-config_icon": "后缀图标",
+      "props_menu-config_body_options_suffix-config_content": "后缀内容",
+      "props_menu-config_body_options_suffix-config_class-name":  "给后缀附加 className",
+      "props_menu-config_body_options_children_prefix-config": "二级菜单前缀配置项",
+      "props_menu-config_body_options_children_suffix-config": "二级菜单后缀配置项",
+      "props_menu-config_footer_options_prefix-config": "菜单前缀配置项",
+      "props_menu-config_footer_options_prefix-config_ico": "前缀图标",
+      "props_menu-config_footer_options_prefix-config_content": "前缀内容",
+      "props_menu-config_footer_options_prefix-config_class-name": "给前缀附加 className",
+      "props_menu-config_footer_options_suffix-config": "菜单后缀配置项",
+      "props_menu-config_footer_options_suffix-config_icon": "后缀图标",
+      "props_menu-config_footer_options_suffix-config_content": "后缀内容",
+      "props_menu-config_footer_options_suffix-config_class-name":  "给后缀附加 className",
+      "props_menu-config_footer_options_children_prefix-config": "二级菜单前缀配置项",
+      "props_menu-config_footer_options_children_suffix-config": "二级菜单后缀配置项",
+      "props_area-config_show-column-status": "显示列选取状态",
+      "props_area-config_show-row-status": "显示行选取状态",
+      "props_keyboard-config_is-back": "是否启用 Backspace 键功能",
+      "props_edit-config_auto-focus": "当单元格被激活为编辑状态时自动聚焦",
+      "props_edit-config_auto-pos": "当单元格被激活为编辑状态时自动定位",
+      "props_custom-config_modal-options_show-zoom": "是否显示最大化与最小化按钮",
+      "props_custom-config_modal-options_show-maximize": "是否显示最大化按钮",
+      "props_custom-config_modal-options_show-minimize": "是否显示最小化按钮",
+      "props_custom-config_modal-options_mask": "是否显示遮罩层",
+      "props_custom-config_modal-options_lock-view": "是否锁住页面，不允许窗口之外的任何操作",
+      "props_custom-config_modal-options_resize": "是否允许窗口边缘拖动调整窗口大小",
+      "props_custom-config_modal-options_esc-closable": "是否允许按 Esc 键关闭窗口",
+      "events_clear-cell-area-selection": "当单元格选取区域被清除时会被触发该事件",
+      "methods_get-params": "用于 params，获取自定义的参数",
+      "methods_get-parent-column": "当存在多级表头时，用于获取父列配置",
+      "methods_update-filter-option-status": "手动更新筛选选项的状态，当使用自定义筛选时会用到"
     },
     "colgroup": {
       "slots_header": "自定义表头内容的模板",
@@ -2187,7 +2426,9 @@
       "props_edit-render": "可编辑渲染器配置项",
       "props_content-render": "内容渲染配置项",
       "props_tree-node": "只对 tree-config 配置时有效，指定为树节点",
-      "props_params": "额外的参数（可以用来存放一些私有参数）"
+      "props_params": "额外的参数（可以用来存放一些私有参数）",
+      "props_edit-render_auto-focus": "设置激活编辑之后自动聚焦的元素",
+      "props_edit-render_auto-select": "是否在激活编辑之后自动选中输入框内容"
     },
     "grid": {
       "props_columns_filters_label": "显示的值",
