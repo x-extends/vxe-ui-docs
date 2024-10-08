@@ -10,9 +10,9 @@
       <template #use>
         <pre>
           <pre-code>
-            npm install @vxe-ui/plugin-render-chart@3
+            npm install vxe-table@3 @vxe-ui/plugin-render-chart@3
             # 或者
-            yarn add @vxe-ui/plugin-render-chart@3
+            yarn add vxe-table@3 @vxe-ui/plugin-render-chart@3
           </pre-code>
         </pre>
 

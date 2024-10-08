@@ -10,9 +10,9 @@
       <template #use>
         <pre>
           <pre-code>
-            npm install @vxe-ui/plugin-export-pdf@3 jspdf
+            npm install vxe-table@3 @vxe-ui/plugin-export-pdf@3 jspdf
             # 或者
-            yarn add @vxe-ui/plugin-export-pdf@3 jspdf
+            yarn add vxe-table@3 @vxe-ui/plugin-export-pdf@3 jspdf
           </pre-code>
         </pre>
 
