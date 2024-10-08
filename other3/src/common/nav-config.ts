@@ -33,14 +33,14 @@ export const navConfigList: NavVO[] = [
           { title: '安装插件', routerLink: { name: 'PluginRenderChartInstall' } }
         ]
       },
-      // {
-      //   title: 'Table 基础表格',
-      //   children: [
-      //     { title: '评分', routerLink: { name: 'PluginRenderChartTableRate' } },
-      //     { title: '柱状图', routerLink: { name: 'PluginRenderChartTableBar' } },
-      //     { title: '饼图', routerLink: { name: 'PluginRenderChartTablePie' } }
-      //   ]
-      // },
+      {
+        title: 'Table 基础表格',
+        children: [
+          { title: '评分', routerLink: { name: 'PluginRenderChartTableRate' } },
+          { title: '柱状图', routerLink: { name: 'PluginRenderChartTableBar' } },
+          { title: '饼图', routerLink: { name: 'PluginRenderChartTablePie' } }
+        ]
+      },
       {
         title: 'Grid 配置式表格',
         children: [
@@ -119,36 +119,36 @@ export const navConfigList: NavVO[] = [
           { title: '安装插件', routerLink: { name: 'PluginRenderElementInstall' } }
         ]
       },
-      // {
-      //   title: 'Form 表单',
-      //   children: [
-      //     {
-      //       title: '基础表单',
-      //       children: [
-      //         { title: 'ElInput', routerLink: { name: 'PluginRenderElementFormItemTemplateElInput' } },
-      //         { title: 'ElSelect', routerLink: { name: 'PluginRenderElementFormItemTemplateElSelect' } },
-      //         { title: 'ElSwitch', routerLink: { name: 'PluginRenderElementFormItemTemplateElSwitch' } },
-      //         { title: 'ElRate', routerLink: { name: 'PluginRenderElementFormItemTemplateElRate' } }
-      //       ]
-      //     },
-      //     {
-      //       title: '配置式表单',
-      //       children: [
-      //         { title: 'ElAutocomplete', routerLink: { name: 'PluginRenderElementFormItemRenderElAutocomplete' } },
-      //         { title: 'ElInput', routerLink: { name: 'PluginRenderElementFormItemRenderElInput' } },
-      //         { title: 'ElInputNumber', routerLink: { name: 'PluginRenderElementFormItemRenderElInputNumber' } },
-      //         { title: 'ElSelect', routerLink: { name: 'PluginRenderElementFormItemRenderElSelect' } },
-      //         { title: 'ElDatePicker', routerLink: { name: 'PluginRenderElementFormItemRenderElDatePicker' } },
-      //         { title: 'ElTimePicker', routerLink: { name: 'PluginRenderElementFormItemRenderElTimePicker' } },
-      //         { title: 'ElCascader', routerLink: { name: 'PluginRenderElementFormItemRenderElCascader' } },
-      //         { title: 'ElSwitch', routerLink: { name: 'PluginRenderElementFormItemRenderElSwitch' } },
-      //         { title: 'ElRadioGroup', routerLink: { name: 'PluginRenderElementFormItemRenderElRadioGroup' } },
-      //         { title: 'ElCheckboxGroup', routerLink: { name: 'PluginRenderElementFormItemRenderElCheckboxGroup' } },
-      //         { title: 'ElRate', routerLink: { name: 'PluginRenderElementFormItemRenderElRate' } }
-      //       ]
-      //     }
-      //   ]
-      // },
+      {
+        title: 'Form 表单',
+        children: [
+          {
+            title: '基础表单',
+            children: [
+              { title: 'ElInput', routerLink: { name: 'PluginRenderElementFormItemTemplateElInput' } },
+              { title: 'ElSelect', routerLink: { name: 'PluginRenderElementFormItemTemplateElSelect' } },
+              { title: 'ElSwitch', routerLink: { name: 'PluginRenderElementFormItemTemplateElSwitch' } },
+              { title: 'ElRate', routerLink: { name: 'PluginRenderElementFormItemTemplateElRate' } }
+            ]
+          },
+          {
+            title: '配置式表单',
+            children: [
+              { title: 'ElAutocomplete', routerLink: { name: 'PluginRenderElementFormItemRenderElAutocomplete' } },
+              { title: 'ElInput', routerLink: { name: 'PluginRenderElementFormItemRenderElInput' } },
+              { title: 'ElInputNumber', routerLink: { name: 'PluginRenderElementFormItemRenderElInputNumber' } },
+              { title: 'ElSelect', routerLink: { name: 'PluginRenderElementFormItemRenderElSelect' } },
+              { title: 'ElDatePicker', routerLink: { name: 'PluginRenderElementFormItemRenderElDatePicker' } },
+              { title: 'ElTimePicker', routerLink: { name: 'PluginRenderElementFormItemRenderElTimePicker' } },
+              { title: 'ElCascader', routerLink: { name: 'PluginRenderElementFormItemRenderElCascader' } },
+              { title: 'ElSwitch', routerLink: { name: 'PluginRenderElementFormItemRenderElSwitch' } },
+              { title: 'ElRadioGroup', routerLink: { name: 'PluginRenderElementFormItemRenderElRadioGroup' } },
+              { title: 'ElCheckboxGroup', routerLink: { name: 'PluginRenderElementFormItemRenderElCheckboxGroup' } },
+              { title: 'ElRate', routerLink: { name: 'PluginRenderElementFormItemRenderElRate' } }
+            ]
+          }
+        ]
+      },
       {
         title: 'Table 基础表格',
         children: [
@@ -179,38 +179,38 @@ export const navConfigList: NavVO[] = [
             ]
           }
         ]
+      },
+      {
+        title: 'Grid 配置式表格',
+        children: [
+          {
+            title: '筛选 - 渲染',
+            children: [
+              { title: 'ElInput', routerLink: { name: 'PluginRenderElementGridFilterElInput' } },
+              { title: 'ElDatePicker', routerLink: { name: 'PluginRenderElementGridFilterElDatePicker' } }
+            ]
+          },
+          {
+            title: '单元格 - 渲染',
+            children: [
+              { title: 'ElSwitch', routerLink: { name: 'PluginRenderElementGridCellElSwitch' } },
+              { title: 'ElRate', routerLink: { name: 'PluginRenderElementGridCellElRate' } }
+            ]
+          },
+          {
+            title: '可编辑 - 渲染',
+            children: [
+              { title: 'ElInput', routerLink: { name: 'PluginRenderElementGridEditElInput' } },
+              { title: 'ElInputNumber', routerLink: { name: 'PluginRenderElementGridEditElInputNumber' } },
+              { title: 'ElAutocomplete', routerLink: { name: 'PluginRenderElementGridEditElAutocomplete' } },
+              { title: 'ElSelect', routerLink: { name: 'PluginRenderElementGridEditElSelect' } },
+              { title: 'ElCascader', routerLink: { name: 'PluginRenderElementGridEditElCascader' } },
+              { title: 'ElDatePicker', routerLink: { name: 'PluginRenderElementGridEditElDatePicker' } },
+              { title: 'ElTimePicker', routerLink: { name: 'PluginRenderElementGridEditElTimeSelect' } }
+            ]
+          }
+        ]
       }
-      // {
-      //   title: 'Grid 配置式表格',
-      //   children: [
-      //     {
-      //       title: '筛选 - 渲染',
-      //       children: [
-      //         { title: 'ElInput', routerLink: { name: 'PluginRenderElementGridFilterElInput' } },
-      //         { title: 'ElDatePicker', routerLink: { name: 'PluginRenderElementGridFilterElDatePicker' } }
-      //       ]
-      //     },
-      //     {
-      //       title: '单元格 - 渲染',
-      //       children: [
-      //         { title: 'ElSwitch', routerLink: { name: 'PluginRenderElementGridCellElSwitch' } },
-      //         { title: 'ElRate', routerLink: { name: 'PluginRenderElementGridCellElRate' } }
-      //       ]
-      //     },
-      //     {
-      //       title: '可编辑 - 渲染',
-      //       children: [
-      //         { title: 'ElInput', routerLink: { name: 'PluginRenderElementGridEditElInput' } },
-      //         { title: 'ElInputNumber', routerLink: { name: 'PluginRenderElementGridEditElInputNumber' } },
-      //         { title: 'ElAutocomplete', routerLink: { name: 'PluginRenderElementGridEditElAutocomplete' } },
-      //         { title: 'ElSelect', routerLink: { name: 'PluginRenderElementGridEditElSelect' } },
-      //         { title: 'ElCascader', routerLink: { name: 'PluginRenderElementGridEditElCascader' } },
-      //         { title: 'ElDatePicker', routerLink: { name: 'PluginRenderElementGridEditElDatePicker' } },
-      //         { title: 'ElTimePicker', routerLink: { name: 'PluginRenderElementGridEditElTimeSelect' } }
-      //       ]
-      //     }
-      //   ]
-      // },
       // {
       //   title: 'FormDesign 表单设计器',
       //   children: [
@@ -227,6 +227,27 @@ export const navConfigList: NavVO[] = [
         title: '开发指南',
         children: [
           { title: '安装插件', routerLink: { name: 'PluginRenderAntdInstall' } }
+        ]
+      },
+      {
+        title: 'Form 表单',
+        children: [
+          {
+            title: '基础表单',
+            children: [
+              { title: 'AInput', routerLink: { name: 'PluginRenderAntdFormItemTemplateAInput' } },
+              { title: 'ASelect', routerLink: { name: 'PluginRenderAntdFormItemTemplateASelect' } },
+              { title: 'ASwitch', routerLink: { name: 'PluginRenderAntdFormItemTemplateASwitch' } }
+            ]
+          },
+          {
+            title: '配置式表单',
+            children: [
+              { title: 'AInput', routerLink: { name: 'PluginRenderAntdFormItemRenderAInput' } },
+              { title: 'ASelect', routerLink: { name: 'PluginRenderAntdFormItemRenderASelect' } },
+              { title: 'ASwitch', routerLink: { name: 'PluginRenderAntdFormItemRenderASwitch' } }
+            ]
+          }
         ]
       },
       {
@@ -252,31 +273,31 @@ export const navConfigList: NavVO[] = [
             ]
           }
         ]
+      },
+      {
+        title: 'Grid 配置式表格',
+        children: [
+          {
+            title: '单元格 - 渲染',
+            children: [
+              { title: 'ASwitch', routerLink: { name: 'PluginRenderAntdGridCellElSwitch' } },
+              { title: 'ARate', routerLink: { name: 'PluginRenderAntdGridCellElRate' } }
+            ]
+          },
+          {
+            title: '可编辑 - 渲染',
+            children: [
+              { title: 'AInput', routerLink: { name: 'PluginRenderAntdGridEditElInput' } },
+              { title: 'AInputNumber', routerLink: { name: 'PluginRenderAntdGridEditElInputNumber' } },
+              { title: 'AAutocomplete', routerLink: { name: 'PluginRenderAntdGridEditElAutocomplete' } },
+              { title: 'ASelect', routerLink: { name: 'PluginRenderAntdGridEditElSelect' } },
+              { title: 'ACascader', routerLink: { name: 'PluginRenderAntdGridEditElCascader' } },
+              { title: 'ADatePicker', routerLink: { name: 'PluginRenderAntdGridEditElDatePicker' } },
+              { title: 'ATimePicker', routerLink: { name: 'PluginRenderAntdGridEditElTimePicker' } }
+            ]
+          }
+        ]
       }
-      // {
-      //   title: 'Grid 配置式表格',
-      //   children: [
-      //     {
-      //       title: '单元格 - 渲染',
-      //       children: [
-      //         { title: 'ASwitch', routerLink: { name: 'PluginRenderAntdGridCellElSwitch' } },
-      //         { title: 'ARate', routerLink: { name: 'PluginRenderAntdGridCellElRate' } }
-      //       ]
-      //     },
-      //     {
-      //       title: '可编辑 - 渲染',
-      //       children: [
-      //         { title: 'AInput', routerLink: { name: 'PluginRenderAntdGridEditElInput' } },
-      //         { title: 'AInputNumber', routerLink: { name: 'PluginRenderAntdGridEditElInputNumber' } },
-      //         { title: 'AAutocomplete', routerLink: { name: 'PluginRenderAntdGridEditElAutocomplete' } },
-      //         { title: 'ASelect', routerLink: { name: 'PluginRenderAntdGridEditElSelect' } },
-      //         { title: 'ACascader', routerLink: { name: 'PluginRenderAntdGridEditElCascader' } },
-      //         { title: 'ADatePicker', routerLink: { name: 'PluginRenderAntdGridEditElDatePicker' } },
-      //         { title: 'ATimePicker', routerLink: { name: 'PluginRenderAntdGridEditElTimePicker' } }
-      //       ]
-      //     }
-      //   ]
-      // },
       // {
       //   title: 'FormDesign 表单设计器',
       //   children: [

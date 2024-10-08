@@ -47,27 +47,27 @@ const routes: Array<RouteConfig> = [
         name: 'PluginRenderChartInstall',
         component: () => import('@/views/plugin-render-chart/install/CodeExample.vue')
       },
-      // {
-      //   path: 'table',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'rate',
-      //       name: 'PluginRenderChartTableRate',
-      //       component: () => import('@/views/plugin-render-chart/table/rate/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'bar',
-      //       name: 'PluginRenderChartTableBar',
-      //       component: () => import('@/views/plugin-render-chart/table/bar/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'pie',
-      //       name: 'PluginRenderChartTablePie',
-      //       component: () => import('@/views/plugin-render-chart/table/pie/CodeExample.vue')
-      //     }
-      //   ]
-      // },
+      {
+        path: 'table',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'rate',
+            name: 'PluginRenderChartTableRate',
+            component: () => import('@/views/plugin-render-chart/table/rate/CodeExample.vue')
+          },
+          {
+            path: 'bar',
+            name: 'PluginRenderChartTableBar',
+            component: () => import('@/views/plugin-render-chart/table/bar/CodeExample.vue')
+          },
+          {
+            path: 'pie',
+            name: 'PluginRenderChartTablePie',
+            component: () => import('@/views/plugin-render-chart/table/pie/CodeExample.vue')
+          }
+        ]
+      },
       {
         path: 'grid',
         component: RouteLayout,
@@ -216,99 +216,99 @@ const routes: Array<RouteConfig> = [
         name: 'PluginRenderElementInstall',
         component: () => import('@/views/plugin-render-element/install/CodeExample.vue')
       },
-      // {
-      //   path: 'form',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'itemTemplate',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'el-input',
-      //           name: 'PluginRenderElementFormItemTemplateElInput',
-      //           component: () => import('@/views/plugin-render-element/form/itemTemplate/el-input/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-select',
-      //           name: 'PluginRenderElementFormItemTemplateElSelect',
-      //           component: () => import('@/views/plugin-render-element/form/itemTemplate/el-select/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-switch',
-      //           name: 'PluginRenderElementFormItemTemplateElSwitch',
-      //           component: () => import('@/views/plugin-render-element/form/itemTemplate/el-switch/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-rate',
-      //           name: 'PluginRenderElementFormItemTemplateElRate',
-      //           component: () => import('@/views/plugin-render-element/form/itemTemplate/el-rate/CodeExample.vue')
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       path: 'itemRender',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'el-autocomplete',
-      //           name: 'PluginRenderElementFormItemRenderElAutocomplete',
-      //           component: () => import('@/views/plugin-render-element/form/itemRender/el-autocomplete/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-input',
-      //           name: 'PluginRenderElementFormItemRenderElInput',
-      //           component: () => import('@/views/plugin-render-element/form/itemRender/el-input/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-input-number',
-      //           name: 'PluginRenderElementFormItemRenderElInputNumber',
-      //           component: () => import('@/views/plugin-render-element/form/itemRender/el-input-number/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-select',
-      //           name: 'PluginRenderElementFormItemRenderElSelect',
-      //           component: () => import('@/views/plugin-render-element/form/itemRender/el-select/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-date-picker',
-      //           name: 'PluginRenderElementFormItemRenderElDatePicker',
-      //           component: () => import('@/views/plugin-render-element/form/itemRender/el-date-picker/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-time-select',
-      //           name: 'PluginRenderElementFormItemRenderElTimePicker',
-      //           component: () => import('@/views/plugin-render-element/form/itemRender/el-time-select/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-cascader',
-      //           name: 'PluginRenderElementFormItemRenderElCascader',
-      //           component: () => import('@/views/plugin-render-element/form/itemRender/el-cascader/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-switch',
-      //           name: 'PluginRenderElementFormItemRenderElSwitch',
-      //           component: () => import('@/views/plugin-render-element/form/itemRender/el-switch/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-radio-group',
-      //           name: 'PluginRenderElementFormItemRenderElRadioGroup',
-      //           component: () => import('@/views/plugin-render-element/form/itemRender/el-radio-group/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-checkbox-group',
-      //           name: 'PluginRenderElementFormItemRenderElCheckboxGroup',
-      //           component: () => import('@/views/plugin-render-element/form/itemRender/el-checkbox-group/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-rate',
-      //           name: 'PluginRenderElementFormItemRenderElRate',
-      //           component: () => import('@/views/plugin-render-element/form/itemRender/el-rate/CodeExample.vue')
-      //         }
-      //       ]
-      //     }
-      //   ]
-      // },
+      {
+        path: 'form',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'itemTemplate',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'el-input',
+                name: 'PluginRenderElementFormItemTemplateElInput',
+                component: () => import('@/views/plugin-render-element/form/itemTemplate/el-input/CodeExample.vue')
+              },
+              {
+                path: 'el-select',
+                name: 'PluginRenderElementFormItemTemplateElSelect',
+                component: () => import('@/views/plugin-render-element/form/itemTemplate/el-select/CodeExample.vue')
+              },
+              {
+                path: 'el-switch',
+                name: 'PluginRenderElementFormItemTemplateElSwitch',
+                component: () => import('@/views/plugin-render-element/form/itemTemplate/el-switch/CodeExample.vue')
+              },
+              {
+                path: 'el-rate',
+                name: 'PluginRenderElementFormItemTemplateElRate',
+                component: () => import('@/views/plugin-render-element/form/itemTemplate/el-rate/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'itemRender',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'el-autocomplete',
+                name: 'PluginRenderElementFormItemRenderElAutocomplete',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-autocomplete/CodeExample.vue')
+              },
+              {
+                path: 'el-input',
+                name: 'PluginRenderElementFormItemRenderElInput',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-input/CodeExample.vue')
+              },
+              {
+                path: 'el-input-number',
+                name: 'PluginRenderElementFormItemRenderElInputNumber',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-input-number/CodeExample.vue')
+              },
+              {
+                path: 'el-select',
+                name: 'PluginRenderElementFormItemRenderElSelect',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-select/CodeExample.vue')
+              },
+              {
+                path: 'el-date-picker',
+                name: 'PluginRenderElementFormItemRenderElDatePicker',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-date-picker/CodeExample.vue')
+              },
+              {
+                path: 'el-time-select',
+                name: 'PluginRenderElementFormItemRenderElTimePicker',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-time-select/CodeExample.vue')
+              },
+              {
+                path: 'el-cascader',
+                name: 'PluginRenderElementFormItemRenderElCascader',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-cascader/CodeExample.vue')
+              },
+              {
+                path: 'el-switch',
+                name: 'PluginRenderElementFormItemRenderElSwitch',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-switch/CodeExample.vue')
+              },
+              {
+                path: 'el-radio-group',
+                name: 'PluginRenderElementFormItemRenderElRadioGroup',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-radio-group/CodeExample.vue')
+              },
+              {
+                path: 'el-checkbox-group',
+                name: 'PluginRenderElementFormItemRenderElCheckboxGroup',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-checkbox-group/CodeExample.vue')
+              },
+              {
+                path: 'el-rate',
+                name: 'PluginRenderElementFormItemRenderElRate',
+                component: () => import('@/views/plugin-render-element/form/itemRender/el-rate/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
       {
         path: 'table',
         component: RouteLayout,
@@ -387,86 +387,86 @@ const routes: Array<RouteConfig> = [
             ]
           }
         ]
+      },
+      {
+        path: 'grid',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'filter',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'el-input',
+                name: 'PluginRenderElementGridFilterElInput',
+                component: () => import('@/views/plugin-render-element/grid/filter/el-input/CodeExample.vue')
+              },
+              {
+                path: 'el-date-picker',
+                name: 'PluginRenderElementGridFilterElDatePicker',
+                component: () => import('@/views/plugin-render-element/grid/filter/el-date-picker/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'cell',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'el-switch',
+                name: 'PluginRenderElementGridCellElSwitch',
+                component: () => import('@/views/plugin-render-element/grid/cell/el-switch/CodeExample.vue')
+              },
+              {
+                path: 'el-rate',
+                name: 'PluginRenderElementGridCellElRate',
+                component: () => import('@/views/plugin-render-element/grid/cell/el-rate/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'edit',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'el-input',
+                name: 'PluginRenderElementGridEditElInput',
+                component: () => import('@/views/plugin-render-element/grid/edit/el-input/CodeExample.vue')
+              },
+              {
+                path: 'el-input-number',
+                name: 'PluginRenderElementGridEditElInputNumber',
+                component: () => import('@/views/plugin-render-element/grid/edit/el-input-number/CodeExample.vue')
+              },
+              {
+                path: 'el-autocomplete',
+                name: 'PluginRenderElementGridEditElAutocomplete',
+                component: () => import('@/views/plugin-render-element/grid/edit/el-autocomplete/CodeExample.vue')
+              },
+              {
+                path: 'el-select',
+                name: 'PluginRenderElementGridEditElSelect',
+                component: () => import('@/views/plugin-render-element/grid/edit/el-select/CodeExample.vue')
+              },
+              {
+                path: 'el-cascader',
+                name: 'PluginRenderElementGridEditElCascader',
+                component: () => import('@/views/plugin-render-element/grid/edit/el-cascader/CodeExample.vue')
+              },
+              {
+                path: 'el-date-picker',
+                name: 'PluginRenderElementGridEditElDatePicker',
+                component: () => import('@/views/plugin-render-element/grid/edit/el-date-picker/CodeExample.vue')
+              },
+              {
+                path: 'el-time-select',
+                name: 'PluginRenderElementGridEditElTimeSelect',
+                component: () => import('@/views/plugin-render-element/grid/edit/el-time-select/CodeExample.vue')
+              }
+            ]
+          }
+        ]
       }
-      // {
-      //   path: 'grid',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'filter',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'el-input',
-      //           name: 'PluginRenderElementGridFilterElInput',
-      //           component: () => import('@/views/plugin-render-element/grid/filter/el-input/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-date-picker',
-      //           name: 'PluginRenderElementGridFilterElDatePicker',
-      //           component: () => import('@/views/plugin-render-element/grid/filter/el-date-picker/CodeExample.vue')
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       path: 'cell',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'el-switch',
-      //           name: 'PluginRenderElementGridCellElSwitch',
-      //           component: () => import('@/views/plugin-render-element/grid/cell/el-switch/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-rate',
-      //           name: 'PluginRenderElementGridCellElRate',
-      //           component: () => import('@/views/plugin-render-element/grid/cell/el-rate/CodeExample.vue')
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       path: 'edit',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'el-input',
-      //           name: 'PluginRenderElementGridEditElInput',
-      //           component: () => import('@/views/plugin-render-element/grid/edit/el-input/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-input-number',
-      //           name: 'PluginRenderElementGridEditElInputNumber',
-      //           component: () => import('@/views/plugin-render-element/grid/edit/el-input-number/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-autocomplete',
-      //           name: 'PluginRenderElementGridEditElAutocomplete',
-      //           component: () => import('@/views/plugin-render-element/grid/edit/el-autocomplete/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-select',
-      //           name: 'PluginRenderElementGridEditElSelect',
-      //           component: () => import('@/views/plugin-render-element/grid/edit/el-select/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-cascader',
-      //           name: 'PluginRenderElementGridEditElCascader',
-      //           component: () => import('@/views/plugin-render-element/grid/edit/el-cascader/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-date-picker',
-      //           name: 'PluginRenderElementGridEditElDatePicker',
-      //           component: () => import('@/views/plugin-render-element/grid/edit/el-date-picker/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'el-time-select',
-      //           name: 'PluginRenderElementGridEditElTimeSelect',
-      //           component: () => import('@/views/plugin-render-element/grid/edit/el-time-select/CodeExample.vue')
-      //         }
-      //       ]
-      //     }
-      //   ]
-      // },
       // {
       //   path: 'form-design',
       //   component: RouteLayout,
@@ -488,6 +488,54 @@ const routes: Array<RouteConfig> = [
         path: 'install',
         name: 'PluginRenderAntdInstall',
         component: () => import('@/views/plugin-render-antd/install/CodeExample.vue')
+      },
+      {
+        path: 'form',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'itemTemplate',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'a-input',
+                name: 'PluginRenderAntdFormItemTemplateAInput',
+                component: () => import('@/views/plugin-render-antd/form/itemTemplate/a-input/CodeExample.vue')
+              },
+              {
+                path: 'a-select',
+                name: 'PluginRenderAntdFormItemTemplateASelect',
+                component: () => import('@/views/plugin-render-antd/form/itemTemplate/a-select/CodeExample.vue')
+              },
+              {
+                path: 'a-switch',
+                name: 'PluginRenderAntdFormItemTemplateASwitch',
+                component: () => import('@/views/plugin-render-antd/form/itemTemplate/a-switch/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'itemRender',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'a-input',
+                name: 'PluginRenderAntdFormItemRenderAInput',
+                component: () => import('@/views/plugin-render-antd/form/itemRender/a-input/CodeExample.vue')
+              },
+              {
+                path: 'a-select',
+                name: 'PluginRenderAntdFormItemRenderASelect',
+                component: () => import('@/views/plugin-render-antd/form/itemRender/a-select/CodeExample.vue')
+              },
+              {
+                path: 'a-switch',
+                name: 'PluginRenderAntdFormItemRenderASwitch',
+                component: () => import('@/views/plugin-render-antd/form/itemRender/a-switch/CodeExample.vue')
+              }
+            ]
+          }
+        ]
       },
       {
         path: 'table',
@@ -551,70 +599,70 @@ const routes: Array<RouteConfig> = [
             ]
           }
         ]
+      },
+      {
+        path: 'grid',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'cell',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'a-switch',
+                name: 'PluginRenderAntdGridCellElSwitch',
+                component: () => import('@/views/plugin-render-antd/grid/cell/a-switch/CodeExample.vue')
+              },
+              {
+                path: 'a-rate',
+                name: 'PluginRenderAntdGridCellElRate',
+                component: () => import('@/views/plugin-render-antd/grid/cell/a-rate/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'edit',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'a-input',
+                name: 'PluginRenderAntdGridEditElInput',
+                component: () => import('@/views/plugin-render-antd/grid/edit/a-input/CodeExample.vue')
+              },
+              {
+                path: 'a-input-number',
+                name: 'PluginRenderAntdGridEditElInputNumber',
+                component: () => import('@/views/plugin-render-antd/grid/edit/a-input-number/CodeExample.vue')
+              },
+              {
+                path: 'a-autocomplete',
+                name: 'PluginRenderAntdGridEditElAutocomplete',
+                component: () => import('@/views/plugin-render-antd/grid/edit/a-autocomplete/CodeExample.vue')
+              },
+              {
+                path: 'a-select',
+                name: 'PluginRenderAntdGridEditElSelect',
+                component: () => import('@/views/plugin-render-antd/grid/edit/a-select/CodeExample.vue')
+              },
+              {
+                path: 'a-cascader',
+                name: 'PluginRenderAntdGridEditElCascader',
+                component: () => import('@/views/plugin-render-antd/grid/edit/a-cascader/CodeExample.vue')
+              },
+              {
+                path: 'a-date-picker',
+                name: 'PluginRenderAntdGridEditElDatePicker',
+                component: () => import('@/views/plugin-render-antd/grid/edit/a-date-picker/CodeExample.vue')
+              },
+              {
+                path: 'a-time-picker',
+                name: 'PluginRenderAntdGridEditElTimePicker',
+                component: () => import('@/views/plugin-render-antd/grid/edit/a-time-picker/CodeExample.vue')
+              }
+            ]
+          }
+        ]
       }
-      // {
-      //   path: 'grid',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'cell',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'a-switch',
-      //           name: 'PluginRenderAntdGridCellElSwitch',
-      //           component: () => import('@/views/plugin-render-antd/grid/cell/a-switch/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'a-rate',
-      //           name: 'PluginRenderAntdGridCellElRate',
-      //           component: () => import('@/views/plugin-render-antd/grid/cell/a-rate/CodeExample.vue')
-      //         }
-      //       ]
-      //     },
-      //     {
-      //       path: 'edit',
-      //       component: RouteLayout,
-      //       children: [
-      //         {
-      //           path: 'a-input',
-      //           name: 'PluginRenderAntdGridEditElInput',
-      //           component: () => import('@/views/plugin-render-antd/grid/edit/a-input/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'a-input-number',
-      //           name: 'PluginRenderAntdGridEditElInputNumber',
-      //           component: () => import('@/views/plugin-render-antd/grid/edit/a-input-number/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'a-autocomplete',
-      //           name: 'PluginRenderAntdGridEditElAutocomplete',
-      //           component: () => import('@/views/plugin-render-antd/grid/edit/a-autocomplete/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'a-select',
-      //           name: 'PluginRenderAntdGridEditElSelect',
-      //           component: () => import('@/views/plugin-render-antd/grid/edit/a-select/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'a-cascader',
-      //           name: 'PluginRenderAntdGridEditElCascader',
-      //           component: () => import('@/views/plugin-render-antd/grid/edit/a-cascader/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'a-date-picker',
-      //           name: 'PluginRenderAntdGridEditElDatePicker',
-      //           component: () => import('@/views/plugin-render-antd/grid/edit/a-date-picker/CodeExample.vue')
-      //         },
-      //         {
-      //           path: 'a-time-picker',
-      //           name: 'PluginRenderAntdGridEditElTimePicker',
-      //           component: () => import('@/views/plugin-render-antd/grid/edit/a-time-picker/CodeExample.vue')
-      //         }
-      //       ]
-      //     }
-      //   ]
-      // },
       // {
       //   path: 'form-design',
       //   component: RouteLayout,

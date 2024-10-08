@@ -6,7 +6,7 @@
       </template>
 
       <template #hobbiesList="{ data }">
-        <el-checkbox-group v-model="data.hobbies1">
+        <el-checkbox-group v-model="data.hobbiesList">
           <el-checkbox v-for="item in hobbies1Options" :key="item.value" :value="item.value" :label="item.label"></el-checkbox>
         </el-checkbox-group>
       </template>

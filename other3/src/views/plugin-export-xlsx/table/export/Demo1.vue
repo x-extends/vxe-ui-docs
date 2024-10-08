@@ -15,8 +15,8 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue'
+<script lang="ts">
+import Vue from 'vue'
 import type { VxeTableInstance, VxeTablePropTypes } from 'vxe-table'
 
 interface RowVO {
@@ -28,25 +28,33 @@ interface RowVO {
   no2: string
 }
 
-const tableRef = ref<VxeTableInstance>()
+export default Vue.extend({
+  data () {
+    const tableData: RowVO[] = [
+      { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', no1: '028', no2: '028' },
+      { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', no1: '220', no2: '220' },
+      { id: 10003, name: 'Test3', role: 'PM', sex: 'Man', no1: '003200', no2: '003200' },
+      { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', no1: '02040', no2: '02040' }
+    ]
 
-const tableData = ref<RowVO[]>([
-  { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', no1: '028', no2: '028' },
-  { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', no1: '220', no2: '220' },
-  { id: 10003, name: 'Test3', role: 'PM', sex: 'Man', no1: '003200', no2: '003200' },
-  { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', no1: '02040', no2: '02040' }
-])
+    const footerData: VxeTablePropTypes.FooterData = [
+      { seq: '合计', name: '12人', no1: 356 }
+    ]
 
-const footerData: VxeTablePropTypes.FooterData = [
-  { seq: '合计', name: '12人', no1: 356 }
-]
-
-const exportEvent = () => {
-  const $table = tableRef.value
-  if ($table) {
-    $table.exportData({
-      type: 'xlsx'
-    })
+    return {
+      tableData,
+      footerData
+    }
+  },
+  methods: {
+    exportEvent () {
+      const $table = this.$refs.tableRef as VxeTableInstance
+      if ($table) {
+        $table.exportData({
+          type: 'xlsx'
+        })
+      }
+    }
   }
-}
+})
 </script>
