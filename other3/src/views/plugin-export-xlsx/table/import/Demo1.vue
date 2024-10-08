@@ -1,12 +1,11 @@
 <template>
   <div>
-    <vxe-button @click="exportEvent">直接导出 PDF 文件</vxe-button>
+    <vxe-button @click="exportEvent">直接导出 XLSX 文件</vxe-button>
+    <vxe-button @click="importEvent">直接导入 XLSX 文件</vxe-button>
     <vxe-table
-      show-footer
       ref="tableRef"
-      :data="tableData"
-      :footer-data="footerData">
-      <vxe-column field="seq" type="seq" width="70"></vxe-column>
+      :data="tableData">
+      <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="sex" title="Sex"></vxe-column>
       <vxe-column field="age" title="Age"></vxe-column>
@@ -16,7 +15,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import type { VxeTableInstance, VxeTablePropTypes } from 'vxe-table'
+import type { VxeTableInstance } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -36,15 +35,21 @@ const tableData = ref<RowVO[]>([
   { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
 ])
 
-const footerData: VxeTablePropTypes.FooterData = [
-  { seq: '合计', name: '12人', age: '356' }
-]
-
 const exportEvent = () => {
   const $table = tableRef.value
   if ($table) {
     $table.exportData({
-      type: 'pdf'
+      type: 'xlsx',
+      original: true
+    })
+  }
+}
+
+const importEvent = () => {
+  const $table = tableRef.value
+  if ($table) {
+    $table.importData({
+      types: ['xlsx']
     })
   }
 }

@@ -38,7 +38,7 @@ const tableData = ref<RowVO[]>([
 ])
 
 const footerData: VxeTablePropTypes.FooterData = [
-  { seq: '合计', name: '12人', no1: '356' }
+  { seq: '合计', name: '12人', no1: 356 }
 ]
 
 const exportEvent = () => {

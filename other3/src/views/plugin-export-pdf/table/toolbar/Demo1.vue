@@ -1,12 +1,11 @@
 <template>
   <div>
-    <vxe-button @click="exportEvent">直接导出 PDF 文件</vxe-button>
+    <vxe-toolbar ref="toolbarRef" export></vxe-toolbar>
     <vxe-table
-      show-footer
       ref="tableRef"
-      :data="tableData"
-      :footer-data="footerData">
-      <vxe-column field="seq" type="seq" width="70"></vxe-column>
+      :export-config="{type: 'pdf'}"
+      :data="tableData">
+      <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="sex" title="Sex"></vxe-column>
       <vxe-column field="age" title="Age"></vxe-column>
@@ -15,8 +14,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import type { VxeTableInstance, VxeTablePropTypes } from 'vxe-table'
+import { onMounted, ref } from 'vue'
+import { VxeToolbarInstance, VxeTableInstance } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -27,6 +26,7 @@ interface RowVO {
   address: string
 }
 
+const toolbarRef = ref<VxeToolbarInstance>()
 const tableRef = ref<VxeTableInstance>()
 
 const tableData = ref<RowVO[]>([
@@ -36,16 +36,11 @@ const tableData = ref<RowVO[]>([
   { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
 ])
 
-const footerData: VxeTablePropTypes.FooterData = [
-  { seq: '合计', name: '12人', age: '356' }
-]
-
-const exportEvent = () => {
+onMounted(() => {
   const $table = tableRef.value
-  if ($table) {
-    $table.exportData({
-      type: 'pdf'
-    })
+  const $toolbar = toolbarRef.value
+  if ($table && $toolbar) {
+    $table.connect($toolbar)
   }
-}
+})
 </script>

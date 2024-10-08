@@ -100,32 +100,32 @@ const routes: Array<RouteConfig> = [
         name: 'PluginExportXlsxInstall',
         component: () => import('@/views/plugin-export-xlsx/install/CodeExample.vue')
       },
-      // {
-      //   path: 'table',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'export',
-      //       name: 'PluginExportXlsxTableExport',
-      //       component: () => import('@/views/plugin-export-xlsx/table/export/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'import',
-      //       name: 'PluginExportXlsxTableImport',
-      //       component: () => import('@/views/plugin-export-xlsx/table/import/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'toolbar',
-      //       name: 'PluginExportXlsxTableToolbar',
-      //       component: () => import('@/views/plugin-export-xlsx/table/toolbar/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'advanced',
-      //       name: 'PluginExportXlsxTableAdvanced',
-      //       component: () => import('@/views/plugin-export-xlsx/table/advanced/CodeExample.vue')
-      //     }
-      //   ]
-      // },
+      {
+        path: 'table',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'export',
+            name: 'PluginExportXlsxTableExport',
+            component: () => import('@/views/plugin-export-xlsx/table/export/CodeExample.vue')
+          },
+          {
+            path: 'import',
+            name: 'PluginExportXlsxTableImport',
+            component: () => import('@/views/plugin-export-xlsx/table/import/CodeExample.vue')
+          },
+          {
+            path: 'toolbar',
+            name: 'PluginExportXlsxTableToolbar',
+            component: () => import('@/views/plugin-export-xlsx/table/toolbar/CodeExample.vue')
+          },
+          {
+            path: 'advanced',
+            name: 'PluginExportXlsxTableAdvanced',
+            component: () => import('@/views/plugin-export-xlsx/table/advanced/CodeExample.vue')
+          }
+        ]
+      },
       {
         path: 'grid',
         component: RouteLayout,
@@ -163,27 +163,27 @@ const routes: Array<RouteConfig> = [
         name: 'PluginExportPdfInstall',
         component: () => import('@/views/plugin-export-pdf/install/CodeExample.vue')
       },
-      // {
-      //   path: 'table',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'export',
-      //       name: 'PluginExportPdfTableExport',
-      //       component: () => import('@/views/plugin-export-pdf/table/export/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'toolbar',
-      //       name: 'PluginExportPdfTableToolbar',
-      //       component: () => import('@/views/plugin-export-pdf/table/toolbar/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'advanced',
-      //       name: 'PluginExportPdfTableAdvanced',
-      //       component: () => import('@/views/plugin-export-pdf/table/advanced/CodeExample.vue')
-      //     }
-      //   ]
-      // },
+      {
+        path: 'table',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'export',
+            name: 'PluginExportPdfTableExport',
+            component: () => import('@/views/plugin-export-pdf/table/export/CodeExample.vue')
+          },
+          {
+            path: 'toolbar',
+            name: 'PluginExportPdfTableToolbar',
+            component: () => import('@/views/plugin-export-pdf/table/toolbar/CodeExample.vue')
+          },
+          {
+            path: 'advanced',
+            name: 'PluginExportPdfTableAdvanced',
+            component: () => import('@/views/plugin-export-pdf/table/advanced/CodeExample.vue')
+          }
+        ]
+      },
       {
         path: 'grid',
         component: RouteLayout,

@@ -21,6 +21,7 @@ interface RowVO {
 export default Vue.extend({
   data () {
     const gridOptions: VxeGridProps<RowVO> = {
+      showFooter: true,
       columns: [
         { type: 'seq', width: 70 },
         { field: 'name', title: 'Name' },
@@ -33,6 +34,9 @@ export default Vue.extend({
         { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', age: 22, address: '广东省' },
         { id: 10003, name: 'Test3', role: 'PM', sex: 'Man', age: 32, address: '上海' },
         { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
+      ],
+      footerData: [
+        { seq: '合计', name: '12人', age: 356 }
       ]
     }
 
