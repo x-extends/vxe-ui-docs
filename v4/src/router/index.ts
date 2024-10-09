@@ -2610,6 +2610,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/other/reverse/CodeExample.vue')
         },
         {
+          path: 'fileList',
+          name: 'ComponentGridOtherFileList',
+          component: () => import('@/views/grid/other/fileList/CodeExample.vue')
+        },
+        {
           path: 'lineEllipsis',
           name: 'ComponentGridOtherLineEllipsis',
           component: () => import('@/views/grid/other/lineEllipsis/CodeExample.vue')
