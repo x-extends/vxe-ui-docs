@@ -3913,6 +3913,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'template',
                 name: 'ComponentSelectBaseTemplate',
                 component: () => import('@/views/select/base/template/CodeExample.vue')
+              },
+              {
+                path: 'scroll',
+                name: 'ComponentSelectBaseScroll',
+                component: () => import('@/views/select/base/scroll/CodeExample.vue')
               }
             ]
           },
@@ -3954,6 +3959,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'template',
                 name: 'ComponentSelectConfigTemplate',
                 component: () => import('@/views/select/config/template/CodeExample.vue')
+              },
+              {
+                path: 'scroll',
+                name: 'ComponentSelectConfigScroll',
+                component: () => import('@/views/select/config/scroll/CodeExample.vue')
               }
             ]
           }

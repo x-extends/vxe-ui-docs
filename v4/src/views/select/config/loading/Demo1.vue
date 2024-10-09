@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-select v-model="val1" placeholder="加载中" :options="opts1" :loading="loading"></vxe-select>
+    <vxe-select v-model="val1" :options="opts1" :loading="loading"></vxe-select>
   </div>
 </template>
 
