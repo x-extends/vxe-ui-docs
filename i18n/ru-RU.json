@@ -113,7 +113,11 @@
         "showCode": "показать код",
         "showTsCode": "Показать ТС",
         "showJsCode": "Показать JS",
-        "hideCode": "скрытый код"
+        "hideCode": "скрытый код",
+        "showSetupJS": "Setup JS",
+        "showOptionJS": "Options JS",
+        "showSetupTS": "Setup TS",
+        "showOptionTS": "Options TS"
       }
     }
   },

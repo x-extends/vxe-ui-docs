@@ -113,7 +113,11 @@
         "showCode": "コードを表示",
         "showTsCode": "TSを表示する",
         "showJsCode": "JSを表示",
-        "hideCode": "隠しコード"
+        "hideCode": "隠しコード",
+        "showSetupJS": "Setup JS",
+        "showOptionJS": "Options JS",
+        "showSetupTS": "Setup TS",
+        "showOptionTS": "Options TS"
       }
     }
   },

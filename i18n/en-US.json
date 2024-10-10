@@ -113,7 +113,11 @@
         "showCode": "show code",
         "showTsCode": "Show TS",
         "showJsCode": "Show JS",
-        "hideCode": "hidden code"
+        "hideCode": "hidden code",
+        "showSetupJS": "Setup JS",
+        "showOptionJS": "Options JS",
+        "showSetupTS": "Setup TS",
+        "showOptionTS": "Options TS"
       }
     }
   },

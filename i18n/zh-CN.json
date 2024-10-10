@@ -113,7 +113,11 @@
         "showCode": "显示代码",
         "showTsCode": "显示TS",
         "showJsCode": "显示JS",
-        "hideCode": "隐藏代码"
+        "hideCode": "隐藏代码",
+        "showSetupJS": "组合式 JS",
+        "showOptionJS": "选项式 JS",
+        "showSetupTS": "组合式 TS",
+        "showOptionTS": "选项式 TS"
       }
     }
   },
