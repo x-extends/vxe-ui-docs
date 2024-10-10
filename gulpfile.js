@@ -5,6 +5,7 @@ const replace = require('gulp-replace')
 const rename = require('gulp-rename')
 const zip = require('gulp-zip')
 const UglifyJS = require('uglify-js')
+const XEUtils = require('xe-utils')
 
 const enableAd = false
 
@@ -19,14 +20,14 @@ const adVariable = {
 }
 
 // 赞助商
-const ssTmpJS = UglifyJS.minify(fs.readFileSync('./ad/ssTmpl.js', 'utf-8'), {
+const ssTmpJS = UglifyJS.minify(XEUtils.toFormatString(fs.readFileSync('./ad/ssTmpl.js', 'utf-8'), adVariable), {
   toplevel: true,
   output: {
     beautify: false
   }
 })
 const ssTmplScript = `<script>(function(){${ssTmpJS.code}})()</script>`
-const sponsorsJS = UglifyJS.minify(fs.readFileSync('./ad/sponsors.js', 'utf-8'), {
+const sponsorsJS = UglifyJS.minify(XEUtils.toFormatString(fs.readFileSync('./ad/sponsors.js', 'utf-8'), adVariable), {
   toplevel: true,
   output: {
     beautify: false
@@ -35,14 +36,14 @@ const sponsorsJS = UglifyJS.minify(fs.readFileSync('./ad/sponsors.js', 'utf-8'),
 const sponsorsTmplScript = `<script>(function(){${sponsorsJS.code}})()</script>`
 
 // 广告位
-const adTmpJS = UglifyJS.minify(fs.readFileSync('./ad/adTmpl.js', 'utf-8'), {
+const adTmpJS = UglifyJS.minify(XEUtils.toFormatString(fs.readFileSync('./ad/adTmpl.js', 'utf-8'), adVariable), {
   toplevel: true,
   output: {
     beautify: false
   }
 })
 const adTmplScript = `<script>(function(){${adTmpJS.code}})()</script>`
-const adCheckJS = UglifyJS.minify(fs.readFileSync('./ad/check.js', 'utf-8'), {
+const adCheckJS = UglifyJS.minify(XEUtils.toFormatString(fs.readFileSync('./ad/check.js', 'utf-8'), adVariable), {
   toplevel: true,
   output: {
     beautify: false
@@ -52,7 +53,8 @@ const adCheckScript = `<script>(function(){${adCheckJS.code}})()</script>`
 const adScript = `<script data-mode="hash" type="text/javascript" charset="UTF-8" src="https://cdn.wwads.cn/js/makemoney.js" async></script>`
 
 // 访问数量统计
-const hmScript = `<script>var _hmt=_hmt||[];(function(){if(location.host.indexOf("localhost")===-1){var b=document.createElement("script");b.src="https://hm.baidu.com/hm.js?d7f93b6aca1d7ac7711f6c21b897a62c";b.onload=function(){_hmt.push(["_requirePlugin","UrlChangeTracker",{shouldTrackUrlChange:function(c,d){return c&&d}}])};var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)}})();</script>`
+const bdtjID = 'd7f93b6aca1d7ac7711f6c21b897a62c'
+const hmScript = `<script>var _hmt=_hmt||[];(function(){if(location.host.indexOf("localhost")===-1){var b=document.createElement("script");b.src="https://hm.baidu.com/hm.js?${bdtjID}";b.onload=function(){_hmt.push(["_requirePlugin","UrlChangeTracker",{shouldTrackUrlChange:function(c,d){return c&&d}}])};var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)}})();</script>`
 
 gulp.task('clear_docs_temp', () => {
   return del([
