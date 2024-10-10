@@ -9,10 +9,13 @@
 
       <template #use>
         <pre>
-          <pre-code>
-            npm install vxe-pc-ui@3.1.27 vxe-table@3.9.1 @vxe-ui/plugin-export-xlsx@3 exceljs
+          <pre-code
+            language="shell"
+            :content="`
+            npm install {{ uiCDNLib }} {{ tableCDNLib }} @vxe-ui/plugin-export-xlsx@3 exceljs
             # 或者
-            yarn add vxe-pc-ui@3.1.27 vxe-table@3.9.1 @vxe-ui/plugin-export-xlsx@3 exceljs
+            yarn add {{ uiCDNLib }} {{ tableCDNLib }} @vxe-ui/plugin-export-xlsx@3 exceljs
+            `">
           </pre-code>
         </pre>
 
@@ -41,3 +44,17 @@
     </CodeLight>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+import { mapGetters } from 'vuex'
+
+export default Vue.extend({
+  computed: {
+    ...mapGetters([
+      'uiCDNLib',
+      'tableCDNLib'
+    ])
+  }
+})
+</script>

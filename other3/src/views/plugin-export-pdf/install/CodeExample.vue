@@ -9,10 +9,13 @@
 
       <template #use>
         <pre>
-          <pre-code>
-            npm install vxe-table@3.9.1 @vxe-ui/plugin-export-pdf@3 jspdf
+          <pre-code
+            language="shell"
+            :content="`
+            npm install {{ uiCDNLib }} {{ tableCDNLib }} @vxe-ui/plugin-export-pdf@3 jspdf
             # 或者
-            yarn add vxe-table@3.9.1 @vxe-ui/plugin-export-pdf@3 jspdf
+            yarn add {{ uiCDNLib }} {{ tableCDNLib }} @vxe-ui/plugin-export-pdf@3 jspdf
+            `">
           </pre-code>
         </pre>
 
@@ -50,3 +53,17 @@
     </CodeLight>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+import { mapGetters } from 'vuex'
+
+export default Vue.extend({
+  computed: {
+    ...mapGetters([
+      'uiCDNLib',
+      'tableCDNLib'
+    ])
+  }
+})
+</script>

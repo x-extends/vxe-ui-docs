@@ -9,10 +9,13 @@
 
       <template #use>
         <pre>
-          <pre-code>
-            npm install vxe-table@4.7.87 vxe-pc-ui@4.2.19 @vxe-ui/plugin-render-chart
+          <pre-code
+            language="shell"
+            :content="`
+            npm install {{ uiCDNLib }} {{ tableCDNLib }} @vxe-ui/plugin-render-chart
             # 或者
-            yarn add vxe-table@4.7.87 vxe-pc-ui@4.2.19 @vxe-ui/plugin-render-chart
+            yarn add {{ uiCDNLib }} {{ tableCDNLib }} @vxe-ui/plugin-render-chart
+            `">
           </pre-code>
         </pre>
 
@@ -35,3 +38,12 @@
     </CodeLight>
   </div>
 </template>
+
+<script lang="ts" setup>
+import { computed } from 'vue'
+import { useAppStore } from '@/store/app'
+
+const appStore = useAppStore()
+const uiCDNLib = computed(() => appStore.uiCDNLib)
+const tableCDNLib = computed(() => appStore.tableCDNLib)
+</script>

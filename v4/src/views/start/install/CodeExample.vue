@@ -10,12 +10,17 @@
 
       <template #use>
         <pre>
-          <pre-code class="shell">
-            npm install vxe-table@4.7.87 vxe-pc-ui@4.2.19
+          <pre-code
+            language="shell"
+            :content="`
+            npm install ${uiCDNLib } ${ tableCDNLib }
             # 或者
-            yarn add vxe-table@4.7.87 vxe-pc-ui@4.2.19
+            yarn add ${uiCDNLib } ${ tableCDNLib }
+            `">
           </pre-code>
-          <pre-code class="javascript">
+          <pre-code
+            language="javascript"
+            content="
             // 完整导入 UI 组件库
             import VxeUI from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
@@ -27,10 +32,19 @@
             // ...
 
             createApp(App).use(VxeUI).use(VxeUITable).mount('#app')
-            // ...
+            // ...">
           </pre-code>
         </pre>
       </template>
     </CodeLight>
   </div>
 </template>
+
+<script lang="ts" setup>
+import { computed } from 'vue'
+import { useAppStore } from '@/store/app'
+
+const appStore = useAppStore()
+const uiCDNLib = computed(() => appStore.uiCDNLib)
+const tableCDNLib = computed(() => appStore.tableCDNLib)
+</script>

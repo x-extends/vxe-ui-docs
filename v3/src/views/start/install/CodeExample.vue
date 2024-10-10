@@ -10,31 +10,51 @@
 
       <template #use>
         <pre>
-          <pre-code class="shell">
-            npm install vxe-table@3.9.1 vxe-pc-ui@3.1.27
-            # 或者
-            yarn add vxe-table@3.9.1 vxe-pc-ui@3.1.27
+          <pre-code
+            language="shell"
+            :content="`
+              npm install ${uiCDNLib } ${ tableCDNLib }
+              # 或者
+              yarn add ${uiCDNLib } ${ tableCDNLib }
+            `">
           </pre-code>
-          <pre-code class="javascript">
-            import Vue from 'vue'
-            // ...
+          <pre-code
+            language="javascript"
+            :content="`
+              import Vue from 'vue'
+              // ...
 
-            // 完整导入 UI 组件库
-            import VxeUI from 'vxe-pc-ui'
-            import 'vxe-pc-ui/lib/style.css'
-            // ...
+              // 完整导入 UI 组件库
+              import VxeUI from 'vxe-pc-ui'
+              import 'vxe-pc-ui/lib/style.css'
+              // ...
 
-            // 完整导入 表格库
-            import VxeUITable from 'vxe-table'
-            import 'vxe-table/lib/style.css'
-            // ...
+              // 完整导入 表格库
+              import VxeUITable from 'vxe-table'
+              import 'vxe-table/lib/style.css'
+              // ...
 
-            Vue.use(VxeUI)
-            Vue.use(VxeUITable)
-            //...
+              Vue.use(VxeUI)
+              Vue.use(VxeUITable)
+              //...
+            `">
           </pre-code>
         </pre>
       </template>
     </CodeLight>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+import { mapGetters } from 'vuex'
+
+export default Vue.extend({
+  computed: {
+    ...mapGetters([
+      'uiCDNLib',
+      'tableCDNLib'
+    ])
+  }
+})
+</script>
