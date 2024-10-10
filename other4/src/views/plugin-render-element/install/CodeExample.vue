@@ -5,6 +5,9 @@
         <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-render-element">
           该插件提供了在表格中渲染第三方组件，用于兼容 <vxe-link href="https://www.npmjs.com/package/element-plus" target="_blank">element-plus</vxe-link> 组件库
         </vxe-tip>
+        <vxe-tip status="error">
+          对应的第三方组件库需自行去全局安装，安装完成对应的组件库后就可以在表格中使用了
+        </vxe-tip>
       </template>
 
       <template #use>
