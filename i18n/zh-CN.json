@@ -117,7 +117,8 @@
         "showSetupJS": "组合式 JS",
         "showOptionJS": "选项式 JS",
         "showSetupTS": "组合式 TS",
-        "showOptionTS": "选项式 TS"
+        "showOptionTS": "选项式 TS",
+        "noExample": "暂无示例"
       }
     }
   },

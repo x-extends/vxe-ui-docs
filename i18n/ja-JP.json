@@ -117,7 +117,8 @@
         "showSetupJS": "Setup JS",
         "showOptionJS": "Options JS",
         "showSetupTS": "Setup TS",
-        "showOptionTS": "Options TS"
+        "showOptionTS": "Options TS",
+        "noExample": "暂无示例"
       }
     }
   },
