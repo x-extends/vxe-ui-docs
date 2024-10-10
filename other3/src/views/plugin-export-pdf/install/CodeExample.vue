@@ -12,9 +12,9 @@
           <pre-code
             language="shell"
             :content="`
-            npm install {{ uiCDNLib }} {{ tableCDNLib }} @vxe-ui/plugin-export-pdf@3 jspdf
+            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-export-pdf@3 jspdf
             # 或者
-            yarn add {{ uiCDNLib }} {{ tableCDNLib }} @vxe-ui/plugin-export-pdf@3 jspdf
+            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-export-pdf@3 jspdf
             `">
           </pre-code>
         </pre>

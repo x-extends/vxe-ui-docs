@@ -12,9 +12,9 @@
           <pre-code
             language="shell"
             :content="`
-            npm install {{ uiCDNLib }} {{ tableCDNLib }} @vxe-ui/plugin-render-chart
+            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-chart
             # 或者
-            yarn add {{ uiCDNLib }} {{ tableCDNLib }} @vxe-ui/plugin-render-chart
+            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-chart
             `">
           </pre-code>
         </pre>

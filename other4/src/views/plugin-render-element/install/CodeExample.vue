@@ -6,7 +6,7 @@
           该插件提供了在表格中渲染第三方组件，用于兼容 <vxe-link href="https://www.npmjs.com/package/element-plus" target="_blank">element-plus</vxe-link> 组件库
         </vxe-tip>
         <vxe-tip status="error">
-          对应的第三方组件库需自行去全局安装，安装完成对应的组件库后就可以在表格中使用了
+          对应的第三方组件库 <vxe-link href="https://www.npmjs.com/package/element-plus" target="_blank">element-plus</vxe-link> 需自行去全局安装，安装完成对应的组件库后就可以在表格中使用了
         </vxe-tip>
       </template>
 
@@ -15,9 +15,9 @@
           <pre-code
             language="shell"
             :content="`
-            npm install {{ uiCDNLib }} {{ tableCDNLib }} @vxe-ui/plugin-render-element
+            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-element
             # 或者
-            yarn add {{ uiCDNLib }} {{ tableCDNLib }} @vxe-ui/plugin-render-element
+            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-element
             `">
           </pre-code>
         </pre>

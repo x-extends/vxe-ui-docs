@@ -12,9 +12,9 @@
           <pre-code
             language="shell"
             :content="`
-            npm install {{ uiCDNLib }} {{ tableCDNLib }} @vxe-ui/plugin-export-xlsx exceljs
+            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-export-xlsx exceljs
             # 或者
-            yarn add {{ uiCDNLib }} {{ tableCDNLib }} @vxe-ui/plugin-export-xlsx exceljs
+            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-export-xlsx exceljs
             `">
           </pre-code>
         </pre>
