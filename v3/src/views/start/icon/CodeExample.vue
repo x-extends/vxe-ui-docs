@@ -14,11 +14,12 @@
 
             VxeUI.setIcon({
               // loading
-              LOADING: 'vxe-icon-spinner roll',
+              LOADING: 'vxe-icon-spinner roll vxe-loading--default-icon',
 
               // button
               BUTTON_DROPDOWN: 'vxe-icon-arrow-down',
               BUTTON_LOADING: 'vxe-icon-spinner roll',
+              BUTTON_TOOLTIP_ICON: 'vxe-icon-question-circle-fill',
 
               // menu
               MENU_ITEM_EXPAND_OPEN: 'vxe-icon-arrow-down rotate180',
@@ -28,6 +29,10 @@
               SELECT_LOADED: 'vxe-icon-spinner roll',
               SELECT_OPEN: 'vxe-icon-caret-down rotate180',
               SELECT_CLOSE: 'vxe-icon-caret-down',
+
+              // icon-picker
+              ICON_PICKER_OPEN: 'vxe-icon-caret-down rotate180',
+              ICON_PICKER_CLOSE: 'vxe-icon-caret-down',
 
               // pager
               PAGER_HOME: 'vxe-icon-home-page',
@@ -88,9 +93,12 @@
               FORM_DESIGN_STYLE_SETTING: 'vxe-icon-layout',
               FORM_DESIGN_PROPS_PC: 'vxe-icon-pc',
               FORM_DESIGN_PROPS_MOBILE: 'vxe-icon-mobile',
+              FORM_DESIGN_PROPS_ADD: 'vxe-icon-add',
+              FORM_DESIGN_PROPS_EDIT: 'vxe-icon-edit',
               FORM_DESIGN_WIDGET_ADD: 'vxe-icon-square-plus-fill',
               FORM_DESIGN_WIDGET_COPY: 'vxe-icon-copy',
               FORM_DESIGN_WIDGET_DELETE: 'vxe-icon-delete',
+              FORM_DESIGN_WIDGET_SWAP_LR: 'vxe-icon-swap',
               FORM_DESIGN_WIDGET_OPTION_DELETE: 'vxe-icon-delete',
               FORM_DESIGN_WIDGET_OPTION_EXPAND_OPEN: 'vxe-icon-square-plus',
               FORM_DESIGN_WIDGET_OPTION_EXPAND_CLOSE: 'vxe-icon-square-minus',
@@ -98,11 +106,14 @@
               // list-design
               LIST_DESIGN_FIELD_SETTING: 'vxe-icon-custom-column',
               LIST_DESIGN_LIST_SETTING: 'vxe-icon-menu',
+              LIST_DESIGN_LIST_SETTING_SEARCH_DELETE: 'vxe-icon-delete',
+              LIST_DESIGN_LIST_SETTING_ACTIVE_DELETE: 'vxe-icon-delete',
 
               // upload
               UPLOAD_FILE_ERROR: 'vxe-icon-warning-circle-fill',
               UPLOAD_FILE_ADD: 'vxe-icon-upload',
               UPLOAD_FILE_REMOVE: 'vxe-icon-delete',
+              UPLOAD_FILE_DOWNLOAD: 'vxe-icon-download',
               UPLOAD_IMAGE_RE_UPLOAD: 'vxe-icon-repeat',
               UPLOAD_IMAGE_ADD: 'vxe-icon-add',
               UPLOAD_IMAGE_REMOVE: 'vxe-icon-close',
@@ -156,9 +167,33 @@
               TABS_TAB_BUTTON_LEFT: 'vxe-icon-arrow-left',
               TABS_TAB_BUTTON_RIGHT: 'vxe-icon-arrow-right',
               TABS_TAB_CLOSE: 'vxe-icon-close',
+              TABS_TAB_REFRESH: 'vxe-icon-refresh',
+              TABS_TAB_REFRESH_LOADING: 'vxe-icon-refresh roll',
 
               // text
-              TEXT_COPY: 'vxe-icon-copy'
+              TEXT_COPY: 'vxe-icon-copy',
+              TEXT_LOADING: 'vxe-icon-spinner roll',
+
+              // carousel
+              CAROUSEL_HORIZONTAL_PREVIOUS: 'vxe-icon-arrow-left',
+              CAROUSEL_HORIZONTAL_NEXT: 'vxe-icon-arrow-right',
+              CAROUSEL_VERTICAL_PREVIOUS: 'vxe-icon-arrow-up',
+              CAROUSEL_VERTICAL_NEXT: 'vxe-icon-arrow-down',
+
+              // collapse
+              COLLAPSE_OPEN: 'vxe-icon-arrow-right rotate90',
+              COLLAPSE_CLOSE: 'vxe-icon-arrow-right',
+
+              // empty
+              EMPTY_DEFAULT: 'vxe-icon-empty',
+
+              // result
+              RESULT_INFO: 'vxe-icon-info-circle-fill',
+              RESULT_SUCCESS: 'vxe-icon-success-circle-fill',
+              RESULT_WARNING: 'vxe-icon-warning-circle-fill',
+              RESULT_ERROR: 'vxe-icon-error-circle-fill',
+              RESULT_QUESTION: 'vxe-icon-question-circle-fill',
+              RESULT_LOADING: 'vxe-icon-spinner roll'
             })
           </pre-code>
         </pre>

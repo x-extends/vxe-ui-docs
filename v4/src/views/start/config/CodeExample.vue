@@ -20,25 +20,49 @@
               alert: {},
               anchor: {},
               anchorLink: {},
+              avatar: {},
+              badge: {},
               breadcrumb: {
                 separator: '/'
               },
               breadcrumbItem: {},
               button: {
-                trigger: 'hover'
+                trigger: 'hover',
+                prefixTooltip: {
+                  enterable: true
+                },
+                suffixTooltip: {
+                  enterable: true
+                }
               },
               buttonGroup: {},
+              calendar: {
+                minDate: new Date(1900, 0, 1),
+                maxDate: new Date(2100, 0, 1),
+                startDay: 1,
+                selectDay: 1
+              },
               card: {
                 border: true,
                 padding: true
               },
+              carousel: {
+                height: 200,
+                loop: true,
+                interval: 5000
+              },
+              carouselItem: {},
               checkbox: {},
               checkboxGroup: {},
               col: {},
-              colgroup: {},
-              collapse: {},
+              collapse: {
+                padding: true,
+                expandConfig: {
+                  showIcon: true
+                }
+              },
               collapsePane: {},
-              column: {},
+              countdown: {},
               datePicker: {
                 // size: null,
                 // transfer: false
@@ -58,8 +82,11 @@
                 mask: true,
                 showTitleOverflow: true,
                 showClose: true,
-                padding: true
+                padding: true,
+                cancelClosable: true,
+                confirmClosable: true
               },
+              empty: {},
               form: {
                 // preventSubmit: false,
                 // size: null,
@@ -72,19 +99,33 @@
                   enterable: true
                 },
                 titleAsterisk: true,
-                titleOverflow: false
+                titleOverflow: false,
+                padding: true
               },
               formDesign: {
                 height: 400,
+                showHeader: true,
                 showPc: true
               },
               formGather: {},
+              formGroup: {},
               formItem: {},
               formView: {},
-              grid: {},
               icon: {},
-              image: {},
-              imagePreview: {},
+              iconPicker: {
+                icons: ['home', 'company', 'comment', 'setting', 'send', 'envelope', 'envelope-open', 'bell', 'search', 'print', 'pc', 'goods', 'chart-line', 'edit', 'delete', 'save', 'folder', 'microphone', 'flag', 'link', 'location', 'sunny', 'rmb', 'usd', 'user', 'add-user', 'add-users', 'star', 'unlock', 'time', 'text', 'feedback', 'calendar', 'association-form', 'cloud-download', 'cloud-upload', 'file', 'subtable', 'chart-bar-x', 'chart-bar-y', 'chart-line', 'chart-pie', 'chart-radar']
+              },
+              image: {
+                showPreview: true,
+                showPrintButton: true
+              },
+              imageGroup: {
+                showPreview: true,
+                showPrintButton: true
+              },
+              imagePreview: {
+                showPrintButton: true
+              },
               input: {
                 // size: null,
                 // transfer: false
@@ -110,6 +151,7 @@
                 height: 400,
                 showPc: true
               },
+              listView: {},
               list: {
                 // size: null,
                 scrollY: {
@@ -118,7 +160,10 @@
                   // oSize: 0
                 }
               },
-              loading: {},
+              loading: {
+                showIcon: true,
+                showText: true
+              },
               modal: {
                 // size: null,
                 top: 16,
@@ -135,9 +180,23 @@
                 padding: true,
                 draggable: true,
                 showConfirmButton: null,
+                cancelClosable: true,
+                confirmClosable: true,
+                zoomConfig: {
+                  minimizeMaxSize: 10,
+                  minimizeVerticalOffset: {
+                    top: -24,
+                    left: 0
+                  },
+                  minimizeHorizontalOffset: {
+                    top: 0,
+                    left: 32
+                  }
+                },
                 // storage: false,
                 storageKey: 'VXE_MODAL_POSITION'
               },
+              noticeBar: {},
               numberInput: {
                 // size: null,
                 // transfer: false
@@ -157,9 +216,13 @@
                 // layouts: ['PrevJump', 'PrevPage', 'Jump', 'PageCount', 'NextPage', 'NextJump', 'Sizes', 'Total']
               },
               print: {},
-              passwordInput: {},
+              passwordInput: {
+                controls: true
+              },
               printPageBreak: {},
-              pulldown: {},
+              pulldown: {
+                destroyOnClose: true
+              },
               radio: {
                 strict: true
               },
@@ -169,16 +232,30 @@
               radioGroup: {
                 strict: true
               },
+              result: {},
               row: {},
               select: {
-                multiCharOverflow: 8
+                multiCharOverflow: 8,
+                scrollY: {
+                  enabled: true,
+                  gt: 100,
+                  oSize: 2
+                }
               },
+              slider: {
+                max: 100,
+                min: 0
+              },
+              steps: {},
               switch: {},
               tabPane: {},
-              table: {},
               tabs: {},
-              textarea: {},
-              toolbar: {},
+              tag: {},
+              textEllipsis: {},
+              text: {},
+              textarea: {
+                resize: 'none'
+              },
               tip: {},
               tooltip: {
                 // size: null,
@@ -189,16 +266,32 @@
               },
               tree: {
                 indent: 20,
+                minHeight: 60,
                 radioConfig: {
                   strict: true
                 }
               },
-              treeSelect: {},
+              treeSelect: {
+                treeConfig: {
+                  radioConfig: {},
+                  checkboxConfig: {}
+                }
+              },
               upload: {
                 mode: 'all',
                 imageTypes: ['jpg', 'jpeg', 'png', 'gif'],
-                showList: true
-  }
+                showList: true,
+                showUploadButton: true,
+                showButtonText: true,
+                showRemoveButton: true,
+                showButtonIcon: true,
+                showPreview: true,
+                imageStyle: {}
+              },
+              watermark: {
+                rotate: -30,
+                gap: [100, 100]
+              }
             })
           </pre-code>
         </pre>
