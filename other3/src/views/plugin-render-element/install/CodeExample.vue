@@ -10,9 +10,9 @@
       <template #use>
         <pre>
           <pre-code>
-            npm install vxe-pc-ui@3.1.24 vxe-table@3.9.0 @vxe-ui/plugin-render-element@3
+            npm install vxe-pc-ui@3.1.27 vxe-table@3.9.1 @vxe-ui/plugin-render-element@3
             # 或者
-            yarn add vxe-pc-ui@3.1.24 vxe-table@3.9.0 @vxe-ui/plugin-render-element@3
+            yarn add vxe-pc-ui@3.1.27 vxe-table@3.9.1 @vxe-ui/plugin-render-element@3
           </pre-code>
         </pre>
 

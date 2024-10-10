@@ -11,9 +11,9 @@
       <template #use>
         <pre>
           <pre-code class="shell">
-            npm install vxe-table@3.9.0 vxe-pc-ui@3.1.24
+            npm install vxe-table@3.9.1 vxe-pc-ui@3.1.27
             # 或者
-            yarn add vxe-table@3.9.0 vxe-pc-ui@3.1.24
+            yarn add vxe-table@3.9.1 vxe-pc-ui@3.1.27
           </pre-code>
           <pre-code class="javascript">
             import Vue from 'vue'

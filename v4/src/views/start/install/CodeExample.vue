@@ -11,9 +11,9 @@
       <template #use>
         <pre>
           <pre-code class="shell">
-            npm install vxe-table@4.7.85 vxe-pc-ui@4.2.15
+            npm install vxe-table@4.7.87 vxe-pc-ui@4.2.19
             # 或者
-            yarn add vxe-table@4.7.85 vxe-pc-ui@4.2.15
+            yarn add vxe-table@4.7.87 vxe-pc-ui@4.2.19
           </pre-code>
           <pre-code class="javascript">
             // 完整导入 UI 组件库
