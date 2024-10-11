@@ -43,6 +43,10 @@
           </pre-code>
         </pre>
       </template>
+
+      <template #preview>
+        <vxe-image src="https://vxeui.com/pluginDocs/table/static/img/areaBasicsEcharts.de733354.gif"></vxe-image>
+      </template>
     </CodeLight>
   </div>
 </template>
