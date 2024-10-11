@@ -16,6 +16,7 @@
     "@vxe-ui/plugin-render-antd": "^4.0.7",
     "@vxe-ui/plugin-render-chart": "^4.0.1",
     "@vxe-ui/plugin-render-element": "^4.0.7",
+    "@vxe-ui/plugin-validator": "^4.0.0",
     "ant-design-vue": "4.2.3",
     "axios": "^1.7.2",
     "core-js": "^3.8.3",

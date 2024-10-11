@@ -52,6 +52,36 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
+    title: '数据校验',
+    isExpand: false,
+    children: [
+      {
+        title: '开发指南',
+        children: [
+          { title: '安装插件', routerLink: { name: 'PluginValidator' } }
+        ]
+      },
+      {
+        title: 'Form 表单',
+        children: [
+          { title: '常用校验', routerLink: { name: 'PluginValidatorFormBase' } }
+        ]
+      },
+      {
+        title: 'Table 基础表格',
+        children: [
+          { title: '常用校验', routerLink: { name: 'PluginValidatorTableBase' } }
+        ]
+      },
+      {
+        title: 'Grid 配置式表格',
+        children: [
+          { title: '常用校验', routerLink: { name: 'PluginValidatorGridBase' } }
+        ]
+      }
+    ]
+  },
+  {
     title: '右键菜单',
     isExpand: false,
     children: [

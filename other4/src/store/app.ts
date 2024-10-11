@@ -56,7 +56,8 @@ export const useAppStore = defineStore('app', {
     pluginRenderAntdCDNLib: handleLibVersion('@vxe-ui/plugin-render-antd'),
     pluginRenderChartCDNLib: handleLibVersion('@vxe-ui/plugin-render-chart'),
     pluginRenderEchartsCDNLib: handleLibVersion('@vxe-ui/plugin-render-echarts'),
-    pluginRenderElementCDNLib: handleLibVersion('@vxe-ui/plugin-render-element')
+    pluginRenderElementCDNLib: handleLibVersion('@vxe-ui/plugin-render-element'),
+    pluginValidatorCDNLib: handleLibVersion('@vxe-ui/plugin-validator')
   },
   actions: {
     setPageLoading (status: boolean) {

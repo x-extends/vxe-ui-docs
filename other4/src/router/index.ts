@@ -748,6 +748,50 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
+    path: '/plugin-validator',
+    component: PageLayout,
+    children: [
+      {
+        path: 'install',
+        name: 'PluginValidator',
+        component: () => import('@/views/plugin-validator/install/CodeExample.vue')
+      },
+      {
+        path: 'form',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'PluginValidatorFormBase',
+            component: () => import('@/views/plugin-validator/form/base/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'table',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'PluginValidatorTableBase',
+            component: () => import('@/views/plugin-validator/table/base/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'grid',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'PluginValidatorGridBase',
+            component: () => import('@/views/plugin-validator/grid/base/CodeExample.vue')
+          }
+        ]
+      }
+    ]
+  },
+  {
     path: '/',
     component: PageLayout,
     children: [

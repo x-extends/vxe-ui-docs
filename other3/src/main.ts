@@ -33,6 +33,7 @@ import VxeUIPluginRenderElement from '@vxe-ui/plugin-render-element'
 import '@vxe-ui/plugin-render-element/dist/style.css'
 import VxeUIPluginRenderAntd from '@vxe-ui/plugin-render-antd'
 import '@vxe-ui/plugin-render-antd/dist/style.css'
+import VxeUIPluginValidator from '@vxe-ui/plugin-validator'
 
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
@@ -67,6 +68,7 @@ VxeUI.use(VxeUIPluginExportPDF, {
 VxeUI.use(VxeUIPluginRenderChart)
 VxeUI.use(VxeUIPluginRenderElement)
 VxeUI.use(VxeUIPluginRenderAntd)
+VxeUI.use(VxeUIPluginValidator)
 
 Vue.use(VxeUI)
 Vue.use(VxeTable)
