@@ -737,6 +737,17 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
+    path: '/plugin-render-echarts',
+    component: PageLayout,
+    children: [
+      {
+        path: 'install',
+        name: 'PluginRenderEcharts',
+        component: () => import('@/views/plugin-render-echarts/install/CodeExample.vue')
+      }
+    ]
+  },
+  {
     path: '/',
     component: PageLayout,
     children: [

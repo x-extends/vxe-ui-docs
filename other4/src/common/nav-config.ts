@@ -337,6 +337,26 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
+    title: '渲染 echarts 图表',
+    isExpand: false,
+    children: [
+      {
+        title: '开发指南',
+        children: [
+          { title: '安装插件', routerLink: { name: 'PluginRenderEcharts' } }
+        ]
+      },
+      {
+        title: 'Grid 配置式表格',
+        children: [
+          { title: '单元格 - 柱状图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' },
+          { title: '单元格 - 折线图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' },
+          { title: '单元格 - 饼图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' }
+        ]
+      }
+    ]
+  },
+  {
     title: 'API',
     isExpand: false,
     children: []
