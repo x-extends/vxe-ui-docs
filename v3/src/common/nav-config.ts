@@ -1347,7 +1347,8 @@ export const navConfigList: NavVO[] = [
             title: '表单项',
             children: [
               { title: '实现一个金额输入', routerLink: { name: 'GlobalRendererFormItemMyItemAmount' } },
-              { title: '实现一个附件上传', routerLink: { name: 'GlobalRendererFormItemMyItemUpload' } }
+              { title: '实现一个附件上传', routerLink: { name: 'GlobalRendererFormItemMyItemUpload' } },
+              { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemRender/el-input` }
             ]
           }
         ]
