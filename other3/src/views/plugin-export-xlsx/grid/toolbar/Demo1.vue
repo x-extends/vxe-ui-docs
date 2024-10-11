@@ -20,6 +20,7 @@ interface RowVO {
 export default Vue.extend({
   data () {
     const gridOptions: VxeGridProps<RowVO> = {
+      border: true,
       toolbarConfig: {
         export: true
       },

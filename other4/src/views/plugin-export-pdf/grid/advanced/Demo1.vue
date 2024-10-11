@@ -21,12 +21,20 @@ interface RowVO {
 const gridRef = ref<VxeGridInstance>()
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
+  border: true,
+  showFooter: true,
   exportConfig: {
     type: 'pdf'
   },
   columns: [
-    { type: 'seq', width: 70 },
-    { field: 'name', title: 'Name' },
+    { field: 'seq', type: 'seq', width: 70 },
+    {
+      title: '分组1',
+      children: [
+        { field: 'name', title: 'Name' },
+        { field: 'role', title: 'Role' }
+      ]
+    },
     { field: 'sex', title: 'Sex' },
     { field: 'age', title: 'Age' }
   ],

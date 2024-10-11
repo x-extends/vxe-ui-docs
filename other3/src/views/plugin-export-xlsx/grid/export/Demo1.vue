@@ -21,19 +21,20 @@ interface RowVO {
 export default Vue.extend({
   data () {
     const gridOptions: VxeGridProps<RowVO> = {
+      border: true,
       showFooter: true,
       columns: [
-        { type: 'seq', width: 70 },
+        { field: 'seq', type: 'seq', width: 70 },
         { field: 'name', title: 'Name' },
         { field: 'sex', title: 'Sex' },
         { field: 'no1', title: 'NO1' },
         { field: 'no2', title: 'NO2 String', cellType: 'string' }
       ],
       data: [
-        { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', no1: '028', no2: '028' },
-        { id: 10002, name: 'Test2', role: '研发', sex: 'Women', no1: '220', no2: '220' },
-        { id: 10003, name: 'Test3', role: '产品经理', sex: 'Man', no1: '003200', no2: '003200' },
-        { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', no1: '02040', no2: '02040' }
+        { id: 10001, name: '张三', role: 'Develop', sex: 'Man', no1: '028', no2: '028' },
+        { id: 10002, name: '李四', role: '研发', sex: 'Women', no1: '220', no2: '220' },
+        { id: 10003, name: '王五', role: '产品经理', sex: 'Man', no1: '003200', no2: '003200' },
+        { id: 10004, name: '老六', role: 'Designer', sex: 'Women', no1: '02040', no2: '02040' }
       ],
       footerData: [
         { seq: '合计', name: '12人', no1: 356 }

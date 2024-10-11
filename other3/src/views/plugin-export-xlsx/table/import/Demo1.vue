@@ -3,6 +3,7 @@
     <vxe-button @click="exportEvent">直接导出 XLSX 文件</vxe-button>
     <vxe-button @click="importEvent">直接导入 XLSX 文件</vxe-button>
     <vxe-table
+      border
       ref="tableRef"
       :data="tableData">
       <vxe-column type="seq" width="70"></vxe-column>

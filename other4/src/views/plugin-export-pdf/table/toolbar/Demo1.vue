@@ -2,6 +2,7 @@
   <div>
     <vxe-toolbar ref="toolbarRef" export></vxe-toolbar>
     <vxe-table
+       border
       ref="tableRef"
       :export-config="{type: 'pdf'}"
       :data="tableData">

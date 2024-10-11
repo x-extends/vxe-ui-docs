@@ -18,6 +18,7 @@ interface RowVO {
 }
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
+  border: true,
   toolbarConfig: {
     export: true
   },

@@ -49,7 +49,7 @@ VxeUI.use(VxeUIPluginExportPDF, {
   fonts: [
     {
       fontName: 'SourceHanSans-Normal',
-      fontUrl: 'https://cdn.jsdelivr.net/npm/vxe-table-plugin-export-pdf/fonts/source-han-sans-normal.js'
+      fontUrl: 'https://cdn.jsdelivr.net/npm/@vxe-ui/plugin-export-pdf/fonts/source-han-sans-normal.js'
     }
   ]
 })
