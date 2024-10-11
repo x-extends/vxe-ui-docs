@@ -82,6 +82,8 @@
               VxeAlert,
               VxeAnchor,
               VxeAnchorLink,
+              VxeAvatar,
+              VxeBadge,
               VxeBreadcrumb,
               VxeBreadcrumbItem,
               VxeButton,
@@ -89,16 +91,20 @@
               VxeCalendar,
               VxeCard,
               VxeCarousel,
+              VxeCarouselItem,
               VxeCheckbox,
               VxeCheckboxGroup,
               VxeCol,
               VxeCollapse,
               VxeCollapsePane,
+              VxeCountdown,
               VxeDatePicker,
               VxeDrawer,
+              VxeEmpty,
               VxeForm,
               VxeFormDesign,
               VxeFormGather,
+              VxeFormGroup,
               VxeFormItem,
               VxeFormView,
               VxeIcon,
@@ -119,6 +125,7 @@
               VxeLoading,
               VxeMenu,
               VxeModal,
+              VxeNoticeBar,
               VxeNumberInput,
               VxeOptgroup,
               VxeOption,
@@ -130,19 +137,24 @@
               VxeRadio,
               VxeRadioButton,
               VxeRadioGroup,
+              VxeResult,
               VxeRow,
               VxeSelect,
+              VxeSlider,
+              VxeSteps,
               VxeSwitch,
               VxeTabPane,
               VxeTabs,
               VxeTag,
+              VxeTextEllipsis,
               VxeText,
               VxeTextarea,
               VxeTip,
               VxeTooltip,
               VxeTree,
               VxeTreeSelect,
-              VxeUpload
+              VxeUpload,
+              VxeWatermark
             } from 'vxe-pc-ui'
 
             import {
@@ -169,6 +181,8 @@
             VxeUI.component(VxeAlert)
             VxeUI.component(VxeAnchor)
             VxeUI.component(VxeAnchorLink)
+            VxeUI.component(VxeAvatar)
+            VxeUI.component(VxeBadge)
             VxeUI.component(VxeBreadcrumb)
             VxeUI.component(VxeBreadcrumbItem)
             VxeUI.component(VxeButton)
@@ -176,16 +190,20 @@
             VxeUI.component(VxeCalendar)
             VxeUI.component(VxeCard)
             VxeUI.component(VxeCarousel)
+            VxeUI.component(VxeCarouselItem)
             VxeUI.component(VxeCheckbox)
             VxeUI.component(VxeCheckboxGroup)
             VxeUI.component(VxeCol)
             VxeUI.component(VxeCollapse)
             VxeUI.component(VxeCollapsePane)
+            VxeUI.component(VxeCountdown)
             VxeUI.component(VxeDatePicker)
             VxeUI.component(VxeDrawer)
+            VxeUI.component(VxeEmpty)
             VxeUI.component(VxeForm)
             VxeUI.component(VxeFormDesign)
             VxeUI.component(VxeFormGather)
+            VxeUI.component(VxeFormGroup)
             VxeUI.component(VxeFormItem)
             VxeUI.component(VxeFormView)
             VxeUI.component(VxeIcon)
@@ -206,6 +224,7 @@
             VxeUI.component(VxeLoading)
             VxeUI.component(VxeMenu)
             VxeUI.component(VxeModal)
+            VxeUI.component(VxeNoticeBar)
             VxeUI.component(VxeNumberInput)
             VxeUI.component(VxeOptgroup)
             VxeUI.component(VxeOption)
@@ -217,12 +236,16 @@
             VxeUI.component(VxeRadio)
             VxeUI.component(VxeRadioButton)
             VxeUI.component(VxeRadioGroup)
+            VxeUI.component(VxeResult)
             VxeUI.component(VxeRow)
             VxeUI.component(VxeSelect)
+            VxeUI.component(VxeSlider)
+            VxeUI.component(VxeSteps)
             VxeUI.component(VxeSwitch)
             VxeUI.component(VxeTabPane)
             VxeUI.component(VxeTabs)
             VxeUI.component(VxeTag)
+            VxeUI.component(VxeTextEllipsis)
             VxeUI.component(VxeText)
             VxeUI.component(VxeTextarea)
             VxeUI.component(VxeTip)
@@ -230,6 +253,7 @@
             VxeUI.component(VxeTree)
             VxeUI.component(VxeTreeSelect)
             VxeUI.component(VxeUpload)
+            VxeUI.component(VxeWatermark)
 
             VxeUI.component(VxeTable)
             VxeUI.component(VxeColumn)

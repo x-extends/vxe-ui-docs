@@ -82,6 +82,8 @@
               VxeAlert,
               VxeAnchor,
               VxeAnchorLink,
+              VxeAvatar,
+              VxeBadge,
               VxeBreadcrumb,
               VxeBreadcrumbItem,
               VxeButton,
@@ -89,16 +91,20 @@
               VxeCalendar,
               VxeCard,
               VxeCarousel,
+              VxeCarouselItem,
               VxeCheckbox,
               VxeCheckboxGroup,
               VxeCol,
               VxeCollapse,
               VxeCollapsePane,
+              VxeCountdown,
               VxeDatePicker,
               VxeDrawer,
+              VxeEmpty,
               VxeForm,
               VxeFormDesign,
               VxeFormGather,
+              VxeFormGroup,
               VxeFormItem,
               VxeFormView,
               VxeIcon,
@@ -119,6 +125,7 @@
               VxeLoading,
               VxeMenu,
               VxeModal,
+              VxeNoticeBar,
               VxeNumberInput,
               VxeOptgroup,
               VxeOption,
@@ -130,19 +137,24 @@
               VxeRadio,
               VxeRadioButton,
               VxeRadioGroup,
+              VxeResult,
               VxeRow,
               VxeSelect,
+              VxeSlider,
+              VxeSteps,
               VxeSwitch,
               VxeTabPane,
               VxeTabs,
               VxeTag,
+              VxeTextEllipsis,
               VxeText,
               VxeTextarea,
               VxeTip,
               VxeTooltip,
               VxeTree,
               VxeTreeSelect,
-              VxeUpload
+              VxeUpload,
+              VxeWatermark
             } from 'vxe-pc-ui'
 
             import {
@@ -167,6 +179,8 @@
               app.use(VxeAlert)
               app.use(VxeAnchor)
               app.use(VxeAnchorLink)
+              app.use(VxeAvatar)
+              app.use(VxeBadge)
               app.use(VxeBreadcrumb)
               app.use(VxeBreadcrumbItem)
               app.use(VxeButton)
@@ -174,16 +188,20 @@
               app.use(VxeCalendar)
               app.use(VxeCard)
               app.use(VxeCarousel)
+              app.use(VxeCarouselItem)
               app.use(VxeCheckbox)
               app.use(VxeCheckboxGroup)
               app.use(VxeCol)
               app.use(VxeCollapse)
               app.use(VxeCollapsePane)
+              app.use(VxeCountdown)
               app.use(VxeDatePicker)
               app.use(VxeDrawer)
+              app.use(VxeEmpty)
               app.use(VxeForm)
               app.use(VxeFormDesign)
               app.use(VxeFormGather)
+              app.use(VxeFormGroup)
               app.use(VxeFormItem)
               app.use(VxeFormView)
               app.use(VxeIcon)
@@ -204,6 +222,7 @@
               app.use(VxeLoading)
               app.use(VxeMenu)
               app.use(VxeModal)
+              app.use(VxeNoticeBar)
               app.use(VxeNumberInput)
               app.use(VxeOptgroup)
               app.use(VxeOption)
@@ -215,12 +234,16 @@
               app.use(VxeRadio)
               app.use(VxeRadioButton)
               app.use(VxeRadioGroup)
+              app.use(VxeResult)
               app.use(VxeRow)
               app.use(VxeSelect)
+              app.use(VxeSlider)
+              app.use(VxeSteps)
               app.use(VxeSwitch)
               app.use(VxeTabPane)
               app.use(VxeTabs)
               app.use(VxeTag)
+              app.use(VxeTextEllipsis)
               app.use(VxeText)
               app.use(VxeTextarea)
               app.use(VxeTip)
@@ -228,6 +251,7 @@
               app.use(VxeTree)
               app.use(VxeTreeSelect)
               app.use(VxeUpload)
+              app.use(VxeWatermark)
             }
 
             function lazyVxeTable (app) {
@@ -238,7 +262,10 @@
               app.use(VxeToolbar)
             }
 
-            createApp(App).use(lazyVxeUI).use(lazyVxeTable).mount('#app')
+            // ...
+            Vue.use(lazyVxeUI)
+            Vue.use(lazyVxeTable)
+            // ...
           </pre-code>
         </pre>
       </template>
