@@ -8,7 +8,7 @@ import JoinSponsor from '@/views/start/JoinSponsor.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/*',
+    path: '/:pathMatch(.*)*',
     redirect: {
       name: 'PluginRenderChartGridBar'
     }
