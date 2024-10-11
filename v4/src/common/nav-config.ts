@@ -835,7 +835,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
       i18nKey: 'app.aside.menu.tableGlobalValidators',
       children: [
         { title: 'API', routerLink: { name: 'GlobalValidatorsTableAPI' } },
-        { title: '单元格校验', routerLink: { name: 'GlobalValidatorsTableBase' } }
+        { title: '单元格校验', routerLink: { name: 'GlobalValidatorsTableBase' } },
+        { title: '便捷校验配置插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-validator/table/base` }
       ]
     },
     {
@@ -1345,7 +1346,8 @@ export const navConfigList: NavVO[] = [
         i18nKey: 'app.aside.menu.formGlobalValidators',
         children: [
           { title: 'API', routerLink: { name: 'GlobalValidatorsFormAPI' } },
-          { title: '表单项校验', routerLink: { name: 'GlobalValidatorsFormBase' } }
+          { title: '表单项校验', routerLink: { name: 'GlobalValidatorsFormBase' } },
+          { title: '便捷校验配置插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-validator/form/base` }
         ]
       },
       {
