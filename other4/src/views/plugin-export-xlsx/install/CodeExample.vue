@@ -12,9 +12,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-export-xlsx exceljs
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-export-xlsx exceljs
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs
+            # 或者
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs
             `">
           </pre-code>
         </pre>
@@ -52,4 +54,5 @@ import { useAppStore } from '@/store/app'
 const appStore = useAppStore()
 const uiCDNLib = computed(() => appStore.uiCDNLib)
 const tableCDNLib = computed(() => appStore.tableCDNLib)
+const pluginExportXlsxCDNLib = computed(() => appStore.pluginExportXlsxCDNLib)
 </script>

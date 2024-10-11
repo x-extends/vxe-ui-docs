@@ -15,9 +15,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-antd
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderAntdCDNLib}
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-antd
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderAntdCDNLib}
+            # 或者
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderAntdCDNLib}
             `">
           </pre-code>
         </pre>
@@ -49,4 +51,5 @@ import { useAppStore } from '@/store/app'
 const appStore = useAppStore()
 const uiCDNLib = computed(() => appStore.uiCDNLib)
 const tableCDNLib = computed(() => appStore.tableCDNLib)
+const pluginRenderAntdCDNLib = computed(() => appStore.pluginRenderAntdCDNLib)
 </script>

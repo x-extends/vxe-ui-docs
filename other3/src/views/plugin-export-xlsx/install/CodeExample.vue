@@ -12,9 +12,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-export-xlsx@3 exceljs
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-export-xlsx@3 exceljs
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs
+            # 或者
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs
             `">
           </pre-code>
         </pre>
@@ -53,7 +55,8 @@ export default Vue.extend({
   computed: {
     ...mapGetters([
       'uiCDNLib',
-      'tableCDNLib'
+      'tableCDNLib',
+      'pluginExportXlsxCDNLib'
     ])
   }
 })

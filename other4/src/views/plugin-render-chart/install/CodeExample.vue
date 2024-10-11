@@ -12,9 +12,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-chart
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderChartCDNLib}
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-chart
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderChartCDNLib}
+            # 或者
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderChartCDNLib}
             `">
           </pre-code>
         </pre>
@@ -46,4 +48,5 @@ import { useAppStore } from '@/store/app'
 const appStore = useAppStore()
 const uiCDNLib = computed(() => appStore.uiCDNLib)
 const tableCDNLib = computed(() => appStore.tableCDNLib)
+const pluginRenderChartCDNLib = computed(() => appStore.pluginRenderChartCDNLib)
 </script>

@@ -15,9 +15,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-element@3
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-element@3
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
+            # 或者
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
             `">
           </pre-code>
         </pre>

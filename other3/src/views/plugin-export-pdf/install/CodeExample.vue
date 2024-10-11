@@ -12,9 +12,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-export-pdf@3 jspdf
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginExportPdfCDNLib} jspdf
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-export-pdf@3 jspdf
+            yarn add ${ uiCDNLib } ${ tableCDNLib }${pluginExportPdfCDNLib} jspdf
+            # 或者
+            pnpm add ${ uiCDNLib } ${ tableCDNLib }${pluginExportPdfCDNLib} jspdf
             `">
           </pre-code>
         </pre>
@@ -62,7 +64,8 @@ export default Vue.extend({
   computed: {
     ...mapGetters([
       'uiCDNLib',
-      'tableCDNLib'
+      'tableCDNLib',
+      'pluginExportPdfCDNLib'
     ])
   }
 })

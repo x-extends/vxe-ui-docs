@@ -12,9 +12,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-export-pdf jspdf
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginExportPdfCDNLib} jspdf
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-export-pdf jspdf
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportPdfCDNLib} jspdf
+            # 或者
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportPdfCDNLib} jspdf
             `">
           </pre-code>
         </pre>
@@ -61,4 +63,5 @@ import { useAppStore } from '@/store/app'
 const appStore = useAppStore()
 const uiCDNLib = computed(() => appStore.uiCDNLib)
 const tableCDNLib = computed(() => appStore.tableCDNLib)
+const pluginExportPdfCDNLib = computed(() => appStore.pluginExportPdfCDNLib)
 </script>

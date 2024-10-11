@@ -23,6 +23,13 @@ const i18nStatus: Record<string, boolean> = {
 
 Vue.use(Vuex)
 
+function handleLibVersion (libName: string) {
+  return function (status: any) {
+    const uiConf = status.versionConfig[libName]
+    return `${libName}@${(uiConf ? uiConf[`v${status.docsVersion}-latest`] : '') || status.docsVersion}`
+  }
+}
+
 export default new Vuex.Store({
   state: {
     pageLoading: false,
@@ -42,14 +49,15 @@ export default new Vuex.Store({
     versionConfig: {}
   },
   getters: {
-    uiCDNLib (status) {
-      const uiConf = status.versionConfig['vxe-pc-ui']
-      return `vxe-pc-ui@${(uiConf ? uiConf[`v${status.docsVersion}-latest`] : '') || status.docsVersion}`
-    },
-    tableCDNLib (status) {
-      const tableConf = status.versionConfig['vxe-table']
-      return `vxe-table@${(tableConf ? tableConf[`v${status.docsVersion}-latest`] : '') || status.docsVersion}`
-    }
+    uiCDNLib: handleLibVersion('vxe-pc-ui'),
+    tableCDNLib: handleLibVersion('vxe-table'),
+    pluginExportPdfCDNLib: handleLibVersion('@vxe-ui/plugin-export-pdf'),
+    pluginExportXlsxCDNLib: handleLibVersion('@vxe-ui/plugin-export-xlsx'),
+    pluginMenuCDNLib: handleLibVersion('@vxe-ui/plugin-menu'),
+    pluginRenderAntdCDNLib: handleLibVersion('@vxe-ui/plugin-render-antd'),
+    pluginRenderChartCDNLib: handleLibVersion('@vxe-ui/plugin-render-chart'),
+    pluginRenderEchartsCDNLib: handleLibVersion('@vxe-ui/plugin-render-echarts'),
+    pluginRenderElementCDNLib: handleLibVersion('@vxe-ui/plugin-render-element')
   },
   mutations: {
     setPageLoading (state, status: boolean) {

@@ -12,9 +12,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-menu
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginMenuCDNLib}
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-menu
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginMenuCDNLib}
+            # 或者
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginMenuCDNLib}
             `">
           </pre-code>
         </pre>
@@ -47,7 +49,8 @@ export default Vue.extend({
   computed: {
     ...mapGetters([
       'uiCDNLib',
-      'tableCDNLib'
+      'tableCDNLib',
+      'pluginMenuCDNLib'
     ])
   }
 })

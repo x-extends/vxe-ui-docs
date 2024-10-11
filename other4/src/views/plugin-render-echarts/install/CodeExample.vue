@@ -3,7 +3,7 @@
     <CodeLight>
       <template #tip>
         <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-render-echarts">
-          该插件提供了在表格中通过鼠标选取单元格后渲染 echarts 图表
+          该插件提供了在表格中通过鼠标选取单元格后渲染 <vxe-link href="https://www.npmjs.com/package/echarts" target="_blank">echarts</vxe-link> 图表
         </vxe-tip>
       </template>
 
@@ -12,9 +12,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-echarts echarts
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-echarts echarts
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts
+            # 或者
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts
             `">
           </pre-code>
         </pre>
@@ -52,4 +54,5 @@ import { useAppStore } from '@/store/app'
 const appStore = useAppStore()
 const uiCDNLib = computed(() => appStore.uiCDNLib)
 const tableCDNLib = computed(() => appStore.tableCDNLib)
+const pluginRenderEchartsCDNLib = computed(() => appStore.pluginRenderEchartsCDNLib)
 </script>

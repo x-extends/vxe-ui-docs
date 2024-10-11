@@ -15,9 +15,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-element
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-element
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
+            # 或者
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
             `">
           </pre-code>
         </pre>
@@ -49,4 +51,5 @@ import { useAppStore } from '@/store/app'
 const appStore = useAppStore()
 const uiCDNLib = computed(() => appStore.uiCDNLib)
 const tableCDNLib = computed(() => appStore.tableCDNLib)
+const pluginRenderElementCDNLib = computed(() => appStore.pluginRenderElementCDNLib)
 </script>

@@ -15,9 +15,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-antd@3
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderAntdCDNLib}
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } @vxe-ui/plugin-render-antd@3
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderAntdCDNLib}
+            # 或者
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderAntdCDNLib}
             `">
           </pre-code>
         </pre>
@@ -50,7 +52,8 @@ export default Vue.extend({
   computed: {
     ...mapGetters([
       'uiCDNLib',
-      'tableCDNLib'
+      'tableCDNLib',
+      'pluginRenderAntdCDNLib'
     ])
   }
 })
