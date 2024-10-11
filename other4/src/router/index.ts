@@ -89,6 +89,69 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
+    path: '/plugin-menu',
+    component: PageLayout,
+    children: [
+      {
+        path: 'install',
+        name: 'PluginMenuInstall',
+        component: () => import('@/views/plugin-menu/install/CodeExample.vue')
+      },
+      {
+        path: 'table',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'header',
+            name: 'PluginMenuTableHeader',
+            component: () => import('@/views/plugin-menu/table/header/CodeExample.vue')
+          },
+          {
+            path: 'body',
+            name: 'PluginMenuTableBody',
+            component: () => import('@/views/plugin-menu/table/body/CodeExample.vue')
+          },
+          {
+            path: 'footer',
+            name: 'PluginMenuTableFooter',
+            component: () => import('@/views/plugin-menu/table/footer/CodeExample.vue')
+          },
+          {
+            path: 'full',
+            name: 'PluginMenuTableFull',
+            component: () => import('@/views/plugin-menu/table/full/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'grid',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'header',
+            name: 'PluginMenuGridHeader',
+            component: () => import('@/views/plugin-menu/grid/header/CodeExample.vue')
+          },
+          {
+            path: 'body',
+            name: 'PluginMenuGridBody',
+            component: () => import('@/views/plugin-menu/grid/body/CodeExample.vue')
+          },
+          {
+            path: 'footer',
+            name: 'PluginMenuGridFooter',
+            component: () => import('@/views/plugin-menu/grid/footer/CodeExample.vue')
+          },
+          {
+            path: 'full',
+            name: 'PluginMenuGridFull',
+            component: () => import('@/views/plugin-menu/grid/full/CodeExample.vue')
+          }
+        ]
+      }
+    ]
+  },
+  {
     path: '/plugin-export-xlsx',
     component: PageLayout,
     children: [

@@ -24,6 +24,7 @@ import 'vxe-table/lib/style.css'
 
 import enUS from 'vxe-pc-ui/lib/language/en-US'
 
+import VxeUIPluginMenu from '@vxe-ui/plugin-menu'
 import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
 import VxeUIPluginExportPDF from '@vxe-ui/plugin-export-pdf'
 import VxeUIPluginRenderChart from '@vxe-ui/plugin-render-chart'
@@ -51,6 +52,7 @@ axios.defaults.baseURL = 'https://api.vxetable.cn/demo'
 
 VxeUI.setI18n('en-US', enUS)
 
+VxeUI.use(VxeUIPluginMenu)
 VxeUI.use(VxeUIPluginExportXLSX)
 VxeUI.use(VxeUIPluginExportPDF, {
   // 支持中文字体

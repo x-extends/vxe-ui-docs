@@ -52,6 +52,36 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
+    title: '右键菜单',
+    isExpand: false,
+    children: [
+      {
+        title: '开发指南',
+        children: [
+          { title: '安装插件', routerLink: { name: 'PluginMenuInstall' } }
+        ]
+      },
+      {
+        title: 'Table 基础表格',
+        children: [
+          { title: '表头菜单', routerLink: { name: 'PluginMenuTableHeader' } },
+          { title: '单元格菜单', routerLink: { name: 'PluginMenuTableBody' } },
+          { title: '表尾菜单', routerLink: { name: 'PluginMenuTableFooter' } },
+          { title: '完整右键菜单', routerLink: { name: 'PluginMenuTableFull' } }
+        ]
+      },
+      {
+        title: 'Grid 配置式表格',
+        children: [
+          { title: '表头菜单', routerLink: { name: 'PluginMenuGridHeader' } },
+          { title: '单元格菜单', routerLink: { name: 'PluginMenuGridBody' } },
+          { title: '表尾菜单', routerLink: { name: 'PluginMenuGridFooter' } },
+          { title: '完整右键菜单', routerLink: { name: 'PluginMenuGridFull' } }
+        ]
+      }
+    ]
+  },
+  {
     title: '导入/导出 XLSX',
     isExpand: false,
     children: [
