@@ -274,7 +274,9 @@ export const navConfigList: NavVO[] = [
       {
         title: 'FormDesign 表单设计器',
         children: [
-          { title: '渲染视图', routerLink: { name: 'PluginRenderElementFormDesignRenderView' } }
+          { title: '渲染视图', routerLink: { name: 'PluginRenderElementFormDesignRenderView' } },
+          { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/' },
+          { title: '零代码平台模板', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/' }
         ]
       }
     ]
@@ -361,7 +363,9 @@ export const navConfigList: NavVO[] = [
       {
         title: 'FormDesign 表单设计器',
         children: [
-          { title: '渲染视图', routerLink: { name: 'PluginRenderAntdFormDesignRenderView' } }
+          { title: '渲染视图', routerLink: { name: 'PluginRenderAntdFormDesignRenderView' } },
+          { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/' },
+          { title: '零代码平台模板', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/' }
         ]
       }
     ]
