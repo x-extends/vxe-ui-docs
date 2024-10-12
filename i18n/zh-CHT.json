@@ -169,7 +169,7 @@
         "areaScroll": "虛擬滾動",
         "areaChart": "簡單圖表",
         "areaEcharts": "整合第三方 echarts 圖表",
-        "areaBasicsEcharts": "基礎圖表",
+        "areaBasicsEcharts": "单元格图表",
         "areaExceljs": "整合第三方 exceljs 導入匯出",
         "areaExportExceljs": "匯出 xlsx",
         "areaJspdf": "整合第三方 jspdf 匯出",

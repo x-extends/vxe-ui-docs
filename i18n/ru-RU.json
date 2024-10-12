@@ -169,7 +169,7 @@
         "areaScroll": "виртуальная прокрутка",
         "areaChart": "простая диаграмма",
         "areaEcharts": "Интегрируйте сторонние диаграммы echarts",
-        "areaBasicsEcharts": "базовая диаграмма",
+        "areaBasicsEcharts": "单元格图表",
         "areaExceljs": "Интеграция стороннего импорта и экспорта Exceljs",
         "areaExportExceljs": "экспортировать xlsx",
         "areaJspdf": "Интегрируйте сторонний экспорт jspdf",

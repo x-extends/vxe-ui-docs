@@ -3,7 +3,7 @@
     <CodeLight>
       <template #tip>
         <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-validator">
-          该插件在表格或表单中提供了常用的校验
+          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/main/plugin-validator" target="_blank"></vxe-link> 该插件在表格或表单中提供了常用的校验
         </vxe-tip>
       </template>
 

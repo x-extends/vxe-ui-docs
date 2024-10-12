@@ -3,7 +3,7 @@
     <CodeLight>
       <template #tip>
         <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-menu">
-          该插件提供了在表格中提供便捷的右键菜单操作
+          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/v3/plugin-men" target="_blank"></vxe-link> 该插件提供了在表格中提供便捷的右键菜单操作
         </vxe-tip>
       </template>
 

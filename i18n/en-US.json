@@ -169,7 +169,7 @@
         "areaScroll": "virtual scrolling",
         "areaChart": "simple chart",
         "areaEcharts": "Integrate third-party echarts charts",
-        "areaBasicsEcharts": "basic chart",
+        "areaBasicsEcharts": "Cell chart",
         "areaExceljs": "Integrate third-party exceljs import and export",
         "areaExportExceljs": "export xlsx",
         "areaJspdf": "Integrate third-party jspdf export",

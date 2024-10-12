@@ -3,7 +3,7 @@
     <CodeLight>
       <template #tip>
         <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-render-chart">
-          该插件提供了在表格中渲染高性能的轻量级图表
+          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/main/plugin-render-chart" target="_blank"></vxe-link> 该插件提供了在表格中渲染高性能的轻量级图表
         </vxe-tip>
       </template>
 

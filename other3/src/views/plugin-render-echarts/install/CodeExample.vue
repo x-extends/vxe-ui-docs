@@ -3,8 +3,9 @@
     <CodeLight>
       <template #tip>
         <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-render-echarts">
-          该插件提供了在表格中通过鼠标选取单元格后渲染 echarts 图表
+          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/v3/plugin-render-echarts" target="_blank"></vxe-link> 该插件提供了在表格中通过鼠标选取单元格后渲染 echarts 图表
         </vxe-tip>
+        <vxe-tip status="error">该导出插件基于 <vxe-link href="https://github.com/apache/echarts" target="_blank">echarts</vxe-link> 库实现，具体开源协议请自行去查看对应的库</vxe-tip>
       </template>
 
       <template #use>

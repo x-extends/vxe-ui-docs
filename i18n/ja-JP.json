@@ -169,7 +169,7 @@
         "areaScroll": "仮想スクロール",
         "areaChart": "簡単なチャート",
         "areaEcharts": "サードパーティの echarts チャートを統合する",
-        "areaBasicsEcharts": "基本チャート",
+        "areaBasicsEcharts": "单元格图表",
         "areaExceljs": "サードパーティの ExcelJS のインポートとエクスポートを統合する",
         "areaExportExceljs": "xlsxをエクスポート",
         "areaJspdf": "サードパーティの jspdf エクスポートを統合する",
