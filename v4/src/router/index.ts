@@ -1246,6 +1246,11 @@ const tableRouteConfig: RouteRecordRaw = {
           path: 'edit',
           name: 'ComponentTableScrollEdit',
           component: () => import('@/views/table/scroll/edit/CodeExample.vue')
+        },
+        {
+          path: 'hvEdit',
+          name: 'ComponentTableScrollHVhEdit',
+          component: () => import('@/views/table/scroll/hvEdit/CodeExample.vue')
         }
       ]
     },
@@ -2489,6 +2494,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'edit',
           name: 'ComponentGridScrollEdit',
           component: () => import('@/views/grid/scroll/edit/CodeExample.vue')
+        },
+        {
+          path: 'hvEdit',
+          name: 'ComponentGridScrollHVEdit',
+          component: () => import('@/views/grid/scroll/hvEdit/CodeExample.vue')
         }
       ]
     },

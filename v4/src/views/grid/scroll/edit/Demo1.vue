@@ -21,7 +21,7 @@ interface RowVO {
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
   showOverflow: true,
-  height: 600,
+  height: 800,
   loading: false,
   editConfig: {
     trigger: 'click',

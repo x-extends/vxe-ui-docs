@@ -3,7 +3,7 @@
     <vxe-table
       border
       show-overflow
-      height="600"
+      height="800"
       :scroll-y="{enabled: true, gt: 0}"
       :edit-config="editConfig"
       :loading="loading"

@@ -374,8 +374,9 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '使用分组表头', routerLink: { name: 'ComponentTableScrollGroup' } },
             { title: '按键导航', routerLink: { name: 'ComponentTableScrollKeyboard' } },
             { title: '单元格合并', routerLink: { name: 'ComponentTableScrollMerge' } },
-            { title: '树形虚拟滚动', routerLink: { name: 'ComponentTableScrollTree' } },
-            { title: '可编辑', routerLink: { name: 'ComponentTableScrollEdit' } }
+            { title: '树形 + 横向虚拟滚动', routerLink: { name: 'ComponentTableScrollTree' } },
+            { title: '可编辑 + 横向虚拟滚动', routerLink: { name: 'ComponentTableScrollEdit' } },
+            { title: '可编辑 + 纵向和横向虚拟滚动', routerLink: { name: 'ComponentTableScrollHVEdit' } }
           ]
         },
         {
@@ -760,8 +761,9 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '设置行高', routerLink: { name: 'ComponentGridScrollRowHeight' } },
             { title: '使用分组表头', routerLink: { name: 'ComponentGridScrollGroup' } },
             { title: '使用表尾', routerLink: { name: 'ComponentGridScrollFooter' } },
-            { title: '树形虚拟滚动', routerLink: { name: 'ComponentGridScrollTree' } },
-            { title: '可编辑', routerLink: { name: 'ComponentGridScrollEdit' } }
+            { title: '树形 + 横向虚拟滚动', routerLink: { name: 'ComponentGridScrollTree' } },
+            { title: '可编辑 + 横向虚拟滚动', routerLink: { name: 'ComponentGridScrollEdit' } },
+            { title: '可编辑 + 纵向和横向虚拟滚动', routerLink: { name: 'ComponentGridScrollHVEdit' } }
           ]
         },
         {
