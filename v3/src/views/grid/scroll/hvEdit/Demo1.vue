@@ -39,7 +39,7 @@ export default Vue.extend({
       showOverflow: true,
       showHeaderOverflow: true,
       showFooterOverflow: true,
-      height: 600,
+      height: 800,
       editConfig: {
         trigger: 'click',
         mode: 'cell'

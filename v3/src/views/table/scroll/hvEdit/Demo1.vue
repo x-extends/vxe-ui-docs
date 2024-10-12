@@ -15,7 +15,7 @@
       show-header-overflow
       show-footer-overflow
       ref="tableRef"
-      height="600"
+      height="800"
       :loading="loading"
       :column-config="{resizable: true}"
       :edit-config="editConfig"
