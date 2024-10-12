@@ -6,8 +6,6 @@
       <vxe-button @click="loadDataAndColumns(5000, 100)">5k行100列</vxe-button>
       <vxe-button @click="loadDataAndColumns(10000, 150)">1w行150列</vxe-button>
       <vxe-button @click="loadDataAndColumns(30000, 200)">3w行200列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(50000, 250)">5w行250列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(100000, 300)">10w行300列</vxe-button>
     </p>
     <p>
       <vxe-button @click="loadDataAndColumns(50, 50)">50行100列</vxe-button>
@@ -15,8 +13,6 @@
       <vxe-button @click="loadDataAndColumns(100, 5000)">100行5k列</vxe-button>
       <vxe-button @click="loadDataAndColumns(150, 10000)">200行1w列</vxe-button>
       <vxe-button @click="loadDataAndColumns(200, 30000)">200行3w列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(250, 50000)">250行1w列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(300, 100000)">300行10w列</vxe-button>
     </p>
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
@@ -63,8 +59,6 @@ export default Vue.extend({
     loadDataAndColumns (rowSize: number, colSize: number) {
       this.gridOptions.loading = true
       setTimeout(() => {
-        const startTime = Date.now()
-
         const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
         const colList: VxeGridPropTypes.Columns = []
         for (let i = 0; i < colSize; i++) {
@@ -86,6 +80,7 @@ export default Vue.extend({
           dataList.push(item)
         }
         if ($grid) {
+          const startTime = Date.now()
           $grid.loadColumn(colList).then(() => {
             return $grid.loadData(dataList)
           }).then(() => {
