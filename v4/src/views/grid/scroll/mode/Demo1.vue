@@ -45,6 +45,7 @@ const imgList1CellRender = reactive<VxeColumnPropTypes.CellRender>({
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
+  showOverflow: true,
   showHeaderOverflow: true,
   showFooterOverflow: true,
   loading: false,
