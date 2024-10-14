@@ -989,6 +989,21 @@ const tableRouteConfig: RouteRecordRaw = {
           path: 'vxe-button',
           name: 'ComponentTableCellTemplateVxeButton',
           component: () => import('@/views/table/cellTemplate/vxe-button/CodeExample.vue')
+        },
+        {
+          path: 'vxe-image',
+          name: 'ComponentTableCellTemplateVxeImage',
+          component: () => import('@/views/table/cellTemplate/vxe-image/CodeExample.vue')
+        },
+        {
+          path: 'vxe-image-group',
+          name: 'ComponentTableCellTemplateVxeImageGroup',
+          component: () => import('@/views/table/cellTemplate/vxe-image-group/CodeExample.vue')
+        },
+        {
+          path: 'vxe-text-ellipsis',
+          name: 'ComponentTableCellTemplateVxeTextEllipsis',
+          component: () => import('@/views/table/cellTemplate/vxe-text-ellipsis/CodeExample.vue')
         }
       ]
     },
