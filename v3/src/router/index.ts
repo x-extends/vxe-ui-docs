@@ -3468,6 +3468,27 @@ const routes: Array<RouteConfig> = [
         ]
       },
       {
+        path: 'rate',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentRateSize',
+            component: () => import('@/views/rate/size/CodeExample.vue')
+          },
+          {
+            path: 'status',
+            name: 'ComponentRateStatus',
+            component: () => import('@/views/rate/status/CodeExample.vue')
+          },
+          {
+            path: 'disabled',
+            name: 'ComponentRateDisabled',
+            component: () => import('@/views/rate/disabled/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'radio',
         component: RouteLayout,
         children: [
@@ -5702,6 +5723,16 @@ const routes: Array<RouteConfig> = [
                     path: 'vxe-checkbox-group',
                     name: 'ComponentFormConfigItemRenderVxeCheckboxGroup',
                     component: () => import('@/views/form/config/itemRender/vxe-checkbox-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-rate',
+                    name: 'ComponentFormConfigItemRenderVxeRate',
+                    component: () => import('@/views/form/config/itemRender/vxe-rate/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-slider',
+                    name: 'ComponentFormConfigItemRenderVxeSlider',
+                    component: () => import('@/views/form/config/itemRender/vxe-slider/CodeExample.vue')
                   },
                   {
                     path: 'vxe-image',
