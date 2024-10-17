@@ -16,6 +16,8 @@
             npm install ${uiCDNLib } ${ tableCDNLib }
             # 或者
             yarn add ${uiCDNLib } ${ tableCDNLib }
+            # 或者
+            pnpm add ${uiCDNLib } ${ tableCDNLib }
             `">
           </pre-code>
           <pre-code

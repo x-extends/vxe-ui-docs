@@ -9,6 +9,9 @@
       </template>
 
       <template #use>
+        <vxe-tip status="success" title="完整安装">
+          可以使用全功能组件
+        </vxe-tip>
         <pre>
           <pre-code
             language="shell"
@@ -16,6 +19,8 @@
             npm install ${uiCDNLib } ${ tableCDNLib }
             # 或者
             yarn add ${uiCDNLib } ${ tableCDNLib }
+            # 或者
+            pnpm add ${uiCDNLib } ${ tableCDNLib }
             `">
           </pre-code>
           <pre-code
