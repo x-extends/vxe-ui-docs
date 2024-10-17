@@ -124,7 +124,7 @@ const giteeUrl = computed(() => {
 const sysVersionOptions = computed(() => {
   return systemVersionList.value.map(item => {
     return {
-      label: i18n.global.t(`app.version.${process.env.VUE_APP_PACKAGE_NAME}.v${item.i18nKey || item.version.replace('.', 'd')}`),
+      label: i18n.global.t(`app.version.${process.env.VUE_APP_PACKAGE_NAME}.v${(item.i18nKey || item.version).replace('.', 'd')}`),
       value: item.version,
       disabled: !!item.isDisabled,
       className: item.isStop ? 'due-to-stop' : (item.isAbandoned ? 'about-to-stop' : '')
