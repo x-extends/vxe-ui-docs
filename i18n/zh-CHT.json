@@ -170,7 +170,7 @@
         "areaMenu": "右鍵選單",
         "areaEdit": "可編輯",
         "areaCustom": "自訂列設定",
-        "areaScroll": "虛擬滾動",
+        "areaScroll": "虛擬滾動（超大数据量表格）",
         "areaChart": "簡單圖表",
         "areaEcharts": "整合第三方 echarts 圖表",
         "areaBasicsEcharts": "单元格图表",

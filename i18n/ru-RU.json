@@ -170,7 +170,7 @@
         "areaMenu": "меню правой кнопки мыши",
         "areaEdit": "Редактируемый",
         "areaCustom": "Пользовательские настройки столбца",
-        "areaScroll": "виртуальная прокрутка",
+        "areaScroll": "Virtual scrolling (oversized data inventory)",
         "areaChart": "простая диаграмма",
         "areaEcharts": "Интегрируйте сторонние диаграммы echarts",
         "areaBasicsEcharts": "单元格图表",

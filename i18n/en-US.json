@@ -170,7 +170,7 @@
         "areaMenu": "right click menu",
         "areaEdit": "Editable",
         "areaCustom": "Custom column settings",
-        "areaScroll": "virtual scrolling",
+        "areaScroll": "Virtual scrolling (oversized data inventory)",
         "areaChart": "simple chart",
         "areaEcharts": "Integrate third-party echarts charts",
         "areaBasicsEcharts": "Cell chart",

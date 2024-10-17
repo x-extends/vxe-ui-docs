@@ -170,7 +170,7 @@
         "areaMenu": "右クリックメニュー",
         "areaEdit": "編集可能",
         "areaCustom": "カスタム列設定",
-        "areaScroll": "仮想スクロール",
+        "areaScroll": "Virtual scrolling (oversized data inventory)",
         "areaChart": "簡単なチャート",
         "areaEcharts": "サードパーティの echarts チャートを統合する",
         "areaBasicsEcharts": "单元格图表",
