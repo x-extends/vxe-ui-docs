@@ -90,11 +90,15 @@
     "version": {
       "vxe-table": {
         "v1": "v1.x (vue 2.6+ stops maintenance) ~ 2020-04 stops updating",
+        "v1.x": "v1.x (vue 2.6+ stops maintenance) ~ 2020-04 stops updating",
         "v2": "v2.x (vue 2.6+ stops maintenance) ~ 2021-12 stops updating",
+        "v2.x": "v2.x (vue 2.6+ stops maintenance) ~ 2021-12 stops updating",
         "v3d8": "v3.0~3.8 (vue 2.6+ stops maintenance) ~ 2024-12 Stop updating",
         "v3": "v3.9+ (vue 2.6+ long-term maintenance version)",
+        "v3.x": "v3.x (vue 2.6+ long-term maintenance version)",
         "v4d6": "v4.0~4.6 (vue 3.x stops maintenance) ~ 2024-12 Stop updating",
-        "v4": "v4.7+ (vue 3.x latest version)"
+        "v4": "v4.7+ (vue 3.x latest version)",
+        "v4.x": "v4.x (vue 3.x latest version)"
       },
       "vxe-pc-ui": {
         "v1": "v1.x (vue 2.6+ stops maintenance) ~ 2024-08 stops updating",

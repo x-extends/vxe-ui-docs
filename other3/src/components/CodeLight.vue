@@ -40,7 +40,7 @@
 
     <div v-if="path" class="example-code">
       <div class="example-btns">
-        <vxe-tooltip :content="$t('app.docs.button.fixDocTip')">
+        <vxe-tooltip v-if="!isPluginDocs" :content="$t('app.docs.button.fixDocTip')">
           <vxe-button class="example-btn" mode="text" icon="vxe-icon-warning-triangle-fill" @click="openDocs">{{ $t('app.docs.button.fixDocs') }}</vxe-button>
         </vxe-tooltip>
         <vxe-button class="example-btn" mode="text" :status="showOptionJS ? 'primary' : ''" :loading="optionJsLoading" :icon="showOptionJS ? 'vxe-icon-eye-fill' : 'vxe-icon-eye-fill-close'" @click="toggleOptionJsVisible">{{ $t('app.docs.button.showOptionJS') }}</vxe-button>
@@ -88,7 +88,6 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue'
-import { mapState } from 'vuex'
 import { codeCacheMaps } from '@/common/cache'
 import { VxeUI } from 'vxe-pc-ui'
 import AsyncDemo from './AsyncDemo.vue'
@@ -127,9 +126,12 @@ export default Vue.extend({
     }
   },
   computed: {
-    ...mapState([
-      'siteBaseUrl'
-    ]),
+    isPluginDocs () {
+      return this.$store.state.isPluginDocs
+    },
+    siteBaseUrl () {
+      return this.$store.state.siteBaseUrl
+    },
     gitDir () {
       return `${process.env.VUE_APP_DOCS_GITHUB_URL}/src/views/${(this as any).compDir}`
     },

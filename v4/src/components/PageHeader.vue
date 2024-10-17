@@ -36,7 +36,7 @@
         </template>
       </vxe-pulldown>
 
-      <vxe-select v-if="!appStore.isPluginDocs" v-model="currSysVersion" class="switch-version" size="mini" :options="sysVersionOptions" @change="vChangeEvent"></vxe-select>
+      <vxe-select v-model="currSysVersion" class="switch-version" size="mini" :options="sysVersionOptions" @change="vChangeEvent"></vxe-select>
 
       <vxe-switch
         class="link switch-theme"
@@ -61,10 +61,10 @@
         </template>
       </vxe-pulldown>
 
-      <a v-if="appStore.isPluginDocs" :class="['plugin-shopping', {'unread': appStore.showAuthMsgFlag}]" :href="appStore.pluginBuyUrl" target="_blank" @click="openPluginEvent">{{ $t('app.header.buyPlugin') }}</a>
+      <a v-if="isPluginDocs" :class="['plugin-shopping', {'unread': appStore.showAuthMsgFlag}]" :href="appStore.pluginBuyUrl" target="_blank" @click="openPluginEvent">{{ $t('app.header.buyPlugin') }}</a>
       <a v-else :class="['plugin-shopping', {'unread': appStore.showAuthMsgFlag}]" :href="appStore.pluginBuyUrl" target="_blank" @click="openPluginEvent">{{ $t('app.header.pluginStore') }}</a>
 
-      <vxe-link v-if="!appStore.isPluginDocs" class="free-donation" status="success" :router-link="{name: 'FreeDonation'}" :content="$t('app.header.supportUs')"></vxe-link>
+      <vxe-link v-if="!isPluginDocs" class="free-donation" status="success" :router-link="{name: 'FreeDonation'}" :content="$t('app.header.supportUs')"></vxe-link>
 
       <vxe-link class="git-btn" status="error" :href="giteeUrl" icon="vxe-icon-gitee-fill" target="_blank"></vxe-link>
       <vxe-link class="git-btn" :href="githubUrl" icon="vxe-icon-github-fill" target="_blank"></vxe-link>
@@ -79,6 +79,7 @@ import { VxePulldownEvents } from 'vxe-pc-ui'
 import i18n from '@/i18n'
 
 const appStore = useAppStore()
+const isPluginDocs = computed(() => appStore.isPluginDocs)
 const siteBaseUrl = computed(() => appStore.siteBaseUrl)
 
 const showSystemMenu = ref(false)
@@ -123,7 +124,7 @@ const giteeUrl = computed(() => {
 const sysVersionOptions = computed(() => {
   return systemVersionList.value.map(item => {
     return {
-      label: i18n.global.t(`app.version.${process.env.VUE_APP_PACKAGE_NAME}.v${item.version.replace('.', 'd')}`),
+      label: i18n.global.t(`app.version.${process.env.VUE_APP_PACKAGE_NAME}.v${item.i18nKey || item.version.replace('.', 'd')}`),
       value: item.version,
       disabled: !!item.isDisabled,
       className: item.isStop ? 'due-to-stop' : (item.isAbandoned ? 'about-to-stop' : '')
@@ -167,11 +168,19 @@ fetch(`${siteBaseUrl.value}/component-api/system-list.json?v=?v=${process.env.VU
   })
 })
 
-fetch(`${siteBaseUrl.value}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-version.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
-  res.json().then(data => {
-    systemVersionList.value = data
+if (isPluginDocs.value) {
+  fetch(`${siteBaseUrl.value}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-plugin-version.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+    res.json().then(data => {
+      systemVersionList.value = data
+    })
   })
-})
+} else {
+  fetch(`${siteBaseUrl.value}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-version.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+    res.json().then(data => {
+      systemVersionList.value = data
+    })
+  })
+}
 </script>
 
 <style lang="scss" scoped>
