@@ -1340,6 +1340,7 @@ export const navConfigList: NavVO[] = [
             title: '渲染 - 插槽式',
             children: [
               { title: 'VxeInput 输入框', routerLink: { name: 'ComponentFormConfigItemTemplateVxeInput' } },
+              { title: 'VxeTextarea 文本域', routerLink: { name: 'ComponentFormConfigItemTemplateVxeTextarea' } },
               { title: 'VxeNumberInput 数值输入', routerLink: { name: 'ComponentFormConfigItemTemplateVxeNumberInput' } },
               { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSelect' } },
               { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormConfigItemTemplateVxeDatePicker' } },
@@ -1347,6 +1348,10 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSwitch' } },
               { title: 'VxeRadioGroup 单选组', routerLink: { name: 'ComponentFormConfigItemTemplateVxeRadioGroup' } },
               { title: 'VxeCheckboxGroup 复选组', routerLink: { name: 'ComponentFormConfigItemTemplateVxeCheckboxGroup' } },
+              { title: 'VxeRate 评分', routerLink: { name: 'ComponentFormConfigItemTemplateVxeRate' } },
+              { title: 'VxeRate 滑动输入', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSlider' } },
+              { title: 'VxeImage 图片', routerLink: { name: 'ComponentFormConfigItemTemplateVxeImage' } },
+              { title: 'VxeImageGroup 图片组', routerLink: { name: 'ComponentFormConfigItemTemplateVxeImageGroup' } },
               { title: 'VxeUpload 上传', routerLink: { name: 'ComponentFormConfigItemTemplateVxeUpload' } },
               { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemRender/el-input` }
             ]

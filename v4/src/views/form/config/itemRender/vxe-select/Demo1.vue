@@ -35,10 +35,7 @@ const sexListItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
   props: {
     multiple: true
   },
-  options: [
-    { label: '女', value: 'Women' },
-    { label: '男', value: 'Man' }
-  ]
+  options: []
 })
 
 const typeItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
@@ -66,22 +63,7 @@ const typeListItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
   props: {
     multiple: true
   },
-  optionGroups: [
-    {
-      label: '分类1',
-      options: [
-        { label: '苹果', value: '1-1' },
-        { label: '雪梨', value: '1-2' }
-      ]
-    },
-    {
-      label: '分类2',
-      options: [
-        { label: '草莓', value: '2-1' },
-        { label: '猕猴桃', value: '2-2' }
-      ]
-    }
-  ]
+  optionGroups: []
 })
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
@@ -103,4 +85,28 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
+
+// 模拟后台接口
+setTimeout(() => {
+  sexListItemRender.options = [
+    { label: '女', value: 'Women' },
+    { label: '男', value: 'Man' }
+  ]
+  typeListItemRender.optionGroups = [
+    {
+      label: '分类1',
+      options: [
+        { label: '苹果', value: '1-1' },
+        { label: '雪梨', value: '1-2' }
+      ]
+    },
+    {
+      label: '分类2',
+      options: [
+        { label: '草莓', value: '2-1' },
+        { label: '猕猴桃', value: '2-2' }
+      ]
+    }
+  ]
+}, 200)
 </script>

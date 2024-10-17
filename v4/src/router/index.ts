@@ -5818,6 +5818,11 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/config/itemTemplate/vxe-input/CodeExample.vue')
                   },
                   {
+                    path: 'vxe-textarea',
+                    name: 'ComponentFormConfigItemTemplateVxeTextarea',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-textarea/CodeExample.vue')
+                  },
+                  {
                     path: 'vxe-number-input',
                     name: 'ComponentFormConfigItemTemplateVxeNumberInput',
                     component: () => import('@/views/form/config/itemTemplate/vxe-number-input/CodeExample.vue')
@@ -5851,6 +5856,26 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'vxe-checkbox-group',
                     name: 'ComponentFormConfigItemTemplateVxeCheckboxGroup',
                     component: () => import('@/views/form/config/itemTemplate/vxe-checkbox-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-rate',
+                    name: 'ComponentFormConfigItemTemplateVxeRate',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-rate/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-slider',
+                    name: 'ComponentFormConfigItemTemplateVxeSlider',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-slider/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-image',
+                    name: 'ComponentFormConfigItemTemplateVxeImage',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-image/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-image-group',
+                    name: 'ComponentFormConfigItemTemplateVxeImageGroup',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-image-group/CodeExample.vue')
                   },
                   {
                     path: 'vxe-upload',
