@@ -26,6 +26,7 @@ const sexItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
   border: true,
+  titleBackground: true,
   verticalAlign: 'center',
   titleWidth: 100,
   data: {

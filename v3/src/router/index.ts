@@ -5631,6 +5631,11 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/form/config/border/CodeExample.vue')
               },
               {
+                path: 'titleBackground',
+                name: 'ComponentFormConfigTitleBackground',
+                component: () => import('@/views/form/config/titleBackground/CodeExample.vue')
+              },
+              {
                 path: 'group',
                 name: 'ComponentFormConfigGroup',
                 component: () => import('@/views/form/config/group/CodeExample.vue')

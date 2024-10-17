@@ -13,20 +13,23 @@ interface FormDataVO {
   nickname: string
   sex: string
   age: string
+  address: string
 }
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
   vertical: true,
   data: {
     name: 'test1',
-    nickname: 'Testing',
+    nickname: '',
     sex: '',
-    age: ''
+    age: '',
+    address: ''
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
     { field: 'sex', title: '性别', span: 24, itemRender: { name: 'VxeInput' } },
     { field: 'age', title: '年龄', span: 24, itemRender: { name: 'VxeInput' } },
+    { field: 'address', title: '地址', span: 24, itemRender: { name: 'VxeTextarea' } },
     {
       align: 'center',
       span: 24,

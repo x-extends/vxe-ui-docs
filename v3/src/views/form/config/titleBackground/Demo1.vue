@@ -28,6 +28,7 @@ export default Vue.extend({
 
     const formOptions: VxeFormProps<FormDataVO> = {
       border: true,
+      titleBackground: true,
       verticalAlign: 'center',
       titleWidth: 100,
       data: {

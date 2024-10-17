@@ -20,6 +20,11 @@
           <vxe-input v-model="formData.age" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
+      <vxe-form-item title="地址" field="address" span="24" :item-render="{}">
+        <template #default="params">
+          <vxe-textarea v-model="formData.address" @change="changeEvent(params)"></vxe-textarea>
+        </template>
+      </vxe-form-item>
       <vxe-form-item align="center" span="24" :item-render="{}">
         <template #default>
           <vxe-button type="submit" status="primary" content="提交"></vxe-button>
@@ -39,6 +44,7 @@ interface FormDataVO {
   nickname: string
   sex: string
   age: string
+  address: string
 }
 
 export default Vue.extend({
@@ -47,7 +53,8 @@ export default Vue.extend({
       name: 'test1',
       nickname: 'Testing',
       sex: '',
-      age: ''
+      age: '',
+      address: ''
     }
 
     return {
