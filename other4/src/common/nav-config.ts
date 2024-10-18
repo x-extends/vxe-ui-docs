@@ -24,7 +24,7 @@ export interface NavVO {
 
 export const navConfigList: NavVO[] = [
   {
-    title: '轻量级图表',
+    title: '官方插件 - 轻量级图表',
     isExpand: false,
     children: [
       {
@@ -52,7 +52,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '数据校验',
+    title: '官方插件 - 数据校验',
     isExpand: false,
     children: [
       {
@@ -82,7 +82,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '右键菜单',
+    title: '官方插件 - 右键菜单',
     isExpand: false,
     children: [
       {
@@ -112,7 +112,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '导入/导出 XLSX',
+    title: '第三方插件 - 导入/导出 XLSX',
     isExpand: false,
     children: [
       {
@@ -142,7 +142,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '导出 PDF',
+    title: '第三方插件 - 导出 PDF',
     isExpand: false,
     children: [
       {
@@ -170,7 +170,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '渲染 element-plus 组件',
+    title: '第三方插件 - 渲染 element-plus 组件',
     isExpand: false,
     children: [
       {
@@ -282,7 +282,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '渲染 ant-design-vue 组件',
+    title: '第三方插件 - 渲染 ant-design-vue 组件',
     isExpand: false,
     children: [
       {
@@ -371,7 +371,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '渲染 echarts 图表',
+    title: '第三方插件 - 渲染 echarts 图表',
     isExpand: false,
     children: [
       {
