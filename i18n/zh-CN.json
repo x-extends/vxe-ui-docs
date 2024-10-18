@@ -167,16 +167,18 @@
         "areaClipIncrement": "粘贴自动插入行与列",
         "areaMerge": "合并区域",
         "areaFNR": "查找与替换",
-        "areaMenu": "右键菜单",
+        "areaMenu": "官方插件 - 右键菜单",
+        "areaCellMenu": "单元格右键菜单",
         "areaEdit": "可编辑",
         "areaCustom": "自定义列设置",
         "areaScroll": "虚拟滚动（超大数据量表格）",
-        "areaChart": "简单图表",
-        "areaEcharts": "集成第三方 echarts 图表",
+        "areaChart": "官方插件 - 单元格图表",
+        "areaCellChart": "渲染简单图表",
+        "areaEcharts": "第三方插件 - echarts 图表",
         "areaBasicsEcharts": "单元格图表",
-        "areaExceljs": "集成第三方 exceljs 导入导出",
+        "areaExceljs": "第三方插件 - exceljs 导入导出",
         "areaExportExceljs": "导出 xlsx",
-        "areaJspdf": "集成第三方 jspdf 导出",
+        "areaJspdf": "第三方插件 - jspdf 导出",
         "areaExportJspdf": "导出 pdf"
       }
     }

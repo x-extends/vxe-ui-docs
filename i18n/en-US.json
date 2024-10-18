@@ -167,16 +167,18 @@
         "areaClipIncrement": "Paste automatically inserts rows and columns",
         "areaMerge": "merge areas",
         "areaFNR": "Find and Replace",
-        "areaMenu": "right click menu",
+        "areaMenu": "Official plugin - content menu",
+        "areaCellMenu": "Cell content menu",
         "areaEdit": "Editable",
         "areaCustom": "Custom column settings",
         "areaScroll": "Virtual scrolling (oversized data inventory)",
-        "areaChart": "simple chart",
-        "areaEcharts": "Integrate third-party echarts charts",
+        "areaChart": "Official plugin - cell charts",
+        "areaCellChart": "Render simple chart",
+        "areaEcharts": "Third party plugin - echarts charts",
         "areaBasicsEcharts": "Cell chart",
-        "areaExceljs": "Integrate third-party exceljs import and export",
+        "areaExceljs": "Third party plugin - exceljs import and export",
         "areaExportExceljs": "export xlsx",
-        "areaJspdf": "Integrate third-party jspdf export",
+        "areaJspdf": "Third party plugin - jspdf export",
         "areaExportJspdf": "export pdf"
       }
     }
