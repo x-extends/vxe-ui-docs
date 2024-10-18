@@ -1317,7 +1317,7 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeRadioGroup 单选组件', routerLink: { name: 'ComponentFormConfigItemRenderVxeRadioGroup' } },
               { title: 'VxeCheckboxGroup 复选组', routerLink: { name: 'ComponentFormConfigItemRenderVxeCheckboxGroup' } },
               { title: 'VxeRate 评分', routerLink: { name: 'ComponentFormConfigItemRenderVxeRate' } },
-              { title: 'VxeRate 滑动输入', routerLink: { name: 'ComponentFormConfigItemRenderVxeSlider' } },
+              { title: 'VxeRate 滑块', routerLink: { name: 'ComponentFormConfigItemRenderVxeSlider' } },
               { title: 'VxeImage 图片', routerLink: { name: 'ComponentFormConfigItemRenderVxeImage' } },
               { title: 'VxeImageGroup 图片组', routerLink: { name: 'ComponentFormConfigItemRenderVxeImageGroup' } },
               { title: 'VxeUpload 上传', routerLink: { name: 'ComponentFormConfigItemRenderVxeUpload' } },
@@ -1339,7 +1339,7 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeRadioGroup 单选组', routerLink: { name: 'ComponentFormConfigItemTemplateVxeRadioGroup' } },
               { title: 'VxeCheckboxGroup 复选组', routerLink: { name: 'ComponentFormConfigItemTemplateVxeCheckboxGroup' } },
               { title: 'VxeRate 评分', routerLink: { name: 'ComponentFormConfigItemTemplateVxeRate' } },
-              { title: 'VxeRate 滑动输入', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSlider' } },
+              { title: 'VxeRate 滑块', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSlider' } },
               { title: 'VxeImage 图片', routerLink: { name: 'ComponentFormConfigItemTemplateVxeImage' } },
               { title: 'VxeImageGroup 图片组', routerLink: { name: 'ComponentFormConfigItemTemplateVxeImageGroup' } },
               { title: 'VxeUpload 上传', routerLink: { name: 'ComponentFormConfigItemTemplateVxeUpload' } },
@@ -1420,7 +1420,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'Slider 滑动输入',
+        title: 'Slider 滑块',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'slider' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentSliderSize' } },
