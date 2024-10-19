@@ -24,7 +24,7 @@ export default Vue.extend({
       name: 'VxeButtonGroup',
       options: [
         { content: '重置', type: 'reset' },
-        { content: '保存', type: 'submit', status: 'primary', icon: 'vxe-icon-save' }
+        { content: '提交', type: 'submit', status: 'primary' }
       ]
     }
 

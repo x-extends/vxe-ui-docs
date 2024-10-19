@@ -1,11 +1,6 @@
 <template>
   <div>
-    <vxe-form v-bind="formOptions" >
-      <template #action>
-        <vxe-button type="reset">重置</vxe-button>
-        <vxe-button type="submit" status="primary">提交</vxe-button>
-      </template>
-    </vxe-form>
+    <vxe-form v-bind="formOptions" ></vxe-form>
   </div>
 </template>
 
@@ -46,6 +41,14 @@ const hobbies2ItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
   ]
 })
 
+const actionItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
+  name: 'VxeButtonGroup',
+  options: [
+    { content: '重置', type: 'reset' },
+    { content: '提交', type: 'submit', status: 'primary' }
+  ]
+})
+
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
   titleWidth: 120,
   data: {
@@ -59,7 +62,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
     { field: 'hobbies1', title: '单选框', span: 24, itemRender: hobbies1ItemRender },
     { field: 'hobbies2', title: '单选按钮', span: 24, itemRender: hobbies2ItemRender },
-    { align: 'center', span: 24, slots: { default: 'action' } }
+    { align: 'center', span: 24, itemRender: actionItemRender }
   ]
 })
 </script>

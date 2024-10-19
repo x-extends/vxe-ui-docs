@@ -5538,6 +5538,11 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/basics/itemRender/select/CodeExample.vue')
                   },
                   {
+                    path: 'vxe-button-group',
+                    name: 'ComponentFormBasicsItemRenderVxeButtonGroup',
+                    component: () => import('@/views/form/basics/itemRender/vxe-button-group/CodeExample.vue')
+                  },
+                  {
                     path: 'vxe-input',
                     name: 'ComponentFormBasicsItemRenderVxeInput',
                     component: () => import('@/views/form/basics/itemRender/vxe-input/CodeExample.vue')
@@ -5583,6 +5588,16 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/basics/itemRender/vxe-checkbox-group/CodeExample.vue')
                   },
                   {
+                    path: 'vxe-rate',
+                    name: 'ComponentFormBasicsItemRenderVxeRate',
+                    component: () => import('@/views/form/basics/itemRender/vxe-rate/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-slider',
+                    name: 'ComponentFormBasicsItemRenderVxeSlider',
+                    component: () => import('@/views/form/basics/itemRender/vxe-slider/CodeExample.vue')
+                  },
+                  {
                     path: 'vxe-upload',
                     name: 'ComponentFormBasicsItemRenderVxeUpload',
                     component: () => import('@/views/form/basics/itemRender/vxe-upload/CodeExample.vue')
@@ -5604,6 +5619,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: RouteLayout,
                 children: [
                   {
+                    path: 'vxe-button',
+                    name: 'ComponentFormBasicsItemTemplateVxeButton',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-button/CodeExample.vue')
+                  },
+                  {
                     path: 'vxe-input',
                     name: 'ComponentFormBasicsItemTemplateVxeInput',
                     component: () => import('@/views/form/basics/itemTemplate/vxe-input/CodeExample.vue')
@@ -5612,6 +5632,11 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'vxe-number-input',
                     name: 'ComponentFormBasicsItemTemplateVxeNumberInput',
                     component: () => import('@/views/form/basics/itemTemplate/vxe-number-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-textarea',
+                    name: 'ComponentFormBasicsItemTemplateVxeTextarea',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-textarea/CodeExample.vue')
                   },
                   {
                     path: 'vxe-select',
@@ -5642,6 +5667,16 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'vxe-checkbox-group',
                     name: 'ComponentFormBasicsItemTemplateVxeCheckboxGroup',
                     component: () => import('@/views/form/basics/itemTemplate/vxe-checkbox-group/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-rate',
+                    name: 'ComponentFormBasicsItemTemplateVxeRate',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-rate/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-slider',
+                    name: 'ComponentFormBasicsItemTemplateVxeSlider',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-slider/CodeExample.vue')
                   },
                   {
                     path: 'vxe-upload',
@@ -5857,6 +5892,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'itemTemplate',
                 component: RouteLayout,
                 children: [
+                  {
+                    path: 'vxe-button',
+                    name: 'ComponentFormConfigItemTemplateVxeButton',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-button/CodeExample.vue')
+                  },
                   {
                     path: 'vxe-input',
                     name: 'ComponentFormConfigItemTemplateVxeInput',

@@ -21,9 +21,16 @@ export default Vue.extend({
     const actionItemRender: VxeFormItemPropTypes.ItemRender = {
       name: 'VxeButtonGroup',
       options: [
-        { content: '重置', type: 'reset' },
-        { content: '保存', type: 'submit', status: 'primary', icon: 'vxe-icon-save' }
-      ]
+        { name: 'back', content: '返回' },
+        { name: 'cancel', content: '取消' },
+        { name: 'reset', content: '重置', type: 'reset' },
+        { name: 'save', content: '保存', type: 'submit', status: 'primary', icon: 'vxe-icon-save' }
+      ],
+      events: {
+        click (slotParams, { name }) {
+          console.log(name)
+        }
+      }
     }
 
     const formOptions: VxeFormProps<FormDataVO> = {

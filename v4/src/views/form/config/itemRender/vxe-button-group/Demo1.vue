@@ -11,27 +11,28 @@ import { VxeFormProps, VxeFormItemPropTypes } from 'vxe-pc-ui'
 interface FormDataVO {
   name: string
   nickname: string
-  hobbies1: string
-  hobbies2: string
-  address: string
 }
 
 const actionItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
   name: 'VxeButtonGroup',
   options: [
-    { content: '重置', type: 'reset' },
-    { content: '保存', type: 'submit', status: 'primary', icon: 'vxe-icon-save' }
-  ]
+    { name: 'back', content: '返回' },
+    { name: 'cancel', content: '取消' },
+    { name: 'reset', content: '重置', type: 'reset' },
+    { name: 'save', content: '保存', type: 'submit', status: 'primary', icon: 'vxe-icon-save' }
+  ],
+  events: {
+    click (slotParams, { name }) {
+      console.log(name)
+    }
+  }
 })
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
   titleWidth: 120,
   data: {
     name: 'test1',
-    nickname: 'Testing',
-    hobbies1: '5',
-    hobbies2: '3',
-    address: ''
+    nickname: 'Testing'
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },

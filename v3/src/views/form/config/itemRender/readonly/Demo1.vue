@@ -2,12 +2,7 @@
   <div>
     <vxe-button status="primary" @click="toggleReadonly">切换只读</vxe-button>
 
-    <vxe-form v-bind="formOptions" >
-      <template #action>
-        <vxe-button v-if="!formOptions.readonly" type="reset">重置</vxe-button>
-        <vxe-button v-if="!formOptions.readonly" type="submit" status="primary">提交</vxe-button>
-      </template>
-    </vxe-form>
+    <vxe-form v-bind="formOptions"></vxe-form>
   </div>
 </template>
 
@@ -143,6 +138,14 @@ export default Vue.extend({
       ]
     }
 
+    const actionItemRender: VxeFormItemPropTypes.ItemRender = {
+      name: 'VxeButtonGroup',
+      options: [
+        { content: '重置', type: 'reset' },
+        { content: '提交', type: 'submit', status: 'primary' }
+      ]
+    }
+
     const formOptions: VxeFormProps<FormDataVO> = {
       readonly: false,
       titleWidth: 120,
@@ -213,7 +216,7 @@ export default Vue.extend({
         { field: 'imgList1', title: '上传图片', span: 24, itemRender: { name: 'VxeUpload', props: { mode: 'image' } } },
         { field: 'imgList2', title: '上传图片多选', span: 24, itemRender: { name: 'VxeUpload', props: { mode: 'image', multiple: true } } },
         { field: 'address', title: '文本域', span: 24, itemRender: { name: 'VxeTextarea' } },
-        { align: 'center', span: 24, slots: { default: 'action' } }
+        { align: 'center', span: 24, itemRender: actionItemRender }
       ],
       rules: {
         num: [
@@ -235,7 +238,8 @@ export default Vue.extend({
     }
 
     return {
-      formOptions
+      formOptions,
+      actionItemRender
     }
   },
   methods: {
