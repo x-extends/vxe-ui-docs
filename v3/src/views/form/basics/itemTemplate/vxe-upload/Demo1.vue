@@ -10,22 +10,22 @@
       </vxe-form-item>
       <vxe-form-item title="上传附件" field="fileList1" span="24" :item-render="{}">
         <template #default>
-          <vxe-upload v-model="formData.fileList1" multiple></vxe-upload>
+          <vxe-upload v-model="formData.fileList1" :upload-method="uploadMethod"></vxe-upload>
         </template>
       </vxe-form-item>
       <vxe-form-item title="上传附件多选" field="fileList2" span="24" :item-render="{}">
         <template #default>
-          <vxe-upload v-model="formData.fileList2" multiple></vxe-upload>
+          <vxe-upload v-model="formData.fileList2" :upload-method="uploadMethod" multiple></vxe-upload>
         </template>
       </vxe-form-item>
       <vxe-form-item title="上传图片" field="imgList1" span="24" :item-render="{}">
         <template #default>
-          <vxe-upload v-model="formData.imgList1" mode="image"></vxe-upload>
+          <vxe-upload v-model="formData.imgList1" mode="image" :upload-method="uploadMethod"></vxe-upload>
         </template>
       </vxe-form-item>
       <vxe-form-item title="上传图片多选" field="imgList2" span="24" :item-render="{}">
         <template #default>
-          <vxe-upload v-model="formData.imgList2" mode="image" multiple></vxe-upload>
+          <vxe-upload v-model="formData.imgList2" mode="image" :upload-method="uploadMethod" multiple></vxe-upload>
         </template>
       </vxe-form-item>
       <vxe-form-item default="center" span="24">
@@ -41,6 +41,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { VxeUploadPropTypes } from 'vxe-pc-ui'
+import axios from 'axios'
 
 interface FormDataVO {
   name: string
@@ -68,8 +69,20 @@ export default Vue.extend({
       ]
     }
 
+    const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file }) => {
+      const formData = new FormData()
+      formData.append('file', file)
+      return axios.post('/api/pub/upload/single', formData).then((res) => {
+        // { url: ''}
+        return {
+          ...res.data
+        }
+      })
+    }
+
     return {
-      formData
+      formData,
+      uploadMethod
     }
   }
 })
