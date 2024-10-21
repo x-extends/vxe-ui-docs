@@ -776,8 +776,9 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '设置行高', routerLink: { name: 'ComponentGridScrollRowHeight' } },
             { title: '使用分组表头', routerLink: { name: 'ComponentGridScrollGroup' } },
             { title: '使用表尾', routerLink: { name: 'ComponentGridScrollFooter' } },
-            { title: '树形 + 横向虚拟滚动', routerLink: { name: 'ComponentGridScrollTree' } },
-            { title: '可编辑 + 横向虚拟滚动', routerLink: { name: 'ComponentGridScrollEdit' } },
+            { title: '树形 + 纵向虚拟滚动', routerLink: { name: 'ComponentGridScrollTree' } },
+            { title: '树形 + 纵向和横向虚拟滚动', routerLink: { name: 'ComponentGridScrollHVTree' } },
+            { title: '可编辑 + 纵向虚拟滚动', routerLink: { name: 'ComponentGridScrollEdit' } },
             { title: '可编辑 + 纵向和横向虚拟滚动', routerLink: { name: 'ComponentGridScrollHVEdit' } }
           ]
         },
