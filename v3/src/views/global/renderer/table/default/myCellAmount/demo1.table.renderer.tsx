@@ -8,7 +8,7 @@ VxeUI.renderer.add('MyTableCellAmount', {
   // 金额右对齐
   tableCellAlign: 'right',
   // 默认显示模板
-  renderTableDefault (renderOpts, params) {
+  renderTableDefault (h, renderOpts, params) {
     const { row, column } = params
     return <span>{XEUtils.commafy(XEUtils.toNumber(row[column.field]))}</span>
   }
