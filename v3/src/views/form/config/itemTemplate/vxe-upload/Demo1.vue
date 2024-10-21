@@ -6,19 +6,19 @@
       </template>
 
       <template #fileList1="{ data }">
-        <vxe-upload v-model="data.fileList1"></vxe-upload>
+        <vxe-upload v-model="data.fileList1" :upload-method="uploadMethod"></vxe-upload>
       </template>
 
       <template #fileList2="{ data }">
-        <vxe-upload v-model="data.fileList2" multiple></vxe-upload>
+        <vxe-upload v-model="data.fileList2" :upload-method="uploadMethod" multiple></vxe-upload>
       </template>
 
       <template #imgList1="{ data }">
-        <vxe-upload v-model="data.imgList1" mode="image"></vxe-upload>
+        <vxe-upload v-model="data.imgList1" mode="image" :upload-method="uploadMethod"></vxe-upload>
       </template>
 
       <template #imgList2="{ data }">
-        <vxe-upload v-model="data.imgList2" mode="image" multiple></vxe-upload>
+        <vxe-upload v-model="data.imgList2" mode="image" :upload-method="uploadMethod" multiple></vxe-upload>
       </template>
 
       <template #action>
@@ -32,6 +32,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { VxeFormProps, VxeUploadPropTypes } from 'vxe-pc-ui'
+import axios from 'axios'
 
 interface FormDataVO {
   name: string
@@ -72,6 +73,18 @@ export default Vue.extend({
 
     return {
       formOptions
+    }
+  },
+  methods: {
+    uploadMethod ({ file }) {
+      const formData = new FormData()
+      formData.append('file', file)
+      return axios.post('/api/pub/upload/single', formData).then((res) => {
+        // { url: ''}
+        return {
+          ...res.data
+        }
+      })
     }
   }
 })
