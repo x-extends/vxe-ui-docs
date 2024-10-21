@@ -2995,6 +2995,11 @@ const routes: Array<RouteConfig> = [
                     path: 'myCellImg',
                     name: 'GlobalRendererTableDefaultMyImg',
                     component: () => import('@/views/global/renderer/table/default/myCellImg/CodeExample.vue')
+                  },
+                  {
+                    path: 'myCellAmount',
+                    name: 'GlobalRendererTableDefaultMyAmount',
+                    component: () => import('@/views/global/renderer/table/default/myCellAmount/CodeExample.vue')
                   }
                 ]
               },
@@ -5777,8 +5782,24 @@ const routes: Array<RouteConfig> = [
               },
               {
                 path: 'collapse',
-                name: 'ComponentFormConfigCollapse',
-                component: () => import('@/views/form/config/collapse/CodeExample.vue')
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'base',
+                    name: 'ComponentFormConfigCollapseBase',
+                    component: () => import('@/views/form/config/collapse/base/CodeExample.vue')
+                  },
+                  {
+                    path: 'buttonText',
+                    name: 'ComponentFormConfigCollapseButtonText',
+                    component: () => import('@/views/form/config/collapse/buttonText/CodeExample.vue')
+                  },
+                  {
+                    path: 'buttonIcon',
+                    name: 'ComponentFormConfigCollapseButtonIcon',
+                    component: () => import('@/views/form/config/collapse/buttonIcon/CodeExample.vue')
+                  }
+                ]
               },
               {
                 path: 'valid',

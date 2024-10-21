@@ -866,6 +866,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           children: [
             { title: '实现一个超链接', routerLink: { name: 'GlobalRendererTableDefaultMyLink' } },
             { title: '实现一个图片预览', routerLink: { name: 'GlobalRendererTableDefaultMyImg' } },
+            { title: '实现一个金额格式化', routerLink: { name: 'GlobalRendererTableDefaultMyAmount' } },
             { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/table/cell/el-switch` }
           ]
         },
@@ -1324,8 +1325,15 @@ export const navConfigList: NavVO[] = [
           { title: '边框', routerLink: { name: 'ComponentFormConfigBorder' } },
           { title: '标题背景', routerLink: { name: 'ComponentFormConfigTitleBackground' } },
           { title: '分组/分行/分列', routerLink: { name: 'ComponentFormConfigGroup' } },
-          { title: '折叠表单', routerLink: { name: 'ComponentFormConfigCollapse' } },
           { title: '表单校验', routerLink: { name: 'ComponentFormConfigValid' } },
+          {
+            title: '折叠表单',
+            children: [
+              { title: '展开与收起', routerLink: { name: 'ComponentFormConfigCollapseBase' } },
+              { title: '自定义按钮文字', routerLink: { name: 'ComponentFormConfigCollapseButtonText' } },
+              { title: '自定义按钮图标', routerLink: { name: 'ComponentFormConfigCollapseButtonIcon' } }
+            ]
+          },
           {
             title: '渲染 - 配置式',
             children: [
