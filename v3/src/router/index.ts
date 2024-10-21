@@ -5517,14 +5517,30 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/form/basics/vertical/CodeExample.vue')
               },
               {
-                path: 'collapse',
-                name: 'ComponentFormBasicsCollapse',
-                component: () => import('@/views/form/basics/collapse/CodeExample.vue')
-              },
-              {
                 path: 'valid',
                 name: 'ComponentFormBasicsValid',
                 component: () => import('@/views/form/basics/valid/CodeExample.vue')
+              },
+              {
+                path: 'collapse',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'base',
+                    name: 'ComponentFormBasicsCollapseBase',
+                    component: () => import('@/views/form/basics/collapse/base/CodeExample.vue')
+                  },
+                  {
+                    path: 'buttonText',
+                    name: 'ComponentFormBasicsCollapseButtonText',
+                    component: () => import('@/views/form/basics/collapse/buttonText/CodeExample.vue')
+                  },
+                  {
+                    path: 'buttonIcon',
+                    name: 'ComponentFormBasicsCollapseButtonIcon',
+                    component: () => import('@/views/form/basics/collapse/buttonIcon/CodeExample.vue')
+                  }
+                ]
               },
               {
                 path: 'itemRender',

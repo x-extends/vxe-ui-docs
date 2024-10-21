@@ -1255,8 +1255,15 @@ export const navConfigList: NavVO[] = [
           { title: '标题背景', routerLink: { name: 'ComponentFormBasicsTitleBackground' } },
           { title: '分组/分行/分列', routerLink: { name: 'ComponentFormBasicsGroup' } },
           { title: '自定义布局', routerLink: { name: 'ComponentFormBasicsCustomLayout' } },
-          { title: '折叠表单', routerLink: { name: 'ComponentFormBasicsCollapse' } },
           { title: '表单校验', routerLink: { name: 'ComponentFormBasicsValid' } },
+          {
+            title: '折叠表单',
+            children: [
+              { title: '展开与收起', routerLink: { name: 'ComponentFormBasicsCollapseBase' } },
+              { title: '自定义按钮文字', routerLink: { name: 'ComponentFormBasicsCollapseButtonText' } },
+              { title: '自定义按钮图标', routerLink: { name: 'ComponentFormBasicsCollapseButtonIcon' } }
+            ]
+          },
           {
             title: '渲染 - 配置式',
             children: [
