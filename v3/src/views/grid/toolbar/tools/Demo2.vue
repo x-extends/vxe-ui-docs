@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-grid v-bind="gridOptions" @toolbar-button-click="toolbarButtonClickEvent"></vxe-grid>
+    <vxe-grid v-bind="gridOptions" @toolbar-tool-click="toolbarToolClickEvent"></vxe-grid>
   </div>
 </template>
 
@@ -56,7 +56,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    toolbarButtonClickEvent (params) {
+    toolbarToolClickEvent (params) {
       console.log(params.code)
     }
   }
