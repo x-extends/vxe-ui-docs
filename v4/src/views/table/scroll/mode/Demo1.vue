@@ -104,8 +104,8 @@
       <vxe-column field="flag1" title="列89" width="100" fixed="right" :cell-render="flag1CellRender"></vxe-column>
       <vxe-column field="action" title="操作" width="120" fixed="right">
         <template #default>
-          <vxe-button mode="text" status="primary">编辑</vxe-button>
-          <vxe-button mode="text" status="error">删除</vxe-button>
+          <vxe-button mode="text" status="primary">按钮1</vxe-button>
+          <vxe-button mode="text" status="error">按钮2</vxe-button>
         </template>
       </vxe-column>
     </vxe-table>

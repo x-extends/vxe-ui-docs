@@ -5,8 +5,8 @@
     <vxe-button @click="loadData(50000)">加载5w条</vxe-button>
     <vxe-grid v-bind="gridOptions">
       <template #action>
-        <vxe-button mode="text" status="primary">编辑</vxe-button>
-        <vxe-button mode="text" status="error">删除</vxe-button>
+        <vxe-button mode="text" status="primary">按钮1</vxe-button>
+        <vxe-button mode="text" status="error">按钮2</vxe-button>
       </template>
     </vxe-grid>
   </div>
