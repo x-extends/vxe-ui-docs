@@ -157,7 +157,7 @@
         "areaDisabled": "Disable area selection",
         "areaExtension": "Drag the expanded area",
         "areaExtendCalcFill": "Expanded area automatically filled",
-        "areaFixed": "Fixed column selection",
+        "areaFixed": "冻结列选取",
         "footerTotal": "Select and total at the end of the table",
         "areaCheckbox": "Check box range selection",
         "areaKeypad": "Button navigation",

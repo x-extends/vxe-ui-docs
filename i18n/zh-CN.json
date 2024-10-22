@@ -157,7 +157,7 @@
         "areaDisabled": "禁用区域选取",
         "areaExtension": "拖动扩展区域",
         "areaExtendCalcFill": "扩展区域自动填充",
-        "areaFixed": "固定列选取",
+        "areaFixed": "冻结列选取",
         "footerTotal": "选取与表尾合计",
         "areaCheckbox": "复选框范围选取",
         "areaKeypad": "按键导航",

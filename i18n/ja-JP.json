@@ -157,7 +157,7 @@
         "areaDisabled": "エリア選択を無効にする",
         "areaExtension": "拡張された領域をドラッグします",
         "areaExtendCalcFill": "拡張された領域は自動的に塗りつぶされます",
-        "areaFixed": "固定列選択",
+        "areaFixed": "冻结列选取",
         "footerTotal": "表の最後に選択して合計します",
         "areaCheckbox": "チェックボックスの範囲選択",
         "areaKeypad": "ボタンのナビゲーション",

@@ -16,12 +16,7 @@ interface NodeVO {
 
 export default Vue.extend({
   data () {
-    const treeConfig: VxeTreeSelectPropTypes.TreeConfig = {
-      lazy: true,
-      loadMethod (this: any, { node }) {
-        return this.getNodeListApi(node)
-      }
-    }
+    const treeConfig: VxeTreeSelectPropTypes.TreeConfig = {}
 
     const treeList: VxeTreeSelectPropTypes.Options = [
       { label: '节点2', value: '2', hasChild: true },
@@ -34,6 +29,14 @@ export default Vue.extend({
       val1: null,
       treeConfig,
       treeList
+    }
+  },
+  created () {
+    this.treeConfig = {
+      lazy: true,
+      loadMethod: ({ node }) => {
+        return this.getNodeListApi(node)
+      }
     }
   },
   methods: {
