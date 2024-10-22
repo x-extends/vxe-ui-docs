@@ -5393,11 +5393,6 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/treeSelect/base/showLine/CodeExample.vue')
               },
               {
-                path: 'lazy',
-                name: 'ComponentTreeSelectBaseLazy',
-                component: () => import('@/views/treeSelect/base/lazy/CodeExample.vue')
-              },
-              {
                 path: 'trigger',
                 name: 'ComponentTreeSelectBaseTrigger',
                 component: () => import('@/views/treeSelect/base/trigger/CodeExample.vue')
@@ -5438,6 +5433,22 @@ const routes: Array<RouteConfig> = [
                 path: 'trigger',
                 name: 'ComponentTreeSelectCheckboxTrigger',
                 component: () => import('@/views/treeSelect/checkbox/trigger/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'lazy',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentTreeSelectLazyBase',
+                component: () => import('@/views/treeSelect/lazy/base/CodeExample.vue')
+              },
+              {
+                path: 'multiple',
+                name: 'ComponentTreeSelectLazyMultiple',
+                component: () => import('@/views/treeSelect/lazy/multiple/CodeExample.vue')
               }
             ]
           }

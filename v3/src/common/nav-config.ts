@@ -1627,7 +1627,6 @@ export const navConfigList: NavVO[] = [
               { title: '多选', routerLink: { name: 'ComponentTreeSelectBaseMultiple' } },
               { title: '自定义图标', routerLink: { name: 'ComponentTreeSelectBaseIcon' } },
               { title: '连接线', routerLink: { name: 'ComponentTreeSelectBaseShowLine' } },
-              { title: '懒加载子节点', routerLink: { name: 'ComponentTreeSelectBaseLazy' } },
               { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectBaseTrigger' } }
             ]
           },
@@ -1644,6 +1643,13 @@ export const navConfigList: NavVO[] = [
               { title: '显示复选框', routerLink: { name: 'ComponentTreeSelectCheckboxBase' } },
               { title: '节点不关联', routerLink: { name: 'ComponentTreeSelectCheckboxCheckStrictly' } },
               { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectCheckboxTrigger' } }
+            ]
+          },
+          {
+            title: '懒加载',
+            children: [
+              { title: '加载子节点', routerLink: { name: 'ComponentTreeSelectLazyBase' } },
+              { title: '多选', routerLink: { name: 'ComponentTreeSelectLazyMultiple' } }
             ]
           }
         ]
