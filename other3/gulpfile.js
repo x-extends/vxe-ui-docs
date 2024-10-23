@@ -38,6 +38,7 @@ gulp.task('handle_vue_tmpltojs', () => {
       allowSyntheticDefaultImports: true,
       noImplicitAny: false,
       sourceMap: false,
+      removeComments: true,
       lib: [
         'esnext',
         'dom',
@@ -94,6 +95,7 @@ gulp.task('handle_tstojs', () => {
       allowSyntheticDefaultImports: true,
       noImplicitAny: false,
       sourceMap: false,
+      removeComments: true,
       lib: [
         'esnext',
         'dom',
