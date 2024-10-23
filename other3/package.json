@@ -16,6 +16,8 @@
     "@vxe-ui/plugin-render-chart": "^3.0.0",
     "@vxe-ui/plugin-render-element": "^3.0.0",
     "@vxe-ui/plugin-render-antd": "^3.0.1",
+    "@vxe-ui/plugin-render-wangeditor": "^3.0.0",
+    "@vxe-ui/plugin-shortcut-key": "^3.0.0",
     "@vxe-ui/plugin-validator": "^3.0.0",
     "ant-design-vue": "1.7.8",
     "axios": "^1.7.2",

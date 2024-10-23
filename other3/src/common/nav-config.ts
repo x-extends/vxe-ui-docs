@@ -367,6 +367,35 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
+    title: '第三方插件 - 渲染 wangEditor 富文本',
+    isExpand: false,
+    children: [
+      {
+        title: '开发指南',
+        children: [
+          { title: '安装插件', routerLink: { name: 'PluginRenderWangEditorInstall' } }
+        ]
+      },
+      {
+        title: 'Form 表单',
+        children: [
+          {
+            title: '基础表单',
+            children: [
+              { title: 'WangEditor', routerLink: { name: 'PluginRenderAntdFormItemTemplateWangEditor' } }
+            ]
+          },
+          {
+            title: '配置式表单',
+            children: [
+              { title: 'WangEditor', routerLink: { name: 'PluginRenderAntdFormItemRenderWangEditor' } }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     title: '第三方插件 - 渲染 echarts 图表',
     isExpand: false,
     children: [

@@ -32,6 +32,8 @@ import VxeUIPluginRenderElement from '@vxe-ui/plugin-render-element'
 import '@vxe-ui/plugin-render-element/dist/style.css'
 import VxeUIPluginRenderAntd from '@vxe-ui/plugin-render-antd'
 import '@vxe-ui/plugin-render-antd/dist/style.css'
+import VxeUIPluginRenderWangEditor, { WangEditor } from '@vxe-ui/plugin-render-wangeditor'
+import '@vxe-ui/plugin-render-wangeditor/dist/style.css'
 import VxeUIPluginValidator from '@vxe-ui/plugin-validator'
 
 import ElementPlus from 'element-plus'
@@ -40,7 +42,7 @@ import 'element-plus/dist/index.css'
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/reset.css'
 
-axios.defaults.baseURL = 'https://api.vxetable.cn'
+axios.defaults.baseURL = process.env.VUE_APP_SERVE_API_URL
 
 VxeUI.setI18n('en-US', enUS)
 
@@ -59,6 +61,28 @@ VxeUI.use(VxeUIPluginExportPDF, {
 VxeUI.use(VxeUIPluginRenderChart)
 VxeUI.use(VxeUIPluginRenderElement)
 VxeUI.use(VxeUIPluginRenderAntd)
+VxeUI.use(VxeUIPluginRenderWangEditor, {
+  // 自定义上传图片方法
+  uploadImageMethod ({ file }) {
+    const formData = new FormData()
+    formData.append('file', file)
+    return axios.post('/api/pub/upload/single', formData).then((res) => {
+      return {
+        ...res.data
+      }
+    })
+  },
+  // 自定义上传视频方法
+  uploadVideoMethod ({ file }) {
+    const formData = new FormData()
+    formData.append('file', file)
+    return axios.post('/api/pub/upload/single', formData).then((res) => {
+      return {
+        ...res.data
+      }
+    })
+  }
+})
 VxeUI.use(VxeUIPluginValidator)
 
 const app = createApp(App)
@@ -74,6 +98,7 @@ app.use(VxeUI)
 app.use(VxeTable)
 app.use(ElementPlus)
 app.use(Antd)
+app.use(WangEditor)
 
 app.use(store)
 app.use(router)

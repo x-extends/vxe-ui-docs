@@ -740,6 +740,45 @@ const routes: Array<RouteConfig> = [
     ]
   },
   {
+    path: '/plugin-render-wangeditor',
+    component: PageLayout,
+    children: [
+      {
+        path: 'install',
+        name: 'PluginRenderWangEditorInstall',
+        component: () => import('@/views/plugin-render-wangeditor/install/CodeExample.vue')
+      },
+      {
+        path: 'form',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'itemTemplate',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'wang-editor',
+                name: 'PluginRenderAntdFormItemTemplateWangEditor',
+                component: () => import('@/views/plugin-render-wangeditor/form/itemTemplate/wang-editor/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'itemRender',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'wang-editor',
+                name: 'PluginRenderAntdFormItemRenderWangEditor',
+                component: () => import('@/views/plugin-render-wangeditor/form/itemRender/wang-editor/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     path: '/plugin-render-echarts',
     component: PageLayout,
     children: [
