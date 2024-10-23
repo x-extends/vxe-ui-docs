@@ -1272,9 +1272,9 @@ export const navConfigList: NavVO[] = [
           {
             title: '渲染 - 配置式',
             children: [
-              { title: 'input 原生输入框', routerLink: { name: 'ComponentFormBasicsItemRenderInput' } },
-              { title: 'textarea 原生文本域', routerLink: { name: 'ComponentFormBasicsItemRenderTextarea' } },
-              { title: 'select 原生下拉框', routerLink: { name: 'ComponentFormBasicsItemRenderSelect' } },
+              { title: 'input 原生-输入框', routerLink: { name: 'ComponentFormBasicsItemRenderInput' } },
+              { title: 'textarea 原生-文本域', routerLink: { name: 'ComponentFormBasicsItemRenderTextarea' } },
+              { title: 'select 原生-下拉框', routerLink: { name: 'ComponentFormBasicsItemRenderSelect' } },
               { title: 'VxeButtonGroup 按钮组', routerLink: { name: 'ComponentFormBasicsItemRenderVxeButtonGroup' } },
               { title: 'VxeInput 输入框', routerLink: { name: 'ComponentFormBasicsItemRenderVxeInput' } },
               { title: 'VxeNumberInput 数值输入框', routerLink: { name: 'ComponentFormBasicsItemRenderVxeNumberInput' } },
@@ -1288,9 +1288,10 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeRate 评分', routerLink: { name: 'ComponentFormBasicsItemRenderVxeRate' } },
               { title: 'VxeSlider 滑块', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSlider' } },
               { title: 'VxeUpload 上传', routerLink: { name: 'ComponentFormBasicsItemRenderVxeUpload' } },
+              { title: 'WangEditor 第三方扩展-富文本', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-wangeditor/form/itemTemplate/wang-editor` },
               { title: '只读模式', routerLink: { name: 'ComponentFormBasicsItemRenderReadonly' } },
               { title: '禁用模式', routerLink: { name: 'ComponentFormBasicsItemRenderDisabled' } },
-              { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemTemplate/el-input` }
+              { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemTemplate/el-input` }
             ]
           },
           {
@@ -1309,7 +1310,8 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeRate 评分', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeRate' } },
               { title: 'VxeSlider 滑块', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSlider' } },
               { title: 'VxeUpload 上传', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeUpload' } },
-              { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemTemplate/el-input` }
+              { title: 'WangEditor 第三方扩展-富文本', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-wangeditor/form/itemTemplate/wang-editor` },
+              { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemTemplate/el-input` }
             ]
           },
           {
@@ -1349,9 +1351,9 @@ export const navConfigList: NavVO[] = [
           {
             title: '渲染 - 配置式',
             children: [
-              { title: 'input 原生输入框', routerLink: { name: 'ComponentFormConfigItemRenderInput' } },
-              { title: 'textarea 原生文本域', routerLink: { name: 'ComponentFormConfigItemRenderTextarea' } },
-              { title: 'select 原生下拉框', routerLink: { name: 'ComponentFormConfigItemRenderSelect' } },
+              { title: 'input 原生-输入框', routerLink: { name: 'ComponentFormConfigItemRenderInput' } },
+              { title: 'textarea 原生-文本域', routerLink: { name: 'ComponentFormConfigItemRenderTextarea' } },
+              { title: 'select 原生-下拉框', routerLink: { name: 'ComponentFormConfigItemRenderSelect' } },
               { title: 'VxeInput 输入框', routerLink: { name: 'ComponentFormConfigItemRenderVxeInput' } },
               { title: 'VxeButtonGroup 按钮组', routerLink: { name: 'ComponentFormConfigItemRenderVxeButtonGroup' } },
               { title: 'VxeTextarea 文本域', routerLink: { name: 'ComponentFormConfigItemRenderVxeTextarea' } },
@@ -1367,9 +1369,10 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeImage 图片', routerLink: { name: 'ComponentFormConfigItemRenderVxeImage' } },
               { title: 'VxeImageGroup 图片组', routerLink: { name: 'ComponentFormConfigItemRenderVxeImageGroup' } },
               { title: 'VxeUpload 上传', routerLink: { name: 'ComponentFormConfigItemRenderVxeUpload' } },
+              { title: 'WangEditor 第三方扩展-富文本', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-wangeditor/form/itemRender/wang-editor` },
               { title: '只读模式', routerLink: { name: 'ComponentFormConfigItemRenderReadonly' } },
               { title: '禁用模式', routerLink: { name: 'ComponentFormConfigItemRenderDisabled' } },
-              { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemRender/el-input` }
+              { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemRender/el-input` }
             ]
           },
           {
@@ -1390,7 +1393,8 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeImage 图片', routerLink: { name: 'ComponentFormConfigItemTemplateVxeImage' } },
               { title: 'VxeImageGroup 图片组', routerLink: { name: 'ComponentFormConfigItemTemplateVxeImageGroup' } },
               { title: 'VxeUpload 上传', routerLink: { name: 'ComponentFormConfigItemTemplateVxeUpload' } },
-              { title: '使用第三方组件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemRender/el-input` }
+              { title: 'WangEditor 第三方扩展-富文本', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-wangeditor/form/itemRender/wang-editor` },
+              { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemRender/el-input` }
             ]
           },
           { title: '实现简历模板', routerLink: { name: 'ComponentFormConfigResumeTemplate' } }
