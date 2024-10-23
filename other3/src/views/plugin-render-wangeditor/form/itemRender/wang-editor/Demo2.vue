@@ -17,8 +17,8 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { reactive } from 'vue'
+<script lang="ts">
+import Vue from 'vue'
 import { VxeFormProps } from 'vxe-pc-ui'
 
 interface FormDataVO {
@@ -26,16 +26,24 @@ interface FormDataVO {
   remark: string
 }
 
-const formOptions = reactive<VxeFormProps<FormDataVO>>({
-  titleWidth: 120,
-  data: {
-    name: 'test1',
-    remark: ''
-  },
-  items: [
-    { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-    { field: 'remark', title: '富文本', span: 24, itemRender: { }, slots: { default: 'remark' } },
-    { align: 'center', span: 24, slots: { default: 'action' } }
-  ]
+export default Vue.extend({
+  data () {
+    const formOptions: VxeFormProps<FormDataVO> = {
+      titleWidth: 120,
+      data: {
+        name: 'test1',
+        remark: ''
+      },
+      items: [
+        { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
+        { field: 'remark', title: '富文本', span: 24, itemRender: { }, slots: { default: 'remark' } },
+        { align: 'center', span: 24, slots: { default: 'action' } }
+      ]
+    }
+
+    return {
+      formOptions
+    }
+  }
 })
 </script>

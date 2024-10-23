@@ -755,7 +755,7 @@ const routes: Array<RouteRecordRaw> = [
             children: [
               {
                 path: 'wang-editor',
-                name: 'PluginRenderAntdFormItemTemplateWangEditor',
+                name: 'PluginRenderWangEditorFormItemTemplateWangEditor',
                 component: () => import('@/views/plugin-render-wangeditor/form/itemTemplate/wang-editor/CodeExample.vue')
               }
             ]
@@ -766,10 +766,21 @@ const routes: Array<RouteRecordRaw> = [
             children: [
               {
                 path: 'wang-editor',
-                name: 'PluginRenderAntdFormItemRenderWangEditor',
+                name: 'PluginRenderWangEditorFormItemRenderWangEditor',
                 component: () => import('@/views/plugin-render-wangeditor/form/itemRender/wang-editor/CodeExample.vue')
               }
             ]
+          }
+        ]
+      },
+      {
+        path: 'form-design',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'renderView',
+            name: 'PluginRenderWangEditorFormDesignRenderView',
+            component: () => import('@/views/plugin-render-wangeditor/form-design/renderView/CodeExample.vue')
           }
         ]
       }

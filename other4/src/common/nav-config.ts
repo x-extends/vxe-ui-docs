@@ -386,15 +386,23 @@ export const navConfigList: NavVO[] = [
           {
             title: '基础表单',
             children: [
-              { title: 'WangEditor', routerLink: { name: 'PluginRenderAntdFormItemTemplateWangEditor' } }
+              { title: 'WangEditor', routerLink: { name: 'PluginRenderWangEditorFormItemTemplateWangEditor' } }
             ]
           },
           {
             title: '配置式表单',
             children: [
-              { title: 'WangEditor', routerLink: { name: 'PluginRenderAntdFormItemRenderWangEditor' } }
+              { title: 'WangEditor', routerLink: { name: 'PluginRenderWangEditorFormItemRenderWangEditor' } }
             ]
           }
+        ]
+      },
+      {
+        title: 'FormDesign 表单设计器',
+        children: [
+          { title: '渲染视图', routerLink: { name: 'PluginRenderWangEditorFormDesignRenderView' } },
+          { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/' },
+          { title: '零代码平台模板', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/' }
         ]
       }
     ]

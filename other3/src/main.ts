@@ -33,6 +33,8 @@ import VxeUIPluginRenderElement from '@vxe-ui/plugin-render-element'
 import '@vxe-ui/plugin-render-element/dist/style.css'
 import VxeUIPluginRenderAntd from '@vxe-ui/plugin-render-antd'
 import '@vxe-ui/plugin-render-antd/dist/style.css'
+import VxeUIPluginRenderWangEditor, { WangEditor } from '@vxe-ui/plugin-render-wangeditor'
+import '@vxe-ui/plugin-render-wangeditor/dist/style.css'
 import VxeUIPluginValidator from '@vxe-ui/plugin-validator'
 
 import Element from 'element-ui'
@@ -68,12 +70,35 @@ VxeUI.use(VxeUIPluginExportPDF, {
 VxeUI.use(VxeUIPluginRenderChart)
 VxeUI.use(VxeUIPluginRenderElement)
 VxeUI.use(VxeUIPluginRenderAntd)
+VxeUI.use(VxeUIPluginRenderWangEditor, {
+  // 自定义上传图片方法
+  uploadImageMethod ({ file }) {
+    const formData = new FormData()
+    formData.append('file', file)
+    return axios.post('/api/pub/upload/single', formData).then((res) => {
+      return {
+        ...res.data
+      }
+    })
+  },
+  // 自定义上传视频方法
+  uploadVideoMethod ({ file }) {
+    const formData = new FormData()
+    formData.append('file', file)
+    return axios.post('/api/pub/upload/single', formData).then((res) => {
+      return {
+        ...res.data
+      }
+    })
+  }
+})
 VxeUI.use(VxeUIPluginValidator)
 
 Vue.use(VxeUI)
 Vue.use(VxeTable)
 Vue.use(Element)
 Vue.use(Antd)
+Vue.use(WangEditor)
 
 Vue.component('PreCode', PreCode)
 Vue.component('CodeLight', CodeLight)

@@ -15,16 +15,24 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue'
+<script lang="ts">
+import Vue from 'vue'
 
 interface FormDataVO {
   name: string
   remark: string
 }
 
-const formData = ref<FormDataVO>({
-  name: 'test1',
-  remark: ''
+export default Vue.extend({
+  data () {
+    const formData: FormDataVO = {
+      name: 'test1',
+      remark: ''
+    }
+
+    return {
+      formData
+    }
+  }
 })
 </script>
