@@ -31,7 +31,7 @@
             // 如果只使用表格
             // import { VxeUI } from 'vxe-table'
             import VxeUIPluginExportPDF from '@vxe-ui/plugin-export-xlsx'
-            import { jsPDF } from 'jspdf'
+            // import { jsPDF } from 'jspdf'
             // ...
 
             // 方式1：建议使用 CDN 方式，这样可以不影响包体积，额外引入 js 就可以

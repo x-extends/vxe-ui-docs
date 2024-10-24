@@ -383,18 +383,8 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Form 表单',
         children: [
-          {
-            title: '基础表单',
-            children: [
-              { title: 'WangEditor', routerLink: { name: 'PluginRenderWangEditorFormItemTemplateWangEditor' } }
-            ]
-          },
-          {
-            title: '配置式表单',
-            children: [
-              { title: 'WangEditor', routerLink: { name: 'PluginRenderWangEditorFormItemRenderWangEditor' } }
-            ]
-          }
+          { title: 'WangEditor 基础表单', routerLink: { name: 'PluginRenderWangEditorFormItemTemplateWangEditor' } },
+          { title: 'WangEditor 配置式表单', routerLink: { name: 'PluginRenderWangEditorFormItemRenderWangEditor' } }
         ]
       },
       {
