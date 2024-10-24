@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button @click="exportEvent">直接导出</vxe-button>
+    <vxe-button @click="exportEvent">直接导出 PDF 文件</vxe-button>
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>

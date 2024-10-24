@@ -361,6 +361,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '导出 HTML 格式', routerLink: { name: 'ComponentTableExportHtml' } },
             { title: '导出 CSV 格式', routerLink: { name: 'ComponentTableExportCsv' } },
             { title: '导出 XLSX 格式', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-export-xlsx/table/export` },
+            { title: '导出 PDF 格式', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-export-pdf/table/export` },
             { title: '格式化单元格内容', routerLink: { name: 'ComponentTableExportExportMethod' } },
             { title: '高级导出', routerLink: { name: 'ComponentTableExportAdvanced' } }
           ]
