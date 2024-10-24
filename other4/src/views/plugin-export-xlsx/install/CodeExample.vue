@@ -13,17 +13,19 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs@4.2.1
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs@4.2.1
             # 或者
-            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs@4.2.1
             `">
           </pre-code>
         </pre>
 
         <pre>
-          <pre-code class="javascript">
+          <pre-code
+            class="javascript"
+            :content="`
             // main.js
             // ...
             // 如果完整使用
@@ -31,16 +33,18 @@
             // 如果只使用表格
             // import { VxeUI } from 'vxe-table'
             import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
-            import ExcelJS from 'exceljs'
+            // import ExcelJS from 'exceljs'
             // ...
 
             // 方式1：建议使用 CDN 方式，这样可以不影响包体积，额外引入 js 就可以
+            // 在 index.html 引入 https://cdn.jsdelivr.net/npm/exceljs@4.2.1/dist/exceljs.min.js
             VxeUI.use(VxeUIPluginExportXLSX)
 
             // 方式2：使用 NPM 安装，注入 ExcelJS 对象
             // VxeUI.use(VxeUIPluginExportXLSX, {
             //   ExcelJS
             // })
+            `">
           </pre-code>
         </pre>
       </template>

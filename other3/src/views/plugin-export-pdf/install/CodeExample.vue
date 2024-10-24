@@ -13,17 +13,19 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginExportPdfCDNLib} jspdf
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginExportPdfCDNLib} jspdf@2.5.2
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib }${pluginExportPdfCDNLib} jspdf
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportPdfCDNLib} jspdf@2.5.2
             # 或者
-            pnpm add ${ uiCDNLib } ${ tableCDNLib }${pluginExportPdfCDNLib} jspdf
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportPdfCDNLib} jspdf@2.5.2
             `">
           </pre-code>
         </pre>
 
         <pre>
-          <pre-code class="javascript">
+          <pre-code
+            class="javascript"
+            :content="`
             // main.js
             // ...
             // 如果完整使用
@@ -35,13 +37,14 @@
             // ...
 
             // 方式1：建议使用 CDN 方式，这样可以不影响包体积，额外引入 js 就可以
+            // 在 index.html 引入 https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.js
             VxeUI.use(VxeUIPluginExportPDF, {
               // 支持中文字体，字体库非常大，建议下载到项目本地
               // fontName: 'SourceHanSans-Normal',
               // fonts: [
               //   {
               //     fontName: 'SourceHanSans-Normal',
-              //     fontUrl: 'https://cdn.jsdelivr.net/npm/@vxe-ui/plugin-export-pdf/fonts/source-han-sans-normal.js'
+              //     fontUrl: 'https://cdn.jsdelivr.net/npm/${pluginExportPdfCDNLib}/fonts/source-han-sans-normal.js'
               //   }
               // ]
             })
@@ -50,6 +53,7 @@
             // VxeUI.use(VxeUIPluginExportPDF, {
             //   jsPDF
             // })
+            `">
           </pre-code>
         </pre>
       </template>
