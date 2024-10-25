@@ -5522,6 +5522,22 @@ const routes: Array<RouteConfig> = [
             ]
           },
           {
+            path: 'checkbox',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentTableSelectCheckboxBase',
+                component: () => import('@/views/table-select/checkbox/base/CodeExample.vue')
+              },
+              {
+                path: 'trigger',
+                name: 'ComponentTableSelectCheckboxTrigger',
+                component: () => import('@/views/table-select/checkbox/trigger/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'scroll',
             component: RouteLayout,
             children: [

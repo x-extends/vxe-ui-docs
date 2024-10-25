@@ -1684,6 +1684,13 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
+            title: '复选框',
+            children: [
+              { title: '显示复选框', routerLink: { name: 'ComponentTableSelectCheckboxBase' } },
+              { title: '选中子节点', routerLink: { name: 'ComponentTableSelectCheckboxTrigger' } }
+            ]
+          },
+          {
             title: '虚拟滚动（大量数据选项）',
             children: [
               { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTableSelectScrollVertical' } },
