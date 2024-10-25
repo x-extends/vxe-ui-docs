@@ -18,8 +18,8 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref, reactive, onMounted, nextTick } from 'vue'
+<script lang="ts">
+import Vue from 'vue'
 import { VxeUI, VxeTableSelectPropTypes } from 'vxe-pc-ui'
 
 interface RowVO {
@@ -28,54 +28,63 @@ interface RowVO {
   [key: string]: string | number
 }
 
-const val1 = ref()
-const loading = ref(false)
+export default Vue.extend({
+  data () {
+    const columnList: VxeTableSelectPropTypes.Columns = []
+    const tableData: RowVO[] = []
 
-const columnList = ref<VxeTableSelectPropTypes.Columns>([])
-const tableData = ref<RowVO[]>([])
-
-const popupConfig = reactive<VxeTableSelectPropTypes.PopupConfig>({
-  width: 500,
-  height: 400
-})
-
-// 模拟行与列数据
-const loadDataAndColumns = (rowSize: number, colSize: number) => {
-  loading.value = true
-  setTimeout(() => {
-    const colList: VxeTableSelectPropTypes.Columns = []
-    for (let i = 0; i < colSize; i++) {
-      colList.push({
-        field: `col${i}`,
-        title: `标题${i}`,
-        width: 160
-      })
+    const popupConfig: VxeTableSelectPropTypes.PopupConfig = {
+      width: 500,
+      height: 400
     }
-    const dataList: RowVO[] = []
-    for (let i = 0; i < rowSize; i++) {
-      const item: RowVO = {
-        id: 10000 + i,
-        name: `Name ${i}`
-      }
-      for (let j = 0; j < colList.length; j++) {
-        item[`col${j}`] = `值_${i}_${j}`
-      }
-      dataList.push(item)
-    }
-    const startTime = Date.now()
-    columnList.value = colList
-    tableData.value = dataList
-    nextTick(() => {
-      VxeUI.modal.message({
-        content: `加载时间 ${Date.now() - startTime} 毫秒`,
-        status: 'success'
-      })
-      loading.value = false
-    })
-  }, 350)
-}
 
-onMounted(() => {
-  loadDataAndColumns(50, 50)
+    return {
+      val1: null,
+      loading: false,
+      columnList,
+      tableData,
+      popupConfig
+    }
+  },
+  methods: {
+    // 模拟行与列数据
+    loadDataAndColumns (rowSize: number, colSize: number) {
+      this.loading = true
+      setTimeout(() => {
+        const colList: VxeTableSelectPropTypes.Columns = []
+        for (let i = 0; i < colSize; i++) {
+          colList.push({
+            field: `col${i}`,
+            title: `标题${i}`,
+            width: 160
+          })
+        }
+        const dataList: RowVO[] = []
+        for (let i = 0; i < rowSize; i++) {
+          const item: RowVO = {
+            id: 10000 + i,
+            name: `Name ${i}`
+          }
+          for (let j = 0; j < colList.length; j++) {
+            item[`col${j}`] = `值_${i}_${j}`
+          }
+          dataList.push(item)
+        }
+        const startTime = Date.now()
+        this.columnList = colList
+        this.tableData = dataList
+        this.$nextTick(() => {
+          VxeUI.modal.message({
+            content: `加载时间 ${Date.now() - startTime} 毫秒`,
+            status: 'success'
+          })
+          this.loading = false
+        })
+      }, 350)
+    }
+  },
+  mounted () {
+    this.loadDataAndColumns(50, 50)
+  }
 })
 </script>

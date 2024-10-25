@@ -4,8 +4,8 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref, reactive } from 'vue'
+<script lang="ts">
+import Vue from 'vue'
 import type { VxeTableSelectPropTypes } from 'vxe-pc-ui'
 
 interface RowVO {
@@ -17,49 +17,60 @@ interface RowVO {
   address: string
 }
 
-const val1 = ref()
-
-const columnList = ref<VxeTableSelectPropTypes.Columns>([
-  { type: 'seq', width: 70 },
-  {
-    title: '分组1',
-    children: [
-      { field: 'name', title: 'Name' },
-      { field: 'role', title: 'Role' }
+export default Vue.extend({
+  data () {
+    const columnList: VxeTableSelectPropTypes.Columns = [
+      { type: 'seq', width: 70 },
+      {
+        title: '分组1',
+        children: [
+          { field: 'name', title: 'Name' },
+          { field: 'role', title: 'Role' }
+        ]
+      },
+      {
+        title: '分组1',
+        children: [
+          { field: 'sex', title: 'Sex' }
+        ]
+      },
+      { field: 'age', title: 'age' },
+      { field: 'address', title: 'Address' }
     ]
+
+    const tableData: RowVO[] = []
+
+    const popupConfig: VxeTableSelectPropTypes.PopupConfig = {
+      width: 500,
+      height: 400
+    }
+
+    return {
+      val1: null,
+      columnList,
+      tableData,
+      popupConfig
+    }
   },
-  {
-    title: '分组1',
-    children: [
-      { field: 'sex', title: 'Sex' }
-    ]
+  methods: {
+    // 模拟行数据
+    loadList (size = 200) {
+      const dataList: RowVO[] = []
+      for (let i = 0; i < size; i++) {
+        dataList.push({
+          id: 10000 + i,
+          name: 'Test' + i,
+          role: 'Developer',
+          sex: '男',
+          age: 40,
+          address: 'Address'
+        })
+      }
+      this.tableData = dataList
+    }
   },
-  { field: 'age', title: 'age' },
-  { field: 'address', title: 'Address' }
-])
-
-const tableData = ref<RowVO[]>([])
-
-const popupConfig = reactive<VxeTableSelectPropTypes.PopupConfig>({
-  width: 500,
-  height: 400
-})
-
-// 模拟行数据
-const loadList = (size = 200) => {
-  const dataList: RowVO[] = []
-  for (let i = 0; i < size; i++) {
-    dataList.push({
-      id: 10000 + i,
-      name: 'Test' + i,
-      role: 'Developer',
-      sex: '男',
-      age: 40,
-      address: 'Address'
-    })
+  created () {
+    this.loadList(500)
   }
-  tableData.value = dataList
-}
-
-loadList(500)
+})
 </script>
