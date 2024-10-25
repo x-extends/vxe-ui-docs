@@ -877,9 +877,12 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '单元格',
           children: [
-            { title: '实现一个超链接', routerLink: { name: 'GlobalRendererTableDefaultMyLink' } },
-            { title: '实现一个图片预览', routerLink: { name: 'GlobalRendererTableDefaultMyImg' } },
-            { title: '实现一个金额格式化', routerLink: { name: 'GlobalRendererTableDefaultMyAmount' } },
+            { title: '实现单元格超链接', routerLink: { name: 'GlobalRendererTableDefaultMyLink' } },
+            { title: '实现单元格图片预览', routerLink: { name: 'GlobalRendererTableDefaultMyImg' } },
+            { title: '实现单元格金额格式化', routerLink: { name: 'GlobalRendererTableDefaultMyAmount' } },
+            { title: '实现表头超链接', routerLink: { name: 'GlobalRendererTableDefaultMyHeaderLink' } },
+            { title: '实现表尾金额格式化', routerLink: { name: 'GlobalRendererTableDefaultMyFooterAmount' } },
+            { title: '实现完整金额格式化', routerLink: { name: 'GlobalRendererTableDefaultMyFullAmount' } },
             { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/table/cell/el-switch` }
           ]
         },
