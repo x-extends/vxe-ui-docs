@@ -4,13 +4,13 @@
       title-width="120"
       :data="formData">
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
-      <vxe-form-item title="日期" field="date" span="24" :item-render="{ name: 'VxeInput', props: { type: 'date' } }"></vxe-form-item>
-      <vxe-form-item title="年份" field="year" span="24" :item-render="{ name: 'VxeInput', props: { type: 'year' } }"></vxe-form-item>
-      <vxe-form-item title="季度" field="quarter" span="24" :item-render="{ name: 'VxeInput', props: { type: 'quarter' } }"></vxe-form-item>
-      <vxe-form-item title="月份" field="month" span="24" :item-render="{ name: 'VxeInput', props: { type: 'month' } }"></vxe-form-item>
-      <vxe-form-item title="周" field="week" span="24" :item-render="{ name: 'VxeInput', props: { type: 'week' } }"></vxe-form-item>
-      <vxe-form-item title="时间" field="time" span="24" :item-render="{ name: 'VxeInput', props: { type: 'time' } }"></vxe-form-item>
-      <vxe-form-item title="日期带时间" field="datetime" span="24" :item-render="{ name: 'VxeInput', props: { type: 'datetime' } }"></vxe-form-item>
+      <vxe-form-item title="日期" field="date" span="24" :item-render="{ name: 'VxeDatePicker' }"></vxe-form-item>
+      <vxe-form-item title="年份" field="year" span="24" :item-render="{ name: 'VxeDatePicker', props: { type: 'year' } }"></vxe-form-item>
+      <vxe-form-item title="季度" field="quarter" span="24" :item-render="{ name: 'VxeDatePicker', props: { type: 'quarter' } }"></vxe-form-item>
+      <vxe-form-item title="月份" field="month" span="24" :item-render="{ name: 'VxeDatePicker', props: { type: 'month' } }"></vxe-form-item>
+      <vxe-form-item title="周" field="week" span="24" :item-render="{ name: 'VxeDatePicker', props: { type: 'week' } }"></vxe-form-item>
+      <vxe-form-item title="时间" field="time" span="24" :item-render="{ name: 'VxeDatePicker', props: { type: 'time' } }"></vxe-form-item>
+      <vxe-form-item title="日期带时间" field="datetime" span="24" :item-render="{ name: 'VxeDatePicker', props: { type: 'datetime' } }"></vxe-form-item>
       <vxe-form-item align="center" span="24">
         <template #default>
           <vxe-button type="reset">重置</vxe-button>

@@ -5370,8 +5370,9 @@ const routes: Array<RouteConfig> = [
           }
         ]
       },
+
       {
-        path: 'treeSelect',
+        path: 'tree-select',
         component: RouteLayout,
         children: [
           {
@@ -5381,37 +5382,47 @@ const routes: Array<RouteConfig> = [
               {
                 path: 'size',
                 name: 'ComponentTreeSelectBaseSize',
-                component: () => import('@/views/treeSelect/base/size/CodeExample.vue')
+                component: () => import('@/views/tree-select/base/size/CodeExample.vue')
               },
               {
                 path: 'hierarchy',
                 name: 'ComponentTreeSelectBaseHierarchy',
-                component: () => import('@/views/treeSelect/base/hierarchy/CodeExample.vue')
+                component: () => import('@/views/tree-select/base/hierarchy/CodeExample.vue')
               },
               {
                 path: 'leveling',
                 name: 'ComponentTreeSelectBaseLeveling',
-                component: () => import('@/views/treeSelect/base/leveling/CodeExample.vue')
+                component: () => import('@/views/tree-select/base/leveling/CodeExample.vue')
               },
               {
                 path: 'multiple',
                 name: 'ComponentTreeSelectBaseMultiple',
-                component: () => import('@/views/treeSelect/base/multiple/CodeExample.vue')
+                component: () => import('@/views/tree-select/base/multiple/CodeExample.vue')
               },
               {
                 path: 'icon',
                 name: 'ComponentTreeSelectBaseIcon',
-                component: () => import('@/views/treeSelect/base/icon/CodeExample.vue')
+                component: () => import('@/views/tree-select/base/icon/CodeExample.vue')
+              },
+              {
+                path: 'optionProps',
+                name: 'ComponentTreeSelectBaseOptionProps',
+                component: () => import('@/views/tree-select/base/optionProps/CodeExample.vue')
+              },
+              {
+                path: 'popupWH',
+                name: 'ComponentTreeSelectBasePopupWH',
+                component: () => import('@/views/tree-select/base/popupWH/CodeExample.vue')
               },
               {
                 path: 'showLine',
                 name: 'ComponentTreeSelectBaseShowLine',
-                component: () => import('@/views/treeSelect/base/showLine/CodeExample.vue')
+                component: () => import('@/views/tree-select/base/showLine/CodeExample.vue')
               },
               {
                 path: 'trigger',
                 name: 'ComponentTreeSelectBaseTrigger',
-                component: () => import('@/views/treeSelect/base/trigger/CodeExample.vue')
+                component: () => import('@/views/tree-select/base/trigger/CodeExample.vue')
               }
             ]
           },
@@ -5422,12 +5433,12 @@ const routes: Array<RouteConfig> = [
               {
                 path: 'base',
                 name: 'ComponentTreeSelectRadioBase',
-                component: () => import('@/views/treeSelect/radio/base/CodeExample.vue')
+                component: () => import('@/views/tree-select/radio/base/CodeExample.vue')
               },
               {
                 path: 'trigger',
                 name: 'ComponentTreeSelectRadioTrigger',
-                component: () => import('@/views/treeSelect/radio/trigger/CodeExample.vue')
+                component: () => import('@/views/tree-select/radio/trigger/CodeExample.vue')
               }
             ]
           },
@@ -5438,17 +5449,17 @@ const routes: Array<RouteConfig> = [
               {
                 path: 'base',
                 name: 'ComponentTreeSelectCheckboxBase',
-                component: () => import('@/views/treeSelect/checkbox/base/CodeExample.vue')
+                component: () => import('@/views/tree-select/checkbox/base/CodeExample.vue')
               },
               {
                 path: 'checkStrictly',
                 name: 'ComponentTreeSelectCheckboxCheckStrictly',
-                component: () => import('@/views/treeSelect/checkbox/checkStrictly/CodeExample.vue')
+                component: () => import('@/views/tree-select/checkbox/checkStrictly/CodeExample.vue')
               },
               {
                 path: 'trigger',
                 name: 'ComponentTreeSelectCheckboxTrigger',
-                component: () => import('@/views/treeSelect/checkbox/trigger/CodeExample.vue')
+                component: () => import('@/views/tree-select/checkbox/trigger/CodeExample.vue')
               }
             ]
           },
@@ -5459,12 +5470,80 @@ const routes: Array<RouteConfig> = [
               {
                 path: 'base',
                 name: 'ComponentTreeSelectLazyBase',
-                component: () => import('@/views/treeSelect/lazy/base/CodeExample.vue')
+                component: () => import('@/views/tree-select/lazy/base/CodeExample.vue')
               },
               {
                 path: 'multiple',
                 name: 'ComponentTreeSelectLazyMultiple',
-                component: () => import('@/views/treeSelect/lazy/multiple/CodeExample.vue')
+                component: () => import('@/views/tree-select/lazy/multiple/CodeExample.vue')
+              }
+            ]
+          }
+        ]
+      },
+      {
+        path: 'table-select',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'basics',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'size',
+                name: 'ComponentTableSelectBaseSize',
+                component: () => import('@/views/table-select/base/size/CodeExample.vue')
+              },
+              {
+                path: 'loading',
+                name: 'ComponentTableSelectBaseLoading',
+                component: () => import('@/views/table-select/base/loading/CodeExample.vue')
+              },
+              {
+                path: 'border',
+                name: 'ComponentTableSelectBaseBorder',
+                component: () => import('@/views/table-select/base/border/CodeExample.vue')
+              },
+              {
+                path: 'optionProps',
+                name: 'ComponentTableSelectBaseOptionProps',
+                component: () => import('@/views/table-select/base/optionProps/CodeExample.vue')
+              },
+              {
+                path: 'popupWH',
+                name: 'ComponentTableSelectBasePopupWH',
+                component: () => import('@/views/table-select/base/popupWH/CodeExample.vue')
+              },
+              {
+                path: 'footer',
+                name: 'ComponentTableSelectBaseFooter',
+                component: () => import('@/views/table-select/base/footer/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'scroll',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'vertical',
+                name: 'ComponentTableSelectScrollVertical',
+                component: () => import('@/views/table-select/scroll/vertical/CodeExample.vue')
+              },
+              {
+                path: 'horizontal',
+                name: 'ComponentTableSelectScrollHorizontal',
+                component: () => import('@/views/table-select/scroll/horizontal/CodeExample.vue')
+              },
+              {
+                path: 'hv',
+                name: 'ComponentTableSelectScrollHV',
+                component: () => import('@/views/table-select/scroll/hv/CodeExample.vue')
+              },
+              {
+                path: 'group',
+                name: 'ComponentTableSelectScrollGroup',
+                component: () => import('@/views/table-select/scroll/group/CodeExample.vue')
               }
             ]
           }

@@ -4,8 +4,8 @@
       title-width="120"
       :data="formData">
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
-      <vxe-form-item title="下拉框" field="region" span="24" :item-render="regionItemRender"></vxe-form-item>
-      <vxe-form-item title="下拉框多选" field="regionList" span="24" :item-render="regionListItemRender"></vxe-form-item>
+      <vxe-form-item title="下拉树选择单选" field="region" span="24" :item-render="regionItemRender"></vxe-form-item>
+      <vxe-form-item title="下拉树选择多选" field="regionList" span="24" :item-render="regionListItemRender"></vxe-form-item>
       <vxe-form-item align="center" span="24">
         <template #default>
           <vxe-button type="reset">重置</vxe-button>
@@ -32,6 +32,7 @@ const regionItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
   options: [
     {
       label: '广东省',
+      value: '1',
       children: [
         { label: '深圳市', value: '1-1' },
         { label: '广州市', value: '1-2' }
@@ -39,6 +40,7 @@ const regionItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
     },
     {
       label: '北京',
+      value: '2',
       children: [
         { label: '东城区', value: '2-1' },
         { label: '西城区', value: '2-2' }
@@ -55,6 +57,7 @@ const regionListItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
   options: [
     {
       label: '广东省',
+      value: '1',
       children: [
         { label: '深圳市', value: '1-1' },
         { label: '广州市', value: '1-2' }
@@ -62,6 +65,7 @@ const regionListItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
     },
     {
       label: '北京',
+      value: '2',
       children: [
         { label: '东城区', value: '2-1' },
         { label: '西城区', value: '2-2' }
