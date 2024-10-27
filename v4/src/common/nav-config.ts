@@ -309,10 +309,11 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'select 原生下拉框', routerLink: { name: 'ComponentTableEditRenderSelect' } },
             { title: 'VxeInput 输入框', routerLink: { name: 'ComponentTableEditRenderVxeInput' } },
             { title: 'VxeNumberInput 数值输入', routerLink: { name: 'ComponentTableEditRenderVxeNumberInput' } },
+            { title: 'VxeIconPicker 图标选择', routerLink: { name: 'ComponentTableEditRenderVxeIconPicker' } },
             { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentTableEditRenderVxeDatePicker' } },
             { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentTableEditRenderVxeSelect' } },
-            { title: 'VxeTreeSelect 下拉树选择器', routerLink: { name: 'ComponentTableEditRenderVxeTreeSelect' } },
-            { title: 'VxeTableSelect 下拉表格选择器', routerLink: { name: 'ComponentTableEditRenderVxeTableSelect' } },
+            { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentTableEditRenderVxeTreeSelect' } },
+            { title: 'VxeTableSelect 下拉表格选择', routerLink: { name: 'ComponentTableEditRenderVxeTableSelect' } },
             { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/table/edit/el-input` }
           ]
         },
@@ -321,8 +322,11 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           children: [
             { title: 'VxeInput 输入框', routerLink: { name: 'ComponentTableEditTemplateVxeInput' } },
             { title: 'VxeNumberInput 数值输入', routerLink: { name: 'ComponentTableEditTemplateVxeNumberInput' } },
+            { title: 'VxeIconPicker 图标选择', routerLink: { name: 'ComponentTableEditTemplateVxeIconPicker' } },
             { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentTableEditTemplateVxeDatePicker' } },
-            { title: 'VxeSelect 下拉树选择器', routerLink: { name: 'ComponentTableEditTemplateVxeSelect' } },
+            { title: 'VxeSelect 下拉树选择', routerLink: { name: 'ComponentTableEditTemplateVxeSelect' } },
+            { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentTableEditTemplateVxeTreeSelect' } },
+            { title: 'VxeTableSelect 下拉表格选择', routerLink: { name: 'ComponentTableEditTemplateVxeTableSelect' } },
             { title: 'VxePulldown 下拉容器', routerLink: { name: 'ComponentTableEditTemplateVxePulldown' } },
             { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/table/edit/el-input` }
           ]
@@ -683,15 +687,15 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '可编辑 - 渲染 - 配置式',
           children: [
-            { title: 'input', routerLink: { name: 'ComponentGridEditRenderInput' } },
-            { title: 'select', routerLink: { name: 'ComponentGridEditRenderSelect' } },
-            { title: 'VxeInput', routerLink: { name: 'ComponentGridEditRenderVxeInput' } },
-            { title: 'VxeNumberInput', routerLink: { name: 'ComponentGridEditRenderVxeNumberInput' } },
-            { title: 'VxeIconPicker', routerLink: { name: 'ComponentGridEditRenderVxeIconPicker' } },
-            { title: 'VxeDatePicker', routerLink: { name: 'ComponentGridEditRenderVxeDatePicker' } },
-            { title: 'VxeSelect', routerLink: { name: 'ComponentGridEditRenderVxeSelect' } },
-            { title: 'VxeTreeSelect 下拉树选择器', routerLink: { name: 'ComponentGridEditRenderVxeTreeSelect' } },
-            { title: 'VxeTableSelect 下拉表格选择器', routerLink: { name: 'ComponentGridEditRenderVxeTableSelect' } },
+            { title: 'input 原生-输入框', routerLink: { name: 'ComponentGridEditRenderInput' } },
+            { title: 'select 原生-下拉框', routerLink: { name: 'ComponentGridEditRenderSelect' } },
+            { title: 'VxeInput 输入框', routerLink: { name: 'ComponentGridEditRenderVxeInput' } },
+            { title: 'VxeNumberInput 数值输入框', routerLink: { name: 'ComponentGridEditRenderVxeNumberInput' } },
+            { title: 'VxeIconPicker 图标选择', routerLink: { name: 'ComponentGridEditRenderVxeIconPicker' } },
+            { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentGridEditRenderVxeDatePicker' } },
+            { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentGridEditRenderVxeSelect' } },
+            { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentGridEditRenderVxeTreeSelect' } },
+            { title: 'VxeTableSelect 下拉表格选择', routerLink: { name: 'ComponentGridEditRenderVxeTableSelect' } },
             { title: '禁用单元格编辑', routerLink: { name: 'ComponentGridEditRenderCellDisable' } },
             { title: '禁用行编辑', routerLink: { name: 'ComponentGridEditRenderRowDisable' } },
             { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/edit/el-input` }
@@ -700,11 +704,14 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '可编辑 - 渲染 - 插槽式',
           children: [
-            { title: 'VxeInput', routerLink: { name: 'ComponentGridEditTemplateVxeInput' } },
-            { title: 'VxeNumberInput', routerLink: { name: 'ComponentGridEditTemplateVxeNumberInput' } },
-            { title: 'VxeDatePicker', routerLink: { name: 'ComponentGridEditTemplateVxeDatePicker' } },
-            { title: 'VxeSelect', routerLink: { name: 'ComponentGridEditTemplateVxeSelect' } },
-            { title: 'VxePulldown', routerLink: { name: 'ComponentGridEditTemplateVxePulldown' } },
+            { title: 'VxeInput 输入框', routerLink: { name: 'ComponentGridEditTemplateVxeInput' } },
+            { title: 'VxeNumberInput 数值输入框', routerLink: { name: 'ComponentGridEditTemplateVxeNumberInput' } },
+            { title: 'VxeIconPicker 图标选择', routerLink: { name: 'ComponentGridEditTemplateVxeIconPicker' } },
+            { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentGridEditTemplateVxeDatePicker' } },
+            { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentGridEditTemplateVxeSelect' } },
+            { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentGridEditTemplateVxeTreeSelect' } },
+            { title: 'VxeTableSelect 下拉表格选择', routerLink: { name: 'ComponentGridEditTemplateVxeTableSelect' } },
+            { title: 'VxePulldown 下拉容器', routerLink: { name: 'ComponentGridEditTemplateVxePulldown' } },
             { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/edit/el-input` }
           ]
         },
@@ -1294,8 +1301,8 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeTextarea 文本域', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTextarea' } },
               { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSelect' } },
               { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeDatePicker' } },
-              { title: 'VxeTreeSelect 下拉树选择器', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTreeSelect' } },
-              { title: 'VxeTableSelect 下拉表格选择器', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTableSelect' } },
+              { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTreeSelect' } },
+              { title: 'VxeTableSelect 下拉表格选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTableSelect' } },
               { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSwitch' } },
               { title: 'VxeRadioGroup 单选组', routerLink: { name: 'ComponentFormBasicsItemRenderVxeRadioGroup' } },
               { title: 'VxeCheckboxGroup 复选组', routerLink: { name: 'ComponentFormBasicsItemRenderVxeCheckboxGroup' } },
@@ -1317,7 +1324,7 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeTextarea 文本域', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeTextarea' } },
               { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSelect' } },
               { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDatePicker' } },
-              { title: 'VxeTreeSelect 下拉树选择器', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeTreeSelect' } },
+              { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeTreeSelect' } },
               { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSwitch' } },
               { title: 'VxeRadioGroup 单选组', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeRadioGroup' } },
               { title: 'VxeCheckboxGroup 复选组', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeCheckboxGroup' } },
@@ -1374,8 +1381,8 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeNumberInput 数值输入', routerLink: { name: 'ComponentFormConfigItemRenderVxeNumberInput' } },
               { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormConfigItemRenderVxeSelect' } },
               { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormConfigItemRenderVxeDatePicker' } },
-              { title: 'VxeTreeSelect 下拉树选择器', routerLink: { name: 'ComponentFormConfigItemRenderVxeTreeSelect' } },
-              { title: 'VxeTableSelect 下拉表格选择器', routerLink: { name: 'ComponentFormConfigItemRenderVxeTableSelect' } },
+              { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentFormConfigItemRenderVxeTreeSelect' } },
+              { title: 'VxeTableSelect 下拉表格选择', routerLink: { name: 'ComponentFormConfigItemRenderVxeTableSelect' } },
               { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormConfigItemRenderVxeSwitch' } },
               { title: 'VxeRadioGroup 单选组件', routerLink: { name: 'ComponentFormConfigItemRenderVxeRadioGroup' } },
               { title: 'VxeCheckboxGroup 复选组', routerLink: { name: 'ComponentFormConfigItemRenderVxeCheckboxGroup' } },
@@ -1399,7 +1406,7 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeNumberInput 数值输入', routerLink: { name: 'ComponentFormConfigItemTemplateVxeNumberInput' } },
               { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSelect' } },
               { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormConfigItemTemplateVxeDatePicker' } },
-              { title: 'VxeTreeSelect 下拉树选择器', routerLink: { name: 'ComponentFormConfigItemTemplateVxeTreeSelect' } },
+              { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentFormConfigItemTemplateVxeTreeSelect' } },
               { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSwitch' } },
               { title: 'VxeRadioGroup 单选组', routerLink: { name: 'ComponentFormConfigItemTemplateVxeRadioGroup' } },
               { title: 'VxeCheckboxGroup 复选组', routerLink: { name: 'ComponentFormConfigItemTemplateVxeCheckboxGroup' } },
@@ -1634,7 +1641,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'TreeSelect 下拉树选择器',
+        title: 'TreeSelect 下拉树选择',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tree-select' } } },
           {
@@ -1676,7 +1683,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'TableSelect 下拉表格选择器',
+        title: 'TableSelect 下拉表格选择',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'table-select' } } },
           {
