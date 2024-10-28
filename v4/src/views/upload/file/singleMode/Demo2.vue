@@ -19,13 +19,8 @@ const fileList1 = ref({
 const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress }) => {
   const formData = new FormData()
   formData.append('file', file)
-  return axios.post('/api/pub/upload/single', formData, {
-    onUploadProgress (progressEvent) {
-      const percentCompleted = Math.round((progressEvent.loaded * 100) / (progressEvent.total || 0))
-      // 更新进度
-      updateProgress(percentCompleted)
-    }
-  }).then((res) => {
+  return axios.post('/api/pub/upload/single', formData).then((res) => {
+    // { url: '' }
     return {
       ...res.data
     }
