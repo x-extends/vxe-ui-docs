@@ -11,15 +11,10 @@ import { VxeUploadPropTypes } from 'vxe-pc-ui'
 
 const imgList = ref([])
 
-const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress }) => {
+const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file }) => {
   const formData = new FormData()
   formData.append('file', file)
-  return axios.post('/api/pub/upload/single', formData, {
-    onUploadProgress (progressEvent) {
-      const percentCompleted = Math.round((progressEvent.loaded * 100) / (progressEvent.total || 0))
-      updateProgress(percentCompleted)
-    }
-  }).then((res) => {
+  return axios.post('/api/pub/upload/single', formData).then((res) => {
     return {
       ...res.data
     }

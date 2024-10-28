@@ -6332,6 +6332,11 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/upload/file/multiple/CodeExample.vue')
               },
               {
+                path: 'uploadMethod',
+                name: 'ComponentUploadFileUploadMethod',
+                component: () => import('@/views/upload/file/uploadMethod/CodeExample.vue')
+              },
+              {
                 path: 'downloadMethod',
                 name: 'ComponentUploadFileDownloadMethod',
                 component: () => import('@/views/upload/file/downloadMethod/CodeExample.vue')
@@ -6446,6 +6451,11 @@ const routes: Array<RouteConfig> = [
                 path: 'multiple',
                 name: 'ComponentUploadImageMultiple',
                 component: () => import('@/views/upload/image/multiple/CodeExample.vue')
+              },
+              {
+                path: 'uploadMethod',
+                name: 'ComponentUploadImageUploadMethod',
+                component: () => import('@/views/upload/image/uploadMethod/CodeExample.vue')
               },
               {
                 path: 'downloadMethod',

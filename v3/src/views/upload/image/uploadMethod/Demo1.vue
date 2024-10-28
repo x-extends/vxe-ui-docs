@@ -1,12 +1,11 @@
 <template>
   <div>
-    <vxe-upload v-model="imgList" mode="image" multiple show-progress :upload-method="uploadMethod"></vxe-upload>
+    <vxe-upload v-model="imgList" mode="image" multiple :upload-method="uploadMethod"></vxe-upload>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import axios from 'axios'
 import { VxeUploadPropTypes } from 'vxe-pc-ui'
 
 export default Vue.extend({
@@ -14,12 +13,15 @@ export default Vue.extend({
     const imgList = []
 
     const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file }) => {
-      const formData = new FormData()
-      formData.append('file', file)
-      return axios.post('/api/pub/upload/single', formData).then((res) => {
-        return {
-          ...res.data
-        }
+      // 模拟后台接口
+      return new Promise(resolve => {
+        setTimeout(() => {
+          // 接收 { url: '' }
+          resolve({
+            name: file.name,
+            url: `${file.name}`
+          })
+        }, 500)
       })
     }
 
