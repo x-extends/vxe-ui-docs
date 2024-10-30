@@ -957,6 +957,42 @@ const tableRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'validate',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'rules',
+          name: 'ComponentTableValidateRules',
+          component: () => import('@/views/table/validate/rules/CodeExample.vue')
+        },
+        {
+          path: 'string',
+          name: 'ComponentTableValidateString',
+          component: () => import('@/views/table/validate/string/CodeExample.vue')
+        },
+        {
+          path: 'number',
+          name: 'ComponentTableValidateNumber',
+          component: () => import('@/views/table/validate/number/CodeExample.vue')
+        },
+        {
+          path: 'regexp',
+          name: 'ComponentTableValidateRegexp',
+          component: () => import('@/views/table/validate/regexp/CodeExample.vue')
+        },
+        {
+          path: 'array',
+          name: 'ComponentTableValidateArray',
+          component: () => import('@/views/table/validate/array/CodeExample.vue')
+        },
+        {
+          path: 'custom',
+          name: 'ComponentTableValidateCustom',
+          component: () => import('@/views/table/validate/custom/CodeExample.vue')
+        }
+      ]
+    },
+    {
       path: 'cellRender',
       component: RouteLayout,
       children: [

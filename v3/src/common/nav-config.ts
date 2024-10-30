@@ -332,6 +332,17 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           ]
         },
         {
+          title: '数据校验',
+          children: [
+            { title: '校验规则配置', routerLink: { name: 'ComponentTableValidateRules' } },
+            { title: '字符串校验', routerLink: { name: 'ComponentTableValidateString' } },
+            { title: '数值校验', routerLink: { name: 'ComponentTableValidateNumber' } },
+            { title: '正则校验', routerLink: { name: 'ComponentTableValidateRegexp' } },
+            { title: '数组校验', routerLink: { name: 'ComponentTableValidateArray' } },
+            { title: '自定义校验', routerLink: { name: 'ComponentTableValidateCustom' } }
+          ]
+        },
+        {
           title: '自定义插槽模板',
           children: [
             { title: '自定义单元格模板', routerLink: { name: 'ComponentTableTemplateDefault' } },

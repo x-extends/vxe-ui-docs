@@ -320,7 +320,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '可编辑 - 渲染 - 插槽式',
           children: [
-            { title: 'VxeInput 输入框', routerLink: { name: 'ComponentTableEditTemplateVxeInput' } },
+            { title: 'VxeInput 输入、框', routerLink: { name: 'ComponentTableEditTemplateVxeInput' } },
             { title: 'VxeNumberInput 数值输入', routerLink: { name: 'ComponentTableEditTemplateVxeNumberInput' } },
             { title: 'VxeIconPicker 图标选择', routerLink: { name: 'ComponentTableEditTemplateVxeIconPicker' } },
             { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentTableEditTemplateVxeDatePicker' } },
@@ -329,6 +329,17 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'VxeTableSelect 下拉表格选择', routerLink: { name: 'ComponentTableEditTemplateVxeTableSelect' } },
             { title: 'VxePulldown 下拉容器', routerLink: { name: 'ComponentTableEditTemplateVxePulldown' } },
             { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/table/edit/el-input` }
+          ]
+        },
+        {
+          title: '数据校验',
+          children: [
+            { title: '校验规则配置', routerLink: { name: 'ComponentTableValidateRules' } },
+            { title: '字符串校验', routerLink: { name: 'ComponentTableValidateString' } },
+            { title: '数值校验', routerLink: { name: 'ComponentTableValidateNumber' } },
+            { title: '正则校验', routerLink: { name: 'ComponentTableValidateRegexp' } },
+            { title: '数组校验', routerLink: { name: 'ComponentTableValidateArray' } },
+            { title: '自定义校验', routerLink: { name: 'ComponentTableValidateCustom' } }
           ]
         },
         {
