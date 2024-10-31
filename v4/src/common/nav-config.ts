@@ -277,6 +277,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '手动编辑', routerLink: { name: 'ComponentTableEditManual' } },
             { title: '单击编辑', routerLink: { name: 'ComponentTableEditClick' } },
             { title: '双击编辑', routerLink: { name: 'ComponentTableEditDblclick' } },
+            { title: '编辑与聚焦', routerLink: { name: 'ComponentTableEditAutoFocus' } },
             { title: '关闭自动清除编辑状态', routerLink: { name: 'ComponentTableEditAutoClear' } },
             { title: '编辑状态', routerLink: { name: 'ComponentTableEditStatus' } },
             { title: '空值占位符', routerLink: { name: 'ComponentTableEditCellPlaceholder' } },
