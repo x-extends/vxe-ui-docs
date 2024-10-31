@@ -935,6 +935,11 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/edit/rowHeight/CodeExample.vue')
         },
         {
+          path: 'multiLineText',
+          name: 'ComponentTableEditMultiLineText',
+          component: () => import('@/views/table/edit/multiLineText/CodeExample.vue')
+        },
+        {
           path: 'uniqueSelect',
           name: 'ComponentTableEditUniqueSelect',
           component: () => import('@/views/table/edit/uniqueSelect/CodeExample.vue')
