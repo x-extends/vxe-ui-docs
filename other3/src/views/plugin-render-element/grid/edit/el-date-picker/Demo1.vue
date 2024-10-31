@@ -33,8 +33,8 @@ export default Vue.extend({
         { type: 'checkbox', width: 60 },
         { type: 'seq', title: 'Number', width: 80 },
         { field: 'name', title: 'Name', minWidth: 140, editRender: { name: 'ElInput' } },
-        { field: 'date1', title: '日期', width: 200, editRender: { name: 'ElDatePicker', props: { type: 'date', valueFormat: 'YYYY-MM-DD' } } },
-        { field: 'date2', title: '日期带时间', width: 220, editRender: { name: 'ElDatePicker', props: { type: 'datetime', valueFormat: 'YYYY-MM-DD HH:mm:ss' } } }
+        { field: 'date1', title: '日期', width: 200, editRender: { name: 'ElDatePicker', props: { type: 'date', valueFormat: 'yyyy-MM-dd' } } },
+        { field: 'date2', title: '日期带时间', width: 220, editRender: { name: 'ElDatePicker', props: { type: 'datetime', valueFormat: 'yyyy-MM-dd HH:mm:ss' } } }
 
       ],
       data: [
