@@ -305,8 +305,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '可编辑 - 渲染 - 配置式',
           children: [
-            { title: 'input 原生输入框', routerLink: { name: 'ComponentTableEditRenderInput' } },
-            { title: 'select 原生下拉框', routerLink: { name: 'ComponentTableEditRenderSelect' } },
+            { title: 'input 原生-输入框', routerLink: { name: 'ComponentTableEditRenderInput' } },
+            { title: 'select 原生-下拉框', routerLink: { name: 'ComponentTableEditRenderSelect' } },
             { title: 'VxeInput 输入框', routerLink: { name: 'ComponentTableEditRenderVxeInput' } },
             { title: 'VxeNumberInput 数值输入', routerLink: { name: 'ComponentTableEditRenderVxeNumberInput' } },
             { title: 'VxeIconPicker 图标选择', routerLink: { name: 'ComponentTableEditRenderVxeIconPicker' } },
