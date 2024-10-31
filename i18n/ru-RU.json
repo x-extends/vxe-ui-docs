@@ -172,6 +172,7 @@
         "areaEdit": "Editable",
         "areaCustom": "Custom column settings",
         "areaScroll": "Virtual scrolling (oversized data inventory)",
+        "areaAutoHeight": "Adaptive row height",
         "areaChart": "Official plugin - cell charts",
         "areaCellChart": "Render simple chart",
         "areaEcharts": "Third party plugin - echarts charts",

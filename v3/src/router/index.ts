@@ -1373,6 +1373,11 @@ const tableRouteConfig: RouteConfig = {
           component: () => import('@/views/table/scroll/rowHeight/CodeExample.vue')
         },
         {
+          path: 'autoRowHeight',
+          name: 'ComponentTableScrollAutoRowHeight',
+          component: () => import('@/views/table/scroll/autoRowHeight/CodeExample.vue')
+        },
+        {
           path: 'group',
           name: 'ComponentTableScrollGroup',
           component: () => import('@/views/table/scroll/group/CodeExample.vue')
@@ -2669,6 +2674,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'rowHeight',
           name: 'ComponentGridScrollRowHeight',
           component: () => import('@/views/grid/scroll/rowHeight/CodeExample.vue')
+        },
+        {
+          path: 'autoRowHeight',
+          name: 'ComponentGridScrollAutoRowHeight',
+          component: () => import('@/views/grid/scroll/autoRowHeight/CodeExample.vue')
         },
         {
           path: 'group',
