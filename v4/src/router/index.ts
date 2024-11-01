@@ -2697,6 +2697,37 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'footer',
           name: 'ComponentGridPrintFooter',
           component: () => import('@/views/grid/print/footer/CodeExample.vue')
+        },
+        {
+          path: 'template',
+          component: RouteLayout,
+          children: [
+            {
+              path: 'top',
+              name: 'ComponentGridPrintTemplateTop',
+              component: () => import('@/views/grid/print/template/top/CodeExample.vue')
+            },
+            {
+              path: 'parameter',
+              name: 'ComponentGridPrintTemplateParameter',
+              component: () => import('@/views/grid/print/template/parameter/CodeExample.vue')
+            },
+            {
+              path: 'bottom',
+              name: 'ComponentGridPrintTemplateBottom',
+              component: () => import('@/views/grid/print/template/bottom/CodeExample.vue')
+            },
+            {
+              path: 'default',
+              name: 'ComponentGridPrintTemplateDefault',
+              component: () => import('@/views/grid/print/template/default/CodeExample.vue')
+            },
+            {
+              path: 'footer',
+              name: 'ComponentGridPrintTemplateFooter',
+              component: () => import('@/views/grid/print/template/footer/CodeExample.vue')
+            }
+          ]
         }
       ]
     },

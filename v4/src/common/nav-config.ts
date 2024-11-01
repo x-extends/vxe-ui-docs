@@ -815,7 +815,17 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '自定义页眉/标题', routerLink: { name: 'ComponentGridPrintHeader' } },
             { title: '自定义页尾/页码', routerLink: { name: 'ComponentGridPrintFooter' } },
             { title: '实现将表格切割为多页打印', routerLink: { name: 'ComponentGridPrintPage' } },
-            { title: '实现打印多张表格', routerLink: { name: 'ComponentGridPrintMultilist' } }
+            { title: '实现打印多张表格', routerLink: { name: 'ComponentGridPrintMultilist' } },
+            {
+              title: '自定义插槽模板',
+              children: [
+                { title: '自定义顶部模板', routerLink: { name: 'ComponentGridPrintTemplateTop' } },
+                { title: '自定义底部模板', routerLink: { name: 'ComponentGridPrintTemplateBottom' } },
+                { title: '自定义参数设置模板', routerLink: { name: 'ComponentGridPrintTemplateParameter' } },
+                { title: '自定义尾部模板', routerLink: { name: 'ComponentGridPrintTemplateFooter' } },
+                { title: '自定义默认模板', routerLink: { name: 'ComponentGridPrintTemplateDefault' } }
+              ]
+            }
           ]
         },
         {
