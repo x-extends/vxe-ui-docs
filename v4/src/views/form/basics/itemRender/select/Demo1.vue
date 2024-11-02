@@ -6,12 +6,7 @@
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'input' }"></vxe-form-item>
       <vxe-form-item title="下拉框" field="sex" span="24" :item-render="sexItemRender"></vxe-form-item>
       <vxe-form-item title="下拉框分组" field="type" span="24" :item-render="typeItemRender"></vxe-form-item>
-      <vxe-form-item align="center" span="24">
-        <template #default>
-          <vxe-button type="reset">重置</vxe-button>
-          <vxe-button type="submit" status="primary">提交</vxe-button>
-        </template>
-      </vxe-form-item>
+      <vxe-form-item align="center" span="24" :item-render="actionItemRender"></vxe-form-item>
     </vxe-form>
   </div>
 </template>
@@ -54,6 +49,14 @@ const typeItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
         { label: '猕猴桃', value: '2-2' }
       ]
     }
+  ]
+})
+
+const actionItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
+  name: 'VxeButtonGroup',
+  options: [
+    { content: '重置', type: 'reset' },
+    { content: '提交', type: 'submit', status: 'primary' }
   ]
 })
 

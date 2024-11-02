@@ -1,11 +1,6 @@
 <template>
   <div>
-    <vxe-form v-bind="formOptions" >
-      <template #action>
-        <vxe-button type="reset">重置</vxe-button>
-        <vxe-button type="submit" status="primary">提交</vxe-button>
-      </template>
-    </vxe-form>
+    <vxe-form v-bind="formOptions" ></vxe-form>
   </div>
 </template>
 
@@ -80,6 +75,14 @@ export default Vue.extend({
       }
     }
 
+    const actionItemRender: VxeFormItemPropTypes.ItemRender = {
+      name: 'VxeButtonGroup',
+      options: [
+        { content: '重置', type: 'reset' },
+        { content: '提交', type: 'submit', status: 'primary' }
+      ]
+    }
+
     const formOptions: VxeFormProps<FormDataVO> & { data: FormDataVO } = {
       titleWidth: 120,
       titleAlign: 'right',
@@ -97,7 +100,7 @@ export default Vue.extend({
         { field: 'role', title: 'Role', span: 12, itemRender: roleItemRender },
         { field: 'startTime', title: 'Start time', span: 12, itemRender: startTimeItemRender },
         { field: 'endTime', title: 'End time', span: 12, itemRender: endTimeItemRender },
-        { align: 'center', span: 24, slots: { default: 'action' } }
+        { align: 'center', span: 24, itemRender: actionItemRender }
       ]
     }
 

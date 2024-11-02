@@ -11,18 +11,14 @@
       <vxe-form-item title="周" field="week" span="24" :item-render="{ name: 'input', attrs: { type: 'week' } }"></vxe-form-item>
       <vxe-form-item title="时间" field="time" span="24" :item-render="{ name: 'input', attrs: { type: 'time' } }"></vxe-form-item>
       <vxe-form-item title="颜色" field="color" span="24" :item-render="{ name: 'input', attrs: { type: 'color' } }"></vxe-form-item>
-      <vxe-form-item align="center" span="24">
-        <template #default>
-          <vxe-button type="reset">重置</vxe-button>
-          <vxe-button type="submit" status="primary">提交</vxe-button>
-        </template>
-      </vxe-form-item>
+      <vxe-form-item align="center" span="24" :item-render="actionItemRender"></vxe-form-item>
     </vxe-form>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { VxeFormItemPropTypes } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -52,8 +48,17 @@ export default Vue.extend({
       address: ''
     }
 
+    const actionItemRender: VxeFormItemPropTypes.ItemRender = {
+      name: 'VxeButtonGroup',
+      options: [
+        { content: '重置', type: 'reset' },
+        { content: '提交', type: 'submit', status: 'primary' }
+      ]
+    }
+
     return {
-      formData
+      formData,
+      actionItemRender
     }
   }
 })

@@ -6,12 +6,7 @@
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-item title="下拉表格单选" field="currUser" span="24" :item-render="currUserItemRender"></vxe-form-item>
       <vxe-form-item title="下拉表格多选" field="currUserList" span="24" :item-render="currUserListItemRender"></vxe-form-item>
-      <vxe-form-item align="center" span="24">
-        <template #default>
-          <vxe-button type="reset">重置</vxe-button>
-          <vxe-button type="submit" status="primary">提交</vxe-button>
-        </template>
-      </vxe-form-item>
+      <vxe-form-item default="center" span="24" :item-render="actionItemRender"></vxe-form-item>
     </vxe-form>
   </div>
 </template>
@@ -61,6 +56,14 @@ const currUserListItemRender = reactive<VxeFormItemPropTypes.ItemRender<FormData
     { value: 10002, label: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },
     { value: 10003, label: 'Test3', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai' },
     { value: 10004, label: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
+  ]
+})
+
+const actionItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
+  name: 'VxeButtonGroup',
+  options: [
+    { content: '重置', type: 'reset' },
+    { content: '提交', type: 'submit', status: 'primary' }
   ]
 })
 

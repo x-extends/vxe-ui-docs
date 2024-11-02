@@ -9,12 +9,7 @@
       <vxe-form-item title="Role" field="role" span="12" :item-render="roleItemRender"></vxe-form-item>
       <vxe-form-item title="Start time" field="startTime" span="12" :item-render="startTimeItemRender"></vxe-form-item>
       <vxe-form-item title="End time" field="endTime" span="12" :item-render="endTimeItemRender"></vxe-form-item>
-      <vxe-form-item align="center" span="24">
-        <template #default>
-          <vxe-button type="reset">重置</vxe-button>
-          <vxe-button type="submit" status="primary">提交</vxe-button>
-        </template>
-      </vxe-form-item>
+      <vxe-form-item align="center" span="24" :item-render="actionItemRender"></vxe-form-item>
     </vxe-form>
   </div>
 </template>
@@ -90,6 +85,14 @@ export default Vue.extend({
       }
     }
 
+    const actionItemRender: VxeFormItemPropTypes.ItemRender = {
+      name: 'VxeButtonGroup',
+      options: [
+        { content: '重置', type: 'reset' },
+        { content: '提交', type: 'submit', status: 'primary' }
+      ]
+    }
+
     const formData: FormDataVO = {
       name: 'test1',
       nickname: '',
@@ -104,6 +107,7 @@ export default Vue.extend({
       roleItemRender,
       startTimeItemRender,
       endTimeItemRender,
+      actionItemRender,
       formData
     }
   }

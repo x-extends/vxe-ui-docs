@@ -6,12 +6,7 @@
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-item title="下拉树选择单选" field="region" span="24" :item-render="regionItemRender"></vxe-form-item>
       <vxe-form-item title="下拉树选择多选" field="regionList" span="24" :item-render="regionListItemRender"></vxe-form-item>
-      <vxe-form-item align="center" span="24">
-        <template #default>
-          <vxe-button type="reset">重置</vxe-button>
-          <vxe-button type="submit" status="primary">提交</vxe-button>
-        </template>
-      </vxe-form-item>
+      <vxe-form-item default="center" span="24" :item-render="actionItemRender"></vxe-form-item>
     </vxe-form>
   </div>
 </template>
@@ -71,6 +66,14 @@ const regionListItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
         { label: '西城区', value: '2-2' }
       ]
     }
+  ]
+})
+
+const actionItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
+  name: 'VxeButtonGroup',
+  options: [
+    { content: '重置', type: 'reset' },
+    { content: '提交', type: 'submit', status: 'primary' }
   ]
 })
 
