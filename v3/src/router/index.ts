@@ -5948,6 +5948,11 @@ const routes: Array<RouteConfig> = [
                     component: () => import('@/views/form/basics/itemRender/vxe-tree-select/CodeExample.vue')
                   },
                   {
+                    path: 'vxe-table-select',
+                    name: 'ComponentFormBasicsItemRenderVxeTableSelect',
+                    component: () => import('@/views/form/basics/itemRender/vxe-table-select/CodeExample.vue')
+                  },
+                  {
                     path: 'vxe-switch',
                     name: 'ComponentFormBasicsItemRenderVxeSwitch',
                     component: () => import('@/views/form/basics/itemRender/vxe-switch/CodeExample.vue')
@@ -6226,6 +6231,11 @@ const routes: Array<RouteConfig> = [
                     path: 'vxe-tree-select',
                     name: 'ComponentFormConfigItemRenderVxeTreeSelect',
                     component: () => import('@/views/form/config/itemRender/vxe-tree-select/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-table-select',
+                    name: 'ComponentFormConfigItemRenderVxeTableSelect',
+                    component: () => import('@/views/form/config/itemRender/vxe-table-select/CodeExample.vue')
                   },
                   {
                     path: 'vxe-switch',
