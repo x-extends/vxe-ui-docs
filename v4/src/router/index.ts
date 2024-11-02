@@ -5987,6 +5987,11 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'disabled',
                     name: 'ComponentFormBasicsItemRenderDisabled',
                     component: () => import('@/views/form/basics/itemRender/disabled/CodeExample.vue')
+                  },
+                  {
+                    path: 'linkageDisabled',
+                    name: 'ComponentFormBasicsItemRenderLinkageDisabled',
+                    component: () => import('@/views/form/basics/itemRender/linkageDisabled/CodeExample.vue')
                   }
                 ]
               },
@@ -6282,6 +6287,11 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'disabled',
                     name: 'ComponentFormConfigItemRenderDisabled',
                     component: () => import('@/views/form/config/itemRender/disabled/CodeExample.vue')
+                  },
+                  {
+                    path: 'linkageDisabled',
+                    name: 'ComponentFormConfigItemRenderLinkageDisabled',
+                    component: () => import('@/views/form/config/itemRender/linkageDisabled/CodeExample.vue')
                   }
                 ]
               },
