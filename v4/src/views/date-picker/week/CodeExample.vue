@@ -11,5 +11,11 @@
         <vxe-tip status="primary">多选</vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="date-picker/week/Demo3">
+      <template #tip>
+        <vxe-tip status="primary">禁用</vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>

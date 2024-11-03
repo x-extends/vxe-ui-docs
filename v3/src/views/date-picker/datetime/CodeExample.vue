@@ -17,5 +17,11 @@
         <vxe-tip status="primary">通过 <ApiLink name="date-picker" prop="value-format"/> 指定格式化</vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="date-picker/datetime/Demo4">
+      <template #tip>
+        <vxe-tip status="primary">禁用</vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>

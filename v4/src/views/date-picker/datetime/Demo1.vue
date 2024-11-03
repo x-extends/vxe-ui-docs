@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-date-picker v-model="val1" placeholder="日期和时间选择" type="datetime" transfer></vxe-date-picker>
+    <vxe-date-picker v-model="val1" placeholder="日期和时间选择" type="datetime"></vxe-date-picker>
   </div>
 </template>
 

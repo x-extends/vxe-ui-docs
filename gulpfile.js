@@ -266,7 +266,7 @@ gulp.task('build_v4_docs', gulp.series('clear_docs_temp', 'copy_v4_docs', 'build
   ], { force: true })
 }))
 
-gulp.task('copy_all_docs', gulp.parallel('copy_v3_docs', 'copy_v4_docs', 'copy_other3_docs', 'copy_other4_docs', 'build_latest_docs'))
+gulp.task('copy_all_docs', gulp.series('copy_v3_docs', 'copy_v4_docs', 'copy_other3_docs', 'copy_other4_docs', 'build_latest_docs'))
 gulp.task('build_all_docs', gulp.series('clear_docs_temp', 'copy_all_docs', 'build_css_unicode', () => {
   return del([
     '_temp'

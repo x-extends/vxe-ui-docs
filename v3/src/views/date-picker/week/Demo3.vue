@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-input v-model="val1" placeholder="日期选择" type="date"></vxe-input>
+    <vxe-date-picker v-model="val1" placeholder="禁用" type="week" disabled></vxe-date-picker>
   </div>
 </template>
 
