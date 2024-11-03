@@ -2,7 +2,7 @@
   <div>
     <CodeLight>
       <template #tip>
-        <vxe-tip status="primary" title="内置主题">
+        <vxe-tip status="primary" title="内置主题切换">
           默认支持 light 和 dark 两种主题样式，通过调用 VxeUI.setTheme('light') 方式修改组件主题样式
         </vxe-tip>
       </template>
@@ -69,8 +69,8 @@
 
     <CodeLight>
       <template #tip>
-        <vxe-tip status="primary" title="自定义 scss 变量">
-          通过修改自定义 scss 变量（<vxe-link href="https://gitee.com/x-extends/vxe-pc-ui/blob/main/styles/variable.scss" status="primary" target="_blank">查看全部变量</vxe-link>）方式修改组件样式，示例：
+        <vxe-tip status="primary" title="自定义全局 scss 变量">
+          通过修改自定义 scss 变量（<vxe-link href="https://gitee.com/x-extends/vxe-pc-ui/blob/main/styles/variable.scss" status="primary" target="_blank">查看全部变量</vxe-link>）方式修改全局组件样式，示例：
         </vxe-tip>
       </template>
 
