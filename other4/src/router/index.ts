@@ -250,6 +250,47 @@ const routes: Array<RouteRecordRaw> = [
             path: 'advanced',
             name: 'PluginExportXlsxGridAdvanced',
             component: () => import('@/views/plugin-export-xlsx/grid/advanced/CodeExample.vue')
+          },
+          {
+            path: 'sheetMethod',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'border',
+                name: 'PluginExportXlsxGridSheetMethodBorder',
+                component: () => import('@/views/plugin-export-xlsx/grid/sheetMethod/border/CodeExample.vue')
+              },
+              {
+                path: 'font',
+                name: 'PluginExportXlsxGridSheetMethodFont',
+                component: () => import('@/views/plugin-export-xlsx/grid/sheetMethod/font/CodeExample.vue')
+              },
+              {
+                path: 'headerBackground',
+                name: 'PluginExportXlsxGridSheetMethodHeaderBackground',
+                component: () => import('@/views/plugin-export-xlsx/grid/sheetMethod/headerBackground/CodeExample.vue')
+              },
+              {
+                path: 'cellWidth',
+                name: 'PluginExportXlsxGridSheetMethodCellWidth',
+                component: () => import('@/views/plugin-export-xlsx/grid/sheetMethod/cellWidth/CodeExample.vue')
+              },
+              {
+                path: 'cellHeight',
+                name: 'PluginExportXlsxGridSheetMethodCellHeight',
+                component: () => import('@/views/plugin-export-xlsx/grid/sheetMethod/cellHeight/CodeExample.vue')
+              },
+              {
+                path: 'hyperlink',
+                name: 'PluginExportXlsxGridSheetMethodHyperlink',
+                component: () => import('@/views/plugin-export-xlsx/grid/sheetMethod/hyperlink/CodeExample.vue')
+              },
+              {
+                path: 'image',
+                name: 'PluginExportXlsxGridSheetMethodImage',
+                component: () => import('@/views/plugin-export-xlsx/grid/sheetMethod/image/CodeExample.vue')
+              }
+            ]
           }
         ]
       }

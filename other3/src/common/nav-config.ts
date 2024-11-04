@@ -148,7 +148,19 @@ export const navConfigList: NavVO[] = [
           { title: '导出 XLSX 文件', routerLink: { name: 'PluginExportXlsxGridExport' } },
           { title: '导入 XLSX 格式', routerLink: { name: 'PluginExportXlsxGridImport' } },
           { title: '使用工具栏', routerLink: { name: 'PluginExportXlsxGridToolbar' } },
-          { title: '高级导出', routerLink: { name: 'PluginExportXlsxGridAdvanced' } }
+          { title: '高级导出', routerLink: { name: 'PluginExportXlsxGridAdvanced' } },
+          {
+            title: '自定义样式',
+            children: [
+              { title: '边框', routerLink: { name: 'PluginExportXlsxGridSheetMethodBorder' } },
+              { title: '字体', routerLink: { name: 'PluginExportXlsxGridSheetMethodFont' } },
+              { title: '表头背景', routerLink: { name: 'PluginExportXlsxGridSheetMethodHeaderBackground' } },
+              { title: '列宽', routerLink: { name: 'PluginExportXlsxGridSheetMethodCellWidth' } },
+              { title: '行高', routerLink: { name: 'PluginExportXlsxGridSheetMethodCellHeight' } },
+              { title: '超链接', routerLink: { name: 'PluginExportXlsxGridSheetMethodHyperlink' } },
+              { title: '添加图片', routerLink: { name: 'PluginExportXlsxGridSheetMethodImage' } }
+            ]
+          }
         ]
       }
     ]
