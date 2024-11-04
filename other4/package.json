@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@vxe-ui/plugin-export-pdf": "^4.0.5",
-    "@vxe-ui/plugin-export-xlsx": "^4.0.4",
+    "@vxe-ui/plugin-export-xlsx": "^4.0.7",
     "@vxe-ui/plugin-menu": "^4.0.2",
     "@vxe-ui/plugin-render-antd": "^4.0.7",
     "@vxe-ui/plugin-render-chart": "^4.0.1",
@@ -21,6 +21,7 @@
     "@vxe-ui/plugin-validator": "^4.0.0",
     "ant-design-vue": "4.2.3",
     "axios": "^1.7.2",
+    "exceljs": "4.4.0",
     "core-js": "^3.8.3",
     "element-plus": "2.7.5",
     "highlight.js": "^11.9.0",

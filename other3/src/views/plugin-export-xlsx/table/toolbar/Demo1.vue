@@ -36,7 +36,7 @@ export default Vue.extend({
       { id: 10003, name: '王五', role: 'PM', sex: 'Man', age: 32, address: '上海' },
       { id: 10004, name: '老六', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' },
       { id: 10005, name: '小七', role: 'Designer', sex: 'Man', age: 37, address: '广东省' },
-      { id: 10006, name: '王八', role: 'Designer', sex: 'Man', age: 39, address: 'Shanghai' }
+      { id: 10006, name: '小八', role: 'Designer', sex: 'Man', age: 39, address: 'Shanghai' }
     ]
 
     const mergeCells: VxeTablePropTypes.MergeCells = [

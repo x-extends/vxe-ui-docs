@@ -183,6 +183,47 @@ const routes: Array<RouteRecordRaw> = [
             path: 'advanced',
             name: 'PluginExportXlsxTableAdvanced',
             component: () => import('@/views/plugin-export-xlsx/table/advanced/CodeExample.vue')
+          },
+          {
+            path: 'sheetMethod',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'border',
+                name: 'PluginExportXlsxTableSheetMethodBorder',
+                component: () => import('@/views/plugin-export-xlsx/table/sheetMethod/border/CodeExample.vue')
+              },
+              {
+                path: 'font',
+                name: 'PluginExportXlsxTableSheetMethodFont',
+                component: () => import('@/views/plugin-export-xlsx/table/sheetMethod/font/CodeExample.vue')
+              },
+              {
+                path: 'headerBackground',
+                name: 'PluginExportXlsxTableSheetMethodHeaderBackground',
+                component: () => import('@/views/plugin-export-xlsx/table/sheetMethod/headerBackground/CodeExample.vue')
+              },
+              {
+                path: 'cellWidth',
+                name: 'PluginExportXlsxTableSheetMethodCellWidth',
+                component: () => import('@/views/plugin-export-xlsx/table/sheetMethod/cellWidth/CodeExample.vue')
+              },
+              {
+                path: 'cellHeight',
+                name: 'PluginExportXlsxTableSheetMethodCellHeight',
+                component: () => import('@/views/plugin-export-xlsx/table/sheetMethod/cellHeight/CodeExample.vue')
+              },
+              {
+                path: 'hyperlink',
+                name: 'PluginExportXlsxTableSheetMethodHyperlink',
+                component: () => import('@/views/plugin-export-xlsx/table/sheetMethod/hyperlink/CodeExample.vue')
+              },
+              {
+                path: 'image',
+                name: 'PluginExportXlsxTableSheetMethodImage',
+                component: () => import('@/views/plugin-export-xlsx/table/sheetMethod/image/CodeExample.vue')
+              }
+            ]
           }
         ]
       },

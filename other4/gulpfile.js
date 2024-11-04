@@ -43,6 +43,9 @@ gulp.task('handle_vue_tmpltojs', () => {
         'dom',
         'dom.iterable',
         'scripthost'
+      ],
+      types: [
+        '@vxe-ui/plugin-export-xlsx'
       ]
     }))
     .pipe(rename({
@@ -99,6 +102,9 @@ gulp.task('handle_tstojs', () => {
         'dom',
         'dom.iterable',
         'scripthost'
+      ],
+      types: [
+        '@vxe-ui/plugin-export-xlsx'
       ]
     }))
     .pipe(gulp.dest('dist/example/js'))
