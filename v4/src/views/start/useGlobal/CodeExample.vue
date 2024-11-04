@@ -97,6 +97,7 @@
               VxeCol,
               VxeCollapse,
               VxeCollapsePane,
+              VxeColorPicker,
               VxeCountdown,
               VxeDatePicker,
               VxeDrawer,
@@ -137,6 +138,7 @@
               VxeRadio,
               VxeRadioButton,
               VxeRadioGroup,
+              VxeRate,
               VxeResult,
               VxeRow,
               VxeSelect,
@@ -144,6 +146,7 @@
               VxeSteps,
               VxeSwitch,
               VxeTabPane,
+              VxeTableSelect,
               VxeTabs,
               VxeTag,
               VxeTextEllipsis,
@@ -194,6 +197,7 @@
               app.use(VxeCol)
               app.use(VxeCollapse)
               app.use(VxeCollapsePane)
+              app.use(VxeColorPicker)
               app.use(VxeCountdown)
               app.use(VxeDatePicker)
               app.use(VxeDrawer)
@@ -234,6 +238,7 @@
               app.use(VxeRadio)
               app.use(VxeRadioButton)
               app.use(VxeRadioGroup)
+              app.use(VxeRate)
               app.use(VxeResult)
               app.use(VxeRow)
               app.use(VxeSelect)
@@ -241,6 +246,7 @@
               app.use(VxeSteps)
               app.use(VxeSwitch)
               app.use(VxeTabPane)
+              app.use(VxeTableSelect)
               app.use(VxeTabs)
               app.use(VxeTag)
               app.use(VxeTextEllipsis)

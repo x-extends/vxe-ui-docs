@@ -10,42 +10,6 @@
 
       <template #use>
         <div>
-          如果您使用了 vite，借助插件 <vxe-link href="https://www.npmjs.com/package/vite-plugin-lazy-import" target="_blank">vite-plugin-lazy-import</vxe-link> 可以实现按需加载模块。
-        </div>
-        <pre>
-          <pre-code class="shell">
-            npm install vite-plugin-lazy-import -D
-          </pre-code>
-          <pre-code class="javascript">
-            // 修改文件 vue.config.js
-
-            // ...
-            import { lazyImport, VxeResolver } from 'vite-plugin-lazy-import'
-
-            export default defineConfig({
-              plugins: [
-                // ...,
-                lazyImport({
-                  resolvers: [
-                    VxeResolver({
-                      libraryName: 'vxe-table'
-                    }),
-                    VxeResolver({
-                      libraryName: 'vxe-pc-ui'
-                    })
-                  ]
-                })
-                // ...
-              ]
-            })
-          </pre-code>
-        </pre>
-      </template>
-    </CodeLight>
-
-    <CodeLight>
-      <template #use>
-        <div>
           如果您使用了 webpack，借助插件 <vxe-link  href="https://www.npmjs.com/package/babel-plugin-import" target="_blank">babel-plugin-import</vxe-link> 可以实现按需加载模块。
         </div>
         <pre>

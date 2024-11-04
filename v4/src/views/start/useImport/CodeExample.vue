@@ -97,6 +97,7 @@
               VxeCol,
               VxeCollapse,
               VxeCollapsePane,
+              VxeColorPicker,
               VxeCountdown,
               VxeDatePicker,
               VxeDrawer,
@@ -137,6 +138,7 @@
               VxeRadio,
               VxeRadioButton,
               VxeRadioGroup,
+              VxeRate,
               VxeResult,
               VxeRow,
               VxeSelect,
@@ -144,6 +146,7 @@
               VxeSteps,
               VxeSwitch,
               VxeTabPane,
+              VxeTableSelect,
               VxeTabs,
               VxeTag,
               VxeTextEllipsis,
@@ -196,6 +199,7 @@
             VxeUI.component(VxeCol)
             VxeUI.component(VxeCollapse)
             VxeUI.component(VxeCollapsePane)
+            VxeUI.component(VxeColorPicker)
             VxeUI.component(VxeCountdown)
             VxeUI.component(VxeDatePicker)
             VxeUI.component(VxeDrawer)
@@ -236,6 +240,7 @@
             VxeUI.component(VxeRadio)
             VxeUI.component(VxeRadioButton)
             VxeUI.component(VxeRadioGroup)
+            VxeUI.component(VxeRate)
             VxeUI.component(VxeResult)
             VxeUI.component(VxeRow)
             VxeUI.component(VxeSelect)
@@ -243,6 +248,7 @@
             VxeUI.component(VxeSteps)
             VxeUI.component(VxeSwitch)
             VxeUI.component(VxeTabPane)
+            VxeUI.component(VxeTableSelect)
             VxeUI.component(VxeTabs)
             VxeUI.component(VxeTag)
             VxeUI.component(VxeTextEllipsis)

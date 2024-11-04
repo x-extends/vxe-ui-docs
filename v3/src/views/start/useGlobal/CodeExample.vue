@@ -10,42 +10,6 @@
 
       <template #use>
         <div>
-          如果您使用了 vite，借助插件 <vxe-link href="https://www.npmjs.com/package/vite-plugin-lazy-import" target="_blank">vite-plugin-lazy-import</vxe-link> 可以实现按需加载模块。
-        </div>
-        <pre>
-          <pre-code class="shell">
-            npm install vite-plugin-lazy-import -D
-          </pre-code>
-          <pre-code class="javascript">
-            // 修改文件 vue.config.js
-
-            // ...
-            import { lazyImport, VxeResolver } from 'vite-plugin-lazy-import'
-
-            export default defineConfig({
-              plugins: [
-                // ...,
-                lazyImport({
-                  resolvers: [
-                    VxeResolver({
-                      libraryName: 'vxe-table'
-                    }),
-                    VxeResolver({
-                      libraryName: 'vxe-pc-ui'
-                    })
-                  ]
-                })
-                // ...
-              ]
-            })
-          </pre-code>
-        </pre>
-      </template>
-    </CodeLight>
-
-    <CodeLight>
-      <template #use>
-        <div>
           如果您使用了 webpack，借助插件 <vxe-link  href="https://www.npmjs.com/package/babel-plugin-import" target="_blank">babel-plugin-import</vxe-link> 可以实现按需加载模块。
         </div>
         <pre>
@@ -97,6 +61,7 @@
               VxeCol,
               VxeCollapse,
               VxeCollapsePane,
+              VxeColorPicker,
               VxeCountdown,
               VxeDatePicker,
               VxeDrawer,
@@ -137,6 +102,7 @@
               VxeRadio,
               VxeRadioButton,
               VxeRadioGroup,
+              VxeRate,
               VxeResult,
               VxeRow,
               VxeSelect,
@@ -144,6 +110,7 @@
               VxeSteps,
               VxeSwitch,
               VxeTabPane,
+              VxeTableSelect,
               VxeTabs,
               VxeTag,
               VxeTextEllipsis,
@@ -194,6 +161,7 @@
               app.use(VxeCol)
               app.use(VxeCollapse)
               app.use(VxeCollapsePane)
+              app.use(VxeColorPicker)
               app.use(VxeCountdown)
               app.use(VxeDatePicker)
               app.use(VxeDrawer)
@@ -234,6 +202,7 @@
               app.use(VxeRadio)
               app.use(VxeRadioButton)
               app.use(VxeRadioGroup)
+              app.use(VxeRate)
               app.use(VxeResult)
               app.use(VxeRow)
               app.use(VxeSelect)
@@ -241,6 +210,7 @@
               app.use(VxeSteps)
               app.use(VxeSwitch)
               app.use(VxeTabPane)
+              app.use(VxeTableSelect)
               app.use(VxeTabs)
               app.use(VxeTag)
               app.use(VxeTextEllipsis)
