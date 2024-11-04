@@ -8,7 +8,10 @@
       :data="tableData"
       :footer-data="footerData">
       <vxe-column field="seq" type="seq" width="70"></vxe-column>
-      <vxe-column field="name" title="Name"></vxe-column>
+      <vxe-colgroup title="分组1">
+        <vxe-column field="name" title="Name"></vxe-column>
+        <vxe-column field="role" title="Role"></vxe-column>
+      </vxe-colgroup>
       <vxe-column field="sex" title="Sex"></vxe-column>
       <vxe-column field="no1" title="NO1"></vxe-column>
       <vxe-column field="no2" title="NO2" cell-type="string"></vxe-column>

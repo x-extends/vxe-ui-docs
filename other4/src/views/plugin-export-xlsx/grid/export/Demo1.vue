@@ -25,7 +25,13 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   showFooter: true,
   columns: [
     { field: 'seq', type: 'seq', width: 70 },
-    { field: 'name', title: 'Name' },
+    {
+      title: '分组1',
+      children: [
+        { field: 'name', title: 'Name' },
+        { field: 'role', title: 'Role' }
+      ]
+    },
     { field: 'sex', title: 'Sex' },
     { field: 'no1', title: 'NO1' },
     { field: 'no2', title: 'NO2 String', cellType: 'string' }
