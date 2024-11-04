@@ -163,6 +163,11 @@
               TREE_SELECT_OPEN: 'vxe-icon-caret-down rotate180',
               TREE_SELECT_CLOSE: 'vxe-icon-caret-down',
 
+              // table-select
+              TABLE_SELECT_LOADED: 'vxe-icon-spinner roll',
+              TABLE_SELECT_OPEN: 'vxe-icon-caret-down rotate180',
+              TABLE_SELECT_CLOSE: 'vxe-icon-caret-down',
+
               // tabs
               TABS_TAB_BUTTON_LEFT: 'vxe-icon-arrow-left',
               TABS_TAB_BUTTON_RIGHT: 'vxe-icon-arrow-right',
@@ -193,7 +198,11 @@
               RESULT_WARNING: 'vxe-icon-warning-circle-fill',
               RESULT_ERROR: 'vxe-icon-error-circle-fill',
               RESULT_QUESTION: 'vxe-icon-question-circle-fill',
-              RESULT_LOADING: 'vxe-icon-spinner roll'
+              RESULT_LOADING: 'vxe-icon-spinner roll',
+
+              // rate
+              RATE_CHECKED: 'vxe-icon-star-fill',
+              RATE_UNCHECKED: 'vxe-icon-star'
             })
           </pre-code>
         </pre>
