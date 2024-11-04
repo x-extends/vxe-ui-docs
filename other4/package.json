@@ -10,7 +10,7 @@
     "format:examples": "eslint --fix dist/example/**/*.{js,ts,vue}"
   },
   "dependencies": {
-    "@vxe-ui/plugin-export-pdf": "^4.0.6",
+    "@vxe-ui/plugin-export-pdf": "^4.0.8",
     "@vxe-ui/plugin-export-xlsx": "^4.0.7",
     "@vxe-ui/plugin-menu": "^4.0.2",
     "@vxe-ui/plugin-render-antd": "^4.0.7",
