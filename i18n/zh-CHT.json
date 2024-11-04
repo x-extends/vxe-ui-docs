@@ -162,6 +162,7 @@
         "areaCheckbox": "複選框範圍選取",
         "areaKeypad": "按鍵導航",
         "areaStatus": "顯示單元格選取狀態",
+        "areaCellToRow": "选择单元格自动选中行",
         "areaClip": "複製與貼上",
         "areaDisabledClip": "停用複製與貼上",
         "areaClipIncrement": "貼上自動插入行與列",
