@@ -32,7 +32,7 @@
           import { VxeUI } from 'vxe-pc-ui'
           // 如果只使用表格
           // import { VxeUI } from 'vxe-table'
-          import VxeUIPluginExportPDF from '@vxe-ui/plugin-export-xlsx'
+          import VxeUIPluginExportPDF from '@vxe-ui/plugin-export-pdf'
           // import { jsPDF } from 'jspdf'
           // ...
 
