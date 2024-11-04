@@ -40,13 +40,13 @@
           // 在 index.html 引入 https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.js
           VxeUI.use(VxeUIPluginExportPDF, {
             // 支持中文字体，字体库非常大，建议下载到项目本地
-            fontName: 'SourceHanSans-Normal',
-            fonts: [
-              {
-                fontName: 'SourceHanSans-Normal',
-                fontUrl: 'https://cdn.jsdelivr.net/npm/${pluginExportPdfCDNLib}/fonts/source-han-sans-normal.js'
-              }
-            ]
+            // fontName: 'SourceHanSans-Normal',
+            // fonts: [
+            //   {
+            //     fontName: 'SourceHanSans-Normal',
+            //     fontUrl: 'https://cdn.jsdelivr.net/npm/${pluginExportPdfCDNLib}/fonts/source-han-sans-normal.js'
+            //   }
+            // ]
           })
 
           // 方式2：使用 NPM 安装，注入 jsPDF 对象
