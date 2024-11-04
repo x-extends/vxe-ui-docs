@@ -34,9 +34,8 @@
             import * as wangEditor from '@wangeditor/editor'
             // ...
 
-            // 方式1：NPM 安装，注入 wangEditor 对象
-            VXETable.use(VxeUIPluginRenderWangEditor, {
-              wangEditor,
+            // （推荐）方式2：CDN 安装，只要确保 window.wangEditor 存在即可
+            VxeUI.use(VxeUIPluginRenderWangEditor, {
               // 自定义上传图片方法
               uploadImageMethod ({ file }) {
                 const formData = new FormData()
@@ -61,8 +60,9 @@
               }
             })
 
-            // // 方式2：CDN 安装，只要确保 window.wangEditor 存在即可
-            // VXETable.use(VxeUIPluginRenderWangEditor, {
+            // 方式1：NPM 安装，注入 wangEditor 对象
+            // VxeUI.use(VxeUIPluginRenderWangEditor, {
+            //   wangEditor,
             //   // 自定义上传图片方法
             //   uploadImageMethod ({ file }) {
             //     return { url: '' }

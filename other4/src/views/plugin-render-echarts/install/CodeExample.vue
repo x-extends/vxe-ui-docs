@@ -34,7 +34,7 @@
             import '@vxe-ui/plugin-render-echarts/dist/style.css'
             // ...
 
-            // 方式1：CDN 安装，只要确保 window.echarts 存在即可
+            // （推荐）方式1：CDN 安装，只要确保 window.echarts 存在即可
             VxeUI.use(VxeUIPluginRenderEcharts)
 
             // 方式2：NPM 安装，注入 echarts 对象

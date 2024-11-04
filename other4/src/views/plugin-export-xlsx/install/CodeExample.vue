@@ -36,7 +36,7 @@
             // import ExcelJS from 'exceljs'
             // ...
 
-            // 方式1：建议使用 CDN 方式，这样可以不影响包体积，额外引入 js 就可以
+            // （推荐）方式1：使用 CDN 方式，这样可以不影响包体积，额外引入 js 就可以
             // 在 index.html 引入 https://cdn.jsdelivr.net/npm/exceljs@4.2.1/dist/exceljs.min.js
             VxeUI.use(VxeUIPluginExportXLSX)
 
