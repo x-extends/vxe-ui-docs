@@ -45,7 +45,7 @@ export default Vue.extend({
         { id: 10004, name: '老六', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
       ],
       footerData: [
-        { seq: '合计', name: '12人', no1: 356 }
+        { seq: '合计', name: '888人', age: 666 }
       ]
     }
 
