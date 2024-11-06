@@ -165,6 +165,11 @@ const createNavList = () => {
         routerLink: { name: 'DocsApi', params: { name } },
         children: XEUtils.mapTree(list, obj => {
           obj.title = obj.name
+          obj.routerLink = {
+            name: 'DocsApi',
+            params: { name },
+            query: { q: obj.name }
+          }
           return obj
         }, { children: 'list', mapChildren: 'children' })
       })
