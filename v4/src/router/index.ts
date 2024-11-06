@@ -382,6 +382,27 @@ const tableRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'drag',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'rowDrag',
+          name: 'ComponentTableDragRowSort',
+          component: () => import('@/views/table/drag/rowSort/CodeExample.vue')
+        },
+        {
+          path: 'rowEvent',
+          name: 'ComponentTableDragRowEvent',
+          component: () => import('@/views/table/drag/rowEvent/CodeExample.vue')
+        },
+        {
+          path: 'rowDragMethod',
+          name: 'ComponentTableDragRowDragMethod',
+          component: () => import('@/views/table/drag/rowDragMethod/CodeExample.vue')
+        }
+      ]
+    },
+    {
       path: 'merge',
       component: RouteLayout,
       children: [
@@ -1747,6 +1768,27 @@ const gridRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'drag',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'rowDrag',
+          name: 'ComponentGridDragRowSort',
+          component: () => import('@/views/grid/drag/rowSort/CodeExample.vue')
+        },
+        {
+          path: 'rowEvent',
+          name: 'ComponentGridDragRowEvent',
+          component: () => import('@/views/grid/drag/rowEvent/CodeExample.vue')
+        },
+        {
+          path: 'rowDragMethod',
+          name: 'ComponentGridDragRowDragMethod',
+          component: () => import('@/views/grid/drag/rowDragMethod/CodeExample.vue')
+        }
+      ]
+    },
+    {
       path: 'layout',
       component: RouteLayout,
       children: [
@@ -2774,6 +2816,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'autoRowHeight',
           name: 'ComponentGridScrollAutoRowHeight',
           component: () => import('@/views/grid/scroll/autoRowHeight/CodeExample.vue')
+        },
+        {
+          path: 'dragRow',
+          name: 'ComponentGridScrollDragRow',
+          component: () => import('@/views/grid/scroll/dragRow/CodeExample.vue')
         },
         {
           path: 'group',

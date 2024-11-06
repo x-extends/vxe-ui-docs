@@ -129,6 +129,14 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           ]
         },
         {
+          title: '行拖拽',
+          children: [
+            { title: '拖拽调整行顺序', routerLink: { name: 'ComponentTableDragRowSort' } },
+            { title: '行拖拽事件', routerLink: { name: 'ComponentTableDragRowEvent' } },
+            { title: '行拖拽拦截', routerLink: { name: 'ComponentTableDragRowDragMethod' } }
+          ]
+        },
+        {
           title: '筛选',
           children: [
             { title: '修改筛选选项', routerLink: { name: 'ComponentTableFilterOptions' } },
@@ -539,6 +547,14 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           ]
         },
         {
+          title: '行拖拽',
+          children: [
+            { title: '拖拽调整行顺序', routerLink: { name: 'ComponentGridDragRowSort' } },
+            { title: '行拖拽事件', routerLink: { name: 'ComponentGridDragRowEvent' } },
+            { title: '行拖拽拦截', routerLink: { name: 'ComponentGridDragRowDragMethod' } }
+          ]
+        },
+        {
           title: '展开行',
           children: [
             { title: '基础使用', routerLink: { name: 'ComponentGridExpandBasic' } },
@@ -839,6 +855,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '滚动模式 + 复杂渲染', routerLink: { name: 'ComponentGridScrollMode' } },
             { title: '设置行高', routerLink: { name: 'ComponentGridScrollRowHeight' } },
             { title: '自适应行高', routerLink: { name: 'ComponentGridScrollAutoRowHeight' } },
+            { title: '拖拽调整行顺序', routerLink: { name: 'ComponentGridScrollDragRow' } },
             { title: '使用分组表头', routerLink: { name: 'ComponentGridScrollGroup' } },
             { title: '使用表尾', routerLink: { name: 'ComponentGridScrollFooter' } },
             { title: '树形 + 纵向虚拟滚动', routerLink: { name: 'ComponentGridScrollTree' } },
