@@ -167,6 +167,7 @@
         "areaDisabledClip": "停用複製與貼上",
         "areaClipIncrement": "貼上自動插入行與列",
         "areaMerge": "合併區域",
+        "areaRowDrag": "拖拽调整顺序",
         "areaFNR": "尋找與替換",
         "areaMenu": "官方插件 - 右键菜单",
         "areaCellMenu": "单元格右键菜单",

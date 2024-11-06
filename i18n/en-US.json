@@ -167,6 +167,7 @@
         "areaDisabledClip": "Disable copy and paste",
         "areaClipIncrement": "Paste automatically inserts rows and columns",
         "areaMerge": "merge areas",
+        "areaRowDrag": "Drag and drop order",
         "areaFNR": "Find and Replace",
         "areaMenu": "Official plugin - content menu",
         "areaCellMenu": "Cell content menu",

@@ -167,6 +167,7 @@
         "areaDisabledClip": "Отключить копирование и вставку",
         "areaClipIncrement": "Вставить автоматически вставляет строки и столбцы.",
         "areaMerge": "объединить области",
+        "areaRowDrag": "拖拽调整顺序",
         "areaFNR": "Найти и заменить",
         "areaMenu": "Official plugin - content menu",
         "areaCellMenu": "Cell content menu",

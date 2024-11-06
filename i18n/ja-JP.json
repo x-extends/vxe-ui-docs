@@ -167,6 +167,7 @@
         "areaDisabledClip": "コピー＆ペーストを無効にする",
         "areaClipIncrement": "貼り付けでは行と列が自動的に挿入されます",
         "areaMerge": "エリアを結合する",
+        "areaRowDrag": "拖拽调整顺序",
         "areaFNR": "検索と置換",
         "areaMenu": "Official plugin - content menu",
         "areaCellMenu": "Cell content menu",
