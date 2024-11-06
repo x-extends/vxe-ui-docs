@@ -399,6 +399,16 @@ const tableRouteConfig: RouteConfig = {
           component: () => import('@/views/table/drag/rowEvent/CodeExample.vue')
         },
         {
+          path: 'rowDisabledMethod',
+          name: 'ComponentTableDragRowDisabledMethod',
+          component: () => import('@/views/table/drag/rowDisabledMethod/CodeExample.vue')
+        },
+        {
+          path: 'rowVisibleMethod',
+          name: 'ComponentTableDragRowVisibleMethod',
+          component: () => import('@/views/table/drag/rowVisibleMethod/CodeExample.vue')
+        },
+        {
           path: 'rowDragMethod',
           name: 'ComponentTableDragRowDragMethod',
           component: () => import('@/views/table/drag/rowDragMethod/CodeExample.vue')
@@ -1783,6 +1793,16 @@ const gridRouteConfig: RouteConfig = {
           path: 'rowEvent',
           name: 'ComponentGridDragRowEvent',
           component: () => import('@/views/grid/drag/rowEvent/CodeExample.vue')
+        },
+        {
+          path: 'rowDisabledMethod',
+          name: 'ComponentGridDragRowDisabledMethod',
+          component: () => import('@/views/grid/drag/rowDisabledMethod/CodeExample.vue')
+        },
+        {
+          path: 'rowVisibleMethod',
+          name: 'ComponentGridDragRowVisibleMethod',
+          component: () => import('@/views/grid/drag/rowVisibleMethod/CodeExample.vue')
         },
         {
           path: 'rowDragMethod',
