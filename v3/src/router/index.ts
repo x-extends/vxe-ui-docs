@@ -650,9 +650,9 @@ const tableRouteConfig: RouteConfig = {
           component: () => import('@/views/table/custom/sort/CodeExample.vue')
         },
         {
-          path: 'template',
-          name: 'ComponentTableCustomTemplate',
-          component: () => import('@/views/table/custom/template/CodeExample.vue')
+          path: 'customBtn',
+          name: 'ComponentTableCustomCustomBtn',
+          component: () => import('@/views/table/custom/customBtn/CodeExample.vue')
         },
         {
           path: 'placement',
@@ -2173,6 +2173,37 @@ const gridRouteConfig: RouteConfig = {
           path: 'remoteFull',
           name: 'ComponentGridCustomRemoteFull',
           component: () => import('@/views/grid/custom/remoteFull/CodeExample.vue')
+        },
+        {
+          path: 'template',
+          component: RouteLayout,
+          children: [
+            {
+              path: 'top',
+              name: 'ComponentGridCustomTemplateTop',
+              component: () => import('@/views/grid/custom/template/top/CodeExample.vue')
+            },
+            {
+              path: 'header',
+              name: 'ComponentGridCustomTemplateHeader',
+              component: () => import('@/views/grid/custom/template/header/CodeExample.vue')
+            },
+            {
+              path: 'bottom',
+              name: 'ComponentGridCustomTemplateBottom',
+              component: () => import('@/views/grid/custom/template/bottom/CodeExample.vue')
+            },
+            {
+              path: 'default',
+              name: 'ComponentGridCustomTemplateDefault',
+              component: () => import('@/views/grid/custom/template/default/CodeExample.vue')
+            },
+            {
+              path: 'footer',
+              name: 'ComponentGridCustomTemplateFooter',
+              component: () => import('@/views/grid/custom/template/footer/CodeExample.vue')
+            }
+          ]
         }
       ]
     },
@@ -3707,6 +3738,11 @@ const routes: Array<RouteConfig> = [
             path: 'showPreview',
             name: 'ComponentImageShowPreview',
             component: () => import('@/views/image/showPreview/CodeExample.vue')
+          },
+          {
+            path: 'maskClosable',
+            name: 'ComponentImageMaskClosable',
+            component: () => import('@/views/image/maskClosable/CodeExample.vue')
           },
           {
             path: 'showPrintButton',
