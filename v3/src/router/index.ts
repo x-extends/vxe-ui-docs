@@ -394,6 +394,11 @@ const tableRouteConfig: RouteConfig = {
           component: () => import('@/views/table/drag/rowSort/CodeExample.vue')
         },
         {
+          path: 'rowIcon',
+          name: 'ComponentTableDragRowIcon',
+          component: () => import('@/views/table/drag/rowIcon/CodeExample.vue')
+        },
+        {
           path: 'rowEvent',
           name: 'ComponentTableDragRowEvent',
           component: () => import('@/views/table/drag/rowEvent/CodeExample.vue')
@@ -1788,6 +1793,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'rowDrag',
           name: 'ComponentGridDragRowSort',
           component: () => import('@/views/grid/drag/rowSort/CodeExample.vue')
+        },
+        {
+          path: 'rowIcon',
+          name: 'ComponentGridDragRowIcon',
+          component: () => import('@/views/grid/drag/rowIcon/CodeExample.vue')
         },
         {
           path: 'rowEvent',

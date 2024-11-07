@@ -132,6 +132,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '行拖拽',
           children: [
             { title: '拖拽调整行顺序', routerLink: { name: 'ComponentTableDragRowSort' } },
+            { title: '自定义图标', routerLink: { name: 'ComponentTableDragRowIcon' } },
             { title: '拖拽事件', routerLink: { name: 'ComponentTableDragRowEvent' } },
             { title: '禁用按钮', routerLink: { name: 'ComponentTableDragRowDisabledMethod' } },
             { title: '按钮可视', routerLink: { name: 'ComponentTableDragRowVisibleMethod' } },
@@ -552,6 +553,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '行拖拽',
           children: [
             { title: '拖拽调整行顺序', routerLink: { name: 'ComponentGridDragRowSort' } },
+            { title: '自定义图标', routerLink: { name: 'ComponentGridDragRowIcon' } },
             { title: '拖拽事件', routerLink: { name: 'ComponentGridDragRowEvent' } },
             { title: '禁用按钮', routerLink: { name: 'ComponentGridDragRowDisabledMethod' } },
             { title: '按钮可视', routerLink: { name: 'ComponentGridDragRowVisibleMethod' } },
