@@ -3188,6 +3188,27 @@ const gridRouteConfig: RouteConfig = {
       ]
     },
     {
+      path: 'loadMore',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'horizontal',
+          name: 'ComponentGridLoadMoreHorizontal',
+          component: () => import('@/views/grid/loadMore/horizontal/CodeExample.vue')
+        },
+        {
+          path: 'vertical',
+          name: 'ComponentGridLoadMoreVertical',
+          component: () => import('@/views/grid/loadMore/vertical/CodeExample.vue')
+        },
+        {
+          path: 'vh',
+          name: 'ComponentGridLoadMoreVH',
+          component: () => import('@/views/grid/loadMore/vh/CodeExample.vue')
+        }
+      ]
+    },
+    {
       path: 'other',
       component: RouteLayout,
       children: [

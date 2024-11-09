@@ -970,6 +970,14 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           ]
         },
         {
+          title: '无限加载',
+          children: [
+            { title: '实现加载行', routerLink: { name: 'ComponentGridLoadMoreVertical' } },
+            { title: '实现加载列', routerLink: { name: 'ComponentGridLoadMoreHorizontal' } },
+            { title: '同时加载行与列', routerLink: { name: 'ComponentGridLoadMoreVH' } }
+          ]
+        },
+        {
           title: '其他',
           children: [
             { title: '定位行、定位列', routerLink: { name: 'ComponentGridOtherScrollTo' } },
