@@ -6,11 +6,6 @@
         <vxe-button>删除</vxe-button>
         <vxe-button>保存</vxe-button>
       </template>
-      <template #tools>
-        <vxe-button icon="vxe-icon-upload"></vxe-button>
-        <vxe-button icon="vxe-icon-setting"></vxe-button>
-        <vxe-button icon="vxe-icon-ellipsis-h"></vxe-button>
-      </template>
     </vxe-toolbar>
     <vxe-table
       :data="tableData">

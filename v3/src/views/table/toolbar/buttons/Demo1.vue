@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-toolbar ref="toolbarRef" custom></vxe-toolbar>
+    <vxe-toolbar :buttons="toolbarButtons" @button-click="buttonClickEvent"></vxe-toolbar>
     <vxe-table
       ref="tableRef"
       :data="tableData">
@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import type { VxeToolbarInstance, VxeTableInstance } from 'vxe-table'
+import { VxeUI, VxeToolbarPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -34,15 +34,23 @@ export default Vue.extend({
       { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
     ]
 
+    const toolbarButtons: VxeToolbarPropTypes.Buttons = [
+      { name: '新增', code: 'add', status: 'primary' },
+      { name: '删除', code: 'del', status: 'error' },
+      { name: '保存', code: 'save', status: 'success' }
+    ]
+
     return {
-      tableData
+      tableData,
+      toolbarButtons
     }
   },
-  mounted () {
-    const $table = this.$refs.tableRef as VxeTableInstance
-    const $toolbar = this.$refs.toolbarRef as VxeToolbarInstance
-    if ($table && $toolbar) {
-      $table.connect($toolbar)
+  methods: {
+    buttonClickEvent ({ code }) {
+      VxeUI.modal.message({
+        content: `点击了 ${code}`,
+        status: 'success'
+      })
     }
   }
 })

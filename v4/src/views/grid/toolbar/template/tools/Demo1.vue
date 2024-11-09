@@ -1,12 +1,18 @@
 <template>
   <div>
-    <vxe-grid v-bind="gridOptions" v-on="gridEvents"></vxe-grid>
+    <vxe-grid v-bind="gridOptions">
+      <template #toolbar_tools>
+        <vxe-button status="primary" @click="addEvent">新增</vxe-button>
+        <vxe-button status="error" @click="delEvent">删除</vxe-button>
+        <vxe-button status="success" @click="saveEvent">保存</vxe-button>
+      </template>
+    </vxe-grid>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import type { VxeGridProps, VxeGridListeners } from 'vxe-table'
+import type { VxeGridProps } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -23,11 +29,9 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   showOverflow: true,
   height: 400,
   toolbarConfig: {
-    buttons: [
-      { name: '新增', code: 'add', status: 'primary' },
-      { name: '删除', code: 'del', status: 'error' },
-      { name: '保存', code: 'save', status: 'success' }
-    ]
+    slots: {
+      tools: 'toolbar_tools'
+    }
   },
   columns: [
     { type: 'checkbox', width: 50 },
@@ -49,9 +53,15 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   ]
 })
 
-const gridEvents: VxeGridListeners = {
-  toolbarButtonClick (params) {
-    console.log(params.code)
-  }
+const addEvent = () => {
+  console.log('add')
+}
+
+const delEvent = () => {
+  console.log('del')
+}
+
+const saveEvent = () => {
+  console.log('save')
 }
 </script>

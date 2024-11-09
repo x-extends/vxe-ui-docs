@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-toolbar ref="toolbarRef" custom></vxe-toolbar>
+    <vxe-toolbar :buttons="toolbarButtons" @button-click="buttonClickEvent"></vxe-toolbar>
     <vxe-table
       ref="tableRef"
       :data="tableData">
@@ -13,8 +13,8 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue'
-import type { VxeToolbarInstance, VxeTableInstance } from 'vxe-table'
+import { ref } from 'vue'
+import { VxeUI, VxeToolbarPropTypes, VxeToolbarEvents } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -25,9 +25,6 @@ interface RowVO {
   address: string
 }
 
-const toolbarRef = ref<VxeToolbarInstance>()
-const tableRef = ref<VxeTableInstance>()
-
 const tableData = ref<RowVO[]>([
   { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
   { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },
@@ -35,11 +32,16 @@ const tableData = ref<RowVO[]>([
   { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
 ])
 
-onMounted(() => {
-  const $table = tableRef.value
-  const $toolbar = toolbarRef.value
-  if ($table && $toolbar) {
-    $table.connect($toolbar)
-  }
-})
+const toolbarButtons = ref<VxeToolbarPropTypes.Buttons>([
+  { name: '新增', code: 'add', status: 'primary' },
+  { name: '删除', code: 'del', status: 'error' },
+  { name: '保存', code: 'save', status: 'success' }
+])
+
+const buttonClickEvent: VxeToolbarEvents.ButtonClick = ({ code }) => {
+  VxeUI.modal.message({
+    content: `点击了 ${code}`,
+    status: 'success'
+  })
+}
 </script>
