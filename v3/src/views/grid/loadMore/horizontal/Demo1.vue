@@ -45,6 +45,9 @@ export default Vue.extend({
   methods: {
     // 模拟行与列数据
     loadDataAndColumns (rowSize: number, colSize: number) {
+      if (this.gridOptions.loading) {
+        return
+      }
       this.gridOptions.loading = true
       setTimeout(() => {
         const colList: VxeGridPropTypes.Columns = []

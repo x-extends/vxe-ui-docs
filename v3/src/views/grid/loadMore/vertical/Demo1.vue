@@ -49,6 +49,9 @@ export default Vue.extend({
   methods: {
     // 模拟行数据
     loadList (size = 200) {
+      if (this.gridOptions.loading) {
+        return
+      }
       // 模拟后端接口
       this.gridOptions.loading = true
       setTimeout(() => {

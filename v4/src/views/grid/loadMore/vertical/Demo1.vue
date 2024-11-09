@@ -43,6 +43,9 @@ let rowKey = 0
 
 // 模拟行数据
 const loadList = (size = 200) => {
+  if (gridOptions.loading) {
+    return
+  }
   // 模拟后端接口
   gridOptions.loading = true
   setTimeout(() => {

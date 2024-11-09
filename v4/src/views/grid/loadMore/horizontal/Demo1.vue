@@ -39,6 +39,9 @@ let colKey = 0
 
 // 模拟行与列数据
 const loadDataAndColumns = (rowSize: number, colSize: number) => {
+  if (gridOptions.loading) {
+    return
+  }
   gridOptions.loading = true
   setTimeout(() => {
     const colList: VxeGridPropTypes.Columns = []
