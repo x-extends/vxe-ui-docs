@@ -12,17 +12,17 @@
       :data="tableData">
       <vxe-column type="checkbox" width="60"></vxe-column>
       <vxe-column type="seq" title="Number" width="80"></vxe-column>
-      <vxe-column title="Name" field="name" min-width="140" :edit-render="{ autofocus: '.el-input__inner' }">
+      <vxe-column title="Name" field="name" min-width="140" :edit-render="{}">
         <template #edit="{ row }">
-          <el-input v-model="row.name"></el-input>
+          <a-input v-model="row.name"></a-input>
         </template>
         <template #default="{ row }">
           <span>{{ row.name }}</span>
         </template>
       </vxe-column>
-      <vxe-column title="输入框" field="nickname" width="200" :edit-render="{ autofocus: '.el-input__inner' }">
+      <vxe-column title="输入框" field="nickname" width="200" :edit-render="{}">
         <template #edit="{ row }">
-          <el-input v-model="row.nickname"></el-input>
+          <a-input v-model="row.nickname"></a-input>
         </template>
         <template #default="{ row }">
           <span>{{ row.nickname }}</span>
@@ -34,7 +34,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessageBox } from 'element-plus'
+import { Modal } from 'ant-design-vue'
 import type { VxeTableInstance } from 'vxe-table'
 
 interface RowVO {
@@ -66,9 +66,15 @@ const saveEvent = () => {
   if ($table) {
     const { insertRecords, removeRecords, updateRecords } = $table.getRecordset()
     if (insertRecords.length || removeRecords.length || updateRecords.length) {
-      ElMessageBox.alert(`insertRecords=${insertRecords.length}; removeRecords=${removeRecords.length}; updateRecords=${updateRecords.length}`)
+      Modal.success({
+        title: '提示',
+        content: `insertRecords=${insertRecords.length}; removeRecords=${removeRecords.length}; updateRecords=${updateRecords.length}`
+      })
     } else {
-      ElMessageBox.alert('数据未改动！')
+      Modal.info({
+        title: '提示',
+        content: '数据未改动！'
+      })
     }
   }
 }
