@@ -21,6 +21,11 @@
           <input class="my-input" v-model="row.age" type="number">
         </template>
       </vxe-column>
+      <vxe-column field="address" title="Address" :edit-render="{autoFocus: 'input'}">
+        <template #edit="{ row }">
+          <input v-model="row.address" type="text">
+        </template>
+      </vxe-column>
     </vxe-table>
   </div>
 </template>
