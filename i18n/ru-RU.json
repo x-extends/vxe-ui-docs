@@ -172,6 +172,7 @@
         "areaMenu": "Official plugin - content menu",
         "areaCellMenu": "Cell content menu",
         "areaEdit": "Editable",
+        "areaEditDisabled": "禁用单元格编辑",
         "areaCustom": "Custom column settings",
         "areaScroll": "Virtual scrolling (oversized data inventory)",
         "areaAutoHeight": "Adaptive row height",

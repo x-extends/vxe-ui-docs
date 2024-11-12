@@ -172,6 +172,7 @@
         "areaMenu": "官方插件 - 右键菜单",
         "areaCellMenu": "单元格右键菜单",
         "areaEdit": "可编辑",
+        "areaEditDisabled": "禁用单元格编辑",
         "areaCustom": "自定义列设置",
         "areaScroll": "虚拟滚动（超大数据量表格）",
         "areaAutoHeight": "自适应行高",
