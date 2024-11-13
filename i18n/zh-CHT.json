@@ -2501,7 +2501,7 @@
       "props_content-render": "內容渲染配置項目",
       "props_tree-node": "只對 tree-config 配置時有效，指定為樹節點",
       "props_params": "額外的參數（可以用來存放一些私有參數）",
-      "props_edit-render_auto-focus": "设置激活编辑之后自动聚焦的元素",
+      "props_edit-render_auto-focus": "设置激活编辑之后自动聚焦的元素，如果为 true，则自动匹配，如果为字符串则为 css 选择器",
       "props_edit-render_auto-select": "是否在激活编辑之后自动选中输入框内容"
     },
     "grid": {

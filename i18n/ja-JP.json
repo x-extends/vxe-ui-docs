@@ -2501,7 +2501,7 @@
       "props_content-render": "コンテンツレンダリング設定項目",
       "props_tree-node": "Tree-config で構成され、ツリー ノードとして指定された場合にのみ有効です",
       "props_params": "追加パラメータ (いくつかのプライベートパラメータを保存するために使用できます)",
-      "props_edit-render_auto-focus": "设置激活编辑之后自动聚焦的元素",
+      "props_edit-render_auto-focus": "设置激活编辑之后自动聚焦的元素，如果为 true，则自动匹配，如果为字符串则为 css 选择器",
       "props_edit-render_auto-select": "是否在激活编辑之后自动选中输入框内容"
     },
     "grid": {
