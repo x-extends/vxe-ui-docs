@@ -24,7 +24,11 @@
           </pre-code>
         </pre>
 
+        <vxe-tip status="primary" title="方式一">使用 NPM 安装</vxe-tip>
+        <vxe-tip status="error">自行去全局安装对应的第三方组件</vxe-tip>
+
         <pre>
+          <div>文件 main.js</div>
           <pre-code class="javascript">
             // main.js
             // ...

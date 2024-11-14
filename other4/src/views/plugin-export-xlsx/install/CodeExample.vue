@@ -3,7 +3,7 @@
     <CodeLight>
       <template #tip>
         <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-export-xlsx">
-          该插件用于支持在表格中导出导入导出 XLSX 文件，基于 <vxe-link href="https://github.com/exceljs/exceljs" target="_blank">exceljs</vxe-link> 实现
+          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/v3/plugin-export-xlsx" target="_blank"></vxe-link> 该插件用于支持在表格中导出导入导出 XLSX 文件，基于 <vxe-link href="https://github.com/exceljs/exceljs" target="_blank">exceljs</vxe-link> 实现
         </vxe-tip>
         <vxe-tip status="error">该导出插件基于 <vxe-link href="https://github.com/exceljs/exceljs" target="_blank">exceljs</vxe-link> 库实现，具体开源协议请自行去查看对应的库</vxe-tip>
       </template>
@@ -22,7 +22,8 @@
           </pre-code>
         </pre>
 
-        <vxe-tip status="primary" title="方式一（推荐）">在 html 引入 CDN  包，建议将对应的包下载到本地后在引入</vxe-tip>
+        <vxe-tip status="primary" title="方式一（推荐）">在 html 引入插件库，使用第三方 CDN 方式记得锁定版本号，避免受到非兼容性更新的影响</vxe-tip>
+        <vxe-tip status="error">不建议将第三方的 CDN 地址用于正式环境，因为该连接随时都可能会失效，建议将对应的包下载到本地后在引入</vxe-tip>
 
         <pre>
           <div>文件 index.html</div>
@@ -45,7 +46,7 @@
           </pre-code>
         </pre>
 
-        <vxe-tip status="primary" title="方式二">使用 NPM 安装，注入 ExcelJS 对象</vxe-tip>
+        <vxe-tip status="primary" title="方式二">使用 NPM 安装</vxe-tip>
 
         <pre>
           <div>文件 main.js</div>

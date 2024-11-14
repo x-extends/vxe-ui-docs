@@ -21,20 +21,29 @@
           </pre-code>
         </pre>
 
+        <vxe-tip status="primary" title="方式一（推荐）">在 html 引入插件库，使用第三方 CDN 方式记得锁定版本号，避免受到非兼容性更新的影响</vxe-tip>
+        <vxe-tip status="error">不建议将第三方的 CDN 地址用于正式环境，因为该连接随时都可能会失效，建议将对应的包下载到本地后在引入</vxe-tip>
+
         <pre>
+          <div>文件 index.html</div>
+          <pre-code
+            class="html"
+            content="
+            <!--引入 css-->
+            %3Clink%20rel%3D%22stylesheet%22%20href%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40wangeditor%2Feditor%405.1.23%2Fdist%2Fcss%2Fstyle.css%22%3E
+            <!--引入 js-->
+            %3Cscript%20type%3D%22text%2Fjavascript%22%20src%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40wangeditor%2Feditor%405.1.23%2Fdist%2Findex.js%22%3E%3C%2Fscript%3E
+            ">
+          </pre-code>
+          <div>文件 main.js</div>
           <pre-code class="javascript">
-            // main.js
             // ...
-            // 如果完整使用
             import { VxeUI } from 'vxe-pc-ui'
-            // 如果只使用表格
-            // import { VxeUI } from 'vxe-table'
             import VxeUIPluginRenderWangEditor, { WangEditor } from '@vxe-ui/plugin-render-wangeditor'
             import '@vxe-ui/plugin-render-wangeditor/dist/style.css'
-            import * as wangEditor from '@wangeditor/editor'
             // ...
 
-            // （推荐）方式2：CDN 安装，只要确保 window.wangEditor 存在即可
+            // 确保 window.wangEditor 变量存在即表示安装完成
             VxeUI.use(VxeUIPluginRenderWangEditor, {
               // 自定义上传图片方法
               uploadImageMethod ({ file }) {
@@ -60,21 +69,51 @@
               }
             })
 
-            // 方式1：NPM 安装，注入 wangEditor 对象
-            // VxeUI.use(VxeUIPluginRenderWangEditor, {
-            //   wangEditor,
-            //   // 自定义上传图片方法
-            //   uploadImageMethod ({ file }) {
-            //     return { url: '' }
-            //   },
-            //   // 自定义上传视频方法
-            //   uploadVideoMethod ({ file }) {
-            //     return { url: '' }
-            //   }
-            // })
+            // （可选组件）安装后可以独立使用
+            app.use(WangEditor)
+          </pre-code>
+        </pre>
 
-            // 可选组件
-            Vue.use(WangEditor)
+        <vxe-tip status="primary" title="方式二">使用 NPM 安装</vxe-tip>
+
+        <pre>
+          <div>文件 main.js</div>
+          <pre-code class="javascript">
+            // ...
+            import { VxeUI } from 'vxe-pc-ui'
+            import VxeUIPluginRenderWangEditor, { WangEditor } from '@vxe-ui/plugin-render-wangeditor'
+            import '@vxe-ui/plugin-render-wangeditor/dist/style.css'
+            import * as wangEditor from '@wangeditor/editor'
+            // ...
+
+            VxeUI.use(VxeUIPluginRenderWangEditor, {
+              wangEditor,
+              // 自定义上传图片方法
+              uploadImageMethod ({ file }) {
+                const formData = new FormData()
+                formData.append('file', file)
+                return axios.post('/api/pub/upload/single', formData).then((res) => {
+                  // { url: '' }
+                  return {
+                    ...res.data
+                  }
+                })
+              },
+              // 自定义上传视频方法
+              uploadVideoMethod ({ file }) {
+                const formData = new FormData()
+                formData.append('file', file)
+                return axios.post('/api/pub/upload/single', formData).then((res) => {
+                  // { url: '' }
+                  return {
+                    ...res.data
+                  }
+                })
+              }
+            })
+
+            // （可选组件）安装后可以独立使用
+            app.use(WangEditor)
           </pre-code>
         </pre>
       </template>
