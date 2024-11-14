@@ -20,13 +20,15 @@
       <slot name="use"></slot>
     </div>
 
-    <div v-if="$slots.preview" class="example-preview">
+    <div v-if="previewPath || $slots.preview" class="example-preview">
       <h2 class="example-preview-header" :class="{active: showPreview}" @click="showPreview = !showPreview">
         <vxe-icon class="example-preview-icon" name="arrow-right"></vxe-icon>
         <span class="example-preview-title">操作&预览</span>
       </h2>
       <div v-show="showPreview" class="example-preview-body">
-        <slot name="preview"></slot>
+        <slot name="preview">
+          <vxe-image :src="`${siteBaseUrl}${previewPath}`"></vxe-image>
+        </slot>
       </div>
     </div>
 
@@ -103,6 +105,7 @@ interface ImportItemVO {
 export default Vue.extend({
   props: {
     path: String,
+    previewPath: String,
     extraImports: {
       type: Array as PropType<string[]>,
       default: () => []
