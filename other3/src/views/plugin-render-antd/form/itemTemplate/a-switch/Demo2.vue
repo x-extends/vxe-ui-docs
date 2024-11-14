@@ -5,12 +5,12 @@
       :data="formData">
       <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
         <template #default>
-          <s-input v-model="formData.name"></s-input>
+          <a-input v-model="formData.name"></a-input>
         </template>
       </vxe-form-item>
       <vxe-form-item title="开关" field="flag" span="24" :item-render="{}">
         <template #default="{ data }">
-          <s-switch v-model="data.flag"></s-switch>
+          <a-switch v-model="data.flag"></a-switch>
         </template>
       </vxe-form-item>
       <vxe-form-item align="center" span="24">
