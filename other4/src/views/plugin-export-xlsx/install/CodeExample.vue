@@ -22,28 +22,45 @@
           </pre-code>
         </pre>
 
+        <vxe-tip status="primary" title="方式一（推荐）">在 html 引入 CDN  包，建议将对应的包下载到本地后在引入</vxe-tip>
+
         <pre>
+          <div>文件 index.html</div>
+          <pre-code
+            class="html"
+            content="%3Cscript%20type%3D%22text%2Fjavascript%22%20src%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2Fexceljs%404.4.0%2Fdist%2Fexceljs.min.js%22%3E%3C%2Fscript%3E">
+          </pre-code>
+          <div>文件 main.js</div>
           <pre-code
             class="javascript"
             :content="`
-            // main.js
             // ...
-            // 如果完整使用
             import { VxeUI } from 'vxe-pc-ui'
-            // 如果只使用表格
-            // import { VxeUI } from 'vxe-table'
             import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
-            // import ExcelJS from 'exceljs'
             // ...
 
-            // （推荐）方式1：使用 CDN 方式，这样可以不影响包体积，额外引入 js 就可以
-            // 在 index.html 引入 https://cdn.jsdelivr.net/npm/exceljs@4.2.1/dist/exceljs.min.js
+            // 确保 window.ExcelJS 变量存在即表示安装完成
             VxeUI.use(VxeUIPluginExportXLSX)
+            `">
+          </pre-code>
+        </pre>
 
-            // 方式2：使用 NPM 安装，注入 ExcelJS 对象
-            // VxeUI.use(VxeUIPluginExportXLSX, {
-            //   ExcelJS
-            // })
+        <vxe-tip status="primary" title="方式二">使用 NPM 安装，注入 ExcelJS 对象</vxe-tip>
+
+        <pre>
+          <div>文件 main.js</div>
+          <pre-code
+            class="javascript"
+            :content="`
+            // ...
+            import { VxeUI } from 'vxe-pc-ui'
+            import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
+            import ExcelJS from 'exceljs'
+            // ...
+
+            VxeUI.use(VxeUIPluginExportXLSX, {
+              ExcelJS
+            })
             `">
           </pre-code>
         </pre>
