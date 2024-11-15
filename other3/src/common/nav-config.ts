@@ -194,6 +194,53 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
+    title: '第三方插件 - 渲染 wangEditor 富文本',
+    isExpand: false,
+    children: [
+      {
+        title: '开发指南',
+        children: [
+          { title: '安装插件', routerLink: { name: 'PluginRenderWangEditorInstall' } }
+        ]
+      },
+      {
+        title: 'Form 表单',
+        children: [
+          { title: 'WangEditor 基础表单', routerLink: { name: 'PluginRenderWangEditorFormItemTemplateWangEditor' } },
+          { title: 'WangEditor 配置式表单', routerLink: { name: 'PluginRenderWangEditorFormItemRenderWangEditor' } }
+        ]
+      }
+      // {
+      //   title: 'FormDesign 表单设计器',
+      //   children: [
+      //     { title: '渲染视图', routerLink: { name: 'PluginRenderWangEditorFormDesignRenderView' } },
+      //     { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/' },
+      //     { title: '零代码平台模板', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/' }
+      //   ]
+      // }
+    ]
+  },
+  {
+    title: '第三方插件 - 渲染 echarts 图表',
+    isExpand: false,
+    children: [
+      {
+        title: '开发指南',
+        children: [
+          { title: '安装插件', routerLink: { name: 'PluginRenderEcharts' } }
+        ]
+      },
+      {
+        title: 'Grid 配置式表格',
+        children: [
+          { title: '单元格 - 柱状图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' },
+          { title: '单元格 - 折线图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' },
+          { title: '单元格 - 饼图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' }
+        ]
+      }
+    ]
+  },
+  {
     title: '第三方插件 - 渲染 element-ui 组件',
     isExpand: false,
     children: [
@@ -391,48 +438,13 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    title: '第三方插件 - 渲染 wangEditor 富文本',
+    title: '第三方插件 - 渲染 iview, view-design 组件',
     isExpand: false,
     children: [
       {
         title: '开发指南',
         children: [
-          { title: '安装插件', routerLink: { name: 'PluginRenderWangEditorInstall' } }
-        ]
-      },
-      {
-        title: 'Form 表单',
-        children: [
-          { title: 'WangEditor 基础表单', routerLink: { name: 'PluginRenderWangEditorFormItemTemplateWangEditor' } },
-          { title: 'WangEditor 配置式表单', routerLink: { name: 'PluginRenderWangEditorFormItemRenderWangEditor' } }
-        ]
-      }
-      // {
-      //   title: 'FormDesign 表单设计器',
-      //   children: [
-      //     { title: '渲染视图', routerLink: { name: 'PluginRenderWangEditorFormDesignRenderView' } },
-      //     { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/' },
-      //     { title: '零代码平台模板', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/' }
-      //   ]
-      // }
-    ]
-  },
-  {
-    title: '第三方插件 - 渲染 echarts 图表',
-    isExpand: false,
-    children: [
-      {
-        title: '开发指南',
-        children: [
-          { title: '安装插件', routerLink: { name: 'PluginRenderEcharts' } }
-        ]
-      },
-      {
-        title: 'Grid 配置式表格',
-        children: [
-          { title: '单元格 - 柱状图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' },
-          { title: '单元格 - 折线图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' },
-          { title: '单元格 - 饼图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' }
+          { title: '安装插件', routerLink: { name: 'PluginRenderIViewInstall' } }
         ]
       }
     ]

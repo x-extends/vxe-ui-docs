@@ -36,6 +36,8 @@ import '@vxe-ui/plugin-render-antd/dist/style.css'
 import VxeUIPluginRenderWangEditor, { WangEditor } from '@vxe-ui/plugin-render-wangeditor'
 import '@vxe-ui/plugin-render-wangeditor/dist/style.css'
 import VxeUIPluginValidator from '@vxe-ui/plugin-validator'
+import VxeUIPluginRenderIView from '@vxe-ui/plugin-render-iview'
+import '@vxe-ui/plugin-render-iview/dist/style.css'
 
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
@@ -93,6 +95,7 @@ VxeUI.use(VxeUIPluginRenderWangEditor, {
   }
 })
 VxeUI.use(VxeUIPluginValidator)
+VxeUI.use(VxeUIPluginRenderIView)
 
 Vue.use(VxeUI)
 Vue.use(VxeTable)

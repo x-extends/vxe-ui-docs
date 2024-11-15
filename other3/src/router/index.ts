@@ -626,6 +626,17 @@ const routes: Array<RouteConfig> = [
     ]
   },
   {
+    path: '/plugin-render-iview',
+    component: PageLayout,
+    children: [
+      {
+        path: 'install',
+        name: 'PluginRenderIViewInstall',
+        component: () => import('@/views/plugin-render-iview/install/CodeExample.vue')
+      }
+    ]
+  },
+  {
     path: '/plugin-render-antd',
     component: PageLayout,
     children: [

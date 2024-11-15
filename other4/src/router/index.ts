@@ -819,6 +819,28 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
+    path: '/plugin-render-iview',
+    component: PageLayout,
+    children: [
+      {
+        path: 'install',
+        name: 'PluginRenderIViewInstall',
+        component: () => import('@/views/plugin-render-iview/install/CodeExample.vue')
+      }
+    ]
+  },
+  {
+    path: '/plugin-render-naive',
+    component: PageLayout,
+    children: [
+      {
+        path: 'install',
+        name: 'PluginRenderNaiveInstall',
+        component: () => import('@/views/plugin-render-naive/install/CodeExample.vue')
+      }
+    ]
+  },
+  {
     path: '/plugin-render-wangeditor',
     component: PageLayout,
     children: [
