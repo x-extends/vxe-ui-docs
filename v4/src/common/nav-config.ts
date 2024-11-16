@@ -131,14 +131,14 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '行拖拽',
           children: [
-            { title: '拖拽调整行顺序', routerLink: { name: 'ComponentTableDragRowSort' } },
-            { title: '冻结列', routerLink: { name: 'ComponentTableDragRowFixed' } },
-            { title: '自定义图标', routerLink: { name: 'ComponentTableDragRowIcon' } },
-            { title: '树结构', routerLink: { name: 'ComponentTableDragRowTree' } },
-            { title: '拖拽事件', routerLink: { name: 'ComponentTableDragRowEvent' } },
-            { title: '禁用按钮', routerLink: { name: 'ComponentTableDragRowDisabledMethod' } },
-            { title: '按钮可视', routerLink: { name: 'ComponentTableDragRowVisibleMethod' } },
-            { title: '拖拽拦截', routerLink: { name: 'ComponentTableDragRowDragMethod' } }
+            { title: '拖拽调整行顺序', routerLink: { name: 'ComponentTableRowDragSort' } },
+            { title: '冻结列', routerLink: { name: 'ComponentTableRowDragFixed' } },
+            { title: '自定义图标', routerLink: { name: 'ComponentTableRowDragIcon' } },
+            { title: '树结构', routerLink: { name: 'ComponentTableRowDragTree' } },
+            { title: '拖拽事件', routerLink: { name: 'ComponentTableRowDragEvents' } },
+            { title: '禁用按钮', routerLink: { name: 'ComponentTableRowDragDisabledMethod' } },
+            { title: '按钮可视', routerLink: { name: 'ComponentTableRowDragVisibleMethod' } },
+            { title: '拖拽拦截', routerLink: { name: 'ComponentTableRowDragDragMethod' } }
           ]
         },
         {
@@ -573,15 +573,15 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '行拖拽',
           children: [
-            { title: '拖拽调整行顺序', routerLink: { name: 'ComponentGridDragRowSort' } },
-            { title: '冻结列', routerLink: { name: 'ComponentGridDragRowFixed' } },
-            { title: '自定义图标', routerLink: { name: 'ComponentGridDragRowIcon' } },
-            { title: '树结构', routerLink: { name: 'ComponentGridDragRowTree' } },
-            { title: '拖拽事件', routerLink: { name: 'ComponentGridDragRowEvent' } },
-            { title: '自定义提示', routerLink: { name: 'ComponentGridDragRowTooltipMethod' } },
-            { title: '禁用按钮', routerLink: { name: 'ComponentGridDragRowDisabledMethod' } },
-            { title: '按钮可视', routerLink: { name: 'ComponentGridDragRowVisibleMethod' } },
-            { title: '拖拽拦截', routerLink: { name: 'ComponentGridDragRowDragMethod' } },
+            { title: '拖拽调整行顺序', routerLink: { name: 'ComponentGridRowDragSort' } },
+            { title: '冻结列', routerLink: { name: 'ComponentGridRowDragFixed' } },
+            { title: '自定义图标', routerLink: { name: 'ComponentGridRowDragIcon' } },
+            { title: '树结构', routerLink: { name: 'ComponentGridRowDragTree' } },
+            { title: '拖拽事件', routerLink: { name: 'ComponentGridRowDragEvents' } },
+            { title: '自定义提示', routerLink: { name: 'ComponentGridRowDragTooltipMethod' } },
+            { title: '禁用按钮', routerLink: { name: 'ComponentGridRowDragDisabledMethod' } },
+            { title: '按钮可视', routerLink: { name: 'ComponentGridRowDragVisibleMethod' } },
+            { title: '拖拽拦截', routerLink: { name: 'ComponentGridRowDragDragMethod' } },
             {
               title: '自定义插槽模板',
               children: [

@@ -382,48 +382,48 @@ const tableRouteConfig: RouteRecordRaw = {
       ]
     },
     {
-      path: 'drag',
+      path: 'rowDrag',
       component: RouteLayout,
       children: [
         {
-          path: 'rowDrag',
-          name: 'ComponentTableDragRowSort',
-          component: () => import('@/views/table/drag/rowSort/CodeExample.vue')
+          path: 'sort',
+          name: 'ComponentTableRowDragSort',
+          component: () => import('@/views/table/rowDrag/sort/CodeExample.vue')
         },
         {
-          path: 'rowFixed',
-          name: 'ComponentTableDragRowFixed',
-          component: () => import('@/views/table/drag/rowFixed/CodeExample.vue')
+          path: 'fixed',
+          name: 'ComponentTableRowDragFixed',
+          component: () => import('@/views/table/rowDrag/fixed/CodeExample.vue')
         },
         {
-          path: 'rowIcon',
-          name: 'ComponentTableDragRowIcon',
-          component: () => import('@/views/table/drag/rowIcon/CodeExample.vue')
+          path: 'icon',
+          name: 'ComponentTableRowDragIcon',
+          component: () => import('@/views/table/rowDrag/icon/CodeExample.vue')
         },
         {
-          path: 'rowTree',
-          name: 'ComponentTableDragRowTree',
-          component: () => import('@/views/table/drag/rowTree/CodeExample.vue')
+          path: 'tree',
+          name: 'ComponentTableRowDragTree',
+          component: () => import('@/views/table/rowDrag/tree/CodeExample.vue')
         },
         {
-          path: 'rowEvent',
-          name: 'ComponentTableDragRowEvent',
-          component: () => import('@/views/table/drag/rowEvent/CodeExample.vue')
+          path: 'events',
+          name: 'ComponentTableRowDragEvents',
+          component: () => import('@/views/table/rowDrag/events/CodeExample.vue')
         },
         {
-          path: 'rowDisabledMethod',
-          name: 'ComponentTableDragRowDisabledMethod',
-          component: () => import('@/views/table/drag/rowDisabledMethod/CodeExample.vue')
+          path: 'disabledMethod',
+          name: 'ComponentTableRowDragDisabledMethod',
+          component: () => import('@/views/table/rowDrag/disabledMethod/CodeExample.vue')
         },
         {
-          path: 'rowVisibleMethod',
-          name: 'ComponentTableDragRowVisibleMethod',
-          component: () => import('@/views/table/drag/rowVisibleMethod/CodeExample.vue')
+          path: 'visibleMethod',
+          name: 'ComponentTableRowDragVisibleMethod',
+          component: () => import('@/views/table/rowDrag/visibleMethod/CodeExample.vue')
         },
         {
-          path: 'rowDragMethod',
-          name: 'ComponentTableDragRowDragMethod',
-          component: () => import('@/views/table/drag/rowDragMethod/CodeExample.vue')
+          path: 'dragMethod',
+          name: 'ComponentTableRowDragDragMethod',
+          component: () => import('@/views/table/rowDrag/dragMethod/CodeExample.vue')
         }
       ]
     },
@@ -1850,62 +1850,62 @@ const gridRouteConfig: RouteRecordRaw = {
       ]
     },
     {
-      path: 'drag',
+      path: 'rowDrag',
       component: RouteLayout,
       children: [
         {
-          path: 'rowDrag',
-          name: 'ComponentGridDragRowSort',
-          component: () => import('@/views/grid/drag/rowSort/CodeExample.vue')
+          path: 'sort',
+          name: 'ComponentGridRowDragSort',
+          component: () => import('@/views/grid/rowDrag/sort/CodeExample.vue')
         },
         {
-          path: 'rowFixed',
-          name: 'ComponentGridDragRowFixed',
-          component: () => import('@/views/grid/drag/rowFixed/CodeExample.vue')
+          path: 'fixed',
+          name: 'ComponentGridRowDragFixed',
+          component: () => import('@/views/grid/rowDrag/fixed/CodeExample.vue')
         },
         {
-          path: 'rowIcon',
-          name: 'ComponentGridDragRowIcon',
-          component: () => import('@/views/grid/drag/rowIcon/CodeExample.vue')
+          path: 'icon',
+          name: 'ComponentGridRowDragIcon',
+          component: () => import('@/views/grid/rowDrag/icon/CodeExample.vue')
         },
         {
-          path: 'rowTree',
-          name: 'ComponentGridDragRowTree',
-          component: () => import('@/views/grid/drag/rowTree/CodeExample.vue')
+          path: 'tree',
+          name: 'ComponentGridRowDragTree',
+          component: () => import('@/views/grid/rowDrag/tree/CodeExample.vue')
         },
         {
-          path: 'rowEvent',
-          name: 'ComponentGridDragRowEvent',
-          component: () => import('@/views/grid/drag/rowEvent/CodeExample.vue')
+          path: 'events',
+          name: 'ComponentGridRowDragEvents',
+          component: () => import('@/views/grid/rowDrag/events/CodeExample.vue')
         },
         {
-          path: 'rowTooltipMethod',
-          name: 'ComponentGridDragRowTooltipMethod',
-          component: () => import('@/views/grid/drag/rowTooltipMethod/CodeExample.vue')
+          path: 'tooltipMethod',
+          name: 'ComponentGridRowDragTooltipMethod',
+          component: () => import('@/views/grid/rowDrag/tooltipMethod/CodeExample.vue')
         },
         {
-          path: 'rowDisabledMethod',
-          name: 'ComponentGridDragRowDisabledMethod',
-          component: () => import('@/views/grid/drag/rowDisabledMethod/CodeExample.vue')
+          path: 'disabledMethod',
+          name: 'ComponentGridRowDragDisabledMethod',
+          component: () => import('@/views/grid/rowDrag/disabledMethod/CodeExample.vue')
         },
         {
-          path: 'rowVisibleMethod',
-          name: 'ComponentGridDragRowVisibleMethod',
-          component: () => import('@/views/grid/drag/rowVisibleMethod/CodeExample.vue')
+          path: 'visibleMethod',
+          name: 'ComponentGridRowDragVisibleMethod',
+          component: () => import('@/views/grid/rowDrag/visibleMethod/CodeExample.vue')
         },
         {
-          path: 'rowDragMethod',
-          name: 'ComponentGridDragRowDragMethod',
-          component: () => import('@/views/grid/drag/rowDragMethod/CodeExample.vue')
+          path: 'dragMethod',
+          name: 'ComponentGridRowDragDragMethod',
+          component: () => import('@/views/grid/rowDrag/dragMethod/CodeExample.vue')
         },
         {
           path: 'template',
           component: RouteLayout,
           children: [
             {
-              path: 'rowTip',
+              path: 'tip',
               name: 'ComponentGridDragTemplateRowTip',
-              component: () => import('@/views/grid/drag/template/rowTip/CodeExample.vue')
+              component: () => import('@/views/grid/rowDrag/template/tip/CodeExample.vue')
             }
           ]
         }
