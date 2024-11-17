@@ -28,8 +28,8 @@ export default Vue.extend({
       columnConfig: {
         useKey: true
       },
-      dragConfig: {
-        rowIcon: 'vxe-icon-sort'
+      rowDragConfig: {
+        icon: 'vxe-icon-sort'
       },
       columns: [
         { field: 'name', title: 'Name' },

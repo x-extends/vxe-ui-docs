@@ -4,7 +4,7 @@
       border
       :row-config="rowConfig"
       :column-config="columnConfig"
-      :drag-config="dragConfig"
+      :row-drag-config="rowDragConfig"
       :data="tableData">
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="role" title="Role" drag-sort></vxe-column>
@@ -44,7 +44,7 @@ const columnConfig = reactive<VxeTablePropTypes.ColumnConfig<RowVO>>({
   useKey: true
 })
 
-const dragConfig = reactive<VxeTablePropTypes.DragConfig<RowVO>>({
-  rowIcon: 'vxe-icon-sort'
+const rowDragConfig = reactive<VxeTablePropTypes.RowDragConfig<RowVO>>({
+  icon: 'vxe-icon-sort'
 })
 </script>

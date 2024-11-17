@@ -28,7 +28,7 @@ export default Vue.extend({
       columnConfig: {
         useKey: true
       },
-      dragConfig: {
+      rowDragConfig: {
         async dragEndMethod () {
           const type = await VxeUI.modal.confirm({
             content: '请是否确认调整顺序？'

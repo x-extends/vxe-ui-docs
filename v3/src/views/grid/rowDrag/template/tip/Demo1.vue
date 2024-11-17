@@ -32,9 +32,9 @@ export default Vue.extend({
       columnConfig: {
         useKey: true
       },
-      dragConfig: {
+      rowDragConfig: {
         slots: {
-          rowTip: 'dragRowTip'
+          tip: 'dragRowTip'
         }
       },
       columns: [

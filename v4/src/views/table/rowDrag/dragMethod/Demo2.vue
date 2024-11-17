@@ -4,7 +4,7 @@
       border
       :row-config="rowConfig"
       :column-config="columnConfig"
-      :drag-config="dragConfig"
+      :row-drag-config="rowDragConfig"
       :data="tableData">
       <vxe-column field="name" title="Name" drag-sort></vxe-column>
       <vxe-column field="role" title="Role"></vxe-column>
@@ -44,7 +44,7 @@ const columnConfig = reactive<VxeTablePropTypes.ColumnConfig<RowVO>>({
   useKey: true
 })
 
-const dragConfig = reactive<VxeTablePropTypes.DragConfig<RowVO>>({
+const rowDragConfig = reactive<VxeTablePropTypes.RowDragConfig<RowVO>>({
   async dragEndMethod () {
     const type = await VxeUI.modal.confirm({
       content: '请是否确认调整顺序？'

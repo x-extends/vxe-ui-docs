@@ -4,7 +4,7 @@
       border
       :row-config="rowConfig"
       :column-config="columnConfig"
-      :drag-config="dragConfig"
+      :row-drag-config="rowDragConfig"
       :data="tableData">
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="role" title="Role" drag-sort></vxe-column>
@@ -46,8 +46,8 @@ export default Vue.extend({
       useKey: true
     }
 
-    const dragConfig: VxeTablePropTypes.DragConfig<RowVO> = {
-      rowDisabledMethod ({ row }) {
+    const rowDragConfig: VxeTablePropTypes.RowDragConfig<RowVO> = {
+      disabledMethod ({ row }) {
         if (row.role === 'Test') {
           return true
         }
@@ -59,7 +59,7 @@ export default Vue.extend({
       tableData,
       rowConfig,
       columnConfig,
-      dragConfig
+      rowDragConfig
     }
   }
 })

@@ -4,7 +4,7 @@
       border
       :row-config="rowConfig"
       :column-config="columnConfig"
-      :drag-config="dragConfig"
+      :row-drag-config="rowDragConfig"
       :data="tableData">
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="role" title="Role" drag-sort></vxe-column>
@@ -46,15 +46,15 @@ export default Vue.extend({
       useKey: true
     }
 
-    const dragConfig: VxeTablePropTypes.DragConfig<RowVO> = {
-      rowIcon: 'vxe-icon-sort'
+    const rowDragConfig: VxeTablePropTypes.RowDragConfig<RowVO> = {
+      icon: 'vxe-icon-sort'
     }
 
     return {
       tableData,
       rowConfig,
       columnConfig,
-      dragConfig
+      rowDragConfig
     }
   }
 })

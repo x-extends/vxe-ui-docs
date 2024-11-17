@@ -10,5 +10,13 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="grid/rowDrag/sort/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          还可以同时配置多个触发按钮
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>

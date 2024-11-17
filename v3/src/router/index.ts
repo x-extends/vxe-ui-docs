@@ -431,6 +431,52 @@ const tableRouteConfig: RouteConfig = {
       ]
     },
     {
+      path: 'colDrag',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'sort',
+          name: 'ComponentTableColDragSort',
+          component: () => import('@/views/table/colDrag/sort/CodeExample.vue')
+        },
+        {
+          path: 'fixed',
+          name: 'ComponentTableColDragFixed',
+          component: () => import('@/views/table/colDrag/fixed/CodeExample.vue')
+        },
+        {
+          path: 'icon',
+          name: 'ComponentTableColDragIcon',
+          component: () => import('@/views/table/colDrag/icon/CodeExample.vue')
+        },
+        {
+          path: 'group',
+          name: 'ComponentTableColDragGroup',
+          component: () => import('@/views/table/colDrag/group/CodeExample.vue')
+        },
+        {
+          path: 'events',
+          name: 'ComponentTableColDragEvents',
+          component: () => import('@/views/table/colDrag/events/CodeExample.vue')
+        },
+        {
+          path: 'disabledMethod',
+          name: 'ComponentTableColDragDisabledMethod',
+          component: () => import('@/views/table/colDrag/disabledMethod/CodeExample.vue')
+        },
+        {
+          path: 'visibleMethod',
+          name: 'ComponentTableColDragVisibleMethod',
+          component: () => import('@/views/table/colDrag/visibleMethod/CodeExample.vue')
+        },
+        {
+          path: 'dragMethod',
+          name: 'ComponentTableColDragDragMethod',
+          component: () => import('@/views/table/colDrag/dragMethod/CodeExample.vue')
+        }
+      ]
+    },
+    {
       path: 'merge',
       component: RouteLayout,
       children: [
@@ -1872,7 +1918,7 @@ const gridRouteConfig: RouteConfig = {
           component: () => import('@/views/grid/rowDrag/icon/CodeExample.vue')
         },
         {
-          path: 'tree',
+          path: 'group',
           name: 'ComponentGridRowDragTree',
           component: () => import('@/views/grid/rowDrag/tree/CodeExample.vue')
         },
@@ -1907,8 +1953,70 @@ const gridRouteConfig: RouteConfig = {
           children: [
             {
               path: 'tip',
-              name: 'ComponentGridDragTemplateRowTip',
+              name: 'ComponentGridRowDragTemplateTip',
               component: () => import('@/views/grid/rowDrag/template/tip/CodeExample.vue')
+            }
+          ]
+        }
+      ]
+    },
+    {
+      path: 'colDrag',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'sort',
+          name: 'ComponentGridColDragSort',
+          component: () => import('@/views/grid/colDrag/sort/CodeExample.vue')
+        },
+        {
+          path: 'fixed',
+          name: 'ComponentGridColDragFixed',
+          component: () => import('@/views/grid/colDrag/fixed/CodeExample.vue')
+        },
+        {
+          path: 'icon',
+          name: 'ComponentGridColDragIcon',
+          component: () => import('@/views/grid/colDrag/icon/CodeExample.vue')
+        },
+        {
+          path: 'group',
+          name: 'ComponentGridColDragGroup',
+          component: () => import('@/views/grid/colDrag/group/CodeExample.vue')
+        },
+        {
+          path: 'events',
+          name: 'ComponentGridColDragEvents',
+          component: () => import('@/views/grid/colDrag/events/CodeExample.vue')
+        },
+        {
+          path: 'tooltipMethod',
+          name: 'ComponentGridColDragTooltipMethod',
+          component: () => import('@/views/grid/colDrag/tooltipMethod/CodeExample.vue')
+        },
+        {
+          path: 'disabledMethod',
+          name: 'ComponentGridColDragDisabledMethod',
+          component: () => import('@/views/grid/colDrag/disabledMethod/CodeExample.vue')
+        },
+        {
+          path: 'visibleMethod',
+          name: 'ComponentGridColDragVisibleMethod',
+          component: () => import('@/views/grid/colDrag/visibleMethod/CodeExample.vue')
+        },
+        {
+          path: 'dragMethod',
+          name: 'ComponentGridColDragDragMethod',
+          component: () => import('@/views/grid/colDrag/dragMethod/CodeExample.vue')
+        },
+        {
+          path: 'template',
+          component: RouteLayout,
+          children: [
+            {
+              path: 'tip',
+              name: 'ComponentGridColDragTemplateTip',
+              component: () => import('@/views/grid/colDrag/template/tip/CodeExample.vue')
             }
           ]
         }
@@ -3066,6 +3174,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'dragRow',
           name: 'ComponentGridScrollDragRow',
           component: () => import('@/views/grid/scroll/dragRow/CodeExample.vue')
+        },
+        {
+          path: 'dragCol',
+          name: 'ComponentGridScrollDragCol',
+          component: () => import('@/views/grid/scroll/dragCol/CodeExample.vue')
         },
         {
           path: 'group',

@@ -28,8 +28,8 @@ export default Vue.extend({
       columnConfig: {
         useKey: true
       },
-      dragConfig: {
-        rowTooltipMethod ({ row }) {
+      rowDragConfig: {
+        tooltipMethod ({ row }) {
           return `正在移动行：${row.name}`
         }
       },

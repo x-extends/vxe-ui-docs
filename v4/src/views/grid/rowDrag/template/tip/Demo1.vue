@@ -30,9 +30,9 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   columnConfig: {
     useKey: true
   },
-  dragConfig: {
+  rowDragConfig: {
     slots: {
-      rowTip: 'dragRowTip'
+      tip: 'dragRowTip'
     }
   },
   columns: [

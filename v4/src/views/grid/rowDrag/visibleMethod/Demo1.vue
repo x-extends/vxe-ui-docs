@@ -26,8 +26,8 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   columnConfig: {
     useKey: true
   },
-  dragConfig: {
-    rowVisibleMethod ({ row }) {
+  rowDragConfig: {
+    visibleMethod ({ row }) {
       if (row.role === 'Test') {
         return false
       }
