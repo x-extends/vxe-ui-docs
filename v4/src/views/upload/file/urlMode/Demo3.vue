@@ -13,7 +13,7 @@ import { VxeUploadPropTypes } from 'vxe-pc-ui'
 
 const fileList1 = ref('https://vxeui.com/resource/img/fj577.jpg')
 
-const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress }) => {
+const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file }) => {
   const formData = new FormData()
   formData.append('file', file)
   return axios.post('/api/pub/upload/single', formData).then((res) => {

@@ -20,14 +20,14 @@ import { VxeUI, VxeModalPropTypes } from 'vxe-pc-ui'
 
 export default Vue.extend({
   methods: {
-    openAlert  (status: VxeModalPropTypes.Status) {
+    openAlert (status: VxeModalPropTypes.Status) {
       VxeUI.modal.alert({
         title: '标题1',
         content: `状态 ${status}`,
         status
       })
     },
-    openCustomAlert  () {
+    openCustomAlert () {
       VxeUI.modal.alert({
         title: '标题2',
         content: '自定义图标',

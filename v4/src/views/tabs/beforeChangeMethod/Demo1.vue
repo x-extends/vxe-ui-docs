@@ -6,7 +6,8 @@
       :height="140"
       :options="tabList"
       :before-change-method="beforeChangeMethod"
-      @tab-change="tabChangeEvent">
+      @tab-change="tabChangeEvent"
+      @tab-change-fail="tabChangeFailEvent">
       <template #default1>
         <div>内容1</div>
         <div>内容1</div>
@@ -70,7 +71,7 @@ const tabChangeEvent: VxeTabsEvents.TabChange = ({ name }) => {
 
 const tabChangeFailEvent: VxeTabsEvents.TabChangeFail = ({ name }) => {
   VxeUI.modal.message({
-    content: '阻止切换',
+    content: `阻止切换 ${name}`,
     status: 'warning'
   })
 }

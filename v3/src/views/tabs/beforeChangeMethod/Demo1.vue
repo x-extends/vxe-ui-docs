@@ -75,9 +75,9 @@ export default Vue.extend({
         status: 'success'
       })
     },
-    tabChangeFailEvent () {
+    tabChangeFailEvent ({ name }) {
       VxeUI.modal.message({
-        content: '阻止切换',
+        content: `阻止切换 ${name}`,
         status: 'warning'
       })
     }

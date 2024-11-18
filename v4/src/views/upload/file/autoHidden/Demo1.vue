@@ -11,7 +11,7 @@ import { VxeUploadPropTypes } from 'vxe-pc-ui'
 
 const fileList = ref([])
 
-const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress }) => {
+const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file }) => {
   const formData = new FormData()
   formData.append('file', file)
   return axios.post('/api/pub/upload/single', formData).then((res) => {
