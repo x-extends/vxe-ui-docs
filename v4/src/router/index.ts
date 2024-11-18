@@ -2016,6 +2016,11 @@ const gridRouteConfig: RouteRecordRaw = {
               component: () => import('@/views/grid/colDrag/template/tip/CodeExample.vue')
             }
           ]
+        },
+        {
+          path: 'rowCol',
+          name: 'ComponentGridColDragRowCol',
+          component: () => import('@/views/grid/colDrag/rowCol/CodeExample.vue')
         }
       ]
     },

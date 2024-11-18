@@ -619,7 +619,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
               children: [
                 { title: '自定义提示模板', routerLink: { name: 'ComponentGridColDragTemplateTip' } }
               ]
-            }
+            },
+            { title: '同时行与列拖拽', routerLink: { name: 'ComponentGridColDragRowCol' } }
           ]
         },
         {
