@@ -14,6 +14,7 @@ import CodeUseVersion from './components/CodeUseVersion.vue'
 import ApiLink from './components/ApiLink.vue'
 
 import axios from 'axios'
+import XEUtils from 'xe-utils'
 
 import VxeUI from 'vxe-pc-ui'
 import 'vxe-pc-ui/lib/style.css'
@@ -45,6 +46,15 @@ import 'element-plus/dist/index.css'
 
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/reset.css'
+
+declare global {
+  interface Window {
+    XEUtils: typeof XEUtils;
+    hljs: any
+  }
+}
+
+window.XEUtils = XEUtils
 
 axios.defaults.baseURL = process.env.VUE_APP_SERVE_API_URL
 

@@ -72,6 +72,7 @@ import DemoRoleSelectPulldown from '@/views/table/editTemplate/vxe-pulldown/Demo
 declare global {
   interface Window {
     XEUtils: typeof XEUtils;
+    hljs: any
   }
 }
 

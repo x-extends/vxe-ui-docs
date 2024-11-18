@@ -15,7 +15,8 @@ module.exports = {
     defineProps: true,
     defineEmits: true,
     defineExpose: true,
-    defineSlots: true
+    defineSlots: true,
+    hljs: true
   },
   rules: {
     'no-console': 'off',

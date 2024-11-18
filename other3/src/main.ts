@@ -48,6 +48,7 @@ import 'ant-design-vue/dist/antd.css'
 declare global {
   interface Window {
     XEUtils: typeof XEUtils;
+    hljs: any
   }
 }
 
