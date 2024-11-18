@@ -6995,6 +6995,16 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/upload/file/tip/CodeExample.vue')
               },
               {
+                path: 'dragToUpload',
+                name: 'ComponentUploadFileDragToUpload',
+                component: () => import('@/views/upload/file/dragToUpload/CodeExample.vue')
+              },
+              {
+                path: 'pasteToUpload',
+                name: 'ComponentUploadFilePasteToUpload',
+                component: () => import('@/views/upload/file/pasteToUpload/CodeExample.vue')
+              },
+              {
                 path: 'progress',
                 name: 'ComponentUploadFileProgress',
                 component: () => import('@/views/upload/file/progress/CodeExample.vue')
@@ -7119,6 +7129,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'tip',
                 name: 'ComponentUploadImageTip',
                 component: () => import('@/views/upload/image/tip/CodeExample.vue')
+              },
+              {
+                path: 'dragToUpload',
+                name: 'ComponentUploadImageDragToUpload',
+                component: () => import('@/views/upload/image/dragToUpload/CodeExample.vue')
+              },
+              {
+                path: 'pasteToUpload',
+                name: 'ComponentUploadImagePasteToUpload',
+                component: () => import('@/views/upload/image/pasteToUpload/CodeExample.vue')
               },
               {
                 path: 'progress',
