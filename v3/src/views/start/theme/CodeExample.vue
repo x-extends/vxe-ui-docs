@@ -77,11 +77,11 @@
       <template #use>
         <pre>
           <pre-code class="css">
-            @use 'vxe-pc-ui/styles/variable.scss' with (
+            @use 'vxe-pc-ui/styles/variable.scss' as vxe_ui_variable with (
               $vxe-ui-font-color: #999999,
               $vxe-ui-font-primary-color: #ff0000
             );
-            @use 'vxe-pc-ui/styles/all.scss';
+            @use 'vxe-pc-ui/styles/all.scss' as vxe_ui_all;
           </pre-code>
         </pre>
       </template>
