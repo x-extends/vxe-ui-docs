@@ -29,12 +29,8 @@
               import Vue from 'vue'
               // ...
 
-              // 完整导入 UI 组件库
               import VxeUI from 'vxe-pc-ui'
               import 'vxe-pc-ui/lib/style.css'
-              // ...
-
-              // 完整导入 表格库
               import VxeUITable from 'vxe-table'
               import 'vxe-table/lib/style.css'
               // ...
