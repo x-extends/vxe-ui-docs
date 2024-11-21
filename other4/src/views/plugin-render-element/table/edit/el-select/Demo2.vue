@@ -8,7 +8,7 @@
       show-overflow
       keep-source
       ref="tableRef"
-      :edit-config="{ trigger: 'click', mode: 'row'}"
+      :edit-config="{ trigger: 'click', mode: 'row', showStatus: true}"
       :data="tableData">
       <vxe-column type="checkbox" width="60"></vxe-column>
       <vxe-column type="seq" title="Number" width="80"></vxe-column>
