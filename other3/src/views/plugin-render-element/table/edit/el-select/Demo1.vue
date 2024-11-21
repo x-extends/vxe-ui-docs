@@ -12,7 +12,7 @@
       :data="tableData">
       <vxe-column type="checkbox" width="60"></vxe-column>
       <vxe-column type="seq" title="Number" width="80"></vxe-column>
-      <vxe-column title="Name" field="name" min-width="140" :edit-render="{ name: 'ElInput' }"></vxe-column>
+      <vxe-column title="Name" field="name" min-width="140" :edit-render="nameEditRender"></vxe-column>
       <vxe-column title="下拉框" field="sex" width="200" :edit-render="sexEditRender"></vxe-column>
       <vxe-column title="下拉框多选" field="sexList" width="200" :edit-render="sexListEditRender"></vxe-column>
     </vxe-table>
@@ -38,6 +38,10 @@ export default Vue.extend({
       { id: 10002, name: 'Test2', sex: '', sexList: ['0', '1'] }
     ]
 
+    const nameEditRender: VxeColumnPropTypes.EditRender = {
+      name: 'ElInput'
+    }
+
     const sexEditRender: VxeColumnPropTypes.EditRender = {
       name: 'ElSelect',
       options: [
@@ -59,6 +63,7 @@ export default Vue.extend({
 
     return {
       tableData,
+      nameEditRender,
       sexEditRender,
       sexListEditRender
     }
