@@ -1467,13 +1467,24 @@ export const navConfigList: NavVO[] = [
           { title: '标题背景', routerLink: { name: 'ComponentFormBasicsTitleBackground' } },
           { title: '分组/分行/分列', routerLink: { name: 'ComponentFormBasicsGroup' } },
           { title: '自定义布局', routerLink: { name: 'ComponentFormBasicsCustomLayout' } },
-          { title: '表单校验', routerLink: { name: 'ComponentFormBasicsValid' } },
           {
             title: '折叠表单',
             children: [
               { title: '展开与收起', routerLink: { name: 'ComponentFormBasicsCollapseBase' } },
               { title: '自定义按钮文字', routerLink: { name: 'ComponentFormBasicsCollapseButtonText' } },
               { title: '自定义按钮图标', routerLink: { name: 'ComponentFormBasicsCollapseButtonIcon' } }
+            ]
+          },
+          {
+            title: '数据校验',
+            children: [
+              { title: '校验规则配置', routerLink: { name: 'ComponentFormBasicsValidateRules' } },
+              { title: '字符串校验规则', routerLink: { name: 'ComponentFormBasicsValidateString' } },
+              { title: '数值校验规则', routerLink: { name: 'ComponentFormBasicsValidateNumber' } },
+              { title: '正则校验规则', routerLink: { name: 'ComponentFormBasicsValidateRegexp' } },
+              { title: '数组校验规则', routerLink: { name: 'ComponentFormBasicsValidateArray' } },
+              { title: '自定义校验规则', routerLink: { name: 'ComponentFormBasicsValidateCustom' } },
+              { title: '错误提示样式', routerLink: { name: 'ComponentFormBasicsValidateTheme' } }
             ]
           },
           {
@@ -1548,13 +1559,24 @@ export const navConfigList: NavVO[] = [
           { title: '边框', routerLink: { name: 'ComponentFormConfigBorder' } },
           { title: '标题背景', routerLink: { name: 'ComponentFormConfigTitleBackground' } },
           { title: '分组/分行/分列', routerLink: { name: 'ComponentFormConfigGroup' } },
-          { title: '表单校验', routerLink: { name: 'ComponentFormConfigValid' } },
           {
             title: '折叠表单',
             children: [
               { title: '展开与收起', routerLink: { name: 'ComponentFormConfigCollapseBase' } },
               { title: '自定义按钮文字', routerLink: { name: 'ComponentFormConfigCollapseButtonText' } },
               { title: '自定义按钮图标', routerLink: { name: 'ComponentFormConfigCollapseButtonIcon' } }
+            ]
+          },
+          {
+            title: '数据校验',
+            children: [
+              { title: '校验规则配置', routerLink: { name: 'ComponentFormConfigValidateRules' } },
+              { title: '字符串校验规则', routerLink: { name: 'ComponentFormConfigValidateString' } },
+              { title: '数值校验规则', routerLink: { name: 'ComponentFormConfigValidateNumber' } },
+              { title: '正则校验规则', routerLink: { name: 'ComponentFormConfigValidateRegexp' } },
+              { title: '数组校验规则', routerLink: { name: 'ComponentFormConfigValidateArray' } },
+              { title: '自定义校验规则', routerLink: { name: 'ComponentFormConfigValidateCustom' } },
+              { title: '错误提示样式', routerLink: { name: 'ComponentFormConfigValidateTheme' } }
             ]
           },
           {

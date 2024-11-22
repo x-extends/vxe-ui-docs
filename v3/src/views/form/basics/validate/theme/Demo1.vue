@@ -1,10 +1,17 @@
 <template>
   <div>
+    <vxe-radio-group v-model="validConfig.theme">
+      <vxe-radio-button label="normal" content="简化"></vxe-radio-button>
+      <vxe-radio-button label="beautify" content="高亮"></vxe-radio-button>
+    </vxe-radio-group>
+
     <vxe-form
-      vertical
       ref="formRef"
       :data="formData"
-      :rules="formRules">
+      :rules="formRules"
+      :valid-config="validConfig"
+      @submit="submitEvent"
+      @reset="resetEvent">
       <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>
@@ -22,7 +29,8 @@
       </vxe-form-item>
       <vxe-form-item align="center" span="24" :item-render="{}">
         <template #default>
-          <vxe-button status="primary" content="手动提交" @click="submitEvent"></vxe-button>
+          <vxe-button type="submit" status="primary" content="提交"></vxe-button>
+          <vxe-button type="reset" content="重置"></vxe-button>
         </template>
       </vxe-form-item>
     </vxe-form>
@@ -43,52 +51,46 @@ interface FormDataVO {
 export default Vue.extend({
   data () {
     const formData: FormDataVO = {
-      name: 'test1',
-      nickname: 'Testing',
+      name: '',
+      nickname: '',
       sex: '',
       age: ''
     }
 
     const formRules: VxeFormPropTypes.Rules<FormDataVO> = {
       name: [
-        { required: true, message: '请输入名称' },
-        { min: 3, max: 5, message: '长度在 3 到 5 个字符' }
+        { required: true, message: '请输入名称' }
       ],
       sex: [
         { required: true, message: '请选择性别' }
       ],
       age: [
-        { required: true, message: '请输入年龄' },
-        {
-          validator ({ itemValue }) {
-            // 自定义校验
-            if (Number(itemValue) > 35 || Number(itemValue) < 18) {
-              return new Error('年龄在 18 ~ 35 之间')
-            }
-          }
-        }
+        { required: true, message: '请输入年龄' }
       ]
     }
+
+    const validConfig: VxeFormPropTypes.ValidConfig = {
+      theme: 'beautify'
+    }
+
     return {
       formData,
-      formRules
+      formRules,
+      validConfig
     }
   },
   methods: {
-    changeEvent  (params: any) {
-      const $form = this.$refs.formRef as VxeFormInstance
+    changeEvent (params: any) {
+      const $form = this.$refs.formRef as VxeFormInstance<FormDataVO>
       if ($form) {
         $form.updateStatus(params)
       }
     },
-    async submitEvent () {
-      const $form = this.$refs.formRef as VxeFormInstance
-      if ($form) {
-        const errMap = await $form.validate()
-        if (!errMap) {
-          VxeUI.modal.message({ content: '保存成功', status: 'success' })
-        }
-      }
+    submitEvent () {
+      VxeUI.modal.message({ content: '保存成功', status: 'success' })
+    },
+    resetEvent () {
+      VxeUI.modal.message({ content: '重置事件', status: 'info' })
     }
   }
 })
