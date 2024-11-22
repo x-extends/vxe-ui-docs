@@ -6367,11 +6367,6 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/form/basics/vertical/CodeExample.vue')
               },
               {
-                path: 'valid',
-                name: 'ComponentFormBasicsValid',
-                component: () => import('@/views/form/basics/valid/CodeExample.vue')
-              },
-              {
                 path: 'collapse',
                 component: RouteLayout,
                 children: [
@@ -6389,6 +6384,47 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'buttonIcon',
                     name: 'ComponentFormBasicsCollapseButtonIcon',
                     component: () => import('@/views/form/basics/collapse/buttonIcon/CodeExample.vue')
+                  }
+                ]
+              },
+              {
+                path: 'validate',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'rules',
+                    name: 'ComponentFormBasicsValidateRules',
+                    component: () => import('@/views/form/basics/validate/rules/CodeExample.vue')
+                  },
+                  {
+                    path: 'string',
+                    name: 'ComponentFormBasicsValidateString',
+                    component: () => import('@/views/form/basics/validate/string/CodeExample.vue')
+                  },
+                  {
+                    path: 'number',
+                    name: 'ComponentFormBasicsValidateNumber',
+                    component: () => import('@/views/form/basics/validate/number/CodeExample.vue')
+                  },
+                  {
+                    path: 'regexp',
+                    name: 'ComponentFormBasicsValidateRegexp',
+                    component: () => import('@/views/form/basics/validate/regexp/CodeExample.vue')
+                  },
+                  {
+                    path: 'array',
+                    name: 'ComponentFormBasicsValidateArray',
+                    component: () => import('@/views/form/basics/validate/array/CodeExample.vue')
+                  },
+                  {
+                    path: 'custom',
+                    name: 'ComponentFormBasicsValidateCustom',
+                    component: () => import('@/views/form/basics/validate/custom/CodeExample.vue')
+                  },
+                  {
+                    path: 'theme',
+                    name: 'ComponentFormBasicsValidateTheme',
+                    component: () => import('@/views/form/basics/validate/theme/CodeExample.vue')
                   }
                 ]
               },
@@ -6678,9 +6714,45 @@ const routes: Array<RouteRecordRaw> = [
                 ]
               },
               {
-                path: 'valid',
-                name: 'ComponentFormConfigValid',
-                component: () => import('@/views/form/config/valid/CodeExample.vue')
+                path: 'validate',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'rules',
+                    name: 'ComponentFormConfigValidateRules',
+                    component: () => import('@/views/form/config/validate/rules/CodeExample.vue')
+                  },
+                  {
+                    path: 'string',
+                    name: 'ComponentFormConfigValidateString',
+                    component: () => import('@/views/form/config/validate/string/CodeExample.vue')
+                  },
+                  {
+                    path: 'number',
+                    name: 'ComponentFormConfigValidateNumber',
+                    component: () => import('@/views/form/config/validate/number/CodeExample.vue')
+                  },
+                  {
+                    path: 'regexp',
+                    name: 'ComponentFormConfigValidateRegexp',
+                    component: () => import('@/views/form/config/validate/regexp/CodeExample.vue')
+                  },
+                  {
+                    path: 'array',
+                    name: 'ComponentFormConfigValidateArray',
+                    component: () => import('@/views/form/config/validate/array/CodeExample.vue')
+                  },
+                  {
+                    path: 'custom',
+                    name: 'ComponentFormConfigValidateCustom',
+                    component: () => import('@/views/form/config/validate/custom/CodeExample.vue')
+                  },
+                  {
+                    path: 'theme',
+                    name: 'ComponentFormConfigValidateTheme',
+                    component: () => import('@/views/form/config/validate/theme/CodeExample.vue')
+                  }
+                ]
               },
               {
                 path: 'itemRender',

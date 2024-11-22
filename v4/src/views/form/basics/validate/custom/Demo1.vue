@@ -6,19 +6,14 @@
       :rules="formRules"
       @submit="submitEvent"
       @reset="resetEvent">
-      <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
+      <vxe-form-item title="名称" field="name" span="12" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="性别" field="sex" span="12" :item-render="{}">
+      <vxe-form-item title="角色" field="role" span="12" :item-render="{}">
         <template #default="params">
-          <vxe-input v-model="formData.sex" @change="changeEvent(params)"></vxe-input>
-        </template>
-      </vxe-form-item>
-      <vxe-form-item title="年龄" field="age" span="12" :item-render="{}">
-        <template #default="params">
-          <vxe-input v-model="formData.age" @change="changeEvent(params)"></vxe-input>
+          <vxe-input v-model="formData.role" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
       <vxe-form-item align="center" span="24" :item-render="{}">
@@ -38,35 +33,41 @@ import { VxeUI, VxeFormInstance, VxeFormPropTypes, VxeFormEvents } from 'vxe-pc-
 interface FormDataVO {
   name: string
   nickname: string
-  sex: string
-  age: string
+  role: string
 }
 
 const formRef = ref<VxeFormInstance<FormDataVO>>()
 
 const formData = ref<FormDataVO>({
-  name: 'test1',
-  nickname: 'Testing',
-  sex: '',
-  age: ''
+  name: '',
+  nickname: '',
+  role: ''
 })
 
 const formRules = ref<VxeFormPropTypes.Rules<FormDataVO>>({
   name: [
-    { required: true, message: '请输入名称' },
-    { min: 3, max: 5, message: '长度在 3 到 5 个字符' }
-  ],
-  sex: [
-    { required: true, message: '请选择性别' }
-  ],
-  age: [
-    { required: true, message: '请输入年龄' },
+    { required: true, content: '必须填写' },
     {
       validator ({ itemValue }) {
-        // 自定义校验
-        if (Number(itemValue) > 35 || Number(itemValue) < 18) {
-          return new Error('年龄在 18 ~ 35 之间')
+        if (itemValue && (itemValue.length < 3 || itemValue.length > 50)) {
+          return new Error('名称长度在 3 到 50 个字符之间')
         }
+      }
+    }
+  ],
+  role: [
+    {
+      validator ({ itemValue }) {
+        // 模拟服务端校验
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (itemValue && !['Develop', 'Test', 'PM'].includes(itemValue)) {
+              reject(new Error('角色不正确'))
+            } else {
+              resolve()
+            }
+          }, 100)
+        })
       }
     }
   ]

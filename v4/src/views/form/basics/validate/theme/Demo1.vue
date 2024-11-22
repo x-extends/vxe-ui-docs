@@ -1,10 +1,17 @@
 <template>
   <div>
+    <vxe-radio-group v-model="validConfig.theme">
+      <vxe-radio-button label="normal" content="简化"></vxe-radio-button>
+      <vxe-radio-button label="beautify" content="高亮"></vxe-radio-button>
+    </vxe-radio-group>
+
     <vxe-form
-      vertical
       ref="formRef"
       :data="formData"
-      :rules="formRules">
+      :rules="formRules"
+      :valid-config="validConfig"
+      @submit="submitEvent"
+      @reset="resetEvent">
       <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>
@@ -22,7 +29,8 @@
       </vxe-form-item>
       <vxe-form-item align="center" span="24" :item-render="{}">
         <template #default>
-          <vxe-button status="primary" content="手动提交" @click="submitEvent"></vxe-button>
+          <vxe-button type="submit" status="primary" content="提交"></vxe-button>
+          <vxe-button type="reset" content="重置"></vxe-button>
         </template>
       </vxe-form-item>
     </vxe-form>
@@ -30,8 +38,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { VxeUI, VxeFormInstance, VxeFormPropTypes } from 'vxe-pc-ui'
+import { ref, reactive } from 'vue'
+import { VxeUI, VxeFormInstance, VxeFormPropTypes, VxeFormEvents } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -43,31 +51,26 @@ interface FormDataVO {
 const formRef = ref<VxeFormInstance<FormDataVO>>()
 
 const formData = ref<FormDataVO>({
-  name: 'test1',
-  nickname: 'Testing',
+  name: '',
+  nickname: '',
   sex: '',
   age: ''
 })
 
 const formRules = ref<VxeFormPropTypes.Rules<FormDataVO>>({
   name: [
-    { required: true, message: '请输入名称' },
-    { min: 3, max: 5, message: '长度在 3 到 5 个字符' }
+    { required: true, message: '请输入名称' }
   ],
   sex: [
     { required: true, message: '请选择性别' }
   ],
   age: [
-    { required: true, message: '请输入年龄' },
-    {
-      validator ({ itemValue }) {
-        // 自定义校验
-        if (Number(itemValue) > 35 || Number(itemValue) < 18) {
-          return new Error('年龄在 18 ~ 35 之间')
-        }
-      }
-    }
+    { required: true, message: '请输入年龄' }
   ]
+})
+
+const validConfig = reactive({
+  theme: 'beautify'
 })
 
 const changeEvent = (params: any) => {
@@ -77,13 +80,11 @@ const changeEvent = (params: any) => {
   }
 }
 
-const submitEvent = async () => {
-  const $form = formRef.value
-  if ($form) {
-    const errMap = await $form.validate()
-    if (!errMap) {
-      VxeUI.modal.message({ content: '保存成功', status: 'success' })
-    }
-  }
+const submitEvent: VxeFormEvents.Submit = () => {
+  VxeUI.modal.message({ content: '保存成功', status: 'success' })
+}
+
+const resetEvent: VxeFormEvents.Reset = () => {
+  VxeUI.modal.message({ content: '重置事件', status: 'info' })
 }
 </script>
