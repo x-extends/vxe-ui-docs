@@ -10,7 +10,7 @@
 
       <template #use>
         <vxe-tip status="success" title="完整安装">
-          可以使用全功能组件
+          可以使用完整功能组件
         </vxe-tip>
         <pre>
           <pre-code
