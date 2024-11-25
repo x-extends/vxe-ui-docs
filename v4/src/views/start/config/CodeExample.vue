@@ -93,7 +93,8 @@
                 // colon: false,
                 validConfig: {
                   showMessage: true,
-                  autoPos: true
+                  autoPos: true,
+                  theme: 'normal' // 错误提示框主题样式
                 },
                 tooltipConfig: {
                   enterable: true
