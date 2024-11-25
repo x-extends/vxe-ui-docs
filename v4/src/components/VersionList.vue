@@ -48,6 +48,8 @@ const showBetaVersion = computed(() => {
           }
         }
       }
+    } else {
+      return true
     }
   } else {
     return betaList.some((item) => item.value.indexOf('4.') === 0)
