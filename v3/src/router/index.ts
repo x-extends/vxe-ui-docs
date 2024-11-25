@@ -2337,6 +2337,11 @@ const gridRouteConfig: RouteConfig = {
       component: RouteLayout,
       children: [
         {
+          path: 'toolbar',
+          name: 'ComponentGridCustomToolbar',
+          component: () => import('@/views/grid/custom/toolbar/CodeExample.vue')
+        },
+        {
           path: 'modal',
           name: 'ComponentGridCustomModal',
           component: () => import('@/views/grid/custom/modal/CodeExample.vue')

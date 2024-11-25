@@ -708,6 +708,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '自定义列',
           children: [
+            { title: '使用工具栏', routerLink: { name: 'ComponentGridCustomToolbar' } },
             { title: '窗口模式', routerLink: { name: 'ComponentGridCustomModal' } },
             { title: '抽屉模式', routerLink: { name: 'ComponentGridCustomDrawer' } },
             { title: '禁用操作操作', routerLink: { name: 'ComponentGridCustomCheckMethod' } },
