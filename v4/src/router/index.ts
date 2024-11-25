@@ -2743,6 +2743,53 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/edit/rowValid/CodeExample.vue')
         },
         {
+          path: 'handleTemp',
+          component: RouteLayout,
+          children: [
+            {
+              path: 'insert',
+              name: 'ComponentGridEditHandleTempInsert',
+              component: () => import('@/views/grid/edit/handleTemp/insert/CodeExample.vue')
+            },
+            {
+              path: 'remove',
+              name: 'ComponentGridEditHandleTempRemove',
+              component: () => import('@/views/grid/edit/handleTemp/remove/CodeExample.vue')
+            },
+            {
+              path: 'pending',
+              name: 'ComponentGridEditHandleTempPending',
+              component: () => import('@/views/grid/edit/handleTemp/pending/CodeExample.vue')
+            },
+            {
+              path: 'update',
+              name: 'ComponentGridEditHandleTempUpdate',
+              component: () => import('@/views/grid/edit/handleTemp/update/CodeExample.vue')
+            }
+          ]
+        },
+        {
+          path: 'handleOriginal',
+          component: RouteLayout,
+          children: [
+            {
+              path: 'insert',
+              name: 'ComponentGridEditHandleOriginalInsert',
+              component: () => import('@/views/grid/edit/handleOriginal/insert/CodeExample.vue')
+            },
+            {
+              path: 'remove',
+              name: 'ComponentGridEditHandleOriginalRemove',
+              component: () => import('@/views/grid/edit/handleOriginal/remove/CodeExample.vue')
+            },
+            {
+              path: 'update',
+              name: 'ComponentGridEditHandleOriginalUpdate',
+              component: () => import('@/views/grid/edit/handleOriginal/update/CodeExample.vue')
+            }
+          ]
+        },
+        {
           path: 'rowImmediately',
           name: 'ComponentGridEditRowImmediately',
           component: () => import('@/views/grid/edit/rowImmediately/CodeExample.vue')
