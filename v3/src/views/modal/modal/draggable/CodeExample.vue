@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="modal/modal/draggable/Demo1">
+    <CodeLight path="modal/modal/draggable/Demo1" previewPath="/resource/docsImg/modal_modal_draggable.gif">
       <template #tip>
         <vxe-tip status="primary" title="拖动窗口">
           默认是允许拖动的
