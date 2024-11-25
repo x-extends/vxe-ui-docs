@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="modal/modal/resize/Demo1">
+    <CodeLight path="modal/modal/resize/Demo1" previewPath="/resource/docsImg/modal_modal_resize.gif">
       <template #tip>
         <vxe-tip status="primary" title="调整窗口宽和高">
           可以通过设置 resize 开启，鼠标点击窗口边缘，按住边缘拖动调整窗口宽和高

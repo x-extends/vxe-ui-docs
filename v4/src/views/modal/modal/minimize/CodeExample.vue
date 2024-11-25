@@ -9,7 +9,7 @@
       </template>
     </CodeLight>
 
-    <CodeLight path="modal/modal/minimize/Demo2">
+    <CodeLight path="modal/modal/minimize/Demo2" previewPath="/resource/docsImg/modal_modal_minimize.gif">
       <template #tip>
         <vxe-tip status="primary">
           叠加多窗口
