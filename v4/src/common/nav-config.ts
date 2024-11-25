@@ -803,7 +803,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '单元格校验', routerLink: { name: 'ComponentGridEditCellValid' } },
             { title: '行编辑', routerLink: { name: 'ComponentGridEditRowValid' } },
             {
-              title: '临时数据 - 增删改',
+              title: '临时数据 - 内置增删改',
               children: [
                 { title: '新增', routerLink: { name: 'ComponentGridEditHandleTempInsert' } },
                 { title: '删除', routerLink: { name: 'ComponentGridEditHandleTempRemove' } },
@@ -812,7 +812,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
               ]
             },
             {
-              title: '数据源 - 增删改',
+              title: '数据源 - 实现增删改',
               children: [
                 { title: '新增', routerLink: { name: 'ComponentGridEditHandleOriginalInsert' } },
                 { title: '删除', routerLink: { name: 'ComponentGridEditHandleOriginalRemove' } },
