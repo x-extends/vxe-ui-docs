@@ -2718,6 +2718,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/cellTemplate/vxe-upload/CodeExample.vue')
         },
         {
+          path: 'vxe-modal',
+          name: 'ComponentGridCellTemplateVxeModal',
+          component: () => import('@/views/grid/cellTemplate/vxe-modal/CodeExample.vue')
+        },
+        {
           path: 'allEdit',
           name: 'ComponentGridCellTemplateAllEdit',
           component: () => import('@/views/grid/cellTemplate/allEdit/CodeExample.vue')
