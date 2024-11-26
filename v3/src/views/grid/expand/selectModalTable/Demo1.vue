@@ -8,7 +8,7 @@
       </template>
 
       <template #action="{ row }">
-        <vxe-button mode="text" status="primary" @click="selectSubList(row)">选择</vxe-button>
+        <vxe-button mode="text" status="primary" @click="selectSubList(row)">选择（{{ row.childList ? row.childList.length : 0 }}）</vxe-button>
       </template>
     </vxe-grid>
 
