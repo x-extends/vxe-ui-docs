@@ -181,7 +181,7 @@
         "areaEditTempRemove": "Remove",
         "areaEditTempPending": "Pending",
         "areaEditTempUpdate": "Update",
-        "areaEditTempRestore": "Revert",
+        "areaEditTempRestore": "Restore",
         "areaCustom": "Custom column settings",
         "areaScroll": "Virtual scrolling (oversized data inventory)",
         "areaAutoHeight": "Adaptive row height",
