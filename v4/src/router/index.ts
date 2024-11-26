@@ -2982,6 +2982,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'vxe-pulldown',
           name: 'ComponentGridEditTemplateVxePulldown',
           component: () => import('@/views/grid/editTemplate/vxe-pulldown/CodeExample.vue')
+        },
+        {
+          path: 'vxe-modal',
+          name: 'ComponentGridEditTemplateVxeModal',
+          component: () => import('@/views/grid/editTemplate/vxe-modal/CodeExample.vue')
         }
       ]
     },
