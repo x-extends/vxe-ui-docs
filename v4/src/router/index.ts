@@ -2723,6 +2723,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/cellTemplate/vxe-modal/CodeExample.vue')
         },
         {
+          path: 'vxe-drawer',
+          name: 'ComponentGridCellTemplateVxeDrawer',
+          component: () => import('@/views/grid/cellTemplate/vxe-drawer/CodeExample.vue')
+        },
+        {
           path: 'allEdit',
           name: 'ComponentGridCellTemplateAllEdit',
           component: () => import('@/views/grid/cellTemplate/allEdit/CodeExample.vue')
@@ -2987,6 +2992,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'vxe-modal',
           name: 'ComponentGridEditTemplateVxeModal',
           component: () => import('@/views/grid/editTemplate/vxe-modal/CodeExample.vue')
+        },
+        {
+          path: 'vxe-drawer',
+          name: 'ComponentGridEditTemplateVxeDrawer',
+          component: () => import('@/views/grid/editTemplate/vxe-drawer/CodeExample.vue')
         }
       ]
     },

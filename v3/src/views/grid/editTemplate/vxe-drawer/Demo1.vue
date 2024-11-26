@@ -1,25 +1,34 @@
 <template>
   <div>
     <vxe-grid v-bind="gridOptions">
+      <template #edit_name="{ row }">
+        <vxe-input v-model="row.name" clearable></vxe-input>
+      </template>
+
+      <template #edit_productName="{ row }">
+        <vxe-input v-model="row.productName" clearable></vxe-input>
+      </template>
+
+      <template #edit_productPrice="{ row }">
+        <vxe-number-input v-model="row.productPrice" type="integer"></vxe-number-input>
+      </template>
+
       <template #action="{ row }">
         <vxe-button mode="text" status="primary" @click="selectEvent(row)">关联订单</vxe-button>
       </template>
     </vxe-grid>
 
-    <vxe-modal
-      resize
+    <vxe-drawer
       show-footer
       show-confirm-button
       show-cancel-button
-      show-maximize
       v-model="showPopup"
       title="关联订单"
-      height="400"
       width="800"
       @show="showSubEvent"
       @confirm="confirmSubEvent">
       <vxe-grid ref="productGridRef" v-bind="productGridOptions"></vxe-grid>
-    </vxe-modal>
+    </vxe-drawer>
   </div>
 </template>
 
@@ -46,11 +55,15 @@ export default Vue.extend({
     const gridOptions: VxeGridProps<RowVO> = {
       border: true,
       showOverflow: true,
+      editConfig: {
+        trigger: 'click',
+        mode: 'row'
+      },
       columns: [
         { type: 'seq', width: 70 },
-        { field: 'name', title: '采购人员', minWidth: 200 },
-        { field: 'productName', title: '商品名称', minWidth: 200 },
-        { field: 'productPrice', title: '商品价格', width: 120 },
+        { field: 'name', title: '采购人员', minWidth: 200, editRender: { }, slots: { edit: 'edit_name' } },
+        { field: 'productName', title: '商品名称', minWidth: 200, editRender: { }, slots: { edit: 'edit_productName' } },
+        { field: 'productPrice', title: '商品价格', width: 120, editRender: { }, slots: { edit: 'edit_productPrice' } },
         { title: '操作', width: 200, slots: { default: 'action' } }
       ],
       data: [

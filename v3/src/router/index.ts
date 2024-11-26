@@ -2726,6 +2726,11 @@ const gridRouteConfig: RouteConfig = {
           component: () => import('@/views/grid/cellTemplate/vxe-modal/CodeExample.vue')
         },
         {
+          path: 'vxe-drawer',
+          name: 'ComponentGridCellTemplateVxeDrawer',
+          component: () => import('@/views/grid/cellTemplate/vxe-drawer/CodeExample.vue')
+        },
+        {
           path: 'allEdit',
           name: 'ComponentGridCellTemplateAllEdit',
           component: () => import('@/views/grid/cellTemplate/allEdit/CodeExample.vue')
@@ -2985,6 +2990,16 @@ const gridRouteConfig: RouteConfig = {
           path: 'vxe-pulldown',
           name: 'ComponentGridEditTemplateVxePulldown',
           component: () => import('@/views/grid/editTemplate/vxe-pulldown/CodeExample.vue')
+        },
+        {
+          path: 'vxe-modal',
+          name: 'ComponentGridEditTemplateVxeModal',
+          component: () => import('@/views/grid/editTemplate/vxe-modal/CodeExample.vue')
+        },
+        {
+          path: 'vxe-drawer',
+          name: 'ComponentGridEditTemplateVxeDrawer',
+          component: () => import('@/views/grid/editTemplate/vxe-drawer/CodeExample.vue')
         }
       ]
     },
