@@ -2254,6 +2254,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'childTable',
           name: 'ComponentGridExpandChildTable',
           component: () => import('@/views/grid/expand/childTable/CodeExample.vue')
+        },
+        {
+          path: 'selectModalTable',
+          name: 'ComponentGridExpandSelectModalTable',
+          component: () => import('@/views/grid/expand/selectModalTable/CodeExample.vue')
         }
       ]
     },

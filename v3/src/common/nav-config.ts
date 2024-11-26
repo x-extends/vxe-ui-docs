@@ -652,7 +652,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '展开容器内间距', routerLink: { name: 'ComponentGridExpandPadding' } },
             { title: '展开容器高度', routerLink: { name: 'ComponentGridExpandHeight' } },
             { title: '使用冻结列', routerLink: { name: 'ComponentGridExpandFixed' } },
-            { title: '实现展开子表格', routerLink: { name: 'ComponentGridExpandChildTable' } }
+            { title: '实现展开子表格', routerLink: { name: 'ComponentGridExpandChildTable' } },
+            { title: '实现弹窗选择到子表格', routerLink: { name: 'ComponentGridExpandSelectModalTable' } }
           ]
         },
         {
