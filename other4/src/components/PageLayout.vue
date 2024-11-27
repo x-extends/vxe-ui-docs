@@ -4,7 +4,7 @@
       <PageHeader />
     </VxeLayoutHeader>
     <VxeLayoutContainer>
-      <VxeLayoutAside class="layout-aside" width="360" :collapsed="!showLeft">
+      <VxeLayoutAside class="layout-aside" :collapsed="!showLeft">
         <PageAside />
       </VxeLayoutAside>
       <VxeLayoutContainer class="layout-content-container" vertical>
