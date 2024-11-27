@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import type { VxeGridProps } from 'vxe-table'
+import type { VxeGridProps, VxeGridPropTypes } from 'vxe-table'
 import XEUtils from 'xe-utils'
 
 interface RowVO {
@@ -42,6 +42,13 @@ const allList = [
   { id: 24577, name: 'Test1', type: 'js', size: '1024', date: '2021-06-01' }
 ]
 
+const allColumns: VxeGridPropTypes.Columns = [
+  { field: 'name', title: 'Name', treeNode: true },
+  { field: 'size', title: 'Size' },
+  { field: 'type', title: 'Type' },
+  { field: 'date', title: 'Date' }
+]
+
 export default Vue.extend({
   data () {
     const gridOptions: VxeGridProps<RowVO> = {
@@ -49,10 +56,7 @@ export default Vue.extend({
       border: 'inner',
       showOverflow: true,
       treeConfig: {},
-      columns: [
-        { field: 'name', title: 'Name', treeNode: true },
-        { field: 'size', title: 'Size' }
-      ],
+      columns: [],
       data: allList
     }
 
@@ -77,6 +81,7 @@ export default Vue.extend({
       return result
     },
     listToGroup  (field?: string) {
+      this.gridOptions.columns = allColumns.filter(conf => conf.field !== field)
       this.gridOptions.data = field ? this.handleGroupByField(allList, field) : allList
     }
   },

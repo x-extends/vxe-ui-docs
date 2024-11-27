@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import type { VxeGridProps } from 'vxe-table'
+import type { VxeGridProps, VxeGridPropTypes } from 'vxe-table'
 import XEUtils from 'xe-utils'
 
 interface RowVO {
@@ -42,15 +42,19 @@ const allList = [
   { id: 24577, name: 'Test1', type: 'js', size: '1024', date: '2021-06-01' }
 ]
 
+const allColumns: VxeGridPropTypes.Columns = [
+  { field: 'name', title: 'Name', treeNode: true },
+  { field: 'size', title: 'Size' },
+  { field: 'type', title: 'Type' },
+  { field: 'date', title: 'Date' }
+]
+
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   height: 400,
   border: 'inner',
   showOverflow: true,
   treeConfig: {},
-  columns: [
-    { field: 'name', title: 'Name', treeNode: true },
-    { field: 'size', title: 'Size' }
-  ],
+  columns: [],
   data: allList
 })
 
@@ -71,6 +75,7 @@ const handleGroupByField = (list: RowVO[], field: string) => {
 }
 
 const listToGroup = (field?: string) => {
+  gridOptions.columns = allColumns.filter(conf => conf.field !== field)
   gridOptions.data = field ? handleGroupByField(allList, field) : allList
 }
 
