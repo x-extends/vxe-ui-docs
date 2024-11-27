@@ -36,6 +36,17 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
+    path: '/enterprise',
+    component: PageLayout,
+    children: [
+      {
+        path: 'preview/:previewCode',
+        name: 'EnterprisePreview',
+        component: () => import('@/views/start/EnterprisePreview.vue')
+      }
+    ]
+  },
+  {
     path: '/plugin-render-chart',
     component: PageLayout,
     children: [
