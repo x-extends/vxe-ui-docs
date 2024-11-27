@@ -1,14 +1,15 @@
 <template>
   <div>
-    <vxe-button status="primary" @click="listToGroup('name')">按名称分组</vxe-button>
-    <vxe-button status="primary" @click="listToGroup('type')">按类型分组</vxe-button>
+    <vxe-button status="primary" @click="listToGroup()">取消分组</vxe-button>
+    <vxe-button status="primary" @click="listToGroup(['name', 'type'])">按名称+类型分组</vxe-button>
+    <vxe-button status="primary" @click="listToGroup(['type', 'date'])">按类型+时间分组</vxe-button>
 
     <vxe-grid v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
 
-<script lang="ts" setup>
-import { reactive } from 'vue'
+<script lang="ts">
+import Vue from 'vue'
 import type { VxeGridProps } from 'vxe-table'
 import XEUtils from 'xe-utils'
 
@@ -42,37 +43,48 @@ const allList = [
   { id: 24577, name: 'Test1', type: 'js', size: '1024', date: '2021-06-01' }
 ]
 
-const gridOptions = reactive<VxeGridProps<RowVO>>({
-  height: 400,
-  border: 'inner',
-  showOverflow: true,
-  treeConfig: {},
-  columns: [
-    { field: 'size', title: 'Size', treeNode: true },
-    { field: 'date', title: 'Date' }
-  ],
-  data: allList
+export default Vue.extend({
+  data () {
+    const gridOptions: VxeGridProps<RowVO> = {
+      height: 400,
+      border: 'inner',
+      showOverflow: true,
+      treeConfig: {},
+      columns: [
+        { field: 'name', title: 'Name', treeNode: true },
+        { field: 'size', title: 'Size' },
+        { field: 'type', title: 'Type' },
+        { field: 'date', title: 'Date' }
+      ],
+      data: allList
+    }
+
+    return {
+      gridOptions,
+      idKey: 1
+    }
+  },
+  methods: {
+    handleGroupByField  (list: RowVO[], fields: string[]) {
+      if (fields && fields.length) {
+        const result: RowVO[] = []
+        XEUtils.each(XEUtils.groupBy(list, fields[0]), (childList, field) => {
+          result.push({
+            id: this.idKey++,
+            name: field,
+            type: '',
+            size: '',
+            date: '',
+            children: this.handleGroupByField(childList, fields.slice(1))
+          })
+        })
+        return result
+      }
+      return list
+    },
+    listToGroup  (fields?: string[]) {
+      this.gridOptions.data = fields ? this.handleGroupByField(allList, fields) : allList
+    }
+  }
 })
-
-let idKey = 1
-const handleGroupByField = (list: RowVO[], field: string) => {
-  const result: RowVO[] = []
-  XEUtils.each(XEUtils.groupBy(list, field), (childList, field) => {
-    result.push({
-      id: idKey++,
-      name: '',
-      type: '',
-      size: field,
-      date: '',
-      children: childList
-    })
-  })
-  return result
-}
-
-const listToGroup = (field?: string) => {
-  gridOptions.data = field ? handleGroupByField(allList, field) : allList
-}
-
-listToGroup('name')
 </script>
