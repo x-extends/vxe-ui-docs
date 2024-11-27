@@ -176,7 +176,7 @@
         "areaCellMenu": "Cell content menu",
         "areaEdit": "Editable",
         "areaEditDisabled": "Disable editable",
-        "areaEditValid": "Edit data validate",
+        "areaEditValid": "Copy paste and verify data",
         "areaEditTemp": "Temporary data - CRUD",
         "areaEditTempInsert": "Insert",
         "areaEditTempRemove": "Remove",

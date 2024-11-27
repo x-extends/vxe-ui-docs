@@ -176,7 +176,7 @@
         "areaCellMenu": "Cell content menu",
         "areaEdit": "Editable",
         "areaEditDisabled": "禁用单元格编辑",
-        "areaEditValid": "可编辑数据校验",
+        "areaEditValid": "复制粘贴与数据校验",
         "areaEditTemp": "临时数据 - 增删改",
         "areaEditTempInsert": "新增",
         "areaEditTempRemove": "删除",
