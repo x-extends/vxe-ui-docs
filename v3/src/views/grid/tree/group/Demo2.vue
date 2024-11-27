@@ -54,6 +54,7 @@ export default Vue.extend({
     const gridOptions: VxeGridProps<RowVO> = {
       height: 400,
       border: 'inner',
+      loading: false,
       showOverflow: true,
       treeConfig: {},
       columns: [],
@@ -82,7 +83,12 @@ export default Vue.extend({
     },
     listToGroup  (field?: string) {
       this.gridOptions.columns = allColumns.filter(conf => conf.field !== field)
-      this.gridOptions.data = field ? this.handleGroupByField(allList, field) : allList
+      this.gridOptions.data = []
+      this.gridOptions.loading = true
+      setTimeout(() => {
+        this.gridOptions.data = field ? this.handleGroupByField(allList, field) : allList
+        this.gridOptions.loading = false
+      }, 200)
     }
   },
   created () {

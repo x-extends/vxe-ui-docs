@@ -52,6 +52,7 @@ const allColumns: VxeGridPropTypes.Columns = [
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   height: 400,
   border: 'inner',
+  loading: false,
   showOverflow: true,
   treeConfig: {},
   columns: [],
@@ -76,7 +77,12 @@ const handleGroupByField = (list: RowVO[], field: string) => {
 
 const listToGroup = (field?: string) => {
   gridOptions.columns = allColumns.filter(conf => conf.field !== field)
-  gridOptions.data = field ? handleGroupByField(allList, field) : allList
+  gridOptions.data = []
+  gridOptions.loading = true
+  setTimeout(() => {
+    gridOptions.data = field ? handleGroupByField(allList, field) : allList
+    gridOptions.loading = false
+  }, 200)
 }
 
 listToGroup('date')
