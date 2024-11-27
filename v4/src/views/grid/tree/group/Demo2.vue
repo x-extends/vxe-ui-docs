@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button status="primary" @click="listToGroup('name')">按名称分组</vxe-button>
+    <vxe-button status="primary" @click="listToGroup('date')">按时间分组</vxe-button>
     <vxe-button status="primary" @click="listToGroup('type')">按类型分组</vxe-button>
 
     <vxe-grid v-bind="gridOptions"></vxe-grid>
@@ -48,8 +48,8 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   showOverflow: true,
   treeConfig: {},
   columns: [
-    { field: 'size', title: 'Size', treeNode: true },
-    { field: 'date', title: 'Date' }
+    { field: 'name', title: 'Name', treeNode: true },
+    { field: 'size', title: 'Size' }
   ],
   data: allList
 })
@@ -60,9 +60,9 @@ const handleGroupByField = (list: RowVO[], field: string) => {
   XEUtils.each(XEUtils.groupBy(list, field), (childList, field) => {
     result.push({
       id: idKey++,
-      name: '',
+      name: field,
       type: '',
-      size: field,
+      size: '',
       date: '',
       children: childList
     })
@@ -74,5 +74,5 @@ const listToGroup = (field?: string) => {
   gridOptions.data = field ? handleGroupByField(allList, field) : allList
 }
 
-listToGroup('name')
+listToGroup('date')
 </script>

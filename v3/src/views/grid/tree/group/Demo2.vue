@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button status="primary" @click="listToGroup('name')">按名称分组</vxe-button>
+    <vxe-button status="primary" @click="listToGroup('date')">按时间分组</vxe-button>
     <vxe-button status="primary" @click="listToGroup('type')">按类型分组</vxe-button>
 
     <vxe-grid v-bind="gridOptions"></vxe-grid>
@@ -51,9 +51,7 @@ export default Vue.extend({
       treeConfig: {},
       columns: [
         { field: 'name', title: 'Name', treeNode: true },
-        { field: 'size', title: 'Size' },
-        { field: 'type', title: 'Type' },
-        { field: 'date', title: 'Date' }
+        { field: 'size', title: 'Size' }
       ],
       data: allList
     }
@@ -69,9 +67,9 @@ export default Vue.extend({
       XEUtils.each(XEUtils.groupBy(list, field), (childList, field) => {
         result.push({
           id: this.idKey++,
-          name: '',
+          name: field,
           type: '',
-          size: field,
+          size: '',
           date: '',
           children: childList
         })
@@ -83,7 +81,7 @@ export default Vue.extend({
     }
   },
   created () {
-    this.listToGroup('name')
+    this.listToGroup('date')
   }
 })
 </script>
