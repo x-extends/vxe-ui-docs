@@ -16,6 +16,7 @@ import StartUseZIndex from '@/views/start/z-index/CodeExample.vue'
 import StartPermission from '@/views/start/permission/CodeExample.vue'
 import FreeDonation from '@/views/start/FreeDonation.vue'
 import JoinSponsor from '@/views/start/JoinSponsor.vue'
+import EnterprisePreview from '@/views/start/EnterprisePreview.vue'
 
 Vue.use(VueRouter)
 
@@ -3660,7 +3661,7 @@ const routes: Array<RouteConfig> = [
       {
         path: 'preview/:previewCode',
         name: 'EnterprisePreview',
-        component: () => import('@/views/start/EnterprisePreview.vue')
+        component: EnterprisePreview
       }
     ]
   },
