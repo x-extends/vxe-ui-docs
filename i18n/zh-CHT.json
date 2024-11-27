@@ -176,6 +176,7 @@
         "areaCellMenu": "单元格右键菜单",
         "areaEdit": "可編輯",
         "areaEditDisabled": "禁用单元格编辑",
+        "areaEditValid": "可编辑数据校验",
         "areaEditTemp": "临时数据 - 增删改",
         "areaEditTempInsert": "新增",
         "areaEditTempRemove": "删除",
