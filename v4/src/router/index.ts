@@ -3122,6 +3122,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/import/advanced/CodeExample.vue')
         },
         {
+          path: 'remote',
+          name: 'ComponentGridImportRemote',
+          component: () => import('@/views/grid/import/remote/CodeExample.vue')
+        },
+        {
           path: 'template',
           component: RouteLayout,
           children: [

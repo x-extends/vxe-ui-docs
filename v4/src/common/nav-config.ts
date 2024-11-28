@@ -984,6 +984,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '导入 CSV 格式', routerLink: { name: 'ComponentGridImportCsv' } },
             { title: '导入 XLSX 格式', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-export-xlsx/grid/import` },
             { title: '高级导入', routerLink: { name: 'ComponentGridImportAdvanced' } },
+            { title: '服务端导入', routerLink: { name: 'ComponentGridImportRemote' } },
             {
               title: '自定义插槽模板',
               children: [
