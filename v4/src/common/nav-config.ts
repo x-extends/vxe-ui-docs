@@ -1619,6 +1619,7 @@ export const navConfigList: NavVO[] = [
               { title: '自定义内容模板', routerLink: { name: 'ComponentFormBasicsTemplateContent' } }
             ]
           },
+          { title: '在页签中使用', routerLink: { name: 'ComponentFormBasicsTabs' } },
           { title: '实现简历模板', routerLink: { name: 'ComponentFormBasicsResumeTemplate' } }
         ]
       },
@@ -1707,6 +1708,7 @@ export const navConfigList: NavVO[] = [
               { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemRender/el-input` }
             ]
           },
+          { title: '在页签中使用', routerLink: { name: 'ComponentFormConfigTabs' } },
           { title: '实现简历模板', routerLink: { name: 'ComponentFormConfigResumeTemplate' } }
         ]
       },

@@ -6853,6 +6853,11 @@ const routes: Array<RouteRecordRaw> = [
                 ]
               },
               {
+                path: 'tabs',
+                name: 'ComponentFormBasicsTabs',
+                component: () => import('@/views/form/basics/tabs/CodeExample.vue')
+              },
+              {
                 path: 'resumeTemplate',
                 name: 'ComponentFormBasicsResumeTemplate',
                 component: () => import('@/views/form/basics/resumeTemplate/CodeExample.vue')
@@ -7176,6 +7181,11 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/config/itemTemplate/vxe-upload/CodeExample.vue')
                   }
                 ]
+              },
+              {
+                path: 'tabs',
+                name: 'ComponentFormConfigTabs',
+                component: () => import('@/views/form/config/tabs/CodeExample.vue')
               },
               {
                 path: 'resumeTemplate',
