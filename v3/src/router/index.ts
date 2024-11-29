@@ -5659,6 +5659,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/drawer/base/CodeExample.vue')
           },
           {
+            path: 'wh',
+            name: 'ComponentDrawerWH',
+            component: () => import('@/views/drawer/wh/CodeExample.vue')
+          },
+          {
             path: 'maskClosable',
             name: 'ComponentDrawerMaskClosable',
             component: () => import('@/views/drawer/maskClosable/CodeExample.vue')

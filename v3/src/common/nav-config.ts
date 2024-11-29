@@ -2216,6 +2216,7 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'drawer' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentDrawerSize' } },
           { title: '自定义弹出方向', routerLink: { name: 'ComponentDrawerBase' } },
+          { title: '宽度与高度', routerLink: { name: 'ComponentDrawerWH' } },
           { title: '内边距', routerLink: { name: 'ComponentDrawerPadding' } },
           { title: '加载中', routerLink: { name: 'ComponentDrawerLoading' } },
           { title: '点击遮罩层关闭', routerLink: { name: 'ComponentDrawerMaskClosable' } },
