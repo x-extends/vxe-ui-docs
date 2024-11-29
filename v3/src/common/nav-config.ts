@@ -1891,7 +1891,11 @@ export const navConfigList: NavVO[] = [
           { title: '周类型', routerLink: { name: 'ComponentDatePickerWeek' } },
           { title: '月度类型', routerLink: { name: 'ComponentDatePickerMonth' } },
           { title: '季度类型', routerLink: { name: 'ComponentDatePickerQuarter' } },
-          { title: '年度类型', routerLink: { name: 'ComponentDatePickerYear' } }
+          { title: '年度类型', routerLink: { name: 'ComponentDatePickerYear' } },
+          { title: '禁用指定日期', routerLink: { name: 'ComponentDatePickerDisabledMethod' } },
+          { title: '可选日期限制', routerLink: { name: 'ComponentDatePickerMinMax' } },
+          { title: '实现日期带小圆点', routerLink: { name: 'ComponentDatePickerFestivalMethod' } },
+          { title: '实现农历及节假日', routerLink: { name: 'ComponentDatePickerHolidays' } }
         ]
       },
       {

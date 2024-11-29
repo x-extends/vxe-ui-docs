@@ -4921,6 +4921,26 @@ const routes: Array<RouteConfig> = [
             path: 'datetime',
             name: 'ComponentDatePickerDatetime',
             component: () => import('@/views/date-picker/datetime/CodeExample.vue')
+          },
+          {
+            path: 'disabledMethod',
+            name: 'ComponentDatePickerDisabledMethod',
+            component: () => import('@/views/date-picker/disabledMethod/CodeExample.vue')
+          },
+          {
+            path: 'minMax',
+            name: 'ComponentDatePickerMinMax',
+            component: () => import('@/views/date-picker/minMax/CodeExample.vue')
+          },
+          {
+            path: 'festivalMethod',
+            name: 'ComponentDatePickerFestivalMethod',
+            component: () => import('@/views/date-picker/festivalMethod/CodeExample.vue')
+          },
+          {
+            path: 'holidays',
+            name: 'ComponentDatePickerHolidays',
+            component: () => import('@/views/date-picker/holidays/CodeExample.vue')
           }
         ]
       },

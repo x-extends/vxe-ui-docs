@@ -4925,6 +4925,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/date-picker/disabledMethod/CodeExample.vue')
           },
           {
+            path: 'minMax',
+            name: 'ComponentDatePickerMinMax',
+            component: () => import('@/views/date-picker/minMax/CodeExample.vue')
+          },
+          {
             path: 'festivalMethod',
             name: 'ComponentDatePickerFestivalMethod',
             component: () => import('@/views/date-picker/festivalMethod/CodeExample.vue')
