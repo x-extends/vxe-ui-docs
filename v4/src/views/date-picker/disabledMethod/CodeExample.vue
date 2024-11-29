@@ -10,7 +10,7 @@
 
     <CodeLight path="date-picker/disabledMethod/Demo2">
       <template #tip>
-        <vxe-tip status="primary">限制只能选择指定日期</vxe-tip>
+        <vxe-tip status="primary">限制只能选择周五</vxe-tip>
       </template>
     </CodeLight>
   </div>
