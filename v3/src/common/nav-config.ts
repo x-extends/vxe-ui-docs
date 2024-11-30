@@ -441,6 +441,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '重写默认编辑行为', routerLink: { name: 'ComponentTableKeyboardEditMethod' } },
             { title: '树结构按键操作', routerLink: { name: 'ComponentTableKeyboardTree' } },
             { title: '树结构可编辑', routerLink: { name: 'ComponentTableKeyboardTreeEdit' } },
+            { title: '树结构-全键盘', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'table_extend_cell_area_tree' }, query: { previewPath: '%23%2FextendCellArea%2Ftable%2FareaTree' } } },
+            { title: '右键菜单-全键盘', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'table_extend_cell_area_menu' }, query: { previewPath: '%23%2FextendCellArea%2Fgrid%2FareaMenu' } } },
             { title: '单元格选择-全键盘', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'table_extend_cell_area_keypad' }, query: { previewPath: '%2FextendCellArea%2Ftable%2FareaKeypad' } } }
           ]
         },
@@ -949,6 +951,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '重写默认编辑行为', routerLink: { name: 'ComponentGridKeyboardEditMethod' } },
             { title: '树结构按键操作', routerLink: { name: 'ComponentGridKeyboardTree' } },
             { title: '树结构可编辑', routerLink: { name: 'ComponentGridKeyboardTreeEdit' } },
+            { title: '树结构-全键盘', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'table_extend_cell_area_tree' }, query: { previewPath: '%23%2FextendCellArea%2Fgrid%2FareaTree' } } },
+            { title: '右键菜单-全键盘', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'table_extend_cell_area_menu' }, query: { previewPath: '%23%2FextendCellArea%2Fgrid%2FareaMenu' } } },
             { title: '单元格选择-全键盘', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'table_extend_cell_area_keypad' }, query: { previewPath: '%2FextendCellArea%2Fgrid%2FareaKeypad' } } }
           ]
         },
