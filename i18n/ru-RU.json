@@ -166,6 +166,8 @@
         "areaClip": "Скопируйте и вставьте",
         "areaDisabledClip": "Отключить копирование и вставку",
         "areaClipIncrement": "Вставить автоматически вставляет строки и столбцы.",
+        "areaTree": "树结构",
+        "areaTreeClipDeep": "树结构的层级粘贴",
         "areaMerge": "объединить области",
         "areaDrag": "拖拽调整顺序",
         "areaRowDrag": "行拖拽",

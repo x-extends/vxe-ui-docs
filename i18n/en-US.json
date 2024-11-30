@@ -166,6 +166,8 @@
         "areaClip": "Copy and paste",
         "areaDisabledClip": "Disable copy and paste",
         "areaClipIncrement": "Paste automatically inserts rows and columns",
+        "areaTree": "Tree",
+        "areaTreeClipDeep": "Deep paste of tree",
         "areaMerge": "merge areas",
         "areaDrag": "Drag and drop order",
         "areaRowDrag": "行拖拽",

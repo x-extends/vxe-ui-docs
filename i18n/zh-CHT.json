@@ -166,6 +166,8 @@
         "areaClip": "複製與貼上",
         "areaDisabledClip": "停用複製與貼上",
         "areaClipIncrement": "貼上自動插入行與列",
+        "areaTree": "树结构",
+        "areaTreeClipDeep": "树结构的层级粘贴",
         "areaMerge": "合併區域",
         "areaDrag": "拖拽调整顺序",
         "areaRowDrag": "行拖拽",

@@ -166,6 +166,8 @@
         "areaClip": "コピー＆ペースト",
         "areaDisabledClip": "コピー＆ペーストを無効にする",
         "areaClipIncrement": "貼り付けでは行と列が自動的に挿入されます",
+        "areaTree": "树结构",
+        "areaTreeClipDeep": "树结构的层级粘贴",
         "areaMerge": "エリアを結合する",
         "areaDrag": "拖拽调整顺序",
         "areaRowDrag": "行拖拽",
