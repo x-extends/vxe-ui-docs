@@ -27,11 +27,17 @@
           <div>文件 main.js</div>
           <pre-code class="javascript">
             // ...
-            import { VxeUI } from 'vxe-pc-ui'
+            import VxeUI from 'vxe-pc-ui'
+            import 'vxe-pc-ui/lib/style.css'
+            import VxeUITable from 'vxe-table'
+            import 'vxe-table/lib/style.css'
             import VxeUIPluginValidator from '@vxe-ui/plugin-validator'
             // ...
 
             VxeUI.use(VxeUIPluginValidator)
+
+            createApp(App).use(VxeUI).use(VxeUITable).mount('#app')
+            // ...
           </pre-code>
         </pre>
       </template>

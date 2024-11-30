@@ -26,9 +26,7 @@
           <pre-code
             language="javascript"
             :content="`
-              import Vue from 'vue'
               // ...
-
               import VxeUI from 'vxe-pc-ui'
               import 'vxe-pc-ui/lib/style.css'
               import VxeUITable from 'vxe-table'

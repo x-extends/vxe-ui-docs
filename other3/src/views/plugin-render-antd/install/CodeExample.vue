@@ -30,17 +30,20 @@
         <pre>
           <div>文件 main.js</div>
           <pre-code class="javascript">
-            // main.js
             // ...
-            // 如果完整使用
-            import { VxeUI } from 'vxe-pc-ui'
-            // 如果只使用表格
-            // import { VxeUI } from 'vxe-table'
+            import VxeUI from 'vxe-pc-ui'
+            import 'vxe-pc-ui/lib/style.css'
+            import VxeUITable from 'vxe-table'
+            import 'vxe-table/lib/style.css'
             import VxeUIPluginRenderAntd from '@vxe-ui/plugin-render-antd'
             import '@vxe-ui/plugin-render-antd/dist/style.css'
             // ...
 
             VxeUI.use(VxeUIPluginRenderAntd)
+
+            Vue.use(VxeUI)
+            Vue.use(VxeUITable)
+            //...
           </pre-code>
         </pre>
       </template>

@@ -36,7 +36,10 @@
             class="javascript"
             :content="`
             // ...
-            import { VxeUI } from 'vxe-pc-ui'
+            import VxeUI from 'vxe-pc-ui'
+            import 'vxe-pc-ui/lib/style.css'
+            import VxeUITable from 'vxe-table'
+            import 'vxe-table/lib/style.css'
             import VxeUIPluginExportPDF from '@vxe-ui/plugin-export-pdf'
             // ...
 
@@ -51,6 +54,10 @@
               //   }
               // ]
             })
+
+            Vue.use(VxeUI)
+            Vue.use(VxeUITable)
+            //...
             `">
           </pre-code>
         </pre>
@@ -63,7 +70,10 @@
             class="javascript"
             :content="`
             // ...
-            import { VxeUI } from 'vxe-pc-ui'
+            import VxeUI from 'vxe-pc-ui'
+            import 'vxe-pc-ui/lib/style.css'
+            import VxeUITable from 'vxe-table'
+            import 'vxe-table/lib/style.css'
             import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
             import { jsPDF } from 'jspdf'
             // ...

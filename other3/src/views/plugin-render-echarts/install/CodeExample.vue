@@ -36,12 +36,19 @@
             class="javascript"
             :content="`
             // ...
-            import { VxeUI } from 'vxe-pc-ui'
+            import VxeUI from 'vxe-pc-ui'
+            import 'vxe-pc-ui/lib/style.css'
+            import VxeUITable from 'vxe-table'
+            import 'vxe-table/lib/style.css'
             import VxeUIPluginRenderEcharts from '@vxe-ui/plugin-render-echarts'
             // ...
 
             // 确保 window.echarts 变量存在即表示安装完成
             VxeUI.use(VxeUIPluginRenderEcharts)
+
+            Vue.use(VxeUI)
+            Vue.use(VxeUITable)
+            //...
             `">
           </pre-code>
         </pre>
@@ -54,7 +61,10 @@
             class="javascript"
             :content="`
             // ...
-            import { VxeUI } from 'vxe-pc-ui'
+            import VxeUI from 'vxe-pc-ui'
+            import 'vxe-pc-ui/lib/style.css'
+            import VxeUITable from 'vxe-table'
+            import 'vxe-table/lib/style.css'
             import VxeUIPluginRenderEcharts from '@vxe-ui/plugin-render-echarts'
             import * as echarts from 'echarts'
             // ...
@@ -62,6 +72,10 @@
             VxeUI.use(VxeUIPluginRenderEcharts, {
               echarts
             })
+
+            Vue.use(VxeUI)
+            Vue.use(VxeUITable)
+            //...
             `">
           </pre-code>
         </pre>

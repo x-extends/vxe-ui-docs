@@ -13,11 +13,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs@4.2.1
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs@4.4.0
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs@4.2.1
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs@4.4.0
             # 或者
-            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs@4.2.1
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs@4.4.0
             `">
           </pre-code>
         </pre>
@@ -36,12 +36,19 @@
             class="javascript"
             :content="`
             // ...
-            import { VxeUI } from 'vxe-pc-ui'
+            import VxeUI from 'vxe-pc-ui'
+            import 'vxe-pc-ui/lib/style.css'
+            import VxeUITable from 'vxe-table'
+            import 'vxe-table/lib/style.css'
             import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
             // ...
 
             // 确保 window.ExcelJS 变量存在即表示安装完成
             VxeUI.use(VxeUIPluginExportXLSX)
+
+            Vue.use(VxeUI)
+            Vue.use(VxeUITable)
+            //...
             `">
           </pre-code>
         </pre>
@@ -62,6 +69,10 @@
             VxeUI.use(VxeUIPluginExportXLSX, {
               ExcelJS
             })
+
+            Vue.use(VxeUI)
+            Vue.use(VxeUITable)
+            //...
             `">
           </pre-code>
         </pre>

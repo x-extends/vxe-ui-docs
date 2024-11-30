@@ -27,12 +27,19 @@
           <div>文件 main.js</div>
           <pre-code class="javascript">
             // ...
-            import { VxeUI } from 'vxe-pc-ui'
+            import VxeUI from 'vxe-pc-ui'
+            import 'vxe-pc-ui/lib/style.css'
+            import VxeUITable from 'vxe-table'
+            import 'vxe-table/lib/style.css'
             import VxeUIPluginRenderChart from '@vxe-ui/plugin-render-chart'
             import '@vxe-ui/plugin-render-chart/dist/style.css'
             // ...
 
             VxeUI.use(VxeUIPluginRenderChart)
+
+            Vue.use(VxeUI)
+            Vue.use(VxeUITable)
+            //...
           </pre-code>
         </pre>
       </template>
