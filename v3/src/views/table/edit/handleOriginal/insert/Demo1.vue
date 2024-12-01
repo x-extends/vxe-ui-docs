@@ -2,6 +2,7 @@
   <div>
     <vxe-button status="primary" @click="addEvent">新增（顶部）</vxe-button>
     <vxe-button status="primary" @click="pushEvent">新增（尾部）</vxe-button>
+    <vxe-button status="primary" @click="insertEvent">新增（第三行插入）</vxe-button>
     <vxe-button status="success" @click="getInsertEvent">获取新增的数据</vxe-button>
     <vxe-table
       border
@@ -82,6 +83,24 @@ export default Vue.extend({
         address: ''
       }
       this.tableData.push(newRow)
+      this.insertRecords.push(newRow)
+      this.$nextTick(() => {
+        const $table = this.$refs.tableRef as VxeTableInstance<RowVO>
+        if ($table) {
+          $table.setEditRow(newRow)
+        }
+      })
+    },
+    insertEvent () {
+      const newRow: RowVO = {
+        id: new Date().getTime(),
+        name: `Name_${new Date().getTime()}`,
+        role: '',
+        sex: '',
+        age: 18,
+        address: ''
+      }
+      this.tableData.splice(2, 0, newRow)
       this.insertRecords.push(newRow)
       this.$nextTick(() => {
         const $table = this.$refs.tableRef as VxeTableInstance<RowVO>
