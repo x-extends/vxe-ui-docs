@@ -1,6 +1,7 @@
 <template>
   <div>
-    <vxe-button status="primary" @click="addEvent">新增</vxe-button>
+    <vxe-button status="primary" @click="addEvent">新增（顶部）</vxe-button>
+    <vxe-button status="primary" @click="pushEvent">新增（尾部）</vxe-button>
     <vxe-button status="success" @click="getInsertEvent">获取新增的数据</vxe-button>
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
@@ -55,6 +56,25 @@ const addEvent = () => {
     address: ''
   }
   gridOptions.data.unshift(newRow)
+  insertRecords.push(newRow)
+  nextTick(() => {
+    const $grid = gridRef.value
+    if ($grid) {
+      $grid.setEditRow(newRow)
+    }
+  })
+}
+
+const pushEvent = () => {
+  const newRow: RowVO = {
+    id: new Date().getTime(),
+    name: `Name_${new Date().getTime()}`,
+    role: '',
+    sex: '',
+    age: 18,
+    address: ''
+  }
+  gridOptions.data.push(newRow)
   insertRecords.push(newRow)
   nextTick(() => {
     const $grid = gridRef.value

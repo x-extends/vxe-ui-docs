@@ -1,6 +1,7 @@
 <template>
   <div>
-    <vxe-button status="primary" @click="addEvent">新增</vxe-button>
+    <vxe-button status="primary" @click="addEvent">新增（顶部）</vxe-button>
+    <vxe-button status="primary" @click="pushEvent">新增（尾部）</vxe-button>
     <vxe-button status="success" @click="getInsertEvent">获取新增的数据</vxe-button>
     <vxe-table
       border
@@ -52,7 +53,18 @@ const addEvent = async () => {
     const record = {
       name: `Name_${new Date().getTime()}`
     }
-    const { row: newRow } = await $table.insert(record)
+    const { row: newRow } = await $table.insertAt(record, 0)
+    $table.setEditRow(newRow)
+  }
+}
+
+const pushEvent = async () => {
+  const $table = tableRef.value
+  if ($table) {
+    const record = {
+      name: `Name_${new Date().getTime()}`
+    }
+    const { row: newRow } = await $table.insertAt(record, -1)
     $table.setEditRow(newRow)
   }
 }
