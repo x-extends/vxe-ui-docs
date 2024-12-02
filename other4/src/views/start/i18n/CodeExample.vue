@@ -74,30 +74,18 @@
           <pre-code class="javascript">
             import { createI18n } from 'vue-i18n'
             import zhCN from 'vxe-pc-ui/lib/language/zh-CN'
-            // import zhHK from 'vxe-pc-ui/lib/language/zh-HK'
-            // import zhTW from 'vxe-pc-ui/lib/language/zh-TW'
-            // import zhMO from 'vxe-pc-ui/lib/language/zh-MO'
             import enUS from 'vxe-pc-ui/lib/language/en-US'
-            // import jaJP from 'vxe-pc-ui/lib/language/ja-JP'
-            // import esES from 'vxe-pc-ui/lib/language/es-ES'
-            // import ptBR from 'vxe-pc-ui/lib/language/pt-BR'
-            // import viVN from 'vxe-pc-ui/lib/language/vi-VN'
-            // import koKR from 'vxe-pc-ui/lib/language/ko-KR'
-            // import huHU from 'vxe-pc-ui/lib/language/hu-HU'
-            // import ruRU from 'vxe-pc-ui/lib/language/ru-RU'
-
-            const messages = {
-              zh_CN: {
-                ...zhCN
-              },
-              en_US: {
-                ...enUS
-              }
-            }
 
             const i18n = createI18n({
               locale: 'zh_CN',
-              messages,
+              messages: {
+                zh_CN: {
+                  ...zhCN
+                },
+                en_US: {
+                  ...enUS
+                }
+              }
             })
 
             export default i18n

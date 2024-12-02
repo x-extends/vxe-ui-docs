@@ -61,5 +61,52 @@
         </pre>
       </template>
     </CodeLight>
+
+    <CodeLight>
+      <template #tip>
+        <vxe-tip status="primary" title="使用自定义国际化">
+          当使用其他国际化插件时，例如 vxe-i18n，可以使用自定义国际化
+        </vxe-tip>
+      </template>
+
+      <template #use>
+        <pre>
+          <pre-code class="javascript">
+            import VueI18n from 'vue-i18n'
+            import zhCN from 'vxe-pc-ui/lib/language/zh-CN'
+            import enUS from 'vxe-pc-ui/lib/language/en-US'
+
+            Vue.use(VueI18n)
+
+            const i18n = createI18n({
+              locale: 'zh_CN',
+              messages: {
+                zh_CN: {
+                  ...zhCN
+                },
+                en_US: {
+                  ...enUS
+                }
+              }
+            })
+
+            export default i18n
+          </pre-code>
+          <pre-code class="javascript">
+            // ...
+            import i18n from './i18n'
+            import { VxeUI } from 'vxe-pc-ui'
+
+            VxeUI.setConfig({
+              // 对组件内置的提示语进行国际化翻译
+              i18n: (key, args) => i18n.t(key, args)
+            })
+
+            // 切换指定语言
+            i18n.locale = 'en_US'
+          </pre-code>
+        </pre>
+      </template>
+    </CodeLight>
   </div>
 </template>
