@@ -26,20 +26,16 @@ export default Vue.extend({
       },
       columns: [
         { type: 'seq', width: 70, fixed: 'left' },
-        {
-          title: '基础信息',
-          fixed: 'left',
-          children: [
-            { field: 'name', title: 'Name', width: 200 },
-            { field: 'role', title: 'Role', width: 100 }
-          ]
-        },
-        { field: 'sex', title: 'Sex', width: 200 },
-        { field: 'age', title: 'Age', width: 200 },
-        { field: 'atrr1', title: 'atrr1', width: 200 },
-        { field: 'atrr2', title: 'atrr2', width: 500 },
-        { field: 'atrr3', title: 'atrr3', width: 300 },
-        { field: 'address', title: 'Address', width: 200, fixed: 'right' }
+        { field: 'name', title: 'Name', width: 100, fixed: 'left' },
+        { field: 'sex', title: 'Sex', width: 100, fixed: 'left' },
+        { field: 'age', title: 'Age', width: 100, fixed: 'left' },
+        { field: 'attr1', title: 'attr1', width: 200 },
+        { field: 'attr2', title: 'attr2 其他2', width: 200 },
+        { field: 'attr3', title: 'attr3', width: 200 },
+        { field: 'attr4', title: 'attr4 其他4', width: 200 },
+        { field: 'date', title: 'Date', width: 100, fixed: 'right' },
+        { field: 'attr6', title: 'Atrr6', width: 100, fixed: 'right' },
+        { field: 'address', title: 'Address', width: 100, fixed: 'right' }
       ],
       data: [
         { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },

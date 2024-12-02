@@ -35,7 +35,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "src/views/table/colResizable/fixed/Demo3.vue", "src/views/table/colResizable/fixed/Demo3.vue"  ],
   "exclude": [
     "node_modules"
   ]

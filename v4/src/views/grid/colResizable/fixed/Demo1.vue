@@ -24,14 +24,15 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   },
   columns: [
     { type: 'seq', width: 70, fixed: 'left' },
-    { field: 'name', title: 'Name', width: 200, fixed: 'left' },
-    { field: 'role', title: 'Role', width: 200 },
-    { field: 'sex', title: 'Sex', width: 200 },
-    { field: 'age', title: 'Age', width: 200 },
-    { field: 'atrr1', title: 'atrr1', width: 200 },
-    { field: 'atrr2', title: 'atrr2', width: 500 },
-    { field: 'atrr3', title: 'atrr3', width: 300 },
-    { field: 'address', title: 'Address', width: 200, fixed: 'right' }
+    { field: 'name', title: 'Name', width: 100, fixed: 'left' },
+    { field: 'sex', title: 'Sex', width: 100, fixed: 'left' },
+    { field: 'age', title: 'Age', width: 100, fixed: 'left' },
+    { field: 'attr1', title: 'attr1', width: 200 },
+    { field: 'attr2', title: 'attr2', width: 200 },
+    { field: 'attr3', title: 'attr3', width: 200 },
+    { field: 'attr4', title: 'attr4', width: 200 },
+    { field: 'time', title: 'Time', width: 200 },
+    { field: 'address', title: 'Address', width: 200, showOverflow: true }
   ],
   data: [
     { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
