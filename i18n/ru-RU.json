@@ -147,10 +147,12 @@
   },
   "plugins": {
     "base": {
-      "guide": "Руководство по разработке",
-      "install": "Установите и используйте",
+      "nav": {
+        "guide": "Руководство по разработке",
+        "install": "Установите и используйте",
         "table": "Таблица базовая таблица",
         "grid": "Таблица конфигурации сети"
+      }
     },
     "extendCellArea": {
       "nav": {
@@ -205,8 +207,20 @@
       }
     },
     "filtersComplexInput": {
-      "stringFilter": "字符串类型筛选",
-      "numberFilter": "数值类型筛选"
+      "nav": {
+        "stringFilter": "字符串类型筛选",
+        "numberFilter": "数值类型筛选"
+      }
+    },
+    "filtersCombination": {
+      "nav": {
+        "aggregationTitle": "基础筛选",
+        "aggregationStringFilter": "字符串类型筛选",
+        "aggregationNumberFilter": "数值类型筛选",
+        "combinationTitle": "复杂筛选",
+        "combinationStringFilter": "字符串类型筛选",
+        "combinationNumberFilter": "数值类型筛选"
+      }
     }
   },
   "components": {
