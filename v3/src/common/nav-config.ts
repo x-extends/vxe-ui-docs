@@ -2125,6 +2125,7 @@ export const navConfigList: NavVO[] = [
       {
         title: '基础',
         children: [
+          { title: '基础', routerLink: { name: 'ComponentTreeBaseBasics' } },
           { title: '尺寸大小', routerLink: { name: 'ComponentTreeBaseSize' } },
           { title: '层级结构', routerLink: { name: 'ComponentTreeBaseHierarchy' } },
           { title: '平级结构', routerLink: { name: 'ComponentTreeBaseLeveling' } },

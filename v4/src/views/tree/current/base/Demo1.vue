@@ -1,18 +1,31 @@
 <template>
   <div>
-    <vxe-tree :data="treeList" :node-config="nodeConfig" transform></vxe-tree>
+    <div>
+      <vxe-button status="primary" @click="selectCurrentEvent">选中节点4</vxe-button>
+      <vxe-button status="primary" @click="clearCurrentEvent">取消节点4</vxe-button>
+      <vxe-button status="success" @click="getCurrentEvent">获取已选</vxe-button>
+    </div>
+
+    <vxe-tree
+      transform
+      ref="treeRef"
+      :data="treeList"
+      :node-config="nodeConfig">
+    </vxe-tree>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-import { VxeTreePropTypes } from 'vxe-pc-ui'
+import { VxeUI, VxeTreeInstance, VxeTreePropTypes } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
   id: string
   parentId?: string | null
 }
+
+const treeRef = ref<VxeTreeInstance<NodeVO>>()
 
 const nodeConfig = reactive<VxeTreePropTypes.NodeConfig>({
   isHover: true,
@@ -41,4 +54,27 @@ const treeList = ref<NodeVO[]>([
   { title: '节点4-3-2', id: '432', parentId: '43' },
   { title: '节点5', id: '5', parentId: null }
 ])
+
+const selectCurrentEvent = () => {
+  const $tree = treeRef.value
+  if ($tree) {
+    $tree.setCurrentNodeId('4')
+  }
+}
+
+const clearCurrentEvent = () => {
+  const $tree = treeRef.value
+  if ($tree) {
+    $tree.clearCurrentNode()
+  }
+}
+
+const getCurrentEvent = () => {
+  const $tree = treeRef.value
+  if ($tree) {
+    debugger
+    const selectId = $tree.getCurrentNodeId()
+    VxeUI.modal.alert(`${selectId}`)
+  }
+}
 </script>

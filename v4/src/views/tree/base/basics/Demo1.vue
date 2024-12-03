@@ -1,23 +1,27 @@
 <template>
   <div>
     <div>
-      <vxe-button status="primary" @click="selectRadioEvent">选中节点4</vxe-button>
-      <vxe-button status="primary" @click="clearRadioEvent">取消节点4</vxe-button>
-      <vxe-button status="success" @click="getRadioEvent">获取已选</vxe-button>
+      <vxe-button status="primary" @click="openExpandEvent">展开节点3</vxe-button>
+      <vxe-button status="primary" @click="clearExpandEvent">关闭节点3</vxe-button>
+      <vxe-button status="primary" @click="expandAllEvent">展开所有</vxe-button>
+      <vxe-button status="primary" @click="clearAllEvent">关闭所有</vxe-button>
+      <vxe-button status="success" @click="getExpansionEvent">获取已展开</vxe-button>
     </div>
 
     <vxe-tree
-      show-radio
-      transform
       ref="treeRef"
-      :data="treeList"
-      v-model:check-node-key="checkNodeKey">
+      transform
+      title-field="title"
+      key-field="id"
+      parent-field="parentId"
+      :node-config="nodeConfig"
+      :data="treeList">
     </vxe-tree>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 import { VxeUI, VxeTreeInstance, VxeTreePropTypes } from 'vxe-pc-ui'
 
 interface NodeVO {
@@ -28,7 +32,9 @@ interface NodeVO {
 
 const treeRef = ref<VxeTreeInstance<NodeVO>>()
 
-const checkNodeKey = ref<VxeTreePropTypes.CheckNodeKey>('3')
+const nodeConfig = reactive<VxeTreePropTypes.NodeConfig>({
+  isHover: true
+})
 
 const treeList = ref<NodeVO[]>([
   { title: '节点2', id: '2', parentId: null },
@@ -53,25 +59,39 @@ const treeList = ref<NodeVO[]>([
   { title: '节点5', id: '5', parentId: null }
 ])
 
-const selectRadioEvent = () => {
+const getExpansionEvent = () => {
   const $tree = treeRef.value
   if ($tree) {
-    $tree.setRadioNodeId('4')
+    const expandIds = $tree.getExpandNodeIds()
+    VxeUI.modal.alert(expandIds.length)
   }
 }
 
-const clearRadioEvent = () => {
+const openExpandEvent = () => {
   const $tree = treeRef.value
   if ($tree) {
-    $tree.clearRadioNode()
+    $tree.setExpandByNodeId('3', true)
   }
 }
 
-const getRadioEvent = () => {
+const clearExpandEvent = () => {
   const $tree = treeRef.value
   if ($tree) {
-    const selectId = $tree.getRadioNodeId()
-    VxeUI.modal.alert(`${selectId}`)
+    $tree.setExpandByNodeId('3', false)
+  }
+}
+
+const expandAllEvent = () => {
+  const $tree = treeRef.value
+  if ($tree) {
+    $tree.setAllExpandNode(true)
+  }
+}
+
+const clearAllEvent = () => {
+  const $tree = treeRef.value
+  if ($tree) {
+    $tree.setAllExpandNode(false)
   }
 }
 </script>

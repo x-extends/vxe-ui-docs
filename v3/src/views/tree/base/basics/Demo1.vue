@@ -1,16 +1,21 @@
 <template>
   <div>
     <div>
-      <vxe-button status="primary" @click="selectCurrentEvent">选中节点4</vxe-button>
-      <vxe-button status="primary" @click="clearCurrentEvent">取消节点4</vxe-button>
-      <vxe-button status="success" @click="getCurrentEvent">获取已选</vxe-button>
+      <vxe-button status="primary" @click="openExpandEvent">展开节点3</vxe-button>
+      <vxe-button status="primary" @click="clearExpandEvent">关闭节点3</vxe-button>
+      <vxe-button status="primary" @click="expandAllEvent">展开所有</vxe-button>
+      <vxe-button status="primary" @click="clearAllEvent">关闭所有</vxe-button>
+      <vxe-button status="success" @click="getExpansionEvent">获取已展开</vxe-button>
     </div>
 
     <vxe-tree
-      transform
       ref="treeRef"
-      :data="treeList"
-      :node-config="nodeConfig">
+      transform
+      title-field="title"
+      key-field="id"
+      parent-field="parentId"
+      :node-config="nodeConfig"
+      :data="treeList">
     </vxe-tree>
   </div>
 </template>
@@ -28,8 +33,7 @@ interface NodeVO {
 export default Vue.extend({
   data () {
     const nodeConfig: VxeTreePropTypes.NodeConfig = {
-      isHover: true,
-      isCurrent: true
+      isHover: true
     }
 
     const treeList: NodeVO[] = [
@@ -61,23 +65,35 @@ export default Vue.extend({
     }
   },
   methods: {
-    selectCurrentEvent () {
+    getExpansionEvent () {
       const $tree = this.$refs.treeRef as VxeTreeInstance<NodeVO>
       if ($tree) {
-        $tree.setCurrentNodeId('4')
+        const expandIds = $tree.getExpandNodeIds()
+        VxeUI.modal.alert(expandIds.length)
       }
     },
-    clearCurrentEvent () {
+    openExpandEvent () {
       const $tree = this.$refs.treeRef as VxeTreeInstance<NodeVO>
       if ($tree) {
-        $tree.clearCurrentNode()
+        $tree.setExpandByNodeId('3', true)
       }
     },
-    getCurrentEvent () {
+    clearExpandEvent () {
       const $tree = this.$refs.treeRef as VxeTreeInstance<NodeVO>
       if ($tree) {
-        const selectId = $tree.getCurrentNodeId()
-        VxeUI.modal.alert(`${selectId}`)
+        $tree.setExpandByNodeId('3', false)
+      }
+    },
+    expandAllEvent () {
+      const $tree = this.$refs.treeRef as VxeTreeInstance<NodeVO>
+      if ($tree) {
+        $tree.setAllExpandNode(true)
+      }
+    },
+    clearAllEvent () {
+      const $tree = this.$refs.treeRef as VxeTreeInstance<NodeVO>
+      if ($tree) {
+        $tree.setAllExpandNode(false)
       }
     }
   }

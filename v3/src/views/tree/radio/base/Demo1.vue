@@ -1,8 +1,15 @@
 <template>
   <div>
+    <div>
+      <vxe-button status="primary" @click="selectRadioEvent">选中节点4</vxe-button>
+      <vxe-button status="primary" @click="clearRadioEvent">取消节点4</vxe-button>
+      <vxe-button status="success" @click="getRadioEvent">获取已选</vxe-button>
+    </div>
+
     <vxe-tree
       show-radio
       transform
+      ref="treeRef"
       :data="treeList"
       :check-node-key.sync="checkNodeKey">
     </vxe-tree>
@@ -11,6 +18,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { VxeUI, VxeTreeInstance, VxeTreePropTypes } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
@@ -44,8 +52,29 @@ export default Vue.extend({
     ]
 
     return {
-      checkNodeKey: 3,
+      checkNodeKey: '3' as VxeTreePropTypes.CheckNodeKey,
       treeList
+    }
+  },
+  methods: {
+    selectRadioEvent () {
+      const $tree = this.$refs.treeRef as VxeTreeInstance<NodeVO>
+      if ($tree) {
+        $tree.setRadioNodeId('4')
+      }
+    },
+    clearRadioEvent () {
+      const $tree = this.$refs.treeRef as VxeTreeInstance<NodeVO>
+      if ($tree) {
+        $tree.clearRadioNode()
+      }
+    },
+    getRadioEvent () {
+      const $tree = this.$refs.treeRef as VxeTreeInstance<NodeVO>
+      if ($tree) {
+        const selectId = $tree.getRadioNodeId()
+        VxeUI.modal.alert(`${selectId}`)
+      }
     }
   }
 })

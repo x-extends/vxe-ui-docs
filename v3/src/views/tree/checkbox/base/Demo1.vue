@@ -1,8 +1,17 @@
 <template>
   <div>
+    <div>
+      <vxe-button status="primary" @click="selectCheckboxEvent">选中节点4</vxe-button>
+      <vxe-button status="primary" @click="clearCheckboxEvent">取消节点4</vxe-button>
+      <vxe-button status="primary" @click="selectAllEvent">选中所有</vxe-button>
+      <vxe-button status="primary" @click="clearAllEvent">取消所有</vxe-button>
+      <vxe-button status="success" @click="getCheckboxEvent">获取已选中</vxe-button>
+    </div>
+
     <vxe-tree
       show-checkbox
       transform
+      ref="treeRef"
       :data="treeList"
       :check-node-keys.sync="checkNodeKeys">
     </vxe-tree>
@@ -11,7 +20,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeTreePropTypes } from 'vxe-pc-ui'
+import { VxeUI, VxeTreeInstance, VxeTreePropTypes } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
@@ -49,6 +58,39 @@ export default Vue.extend({
     return {
       checkNodeKeys,
       treeList
+    }
+  },
+  methods: {
+    selectCheckboxEvent () {
+      const $tree = this.$refs.treeRef as VxeTreeInstance<NodeVO>
+      if ($tree) {
+        $tree.setCheckboxByNodeId('4', true)
+      }
+    },
+    clearCheckboxEvent () {
+      const $tree = this.$refs.treeRef as VxeTreeInstance<NodeVO>
+      if ($tree) {
+        $tree.setCheckboxByNodeId('4', false)
+      }
+    },
+    selectAllEvent () {
+      const $tree = this.$refs.treeRef as VxeTreeInstance<NodeVO>
+      if ($tree) {
+        $tree.setAllCheckboxNode(true)
+      }
+    },
+    clearAllEvent () {
+      const $tree = this.$refs.treeRef as VxeTreeInstance<NodeVO>
+      if ($tree) {
+        $tree.setAllCheckboxNode(false)
+      }
+    },
+    getCheckboxEvent () {
+      const $tree = this.$refs.treeRef as VxeTreeInstance<NodeVO>
+      if ($tree) {
+        const selectIds = $tree.getCheckboxNodeIds()
+        VxeUI.modal.alert(selectIds.length)
+      }
     }
   }
 })

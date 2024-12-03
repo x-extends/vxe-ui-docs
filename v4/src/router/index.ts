@@ -6205,6 +6205,11 @@ const routes: Array<RouteRecordRaw> = [
             component: RouteLayout,
             children: [
               {
+                path: 'basics',
+                name: 'ComponentTreeBaseBasics',
+                component: () => import('@/views/tree/base/basics/CodeExample.vue')
+              },
+              {
                 path: 'size',
                 name: 'ComponentTreeBaseSize',
                 component: () => import('@/views/tree/base/size/CodeExample.vue')
