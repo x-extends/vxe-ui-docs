@@ -169,7 +169,9 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '修改筛选选项', routerLink: { name: 'ComponentTableFilterOptions' } },
             { title: '服务端筛选', routerLink: { name: 'ComponentTableFilterRemote' } },
             { title: '实现列头筛选', routerLink: { name: 'ComponentTableFilterHeader' } },
-            { title: '手动操作筛选', routerLink: { name: 'ComponentTableFilterManual' } }
+            { title: '手动操作筛选', routerLink: { name: 'ComponentTableFilterManual' } },
+            { title: '输入筛选', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'filters_complex_input_table_string_filter' }, query: { previewPath: '%2FfiltersComplexInput%2Ftable%2FstringFilter' } } },
+            { title: '组合筛选', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'filters_combination_table_combination_string_filter' }, query: { previewPath: '%2FfiltersCombination%2Ftable%2Fcombination%2FstringFilter' } } }
           ]
         },
         {
@@ -700,7 +702,9 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           children: [
             { title: '修改筛选选项', routerLink: { name: 'ComponentGridFilterOptions' } },
             { title: '服务端筛选', routerLink: { name: 'ComponentGridFilterRemote' } },
-            { title: '实现列头中自定义筛选', routerLink: { name: 'ComponentGridFilterHeaderFilter' } }
+            { title: '实现列头中自定义筛选', routerLink: { name: 'ComponentGridFilterHeaderFilter' } },
+            { title: '输入筛选', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'filters_complex_input_table_string_filter' }, query: { previewPath: '%2FfiltersComplexInput%2Fgrid%2FstringFilter' } } },
+            { title: '组合筛选', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'filters_combination_table_combination_string_filter' }, query: { previewPath: '%2FfiltersCombination%2Fgrid%2Fcombination%2FstringFilter' } } }
           ]
         },
         {
