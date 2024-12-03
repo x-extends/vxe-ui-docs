@@ -533,6 +533,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '其他',
           children: [
+            { title: '在页签中使用', routerLink: { name: 'ComponentTableOtherTabs' } },
             { title: '多行文本溢出省略', routerLink: { name: 'ComponentTableOtherLineEllipsis' } }
           ]
         }
@@ -1129,6 +1130,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '其他',
           children: [
+            { title: '在页签中使用', routerLink: { name: 'ComponentGridOtherTabs' } },
             { title: '定位行、定位列', routerLink: { name: 'ComponentGridOtherScrollTo' } },
             { title: '反转列与行', routerLink: { name: 'ComponentGridOtherReverse' } },
             { title: '文件列表', routerLink: { name: 'ComponentGridOtherFileList' } },
