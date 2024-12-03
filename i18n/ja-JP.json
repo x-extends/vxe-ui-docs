@@ -146,12 +146,14 @@
     }
   },
   "plugins": {
+    "base": {
+      "guide": "開発ガイド",
+      "install": "インストールして使用する",
+        "table": "テーブル基本テーブル",
+        "grid": "グリッド構成表"
+    },
     "extendCellArea": {
       "nav": {
-        "guide": "開発ガイド",
-        "install": "インストールして使用する",
-        "table": "テーブル基本テーブル",
-        "grid": "グリッド構成表",
         "singleArea": "単一エリアの選択",
         "multiArea": "複数のエリア選択",
         "areaDisabled": "エリア選択を無効にする",
@@ -201,6 +203,10 @@
         "areaJspdf": "Third party plugin - jspdf export",
         "areaExportJspdf": "export pdf"
       }
+    },
+    "filtersComplexInput": {
+      "stringFilter": "字符串类型筛选",
+      "numberFilter": "数值类型筛选"
     }
   },
   "components": {

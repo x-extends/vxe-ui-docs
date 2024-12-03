@@ -146,12 +146,14 @@
     }
   },
   "plugins": {
+    "base": {
+      "guide": "Development Guide",
+      "install": "Install and use",
+        "table": "Table basic table",
+        "grid": "Grid configuration table"
+    },
     "extendCellArea": {
       "nav": {
-        "guide": "Development Guide",
-        "install": "Install and use",
-        "table": "Table basic table",
-        "grid": "Grid configuration table",
         "singleArea": "Single area selection",
         "multiArea": "Multiple area selection",
         "areaDisabled": "Disable area selection",
@@ -201,6 +203,10 @@
         "areaJspdf": "Third party plugin - jspdf export",
         "areaExportJspdf": "export pdf"
       }
+    },
+    "filtersComplexInput": {
+      "stringFilter": "字符串类型筛选",
+      "numberFilter": "数值类型筛选"
     }
   },
   "components": {

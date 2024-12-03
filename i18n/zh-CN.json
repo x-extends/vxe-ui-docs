@@ -146,12 +146,14 @@
     }
   },
   "plugins": {
+    "base": {
+      "guide": "开发指南",
+      "install": "安装使用",
+        "table": "Table 基础表格",
+        "grid": "Grid 配置式表格"
+    },
     "extendCellArea": {
       "nav": {
-        "guide": "开发指南",
-        "install": "安装使用",
-        "table": "Table 基础表格",
-        "grid": "Grid 配置式表格",
         "singleArea": "单个区域选取",
         "multiArea": "多重区域选取",
         "areaDisabled": "禁用区域选取",
@@ -201,6 +203,10 @@
         "areaJspdf": "第三方插件 - jspdf 导出",
         "areaExportJspdf": "导出 pdf"
       }
+    },
+    "filtersComplexInput": {
+      "stringFilter": "字符串类型筛选",
+      "numberFilter": "数值类型筛选"
     }
   },
   "components": {
