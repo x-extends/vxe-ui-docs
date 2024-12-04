@@ -3706,6 +3706,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'yearMonth',
           name: 'ComponentGridOtherYearMonth',
           component: () => import('@/views/grid/other/yearMonth/CodeExample.vue')
+        },
+        {
+          path: 'pasteToUpload',
+          name: 'ComponentGridOtherPasteToUpload',
+          component: () => import('@/views/grid/other/pasteToUpload/CodeExample.vue')
         }
       ]
     }
