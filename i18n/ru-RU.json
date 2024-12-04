@@ -165,6 +165,8 @@
         "footerTotal": "Выберите и подведите итог в конце таблицы",
         "areaCheckbox": "Выбор диапазона флажков",
         "areaKeypad": "Кнопка навигации",
+        "areaKeypadHandle": "按键功能示例",
+        "areaKeypadHandleEnterAddRow": "末行回车新增行",
         "areaStatus": "Показать статус выбора ячейки",
         "areaCellToRow": "选择单元格自动选中行",
         "areaClip": "Скопируйте и вставьте",
