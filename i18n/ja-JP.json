@@ -166,7 +166,7 @@
         "areaCheckbox": "チェックボックスの範囲選択",
         "areaKeypad": "ボタンのナビゲーション",
         "areaKeypadHandle": "按键功能示例",
-        "areaKeypadHandleEnterAddRow": "末行回车新增行",
+        "areaKeypadHandleEnterAddRow": "最后一行回车新增行",
         "areaStatus": "セルの選択状態を表示",
         "areaCellToRow": "选择单元格自动选中行",
         "areaClip": "コピー＆ペースト",

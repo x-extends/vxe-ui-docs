@@ -166,7 +166,7 @@
         "areaCheckbox": "複選框範圍選取",
         "areaKeypad": "按鍵導航",
         "areaKeypadHandle": "按键功能示例",
-        "areaKeypadHandleEnterAddRow": "末行回车新增行",
+        "areaKeypadHandleEnterAddRow": "最后一行回车新增行",
         "areaStatus": "顯示單元格選取狀態",
         "areaCellToRow": "选择单元格自动选中行",
         "areaClip": "複製與貼上",

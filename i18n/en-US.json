@@ -166,7 +166,7 @@
         "areaCheckbox": "Check box range selection",
         "areaKeypad": "Button navigation",
         "areaKeypadHandle": "按键功能示例",
-        "areaKeypadHandleEnterAddRow": "末行回车新增行",
+        "areaKeypadHandleEnterAddRow": "最后一行回车新增行",
         "areaStatus": "Show cell selection status",
         "areaCellToRow": "Select cells to automatically select rows",
         "areaClip": "Copy and paste",
