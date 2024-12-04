@@ -189,6 +189,8 @@
         "areaEditTempPending": "标记",
         "areaEditTempUpdate": "修改",
         "areaEditTempRestore": "还原",
+        "areaEditCell": "编辑功能示例",
+        "areaEditCellUpload": "上传附件",
         "areaCustom": "自定义列设置",
         "areaScroll": "虚拟滚动（超大数据量表格）",
         "areaAutoHeight": "自适应行高",

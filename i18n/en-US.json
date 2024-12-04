@@ -189,6 +189,8 @@
         "areaEditTempPending": "Pending",
         "areaEditTempUpdate": "Update",
         "areaEditTempRestore": "Restore",
+        "areaEditCell": "编辑功能示例",
+        "areaEditCellUpload": "上传附件",
         "areaCustom": "Custom column settings",
         "areaScroll": "Virtual scrolling (oversized data inventory)",
         "areaAutoHeight": "Adaptive row height",
