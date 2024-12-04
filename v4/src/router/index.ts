@@ -944,6 +944,11 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/keyboard/keyboard/CodeExample.vue')
         },
         {
+          path: 'enterAppend',
+          name: 'ComponentTableKeyboardEnterAppend',
+          component: () => import('@/views/table/keyboard/enterAppend/CodeExample.vue')
+        },
+        {
           path: 'edit',
           name: 'ComponentTableKeyboardEdit',
           component: () => import('@/views/table/keyboard/edit/CodeExample.vue')
@@ -2855,6 +2860,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'keyboard',
           name: 'ComponentGridKeyboardKeyboard',
           component: () => import('@/views/grid/keyboard/keyboard/CodeExample.vue')
+        },
+        {
+          path: 'enterAppend',
+          name: 'ComponentGridKeyboardEnterAppend',
+          component: () => import('@/views/grid/keyboard/enterAppend/CodeExample.vue')
         },
         {
           path: 'edit',
