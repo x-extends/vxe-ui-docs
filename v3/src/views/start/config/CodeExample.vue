@@ -94,7 +94,7 @@
                 validConfig: {
                   showMessage: true,
                   autoPos: true,
-                  theme: 'normal' // 错误提示框主题样式
+                  theme: 'beautify'
                 },
                 tooltipConfig: {
                   enterable: true
@@ -177,6 +177,7 @@
                 marginSize: 0,
                 dblclickZoom: true,
                 showTitleOverflow: true,
+                animat: true,
                 showClose: true,
                 padding: true,
                 draggable: true,
@@ -233,6 +234,7 @@
               radioGroup: {
                 strict: true
               },
+              rate: {},
               result: {},
               row: {},
               select: {
@@ -250,6 +252,25 @@
               steps: {},
               switch: {},
               tabPane: {},
+              tableSelect: {
+                gridConfig: {
+                  showOverflow: true,
+                  showHeaderOverflow: true,
+                  showFooterOverflow: true,
+                  rowConfig: {
+                    isHover: true
+                  },
+                  scrollX: {
+                    enabled: true,
+                    gt: 0
+                  },
+                  scrollY: {
+                    mode: 'wheel',
+                    enabled: true,
+                    gt: 0
+                  }
+                }
+              },
               tabs: {},
               tag: {},
               textEllipsis: {},
@@ -260,10 +281,12 @@
               tip: {},
               tooltip: {
                 // size: null,
+                // enterable: false,
                 trigger: 'hover',
                 theme: 'dark',
                 enterDelay: 500,
-                leaveDelay: 300
+                leaveDelay: 300,
+                isArrow: true
               },
               tree: {
                 indent: 20,
@@ -287,15 +310,17 @@
                 showRemoveButton: true,
                 showButtonIcon: true,
                 showPreview: true,
+                dragToUpload: true,
                 imageStyle: {}
               },
               watermark: {
                 rotate: -30,
                 gap: [100, 100]
               },
-
               table: {
+                fit: true,
                 showHeader: true,
+                animat: true,
                 delayHover: 250,
                 autoResize: true,
                 padding: true,
@@ -318,11 +343,21 @@
                 //   keyField: '_X_ROW_KEY' // 行数据的唯一主键字段名
                 // },
                 resizeConfig: {
-                  refreshDelay: 250
+                  // refreshDelay: 250
+                },
+                resizableConfig: {
+                  dragMode: 'auto',
+                  showDragTip: true
                 },
                 radioConfig: {
                   // trigger: 'default'
                   strict: true
+                },
+                rowDragConfig: {
+                  showIcon: true
+                },
+                columnDragConfig: {
+                  showIcon: true
                 },
                 checkboxConfig: {
                   // trigger: 'default',
@@ -337,7 +372,7 @@
                   autoPos: true,
                   message: 'inline',
                   msgMode: 'single',
-                  theme: 'normal' // 错误提示框主题样式
+                  theme: 'beautify'
                 },
                 columnConfig: {
                   maxFixedSize: 4
@@ -395,8 +430,20 @@
                   autoFocus: true
                 },
                 importConfig: {
+                  _typeMaps: {
+                    csv: 1,
+                    html: 1,
+                    xml: 1,
+                    txt: 1
+                  }
                 },
                 exportConfig: {
+                  _typeMaps: {
+                    csv: 1,
+                    html: 1,
+                    xml: 1,
+                    txt: 1
+                  }
                 },
                 printConfig: {
                 },
@@ -408,7 +455,8 @@
                 },
                 areaConfig: {
                   autoClear: true,
-                  selectCellByHeader: true
+                  selectCellByHeader: true,
+                  selectCellByBody: true
                 },
                 clipConfig: {
                   isCopy: true,
@@ -420,12 +468,12 @@
                   isReplace: true
                 },
                 scrollX: {
-                  // enabled: false, // 是否默认开启虚拟滚动
+                  // enabled: false,
                   gt: 60
                   // oSize: 0
                 },
                 scrollY: {
-                  // enabled: false, // 是否默认开启虚拟滚动
+                  // enabled: false,
                   gt: 100
                   // oSize: 0
                 }
