@@ -19,7 +19,7 @@
       </vxe-form-item>
       <vxe-form-item title="性别" field="sex" span="12" :item-render="{}">
         <template #default="params">
-          <vxe-input v-model="formData.sex" @change="changeEvent(params)"></vxe-input>
+          <vxe-select v-model="formData.sex" :options="sexOptions" @change="changeEvent(params)"></vxe-select>
         </template>
       </vxe-form-item>
       <vxe-form-item title="年龄" field="age" span="12" :item-render="{}">
@@ -72,6 +72,11 @@ const formRules = ref<VxeFormPropTypes.Rules<FormDataVO>>({
 const validConfig = reactive({
   theme: 'beautify'
 })
+
+const sexOptions = ref([
+  { label: '女', value: 'Women' },
+  { label: '男', value: 'Man' }
+])
 
 const changeEvent = (params: any) => {
   const $form = formRef.value

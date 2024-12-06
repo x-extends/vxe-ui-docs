@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import { VxeUI, VxeFormProps, VxeFormPropTypes, VxeFormListeners } from 'vxe-pc-ui'
+import { VxeUI, VxeFormProps, VxeFormPropTypes, VxeFormListeners, VxeFormItemPropTypes } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -19,6 +19,14 @@ interface FormDataVO {
   sex: string
   age: string
 }
+
+const sexItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
+  name: 'VxeSelect',
+  options: [
+    { label: '女', value: 'Women' },
+    { label: '男', value: 'Man' }
+  ]
+})
 
 const formOptions = reactive<VxeFormProps<FormDataVO> & { validConfig: VxeFormPropTypes.ValidConfig }>({
   validConfig: {
@@ -43,7 +51,7 @@ const formOptions = reactive<VxeFormProps<FormDataVO> & { validConfig: VxeFormPr
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
-    { field: 'sex', title: '性别', span: 12, itemRender: { name: 'VxeInput' } },
+    { field: 'sex', title: '性别', span: 12, itemRender: sexItemRender },
     { field: 'age', title: '年龄', span: 12, itemRender: { name: 'VxeInput' } },
     {
       align: 'center',

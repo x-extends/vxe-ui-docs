@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeUI, VxeFormProps, VxeFormPropTypes } from 'vxe-pc-ui'
+import { VxeUI, VxeFormProps, VxeFormPropTypes, VxeFormItemPropTypes } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -26,6 +26,14 @@ interface FormDataVO {
 
 export default Vue.extend({
   data () {
+    const sexItemRender: VxeFormItemPropTypes.ItemRender = {
+      name: 'VxeSelect',
+      options: [
+        { label: '女', value: 'Women' },
+        { label: '男', value: 'Man' }
+      ]
+    }
+
     const formOptions: VxeFormProps<FormDataVO> & { validConfig: VxeFormPropTypes.ValidConfig } = {
       validConfig: {
         theme: 'beautify'
@@ -49,7 +57,7 @@ export default Vue.extend({
       },
       items: [
         { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
-        { field: 'sex', title: '性别', span: 12, itemRender: { name: 'VxeInput' } },
+        { field: 'sex', title: '性别', span: 12, itemRender: sexItemRender },
         { field: 'age', title: '年龄', span: 12, itemRender: { name: 'VxeInput' } },
         {
           align: 'center',
@@ -66,7 +74,8 @@ export default Vue.extend({
     }
 
     return {
-      formOptions
+      formOptions,
+      sexItemRender
     }
   },
   methods: {

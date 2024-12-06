@@ -19,7 +19,7 @@
       </vxe-form-item>
       <vxe-form-item title="性别" field="sex" span="12" :item-render="{}">
         <template #default="params">
-          <vxe-input v-model="formData.sex" @change="changeEvent(params)"></vxe-input>
+          <vxe-select v-model="formData.sex" :options="sexOptions" @change="changeEvent(params)"></vxe-select>
         </template>
       </vxe-form-item>
       <vxe-form-item title="年龄" field="age" span="12" :item-render="{}">
@@ -73,10 +73,16 @@ export default Vue.extend({
       theme: 'beautify'
     }
 
+    const sexOptions = [
+      { label: '女', value: 'Women' },
+      { label: '男', value: 'Man' }
+    ]
+
     return {
       formData,
       formRules,
-      validConfig
+      validConfig,
+      sexOptions
     }
   },
   methods: {
