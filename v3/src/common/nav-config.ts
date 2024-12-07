@@ -2269,6 +2269,7 @@ export const navConfigList: NavVO[] = [
           { title: '点击确认按钮不可关闭', routerLink: { name: 'ComponentDrawerConfirmClosable' } },
           { title: '点击取消按钮不可关闭', routerLink: { name: 'ComponentDrawerCancelClosable' } },
           { title: '同时弹出多个抽屉', routerLink: { name: 'ComponentDrawerMultiple' } },
+          { title: '拖拽调整大小', routerLink: { name: 'ComponentDrawerEscResize' } },
           { title: '按 Esc 键可关闭', routerLink: { name: 'ComponentDrawerEscClosable' } },
           { title: '拦截关闭', routerLink: { name: 'ComponentDrawerBeforeHide' } },
           { title: '自定义模板', routerLink: { name: 'ComponentDrawerTemplateFooter' } },

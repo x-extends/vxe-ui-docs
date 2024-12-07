@@ -5831,6 +5831,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/drawer/multiple/CodeExample.vue')
           },
           {
+            path: 'resize',
+            name: 'ComponentDrawerEscResize',
+            component: () => import('@/views/drawer/resize/CodeExample.vue')
+          },
+          {
             path: 'escClosable',
             name: 'ComponentDrawerEscClosable',
             component: () => import('@/views/drawer/escClosable/CodeExample.vue')

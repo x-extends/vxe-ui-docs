@@ -711,6 +711,11 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/custom/drawer/CodeExample.vue')
         },
         {
+          path: 'defHide',
+          name: 'ComponentTableCustomDefHide',
+          component: () => import('@/views/table/custom/defHide/CodeExample.vue')
+        },
+        {
           path: 'checkMethod',
           name: 'ComponentTableCustomCheckMethod',
           component: () => import('@/views/table/custom/checkMethod/CodeExample.vue')
@@ -2502,6 +2507,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'drawer',
           name: 'ComponentGridCustomDrawer',
           component: () => import('@/views/grid/custom/drawer/CodeExample.vue')
+        },
+        {
+          path: 'defHide',
+          name: 'ComponentGridCustomDefHide',
+          component: () => import('@/views/grid/custom/defHide/CodeExample.vue')
         },
         {
           path: 'checkMethod',
@@ -5826,6 +5836,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'multiple',
             name: 'ComponentDrawerMultiple',
             component: () => import('@/views/drawer/multiple/CodeExample.vue')
+          },
+          {
+            path: 'resize',
+            name: 'ComponentDrawerEscResize',
+            component: () => import('@/views/drawer/resize/CodeExample.vue')
           },
           {
             path: 'escClosable',
