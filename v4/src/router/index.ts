@@ -41,6 +41,11 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/base/align/CodeExample.vue')
         },
         {
+          path: 'visible',
+          name: 'ComponentTableBaseVisible',
+          component: () => import('@/views/table/base/visible/CodeExample.vue')
+        },
+        {
           path: 'width',
           name: 'ComponentTableBaseWidth',
           component: () => import('@/views/table/base/width/CodeExample.vue')
@@ -1782,6 +1787,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'align',
           name: 'ComponentGridBaseAlign',
           component: () => import('@/views/grid/base/align/CodeExample.vue')
+        },
+        {
+          path: 'visible',
+          name: 'ComponentGridBaseVisible',
+          component: () => import('@/views/grid/base/visible/CodeExample.vue')
         },
         {
           path: 'width',
