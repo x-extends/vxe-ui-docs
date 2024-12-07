@@ -41,12 +41,18 @@ export default Vue.extend({
       { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
     ]
 
-    const footerData = [
+    const footerData: VxeTablePropTypes.FooterData = [
       { seq: '合计', sex: '666', age: '999' },
       { seq: '平均', sex: '888', age: '333' }
     ]
 
     const exportConfig: VxeTablePropTypes.ExportConfig = {
+      columns: [
+        { field: 'seq' },
+        { field: 'group2' },
+        { field: 'sex' },
+        { field: 'age' }
+      ]
     }
 
     return {

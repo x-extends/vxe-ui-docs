@@ -1594,6 +1594,11 @@ const tableRouteConfig: RouteRecordRaw = {
           path: 'advanced',
           name: 'ComponentTableExportAdvanced',
           component: () => import('@/views/table/export/advanced/CodeExample.vue')
+        },
+        {
+          path: 'columns',
+          name: 'ComponentTableExportColumns',
+          component: () => import('@/views/table/export/columns/CodeExample.vue')
         }
       ]
     },

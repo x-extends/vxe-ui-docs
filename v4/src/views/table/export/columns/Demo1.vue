@@ -41,12 +41,18 @@ const tableData = ref<RowVO[]>([
   { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
 ])
 
-const footerData = ref<VxeTablePropTypes.FooterData>([
+const footerData = ref([
   { seq: '合计', sex: '666', age: '999' },
   { seq: '平均', sex: '888', age: '333' }
 ])
 
 const exportConfig = reactive<VxeTablePropTypes.ExportConfig>({
+  columns: [
+    { field: 'seq' },
+    { field: 'group2' },
+    { field: 'sex' },
+    { field: 'age' }
+  ]
 })
 
 const exportEvent = () => {
