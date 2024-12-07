@@ -1001,6 +1001,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '自定义数据', routerLink: { name: 'ComponentGridExportData' } },
             { title: '格式化导出内容', routerLink: { name: 'ComponentGridExportExportMethod' } },
             { title: '高级导出', routerLink: { name: 'ComponentGridExportAdvanced' } },
+            { title: '设置默认列', routerLink: { name: 'ComponentGridExportColumns' } },
             { title: '自定义导出类型', routerLink: { name: 'ComponentGridExportTypes' } },
             { title: '服务端导出', routerLink: { name: 'ComponentGridExportRemote' } },
             { title: '自定义导出模式', routerLink: { name: 'ComponentGridExportModes' } },
