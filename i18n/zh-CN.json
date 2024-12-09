@@ -219,6 +219,8 @@
     },
     "filtersComplexInput": {
       "nav": {
+        "complexSimpleFilter": "输入筛选",
+        "complexInputTitle": "带条件筛选",
         "stringFilter": "字符串类型筛选",
         "numberFilter": "数值类型筛选"
       }
