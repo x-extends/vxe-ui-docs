@@ -7,6 +7,7 @@
       <vxe-form-item title="数值" field="num" span="24" :item-render="{ name: 'VxeNumberInput' }"></vxe-form-item>
       <vxe-form-item title="整数" field="integer" span="24" :item-render="{ name: 'VxeNumberInput', props: { type: 'integer' } }"></vxe-form-item>
       <vxe-form-item title="小数" field="float" span="24" :item-render="{ name: 'VxeNumberInput', props: { type: 'float' } }"></vxe-form-item>
+      <vxe-form-item title="金额" field="money" span="24" :item-render="{ name: 'VxeNumberInput', props: { type: 'amount' } }"></vxe-form-item>
       <vxe-form-item align="center" span="24" :item-render="actionItemRender"></vxe-form-item>
     </vxe-form>
   </div>
@@ -22,6 +23,7 @@ interface FormDataVO {
   num: number | null
   float: number | null
   integer: number | null
+  money: number | null
 }
 
 export default Vue.extend({
@@ -31,7 +33,8 @@ export default Vue.extend({
       nickname: 'Testing',
       num: null,
       integer: null,
-      float: null
+      float: null,
+      money: null
     }
 
     const actionItemRender: VxeFormItemPropTypes.ItemRender = {

@@ -17,6 +17,10 @@
         <vxe-number-input v-model="data.float" type="float"></vxe-number-input>
       </template>
 
+      <template #money="{ data }">
+        <vxe-number-input v-model="data.money" type="amount"></vxe-number-input>
+      </template>
+
       <template #action>
         <vxe-button type="reset">重置</vxe-button>
         <vxe-button type="submit" status="primary">提交</vxe-button>
@@ -34,6 +38,7 @@ interface FormDataVO {
   num: number | null
   float: number | null
   integer: number | null
+  money: number | null
 }
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
@@ -42,13 +47,15 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     name: 'test1',
     num: null,
     integer: null,
-    float: null
+    float: null,
+    money: null
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
     { field: 'num', title: '数字', span: 24, itemRender: { }, slots: { default: 'num' } },
     { field: 'integer', title: '整数', span: 24, itemRender: { }, slots: { default: 'integer' } },
     { field: 'float', title: '小数', span: 24, itemRender: { }, slots: { default: 'float' } },
+    { field: 'money', title: '金额', span: 24, itemRender: { }, slots: { default: 'money' } },
     { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })

@@ -23,6 +23,11 @@
           <vxe-number-input v-model="formData.float" type="float"></vxe-number-input>
         </template>
       </vxe-form-item>
+      <vxe-form-item title="金额" field="money" span="24" :item-render="{}">
+        <template #default>
+          <vxe-number-input v-model="formData.money" type="amount"></vxe-number-input>
+        </template>
+      </vxe-form-item>
       <vxe-form-item align="center" span="24">
         <template #default>
           <vxe-button type="reset">重置</vxe-button>
@@ -42,6 +47,7 @@ interface FormDataVO {
   num: number | null
   float: number | null
   integer: number | null
+  money: number | null
 }
 
 const formData = ref<FormDataVO>({
@@ -49,6 +55,7 @@ const formData = ref<FormDataVO>({
   nickname: 'Testing',
   num: null,
   integer: null,
-  float: null
+  float: null,
+  money: null
 })
 </script>
