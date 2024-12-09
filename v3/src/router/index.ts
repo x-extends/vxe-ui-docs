@@ -1803,6 +1803,11 @@ const tableRouteConfig: RouteConfig = {
           path: 'lineEllipsis',
           name: 'ComponentTableOtherLineEllipsis',
           component: () => import('@/views/table/other/lineEllipsis/CodeExample.vue')
+        },
+        {
+          path: 'bookkeepingVoucher',
+          name: 'ComponentTableOtherBookkeepingVoucher',
+          component: () => import('@/views/table/other/bookkeepingVoucher/CodeExample.vue')
         }
       ]
     }
@@ -3818,6 +3823,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'yearMonth',
           name: 'ComponentGridOtherYearMonth',
           component: () => import('@/views/grid/other/yearMonth/CodeExample.vue')
+        },
+        {
+          path: 'bookkeepingVoucher',
+          name: 'ComponentGridOtherBookkeepingVoucher',
+          component: () => import('@/views/grid/other/bookkeepingVoucher/CodeExample.vue')
         },
         {
           path: 'pasteToUpload',

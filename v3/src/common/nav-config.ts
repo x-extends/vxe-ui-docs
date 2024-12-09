@@ -548,10 +548,11 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           ]
         },
         {
-          title: '其他',
+          title: '功能示例',
           children: [
             { title: '在页签中使用', routerLink: { name: 'ComponentTableOtherTabs' } },
-            { title: '多行文本溢出省略', routerLink: { name: 'ComponentTableOtherLineEllipsis' } }
+            { title: '实现多行文本溢出省略', routerLink: { name: 'ComponentTableOtherLineEllipsis' } },
+            { title: '实现记账凭证', routerLink: { name: 'ComponentTableOtherBookkeepingVoucher' } }
           ]
         }
       ]
@@ -1163,14 +1164,15 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           ]
         },
         {
-          title: '其他',
+          title: '功能示例',
           children: [
             { title: '在页签中使用', routerLink: { name: 'ComponentGridOtherTabs' } },
-            { title: '定位行、定位列', routerLink: { name: 'ComponentGridOtherScrollTo' } },
-            { title: '反转列与行', routerLink: { name: 'ComponentGridOtherReverse' } },
-            { title: '文件列表', routerLink: { name: 'ComponentGridOtherFileList' } },
-            { title: '多行文本溢出省略', routerLink: { name: 'ComponentGridOtherLineEllipsis' } },
-            { title: '动态生成月份表头', routerLink: { name: 'ComponentGridOtherYearMonth' } },
+            { title: '定位行、定位列的使用', routerLink: { name: 'ComponentGridOtherScrollTo' } },
+            { title: '实现反转列与行', routerLink: { name: 'ComponentGridOtherReverse' } },
+            { title: '实现上传文件列表', routerLink: { name: 'ComponentGridOtherFileList' } },
+            { title: '实现多行文本溢出省略', routerLink: { name: 'ComponentGridOtherLineEllipsis' } },
+            { title: '实现动态生成月份表头', routerLink: { name: 'ComponentGridOtherYearMonth' } },
+            { title: '实现记账凭证', routerLink: { name: 'ComponentGridOtherBookkeepingVoucher' } },
             { title: '实现粘贴上传', routerLink: { name: 'ComponentGridOtherPasteToUpload' } }
           ]
         }
