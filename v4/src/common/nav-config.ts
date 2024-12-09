@@ -1928,6 +1928,16 @@ export const navConfigList: NavVO[] = [
               { title: '小数位数', routerLink: { name: 'ComponentNumberInputFloatDigits' } },
               { title: '控制按钮', routerLink: { name: 'ComponentNumberInputFloatControls' } }
             ]
+          },
+          {
+            title: '金额',
+            children: [
+              { title: '基础', routerLink: { name: 'ComponentNumberInputAmountBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentNumberInputAmountClearable' } },
+              { title: '设置步数', routerLink: { name: 'ComponentNumberInputAmountStep' } },
+              { title: '小数位数', routerLink: { name: 'ComponentNumberInputAmountDigits' } },
+              { title: '控制按钮', routerLink: { name: 'ComponentNumberInputAmountControls' } }
+            ]
           }
         ]
       },

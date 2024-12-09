@@ -5027,6 +5027,37 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/number-input/float/controls/CodeExample.vue')
               }
             ]
+          },
+          {
+            path: 'amount',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentNumberInputAmountBase',
+                component: () => import('@/views/number-input/amount/base/CodeExample.vue')
+              },
+              {
+                path: 'clearable',
+                name: 'ComponentNumberInputAmountClearable',
+                component: () => import('@/views/number-input/amount/clearable/CodeExample.vue')
+              },
+              {
+                path: 'digits',
+                name: 'ComponentNumberInputAmountDigits',
+                component: () => import('@/views/number-input/amount/digits/CodeExample.vue')
+              },
+              {
+                path: 'step',
+                name: 'ComponentNumberInputAmountStep',
+                component: () => import('@/views/number-input/amount/step/CodeExample.vue')
+              },
+              {
+                path: 'controls',
+                name: 'ComponentNumberInputAmountControls',
+                component: () => import('@/views/number-input/amount/controls/CodeExample.vue')
+              }
+            ]
           }
         ]
       },
