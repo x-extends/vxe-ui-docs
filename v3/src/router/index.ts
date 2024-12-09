@@ -6904,7 +6904,7 @@ const routes: Array<RouteConfig> = [
                   {
                     path: 'vxe-number-input',
                     name: 'ComponentFormBasicsItemRenderVxeNumberInput',
-                    component: () => import('@/views/form/basics/itemRender/number-input/CodeExample.vue')
+                    component: () => import('@/views/form/basics/itemRender/vxe-number-input/CodeExample.vue')
                   },
                   {
                     path: 'vxe-textarea',
