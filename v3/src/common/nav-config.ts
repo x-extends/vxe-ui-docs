@@ -144,6 +144,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '拖拽调整列顺序', routerLink: { name: 'ComponentTableColDragSort' } },
             { title: '冻结列', routerLink: { name: 'ComponentTableColDragFixed' } },
             { title: '自定义图标', routerLink: { name: 'ComponentTableColDragIcon' } },
+            { title: '拖拽辅助样式', routerLink: { name: 'ComponentTableColDragShowGuidesStatus' } },
             { title: '分组表头', routerLink: { name: 'ComponentTableColDragGroup' } },
             { title: '拖拽事件', routerLink: { name: 'ComponentTableColDragEvents' } },
             { title: '禁用按钮', routerLink: { name: 'ComponentTableColDragDisabledMethod' } },
@@ -157,7 +158,17 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '拖拽调整行顺序', routerLink: { name: 'ComponentTableRowDragSort' } },
             { title: '冻结列', routerLink: { name: 'ComponentTableRowDragFixed' } },
             { title: '自定义图标', routerLink: { name: 'ComponentTableRowDragIcon' } },
-            { title: '树结构', routerLink: { name: 'ComponentTableRowDragTree' } },
+            { title: '拖拽辅助样式', routerLink: { name: 'ComponentTableRowDragShowGuidesStatus' } },
+            {
+              title: '树结构',
+              children: [
+                { title: '树拖拽', routerLink: { name: 'ComponentTableRowDragTreeBase' } },
+                { title: '跨层级拖拽', routerLink: { name: 'ComponentTableRowDragTreeCossDrag' } },
+                { title: '自己拖拽给自己', routerLink: { name: 'ComponentTableRowDragTreeSelfToChildDrag' } },
+                { title: '拖拽辅助样式', routerLink: { name: 'ComponentTableRowDragTreeShowGuidesStatus' } },
+                { title: '拖拽二次确认', routerLink: { name: 'ComponentTableRowDragTreeDragMethod' } }
+              ]
+            },
             { title: '拖拽事件', routerLink: { name: 'ComponentTableRowDragEvents' } },
             { title: '禁用按钮', routerLink: { name: 'ComponentTableRowDragDisabledMethod' } },
             { title: '按钮可视', routerLink: { name: 'ComponentTableRowDragVisibleMethod' } },
@@ -656,6 +667,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '拖拽调整列顺序', routerLink: { name: 'ComponentGridColDragSort' } },
             { title: '冻结列', routerLink: { name: 'ComponentGridColDragFixed' } },
             { title: '自定义图标', routerLink: { name: 'ComponentGridColDragIcon' } },
+            { title: '拖拽辅助样式', routerLink: { name: 'ComponentGridColDragShowGuidesStatus' } },
             { title: '分组表头', routerLink: { name: 'ComponentGridColDragGroup' } },
             { title: '拖拽事件', routerLink: { name: 'ComponentGridColDragEvents' } },
             { title: '自定义提示', routerLink: { name: 'ComponentGridColDragTooltipMethod' } },
@@ -677,7 +689,17 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '拖拽调整行顺序', routerLink: { name: 'ComponentGridRowDragSort' } },
             { title: '冻结列', routerLink: { name: 'ComponentGridRowDragFixed' } },
             { title: '自定义图标', routerLink: { name: 'ComponentGridRowDragIcon' } },
-            { title: '树结构', routerLink: { name: 'ComponentGridRowDragTree' } },
+            { title: '拖拽辅助样式', routerLink: { name: 'ComponentGridRowDragShowGuidesStatus' } },
+            {
+              title: '树结构',
+              children: [
+                { title: '树拖拽', routerLink: { name: 'ComponentGridRowDragTreeBase' } },
+                { title: '跨层级拖拽', routerLink: { name: 'ComponentGridRowDragTreeCossDrag' } },
+                { title: '自己拖拽给自己', routerLink: { name: 'ComponentGridRowDragTreeSelfToChildDrag' } },
+                { title: '拖拽辅助样式', routerLink: { name: 'ComponentGridRowDragTreeShowGuidesStatus' } },
+                { title: '拖拽二次确认', routerLink: { name: 'ComponentGridRowDragTreeDragMethod' } }
+              ]
+            },
             { title: '拖拽事件', routerLink: { name: 'ComponentGridRowDragEvents' } },
             { title: '自定义提示', routerLink: { name: 'ComponentGridRowDragTooltipMethod' } },
             { title: '禁用按钮', routerLink: { name: 'ComponentGridRowDragDisabledMethod' } },
