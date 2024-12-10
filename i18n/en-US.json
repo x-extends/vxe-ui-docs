@@ -199,8 +199,6 @@
         "areaEditCell": "Edit function example",
         "areaEditCellUpload": "Upload attachment",
         "areaCustom": "Custom column settings",
-        "areaScroll": "Virtual scrolling (extremely large data volume tables)",
-        "areaAutoHeight": "Adaptive line height",
         "areaLoadMore": "infinite scroll",
         "areaHandle": "Cell operations",
         "areaHandleSingleArea": "Manual operation of single area",
@@ -213,6 +211,14 @@
         "areaExportExceljs": "export xlsx",
         "areaJspdf": "Third-party plug-in - jspdf export",
         "areaExportJspdf": "export pdf",
+        "scroll": "Virtual scrolling (extremely large data volume tables)",
+        "scrollVertical": "Vertical virtual scrolling",
+        "scrollHorizontal": "Horizontal virtual scroll",
+        "scrollAutoHeight": "Automatic line height",
+        "scrollTree": "Tree virtual scrolling",
+        "loadMore": "Unlimited scrolling load data",
+        "loadMoreVertical": "Scrolling load data",
+        "loadMoreHorizontal": "Scrolling load columns",
         "other": "Function example",
         "bookkeepingVoucher": "Accounting voucher"
       }

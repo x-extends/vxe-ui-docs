@@ -199,8 +199,6 @@
         "areaEditCell": "编辑功能示例",
         "areaEditCellUpload": "上传附件",
         "areaCustom": "自定义列设置",
-        "areaScroll": "虚拟滚动（超大数据量表格）",
-        "areaAutoHeight": "自适应行高",
         "areaLoadMore": "无限滚动",
         "areaHandle": "单元格操作",
         "areaHandleSingleArea": "手动操作单区域",
@@ -213,6 +211,14 @@
         "areaExportExceljs": "导出 xlsx",
         "areaJspdf": "第三方插件 - jspdf 导出",
         "areaExportJspdf": "导出 pdf",
+        "scroll": "虚拟滚动（超大数据量表格）",
+        "scrollVertical": "纵向虚拟滚动",
+        "scrollHorizontal": "横向虚拟滚动",
+        "scrollAutoHeight": "自适应行高",
+        "scrollTree": "树形虚拟滚动",
+        "loadMore": "无限滚动",
+        "loadMoreVertical": "实现加载行",
+        "loadMoreHorizontal": "实现加载列",
         "other": "功能示例",
         "bookkeepingVoucher": "记账凭证"
       }
