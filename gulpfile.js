@@ -8,6 +8,7 @@ const UglifyJS = require('uglify-js')
 const XEUtils = require('xe-utils')
 
 const enableAd = true
+const enableSponsors = false
 
 // 是否启用强制广告
 const isForceAd = false
@@ -71,7 +72,7 @@ gulp.task('copy_other3_temp', () => {
 gulp.task('copy_other3_index', gulp.series('copy_other3_temp', () => {
   return gulp.src('other3/dist/index.html')
     .pipe(replace('</head>', enableAd ? `${adScript}${isForceAd ? adCheckScript : ''}</head>`: '</head>'))
-    .pipe(replace('</body>', `${ssTmplScript}${sponsorsTmplScript}${enableAd ? adTmplScript : ''}</body>`))
+    .pipe(replace('</body>', `${enableSponsors ? ssTmplScript : ''}${ enableSponsors ? sponsorsTmplScript : ''}${enableAd ? adTmplScript : ''}</body>`))
     .pipe(gulp.dest('_temp/other3'))
     .pipe(rename({
       basename: '404'
@@ -96,7 +97,7 @@ gulp.task('copy_other4_temp', () => {
 gulp.task('copy_other4_index', gulp.series('copy_other4_temp', () => {
   return gulp.src('other4/dist/index.html')
     .pipe(replace('</head>', enableAd ? `${adScript}${isForceAd ? adCheckScript : ''}</head>`: '</head>'))
-    .pipe(replace('</body>', `${ssTmplScript}${sponsorsTmplScript}${enableAd ? adTmplScript : ''}</body>`))
+    .pipe(replace('</body>', `${enableSponsors ? ssTmplScript : ''}${ enableSponsors ? sponsorsTmplScript : ''}${enableAd ? adTmplScript : ''}</body>`))
     .pipe(gulp.dest('_temp/other4'))
     .pipe(rename({
       basename: '404'
@@ -121,7 +122,7 @@ gulp.task('copy_v1_temp', () => {
 gulp.task('copy_v1_index', gulp.series('copy_v1_temp', () => {
   return gulp.src('v1/dist/index.html')
   .pipe(replace('</head>', enableAd ? `${adScript}${isForceAd ? adCheckScript : ''}</head>`: '</head>'))
-  .pipe(replace('</body>', `${ssTmplScript}${sponsorsTmplScript}${enableAd ? adTmplScript : ''}</body>`))
+  .pipe(replace('</body>', `${enableSponsors ? ssTmplScript : ''}${ enableSponsors ? sponsorsTmplScript : ''}${enableAd ? adTmplScript : ''}</body>`))
   .pipe(gulp.dest('_temp/v1'))
     .pipe(rename({
       basename: '404'
@@ -147,7 +148,7 @@ gulp.task('copy_v2_temp', () => {
 gulp.task('copy_v2_index', gulp.series('copy_v2_temp', () => {
   return gulp.src('v2/dist/index.html')
   .pipe(replace('</head>', enableAd ? `${adScript}${isForceAd ? adCheckScript : ''}</head>`: '</head>'))
-  .pipe(replace('</body>', `${ssTmplScript}${sponsorsTmplScript}${enableAd ? adTmplScript : ''}</body>`))
+  .pipe(replace('</body>', `${enableSponsors ? ssTmplScript : ''}${ enableSponsors ? sponsorsTmplScript : ''}${enableAd ? adTmplScript : ''}</body>`))
   .pipe(gulp.dest('_temp/v2'))
     .pipe(rename({
       basename: '404'
@@ -173,7 +174,7 @@ gulp.task('copy_v3_temp', () => {
 gulp.task('copy_v3_index', gulp.series('copy_v3_temp', () => {
   return gulp.src('v3/dist/index.html')
     .pipe(replace('</head>', enableAd ? `${adScript}${isForceAd ? adCheckScript : ''}</head>`: '</head>'))
-    .pipe(replace('</body>', `${ssTmplScript}${sponsorsTmplScript}${enableAd ? adTmplScript : ''}</body>`))
+    .pipe(replace('</body>', `${enableSponsors ? ssTmplScript : ''}${ enableSponsors ? sponsorsTmplScript : ''}${enableAd ? adTmplScript : ''}</body>`))
     .pipe(gulp.dest('_temp/v3'))
     .pipe(rename({
       basename: '404'
@@ -199,7 +200,7 @@ gulp.task('copy_v4_temp', () => {
 gulp.task('copy_v4_index', gulp.series('copy_v4_temp', () => {
   return gulp.src('v4/dist/index.html')
     .pipe(replace('</head>', enableAd ? `${adScript}${isForceAd ? adCheckScript : ''}</head>`: '</head>'))
-    .pipe(replace('</body>', `${ssTmplScript}${sponsorsTmplScript}${enableAd ? adTmplScript : ''}</body>`))
+    .pipe(replace('</body>', `${enableSponsors ? ssTmplScript : ''}${ enableSponsors ? sponsorsTmplScript : ''}${enableAd ? adTmplScript : ''}</body>`))
     .pipe(gulp.dest('_temp/v4'))
     .pipe(rename({
       basename: '404'
