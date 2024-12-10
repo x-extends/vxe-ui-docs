@@ -7,7 +7,7 @@ const zip = require('gulp-zip')
 const UglifyJS = require('uglify-js')
 const XEUtils = require('xe-utils')
 
-const enableAd = false
+const enableAd = true
 
 // 是否启用强制广告
 const isForceAd = false

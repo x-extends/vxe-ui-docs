@@ -8,7 +8,7 @@ setTimeout(function () {
   }
   var wwDiv = document.createElement('div')
   wwDiv.className = 'wwads-cn wwads-vertical'
-  wwDiv.setAttribute('data-id', '214')
+  wwDiv.setAttribute('data-id', '344')
   wwDiv.style = '{VXE_AD_WWADS_STYLE}'
   warpperEl.appendChild(wwDiv)
 })
