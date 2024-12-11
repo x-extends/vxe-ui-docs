@@ -170,7 +170,7 @@
         "areaKeypadHandleEditAppend": "Edit using append method",
         "areaKeypadHandleEnterAddRow": "Enter key to append new line",
         "areaStatus": "Show cell selection status",
-        "areaCellToRow": "Select cells to automatically select rows",
+        "areaCellToRow": "Excel style",
         "areaClip": "Copy and paste",
         "areaDisabledClip": "Disable copy and paste",
         "areaClipIncrement": "Paste automatically inserts rows and columns",

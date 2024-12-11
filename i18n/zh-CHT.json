@@ -170,7 +170,7 @@
         "areaKeypadHandleEditAppend": "使用追加方式编辑",
         "areaKeypadHandleEnterAddRow": "回车键追加新行",
         "areaStatus": "顯示單元格選取狀態",
-        "areaCellToRow": "选择单元格自动选中行",
+        "areaCellToRow": "Excel 样式",
         "areaClip": "複製與貼上",
         "areaDisabledClip": "停用複製與貼上",
         "areaClipIncrement": "貼上自動插入行與列",

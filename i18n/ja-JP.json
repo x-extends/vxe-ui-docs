@@ -170,7 +170,7 @@
         "areaKeypadHandleEditAppend": "使用追加方式编辑",
         "areaKeypadHandleEnterAddRow": "回车键追加新行",
         "areaStatus": "セルの選択状態を表示",
-        "areaCellToRow": "选择单元格自动选中行",
+        "areaCellToRow": "Excel 样式",
         "areaClip": "コピー＆ペースト",
         "areaDisabledClip": "コピー＆ペーストを無効にする",
         "areaClipIncrement": "貼り付けでは行と列が自動的に挿入されます",
