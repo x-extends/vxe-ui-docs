@@ -3837,6 +3837,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/other/yearMonth/CodeExample.vue')
         },
         {
+          path: 'pageCheckbox',
+          name: 'ComponentGridOtherPageCheckbox',
+          component: () => import('@/views/grid/other/pageCheckbox/CodeExample.vue')
+        },
+        {
           path: 'bookkeepingVoucher',
           name: 'ComponentGridOtherBookkeepingVoucher',
           component: () => import('@/views/grid/other/bookkeepingVoucher/CodeExample.vue')

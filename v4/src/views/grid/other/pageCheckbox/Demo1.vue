@@ -1,12 +1,13 @@
 <template>
   <div>
-    <vxe-grid v-bind="gridOptions" @page-change="pageChangeEvent"></vxe-grid>
+    <vxe-button status="success" @click="getSelectEvent">获取已选</vxe-button>
+    <vxe-grid ref="gridRef" v-bind="gridOptions" v-on="gridEvents"></vxe-grid>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-import type { VxeGridProps } from 'vxe-table'
+<script lang="ts" setup>
+import { ref, reactive } from 'vue'
+import { VxeUI, VxeGridInstance, VxeGridProps, VxeGridListeners } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -16,6 +17,8 @@ interface RowVO {
   age: number
   address: string
 }
+
+const gridRef = ref<VxeGridInstance<RowVO>>()
 
 const allList = [
   { id: 10001, name: 'Test1', nickname: 'T1', role: 'Develop', sex: 'Man', age: 28, address: 'Shenzhen' },
@@ -42,66 +45,72 @@ const allList = [
   { id: 100022, name: 'Test22', nickname: 'T22', role: 'Develop', sex: 'Man', age: 44, address: 'Guangzhou' }
 ]
 
-export default Vue.extend({
-  data () {
-    const gridOptions: VxeGridProps<RowVO> & {
-      pagerConfig: {
-        total: number
-        currentPage: number
-        pageSize: number
-      }
-    } = {
-      showOverflow: true,
-      border: true,
-      loading: false,
-      height: 500,
-      pagerConfig: {
-        total: 0,
-        currentPage: 1,
-        pageSize: 10
-      },
-      columns: [
-        { type: 'seq', width: 70, fixed: 'left' },
-        { field: 'name', title: 'Name', minWidth: 160 },
-        { field: 'email', title: 'Email', minWidth: 160 },
-        { field: 'nickname', title: 'Nickname', minWidth: 160 },
-        { field: 'age', title: 'Age', width: 100 },
-        { field: 'role', title: 'Role', minWidth: 160 },
-        { field: 'amount', title: 'Amount', width: 140 },
-        { field: 'updateDate', title: 'Update Date', visible: false },
-        { field: 'createDate', title: 'Create Date', visible: false }
-      ],
-      data: [
-        { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
-        { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },
-        { id: 10003, name: 'Test3', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai' },
-        { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
-      ]
-    }
+// 模拟前端分页
+const handlePageData = () => {
+  gridOptions.loading = true
+  setTimeout(() => {
+    const { pageSize, currentPage } = gridOptions.pagerConfig
+    gridOptions.pagerConfig.total = allList.length
+    gridOptions.data = allList.slice((currentPage - 1) * pageSize, currentPage * pageSize)
+    gridOptions.loading = false
+  }, 100)
+}
 
-    return {
-      gridOptions
-    }
-  },
-  methods: {
-    // 模拟前端分页
-    handlePageData () {
-      this.gridOptions.loading = true
-      setTimeout(() => {
-        const { pageSize, currentPage } = this.gridOptions.pagerConfig
-        this.gridOptions.pagerConfig.total = allList.length
-        this.gridOptions.data = allList.slice((currentPage - 1) * pageSize, currentPage * pageSize)
-        this.gridOptions.loading = false
-      }, 100)
-    },
-    pageChangeEvent ({ pageSize, currentPage }) {
-      this.gridOptions.pagerConfig.currentPage = currentPage
-      this.gridOptions.pagerConfig.pageSize = pageSize
-      this.handlePageData()
-    }
-  },
-  created () {
-    this.handlePageData()
+const gridOptions = reactive<VxeGridProps<RowVO> & {
+  pagerConfig: {
+    total: number
+    currentPage: number
+    pageSize: number
   }
+}>({
+  showOverflow: true,
+  border: true,
+  loading: false,
+  height: 500,
+  rowConfig: {
+    keyField: 'id'
+  },
+  checkboxConfig: {
+    reserve: true
+  },
+  pagerConfig: {
+    total: 0,
+    currentPage: 1,
+    pageSize: 10
+  },
+  columns: [
+    { type: 'checkbox', width: 60 },
+    { field: 'name', title: 'Name', minWidth: 160 },
+    { field: 'email', title: 'Email', minWidth: 160 },
+    { field: 'nickname', title: 'Nickname', minWidth: 160 },
+    { field: 'age', title: 'Age', width: 100 },
+    { field: 'role', title: 'Role', minWidth: 160 },
+    { field: 'amount', title: 'Amount', width: 140 },
+    { field: 'updateDate', title: 'Update Date', visible: false },
+    { field: 'createDate', title: 'Create Date', visible: false }
+  ],
+  data: []
 })
+
+const gridEvents: VxeGridListeners = {
+  pageChange ({ pageSize, currentPage }) {
+    gridOptions.pagerConfig.currentPage = currentPage
+    gridOptions.pagerConfig.pageSize = pageSize
+    handlePageData()
+  }
+}
+
+const getSelectEvent = () => {
+  const $grid = gridRef.value
+  if ($grid) {
+    const selectRecords = $grid.getCheckboxRecords()
+    const selectReserveRecords = $grid.getCheckboxReserveRecords()
+    VxeUI.modal.message({
+      content: `总共勾选： ${selectRecords.length + selectReserveRecords.length} 条，当前页勾选：${selectRecords.length} 条，已保留勾选：${selectReserveRecords.length} 条`,
+      status: 'success'
+    })
+  }
+}
+
+handlePageData()
 </script>
