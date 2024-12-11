@@ -2161,6 +2161,21 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/colDrag/group/CodeExample.vue')
         },
         {
+          path: 'crossDrag',
+          name: 'ComponentGridColDragCrossDrag',
+          component: () => import('@/views/grid/colDrag/crossDrag/CodeExample.vue')
+        },
+        {
+          path: 'selfToChildDrag',
+          name: 'ComponentGridColDragSelfToChildDrag',
+          component: () => import('@/views/grid/colDrag/selfToChildDrag/CodeExample.vue')
+        },
+        {
+          path: 'toChildDrag',
+          name: 'ComponentGridColDragToChildDrag',
+          component: () => import('@/views/grid/colDrag/toChildDrag/CodeExample.vue')
+        },
+        {
           path: 'events',
           name: 'ComponentGridColDragEvents',
           component: () => import('@/views/grid/colDrag/events/CodeExample.vue')
