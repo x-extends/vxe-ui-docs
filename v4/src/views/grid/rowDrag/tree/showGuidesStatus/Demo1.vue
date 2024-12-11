@@ -26,6 +26,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   rowDragConfig: {
     isCrossDrag: true,
     isSelfToChildDrag: true,
+    isToChildDrag: true,
     showGuidesStatus: true
   },
   columnConfig: {

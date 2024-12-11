@@ -58,6 +58,7 @@ const rowConfig = reactive<VxeTablePropTypes.RowConfig<RowVO>>({
 const rowDragConfig = reactive<VxeTablePropTypes.RowDragConfig<RowVO>>({
   isCrossDrag: true,
   isSelfToChildDrag: true,
+  isToChildDrag: true,
   showGuidesStatus: true
 })
 

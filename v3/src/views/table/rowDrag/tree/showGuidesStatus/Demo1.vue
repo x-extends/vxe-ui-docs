@@ -60,6 +60,7 @@ export default Vue.extend({
     const rowDragConfig: VxeTablePropTypes.RowDragConfig<RowVO> = {
       isCrossDrag: true,
       isSelfToChildDrag: true,
+      isToChildDrag: true,
       showGuidesStatus: true
     }
 

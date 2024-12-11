@@ -28,6 +28,7 @@ export default Vue.extend({
       rowDragConfig: {
         isCrossDrag: true,
         isSelfToChildDrag: true,
+        isToChildDrag: true,
         showGuidesStatus: true
       },
       columnConfig: {
