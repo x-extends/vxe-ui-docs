@@ -2596,7 +2596,14 @@
       "props_custom-config_drawer-options_resize": "是否允许调整抽屉大小",
       "props_custom-config_drawer-options_mask-closable": "是否允许点击遮罩层关闭窗口",
       "props_custom-config_drawer-options_esc-closable": "是否允许通过 Esc 按键关闭窗口",
-      "events_enter-append-row": "只对 isEnter=true 有效，当通过回车自动新增行之后触会发该事件"
+      "events_enter-append-row": "只对 isEnter=true 有效，当通过回车自动新增行之后触会发该事件",
+      "props_row-drag-config_is-to-child-drag": "只对 tree-config 启用有效，是否允许拖拽成目标节点的子级",
+      "props_column-drag-config_is-cross-drag": "用于分组表头，是否跨列拖拽，启用后允许拖拽到其他的列，除自身列之外",
+      "props_column-drag-config_is-to-child-drag": "是否允许拖拽成目标列的子级",
+      "props_column-drag-config_is-self-to-child-drag": "用于分组表头，是否允许将自己拖拽到子孙列中",
+      "methods_get-full-columns": "获取表格的全量列",
+      "methods_get-full-data": "获取完整的全量表体数据，如果是 tree-config 则返回带层级的树结构",
+      "methods_set-sort": "手动对表格进行排序，如果 update=true 则同时更新数据，否则只改变排序状态"
     },
     "colgroup": {
       "slots_header": "カスタムヘッダーコンテンツテンプレート",
@@ -4021,7 +4028,14 @@
       "props_custom-config_drawer-options_resize": "是否允许调整抽屉大小",
       "props_custom-config_drawer-options_mask-closable": "是否允许点击遮罩层关闭窗口",
       "props_custom-config_drawer-options_esc-closable": "是否允许通过 Esc 按键关闭窗口",
-      "events_enter-append-row": "只对 isEnter=true 有效，当通过回车自动新增行之后触会发该事件"
+      "events_enter-append-row": "只对 isEnter=true 有效，当通过回车自动新增行之后触会发该事件",
+      "props_row-drag-config_is-to-child-drag": "只对 tree-config 启用有效，是否允许拖拽成目标节点的子级",
+      "props_column-drag-config_is-cross-drag": "用于分组表头，是否跨列拖拽，启用后允许拖拽到其他的列，除自身列之外",
+      "props_column-drag-config_is-to-child-drag": "是否允许拖拽成目标列的子级",
+      "props_column-drag-config_is-self-to-child-drag": "用于分组表头，是否允许将自己拖拽到子孙列中",
+      "methods_get-full-columns": "获取表格的全量列",
+      "methods_get-full-data": "获取完整的全量表体数据，如果是 tree-config 则返回带层级的树结构",
+      "methods_set-sort": "手动对表格进行排序，如果 update=true 则同时更新数据，否则只改变排序状态"
     },
     "toolbar": {
       "props_class-name": "ツールバーにクラス名を付けます",

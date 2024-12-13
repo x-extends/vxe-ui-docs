@@ -2596,7 +2596,14 @@
       "props_custom-config_drawer-options_resize": "Whether to allow drawer resizing",
       "props_custom-config_drawer-options_mask-closable": "Whether to allow clicking on the mask layer to close the window",
       "props_custom-config_drawer-options_esc-closable": "Whether to allow the window to be closed via the Esc key",
-      "events_enter-append-row": "Only valid for isEnter=true. This event will be triggered when a line is automatically added by carriage return."
+      "events_enter-append-row": "Only valid for isEnter=true. This event will be triggered when a line is automatically added by carriage return.",
+      "props_row-drag-config_is-to-child-drag": "Only valid when tree-config is enabled, whether to allow dragging into children of the target node",
+      "props_column-drag-config_is-cross-drag": "Used for grouping table headers. Whether to drag across columns. When enabled, dragging to other columns is allowed, except for the own column.",
+      "props_column-drag-config_is-to-child-drag": "Whether to allow dragging to become a child of the target column",
+      "props_column-drag-config_is-self-to-child-drag": "Used for grouping table headers, whether to allow dragging yourself into the descendants column",
+      "methods_get-full-columns": "Get all columns of the table",
+      "methods_get-full-data": "Get the complete full body data, if it is tree-config, return the hierarchical tree structure",
+      "methods_set-sort": "Manually sort the table. If update=true, the data will be updated at the same time. Otherwise, only the sorting status will be changed."
     },
     "colgroup": {
       "slots_header": "Custom header content template",
@@ -4021,7 +4028,14 @@
       "props_custom-config_drawer-options_resize": "Whether to allow drawer resizing",
       "props_custom-config_drawer-options_mask-closable": "Whether to allow clicking on the mask layer to close the window",
       "props_custom-config_drawer-options_esc-closable": "Whether to allow the window to be closed via the Esc key",
-      "events_enter-append-row": "Only valid for isEnter=true. This event will be triggered when a line is automatically added by carriage return."
+      "events_enter-append-row": "Only valid for isEnter=true. This event will be triggered when a line is automatically added by carriage return.",
+      "props_row-drag-config_is-to-child-drag": "Only valid when tree-config is enabled, whether to allow dragging into children of the target node",
+      "props_column-drag-config_is-cross-drag": "Used for grouping table headers. Whether to drag across columns. When enabled, dragging to other columns is allowed, except for the own column.",
+      "props_column-drag-config_is-to-child-drag": "Whether to allow dragging to become a child of the target column",
+      "props_column-drag-config_is-self-to-child-drag": "Used for grouping table headers, whether to allow dragging yourself into the descendants column",
+      "methods_get-full-columns": "Get all columns of the table",
+      "methods_get-full-data": "Get the complete full body data, if it is tree-config, return the hierarchical tree structure",
+      "methods_set-sort": "Manually sort the table. If update=true, the data will be updated at the same time. Otherwise, only the sorting status will be changed."
     },
     "toolbar": {
       "props_class-name": "Give the toolbar className",
