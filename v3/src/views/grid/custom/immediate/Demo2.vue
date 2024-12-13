@@ -28,6 +28,7 @@ export default Vue.extend({
         resizable: true
       },
       customConfig: {
+        mode: 'modal',
         immediate: true
       },
       columns: [
