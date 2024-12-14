@@ -11,6 +11,10 @@
       "searchResultHtml": "找不到與 “<span class=\"keyword-lighten\">{0}</span>” 相關的結果！",
       "searchLoadingText": "正在搜索，請稍等！",
       "menu": {
+        "demoTitle": "功能演示",
+        "demoList": "普通列表",
+        "demoTree": "层级列表",
+        "demoCrud": "增删改查",
         "guide": "開發指南",
         "globalInstall": "全域安裝 - 全量導入",
         "lazyUseGlobal": "全域安裝 - 按需導入",

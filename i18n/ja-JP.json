@@ -11,6 +11,10 @@
       "searchResultHtml": "「<span class=\"keyword-lighten\">{0}</span>」に一致する結果はありません!",
       "searchLoadingText": "検索中です、お待ちください！",
       "menu": {
+        "demoTitle": "功能演示",
+        "demoList": "普通列表",
+        "demoTree": "层级列表",
+        "demoCrud": "增删改查",
         "guide": "開発ガイド",
         "globalInstall": "グローバル インストール - 完全インポート",
         "lazyUseGlobal": "グローバル インストール - オンデマンドでインポート",

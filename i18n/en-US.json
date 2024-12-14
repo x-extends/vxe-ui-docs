@@ -11,6 +11,10 @@
       "searchResultHtml": "No results found for \"<span class=\"keyword-lighten\">{0}</span>\"!",
       "searchLoadingText": "Searching, please wait!",
       "menu": {
+        "demoTitle": "Demo",
+        "demoList": "List",
+        "demoTree": "Tree",
+        "demoCrud": "CRUD",
         "guide": "Development Guide",
         "globalInstall": "Global installation - full import",
         "lazyUseGlobal": "Global installation - import on demand",

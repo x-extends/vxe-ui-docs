@@ -11,6 +11,10 @@
       "searchResultHtml": "По запросу \"<span class=\"keyword-lighten\">{0}</span>\" результатов не найдено!",
       "searchLoadingText": "Ищем, пожалуйста, подождите!",
       "menu": {
+        "demoTitle": "功能演示",
+        "demoList": "普通列表",
+        "demoTree": "层级列表",
+        "demoCrud": "增删改查",
         "guide": "Руководство по разработке",
         "globalInstall": "Глобальная установка – полный импорт",
         "lazyUseGlobal": "Глобальная установка – импорт по требованию",
