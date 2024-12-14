@@ -13,7 +13,7 @@
       "menu": {
         "demoTitle": "功能演示",
         "demoList": "普通列表 - 演示",
-        "demoDynamic": "实时更新 - 演示",
+        "demoRealTime": "实时更新 - 演示",
         "demoTree": "层级列表 - 演示",
         "demoCrud": "增删改查 - 演示",
         "demoClip": "复制粘贴 - 演示",

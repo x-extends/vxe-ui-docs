@@ -13,7 +13,7 @@
       "menu": {
         "demoTitle": "Demo",
         "demoList": "List - Demonstration",
-        "demoDynamic": "Real-time update - Demonstration",
+        "demoRealTime": "Real-time update - Demonstration",
         "demoTree": "Tree - Demonstration",
         "demoCrud": "CRUD - Demonstration",
         "demoClip": "Copy and paste - Demonstration",
