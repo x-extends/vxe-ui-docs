@@ -155,6 +155,9 @@
   "plugins": {
     "base": {
       "nav": {
+        "demoTitle": "Demo",
+        "demoClip": "Copy and paste - Demonstration",
+        "demoChart": "Chart rendering - Demonstration",
         "guide": "Development Guide",
         "install": "Install and use",
         "table": "Table basic table",

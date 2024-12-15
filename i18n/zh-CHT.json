@@ -155,6 +155,9 @@
   "plugins": {
     "base": {
       "nav": {
+        "demoTitle": "功能演示",
+        "demoClip": "复制粘贴 - 演示",
+        "demoChart": "图表渲染 - 演示",
         "guide": "開發指南",
         "install": "安裝使用",
         "table": "Table 基礎表格",
