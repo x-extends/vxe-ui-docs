@@ -156,6 +156,10 @@
     "base": {
       "nav": {
         "demoTitle": "Demo",
+        "demoList": "List - Demonstration",
+        "demoRealTime": "Real-time update - Demonstration",
+        "demoTree": "Tree - Demonstration",
+        "demoCrud": "CRUD - Demonstration",
         "demoClip": "Copy and paste - Demonstration",
         "demoChart": "Chart rendering - Demonstration",
         "guide": "Development Guide",

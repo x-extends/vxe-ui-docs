@@ -1531,7 +1531,8 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image' } } },
           { title: '设置宽高', routerLink: { name: 'ComponentImageBase' } },
-          { title: '多张图片', routerLink: { name: 'ComponentImageMultiple' } },
+          { title: '圆形图片', routerLink: { name: 'ComponentImageCircle' } },
+          { title: '预览多张图片', routerLink: { name: 'ComponentImageMultiple' } },
           { title: '懒加载', routerLink: { name: 'ComponentImageLazy' } },
           { title: '预览', routerLink: { name: 'ComponentImageShowPreview' } },
           { title: '点击遮罩层关闭', routerLink: { name: 'ComponentImageMaskClosable' } },
@@ -2150,6 +2151,7 @@ export const navConfigList: NavVO[] = [
               { title: '只读状态', routerLink: { name: 'ComponentUploadImageReadonly' } },
               { title: '禁用状态', routerLink: { name: 'ComponentUploadImageDisabled' } },
               { title: '自定义图片宽高', routerLink: { name: 'ComponentUploadImageImgStyle' } },
+              { title: '圆形图片', routerLink: { name: 'ComponentUploadImageCircle' } },
               { title: '下载文件', routerLink: { name: 'ComponentUploadImageDownloadMethod' } },
               { title: '上传方法', routerLink: { name: 'ComponentUploadImageUploadMethod' } },
               { title: '阻止下载', routerLink: { name: 'ComponentUploadImageBeforeDownloadMethod' } },

@@ -4544,6 +4544,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/image/base/CodeExample.vue')
           },
           {
+            path: 'circle',
+            name: 'ComponentImageCircle',
+            component: () => import('@/views/image/circle/CodeExample.vue')
+          },
+          {
             path: 'multiple',
             name: 'ComponentImageMultiple',
             component: () => import('@/views/image/multiple/CodeExample.vue')
@@ -7721,6 +7726,11 @@ const routes: Array<RouteConfig> = [
                 path: 'imgStyle',
                 name: 'ComponentUploadImageImgStyle',
                 component: () => import('@/views/upload/image/imgStyle/CodeExample.vue')
+              },
+              {
+                path: 'circle',
+                name: 'ComponentUploadImageCircle',
+                component: () => import('@/views/upload/image/circle/CodeExample.vue')
               },
               {
                 path: 'readonly',
