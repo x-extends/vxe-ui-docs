@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-pulldown v-model="showPull">
+    <vxe-pulldown v-model="showPull" @visible-change="visibleChangeEvent">
       <template #default>
         <vxe-button mode="text" icon="vxe-icon-arrow-down" @click="toggleEvent">下拉菜单</vxe-button>
       </template>
@@ -19,6 +19,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { VxePulldownEvents } from 'vxe-pc-ui'
 
 const showPull = ref(false)
 
@@ -29,6 +30,10 @@ const toggleEvent = () => {
 const clickEvent = (num: number) => {
   showPull.value = false
   console.log(num)
+}
+
+const visibleChangeEvent: VxePulldownEvents.VisibleChange = ({ visible }) => {
+  console.log('展开/隐藏', visible)
 }
 </script>
 

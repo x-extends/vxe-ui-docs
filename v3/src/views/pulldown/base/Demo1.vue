@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-pulldown v-model="showPull">
+    <vxe-pulldown v-model="showPull" @visible-change="visibleChangeEvent">
       <template #default>
         <vxe-button mode="text" icon="vxe-icon-arrow-down" @click="toggleEvent">下拉菜单</vxe-button>
       </template>
@@ -33,6 +33,9 @@ export default Vue.extend({
     clickEvent  (num: number) {
       this.showPull = false
       console.log(num)
+    },
+    visibleChangeEvent ({ visible }) {
+      console.log('展开/隐藏', visible)
     }
   }
 })

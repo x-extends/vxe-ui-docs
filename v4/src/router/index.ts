@@ -7733,6 +7733,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/upload/file/moreBtn/CodeExample.vue')
               },
               {
+                path: 'dragSort',
+                name: 'ComponentUploadFileDragSort',
+                component: () => import('@/views/upload/file/dragSort/CodeExample.vue')
+              },
+              {
                 path: 'showError',
                 name: 'ComponentUploadFileShowError',
                 component: () => import('@/views/upload/file/showError/CodeExample.vue')
@@ -7872,6 +7877,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'moreBtn',
                 name: 'ComponentUploadImageMoreBtn',
                 component: () => import('@/views/upload/image/moreBtn/CodeExample.vue')
+              },
+              {
+                path: 'dragSort',
+                name: 'ComponentUploadImageDragSort',
+                component: () => import('@/views/upload/image/dragSort/CodeExample.vue')
               },
               {
                 path: 'showError',
