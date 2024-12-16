@@ -420,6 +420,11 @@ const tableRouteConfig: RouteConfig = {
           component: () => import('@/views/table/rowDrag/showGuidesStatus/CodeExample.vue')
         },
         {
+          path: 'trigger',
+          name: 'ComponentTableRowDragTrigger',
+          component: () => import('@/views/table/rowDrag/trigger/CodeExample.vue')
+        },
+        {
           path: 'tree',
           component: RouteLayout,
           children: [
@@ -526,6 +531,11 @@ const tableRouteConfig: RouteConfig = {
           path: 'group',
           name: 'ComponentTableColDragGroup',
           component: () => import('@/views/table/colDrag/group/CodeExample.vue')
+        },
+        {
+          path: 'trigger',
+          name: 'ComponentTableColDragTrigger',
+          component: () => import('@/views/table/colDrag/trigger/CodeExample.vue')
         },
         {
           path: 'events',
@@ -2194,6 +2204,11 @@ const gridRouteConfig: RouteConfig = {
           component: () => import('@/views/grid/colDrag/toChildDrag/CodeExample.vue')
         },
         {
+          path: 'trigger',
+          name: 'ComponentGridColDragTrigger',
+          component: () => import('@/views/grid/colDrag/trigger/CodeExample.vue')
+        },
+        {
           path: 'events',
           name: 'ComponentGridColDragEvents',
           component: () => import('@/views/grid/colDrag/events/CodeExample.vue')
@@ -2259,6 +2274,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'showGuidesStatus',
           name: 'ComponentGridRowDragShowGuidesStatus',
           component: () => import('@/views/grid/rowDrag/showGuidesStatus/CodeExample.vue')
+        },
+        {
+          path: 'trigger',
+          name: 'ComponentGridRowDragTrigger',
+          component: () => import('@/views/grid/rowDrag/trigger/CodeExample.vue')
         },
         {
           path: 'tree',
