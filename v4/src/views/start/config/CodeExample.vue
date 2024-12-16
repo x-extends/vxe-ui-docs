@@ -311,7 +311,7 @@
                 showButtonIcon: true,
                 showPreview: true,
                 dragToUpload: true,
-                imageStyle: {}
+                imageConfig: {}
               },
               watermark: {
                 rotate: -30,
