@@ -1112,7 +1112,9 @@
       "props_exponential": "科学的表記法の入力を許可するかどうか",
       "props_controls": "コントロールボタンを表示するかどうか",
       "events_input": "このメソッドは入力時にトリガーされます",
-      "events_change": "このイベントは、値が変更されるとトリガーされます"
+      "events_change": "このイベントは、値が変更されるとトリガーされます",
+      "props_show-currency": "只对 type=amount 有效，是否显示前缀货币符号",
+      "props_currency-symbol": "只对 type=amount 有效，自定义货币符号"
     },
     "optgroup": {
       "props_visible": "表示するかどうか",
@@ -1206,7 +1208,9 @@
       "props_placement": "ドロップダウンパネルの表示方向を修正",
       "props_transfer": "ポップアップ コンテナーを本文に挿入するかどうか (テーブルに埋め込まれている場合、またはポップアップ ウィンドウでブロックされている場合は true に設定する必要があります)",
       "events_option-click": "オプションに使用され、ドロップダウン オプションがクリックされたときにこのイベントがトリガーされます。",
-      "events_hide-panel": "このイベントは、ドロップダウン パネルが非表示になったときにトリガーされます。"
+      "events_hide-panel": "このイベントは、ドロップダウン パネルが非表示になったときにトリガーされます。",
+      "events_show-panel": "在下拉面板被点击关闭时触发该事件",
+      "events_visible-change": "下拉面板显示或隐藏时会触发该事件"
     },
     "radio": {
       "props_content": "コンテンツ (国際化の有効化をサポート)",
@@ -1234,6 +1238,11 @@
       "props_option-props": "オプション属性パラメータの設定",
       "props_model-value": "v-model バインディング値",
       "props_size": "サイズ"
+    },
+    "rate": {
+      "props_model-value": "v-model 绑定值",
+      "props_disabled": "是否禁用",
+      "props_size": "尺寸大小"
     },
     "result": {
       "props_image-url": "图片链接",
@@ -1373,6 +1382,20 @@
       "events_tab-load": "変更イベントは、タブが読み込まれるときにトリガーされます。",
       "methods_prev": "前のタブに手動で切り替える",
       "methods_next": "手動で次のタブに切り替える"
+    },
+    "table-select": {
+      "props_model-value": "v-model 绑定值",
+      "props_size": "尺寸大小",
+      "props_multiple": "是否多选",
+      "props_clearable": "当有值时，是否在右侧显示清除按钮",
+      "props_placeholder": "当值为空时，显示的占位符",
+      "props_class-name": "附加 className",
+      "props_popup-class-name": "给下拉容器附加 className",
+      "props_disabled": "是否禁用",
+      "props_prefix-icon": "前缀图标",
+      "props_placement": "固定显示下拉面板的方向",
+      "props_options": "下拉选项列表",
+      "props_option-props": "下拉选项属性参数配置"
     },
     "tag": {
       "props_size": "サイズ",
@@ -1528,7 +1551,14 @@
       "methods_is-checked-by-radio-node": "用于 show-radio，判断指定节点是否为选中状态",
       "methods_is-checked-by-checkbox-node-id": "用于 show-checkbox，根据节点主键判断指定节点是否为选中状态",
       "methods_is-checked-by-checkbox-node": "用于 show-checkbox，判断指定节点是否为选中状态",
-      "methods_is-indeterminate-by-checkbox-node": "用于 show-checkbox，判断指定节点是否为半选状态"
+      "methods_is-indeterminate-by-checkbox-node": "用于 show-checkbox，判断指定节点是否为半选状态",
+      "methods_get-radio-node-id": "只对 show-radio 有效，获取单选框的节点对应的键值",
+      "methods_get-radio-node": "只对 show-radio 有效，获取单选框的节点",
+      "methods_get-checkbox-node-ids": "只对 show-checkbox 有效，获取复选框的节点对应的键值",
+      "methods_get-checkbox-nodes": "只对 show-checkbox 有效，获取复选框的节点",
+      "methods_set-radio-node-id": "只对 show-radio 有效，通过键值设置节点是否被选中",
+      "methods_get-expand-node-ids": "获取已展开的节点对应的键值",
+      "methods_get-expand-nodes": "获取已展开的节点"
     },
     "tree-select": {
       "props_model-value": "v-model バインディング値",

@@ -1112,7 +1112,9 @@
       "props_exponential": "是否允許輸入科學計數",
       "props_controls": "是否顯示控制按鈕",
       "events_input": "在輸入時觸發該方法",
-      "events_change": "在值改變時觸發該事件"
+      "events_change": "在值改變時觸發該事件",
+      "props_show-currency": "只对 type=amount 有效，是否显示前缀货币符号",
+      "props_currency-symbol": "只对 type=amount 有效，自定义货币符号"
     },
     "optgroup": {
       "props_visible": "是否顯示",
@@ -1206,7 +1208,9 @@
       "props_placement": "固定顯示下拉麵板的方向",
       "props_transfer": "是否將彈框容器插入於 body 內（對於嵌入到表格或彈窗中被遮擋時需要設為 true）",
       "events_option-click": "用於 options，在下拉選項被點擊時觸發該事件",
-      "events_hide-panel": "在下拉麵板被觸發隱藏時觸發該事件"
+      "events_hide-panel": "在下拉麵板被觸發隱藏時觸發該事件",
+      "events_show-panel": "在下拉面板被点击关闭时触发该事件",
+      "events_visible-change": "下拉面板显示或隐藏时会触发该事件"
     },
     "radio": {
       "props_content": "內容（支援開啟國際化）",
@@ -1234,6 +1238,11 @@
       "props_option-props": "選項屬性參數配置",
       "props_model-value": "v-model 綁定值",
       "props_size": "尺寸"
+    },
+    "rate": {
+      "props_model-value": "v-model 绑定值",
+      "props_disabled": "是否禁用",
+      "props_size": "尺寸大小"
     },
     "result": {
       "props_image-url": "图片链接",
@@ -1373,6 +1382,20 @@
       "events_tab-load": "當頁籤被載入時會觸發改事件",
       "methods_prev": "手動切換上一個頁籤",
       "methods_next": "手動切換下一個頁籤"
+    },
+    "table-select": {
+      "props_model-value": "v-model 绑定值",
+      "props_size": "尺寸大小",
+      "props_multiple": "是否多选",
+      "props_clearable": "当有值时，是否在右侧显示清除按钮",
+      "props_placeholder": "当值为空时，显示的占位符",
+      "props_class-name": "附加 className",
+      "props_popup-class-name": "给下拉容器附加 className",
+      "props_disabled": "是否禁用",
+      "props_prefix-icon": "前缀图标",
+      "props_placement": "固定显示下拉面板的方向",
+      "props_options": "下拉选项列表",
+      "props_option-props": "下拉选项属性参数配置"
     },
     "tag": {
       "props_size": "尺寸",
@@ -1528,7 +1551,14 @@
       "methods_is-checked-by-radio-node": "用于 show-radio，判断指定节点是否为选中状态",
       "methods_is-checked-by-checkbox-node-id": "用于 show-checkbox，根据节点主键判断指定节点是否为选中状态",
       "methods_is-checked-by-checkbox-node": "用于 show-checkbox，判断指定节点是否为选中状态",
-      "methods_is-indeterminate-by-checkbox-node": "用于 show-checkbox，判断指定节点是否为半选状态"
+      "methods_is-indeterminate-by-checkbox-node": "用于 show-checkbox，判断指定节点是否为半选状态",
+      "methods_get-radio-node-id": "只对 show-radio 有效，获取单选框的节点对应的键值",
+      "methods_get-radio-node": "只对 show-radio 有效，获取单选框的节点",
+      "methods_get-checkbox-node-ids": "只对 show-checkbox 有效，获取复选框的节点对应的键值",
+      "methods_get-checkbox-nodes": "只对 show-checkbox 有效，获取复选框的节点",
+      "methods_set-radio-node-id": "只对 show-radio 有效，通过键值设置节点是否被选中",
+      "methods_get-expand-node-ids": "获取已展开的节点对应的键值",
+      "methods_get-expand-nodes": "获取已展开的节点"
     },
     "tree-select": {
       "props_model-value": "v-model 綁定值",
