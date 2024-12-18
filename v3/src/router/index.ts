@@ -5148,6 +5148,11 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/number-input/amount/digits/CodeExample.vue')
               },
               {
+                path: 'showCurrency',
+                name: 'ComponentNumberInputAmountShowCurrency',
+                component: () => import('@/views/number-input/amount/showCurrency/CodeExample.vue')
+              },
+              {
                 path: 'step',
                 name: 'ComponentNumberInputAmountStep',
                 component: () => import('@/views/number-input/amount/step/CodeExample.vue')

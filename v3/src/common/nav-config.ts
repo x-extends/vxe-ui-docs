@@ -1958,6 +1958,7 @@ export const navConfigList: NavVO[] = [
               { title: '可清除', routerLink: { name: 'ComponentNumberInputAmountClearable' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputAmountStep' } },
               { title: '小数位数', routerLink: { name: 'ComponentNumberInputAmountDigits' } },
+              { title: '显示货币符号', routerLink: { name: 'ComponentNumberInputAmountShowCurrency' } },
               { title: '控制按钮', routerLink: { name: 'ComponentNumberInputAmountControls' } }
             ]
           }
