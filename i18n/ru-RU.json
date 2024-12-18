@@ -514,7 +514,9 @@
       "slots_right": "自定义右侧模板",
       "slots_aside": "抽屉侧边栏的模板",
       "slots_leftfoot": "抽屉底部左侧的模板",
-      "slots_rightfoot": "抽屉底部右侧的模板"
+      "slots_rightfoot": "抽屉底部右侧的模板",
+      "props_resize": "是否允许抽屉边缘拖动调整抽屉大小",
+      "events_resize": "抽屉调整大小时会触发该事件"
     },
     "empty": {
       "props_image-url": "图片链接",
@@ -621,7 +623,13 @@
       "props_border": "显示边框",
       "props_title-background": "所有项显示标题背景",
       "props_items_vertical-align": "垂直的对齐方式",
-      "props_items_title-background": "显示标题背景"
+      "props_items_title-background": "显示标题背景",
+      "props_valid-config_theme": "主题色，支持普通样式和高亮样式",
+      "props_collapse-config": "可折叠配置项",
+      "props_collapse-config_fold-icon": "展开图标",
+      "props_collapse-config_unfold-icon": "收起图标",
+      "props_collapse-config_fold-button-text": "展开文字",
+      "props_collapse-config_unfold-button-text": "收起文字"
     },
     "form-design": {
       "props_size": "размер",
@@ -793,7 +801,9 @@
       "props_show-preview": "Нажмите на изображение, чтобы открыть предварительный просмотр",
       "props_show-print-button": "Показать кнопку печати",
       "props_show-download-button": "Показать кнопку загрузки",
-      "props_size": "размер"
+      "props_size": "размер",
+      "props_circle": "圆形",
+      "props_mask-closable": "是否允许点击遮罩层关闭图片预览"
     },
     "image-group": {
       "props_url-list": "Связанный список",
