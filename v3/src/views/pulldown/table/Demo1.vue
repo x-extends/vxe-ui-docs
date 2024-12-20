@@ -56,7 +56,7 @@ export default Vue.extend({
       border: true,
       autoResize: true,
       loading: false,
-      height: 'auto',
+      height: '100%',
       rowConfig: {
         isHover: true
       },

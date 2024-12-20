@@ -52,7 +52,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
   autoResize: true,
   loading: false,
-  height: 'auto',
+  height: '100%',
   rowConfig: {
     isHover: true
   },
