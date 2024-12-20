@@ -5,9 +5,7 @@
       <vxe-button @click="loadData(500)">加载500条</vxe-button>
       <vxe-button @click="loadData(10000)">加载1w条</vxe-button>
       <vxe-button @click="loadData(100000)">加载10w条</vxe-button>
-      <vxe-button @click="loadData(300000)">加载30w条</vxe-button>
-      <vxe-button @click="loadData(500000)">加载50w条</vxe-button>
-      <vxe-button @click="loadData(600000)">加载60w条</vxe-button>
+      <vxe-button @click="loadData(250000)">加载25w条</vxe-button>
     </p>
 
     <vxe-list class="my-table-list" height="600" :data="list" :scroll-y="{enabled: true, gt: 0, sItem: '.my-tr'}">
@@ -72,9 +70,11 @@ const getList = (size: number): Promise<ItemVO[]> => {
 
 export default Vue.extend({
   data () {
+    const list: ItemVO[] = []
+
     return {
       loading: false,
-      list: [] as ItemVO[]
+      list
     }
   },
   methods: {

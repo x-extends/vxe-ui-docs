@@ -1,14 +1,9 @@
 <template>
   <div>
-    <p>
-      <vxe-button @click="loadData(10)">加载10条</vxe-button>
-      <vxe-button @click="loadData(500)">加载500条</vxe-button>
-      <vxe-button @click="loadData(10000)">加载1w条</vxe-button>
-      <vxe-button @click="loadData(100000)">加载10w条</vxe-button>
-      <vxe-button @click="loadData(250000)">加载25w条</vxe-button>
-    </p>
-
-    <vxe-list height="600" class="my-list" :loading="loading" :data="list" :scroll-y="{enabled: true}">
+    <vxe-button @click="height = 200">设置200</vxe-button>
+    <vxe-button @click="height = 400">设置400</vxe-button>
+    <vxe-button @click="height = 600">设置600</vxe-button>
+    <vxe-list :height="height" class="my-list" :loading="loading" :data="list" :scroll-y="{enabled: true}" auto-resize>
       <template #default="{ items }">
         <div class="my-list-item" v-for="(item, index) in items" :key="index">
           <span>自定义内容 {{ item.label }}</span>
@@ -19,8 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, nextTick } from 'vue'
-import { VxeUI } from 'vxe-pc-ui'
+import { ref, onMounted } from 'vue'
 
 interface ItemVO {
   id: number
@@ -29,6 +23,7 @@ interface ItemVO {
 
 const loading = ref(false)
 const list = ref<ItemVO[]>([])
+const height = ref(200)
 
 // 模拟后台
 const mockList: ItemVO[] = []
@@ -52,16 +47,10 @@ const loadData = async (size: number) => {
   loading.value = true
   list.value = await getList(size)
   loading.value = false
-  const startTime = Date.now()
-  await nextTick()
-  await VxeUI.modal.message({
-    content: `渲染 ${size} 行，用时 ${Date.now() - startTime}毫秒`,
-    status: 'info'
-  })
 }
 
-onMounted(async () => {
-  loadData(200)
+onMounted(() => {
+  loadData(500)
 })
 </script>
 

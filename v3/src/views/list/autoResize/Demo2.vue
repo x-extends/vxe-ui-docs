@@ -1,26 +1,22 @@
 <template>
   <div>
-    <p>
-      <vxe-button @click="loadData(10)">加载10条</vxe-button>
-      <vxe-button @click="loadData(500)">加载500条</vxe-button>
-      <vxe-button @click="loadData(10000)">加载1w条</vxe-button>
-      <vxe-button @click="loadData(100000)">加载10w条</vxe-button>
-      <vxe-button @click="loadData(250000)">加载25w条</vxe-button>
-    </p>
-
-    <vxe-list height="600" class="my-list" :loading="loading" :data="list" :scroll-y="{enabled: true}">
-      <template #default="{ items }">
-        <div class="my-list-item" v-for="(item, index) in items" :key="index">
-          <span>自定义内容 {{ item.label }}</span>
-        </div>
-      </template>
-    </vxe-list>
+    <vxe-button @click="height = 200">设置200</vxe-button>
+    <vxe-button @click="height = 400">设置400</vxe-button>
+    <vxe-button @click="height = 600">设置600</vxe-button>
+    <div class="list-wrapper" :class="`h-${height}`">
+      <vxe-list height="100%" class="my-list" :loading="loading" :data="list" :scroll-y="{enabled: true}" auto-resize>
+        <template #default="{ items }">
+          <div class="my-list-item" v-for="(item, index) in items" :key="index">
+            <span>自定义内容 {{ item.label }}</span>
+          </div>
+        </template>
+      </vxe-list>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeUI } from 'vxe-pc-ui'
 
 interface ItemVO {
   id: number
@@ -51,6 +47,7 @@ export default Vue.extend({
 
     return {
       loading: false,
+      height: 200,
       list
     }
   },
@@ -59,12 +56,6 @@ export default Vue.extend({
       this.loading = true
       this.list = await getList(size)
       this.loading = false
-      const startTime = Date.now()
-      await this.$nextTick()
-      await VxeUI.modal.message({
-        content: `渲染 ${size} 行，用时 ${Date.now() - startTime}毫秒`,
-        status: 'info'
-      })
     }
 
   },
@@ -75,6 +66,19 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+.list-wrapper {
+  height: 300px;
+  overflow: hidden;
+  &.h-200 {
+    height: 200px;
+  }
+  &.h-400 {
+    height: 400px;
+  }
+  &.h-600 {
+    height: 600px;
+  }
+}
 .my-list {
   border: 1px solid #e8eaec;
 }

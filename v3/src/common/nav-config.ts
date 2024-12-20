@@ -1492,8 +1492,9 @@ export const navConfigList: NavVO[] = [
         title: 'List 虚拟列表',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'list' } } },
-          { title: '实现大量数据列表', routerLink: { name: 'ComponentListBase' } },
-          { title: '实现大量数据表格', routerLink: { name: 'ComponentListTable' } }
+          { title: '纵向虚拟列表', routerLink: { name: 'ComponentListBase' } },
+          { title: '响应式高度', routerLink: { name: 'ComponentListAutoResize' } },
+          { title: '实现轻量级虚拟表格', routerLink: { name: 'ComponentListTable' } }
         ]
       }
     ]

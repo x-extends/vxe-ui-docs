@@ -5890,6 +5890,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/list/base/CodeExample.vue')
           },
           {
+            path: 'autoResize',
+            name: 'ComponentListAutoResize',
+            component: () => import('@/views/list/autoResize/CodeExample.vue')
+          },
+          {
             path: 'table',
             name: 'ComponentListTable',
             component: () => import('@/views/list/table/CodeExample.vue')
