@@ -136,6 +136,11 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/base/maxHeight/CodeExample.vue')
         },
         {
+          path: 'columnHeight',
+          name: 'ComponentTableBaseColumnHeight',
+          component: () => import('@/views/table/base/columnHeight/CodeExample.vue')
+        },
+        {
           path: 'rowHeight',
           name: 'ComponentTableBaseRowHeight',
           component: () => import('@/views/table/base/rowHeight/CodeExample.vue')
@@ -1948,6 +1953,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'maxHeight',
           name: 'ComponentGridBaseMaxHeight',
           component: () => import('@/views/grid/base/maxHeight/CodeExample.vue')
+        },
+        {
+          path: 'columnHeight',
+          name: 'ComponentGridBaseColumnHeight',
+          component: () => import('@/views/grid/base/columnHeight/CodeExample.vue')
         },
         {
           path: 'rowHeight',
