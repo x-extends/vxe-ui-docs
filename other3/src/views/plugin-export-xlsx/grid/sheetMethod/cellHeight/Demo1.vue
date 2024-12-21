@@ -26,7 +26,7 @@ export default Vue.extend({
       exportConfig: {
         async sheetMethod (params) {
           const { worksheet } = params
-          worksheet.eachRow((excelRow, rowIndex) => {
+          worksheet.eachRow((excelRow) => {
             // 设置行高
             excelRow.height = 60
           })
