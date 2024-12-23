@@ -3,16 +3,16 @@
     <div class="header-left">
       <a class="logo" :href="siteBaseUrl">
         <img src="/logo.png">
-        <span class="title">{{ appStore.pageTitle }}</span>
+        <span class="title">{{ pageTitle }}</span>
       </a>
-      <a :href='`https://gitee.com/x-extends/${appStore.packName}/stargazers`'>
-        <img :src='`https://gitee.com/x-extends/${appStore.packName}/badge/star.svg?theme=gvp`' alt='star'>
+      <a :href='`https://gitee.com/x-extends/${packName}/stargazers`'>
+        <img :src='`https://gitee.com/x-extends/${packName}/badge/star.svg?theme=gvp`' alt='star'>
       </a>
-      <a :href="`http://npm-stat.com/charts.html?package=${appStore.packName}`">
-        <img :src="`https://img.shields.io/npm/dm/${appStore.packName}.svg`">
+      <a :href="`http://npm-stat.com/charts.html?package=${packName}`">
+        <img :src="`https://img.shields.io/npm/dm/${packName}.svg`">
       </a>
-      <a :href="`https://github.com/x-extends/${appStore.packName}/stargazers`">
-        <img :src="`https://img.shields.io/github/stars/x-extends/${appStore.packName}.svg`">
+      <a :href="`https://github.com/x-extends/${packName}/stargazers`">
+        <img :src="`https://img.shields.io/github/stars/x-extends/${packName}.svg`">
       </a>
     </div>
     <div class="header-middle"></div>
@@ -20,7 +20,7 @@
       <vxe-pulldown v-model="showSystemMenu" show-popup-shadow>
         <vxe-button class="system-menu-btn" mode="text" @click="toggleSystemMenuEvent">
           <vxe-icon class="system-menu-btn-icon" name="arrow-down"></vxe-icon>
-          <span :class="['system-menu-btn-text', {'unread': appStore.showTopMenuMsgFlag}]">{{ $t('app.header.moreProducts') }}</span>
+          <span :class="['system-menu-btn-text', {'unread': showTopMenuMsgFlag}]">{{ $t('app.header.moreProducts') }}</span>
         </vxe-button>
 
         <template #dropdown>
@@ -62,8 +62,8 @@
         </template>
       </vxe-pulldown>
 
-      <a v-if="isPluginDocs" :class="['plugin-shopping', {'unread': appStore.showAuthMsgFlag}]" :href="currBuyPluginBUrl" target="_blank" @click="openPluginEvent">{{ $t('app.header.buyPlugin') }}</a>
-      <a v-else :class="['plugin-shopping', {'unread': appStore.showAuthMsgFlag}]" :href="currBuyPluginBUrl" target="_blank" @click="openPluginEvent">{{ $t('app.header.pluginStore') }}</a>
+      <a v-if="isPluginDocs" :class="['plugin-shopping', {'unread': showAuthMsgFlag}]" :href="currBuyPluginBUrl" target="_blank" @click="openPluginEvent">{{ $t('app.header.buyPlugin') }}</a>
+      <a v-else :class="['plugin-shopping', {'unread': showAuthMsgFlag}]" :href="currBuyPluginBUrl" target="_blank" @click="openPluginEvent">{{ $t('app.header.pluginStore') }}</a>
 
       <vxe-link v-if="!isPluginDocs" class="free-donation" status="primary" :router-link="{name: 'FreeDonation'}" :content="$t('app.header.supportUs')"></vxe-link>
 
@@ -80,6 +80,10 @@ import { VxePulldownEvents } from 'vxe-pc-ui'
 import i18n from '@/i18n'
 
 const appStore = useAppStore()
+const pageTitle = computed(() => appStore.pageTitle)
+const packName = computed(() => appStore.packName)
+const showTopMenuMsgFlag = computed(() => appStore.showTopMenuMsgFlag)
+const showAuthMsgFlag = computed(() => appStore.showAuthMsgFlag)
 const isExtendDocs = computed(() => appStore.isExtendDocs)
 const isPluginDocs = computed(() => appStore.isPluginDocs)
 const siteBaseUrl = computed(() => appStore.siteBaseUrl)
