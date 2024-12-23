@@ -5210,6 +5210,32 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'color-picker',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'size',
+            name: 'ComponentColorPickerSize',
+            component: () => import('@/views/color-picker/size/CodeExample.vue')
+          },
+          {
+            path: 'clearable',
+            name: 'ComponentColorPickerClearable',
+            component: () => import('@/views/color-picker/clearable/CodeExample.vue')
+          },
+          {
+            path: 'colors',
+            name: 'ComponentColorPickerColors',
+            component: () => import('@/views/color-picker/colors/CodeExample.vue')
+          },
+          {
+            path: 'type',
+            name: 'ComponentColorPickerType',
+            component: () => import('@/views/color-picker/type/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'icon-picker',
         component: RouteLayout,
         children: [

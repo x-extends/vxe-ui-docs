@@ -1977,6 +1977,16 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: 'ColorPicker 颜色选择',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon-picker' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentColorPickerSize' } },
+          { title: '可清除', routerLink: { name: 'ComponentColorPickerClearable' } },
+          { title: '快捷颜色', routerLink: { name: 'ComponentColorPickerColors' } },
+          { title: 'RGB 色值', routerLink: { name: 'ComponentColorPickerType' } }
+        ]
+      },
+      {
         title: 'IconPicker 图标选择',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon-picker' } } },
