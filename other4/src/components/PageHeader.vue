@@ -45,6 +45,10 @@
         :close-label="$t('app.base.dark')">
       </vxe-switch>
 
+      <vxe-color-picker class="switch-primary-color" v-model="currPrimaryColor" :colors="colorList" size="mini"></vxe-color-picker>
+
+      <vxe-radio-group class="switch-size" v-model="currCompSize" :options="sizeOptions" type="button" size="mini"></vxe-radio-group>
+
       <vxe-pulldown :options="langOptions" trigger="click" show-popup-shadow @option-click="langClickEvent">
         <vxe-button class="switch-lang-btn" mode="text" icon="vxe-icon-language-switch" :content="currLangLabel"></vxe-button>
 
@@ -61,7 +65,7 @@
       <a v-if="isPluginDocs" :class="['plugin-shopping', {'unread': appStore.showAuthMsgFlag}]" :href="currBuyPluginBUrl" target="_blank" @click="openPluginEvent">{{ $t('app.header.buyPlugin') }}</a>
       <a v-else :class="['plugin-shopping', {'unread': appStore.showAuthMsgFlag}]" :href="currBuyPluginBUrl" target="_blank" @click="openPluginEvent">{{ $t('app.header.pluginStore') }}</a>
 
-      <vxe-link v-if="!isPluginDocs" class="free-donation" status="success" :router-link="{name: 'FreeDonation'}" :content="$t('app.header.supportUs')"></vxe-link>
+      <vxe-link v-if="!isPluginDocs" class="free-donation" status="primary" :router-link="{name: 'FreeDonation'}" :content="$t('app.header.supportUs')"></vxe-link>
 
       <vxe-link class="git-btn" status="error" :href="giteeUrl" icon="vxe-icon-gitee-fill" target="_blank"></vxe-link>
       <vxe-link class="git-btn" :href="githubUrl" icon="vxe-icon-github-fill" target="_blank"></vxe-link>
@@ -106,10 +110,39 @@ const currTheme = computed({
   }
 })
 
+const currPrimaryColor = computed({
+  get () {
+    return appStore.primaryColor
+  },
+  set (color) {
+    appStore.setPrimaryColor(color || '')
+  }
+})
+
+const currCompSize = computed({
+  get () {
+    return appStore.componentsSize
+  },
+  set (size) {
+    appStore.setComponentsSize(size)
+  }
+})
+
 const langOptions = ref<{
   value: string
   label: string
 }[]>([])
+
+const colorList = ref([
+  '#409eff', '#29D2F8', '#31FC49', '#3FF2B3', '#B52DFE', '#FC3243', '#FA3077', '#D1FC44', '#FEE529', '#FA9A2C'
+])
+
+const sizeOptions = ref([
+  { label: '默认', value: '' },
+  { label: '中', value: 'medium' },
+  { label: '小', value: 'small' },
+  { label: '迷你', value: 'mini' }
+])
 
 const currLanguage = computed(() => {
   return langOptions.value.find(item => item.value === appStore.language)
@@ -227,6 +260,8 @@ if (isPluginDocs.value) {
   }
   .system-menu-btn,
   .switch-theme,
+  .switch-primary-color,
+  .switch-size,
   .switch-lang-btn,
   .switch-lang,
   .switch-version,
@@ -234,7 +269,7 @@ if (isPluginDocs.value) {
   .plugin-shopping,
   .git-btn {
     flex-shrink: 0;
-    margin-right: 20px;
+    margin-right: 16px;
   }
   .git-btn {
     font-size: 1.4em;

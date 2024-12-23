@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { VxeUI, VxeGlobalI18nLocale } from 'vxe-pc-ui'
+import { VxeUI, VxeGlobalI18nLocale, VxeComponentSizeType } from 'vxe-pc-ui'
 import axios from 'axios'
 import i18n from '@/i18n'
 import XEUtils from 'xe-utils'
@@ -38,6 +38,7 @@ export default new Vuex.Store({
     isExtendDocs: process.env.VUE_APP_IS_EXTEND_DOCS === 'true',
     isPluginDocs: process.env.VUE_APP_IS_PLUGIN_DOCS === 'true',
     theme: currTheme,
+    componentsSize: '' as VxeComponentSizeType,
     docsVersion: '3',
     serveTY: new Date().getFullYear(),
     language: currLanguage,
@@ -61,8 +62,7 @@ export default new Vuex.Store({
     pluginRenderElementCDNLib: handleLibVersion('@vxe-ui/plugin-render-element'),
     pluginRenderWangEditorCDNLib: handleLibVersion('@vxe-ui/plugin-render-wangeditor'),
     pluginValidatorCDNLib: handleLibVersion('@vxe-ui/plugin-validator'),
-    pluginShortcutKeyCDNLib: handleLibVersion('@vxe-ui/plugin-shortcut-key'),
-    pluginRenderIViewCDNLib: handleLibVersion('@vxe-ui/plugin-render-iview')
+    pluginShortcutKeyCDNLib: handleLibVersion('@vxe-ui/plugin-shortcut-key')
   },
   mutations: {
     setPageLoading (state, status: boolean) {
@@ -73,6 +73,9 @@ export default new Vuex.Store({
       VxeUI.setTheme(name)
       document.documentElement.setAttribute('vxe-docs-theme', name)
       localStorage.setItem('VXE_DOCS_THEME', name)
+    },
+    setComponentsSize (state, size: VxeComponentSizeType) {
+      state.componentsSize = size
     },
     setLanguage (state, language: VxeGlobalI18nLocale) {
       if (i18nStatus[language]) {
