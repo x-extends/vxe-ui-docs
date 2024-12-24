@@ -459,6 +459,14 @@
       "props_size": "尺寸大小",
       "slots_default": "自定义内容插槽"
     },
+    "color-picker": {
+      "props_model-value": "v-model 绑定值",
+      "props_clearable": "当有值时，是否在右侧显示清除按钮",
+      "props_size": "尺寸大小",
+      "props_colors": "颜色列表",
+      "events_change": "在值发生改变时触发该事件",
+      "events_clear": "在点击右侧清除按钮时触发该事件"
+    },
     "date-picker": {
       "props_model-value": "v-model 綁定值",
       "props_type": "類型",
@@ -789,7 +797,9 @@
       "props_model-value": "v-model 綁定值",
       "props_clearable": "當有值時，是否在右側顯示清除按鈕",
       "props_size": "尺寸",
-      "props_icons": "自訂圖示列表"
+      "props_icons": "自訂圖示列表",
+      "events_change": "在值发生改变时触发该事件",
+      "events_clear": "在点击右侧清除按钮时触发该事件"
     },
     "image": {
       "props_src": "路徑",
@@ -2690,7 +2700,10 @@
       "methods_print_include-fields": "指定哪些列需要被打印",
       "methods_print_exclude-fields": "排除哪些列不被打印",
       "methods_open-print_include-fields": "默认指定勾选哪些列",
-      "methods_open-print_exclude-fields": "默认排除不勾选哪些列"
+      "methods_open-print_exclude-fields": "默认排除不勾选哪些列",
+      "methods_insert-child": "用于树结构，往指定节点插入子级临时数据，从子级的第一行新增一行或多行新数据",
+      "methods_insert-child-at": "用于树结构，往指定节点插入子级临时数据",
+      "methods_insert-child-next-at": "与 insertChildAt 行为一致，区别就是会插入指定目标子级的到下一行"
     },
     "colgroup": {
       "slots_header": "自訂表頭內容的模板",
@@ -4175,7 +4188,10 @@
       "methods_print_include-fields": "指定哪些列需要被打印",
       "methods_print_exclude-fields": "排除哪些列不被打印",
       "methods_open-print_include-fields": "默认指定勾选哪些列",
-      "methods_open-print_exclude-fields": "默认排除不勾选哪些列"
+      "methods_open-print_exclude-fields": "默认排除不勾选哪些列",
+      "methods_insert-child": "用于树结构，往指定节点插入子级临时数据，从子级的第一行新增一行或多行新数据",
+      "methods_insert-child-at": "用于树结构，往指定节点插入子级临时数据",
+      "methods_insert-child-next-at": "与 insertChildAt 行为一致，区别就是会插入指定目标子级的到下一行"
     },
     "toolbar": {
       "props_class-name": "給工具列 className",
