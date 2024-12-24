@@ -11,7 +11,7 @@
     <CodeLight path="color-picker/type/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          设置为 RGBA 类型
+          设置为 RGB 类型，当指定为 rgb 类型时，如果色值有透明度，则返回 rgba 格式，如果色值没有透明度，则返回 rgb 格式
         </vxe-tip>
       </template>
     </CodeLight>

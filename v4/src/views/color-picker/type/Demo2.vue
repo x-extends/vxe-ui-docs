@@ -1,8 +1,8 @@
 <template>
   <div>
-    <vxe-color-picker v-model="val1" type="rgba" clearable></vxe-color-picker>
-    <vxe-color-picker v-model="val2" type="rgba" clearable></vxe-color-picker>
-    <vxe-color-picker v-model="val3" type="rgba" clearable></vxe-color-picker>
+    <vxe-color-picker v-model="val1" type="rgb" clearable></vxe-color-picker>
+    <vxe-color-picker v-model="val2" type="rgb" clearable></vxe-color-picker>
+    <vxe-color-picker v-model="val3" type="rgb" clearable></vxe-color-picker>
   </div>
 </template>
 
