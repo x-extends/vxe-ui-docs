@@ -5108,6 +5108,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/number-input/integer/step/CodeExample.vue')
               },
               {
+                path: 'range',
+                name: 'ComponentNumberInputIntegerRange',
+                component: () => import('@/views/number-input/number/range/CodeExample.vue')
+              },
+              {
                 path: 'controls',
                 name: 'ComponentNumberInputIntegerControls',
                 component: () => import('@/views/number-input/integer/controls/CodeExample.vue')
@@ -5137,6 +5142,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'step',
                 name: 'ComponentNumberInputFloatStep',
                 component: () => import('@/views/number-input/float/step/CodeExample.vue')
+              },
+              {
+                path: 'range',
+                name: 'ComponentNumberInputFloatRange',
+                component: () => import('@/views/number-input/float/range/CodeExample.vue')
+              },
+              {
+                path: 'autoFill',
+                name: 'ComponentNumberInputFloatAutoFill',
+                component: () => import('@/views/number-input/float/autoFill/CodeExample.vue')
               },
               {
                 path: 'controls',
@@ -5173,6 +5188,16 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'step',
                 name: 'ComponentNumberInputAmountStep',
                 component: () => import('@/views/number-input/amount/step/CodeExample.vue')
+              },
+              {
+                path: 'range',
+                name: 'ComponentNumberInputAmountRange',
+                component: () => import('@/views/number-input/amount/range/CodeExample.vue')
+              },
+              {
+                path: 'autoFill',
+                name: 'ComponentNumberInputAmountAutoFill',
+                component: () => import('@/views/number-input/amount/autoFill/CodeExample.vue')
               },
               {
                 path: 'controls',

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <vxe-number-input v-model="val1" placeholder="最小值" type="number" min="5"></vxe-number-input>
-    <vxe-number-input v-model="val2" placeholder="最大值" type="number" max="50"></vxe-number-input>
-    <vxe-number-input v-model="val3" placeholder="最小值与最大值" type="number" min="10" max="100"></vxe-number-input>
+    <vxe-number-input v-model="val1" placeholder="最小值" min="5"></vxe-number-input>
+    <vxe-number-input v-model="val2" placeholder="最大值" max="50"></vxe-number-input>
+    <vxe-number-input v-model="val3" placeholder="最小值与最大值" min="10" max="100"></vxe-number-input>
   </div>
 </template>
 

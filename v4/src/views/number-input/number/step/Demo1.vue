@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-number-input v-model="val1" placeholder="设置步数" type="number" step="5"></vxe-number-input>
+    <vxe-number-input v-model="val1" placeholder="设置步数" step="5"></vxe-number-input>
   </div>
 </template>
 

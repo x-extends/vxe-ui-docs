@@ -1945,6 +1945,7 @@ export const navConfigList: NavVO[] = [
               { title: '基础', routerLink: { name: 'ComponentNumberInputIntegerBase' } },
               { title: '可清除', routerLink: { name: 'ComponentNumberInputIntegerClearable' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputIntegerStep' } },
+              { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputIntegerRange' } },
               { title: '控制按钮', routerLink: { name: 'ComponentNumberInputIntegerControls' } }
             ]
           },
@@ -1955,6 +1956,8 @@ export const navConfigList: NavVO[] = [
               { title: '可清除', routerLink: { name: 'ComponentNumberInputFloatClearable' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputFloatStep' } },
               { title: '小数位数', routerLink: { name: 'ComponentNumberInputFloatDigits' } },
+              { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputFloatRange' } },
+              { title: '自动补0', routerLink: { name: 'ComponentNumberInputFloatAutoFill' } },
               { title: '控制按钮', routerLink: { name: 'ComponentNumberInputFloatControls' } }
             ]
           },
@@ -1965,6 +1968,8 @@ export const navConfigList: NavVO[] = [
               { title: '可清除', routerLink: { name: 'ComponentNumberInputAmountClearable' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputAmountStep' } },
               { title: '小数位数', routerLink: { name: 'ComponentNumberInputAmountDigits' } },
+              { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputAmountRange' } },
+              { title: '自动补0', routerLink: { name: 'ComponentNumberInputAmountAutoFill' } },
               { title: '显示货币符号', routerLink: { name: 'ComponentNumberInputAmountShowCurrency' } },
               { title: '控制按钮', routerLink: { name: 'ComponentNumberInputAmountControls' } }
             ]

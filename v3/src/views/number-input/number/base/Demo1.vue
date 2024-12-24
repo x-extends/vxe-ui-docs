@@ -1,7 +1,7 @@
 <template>
   <div>
-    <vxe-number-input v-model="val1" placeholder="数值类型" type="number"></vxe-number-input>
-    <vxe-number-input v-model="val2" type="number"></vxe-number-input>
+    <vxe-number-input v-model="val1" placeholder="数值类型"></vxe-number-input>
+    <vxe-number-input v-model="val2"></vxe-number-input>
   </div>
 </template>
 
