@@ -4578,6 +4578,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'permissionCode',
             name: 'ComponentMenuPermissionCode',
             component: () => import('@/views/menu/permissionCode/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            name: 'ComponentMenuTemplate',
+            component: () => import('@/views/menu/template/CodeExample.vue')
           }
         ]
       },
@@ -6407,6 +6412,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'festivalMethod',
             name: 'ComponentCalendarFestivalMethod',
             component: () => import('@/views/calendar/festivalMethod/CodeExample.vue')
+          },
+          {
+            path: 'events',
+            name: 'ComponentCalendarFestivalEvents',
+            component: () => import('@/views/calendar/events/CodeExample.vue')
           }
         ]
       },

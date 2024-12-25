@@ -1568,7 +1568,8 @@ export const navConfigList: NavVO[] = [
           { title: '月度图', routerLink: { name: 'ComponentCalendarMonth' } },
           { title: '季度图', routerLink: { name: 'ComponentCalendarQuarter' } },
           { title: '年度视图', routerLink: { name: 'ComponentCalendarYear' } },
-          { title: '显示节假日', routerLink: { name: 'ComponentCalendarFestivalMethod' } }
+          { title: '显示节假日', routerLink: { name: 'ComponentCalendarFestivalMethod' } },
+          { title: '事件监听', routerLink: { name: 'ComponentCalendarFestivalEvents' } }
         ]
       }
     ]
@@ -1591,7 +1592,8 @@ export const navConfigList: NavVO[] = [
           { title: '加载中', routerLink: { name: 'ComponentMenuLoading' } },
           { title: '图标', routerLink: { name: 'ComponentMenuIcon' } },
           { title: '路由模式', routerLink: { name: 'ComponentMenuRouterLink' } },
-          { title: '权限码', routerLink: { name: 'ComponentMenuPermissionCode' } }
+          { title: '权限码', routerLink: { name: 'ComponentMenuPermissionCode' } },
+          { title: '自定义插槽模板', routerLink: { name: 'ComponentMenuTemplate' } }
         ]
       },
       {
