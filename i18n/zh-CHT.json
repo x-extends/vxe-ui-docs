@@ -366,7 +366,8 @@
       "props_class-name": "附加 className",
       "props_size": "尺寸",
       "props_multiple": "是否多選",
-      "events_change": "在值改變時觸發該事件"
+      "events_change": "在值改變時觸發該事件",
+      "events_view-change": "在日历视图发生改变时触发该事件"
     },
     "card": {
       "props_title": "標題",
@@ -1033,7 +1034,10 @@
       "props_options_permission-code": "權限碼",
       "props_collapsed": "是否折疊",
       "props_loading": "載入中",
-      "events_click": "在點擊選單時觸發該事件"
+      "events_click": "在點擊選單時觸發該事件",
+      "menu.props_options_slots": "自定义插槽模板",
+      "menu.props_options_slots_default": "自定义菜单项插槽模板",
+      "menu.slots_option": "自定义菜单项插槽模板"
     },
     "modal": {
       "props_class-name": "給視窗附加 className",

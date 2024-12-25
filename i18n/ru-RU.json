@@ -366,7 +366,8 @@
       "props_class-name": "Добавить имя класса",
       "props_size": "размер",
       "props_multiple": "Стоит ли выбирать несколько",
-      "events_change": "Это событие срабатывает при изменении значения"
+      "events_change": "Это событие срабатывает при изменении значения",
+      "events_view-change": "在日历视图发生改变时触发该事件"
     },
     "card": {
       "props_title": "заголовок",
@@ -1033,7 +1034,10 @@
       "props_options_permission-code": "Код разрешения",
       "props_collapsed": "Стоит ли сбрасывать карты",
       "props_loading": "загрузка",
-      "events_click": "Это событие срабатывает при нажатии на меню"
+      "events_click": "Это событие срабатывает при нажатии на меню",
+      "menu.props_options_slots": "自定义插槽模板",
+      "menu.props_options_slots_default": "自定义菜单项插槽模板",
+      "menu.slots_option": "自定义菜单项插槽模板"
     },
     "modal": {
       "props_class-name": "Добавить имя класса в окно",

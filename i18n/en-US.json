@@ -366,7 +366,8 @@
       "props_class-name": "Append className",
       "props_size": "size",
       "props_multiple": "Whether to select multiple",
-      "events_change": "This event is triggered when the value changes"
+      "events_change": "This event is triggered when the value changes",
+      "events_view-change": "在日历视图发生改变时触发该事件"
     },
     "card": {
       "props_title": "title",
@@ -1033,7 +1034,10 @@
       "props_options_permission-code": "Permission code",
       "props_collapsed": "Whether to fold",
       "props_loading": "loading",
-      "events_click": "This event is triggered when the menu is clicked"
+      "events_click": "This event is triggered when the menu is clicked",
+      "menu.props_options_slots": "自定义插槽模板",
+      "menu.props_options_slots_default": "自定义菜单项插槽模板",
+      "menu.slots_option": "自定义菜单项插槽模板"
     },
     "modal": {
       "props_class-name": "Append className to window",

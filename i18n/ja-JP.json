@@ -366,7 +366,8 @@
       "props_class-name": "クラス名を追加",
       "props_size": "サイズ",
       "props_multiple": "複数選択するかどうか",
-      "events_change": "このイベントは、値が変更されるとトリガーされます"
+      "events_change": "このイベントは、値が変更されるとトリガーされます",
+      "events_view-change": "在日历视图发生改变时触发该事件"
     },
     "card": {
       "props_title": "タイトル",
@@ -1033,7 +1034,10 @@
       "props_options_permission-code": "許可コード",
       "props_collapsed": "折りたたむかどうか",
       "props_loading": "読み込み中",
-      "events_click": "このイベントは、メニューがクリックされたときにトリガーされます"
+      "events_click": "このイベントは、メニューがクリックされたときにトリガーされます",
+      "menu.props_options_slots": "自定义插槽模板",
+      "menu.props_options_slots_default": "自定义菜单项插槽模板",
+      "menu.slots_option": "自定义菜单项插槽模板"
     },
     "modal": {
       "props_class-name": "classNameをウィンドウに追加",
