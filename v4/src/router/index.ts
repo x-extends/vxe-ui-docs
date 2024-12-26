@@ -459,6 +459,11 @@ const tableRouteConfig: RouteRecordRaw = {
               path: 'dragMethod',
               name: 'ComponentTableRowDragTreeDragMethod',
               component: () => import('@/views/table/rowDrag/tree/dragMethod/CodeExample.vue')
+            },
+            {
+              path: 'lazy',
+              name: 'ComponentTableRowDragTreeLazy',
+              component: () => import('@/views/table/rowDrag/tree/lazy/CodeExample.vue')
             }
           ]
         },
@@ -2325,6 +2330,11 @@ const gridRouteConfig: RouteRecordRaw = {
               path: 'dragMethod',
               name: 'ComponentGridRowDragTreeDragMethod',
               component: () => import('@/views/grid/rowDrag/tree/dragMethod/CodeExample.vue')
+            },
+            {
+              path: 'lazy',
+              name: 'ComponentGridRowDragTreeLazy',
+              component: () => import('@/views/grid/rowDrag/tree/lazy/CodeExample.vue')
             }
           ]
         },
@@ -2882,6 +2892,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'groupFields',
           name: 'ComponentGridTreeGroupFields',
           component: () => import('@/views/grid/tree/groupFields/CodeExample.vue')
+        },
+        {
+          path: 'lazy',
+          name: 'ComponentGridTreeLazy',
+          component: () => import('@/views/grid/tree/lazy/CodeExample.vue')
         }
       ]
     },
