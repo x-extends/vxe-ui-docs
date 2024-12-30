@@ -1333,6 +1333,11 @@ const tableRouteConfig: RouteRecordRaw = {
           component: RouteLayout,
           children: [
             {
+              path: 'edit',
+              name: 'ComponentTableValidateTemplateEdit',
+              component: () => import('@/views/table/validate/template/edit/CodeExample.vue')
+            },
+            {
               path: 'valid',
               name: 'ComponentTableValidateTemplateValid',
               component: () => import('@/views/table/validate/template/valid/CodeExample.vue')
@@ -2993,6 +2998,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'template',
           component: RouteLayout,
           children: [
+            {
+              path: 'edit',
+              name: 'ComponentGridValidateTemplateEdit',
+              component: () => import('@/views/grid/validate/template/edit/CodeExample.vue')
+            },
             {
               path: 'valid',
               name: 'ComponentGridValidateTemplateValid',
