@@ -2,7 +2,6 @@
   <div>
     <vxe-button content="打开窗口" @click="openEvent"></vxe-button>
     <vxe-button content="关闭窗口" @click="closeEvent"></vxe-button>
-    <vxe-button content="最大化" @click="maxEvent"></vxe-button>
 
     <vxe-modal
       ref="modalRef"
@@ -17,6 +16,7 @@
       <div>
         <vxe-button content="还原" @click="revertEvent"></vxe-button>
         <vxe-button content="最小化" @click="minEvent"></vxe-button>
+        <vxe-button content="最大化" @click="maxEvent"></vxe-button>
       </div>
     </vxe-modal>
   </div>
