@@ -2471,6 +2471,7 @@ export const navConfigList: NavVO[] = [
           { title: '自定义窗口最小化的排列方式', routerLink: { name: 'ComponentModalModalMinimizeLayout' } },
           { title: '记忆功能', routerLink: { name: 'ComponentModalModalRemember' } },
           { title: '嵌入 iframe', routerLink: { name: 'ComponentModalModalIframe' } },
+          { title: '手动操作', routerLink: { name: 'ComponentModalModalManual' } },
           { title: '完整功能', routerLink: { name: 'ComponentModalModalFull' } }
         ]
       }

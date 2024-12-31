@@ -5864,6 +5864,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/modal/modal/resize/CodeExample.vue')
           },
           {
+            path: 'manual',
+            name: 'ComponentModalModalManual',
+            component: () => import('@/views/modal/modal/manual/CodeExample.vue')
+          },
+          {
             path: 'multiple',
             name: 'ComponentModalModalMultiple',
             component: () => import('@/views/modal/modal/multiple/CodeExample.vue')
