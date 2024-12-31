@@ -1,20 +1,30 @@
 <template>
   <div>
-    <vxe-select v-model="val1" v-bind="selectOptions"></vxe-select>
+    <vxe-select v-model="val1" placeholder="默认最后一条" :loading="loading" :default-config="{selectMode: 'last'}">
+      <vxe-option v-for="num in 15" :key="num" :value="num" :label="`选项${num}`"></vxe-option>
+    </vxe-select>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeSelectProps } from 'vxe-pc-ui'
+import { VxeSelectPropTypes } from 'vxe-pc-ui'
 
 export default Vue.extend({
   data () {
-    const selectOptions: VxeSelectProps = {
-      clearable: true,
-      filterable: true,
-      placeholder: '可搜索',
-      options: [
+    const opts1: VxeSelectPropTypes.Options = []
+
+    return {
+      val1: null,
+      loading: false,
+      opts1
+    }
+  },
+  created () {
+    this.loading = true
+    setTimeout(() => {
+      this.loading = false
+      this.opts1 = [
         { value: 1001, label: 'table' },
         { value: 1002, label: 'grid' },
         { value: 1003, label: 'button' },
@@ -28,12 +38,7 @@ export default Vue.extend({
         { value: 1012, label: 'checkbox' },
         { value: 1013, label: 'group' }
       ]
-    }
-
-    return {
-      val1: null,
-      selectOptions
-    }
+    }, 500)
   }
 })
 </script>

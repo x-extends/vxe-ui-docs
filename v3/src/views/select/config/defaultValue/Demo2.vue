@@ -11,10 +11,24 @@ import { VxeSelectProps } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const selectOptions: VxeSelectProps = {
-      clearable: true,
-      filterable: true,
-      placeholder: '可搜索',
-      options: [
+      loading: false,
+      placeholder: '默认最后一条',
+      defaultConfig: {
+        selectMode: 'last'
+      },
+      options: []
+    }
+
+    return {
+      val1: null,
+      selectOptions
+    }
+  },
+  created () {
+    this.selectOptions.loading = true
+    setTimeout(() => {
+      this.selectOptions.loading = false
+      this.selectOptions.options = [
         { value: 1001, label: 'table' },
         { value: 1002, label: 'grid' },
         { value: 1003, label: 'button' },
@@ -28,12 +42,7 @@ export default Vue.extend({
         { value: 1012, label: 'checkbox' },
         { value: 1013, label: 'group' }
       ]
-    }
-
-    return {
-      val1: null,
-      selectOptions
-    }
+    }, 500)
   }
 })
 </script>

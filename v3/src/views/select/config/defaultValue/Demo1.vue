@@ -11,9 +11,10 @@ import { VxeSelectProps } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const selectOptions: VxeSelectProps = {
-      clearable: true,
-      filterable: true,
-      placeholder: '可搜索',
+      placeholder: '默认第一条',
+      defaultConfig: {
+        selectMode: 'first'
+      },
       options: [
         { value: 1001, label: 'table' },
         { value: 1002, label: 'grid' },

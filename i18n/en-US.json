@@ -1,8 +1,8 @@
 {
   "app": {
     "aside": {
-      "stableVersion": "Stable version",
-      "latestVersion": "Early adopter version",
+      "stableVersion": "Stable",
+      "latestVersion": "Latest",
       "enterpriseVersion": "Enterprise Edition",
       "pluginVersion": "plug-in",
       "templateVersion": "template",

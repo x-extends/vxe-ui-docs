@@ -10,10 +10,18 @@ import { VxeSelectProps } from 'vxe-pc-ui'
 
 const val1 = ref()
 const selectOptions = reactive<VxeSelectProps>({
-  clearable: true,
-  filterable: true,
-  placeholder: '可搜索',
-  options: [
+  loading: false,
+  placeholder: '默认最后一条',
+  defaultConfig: {
+    selectMode: 'last'
+  },
+  options: []
+})
+
+selectOptions.loading = true
+setTimeout(() => {
+  selectOptions.loading = false
+  selectOptions.options = [
     { value: 1001, label: 'table' },
     { value: 1002, label: 'grid' },
     { value: 1003, label: 'button' },
@@ -27,5 +35,5 @@ const selectOptions = reactive<VxeSelectProps>({
     { value: 1012, label: 'checkbox' },
     { value: 1013, label: 'group' }
   ]
-})
+}, 500)
 </script>

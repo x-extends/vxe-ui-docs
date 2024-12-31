@@ -5449,6 +5449,11 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/select/base/group/CodeExample.vue')
               },
               {
+                path: 'defaultValue',
+                name: 'ComponentSelectBaseDefaultValue',
+                component: () => import('@/views/select/base/defaultValue/CodeExample.vue')
+              },
+              {
                 path: 'multiple',
                 name: 'ComponentSelectBaseMultiple',
                 component: () => import('@/views/select/base/multiple/CodeExample.vue')
@@ -5498,6 +5503,11 @@ const routes: Array<RouteConfig> = [
                 path: 'group',
                 name: 'ComponentSelectConfigGroup',
                 component: () => import('@/views/select/config/group/CodeExample.vue')
+              },
+              {
+                path: 'defaultValue',
+                name: 'ComponentSelectConfigDefaultValue',
+                component: () => import('@/views/select/config/defaultValue/CodeExample.vue')
               },
               {
                 path: 'multiple',

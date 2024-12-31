@@ -168,7 +168,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
               children: [
                 { title: '树拖拽', routerLink: { name: 'ComponentTableRowDragTreeBase' } },
                 { title: '跨层级拖拽', routerLink: { name: 'ComponentTableRowDragTreeCossDrag' } },
-                { title: '自己拖拽给自己', routerLink: { name: 'ComponentTableRowDragTreeSelfToChildDrag' } },
+                { title: '自己拖拽给自己子级', routerLink: { name: 'ComponentTableRowDragTreeSelfToChildDrag' } },
                 { title: '拖拽成子级', routerLink: { name: 'ComponentTableRowDragTreeToChildDrag' } },
                 { title: '拖拽辅助样式', routerLink: { name: 'ComponentTableRowDragTreeShowGuidesStatus' } },
                 { title: '拖拽二次确认', routerLink: { name: 'ComponentTableRowDragTreeDragMethod' } },
@@ -687,7 +687,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '拖拽辅助样式', routerLink: { name: 'ComponentGridColDragShowGuidesStatus' } },
             { title: '分组表头', routerLink: { name: 'ComponentGridColDragGroup' } },
             { title: '跨层级拖拽', routerLink: { name: 'ComponentGridColDragCrossDrag' } },
-            { title: '自己拖拽给自己', routerLink: { name: 'ComponentGridColDragSelfToChildDrag' } },
+            { title: '自己拖拽给自己子级', routerLink: { name: 'ComponentGridColDragSelfToChildDrag' } },
             { title: '拖拽成子级', routerLink: { name: 'ComponentGridColDragToChildDrag' } },
             { title: '触发方式', routerLink: { name: 'ComponentGridColDragTrigger' } },
             { title: '拖拽事件', routerLink: { name: 'ComponentGridColDragEvents' } },
@@ -717,7 +717,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
               children: [
                 { title: '树拖拽', routerLink: { name: 'ComponentGridRowDragTreeBase' } },
                 { title: '跨层级拖拽', routerLink: { name: 'ComponentGridRowDragTreeCossDrag' } },
-                { title: '自己拖拽给自己', routerLink: { name: 'ComponentGridRowDragTreeSelfToChildDrag' } },
+                { title: '自己拖拽给自己子级', routerLink: { name: 'ComponentGridRowDragTreeSelfToChildDrag' } },
                 { title: '拖拽成子级', routerLink: { name: 'ComponentGridRowDragTreeToChildDrag' } },
                 { title: '拖拽辅助样式', routerLink: { name: 'ComponentGridRowDragTreeShowGuidesStatus' } },
                 { title: '拖拽二次确认', routerLink: { name: 'ComponentGridRowDragTreeDragMethod' } },
@@ -2044,6 +2044,7 @@ export const navConfigList: NavVO[] = [
               { title: '加载中', routerLink: { name: 'ComponentSelectBaseLoading' } },
               { title: '可筛选', routerLink: { name: 'ComponentSelectBaseFilterable' } },
               { title: '分组', routerLink: { name: 'ComponentSelectBaseGroup' } },
+              { title: '默认值', routerLink: { name: 'ComponentSelectBaseDefaultValue' } },
               { title: '多选', routerLink: { name: 'ComponentSelectBaseMultiple' } },
               { title: '限制最大数量', routerLink: { name: 'ComponentSelectBaseMax' } },
               { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectBaseTemplate' } },
@@ -2058,6 +2059,7 @@ export const navConfigList: NavVO[] = [
               { title: '加载中', routerLink: { name: 'ComponentSelectConfigLoading' } },
               { title: '可筛选', routerLink: { name: 'ComponentSelectConfigFilterable' } },
               { title: '分组', routerLink: { name: 'ComponentSelectConfigGroup' } },
+              { title: '默认值', routerLink: { name: 'ComponentSelectConfigDefaultValue' } },
               { title: '多选', routerLink: { name: 'ComponentSelectConfigMultiple' } },
               { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectConfigTemplate' } },
               { title: '虚拟滚动（大量数据选项）', routerLink: { name: 'ComponentSelectConfigScroll' } }

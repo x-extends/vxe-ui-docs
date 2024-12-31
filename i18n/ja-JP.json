@@ -1,8 +1,8 @@
 {
   "app": {
     "aside": {
-      "stableVersion": "安定版",
-      "latestVersion": "早期採用バージョン",
+      "stableVersion": "Stable",
+      "latestVersion": "Latest",
       "enterpriseVersion": "エンタープライズ版",
       "pluginVersion": "プラグイン",
       "templateVersion": "テンプレート",

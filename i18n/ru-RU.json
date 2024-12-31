@@ -1,8 +1,8 @@
 {
   "app": {
     "aside": {
-      "stableVersion": "Стабильная версия",
-      "latestVersion": "Ранняя версия",
+      "stableVersion": "Stable",
+      "latestVersion": "Latest",
       "enterpriseVersion": "Корпоративная версия",
       "pluginVersion": "плагин",
       "templateVersion": "шаблон",

@@ -2231,6 +2231,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/colDrag/group/CodeExample.vue')
         },
         {
+          path: 'peerDrag',
+          name: 'ComponentGridColDragPeerDrag',
+          component: () => import('@/views/grid/colDrag/peerDrag/CodeExample.vue')
+        },
+        {
           path: 'crossDrag',
           name: 'ComponentGridColDragCrossDrag',
           component: () => import('@/views/grid/colDrag/crossDrag/CodeExample.vue')
@@ -2330,6 +2335,11 @@ const gridRouteConfig: RouteRecordRaw = {
               path: 'base',
               name: 'ComponentGridRowDragTreeBase',
               component: () => import('@/views/grid/rowDrag/tree/base/CodeExample.vue')
+            },
+            {
+              path: 'peerDrag',
+              name: 'ComponentGridRowDragTreePeerDrag',
+              component: () => import('@/views/grid/rowDrag/tree/peerDrag/CodeExample.vue')
             },
             {
               path: 'cossDrag',
@@ -5471,6 +5481,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/select/base/group/CodeExample.vue')
               },
               {
+                path: 'defaultValue',
+                name: 'ComponentSelectBaseDefaultValue',
+                component: () => import('@/views/select/base/defaultValue/CodeExample.vue')
+              },
+              {
                 path: 'multiple',
                 name: 'ComponentSelectBaseMultiple',
                 component: () => import('@/views/select/base/multiple/CodeExample.vue')
@@ -5520,6 +5535,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'group',
                 name: 'ComponentSelectConfigGroup',
                 component: () => import('@/views/select/config/group/CodeExample.vue')
+              },
+              {
+                path: 'defaultValue',
+                name: 'ComponentSelectConfigDefaultValue',
+                component: () => import('@/views/select/config/defaultValue/CodeExample.vue')
               },
               {
                 path: 'multiple',
