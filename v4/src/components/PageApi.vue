@@ -5,7 +5,7 @@
       class="api-table"
       :columns="columns"
       v-bind="gridOptions">
-      <template #toolbar_buttons>
+      <template #toolbarButtons>
         <vxe-input clearable class="search-input" v-model="searchName" type="search" :placeholder="$t('app.layout.apiSearch', [apiName])" @keyup="searchEvent" @clear="searchEvent"></vxe-input>
       </template>
 
@@ -162,7 +162,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
       query: loadList
     },
     slots: {
-      buttons: 'toolbar_buttons'
+      buttons: 'toolbarButtons'
     }
   },
   data: []
