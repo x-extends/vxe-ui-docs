@@ -5933,6 +5933,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/modal/modal/remember/CodeExample.vue')
           },
           {
+            path: 'storage',
+            name: 'ComponentModalModalStorage',
+            component: () => import('@/views/modal/modal/storage/CodeExample.vue')
+          },
+          {
             path: 'iframe',
             name: 'ComponentModalModalIframe',
             component: () => import('@/views/modal/modal/iframe/CodeExample.vue')

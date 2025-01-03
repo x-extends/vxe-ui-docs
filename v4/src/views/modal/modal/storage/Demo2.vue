@@ -9,15 +9,17 @@ import { VxeUI } from 'vxe-pc-ui'
 
 const openEvent = () => {
   VxeUI.modal.open({
+    id: 'modalStore2',
     title: '标题2',
     width: 600,
     height: 400,
     resize: true,
-    showZoom: true,
-    remember: true,
+    showMaximize: true,
+    showMinimize: true,
+    storage: true,
     slots: {
       default () {
-        return <div>记忆功能，会在打开时还原成最后一次操作的状态</div>
+        return <div>记忆功能，会在首次打开恢复最后一次操作的状态</div>
       }
     }
   })
