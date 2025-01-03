@@ -2234,6 +2234,11 @@ const gridRouteConfig: RouteConfig = {
           component: () => import('@/views/grid/colDrag/group/CodeExample.vue')
         },
         {
+          path: 'peerDrag',
+          name: 'ComponentGridColDragPeerDrag',
+          component: () => import('@/views/grid/colDrag/peerDrag/CodeExample.vue')
+        },
+        {
           path: 'crossDrag',
           name: 'ComponentGridColDragCrossDrag',
           component: () => import('@/views/grid/colDrag/crossDrag/CodeExample.vue')
@@ -2333,6 +2338,11 @@ const gridRouteConfig: RouteConfig = {
               path: 'base',
               name: 'ComponentGridRowDragTreeBase',
               component: () => import('@/views/grid/rowDrag/tree/base/CodeExample.vue')
+            },
+            {
+              path: 'peerDrag',
+              name: 'ComponentGridRowDragTreePeerDrag',
+              component: () => import('@/views/grid/rowDrag/tree/peerDrag/CodeExample.vue')
             },
             {
               path: 'cossDrag',
@@ -3181,6 +3191,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'cellDisable',
           name: 'ComponentGridEditCellDisable',
           component: () => import('@/views/grid/edit/cellDisable/CodeExample.vue')
+        },
+        {
+          path: 'mode',
+          name: 'ComponentGridEditMode',
+          component: () => import('@/views/grid/edit/mode/CodeExample.vue')
         },
         {
           path: 'rowDisable',

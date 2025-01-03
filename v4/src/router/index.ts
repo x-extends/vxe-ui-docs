@@ -3190,6 +3190,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/edit/cellDisable/CodeExample.vue')
         },
         {
+          path: 'mode',
+          name: 'ComponentGridEditMode',
+          component: () => import('@/views/grid/edit/mode/CodeExample.vue')
+        },
+        {
           path: 'rowDisable',
           name: 'ComponentGridEditRowDisable',
           component: () => import('@/views/grid/edit/rowDisable/CodeExample.vue')
