@@ -1406,6 +1406,7 @@ export const navConfigList: NavVO[] = [
           { title: '加载中', routerLink: { name: 'ComponentButtonLoading' } },
           { title: '触发方式', routerLink: { name: 'ComponentButtonTrigger' } },
           { title: '按钮组', routerLink: { name: 'ComponentButtonGroup' } },
+          { title: '排版方式', routerLink: { name: 'ComponentButtonVertical' } },
           { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdown' } },
           { title: '禁用', routerLink: { name: 'ComponentButtonDisabled' } },
           { title: '权限码', routerLink: { name: 'ComponentButtonPermissionCode' } }
@@ -2032,13 +2033,98 @@ export const navConfigList: NavVO[] = [
         title: 'DatePicker 日期选择',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'date-picker' } } },
-          { title: '日期类型', routerLink: { name: 'ComponentDatePickerDate' } },
-          { title: '时间类型', routerLink: { name: 'ComponentDatePickerTime' } },
-          { title: '日期带时间类型', routerLink: { name: 'ComponentDatePickerDatetime' } },
-          { title: '周类型', routerLink: { name: 'ComponentDatePickerWeek' } },
-          { title: '月度类型', routerLink: { name: 'ComponentDatePickerMonth' } },
-          { title: '季度类型', routerLink: { name: 'ComponentDatePickerQuarter' } },
-          { title: '年度类型', routerLink: { name: 'ComponentDatePickerYear' } },
+          {
+            title: '日期类型',
+            children: [
+              { title: '单选', routerLink: { name: 'ComponentDatePickerDateBase' } },
+              { title: '多选', routerLink: { name: 'ComponentDatePickerDateMultiple' } },
+              { title: '禁用', routerLink: { name: 'ComponentDatePickerDateDisabled' } },
+              {
+                title: '自定义插槽模板',
+                children: [
+                  { title: '自定义顶部模板', routerLink: { name: 'ComponentDatePickerDateTemplateTop' } },
+                  { title: '自定义底部模板', routerLink: { name: 'ComponentDatePickerDateTemplateBottom' } },
+                  { title: '自定义左侧模板', routerLink: { name: 'ComponentDatePickerDateTemplateLeft' } },
+                  { title: '自定义右侧模板', routerLink: { name: 'ComponentDatePickerDateTemplateRight' } }
+                ]
+              }
+            ]
+          },
+          {
+            title: '时间类型',
+            children: [
+              { title: '单选', routerLink: { name: 'ComponentDatePickerTimeBase' } },
+              { title: '禁用', routerLink: { name: 'ComponentDatePickerTimeDisabled' } },
+              { title: '自定义格式', routerLink: { name: 'ComponentDatePickerTimeValueFormat' } },
+              {
+                title: '自定义插槽模板',
+                children: [
+                  { title: '自定义顶部模板', routerLink: { name: 'ComponentDatePickerTimeTemplateTop' } },
+                  { title: '自定义底部模板', routerLink: { name: 'ComponentDatePickerTimeTemplateBottom' } },
+                  { title: '自定义左侧模板', routerLink: { name: 'ComponentDatePickerTimeTemplateLeft' } },
+                  { title: '自定义右侧模板', routerLink: { name: 'ComponentDatePickerTimeTemplateRight' } }
+                ]
+              }
+            ]
+          },
+          {
+            title: '日期带时间类型',
+            children: [
+              { title: '单选', routerLink: { name: 'ComponentDatePickerDatetimeBase' } },
+              { title: '禁用', routerLink: { name: 'ComponentDatePickerDatetimeDisabled' } },
+              { title: '多选', routerLink: { name: 'ComponentDatePickerDatetimeMultiple' } },
+              { title: '自定义格式', routerLink: { name: 'ComponentDatePickerDatetimeValueFormat' } },
+              {
+                title: '自定义插槽模板',
+                children: [
+                  { title: '自定义顶部模板', routerLink: { name: 'ComponentDatePickerDatetimeTemplateTop' } },
+                  { title: '自定义底部模板', routerLink: { name: 'ComponentDatePickerDatetimeTemplateBottom' } },
+                  { title: '自定义左侧模板', routerLink: { name: 'ComponentDatePickerDatetimeTemplateLeft' } },
+                  { title: '自定义右侧模板', routerLink: { name: 'ComponentDatePickerDatetimeTemplateRight' } }
+                ]
+              }
+            ]
+          },
+          {
+            title: '周类型',
+            children: [
+              { title: '单选', routerLink: { name: 'ComponentDatePickerWeekBase' } },
+              { title: '禁用', routerLink: { name: 'ComponentDatePickerWeekDisabled' } },
+              { title: '多选', routerLink: { name: 'ComponentDatePickerWeekMultiple' } },
+              { title: '自定义开始日', routerLink: { name: 'ComponentDatePickerWeekStartDay' } },
+              { title: '自定义返回值', routerLink: { name: 'ComponentDatePickerWeekSelectDay' } },
+              {
+                title: '自定义插槽模板',
+                children: [
+                  { title: '自定义顶部模板', routerLink: { name: 'ComponentDatePickerWeekTemplateTop' } },
+                  { title: '自定义底部模板', routerLink: { name: 'ComponentDatePickerWeekTemplateBottom' } },
+                  { title: '自定义左侧模板', routerLink: { name: 'ComponentDatePickerWeekTemplateLeft' } },
+                  { title: '自定义右侧模板', routerLink: { name: 'ComponentDatePickerWeekTemplateRight' } }
+                ]
+              }
+            ]
+          },
+          {
+            title: '月度类型',
+            children: [
+              { title: '单选', routerLink: { name: 'ComponentDatePickerMonthBase' } },
+              { title: '多选', routerLink: { name: 'ComponentDatePickerMonthMultiple' } }
+            ]
+          },
+          {
+            title: '季度类型',
+            children: [
+              { title: '单选', routerLink: { name: 'ComponentDatePickerQuarterBase' } },
+              { title: '多选', routerLink: { name: 'ComponentDatePickerQuarterMultiple' } }
+            ]
+          },
+          {
+            title: '年度类型',
+            children: [
+              { title: '年度类型', routerLink: { name: 'ComponentDatePickerYearBase' } },
+              { title: '年度类型', routerLink: { name: 'ComponentDatePickerYeaMultiple' } }
+            ]
+          },
           { title: '禁用指定日期', routerLink: { name: 'ComponentDatePickerDisabledMethod' } },
           { title: '可选日期限制', routerLink: { name: 'ComponentDatePickerMinMax' } },
           { title: '实现日期带小圆点', routerLink: { name: 'ComponentDatePickerFestivalMethod' } },

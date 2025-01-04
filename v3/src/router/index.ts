@@ -4894,6 +4894,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/button/group/CodeExample.vue')
           },
           {
+            path: 'vertical',
+            name: 'ComponentButtonVertical',
+            component: () => import('@/views/button/vertical/CodeExample.vue')
+          },
+          {
             path: 'dropdown',
             name: 'ComponentButtonDropdown',
             component: () => import('@/views/button/dropdown/CodeExample.vue')
@@ -5365,38 +5370,254 @@ const routes: Array<RouteConfig> = [
         children: [
           {
             path: 'date',
-            name: 'ComponentDatePickerDate',
-            component: () => import('@/views/date-picker/date/CodeExample.vue')
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentDatePickerDateBase',
+                component: () => import('@/views/date-picker/date/base/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentDatePickerDateDisabled',
+                component: () => import('@/views/date-picker/date/disabled/CodeExample.vue')
+              },
+              {
+                path: 'multiple',
+                name: 'ComponentDatePickerDateMultiple',
+                component: () => import('@/views/date-picker/date/multiple/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'top',
+                    name: 'ComponentDatePickerDateTemplateTop',
+                    component: () => import('@/views/date-picker/date/template/top/CodeExample.vue')
+                  },
+                  {
+                    path: 'bottom',
+                    name: 'ComponentDatePickerDateTemplateBottom',
+                    component: () => import('@/views/date-picker/date/template/bottom/CodeExample.vue')
+                  },
+                  {
+                    path: 'left',
+                    name: 'ComponentDatePickerDateTemplateLeft',
+                    component: () => import('@/views/date-picker/date/template/left/CodeExample.vue')
+                  },
+                  {
+                    path: 'right',
+                    name: 'ComponentDatePickerDateTemplateRight',
+                    component: () => import('@/views/date-picker/date/template/right/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
           },
           {
             path: 'week',
-            name: 'ComponentDatePickerWeek',
-            component: () => import('@/views/date-picker/week/CodeExample.vue')
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentDatePickerWeekBase',
+                component: () => import('@/views/date-picker/week/base/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentDatePickerWeekDisabled',
+                component: () => import('@/views/date-picker/week/disabled/CodeExample.vue')
+              },
+              {
+                path: 'multiple',
+                name: 'ComponentDatePickerWeekMultiple',
+                component: () => import('@/views/date-picker/week/multiple/CodeExample.vue')
+              },
+              {
+                path: 'startDay',
+                name: 'ComponentDatePickerWeekStartDay',
+                component: () => import('@/views/date-picker/week/startDay/CodeExample.vue')
+              },
+              {
+                path: 'selectDay',
+                name: 'ComponentDatePickerWeekSelectDay',
+                component: () => import('@/views/date-picker/week/selectDay/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'top',
+                    name: 'ComponentDatePickerWeekTemplateTop',
+                    component: () => import('@/views/date-picker/week/template/top/CodeExample.vue')
+                  },
+                  {
+                    path: 'bottom',
+                    name: 'ComponentDatePickerWeekTemplateBottom',
+                    component: () => import('@/views/date-picker/week/template/bottom/CodeExample.vue')
+                  },
+                  {
+                    path: 'left',
+                    name: 'ComponentDatePickerWeekTemplateLeft',
+                    component: () => import('@/views/date-picker/week/template/left/CodeExample.vue')
+                  },
+                  {
+                    path: 'right',
+                    name: 'ComponentDatePickerWeekTemplateRight',
+                    component: () => import('@/views/date-picker/week/template/right/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
           },
           {
             path: 'month',
-            name: 'ComponentDatePickerMonth',
-            component: () => import('@/views/date-picker/month/CodeExample.vue')
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentDatePickerMonthBase',
+                component: () => import('@/views/date-picker/month/base/CodeExample.vue')
+              },
+              {
+                path: 'multiple',
+                name: 'ComponentDatePickerMonthMultiple',
+                component: () => import('@/views/date-picker/month/multiple/CodeExample.vue')
+              }
+            ]
           },
           {
             path: 'quarter',
-            name: 'ComponentDatePickerQuarter',
-            component: () => import('@/views/date-picker/quarter/CodeExample.vue')
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentDatePickerQuarterBase',
+                component: () => import('@/views/date-picker/quarter/base/CodeExample.vue')
+              },
+              {
+                path: 'multiple',
+                name: 'ComponentDatePickerQuarterMultiple',
+                component: () => import('@/views/date-picker/quarter/multiple/CodeExample.vue')
+              }
+            ]
           },
           {
             path: 'year',
-            name: 'ComponentDatePickerYear',
-            component: () => import('@/views/date-picker/year/CodeExample.vue')
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentDatePickerYearBase',
+                component: () => import('@/views/date-picker/year/base/CodeExample.vue')
+              },
+              {
+                path: 'multiple',
+                name: 'ComponentDatePickerYeaMultiple',
+                component: () => import('@/views/date-picker/year/multiple/CodeExample.vue')
+              }
+            ]
           },
           {
             path: 'time',
-            name: 'ComponentDatePickerTime',
-            component: () => import('@/views/date-picker/time/CodeExample.vue')
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentDatePickerTimeBase',
+                component: () => import('@/views/date-picker/time/base/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentDatePickerTimeDisabled',
+                component: () => import('@/views/date-picker/time/disabled/CodeExample.vue')
+              },
+              {
+                path: 'valueFormat',
+                name: 'ComponentDatePickerTimeValueFormat',
+                component: () => import('@/views/date-picker/time/valueFormat/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'top',
+                    name: 'ComponentDatePickerTimeTemplateTop',
+                    component: () => import('@/views/date-picker/time/template/top/CodeExample.vue')
+                  },
+                  {
+                    path: 'bottom',
+                    name: 'ComponentDatePickerTimeTemplateBottom',
+                    component: () => import('@/views/date-picker/time/template/bottom/CodeExample.vue')
+                  },
+                  {
+                    path: 'left',
+                    name: 'ComponentDatePickerTimeTemplateLeft',
+                    component: () => import('@/views/date-picker/time/template/left/CodeExample.vue')
+                  },
+                  {
+                    path: 'right',
+                    name: 'ComponentDatePickerTimeTemplateRight',
+                    component: () => import('@/views/date-picker/time/template/right/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
           },
           {
             path: 'datetime',
-            name: 'ComponentDatePickerDatetime',
-            component: () => import('@/views/date-picker/datetime/CodeExample.vue')
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentDatePickerDatetimeBase',
+                component: () => import('@/views/date-picker/datetime/base/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentDatePickerDatetimeDisabled',
+                component: () => import('@/views/date-picker/datetime/disabled/CodeExample.vue')
+              },
+              {
+                path: 'multiple',
+                name: 'ComponentDatePickerDatetimeMultiple',
+                component: () => import('@/views/date-picker/datetime/multiple/CodeExample.vue')
+              },
+              {
+                path: 'valueFormat',
+                name: 'ComponentDatePickerDatetimeValueFormat',
+                component: () => import('@/views/date-picker/datetime/valueFormat/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'top',
+                    name: 'ComponentDatePickerDatetimeTemplateTop',
+                    component: () => import('@/views/date-picker/datetime/template/top/CodeExample.vue')
+                  },
+                  {
+                    path: 'bottom',
+                    name: 'ComponentDatePickerDatetimeTemplateBottom',
+                    component: () => import('@/views/date-picker/datetime/template/bottom/CodeExample.vue')
+                  },
+                  {
+                    path: 'left',
+                    name: 'ComponentDatePickerDatetimeTemplateLeft',
+                    component: () => import('@/views/date-picker/datetime/template/left/CodeExample.vue')
+                  },
+                  {
+                    path: 'right',
+                    name: 'ComponentDatePickerDatetimeTemplateRight',
+                    component: () => import('@/views/date-picker/datetime/template/right/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
           },
           {
             path: 'disabledMethod',
