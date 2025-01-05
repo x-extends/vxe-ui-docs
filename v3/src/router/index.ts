@@ -2201,6 +2201,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'fixed',
           name: 'ComponentGridColResizableFixed',
           component: () => import('@/views/grid/colResizable/fixed/CodeExample.vue')
+        },
+        {
+          path: 'dblclickAutoWidth',
+          name: 'ComponentGridColResizableDblclickAutoWidth',
+          component: () => import('@/views/grid/colResizable/dblclickAutoWidth/CodeExample.vue')
         }
       ]
     },
