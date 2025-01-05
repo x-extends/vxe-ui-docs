@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-date-picker v-model="val1" placeholder="禁用" clearable multiple disabled></vxe-date-picker>
+    <vxe-date-picker v-model="val1" placeholder="时" type="time" value-format="HH" label-format="HH" clearable></vxe-date-picker>
   </div>
 </template>
 

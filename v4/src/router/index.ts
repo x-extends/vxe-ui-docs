@@ -5440,6 +5440,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/date-picker/date/multiple/CodeExample.vue')
               },
               {
+                path: 'shortcut',
+                name: 'ComponentDatePickerDateShortcut',
+                component: () => import('@/views/date-picker/date/shortcut/CodeExample.vue')
+              },
+              {
                 path: 'template',
                 component: RouteLayout,
                 children: [
@@ -5497,6 +5502,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/date-picker/week/selectDay/CodeExample.vue')
               },
               {
+                path: 'shortcut',
+                name: 'ComponentDatePickerWeekShortcut',
+                component: () => import('@/views/date-picker/week/shortcut/CodeExample.vue')
+              },
+              {
                 path: 'template',
                 component: RouteLayout,
                 children: [
@@ -5537,6 +5547,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'multiple',
                 name: 'ComponentDatePickerMonthMultiple',
                 component: () => import('@/views/date-picker/month/multiple/CodeExample.vue')
+              },
+              {
+                path: 'shortcut',
+                name: 'ComponentDatePickerMonthShortcut',
+                component: () => import('@/views/date-picker/month/shortcut/CodeExample.vue')
               }
             ]
           },
@@ -5553,6 +5568,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'multiple',
                 name: 'ComponentDatePickerQuarterMultiple',
                 component: () => import('@/views/date-picker/quarter/multiple/CodeExample.vue')
+              },
+              {
+                path: 'shortcut',
+                name: 'ComponentDatePickerQuarterShortcut',
+                component: () => import('@/views/date-picker/quarter/shortcut/CodeExample.vue')
               }
             ]
           },
@@ -5567,8 +5587,13 @@ const routes: Array<RouteRecordRaw> = [
               },
               {
                 path: 'multiple',
-                name: 'ComponentDatePickerYeaMultiple',
+                name: 'ComponentDatePickerYearMultiple',
                 component: () => import('@/views/date-picker/year/multiple/CodeExample.vue')
+              },
+              {
+                path: 'shortcut',
+                name: 'ComponentDatePickerYearShortcut',
+                component: () => import('@/views/date-picker/year/shortcut/CodeExample.vue')
               }
             ]
           },
@@ -5590,6 +5615,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'valueFormat',
                 name: 'ComponentDatePickerTimeValueFormat',
                 component: () => import('@/views/date-picker/time/valueFormat/CodeExample.vue')
+              },
+              {
+                path: 'shortcut',
+                name: 'ComponentDatePickerTimeShortcut',
+                component: () => import('@/views/date-picker/time/shortcut/CodeExample.vue')
               },
               {
                 path: 'template',
@@ -5642,6 +5672,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'valueFormat',
                 name: 'ComponentDatePickerDatetimeValueFormat',
                 component: () => import('@/views/date-picker/datetime/valueFormat/CodeExample.vue')
+              },
+              {
+                path: 'shortcut',
+                name: 'ComponentDatePickerDatetimeShortcut',
+                component: () => import('@/views/date-picker/week/shortcut/CodeExample.vue')
               },
               {
                 path: 'template',

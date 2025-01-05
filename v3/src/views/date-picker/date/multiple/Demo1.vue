@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-input v-model="val1" placeholder="日期多选" clearable multiple></vxe-input>
+    <vxe-date-picker v-model="val1" placeholder="日期多选" clearable multiple></vxe-date-picker>
   </div>
 </template>
 
