@@ -5,8 +5,8 @@
       show-overflow
       show-footer
       keep-source
-      :mouse-config="{selected: true}"
-      :edit-config="{trigger: 'dblclick', mode: 'cell', showStatus: true}"
+      :mouse-config="mouseConfig"
+      :edit-config="editConfig"
       :menu-config="menuConfig"
       :data="tableData"
       :footer-data="footerData">
@@ -15,8 +15,8 @@
       <vxe-column title="Name" field="name" :edit-render="{name: 'input'}"></vxe-column>
       <vxe-column title="Nickname" field="nickname" :edit-render="{name: 'input'}"></vxe-column>
       <vxe-column title="Age" field="age" :edit-render="{name: 'input'}"></vxe-column>
-      <vxe-column title="Role" field="role" sortable></vxe-column>
-      <vxe-column title="Address" field="address" sortable></vxe-column>
+      <vxe-column title="Role" field="role" sortable :edit-render="{name: 'input'}"></vxe-column>
+      <vxe-column title="Address" field="address" sortable :edit-render="{name: 'input'}"></vxe-column>
     </vxe-table>
   </div>
 </template>
@@ -35,6 +35,16 @@ interface RowVO {
   address: string
 }
 
+const editConfig = reactive<VxeTablePropTypes.EditConfig<RowVO>>({
+  trigger: 'dblclick',
+  mode: 'cell',
+  showStatus: true
+})
+
+const mouseConfig = reactive<VxeTablePropTypes.MouseConfig>({
+  selected: true
+})
+
 const menuConfig = reactive<VxeTablePropTypes.MenuConfig>({
   header: {
     options: [
@@ -51,6 +61,26 @@ const menuConfig = reactive<VxeTablePropTypes.MenuConfig>({
       [
         { code: 'CLEAR_CELL', name: '清除值' },
         { code: 'REVERT_CELL', name: '还原值' }
+      ],
+      [
+        {
+          name: '插入数据',
+          children: [
+            { code: 'INSERT_AT_ROW', name: '插入' },
+            { code: 'INSERT_NEXT_AT_ROW', name: '插入 next' },
+            { code: 'INSERT_AT_EDIT_ROW', name: '插入并编辑' },
+            { code: 'INSERT_NEXT_AT_EDIT_ROW', name: '插入并编辑 next' }
+          ]
+        }
+      ],
+      [
+        {
+          name: '删除数据',
+          children: [
+            { code: 'DELETE_ROW', name: '删除行' },
+            { code: 'DELETE_CHECKBOX_ROW', name: '删除复选框勾选行' }
+          ]
+        }
       ],
       [
         {
