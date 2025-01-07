@@ -39,8 +39,8 @@ export default Vue.extend({
         { field: 'name', title: 'Name', editRender: { name: 'input' } },
         { field: 'nickname', title: 'Nickname', editRender: { name: 'input' } },
         { field: 'age', title: 'Age', editRender: { name: 'input' } },
-        { field: 'role', title: 'Role', sortable: true },
-        { field: 'address', title: 'Address', sortable: true }
+        { field: 'role', title: 'Role', sortable: true, editRender: { name: 'input' } },
+        { field: 'address', title: 'Address', sortable: true, editRender: { name: 'input' } }
       ],
       data: [
         { id: 10001, name: 'Test1', nickname: 'T1', role: 'Develop', sex: 'Man', age: 28, address: 'Shenzhen' },
@@ -65,6 +65,26 @@ export default Vue.extend({
             [
               { code: 'CLEAR_CELL', name: '清除值' },
               { code: 'REVERT_CELL', name: '还原值' }
+            ],
+            [
+              {
+                name: '插入数据',
+                children: [
+                  { code: 'INSERT_AT_ROW', name: '插入' },
+                  { code: 'INSERT_NEXT_AT_ROW', name: '插入 next' },
+                  { code: 'INSERT_AT_EDIT_ROW', name: '插入并编辑' },
+                  { code: 'INSERT_NEXT_AT_EDIT_ROW', name: '插入并编辑 next' }
+                ]
+              }
+            ],
+            [
+              {
+                name: '删除数据',
+                children: [
+                  { code: 'DELETE_ROW', name: '删除行' },
+                  { code: 'DELETE_CHECKBOX_ROW', name: '删除复选框勾选行' }
+                ]
+              }
             ],
             [
               {
