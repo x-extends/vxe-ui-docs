@@ -7457,6 +7457,11 @@ const routes: Array<RouteConfig> = [
                     path: 'theme',
                     name: 'ComponentFormBasicsValidateTheme',
                     component: () => import('@/views/form/basics/validate/theme/CodeExample.vue')
+                  },
+                  {
+                    path: 'manual',
+                    name: 'ComponentFormBasicsValidateManual',
+                    component: () => import('@/views/form/basics/validate/manual/CodeExample.vue')
                   }
                 ]
               },
@@ -7659,6 +7664,11 @@ const routes: Array<RouteConfig> = [
                 ]
               },
               {
+                path: 'tabs',
+                name: 'ComponentFormBasicsTabs',
+                component: () => import('@/views/form/basics/tabs/CodeExample.vue')
+              },
+              {
                 path: 'resumeTemplate',
                 name: 'ComponentFormBasicsResumeTemplate',
                 component: () => import('@/views/form/basics/resumeTemplate/CodeExample.vue')
@@ -7783,6 +7793,11 @@ const routes: Array<RouteConfig> = [
                     path: 'theme',
                     name: 'ComponentFormConfigValidateTheme',
                     component: () => import('@/views/form/config/validate/theme/CodeExample.vue')
+                  },
+                  {
+                    path: 'manual',
+                    name: 'ComponentFormConfigValidateManual',
+                    component: () => import('@/views/form/config/validate/manual/CodeExample.vue')
                   }
                 ]
               },
@@ -7982,6 +7997,11 @@ const routes: Array<RouteConfig> = [
                     component: () => import('@/views/form/config/itemTemplate/vxe-upload/CodeExample.vue')
                   }
                 ]
+              },
+              {
+                path: 'tabs',
+                name: 'ComponentFormConfigTabs',
+                component: () => import('@/views/form/config/tabs/CodeExample.vue')
               },
               {
                 path: 'resumeTemplate',

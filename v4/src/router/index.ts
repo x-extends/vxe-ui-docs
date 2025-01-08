@@ -7478,6 +7478,11 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'theme',
                     name: 'ComponentFormBasicsValidateTheme',
                     component: () => import('@/views/form/basics/validate/theme/CodeExample.vue')
+                  },
+                  {
+                    path: 'manual',
+                    name: 'ComponentFormBasicsValidateManual',
+                    component: () => import('@/views/form/basics/validate/manual/CodeExample.vue')
                   }
                 ]
               },
@@ -7809,6 +7814,11 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'theme',
                     name: 'ComponentFormConfigValidateTheme',
                     component: () => import('@/views/form/config/validate/theme/CodeExample.vue')
+                  },
+                  {
+                    path: 'manual',
+                    name: 'ComponentFormConfigValidateManual',
+                    component: () => import('@/views/form/config/validate/manual/CodeExample.vue')
                   }
                 ]
               },

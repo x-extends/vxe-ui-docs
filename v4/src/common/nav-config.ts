@@ -1688,7 +1688,8 @@ export const navConfigList: NavVO[] = [
               { title: '正则校验规则', routerLink: { name: 'ComponentFormBasicsValidateRegexp' } },
               { title: '数组校验规则', routerLink: { name: 'ComponentFormBasicsValidateArray' } },
               { title: '自定义校验规则', routerLink: { name: 'ComponentFormBasicsValidateCustom' } },
-              { title: '错误提示样式', routerLink: { name: 'ComponentFormBasicsValidateTheme' } }
+              { title: '错误提示样式', routerLink: { name: 'ComponentFormBasicsValidateTheme' } },
+              { title: '手动调用', routerLink: { name: 'ComponentFormBasicsValidateManual' } }
             ]
           },
           {
@@ -1781,7 +1782,8 @@ export const navConfigList: NavVO[] = [
               { title: '正则校验规则', routerLink: { name: 'ComponentFormConfigValidateRegexp' } },
               { title: '数组校验规则', routerLink: { name: 'ComponentFormConfigValidateArray' } },
               { title: '自定义校验规则', routerLink: { name: 'ComponentFormConfigValidateCustom' } },
-              { title: '错误提示样式', routerLink: { name: 'ComponentFormConfigValidateTheme' } }
+              { title: '错误提示样式', routerLink: { name: 'ComponentFormConfigValidateTheme' } },
+              { title: '手动调用', routerLink: { name: 'ComponentFormConfigValidateManual' } }
             ]
           },
           {
