@@ -912,7 +912,8 @@
       "props_size": "尺寸",
       "props_disabled": "是否禁用",
       "props_prefix-icon": "头部图标",
-      "props_suffix-icon": "尾部图标"
+      "props_suffix-icon": "尾部图标",
+      "props_trim": "自动去掉左右空格"
     },
     "layout-aside": {
       "props_width": "ширина",
