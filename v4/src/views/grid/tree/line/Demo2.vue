@@ -26,6 +26,9 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   columnConfig: {
     resizable: true
   },
+  checkboxConfig: {
+    labelField: 'name'
+  },
   treeConfig: {
     transform: true,
     rowField: 'id',
@@ -33,7 +36,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     showLine: true
   },
   columns: [
-    { field: 'name', title: 'Name', treeNode: true },
+    { type: 'checkbox', treeNode: true },
     { field: 'size', title: 'Size' },
     { field: 'type', title: 'Type' },
     { field: 'date', title: 'Date' }

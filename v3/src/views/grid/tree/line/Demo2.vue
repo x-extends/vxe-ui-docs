@@ -28,6 +28,9 @@ export default Vue.extend({
       columnConfig: {
         resizable: true
       },
+      checkboxConfig: {
+        labelField: 'name'
+      },
       treeConfig: {
         transform: true,
         rowField: 'id',
@@ -35,7 +38,7 @@ export default Vue.extend({
         showLine: true
       },
       columns: [
-        { field: 'name', title: 'Name', treeNode: true },
+        { type: 'checkbox', treeNode: true },
         { field: 'size', title: 'Size' },
         { field: 'type', title: 'Type' },
         { field: 'date', title: 'Date' }
