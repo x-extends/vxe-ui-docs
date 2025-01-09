@@ -170,6 +170,7 @@
     },
     "extendCellArea": {
       "nav": {
+        "back": "Back",
         "tree": "tree structure",
         "singleArea": "Single area selection",
         "multiArea": "Multiple area selection",

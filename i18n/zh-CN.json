@@ -170,6 +170,7 @@
     },
     "extendCellArea": {
       "nav": {
+        "back": "返回",
         "tree": "树结构",
         "singleArea": "单个区域选取",
         "multiArea": "多重区域选取",
