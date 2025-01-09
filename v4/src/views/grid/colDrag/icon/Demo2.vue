@@ -1,8 +1,8 @@
 <template>
   <div>
     <vxe-grid v-bind="gridOptions">
-      <template #rowDragIcon>
-        <img src="https://vxeui.com/resource/img/icon_rowDrag.png" width="20" height="20">
+      <template #columnDragIcon>
+        <img src="https://vxeui.com/resource/img/icon_colDrag.png" width="20" height="20">
       </template>
     </vxe-grid>
   </div>
@@ -23,14 +23,12 @@ interface RowVO {
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
-  rowConfig: {
-    drag: true
-  },
   columnConfig: {
+    drag: true
   },
   columns: [
     { field: 'name', title: 'Name' },
-    { field: 'role', title: 'Role', dragSort: true },
+    { field: 'role', title: 'Role' },
     { field: 'sex', title: 'Sex' },
     { field: 'age', title: 'Age' },
     { field: 'address', title: 'Address' }
