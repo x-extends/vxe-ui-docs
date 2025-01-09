@@ -30,6 +30,7 @@
         "globalPermission": "全局权限控制",
         "i18n": "国际化",
         "tools": "工具类",
+        "functions": " 函数类",
         "clipboard": "剪贴板",
         "baseTitle": "基础组件",
         "iconTitle": "Icon 图标",

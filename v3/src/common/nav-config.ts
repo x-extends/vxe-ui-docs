@@ -1351,8 +1351,8 @@ export const navConfigList: NavVO[] = [
   {
     i18nKey: 'app.aside.menu.tools',
     children: [
-      // { title: '函数库', linkUrl: 'https://vxetable.cn/xe-utils/' },
-      { i18nKey: 'app.aside.menu.clipboard', routerLink: { name: 'ToolClipboard' } }
+      { i18nKey: 'app.aside.menu.clipboard', routerLink: { name: 'ToolClipboard' } },
+      { i18nKey: 'app.aside.menu.functions', linkUrl: 'https://vxeui.com/xe-utils/' }
     ]
   },
   {
