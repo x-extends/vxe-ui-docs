@@ -1239,7 +1239,7 @@
       "props_transfer": "是否将弹框容器插入于 body 内（对于嵌入到表格或者弹窗中被遮挡时需要设置为 true）",
       "events_option-click": "用于 options，在下拉选项被点击时触发该事件",
       "events_hide-panel": "在下拉面板被点击隐藏时触发该事件",
-      "events_show-panel": "在下拉面板被点击关闭时触发该事件",
+      "events_show-panel": "在下拉面板被点击显示时触发该事件",
       "events_visible-change": "下拉面板显示或隐藏时会触发该事件"
     },
     "radio": {

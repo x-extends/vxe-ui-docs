@@ -1239,7 +1239,7 @@
       "props_transfer": "Whether to insert the pop-up container into the body (it needs to be set to true when it is embedded in a table or blocked in a pop-up window)",
       "events_option-click": "Used for options, this event is triggered when the drop-down option is clicked",
       "events_hide-panel": "This event is triggered when the drop-down panel is hidden",
-      "events_show-panel": "在下拉面板被点击关闭时触发该事件",
+      "events_show-panel": "在下拉面板被点击显示时触发该事件",
       "events_visible-change": "下拉面板显示或隐藏时会触发该事件"
     },
     "radio": {

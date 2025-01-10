@@ -1239,7 +1239,7 @@
       "props_transfer": "是否將彈框容器插入於 body 內（對於嵌入到表格或彈窗中被遮擋時需要設為 true）",
       "events_option-click": "用於 options，在下拉選項被點擊時觸發該事件",
       "events_hide-panel": "在下拉麵板被觸發隱藏時觸發該事件",
-      "events_show-panel": "在下拉面板被点击关闭时触发该事件",
+      "events_show-panel": "在下拉面板被点击显示时触发该事件",
       "events_visible-change": "下拉面板显示或隐藏时会触发该事件"
     },
     "radio": {
