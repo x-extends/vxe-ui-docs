@@ -1903,7 +1903,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'rate 评分',
+        title: 'Rate 评分',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'rate' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentRateSize' } },
