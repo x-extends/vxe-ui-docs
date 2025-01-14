@@ -3943,6 +3943,22 @@ const gridRouteConfig: RouteConfig = {
       ]
     },
     {
+      path: 'scrollbar',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'barStyle',
+          name: 'ComponentGridScrollbarBarStyle',
+          component: () => import('@/views/grid/scrollbar/barStyle/CodeExample.vue')
+        },
+        {
+          path: 'barPos',
+          name: 'ComponentGridScrollbarBarPos',
+          component: () => import('@/views/grid/scrollbar/barPos/CodeExample.vue')
+        }
+      ]
+    },
+    {
       path: 'search',
       component: RouteLayout,
       children: [

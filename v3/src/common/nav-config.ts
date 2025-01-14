@@ -37,6 +37,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '基础', routerLink: { name: 'ComponentTableBaseBasic' } },
             { title: '尺寸大小', routerLink: { name: 'ComponentTableBaseSize' } },
             { title: '数据类型', routerLink: { name: 'ComponentTableBaseData' } },
+            { title: '表尾数据', routerLink: { name: 'ComponentTableBaseFooter' } },
             { title: '空数据提示', routerLink: { name: 'ComponentTableBaseEmpty' } },
             { title: '边框', routerLink: { name: 'ComponentTableBaseBorder' } },
             { title: '圆角', routerLink: { name: 'ComponentTableBaseRound' } },
@@ -63,7 +64,6 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '设置行度', routerLink: { name: 'ComponentTableBaseRowHeight' } },
             { title: '冻结列', routerLink: { name: 'ComponentTableBaseFixed' } },
             { title: '冻结表头和列', routerLink: { name: 'ComponentTableBaseFixedFull' } },
-            { title: '表尾数据', routerLink: { name: 'ComponentTableBaseFooter' } },
             { title: '分组表头', routerLink: { name: 'ComponentTableBaseGroup' } },
             { title: '排序', routerLink: { name: 'ComponentTableBaseSort' } },
             { title: '筛选', routerLink: { name: 'ComponentTableBaseFilter' } },
@@ -581,6 +581,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '基础', routerLink: { name: 'ComponentGridBaseBasic' } },
             { title: '尺寸大小', routerLink: { name: 'ComponentGridBaseSize' } },
             { title: '数据类型', routerLink: { name: 'ComponentGridBaseData' } },
+            { title: '表尾数据', routerLink: { name: 'ComponentGridBaseFooter' } },
             { title: '空数据提示', routerLink: { name: 'ComponentGridBaseEmpty' } },
             { title: '边框', routerLink: { name: 'ComponentGridBaseBorder' } },
             { title: '圆角', routerLink: { name: 'ComponentGridBaseRound' } },
@@ -607,7 +608,6 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '设置行度', routerLink: { name: 'ComponentGridBaseRowHeight' } },
             { title: '冻结列', routerLink: { name: 'ComponentGridBaseFixed' } },
             { title: '冻结表头和列', routerLink: { name: 'ComponentGridBaseFixedFull' } },
-            { title: '表尾', routerLink: { name: 'ComponentGridBaseFooter' } },
             { title: '分组表头', routerLink: { name: 'ComponentGridBaseGroup' } },
             { title: '排序', routerLink: { name: 'ComponentGridBaseSort' } },
             { title: '筛选', routerLink: { name: 'ComponentGridBaseFilter' } },
@@ -1191,6 +1191,13 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '实现表格搜索', routerLink: { name: 'ComponentGridSearchList' } },
             { title: '实现树形表格搜索', routerLink: { name: 'ComponentGridSearchTree' } },
             { title: '查找与替换', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'table_extend_cell_area_fnr' }, query: { previewPath: '%2FextendCellArea%2Fgrid%2FareaFNR' } } }
+          ]
+        },
+        {
+          title: '滚动条',
+          children: [
+            { title: '滚动条样式', routerLink: { name: 'ComponentGridScrollbarBarStyle' } },
+            { title: '滚动条位置', routerLink: { name: 'ComponentGridScrollbarBarPos' } }
           ]
         },
         {
