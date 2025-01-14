@@ -23,14 +23,6 @@ export default Vue.extend({
       border: true,
       showFooter: true,
       height: 400,
-      scrollbarConfig: {
-        x: {
-          position: 'top'
-        },
-        y: {
-          position: 'left'
-        }
-      },
       columns: [
         { field: 'seq', type: 'seq', width: 70, fixed: 'left' },
         { field: 'name', title: 'Name', width: 300 },
@@ -55,7 +47,6 @@ export default Vue.extend({
         { id: 100010, name: 'Test10', role: 'Develop', sex: 'Women', age: 35, address: 'test abc' }
       ],
       footerData: [
-
         { seq: '合计', name: '222', age: '555', attr2: '555', role: '111' }
       ]
     }
