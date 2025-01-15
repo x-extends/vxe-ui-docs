@@ -48,7 +48,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '自动换行', routerLink: { name: 'ComponentTableBaseAutoBreak' } },
             { title: '溢出隐藏', routerLink: { name: 'ComponentTableBaseOverflow' } },
             { title: '文本提示', routerLink: { name: 'ComponentTableBaseTooltip' } },
-            { title: '滚动条样式', routerLink: { name: 'ComponentTableBaseScrollStyle' } },
+            // { title: '滚动条样式', routerLink: { name: 'ComponentTableBaseScrollStyle' } },
             { title: '斑马线样式', routerLink: { name: 'ComponentTableBaseStripe' } },
             { title: '单元格样式', routerLink: { name: 'ComponentTableBaseStyle' } },
             { title: '动态样式', routerLink: { name: 'ComponentTableBaseDynamicStyle' } },
@@ -527,7 +527,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '纵向和横向', routerLink: { name: 'ComponentTableScrollHV' } },
             { title: '函数式加载数据', routerLink: { name: 'ComponentTableScrollLoadData' } },
             { title: '冻结列 + 复杂渲染', routerLink: { name: 'ComponentTableScrollFixed' } },
-            { title: '滚动模式 + 复杂渲染', routerLink: { name: 'ComponentTableScrollMode' } },
+            // { title: '滚动模式 + 复杂渲染', routerLink: { name: 'ComponentTableScrollMode' } },
             { title: '设置行高', routerLink: { name: 'ComponentTableScrollRowHeight' } },
             { title: '自适应行高', routerLink: { name: 'ComponentTableScrollAutoRowHeight' } },
             { title: '自适应行高 + 纵向和横向', routerLink: { name: 'ComponentTableScrollAutoRowVH' } },
@@ -592,7 +592,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '自动换行', routerLink: { name: 'ComponentGridBaseAutoBreak' } },
             { title: '溢出隐藏', routerLink: { name: 'ComponentGridBaseOverflow' } },
             { title: '文本提示', routerLink: { name: 'ComponentGridBaseTooltip' } },
-            { title: '滚动条样式', routerLink: { name: 'ComponentGridBaseScrollStyle' } },
+            // { title: '滚动条样式', routerLink: { name: 'ComponentGridBaseScrollStyle' } },
             { title: '斑马线样式', routerLink: { name: 'ComponentGridBaseStripe' } },
             { title: '单元格样式', routerLink: { name: 'ComponentGridBaseStyle' } },
             { title: '动态样式', routerLink: { name: 'ComponentGridBaseDynamicStyle' } },
@@ -619,6 +619,13 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'HTML 类型', routerLink: { name: 'ComponentGridBaseHtml' } },
             { title: '列配置', routerLink: { name: 'ComponentGridBaseColumns' } },
             { title: '完整案例', routerLink: { name: 'ComponentGridBaseFull' } }
+          ]
+        },
+        {
+          title: '单元格配置',
+          children: [
+            { title: '边距', routerLink: { name: 'ComponentGridCellPadding' } },
+            { title: '高度', routerLink: { name: 'ComponentGridCellHeight' } }
           ]
         },
         {
@@ -1148,7 +1155,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '纵向和横向', routerLink: { name: 'ComponentGridScrollHV' } },
             { title: '函数式加载数据', routerLink: { name: 'ComponentGridScrollLoadData' } },
             { title: '冻结列 + 复杂渲染', routerLink: { name: 'ComponentGridScrollFixed' } },
-            { title: '滚动模式 + 复杂渲染', routerLink: { name: 'ComponentGridScrollMode' } },
+            // { title: '滚动模式 + 复杂渲染', routerLink: { name: 'ComponentGridScrollMode' } },
             { title: '设置行高', routerLink: { name: 'ComponentGridScrollRowHeight' } },
             { title: '自适应行高', routerLink: { name: 'ComponentGridScrollAutoRowHeight' } },
             { title: '自适应行高 + 纵向和横向', routerLink: { name: 'ComponentGridScrollAutoRowVH' } },

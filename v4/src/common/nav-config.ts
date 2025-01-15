@@ -622,6 +622,13 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           ]
         },
         {
+          title: '单元格配置',
+          children: [
+            { title: '边距', routerLink: { name: 'ComponentGridCellPadding' } },
+            { title: '高度', routerLink: { name: 'ComponentGridCellHeight' } }
+          ]
+        },
+        {
           title: '单元格合并',
           children: [
             { title: '将多行进行合并', routerLink: { name: 'ComponentGridMergeRow' } },
