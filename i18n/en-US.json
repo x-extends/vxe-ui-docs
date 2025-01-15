@@ -2742,7 +2742,20 @@
       "props_virtual-y-config_scroll-to-top-on-change": "当数据源被更改时，自动将纵向滚动条滚动到顶部",
       "props_virtual-y-config_threshold": "滚指定滚动到边界距离的阈值，当滚动位置达到时会触发 scroll-boundary 事件",
       "slots_row-drag-icon": "自定义行拖拽按钮插槽模板",
-      "slots_column-drag-icon": "自定义列拖拽按钮插槽模板"
+      "slots_column-drag-icon": "自定义列拖拽按钮插槽模板",
+      "props_scrollbar-config": "滚动条配置项",
+      "props_scrollbar-config_x": "横向滚动条",
+      "props_scrollbar-config_x_position": "滚动条显示位置",
+      "props_scrollbar-config_y": "纵向滚动条",
+      "props_scrollbar-config_y_position": "滚动条显示位置",
+      "props_cell-config_padding": "是否显示间距",
+      "props_cell-config_height": "单元格默认高度",
+      "props_header-cell-config": "表头单元格配置项",
+      "props_header-cell-config_padding": "是否显示间距",
+      "props_header-cell-config_height": "默认高度",
+      "props_footer-cell-config": "表尾单元格配置项",
+      "props_footer-cell-config_padding": "是否显示间距",
+      "props_footer-cell-config_height": "默认高度"
     },
     "colgroup": {
       "slots_header": "Custom header content template",
@@ -4253,7 +4266,20 @@
       "props_virtual-y-config_scroll-to-top-on-change": "当数据源被更改时，自动将纵向滚动条滚动到顶部",
       "props_virtual-y-config_threshold": "滚指定滚动到边界距离的阈值，当滚动位置达到时会触发 scroll-boundary 事件",
       "slots_row-drag-icon": "自定义行拖拽按钮插槽模板",
-      "slots_column-drag-icon": "自定义列拖拽按钮插槽模板"
+      "slots_column-drag-icon": "自定义列拖拽按钮插槽模板",
+      "props_scrollbar-config": "滚动条配置项",
+      "props_scrollbar-config_x": "横向滚动条",
+      "props_scrollbar-config_x_position": "滚动条显示位置",
+      "props_scrollbar-config_y": "纵向滚动条",
+      "props_scrollbar-config_y_position": "滚动条显示位置",
+      "props_cell-config_padding": "是否显示间距",
+      "props_cell-config_height": "单元格默认高度",
+      "props_header-cell-config": "表头单元格配置项",
+      "props_header-cell-config_padding": "是否显示间距",
+      "props_header-cell-config_height": "默认高度",
+      "props_footer-cell-config": "表尾单元格配置项",
+      "props_footer-cell-config_padding": "是否显示间距",
+      "props_footer-cell-config_height": "默认高度"
     },
     "toolbar": {
       "props_class-name": "Give the toolbar className",
