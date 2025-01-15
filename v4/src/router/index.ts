@@ -2322,6 +2322,32 @@ const gridRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'rowResizable',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'base',
+          name: 'ComponentGridRowResizableBase',
+          component: () => import('@/views/grid/rowResizable/base/CodeExample.vue')
+        },
+        {
+          path: 'fixed',
+          name: 'ComponentGridRowResizableFixed',
+          component: () => import('@/views/grid/rowResizable/fixed/CodeExample.vue')
+        },
+        {
+          path: 'tree',
+          name: 'ComponentGridRowResizableTree',
+          component: () => import('@/views/grid/rowResizable/tree/CodeExample.vue')
+        },
+        {
+          path: 'rowResize',
+          name: 'ComponentGridRowResizableRowResize',
+          component: () => import('@/views/grid/rowResizable/rowResize/CodeExample.vue')
+        }
+      ]
+    },
+    {
       path: 'rowDrag',
       component: RouteLayout,
       children: [
