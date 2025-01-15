@@ -377,6 +377,15 @@
                 columnConfig: {
                   maxFixedSize: 4
                 },
+                cellConfig: {
+                  padding: true
+                },
+                headerCellConfig: {
+                  padding: true
+                },
+                footerCellConfig: {
+                  padding: true
+                },
                 // menuConfig: {
                 //   visibleMethod () {}
                 // },
