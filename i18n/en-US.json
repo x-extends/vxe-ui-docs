@@ -18,6 +18,7 @@
         "demoCrud": "CRUD - Demonstration",
         "demoClip": "Copy and paste - Demonstration",
         "demoChart": "Chart rendering - Demonstration",
+        "demoExcel": "Excel 风格",
         "guide": "Development Guide",
         "globalInstall": "Global installation - full import",
         "lazyUseGlobal": "Global installation - import on demand",

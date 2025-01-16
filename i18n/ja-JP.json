@@ -18,6 +18,7 @@
         "demoCrud": "增删改查 - 演示",
         "demoClip": "复制粘贴 - 演示",
         "demoChart": "图表渲染 - 演示",
+        "demoExcel": "Excel 风格",
         "guide": "開発ガイド",
         "globalInstall": "グローバル インストール - 完全インポート",
         "lazyUseGlobal": "グローバル インストール - オンデマンドでインポート",
