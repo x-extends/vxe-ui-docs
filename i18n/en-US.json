@@ -2755,7 +2755,12 @@
       "props_header-cell-config_height": "默认高度",
       "props_footer-cell-config": "表尾单元格配置项",
       "props_footer-cell-config_padding": "是否显示间距",
-      "props_footer-cell-config_height": "默认高度"
+      "props_footer-cell-config_height": "默认高度",
+      "props_row-config_resizable": "每一行开启调整行高度，配合 column.row-resize 指定触发拖拽按钮",
+      "methods_set-row-height": "设置行高",
+      "methods_get-row-height": "获取行高",
+      "methods_set-row-height-conf": "批量设置行高",
+      "methods_get-row-height-conf": "批量获取行高"
     },
     "colgroup": {
       "slots_header": "Custom header content template",
@@ -4279,7 +4284,12 @@
       "props_header-cell-config_height": "默认高度",
       "props_footer-cell-config": "表尾单元格配置项",
       "props_footer-cell-config_padding": "是否显示间距",
-      "props_footer-cell-config_height": "默认高度"
+      "props_footer-cell-config_height": "默认高度",
+      "props_row-config_resizable": "每一行开启调整行高度，配合 column.row-resize 指定触发拖拽按钮",
+      "methods_set-row-height": "设置行高",
+      "methods_get-row-height": "获取行高",
+      "methods_set-row-height-conf": "批量设置行高",
+      "methods_get-row-height-conf": "批量获取行高"
     },
     "toolbar": {
       "props_class-name": "Give the toolbar className",
