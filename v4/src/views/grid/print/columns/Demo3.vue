@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button @click="exportEvent">高级导出</vxe-button>
+    <vxe-button status="primary" @click="exportEvent">点击打印</vxe-button>
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
@@ -23,25 +23,23 @@ const gridRef = ref<VxeGridInstance<RowVO>>()
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
   showFooter: true,
-  exportConfig: {
-    filename () {
-      return `导出文件名${Date.now()}`
-    },
-    sheetName () {
-      return `导出标题${Date.now()}`
-    }
+  printConfig: {
+    excludeFields: [
+      'seq'
+    ]
   },
   columns: [
     { field: 'seq', type: 'seq', width: 70 },
-    { field: 'checkbox', type: 'checkbox', width: 70 },
     {
       title: '分组1',
+      field: 'group1',
       children: [
         { field: 'name', title: 'Name' }
       ]
     },
     {
       title: '分组2',
+      field: 'group2',
       children: [
         { field: 'sex', title: 'Sex' },
         { field: 'age', title: 'Age' }
@@ -63,7 +61,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
 const exportEvent = () => {
   const $grid = gridRef.value
   if ($grid) {
-    $grid.openExport()
+    $grid.openPrint()
   }
 }
 </script>

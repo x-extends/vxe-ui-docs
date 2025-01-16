@@ -152,6 +152,7 @@ const searchName = ref('')
 const showSearchList = ref(false)
 const searchLoading = ref(false)
 const searchList = ref<NavVO[]>([])
+let isInit = false
 
 const handleNavApiParams = (item: NavVO) => {
   if (item.isSelfAPI) {
@@ -278,8 +279,9 @@ const scrollToNav = (item: NavVO) => {
       if (linkEl) {
         if ((linkEl as any).scrollIntoViewIfNeeded) {
           (linkEl as any).scrollIntoViewIfNeeded()
-        } else if ((linkEl as any).scrollIntoView) {
+        } else if (!isInit && (linkEl as any).scrollIntoView) {
           (linkEl as any).scrollIntoView()
+          isInit = true
         }
       }
     }

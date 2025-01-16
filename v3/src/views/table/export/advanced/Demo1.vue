@@ -2,6 +2,7 @@
   <div>
     <vxe-button @click="exportEvent">高级导出</vxe-button>
     <vxe-table
+      border
       show-footer
       ref="tableRef"
       :export-config="exportConfig"

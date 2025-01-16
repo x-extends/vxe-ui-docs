@@ -3739,6 +3739,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/print/advanced/CodeExample.vue')
         },
         {
+          path: 'columns',
+          name: 'ComponentGridPrintColumns',
+          component: () => import('@/views/grid/print/columns/CodeExample.vue')
+        },
+        {
           path: 'page',
           name: 'ComponentGridPrintPage',
           component: () => import('@/views/grid/print/page/CodeExample.vue')

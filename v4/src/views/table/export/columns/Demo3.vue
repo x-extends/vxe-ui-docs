@@ -2,14 +2,12 @@
   <div>
     <vxe-button @click="exportEvent">高级导出</vxe-button>
     <vxe-table
-      border
       show-footer
       ref="tableRef"
       :export-config="exportConfig"
       :footer-data="footerData"
       :data="tableData">
       <vxe-column field="seq" type="seq" width="70"></vxe-column>
-      <vxe-column field="checkbox" type="checkbox" width="70"></vxe-column>
       <vxe-colgroup title="分组1">
         <vxe-column field="name" title="Name"></vxe-column>
       </vxe-colgroup>
@@ -43,18 +41,15 @@ const tableData = ref<RowVO[]>([
   { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
 ])
 
-const footerData = ref<VxeTablePropTypes.FooterData>([
+const footerData = ref([
   { seq: '合计', sex: '666', age: '999' },
   { seq: '平均', sex: '888', age: '333' }
 ])
 
 const exportConfig = reactive<VxeTablePropTypes.ExportConfig>({
-  filename () {
-    return `导出文件名${Date.now()}`
-  },
-  sheetName () {
-    return `导出标题${Date.now()}`
-  }
+  excludeFields: [
+    'seq'
+  ]
 })
 
 const exportEvent = () => {

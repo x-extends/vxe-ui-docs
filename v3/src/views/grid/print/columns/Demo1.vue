@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button @click="exportEvent">高级导出</vxe-button>
+    <vxe-button status="primary" @click="exportEvent">点击打印</vxe-button>
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
@@ -23,25 +23,26 @@ export default Vue.extend({
     const gridOptions: VxeGridProps<RowVO> = {
       border: true,
       showFooter: true,
-      exportConfig: {
-        filename () {
-          return `导出文件名${Date.now()}`
-        },
-        sheetName () {
-          return `导出标题${Date.now()}`
-        }
+      printConfig: {
+        columns: [
+          { field: 'seq' },
+          { field: 'group2' },
+          { field: 'sex' },
+          { field: 'age' }
+        ]
       },
       columns: [
         { field: 'seq', type: 'seq', width: 70 },
-        { field: 'checkbox', type: 'checkbox', width: 70 },
         {
           title: '分组1',
+          field: 'group1',
           children: [
             { field: 'name', title: 'Name' }
           ]
         },
         {
           title: '分组2',
+          field: 'group2',
           children: [
             { field: 'sex', title: 'Sex' },
             { field: 'age', title: 'Age' }
@@ -65,10 +66,10 @@ export default Vue.extend({
     }
   },
   methods: {
-    exportEvent  () {
+    exportEvent () {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
       if ($grid) {
-        $grid.openExport()
+        $grid.openPrint()
       }
     }
   }

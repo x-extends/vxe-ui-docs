@@ -148,7 +148,8 @@ export default Vue.extend({
       searchList: [] as NavVO[],
       searchName: '',
       showSearchList: false,
-      searchLoading: false
+      searchLoading: false,
+      isInit: false
     }
   },
   computed: {
@@ -276,8 +277,9 @@ export default Vue.extend({
           if (linkEl) {
             if ((linkEl as any).scrollIntoViewIfNeeded) {
               (linkEl as any).scrollIntoViewIfNeeded()
-            } else if ((linkEl as any).scrollIntoView) {
+            } else if (!this.isInit && (linkEl as any).scrollIntoView) {
               (linkEl as any).scrollIntoView()
+              this.isInit = true
             }
           }
         }
