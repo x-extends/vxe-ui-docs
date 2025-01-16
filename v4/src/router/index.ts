@@ -2221,6 +2221,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'dblclickAutoWidth',
           name: 'ComponentGridColResizableDblclickAutoWidth',
           component: () => import('@/views/grid/colResizable/dblclickAutoWidth/CodeExample.vue')
+        },
+        {
+          path: 'manual',
+          name: 'ComponentGridColResizableManual',
+          component: () => import('@/views/grid/colResizable/manual/CodeExample.vue')
         }
       ]
     },
@@ -2344,6 +2349,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'rowResize',
           name: 'ComponentGridRowResizableRowResize',
           component: () => import('@/views/grid/rowResizable/rowResize/CodeExample.vue')
+        },
+        {
+          path: 'manual',
+          name: 'ComponentGridRowResizableManual',
+          component: () => import('@/views/grid/rowResizable/manual/CodeExample.vue')
         }
       ]
     },
