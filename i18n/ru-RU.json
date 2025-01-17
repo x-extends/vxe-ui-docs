@@ -187,7 +187,7 @@
         "areaKeypadHandleEditAppend": "使用追加方式编辑",
         "areaKeypadHandleEnterAddRow": "回车键追加新行",
         "areaStatus": "Показать статус выбора ячейки",
-        "areaCellToRow": "Excel 样式",
+        "areaCellToRow": "选择一整行",
         "areaClip": "Скопируйте и вставьте",
         "areaDisabledClip": "Отключить копирование и вставку",
         "areaClipIncrement": "Вставить автоматически вставляет строки и столбцы.",
