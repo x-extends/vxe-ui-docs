@@ -2761,7 +2761,10 @@
       "methods_set-row-height": "设置行高",
       "methods_get-row-height": "获取行高",
       "methods_set-row-height-conf": "批量设置行高",
-      "methods_get-row-height-conf": "批量获取行高"
+      "methods_get-row-height-conf": "批量获取行高",
+      "props_resizable-config_is-dblclick-auto-height": "双击自适应行高，启用后双击拖拽线，自动根据整列的内容自适应调整行高",
+      "props_resizable-config_is-sync-auto-width": "当拖拽调整列宽时，是否自动同步更新所选区域的所有列宽",
+      "props_resizable-config_is-sync-auto-height": "当拖拽调整行高时，是否自动同步更新所选区域的所有行高"
     },
     "colgroup": {
       "slots_header": "Custom header content template",
@@ -4290,7 +4293,10 @@
       "methods_set-row-height": "设置行高",
       "methods_get-row-height": "获取行高",
       "methods_set-row-height-conf": "批量设置行高",
-      "methods_get-row-height-conf": "批量获取行高"
+      "methods_get-row-height-conf": "批量获取行高",
+      "props_resizable-config_is-dblclick-auto-height": "双击自适应行高，启用后双击拖拽线，自动根据整列的内容自适应调整行高",
+      "props_resizable-config_is-sync-auto-width": "当拖拽调整列宽时，是否自动同步更新所选区域的所有列宽",
+      "props_resizable-config_is-sync-auto-height": "当拖拽调整行高时，是否自动同步更新所选区域的所有行高"
     },
     "toolbar": {
       "props_class-name": "Give the toolbar className",
