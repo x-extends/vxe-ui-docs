@@ -40,7 +40,7 @@
             // ...
 
             VxeUI.use(VxeUIPluginRenderAntd, {
-              // prefixCls: 'ant-'
+              // prefixCls: 'ant'
             })
 
             createApp(App).use(VxeUI).use(VxeUITable).mount('#app')

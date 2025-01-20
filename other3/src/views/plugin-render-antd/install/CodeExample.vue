@@ -40,7 +40,7 @@
             // ...
 
             VxeUI.use(VxeUIPluginRenderAntd, {
-              // prefixCls: 'ant-'
+              // prefixCls: 'ant'
             })
 
             Vue.use(VxeUI)
