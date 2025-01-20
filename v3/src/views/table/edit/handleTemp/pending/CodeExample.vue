@@ -10,5 +10,13 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="table/edit/handleTemp/pending/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          树节点标记为待删除状态
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>
