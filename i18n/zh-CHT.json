@@ -2765,7 +2765,9 @@
       "methods_get-row-height-conf": "批量获取行高",
       "props_resizable-config_is-dblclick-auto-height": "双击自适应行高，启用后双击拖拽线，自动根据整列的内容自适应调整行高",
       "props_resizable-config_is-sync-auto-width": "当拖拽调整列宽时，是否自动同步更新所选区域的所有列宽",
-      "props_resizable-config_is-sync-auto-height": "当拖拽调整行高时，是否自动同步更新所选区域的所有行高"
+      "props_resizable-config_is-sync-auto-height": "当拖拽调整行高时，是否自动同步更新所选区域的所有行高",
+      "props_row-drag-config_drag-to-child-method": "用于 isToChildDrag，在拖拽完成后，该方法的返回值用于决定是否拖拽成子级",
+      "props_column-drag-config_drag-to-child-method": "用于 isToChildDrag，在拖拽完成后，该方法的返回值用于决定是否拖拽成子级"
     },
     "colgroup": {
       "slots_header": "自訂表頭內容的模板",
@@ -4297,7 +4299,9 @@
       "methods_get-row-height-conf": "批量获取行高",
       "props_resizable-config_is-dblclick-auto-height": "双击自适应行高，启用后双击拖拽线，自动根据整列的内容自适应调整行高",
       "props_resizable-config_is-sync-auto-width": "当拖拽调整列宽时，是否自动同步更新所选区域的所有列宽",
-      "props_resizable-config_is-sync-auto-height": "当拖拽调整行高时，是否自动同步更新所选区域的所有行高"
+      "props_resizable-config_is-sync-auto-height": "当拖拽调整行高时，是否自动同步更新所选区域的所有行高",
+      "props_row-drag-config_drag-to-child-method": "用于 isToChildDrag，在拖拽完成后，该方法的返回值用于决定是否拖拽成子级",
+      "props_column-drag-config_drag-to-child-method": "用于 isToChildDrag，在拖拽完成后，该方法的返回值用于决定是否拖拽成子级"
     },
     "toolbar": {
       "props_class-name": "給工具列 className",
