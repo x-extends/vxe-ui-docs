@@ -39,7 +39,9 @@
             import '@vxe-ui/plugin-render-antd/dist/style.css'
             // ...
 
-            VxeUI.use(VxeUIPluginRenderAntd)
+            VxeUI.use(VxeUIPluginRenderAntd, {
+              // prefixCls: 'ant-'
+            })
 
             createApp(App).use(VxeUI).use(VxeUITable).mount('#app')
             // ...

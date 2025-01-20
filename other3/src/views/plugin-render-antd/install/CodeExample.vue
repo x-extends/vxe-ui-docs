@@ -39,7 +39,9 @@
             import '@vxe-ui/plugin-render-antd/dist/style.css'
             // ...
 
-            VxeUI.use(VxeUIPluginRenderAntd)
+            VxeUI.use(VxeUIPluginRenderAntd, {
+              // prefixCls: 'ant-'
+            })
 
             Vue.use(VxeUI)
             Vue.use(VxeUITable)
