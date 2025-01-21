@@ -23,7 +23,7 @@ const gridRef = ref<VxeGridInstance<RowVO>>()
 const gridOptions = reactive<VxeGridProps<RowVO> & { data: RowVO[] }>({
   border: true,
   cellConfig: {
-    height: 60
+    height: 80
   },
   rowConfig: {
     resizable: true
@@ -40,9 +40,9 @@ const gridOptions = reactive<VxeGridProps<RowVO> & { data: RowVO[] }>({
     { field: 'address', title: 'Address' }
   ],
   data: [
-    { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man Man Man', age: 28, address: 'test abc' },
-    { id: 10002, name: 'Test2 Test2', role: 'Test Test Test5555 Test22222 Test11111 Test11 Test', sex: 'Women', age: 22, address: 'Guangzhou' },
-    { id: 10003, name: 'Test3', role: 'PM', sex: 'Man Man Man Man Man Man', age: 32, address: 'Shanghai' },
+    { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
+    { id: 10002, name: 'Test2 Test2', role: 'Test Test Test5fffff55 Testgggg22222 Test1hhhh1111 Testjjjjjjj11 Teststjjjjjjj11 Teststjjjjjjj11 Test', sex: 'Women', age: 22, address: 'Guangzhou' },
+    { id: 10003, name: 'Test3', role: 'Man lMan kkkkkkkkkMan Man jjjjjjMan Man jjjMan Man', sex: 'Man', age: 32, address: 'Shanghai' },
     { id: 10004, name: 'Test4', role: 'Designer Designer', sex: 'Women', age: 24, address: 'Shanghai' }
   ]
 })
