@@ -401,6 +401,37 @@ const tableRouteConfig: RouteConfig = {
       ]
     },
     {
+      path: 'rowResizable',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'base',
+          name: 'ComponentTableRowResizableBase',
+          component: () => import('@/views/table/rowResizable/base/CodeExample.vue')
+        },
+        {
+          path: 'fixed',
+          name: 'ComponentTableRowResizableFixed',
+          component: () => import('@/views/table/rowResizable/fixed/CodeExample.vue')
+        },
+        {
+          path: 'tree',
+          name: 'ComponentTableRowResizableTree',
+          component: () => import('@/views/table/rowResizable/tree/CodeExample.vue')
+        },
+        {
+          path: 'rowResize',
+          name: 'ComponentTableRowResizableRowResize',
+          component: () => import('@/views/table/rowResizable/rowResize/CodeExample.vue')
+        },
+        {
+          path: 'manual',
+          name: 'ComponentTableRowResizableManual',
+          component: () => import('@/views/table/rowResizable/manual/CodeExample.vue')
+        }
+      ]
+    },
+    {
       path: 'rowDrag',
       component: RouteLayout,
       children: [
@@ -2352,6 +2383,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'rowResize',
           name: 'ComponentGridRowResizableRowResize',
           component: () => import('@/views/grid/rowResizable/rowResize/CodeExample.vue')
+        },
+        {
+          path: 'dblclickAutoHeight',
+          name: 'ComponentGridRowResizableDblclickAutoHeight',
+          component: () => import('@/views/grid/rowResizable/dblclickAutoHeight/CodeExample.vue')
         },
         {
           path: 'manual',
