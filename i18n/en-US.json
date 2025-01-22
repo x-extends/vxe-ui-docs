@@ -2767,7 +2767,9 @@
       "props_resizable-config_is-sync-auto-width": "当拖拽调整列宽时，是否自动同步更新所选区域的所有列宽",
       "props_resizable-config_is-sync-auto-height": "当拖拽调整行高时，是否自动同步更新所选区域的所有行高",
       "props_row-drag-config_drag-to-child-method": "用于 isToChildDrag，在拖拽完成后，该方法的返回值用于决定是否拖拽成子级",
-      "props_column-drag-config_drag-to-child-method": "用于 isToChildDrag，在拖拽完成后，该方法的返回值用于决定是否拖拽成子级"
+      "props_column-drag-config_drag-to-child-method": "用于 isToChildDrag，在拖拽完成后，该方法的返回值用于决定是否拖拽成子级",
+      "props_sort-config_allow-clear": "只对 allowBtn 有效，是否启用当点击排序图标时，如果与当前一致，则取消排序",
+      "props_sort-config_allow-btn": "是否允许点击排序图标进行操作"
     },
     "colgroup": {
       "slots_header": "Custom header content template",
@@ -4301,7 +4303,9 @@
       "props_resizable-config_is-sync-auto-width": "当拖拽调整列宽时，是否自动同步更新所选区域的所有列宽",
       "props_resizable-config_is-sync-auto-height": "当拖拽调整行高时，是否自动同步更新所选区域的所有行高",
       "props_row-drag-config_drag-to-child-method": "用于 isToChildDrag，在拖拽完成后，该方法的返回值用于决定是否拖拽成子级",
-      "props_column-drag-config_drag-to-child-method": "用于 isToChildDrag，在拖拽完成后，该方法的返回值用于决定是否拖拽成子级"
+      "props_column-drag-config_drag-to-child-method": "用于 isToChildDrag，在拖拽完成后，该方法的返回值用于决定是否拖拽成子级",
+      "props_sort-config_allow-clear": "只对 allowBtn 有效，是否启用当点击排序图标时，如果与当前一致，则取消排序",
+      "props_sort-config_allow-btn": "是否允许点击排序图标进行操作"
     },
     "toolbar": {
       "props_class-name": "Give the toolbar className",
