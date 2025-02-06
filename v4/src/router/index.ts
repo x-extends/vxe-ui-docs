@@ -2259,6 +2259,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/colResizable/dblclickAutoWidth/CodeExample.vue')
         },
         {
+          path: 'allColumnDrag',
+          name: 'ComponentGridColResizableAllColumnDrag',
+          component: () => import('@/views/grid/colResizable/allColumnDrag/CodeExample.vue')
+        },
+        {
           path: 'manual',
           name: 'ComponentGridColResizableManual',
           component: () => import('@/views/grid/colResizable/manual/CodeExample.vue')
