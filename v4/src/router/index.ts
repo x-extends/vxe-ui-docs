@@ -2397,6 +2397,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/rowResizable/dblclickAutoHeight/CodeExample.vue')
         },
         {
+          path: 'allRowDrag',
+          name: 'ComponentGridRowResizableAllRowDrag',
+          component: () => import('@/views/grid/rowResizable/allRowDrag/CodeExample.vue')
+        },
+        {
           path: 'manual',
           name: 'ComponentGridRowResizableManual',
           component: () => import('@/views/grid/rowResizable/manual/CodeExample.vue')
