@@ -26,12 +26,12 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     isAllRowDrag: true
   },
   columns: [
-    { type: 'seq', width: 70, rowResize: true },
-    { field: 'name', title: 'Name', rowResize: true },
-    { field: 'sex', title: 'Sex', rowResize: true },
-    { field: 'age', title: 'Age', rowResize: true },
-    { field: 'time', title: 'Time', rowResize: true },
-    { field: 'address', title: 'Address', rowResize: true }
+    { type: 'seq', width: 70 },
+    { field: 'name', title: 'Name' },
+    { field: 'sex', title: 'Sex' },
+    { field: 'age', title: 'Age' },
+    { field: 'time', title: 'Time' },
+    { field: 'address', title: 'Address' }
   ],
   data: [
     { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
