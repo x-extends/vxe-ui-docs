@@ -1269,6 +1269,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '实现动态生成月份表头', routerLink: { name: 'ComponentGridOtherYearMonth' } },
             { title: '实现分页复选框选择', routerLink: { name: 'ComponentGridOtherPageCheckbox' } },
             { title: '实现记账凭证', routerLink: { name: 'ComponentGridOtherBookkeepingVoucher' } },
+            { title: '单元格可拖拽调整宽高', routerLink: { name: 'ComponentGridOtherAllRowColDrag' } },
             { title: '实现粘贴上传', routerLink: { name: 'ComponentGridOtherPasteToUpload' } }
           ]
         }

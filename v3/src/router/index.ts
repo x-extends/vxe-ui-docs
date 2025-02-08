@@ -4176,6 +4176,11 @@ const gridRouteConfig: RouteConfig = {
           component: () => import('@/views/grid/other/bookkeepingVoucher/CodeExample.vue')
         },
         {
+          path: 'allRowColDrag',
+          name: 'ComponentGridOtherAllRowColDrag',
+          component: () => import('@/views/grid/other/allRowColDrag/CodeExample.vue')
+        },
+        {
           path: 'pasteToUpload',
           name: 'ComponentGridOtherPasteToUpload',
           component: () => import('@/views/grid/other/pasteToUpload/CodeExample.vue')
