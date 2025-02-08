@@ -2769,7 +2769,9 @@
       "props_row-drag-config_drag-to-child-method": "用于 isToChildDrag，在拖拽完成后，该方法的返回值用于决定是否拖拽成子级",
       "props_column-drag-config_drag-to-child-method": "用于 isToChildDrag，在拖拽完成后，该方法的返回值用于决定是否拖拽成子级",
       "props_sort-config_allow-clear": "只对 allowBtn 有效，是否启用当点击排序图标时，如果与当前一致，则取消排序",
-      "props_sort-config_allow-btn": "是否允许点击排序图标进行操作"
+      "props_sort-config_allow-btn": "是否允许点击排序图标进行操作",
+      "props_resizable-config_is-all-row-drag": "所有单元格默认允许拖拽调整行高",
+      "props_resizable-config_is-all-column-drag": "所有单元格默认允许拖拽调整列宽"
     },
     "colgroup": {
       "slots_header": "自訂表頭內容的模板",
@@ -4305,7 +4307,9 @@
       "props_row-drag-config_drag-to-child-method": "用于 isToChildDrag，在拖拽完成后，该方法的返回值用于决定是否拖拽成子级",
       "props_column-drag-config_drag-to-child-method": "用于 isToChildDrag，在拖拽完成后，该方法的返回值用于决定是否拖拽成子级",
       "props_sort-config_allow-clear": "只对 allowBtn 有效，是否启用当点击排序图标时，如果与当前一致，则取消排序",
-      "props_sort-config_allow-btn": "是否允许点击排序图标进行操作"
+      "props_sort-config_allow-btn": "是否允许点击排序图标进行操作",
+      "props_resizable-config_is-all-row-drag": "所有单元格默认允许拖拽调整行高",
+      "props_resizable-config_is-all-column-drag": "所有单元格默认允许拖拽调整列宽"
     },
     "toolbar": {
       "props_class-name": "給工具列 className",
