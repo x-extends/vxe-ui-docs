@@ -31,6 +31,7 @@ export default Vue.extend({
         type: 'xlsx'
       },
       columns: [
+        { type: 'checkbox', width: 70 },
         { field: 'seq', type: 'seq', width: 70 },
         {
           title: '分组1',

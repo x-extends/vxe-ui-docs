@@ -9,6 +9,7 @@
       :data="tableData"
       :merge-cells="mergeCells"
       :footer-data="footerData">
+      <vxe-column type="checkbox" width="70"></vxe-column>
       <vxe-column field="seq" type="seq" width="70"></vxe-column>
       <vxe-colgroup title="分组1">
         <vxe-column field="name" title="Name"></vxe-column>
