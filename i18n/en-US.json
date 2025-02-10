@@ -2670,7 +2670,7 @@
       "methods_reset-filter-panel": "For use in custom panels to manually reset filter panel conditions",
       "methods_save-filter-panel": "For use in custom panels to manually save filter panel conditions",
       "props_resizable-config_drag-mode": "Column width drag mode, supports adaptive and fixed modes",
-      "props_resizable-config_show-drag-tip": "Display column width drag prompts, and display column width in real time during the drag process",
+      "props_resizable-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息",
       "props_row-drag-config_is-cross-drag": "It is only valid when tree-config is enabled. Whether to drag across nodes is used for tree structures. After enabling, dragging to other child nodes is allowed, except for the own node.",
       "props_row-drag-config_is-self-to-child-drag": "Only valid when tree-config is enabled, whether to allow dragging oneself to descendant nodes",
       "props_row-drag-config_show-guides-status": "Whether to display the drag assist status display",
@@ -2771,7 +2771,9 @@
       "props_sort-config_allow-clear": "只对 allowBtn 有效，是否启用当点击排序图标时，如果与当前一致，则取消排序",
       "props_sort-config_allow-btn": "是否允许点击排序图标进行操作",
       "props_resizable-config_is-all-row-drag": "所有单元格默认允许拖拽调整行高",
-      "props_resizable-config_is-all-column-drag": "所有单元格默认允许拖拽调整列宽"
+      "props_resizable-config_is-all-column-drag": "所有单元格默认允许拖拽调整列宽",
+      "props_row-drag-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息",
+      "props_column-drag-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息"
     },
     "colgroup": {
       "slots_header": "Custom header content template",
@@ -4177,7 +4179,7 @@
       "methods_reset-filter-panel": "For use in custom panels to manually reset filter panel conditions",
       "methods_save-filter-panel": "For use in custom panels to manually save filter panel conditions",
       "props_resizable-config_drag-mode": "Column width drag mode, supports adaptive and fixed modes",
-      "props_resizable-config_show-drag-tip": "Display column width drag prompts, and display column width in real time during the drag process",
+      "props_resizable-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息",
       "props_row-drag-config_is-cross-drag": "It is only valid when tree-config is enabled. Whether to drag across nodes is used for tree structures. After enabling, dragging to other child nodes is allowed, except for the own node.",
       "props_row-drag-config_is-self-to-child-drag": "Only valid when tree-config is enabled, whether to allow dragging oneself to descendant nodes",
       "props_row-drag-config_show-guides-status": "Whether to display the drag assist status display",
@@ -4309,7 +4311,9 @@
       "props_sort-config_allow-clear": "只对 allowBtn 有效，是否启用当点击排序图标时，如果与当前一致，则取消排序",
       "props_sort-config_allow-btn": "是否允许点击排序图标进行操作",
       "props_resizable-config_is-all-row-drag": "所有单元格默认允许拖拽调整行高",
-      "props_resizable-config_is-all-column-drag": "所有单元格默认允许拖拽调整列宽"
+      "props_resizable-config_is-all-column-drag": "所有单元格默认允许拖拽调整列宽",
+      "props_row-drag-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息",
+      "props_column-drag-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息"
     },
     "toolbar": {
       "props_class-name": "Give the toolbar className",

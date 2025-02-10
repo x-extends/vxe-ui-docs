@@ -2670,7 +2670,7 @@
       "methods_reset-filter-panel": "用于在自定义面板中使用，手动重置筛选面板条件",
       "methods_save-filter-panel": "用于在自定义面板中使用，手动保存筛选面板条件",
       "props_resizable-config_drag-mode": "列宽拖拽模式，支持自适应和固定模式",
-      "props_resizable-config_show-drag-tip": "显示列宽拖拽提示，拖拽过程中实时显示列宽",
+      "props_resizable-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息",
       "props_row-drag-config_is-cross-drag": "只对 tree-config 启用有效，是否跨节点拖拽，用于树结构，启用后允许拖拽到其他的子节点，除自身节点之外",
       "props_row-drag-config_is-self-to-child-drag": "只对 tree-config 启用有效，是否允许将自己拖拽到子孙节点中",
       "props_row-drag-config_show-guides-status": "是否显示拖拽辅助状态显示",
@@ -2771,7 +2771,9 @@
       "props_sort-config_allow-clear": "只对 allowBtn 有效，是否启用当点击排序图标时，如果与当前一致，则取消排序",
       "props_sort-config_allow-btn": "是否允许点击排序图标进行操作",
       "props_resizable-config_is-all-row-drag": "所有单元格默认允许拖拽调整行高",
-      "props_resizable-config_is-all-column-drag": "所有单元格默认允许拖拽调整列宽"
+      "props_resizable-config_is-all-column-drag": "所有单元格默认允许拖拽调整列宽",
+      "props_row-drag-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息",
+      "props_column-drag-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息"
     },
     "colgroup": {
       "slots_header": "自定义表头内容的模板",
@@ -4177,7 +4179,7 @@
       "methods_reset-filter-panel": "用于在自定义面板中使用，手动重置筛选面板条件",
       "methods_save-filter-panel": "用于在自定义面板中使用，手动保存筛选面板条件",
       "props_resizable-config_drag-mode": "列宽拖拽模式，支持自适应和固定模式",
-      "props_resizable-config_show-drag-tip": "显示列宽拖拽提示，拖拽过程中实时显示列宽",
+      "props_resizable-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息",
       "props_row-drag-config_is-cross-drag": "只对 tree-config 启用有效，是否跨节点拖拽，用于树结构，启用后允许拖拽到其他的子节点，除自身节点之外",
       "props_row-drag-config_is-self-to-child-drag": "只对 tree-config 启用有效，是否允许将自己拖拽到子孙节点中",
       "props_row-drag-config_show-guides-status": "是否显示拖拽辅助状态显示",
@@ -4309,7 +4311,9 @@
       "props_sort-config_allow-clear": "只对 allowBtn 有效，是否启用当点击排序图标时，如果与当前一致，则取消排序",
       "props_sort-config_allow-btn": "是否允许点击排序图标进行操作",
       "props_resizable-config_is-all-row-drag": "所有单元格默认允许拖拽调整行高",
-      "props_resizable-config_is-all-column-drag": "所有单元格默认允许拖拽调整列宽"
+      "props_resizable-config_is-all-column-drag": "所有单元格默认允许拖拽调整列宽",
+      "props_row-drag-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息",
+      "props_column-drag-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息"
     },
     "toolbar": {
       "props_class-name": "给工具栏 className",
