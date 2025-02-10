@@ -1279,7 +1279,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
     {
       i18nKey: 'app.aside.menu.tableCssVar',
       children: [
-        { title: '行高', routerLink: { name: 'CssVarTableRowHeight' } }
+        { title: '单元格高度', routerLink: { name: 'CssVarTableRowHeight' } }
       ]
     },
     {
