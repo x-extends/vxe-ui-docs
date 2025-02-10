@@ -59,6 +59,7 @@
         "tableTitle": "Table table",
         "tableTableTitle": "Table basic table",
         "tableGridTitle": "Grid configuration table",
+        "tableCssVar": "Css 变量",
         "tableGlobalFormats": "Format (global reuse)",
         "tableGlobalMenus": "Right-click menu (global reuse)",
         "tableGlobalCommands": "Toolbar commands (global reuse)",

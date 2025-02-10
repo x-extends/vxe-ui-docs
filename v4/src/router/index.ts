@@ -4614,6 +4614,19 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
+    path: '/cssVar',
+    component: PageLayout,
+    children: [
+      {
+        path: 'table',
+        component: RouteLayout,
+        children: [
+          { path: 'rowHeight', name: 'CssVarTableRowHeight', component: () => import('@/views/vars/table/rowHeight/CodeExample.vue') }
+        ]
+      }
+    ]
+  },
+  {
     path: '/component',
     component: PageLayout,
     children: [

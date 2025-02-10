@@ -59,6 +59,7 @@
         "tableTitle": "Table 表格",
         "tableTableTitle": "Table 基础表格",
         "tableGridTitle": "Grid 配置式表格",
+        "tableCssVar": "Css 变量",
         "tableGlobalFormats": "格式化（全局复用）",
         "tableGlobalMenus": "右键菜单（全局复用）",
         "tableGlobalCommands": "工具栏指令（全局复用）",

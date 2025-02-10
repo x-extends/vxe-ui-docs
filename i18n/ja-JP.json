@@ -59,6 +59,7 @@
         "tableTitle": "テーブルテーブル",
         "tableTableTitle": "テーブル基本テーブル",
         "tableGridTitle": "グリッド構成表",
+        "tableCssVar": "Css 变量",
         "tableGlobalFormats": "フォーマット (グローバル再利用)",
         "tableGlobalMenus": "右クリックメニュー（グローバル再利用）",
         "tableGlobalCommands": "ツールバーコマンド (グローバル再利用)",
