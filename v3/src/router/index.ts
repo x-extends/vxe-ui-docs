@@ -4624,6 +4624,7 @@ const routes: Array<RouteConfig> = [
         path: 'table',
         component: RouteLayout,
         children: [
+          { path: 'border', name: 'CssVarTableBorder', component: () => import('@/views/vars/table/border/CodeExample.vue') },
           { path: 'rowHeight', name: 'CssVarTableRowHeight', component: () => import('@/views/vars/table/rowHeight/CodeExample.vue') }
         ]
       }
