@@ -1280,6 +1280,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
       i18nKey: 'app.aside.menu.tableCssVar',
       children: [
         { title: '字体大小', routerLink: { name: 'CssVarTableFontSize' } },
+        { title: '字体颜色', routerLink: { name: 'CssVarTableFontColor' } },
         { title: '单元格边框', routerLink: { name: 'CssVarTableBorder' } },
         { title: '单元格高度', routerLink: { name: 'CssVarTableRowHeight' } }
       ]
