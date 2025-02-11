@@ -2776,7 +2776,8 @@
       "props_row-drag-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息",
       "props_column-drag-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息",
       "events_column-resizable-change": "当列宽拖动发生变化时会触发该事件",
-      "events_row-resizable-change": "当行高拖动发生变化时会触发该事件"
+      "events_row-resizable-change": "当行高拖动发生变化时会触发该事件",
+      "events_checkbox-range-select": "当同时按住 Shift 键勾选复选框转为范围选择时会触发的事件"
     },
     "colgroup": {
       "slots_header": "Пользовательский шаблон содержимого заголовка",
@@ -4318,7 +4319,8 @@
       "props_row-drag-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息",
       "props_column-drag-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息",
       "events_column-resizable-change": "当列宽拖动发生变化时会触发该事件",
-      "events_row-resizable-change": "当行高拖动发生变化时会触发该事件"
+      "events_row-resizable-change": "当行高拖动发生变化时会触发该事件",
+      "events_checkbox-range-select": "当同时按住 Shift 键勾选复选框转为范围选择时会触发的事件"
     },
     "toolbar": {
       "props_class-name": "Дайте имя класса панели инструментов",
