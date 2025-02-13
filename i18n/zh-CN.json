@@ -2777,7 +2777,9 @@
       "props_column-drag-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息",
       "events_column-resizable-change": "当列宽拖动发生变化时会触发该事件",
       "events_row-resizable-change": "当行高拖动发生变化时会触发该事件",
-      "events_checkbox-range-select": "当同时按住 Shift 键勾选复选框转为范围选择时会触发的事件"
+      "events_checkbox-range-select": "当同时按住 Shift 键勾选复选框转为范围选择时会触发的事件",
+      "props_radio-config_allow-clear": "只对 allowBtn 有效，是否启用当点击排序图标时，如果与当前一致，则取消排序",
+      "props_radio-config_allow-btn": "是否允许点击排序图标进行操作"
     },
     "colgroup": {
       "slots_header": "自定义表头内容的模板",
@@ -4320,7 +4322,9 @@
       "props_column-drag-config_show-drag-tip": "显示拖拽提示，拖拽过程中显示信息",
       "events_column-resizable-change": "当列宽拖动发生变化时会触发该事件",
       "events_row-resizable-change": "当行高拖动发生变化时会触发该事件",
-      "events_checkbox-range-select": "当同时按住 Shift 键勾选复选框转为范围选择时会触发的事件"
+      "events_checkbox-range-select": "当同时按住 Shift 键勾选复选框转为范围选择时会触发的事件",
+      "props_radio-config_allow-clear": "只对 allowBtn 有效，是否启用当点击排序图标时，如果与当前一致，则取消排序",
+      "props_radio-config_allow-btn": "是否允许点击排序图标进行操作"
     },
     "toolbar": {
       "props_class-name": "给工具栏 className",
