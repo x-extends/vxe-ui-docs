@@ -1447,7 +1447,12 @@
       "props_icon": "icon",
       "props_content": "content",
       "props_line-clamp": "Specify the number of display lines. When the text exceeds the specified number of lines, it will be automatically truncated and omitted.",
-      "props_offset-length": "Omitting the word offset can be used to reserve a specified word width at the end"
+      "props_offset-length": "Omitting the word offset can be used to reserve a specified word width at the end",
+      "props_href": "链接",
+      "props_target": "打开方式",
+      "props_router-link": "对应 vue-router 路由配置",
+      "props_underline": "下划线",
+      "props_permission-code": "权限码"
     },
     "text": {
       "props_size": "size",

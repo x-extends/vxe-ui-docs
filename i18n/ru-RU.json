@@ -1447,7 +1447,12 @@
       "props_icon": "图标",
       "props_content": "内容",
       "props_line-clamp": "指定显示行数，当文字超出指定行数时自动截断省略",
-      "props_offset-length": "省略字数偏移量，可用于给末端预留指定字数宽度"
+      "props_offset-length": "省略字数偏移量，可用于给末端预留指定字数宽度",
+      "props_href": "链接",
+      "props_target": "打开方式",
+      "props_router-link": "对应 vue-router 路由配置",
+      "props_underline": "下划线",
+      "props_permission-code": "权限码"
     },
     "text": {
       "props_size": "размер",
