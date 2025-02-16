@@ -11,7 +11,7 @@
     <CodeLight path="grid/expand/mode/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          内嵌模式，如果存在冻结列，拖动横向滚动条时内容也会随着滚动
+          内嵌模式，通过 <ApiLink name="grid" prop="expand-config"/>.<ApiLink name="grid" prop="mode"/> 设置，如果存在冻结列，拖动横向滚动条时内容也会随着滚动
         </vxe-tip>
         <vxe-tip status="error">
           内嵌模式不支持虚拟滚动
