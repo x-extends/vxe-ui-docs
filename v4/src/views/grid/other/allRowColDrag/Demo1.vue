@@ -28,7 +28,8 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     resizable: true
   },
   columnDragConfig: {
-    showIcon: false
+    showIcon: false,
+    trigger: 'cell'
   },
   resizableConfig: {
     isAllRowDrag: true,

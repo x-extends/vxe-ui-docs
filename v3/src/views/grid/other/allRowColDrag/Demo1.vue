@@ -30,7 +30,8 @@ export default Vue.extend({
         resizable: true
       },
       columnDragConfig: {
-        showIcon: false
+        showIcon: false,
+        trigger: 'cell'
       },
       resizableConfig: {
         isAllRowDrag: true,
