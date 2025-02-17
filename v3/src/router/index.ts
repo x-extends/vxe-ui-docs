@@ -1395,6 +1395,16 @@ const tableRouteConfig: RouteConfig = {
       component: RouteLayout,
       children: [
         {
+          path: 'format-option',
+          name: 'ComponentTableCellRenderFormatOption',
+          component: () => import('@/views/table/cellRender/format-option/CodeExample.vue')
+        },
+        {
+          path: 'format-tree',
+          name: 'ComponentTableCellRenderFormatTree',
+          component: () => import('@/views/table/cellRender/format-tree/CodeExample.vue')
+        },
+        {
           path: 'vxe-switch',
           name: 'ComponentTableCellRenderVxeSwitch',
           component: () => import('@/views/table/cellRender/vxe-switch/CodeExample.vue')
