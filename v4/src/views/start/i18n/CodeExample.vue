@@ -33,6 +33,7 @@
             // import viVN from 'vxe-pc-ui/lib/language/vi-VN'
             // import thTH from 'vxe-pc-ui/lib/language/th-TH'
             // import itIT from 'vxe-pc-ui/lib/language/it-IT'
+            // import idID from 'vxe-pc-ui/lib/language/id-ID'
 
             // 注册语言
             VxeUI.setI18n('zh-CN', zhCN)
@@ -55,6 +56,7 @@
             // VxeUI.setI18n('vi-VN', viVN)
             // VxeUI.setI18n('th-TH', thTH)
             // VxeUI.setI18n('it-IT', itIT)
+            // VxeUI.setI18n('id-ID', idID)
 
             // 切换指定语言
             VxeUI.setLanguage('en-US')
