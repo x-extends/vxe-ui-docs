@@ -959,6 +959,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'VxeTextEllipsis', routerLink: { name: 'ComponentGridCellRenderVxeTextEllipsis' } },
             { title: 'VxeRate', routerLink: { name: 'ComponentGridCellRenderVxeRate' } },
             { title: 'VxeUpload', routerLink: { name: 'ComponentGridCellRenderVxeUpload' } },
+            { title: '格式化选项', routerLink: { name: 'ComponentGridCellRenderFormatOption' } },
+            { title: '格式化树选项', routerLink: { name: 'ComponentGridCellRenderFormatTree' } },
             { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/cell/el-switch` }
           ]
         },

@@ -3181,6 +3181,16 @@ const gridRouteConfig: RouteConfig = {
       component: RouteLayout,
       children: [
         {
+          path: 'format-option',
+          name: 'ComponentGridCellRenderFormatOption',
+          component: () => import('@/views/grid/cellRender/format-option/CodeExample.vue')
+        },
+        {
+          path: 'format-tree',
+          name: 'ComponentGridCellRenderFormatTree',
+          component: () => import('@/views/grid/cellRender/format-tree/CodeExample.vue')
+        },
+        {
           path: 'vxe-switch',
           name: 'ComponentGridCellRenderVxeSwitch',
           component: () => import('@/views/grid/cellRender/vxe-switch/CodeExample.vue')
