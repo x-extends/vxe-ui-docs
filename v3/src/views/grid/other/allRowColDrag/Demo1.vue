@@ -29,6 +29,9 @@ export default Vue.extend({
         drag: true,
         resizable: true
       },
+      columnDragConfig: {
+        showIcon: false
+      },
       resizableConfig: {
         isAllRowDrag: true,
         isAllColumnDrag: true
