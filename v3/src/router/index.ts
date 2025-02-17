@@ -6555,6 +6555,22 @@ const routes: Array<RouteConfig> = [
             path: 'options',
             name: 'ComponentCollapseOptions',
             component: () => import('@/views/collapse/options/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'default',
+                name: 'ComponentCollapseTemplateDefault',
+                component: () => import('@/views/collapse/template/default/CodeExample.vue')
+              },
+              {
+                path: 'title',
+                name: 'ComponentCollapseTemplateTitle',
+                component: () => import('@/views/collapse/template/title/CodeExample.vue')
+              }
+            ]
           }
         ]
       },

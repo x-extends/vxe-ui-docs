@@ -1542,7 +1542,9 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'collapse' } } },
           { title: '基础', routerLink: { name: 'ComponentCollapseBase' } },
           { title: '图标', routerLink: { name: 'ComponentCollapseIon' } },
-          { title: '配置式', routerLink: { name: 'ComponentCollapseOptions' } }
+          { title: '配置式', routerLink: { name: 'ComponentCollapseOptions' } },
+          { title: '自定义标题模板', routerLink: { name: 'ComponentCollapseTemplateTitle' } },
+          { title: '自定义内容模板', routerLink: { name: 'ComponentCollapseTemplateDefault' } }
         ]
       },
       {
