@@ -22,9 +22,11 @@ export default Vue.extend({
     const gridOptions: VxeGridProps<RowVO> = {
       border: true,
       columnConfig: {
+        drag: true,
         resizable: true
       },
       rowConfig: {
+        drag: true,
         resizable: true
       },
       resizableConfig: {
@@ -33,7 +35,7 @@ export default Vue.extend({
       },
       columns: [
         { type: 'seq', width: 70 },
-        { field: 'name', title: 'Name' },
+        { field: 'name', title: 'Name', dragSort: true },
         { field: 'sex', title: 'Sex' },
         { field: 'age', title: 'Age' },
         { field: 'time', title: 'Time' },
