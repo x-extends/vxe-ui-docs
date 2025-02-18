@@ -43,6 +43,7 @@ export default Vue.extend({
     const regionOptions = [
       {
         label: '广东省',
+        value: '1',
         children: [
           { label: '深圳市', value: '1-1' },
           { label: '广州市', value: '1-2' }
@@ -50,6 +51,7 @@ export default Vue.extend({
       },
       {
         label: '北京',
+        value: '2',
         children: [
           { label: '东城区', value: '2-1' },
           { label: '西城区', value: '2-2' }

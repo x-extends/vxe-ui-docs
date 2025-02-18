@@ -43,7 +43,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
       address: 'test abc',
       childList: [
         { id: 10011, name: 'Test112', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
-        { id: 10012, name: 'Test134', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' }
+        { id: 10012, name: 'Test134 134134134134134134134134', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' }
       ]
     },
     {
@@ -54,7 +54,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
       age: 22,
       address: 'Guangzhou',
       childList: [
-        { id: 10021, name: 'Test233', role: 'Designer', sex: 'Man', age: 34, address: 'test 234324' }
+        { id: 10021, name: 'Test233 233233233233233', role: 'Designer', sex: 'Man', age: 34, address: 'test 234324' }
       ]
     },
     {
@@ -65,9 +65,9 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
       age: 32,
       address: 'Shanghai',
       childList: [
-        { id: 10031, name: 'Test366', role: 'Test', sex: 'Man', age: 76, address: 'test rtyty' },
+        { id: 10031, name: 'Test366 366 366 366366366366', role: 'Test', sex: 'Man', age: 76, address: 'test rtyty' },
         { id: 10032, name: 'Test345', role: 'Develop', sex: 'Women', age: 56, address: 'Guangzhou' },
-        { id: 10032, name: 'Test361', role: 'Test', sex: 'Women', age: 21, address: 'Guangzhou' },
+        { id: 10032, name: 'Test361 361 361361361361361361361361361361361361', role: 'Test', sex: 'Women', age: 21, address: 'Guangzhou' },
         { id: 10033, name: 'Test367', role: 'Develop', sex: 'Women', age: 28, address: 'Guangzhou' },
         { id: 10034, name: 'Test3213', role: 'Test', sex: 'Man', age: 35, address: 'Guangzhou' }
       ]
@@ -80,7 +80,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
       age: 24,
       address: 'Shanghai',
       childList: [
-        { id: 10041, name: 'Test456', role: 'Designer', sex: 'Man', age: 19, address: 'test 3444444' },
+        { id: 10041, name: 'Test456456 456456456456456456', role: 'Designer', sex: 'Man', age: 19, address: 'test 3444444' },
         { id: 10042, name: 'Test457', role: 'Test', sex: 'Women', age: 29, address: 'rtyty sdfsdf' }
       ]
     }

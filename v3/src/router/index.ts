@@ -769,6 +769,11 @@ const tableRouteConfig: RouteConfig = {
           component: () => import('@/views/table/toolbar/custom/CodeExample.vue')
         },
         {
+          path: 'refresh',
+          name: 'ComponentTableToolbarRefresh',
+          component: () => import('@/views/table/toolbar/refresh/CodeExample.vue')
+        },
+        {
           path: 'print',
           name: 'ComponentTableToolbarPrint',
           component: () => import('@/views/table/toolbar/print/CodeExample.vue')
@@ -1389,6 +1394,16 @@ const tableRouteConfig: RouteConfig = {
       path: 'cellRender',
       component: RouteLayout,
       children: [
+        {
+          path: 'format-option',
+          name: 'ComponentTableCellRenderFormatOption',
+          component: () => import('@/views/table/cellRender/format-option/CodeExample.vue')
+        },
+        {
+          path: 'format-tree',
+          name: 'ComponentTableCellRenderFormatTree',
+          component: () => import('@/views/table/cellRender/format-tree/CodeExample.vue')
+        },
         {
           path: 'vxe-switch',
           name: 'ComponentTableCellRenderVxeSwitch',
@@ -2149,6 +2164,11 @@ const gridRouteConfig: RouteConfig = {
           component: () => import('@/views/grid/sort/multiple/CodeExample.vue')
         },
         {
+          path: 'tree',
+          name: 'ComponentGridSortTree',
+          component: () => import('@/views/grid/sort/tree/CodeExample.vue')
+        },
+        {
           path: 'remote',
           name: 'ComponentGridSortRemote',
           component: () => import('@/views/grid/sort/remote/CodeExample.vue')
@@ -2173,6 +2193,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'remote',
           name: 'ComponentGridFilterRemote',
           component: () => import('@/views/grid/filter/remote/CodeExample.vue')
+        },
+        {
+          path: 'tree',
+          name: 'ComponentGridFilterTree',
+          component: () => import('@/views/grid/filter/tree/CodeExample.vue')
         },
         {
           path: 'setFilter',
@@ -2705,6 +2730,11 @@ const gridRouteConfig: RouteConfig = {
           component: () => import('@/views/grid/expand/childTable/CodeExample.vue')
         },
         {
+          path: 'mode',
+          name: 'ComponentGridExpandMode',
+          component: () => import('@/views/grid/expand/mode/CodeExample.vue')
+        },
+        {
           path: 'selectModalTable',
           name: 'ComponentGridExpandSelectModalTable',
           component: () => import('@/views/grid/expand/selectModalTable/CodeExample.vue')
@@ -2811,6 +2841,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'refresh',
           name: 'ComponentGridToolbarRefresh',
           component: () => import('@/views/grid/toolbar/refresh/CodeExample.vue')
+        },
+        {
+          path: 'full',
+          name: 'ComponentGridToolbarFull',
+          component: () => import('@/views/grid/toolbar/full/CodeExample.vue')
         },
         {
           path: 'icon',
@@ -3155,6 +3190,16 @@ const gridRouteConfig: RouteConfig = {
       path: 'cellRender',
       component: RouteLayout,
       children: [
+        {
+          path: 'format-option',
+          name: 'ComponentGridCellRenderFormatOption',
+          component: () => import('@/views/grid/cellRender/format-option/CodeExample.vue')
+        },
+        {
+          path: 'format-tree',
+          name: 'ComponentGridCellRenderFormatTree',
+          component: () => import('@/views/grid/cellRender/format-tree/CodeExample.vue')
+        },
         {
           path: 'vxe-switch',
           name: 'ComponentGridCellRenderVxeSwitch',
@@ -3722,9 +3767,14 @@ const gridRouteConfig: RouteConfig = {
           component: () => import('@/views/grid/export/advanced/CodeExample.vue')
         },
         {
-          path: 'columns',
-          name: 'ComponentGridExportColumns',
-          component: () => import('@/views/grid/export/columns/CodeExample.vue')
+          path: 'includeFields',
+          name: 'ComponentGridExportIncludeFields',
+          component: () => import('@/views/grid/export/includeFields/CodeExample.vue')
+        },
+        {
+          path: 'excludeFields',
+          name: 'ComponentGridExportExcludeFields',
+          component: () => import('@/views/grid/export/excludeFields/CodeExample.vue')
         },
         {
           path: 'types',
@@ -3944,6 +3994,16 @@ const gridRouteConfig: RouteConfig = {
           path: 'hvTree',
           name: 'ComponentGridScrollHVTree',
           component: () => import('@/views/grid/scroll/hvTree/CodeExample.vue')
+        },
+        {
+          path: 'expand',
+          name: 'ComponentGridScrollExpand',
+          component: () => import('@/views/grid/scroll/expand/CodeExample.vue')
+        },
+        {
+          path: 'expandFixed',
+          name: 'ComponentGridScrollExpandFixed',
+          component: () => import('@/views/grid/scroll/expandFixed/CodeExample.vue')
         },
         {
           path: 'edit',
@@ -6520,6 +6580,22 @@ const routes: Array<RouteConfig> = [
             path: 'options',
             name: 'ComponentCollapseOptions',
             component: () => import('@/views/collapse/options/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'default',
+                name: 'ComponentCollapseTemplateDefault',
+                component: () => import('@/views/collapse/template/default/CodeExample.vue')
+              },
+              {
+                path: 'title',
+                name: 'ComponentCollapseTemplateTitle',
+                component: () => import('@/views/collapse/template/title/CodeExample.vue')
+              }
+            ]
           }
         ]
       },

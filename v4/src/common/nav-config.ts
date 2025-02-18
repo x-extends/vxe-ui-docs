@@ -244,6 +244,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '左侧按钮', routerLink: { name: 'ComponentTableToolbarButtons' } },
             { title: '右侧按钮', routerLink: { name: 'ComponentTableToolbarTools' } },
             { title: '自定义列功能', routerLink: { name: 'ComponentTableToolbarCustom' } },
+            { title: '刷新功能', routerLink: { name: 'ComponentTableToolbarRefresh' } },
             { title: '打印功能', routerLink: { name: 'ComponentTableToolbarPrint' } },
             { title: '导入功能', routerLink: { name: 'ComponentTableToolbarImport' } },
             { title: '导出功能', routerLink: { name: 'ComponentTableToolbarExport' } },
@@ -334,6 +335,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'VxeRate 评分', routerLink: { name: 'ComponentTableCellRenderVxeRate' } },
             { title: 'VxeSlider 滑块', routerLink: { name: 'ComponentTableCellRenderVxeSlider' } },
             { title: 'VxeUpload 上传', routerLink: { name: 'ComponentTableCellRenderVxeUpload' } },
+            { title: '格式化选项', routerLink: { name: 'ComponentTableCellRenderFormatOption' } },
+            { title: '格式化树选项', routerLink: { name: 'ComponentTableCellRenderFormatTree' } },
             { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/table/cell/el-switch` }
           ]
         },
@@ -688,6 +691,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '排序',
           children: [
             { title: '多字段排序', routerLink: { name: 'ComponentGridSortMultiple' } },
+            { title: '树结构排序', routerLink: { name: 'ComponentGridSortTree' } },
             { title: '服务端排序', routerLink: { name: 'ComponentGridSortRemote' } },
             { title: '手动排序', routerLink: { name: 'ComponentGridSortSetSort' } },
             { title: '排序图标', routerLink: { name: 'ComponentGridSortIconVisibleMethod' } }
@@ -790,6 +794,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '展开容器高度', routerLink: { name: 'ComponentGridExpandHeight' } },
             { title: '使用冻结列', routerLink: { name: 'ComponentGridExpandFixed' } },
             { title: '实现展开子表格', routerLink: { name: 'ComponentGridExpandChildTable' } },
+            { title: '展开模式', routerLink: { name: 'ComponentGridExpandMode' } },
             { title: '实现弹窗选择到子表格', routerLink: { name: 'ComponentGridExpandSelectModalTable' } }
           ]
         },
@@ -797,6 +802,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           title: '筛选',
           children: [
             { title: '服务端筛选', routerLink: { name: 'ComponentGridFilterRemote' } },
+            { title: '树结构筛选', routerLink: { name: 'ComponentGridFilterTree' } },
             { title: '手动弹出', routerLink: { name: 'ComponentGridFilterManual' } },
             { title: '手动筛选', routerLink: { name: 'ComponentGridFilterSetFilter' } },
             { title: '实现列头筛选', routerLink: { name: 'ComponentGridFilterHeaderFilter' } },
@@ -855,6 +861,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '导入数据', routerLink: { name: 'ComponentGridToolbarImport' } },
             { title: '导出数据', routerLink: { name: 'ComponentGridToolbarExport' } },
             { title: '刷新列表', routerLink: { name: 'ComponentGridToolbarRefresh' } },
+            { title: '完整功能', routerLink: { name: 'ComponentGridToolbarFull' } },
             { title: '自定义图标', routerLink: { name: 'ComponentGridToolbarIcon' } },
             {
               title: '自定义插槽模板',
@@ -954,6 +961,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'VxeTextEllipsis', routerLink: { name: 'ComponentGridCellRenderVxeTextEllipsis' } },
             { title: 'VxeRate', routerLink: { name: 'ComponentGridCellRenderVxeRate' } },
             { title: 'VxeUpload', routerLink: { name: 'ComponentGridCellRenderVxeUpload' } },
+            { title: '格式化选项', routerLink: { name: 'ComponentGridCellRenderFormatOption' } },
+            { title: '格式化树选项', routerLink: { name: 'ComponentGridCellRenderFormatTree' } },
             { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/cell/el-switch` }
           ]
         },
@@ -1112,7 +1121,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '自定义数据', routerLink: { name: 'ComponentGridExportData' } },
             { title: '格式化导出内容', routerLink: { name: 'ComponentGridExportExportMethod' } },
             { title: '高级导出', routerLink: { name: 'ComponentGridExportAdvanced' } },
-            { title: '指定列', routerLink: { name: 'ComponentGridExportColumns' } },
+            { title: '指定列', routerLink: { name: 'ComponentGridExportIncludeFields' } },
+            { title: '排除列', routerLink: { name: 'ComponentGridExportExcludeFields' } },
             { title: '自定义导出类型', routerLink: { name: 'ComponentGridExportTypes' } },
             { title: '服务端导出', routerLink: { name: 'ComponentGridExportRemote' } },
             { title: '自定义导出模式', routerLink: { name: 'ComponentGridExportModes' } },
@@ -1194,6 +1204,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '合并行与列', routerLink: { name: 'ComponentGridScrollMerge' } },
             { title: '树形 + 纵向', routerLink: { name: 'ComponentGridScrollTree' } },
             { title: '树形 + 纵向和横向', routerLink: { name: 'ComponentGridScrollHVTree' } },
+            { title: '展开行', routerLink: { name: 'ComponentGridScrollExpand' } },
+            { title: '展开行 + 复杂子表渲染', routerLink: { name: 'ComponentGridScrollExpandFixed' } },
             { title: '可编辑 + 纵向', routerLink: { name: 'ComponentGridScrollEdit' } },
             { title: '可编辑 + 纵向和横向', routerLink: { name: 'ComponentGridScrollHVEdit' } }
           ]
@@ -1535,7 +1547,9 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'collapse' } } },
           { title: '基础', routerLink: { name: 'ComponentCollapseBase' } },
           { title: '图标', routerLink: { name: 'ComponentCollapseIon' } },
-          { title: '配置式', routerLink: { name: 'ComponentCollapseOptions' } }
+          { title: '配置式', routerLink: { name: 'ComponentCollapseOptions' } },
+          { title: '自定义标题模板', routerLink: { name: 'ComponentCollapseTemplateTitle' } },
+          { title: '自定义内容模板', routerLink: { name: 'ComponentCollapseTemplateDefault' } }
         ]
       },
       {
