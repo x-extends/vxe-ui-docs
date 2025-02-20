@@ -2907,7 +2907,11 @@
       "props_tree-node": "صالح فقط لتكوين الأشجار ، المحددة كعقدة شجرة",
       "props_params": "معلمات إضافية (يمكن استخدامها لتخزين بعض المعلمات الخاصة)",
       "props_edit-render_auto-focus": "يعين العنصر الذي يتم تركيزه تلقائيًا بعد تحرير التنشيط ، إذا كان صحيحًا ، فسيتوافق تلقائيًا ، إذا كانت سلسلة ، فسيكون محددًا CSS",
-      "props_edit-render_auto-select": "ما إذا كان سيتم تحديد محتوى مربع الإدخال تلقائيًا بعد تنشيط التحرير"
+      "props_edit-render_auto-select": "ما إذا كان سيتم تحديد محتوى مربع الإدخال تلقائيًا بعد تنشيط التحرير",
+      "props_padding": "显示边距",
+      "props_vertical-align": "项垂直的对齐方式",
+      "props_cell-render_show-negative-status": "当值为负数时，自动显示为红色（仅用于特殊组件）",
+      "props_edit-render_show-negative-status": "当值为负数时，自动显示为红色（仅用于特殊组件）"
     },
     "grid": {
       "props_columns_filters_label": "القيمة المعروضة",

@@ -2907,7 +2907,11 @@
       "props_tree-node": "트리 코피그 구성에만 유효하며 트리 노드로 지정됩니다.",
       "props_params": "추가 매개 변수 (일부 개인 매개 변수를 저장하는 데 사용할 수 있음)",
       "props_edit-render_auto-focus": "활성화 후에 자동으로 초점을 맞춘 요소를 설정합니다. true 인 경우 자동으로 일치하면 문자열 인 경우 CSS 선택기가됩니다.",
-      "props_edit-render_auto-select": "편집 후 입력 상자 컨텐츠를 자동으로 선택할지 여부"
+      "props_edit-render_auto-select": "편집 후 입력 상자 컨텐츠를 자동으로 선택할지 여부",
+      "props_padding": "显示边距",
+      "props_vertical-align": "项垂直的对齐方式",
+      "props_cell-render_show-negative-status": "当值为负数时，自动显示为红色（仅用于特殊组件）",
+      "props_edit-render_show-negative-status": "当值为负数时，自动显示为红色（仅用于特殊组件）"
     },
     "grid": {
       "props_columns_filters_label": "표시된 값",

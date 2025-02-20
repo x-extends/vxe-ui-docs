@@ -2907,7 +2907,11 @@
       "props_tree-node": "Somente válido para a configuração de configuração de árvore, especificada como um nó de árvore",
       "props_params": "Parâmetros adicionais (podem ser usados ​​para armazenar alguns parâmetros privados)",
       "props_edit-render_auto-focus": "Define o elemento que é focado automaticamente após a edição de ativação, se verdadeiro, ele corresponderá automaticamente, se for uma string, será um seletor CSS",
-      "props_edit-render_auto-select": "Se deve selecionar automaticamente o conteúdo da caixa de entrada após a ativação da edição"
+      "props_edit-render_auto-select": "Se deve selecionar automaticamente o conteúdo da caixa de entrada após a ativação da edição",
+      "props_padding": "显示边距",
+      "props_vertical-align": "项垂直的对齐方式",
+      "props_cell-render_show-negative-status": "当值为负数时，自动显示为红色（仅用于特殊组件）",
+      "props_edit-render_show-negative-status": "当值为负数时，自动显示为红色（仅用于特殊组件）"
     },
     "grid": {
       "props_columns_filters_label": "O valor exibido",

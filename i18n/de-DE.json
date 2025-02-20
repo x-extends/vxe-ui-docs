@@ -2907,7 +2907,11 @@
       "props_tree-node": "Nur für die Baumkonfigurationskonfiguration gültig, als Baumknoten angegeben",
       "props_params": "Zusätzliche Parameter (können verwendet werden, um einige private Parameter zu speichern)",
       "props_edit-render_auto-focus": "Legt das Element fest, das nach der Aktivierungsbearbeitung automatisch fokussiert ist. Wenn wahr, ist es automatisch übereinstimmt. Wenn es sich um eine Zeichenfolge handelt, ist es ein CSS -Selektor",
-      "props_edit-render_auto-select": "Ob automatisch den Inhalt des Eingangsfelds nach der Bearbeitung aktiviert ist"
+      "props_edit-render_auto-select": "Ob automatisch den Inhalt des Eingangsfelds nach der Bearbeitung aktiviert ist",
+      "props_padding": "显示边距",
+      "props_vertical-align": "项垂直的对齐方式",
+      "props_cell-render_show-negative-status": "当值为负数时，自动显示为红色（仅用于特殊组件）",
+      "props_edit-render_show-negative-status": "当值为负数时，自动显示为红色（仅用于特殊组件）"
     },
     "grid": {
       "props_columns_filters_label": "Der angezeigte Wert",

@@ -2907,7 +2907,11 @@
       "props_tree-node": "ツリーノードとして指定されたTree-Config構成に対してのみ有効",
       "props_params": "追加のパラメーター（いくつかのプライベートパラメーターを保存するために使用できます）",
       "props_edit-render_auto-focus": "アクティベーション編集後に自動的に焦点が合っている要素を設定します。真に、文字列の場合、CSSセレクターになります。",
-      "props_edit-render_auto-select": "編集後に入力ボックスコンテンツを自動的に選択するかどうか"
+      "props_edit-render_auto-select": "編集後に入力ボックスコンテンツを自動的に選択するかどうか",
+      "props_padding": "显示边距",
+      "props_vertical-align": "项垂直的对齐方式",
+      "props_cell-render_show-negative-status": "当值为负数时，自动显示为红色（仅用于特殊组件）",
+      "props_edit-render_show-negative-status": "当值为负数时，自动显示为红色（仅用于特殊组件）"
     },
     "grid": {
       "props_columns_filters_label": "表示された値",

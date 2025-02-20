@@ -2907,7 +2907,11 @@
       "props_tree-node": "只對 tree-config 配置時有效，指定為樹節點",
       "props_params": "額外的參數（可以用來存放一些私有參數）",
       "props_edit-render_auto-focus": "設置激活編輯之後自動聚焦的元素，如果為 true，則自動匹配，如果為字符串則為 css 選擇器",
-      "props_edit-render_auto-select": "是否在激活編輯之後自動選中輸入框內容"
+      "props_edit-render_auto-select": "是否在激活編輯之後自動選中輸入框內容",
+      "props_padding": "显示边距",
+      "props_vertical-align": "项垂直的对齐方式",
+      "props_cell-render_show-negative-status": "当值为负数时，自动显示为红色（仅用于特殊组件）",
+      "props_edit-render_show-negative-status": "当值为负数时，自动显示为红色（仅用于特殊组件）"
     },
     "grid": {
       "props_columns_filters_label": "顯示的值",
