@@ -1,12 +1,10 @@
 <template>
   <div>
-    <CodeLight path="image-preview/Demo1">
+    <CodeLight path="image-preview/Demo1" previewPath="/resource/ui/image-preview.gif">
       <template #tip>
-        <vxe-tip status="primary" title="图片预览"></vxe-tip>
-      </template>
-
-      <template #preview>
-        <img :src="`${siteBaseUrl}/resource/ui/image-preview.gif`">
+        <vxe-tip status="primary" title="图片预览">
+          通过 VxeUI.previewImage 就可以非常简单调用图片预览
+        </vxe-tip>
       </template>
 
       <template #describe>
@@ -28,13 +26,11 @@
         </pre>
       </template>
     </CodeLight>
+
+    <CodeLight path="image-preview/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">传对象数组格式</vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>
-
-<script lang="ts" setup>
-import { computed } from 'vue'
-import { useAppStore } from '@/store/app'
-
-const appStore = useAppStore()
-const siteBaseUrl = computed(() => appStore.siteBaseUrl)
-</script>
