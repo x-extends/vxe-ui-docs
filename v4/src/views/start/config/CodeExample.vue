@@ -177,7 +177,6 @@
                 marginSize: 0,
                 dblclickZoom: true,
                 showTitleOverflow: true,
-                animat: true,
                 showClose: true,
                 padding: true,
                 draggable: true,
@@ -195,6 +194,7 @@
                     left: 32
                   }
                 },
+                // remember: false,
                 // storage: false,
                 storageKey: 'VXE_MODAL_POSITION'
               },
@@ -355,13 +355,11 @@
                 },
                 rowDragConfig: {
                   showIcon: true,
-                  animation: true,
                   showGuidesStatus: true,
                   showDragTip: true
                 },
                 columnDragConfig: {
                   showIcon: true,
-                  animation: true,
                   showGuidesStatus: true,
                   showDragTip: true
                 },
