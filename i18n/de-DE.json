@@ -1129,7 +1129,7 @@
       "props_position": "Nur gültig für type = modal. Die Standardposition des Fensters kann auf die Anzeige in der Mitte eingestellt werden",
       "props_z-index": "Benutzerdefinierte Stapelauftrag (für einige besondere Szenarien, z.",
       "props_show-title-overflow": "Stellen Sie den Titelinhalt ein, der als Ellipsis angezeigt werden soll, wenn er zu lang ist",
-      "props_fullscreen": "Maximieren Sie die Anzeige automatisch, wenn das Fenster geöffnet wird",
+      "props_fullscreen": "窗口打开时默认最大化显示（默认只会在首次打开触发一次，如果需要每次都发可以通过 remember 设置）",
       "props_draggable": "Ob das Schleppen des Fensters aktiviert werden soll",
       "props_dblclick-zoom": "Nur gültig für type = modal, darf es das Fenster vergrößern oder wiederherstellen, indem er auf den Kopf doppelklickt",
       "props_remember": "Speicherfunktion, denken Sie an den letzten Betriebsstatus, stellen Sie den Fensterstatus wieder her, wenn Sie das Fenster erneut öffnen",

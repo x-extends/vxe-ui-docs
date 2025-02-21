@@ -1129,7 +1129,7 @@
       "props_position": "只對 type=modal 有效，窗口的默認位置，可以設置為 center 居中顯示",
       "props_z-index": "自定義堆疊順序（對於某些特殊場景，比如被遮擋時可能會用到）",
       "props_show-title-overflow": "設置標題內容過長時顯示為省略號",
-      "props_fullscreen": "窗口打開時自動最大化顯示",
+      "props_fullscreen": "窗口打开时默认最大化显示（默认只会在首次打开触发一次，如果需要每次都发可以通过 remember 设置）",
       "props_draggable": "是否啟用窗口拖動",
       "props_dblclick-zoom": "只對 type=modal 有效，是否允許通過雙擊頭部放大或還原窗口",
       "props_remember": "記憶功能，會記住最後操作狀態，再次打開窗口時還原窗口狀態",

@@ -1129,7 +1129,7 @@
       "props_position": "Uniquement valide pour type = modal, la position par défaut de la fenêtre peut être définie au centre pour afficher",
       "props_z-index": "Ordre d'empilement personnalisé (pour certains scénarios spéciaux, comme lorsqu'il est occlus)",
       "props_show-title-overflow": "Définissez le contenu du titre à afficher en tant qu'ellipsis s'il est trop long",
-      "props_fullscreen": "Maximiser automatiquement l'affichage lorsque la fenêtre s'ouvre",
+      "props_fullscreen": "窗口打开时默认最大化显示（默认只会在首次打开触发一次，如果需要每次都发可以通过 remember 设置）",
       "props_draggable": "S'il faut permettre la traînée de fenêtre",
       "props_dblclick-zoom": "Seul valide pour type = modal, est-il autorisé à agrandir ou à restaurer la fenêtre en double-cliquant sur la tête",
       "props_remember": "Fonction de mémoire, n'oubliez pas le dernier état d'opération, restaurez l'état de la fenêtre lors de l'ouverture de la fenêtre",

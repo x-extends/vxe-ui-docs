@@ -1129,7 +1129,7 @@
       "props_position": "type = modal에 대해서만 유효하며, 창의 기본 위치는 중앙으로 설정하여 표시 할 수 있습니다.",
       "props_z-index": "사용자 정의 스태킹 순서 (폐쇄 시점과 같은 특별한 시나리오의 경우)",
       "props_show-title-overflow": "너무 길면 타이틀 컨텐츠를 타원으로 표시합니다.",
-      "props_fullscreen": "창이 열리면 디스플레이를 자동으로 최대화합니다",
+      "props_fullscreen": "窗口打开时默认最大化显示（默认只会在首次打开触发一次，如果需要每次都发可以通过 remember 设置）",
       "props_draggable": "창 드래그 활성화 여부",
       "props_dblclick-zoom": "유형 = 모달에만 유효합니다. 헤드를 두 번 클릭하여 창을 확대하거나 복원 할 수 있습니까?",
       "props_remember": "메모리 함수, 마지막 작동 상태를 기억하고 창을 다시 열 때 창 상태를 복원하십시오.",

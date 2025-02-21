@@ -1129,7 +1129,7 @@
       "props_position": "Somente válido para tipo = modal, a posição padrão da janela pode ser definida como central para exibir",
       "props_z-index": "Ordem de empilhamento personalizado (para alguns cenários especiais, como quando ocluídos)",
       "props_show-title-overflow": "Defina o conteúdo do título a ser exibido como uma elipse se for muito longo",
-      "props_fullscreen": "Maximize automaticamente a exibição quando a janela se abrir",
+      "props_fullscreen": "窗口打开时默认最大化显示（默认只会在首次打开触发一次，如果需要每次都发可以通过 remember 设置）",
       "props_draggable": "Se deve habilitar o arrasto de janelas",
       "props_dblclick-zoom": "Somente válido para tipo = modal, é permitido aumentar ou restaurar a janela clicando duas vezes na cabeça",
       "props_remember": "Função da memória, lembre -se do último estado de operação, restaure o estado da janela ao abrir a janela novamente",

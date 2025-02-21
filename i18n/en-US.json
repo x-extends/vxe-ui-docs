@@ -1129,7 +1129,7 @@
       "props_position": "Only valid for type=modal. The default position of the window can be set to center to display in the center.",
       "props_z-index": "Customize the stacking order (may be used in some special scenarios, such as when it is blocked)",
       "props_show-title-overflow": "Set the title content to be displayed as an ellipsis when it is too long",
-      "props_fullscreen": "Automatically maximize the window when it opens",
+      "props_fullscreen": "窗口打开时默认最大化显示（默认只会在首次打开触发一次，如果需要每次都发可以通过 remember 设置）",
       "props_draggable": "Whether to enable window dragging",
       "props_dblclick-zoom": "Only valid for type=modal, whether to allow the window to be enlarged or restored by double-clicking the head",
       "props_remember": "The memory function will remember the last operation status and restore the window status when opening the window again.",
