@@ -265,7 +265,6 @@
                     gt: 0
                   },
                   scrollY: {
-                    mode: 'wheel',
                     enabled: true,
                     gt: 0
                   }
