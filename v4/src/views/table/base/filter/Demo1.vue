@@ -34,8 +34,8 @@ const tableData = ref<RowVO[]>([
 ])
 
 const sexOptions = ref<VxeColumnPropTypes.Filters>([
-  { label: 'Man', value: '1' },
-  { label: 'Woman', value: '0' }
+  { label: 'Man', value: 'Man' },
+  { label: 'Woman', value: 'Woman' }
 ])
 
 const ageOptions = ref<VxeColumnPropTypes.Filters>([
