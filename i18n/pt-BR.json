@@ -200,6 +200,7 @@
         "areaCellToRow": "Selecione uma linha inteira",
         "areaClip": "Copiar e colar",
         "areaDisabledClip": "Desativar cópia e colar",
+        "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "A pasta insere automaticamente linhas e colunas",
         "areaTree": "Estrutura da árvore",
         "areaTreeClipDeep": "Pasta em nível de árvore",

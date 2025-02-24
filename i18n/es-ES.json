@@ -200,6 +200,7 @@
         "areaCellToRow": "Seleccione una fila completa",
         "areaClip": "Copiar y pegar",
         "areaDisabledClip": "Deshabilitar copiar y pegar",
+        "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "Pegar inserta automáticamente filas y columnas",
         "areaTree": "Estructura de árboles",
         "areaTreeClipDeep": "Pasta a nivel de árbol",

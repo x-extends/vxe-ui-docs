@@ -200,6 +200,7 @@
         "areaCellToRow": "Wählen Sie eine ganze Zeile aus",
         "areaClip": "Kopieren und einfügen",
         "areaDisabledClip": "Deaktivieren Sie kopieren und einfügen",
+        "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "Fügen Sie automatisch Zeilen und Spalten ein ein",
         "areaTree": "Baumstruktur",
         "areaTreeClipDeep": "Paste auf Baumebene",

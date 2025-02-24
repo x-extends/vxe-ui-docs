@@ -200,6 +200,7 @@
         "areaCellToRow": "选择一整行",
         "areaClip": "复制与粘贴",
         "areaDisabledClip": "禁用复制与粘贴",
+        "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "粘贴自动插入行与列",
         "areaTree": "树结构",
         "areaTreeClipDeep": "树层级的粘贴",

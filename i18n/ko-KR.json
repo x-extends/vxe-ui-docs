@@ -200,6 +200,7 @@
         "areaCellToRow": "전체 행을 선택하십시오",
         "areaClip": "복사하여 붙여 넣습니다",
         "areaDisabledClip": "복사 및 붙여 넣기를 비활성화하십시오",
+        "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "붙여 넣기 행과 열을 자동으로 삽입합니다",
         "areaTree": "나무 구조",
         "areaTreeClipDeep": "나무 수준의 페이스트",

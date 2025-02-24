@@ -200,6 +200,7 @@
         "areaCellToRow": "Выберите всю строку",
         "areaClip": "Копировать и вставить",
         "areaDisabledClip": "Отключить копию и вставьте",
+        "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "Вставьте автоматически вставки ряды и столбцы",
         "areaTree": "Дерево структура",
         "areaTreeClipDeep": "Паста на уровне деревьев",
