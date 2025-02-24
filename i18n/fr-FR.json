@@ -159,6 +159,7 @@
   "plugins": {
     "base": {
       "nav": {
+        "back": "retour",
         "demoTitle": "Démonstration fonctionnelle",
         "demoList": "Liste normale - démo",
         "demoProduct": "Liste de produits - démo",

@@ -159,6 +159,7 @@
   "plugins": {
     "base": {
       "nav": {
+        "back": "返回",
         "demoTitle": "功能演示",
         "demoList": "普通列表 - 演示",
         "demoProduct": "商品列表 - 演示",

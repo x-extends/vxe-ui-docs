@@ -159,6 +159,7 @@
   "plugins": {
     "base": {
       "nav": {
+        "back": "반품",
         "demoTitle": "기능적 데모",
         "demoList": "일반 목록 - 데모",
         "demoProduct": "제품 목록 - 데모",
