@@ -1201,7 +1201,20 @@
       "methods_next-page": "Sautez manuellement à la page suivante",
       "methods_prev-jump": "Passez à la page précédente sur les pages",
       "methods_next-jump": "Passez à la page suivante sur la page",
-      "methods_jump-page": "Sauter à la page spécifiée"
+      "methods_jump-page": "Sauter à la page spécifiée",
+      "slots_home": "自定义首页按钮模板",
+      "slots_prev-page": "自定义上一页按钮模板",
+      "slots_jump-prev": "自定义向上跳页按钮模板",
+      "slots_jump-next": "自定义向下跳页按钮模板",
+      "slots_next-page": "自定义下一页按钮模板",
+      "slots_end": "自定义末页按钮模板",
+      "slots_number": "自定义页数按钮模板",
+      "slots_jump-number": "自定义页数带跳页按钮模板",
+      "slots_sizes": "自定义页大小切换按钮模板",
+      "slots_full-jump": "自定义完整跳页按钮模板",
+      "slots_jump": "自定义跳页按钮模板",
+      "slots_page-count": "自定义总页数按钮模板",
+      "slots_total": "自定义总条数按钮模板"
     },
     "password-input": {
       "props_model-value": "Valeur de liaison du modèle V",
