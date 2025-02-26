@@ -1639,11 +1639,13 @@ export const navConfigList: NavVO[] = [
         title: 'Image 图片',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image' } } },
+          { title: 'Group API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image-group' } } },
           { title: '设置宽高', routerLink: { name: 'ComponentImageBase' } },
           { title: '圆形图片', routerLink: { name: 'ComponentImageCircle' } },
           { title: '预览多张图片', routerLink: { name: 'ComponentImageMultiple' } },
           { title: '懒加载', routerLink: { name: 'ComponentImageLazy' } },
           { title: '预览', routerLink: { name: 'ComponentImageShowPreview' } },
+          { title: '图片组', routerLink: { name: 'ComponentImageGroup' } },
           { title: '点击遮罩层关闭', routerLink: { name: 'ComponentImageMaskClosable' } },
           { title: '打印按钮', routerLink: { name: 'ComponentImageShowPrintButton' } },
           { title: '下载按钮', routerLink: { name: 'ComponentImageShowDownloadButton' } }

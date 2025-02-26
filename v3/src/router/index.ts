@@ -4948,6 +4948,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/image/showPreview/CodeExample.vue')
           },
           {
+            path: 'group',
+            name: 'ComponentImageGroup',
+            component: () => import('@/views/image/group/CodeExample.vue')
+          },
+          {
             path: 'maskClosable',
             name: 'ComponentImageMaskClosable',
             component: () => import('@/views/image/maskClosable/CodeExample.vue')
