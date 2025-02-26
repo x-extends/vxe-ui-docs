@@ -4945,11 +4945,6 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/image/showPreview/CodeExample.vue')
           },
           {
-            path: 'group',
-            name: 'ComponentImageGroup',
-            component: () => import('@/views/image/group/CodeExample.vue')
-          },
-          {
             path: 'maskClosable',
             name: 'ComponentImageMaskClosable',
             component: () => import('@/views/image/maskClosable/CodeExample.vue')
@@ -4964,6 +4959,16 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentImageShowDownloadButton',
             component: () => import('@/views/image/showDownloadButton/CodeExample.vue')
           }
+        ]
+      },
+      {
+        path: 'image-group',
+        component: RouteLayout,
+        children: [
+          { path: 'group', name: 'ComponentImageGroupBase', component: () => import('@/views/image-group/base/CodeExample.vue') },
+          { path: 'showPreview', name: 'ComponentImageGroupShowPreview', component: () => import('@/views/image-group/showPreview/CodeExample.vue') },
+          { path: 'showPrintButton', name: 'ComponentImageGroupShowPrintButton', component: () => import('@/views/image-group/showPrintButton/CodeExample.vue') },
+          { path: 'showDownloadButton', name: 'ComponentImageGroupShowDownloadButton', component: () => import('@/views/image-group/showDownloadButton/CodeExample.vue') }
         ]
       },
       {

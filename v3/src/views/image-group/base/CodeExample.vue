@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="image/group/Demo1">
+    <CodeLight path="image-group/base/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="图片组">
           用于显示一组图片
@@ -8,7 +8,7 @@
       </template>
     </CodeLight>
 
-    <CodeLight path="image/group/Demo2">
+    <CodeLight path="image-group/base/Demo2">
       <template #tip>
         <vxe-tip status="primary">
           对象格式
