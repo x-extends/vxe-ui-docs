@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-image-group :url-list="urlList" :image-style="{width: 100, height: 100}"></vxe-image-group>
+    <vxe-image-group :url-list="urlList" :image-style="{width: 60, height: 60}"></vxe-image-group>
   </div>
 </template>
 
