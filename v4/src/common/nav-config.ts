@@ -1709,7 +1709,14 @@ export const navConfigList: NavVO[] = [
           { title: '对齐方式', routerLink: { name: 'ComponentPagerAlign' } },
           { title: '自定义页大小列表', routerLink: { name: 'ComponentPagerPageSize' } },
           { title: '自定义布局', routerLink: { name: 'ComponentPagerLayout' } },
-          { title: '自定义模板', routerLink: { name: 'ComponentPagerTemplate' } }
+          {
+            title: '自定义模板',
+            children: [
+              { title: '左侧区域', routerLink: { name: 'ComponentPagerTemplateLeft' } },
+              { title: '右侧区域', routerLink: { name: 'ComponentPagerTemplateRight' } },
+              { title: '功能区', routerLink: { name: 'ComponentPagerTemplateFunc' } }
+            ]
+          }
         ]
       }
     ]

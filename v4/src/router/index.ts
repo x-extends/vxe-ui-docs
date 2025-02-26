@@ -6086,8 +6086,24 @@ const routes: Array<RouteRecordRaw> = [
           },
           {
             path: 'template',
-            name: 'ComponentPagerTemplate',
-            component: () => import('@/views/pager/template/CodeExample.vue')
+            component: RouteLayout,
+            children: [
+              {
+                path: 'left',
+                name: 'ComponentPagerTemplateLeft',
+                component: () => import('@/views/pager/template/left/CodeExample.vue')
+              },
+              {
+                path: 'right',
+                name: 'ComponentPagerTemplateRight',
+                component: () => import('@/views/pager/template/right/CodeExample.vue')
+              },
+              {
+                path: 'func',
+                name: 'ComponentPagerTemplateFunc',
+                component: () => import('@/views/pager/template/func/CodeExample.vue')
+              }
+            ]
           }
         ]
       },
