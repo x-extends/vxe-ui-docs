@@ -6482,6 +6482,14 @@ const routes: Array<RouteConfig> = [
             path: 'full',
             name: 'ComponentModalModalFull',
             component: () => import('@/views/modal/modal/full/CodeExample.vue')
+          },
+          {
+            path: 'other',
+            component: RouteLayout,
+            children: [
+              { path: 'form', name: 'ComponentModalModalOtherForm', component: () => import('@/views/modal/other/form/CodeExample.vue') },
+              { path: 'table', name: 'ComponentModalModalOtherTable', component: () => import('@/views/modal/other/table/CodeExample.vue') }
+            ]
           }
         ]
       },
