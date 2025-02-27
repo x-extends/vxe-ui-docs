@@ -2673,6 +2673,13 @@ export const navConfigList: NavVO[] = [
           { title: '手动操作', routerLink: { name: 'ComponentModalModalManual' } },
           { title: '完整功能', routerLink: { name: 'ComponentModalModalFull' } }
         ]
+      },
+      {
+        title: '功能示例',
+        children: [
+          { title: '弹窗与表单', routerLink: { name: 'ComponentModalModalOtherForm' } },
+          { title: '弹窗与表格', routerLink: { name: 'ComponentModalModalOtherTable' } }
+        ]
       }
     ]
   },
