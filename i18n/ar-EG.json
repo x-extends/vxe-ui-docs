@@ -271,10 +271,10 @@
   },
   "shopping": {
     "apps": {
-      "TemplateZeroCode": "Zero code system template",
-      "ExtendCellArea": "Region selection",
-      "FiltersCombination": "Complex combination Filters",
-      "FiltersComplexInput": "Complex input Filters"
+      "TemplateZeroCode": "零代码配套模板",
+      "ExtendCellArea": "区域选取",
+      "FiltersCombination": "组合筛选",
+      "FiltersComplexInput": "输入筛选"
     }
   },
   "components": {
