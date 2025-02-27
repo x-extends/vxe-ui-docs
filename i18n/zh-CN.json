@@ -269,6 +269,13 @@
       }
     }
   },
+  "shopping": {
+    "apps": {
+      "ExtendCellArea": "区域选取",
+      "FiltersCombination": "组合筛选",
+      "FiltersComplexInput": "输入筛选"
+    }
+  },
   "components": {
     "alert": {
       "props_title": "标题",
