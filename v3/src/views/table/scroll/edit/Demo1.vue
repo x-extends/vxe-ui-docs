@@ -7,6 +7,9 @@
       <vxe-button @click="loadData(10000)">加载1w行</vxe-button>
       <vxe-button @click="loadData(30000)">加载3w行</vxe-button>
     </p>
+    <p>
+      <vxe-button status="primary" @click="addEvent">新增</vxe-button>
+    </p>
     <vxe-table
       border
       show-overflow
@@ -95,6 +98,13 @@ export default Vue.extend({
           })
         }
       }, 350)
+    },
+    addEvent () {
+      const $table = this.$refs.tableRef as VxeTableInstance
+      if ($table) {
+        const record = {}
+        $table.insert(record)
+      }
     }
   },
   created () {

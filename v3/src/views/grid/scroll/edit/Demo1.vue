@@ -7,6 +7,9 @@
       <vxe-button @click="loadData(10000)">加载1w行</vxe-button>
       <vxe-button @click="loadData(30000)">加载3w行</vxe-button>
     </p>
+    <p>
+      <vxe-button status="primary" @click="addEvent">新增</vxe-button>
+    </p>
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
@@ -92,6 +95,13 @@ export default Vue.extend({
           })
         }
       }, 350)
+    },
+    addEvent () {
+      const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
+      if ($grid) {
+        const record = {}
+        $grid.insert(record)
+      }
     }
   },
   created () {
