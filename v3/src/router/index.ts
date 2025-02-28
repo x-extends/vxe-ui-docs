@@ -5610,6 +5610,11 @@ const routes: Array<RouteConfig> = [
             path: 'icons',
             name: 'ComponentIconPickerIcons',
             component: () => import('@/views/icon-picker/icons/CodeExample.vue')
+          },
+          {
+            path: 'color',
+            name: 'ComponentIconPickerColor',
+            component: () => import('@/views/icon-picker/color/CodeExample.vue')
           }
         ]
       },
