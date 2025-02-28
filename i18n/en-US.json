@@ -834,7 +834,14 @@
       "props_size": "size",
       "props_icons": "Custom icon list",
       "events_change": "This event is triggered when the value changes",
-      "events_clear": "This event is triggered when the clear button on the right is clicked"
+      "events_clear": "This event is triggered when the clear button on the right is clicked",
+      "props_class-name": "附加 className",
+      "props_popup-class-name": "给下拉容器附加 className",
+      "props_show-icon-title": "是否显示图标的标题",
+      "props_readonly": "是否只读",
+      "props_disabled": "是否禁用",
+      "props_placement": "固定显示下拉面板的方向",
+      "props_transfer": "是否将弹框容器插入于 body 内（对于嵌入到表格或者弹窗中被遮挡时需要设置为 true）"
     },
     "image": {
       "props_src": "path",
