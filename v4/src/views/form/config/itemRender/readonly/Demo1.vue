@@ -1,6 +1,8 @@
 <template>
   <div>
     <vxe-button status="primary" @click="toggleReadonly">切换只读</vxe-button>
+    <vxe-button status="success" @click="toggleBorder">显示边框</vxe-button>
+    <vxe-button status="success" @click="toggleBackground">显示背景</vxe-button>
 
     <vxe-form v-bind="formOptions"></vxe-form>
   </div>
@@ -13,9 +15,10 @@ import { VxeFormProps, VxeUploadPropTypes, VxeFormItemPropTypes } from 'vxe-pc-u
 interface FormDataVO {
   name: string
   nickname: string
-  num: string
-  float: string
-  integer: string
+  num: number
+  float: number
+  integer: number
+  amount: number
   date: string
   time: string
   year: string
@@ -145,23 +148,26 @@ const actionItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
 })
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
+  border: false,
   readonly: false,
-  titleWidth: 120,
+  titleWidth: 140,
   titleColon: true,
+  titleBackground: false,
   titleAlign: 'right',
   data: {
     name: 'test1',
     nickname: 'Testing',
-    num: '',
-    integer: '',
-    float: '',
-    date: '',
-    time: '',
-    year: '',
-    quarter: '',
-    month: '',
-    week: '',
-    datetime: '',
+    num: 4236985.3,
+    integer: 100000,
+    float: 31200.33,
+    amount: 100000,
+    date: '2025-02-02',
+    time: '02:01:02',
+    year: '2025-01-01',
+    quarter: '2025-04-01',
+    month: '2025-10-01',
+    week: '2025-03-17',
+    datetime: '2025-02-02 10:30:45',
     sex: 'Man',
     sexList: ['Man', 'Women'],
     type: '1-1',
@@ -184,21 +190,24 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
     { field: 'nickname', title: '输入框', span: 24, itemRender: { name: 'VxeInput' } },
     {
+      span: 24,
       children: [
-        { field: 'num', title: '数字', span: 12, itemRender: { name: 'VxeInput', props: { type: 'number' } } },
-        { field: 'integer', title: '整数', span: 12, itemRender: { name: 'VxeInput', props: { type: 'integer' } } },
-        { field: 'float', title: '小数', span: 24, itemRender: { name: 'VxeInput', props: { type: 'float' } } }
+        { field: 'num', title: '数字', span: 12, itemRender: { name: 'VxeNumberInput' } },
+        { field: 'integer', title: '整数', span: 12, itemRender: { name: 'VxeNumberInput', props: { type: 'integer' } } },
+        { field: 'float', title: '小数', span: 12, itemRender: { name: 'VxeNumberInput', props: { type: 'float' } } },
+        { field: 'amount', title: '金额', span: 12, itemRender: { name: 'VxeNumberInput', props: { type: 'amount' } } }
       ]
     },
     {
+      span: 24,
       children: [
-        { field: 'date', title: '日期', span: 8, itemRender: { name: 'VxeInput', props: { type: 'date' } } },
-        { field: 'year', title: '年份', span: 8, itemRender: { name: 'VxeInput', props: { type: 'year' } } },
-        { field: 'quarter', title: '季度', span: 8, itemRender: { name: 'VxeInput', props: { type: 'quarter' } } },
-        { field: 'month', title: '月份', span: 8, itemRender: { name: 'VxeInput', props: { type: 'month' } } },
-        { field: 'week', title: '周', span: 8, itemRender: { name: 'VxeInput', props: { type: 'week' } } },
-        { field: 'time', title: '时间', span: 8, itemRender: { name: 'VxeInput', props: { type: 'time' } } },
-        { field: 'datetime', title: '日期带时间', span: 24, itemRender: { name: 'VxeInput', props: { type: 'datetime' } } }
+        { field: 'date', title: '日期', span: 12, itemRender: { name: 'VxeDatePicker' } },
+        { field: 'year', title: '年份', span: 12, itemRender: { name: 'VxeDatePicker', props: { type: 'year' } } },
+        { field: 'quarter', title: '季度', span: 12, itemRender: { name: 'VxeDatePicker', props: { type: 'quarter' } } },
+        { field: 'month', title: '月份', span: 12, itemRender: { name: 'VxeDatePicker', props: { type: 'month' } } },
+        { field: 'week', title: '周', span: 12, itemRender: { name: 'VxeDatePicker', props: { type: 'week' } } },
+        { field: 'time', title: '时间', span: 12, itemRender: { name: 'VxeDatePicker', props: { type: 'time' } } },
+        { field: 'datetime', title: '日期带时间', span: 12, itemRender: { name: 'VxeDatePicker', props: { type: 'datetime' } } }
       ]
     },
     { field: 'sex', title: '下拉框', span: 12, itemRender: sexItemRender },
@@ -237,5 +246,13 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
 
 const toggleReadonly = () => {
   formOptions.readonly = !formOptions.readonly
+}
+
+const toggleBorder = () => {
+  formOptions.border = !formOptions.border
+}
+
+const toggleBackground = () => {
+  formOptions.titleBackground = !formOptions.titleBackground
 }
 </script>

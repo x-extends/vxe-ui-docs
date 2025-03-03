@@ -1,6 +1,8 @@
 <template>
   <div>
     <vxe-button status="primary" @click="toggleDisabled">切换禁用</vxe-button>
+    <vxe-button status="success" @click="toggleBorder">显示边框</vxe-button>
+    <vxe-button status="success" @click="toggleBackground">显示背景</vxe-button>
 
     <vxe-form v-bind="formOptions"></vxe-form>
   </div>
@@ -147,9 +149,11 @@ export default Vue.extend({
     }
 
     const formOptions: VxeFormProps<FormDataVO> = {
+      border: false,
       disabled: false,
-      titleWidth: 120,
+      titleWidth: 140,
       titleColon: true,
+      titleBackground: false,
       titleAlign: 'right',
       data: {
         name: 'test1',
@@ -186,21 +190,24 @@ export default Vue.extend({
         { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
         { field: 'nickname', title: '输入框', span: 24, itemRender: { name: 'VxeInput' } },
         {
+          span: 24,
           children: [
-            { field: 'num', title: '数字', span: 12, itemRender: { name: 'VxeInput', props: { type: 'number' } } },
-            { field: 'integer', title: '整数', span: 12, itemRender: { name: 'VxeInput', props: { type: 'integer' } } },
-            { field: 'float', title: '小数', span: 24, itemRender: { name: 'VxeInput', props: { type: 'float' } } }
+            { field: 'num', title: '数字', span: 12, itemRender: { name: 'VxeNumberInput' } },
+            { field: 'integer', title: '整数', span: 12, itemRender: { name: 'VxeNumberInput', props: { type: 'integer' } } },
+            { field: 'float', title: '小数', span: 12, itemRender: { name: 'VxeNumberInput', props: { type: 'float' } } },
+            { field: 'amount', title: '金额', span: 12, itemRender: { name: 'VxeNumberInput', props: { type: 'amount' } } }
           ]
         },
         {
+          span: 24,
           children: [
-            { field: 'date', title: '日期', span: 8, itemRender: { name: 'VxeInput', props: { type: 'date' } } },
-            { field: 'year', title: '年份', span: 8, itemRender: { name: 'VxeInput', props: { type: 'year' } } },
-            { field: 'quarter', title: '季度', span: 8, itemRender: { name: 'VxeInput', props: { type: 'quarter' } } },
-            { field: 'month', title: '月份', span: 8, itemRender: { name: 'VxeInput', props: { type: 'month' } } },
-            { field: 'week', title: '周', span: 8, itemRender: { name: 'VxeInput', props: { type: 'week' } } },
-            { field: 'time', title: '时间', span: 8, itemRender: { name: 'VxeInput', props: { type: 'time' } } },
-            { field: 'datetime', title: '日期带时间', span: 24, itemRender: { name: 'VxeInput', props: { type: 'datetime' } } }
+            { field: 'date', title: '日期', span: 12, itemRender: { name: 'VxeDatePicker' } },
+            { field: 'year', title: '年份', span: 12, itemRender: { name: 'VxeDatePicker', props: { type: 'year' } } },
+            { field: 'quarter', title: '季度', span: 12, itemRender: { name: 'VxeDatePicker', props: { type: 'quarter' } } },
+            { field: 'month', title: '月份', span: 12, itemRender: { name: 'VxeDatePicker', props: { type: 'month' } } },
+            { field: 'week', title: '周', span: 12, itemRender: { name: 'VxeDatePicker', props: { type: 'week' } } },
+            { field: 'time', title: '时间', span: 12, itemRender: { name: 'VxeDatePicker', props: { type: 'time' } } },
+            { field: 'datetime', title: '日期带时间', span: 12, itemRender: { name: 'VxeDatePicker', props: { type: 'datetime' } } }
           ]
         },
         { field: 'sex', title: '下拉框', span: 12, itemRender: sexItemRender },
@@ -245,6 +252,12 @@ export default Vue.extend({
   methods: {
     toggleDisabled () {
       this.formOptions.disabled = !this.formOptions.disabled
+    },
+    toggleBorder () {
+      this.formOptions.border = !this.formOptions.border
+    },
+    toggleBackground () {
+      this.formOptions.titleBackground = !this.formOptions.titleBackground
     }
   }
 })
