@@ -77,7 +77,7 @@ export default Vue.extend({
     revertRow (row: RowVO) {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
       if ($grid) {
-        if ($grid.isUpdateByRow(row)) {
+        if ($grid.isUpdateByRow(row) || $grid.isRemoveByRow(row)) {
           $grid.revertData(row)
           VxeUI.modal.message({
             content: '数据已恢复',

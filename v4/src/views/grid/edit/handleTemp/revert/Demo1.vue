@@ -75,7 +75,7 @@ const updateRow2 = (row: RowVO) => {
 const revertRow = (row: RowVO) => {
   const $grid = gridRef.value
   if ($grid) {
-    if ($grid.isUpdateByRow(row)) {
+    if ($grid.isUpdateByRow(row) || $grid.isRemoveByRow(row)) {
       $grid.revertData(row)
       VxeUI.modal.message({
         content: '数据已恢复',
