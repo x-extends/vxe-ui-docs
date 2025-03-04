@@ -2114,7 +2114,8 @@ export const navConfigList: NavVO[] = [
           { title: '尺寸大小', routerLink: { name: 'ComponentColorPickerSize' } },
           { title: '可清除', routerLink: { name: 'ComponentColorPickerClearable' } },
           { title: '快捷颜色', routerLink: { name: 'ComponentColorPickerColors' } },
-          { title: 'RGB 色值', routerLink: { name: 'ComponentColorPickerType' } }
+          { title: 'RGB 色值', routerLink: { name: 'ComponentColorPickerType' } },
+          { title: '取色管', routerLink: { name: 'ComponentColorPickerShowEyeDropper' } }
         ]
       },
       {

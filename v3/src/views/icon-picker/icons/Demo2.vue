@@ -12,13 +12,13 @@ export default Vue.extend({
     return {
       val1: 'vxe-icon-comment',
       iconList: [
-        'home',
-        'company',
-        'comment',
-        'setting',
-        'send',
-        'envelope',
-        'envelope-open'
+        { icon: 'vxe-icon-home' },
+        { icon: 'vxe-icon-company' },
+        { icon: 'vxe-icon-comment' },
+        { icon: 'vxe-icon-setting' },
+        { icon: 'vxe-icon-send' },
+        { icon: 'vxe-icon-envelope' },
+        { icon: 'vxe-icon-envelope-open' }
       ]
     }
   }

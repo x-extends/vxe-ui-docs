@@ -5626,6 +5626,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'type',
             name: 'ComponentColorPickerType',
             component: () => import('@/views/color-picker/type/CodeExample.vue')
+          },
+          {
+            path: 'showEyeDropper',
+            name: 'ComponentColorPickerShowEyeDropper',
+            component: () => import('@/views/color-picker/showEyeDropper/CodeExample.vue')
           }
         ]
       },

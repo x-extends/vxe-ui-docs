@@ -9,12 +9,12 @@ import { ref } from 'vue'
 
 const val1 = ref('vxe-icon-comment')
 const iconList = ref([
-  'home',
-  'company',
-  'comment',
-  'setting',
-  'send',
-  'envelope',
-  'envelope-open'
+  { icon: 'vxe-icon-home' },
+  { icon: 'vxe-icon-company' },
+  { icon: 'vxe-icon-comment' },
+  { icon: 'vxe-icon-setting' },
+  { icon: 'vxe-icon-send' },
+  { icon: 'vxe-icon-envelope' },
+  { icon: 'vxe-icon-envelope-open' }
 ])
 </script>
