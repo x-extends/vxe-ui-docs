@@ -1413,7 +1413,9 @@
       "props_scroll-y_gt": "指定大于指定行时自动启动纵向虚拟滚动，如果为 0 则总是启用；如果需要关闭，可以设置 enabled 为 false（注：启用纵向虚拟滚动之后将不能支持动态行高）",
       "props_scroll-y_o-size": "指定每次渲染的数据偏移量，偏移量越大渲染次数就越少，但每次渲染耗时就越久（对于低性能浏览器可以设置大一点，减低渲染次数）",
       "methods_load-data": "加载数据",
-      "methods_reload-data": "加载数据并清除所有状态"
+      "methods_reload-data": "加载数据并清除所有状态",
+      "props_default-config": "默认值配置项",
+      "props_default-config_select-mode": "默认选择模式，默认选中行为只会在初始化时触发一次"
     },
     "slider": {
       "props_model-value": "v-model 绑定值",
@@ -4492,7 +4494,11 @@
       "props_buttons_placement": "固定显示下拉面板的方向",
       "props_buttons_transfer": "是否将弹框容器插入于 body 内（对于嵌入到表格或者弹窗中被遮挡时需要设置为 true）",
       "props_tools_placement": "固定显示下拉面板的方向",
-      "props_tools_transfer": "是否将弹框容器插入于 body 内（对于嵌入到表格或者弹窗中被遮挡时需要设置为 true）"
+      "props_tools_transfer": "是否将弹框容器插入于 body 内（对于嵌入到表格或者弹窗中被遮挡时需要设置为 true）",
+      "slots_button-prefix": "自定义左侧按钮列表前缀插槽模板",
+      "slots_button-suffix": "自定义左侧按钮列表后缀插槽模板",
+      "slots_tool-prefix": "自定义右侧工具列表前缀插槽模板",
+      "slots_tool-suffix": "自定义右侧工具列表后缀插槽模板"
     }
   }
 }

@@ -1413,7 +1413,9 @@
       "props_scroll-y_gt": "Lorsque la ligne spécifiée est supérieure à la ligne spécifiée, elle sera toujours activée si elle est 0;",
       "props_scroll-y_o-size": "Spécifiez le décalage des données pour chaque rendu.",
       "methods_load-data": "Chargement des données",
-      "methods_reload-data": "Chargez les données et effacez tous les états"
+      "methods_reload-data": "Chargez les données et effacez tous les états",
+      "props_default-config": "默认值配置项",
+      "props_default-config_select-mode": "默认选择模式，默认选中行为只会在初始化时触发一次"
     },
     "slider": {
       "props_model-value": "Valeur de liaison du modèle V",
@@ -4492,7 +4494,11 @@
       "props_buttons_placement": "Affichage fixe de la direction du panneau d'attraction",
       "props_buttons_transfer": "Que ce soit pour insérer le conteneur pop-up dans le corps (il doit être réglé sur true lorsqu'il est intégré dans une table ou une fenêtre contextuelle)",
       "props_tools_placement": "Affichage fixe de la direction du panneau d'attraction",
-      "props_tools_transfer": "Que ce soit pour insérer le conteneur pop-up dans le corps (il doit être réglé sur true lorsqu'il est intégré dans une table ou une fenêtre contextuelle)"
+      "props_tools_transfer": "Que ce soit pour insérer le conteneur pop-up dans le corps (il doit être réglé sur true lorsqu'il est intégré dans une table ou une fenêtre contextuelle)",
+      "slots_button-prefix": "自定义左侧按钮列表前缀插槽模板",
+      "slots_button-suffix": "自定义左侧按钮列表后缀插槽模板",
+      "slots_tool-prefix": "自定义右侧工具列表前缀插槽模板",
+      "slots_tool-suffix": "自定义右侧工具列表后缀插槽模板"
     }
   }
 }

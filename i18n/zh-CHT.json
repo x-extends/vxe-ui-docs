@@ -1413,7 +1413,9 @@
       "props_scroll-y_gt": "指定大於指定行時自動啟動縱向虛擬滾動，如果為 0 則總是啟用；如果需要關閉，可以設置 enabled 為 false（注：啟用縱向虛擬滾動之後將不能支持動態行高）",
       "props_scroll-y_o-size": "指定每次渲染的數據偏移量，偏移量越大渲染次數就越少，但每次渲染耗時就越久（對於低性能瀏覽器可以設置大一點，減低渲染次數）",
       "methods_load-data": "加載數據",
-      "methods_reload-data": "加載數據並清除所有狀態"
+      "methods_reload-data": "加載數據並清除所有狀態",
+      "props_default-config": "默认值配置项",
+      "props_default-config_select-mode": "默认选择模式，默认选中行为只会在初始化时触发一次"
     },
     "slider": {
       "props_model-value": "v-model 綁定值",
@@ -4492,7 +4494,11 @@
       "props_buttons_placement": "固定顯示下拉麵板的方向",
       "props_buttons_transfer": "是否將彈框容器插入於 body 內（對於嵌入到表格或者彈窗中被遮擋時需要設置為 true）",
       "props_tools_placement": "固定顯示下拉麵板的方向",
-      "props_tools_transfer": "是否將彈框容器插入於 body 內（對於嵌入到表格或者彈窗中被遮擋時需要設置為 true）"
+      "props_tools_transfer": "是否將彈框容器插入於 body 內（對於嵌入到表格或者彈窗中被遮擋時需要設置為 true）",
+      "slots_button-prefix": "自定义左侧按钮列表前缀插槽模板",
+      "slots_button-suffix": "自定义左侧按钮列表后缀插槽模板",
+      "slots_tool-prefix": "自定义右侧工具列表前缀插槽模板",
+      "slots_tool-suffix": "自定义右侧工具列表后缀插槽模板"
     }
   }
 }

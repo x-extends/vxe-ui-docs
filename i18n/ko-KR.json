@@ -1413,7 +1413,9 @@
       "props_scroll-y_gt": "지정된 행이 지정된 행보다 크면 0 인 경우 항상 사용됩니다.",
       "props_scroll-y_o-size": "각 렌더링에 대한 데이터 오프셋을 지정하십시오. 오프셋이 클수록 렌더링 시간이 줄어들수록 각 렌더링이 길어질수록 (저 성능 브라우저의 경우, 렌더링 수를 줄일 수 있습니다).",
       "methods_load-data": "데이터로드",
-      "methods_reload-data": "데이터를로드하고 모든 상태를 지우십시오"
+      "methods_reload-data": "데이터를로드하고 모든 상태를 지우십시오",
+      "props_default-config": "默认值配置项",
+      "props_default-config_select-mode": "默认选择模式，默认选中行为只会在初始化时触发一次"
     },
     "slider": {
       "props_model-value": "V- 모델 결합 값",
@@ -4492,7 +4494,11 @@
       "props_buttons_placement": "풀다운 패널의 방향의 표시가 수정되었습니다",
       "props_buttons_transfer": "팝업 컨테이너를 본체에 삽입할지 여부 (테이블 또는 팝업 창에 포함시킬 때 true로 설정해야합니다)",
       "props_tools_placement": "풀다운 패널의 방향의 표시가 수정되었습니다",
-      "props_tools_transfer": "팝업 컨테이너를 본체에 삽입할지 여부 (테이블 또는 팝업 창에 포함시킬 때 true로 설정해야합니다)"
+      "props_tools_transfer": "팝업 컨테이너를 본체에 삽입할지 여부 (테이블 또는 팝업 창에 포함시킬 때 true로 설정해야합니다)",
+      "slots_button-prefix": "自定义左侧按钮列表前缀插槽模板",
+      "slots_button-suffix": "自定义左侧按钮列表后缀插槽模板",
+      "slots_tool-prefix": "自定义右侧工具列表前缀插槽模板",
+      "slots_tool-suffix": "自定义右侧工具列表后缀插槽模板"
     }
   }
 }
