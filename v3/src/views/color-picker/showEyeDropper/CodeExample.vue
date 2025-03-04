@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="color-picker/showEyeDropper/Demo1">
+    <CodeLight path="color-picker/showEyeDropper/Demo1" previewPath="/resource/docsImg/color_picker_show_eye_dropper.gif">
       <template #tip>
         <vxe-tip status="primary" title="显示取色管">
           通过 <ApiLink name="color-picker" prop="show-eye-dropper"/> 启用取色管功能
