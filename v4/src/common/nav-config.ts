@@ -401,6 +401,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '使用合并行与列', routerLink: { name: 'ComponentTableEditSpan' } },
             { title: '使用右键菜单', routerLink: { name: 'ComponentTableEditMenu' } },
             { title: '设置行高', routerLink: { name: 'ComponentTableEditRowHeight' } },
+            { title: '负数自动标红', routerLink: { name: 'ComponentTableEditShowNegativeStatus' } },
             { title: '实现附件列表', routerLink: { name: 'ComponentTableEditFileList' } },
             { title: '实现弹窗编辑表单', routerLink: { name: 'ComponentTableEditModalForm' } },
             { title: '实现弹窗选择数据', routerLink: { name: 'ComponentTableEditModalSelect' } },

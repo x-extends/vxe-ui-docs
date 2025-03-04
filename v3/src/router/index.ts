@@ -1312,6 +1312,11 @@ const tableRouteConfig: RouteConfig = {
           component: () => import('@/views/table/edit/cascadingSelect/CodeExample.vue')
         },
         {
+          path: 'showNegativeStatus',
+          name: 'ComponentTableEditShowNegativeStatus',
+          component: () => import('@/views/table/edit/showNegativeStatus/CodeExample.vue')
+        },
+        {
           path: 'rowImmediately',
           name: 'ComponentTableEditRowImmediately',
           component: () => import('@/views/table/edit/rowImmediately/CodeExample.vue')
