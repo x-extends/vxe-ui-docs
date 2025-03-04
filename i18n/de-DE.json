@@ -381,7 +381,8 @@
       "props_options_trigger": "Nur für die Router-Linie gültig, Link Öffnungsmethode",
       "props_options_loading": "Lade es?",
       "props_options_title": "",
-      "props_permission-code": "Erlaubniscode"
+      "props_permission-code": "Erlaubniscode",
+      "props_vertical": "使用垂直布局"
     },
     "calendar": {
       "props_model-value": "V-Model-Bindungswert",
@@ -502,7 +503,8 @@
       "props_placement": "Feste Anzeige der Richtung des Pulldown-Feldes",
       "props_transfer": "Ob Sie den Popup-Behälter in den Körper einfügen möchten",
       "events_change": "Dieses Ereignis wird ausgelöst, wenn sich der Wert ändert",
-      "events_clear": "Dieses Ereignis wird beim Klicken auf die Schaltfläche Löschen auf der rechten Seite ausgelöst"
+      "events_clear": "Dieses Ereignis wird beim Klicken auf die Schaltfläche Löschen auf der rechten Seite ausgelöst",
+      "props_show-eye-dropper": "显示取色器"
     },
     "date-picker": {
       "props_model-value": "V-Model-Bindungswert",
@@ -511,7 +513,23 @@
       "props_placeholder": "Wenn der Wert leer ist, ist der angezeigte Platzhalter",
       "props_multiple": "Unabhängig davon, ob Sie mehrere Auswahlmöglichkeiten auswählen möchten",
       "props_disabled": "Ob zu deaktivieren",
-      "props_readonly": "Nur lesen"
+      "props_readonly": "Nur lesen",
+      "props_limit-count": "限制选择数量",
+      "props_shortcut-config": "快捷按钮配置项",
+      "props_shortcut-config_enabled": "是否启用",
+      "props_shortcut-config_position": "显示位置",
+      "props_shortcut-config_align": "按钮对齐方式",
+      "props_shortcut-config_mode": "按钮模式",
+      "props_shortcut-config_click-method": "按钮点击的处理方法",
+      "props_shortcut-config_options": "按钮列表",
+      "slots_prefix": "自定义前缀图标插槽模板",
+      "slots_suffix": "自定义后缀图标插槽模板",
+      "slots_header": "自定义自定义头部插槽模板",
+      "slots_footer": "自定义自定义尾部插槽模板",
+      "slots_top": "自定义顶部插槽模板",
+      "slots_bottom": "自定义底部插槽模板",
+      "slots_left": "自定义左侧插槽模板",
+      "slots_right": "自定义右侧插槽模板"
     },
     "drawer": {
       "props_class-name": "Befestigen Sie den Klassennamen an die Schublade",

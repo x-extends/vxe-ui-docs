@@ -381,7 +381,8 @@
       "props_options_trigger": "Действительно только для маршрутизатора, метод открытия ссылок",
       "props_options_loading": "Это загрузка?",
       "props_options_title": "",
-      "props_permission-code": "Код разрешения"
+      "props_permission-code": "Код разрешения",
+      "props_vertical": "使用垂直布局"
     },
     "calendar": {
       "props_model-value": "V-модель связывания",
@@ -502,7 +503,8 @@
       "props_placement": "Фиксированный отображение направления раскрывающейся панели",
       "props_transfer": "Вставить всплывающий контейнер в тело",
       "events_change": "Это событие запускается при изменении значения",
-      "events_clear": "Это событие запускается при нажатии кнопки «Очистить» справа"
+      "events_clear": "Это событие запускается при нажатии кнопки «Очистить» справа",
+      "props_show-eye-dropper": "显示取色器"
     },
     "date-picker": {
       "props_model-value": "V-модель связывания",
@@ -511,7 +513,23 @@
       "props_placeholder": "Когда значение пустое, отображаемый заполнитель",
       "props_multiple": "Выбирать несколько вариантов",
       "props_disabled": "Отключить ли",
-      "props_readonly": "Читать только"
+      "props_readonly": "Читать только",
+      "props_limit-count": "限制选择数量",
+      "props_shortcut-config": "快捷按钮配置项",
+      "props_shortcut-config_enabled": "是否启用",
+      "props_shortcut-config_position": "显示位置",
+      "props_shortcut-config_align": "按钮对齐方式",
+      "props_shortcut-config_mode": "按钮模式",
+      "props_shortcut-config_click-method": "按钮点击的处理方法",
+      "props_shortcut-config_options": "按钮列表",
+      "slots_prefix": "自定义前缀图标插槽模板",
+      "slots_suffix": "自定义后缀图标插槽模板",
+      "slots_header": "自定义自定义头部插槽模板",
+      "slots_footer": "自定义自定义尾部插槽模板",
+      "slots_top": "自定义顶部插槽模板",
+      "slots_bottom": "自定义底部插槽模板",
+      "slots_left": "自定义左侧插槽模板",
+      "slots_right": "自定义右侧插槽模板"
     },
     "drawer": {
       "props_class-name": "Прикрепите классное имя к ящику",

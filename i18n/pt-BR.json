@@ -381,7 +381,8 @@
       "props_options_trigger": "Somente válido para o método de abertura do roteador-lin,",
       "props_options_loading": "Está carregando?",
       "props_options_title": "",
-      "props_permission-code": "Código de permissão"
+      "props_permission-code": "Código de permissão",
+      "props_vertical": "使用垂直布局"
     },
     "calendar": {
       "props_model-value": "Valor de ligação ao modelo V.",
@@ -502,7 +503,8 @@
       "props_placement": "Exibição fixa da direção do painel pull-down",
       "props_transfer": "Se deve inserir o recipiente pop-up no corpo",
       "events_change": "Este evento é acionado quando o valor muda",
-      "events_clear": "Este evento é acionado ao clicar no botão Limpar à direita"
+      "events_clear": "Este evento é acionado ao clicar no botão Limpar à direita",
+      "props_show-eye-dropper": "显示取色器"
     },
     "date-picker": {
       "props_model-value": "Valor de ligação ao modelo V.",
@@ -511,7 +513,23 @@
       "props_placeholder": "Quando o valor está vazio, o espaço reservado exibido",
       "props_multiple": "Se deve escolher várias opções",
       "props_disabled": "Se deve desativar",
-      "props_readonly": "Somente leitura"
+      "props_readonly": "Somente leitura",
+      "props_limit-count": "限制选择数量",
+      "props_shortcut-config": "快捷按钮配置项",
+      "props_shortcut-config_enabled": "是否启用",
+      "props_shortcut-config_position": "显示位置",
+      "props_shortcut-config_align": "按钮对齐方式",
+      "props_shortcut-config_mode": "按钮模式",
+      "props_shortcut-config_click-method": "按钮点击的处理方法",
+      "props_shortcut-config_options": "按钮列表",
+      "slots_prefix": "自定义前缀图标插槽模板",
+      "slots_suffix": "自定义后缀图标插槽模板",
+      "slots_header": "自定义自定义头部插槽模板",
+      "slots_footer": "自定义自定义尾部插槽模板",
+      "slots_top": "自定义顶部插槽模板",
+      "slots_bottom": "自定义底部插槽模板",
+      "slots_left": "自定义左侧插槽模板",
+      "slots_right": "自定义右侧插槽模板"
     },
     "drawer": {
       "props_class-name": "Anexe ClassName à gaveta",

@@ -381,7 +381,8 @@
       "props_options_trigger": "Seulement valable pour le routeur-lin, la méthode d'ouverture des liens",
       "props_options_loading": "Est-ce que ça se charge?",
       "props_options_title": "",
-      "props_permission-code": "Code d'autorisation"
+      "props_permission-code": "Code d'autorisation",
+      "props_vertical": "使用垂直布局"
     },
     "calendar": {
       "props_model-value": "Valeur de liaison du modèle V",
@@ -502,7 +503,8 @@
       "props_placement": "Affichage fixe de la direction du panneau d'attraction",
       "props_transfer": "S'il faut insérer le conteneur pop-up dans le corps",
       "events_change": "Cet événement est déclenché lorsque la valeur change",
-      "events_clear": "Cet événement est déclenché lorsque vous cliquez sur le bouton Effacer à droite"
+      "events_clear": "Cet événement est déclenché lorsque vous cliquez sur le bouton Effacer à droite",
+      "props_show-eye-dropper": "显示取色器"
     },
     "date-picker": {
       "props_model-value": "Valeur de liaison du modèle V",
@@ -511,7 +513,23 @@
       "props_placeholder": "Lorsque la valeur est vide, l'espace réservé affiché",
       "props_multiple": "Que ce soit pour choisir plusieurs choix",
       "props_disabled": "Si elle doit désactiver",
-      "props_readonly": "Lire uniquement"
+      "props_readonly": "Lire uniquement",
+      "props_limit-count": "限制选择数量",
+      "props_shortcut-config": "快捷按钮配置项",
+      "props_shortcut-config_enabled": "是否启用",
+      "props_shortcut-config_position": "显示位置",
+      "props_shortcut-config_align": "按钮对齐方式",
+      "props_shortcut-config_mode": "按钮模式",
+      "props_shortcut-config_click-method": "按钮点击的处理方法",
+      "props_shortcut-config_options": "按钮列表",
+      "slots_prefix": "自定义前缀图标插槽模板",
+      "slots_suffix": "自定义后缀图标插槽模板",
+      "slots_header": "自定义自定义头部插槽模板",
+      "slots_footer": "自定义自定义尾部插槽模板",
+      "slots_top": "自定义顶部插槽模板",
+      "slots_bottom": "自定义底部插槽模板",
+      "slots_left": "自定义左侧插槽模板",
+      "slots_right": "自定义右侧插槽模板"
     },
     "drawer": {
       "props_class-name": "Joignez le nom de classe au tiroir",

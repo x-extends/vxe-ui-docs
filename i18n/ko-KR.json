@@ -381,7 +381,8 @@
       "props_options_trigger": "라우터 린, 링크 개방 방법에만 유효합니다",
       "props_options_loading": "로드하고 있습니까?",
       "props_options_title": "",
-      "props_permission-code": "권한 코드"
+      "props_permission-code": "권한 코드",
+      "props_vertical": "使用垂直布局"
     },
     "calendar": {
       "props_model-value": "V- 모델 결합 값",
@@ -502,7 +503,8 @@
       "props_placement": "풀다운 패널의 방향의 표시가 수정되었습니다",
       "props_transfer": "팝업 용기를 몸에 삽입할지 여부",
       "events_change": "이 이벤트는 값이 변경 될 때 트리거됩니다",
-      "events_clear": "이 이벤트는 오른쪽의 클리어 버튼을 클릭하면 트리거됩니다."
+      "events_clear": "이 이벤트는 오른쪽의 클리어 버튼을 클릭하면 트리거됩니다.",
+      "props_show-eye-dropper": "显示取色器"
     },
     "date-picker": {
       "props_model-value": "V- 모델 결합 값",
@@ -511,7 +513,23 @@
       "props_placeholder": "값이 비어 있으면 표시된 자리 표시 자",
       "props_multiple": "여러 선택 여부",
       "props_disabled": "비활성화 여부",
-      "props_readonly": "만 읽으십시오"
+      "props_readonly": "만 읽으십시오",
+      "props_limit-count": "限制选择数量",
+      "props_shortcut-config": "快捷按钮配置项",
+      "props_shortcut-config_enabled": "是否启用",
+      "props_shortcut-config_position": "显示位置",
+      "props_shortcut-config_align": "按钮对齐方式",
+      "props_shortcut-config_mode": "按钮模式",
+      "props_shortcut-config_click-method": "按钮点击的处理方法",
+      "props_shortcut-config_options": "按钮列表",
+      "slots_prefix": "自定义前缀图标插槽模板",
+      "slots_suffix": "自定义后缀图标插槽模板",
+      "slots_header": "自定义自定义头部插槽模板",
+      "slots_footer": "自定义自定义尾部插槽模板",
+      "slots_top": "自定义顶部插槽模板",
+      "slots_bottom": "自定义底部插槽模板",
+      "slots_left": "自定义左侧插槽模板",
+      "slots_right": "自定义右侧插槽模板"
     },
     "drawer": {
       "props_class-name": "클래스 이름을 서랍에 첨부하십시오",
