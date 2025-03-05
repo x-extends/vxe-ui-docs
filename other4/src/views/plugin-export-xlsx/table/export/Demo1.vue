@@ -41,9 +41,9 @@ const tableData = ref<RowVO[]>([
   { id: 10004, name: '老六', role: 'Designer', sex: 'Women', no1: '02040', no2: '02040' }
 ])
 
-const footerData: VxeTablePropTypes.FooterData = [
+const footerData = ref<VxeTablePropTypes.FooterData>([
   { seq: '合计', name: '12人', no1: '356' }
-]
+])
 
 const exportEvent = () => {
   const $table = tableRef.value
