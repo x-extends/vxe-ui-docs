@@ -125,11 +125,12 @@ const loadData = (rowSize: number) => {
   }, 50)
 }
 
-const addEvent = () => {
+const addEvent = async () => {
   const $table = tableRef.value
   if ($table) {
     const record = {}
-    $table.insert(record)
+    const { row: newRow } = await $table.insert(record)
+    $table.setEditCell(newRow, 'name')
   }
 }
 

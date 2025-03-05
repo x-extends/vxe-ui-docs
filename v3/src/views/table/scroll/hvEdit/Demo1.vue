@@ -129,11 +129,12 @@ export default Vue.extend({
         }
       }, 50)
     },
-    addEvent () {
+    async addEvent () {
       const $table = this.$refs.tableRef as VxeTableInstance
       if ($table) {
         const record = {}
-        $table.insert(record)
+        const { row: newRow } = await $table.insert(record)
+        $table.setEditCell(newRow, 'name')
       }
     }
   },

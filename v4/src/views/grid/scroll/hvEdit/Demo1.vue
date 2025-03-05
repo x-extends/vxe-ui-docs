@@ -92,11 +92,12 @@ const loadDataAndColumns = (rowSize: number, colSize: number) => {
   }, 50)
 }
 
-const addEvent = () => {
+const addEvent = async () => {
   const $grid = gridRef.value
   if ($grid) {
     const record = {}
-    $grid.insert(record)
+    const { row: newRow } = await $grid.insert(record)
+    $grid.setEditCell(newRow, 'name')
   }
 }
 

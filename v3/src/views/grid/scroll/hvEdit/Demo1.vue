@@ -96,11 +96,12 @@ export default Vue.extend({
         }
       }, 50)
     },
-    addEvent () {
+    async addEvent () {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
       if ($grid) {
         const record = {}
-        $grid.insert(record)
+        const { row: newRow } = await $grid.insert(record)
+        $grid.setEditCell(newRow, 'name')
       }
     }
   },
