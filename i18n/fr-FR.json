@@ -1384,6 +1384,7 @@
       "props_option-key": "Abandonné et remplacé par Option-Config.Usekey",
       "props_filterable": "S'il faut permettre le filtrage de traction",
       "props_filter-method": "Seulement valable pour les méthodes de filtrage filtrables et personnalisées",
+      "props_allow-create": "是否允许手动新增选项",
       "slots_prefix": "Modèle d'icône de préfixe personnalisé",
       "slots_header": "Modèle de tête de conteneur personnalisé",
       "slots_option": "Modèle d'option de conteneur personnalisé conteneur",

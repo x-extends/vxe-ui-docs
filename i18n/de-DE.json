@@ -1384,6 +1384,7 @@
       "props_option-key": "Verlassen und ersetzt durch Option-Config. Usekey",
       "props_filterable": "Ob das Pulldown-Filtering aktiviert werden soll",
       "props_filter-method": "Nur für filterbare, benutzerdefinierte Filtermethoden gültig",
+      "props_allow-create": "是否允许手动新增选项",
       "slots_prefix": "Benutzerdefinierte Vorlage für das Präfix -Symbol",
       "slots_header": "Benutzerdefinierte Popup-Container-Kopfvorlage",
       "slots_option": "Benutzerdefinierte Popup -Container -Optionsvorlage",

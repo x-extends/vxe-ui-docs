@@ -1384,6 +1384,7 @@
       "props_option-key": "Abandonado y reemplazado por opción-config.useykey",
       "props_filterable": "Si habilitar el filtrado desplegable",
       "props_filter-method": "Solo válido para métodos de filtrado personalizables y filtrables",
+      "props_allow-create": "是否允许手动新增选项",
       "slots_prefix": "Plantilla de icono de prefijo personalizado",
       "slots_header": "Plantilla de cabezal de contenedor emergente personalizado",
       "slots_option": "Plantilla de opción de contenedor emergente personalizado",

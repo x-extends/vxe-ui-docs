@@ -1384,6 +1384,7 @@
       "props_option-key": "Abandonado e substituído por option-config.usekey",
       "props_filterable": "Se deve habilitar a filtragem pull-down",
       "props_filter-method": "Somente válido para métodos de filtragem personalizável e filtrável",
+      "props_allow-create": "是否允许手动新增选项",
       "slots_prefix": "Modelo de ícone de prefixo personalizado",
       "slots_header": "Modelo de cabeça de contêiner pop-up personalizado",
       "slots_option": "Modelo de opção de contêiner pop -up personalizado",

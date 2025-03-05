@@ -1384,6 +1384,7 @@
       "props_option-key": "مهجورة واستبدلها الخيار config.usekey",
       "props_filterable": "ما إذا كان لتمكين التصفية المنسدلة",
       "props_filter-method": "صالحة فقط لطرق التصفية المخصصة المخصصة",
+      "props_allow-create": "是否允许手动新增选项",
       "slots_prefix": "قالب أيقونة البادئة المخصصة",
       "slots_header": "قالب رأس الحاوية المنبثقة المخصص",
       "slots_option": "قالب خيار الحاوية المنبثقة المخصصة",

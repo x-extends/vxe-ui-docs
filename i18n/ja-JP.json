@@ -1384,6 +1384,7 @@
       "props_option-key": "放棄され、option-config.usekeyに置き換えられました",
       "props_filterable": "プルダウンフィルタリングを有効にするかどうか",
       "props_filter-method": "フィルター可能なカスタムフィルタリング方法に対してのみ有効です",
+      "props_allow-create": "是否允许手动新增选项",
       "slots_prefix": "カスタムプレフィックスアイコンテンプレート",
       "slots_header": "カスタムポップアップコンテナヘッドテンプレート",
       "slots_option": "カスタムポップアップコンテナオプションテンプレート",

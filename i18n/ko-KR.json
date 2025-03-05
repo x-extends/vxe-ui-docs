@@ -1384,6 +1384,7 @@
       "props_option-key": "옵션 -config.usekey로 포기하고 대체되었습니다",
       "props_filterable": "풀다운 필터링을 활성화할지 여부",
       "props_filter-method": "여과 가능한 사용자 정의 필터링 방법에만 유효합니다",
+      "props_allow-create": "是否允许手动新增选项",
       "slots_prefix": "사용자 정의 접두사 아이콘 템플릿",
       "slots_header": "맞춤형 팝업 컨테이너 헤드 템플릿",
       "slots_option": "맞춤형 팝업 컨테이너 옵션 템플릿",

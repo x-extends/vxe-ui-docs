@@ -1384,6 +1384,7 @@
       "props_option-key": "Deprecated, replaced by option-config.useKey",
       "props_filterable": "Whether to enable drop-down filtering function",
       "props_filter-method": "Only valid for filterable, custom filtering method",
+      "props_allow-create": "是否允许手动新增选项",
       "slots_prefix": "Custom prefix icon template",
       "slots_header": "Custom pop-up container header template",
       "slots_option": "Custom popup container options template",

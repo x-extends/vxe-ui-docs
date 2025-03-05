@@ -1384,6 +1384,7 @@
       "props_option-key": "已廢棄，被 option-config.useKey 替換",
       "props_filterable": "是否啟用下拉過濾功能",
       "props_filter-method": "只對 filterable 有效，自定義過濾方法",
+      "props_allow-create": "是否允许手动新增选项",
       "slots_prefix": "自定義前綴圖標模板",
       "slots_header": "自定義彈窗容器頭部模板",
       "slots_option": "自定義彈窗容器選項模板",
