@@ -6009,6 +6009,11 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/select/base/max/CodeExample.vue')
               },
               {
+                path: 'allowCreate',
+                name: 'ComponentSelectBaseAllowCreate',
+                component: () => import('@/views/select/base/allowCreate/CodeExample.vue')
+              },
+              {
                 path: 'template',
                 name: 'ComponentSelectBaseTemplate',
                 component: () => import('@/views/select/base/template/CodeExample.vue')
@@ -6058,6 +6063,11 @@ const routes: Array<RouteConfig> = [
                 path: 'multiple',
                 name: 'ComponentSelectConfigMultiple',
                 component: () => import('@/views/select/config/multiple/CodeExample.vue')
+              },
+              {
+                path: 'allowCreate',
+                name: 'ComponentSelectConfigAllowCreate',
+                component: () => import('@/views/select/config/allowCreate/CodeExample.vue')
               },
               {
                 path: 'template',

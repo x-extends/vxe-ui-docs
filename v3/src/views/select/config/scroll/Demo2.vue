@@ -1,11 +1,11 @@
 <template>
   <div>
     <p>
-      <vxe-button @click="loadData(1000)">加载1千条</vxe-button>
-      <vxe-button @click="loadData(10000)">加载1万条</vxe-button>
-      <vxe-button @click="loadData(100000)">加载10万条</vxe-button>
-      <vxe-button @click="loadData(300000)">加载30万条</vxe-button>
-      <vxe-button @click="loadData(500000)">加载50万条</vxe-button>
+      <vxe-button @click="loadData(1000)">加载1k条</vxe-button>
+      <vxe-button @click="loadData(10000)">加载1w条</vxe-button>
+      <vxe-button @click="loadData(100000)">加载10w条</vxe-button>
+      <vxe-button @click="loadData(300000)">加载30w条</vxe-button>
+      <vxe-button @click="loadData(500000)">加载50w条</vxe-button>
     </p>
     <vxe-select ref="selectRef" v-model="val1" v-bind="selectOptions"></vxe-select>
   </div>

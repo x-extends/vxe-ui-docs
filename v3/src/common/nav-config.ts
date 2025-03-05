@@ -2250,6 +2250,7 @@ export const navConfigList: NavVO[] = [
               { title: '默认值', routerLink: { name: 'ComponentSelectBaseDefaultValue' } },
               { title: '多选', routerLink: { name: 'ComponentSelectBaseMultiple' } },
               { title: '限制最大数量', routerLink: { name: 'ComponentSelectBaseMax' } },
+              { title: '可新增', routerLink: { name: 'ComponentSelectBaseAllowCreate' } },
               { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectBaseTemplate' } },
               { title: '虚拟滚动（大量数据选项）', routerLink: { name: 'ComponentSelectBaseScroll' } }
             ]
@@ -2264,6 +2265,7 @@ export const navConfigList: NavVO[] = [
               { title: '分组', routerLink: { name: 'ComponentSelectConfigGroup' } },
               { title: '默认值', routerLink: { name: 'ComponentSelectConfigDefaultValue' } },
               { title: '多选', routerLink: { name: 'ComponentSelectConfigMultiple' } },
+              { title: '可新增', routerLink: { name: 'ComponentSelectConfigAllowCreate' } },
               { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectConfigTemplate' } },
               { title: '虚拟滚动（大量数据选项）', routerLink: { name: 'ComponentSelectConfigScroll' } }
             ]
