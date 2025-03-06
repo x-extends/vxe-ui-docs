@@ -1416,7 +1416,9 @@
       "methods_load-data": "データの読み込み",
       "methods_reload-data": "データをロードし、すべての状態をクリアします",
       "props_default-config": "默认值配置项",
-      "props_default-config_select-mode": "默认选择模式，默认选中行为只会在初始化时触发一次"
+      "props_default-config_select-mode": "默认选择模式，默认选中行为只会在初始化时触发一次",
+      "events_click": "在点击时触发该事件",
+      "events_visible-change": "下拉面板显示或隐藏时会触发该事件"
     },
     "slider": {
       "props_model-value": "Vモデルバインディング値",
