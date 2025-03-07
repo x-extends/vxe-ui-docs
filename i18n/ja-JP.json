@@ -2864,7 +2864,10 @@
       "events_row-resizable-change": "このイベントは、列の高ドラッグが変更されたときにトリガーされます",
       "events_checkbox-range-select": "シフトキーを押し続け、チェックボックスをチェックして範囲選択に切り替えるとトリガーされるイベント",
       "props_radio-config_allow-clear": "[lockbtnにのみ有効]クリック時にソートアイコンを有効にするかどうか、現在のアイコンと一致している場合は、unsorted",
-      "props_radio-config_allow-btn": "操作するソートアイコンをクリックすることは許可されていますか？"
+      "props_radio-config_allow-btn": "操作するソートアイコンをクリックすることは許可されていますか？",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "colgroup": {
       "slots_header": "ヘッダーのコンテンツをカスタマイズするためのテンプレート",
@@ -4413,7 +4416,10 @@
       "events_row-resizable-change": "このイベントは、列の高ドラッグが変更されたときにトリガーされます",
       "events_checkbox-range-select": "シフトキーを押し続け、チェックボックスをチェックして範囲選択に切り替えるとトリガーされるイベント",
       "props_radio-config_allow-clear": "[lockbtnにのみ有効]クリック時にソートアイコンを有効にするかどうか、現在のアイコンと一致している場合は、unsorted",
-      "props_radio-config_allow-btn": "操作するソートアイコンをクリックすることは許可されていますか？"
+      "props_radio-config_allow-btn": "操作するソートアイコンをクリックすることは許可されていますか？",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "toolbar": {
       "props_class-name": "Toolbar classNameを指定します",

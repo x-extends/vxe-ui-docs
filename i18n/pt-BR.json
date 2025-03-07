@@ -2864,7 +2864,10 @@
       "events_row-resizable-change": "Este evento é acionado quando o alto arrasto muda",
       "events_checkbox-range-select": "Eventos que serão acionados quando você pressionar a tecla Shift e verificar a caixa de seleção para alternar para a seleção do alcance",
       "props_radio-config_allow-clear": "Somente válido para allowbtn, se deve habilitar o ícone de classificação ao clicar, se for consistente com o atual, não classificado",
-      "props_radio-config_allow-btn": "É permitido clicar no ícone de classificação para operar?"
+      "props_radio-config_allow-btn": "É permitido clicar no ícone de classificação para operar?",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "colgroup": {
       "slots_header": "Modelo para personalizar o conteúdo do cabeçalho",
@@ -4413,7 +4416,10 @@
       "events_row-resizable-change": "Este evento é acionado quando o alto arrasto muda",
       "events_checkbox-range-select": "Eventos que serão acionados quando você pressionar a tecla Shift e verificar a caixa de seleção para alternar para a seleção do alcance",
       "props_radio-config_allow-clear": "Somente válido para allowbtn, se deve habilitar o ícone de classificação ao clicar, se for consistente com o atual, não classificado",
-      "props_radio-config_allow-btn": "É permitido clicar no ícone de classificação para operar?"
+      "props_radio-config_allow-btn": "É permitido clicar no ícone de classificação para operar?",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "toolbar": {
       "props_class-name": "Dê o nome da classe da barra de ferramentas",

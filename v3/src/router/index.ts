@@ -2395,6 +2395,11 @@ const gridRouteConfig: RouteConfig = {
           ]
         },
         {
+          path: 'manual',
+          name: 'ComponentGridColDragManual',
+          component: () => import('@/views/grid/colDrag/manual/CodeExample.vue')
+        },
+        {
           path: 'rowCol',
           name: 'ComponentGridColDragRowCol',
           component: () => import('@/views/grid/colDrag/rowCol/CodeExample.vue')
@@ -2514,6 +2519,11 @@ const gridRouteConfig: RouteConfig = {
               path: 'lazy',
               name: 'ComponentGridRowDragTreeLazy',
               component: () => import('@/views/grid/rowDrag/tree/lazy/CodeExample.vue')
+            },
+            {
+              path: 'manual',
+              name: 'ComponentGridRowDragTreeManual',
+              component: () => import('@/views/grid/rowDrag/tree/manual/CodeExample.vue')
             }
           ]
         },
@@ -2552,6 +2562,11 @@ const gridRouteConfig: RouteConfig = {
               component: () => import('@/views/grid/rowDrag/template/tip/CodeExample.vue')
             }
           ]
+        },
+        {
+          path: 'manual',
+          name: 'ComponentGridRowDragManual',
+          component: () => import('@/views/grid/rowDrag/manual/CodeExample.vue')
         }
       ]
     },

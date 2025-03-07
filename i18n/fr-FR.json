@@ -2864,7 +2864,10 @@
       "events_row-resizable-change": "Cet événement est déclenché lorsque la traînée à haut niveau change",
       "events_checkbox-range-select": "Événements qui seront déclenchés lorsque vous maintenez la touche Maj et cochez la case pour passer à la sélection de plage",
       "props_radio-config_allow-clear": "Seulement valable pour pertebtn, s'il faut activer l'icône de tri lors du clic, s'il est cohérent avec celui actuel, non trié",
-      "props_radio-config_allow-btn": "Est-il autorisé à cliquer sur l'icône de tri pour fonctionner?"
+      "props_radio-config_allow-btn": "Est-il autorisé à cliquer sur l'icône de tri pour fonctionner?",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "colgroup": {
       "slots_header": "Modèle pour personnaliser le contenu de l'en-tête",
@@ -4413,7 +4416,10 @@
       "events_row-resizable-change": "Cet événement est déclenché lorsque la traînée à haut niveau change",
       "events_checkbox-range-select": "Événements qui seront déclenchés lorsque vous maintenez la touche Maj et cochez la case pour passer à la sélection de plage",
       "props_radio-config_allow-clear": "Seulement valable pour pertebtn, s'il faut activer l'icône de tri lors du clic, s'il est cohérent avec celui actuel, non trié",
-      "props_radio-config_allow-btn": "Est-il autorisé à cliquer sur l'icône de tri pour fonctionner?"
+      "props_radio-config_allow-btn": "Est-il autorisé à cliquer sur l'icône de tri pour fonctionner?",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "toolbar": {
       "props_class-name": "Donnez le nom de classe de la barre d'outils",

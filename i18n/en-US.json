@@ -2864,7 +2864,10 @@
       "events_row-resizable-change": "This event is triggered when the row high drag changes",
       "events_checkbox-range-select": "Events that will be triggered when you hold down the Shift key and check the check box to switch to range selection",
       "props_radio-config_allow-clear": "Only valid for allowBtn, whether to enable the sort icon when clicking, if it is consistent with the current one, unsorted",
-      "props_radio-config_allow-btn": "Is it allowed to click the sort icon to operate?"
+      "props_radio-config_allow-btn": "Is it allowed to click the sort icon to operate?",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "colgroup": {
       "slots_header": "Custom header content template",
@@ -4413,7 +4416,10 @@
       "events_row-resizable-change": "This event is triggered when the row high drag changes",
       "events_checkbox-range-select": "Events that will be triggered when you hold down the Shift key and check the check box to switch to range selection",
       "props_radio-config_allow-clear": "Only valid for allowBtn, whether to enable the sort icon when clicking, if it is consistent with the current one, unsorted",
-      "props_radio-config_allow-btn": "Is it allowed to click the sort icon to operate?"
+      "props_radio-config_allow-btn": "Is it allowed to click the sort icon to operate?",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "toolbar": {
       "props_class-name": "Give the toolbar className",

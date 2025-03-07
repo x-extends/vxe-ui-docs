@@ -2864,7 +2864,10 @@
       "events_row-resizable-change": "當行高拖動發生變化時會觸發該事件",
       "events_checkbox-range-select": "當同時按住 Shift 鍵勾選複選框轉為範圍選擇時會觸發的事件",
       "props_radio-config_allow-clear": "只對 allowBtn 有效，是否啟用當點擊排序圖標時，如果與當前一致，則取消排序",
-      "props_radio-config_allow-btn": "是否允許點擊排序圖標進行操作"
+      "props_radio-config_allow-btn": "是否允許點擊排序圖標進行操作",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "colgroup": {
       "slots_header": "自定義表頭內容的模板",
@@ -4413,7 +4416,10 @@
       "events_row-resizable-change": "當行高拖動發生變化時會觸發該事件",
       "events_checkbox-range-select": "當同時按住 Shift 鍵勾選複選框轉為範圍選擇時會觸發的事件",
       "props_radio-config_allow-clear": "只對 allowBtn 有效，是否啟用當點擊排序圖標時，如果與當前一致，則取消排序",
-      "props_radio-config_allow-btn": "是否允許點擊排序圖標進行操作"
+      "props_radio-config_allow-btn": "是否允許點擊排序圖標進行操作",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "toolbar": {
       "props_class-name": "給工具欄 className",

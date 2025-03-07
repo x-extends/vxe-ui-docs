@@ -2864,7 +2864,10 @@
       "events_row-resizable-change": "Este evento se activa cuando cambia la fila de arrastre de la fila",
       "events_checkbox-range-select": "Eventos que se activarán cuando mantenga presionado la tecla de cambio y marque la casilla de verificación para cambiar a la selección de rango",
       "props_radio-config_allow-clear": "Solo válido para permitirse, si habilita el icono de clasificación al hacer clic, si es consistente con el actual, sin clasificar",
-      "props_radio-config_allow-btn": "¿Está permitido hacer clic en el icono de clasificación para operar?"
+      "props_radio-config_allow-btn": "¿Está permitido hacer clic en el icono de clasificación para operar?",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "colgroup": {
       "slots_header": "Plantilla para personalizar el contenido del encabezado",
@@ -4413,7 +4416,10 @@
       "events_row-resizable-change": "Este evento se activa cuando cambia la fila de arrastre de la fila",
       "events_checkbox-range-select": "Eventos que se activarán cuando mantenga presionado la tecla de cambio y marque la casilla de verificación para cambiar a la selección de rango",
       "props_radio-config_allow-clear": "Solo válido para permitirse, si habilita el icono de clasificación al hacer clic, si es consistente con el actual, sin clasificar",
-      "props_radio-config_allow-btn": "¿Está permitido hacer clic en el icono de clasificación para operar?"
+      "props_radio-config_allow-btn": "¿Está permitido hacer clic en el icono de clasificación para operar?",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "toolbar": {
       "props_class-name": "Dé la barra de herramientas de classname",

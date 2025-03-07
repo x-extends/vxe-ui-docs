@@ -2864,7 +2864,10 @@
       "events_row-resizable-change": "Dieses Ereignis wird ausgelöst, wenn sich die Zeile hohe Drag ändert",
       "events_checkbox-range-select": "Ereignisse, die ausgelöst werden, wenn Sie die Schalttaste gedrückt halten",
       "props_radio-config_allow-clear": "Nur gültig für DeglyBtn, ob beim Klicken das Symbol des Sortierens aktiviert werden soll, falls es mit dem aktuellen, ungeortiert ist, übereinstimmt",
-      "props_radio-config_allow-btn": "Dürfen es auf das Sortiersymbol klicken, um sie zu betreiben?"
+      "props_radio-config_allow-btn": "Dürfen es auf das Sortiersymbol klicken, um sie zu betreiben?",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "colgroup": {
       "slots_header": "Vorlage zum Anpassen des Inhalts des Headers",
@@ -4413,7 +4416,10 @@
       "events_row-resizable-change": "Dieses Ereignis wird ausgelöst, wenn sich die Zeile hohe Drag ändert",
       "events_checkbox-range-select": "Ereignisse, die ausgelöst werden, wenn Sie die Schalttaste gedrückt halten",
       "props_radio-config_allow-clear": "Nur gültig für DeglyBtn, ob beim Klicken das Symbol des Sortierens aktiviert werden soll, falls es mit dem aktuellen, ungeortiert ist, übereinstimmt",
-      "props_radio-config_allow-btn": "Dürfen es auf das Sortiersymbol klicken, um sie zu betreiben?"
+      "props_radio-config_allow-btn": "Dürfen es auf das Sortiersymbol klicken, um sie zu betreiben?",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "toolbar": {
       "props_class-name": "Geben Sie der Symbolleiste -Klassenname an",

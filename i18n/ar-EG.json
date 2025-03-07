@@ -2864,7 +2864,10 @@
       "events_row-resizable-change": "يتم تشغيل هذا الحدث عندما يتغير السحب العالي في الصف",
       "events_checkbox-range-select": "الأحداث التي سيتم تشغيلها عند الضغط على مفتاح Shift وتحقق من خانة الاختيار للتبديل إلى اختيار النطاق",
       "props_radio-config_allow-clear": "صالح فقط لـ ALBTBTN ، سواء لتمكين أيقونة الفرز عند النقر ، إذا كان متسقًا مع العنوان الحالي ، غير مصنوع",
-      "props_radio-config_allow-btn": "هل يُسمح بالنقر فوق أيقونة الفرز للعمل؟"
+      "props_radio-config_allow-btn": "هل يُسمح بالنقر فوق أيقونة الفرز للعمل؟",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "colgroup": {
       "slots_header": "قالب لتخصيص محتوى الرأس",
@@ -4413,7 +4416,10 @@
       "events_row-resizable-change": "يتم تشغيل هذا الحدث عندما يتغير السحب العالي في الصف",
       "events_checkbox-range-select": "الأحداث التي سيتم تشغيلها عند الضغط على مفتاح Shift وتحقق من خانة الاختيار للتبديل إلى اختيار النطاق",
       "props_radio-config_allow-clear": "صالح فقط لـ ALBTBTN ، سواء لتمكين أيقونة الفرز عند النقر ، إذا كان متسقًا مع العنوان الحالي ، غير مصنوع",
-      "props_radio-config_allow-btn": "هل يُسمح بالنقر فوق أيقونة الفرز للعمل؟"
+      "props_radio-config_allow-btn": "هل يُسمح بالنقر فوق أيقونة الفرز للعمل؟",
+      "methods_get-el": "获取容器元素",
+      "methods_move-column-to": "移动列到指定列的位置",
+      "methods_move-row-to": "移动行到指定行的位置"
     },
     "toolbar": {
       "props_class-name": "امنح اسم أدوات ClassName",
