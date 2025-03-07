@@ -8,7 +8,7 @@
 
     <CodeLight path="date-picker/datetime/valueFormat/Demo2">
       <template #tip>
-        <vxe-tip status="primary" title="自定义格式">只显示小时时</vxe-tip>
+        <vxe-tip status="primary">只显示小时时</vxe-tip>
       </template>
     </CodeLight>
   </div>
