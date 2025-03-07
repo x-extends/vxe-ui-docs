@@ -546,7 +546,9 @@
       "props_shortcut-config_options_class-name": "给展示容器附加 className",
       "props_shortcut-config_options_loading": "是否加载中",
       "props_shortcut-config_options_trigger": "触发方式",
-      "props_shortcut-config_options_click-method": "按钮点击的处理方法"
+      "props_shortcut-config_options_click-method": "按钮点击的处理方法",
+      "props_label-format": "只对 type=date|datetime|week|month|quarter|year 有效，输入框中显示的日期格式",
+      "props_value-format": "只对 type=date|datetime|week|month|quarter|year 有效，绑定值的返回格式，默认返回 Date 类型，如果指定格式则返回字符串"
     },
     "drawer": {
       "props_class-name": "إرفاق اسم className إلى الدرج",
