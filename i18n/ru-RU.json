@@ -548,7 +548,11 @@
       "props_shortcut-config_options_trigger": "触发方式",
       "props_shortcut-config_options_click-method": "按钮点击的处理方法",
       "props_label-format": "自定义显示的日期格式",
-      "props_value-format": "自定义绑定值的返回格式"
+      "props_value-format": "自定义绑定值的返回格式",
+      "methods_focus": "获取焦点",
+      "methods_blur": "失去焦点",
+      "methods_show-panel": "显示下拉面板",
+      "methods_hide-panel": "隐藏下拉面板"
     },
     "drawer": {
       "props_class-name": "Прикрепите классное имя к ящику",
