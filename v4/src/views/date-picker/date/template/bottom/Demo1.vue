@@ -2,9 +2,9 @@
   <div>
     <vxe-date-picker ref="datePickerRef" v-model="val1">
       <template #bottom>
-        <vxe-button mode="text" status="primary" @click="selectTodayEvent">选择今天</vxe-button>
-        <vxe-button mode="text" @click="selectPrevDayEvent">选择昨天</vxe-button>
-        <vxe-button mode="text" @click="selectNextDayEvent">选择明天</vxe-button>
+        <vxe-tag status="success" @click="selectTodayEvent">选择今天</vxe-tag>
+        <vxe-tag status="success" @click="selectPrevDayEvent">选择昨天</vxe-tag>
+        <vxe-tag status="success" @click="selectNextDayEvent">选择明天</vxe-tag>
       </template>
     </vxe-date-picker>
   </div>
