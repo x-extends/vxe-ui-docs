@@ -277,6 +277,29 @@
       "ExtendCellArea": "区域选取",
       "FiltersCombination": "组合筛选",
       "FiltersComplexInput": "输入筛选"
+    },
+    "menus": {
+      "authList": "授权查询",
+      "pluginMarket": "插件市场",
+      "personaCenter": "用户中心",
+      "authorizedList": "已授权的插件",
+      "myOrder": "我的订单",
+      "manageList": "管理中心"
+    },
+    "views": {
+      "PleaseEmail": "请输入邮箱",
+      "PleasePasswd": "请输入密码",
+      "depVersionTitle": "依赖版本",
+      "releaseTitle": "更新日志",
+      "backBtn": "返回",
+      "demoBtn": "在线演示",
+      "apiBtn": "查看 API 文档",
+      "trialBtn": "申请试用",
+      "buyBtn": "购买授权",
+      "histVersion": "历史版本记录",
+      "registerBtn": "注册",
+      "loginBtn": "登录",
+      "logoutBtn": "退出"
     }
   },
   "components": {

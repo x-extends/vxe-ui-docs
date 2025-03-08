@@ -277,6 +277,29 @@
       "ExtendCellArea": "Region selection",
       "FiltersCombination": "Complex combination Filters",
       "FiltersComplexInput": "Complex input Filters"
+    },
+    "menus": {
+      "authList": "Authorization query",
+      "pluginMarket": "Plugin market",
+      "personaCenter": "My",
+      "authorizedList": "An authorized plugin",
+      "myOrder": "My order",
+      "manageList": "Management center"
+    },
+    "views": {
+      "PleaseEmail": "Please enter email",
+      "PleasePasswd": "Please enter password",
+      "depVersionTitle": "Dependent version",
+      "releaseTitle": "Release log",
+      "backBtn": "Go back",
+      "demoBtn": "Online presentation",
+      "apiBtn": "View API",
+      "trialBtn": "Apply for probation",
+      "buyBtn": "Purchase authorization",
+      "histVersion": "Historical version release",
+      "registerBtn": "Register",
+      "loginBtn": "Login",
+      "logoutBtn": "Logout"
     }
   },
   "components": {
