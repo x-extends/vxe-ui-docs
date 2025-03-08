@@ -299,7 +299,18 @@
       "histVersion": "Historical version release",
       "registerBtn": "Register",
       "loginBtn": "Login",
-      "logoutBtn": "Logout"
+      "logoutBtn": "Logout",
+      "query": "Query",
+      "authDate": "Authorization time",
+      "download": "Download",
+      "document": "Document",
+      "more": "More",
+      "authNO": "Authorization number",
+      "boundDomain": "Bound domain name",
+      "registerDate": "Registration date",
+      "loginPasswd": "Login password",
+      "dePasswd": "Unzip a password",
+      "loginEmail": "Bind email address"
     }
   },
   "components": {

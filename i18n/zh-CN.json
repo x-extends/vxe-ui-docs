@@ -299,7 +299,18 @@
       "histVersion": "历史版本记录",
       "registerBtn": "注册",
       "loginBtn": "登录",
-      "logoutBtn": "退出"
+      "logoutBtn": "退出",
+      "query": "查询",
+      "authDate": "授权时间",
+      "download": "下载",
+      "document": "文档",
+      "more": "更多",
+      "authNO": "授权编号",
+      "boundDomain": "绑定域名",
+      "registerDate": "注册时间",
+      "loginPasswd": "登录密码",
+      "dePasswd": "解压密码",
+      "loginEmail": "绑定邮箱"
     }
   },
   "components": {
