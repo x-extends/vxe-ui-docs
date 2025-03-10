@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button content="点击弹出" @click="openEvent"></vxe-button>
+    <vxe-button content="全屏弹出" @click="openEvent"></vxe-button>
   </div>
 </template>
 
