@@ -1,16 +1,29 @@
 <template>
   <div>
     <p>
-      <vxe-input v-model="filterName" type="search" placeholder="试试全表搜索" @keyup="searchEvent"></vxe-input>
+      <vxe-input v-model="filterName" type="search" placeholder="试试全表搜索" clearable @change="searchEvent"></vxe-input>
     </p>
 
-    <vxe-grid ref="gridRef" v-bind="gridOptions" class="mytree-grid"></vxe-grid>
+    <vxe-table
+      ref="tableRef"
+      class="mytree-table"
+      height="400"
+      :column-config="{useKey: true}"
+      :row-config="{useKey: true}"
+      :tree-config="treeConfig"
+      :data="list">
+      <vxe-column type="seq" width="220" title="序号" tree-node></vxe-column>
+      <vxe-column field="name" title="Name" type="html"></vxe-column>
+      <vxe-column field="size" title="Size" type="html"></vxe-column>
+      <vxe-column field="type" title="Type" type="html"></vxe-column>
+      <vxe-column field="date" title="Date" type="html"></vxe-column>
+    </vxe-table>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, reactive, nextTick } from 'vue'
-import type { VxeGridProps, VxeGridInstance } from 'vxe-table'
+import type { VxeTableInstance, VxeTablePropTypes } from 'vxe-table'
 import XEUtils from 'xe-utils'
 
 interface RowVO {
@@ -20,11 +33,18 @@ interface RowVO {
   size: number
   date: string
   children?: RowVO[]
+  childList?: RowVO[]
 }
 
-const gridRef = ref<VxeGridInstance<RowVO>>()
+const tableRef = ref<VxeTableInstance<RowVO>>()
 
 const filterName = ref('')
+const list = ref<RowVO[]>([])
+
+const treeConfig = reactive<VxeTablePropTypes.TreeConfig>({
+  childrenField: 'childList'
+})
+
 const allData = [
   { id: 1000, name: 'Test1', type: 'mp3', size: 1024, date: '2020-08-01' },
   {
@@ -54,26 +74,6 @@ const allData = [
   { id: 24555, name: 'Test9', type: 'avi', size: 224, date: '2020-10-01' }
 ]
 
-const gridOptions = reactive<VxeGridProps<RowVO>>({
-  border: true,
-  height: 400,
-  columnConfig: {
-    useKey: true
-  },
-  rowConfig: {
-    useKey: true
-  },
-  treeConfig: {},
-  columns: [
-    { type: 'seq', title: '序号', width: 220, treeNode: true },
-    { field: 'name', title: 'Name', type: 'html' },
-    { field: 'size', title: 'Size', type: 'html' },
-    { field: 'type', title: 'Type', type: 'html' },
-    { field: 'date', title: 'Date', type: 'html' }
-  ],
-  data: []
-})
-
 const handleSearch = () => {
   const filterVal = XEUtils.toValueString(filterName.value).trim().toLowerCase()
   if (filterVal) {
@@ -81,22 +81,23 @@ const handleSearch = () => {
     const searchProps = ['name', 'size', 'type', 'date']
     const rest = XEUtils.searchTree(allData, item => {
       return searchProps.some(key => String(item[key]).toLowerCase().indexOf(filterVal) > -1)
-    }, { children: 'children' })
+    }, { children: 'children', mapChildren: 'childList', isEvery: true })
     XEUtils.eachTree(rest, item => {
       searchProps.forEach(key => {
         item[key] = String(item[key]).replace(filterRE, match => `<span class="keyword-highlight">${match}</span>`)
       })
-    }, { children: 'children' })
-    gridOptions.data = rest
+    }, { children: 'childList' })
+    list.value = rest
     // 搜索之后默认展开所有子节点
     nextTick(() => {
-      const $grid = gridRef.value
-      if ($grid) {
-        $grid.setAllTreeExpand(true)
+      const $table = tableRef.value
+      if ($table) {
+        $table.setAllTreeExpand(true)
       }
     })
   } else {
-    gridOptions.data = allData
+    const rest = XEUtils.searchTree(allData, () => true, { children: 'children', mapChildren: 'childList', isEvery: true })
+    list.value = rest
   }
 }
 
@@ -109,7 +110,7 @@ handleSearch()
 </script>
 
 <style lang="scss" scoped>
-.mytree-grid {
+.mytree-table {
   ::v-deep(.keyword-highlight)  {
     background-color: #FFFF00;
   }

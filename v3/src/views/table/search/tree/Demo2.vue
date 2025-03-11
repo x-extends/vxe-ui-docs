@@ -1,16 +1,29 @@
 <template>
   <div>
     <p>
-      <vxe-input v-model="filterName" type="search" placeholder="试试全表搜索" @keyup="searchEvent"></vxe-input>
+      <vxe-input v-model="filterName" type="search" placeholder="试试全表搜索" clearable @change="searchEvent"></vxe-input>
     </p>
 
-    <vxe-grid ref="gridRef" v-bind="gridOptions" class="mytree-grid"></vxe-grid>
+    <vxe-table
+      ref="tableRef"
+      class="mytree-table"
+      height="400"
+      :column-config="{useKey: true}"
+      :row-config="{useKey: true}"
+      :tree-config="treeConfig"
+      :data="list">
+      <vxe-column type="seq" width="220" title="序号" tree-node></vxe-column>
+      <vxe-column field="name" title="Name" type="html"></vxe-column>
+      <vxe-column field="size" title="Size" type="html"></vxe-column>
+      <vxe-column field="type" title="Type" type="html"></vxe-column>
+      <vxe-column field="date" title="Date" type="html"></vxe-column>
+    </vxe-table>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import type { VxeGridProps, VxeGridInstance } from 'vxe-table'
+import type { VxeTableInstance, VxeTablePropTypes } from 'vxe-table'
 import XEUtils from 'xe-utils'
 
 interface RowVO {
@@ -20,6 +33,7 @@ interface RowVO {
   size: number
   date: string
   children?: RowVO[]
+  childList?: RowVO[]
 }
 
 const allData: RowVO[] = [
@@ -53,55 +67,43 @@ const allData: RowVO[] = [
 
 export default Vue.extend({
   data () {
-    const gridOptions: VxeGridProps<RowVO> = {
-      border: true,
-      height: 400,
-      columnConfig: {
-        useKey: true
-      },
-      rowConfig: {
-        useKey: true
-      },
-      treeConfig: {},
-      columns: [
-        { type: 'seq', title: '序号', width: 220, treeNode: true },
-        { field: 'name', title: 'Name', type: 'html' },
-        { field: 'size', title: 'Size', type: 'html' },
-        { field: 'type', title: 'Type', type: 'html' },
-        { field: 'date', title: 'Date', type: 'html' }
-      ],
-      data: []
+    const list: RowVO[] = []
+
+    const treeConfig: VxeTablePropTypes.TreeConfig = {
+      childrenField: 'childList'
     }
 
     return {
-      gridOptions,
-      filterName: ''
+      treeConfig,
+      filterName: '',
+      list
     }
   },
   methods: {
-    handleSearch  () {
+    handleSearch () {
       const filterVal = XEUtils.toValueString(this.filterName).trim().toLowerCase()
       if (filterVal) {
         const filterRE = new RegExp(filterVal, 'gi')
         const searchProps = ['name', 'size', 'type', 'date']
         const rest = XEUtils.searchTree(allData, item => {
           return searchProps.some(key => String(item[key]).toLowerCase().indexOf(filterVal) > -1)
-        }, { children: 'children' })
+        }, { children: 'children', mapChildren: 'childList', isEvery: true })
         XEUtils.eachTree(rest, item => {
           searchProps.forEach(key => {
             item[key] = String(item[key]).replace(filterRE, match => `<span class="keyword-highlight">${match}</span>`)
           })
-        }, { children: 'children' })
-        this.gridOptions.data = rest
+        }, { children: 'childList' })
+        this.list = rest
         // 搜索之后默认展开所有子节点
         this.$nextTick(() => {
-          const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
-          if ($grid) {
-            $grid.setAllTreeExpand(true)
+          const $table = this.$refs.tableRef as VxeTableInstance<RowVO>
+          if ($table) {
+            $table.setAllTreeExpand(true)
           }
         })
       } else {
-        this.gridOptions.data = allData
+        const rest = XEUtils.searchTree(allData, () => true, { children: 'children', mapChildren: 'childList', isEvery: true })
+        this.list = rest
       }
     },
     // 节流函数,间隔500毫秒触发搜索
@@ -116,7 +118,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.mytree-grid {
+.mytree-table {
   ::v-deep(.keyword-highlight)  {
     background-color: #FFFF00;
   }

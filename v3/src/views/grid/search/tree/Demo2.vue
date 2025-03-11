@@ -86,7 +86,7 @@ export default Vue.extend({
         const searchProps = ['name', 'size', 'type', 'date']
         const rest = XEUtils.searchTree(allData, item => {
           return searchProps.some(key => String(item[key]).toLowerCase().indexOf(filterVal) > -1)
-        }, { children: 'children' })
+        }, { children: 'children', mapChildren: 'childList', isEvery: true })
         XEUtils.eachTree(rest, item => {
           searchProps.forEach(key => {
             item[key] = String(item[key]).replace(filterRE, match => `<span class="keyword-highlight">${match}</span>`)
@@ -101,7 +101,8 @@ export default Vue.extend({
           }
         })
       } else {
-        this.gridOptions.data = allData
+        const rest = XEUtils.searchTree(allData, () => true, { children: 'children', mapChildren: 'childList', isEvery: true })
+        this.gridOptions.data = rest
       }
     },
     // 节流函数,间隔500毫秒触发搜索

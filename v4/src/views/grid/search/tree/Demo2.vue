@@ -20,6 +20,7 @@ interface RowVO {
   size: number
   date: string
   children?: RowVO[]
+  childList?: RowVO[]
 }
 
 const gridRef = ref<VxeGridInstance<RowVO>>()
@@ -81,12 +82,12 @@ const handleSearch = () => {
     const searchProps = ['name', 'size', 'type', 'date']
     const rest = XEUtils.searchTree(allData, item => {
       return searchProps.some(key => String(item[key]).toLowerCase().indexOf(filterVal) > -1)
-    }, { children: 'children' })
+    }, { children: 'children', mapChildren: 'childList', isEvery: true })
     XEUtils.eachTree(rest, item => {
       searchProps.forEach(key => {
         item[key] = String(item[key]).replace(filterRE, match => `<span class="keyword-highlight">${match}</span>`)
       })
-    }, { children: 'children' })
+    }, { children: 'childList' })
     gridOptions.data = rest
     // 搜索之后默认展开所有子节点
     nextTick(() => {
@@ -96,7 +97,8 @@ const handleSearch = () => {
       }
     })
   } else {
-    gridOptions.data = allData
+    const rest = XEUtils.searchTree(allData, () => true, { children: 'children', mapChildren: 'childList', isEvery: true })
+    gridOptions.data = rest
   }
 }
 
