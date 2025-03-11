@@ -259,7 +259,8 @@
         "complexSimpleFilter": "필터를 입력하십시오",
         "complexInputTitle": "조건으로 필터링하십시오",
         "stringFilter": "문자열 유형 필터링",
-        "numberFilter": "숫자 유형 필터링"
+        "numberFilter": "숫자 유형 필터링",
+        "treeFilter": "树结构筛选"
       }
     },
     "filtersCombination": {
@@ -267,7 +268,8 @@
         "aggregationFilter": "기본 필터링",
         "combinationTitle": "복잡한 필터링",
         "combinationStringFilter": "문자열 유형 필터링",
-        "combinationNumberFilter": "숫자 유형 필터링"
+        "combinationNumberFilter": "숫자 유형 필터링",
+        "treeFilter": "树结构筛选"
       }
     }
   },

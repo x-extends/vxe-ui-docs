@@ -259,7 +259,8 @@
         "complexSimpleFilter": "Введите фильтр",
         "complexInputTitle": "Фильтр с условиями",
         "stringFilter": "Фильтрация типа строки",
-        "numberFilter": "Фильтрация численного типа"
+        "numberFilter": "Фильтрация численного типа",
+        "treeFilter": "树结构筛选"
       }
     },
     "filtersCombination": {
@@ -267,7 +268,8 @@
         "aggregationFilter": "Основная фильтрация",
         "combinationTitle": "Сложная фильтрация",
         "combinationStringFilter": "Фильтрация типа строки",
-        "combinationNumberFilter": "Фильтрация численного типа"
+        "combinationNumberFilter": "Фильтрация численного типа",
+        "treeFilter": "树结构筛选"
       }
     }
   },

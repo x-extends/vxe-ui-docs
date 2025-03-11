@@ -259,7 +259,8 @@
         "complexSimpleFilter": "أدخل المرشح",
         "complexInputTitle": "تصفية مع الظروف",
         "stringFilter": "تصفية نوع السلسلة",
-        "numberFilter": "تصفية النوع العددي"
+        "numberFilter": "تصفية النوع العددي",
+        "treeFilter": "树结构筛选"
       }
     },
     "filtersCombination": {
@@ -267,7 +268,8 @@
         "aggregationFilter": "التصفية الأساسية",
         "combinationTitle": "تصفية معقدة",
         "combinationStringFilter": "تصفية نوع السلسلة",
-        "combinationNumberFilter": "تصفية النوع العددي"
+        "combinationNumberFilter": "تصفية النوع العددي",
+        "treeFilter": "树结构筛选"
       }
     }
   },

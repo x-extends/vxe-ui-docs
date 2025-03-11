@@ -259,7 +259,8 @@
         "complexSimpleFilter": "Ingresar filtro",
         "complexInputTitle": "Filtrar con condiciones",
         "stringFilter": "Filtrado de tipo de cadena",
-        "numberFilter": "Filtrado de tipo numérico"
+        "numberFilter": "Filtrado de tipo numérico",
+        "treeFilter": "树结构筛选"
       }
     },
     "filtersCombination": {
@@ -267,7 +268,8 @@
         "aggregationFilter": "Filtrado básico",
         "combinationTitle": "Filtrado complejo",
         "combinationStringFilter": "Filtrado de tipo de cadena",
-        "combinationNumberFilter": "Filtrado de tipo numérico"
+        "combinationNumberFilter": "Filtrado de tipo numérico",
+        "treeFilter": "树结构筛选"
       }
     }
   },

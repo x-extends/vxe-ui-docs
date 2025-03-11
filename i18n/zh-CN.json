@@ -259,7 +259,8 @@
         "complexSimpleFilter": "输入筛选",
         "complexInputTitle": "带条件筛选",
         "stringFilter": "字符串类型筛选",
-        "numberFilter": "数值类型筛选"
+        "numberFilter": "数值类型筛选",
+        "treeFilter": "树结构筛选"
       }
     },
     "filtersCombination": {
@@ -267,7 +268,8 @@
         "aggregationFilter": "基础筛选",
         "combinationTitle": "复杂筛选",
         "combinationStringFilter": "字符串类型筛选",
-        "combinationNumberFilter": "数值类型筛选"
+        "combinationNumberFilter": "数值类型筛选",
+        "treeFilter": "树结构筛选"
       }
     }
   },
