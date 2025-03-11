@@ -64,7 +64,9 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   rowConfig: {
     useKey: true
   },
-  treeConfig: {},
+  treeConfig: {
+    childrenField: 'childList'
+  },
   columns: [
     { type: 'seq', title: '序号', width: 220, treeNode: true },
     { field: 'name', title: 'Name', type: 'html' },
