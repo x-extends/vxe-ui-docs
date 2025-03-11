@@ -2907,7 +2907,12 @@
       "props_radio-config_allow-btn": "Is it allowed to click the sort icon to operate?",
       "methods_get-el": "获取容器元素",
       "methods_move-column-to": "移动列到指定列的位置",
-      "methods_move-row-to": "移动行到指定行的位置"
+      "methods_move-row-to": "移动行到指定行的位置",
+      "props_current-column-config": "当前列配置信息",
+      "props_current-column-config_trigger": "触发方式",
+      "props_current-column-config_is-follow-selected": "只对 mouse-config.selected 启用有效，是否跟随单元格选中而移动高亮列",
+      "props_current-row-config": "当前行配置信息",
+      "props_current-row-config_is-follow-selected": "只对 mouse-config.selected 启用有效，是否跟随单元格选中而移动高亮行"
     },
     "colgroup": {
       "slots_header": "Custom header content template",
@@ -4459,7 +4464,12 @@
       "props_radio-config_allow-btn": "Is it allowed to click the sort icon to operate?",
       "methods_get-el": "获取容器元素",
       "methods_move-column-to": "移动列到指定列的位置",
-      "methods_move-row-to": "移动行到指定行的位置"
+      "methods_move-row-to": "移动行到指定行的位置",
+      "props_current-column-config": "当前列配置信息",
+      "props_current-column-config_trigger": "触发方式",
+      "props_current-column-config_is-follow-selected": "只对 mouse-config.selected 启用有效，是否跟随单元格选中而移动高亮列",
+      "props_current-row-config": "当前行配置信息",
+      "props_current-row-config_is-follow-selected": "只对 mouse-config.selected 启用有效，是否跟随单元格选中而移动高亮行"
     },
     "toolbar": {
       "props_class-name": "Give the toolbar className",
