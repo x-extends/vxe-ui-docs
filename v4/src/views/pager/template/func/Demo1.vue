@@ -36,7 +36,7 @@
         <span style="background: #f9f192;" @click="pageVO2.currentPage = pageCount">末页</span>
       </template>
       <template #sizes="{ options }">
-        <span style="background: #cff395;">选择页大小 <vxe-select v-model="pageVO2.pageSize" :options="options"></vxe-select></span>
+        <span style="background: #cff395;">选择页大小 <vxe-select v-model="pageVO2.pageSize" :options="options" transfer></vxe-select></span>
       </template>
       <template #fullJump>
         <span style="background: #dbd7d7;">跳页<vxe-number-input v-model="pageVO2.currentPage" type="integer"></vxe-number-input></span>
