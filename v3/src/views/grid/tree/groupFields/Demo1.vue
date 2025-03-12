@@ -86,7 +86,7 @@ export default Vue.extend({
             children: this.handleGroupByField(childList, fields.slice(1))
           })
         })
-        return XEUtils.toTreeArray(result, { key: 'id', parentKey: 'parentId', children: 'children' })
+        return XEUtils.toTreeArray(result, { key: 'id', parentKey: 'parentId', children: 'children', clear: true })
       }
       return list
     },

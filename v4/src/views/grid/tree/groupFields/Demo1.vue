@@ -79,7 +79,7 @@ const handleGroupByField = (list: RowVO[], fields: string[]) => {
         children: handleGroupByField(childList, fields.slice(1))
       })
     })
-    return XEUtils.toTreeArray(result, { key: 'id', parentKey: 'parentId', children: 'children' })
+    return XEUtils.toTreeArray(result, { key: 'id', parentKey: 'parentId', children: 'children', clear: true })
   }
   return list
 }
