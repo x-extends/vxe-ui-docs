@@ -267,6 +267,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/plugin-export-xlsx/grid/advanced/CodeExample.vue')
           },
           {
+            path: 'scroll',
+            name: 'PluginExportXlsxGridScroll',
+            component: () => import('@/views/plugin-export-xlsx/grid/scroll/CodeExample.vue')
+          },
+          {
             path: 'sheetMethod',
             component: RouteLayout,
             children: [
