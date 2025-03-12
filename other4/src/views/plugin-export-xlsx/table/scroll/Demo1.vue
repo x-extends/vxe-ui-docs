@@ -5,6 +5,7 @@
       border
       show-footer
       show-overflow
+      height="600"
       ref="tableRef"
       :loading="loading"
       :column-config="columnConfig"
