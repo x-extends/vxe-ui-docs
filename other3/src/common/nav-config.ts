@@ -128,6 +128,7 @@ export const navConfigList: NavVO[] = [
           { title: '导入 XLSX 格式', routerLink: { name: 'PluginExportXlsxTableImport' } },
           { title: '使用工具栏', routerLink: { name: 'PluginExportXlsxTableToolbar' } },
           { title: '高级导出', routerLink: { name: 'PluginExportXlsxTableAdvanced' } },
+          { title: '大数据量导出', routerLink: { name: 'PluginExportXlsxTableScroll' } },
           {
             title: '自定义样式',
             children: [

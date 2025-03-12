@@ -109,7 +109,6 @@ export default Vue.extend({
         $grid.openExport()
       }
     }
-
   },
   created () {
     this.loadList(200)

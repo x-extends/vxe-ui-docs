@@ -197,6 +197,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/plugin-export-xlsx/table/advanced/CodeExample.vue')
           },
           {
+            path: 'scroll',
+            name: 'PluginExportXlsxTableScroll',
+            component: () => import('@/views/plugin-export-xlsx/table/scroll/CodeExample.vue')
+          },
+          {
             path: 'sheetMethod',
             component: RouteLayout,
             children: [
