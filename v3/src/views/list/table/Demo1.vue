@@ -12,11 +12,13 @@
       <template #default="{ items }">
         <table>
           <thead>
-            <th>列1</th>
-            <th>列2</th>
-            <th>列3</th>
-            <th>列4</th>
-            <th>列5</th>
+            <tr>
+              <th>列1</th>
+              <th>列2</th>
+              <th>列3</th>
+              <th>列4</th>
+              <th>列5</th>
+            </tr>
           </thead>
           <tbody>
             <tr class="my-tr" v-for="item in items" :key="item.id">
