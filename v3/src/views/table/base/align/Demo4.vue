@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-radio-group v-model="align">
+    <vxe-radio-group v-model="footerAlign">
       <vxe-radio-button label="left" content="居左"></vxe-radio-button>
       <vxe-radio-button label="center" content="居中"></vxe-radio-button>
       <vxe-radio-button label="right" content="居右"></vxe-radio-button>
@@ -9,7 +9,7 @@
     <vxe-table
       border
       show-footer
-      :align="align"
+      :footer-align="footerAlign"
       :data="tableData"
       :footer-data="footerData">
       <vxe-column field="seq" type="seq" width="70"></vxe-column>
@@ -35,7 +35,7 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
-    const align: VxeTablePropTypes.FooterAlign = 'left'
+    const footerAlign: VxeTablePropTypes.FooterAlign = 'left'
 
     const tableData: RowVO[] = [
       { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
@@ -49,7 +49,7 @@ export default Vue.extend({
     ]
 
     return {
-      align,
+      footerAlign,
       tableData,
       footerData
     }
