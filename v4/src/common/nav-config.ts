@@ -2071,6 +2071,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '基础', routerLink: { name: 'ComponentNumberInputNumberBase' } },
               { title: '可清除', routerLink: { name: 'ComponentNumberInputNumberClearable' } },
+              { title: '只读模式', routerLink: { name: 'ComponentNumberInputNumberReadonly' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputNumberStep' } },
               { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputNumberRange' } },
               { title: '控制按钮', routerLink: { name: 'ComponentNumberInputNumberControls' } }
@@ -2081,6 +2082,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '基础', routerLink: { name: 'ComponentNumberInputIntegerBase' } },
               { title: '可清除', routerLink: { name: 'ComponentNumberInputIntegerClearable' } },
+              { title: '只读模式', routerLink: { name: 'ComponentNumberInputIntegerReadonly' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputIntegerStep' } },
               { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputIntegerRange' } },
               { title: '控制按钮', routerLink: { name: 'ComponentNumberInputIntegerControls' } }
@@ -2091,6 +2093,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '基础', routerLink: { name: 'ComponentNumberInputFloatBase' } },
               { title: '可清除', routerLink: { name: 'ComponentNumberInputFloatClearable' } },
+              { title: '只读模式', routerLink: { name: 'ComponentNumberInputFloatReadonly' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputFloatStep' } },
               { title: '小数位数', routerLink: { name: 'ComponentNumberInputFloatDigits' } },
               { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputFloatRange' } },
@@ -2103,6 +2106,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '基础', routerLink: { name: 'ComponentNumberInputAmountBase' } },
               { title: '可清除', routerLink: { name: 'ComponentNumberInputAmountClearable' } },
+              { title: '只读模式', routerLink: { name: 'ComponentNumberInputAmountReadonly' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputAmountStep' } },
               { title: '小数位数', routerLink: { name: 'ComponentNumberInputAmountDigits' } },
               { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputAmountRange' } },
@@ -2264,7 +2268,8 @@ export const navConfigList: NavVO[] = [
               { title: '禁用', routerLink: { name: 'ComponentSelectBaseDisabled' } },
               { title: '自定义图标', routerLink: { name: 'ComponentSelectBaseIcon' } },
               { title: '加载中', routerLink: { name: 'ComponentSelectBaseLoading' } },
-              { title: '可筛选', routerLink: { name: 'ComponentSelectBaseFilterable' } },
+              { title: '本地搜索', routerLink: { name: 'ComponentSelectBaseFilterable' } },
+              { title: '远程搜索', routerLink: { name: 'ComponentSelectBaseRemote' } },
               { title: '分组', routerLink: { name: 'ComponentSelectBaseGroup' } },
               { title: '默认值', routerLink: { name: 'ComponentSelectBaseDefaultValue' } },
               { title: '多选', routerLink: { name: 'ComponentSelectBaseMultiple' } },
@@ -2280,7 +2285,8 @@ export const navConfigList: NavVO[] = [
               { title: '可清除', routerLink: { name: 'ComponentSelectConfigClearable' } },
               { title: '禁用', routerLink: { name: 'ComponentSelectConfigDisabled' } },
               { title: '加载中', routerLink: { name: 'ComponentSelectConfigLoading' } },
-              { title: '可筛选', routerLink: { name: 'ComponentSelectConfigFilterable' } },
+              { title: '本地搜索', routerLink: { name: 'ComponentSelectConfigFilterable' } },
+              { title: '远程搜索', routerLink: { name: 'ComponentSelectConfigRemote' } },
               { title: '分组', routerLink: { name: 'ComponentSelectConfigGroup' } },
               { title: '默认值', routerLink: { name: 'ComponentSelectConfigDefaultValue' } },
               { title: '多选', routerLink: { name: 'ComponentSelectConfigMultiple' } },

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-select v-model="val1" placeholder="可搜索" :options="opts1" clearable filterable></vxe-select>
+    <vxe-select v-model="val1" placeholder="本地搜索" :options="opts1" clearable filterable></vxe-select>
   </div>
 </template>
 

@@ -6040,6 +6040,11 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/select/base/filterable/CodeExample.vue')
               },
               {
+                path: 'remote',
+                name: 'ComponentSelectBaseRemote',
+                component: () => import('@/views/select/base/remote/CodeExample.vue')
+              },
+              {
                 path: 'group',
                 name: 'ComponentSelectBaseGroup',
                 component: () => import('@/views/select/base/group/CodeExample.vue')
@@ -6099,6 +6104,11 @@ const routes: Array<RouteConfig> = [
                 path: 'filterable',
                 name: 'ComponentSelectConfigFilterable',
                 component: () => import('@/views/select/config/filterable/CodeExample.vue')
+              },
+              {
+                path: 'remote',
+                name: 'ComponentSelectConfigRemote',
+                component: () => import('@/views/select/config/remote/CodeExample.vue')
               },
               {
                 path: 'group',

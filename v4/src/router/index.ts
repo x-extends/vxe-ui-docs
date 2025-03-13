@@ -5487,6 +5487,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/number-input/number/clearable/CodeExample.vue')
               },
               {
+                path: 'readonly',
+                name: 'ComponentNumberInputNumberReadonly',
+                component: () => import('@/views/number-input/number/readonly/CodeExample.vue')
+              },
+              {
                 path: 'step',
                 name: 'ComponentNumberInputNumberStep',
                 component: () => import('@/views/number-input/number/step/CodeExample.vue')
@@ -5518,6 +5523,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/number-input/integer/clearable/CodeExample.vue')
               },
               {
+                path: 'readonly',
+                name: 'ComponentNumberInputIntegerReadonly',
+                component: () => import('@/views/number-input/integer/readonly/CodeExample.vue')
+              },
+              {
                 path: 'step',
                 name: 'ComponentNumberInputIntegerStep',
                 component: () => import('@/views/number-input/integer/step/CodeExample.vue')
@@ -5547,6 +5557,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'clearable',
                 name: 'ComponentNumberInputFloatClearable',
                 component: () => import('@/views/number-input/float/clearable/CodeExample.vue')
+              },
+              {
+                path: 'readonly',
+                name: 'ComponentNumberInputFloatReadonly',
+                component: () => import('@/views/number-input/float/readonly/CodeExample.vue')
               },
               {
                 path: 'digits',
@@ -5588,6 +5603,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'clearable',
                 name: 'ComponentNumberInputAmountClearable',
                 component: () => import('@/views/number-input/amount/clearable/CodeExample.vue')
+              },
+              {
+                path: 'readonly',
+                name: 'ComponentNumberInputAmountReadonly',
+                component: () => import('@/views/number-input/amount/readonly/CodeExample.vue')
               },
               {
                 path: 'digits',
@@ -6067,6 +6087,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/select/base/filterable/CodeExample.vue')
               },
               {
+                path: 'remote',
+                name: 'ComponentSelectBaseRemote',
+                component: () => import('@/views/select/base/remote/CodeExample.vue')
+              },
+              {
                 path: 'group',
                 name: 'ComponentSelectBaseGroup',
                 component: () => import('@/views/select/base/group/CodeExample.vue')
@@ -6126,6 +6151,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'filterable',
                 name: 'ComponentSelectConfigFilterable',
                 component: () => import('@/views/select/config/filterable/CodeExample.vue')
+              },
+              {
+                path: 'remote',
+                name: 'ComponentSelectConfigRemote',
+                component: () => import('@/views/select/config/remote/CodeExample.vue')
               },
               {
                 path: 'group',
