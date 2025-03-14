@@ -2924,7 +2924,10 @@
       "props_current-column-config_trigger": "触发方式",
       "props_current-column-config_is-follow-selected": "只对 mouse-config.selected 启用有效，是否跟随单元格选中而移动高亮列",
       "props_current-row-config": "当前行配置信息",
-      "props_current-row-config_is-follow-selected": "只对 mouse-config.selected 启用有效，是否跟随单元格选中而移动高亮行"
+      "props_current-row-config_is-follow-selected": "只对 mouse-config.selected 启用有效，是否跟随单元格选中而移动高亮行",
+      "props_sort-config_asc-title": "自定义列头升级按钮的 title 提示语",
+      "props_sort-config_desc-title": "自定义列头倒序按钮的 title 提示语",
+      "props_checkbox-config_header-title": "自定义列头复选框的 title 提示语"
     },
     "colgroup": {
       "slots_header": "Custom header content template",
@@ -4481,7 +4484,10 @@
       "props_current-column-config_trigger": "触发方式",
       "props_current-column-config_is-follow-selected": "只对 mouse-config.selected 启用有效，是否跟随单元格选中而移动高亮列",
       "props_current-row-config": "当前行配置信息",
-      "props_current-row-config_is-follow-selected": "只对 mouse-config.selected 启用有效，是否跟随单元格选中而移动高亮行"
+      "props_current-row-config_is-follow-selected": "只对 mouse-config.selected 启用有效，是否跟随单元格选中而移动高亮行",
+      "props_sort-config_asc-title": "自定义列头升级按钮的 title 提示语",
+      "props_sort-config_desc-title": "自定义列头倒序按钮的 title 提示语",
+      "props_checkbox-config_header-title": "自定义列头复选框的 title 提示语"
     },
     "toolbar": {
       "props_class-name": "Give the toolbar className",
