@@ -31,7 +31,7 @@
             class="html"
             content="%3Cscript%20type%3D%22text%2Fjavascript%22%20src%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2Fexceljs%404.4.0%2Fdist%2Fexceljs.min.js%22%3E%3C%2Fscript%3E">
           </pre-code>
-          <div>文件 main.js</div>
+          <div>文件 src/main </div>
           <pre-code
             class="javascript"
             :content="`
@@ -56,7 +56,7 @@
         <vxe-tip status="primary" title="方式二">使用 NPM 安装</vxe-tip>
 
         <pre>
-          <div>文件 main.js</div>
+          <div>文件 src/main </div>
           <pre-code
             class="javascript"
             :content="`

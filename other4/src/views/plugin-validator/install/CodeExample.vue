@@ -24,7 +24,7 @@
         <vxe-tip status="primary" title="方式一">使用 NPM 安装</vxe-tip>
 
         <pre>
-          <div>文件 main.js</div>
+          <div>文件 src/main </div>
           <pre-code class="javascript">
             // ...
             import VxeUI from 'vxe-pc-ui'

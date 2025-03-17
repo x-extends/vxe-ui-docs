@@ -83,7 +83,9 @@ export const useAppStore = defineStore('app', {
     pluginRenderChartCDNLib: handleLibVersion('@vxe-ui/plugin-render-chart'),
     pluginRenderEchartsCDNLib: handleLibVersion('@vxe-ui/plugin-render-echarts'),
     pluginRenderElementCDNLib: handleLibVersion('@vxe-ui/plugin-render-element'),
-    pluginRenderWangEditorCDNLib: handleLibVersion('@vxe-ui/plugin-render-wangeditor'),
+    pluginRenderNaiveCDNLib: handleLibVersion('@vxe-ui/plugin-render-naive'),
+    pluginRenderIViewCDNLib: handleLibVersion('@vxe-ui/plugin-render-iview'),
+    pluginRenderWangEditorCDNLib: handleLibVersion('@vxe-ui/@vxe-ui/plugin-render-naive'),
     pluginValidatorCDNLib: handleLibVersion('@vxe-ui/plugin-validator'),
     pluginShortcutKeyCDNLib: handleLibVersion('@vxe-ui/plugin-shortcut-key')
   },

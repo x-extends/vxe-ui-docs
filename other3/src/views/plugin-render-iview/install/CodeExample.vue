@@ -28,7 +28,7 @@
         <vxe-tip status="error">自行去安装对应的第三方组件；如果需要使用配置式，则需要全局安装</vxe-tip>
 
         <pre>
-          <div>文件 main.js</div>
+          <div>文件 src/main </div>
           <pre-code class="javascript">
             // ...
             import VxeUI from 'vxe-pc-ui'

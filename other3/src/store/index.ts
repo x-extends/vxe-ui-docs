@@ -84,6 +84,8 @@ export default new Vuex.Store({
     pluginRenderChartCDNLib: handleLibVersion('@vxe-ui/plugin-render-chart'),
     pluginRenderEchartsCDNLib: handleLibVersion('@vxe-ui/plugin-render-echarts'),
     pluginRenderElementCDNLib: handleLibVersion('@vxe-ui/plugin-render-element'),
+    pluginRenderNaiveCDNLib: handleLibVersion('@vxe-ui/plugin-render-naive'),
+    pluginRenderIViewCDNLib: handleLibVersion('@vxe-ui/plugin-render-iview'),
     pluginRenderWangEditorCDNLib: handleLibVersion('@vxe-ui/plugin-render-wangeditor'),
     pluginValidatorCDNLib: handleLibVersion('@vxe-ui/plugin-validator'),
     pluginShortcutKeyCDNLib: handleLibVersion('@vxe-ui/plugin-shortcut-key')
