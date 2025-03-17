@@ -75,6 +75,7 @@ export default new Vuex.Store({
     versionConfig: {}
   },
   getters: {
+    vueCDNLib: handleLibVersion('vue'),
     uiCDNLib: handleLibVersion('vxe-pc-ui'),
     tableCDNLib: handleLibVersion('vxe-table'),
     pluginExportPdfCDNLib: handleLibVersion('@vxe-ui/plugin-export-pdf'),
