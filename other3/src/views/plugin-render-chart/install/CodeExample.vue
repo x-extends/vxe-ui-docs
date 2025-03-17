@@ -85,7 +85,7 @@ export default Vue.extend({
       pluginRenderChartCDNLib(): string
     },
     cdnUrl (): string {
-      return `/resource/cdn/${this.packName}-v${this.docsVersion}.html?v=${process.env.VUE_APP_DATE_NOW}`
+      return `/resource/cdn/plugin-render-chart-v${this.docsVersion}.html?v=${process.env.VUE_APP_DATE_NOW}`
     }
   },
   created () {
