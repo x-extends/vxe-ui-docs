@@ -1400,6 +1400,11 @@ const tableRouteConfig: RouteConfig = {
       component: RouteLayout,
       children: [
         {
+          path: 'format-number-input',
+          name: 'ComponentTableCellRenderFormatNumberInput',
+          component: () => import('@/views/table/cellRender/format-number-input/CodeExample.vue')
+        },
+        {
           path: 'format-option',
           name: 'ComponentTableCellRenderFormatOption',
           component: () => import('@/views/table/cellRender/format-option/CodeExample.vue')
@@ -3246,6 +3251,11 @@ const gridRouteConfig: RouteConfig = {
       path: 'cellRender',
       component: RouteLayout,
       children: [
+        {
+          path: 'format-number-input',
+          name: 'ComponentGridCellRenderFormatNumberInput',
+          component: () => import('@/views/grid/cellRender/format-number-input/CodeExample.vue')
+        },
         {
           path: 'format-option',
           name: 'ComponentGridCellRenderFormatOption',
