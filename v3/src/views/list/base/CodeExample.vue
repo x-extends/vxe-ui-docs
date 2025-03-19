@@ -6,9 +6,6 @@
           <div>将大数组按需切割成可视区 items 条数进行渲染，拥有最高性能的虚拟列表渲染能力，使渲染性能大幅提升。</div>
         </vxe-tip>
         <vxe-tip status="error">
-          <div>最大可以支持 80w 行，不同浏览器不同版本理论上限行数不一样</div>
-        </vxe-tip>
-        <vxe-tip status="error">
           <div>需要固定容器高度和每行的高度，渲染性能达到极致流畅</div>
         </vxe-tip>
       </template>

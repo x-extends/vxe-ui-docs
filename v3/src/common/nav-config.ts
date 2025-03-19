@@ -1229,7 +1229,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '展开行', routerLink: { name: 'ComponentGridScrollExpand' } },
             { title: '展开行 + 复杂子表渲染', routerLink: { name: 'ComponentGridScrollExpandFixed' } },
             { title: '可编辑 + 纵向', routerLink: { name: 'ComponentGridScrollEdit' } },
-            { title: '可编辑 + 纵向和横向', routerLink: { name: 'ComponentGridScrollHVEdit' } }
+            { title: '可编辑 + 纵向和横向', routerLink: { name: 'ComponentGridScrollHVEdit' } },
+            { title: '百万级数据量', routerLink: { name: 'ComponentGridScrollBigData' } }
           ]
         },
         {
