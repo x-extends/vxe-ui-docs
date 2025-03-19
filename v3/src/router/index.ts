@@ -3140,6 +3140,7 @@ const gridRouteConfig: RouteConfig = {
         },
         {
           path: 'checkbox',
+          component: RouteLayout,
           children: [
             {
               path: 'base',

@@ -551,7 +551,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '使用分组表头', routerLink: { name: 'ComponentTableScrollGroup' } },
             { title: '按键导航', routerLink: { name: 'ComponentTableScrollKeyboard' } },
             { title: '单元格合并', routerLink: { name: 'ComponentTableScrollMerge' } },
-            { title: '树形 + 横向', routerLink: { name: 'ComponentTableScrollTree' } },
+            { title: '树形 + 纵向', routerLink: { name: 'ComponentTableScrollTree' } },
             { title: '可编辑 + 横向', routerLink: { name: 'ComponentTableScrollEdit' } },
             { title: '可编辑 + 纵向和横向', routerLink: { name: 'ComponentTableScrollHVEdit' } }
           ]

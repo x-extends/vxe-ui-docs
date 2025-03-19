@@ -3137,6 +3137,7 @@ const gridRouteConfig: RouteRecordRaw = {
         },
         {
           path: 'checkbox',
+          component: RouteLayout,
           children: [
             {
               path: 'base',
