@@ -1308,7 +1308,10 @@
       "slots_full-jump": "自定义完整跳页按钮模板",
       "slots_jump": "自定义跳页按钮模板",
       "slots_page-count": "自定义总页数按钮模板",
-      "slots_total": "自定义总条数按钮模板"
+      "slots_total": "自定义总条数按钮模板",
+      "slots_prev-jump": "自定义向上跳页按钮模板",
+      "slots_next-jump": "自定义向下跳页按钮模板",
+      "slots_number-jump": "自定义页数带跳页按钮模板"
     },
     "password-input": {
       "props_model-value": "v-model binding value",
