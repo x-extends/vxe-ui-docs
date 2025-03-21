@@ -2927,7 +2927,9 @@
       "props_current-row-config_is-follow-selected": "只对 mouse-config.selected 启用有效，是否跟随单元格选中而移动高亮行",
       "props_sort-config_asc-title": "自定义列头升级按钮的 title 提示语",
       "props_sort-config_desc-title": "自定义列头倒序按钮的 title 提示语",
-      "props_checkbox-config_header-title": "自定义列头复选框的 title 提示语"
+      "props_checkbox-config_header-title": "自定义列头复选框的 title 提示语",
+      "props_filter-config_is-every": "是否精确筛选到每一行，默认情况下是父级被匹配到则所有子级也被匹配；如果传 true 则会对每一行进行筛选",
+      "methods_get-copy-cell-area": "用于 mouse-config.area，用于获取标记为复制粘贴的区域"
     },
     "colgroup": {
       "slots_header": "自定义表头内容的模板",
@@ -4487,7 +4489,9 @@
       "props_current-row-config_is-follow-selected": "只对 mouse-config.selected 启用有效，是否跟随单元格选中而移动高亮行",
       "props_sort-config_asc-title": "自定义列头升级按钮的 title 提示语",
       "props_sort-config_desc-title": "自定义列头倒序按钮的 title 提示语",
-      "props_checkbox-config_header-title": "自定义列头复选框的 title 提示语"
+      "props_checkbox-config_header-title": "自定义列头复选框的 title 提示语",
+      "props_filter-config_is-every": "是否精确筛选到每一行，默认情况下是父级被匹配到则所有子级也被匹配；如果传 true 则会对每一行进行筛选",
+      "methods_get-copy-cell-area": "用于 mouse-config.area，用于获取标记为复制粘贴的区域"
     },
     "toolbar": {
       "props_class-name": "给工具栏 className",
