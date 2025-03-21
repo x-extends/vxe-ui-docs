@@ -389,6 +389,11 @@ const tableRouteConfig: RouteConfig = {
           component: () => import('@/views/table/filter/remote/CodeExample.vue')
         },
         {
+          path: 'tree',
+          name: 'ComponentTableFilterTree',
+          component: () => import('@/views/table/filter/tree/CodeExample.vue')
+        },
+        {
           path: 'setFilter',
           name: 'ComponentTableFilterSetFilter',
           component: () => import('@/views/table/filter/setFilter/CodeExample.vue')
@@ -2722,6 +2727,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'all',
           name: 'ComponentGridMergeAll',
           component: () => import('@/views/grid/merge/all/CodeExample.vue')
+        },
+        {
+          path: 'spanMethod',
+          name: 'ComponentGridMergeSpanMethod',
+          component: () => import('@/views/grid/merge/spanMethod/CodeExample.vue')
         },
         {
           path: 'footer',
