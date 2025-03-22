@@ -9,7 +9,7 @@
 
       <template #use>
         <pre>
-          <pre-code class="javascript">
+          <pre-code language="javascript">
             import { VxeUI } from 'vxe-pc-ui'
 
             // 切换为默认主题
@@ -31,16 +31,32 @@
 
       <template #use>
         <pre>
-          <pre-code class="css">
+          <pre-code language="css">
             // 默认主题
             html[data-vxe-ui-theme="light"] {
+              // 字体颜色
               --vxe-ui-font-color: #606266;
+              // 主题颜色
               --vxe-ui-font-primary-color: #409eff;
+
+              // 活动颜色
+              --vxe-ui-font-primary-tinge-color: #d4d5d7;
+              // 松开颜色
+              --vxe-ui-font-primary-lighten-color: #797b80;
+              // 按下颜色
+              --vxe-ui-font-primary-darken-color: #47494c;
+              // 禁用颜色
+              --vxe-ui-font-primary-disabled-color: #BFBFBF;
             }
             // 暗黑主题
             html[data-vxe-ui-theme="dark"] {
               --vxe-ui-font-color: #a0a3a7;
               --vxe-ui-font-primary-color: #409eff;
+
+              --vxe-ui-font-primary-tinge-color: #33353b;
+              --vxe-ui-font-primary-lighten-color: #797b80;
+              --vxe-ui-font-primary-darken-color: #47494c;
+              --vxe-ui-font-primary-disabled-color: #464646;
             }
           </pre-code>
         </pre>
@@ -56,7 +72,7 @@
 
       <template #use>
         <pre>
-          <pre-code class="css">
+          <pre-code language="css">
             // 给 html 加对应的 class 就可以生效，例如 my-theme，然后修改css变量
             html.my-theme {
               --vxe-ui-font-color: #999999,
@@ -76,7 +92,7 @@
 
       <template #use>
         <pre>
-          <pre-code class="css">
+          <pre-code language="css">
             @use 'vxe-pc-ui/styles/variable.scss' as vxe_ui_variable with (
               $vxe-ui-font-color: #999999,
               $vxe-ui-font-primary-color: #ff0000
