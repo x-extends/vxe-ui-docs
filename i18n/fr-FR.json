@@ -1311,7 +1311,9 @@
       "slots_total": "自定义总条数按钮模板",
       "slots_prev-jump": "自定义向上跳页按钮模板",
       "slots_next-jump": "自定义向下跳页按钮模板",
-      "slots_number-jump": "自定义页数带跳页按钮模板"
+      "slots_number-jump": "自定义页数带跳页按钮模板",
+      "methods_home-page": "手动跳转到首页页",
+      "methods_end-page": "手动跳转到末页"
     },
     "password-input": {
       "props_model-value": "Valeur de liaison du modèle V",
