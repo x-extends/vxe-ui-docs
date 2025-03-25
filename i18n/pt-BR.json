@@ -1565,7 +1565,18 @@
       "props_prefix-icon": "Ícone de prefixo",
       "props_placement": "Exibição fixa da direção do painel pull-down",
       "props_options": "Lista de opções suspensas",
-      "props_option-props": "Opções de retirada Atributo Configuração do parâmetro"
+      "props_option-props": "Opções de retirada Atributo Configuração do parâmetro",
+      "events_change": "值改变时触发该事件",
+      "props_popup-config": "下拉面板配置项",
+      "props_grid-config": "表格配置项",
+      "props_transfer": "是否将弹框容器插入于 body 内",
+      "events_clear": "在点击右侧清除按钮时触发该事件",
+      "events_blur": "在失焦时触发该方法",
+      "events_focus": "在聚焦时触发该方法",
+      "events_page-change": "只对 grid-config.pager-config 配置时有效，分页发生改变时会触发该事件",
+      "events_form-submit": "只对 grid-config.form-config 配置时有效，表单提交时会触发该事件",
+      "events_form-reset": "只对 grid-config.form-config 配置时有效，表单重置时会触发该事件",
+      "events_form-collapse": "只对 grid-config.form-config 配置时有效，当折叠按钮被手动点击时会触发该事件"
     },
     "tag": {
       "props_size": "tamanho",

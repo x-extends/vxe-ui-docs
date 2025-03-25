@@ -2358,6 +2358,13 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
+            title: '查询表单',
+            children: [
+              { title: '查询表单', routerLink: { name: 'ComponentTableSelectFormSearch' } },
+              { title: '折叠表单', routerLink: { name: 'ComponentTableSelectFormCollapse' } }
+            ]
+          },
+          {
             title: '虚拟滚动（大量数据选项）',
             children: [
               { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTableSelectScrollVertical' } },

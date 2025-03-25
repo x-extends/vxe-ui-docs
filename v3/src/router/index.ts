@@ -7654,6 +7654,22 @@ const routes: Array<RouteConfig> = [
             ]
           },
           {
+            path: 'form',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'search',
+                name: 'ComponentTableSelectFormSearch',
+                component: () => import('@/views/table-select/form/search/CodeExample.vue')
+              },
+              {
+                path: 'collapse',
+                name: 'ComponentTableSelectFormCollapse',
+                component: () => import('@/views/table-select/form/collapse/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'scroll',
             component: RouteLayout,
             children: [

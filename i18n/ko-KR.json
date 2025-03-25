@@ -1565,7 +1565,18 @@
       "props_prefix-icon": "접두사 아이콘",
       "props_placement": "풀다운 패널의 방향의 표시가 수정되었습니다",
       "props_options": "드롭 다운 옵션 목록",
-      "props_option-props": "풀다운 옵션 속성 매개 변수 구성"
+      "props_option-props": "풀다운 옵션 속성 매개 변수 구성",
+      "events_change": "值改变时触发该事件",
+      "props_popup-config": "下拉面板配置项",
+      "props_grid-config": "表格配置项",
+      "props_transfer": "是否将弹框容器插入于 body 内",
+      "events_clear": "在点击右侧清除按钮时触发该事件",
+      "events_blur": "在失焦时触发该方法",
+      "events_focus": "在聚焦时触发该方法",
+      "events_page-change": "只对 grid-config.pager-config 配置时有效，分页发生改变时会触发该事件",
+      "events_form-submit": "只对 grid-config.form-config 配置时有效，表单提交时会触发该事件",
+      "events_form-reset": "只对 grid-config.form-config 配置时有效，表单重置时会触发该事件",
+      "events_form-collapse": "只对 grid-config.form-config 配置时有效，当折叠按钮被手动点击时会触发该事件"
     },
     "tag": {
       "props_size": "크기",
