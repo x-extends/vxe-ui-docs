@@ -72,7 +72,6 @@ const clearCurrentEvent = () => {
 const getCurrentEvent = () => {
   const $tree = treeRef.value
   if ($tree) {
-    debugger
     const selectId = $tree.getCurrentNodeId()
     VxeUI.modal.alert(`${selectId}`)
   }
