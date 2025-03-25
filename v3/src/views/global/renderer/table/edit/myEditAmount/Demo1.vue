@@ -2,6 +2,7 @@
   <div>
     <vxe-table
       border
+      show-overflow
       height="300"
       :edit-config="{trigger: 'click',mode: 'cell'}"
       :data="tableData">
