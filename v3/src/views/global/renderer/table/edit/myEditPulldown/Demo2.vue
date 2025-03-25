@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from 'vue'
+import Vue from 'vue'
 import type { VxeGridProps } from 'vxe-table'
 
 interface RowVO {
@@ -18,6 +18,10 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
+    const nameEditRender = {
+      name: 'MyTableEditPulldown'
+    }
+
     const gridOptions: VxeGridProps<RowVO> = {
       border: true,
       showOverflow: true,
@@ -28,7 +32,7 @@ export default Vue.extend({
       },
       columns: [
         { type: 'seq', width: 50 },
-        { field: 'name', title: 'name', editRender: { name: 'MyTableEditPulldown' } },
+        { field: 'name', title: 'name', editRender: nameEditRender },
         { field: 'sex', title: 'sex' },
         { field: 'age', title: 'Age' },
         { field: 'address', title: 'Address' }
