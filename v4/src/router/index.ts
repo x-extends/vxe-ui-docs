@@ -7716,6 +7716,17 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'pager',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'page',
+                name: 'ComponentTableSelectPagerPage',
+                component: () => import('@/views/table-select/pager/page/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'scroll',
             component: RouteLayout,
             children: [

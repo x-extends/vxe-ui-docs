@@ -2374,6 +2374,12 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
+            title: '分页',
+            children: [
+              { title: '数据分页', routerLink: { name: 'ComponentTableSelectPagerPage' } }
+            ]
+          },
+          {
             title: '虚拟滚动（大量数据选项）',
             children: [
               { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTableSelectScrollVertical' } },
