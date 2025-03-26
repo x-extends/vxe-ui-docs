@@ -27,7 +27,7 @@
         <pre>
           <div>文件 index.html</div>
           <pre-code
-            class="html"
+            language="html"
             content="
             <!--引入 css-->
             %3Clink%20rel%3D%22stylesheet%22%20href%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40wangeditor%2Feditor%405.1.23%2Fdist%2Fcss%2Fstyle.css%22%3E
@@ -36,7 +36,7 @@
             ">
           </pre-code>
           <div>文件 src/main </div>
-          <pre-code class="javascript">
+          <pre-code language="javascript">
             // ...
             import VxeUI from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
@@ -85,7 +85,7 @@
 
         <pre>
           <div>文件 src/main </div>
-          <pre-code class="javascript">
+          <pre-code language="javascript">
             // ...
             import VxeUI from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'

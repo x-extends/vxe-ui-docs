@@ -28,12 +28,12 @@
         <pre>
           <div>文件 index.html</div>
           <pre-code
-            class="html"
+            language="html"
             content="%3Cscript%20type%3D%22text%2Fjavascript%22%20src%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2Fecharts%405.4.3%2Fdist%2Fecharts.min.js%22%3E%3C%2Fscript%3E">
           </pre-code>
           <div>文件 src/main </div>
           <pre-code
-            class="javascript"
+            language="javascript"
             :content="`
             // ...
             import VxeUI from 'vxe-pc-ui'
@@ -57,7 +57,7 @@
         <pre>
           <div>文件 src/main </div>
           <pre-code
-            class="javascript"
+            language="javascript"
             :content="`
             // ...
             import VxeUI from 'vxe-pc-ui'

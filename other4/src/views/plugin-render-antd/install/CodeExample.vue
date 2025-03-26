@@ -29,7 +29,7 @@
 
         <pre>
           <div>文件 src/main </div>
-          <pre-code class="javascript">
+          <pre-code language="javascript">
             // ...
             import VxeUI from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
