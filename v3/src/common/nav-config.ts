@@ -31,6 +31,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
       i18nKey: 'app.aside.menu.tableTableTitle',
       children: [
         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'table' } } },
+        { title: 'Column API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'column' } } },
         {
           title: '基础功能',
           children: [
@@ -1616,6 +1617,7 @@ export const navConfigList: NavVO[] = [
         title: 'Pulldown 下拉容器',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pulldown' } } },
+          { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split-item' } } },
           { title: '基础', routerLink: { name: 'ComponentPulldownBase' } },
           { title: '配置列表', routerLink: { name: 'ComponentPulldownOptions' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentPulldownTemplate' } },
@@ -1770,6 +1772,7 @@ export const navConfigList: NavVO[] = [
     i18nKey: 'app.aside.menu.formTitle',
     children: [
       { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form' } } },
+      { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-item' } } },
       {
         i18nKey: 'app.aside.menu.formBaseTitle',
         children: [

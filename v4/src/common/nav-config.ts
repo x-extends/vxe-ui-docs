@@ -31,6 +31,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
       i18nKey: 'app.aside.menu.tableTableTitle',
       children: [
         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'table' } } },
+        { title: 'Column API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'column' } } },
         {
           title: '基础功能',
           children: [
@@ -1582,6 +1583,7 @@ export const navConfigList: NavVO[] = [
         title: 'Split 分割面板',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split' } } },
+          { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split-item' } } },
           { title: '基础', routerLink: { name: 'ComponentSplitBase' } },
           { title: '高度', routerLink: { name: 'ComponentSplitHeight' } },
           { title: '边框', routerLink: { name: 'ComponentSplitBorder' } },
@@ -1769,6 +1771,7 @@ export const navConfigList: NavVO[] = [
     i18nKey: 'app.aside.menu.formTitle',
     children: [
       { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form' } } },
+      { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-item' } } },
       {
         i18nKey: 'app.aside.menu.formBaseTitle',
         children: [
