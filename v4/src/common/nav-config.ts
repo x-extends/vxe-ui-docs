@@ -1590,6 +1590,7 @@ export const navConfigList: NavVO[] = [
           { title: '边框', routerLink: { name: 'ComponentSplitBorder' } },
           { title: '边距', routerLink: { name: 'ComponentSplitPadding' } },
           { title: '垂直布局', routerLink: { name: 'ComponentSplitVertical' } },
+          { title: '折叠按钮', routerLink: { name: 'ComponentSplitAction' } },
           { title: '组合布局', routerLink: { name: 'ComponentSplitLayout' } }
         ]
       },

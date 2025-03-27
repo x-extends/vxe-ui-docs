@@ -5410,6 +5410,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/split/vertical/CodeExample.vue')
           },
           {
+            path: 'action',
+            name: 'ComponentSplitAction',
+            component: () => import('@/views/split/action/CodeExample.vue')
+          },
+          {
             path: 'layout',
             name: 'ComponentSplitLayout',
             component: () => import('@/views/split/layout/CodeExample.vue')

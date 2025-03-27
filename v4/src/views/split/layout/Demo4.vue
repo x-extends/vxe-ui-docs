@@ -15,7 +15,7 @@
         </vxe-split>
       </vxe-split-item>
       <vxe-split-item>
-        <div style="height: 100%;background-color: #d8d8f9;">底部</div>
+        <div style="height: 100%;background-color: #f3d0ec;">底部</div>
       </vxe-split-item>
     </vxe-split>
   </div>

@@ -2,7 +2,7 @@
   <div>
     <vxe-split height="300" border>
       <vxe-split-item>
-        <div style="height: 100%;background-color: #d8d8f9;">左侧</div>
+        <div style="height: 100%;background-color: #f3d0ec;">左侧</div>
       </vxe-split-item>
       <vxe-split-item>
         <vxe-split border vertical>

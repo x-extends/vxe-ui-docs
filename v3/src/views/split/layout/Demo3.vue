@@ -2,7 +2,7 @@
   <div>
     <vxe-split height="300" border vertical>
       <vxe-split-item>
-        <div style="height: 100%;background-color: #d8d8f9;">顶部</div>
+        <div style="height: 100%;background-color: #f3d0ec;">顶部</div>
       </vxe-split-item>
       <vxe-split-item>
         <vxe-split border>

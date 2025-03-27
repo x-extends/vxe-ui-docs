@@ -12,7 +12,7 @@
         </vxe-split>
       </vxe-split-item>
       <vxe-split-item>
-        <div style="height: 100%;background-color: #d8d8f9;">右侧</div>
+        <div style="height: 100%;background-color: #f3d0ec;">右侧</div>
       </vxe-split-item>
     </vxe-split>
   </div>
