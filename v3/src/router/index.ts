@@ -4352,6 +4352,11 @@ const gridRouteConfig: RouteConfig = {
           path: 'pasteToUpload',
           name: 'ComponentGridOtherPasteToUpload',
           component: () => import('@/views/grid/other/pasteToUpload/CodeExample.vue')
+        },
+        {
+          path: 'leftRight',
+          name: 'ComponentGridOtherLeftRight',
+          component: () => import('@/views/grid/other/leftRight/CodeExample.vue')
         }
       ]
     }
@@ -5393,6 +5398,11 @@ const routes: Array<RouteConfig> = [
             path: 'border',
             name: 'ComponentSplitBorder',
             component: () => import('@/views/split/border/CodeExample.vue')
+          },
+          {
+            path: 'padding',
+            name: 'ComponentSplitPadding',
+            component: () => import('@/views/split/padding/CodeExample.vue')
           },
           {
             path: 'vertical',

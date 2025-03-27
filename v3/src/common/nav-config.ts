@@ -1309,7 +1309,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '实现分页复选框选择', routerLink: { name: 'ComponentGridOtherPageCheckbox' } },
             { title: '实现记账凭证', routerLink: { name: 'ComponentGridOtherBookkeepingVoucher' } },
             { title: '单元格可拖拽调整宽高', routerLink: { name: 'ComponentGridOtherAllRowColDrag' } },
-            { title: '实现粘贴上传', routerLink: { name: 'ComponentGridOtherPasteToUpload' } }
+            { title: '实现粘贴上传', routerLink: { name: 'ComponentGridOtherPasteToUpload' } },
+            { title: '实现左边树和右边表格', routerLink: { name: 'ComponentGridOtherLeftRight' } }
           ]
         }
       ]
@@ -1586,6 +1587,7 @@ export const navConfigList: NavVO[] = [
           { title: '基础', routerLink: { name: 'ComponentSplitBase' } },
           { title: '高度', routerLink: { name: 'ComponentSplitHeight' } },
           { title: '边框', routerLink: { name: 'ComponentSplitBorder' } },
+          { title: '边距', routerLink: { name: 'ComponentSplitPadding' } },
           { title: '垂直布局', routerLink: { name: 'ComponentSplitVertical' } },
           { title: '组合布局', routerLink: { name: 'ComponentSplitLayout' } }
         ]
