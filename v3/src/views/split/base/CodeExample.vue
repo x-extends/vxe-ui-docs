@@ -9,7 +9,7 @@
     <CodeLight path="split/base/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          还可以多个面板
+          支持多个面板
         </vxe-tip>
       </template>
     </CodeLight>
