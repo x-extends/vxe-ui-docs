@@ -1579,6 +1579,17 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: 'Split 分割面板',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split' } } },
+          { title: '基础', routerLink: { name: 'ComponentSplitBase' } },
+          { title: '高度', routerLink: { name: 'ComponentSplitHeight' } },
+          { title: '边框', routerLink: { name: 'ComponentSplitBorder' } },
+          { title: '垂直布局', routerLink: { name: 'ComponentSplitVertical' } },
+          { title: '组合布局', routerLink: { name: 'ComponentSplitLayout' } }
+        ]
+      },
+      {
         title: 'Tabs 页签',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tabs' } } },
@@ -2024,7 +2035,7 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'slider' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentSliderSize' } },
-          { title: '基本', routerLink: { name: 'ComponentSliderBase' } },
+          { title: '基础', routerLink: { name: 'ComponentSliderBase' } },
           { title: '范围滑动', routerLink: { name: 'ComponentSliderRange' } },
           { title: '只读', routerLink: { name: 'ComponentSliderReadonly' } },
           { title: '禁用', routerLink: { name: 'ComponentSliderDisabled' } }

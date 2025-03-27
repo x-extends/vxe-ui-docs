@@ -1477,6 +1477,16 @@
       "props_virtual-y-config_gt": "指定大于指定行时自动启动纵向虚拟滚动，如果为 0 则总是启用；如果需要关闭，可以设置 enabled 为 false（注：启用纵向虚拟滚动之后将不能支持动态行高）",
       "props_virtual-y-config_o-size": "指定每次渲染的数据偏移量，偏移量越大渲染次数就越少，但每次渲染耗时就越久"
     },
+    "split": {
+      "props_vertical": "使用垂直布局",
+      "props_border": "是否带有边框"
+    },
+    "split-item": {
+      "props_width": "宽度",
+      "props_height": "高度",
+      "props_min-width": "最小宽度",
+      "props_min-height": "最小高度"
+    },
     "slider": {
       "props_model-value": "V- 모델 결합 값",
       "props_range": "레인지 드래그",

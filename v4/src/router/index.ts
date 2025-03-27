@@ -5378,6 +5378,37 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'split',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'base',
+            name: 'ComponentSplitBase',
+            component: () => import('@/views/split/base/CodeExample.vue')
+          },
+          {
+            path: 'height',
+            name: 'ComponentSplitHeight',
+            component: () => import('@/views/split/height/CodeExample.vue')
+          },
+          {
+            path: 'border',
+            name: 'ComponentSplitBorder',
+            component: () => import('@/views/split/border/CodeExample.vue')
+          },
+          {
+            path: 'vertical',
+            name: 'ComponentSplitVertical',
+            component: () => import('@/views/split/vertical/CodeExample.vue')
+          },
+          {
+            path: 'layout',
+            name: 'ComponentSplitLayout',
+            component: () => import('@/views/split/layout/CodeExample.vue')
+          }
+        ]
+      },
+      {
         path: 'input',
         component: RouteLayout,
         children: [

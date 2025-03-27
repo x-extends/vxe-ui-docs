@@ -1579,8 +1579,20 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: 'Split 分割面板',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split' } } },
+          { title: '基础', routerLink: { name: 'ComponentSplitBase' } },
+          { title: '高度', routerLink: { name: 'ComponentSplitHeight' } },
+          { title: '边框', routerLink: { name: 'ComponentSplitBorder' } },
+          { title: '垂直布局', routerLink: { name: 'ComponentSplitVertical' } },
+          { title: '组合布局', routerLink: { name: 'ComponentSplitLayout' } }
+        ]
+      },
+      {
         title: 'Tabs 页签',
         children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tabs' } } },
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tabs' } } },
           { title: '基础', routerLink: { name: 'ComponentTabsBase' } },
           { title: '卡片风格', routerLink: { name: 'ComponentTabsCard' } },
