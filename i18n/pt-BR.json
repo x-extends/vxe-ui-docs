@@ -1478,14 +1478,21 @@
       "props_virtual-y-config_o-size": "指定每次渲染的数据偏移量，偏移量越大渲染次数就越少，但每次渲染耗时就越久"
     },
     "split": {
-      "props_vertical": "使用垂直布局",
-      "props_border": "是否带有边框"
-    },
-    "split-item": {
       "props_width": "宽度",
       "props_height": "高度",
-      "props_min-width": "最小宽度",
-      "props_min-height": "最小高度"
+      "props_vertical": "使用垂直布局",
+      "props_border": "是否带有边框",
+      "props_item-config": "面板的配置项",
+      "props_item-config_min-width": "面板默认最小宽度",
+      "props_item-config_min-height": "面板默认最小高度",
+      "methods_recalculate": "重新计算方法"
+    },
+    "split-item": {
+      "props_width": "面板的宽度",
+      "props_height": "面板的高度",
+      "props_min-width": "面板的最小宽度",
+      "props_min-height": "面板的最小高度",
+      "slots_default": "显示的内容"
     },
     "slider": {
       "props_model-value": "Valor de ligação ao modelo V.",
@@ -1523,7 +1530,8 @@
       "props_title-width": "Largura do título",
       "props_title-align": "Alinhamento do título",
       "props_preload": "Seja para pré -carga",
-      "props_permission-code": "Código de permissão"
+      "props_permission-code": "Código de permissão",
+      "slots_default": "显示的内容"
     },
     "tabs": {
       "props_model-value": "Valor de ligação ao modelo V.",
