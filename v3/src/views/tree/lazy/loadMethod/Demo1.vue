@@ -1,19 +1,12 @@
 <template>
   <div>
-    <vxe-tree
-      lazy
-      show-checkbox
-      has-child-field="hasChild"
-      :node-config="nodeConfig"
-      :load-method="loadMethod"
-      :data="treeList">
-    </vxe-tree>
+    <vxe-tree v-bind="treeOptions"></vxe-tree>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeTreePropTypes } from 'vxe-pc-ui'
+import { VxeTreeProps } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
@@ -21,38 +14,41 @@ interface NodeVO {
   hasChild?: boolean
 }
 
+function getNodeListApi (node: any) {
+  return new Promise<NodeVO[]>(resolve => {
+    // 模拟后端接口
+    setTimeout(() => {
+      resolve([
+        { title: `${node.title}-1`, id: `${node.id}1`, hasChild: Math.random() * 10 < 6 },
+        { title: `${node.title}-2`, id: `${node.id}2`, hasChild: Math.random() * 10 < 6 }
+      ])
+    }, 500)
+  })
+}
+
 export default Vue.extend({
   data () {
-    const nodeConfig: VxeTreePropTypes.NodeConfig = {
-      isHover: true
+    const treeOptions: VxeTreeProps = {
+      transform: true,
+      lazy: true,
+      showCheckbox: true,
+      hasChildField: 'hasChild',
+      nodeConfig: {
+        isHover: true
+      },
+      loadMethod ({ node }) {
+        return getNodeListApi(node)
+      },
+      data: [
+        { title: '节点2', id: '2', hasChild: true },
+        { title: '节点3', id: '3', hasChild: true },
+        { title: '节点4', id: '4', hasChild: true },
+        { title: '节点5', id: '5', hasChild: false }
+      ]
     }
-
-    const treeList: NodeVO[] = [
-      { title: '节点2', id: '2', hasChild: true },
-      { title: '节点3', id: '3', hasChild: true },
-      { title: '节点4', id: '4', hasChild: true },
-      { title: '节点5', id: '5', hasChild: false }
-    ]
 
     return {
-      nodeConfig,
-      treeList
-    }
-  },
-  methods: {
-    getNodeListApi (node: any) {
-      return new Promise<NodeVO[]>(resolve => {
-        // 模拟后端接口
-        setTimeout(() => {
-          resolve([
-            { title: `${node.title}-1`, id: `${node.id}1`, hasChild: Math.random() * 10 < 6 },
-            { title: `${node.title}-2`, id: `${node.id}2`, hasChild: Math.random() * 10 < 6 }
-          ])
-        }, 500)
-      })
-    },
-    loadMethod ({ node }) {
-      return this.getNodeListApi(node)
+      treeOptions
     }
   }
 })
