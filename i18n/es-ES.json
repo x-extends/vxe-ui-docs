@@ -1505,7 +1505,14 @@
       "events_resize-end": "面板拖拽结束时会触发该事件",
       "methods_reset": "重置面板",
       "methods_load-item": "加载面板配置",
-      "methods_reload-item": "重新加载面板配置，区别就是会重置"
+      "methods_reload-item": "重新加载面板配置，区别就是会重置",
+      "events_toggle-expand": "模板被展开或折叠时会触发该事件",
+      "props_items_name": "面板唯一 Name",
+      "props_items_width": "面板的宽度",
+      "props_items_height": "面板的高度",
+      "props_items_min-width": "面板的最小宽度",
+      "props_items_min-height": "面板的最小高度",
+      "props_props_items_show-action": "是否显示折叠按钮"
     },
     "split-item": {
       "props_name": "面板唯一 Name",
