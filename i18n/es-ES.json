@@ -1512,7 +1512,7 @@
       "props_items_height": "面板的高度",
       "props_items_min-width": "面板的最小宽度",
       "props_items_min-height": "面板的最小高度",
-      "props_props_items_show-action": "是否显示折叠按钮"
+      "props_items_show-action": "是否显示折叠按钮"
     },
     "split-item": {
       "props_name": "面板唯一 Name",
