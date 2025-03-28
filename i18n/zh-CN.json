@@ -509,7 +509,8 @@
       "props_options_title-align": "对齐方式",
       "props_options_preload": "是否预加载",
       "props_options_permission-code": "权限码",
-      "events_change": "在展开关闭面板时会触发该事件"
+      "events_change": "在展开关闭面板时会触发该事件",
+      "events_toggle-expand": "模板被展开或折叠时会触发该事件"
     },
     "collapse-pane": {
       "props_title": "标题",
@@ -1148,7 +1149,10 @@
       "events_click": "在单击菜单时触发该事件",
       "menu.props_options_slots": "自定义插槽模板",
       "menu.props_options_slots_default": "自定义菜单项插槽模板",
-      "menu.slots_option": "自定义菜单项插槽模板"
+      "menu.slots_option": "自定义菜单项插槽模板",
+      "props_options_slots": "自定义插槽模板",
+      "props_options_slots_default": "自定义菜单项模板",
+      "slots_option": "自定义菜单项模板"
     },
     "modal": {
       "props_class-name": "给窗口附加 className",
@@ -1252,7 +1256,8 @@
       "events_input": "在输入时触发该方法",
       "events_change": "在值发生改变时触发该事件",
       "props_show-currency": "只对 type=amount 有效，是否显示前缀货币符号",
-      "props_currency-symbol": "只对 type=amount 有效，自定义货币符号"
+      "props_currency-symbol": "只对 type=amount 有效，自定义货币符号",
+      "props_editable": "文本框是否允许输入"
     },
     "optgroup": {
       "props_visible": "是否显示",
@@ -4554,7 +4559,28 @@
       "props_sort-config_desc-title": "自定义列头倒序按钮的 title 提示语",
       "props_checkbox-config_header-title": "自定义列头复选框的 title 提示语",
       "props_filter-config_is-every": "是否精确筛选到每一行，默认情况下是父级被匹配到则所有子级也被匹配；如果传 true 则会对每一行进行筛选",
-      "methods_get-copy-cell-area": "用于 mouse-config.area，用于获取标记为复制粘贴的区域"
+      "methods_get-copy-cell-area": "用于 mouse-config.area，用于获取标记为复制粘贴的区域",
+      "props_columns_padding": "显示边距",
+      "props_columns_vertical-align": "项垂直的对齐方式",
+      "props_columns_cell-render_show-negative-status": "当值为负数时，自动显示为红色（仅用于特殊组件）",
+      "props_columns_edit-render_show-negative-status": "当值为负数时，自动显示为红色（仅用于特殊组件）",
+      "props_toolbar-config_slots_button-prefix": "自定义左侧按钮列表前缀插槽模板",
+      "props_toolbar-config_slots_button-suffix": "自定义左侧按钮列表后缀插槽模板",
+      "props_toolbar-config_slots_tool-prefix": "自定义右侧工具列表前缀插槽模板",
+      "props_toolbar-config_slots_tool-suffix": "自定义右侧工具列表后缀插槽模板",
+      "props_pager-config_slots_home": "自定义首页按钮模板",
+      "props_pager-config_slots_prev-page": "自定义上一页按钮模板",
+      "props_pager-config_slots_prev-jump": "自定义向上跳页按钮模板",
+      "props_pager-config_slots_next-jump": "自定义向下跳页按钮模板",
+      "props_pager-config_slots_next-page": "自定义下一页按钮模板",
+      "props_pager-config_slots_end": "自定义末页按钮模板",
+      "props_pager-config_slots_number": "自定义页数按钮模板",
+      "props_pager-config_slots_number-jump": "自定义页数带跳页按钮模板",
+      "props_pager-config_slots_sizes": "自定义页大小切换按钮模板",
+      "props_pager-config_slots_full-jump": "自定义完整跳页按钮模板",
+      "props_pager-config_slots_jump": "自定义跳页按钮模板",
+      "props_pager-config_slots_page-count": "自定义总页数按钮模板",
+      "props_pager-config_slots_total": "自定义总条数按钮模板"
     },
     "toolbar": {
       "props_class-name": "给工具栏 className",
