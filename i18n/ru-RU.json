@@ -508,7 +508,8 @@
       "props_options_title-width": "ширина заголовка",
       "props_options_title-align": "Выравнивание",
       "props_options_preload": "Нагрузка ли",
-      "props_options_permission-code": "Код разрешения"
+      "props_options_permission-code": "Код разрешения",
+      "events_change": "在展开关闭面板时会触发该事件"
     },
     "collapse-pane": {
       "props_title": "заголовок",

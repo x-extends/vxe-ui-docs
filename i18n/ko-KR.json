@@ -508,7 +508,8 @@
       "props_options_title-width": "제목 너비",
       "props_options_title-align": "조정",
       "props_options_preload": "예압 여부",
-      "props_options_permission-code": "권한 코드"
+      "props_options_permission-code": "권한 코드",
+      "events_change": "在展开关闭面板时会触发该事件"
     },
     "collapse-pane": {
       "props_title": "제목",

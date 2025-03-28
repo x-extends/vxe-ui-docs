@@ -508,7 +508,8 @@
       "props_options_title-width": "عرض العنوان",
       "props_options_title-align": "تنسيق",
       "props_options_preload": "سواء للتحميل المسبق",
-      "props_options_permission-code": "رمز الإذن"
+      "props_options_permission-code": "رمز الإذن",
+      "events_change": "在展开关闭面板时会触发该事件"
     },
     "collapse-pane": {
       "props_title": "عنوان",

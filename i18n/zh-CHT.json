@@ -508,7 +508,8 @@
       "props_options_title-width": "標題寬度",
       "props_options_title-align": "對齊方式",
       "props_options_preload": "是否預加載",
-      "props_options_permission-code": "權限碼"
+      "props_options_permission-code": "權限碼",
+      "events_change": "在展开关闭面板时会触发该事件"
     },
     "collapse-pane": {
       "props_title": "標題",

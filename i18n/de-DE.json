@@ -508,7 +508,8 @@
       "props_options_title-width": "Titelbreite",
       "props_options_title-align": "Ausrichtung",
       "props_options_preload": "Ob vorlädt werden",
-      "props_options_permission-code": "Erlaubniscode"
+      "props_options_permission-code": "Erlaubniscode",
+      "events_change": "在展开关闭面板时会触发该事件"
     },
     "collapse-pane": {
       "props_title": "Titel",

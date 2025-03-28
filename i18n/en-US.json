@@ -508,7 +508,8 @@
       "props_options_title-width": "title width",
       "props_options_title-align": "Alignment",
       "props_options_preload": "Whether to preload",
-      "props_options_permission-code": "Permission code"
+      "props_options_permission-code": "Permission code",
+      "events_change": "在展开关闭面板时会触发该事件"
     },
     "collapse-pane": {
       "props_title": "title",

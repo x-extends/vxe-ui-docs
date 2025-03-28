@@ -508,7 +508,8 @@
       "props_options_title-width": "Largura do título",
       "props_options_title-align": "Alinhamento",
       "props_options_preload": "Seja para pré -carga",
-      "props_options_permission-code": "Código de permissão"
+      "props_options_permission-code": "Código de permissão",
+      "events_change": "在展开关闭面板时会触发该事件"
     },
     "collapse-pane": {
       "props_title": "título",

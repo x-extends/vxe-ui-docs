@@ -508,7 +508,8 @@
       "props_options_title-width": "Ширина титулу",
       "props_options_title-align": "Вирівнювання",
       "props_options_preload": "Чи потрібно попередньо завантажити",
-      "props_options_permission-code": "Код дозволу"
+      "props_options_permission-code": "Код дозволу",
+      "events_change": "在展开关闭面板时会触发该事件"
     },
     "collapse-pane": {
       "props_title": "титул",
