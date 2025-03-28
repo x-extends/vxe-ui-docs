@@ -1488,7 +1488,7 @@
       "props_item-config": "面板的配置项",
       "props_item-config_min-width": "面板默认最小宽度",
       "props_item-config_min-height": "面板默认最小高度",
-      "methods_recalculate": "重新计算方法",
+      "methods_recalculate": "重新计算布局",
       "props_bar-config": "拖动条配置项",
       "props_bar-config_width": "宽度",
       "props_bar-config_height": "高度",
@@ -1503,7 +1503,9 @@
       "events_resize-start": "面板拖拽开始时会触发该事件",
       "events_resize-drag": "面板拖拽过程中会触发该事件",
       "events_resize-end": "面板拖拽结束时会触发该事件",
-      "methods_reset": "重置面板"
+      "methods_reset": "重置面板",
+      "methods_load-item": "加载面板配置",
+      "methods_reload-item": "重新加载面板配置，区别就是会重置"
     },
     "split-item": {
       "props_name": "面板唯一 Name",

@@ -5385,39 +5385,51 @@ const routes: Array<RouteConfig> = [
         component: RouteLayout,
         children: [
           {
-            path: 'base',
-            name: 'ComponentSplitBase',
-            component: () => import('@/views/split/base/CodeExample.vue')
+            path: 'basics',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentSplitBasicsBase',
+                component: () => import('@/views/split/basics/base/CodeExample.vue')
+              },
+              {
+                path: 'height',
+                name: 'ComponentSplitBasicsHeight',
+                component: () => import('@/views/split/basics/height/CodeExample.vue')
+              },
+              {
+                path: 'border',
+                name: 'ComponentSplitBasicsBorder',
+                component: () => import('@/views/split/basics/border/CodeExample.vue')
+              },
+              {
+                path: 'padding',
+                name: 'ComponentSplitBasicsPadding',
+                component: () => import('@/views/split/basics/padding/CodeExample.vue')
+              },
+              {
+                path: 'vertical',
+                name: 'ComponentSplitBasicsVertical',
+                component: () => import('@/views/split/basics/vertical/CodeExample.vue')
+              },
+              {
+                path: 'action',
+                name: 'ComponentSplitBasicsAction',
+                component: () => import('@/views/split/basics/action/CodeExample.vue')
+              },
+              {
+                path: 'layout',
+                name: 'ComponentSplitBasicsLayout',
+                component: () => import('@/views/split/basics/layout/CodeExample.vue')
+              }
+            ]
           },
           {
-            path: 'height',
-            name: 'ComponentSplitHeight',
-            component: () => import('@/views/split/height/CodeExample.vue')
-          },
-          {
-            path: 'border',
-            name: 'ComponentSplitBorder',
-            component: () => import('@/views/split/border/CodeExample.vue')
-          },
-          {
-            path: 'padding',
-            name: 'ComponentSplitPadding',
-            component: () => import('@/views/split/padding/CodeExample.vue')
-          },
-          {
-            path: 'vertical',
-            name: 'ComponentSplitVertical',
-            component: () => import('@/views/split/vertical/CodeExample.vue')
-          },
-          {
-            path: 'action',
-            name: 'ComponentSplitAction',
-            component: () => import('@/views/split/action/CodeExample.vue')
-          },
-          {
-            path: 'layout',
-            name: 'ComponentSplitLayout',
-            component: () => import('@/views/split/layout/CodeExample.vue')
+            path: 'config',
+            component: RouteLayout,
+            children: [
+            ]
           }
         ]
       },
