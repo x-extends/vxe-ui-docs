@@ -1483,6 +1483,8 @@
       "props_height": "高度",
       "props_vertical": "使用垂直布局",
       "props_border": "是否带有边框",
+      "props_padding": "显示边距",
+      "props_items": "面板列表",
       "props_item-config": "面板的配置项",
       "props_item-config_min-width": "面板默认最小宽度",
       "props_item-config_min-height": "面板默认最小高度",
