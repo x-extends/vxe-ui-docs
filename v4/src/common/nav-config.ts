@@ -1585,7 +1585,7 @@ export const navConfigList: NavVO[] = [
         title: 'Split 分割面板',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split' } } },
-          { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split-item' } } },
+          { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split-pane' } } },
           {
             title: '基础',
             children: [

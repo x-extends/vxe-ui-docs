@@ -1,12 +1,12 @@
 <template>
   <div>
     <vxe-split height="300" border vertical>
-      <vxe-split-item>
+      <vxe-split-pane>
         <div style="height: 200px;background-color: #f3e1e1;">顶部</div>
-      </vxe-split-item>
-      <vxe-split-item>
+      </vxe-split-pane>
+      <vxe-split-pane>
         <div style="height: 400px;background-color: #d8d8f9;">底部</div>
-      </vxe-split-item>
+      </vxe-split-pane>
     </vxe-split>
   </div>
 </template>

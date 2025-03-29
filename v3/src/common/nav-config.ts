@@ -1585,7 +1585,7 @@ export const navConfigList: NavVO[] = [
         title: 'Split 分割面板',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split' } } },
-          { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split-item' } } },
+          { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split-pane' } } },
           {
             title: '基础',
             children: [
@@ -1600,7 +1600,15 @@ export const navConfigList: NavVO[] = [
           },
           {
             title: '配置式',
-            children: []
+            children: [
+              { title: '基础', routerLink: { name: 'ComponentSplitConfigBase' } },
+              { title: '高度', routerLink: { name: 'ComponentSplitConfigHeight' } },
+              { title: '边框', routerLink: { name: 'ComponentSplitConfigBorder' } },
+              { title: '边距', routerLink: { name: 'ComponentSplitConfigPadding' } },
+              { title: '垂直布局', routerLink: { name: 'ComponentSplitConfigVertical' } },
+              { title: '折叠按钮', routerLink: { name: 'ComponentSplitConfigAction' } },
+              { title: '组合布局', routerLink: { name: 'ComponentSplitConfigLayout' } }
+            ]
           }
         ]
       },
@@ -1631,7 +1639,7 @@ export const navConfigList: NavVO[] = [
         title: 'Pulldown 下拉容器',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pulldown' } } },
-          { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split-item' } } },
+          { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split-pane' } } },
           { title: '基础', routerLink: { name: 'ComponentPulldownBase' } },
           { title: '配置列表', routerLink: { name: 'ComponentPulldownOptions' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentPulldownTemplate' } },

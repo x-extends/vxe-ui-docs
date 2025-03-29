@@ -5418,6 +5418,41 @@ const routes: Array<RouteConfig> = [
             path: 'config',
             component: RouteLayout,
             children: [
+              {
+                path: 'base',
+                name: 'ComponentSplitConfigBase',
+                component: () => import('@/views/split/config/base/CodeExample.vue')
+              },
+              {
+                path: 'height',
+                name: 'ComponentSplitConfigHeight',
+                component: () => import('@/views/split/config/height/CodeExample.vue')
+              },
+              {
+                path: 'border',
+                name: 'ComponentSplitConfigBorder',
+                component: () => import('@/views/split/config/border/CodeExample.vue')
+              },
+              {
+                path: 'padding',
+                name: 'ComponentSplitConfigPadding',
+                component: () => import('@/views/split/config/padding/CodeExample.vue')
+              },
+              {
+                path: 'vertical',
+                name: 'ComponentSplitConfigVertical',
+                component: () => import('@/views/split/config/vertical/CodeExample.vue')
+              },
+              {
+                path: 'action',
+                name: 'ComponentSplitConfigAction',
+                component: () => import('@/views/split/config/action/CodeExample.vue')
+              },
+              {
+                path: 'layout',
+                name: 'ComponentSplitConfigLayout',
+                component: () => import('@/views/split/config/layout/CodeExample.vue')
+              }
             ]
           }
         ]
