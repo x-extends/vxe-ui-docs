@@ -1,6 +1,10 @@
 <template>
   <div>
-    <vxe-upload v-model="fileList" multiple tip-text="自定义提示语"></vxe-upload>
+    <vxe-upload v-model="fileList" multiple>
+      <template #tip>
+        <span>自定义插槽提示语</span>
+      </template>
+    </vxe-upload>
   </div>
 </template>
 
