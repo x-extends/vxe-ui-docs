@@ -338,8 +338,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'VxeSlider 滑块', routerLink: { name: 'ComponentTableCellRenderVxeSlider' } },
             { title: 'VxeUpload 上传', routerLink: { name: 'ComponentTableCellRenderVxeUpload' } },
             { title: 'FormatNumberInput 格式化数值', routerLink: { name: 'ComponentTableCellRenderFormatNumberInput' } },
-            { title: 'FormatSelect 格式化下拉选项', routerLink: { name: 'ComponentTableCellRenderFormatOption' } },
-            { title: 'FormatTreeSelect 格式化下拉树', routerLink: { name: 'ComponentTableCellRenderFormatTree' } },
+            { title: 'FormatSelect 格式化列表选项', routerLink: { name: 'ComponentTableCellRenderFormatOption' } },
+            { title: 'FormatTreeSelect 格式化树选项', routerLink: { name: 'ComponentTableCellRenderFormatTree' } },
             { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/table/cell/el-switch` }
           ]
         },
@@ -982,8 +982,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'VxeRate 评分', routerLink: { name: 'ComponentGridCellRenderVxeRate' } },
             { title: 'VxeUpload 上传', routerLink: { name: 'ComponentGridCellRenderVxeUpload' } },
             { title: 'FormatNumberInput 格式化数值', routerLink: { name: 'ComponentGridCellRenderFormatNumberInput' } },
-            { title: 'FormatSelect 格式化下拉选项', routerLink: { name: 'ComponentGridCellRenderFormatOption' } },
-            { title: 'FormatTreeSelect 格式化下拉树', routerLink: { name: 'ComponentGridCellRenderFormatTree' } },
+            { title: 'FormatSelect 格式化列表选项', routerLink: { name: 'ComponentGridCellRenderFormatOption' } },
+            { title: 'FormatTreeSelect 格式化树选项', routerLink: { name: 'ComponentGridCellRenderFormatTree' } },
             { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/grid/cell/el-switch` }
           ]
         },
