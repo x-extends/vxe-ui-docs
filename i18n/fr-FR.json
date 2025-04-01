@@ -229,6 +229,7 @@
         "areaEditTempRestore": "réduction",
         "areaEditCell": "Exemple de fonction d'édition",
         "areaEditCellUpload": "Télécharger les pièces jointes",
+        "areaEditCellLeftRight": "实现左边树和右边表格",
         "areaCustom": "Personnaliser les paramètres de la colonne",
         "areaLoadMore": "Défilement infini",
         "areaHandle": "Opérations cellulaires",

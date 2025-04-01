@@ -229,6 +229,7 @@
         "areaEditTempRestore": "削減",
         "areaEditCell": "関数の編集例",
         "areaEditCellUpload": "添付ファイルをアップロードします",
+        "areaEditCellLeftRight": "实现左边树和右边表格",
         "areaCustom": "列設定をカスタマイズします",
         "areaLoadMore": "無限のスクロール",
         "areaHandle": "細胞操作",

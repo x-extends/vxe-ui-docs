@@ -229,6 +229,7 @@
         "areaEditTempRestore": "還原",
         "areaEditCell": "編輯功能示例",
         "areaEditCellUpload": "上傳附件",
+        "areaEditCellLeftRight": "实现左边树和右边表格",
         "areaCustom": "自定義列設置",
         "areaLoadMore": "無限滾動",
         "areaHandle": "單元格操作",

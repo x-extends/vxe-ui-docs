@@ -229,6 +229,7 @@
         "areaEditTempRestore": "снижение",
         "areaEditCell": "Пример функции редактирования",
         "areaEditCellUpload": "Загрузить вложения",
+        "areaEditCellLeftRight": "实现左边树和右边表格",
         "areaCustom": "Настроить настройки столбца",
         "areaLoadMore": "Бесконечная прокрутка",
         "areaHandle": "Ячейки",

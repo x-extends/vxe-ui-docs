@@ -229,6 +229,7 @@
         "areaEditTempRestore": "reduction",
         "areaEditCell": "Edit function example",
         "areaEditCellUpload": "Upload attachment",
+        "areaEditCellLeftRight": "实现左边树和右边表格",
         "areaCustom": "Custom column settings",
         "areaLoadMore": "infinite scroll",
         "areaHandle": "Cell operations",
