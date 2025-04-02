@@ -3025,7 +3025,8 @@
       "methods_export-data_is-title": "是否导出标题",
       "methods_open-export_is-title": "是否导出标题",
       "methods_print_is-title": "是否导出标题",
-      "methods_open-print_is-title": "是否导出标题"
+      "methods_open-print_is-title": "是否导出标题",
+      "methods_get-print-html_filename": "名称"
     },
     "colgroup": {
       "slots_header": "헤더의 내용을 사용자 정의하기위한 템플릿",
@@ -4634,7 +4635,8 @@
       "methods_export-data_is-title": "是否导出标题",
       "methods_open-export_is-title": "是否导出标题",
       "methods_print_is-title": "是否导出标题",
-      "methods_open-print_is-title": "是否导出标题"
+      "methods_open-print_is-title": "是否导出标题",
+      "methods_get-print-html_filename": "名称"
     },
     "toolbar": {
       "props_class-name": "도구 모음 클래스 이름을 제공하십시오",

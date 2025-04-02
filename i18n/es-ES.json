@@ -3025,7 +3025,8 @@
       "methods_export-data_is-title": "是否导出标题",
       "methods_open-export_is-title": "是否导出标题",
       "methods_print_is-title": "是否导出标题",
-      "methods_open-print_is-title": "是否导出标题"
+      "methods_open-print_is-title": "是否导出标题",
+      "methods_get-print-html_filename": "名称"
     },
     "colgroup": {
       "slots_header": "Plantilla para personalizar el contenido del encabezado",
@@ -4634,7 +4635,8 @@
       "methods_export-data_is-title": "是否导出标题",
       "methods_open-export_is-title": "是否导出标题",
       "methods_print_is-title": "是否导出标题",
-      "methods_open-print_is-title": "是否导出标题"
+      "methods_open-print_is-title": "是否导出标题",
+      "methods_get-print-html_filename": "名称"
     },
     "toolbar": {
       "props_class-name": "Dé la barra de herramientas de classname",
