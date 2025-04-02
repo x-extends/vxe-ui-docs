@@ -248,6 +248,7 @@
         "scrollHorizontal": "Horizontal virtual scrolling",
         "scrollAutoHeight": "Adaptive line height",
         "scrollTree": "Tree virtual scrolling",
+        "scrollMerge": "Cell merge",
         "loadMore": "infinite scroll",
         "loadMoreVertical": "Implement loading rows",
         "loadMoreHorizontal": "Implement loading columns",

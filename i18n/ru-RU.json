@@ -248,6 +248,7 @@
         "scrollHorizontal": "Горизонтальная виртуальная прокрутка",
         "scrollAutoHeight": "Адаптивная высота",
         "scrollTree": "Виртуальная прокрутка деревьев",
+        "scrollMerge": "单元格合并",
         "loadMore": "Бесконечная прокрутка",
         "loadMoreVertical": "Реализуйте загрузочные строки",
         "loadMoreHorizontal": "Реализуйте загрузочные столбцы",

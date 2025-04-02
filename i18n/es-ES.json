@@ -248,6 +248,7 @@
         "scrollHorizontal": "Desplazamiento virtual horizontal",
         "scrollAutoHeight": "Altura adaptativa",
         "scrollTree": "Scrolling virtual de los árboles",
+        "scrollMerge": "单元格合并",
         "loadMore": "Desplazamiento infinito",
         "loadMoreVertical": "Implementar la carga de filas",
         "loadMoreHorizontal": "Implementar columnas de carga",

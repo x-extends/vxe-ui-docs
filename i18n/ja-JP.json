@@ -248,6 +248,7 @@
         "scrollHorizontal": "水平な仮想スクロール",
         "scrollAutoHeight": "適応高さ",
         "scrollTree": "ツリー仮想スクロール",
+        "scrollMerge": "单元格合并",
         "loadMore": "無限のスクロール",
         "loadMoreVertical": "ロード行を実装します",
         "loadMoreHorizontal": "読み込み列を実装します",

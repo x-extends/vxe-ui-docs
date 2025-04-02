@@ -248,6 +248,7 @@
         "scrollHorizontal": "Rolagem virtual horizontal",
         "scrollAutoHeight": "Altura adaptativa",
         "scrollTree": "Rolagem virtual de árvore",
+        "scrollMerge": "单元格合并",
         "loadMore": "Rolagem infinita",
         "loadMoreVertical": "Implementar linhas de carregamento",
         "loadMoreHorizontal": "Implementar colunas de carregamento",

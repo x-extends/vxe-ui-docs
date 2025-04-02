@@ -248,6 +248,7 @@
         "scrollHorizontal": "수평 가상 스크롤",
         "scrollAutoHeight": "적응력 높이",
         "scrollTree": "트리 가상 스크롤",
+        "scrollMerge": "单元格合并",
         "loadMore": "무한 스크롤",
         "loadMoreVertical": "로딩 행을 구현합니다",
         "loadMoreHorizontal": "로딩 열을 구현합니다",

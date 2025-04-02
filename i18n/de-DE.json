@@ -248,6 +248,7 @@
         "scrollHorizontal": "Horizontales virtuelles Scrollen",
         "scrollAutoHeight": "Anpassungshöhe",
         "scrollTree": "Baum virtuelles Scrollen",
+        "scrollMerge": "单元格合并",
         "loadMore": "Unendliches Scrollen",
         "loadMoreVertical": "Ladezreihen implementieren",
         "loadMoreHorizontal": "Ladespalten implementieren",

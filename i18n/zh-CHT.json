@@ -248,6 +248,7 @@
         "scrollHorizontal": "橫向虛擬滾動",
         "scrollAutoHeight": "自適應行高",
         "scrollTree": "樹形虛擬滾動",
+        "scrollMerge": "单元格合并",
         "loadMore": "無限滾動",
         "loadMoreVertical": "實現加載行",
         "loadMoreHorizontal": "實現加載列",
