@@ -3019,7 +3019,13 @@
       "methods_get-print-html_footer-filter-method": "表尾过滤方法，该函数的返回值用来决定是否过滤掉表尾行",
       "methods_get-print-html_style": "只对 type=html 有效，自定义文档的 css 样式信息",
       "methods_get-print-html_use-style": "只对 type=html,xlsx 有效，支持带样式",
-      "methods_get-print-html_params": "自定义额外参数"
+      "methods_get-print-html_params": "自定义额外参数",
+      "props_export-config_is-title": "是否导出标题",
+      "props_print-config_is-title": "是否导出标题",
+      "methods_export-data_is-title": "是否导出标题",
+      "methods_open-export_is-title": "是否导出标题",
+      "methods_print_is-title": "是否导出标题",
+      "methods_open-print_is-title": "是否导出标题"
     },
     "colgroup": {
       "slots_header": "Шаблон для настройки содержания заголовка",
@@ -4622,7 +4628,13 @@
       "methods_get-print-html_footer-filter-method": "表尾过滤方法，该函数的返回值用来决定是否过滤掉表尾行",
       "methods_get-print-html_style": "只对 type=html 有效，自定义文档的 css 样式信息",
       "methods_get-print-html_use-style": "只对 type=html,xlsx 有效，支持带样式",
-      "methods_get-print-html_params": "自定义额外参数"
+      "methods_get-print-html_params": "自定义额外参数",
+      "props_export-config_is-title": "是否导出标题",
+      "props_print-config_is-title": "是否导出标题",
+      "methods_export-data_is-title": "是否导出标题",
+      "methods_open-export_is-title": "是否导出标题",
+      "methods_print_is-title": "是否导出标题",
+      "methods_open-print_is-title": "是否导出标题"
     },
     "toolbar": {
       "props_class-name": "Дайте имя класса панели инструментов",
