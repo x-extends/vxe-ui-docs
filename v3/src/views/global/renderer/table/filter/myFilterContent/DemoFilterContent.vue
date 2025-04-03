@@ -51,6 +51,17 @@ export default Vue.extend({
       columnValList: [] as ColValItem[]
     }
   },
+  computed: {
+    currField () {
+      const { column } = this.renderParams || {}
+      return column ? column.field : ''
+    }
+  },
+  watch: {
+    currField () {
+      this.load()
+    }
+  },
   methods: {
     load  () {
       const { renderParams } = this
@@ -98,11 +109,6 @@ export default Vue.extend({
         const { $table } = renderParams
         $table.resetFilterPanel()
       }
-    }
-  },
-  watch: {
-    renderParams () {
-      this.load()
     }
   },
   created () {

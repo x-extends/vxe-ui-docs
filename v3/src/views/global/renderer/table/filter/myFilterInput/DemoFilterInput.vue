@@ -28,6 +28,17 @@ export default Vue.extend({
       currOption: null as VxeTableDefines.FilterOption|null
     }
   },
+  computed: {
+    currField () {
+      const { column } = this.renderParams || {}
+      return column ? column.field : ''
+    }
+  },
+  watch: {
+    currField () {
+      this.load()
+    }
+  },
   methods: {
     load () {
       const { renderParams } = this
@@ -54,11 +65,6 @@ export default Vue.extend({
           $table.saveFilterPanel()
         }
       }
-    }
-  },
-  watch: {
-    renderParams () {
-      this.load()
     }
   },
   created () {

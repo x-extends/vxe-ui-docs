@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import { watch, PropType, ref } from 'vue'
+import { watch, PropType, ref, computed } from 'vue'
 import { VxeInput, VxeRadio, VxeButton, VxeGlobalRendererHandles } from 'vxe-pc-ui'
 import { VxeTableDefines } from 'vxe-table'
 
@@ -27,6 +27,11 @@ const props = defineProps({
 })
 
 const currOption = ref<VxeTableDefines.FilterOption>()
+
+const currField = computed(() => {
+  const { column } = props.renderParams || {}
+  return column ? column.field : ''
+})
 
 const load = () => {
   const { renderParams } = props
@@ -63,10 +68,9 @@ const resetEvent = () => {
   }
 }
 
-watch(() => {
-  const { column } = props.renderParams || {}
-  return column
-}, load)
+watch(currField, () => {
+  load()
+})
 
 load()
 </script>

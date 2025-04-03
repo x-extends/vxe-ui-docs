@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts" setup>
-import { watch, PropType, ref } from 'vue'
+import { watch, PropType, ref, computed } from 'vue'
 import { VxeGlobalRendererHandles, VxeTableDefines } from 'vxe-table'
 import XEUtils from 'xe-utils'
 
@@ -47,6 +47,11 @@ const currOption = ref<VxeTableDefines.FilterOption>()
 const isCheckedAll = ref(false)
 const allValList = ref<ColValItem[]>([])
 const columnValList = ref<ColValItem[]>([])
+
+const currField = computed(() => {
+  const { column } = props.renderParams || {}
+  return column ? column.field : ''
+})
 
 const load = () => {
   const { renderParams } = props
@@ -100,10 +105,9 @@ const resetFilterEvent = () => {
   }
 }
 
-watch(() => {
-  const { column } = props.renderParams || {}
-  return column
-}, load)
+watch(currField, () => {
+  load()
+})
 
 load()
 </script>
