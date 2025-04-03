@@ -20,7 +20,7 @@ import { VxeInput, VxeRadio, VxeButton, VxeGlobalRendererHandles } from 'vxe-pc-
 import { VxeTableDefines } from 'vxe-table'
 
 const props = defineProps({
-  params: {
+  renderParams: {
     type: Object as PropType<VxeGlobalRendererHandles.RenderTableFilterParams>,
     default: () => ({})
   }
@@ -29,42 +29,42 @@ const props = defineProps({
 const currOption = ref<VxeTableDefines.FilterOption>()
 
 const load = () => {
-  const { params } = props
-  if (params) {
-    const { column } = params
+  const { renderParams } = props
+  if (renderParams) {
+    const { column } = renderParams
     const option = column.filters[0]
     currOption.value = option
   }
 }
 
 const changeOptionEvent = () => {
-  const { params } = props
+  const { renderParams } = props
   const option = currOption.value
-  if (params && option) {
-    const { $table } = params
+  if (renderParams && option) {
+    const { $table } = renderParams
     const checked = !!option.data.name
     $table.updateFilterOptionStatus(option, checked)
   }
 }
 
 const confirmEvent = () => {
-  const { params } = props
-  if (params) {
-    const { $table } = params
+  const { renderParams } = props
+  if (renderParams) {
+    const { $table } = renderParams
     $table.saveFilterPanel()
   }
 }
 
 const resetEvent = () => {
-  const { params } = props
-  if (params) {
-    const { $table } = params
+  const { renderParams } = props
+  if (renderParams) {
+    const { $table } = renderParams
     $table.resetFilterPanel()
   }
 }
 
 watch(() => {
-  const { column } = props.params || {}
+  const { column } = props.renderParams || {}
   return column
 }, load)
 

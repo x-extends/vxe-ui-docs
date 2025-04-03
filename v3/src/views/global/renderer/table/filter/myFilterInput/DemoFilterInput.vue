@@ -57,7 +57,7 @@ export default Vue.extend({
     }
   },
   watch: {
-    'props.params' () {
+    renderParams () {
       this.load()
     }
   },
