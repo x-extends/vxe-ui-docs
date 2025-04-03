@@ -35,7 +35,7 @@ interface RowVO {
 }
 
 // 模拟接口
-const findSubInfo = (id: number) => {
+function findSubInfo (id: number) {
   return new Promise<{
     mobile: string
     address: string
