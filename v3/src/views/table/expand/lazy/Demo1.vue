@@ -60,7 +60,7 @@ export default Vue.extend({
 
     const expandConfig: VxeTablePropTypes.ExpandConfig<RowVO> = {
       lazy: true,
-      loadMethod ({ row }) {
+      loadMethod: ({ row }) => {
         // 调用接口
         return findSubInfo(row.id).then(data => {
           row.subInfo = data
