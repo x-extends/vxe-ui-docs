@@ -11,23 +11,32 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue'
-import { VxeUploadPropTypes } from 'vxe-pc-ui'
+<script lang="ts">
+import Vue from 'vue'
 import axios from 'axios'
 
-const fileList = ref([
-  { name: 'fj581.jpeg', url: 'https://vxeui.com/resource/img/fj581.jpeg' }
-])
-const pasteToUpload = ref(true)
+export default Vue.extend({
+  data () {
+    const fileList = [
+      { name: 'fj581.jpeg', url: 'https://vxeui.com/resource/img/fj581.jpeg' }
+    ]
+    const pasteToUpload = true
 
-const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file }) => {
-  const formData = new FormData()
-  formData.append('file', file)
-  return axios.post('/api/pub/upload/single', formData).then((res) => {
     return {
-      ...res.data
+      fileList,
+      pasteToUpload
     }
-  })
-}
+  },
+  methods: {
+    uploadMethod ({ file }) {
+      const formData = new FormData()
+      formData.append('file', file)
+      return axios.post('/api/pub/upload/single', formData).then((res) => {
+        return {
+          ...res.data
+        }
+      })
+    }
+  }
+})
 </script>
