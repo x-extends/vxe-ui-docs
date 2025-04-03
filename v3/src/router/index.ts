@@ -6697,7 +6697,8 @@ const routes: Array<RouteConfig> = [
             component: RouteLayout,
             children: [
               { path: 'form', name: 'ComponentModalModalOtherForm', component: () => import('@/views/modal/other/form/CodeExample.vue') },
-              { path: 'table', name: 'ComponentModalModalOtherTable', component: () => import('@/views/modal/other/table/CodeExample.vue') }
+              { path: 'table', name: 'ComponentModalModalOtherTable', component: () => import('@/views/modal/other/table/CodeExample.vue') },
+              { path: 'leftRight', name: 'ComponentModalModalOtherLeftRight', component: () => import('@/views/modal/other/leftRight/CodeExample.vue') }
             ]
           }
         ]
