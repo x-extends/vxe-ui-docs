@@ -30,7 +30,8 @@ export default Vue.extend({
   },
   computed: {
     currField () {
-      const { column } = this.renderParams || {}
+      const renderParams = (this.renderParams || {}) as VxeGlobalRendererHandles.RenderTableFilterParams
+      const { column } = renderParams
       return column ? column.field : ''
     }
   },
