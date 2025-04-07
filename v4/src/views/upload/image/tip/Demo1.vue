@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-upload v-model="imgList" mode="image" tip-text="自定义提示语"></vxe-upload>
+    <vxe-upload v-model="imgList" mode="image" tip-text="自定义提示语" show-tip></vxe-upload>
   </div>
 </template>
 

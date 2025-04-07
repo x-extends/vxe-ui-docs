@@ -3,6 +3,7 @@
     <vxe-upload
       multiple
       show-progress
+      show-tip
       v-model="imgList"
       mode="image"
       :limit-count="3"
