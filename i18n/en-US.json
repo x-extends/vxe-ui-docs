@@ -166,13 +166,15 @@
         "demoProduct": "Product List - Demo",
         "demoRealTime": "Real-time update - Demo",
         "demoTree": "Hierarchy List - Demo",
-        "demoBig": "百万级列表 - 演示",
+        "demoBig": "Mega list - Demo",
         "demoCrud": "Add, delete, modify and check - Demo",
         "demoClip": "Copy and paste - Demo",
         "demoChart": "Chart Rendering - Demo",
         "demoExcel": "Excel Styles - Demo",
         "guide": "Development Guide",
         "install": "Install and use",
+        "useV4Old": "Install an older version v4.0 ~ v4.6.x",
+        "use34Old": "Install an older version v3.0 ~ v3.8.x",
         "table": "Table basic table",
         "grid": "Grid configuration table"
       }
@@ -187,7 +189,7 @@
         "areaDisabled": "Disable area selection",
         "areaExtension": "Drag the expanded area",
         "areaExtendCalcFill": "Drag Autocopy Fill",
-        "areaExcel": "Excel 样式",
+        "areaExcel": "Excel",
         "areaFixed": "Freeze column selection",
         "footerTotal": "Select and total at the end of the table",
         "areaCheckbox": "Check box range selection",
@@ -203,7 +205,7 @@
         "areaCellToRow": "Select a whole row",
         "areaClip": "Copy and paste",
         "areaDisabledClip": "Disable copy and paste",
-        "areaClipCustomClip": "自定义复制和粘贴方法",
+        "areaClipCustomClip": "Custom copy and paste methods",
         "areaClipIncrement": "Paste automatically inserts rows and columns",
         "areaTree": "tree structure",
         "areaTreeClipDeep": "Tree level pasting",
@@ -512,8 +514,8 @@
       "props_options_title-align": "Alignment",
       "props_options_preload": "Whether to preload",
       "props_options_permission-code": "Permission code",
-      "events_change": "在展开关闭面板时会触发该事件",
-      "events_toggle-expand": "模板被展开或折叠时会触发该事件"
+      "events_change": "This event is triggered when the Close panel is expanded",
+      "events_toggle-expand": "This event is triggered when the template is expanded or collapsed"
     },
     "collapse-pane": {
       "props_title": "title",
@@ -545,7 +547,7 @@
       "props_transfer": "Whether to insert the popup container into the body",
       "events_change": "This event is triggered when the value changes",
       "events_clear": "This event is triggered when the clear button on the right is clicked",
-      "props_show-eye-dropper": "显示取色器"
+      "props_show-eye-dropper": "Display the color picker"
     },
     "date-picker": {
       "props_model-value": "v-model binding value",
@@ -555,7 +557,7 @@
       "props_multiple": "Whether to select multiple",
       "props_disabled": "Whether to disable",
       "props_readonly": "Is it read-only?",
-      "props_limit-count": "限制选择数量",
+      "props_limit-count": "Limit the number of choices",
       "props_shortcut-config": "快捷按钮配置项",
       "props_shortcut-config_enabled": "是否启用",
       "props_shortcut-config_position": "显示位置",

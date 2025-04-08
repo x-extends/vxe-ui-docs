@@ -173,6 +173,8 @@
         "demoExcel": "Excel样式 - 演示",
         "guide": "开发指南",
         "install": "安装使用",
+        "useV4Old": "安装老版本插件 v4.0 ~ v4.6.x",
+        "use34Old": "安装老版本插件 v3.0 ~ v3.8.x",
         "table": "Table 基础表格",
         "grid": "Grid 配置式表格"
       }
