@@ -291,8 +291,9 @@
       "manageList": "管理中心"
     },
     "views": {
-      "PleaseEmail": "请输入邮箱",
-      "PleasePasswd": "请输入密码",
+      "pleaseEmail": "请输入邮箱",
+      "pleasePasswd": "请输入密码",
+      "enterpriseType": "主体类型",
       "depVersionTitle": "依赖版本",
       "releaseTitle": "更新日志",
       "backBtn": "返回",

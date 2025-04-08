@@ -291,8 +291,9 @@
       "manageList": "Management center"
     },
     "views": {
-      "PleaseEmail": "Please enter email",
-      "PleasePasswd": "Please enter password",
+      "pleaseEmail": "Please enter email",
+      "pleasePasswd": "Please enter password",
+      "enterpriseType": "主体类型",
       "depVersionTitle": "Dependent version",
       "releaseTitle": "Release log",
       "backBtn": "Go back",
