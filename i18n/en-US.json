@@ -1,8 +1,8 @@
 {
   "app": {
     "aside": {
-      "stableVersion": "Stable version",
-      "latestVersion": "Early adopter version",
+      "stableVersion": "Stable",
+      "latestVersion": "Latest",
       "enterpriseVersion": "Enterprise Edition",
       "pluginVersion": "plug-in",
       "templateVersion": "template",
@@ -16,7 +16,7 @@
         "demoProduct": "Product List - Demo",
         "demoRealTime": "Real-time update - Demo",
         "demoTree": "Hierarchy List - Demo",
-        "demoBig": "百万级列表 - 演示",
+        "demoBig": "Mega list - Dem",
         "demoCrud": "Add, delete, modify and check - Demo",
         "demoClip": "Copy and paste - Demo",
         "demoChart": "Chart Rendering - Demo",
@@ -181,20 +181,20 @@
       "nav": {
         "back": "return",
         "tree": "tree structure",
-        "areaBasic": "基础功能",
+        "areaBasic": "Basic",
         "singleArea": "Single area selection",
         "multiArea": "Multiple area selection",
         "areaDisabled": "Disable area selection",
         "areaExtension": "Drag the expanded area",
-        "areaExtendCalcFill": "拖动自动复制填充",
+        "areaExtendCalcFill": "Drag Autocopy Fill",
         "areaExcel": "Excel 样式",
         "areaFixed": "Freeze column selection",
         "footerTotal": "Select and total at the end of the table",
         "areaCheckbox": "Check box range selection",
-        "areaCellFormat": "复制粘贴数据类型",
-        "areaCellFormatString": "字符串",
-        "areaCellFormatNumber": "数值",
-        "areaCellFormatAmount": "货币",
+        "areaCellFormat": "Copy and paste data types",
+        "areaCellFormatString": "String",
+        "areaCellFormatNumber": "Number",
+        "areaCellFormatAmount": "Currency",
         "areaKeypad": "Button navigation",
         "areaKeypadHandle": "Key function example",
         "areaKeypadHandleEditAppend": "Edit using append method",
@@ -229,7 +229,7 @@
         "areaEditTempRestore": "reduction",
         "areaEditCell": "Edit function example",
         "areaEditCellUpload": "Upload attachment",
-        "areaEditCellLeftRight": "实现左边树和右边表格",
+        "areaEditCellLeftRight": "Implement the left tree and the right table",
         "areaCustom": "Custom column settings",
         "areaLoadMore": "infinite scroll",
         "areaHandle": "Cell operations",
@@ -262,7 +262,7 @@
         "complexInputTitle": "Filter with conditions",
         "stringFilter": "String type filter",
         "numberFilter": "Numeric type filter",
-        "treeFilter": "树结构筛选"
+        "treeFilter": "Tree filter"
       }
     },
     "filtersCombination": {
@@ -271,7 +271,7 @@
         "combinationTitle": "Complex filtering",
         "combinationStringFilter": "String type filter",
         "combinationNumberFilter": "Numeric type filter",
-        "treeFilter": "树结构筛选"
+        "treeFilter": "Tree filter"
       }
     }
   },
