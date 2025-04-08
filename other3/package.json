@@ -23,7 +23,7 @@
     "axios": "^1.7.2",
     "core-js": "^3.8.3",
     "dayjs": "^1.11.9",
-    "element-ui": "2.15.15",
+    "element-ui": "2.15.14",
     "exceljs": "4.4.0",
     "tinycolor2": "^1.6.0",
     "vue": "2.6.14",
