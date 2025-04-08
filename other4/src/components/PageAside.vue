@@ -336,7 +336,7 @@ updateExpand()
 
 setTimeout(() => {
   appStore.updateComponentApiJSON()
-}, 300)
+}, 500)
 </script>
 
 <style lang="scss" scoped>
