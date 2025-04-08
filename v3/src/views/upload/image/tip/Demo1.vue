@@ -1,6 +1,8 @@
 <template>
   <div>
-    <vxe-upload v-model="imgList" mode="image" tip-text="自定义提示语" show-tip></vxe-upload>
+    <vxe-switch v-model="showTip" status="primary"></vxe-switch>
+
+    <vxe-upload v-model="imgList" mode="image" tip-text="自定义提示语" :show-tip="showTip"></vxe-upload>
   </div>
 </template>
 
@@ -9,6 +11,7 @@ import Vue from 'vue'
 
 export default Vue.extend({
   data () {
+    const showTip = false
     const imgList = [
       { name: 'fj573.jpeg', url: 'https://vxeui.com/resource/img/fj573.jpeg' },
       { name: 'fj562.png', url: 'https://vxeui.com/resource/img/fj562.png' },
@@ -16,6 +19,7 @@ export default Vue.extend({
     ]
 
     return {
+      showTip,
       imgList
     }
   }
