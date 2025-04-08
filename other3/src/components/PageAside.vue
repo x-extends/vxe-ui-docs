@@ -334,7 +334,7 @@ export default Vue.extend({
 
     setTimeout(() => {
       this.updateComponentApiJSON()
-    }, 500)
+    }, 300)
   }
 })
 </script>
