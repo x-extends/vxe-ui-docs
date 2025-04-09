@@ -50,9 +50,9 @@ export default Vue.extend({
       { id: 10004, name: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
     ]
 
-    const editConfig: VxeTablePropTypes.EditConfig = {
+    const editConfig: VxeTablePropTypes.EditConfig<RowVO> = {
       trigger: 'manual',
-      ode: 'row',
+      mode: 'row',
       showStatus: true,
       autoClear: false
     }

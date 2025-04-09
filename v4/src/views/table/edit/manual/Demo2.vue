@@ -43,12 +43,12 @@ interface RowVO {
 
 const tableRef = ref<VxeTableInstance<RowVO>>()
 
-const editConfig: VxeTablePropTypes.EditConfig = {
+const editConfig = ref<VxeTablePropTypes.EditConfig<RowVO>>({
   trigger: 'manual',
   mode: 'row',
   showStatus: true,
   autoClear: false
-}
+})
 
 const loading = ref(false)
 const tableData = ref<RowVO[]>([
