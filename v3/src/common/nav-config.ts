@@ -964,7 +964,6 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             },
             { title: '默认展开节点', routerLink: { name: 'ComponentGridTreeExpandRowKeys' } },
             { title: '同时使用展开行', routerLink: { name: 'ComponentGridTreeExpandRow' } },
-            { title: '实现数据分组', routerLink: { name: 'ComponentGridTreeGroup' } },
             { title: '实现多字段分组', routerLink: { name: 'ComponentGridTreeGroupFields' } },
             { title: '懒加载', routerLink: { name: 'ComponentGridTreeLazy' } },
             { title: '单元格选取', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'table_extend_cell_area_tree' }, query: { previewPath: '%2FextendCellArea%2Fgrid%2FareaTree' } } }
