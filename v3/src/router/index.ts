@@ -5,15 +5,6 @@ import RouteLayout from '@/components/RouteLayout.vue'
 import PageLayout from '@/components/PageLayout.vue'
 
 import StartInstall from '@/views/start/install/CodeExample.vue'
-import StartUseGlobal from '@/views/start/useGlobal/CodeExample.vue'
-import StartUseImport from '@/views/start/useImport/CodeExample.vue'
-import StartCDN from '@/views/start/cdn/CodeExample.vue'
-import StartIcons from '@/views/start/icon/CodeExample.vue'
-import StartConfig from '@/views/start/config/CodeExample.vue'
-import StartTheme from '@/views/start/theme/CodeExample.vue'
-import StartI18n from '@/views/start/i18n/CodeExample.vue'
-import StartUseZIndex from '@/views/start/z-index/CodeExample.vue'
-import StartPermission from '@/views/start/permission/CodeExample.vue'
 import FreeDonation from '@/views/start/FreeDonation.vue'
 import JoinSponsor from '@/views/start/JoinSponsor.vue'
 import EnterprisePreview from '@/views/start/EnterprisePreview.vue'
@@ -4424,47 +4415,47 @@ const routes: Array<RouteConfig> = [
       {
         path: 'useGlobal',
         name: 'StartUseGlobal',
-        component: StartUseGlobal
+        component: () => import('@/views/start/useGlobal/CodeExample.vue')
       },
       {
         path: 'useImport',
         name: 'StartUseImport',
-        component: StartUseImport
+        component: () => import('@/views/start/useImport/CodeExample.vue')
       },
       {
         path: 'cdn',
         name: 'StartCDN',
-        component: StartCDN
+        component: () => import('@/views/start/cdn/CodeExample.vue')
       },
       {
         path: 'global',
         name: 'StartConfig',
-        component: StartConfig
+        component: () => import('@/views/start/config/CodeExample.vue')
       },
       {
         path: 'icons',
         name: 'StartIcons',
-        component: StartIcons
+        component: () => import('@/views/start/icon/CodeExample.vue')
       },
       {
         path: 'theme',
         name: 'StartTheme',
-        component: StartTheme
+        component: () => import('@/views/start/theme/CodeExample.vue')
       },
       {
         path: 'i18n',
         name: 'StartI18n',
-        component: StartI18n
+        component: () => import('@/views/start/i18n/CodeExample.vue')
       },
       {
         path: 'z-index',
         name: 'StartUseZIndex',
-        component: StartUseZIndex
+        component: () => import('@/views/start/z-index/CodeExample.vue')
       },
       {
         path: 'permission',
         name: 'StartPermission',
-        component: StartPermission
+        component: () => import('@/views/start/permission/CodeExample.vue')
       },
       {
         path: 'freeDonation',
@@ -7497,6 +7488,11 @@ const routes: Array<RouteConfig> = [
                 path: 'showLine',
                 name: 'ComponentTreeBaseShowLine',
                 component: () => import('@/views/tree/base/showLine/CodeExample.vue')
+              },
+              {
+                path: 'expandAll',
+                name: 'ComponentTreeBaseExpandAll',
+                component: () => import('@/views/tree/base/expandAll/CodeExample.vue')
               },
               {
                 path: 'template',

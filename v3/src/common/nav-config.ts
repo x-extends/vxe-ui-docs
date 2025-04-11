@@ -2525,6 +2525,7 @@ export const navConfigList: NavVO[] = [
           { title: '自定义图标', routerLink: { name: 'ComponentTreeBaseIcon' } },
           { title: '手风琴展开效果', routerLink: { name: 'ComponentTreeBaseAccordion' } },
           { title: '连接线', routerLink: { name: 'ComponentTreeBaseShowLine' } },
+          { title: '默认展开', routerLink: { name: 'ComponentTreeBaseExpandAll' } },
           {
             title: '自定义插槽模板',
             children: [
