@@ -2509,7 +2509,14 @@ export const navConfigList: NavVO[] = [
           { title: '自定义图标', routerLink: { name: 'ComponentTreeBaseIcon' } },
           { title: '手风琴展开效果', routerLink: { name: 'ComponentTreeBaseAccordion' } },
           { title: '连接线', routerLink: { name: 'ComponentTreeBaseShowLine' } },
-          { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeBaseTemplate' } }
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '自定义标题模板', routerLink: { name: 'ComponentTreeBaseTemplateTitle' } },
+              { title: '自定义图标模板', routerLink: { name: 'ComponentTreeBaseTemplateIcon' } },
+              { title: '自定义右侧模板', routerLink: { name: 'ComponentTreeBaseTemplateExtra' } }
+            ]
+          }
         ]
       },
       {

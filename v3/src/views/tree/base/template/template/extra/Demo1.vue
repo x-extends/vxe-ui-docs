@@ -2,12 +2,7 @@
   <div>
     <vxe-tree
       transform
-      :node-config="nodeConfig"
       :data="treeList">
-      <template #title="{ node }">
-        <span>{{ node.title }}</span>
-        <vxe-icon status="error" name="warning-triangle"></vxe-icon>
-      </template>
       <template #extra>
         <vxe-link href="https://vxeui.com/" status="primary">查看</vxe-link>
         <vxe-button mode="text" status="error" icon="vxe-icon-delete-fill">删除</vxe-button>
@@ -22,10 +17,6 @@ import { VxeTreePropTypes } from 'vxe-pc-ui'
 
 export default Vue.extend({
   data () {
-    const nodeConfig: VxeTreePropTypes.NodeConfig = {
-      isHover: true
-    }
-
     const treeList: VxeTreePropTypes.Data = [
       { title: '节点2', id: '2', parentId: null },
       { title: '节点3', id: '3', parentId: null },
@@ -50,7 +41,6 @@ export default Vue.extend({
     ]
 
     return {
-      nodeConfig,
       treeList
     }
   }

@@ -7458,8 +7458,24 @@ const routes: Array<RouteConfig> = [
               },
               {
                 path: 'template',
-                name: 'ComponentTreeBaseTemplate',
-                component: () => import('@/views/tree/base/template/CodeExample.vue')
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'title',
+                    name: 'ComponentTreeBaseTemplateTitle',
+                    component: () => import('@/views/tree/base/template/title/CodeExample.vue')
+                  },
+                  {
+                    path: 'icon',
+                    name: 'ComponentTreeBaseTemplateIcon',
+                    component: () => import('@/views/tree/base/template/icon/CodeExample.vue')
+                  },
+                  {
+                    path: 'extra',
+                    name: 'ComponentTreeBaseTemplateExtra',
+                    component: () => import('@/views/tree/base/template/extra/CodeExample.vue')
+                  }
+                ]
               }
             ]
           },
