@@ -44,6 +44,8 @@ const i18nStatus: Record<string, boolean> = {
   [currLanguage]: true
 }
 
+const apiMapPromise: Record<string, Promise<any> | null> = {}
+
 Vue.use(Vuex)
 
 function handleLibVersion (libName: string) {
@@ -136,10 +138,14 @@ export default new Vuex.Store({
     },
     updateComponentApiJSON (state) {
       if (!apiPromise) {
-        apiPromise = fetch(`${state.siteBaseUrl}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-v${process.env.VUE_APP_VXE_VERSION}/apiMaps.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+        apiPromise = fetch(`${state.siteBaseUrl}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-v${process.env.VUE_APP_VXE_VERSION}/apiKeys.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
           return res.json().then(data => {
             if (data) {
-              state.compApiMaps = data
+              const compApiMaps: Record<string, any[]> = {}
+              data.forEach(name => {
+                compApiMaps[name] = []
+              })
+              state.compApiMaps = compApiMaps
             }
           })
         }).then(() => {
@@ -161,6 +167,16 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    getComponentApiConf ({ state }, apiName: string) {
+      if (!apiMapPromise[apiName]) {
+        apiMapPromise[apiName] = fetch(`${state.siteBaseUrl}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-v${process.env.VUE_APP_VXE_VERSION}/api/vxe-${apiName}.json?v=?v=${process.env.VUE_APP_DATE_NOW}`)
+          .then(res => res.json()).catch(() => {
+            apiMapPromise[apiName] = null
+            return []
+          })
+      }
+      return apiMapPromise[apiName]
+    }
   },
   modules: {
   }

@@ -43,6 +43,8 @@ const i18nStatus: Record<string, boolean> = {
   [currLanguage]: true
 }
 
+const apiMapPromise: Record<string, Promise<any> | null> = {}
+
 function handleLibVersion (libName: string) {
   return function (status: any) {
     const uiConf = status.versionConfig[libName]
@@ -135,10 +137,14 @@ export const useAppStore = defineStore('app', {
     },
     updateComponentApiJSON () {
       if (!apiPromise) {
-        apiPromise = fetch(`${this.siteBaseUrl}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-v${process.env.VUE_APP_VXE_VERSION}/apiMaps.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+        apiPromise = fetch(`${this.siteBaseUrl}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-v${process.env.VUE_APP_VXE_VERSION}/apiKeys.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
           return res.json().then(data => {
             if (data) {
-              this.compApiMaps = data
+              const compApiMaps: Record<string, any[]> = {}
+              data.forEach(name => {
+                compApiMaps[name] = []
+              })
+              this.compApiMaps = compApiMaps
             }
           })
         }).then(() => {
@@ -146,6 +152,16 @@ export const useAppStore = defineStore('app', {
         })
       }
       return apiPromise
+    },
+    getComponentApiConf (apiName: string) {
+      if (!apiMapPromise[apiName]) {
+        apiMapPromise[apiName] = fetch(`${this.siteBaseUrl}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-v${process.env.VUE_APP_VXE_VERSION}/api/vxe-${apiName}.json?v=?v=${process.env.VUE_APP_DATE_NOW}`)
+          .then(res => res.json()).catch(() => {
+            apiMapPromise[apiName] = null
+            return []
+          })
+      }
+      return apiMapPromise[apiName]
     },
     readAuthMsgFlagVisible () {
       this.showAuthMsgFlag = false
