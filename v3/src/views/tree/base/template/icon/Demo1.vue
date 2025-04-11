@@ -4,8 +4,8 @@
       transform
       :data="treeList">
       <template #icon="{ isExpand }">
-        <vxe-icon v-if="isExpand" name="square-minus"></vxe-icon>
-        <vxe-icon v-else name="square-plus"></vxe-icon>
+        <vxe-icon v-if="isExpand" status="success" name="square-minus"></vxe-icon>
+        <vxe-icon v-else status="error" name="square-plus"></vxe-icon>
       </template>
     </vxe-tree>
   </div>
