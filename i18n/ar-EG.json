@@ -1801,7 +1801,8 @@
       "methods_get-checkbox-nodes": "صالح فقط لـ show-checkbox ، احصل على العقد من مربع الاختيار",
       "methods_set-radio-node-id": "صالح فقط لـ show-radio ، واستخدم قيم المفاتيح لتعيين ما إذا تم تحديد العقدة",
       "methods_get-expand-node-ids": "احصل على القيمة الرئيسية المقابلة للعقدة الموسعة",
-      "methods_get-expand-nodes": "احصل على العقدة الموسعة"
+      "methods_get-expand-nodes": "احصل على العقدة الموسعة",
+      "slots_icon": "自定义图标插槽"
     },
     "tree-select": {
       "props_model-value": "V-model قيمة الربط",

@@ -1801,7 +1801,8 @@
       "methods_get-checkbox-nodes": "Solo válido para show-checkbox, obtenga los nodos de la casilla de verificación",
       "methods_set-radio-node-id": "Solo válido para show-radio, y use valores clave para establecer si el nodo está seleccionado",
       "methods_get-expand-node-ids": "Obtenga el valor clave correspondiente al nodo expandido",
-      "methods_get-expand-nodes": "Obtener el nodo expandido"
+      "methods_get-expand-nodes": "Obtener el nodo expandido",
+      "slots_icon": "自定义图标插槽"
     },
     "tree-select": {
       "props_model-value": "Valor de enlace V-Modelo",

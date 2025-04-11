@@ -1801,7 +1801,8 @@
       "methods_get-checkbox-nodes": "Только действителен для Show-checkbox, получите узлы флажона",
       "methods_set-radio-node-id": "Только действителен для Show-radio и используйте значения ключей, чтобы установить, выбран ли узел",
       "methods_get-expand-node-ids": "Получите значение ключа, соответствующее расширенному узлу",
-      "methods_get-expand-nodes": "Получить расширенный узел"
+      "methods_get-expand-nodes": "Получить расширенный узел",
+      "slots_icon": "自定义图标插槽"
     },
     "tree-select": {
       "props_model-value": "V-модель связывания",

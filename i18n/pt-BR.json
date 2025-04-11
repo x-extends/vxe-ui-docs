@@ -1801,7 +1801,8 @@
       "methods_get-checkbox-nodes": "Somente válido para o show-checkbox, obtenha os nós da caixa de seleção",
       "methods_set-radio-node-id": "Somente válido para o radio do show e use valores-chave para definir se o nó está selecionado",
       "methods_get-expand-node-ids": "Obtenha o valor da chave correspondente ao nó expandido",
-      "methods_get-expand-nodes": "Obtenha o nó expandido"
+      "methods_get-expand-nodes": "Obtenha o nó expandido",
+      "slots_icon": "自定义图标插槽"
     },
     "tree-select": {
       "props_model-value": "Valor de ligação ao modelo V.",

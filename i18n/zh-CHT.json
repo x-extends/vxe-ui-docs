@@ -1801,7 +1801,8 @@
       "methods_get-checkbox-nodes": "只對 show-checkbox 有效，獲取複選框的節點",
       "methods_set-radio-node-id": "只對 show-radio 有效，通過鍵值設置節點是否被選中",
       "methods_get-expand-node-ids": "獲取已展開的節點對應的鍵值",
-      "methods_get-expand-nodes": "獲取已展開的節點"
+      "methods_get-expand-nodes": "獲取已展開的節點",
+      "slots_icon": "自定义图标插槽"
     },
     "tree-select": {
       "props_model-value": "v-model 綁定值",

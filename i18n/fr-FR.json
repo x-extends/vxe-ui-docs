@@ -1801,7 +1801,8 @@
       "methods_get-checkbox-nodes": "Seulement valable pour Show-Checkbox, obtenez les nœuds de la case à cocher",
       "methods_set-radio-node-id": "Valide uniquement pour Show-Radio et utiliser des valeurs clés pour définir si le nœud est sélectionné",
       "methods_get-expand-node-ids": "Obtenez la valeur clé correspondant au nœud élargi",
-      "methods_get-expand-nodes": "Obtenez le nœud élargi"
+      "methods_get-expand-nodes": "Obtenez le nœud élargi",
+      "slots_icon": "自定义图标插槽"
     },
     "tree-select": {
       "props_model-value": "Valeur de liaison du modèle V",

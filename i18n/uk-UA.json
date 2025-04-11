@@ -1801,7 +1801,8 @@
       "methods_get-checkbox-nodes": "Діє лише для шоу-Checkbox, отримайте вузли прапорець",
       "methods_set-radio-node-id": "Дійсна лише для шоу-radio та використовуйте ключові значення, щоб встановити, чи вибрано вузол",
       "methods_get-expand-node-ids": "Отримайте ключове значення, що відповідає розширеному вузлу",
-      "methods_get-expand-nodes": "Отримайте розширений вузол"
+      "methods_get-expand-nodes": "Отримайте розширений вузол",
+      "slots_icon": "自定义图标插槽"
     },
     "tree-select": {
       "props_model-value": "значення зв'язування V-моделі",

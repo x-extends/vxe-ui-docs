@@ -1801,7 +1801,8 @@
       "methods_get-checkbox-nodes": "Only valid for show-checkbox, get the nodes of the checkbox",
       "methods_set-radio-node-id": "Only valid for show-radio, and use key values ​​to set whether the node is selected",
       "methods_get-expand-node-ids": "Get the key value corresponding to the expanded node",
-      "methods_get-expand-nodes": "Get the expanded node"
+      "methods_get-expand-nodes": "Get the expanded node",
+      "slots_icon": "自定义图标插槽"
     },
     "tree-select": {
       "props_model-value": "v-model binding value",

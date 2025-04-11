@@ -1801,7 +1801,8 @@
       "methods_get-checkbox-nodes": "Holen Sie sich nur für die Show-Checkbox die Knoten des Kontrollkästchens",
       "methods_set-radio-node-id": "Nur für Show-Radio gültig und verwenden Sie die Schlüsselwerte, um festzustellen, ob der Knoten ausgewählt ist",
       "methods_get-expand-node-ids": "Erhalten Sie den Schlüsselwert, der dem erweiterten Knoten entspricht",
-      "methods_get-expand-nodes": "Holen Sie sich den erweiterten Knoten"
+      "methods_get-expand-nodes": "Holen Sie sich den erweiterten Knoten",
+      "slots_icon": "自定义图标插槽"
     },
     "tree-select": {
       "props_model-value": "V-Model-Bindungswert",

@@ -1801,7 +1801,8 @@
       "methods_get-checkbox-nodes": "show-checkboxでのみ有効なチェックボックスのノードを取得します",
       "methods_set-radio-node-id": "ショーラジオに対してのみ有効で、キー値を使用してノードが選択されているかどうかを設定します",
       "methods_get-expand-node-ids": "拡張されたノードに対応するキー値を取得します",
-      "methods_get-expand-nodes": "拡張されたノードを取得します"
+      "methods_get-expand-nodes": "拡張されたノードを取得します",
+      "slots_icon": "自定义图标插槽"
     },
     "tree-select": {
       "props_model-value": "Vモデルバインディング値",

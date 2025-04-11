@@ -1801,7 +1801,8 @@
       "methods_get-checkbox-nodes": "Show-Checkbox에만 유효하고 확인란의 노드를 가져옵니다.",
       "methods_set-radio-node-id": "show-radio에만 유효하며 키 값을 사용하여 노드가 선택되었는지 여부를 설정합니다.",
       "methods_get-expand-node-ids": "확장 된 노드에 해당하는 키 값을 얻으십시오",
-      "methods_get-expand-nodes": "확장 된 노드를 얻으십시오"
+      "methods_get-expand-nodes": "확장 된 노드를 얻으십시오",
+      "slots_icon": "自定义图标插槽"
     },
     "tree-select": {
       "props_model-value": "V- 모델 결합 값",
