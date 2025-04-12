@@ -3036,7 +3036,9 @@
       "events_current-row-change": "只对 row-config.isCurrent 有效，当手动选中行并且且值发生改变时触发的事件",
       "events_current-row-disabled": "只对 current-row-config.beforeSelectMethod 有效，当手动选中行并被禁止选中时触发的事件",
       "events_current-column-change": "只对 column-config.isCurrent 有效，当手动选中列并且值发生改变时触发的事件",
-      "events_current-column-disabled": "只对 current-column-config.beforeSelectMethod 有效，当手动选中列并且被禁止选中时触发的事件"
+      "events_current-column-disabled": "只对 current-column-config.beforeSelectMethod 有效，当手动选中列并且被禁止选中时触发的事件",
+      "props_filter-config_transfer": "是否将弹框容器插入于 body 内",
+      "props_current-row-config_trigger": "触发方式"
     },
     "colgroup": {
       "slots_header": "自定義表頭內容的模板",
@@ -4652,7 +4654,9 @@
       "events_current-row-change": "只对 row-config.isCurrent 有效，当手动选中行并且且值发生改变时触发的事件",
       "events_current-row-disabled": "只对 current-row-config.beforeSelectMethod 有效，当手动选中行并被禁止选中时触发的事件",
       "events_current-column-change": "只对 column-config.isCurrent 有效，当手动选中列并且值发生改变时触发的事件",
-      "events_current-column-disabled": "只对 current-column-config.beforeSelectMethod 有效，当手动选中列并且被禁止选中时触发的事件"
+      "events_current-column-disabled": "只对 current-column-config.beforeSelectMethod 有效，当手动选中列并且被禁止选中时触发的事件",
+      "props_filter-config_transfer": "是否将弹框容器插入于 body 内",
+      "props_current-row-config_trigger": "触发方式"
     },
     "toolbar": {
       "props_class-name": "給工具欄 className",
