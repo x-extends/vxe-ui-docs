@@ -1,6 +1,6 @@
 # Vxe UI 官方文档
 
-## 在线文档x
+## 在线文档
 
 * Vxe UI [https://vxeui.com](https://vxeui.com)
 * Vxe Table [https://vxetable.cn](https://vxetable.cn)
