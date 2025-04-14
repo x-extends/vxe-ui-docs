@@ -3,7 +3,7 @@
     <vxe-button @click="height = 200">设置200</vxe-button>
     <vxe-button @click="height = 400">设置400</vxe-button>
     <vxe-button @click="height = 600">设置600</vxe-button>
-    <vxe-list :height="height" class="my-list" :loading="loading" :data="list" :scroll-y="{enabled: true}" auto-resize>
+    <vxe-list :height="height" class="my-list" :loading="loading" :data="list" :virtual-y-config="{enabled: true}" auto-resize>
       <template #default="{ items }">
         <div class="my-list-item" v-for="(item, index) in items" :key="index">
           <span>自定义内容 {{ item.label }}</span>

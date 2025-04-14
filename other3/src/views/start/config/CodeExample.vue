@@ -112,7 +112,7 @@
               },
               list: {
                 // size: null,
-                scrollY: {
+                virtualYConfig: {
                   enabled: true,
                   gt: 100
                   // oSize: 0

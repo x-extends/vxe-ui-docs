@@ -8,7 +8,7 @@
       <vxe-button @click="loadData(250000)">加载25w条</vxe-button>
     </p>
 
-    <vxe-list class="my-table-list" height="600" :data="list" :scroll-y="{enabled: true, gt: 0, sItem: '.my-tr'}">
+    <vxe-list class="my-table-list" height="600" :data="list" :virtual-y-config="{enabled: true, gt: 0, sItem: '.my-tr'}">
       <template #default="{ items }">
         <table>
           <thead>

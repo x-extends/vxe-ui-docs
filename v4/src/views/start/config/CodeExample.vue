@@ -155,7 +155,7 @@
               listView: {},
               list: {
                 // size: null,
-                scrollY: {
+                virtualYConfig: {
                   enabled: true,
                   gt: 100
                   // oSize: 0
@@ -239,7 +239,7 @@
               row: {},
               select: {
                 multiCharOverflow: 8,
-                scrollY: {
+                virtualYConfig: {
                   enabled: true,
                   gt: 100,
                   oSize: 2
@@ -260,11 +260,11 @@
                   rowConfig: {
                     isHover: true
                   },
-                  scrollX: {
+                  virtualXConfig: {
                     enabled: true,
                     gt: 0
                   },
-                  scrollY: {
+                  virtualYConfig: {
                     enabled: true,
                     gt: 0
                   }
