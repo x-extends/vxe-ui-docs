@@ -1,87 +1,129 @@
 <template>
-  <div class="code-light">
-    <div class="example-tip">
-      <div class="tip">
-        <slot name="tip"></slot>
-      </div>
-    </div>
+  <div ref="asideElemRef" class="page-aside">
+    <div class="nav-top">
+      <VersionList />
+      <vxe-pulldown v-model="showSearchList" transfer>
+        <vxe-input v-model="searchName" class="search-input" type="search" :placeholder="$t('app.aside.docsSearch')" clearable @click="clickSearchEvent" @change="changeSearchEvent"></vxe-input>
 
-    <div v-if="$slots.install" class="example-install">
-      <h2 class="example-install-header" :class="{active: showInstall}" @click="showInstall = !showInstall">
-        <vxe-icon class="example-install-icon" name="arrow-right"></vxe-icon>
-        <span class="example-install-title">安装&使用</span>
-      </h2>
-      <div v-show="showInstall" class="example-install-body">
-        <slot name="install"></slot>
-      </div>
-    </div>
-
-    <div v-if="$slots.use" class="example-use">
-      <slot name="use"></slot>
-    </div>
-
-    <div v-if="previewUrl || $slots.preview" class="example-preview">
-      <h2 class="example-preview-header" :class="{active: showPreview}" @click="showPreview = !showPreview">
-        <vxe-icon class="example-preview-icon" name="arrow-right"></vxe-icon>
-        <span class="example-preview-title">操作&预览</span>
-      </h2>
-      <div v-show="showPreview" class="example-preview-body">
-        <slot name="preview">
-          <vxe-image :key="previewUrl" :src="previewUrl" mask-closable></vxe-image>
-        </slot>
-      </div>
-    </div>
-
-    <div v-if="path" class="example-demo">
-      <AsyncDemo :path="path" :key="path" />
-    </div>
-
-    <div v-if="$slots.describe" class="example-describe">
-      <slot name="describe"></slot>
-    </div>
-
-    <div v-if="path" class="example-code">
-      <div class="example-btns">
-        <vxe-tooltip v-if="!isPluginDocs" :content="$t('app.docs.button.fixDocTip')">
-          <vxe-button class="example-btn" mode="text" icon="vxe-icon-warning-triangle-fill" @click="openDocs">{{ $t('app.docs.button.fixDocs') }}</vxe-button>
-        </vxe-tooltip>
-        <vxe-button class="example-btn" mode="text" :status="showOptionJS ? 'primary' : ''" :loading="optionJsLoading" :icon="showOptionJS ? 'vxe-icon-eye-fill' : 'vxe-icon-eye-fill-close'" @click="toggleOptionJsVisible">{{ $t('app.docs.button.showOptionJS') }}</vxe-button>
-        <vxe-button class="example-btn" mode="text" :status="showOptionTS ? 'primary' : ''" :loading="optionTsLoading" :icon="showOptionTS ? 'vxe-icon-eye-fill' : 'vxe-icon-eye-fill-close'" @click="toggleOptionTsVisible">{{ $t('app.docs.button.showOptionTS') }}</vxe-button>
-      </div>
-      <div class="example-code-warpper" v-show="showOptionJS">
-        <div v-for="(item, index) in importOptionJsCodes" :key="index" class="example-code-item">
-          <div class="example-code-file" :class="{'is-expand': item.isExpand}" @click="toggleItemExpand(item)">
-            <vxe-icon name="arrow-right" class="example-code-file-icon"></vxe-icon>
-            <span class="example-code-file-name">{{ item.name }}</span>
-            <vxe-button class="example-copy-btn" status="success" mode="text" icon="vxe-icon-copy" @click.stop="copyCode(item.text)" :disabled="!item.text">{{ $t('app.docs.button.copyCode') }}</vxe-button>
+        <template #dropdown>
+          <div class="nav-search-wrapper">
+            <div v-if="searchName && searchList.length">
+              <vxe-tree
+                is-hover
+                ref="treeRef"
+                :data="searchList"
+                title-field="title"
+                children-field="searchResult"
+                trigger="node">
+                <template #title="{ node }">
+                  <vxe-link v-if="node.routerLink" status="primary" :class="[getApiClass(node)]" :router-link="node.routerLink" @click="searchRowClickEvent">
+                    <span v-html="node.title"></span>
+                  </vxe-link>
+                  <vxe-link v-else-if="node.linkUrl" status="primary" :href="node.linkUrl" target="_blank">
+                    <span v-html="node.title"></span>
+                  </vxe-link>
+                  <span v-else v-html="node.title"></span>
+                </template>
+              </vxe-tree>
+            </div>
+            <div v-else class="nav-search-empty">
+              <div v-if="!searchName">{{ $t('app.aside.searchPlaceholder') }}</div>
+              <div v-else-if="searchLoading">
+                <vxe-icon name="refresh" roll></vxe-icon>
+                <span>{{ $t('app.aside.searchLoadingText') }}</span>
+              </div>
+              <div v-else v-html="$t('app.aside.searchResultHtml', [searchName])"></div>
+            </div>
           </div>
-          <CodeRender v-if="item.isExpand" :language="item.lang" :code="item.text"></CodeRender>
-        </div>
-        <div class="example-code-item">
-          <div class="example-code-file">
-            <vxe-link icon="vxe-icon-link" :href="`${gitDir}/${getFileName(`${path}.vue`)}`" title="点击查看" target="_blank"></vxe-link>
-            <span class="example-code-file-name">{{ getFileName(`${path}.vue`) }}</span>
-            <vxe-button class="example-copy-btn" status="success" mode="text" icon="vxe-icon-copy" @click.stop="copyCode(optionJsCodeText)" :disabled="!optionJsCodeText">{{ $t('app.docs.button.copyCode') }}</vxe-button>
-          </div>
-          <CodeRender language="html" :code="optionJsCodeText"></CodeRender>
-        </div>
+        </template>
+      </vxe-pulldown>
+    </div>
+    <div class="nav-item nav-level1" v-for="(item1, index1) in navList" :key="index1" :class="[{'is-expand': item1.isExpand}]">
+      <div class="nav-name" :class="{'is-plugin': item1.isPlugin, 'is-enterprise': item1.isEnterprise}" :title="item1.title" @click="toggleExpand(item1)">
+        <vxe-link v-if="item1.routerLink" class="nav-item-link" :status="item1.linkStatus" :router-link="item1.routerLink" :content="item1.title"></vxe-link>
+        <vxe-link v-else-if="item1.linkUrl" class="nav-item-link" :status="item1.linkStatus" :href="item1.linkUrl" :target="item1.linkTarget || '_blank'" :content="item1.title"></vxe-link>
+        <span v-else>
+          <span class="vxe-icon-arrow-right nav-link-icon"></span>
+          <span class="nav-item-text">
+            <span> {{ item1.title }}</span>
+            <vxe-text v-if="['API'].includes(item1.title || '') && item1.children" status="success">（{{ item1.children.length }}）</vxe-text>
+          </span>
+        </span>
       </div>
-      <div class="example-code-warpper" v-show="showOptionTS">
-        <div v-for="(item, index) in importOptionTsCodes" :key="index" class="example-code-item">
-          <div class="example-code-file" :class="{'is-expand': item.isExpand}" @click="toggleItemExpand(item)">
-            <vxe-icon name="arrow-right" class="example-code-file-icon"></vxe-icon>
-            <span class="example-code-file-name">{{ item.name }}</span>
-            <vxe-button class="example-copy-btn" status="success" mode="text" icon="vxe-icon-copy" @click.stop="copyCode(item.text)" :disabled="!item.text">{{ $t('app.docs.button.copyCode') }}</vxe-button>
+      <div v-if="item1.isExpand && item1.children && item1.children.length" class="nav-subs">
+        <div class="nav-item nav-level2" v-for="(item2, index2) in item1.children" :key="`${index1}${index2}`" :class="[{'is-expand': item2.isExpand}]">
+          <div class="nav-name" :class="{'is-plugin': item2.isPlugin, 'is-enterprise': item2.isEnterprise}" :title="item2.title" @click="toggleExpand(item2)">
+            <vxe-link v-if="item2.routerLink" :class="['nav-item-link', getApiClass(item2)]" :router-link="item2.routerLink">
+              <span>{{ item2.title }}</span>
+              <span v-if="item2.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterpriseVersion') }}</span>
+              <span v-else-if="item2.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
+              <span v-else-if="item2.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+            </vxe-link>
+            <vxe-link v-else-if="item2.linkUrl" class="nav-item-link" :status="item2.linkStatus" :href="item2.linkUrl" :target="item2.linkTarget || '_blank'">
+              <span>{{ item2.title }}</span>
+              <span v-if="item2.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterpriseVersion') }}</span>
+              <span v-else-if="item2.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
+              <span v-else-if="item2.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+            </vxe-link>
+            <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-right" :content="item2.title"></vxe-text>
           </div>
-          <CodeRender v-if="item.isExpand" :language="item.lang" :code="item.text"></CodeRender>
-        </div>
-        <div class="example-code-item">
-          <div class="example-code-file">
-            <vxe-link icon="vxe-icon-link" :href="`${gitDir}/${getFileName(`${path}.vue`)}`" title="点击查看" target="_blank"></vxe-link>
-            <span class="example-code-file-name">{{ getFileName(`${path}.vue`) }}</span>
-            <vxe-button class="example-copy-btn" status="success" mode="text" icon="vxe-icon-copy" @click.stop="copyCode(optionTsCodeText)" :disabled="!optionTsCodeText">{{ $t('app.docs.button.copyCode') }}</vxe-button>
+          <div v-if="!['API'].includes(item1.title || '') && item2.isExpand && item2.children && item2.children.length" class="nav-subs">
+            <div class="nav-item nav-level3" v-for="(item3, index3) in item2.children" :key="`${index1}${index2}${index3}`" :class="[{'is-expand': item3.isExpand}]">
+              <div class="nav-name" :class="{'is-plugin': item3.isPlugin, 'is-enterprise': item3.isEnterprise}" :title="item3.title" @click="toggleExpand(item3)">
+                <vxe-link v-if="item3.routerLink" :class="['nav-item-link', getApiClass(item3)]" :router-link="item3.routerLink">
+                  <span>{{ item3.title }}</span>
+                  <span v-if="item3.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterpriseVersion') }}</span>
+                  <span v-else-if="item3.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
+                  <span v-else-if="item3.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+                </vxe-link>
+                <vxe-link v-else-if="item3.linkUrl" class="nav-item-link" :status="item3.linkStatus" :href="item3.linkUrl" :target="item3.linkTarget || '_blank'">
+                  <span>{{ item3.title }}</span>
+                  <span v-if="item3.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterpriseVersion') }}</span>
+                  <span v-else-if="item3.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
+                  <span v-else-if="item3.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+                </vxe-link>
+                <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-right" :content="item3.title"></vxe-text>
+              </div>
+              <div v-if="item3.isExpand && item3.children && item3.children.length" class="nav-subs">
+                <div class="nav-item nav-level4" v-for="(item4, index4) in item3.children" :key="`${index1}${index2}${index3}${index4}`" :class="[{'is-expand': item4.isExpand}]">
+                  <div class="nav-name" :class="{'is-plugin': item4.isPlugin, 'is-enterprise': item4.isEnterprise}" :title="item4.title" @click="toggleExpand(item4)">
+                    <vxe-link v-if="item4.routerLink" :class="['nav-item-link', getApiClass(item4)]" :router-link="item4.routerLink">
+                      <span>{{ item4.title }}</span>
+                      <span v-if="item4.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterpriseVersion') }}</span>
+                      <span v-else-if="item4.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
+                      <span v-else-if="item4.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+                    </vxe-link>
+                    <vxe-link v-else-if="item4.linkUrl" class="nav-item-link" :status="item4.linkStatus" :href="item4.linkUrl" :target="item4.linkTarget || '_blank'">
+                      <span>{{ item4.title }}</span>
+                      <span v-if="item4.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterpriseVersion') }}</span>
+                      <span v-else-if="item4.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
+                      <span v-else-if="item4.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+                    </vxe-link>
+                    <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-right" :content="item4.title"></vxe-text>
+                  </div>
+                  <div v-if="item4.isExpand && item4.children && item4.children.length" class="nav-subs">
+                    <div class="nav-item nav-level5" v-for="(item5, index5) in item4.children" :key="`${index1}${index2}${index3}${index5}`" :class="[{'is-expand': item5.isExpand}]">
+                      <div class="nav-name" :class="{'is-plugin': item5.isPlugin, 'is-enterprise': item5.isEnterprise}" :title="item5.title" @click="toggleExpand(item5)">
+                        <vxe-link v-if="item5.routerLink" :class="['nav-item-link', getApiClass(item5)]" :router-link="item5.routerLink">
+                          <span>{{ item5.title }}</span>
+                          <span v-if="item5.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterpriseVersion') }}</span>
+                          <span v-else-if="item5.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
+                          <span v-else-if="item5.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+                        </vxe-link>
+                        <vxe-link v-else-if="item5.linkUrl" class="nav-item-link" :status="item5.linkStatus" :href="item5.linkUrl" :target="item5.linkTarget || '_blank'">
+                          <span>{{ item5.title }}</span>
+                          <span v-if="item5.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterpriseVersion') }}</span>
+                          <span v-else-if="item5.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
+                          <span v-else-if="item5.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+                        </vxe-link>
+                        <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-right" :content="item5.title"></vxe-text>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <CodeRender language="html" :code="optionTsCodeText"></CodeRender>
         </div>
       </div>
     </div>
@@ -89,365 +131,409 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from 'vue'
-import { codeCacheMaps } from '@/common/cache'
-import { VxeUI } from 'vxe-pc-ui'
-import AsyncDemo from './AsyncDemo.vue'
-
-interface ImportItemVO {
-  path: string
-  name: string
-  lang: string
-  text: string
-  isExpand: boolean
-}
+import Vue from 'vue'
+import { mapActions, mapState } from 'vuex'
+import { navConfigList, NavVO } from '@/common/nav-config'
+import { VxeTreeInstance } from 'vxe-pc-ui'
+import XEUtils from 'xe-utils'
+import VersionList from './VersionList.vue'
 
 export default Vue.extend({
-  props: {
-    path: String,
-    previewPath: String,
-    extraImports: {
-      type: Array as PropType<string[]>,
-      default: () => []
-    }
-  },
   components: {
-    AsyncDemo
+    VersionList
   },
   data () {
     return {
-      showInstall: false,
-      showPreview: true,
-      optionJsCodeText: '',
-      optionTsCodeText: '',
-      showOptionJS: false,
-      showOptionTS: false,
-      optionJsLoading: false,
-      optionTsLoading: false,
-      importOptionTsCodes: [] as ImportItemVO[],
-      importOptionJsCodes: [] as ImportItemVO[]
+      navList: [] as NavVO[],
+      searchList: [] as NavVO[],
+      searchName: '',
+      showSearchList: false,
+      searchLoading: false,
+      isInit: false
     }
   },
   computed: {
-    isPluginDocs () {
-      return this.$store.state.isPluginDocs as string
-    },
-    siteBaseUrl () {
-      return this.$store.state.siteBaseUrl as string
-    },
-    systemConfig () {
-      return this.$store.state.systemConfig as string
-    },
-    gitDir () {
-      return `${process.env.VUE_APP_DOCS_GITHUB_URL}/src/views/${(this as any).compDir}`
-    },
-    compDir () {
-      const paths = this.path?.split('/') || []
-      return paths.slice(0, paths.length - 1).join('/')
-    },
-    previewUrl () {
-      const { previewPath } = this
-      if (previewPath) {
-        if (/^http/.test(previewPath)) {
-          return previewPath
-        }
-        return `${(this as any).siteBaseUrl}${previewPath}?v=${(this as any).systemConfig.previewVersion}`
-      }
-      return ''
-    }
+    ...mapState([
+      'compApiMaps'
+    ])
   },
   methods: {
-    getFileName  (path: string) {
-      return path.split('/').slice(-1)[0]
-    },
-    transformFilePath  (path: string) {
-      return path.replace(/^\.\//, `${(this as any).compDir}/`)
-    },
-    parseFilePath  (this: any, path: string) {
-      const [, filePath, fileType] = path.match(/(.*)\.(vue|js|jsx|ts|tsx)$/) || [path, '.vue', 'vue']
-      return {
-        filePath: this.transformFilePath(filePath),
-        codeLang: ['js', 'ts', 'jsx', 'tsx'].includes(fileType) ? 'javascript' : 'html',
-        fileType: fileType
-      }
-    },
-    parseJsFilePath  (this: any, path: string) {
-      const rest = this.parseFilePath(path)
-      rest.fileType = rest.fileType.replace('ts', 'js')
-      return rest
-    },
-    parseTsFilePath (this: any, path: string) {
-      const rest = this.parseFilePath(path)
-      rest.fileType = rest.fileType.replace('js', 'ts')
-      return rest
-    },
-    getExampleText (url: string) {
-      if (!codeCacheMaps[url]) {
-        codeCacheMaps[url] = fetch(`${url}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
-          if (response.status >= 200 && response.status < 400) {
-            return response.text()
-          } else {
-            delete codeCacheMaps[url]
-          }
-          return ''
-        })
-      }
-      return codeCacheMaps[url]
-    },
-    loadOptionJsCode (this: any) {
-      const compPath = this.path
-      if (compPath) {
-        this.optionJsLoading = true
-        const exampleBaeUrl = `${this.siteBaseUrl}${process.env.BASE_URL}`
-        Promise.all([
-          this.getExampleText(`${exampleBaeUrl}example/js/${compPath}.vue`),
-          ...(this.extraImports?.map(impPath => {
-            const { filePath, fileType, codeLang } = this.parseJsFilePath(impPath)
-            return this.getExampleText(`${exampleBaeUrl}example/js/${filePath}.${fileType}`).then(text => {
-              return {
-                path: `${filePath}.${fileType}`,
-                name: this.getFileName(`${filePath}.${fileType}`),
-                lang: codeLang,
-                text,
-                isExpand: false
-              }
-            })
-          }) || [])
-        ]).then(([text1, ...impTexts]) => {
-          this.optionJsCodeText = text1 || this.$t('app.docs.button.noExample')
-          this.importOptionJsCodes = impTexts || this.$t('app.docs.button.noExample')
-          this.optionJsLoading = false
-        }).catch(() => {
-          this.optionJsLoading = false
-        })
-      } else {
-        this.optionJsLoading = false
-      }
-      return Promise.resolve()
-    },
-    loadOptionTsCode (this: any) {
-      const compPath = this.path
-      if (compPath) {
-        this.optionTsLoading = true
-        const exampleBaeUrl = `${this.siteBaseUrl}${process.env.BASE_URL}`
-        Promise.all([
-          this.getExampleText(`${exampleBaeUrl}example/ts/${compPath}.vue`),
-          ...(this.extraImports?.map(impPath => {
-            const { filePath, fileType, codeLang } = this.parseTsFilePath(impPath)
-            return this.getExampleText(`${exampleBaeUrl}example/ts/${filePath}.${fileType}`).then(text => {
-              return {
-                path: `${filePath}.${fileType}`,
-                name: this.getFileName(`${filePath}.${fileType}`),
-                lang: codeLang,
-                text,
-                isExpand: false
-              }
-            })
-          }) || [])
-        ]).then(([text1, ...impTexts]) => {
-          this.optionTsCodeText = text1 || this.$t('app.docs.button.noExample')
-          this.importOptionTsCodes = impTexts || this.$t('app.docs.button.noExample')
-          this.optionTsLoading = false
-        }).catch(() => {
-          this.optionTsLoading = false
-        })
-      } else {
-        this.optionTsLoading = false
-      }
-      return Promise.resolve()
-    },
-    toggleOptionJsVisible  (this: any) {
-      this.showOptionTS = false
-      this.showOptionJS = !this.showOptionJS
-      if (this.showOptionJS) {
-        this.loadOptionJsCode()
-      }
-    },
-    toggleOptionTsVisible  (this: any) {
-      this.showOptionJS = false
-      this.showOptionTS = !this.showOptionTS
-      if (this.showOptionTS) {
-        this.loadOptionTsCode()
-      }
-    },
-    copyCode (content: string) {
-      if (content) {
-        if (VxeUI.clipboard.copy(content)) {
-          VxeUI.modal.message({ content: '已复制到剪贴板！', status: 'success' })
+    ...mapActions([
+      'updateComponentApiJSON'
+    ]),
+    handleNavApiParams  (item: NavVO) {
+      if (item.isSelfAPI) {
+        if (item.routerLink && item.routerLink.params) {
+          item.name = `${item.routerLink.params.name}`
+          item.routerLink.query = Object.assign({}, item.routerLink.query, { apiKey: item.routerLink.params.name })
         }
       }
     },
-    toggleItemExpand (item: ImportItemVO) {
-      item.isExpand = !item.isExpand
+    updateTitle  () {
+      XEUtils.eachTree(this.navList, (item) => {
+        item.title = item.i18nKey ? this.$t(item.i18nKey) as string : item.title
+      }, { children: 'children' })
     },
-    openDocs () {
-      open(`${process.env.VUE_APP_DOCS_GITHUB_URL}/src/views/${this.path}.vue`)
+    createNavList () {
+      XEUtils.eachTree(navConfigList, item => {
+        item.title = item.i18nKey ? this.$t(item.i18nKey) as string : item.title
+        item.isExpand = item.isExpand || false
+        this.handleNavApiParams(item)
+      }, { children: 'children' })
+      const apiItem = navConfigList.find(item => item.title === 'API')
+      if (apiItem) {
+        const apiList: NavVO[] = []
+        XEUtils.each(XEUtils.clone(this.compApiMaps, true), (list, compName) => {
+          const name = compName.split('-').slice(1).join('-')
+          apiList.push({
+            title: `${compName}`,
+            name: name,
+            isAllAPI: true,
+            routerLink: { name: 'DocsApi', params: { name } },
+            children: XEUtils.mapTree(list, obj => {
+              obj.title = obj.name
+              obj.routerLink = {
+                name: 'DocsApi',
+                params: { name },
+                query: { q: obj.name }
+              }
+              return obj
+            }, { children: 'list', mapChildren: 'children' })
+          })
+        })
+        apiItem.children = apiList
+      }
+      const list = XEUtils.clone(navConfigList, true)
+      this.navList = list
+      this.updateExpand()
+    },
+    handleSearch () {
+      const filterName = XEUtils.toValueString(this.searchName).trim()
+      if (filterName) {
+        const filterRE = new RegExp(`${filterName}|${XEUtils.camelCase(filterName)}|${XEUtils.kebabCase(filterName)}`, 'i')
+        const rest = XEUtils.searchTree(this.navList, (item) => {
+          return filterRE.test(item.title || '')
+        }, { children: 'children', mapChildren: 'searchResult' })
+        XEUtils.eachTree(rest, (item) => {
+          item.title = `${item.title || ''}`.replace(filterRE, (match) => `<span class="keyword-lighten">${match}</span>`)
+        }, { children: 'searchResult' })
+        this.searchList = rest
+        this.searchList.forEach(group => {
+          group.isExpand = true
+        })
+      } else {
+        this.searchList = []
+      }
+      this.searchLoading = false
+      setTimeout(() => this.expandAllApiTree(), 100)
+    },
+    // 调用频率间隔 500 毫秒
+    searchEvent: XEUtils.debounce(function (this: any) {
+      this.handleSearch()
+    }, 500, { leading: false, trailing: true }),
+    clickSearchEvent  () {
+      this.searchLoading = true
+      if (!this.showSearchList) {
+        this.handleSearch()
+      }
+      this.showSearchList = true
+    },
+    changeSearchEvent () {
+      this.searchLoading = true
+      this.showSearchList = true
+      this.searchEvent()
+    },
+    searchRowClickEvent  () {
+      this.showSearchList = false
+    },
+    expandAllApiTree  () {
+      const $tree = this.$refs.treeRef as VxeTreeInstance
+      if ($tree) {
+        $tree.setAllExpandNode(true)
+      }
+    },
+    toggleExpand  (item: NavVO) {
+      if (item.children && item.children.length) {
+        item.isExpand = !item.isExpand
+      }
+    },
+    getApiClass (item: NavVO) {
+      if (!item.routerLink) {
+        return ''
+      }
+      if (item.isAllAPI) {
+        return `${item.routerLink.name}-all-${item.name}`
+      }
+      if (item.isSelfAPI) {
+        return `${item.routerLink.name}-self-${item.name}`
+      }
+      return `${item.routerLink.name}`
+    },
+    scrollToNav  (item: NavVO) {
+      this.$nextTick(() => {
+        const asideElem = this.$refs.asideElemRef as HTMLElement
+        if (asideElem && item.routerLink) {
+          const linkEl = asideElem.querySelector(`.nav-item-link.${this.getApiClass(item)}`)
+          if (linkEl) {
+            if ((linkEl as any).scrollIntoViewIfNeeded) {
+              (linkEl as any).scrollIntoViewIfNeeded()
+            } else if (!this.isInit && (linkEl as any).scrollIntoView) {
+              (linkEl as any).scrollIntoView()
+              this.isInit = true
+            }
+          }
+        }
+      })
+    },
+    updateExpand  () {
+      const route = this.$route
+      const routeName = route.name
+      const apiKey = route.query.apiKey
+      const apiName = route.params.name
+      const rest = XEUtils.findTree(this.navList, (item) => {
+        const { routerLink } = item
+        if (!routerLink) {
+          return false
+        }
+        if (routerLink.name === routeName) {
+          if (routeName === 'EnterprisePreview') {
+            return !!((routerLink.params && routerLink.params.previewCode === route.params.previewCode) && (routerLink.query && routerLink.query.previewPath === route.query.previewPath))
+          }
+          if (item.isSelfAPI) {
+            return !!(routerLink.params && routerLink.params.name === apiKey)
+          }
+          if (item.isAllAPI) {
+            return !!(routerLink.params && routerLink.params.name === apiName)
+          }
+          return true
+        }
+        return false
+      }, { children: 'children' })
+      if (rest) {
+        rest.nodes.forEach(item => {
+          item.isExpand = true
+        })
+        this.scrollToNav(rest.item)
+      }
     }
+  },
+  watch: {
+    $route () {
+      this.updateExpand()
+    },
+    compApiMaps () {
+      this.createNavList()
+    },
+    '$t.locale' () {
+      this.updateTitle()
+    }
+  },
+  created () {
+    this.createNavList()
+    this.updateExpand()
+
+    this.updateComponentApiJSON()
   }
 })
 </script>
 
-<style lang="scss">
-.code-light {
-  margin: 30px 0;
-  border: 1px solid var(--vxe-ui-docs-layout-border-color);
-  border-radius: 4px;
-  ::v-deep(.tip) {
-    margin: 0;
+<style lang="scss" scoped>
+.vxe-layout-aside.is--collapse {
+  .page-aside {
+    visibility: hidden;
   }
 }
-.example-tip {
-  padding: 8px 24px 8px 24px;
-}
-.example-use {
-  padding: 0 24px 0 24px;
-}
-.example-demo {
-  margin: 30px;
-}
-
-.example-describe {
-  margin: 30px;
-}
-.example-btns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60px;
-  border-top: 1px dashed var(--vxe-ui-docs-layout-border-color);
-  .example-btn {
-    min-width: 100px;
+.page-aside {
+  .nav-top {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 16px 0;
+    text-align: center;
+    background-color: var(--vxe-ui-docs-layout-background-color);
+    box-shadow: inset 0px 12px 8px -8px rgba(0,0,0,.12);
+    z-index: 3;
   }
-}
-.example-code-warpper {
-  padding: 0 30px;
-  margin: 0;
-  pre {
-    display: flex;
-    margin: 0;
-    padding: 0 0 30px 0;
-    code {
-      flex-grow: 1;
+  .search-input {
+    width: 100%;
+  }
+  .nav-item {
+    position: relative;
+    user-select: none;
+  }
+  .nav-name {
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    span {
+      display: inline-block;
     }
   }
-}
-.example-code-item {
-  display: block;
-  position: relative;
-}
-.example-code-file {
-  position: relative;
-  line-height: 28px;
-  margin: 6px 0;
-  &.is-expand {
-    .example-code-file-icon {
-      transform: rotate(90deg);
-    }
-  }
-  .example-code-file-icon {
-    display: inline-block;
-    transition: transform 0.2s ease-in-out;
+  .nav-link-icon {
+    font-size: 13px;
     margin-right: 8px;
+    transition: transform .2s ease-in-out;
   }
-  .example-copy-btn {
+  .nav-item-link {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &.router-link-exact-active {
+      color: var(--vxe-ui-docs-primary-color);
+      font-weight: 700;
+    }
+  }
+  .nav-item-enterprise-icon,
+  .nav-item-plugin-icon,
+  .nav-item-template-icon {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    top: 0.2em;
+    font-size: 12px;
+    line-height: 15px;
+    height: 16px;
+    padding: 0 5px 0 5px;
+    border-radius: 4px;
+    transform: rotate(-7deg) translate(6px, 4px);
+    &::after {
+      content: "";
+      position: absolute;
+      left: -9px;
+      bottom: 4px;
+      border: 5px solid transparent;
+    }
   }
-}
-
-.example-use-header {
-  line-height: 2em;
-  font-size: 1.4em;
-  cursor: pointer;
-  .example-use-icon,
-  .example-use-title {
-    display: inline-block;
-    vertical-align: middle;
-    user-select: none;
+  .nav-item-enterprise-icon {
+    color: #333;
+    background-color: #f5c28f;
+    &::after {
+      border-right-color: #f5c28f;
+    }
   }
-  .example-use-icon {
-    transition: transform 0.2s ease-in-out;
+  .nav-item-plugin-icon {
+    color: #efebeb;
+    background-color: #3eb910;
+    &::after {
+      border-right-color: #3eb910;
+    }
   }
-  .example-use-title {
-    padding-left: 10px;
+  .nav-item-template-icon {
+    color: #efebeb;
+    background-color: #b31a20;
+    &::after {
+      border-right-color: #b31a20;
+    }
   }
-  &.active {
-    .example-use-icon {
-      transform: rotate(90deg);
+  ::v-deep(.nav-item) {
+    & > .nav-subs {
+      display: none;
+    }
+    &.is-expand {
+      & > .nav-name {
+        .nav-link-icon {
+          transform: rotate(90deg);
+        }
+        .vxe-text--icon {
+          transform: rotate(90deg);
+        }
+      }
+      & > .nav-subs {
+        display: block;
+      }
+    }
+    .vxe-text--icon {
+      display: inline-block;
+      font-size: 12px;
+      transition: transform .2s ease-in-out;
+    }
+    .nav-item-text {
+      cursor: pointer;
+    }
+  }
+  .nav-level1 {
+    & > .nav-name {
+      padding: 0 1.2em 0.4em 1.2em;
+      line-height: 40px;
+      cursor: pointer;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0.2em;
+        left: 1.2em;
+        width: calc(100% - 2.4em);
+        border-bottom: 1px solid var(--vxe-ui-docs-layout-border-color);
+      }
+      .nav-item-text,
+      .nav-item-link {
+        font-size: 15px;
+        font-weight: 700;
+      }
+    }
+  }
+  .nav-level2 {
+    & > .nav-name {
+      line-height: 36px;
+      padding-left: 3.4em;
+      .nav-item-text,
+      .nav-item-link {
+        font-size: 14px;
+      }
+    }
+    .nav-item-text {
+      color: var(--vxe-ui-docs-layout-menu-color);
+      font-weight: 700;
+    }
+  }
+  .nav-level3 {
+    & > .nav-name {
+      line-height: 32px;
+      padding-left: 5em;
+      .nav-item-text,
+      .nav-item-link {
+        font-size: 14px;
+      }
+    }
+  }
+  .nav-level4 {
+    & > .nav-name {
+      line-height: 28px;
+      padding-left: 7.4em;
+      .nav-item-text,
+      .nav-item-link {
+        font-size: 14px;
+      }
+    }
+  }
+  .nav-level5 {
+    & > .nav-name {
+      line-height: 28px;
+      padding-left: 9em;
+      .nav-item-text,
+      .nav-item-link {
+        font-size: 14px;
+      }
     }
   }
 }
-.example-use-body {
-  padding: 20px 64px 0 64px;
-  & > img {
-    max-width: 100%;
-    max-height: 300px;
-  }
-}
+</style>
 
-.example-preview-header {
-  line-height: 2em;
-  font-size: 1.4em;
-  cursor: pointer;
-  .example-preview-icon,
-  .example-preview-title {
-    display: inline-block;
-    vertical-align: middle;
-    user-select: none;
-  }
-  .example-preview-icon {
-    transition: transform 0.2s ease-in-out;
-  }
-  .example-preview-title {
-    padding-left: 10px;
-  }
-  &.active {
-    .example-preview-icon {
-      transform: rotate(90deg);
-    }
-  }
+<style lang="scss">
+.nav-search-wrapper {
+  max-height: 70vh;
+  width: 600px;
+  padding: 32px;
+  overflow: auto;
+  border-radius: 4px;
+  font-size: 18px;
+  border: 1px solid var(--vxe-ui-docs-layout-border-color);
+  background-color: var(--vxe-ui-docs-layout-background-color);
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
 }
-.example-preview-body {
-  padding: 20px 64px 0 64px;
+.nav-search-empty {
+  padding: 40px 16px;
   text-align: center;
-  & > img {
-    max-width: 100%;
-    max-height: 300px;
-  }
-}
-
-.example-install {
-  padding: 8px 24px 8px 24px;
-}
-.example-install-header {
-  cursor: pointer;
-  margin: 30px 0 0.8em;
-  padding-bottom: 0.7em;
-  border-bottom: 1px solid var(--vxe-ui-docs-layout-border-color);
-  .example-install-icon,
-  .example-install-title {
-    display: inline-block;
-    vertical-align: middle;
-    user-select: none;
-  }
-  .example-install-icon {
-    transition: transform 0.2s ease-in-out;
-  }
-  .example-install-title {
-    padding-left: 10px;
-  }
-  &.active {
-    .example-install-icon {
-      transform: rotate(90deg);
-    }
-  }
-}
-.example-install-body {
-  padding: 20px 64px 0 64px;
-  & > img {
-    max-width: 100%;
-    max-height: 300px;
-  }
+  font-size: 18px;
+  word-break: break-all;
 }
 </style>
