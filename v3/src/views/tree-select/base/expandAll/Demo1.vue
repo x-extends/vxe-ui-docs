@@ -24,9 +24,7 @@ export default Vue.extend({
       transform: true,
       keyField: 'value',
       parentField: 'parentId',
-      radioConfig: {
-        showIcon: true
-      }
+      expandAll: true
     }
 
     const treeList: NodeVO[] = [

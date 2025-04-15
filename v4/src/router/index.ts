@@ -7724,6 +7724,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/tree-select/base/showLine/CodeExample.vue')
               },
               {
+                path: 'expandAll',
+                name: 'ComponentTreeSelectBaseExpandAll',
+                component: () => import('@/views/tree-select/base/expandAll/CodeExample.vue')
+              },
+              {
                 path: 'trigger',
                 name: 'ComponentTreeSelectBaseTrigger',
                 component: () => import('@/views/tree-select/base/trigger/CodeExample.vue')

@@ -1,7 +1,6 @@
 <template>
   <div>
     <vxe-tree-select
-      multiple
       v-model="val1"
       :tree-config="treeConfig"
       :options="treeList">
@@ -10,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive, ref } from 'vue'
+import { ref, reactive } from 'vue'
 import { VxeTreeSelectPropTypes } from 'vxe-pc-ui'
 
 interface NodeVO {
@@ -19,15 +18,13 @@ interface NodeVO {
   parentId?: string | null
 }
 
-const val1 = ref([])
+const val1 = ref()
 
 const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig>({
   transform: true,
   keyField: 'value',
   parentField: 'parentId',
-  checkboxConfig: {
-    showIcon: true
-  }
+  expandAll: true
 })
 
 const treeList = ref<NodeVO[]>([

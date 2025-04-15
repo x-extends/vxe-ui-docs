@@ -2368,6 +2368,7 @@ export const navConfigList: NavVO[] = [
               { title: '自定义字段', routerLink: { name: 'ComponentTreeSelectBaseOptionProps' } },
               { title: '自定义宽高', routerLink: { name: 'ComponentTreeSelectBasePopupWH' } },
               { title: '连接线', routerLink: { name: 'ComponentTreeSelectBaseShowLine' } },
+              { title: '默认展开', routerLink: { name: 'ComponentTreeSelectBaseExpandAll' } },
               { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectBaseTrigger' } }
             ]
           },
