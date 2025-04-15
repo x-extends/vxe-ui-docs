@@ -1,325 +1,453 @@
 <template>
-  <div class="api-view">
-    <vxe-grid
-      ref="gridRef"
-      class="api-table"
-      :columns="columns"
-      v-bind="gridOptions">
-      <template #toolbarButtons>
-        <vxe-input clearable class="search-input" v-model="searchName" type="search" :placeholder="$t('app.layout.apiSearch', [apiName])" @keyup="searchEvent" @clear="searchEvent"></vxe-input>
-      </template>
+  <div class="code-light">
+    <div class="example-tip">
+      <div class="tip">
+        <slot name="tip"></slot>
+      </div>
+    </div>
 
-      <template #default_name="{ row }">
-        <span class="api-name">
-          <span class="api-name-text" v-html="row.name"></span>
-          <span class="api-name-version" v-if="row.version">
-            <span v-if="row.version === 'extend-cell-area'">{{ $t('api.enterpriseVersion') }}</span>
-            <span v-else>{{ getVersion(row.version) }}</span>
-          </span>
-        </span>
-      </template>
-      <template #default_version="{ row }">
-        <template v-if="row.version === 'extend-cell-area'">
-          <a class="link enterprise-version" :href="pluginBuyUrl" target="_blank">{{ $t('api.enterpriseVersion') }}</a>
-        </template>
-        <template v-else-if="row.disabled">
-          <span class="disabled">已废弃</span>
-        </template>
-        <template v-else-if="row.abandoned">
-          <span class="abandoned">评估阶段</span>
-        </template>
-        <template v-else>
-          <span v-show="row.version" class="compatibility">{{ getVersion(row.version) }}</span>
-        </template>
-      </template>
+    <div v-if="$slots.install" class="example-install">
+      <h2 class="example-install-header" :class="{active: showInstall}" @click="showInstall = !showInstall">
+        <vxe-icon class="example-install-icon" name="arrow-right"></vxe-icon>
+        <span class="example-install-title">安装&使用</span>
+      </h2>
+      <div v-show="showInstall" class="example-install-body">
+        <slot name="install"></slot>
+      </div>
+    </div>
 
-      <template #empty>
-        <span class="red">找不对应 API，请输入正确的关键字！</span>
-      </template>
-    </vxe-grid>
+    <div v-if="$slots.use" class="example-use">
+      <slot name="use"></slot>
+    </div>
+
+    <div v-if="previewUrl || $slots.preview" class="example-preview">
+      <h2 class="example-preview-header" :class="{active: showPreview}" @click="showPreview = !showPreview">
+        <vxe-icon class="example-preview-icon" name="arrow-right"></vxe-icon>
+        <span class="example-preview-title">操作&预览</span>
+      </h2>
+      <div v-show="showPreview" class="example-preview-body">
+        <slot name="preview">
+          <vxe-image :key="previewUrl" :src="previewUrl" mask-closable></vxe-image>
+        </slot>
+      </div>
+    </div>
+
+    <div v-if="path" class="example-demo">
+      <AsyncDemo :path="path" :key="path" />
+    </div>
+
+    <div v-if="$slots.describe" class="example-describe">
+      <slot name="describe"></slot>
+    </div>
+
+    <div v-if="path" class="example-code">
+      <div class="example-btns">
+        <vxe-tooltip v-if="!isPluginDocs" :content="$t('app.docs.button.fixDocTip')">
+          <vxe-button class="example-btn" mode="text" icon="vxe-icon-warning-triangle-fill" @click="openDocs">{{ $t('app.docs.button.fixDocs') }}</vxe-button>
+        </vxe-tooltip>
+        <vxe-button class="example-btn" mode="text" :status="showOptionJS ? 'primary' : ''" :loading="optionJsLoading" :icon="showOptionJS ? 'vxe-icon-eye-fill' : 'vxe-icon-eye-fill-close'" @click="toggleOptionJsVisible">{{ $t('app.docs.button.showOptionJS') }}</vxe-button>
+        <vxe-button class="example-btn" mode="text" :status="showOptionTS ? 'primary' : ''" :loading="optionTsLoading" :icon="showOptionTS ? 'vxe-icon-eye-fill' : 'vxe-icon-eye-fill-close'" @click="toggleOptionTsVisible">{{ $t('app.docs.button.showOptionTS') }}</vxe-button>
+      </div>
+      <div class="example-code-warpper" v-show="showOptionJS">
+        <div v-for="(item, index) in importOptionJsCodes" :key="index" class="example-code-item">
+          <div class="example-code-file" :class="{'is-expand': item.isExpand}" @click="toggleItemExpand(item)">
+            <vxe-icon name="arrow-right" class="example-code-file-icon"></vxe-icon>
+            <span class="example-code-file-name">{{ item.name }}</span>
+            <vxe-button class="example-copy-btn" status="success" mode="text" icon="vxe-icon-copy" @click.stop="copyCode(item.text)" :disabled="!item.text">{{ $t('app.docs.button.copyCode') }}</vxe-button>
+          </div>
+          <CodeRender v-if="item.isExpand" :language="item.lang" :code="item.text"></CodeRender>
+        </div>
+        <div class="example-code-item">
+          <div class="example-code-file">
+            <vxe-link icon="vxe-icon-link" :href="`${gitDir}/${getFileName(`${path}.vue`)}`" title="点击查看" target="_blank"></vxe-link>
+            <span class="example-code-file-name">{{ getFileName(`${path}.vue`) }}</span>
+            <vxe-button class="example-copy-btn" status="success" mode="text" icon="vxe-icon-copy" @click.stop="copyCode(optionJsCodeText)" :disabled="!optionJsCodeText">{{ $t('app.docs.button.copyCode') }}</vxe-button>
+          </div>
+          <CodeRender language="html" :code="optionJsCodeText"></CodeRender>
+        </div>
+      </div>
+      <div class="example-code-warpper" v-show="showOptionTS">
+        <div v-for="(item, index) in importOptionTsCodes" :key="index" class="example-code-item">
+          <div class="example-code-file" :class="{'is-expand': item.isExpand}" @click="toggleItemExpand(item)">
+            <vxe-icon name="arrow-right" class="example-code-file-icon"></vxe-icon>
+            <span class="example-code-file-name">{{ item.name }}</span>
+            <vxe-button class="example-copy-btn" status="success" mode="text" icon="vxe-icon-copy" @click.stop="copyCode(item.text)" :disabled="!item.text">{{ $t('app.docs.button.copyCode') }}</vxe-button>
+          </div>
+          <CodeRender v-if="item.isExpand" :language="item.lang" :code="item.text"></CodeRender>
+        </div>
+        <div class="example-code-item">
+          <div class="example-code-file">
+            <vxe-link icon="vxe-icon-link" :href="`${gitDir}/${getFileName(`${path}.vue`)}`" title="点击查看" target="_blank"></vxe-link>
+            <span class="example-code-file-name">{{ getFileName(`${path}.vue`) }}</span>
+            <vxe-button class="example-copy-btn" status="success" mode="text" icon="vxe-icon-copy" @click.stop="copyCode(optionTsCodeText)" :disabled="!optionTsCodeText">{{ $t('app.docs.button.copyCode') }}</vxe-button>
+          </div>
+          <CodeRender language="html" :code="optionTsCodeText"></CodeRender>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import { mapState, mapActions } from 'vuex'
-import XEUtils from 'xe-utils'
+import Vue, { PropType } from 'vue'
+import { codeCacheMaps } from '@/common/cache'
+import { VxeUI } from 'vxe-pc-ui'
+import AsyncDemo from './AsyncDemo.vue'
 
-interface RowVO {
+interface ImportItemVO {
+  path: string
   name: string
-  enum: string
-  type: string
-  defVal: string
-  version: string
-  i18nKey: string
-  i18nValue: string
-  disabled?: boolean
-  abandoned?: boolean
-  list: RowVO[]
+  lang: string
+  text: string
+  isExpand: boolean
 }
 
-const tableComponents = [
-  'table',
-  'colgroup',
-  'column',
-  'grid',
-  'toolbar'
-]
-
 export default Vue.extend({
-  data (this: any) {
-    const route = this.$route
+  props: {
+    path: String,
+    previewPath: String,
+    extraImports: {
+      type: Array as PropType<string[]>,
+      default: () => []
+    }
+  },
+  components: {
+    AsyncDemo
+  },
+  data () {
     return {
-      searchName: `${route.query.q || ''}`,
-      tableData: [] as RowVO[],
-
-      gridOptions: {
-        id: 'document_api',
-        autoResize: true,
-        height: 'auto',
-        loading: false,
-        loadingConfig: {
-          text: '检测到 API 有更新，正在自动更新中，请稍后...'
-        },
-        rowConfig: {
-          useKey: true,
-          keyField: 'id',
-          isHover: true,
-          isCurrent: true
-        },
-        columnConfig: {
-          useKey: true,
-          resizable: true,
-          isHover: true,
-          isCurrent: true
-        },
-        cellClassName ({ row, column }) {
-          return {
-            'api-enterprise': row.version === 'extend-cell-area',
-            'api-disabled': row.disabled,
-            'api-abandoned': row.abandoned,
-            'disabled-line-through': (row.disabled) && column.field === 'name'
-          }
-        },
-        customConfig: {
-          storage: true,
-          checkMethod ({ column }) {
-            if (['name', 'i18nValue'].includes(column.field)) {
-              return false
-            }
-            return true
-          }
-        },
-        treeConfig: {
-          childrenField: 'list',
-          expandRowKeys: []
-        },
-        toolbarConfig: {
-          custom: true,
-          refresh: {
-            query: this.loadList
-          },
-          slots: {
-            buttons: 'toolbarButtons'
-          }
-        },
-        data: []
-      }
+      showInstall: false,
+      showPreview: true,
+      optionJsCodeText: '',
+      optionTsCodeText: '',
+      showOptionJS: false,
+      showOptionTS: false,
+      optionJsLoading: false,
+      optionTsLoading: false,
+      importOptionTsCodes: [] as ImportItemVO[],
+      importOptionJsCodes: [] as ImportItemVO[]
     }
   },
   computed: {
-    ...mapState([
-      'pluginBuyUrl',
-      'compApiMaps'
-    ]),
-    ...({} as {
-      pluginBuyUrl(): string
-    }),
-    apiName () {
-      const route = this.$route
-      return route.params.name as string
+    isPluginDocs () {
+      return this.$store.state.isPluginDocs as string
     },
-    columns () {
-      return [
-        {
-          field: 'name',
-          title: this.$t('api.title.prop'),
-          type: 'html',
-          treeNode: true,
-          minWidth: 280,
-          titlePrefix: {
-            content: this.$t('api.title.propHelp')
-          },
-          filters: [
-            { label: 'Props', value: 'Props' },
-            { label: 'Slots', value: 'Slots' },
-            { label: 'Events', value: 'Events' },
-            { label: 'Methods', value: 'Methods' }
-          ],
-          slots: { default: 'default_name' }
-        },
-        { field: 'i18nValue', title: this.$t('api.title.desc'), type: 'html', minWidth: 300 },
-        { field: 'type', title: this.$t('api.title.type'), type: 'html', minWidth: 140 },
-        { field: 'enum', title: this.$t('api.title.enum'), type: 'html', minWidth: 150 },
-        { field: 'defVal', title: this.$t('api.title.defVal'), type: 'html', minWidth: 160, titlePrefix: { content: this.$t('api.title.defValHelp') } },
-        { field: 'version', title: this.$t('api.title.version'), type: 'html', width: 180, titlePrefix: { content: this.$t('api.title.versionHelp') }, slots: { default: 'default_version' } }
-      ]
-    }
-  },
-  watch: {
-    apiName (this: any) {
-      const $grid = this.$refs.gridRef
-      this.searchName = ''
-      if ($grid) {
-        $grid.clearAll()
+    siteBaseUrl () {
+      return this.$store.state.siteBaseUrl as string
+    },
+    systemConfig () {
+      return this.$store.state.systemConfig as string
+    },
+    gitDir () {
+      return `${process.env.VUE_APP_DOCS_GITHUB_URL}/src/views/${(this as any).compDir}`
+    },
+    compDir () {
+      const paths = this.path?.split('/') || []
+      return paths.slice(0, paths.length - 1).join('/')
+    },
+    previewUrl () {
+      const { previewPath } = this
+      if (previewPath) {
+        if (/^http/.test(previewPath)) {
+          return previewPath
+        }
+        return `${(this as any).siteBaseUrl}${previewPath}?v=${(this as any).systemConfig.previewVersion}`
       }
-      this.loadList()
-    },
-    compApiMaps (this: any) {
-      this.loadList()
+      return ''
     }
   },
   methods: {
-    ...mapActions([
-      'getComponentApiConf',
-      'getComponentI18nJSON'
-    ]),
-    loadList (this: any) {
-      this.gridOptions.loading = true
-      Promise.all([
-        this.getComponentApiConf(this.apiName),
-        this.getComponentI18nJSON()
-      ]).then(([data]) => {
-        const list = XEUtils.clone(data || [], true)
-        XEUtils.eachTree(list, (item, i, items, path, parent, nodes) => {
-          if (parent) {
-            item.i18nKey = `components.${this.apiName}.${nodes.map(item => `${XEUtils.kebabCase(item.name)}`.replace(/\(.*/, '')).join('_')}`
+    getFileName  (path: string) {
+      return path.split('/').slice(-1)[0]
+    },
+    transformFilePath  (path: string) {
+      return path.replace(/^\.\//, `${(this as any).compDir}/`)
+    },
+    parseFilePath  (this: any, path: string) {
+      const [, filePath, fileType] = path.match(/(.*)\.(vue|js|jsx|ts|tsx)$/) || [path, '.vue', 'vue']
+      return {
+        filePath: this.transformFilePath(filePath),
+        codeLang: ['js', 'ts', 'jsx', 'tsx'].includes(fileType) ? 'javascript' : 'html',
+        fileType: fileType
+      }
+    },
+    parseJsFilePath  (this: any, path: string) {
+      const rest = this.parseFilePath(path)
+      rest.fileType = rest.fileType.replace('ts', 'js')
+      return rest
+    },
+    parseTsFilePath (this: any, path: string) {
+      const rest = this.parseFilePath(path)
+      rest.fileType = rest.fileType.replace('js', 'ts')
+      return rest
+    },
+    getExampleText (url: string) {
+      if (!codeCacheMaps[url]) {
+        codeCacheMaps[url] = fetch(`${url}?v=${process.env.VUE_APP_DATE_NOW}`).then(response => {
+          if (response.status >= 200 && response.status < 400) {
+            return response.text()
           } else {
-            item.i18nKey = `api.title.${item.name}`
+            delete codeCacheMaps[url]
           }
-          item.i18nValue = this.$t(item.i18nKey)
-        }, { children: 'list' })
-        this.tableData = list
-        this.gridOptions.data = list
-        this.gridOptions.loading = false
-        this.handleSearch()
-      })
+          return ''
+        })
+      }
+      return codeCacheMaps[url]
     },
-    handleValueHighlight  (str: string, filterRE: RegExp) {
-      return `${str || ''}`.replace(filterRE, (match) => `<span class="keyword-lighten">${match}</span>`)
-    },
-    handleSearch (this: any) {
-      const filterName = XEUtils.toValueString(this.searchName).trim()
-      if (filterName) {
-        const options = { children: 'list' }
-        if (filterName === 'pro') {
-          const rest = XEUtils.searchTree(this.tableData, (item: any) => item.version === 'extend-cell-area', options)
-          this.gridOptions.data = rest
-        } else {
-          const filterRE = new RegExp(`${filterName}|${XEUtils.camelCase(filterName)}|${XEUtils.kebabCase(filterName)}`, 'i')
-          const rest = XEUtils.searchTree(this.tableData, (item: any) => {
-            return filterRE.test(item.name) || filterRE.test(item.i18nValue)
-          }, options)
-          XEUtils.eachTree(rest, (item: any) => {
-            item.name = this.handleValueHighlight(item.name, filterRE)
-            item.i18nValue = this.handleValueHighlight(item.i18nValue, filterRE)
-          }, options)
-          this.gridOptions.data = rest
-          setTimeout(() => {
-            const $grid = this.$refs.gridRef
-            if ($grid) {
-              $grid.setAllTreeExpand(true)
-            }
-          }, 100)
-        }
+    loadOptionJsCode (this: any) {
+      const compPath = this.path
+      if (compPath) {
+        this.optionJsLoading = true
+        const exampleBaeUrl = `${this.siteBaseUrl}${process.env.BASE_URL}`
+        Promise.all([
+          this.getExampleText(`${exampleBaeUrl}example/js/${compPath}.vue`),
+          ...(this.extraImports?.map(impPath => {
+            const { filePath, fileType, codeLang } = this.parseJsFilePath(impPath)
+            return this.getExampleText(`${exampleBaeUrl}example/js/${filePath}.${fileType}`).then(text => {
+              return {
+                path: `${filePath}.${fileType}`,
+                name: this.getFileName(`${filePath}.${fileType}`),
+                lang: codeLang,
+                text,
+                isExpand: false
+              }
+            })
+          }) || [])
+        ]).then(([text1, ...impTexts]) => {
+          this.optionJsCodeText = text1 || this.$t('app.docs.button.noExample')
+          this.importOptionJsCodes = impTexts || this.$t('app.docs.button.noExample')
+          this.optionJsLoading = false
+        }).catch(() => {
+          this.optionJsLoading = false
+        })
       } else {
-        this.gridOptions.data = this.tableData.slice(0)
-        setTimeout(() => {
-          const $grid = this.$refs.gridRef
-          if ($grid) {
-            $grid.setTreeExpand(this.gridOptions.data, true)
-          }
-        }, 100)
+        this.optionJsLoading = false
+      }
+      return Promise.resolve()
+    },
+    loadOptionTsCode (this: any) {
+      const compPath = this.path
+      if (compPath) {
+        this.optionTsLoading = true
+        const exampleBaeUrl = `${this.siteBaseUrl}${process.env.BASE_URL}`
+        Promise.all([
+          this.getExampleText(`${exampleBaeUrl}example/ts/${compPath}.vue`),
+          ...(this.extraImports?.map(impPath => {
+            const { filePath, fileType, codeLang } = this.parseTsFilePath(impPath)
+            return this.getExampleText(`${exampleBaeUrl}example/ts/${filePath}.${fileType}`).then(text => {
+              return {
+                path: `${filePath}.${fileType}`,
+                name: this.getFileName(`${filePath}.${fileType}`),
+                lang: codeLang,
+                text,
+                isExpand: false
+              }
+            })
+          }) || [])
+        ]).then(([text1, ...impTexts]) => {
+          this.optionTsCodeText = text1 || this.$t('app.docs.button.noExample')
+          this.importOptionTsCodes = impTexts || this.$t('app.docs.button.noExample')
+          this.optionTsLoading = false
+        }).catch(() => {
+          this.optionTsLoading = false
+        })
+      } else {
+        this.optionTsLoading = false
+      }
+      return Promise.resolve()
+    },
+    toggleOptionJsVisible  (this: any) {
+      this.showOptionTS = false
+      this.showOptionJS = !this.showOptionJS
+      if (this.showOptionJS) {
+        this.loadOptionJsCode()
       }
     },
-    searchEvent: XEUtils.debounce(function (this: any) {
-      this.handleSearch()
-    }, 500, { leading: false, trailing: true }),
-    getVersion (this: any, version?: string) {
-      if (version) {
-        if (/^\d{1,3}[.]\d{1,3}/.test(version)) {
-          if (tableComponents.includes(this.apiName)) {
-            return `vxe-table@${version}`
-          }
-        }
-        return `vxe-pc-ui@${version}`
+    toggleOptionTsVisible  (this: any) {
+      this.showOptionJS = false
+      this.showOptionTS = !this.showOptionTS
+      if (this.showOptionTS) {
+        this.loadOptionTsCode()
       }
-      return version
+    },
+    copyCode (content: string) {
+      if (content) {
+        if (VxeUI.clipboard.copy(content)) {
+          VxeUI.modal.message({ content: '已复制到剪贴板！', status: 'success' })
+        }
+      }
+    },
+    toggleItemExpand (item: ImportItemVO) {
+      item.isExpand = !item.isExpand
+    },
+    openDocs () {
+      open(`${process.env.VUE_APP_DOCS_GITHUB_URL}/src/views/${this.path}.vue`)
     }
-  },
-  created (this: any) {
-    this.$nextTick(() => {
-      this.loadList()
-    })
   }
 })
 </script>
 
-<style lang="scss" scoped>
-.api-view {
-  height: 100%;
-  overflow: hidden;
-}
-.search-input {
-  width: 300px;
-}
-.enterprise-version {
-  background-color: #f6ca9d;
-  border-radius: 10px;
-  font-size: 12px;
-  padding: 2px 8px;
-  color: #606266;
-}
-.api-name {
-  position: relative;
-  .api-name-version {
-    position: absolute;
-    bottom: 8px;
-    color: var(--vxe-ui-docs-primary-color);
-    border: 1px solid var(--vxe-ui-docs-primary-color);;
-    font-size: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    line-height: 14px;
-    height: 16px;
-    padding: 0 2px;
-    transform: translateX(2px);
-    border-radius: 4px;
+<style lang="scss">
+.code-light {
+  margin: 30px 0;
+  border: 1px solid var(--vxe-ui-docs-layout-border-color);
+  border-radius: 4px;
+  ::v-deep(.tip) {
+    margin: 0;
   }
 }
-::v-deep(.vxe-body--row) {
-  .vxe-body--column {
-    &.api-abandoned {
-      cursor: help;
-      color: #70541C;
-      background-color: #FFFBE5;
-      .compatibility {
-        background-color: #70541C;
-      }
+.example-tip {
+  padding: 8px 24px 8px 24px;
+}
+.example-use {
+  padding: 0 24px 0 24px;
+}
+.example-demo {
+  margin: 30px;
+}
+
+.example-describe {
+  margin: 30px;
+}
+.example-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  border-top: 1px dashed var(--vxe-ui-docs-layout-border-color);
+  .example-btn {
+    min-width: 100px;
+  }
+}
+.example-code-warpper {
+  padding: 0 30px;
+  margin: 0;
+  pre {
+    display: flex;
+    margin: 0;
+    padding: 0 0 30px 0;
+    code {
+      flex-grow: 1;
     }
-    &.api-disabled {
-      cursor: help;
-      color: #cb2431;
-      background-color: #fbb1b1;
-      .compatibility {
-        background-color: #cb2431;
-      }
+  }
+}
+.example-code-item {
+  display: block;
+  position: relative;
+}
+.example-code-file {
+  position: relative;
+  line-height: 28px;
+  margin: 6px 0;
+  &.is-expand {
+    .example-code-file-icon {
+      transform: rotate(90deg);
     }
-    &.api-enterprise {
-      color: #409eff;
-      font-weight: 700;
+  }
+  .example-code-file-icon {
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+    margin-right: 8px;
+  }
+  .example-copy-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.example-use-header {
+  line-height: 2em;
+  font-size: 1.4em;
+  cursor: pointer;
+  .example-use-icon,
+  .example-use-title {
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+  }
+  .example-use-icon {
+    transition: transform 0.2s ease-in-out;
+  }
+  .example-use-title {
+    padding-left: 10px;
+  }
+  &.active {
+    .example-use-icon {
+      transform: rotate(90deg);
     }
+  }
+}
+.example-use-body {
+  padding: 20px 64px 0 64px;
+  & > img {
+    max-width: 100%;
+    max-height: 300px;
+  }
+}
+
+.example-preview-header {
+  line-height: 2em;
+  font-size: 1.4em;
+  cursor: pointer;
+  .example-preview-icon,
+  .example-preview-title {
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+  }
+  .example-preview-icon {
+    transition: transform 0.2s ease-in-out;
+  }
+  .example-preview-title {
+    padding-left: 10px;
+  }
+  &.active {
+    .example-preview-icon {
+      transform: rotate(90deg);
+    }
+  }
+}
+.example-preview-body {
+  padding: 20px 64px 0 64px;
+  text-align: center;
+  & > img {
+    max-width: 100%;
+    max-height: 300px;
+  }
+}
+
+.example-install {
+  padding: 8px 24px 8px 24px;
+}
+.example-install-header {
+  cursor: pointer;
+  margin: 30px 0 0.8em;
+  padding-bottom: 0.7em;
+  border-bottom: 1px solid var(--vxe-ui-docs-layout-border-color);
+  .example-install-icon,
+  .example-install-title {
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+  }
+  .example-install-icon {
+    transition: transform 0.2s ease-in-out;
+  }
+  .example-install-title {
+    padding-left: 10px;
+  }
+  &.active {
+    .example-install-icon {
+      transform: rotate(90deg);
+    }
+  }
+}
+.example-install-body {
+  padding: 20px 64px 0 64px;
+  & > img {
+    max-width: 100%;
+    max-height: 300px;
   }
 }
 </style>
