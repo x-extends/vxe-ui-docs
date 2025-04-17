@@ -6,7 +6,11 @@
       <vxe-button status="success" @click="getRadioEvent">获取已选</vxe-button>
     </div>
 
-    <vxe-tree ref="treeRef" :check-node-key.sync="checkNodeKey" v-bind="treeOptions"></vxe-tree>
+    <vxe-tree
+      ref="treeRef"
+      v-bind="treeOptions"
+      :check-node-key.sync="checkNodeKey">
+    </vxe-tree>
   </div>
 </template>
 

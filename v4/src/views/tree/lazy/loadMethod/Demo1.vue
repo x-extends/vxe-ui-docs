@@ -5,12 +5,13 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive } from 'vue'
+import { reactive } from 'vue'
 import { VxeTreeProps } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
   id: string
+  parentId?: string | null
   hasChild?: boolean
 }
 
@@ -26,11 +27,10 @@ const getNodeListApi = (node: any) => {
   })
 }
 
-const treeOptions = reactive<VxeTreeProps>({
+const treeOptions = reactive<VxeTreeProps<NodeVO>>({
   transform: true,
   lazy: true,
   showCheckbox: true,
-  hasChildField: 'hasChild',
   nodeConfig: {
     isHover: true
   },

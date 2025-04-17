@@ -1,38 +1,19 @@
 <template>
   <div>
-    <vxe-tree
-      lazy
-      show-checkbox
-      show-line
-      icon-open="vxe-icon-square-minus"
-      icon-close="vxe-icon-square-plus"
-      :node-config="nodeConfig"
-      :load-method="loadMethod"
-      :data="treeList">
-    </vxe-tree>
+    <vxe-tree v-bind="treeOptions"></vxe-tree>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive } from 'vue'
-import { VxeTreePropTypes } from 'vxe-pc-ui'
+import { reactive } from 'vue'
+import { VxeTreeProps } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
   id: string
+  parentId?: string | null
   hasChild?: boolean
 }
-
-const nodeConfig = reactive<VxeTreePropTypes.NodeConfig>({
-  isHover: true
-})
-
-const treeList = ref<NodeVO[]>([
-  { title: '节点2', id: '2', hasChild: true },
-  { title: '节点3', id: '3', hasChild: true },
-  { title: '节点4', id: '4', hasChild: true },
-  { title: '节点5', id: '5', hasChild: false }
-])
 
 const getNodeListApi = (node: any) => {
   return new Promise<NodeVO[]>(resolve => {
@@ -46,7 +27,24 @@ const getNodeListApi = (node: any) => {
   })
 }
 
-const loadMethod: VxeTreePropTypes.LoadMethod<NodeVO> = ({ node }) => {
-  return getNodeListApi(node)
-}
+const treeOptions = reactive<VxeTreeProps<NodeVO>>({
+  transform: true,
+  lazy: true,
+  showCheckbox: true,
+  showLine: true,
+  iconOpen: 'vxe-icon-square-minus',
+  iconClose: 'vxe-icon-square-plus',
+  nodeConfig: {
+    isHover: true
+  },
+  loadMethod ({ node }) {
+    return getNodeListApi(node)
+  },
+  data: [
+    { title: '节点2', id: '2', hasChild: true },
+    { title: '节点3', id: '3', hasChild: true },
+    { title: '节点4', id: '4', hasChild: true },
+    { title: '节点5', id: '5', hasChild: false }
+  ]
+})
 </script>

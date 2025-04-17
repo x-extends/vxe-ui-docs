@@ -8,7 +8,10 @@
       <vxe-button status="success" @click="getCheckboxEvent">获取已选中</vxe-button>
     </div>
 
-    <vxe-tree ref="treeRef" v-model:check-node-keys="checkNodeKeys" v-bind="treeOptions">
+    <vxe-tree
+      ref="treeRef"
+      v-bind="treeOptions"
+      v-model:check-node-keys="checkNodeKeys">
     </vxe-tree>
   </div>
 </template>
@@ -25,9 +28,12 @@ interface NodeVO {
 
 const treeRef = ref<VxeTreeInstance<NodeVO>>()
 
+const checkNodeKeys = ref<VxeTreePropTypes.CheckNodeKeys>([3, 31, 331])
+
 const treeOptions = reactive<VxeTreeProps>({
   transform: true,
   showCheckbox: true,
+  keyField: 'id',
   data: [
     { title: '节点2', id: '2', parentId: null },
     { title: '节点3', id: '3', parentId: null },
@@ -51,8 +57,6 @@ const treeOptions = reactive<VxeTreeProps>({
     { title: '节点5', id: '5', parentId: null }
   ]
 })
-
-const checkNodeKeys = ref<VxeTreePropTypes.CheckNodeKeys>([3, 31, 331])
 
 const selectCheckboxEvent = () => {
   const $tree = treeRef.value

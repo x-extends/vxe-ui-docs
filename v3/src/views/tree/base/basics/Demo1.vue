@@ -26,12 +26,6 @@ export default Vue.extend({
   data () {
     const treeOptions: VxeTreeProps = {
       transform: true,
-      titleField: 'title',
-      keyField: 'id',
-      parentField: 'parentId',
-      nodeConfig: {
-        isHover: true
-      },
       data: [
         { title: '节点2', id: '2', parentId: null },
         { title: '节点3', id: '3', parentId: null },

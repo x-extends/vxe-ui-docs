@@ -6,7 +6,11 @@
       <vxe-button status="success" @click="getRadioEvent">获取已选</vxe-button>
     </div>
 
-    <vxe-tree ref="treeRef" v-model:check-node-key="checkNodeKey" v-bind="treeOptions"></vxe-tree>
+    <vxe-tree
+      ref="treeRef"
+      v-bind="treeOptions"
+      v-model:check-node-key="checkNodeKey">
+    </vxe-tree>
   </div>
 </template>
 
@@ -27,6 +31,7 @@ const checkNodeKey = ref<VxeTreePropTypes.CheckNodeKey>('3')
 const treeOptions = reactive<VxeTreeProps>({
   transform: true,
   showRadio: true,
+  keyField: 'id',
   data: [
     { title: '节点2', id: '2', parentId: null },
     { title: '节点3', id: '3', parentId: null },

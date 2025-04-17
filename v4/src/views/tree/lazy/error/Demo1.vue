@@ -1,38 +1,22 @@
 <template>
   <div>
     <vxe-tree
-      lazy
-      show-checkbox
-      has-child-field="hasChild"
-      :node-config="nodeConfig"
-      :load-method="loadMethod"
-      :data="treeList"
-      @load-success="loadSuccess"
-      @load-error="loadError">
+      v-bind="treeOptions"
+      v-on="treeEvents">
     </vxe-tree>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive } from 'vue'
-import { VxeUI, VxeTreePropTypes, VxeTreeEvents } from 'vxe-pc-ui'
+import { reactive } from 'vue'
+import { VxeUI, VxeTreeProps, VxeTreeListeners } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
   id: string
+  parentId?: string | null
   hasChild?: boolean
 }
-
-const nodeConfig = reactive<VxeTreePropTypes.NodeConfig>({
-  isHover: true
-})
-
-const treeList = ref<NodeVO[]>([
-  { title: '节点2', id: '2', hasChild: true },
-  { title: '节点3', id: '3', hasChild: true },
-  { title: '节点4', id: '4', hasChild: true },
-  { title: '节点5', id: '5', hasChild: false }
-])
 
 const getNodeListApi = (node: any) => {
   return new Promise<NodeVO[]>((resolve, reject) => {
@@ -50,21 +34,37 @@ const getNodeListApi = (node: any) => {
   })
 }
 
-const loadMethod: VxeTreePropTypes.LoadMethod<NodeVO> = ({ node }) => {
-  return getNodeListApi(node)
-}
+const treeOptions = reactive<VxeTreeProps<NodeVO>>({
+  transform: true,
+  lazy: true,
+  showCheckbox: true,
+  showLine: true,
+  nodeConfig: {
+    isHover: true
+  },
+  loadMethod ({ node }) {
+    return getNodeListApi(node)
+  },
+  data: [
+    { title: '节点2', id: '2', hasChild: true },
+    { title: '节点3', id: '3', hasChild: true },
+    { title: '节点4', id: '4', hasChild: true },
+    { title: '节点5', id: '5', hasChild: false }
+  ]
+})
 
-const loadSuccess: VxeTreeEvents.LoadSuccess = () => {
-  VxeUI.modal.message({
-    content: '加载成功',
-    status: 'success'
-  })
-}
-
-const loadError: VxeTreeEvents.LoadError = () => {
-  VxeUI.modal.message({
-    content: '加载失败',
-    status: 'error'
-  })
+const treeEvents: VxeTreeListeners<NodeVO> = {
+  loadSuccess () {
+    VxeUI.modal.message({
+      content: '加载成功',
+      status: 'success'
+    })
+  },
+  loadError () {
+    VxeUI.modal.message({
+      content: '加载失败',
+      status: 'error'
+    })
+  }
 }
 </script>

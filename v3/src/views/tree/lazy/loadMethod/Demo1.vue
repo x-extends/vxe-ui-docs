@@ -11,6 +11,7 @@ import { VxeTreeProps } from 'vxe-pc-ui'
 interface NodeVO {
   title: string
   id: string
+  parentId?: string | null
   hasChild?: boolean
 }
 
@@ -28,7 +29,7 @@ function getNodeListApi (node: any) {
 
 export default Vue.extend({
   data () {
-    const treeOptions: VxeTreeProps = {
+    const treeOptions: VxeTreeProps<NodeVO> = {
       transform: true,
       lazy: true,
       showCheckbox: true,

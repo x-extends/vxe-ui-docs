@@ -8,7 +8,11 @@
       <vxe-button status="success" @click="getCheckboxEvent">获取已选中</vxe-button>
     </div>
 
-    <vxe-tree ref="treeRef" :check-node-keys.sync="checkNodeKeys" v-bind="treeOptions"></vxe-tree>
+    <vxe-tree
+      ref="treeRef"
+      v-bind="treeOptions"
+      :check-node-keys.sync="checkNodeKeys">
+    </vxe-tree>
   </div>
 </template>
 
