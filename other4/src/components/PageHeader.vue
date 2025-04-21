@@ -113,6 +113,7 @@ const pluginAppList = ref<{
   label: string
   code: string
   uri: string
+  isEnterprise: boolean
 }[]>([])
 
 const showSystemMenu = ref(false)
