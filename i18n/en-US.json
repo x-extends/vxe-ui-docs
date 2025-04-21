@@ -175,7 +175,7 @@
         "guide": "Development Guide",
         "install": "Install and use",
         "useV4Old": "Install an older version v4.0 ~ v4.6.x",
-        "use34Old": "Install an older version v3.0 ~ v3.8.x",
+        "use3Old": "Install an older version v3.0 ~ v3.8.x",
         "table": "Table basic table",
         "grid": "Grid configuration table"
       }

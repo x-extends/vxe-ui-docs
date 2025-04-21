@@ -175,7 +175,7 @@
         "guide": "Guia de desenvolvimento",
         "install": "Instalar e usar",
         "useV4Old": "安装老版本插件 v4.0 ~ v4.6.x",
-        "use34Old": "安装老版本插件 v3.0 ~ v3.8.x",
+        "use3Old": "安装老版本插件 v3.0 ~ v3.8.x",
         "table": "Tabela básica da tabela",
         "grid": "Tabela de configuração da grade"
       }
