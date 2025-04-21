@@ -27,6 +27,7 @@
           <ul class="plugin-app-wrapper">
             <li v-for="(item, index) in pluginAppList" :key="index">
               <vxe-link :href="`${tablePluginDocsUrl}${item.uri}`" :content="$t(`shopping.apps.${item.code}`)"></vxe-link>
+              <span v-if="item.isEnterprise" class="enterprise">{{ $t('app.header.enterpriseVersion') }}</span>
             </li>
           </ul>
         </template>
@@ -109,6 +110,7 @@ export default Vue.extend({
         label: string
         code: string
         uri: string
+        isEnterprise: boolean
       }[],
 
       showSystemMenu: false,
