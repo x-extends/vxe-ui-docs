@@ -285,6 +285,7 @@
     "apps": {
       "TemplateZeroCode": "Zero code system template",
       "ExtendCellArea": "Region selection",
+      "ExtendPivotTable": "Pivot table",
       "FiltersCombination": "Complex combination Filters",
       "FiltersComplexInput": "Complex input Filters"
     },

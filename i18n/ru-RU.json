@@ -285,6 +285,7 @@
     "apps": {
       "TemplateZeroCode": "零代码配套模板",
       "ExtendCellArea": "区域选取",
+      "ExtendPivotTable": "数据透视表",
       "FiltersCombination": "组合筛选",
       "FiltersComplexInput": "输入筛选"
     },
