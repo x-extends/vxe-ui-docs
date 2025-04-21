@@ -2794,7 +2794,7 @@ const gridRouteConfig: RouteRecordRaw = {
           children: [
             { path: 'base', name: 'ComponentGridRowGroupCheckboxBase', component: () => import('@/views/grid/rowGroup/checkbox/base/CodeExample.vue') },
             { path: 'checkStrictly', name: 'ComponentGridRowGroupCheckboxCheckStrictly', component: () => import('@/views/grid/rowGroup/checkbox/checkStrictly/CodeExample.vue') },
-            { path: 'checkStrictly', name: 'ComponentGridRowGroupCheckboxStrictlyHeader', component: () => import('@/views/grid/rowGroup/checkbox/strictlyHeader/CodeExample.vue') },
+            { path: 'strictlyHeader', name: 'ComponentGridRowGroupCheckboxStrictlyHeader', component: () => import('@/views/grid/rowGroup/checkbox/strictlyHeader/CodeExample.vue') },
             { path: 'checked', name: 'ComponentGridRowGroupCheckboxChecked', component: () => import('@/views/grid/rowGroup/checkbox/checked/CodeExample.vue') }
           ]
         },
