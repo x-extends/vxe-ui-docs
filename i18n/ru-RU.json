@@ -87,6 +87,7 @@
     },
     "header": {
       "moreProducts": "Экология",
+      "morePlugin": "插件",
       "pluginStore": "Рынок плагина",
       "enterpriseVersion": "Enterprise Edition",
       "buyPlugin": "Получить разрешение",

@@ -87,6 +87,7 @@
     },
     "header": {
       "moreProducts": "ecology",
+      "morePlugin": "plugin",
       "pluginStore": "plug-in market",
       "enterpriseVersion": "Enterprise Edition",
       "buyPlugin": "Get authorization",
