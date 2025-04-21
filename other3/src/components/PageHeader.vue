@@ -26,7 +26,7 @@
         <template #dropdown>
           <ul class="plugin-app-wrapper">
             <li v-for="(item, index) in pluginAppList" :key="index">
-              <vxe-link :href="`${otherUrl}${item.uri}`" :content="$t(`shopping.apps.${item.code}`)"></vxe-link>
+              <vxe-link :href="`${tablePluginDocsUrl}${item.uri}`" :content="$t(`shopping.apps.${item.code}`)"></vxe-link>
             </li>
           </ul>
         </template>
@@ -91,7 +91,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { mapMutations, mapState } from 'vuex'
-import { otherUrl } from '@/common/nav-config'
+import { tablePluginDocsUrl } from '@/common/nav-config'
 
 export default Vue.extend({
   inject: {
@@ -101,7 +101,7 @@ export default Vue.extend({
   },
   data () {
     return {
-      otherUrl,
+      tablePluginDocsUrl,
 
       showPluginApp: false,
       pluginAppList: [] as {

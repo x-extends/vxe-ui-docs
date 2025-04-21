@@ -26,7 +26,7 @@
         <template #dropdown>
           <ul class="plugin-app-wrapper">
             <li v-for="(item, index) in pluginAppList" :key="index">
-              <vxe-link :href="`${otherUrl}${item.uri}`" :content="$t(`shopping.apps.${item.code}`)"></vxe-link>
+              <vxe-link :href="`${tablePluginDocsUrl}${item.uri}`" :content="$t(`shopping.apps.${item.code}`)"></vxe-link>
             </li>
           </ul>
         </template>
@@ -91,7 +91,7 @@
 import { ref, computed, inject } from 'vue'
 import { useAppStore } from '@/store/app'
 import { VxePulldownEvents } from 'vxe-pc-ui'
-import { otherUrl } from '@/common/nav-config'
+import { tablePluginDocsUrl } from '@/common/nav-config'
 import i18n from '@/i18n'
 import XEUtils from 'xe-utils'
 
