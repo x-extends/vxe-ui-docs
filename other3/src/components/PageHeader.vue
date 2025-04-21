@@ -17,6 +17,21 @@
     </div>
     <div class="header-middle"></div>
     <div class="header-right">
+      <vxe-pulldown v-if="isPluginDocs" v-model="showPluginApp" show-popup-shadow>
+        <vxe-button class="system-menu-btn" mode="text" @click="togglePluginAppEvent">
+          <vxe-icon class="system-menu-btn-icon" name="arrow-down"></vxe-icon>
+          <span :class="['system-menu-btn-text', {'unread': showTopMenuMsgFlag}]">{{ $t('app.header.morePlugin') }}</span>
+        </vxe-button>
+
+        <template #dropdown>
+          <ul class="plugin-app-wrapper">
+            <li v-for="(item, index) in pluginAppList" :key="index">
+              <vxe-link :href="`${otherUrl}${item.uri}`" :content="$t(`shopping.apps.${item.code}`)"></vxe-link>
+            </li>
+          </ul>
+        </template>
+      </vxe-pulldown>
+      <vxe-pulldown v-else v-model="showSystemMenu" show-popup-shadow>
       <vxe-pulldown v-model="showSystemMenu" show-popup-shadow>
         <vxe-button class="system-menu-btn" mode="text" @click="toggleSystemMenuEvent">
           <vxe-icon class="system-menu-btn-icon" name="arrow-down"></vxe-icon>
@@ -76,6 +91,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { mapMutations, mapState } from 'vuex'
+import { otherUrl } from '@/common/nav-config'
 
 export default Vue.extend({
   inject: {
@@ -85,6 +101,16 @@ export default Vue.extend({
   },
   data () {
     return {
+      otherUrl,
+
+      showPluginApp: false,
+      pluginAppList: [] as {
+        value: string
+        label: string
+        code: string
+        uri: string
+      }[],
+
       showSystemMenu: false,
       systemMenuList: [] as any[],
 
@@ -210,6 +236,9 @@ export default Vue.extend({
     ]),
     langClickEvent (this: any, { option }: any) {
       this.setLanguage(option.value as any)
+    },
+    togglePluginAppEvent () {
+      this.showPluginApp = !this.showPluginApp
     },
     toggleSystemMenuEvent  (this: any) {
       this.showSystemMenu = !this.showSystemMenu

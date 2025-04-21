@@ -22,6 +22,8 @@ export interface NavVO {
   children?: NavVO[]
 }
 
+export const otherUrl = `${process.env.VUE_APP_SITE_PLUGIN_URL}/other${process.env.VUE_APP_VXE_VERSION}`
+
 export const navConfigList: NavVO[] = [
   {
     title: '官方插件 - 轻量级图表',
