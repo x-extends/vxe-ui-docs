@@ -3252,6 +3252,11 @@ const gridRouteConfig: RouteConfig = {
           component: () => import('@/views/grid/tree/sort/CodeExample.vue')
         },
         {
+          path: 'filter',
+          name: 'ComponentGridTreeFilter',
+          component: () => import('@/views/grid/tree/filter/CodeExample.vue')
+        },
+        {
           path: 'expandRow',
           name: 'ComponentGridTreeExpandRow',
           component: () => import('@/views/grid/tree/expandRow/CodeExample.vue')
