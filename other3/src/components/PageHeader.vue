@@ -181,7 +181,7 @@ export default Vue.extend({
       set (name) {
         this.setTheme(name)
       }
-    },
+    } as any,
     currPrimaryColor: {
       get () {
         return this.primaryColor
@@ -189,7 +189,7 @@ export default Vue.extend({
       set (color) {
         this.setPrimaryColor(color || '')
       }
-    },
+    } as any,
     currCompSize: {
       get () {
         return this.componentsSize
@@ -197,7 +197,7 @@ export default Vue.extend({
       set (size) {
         this.setComponentsSize(size)
       }
-    },
+    } as any,
     currLanguage (): any {
       return this.langOptions.find(item => item.value === this.language)
     },
