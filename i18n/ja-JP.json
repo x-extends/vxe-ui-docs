@@ -213,6 +213,7 @@
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "貼り付けは行と列を自動的に挿入します",
         "areaTree": "ツリー構造",
+        "areaTreeFilter": "筛选",
         "areaTreeClipDeep": "ツリーレベルのペースト",
         "areaTreeRowDrag": "ドラッグしてドラッグします",
         "areaTreeRowColDrag": "行と列をドラッグアンドドラッグします",

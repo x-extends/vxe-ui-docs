@@ -213,6 +213,7 @@
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "Вставьте автоматически вставки ряды и столбцы",
         "areaTree": "Дерево структура",
+        "areaTreeFilter": "筛选",
         "areaTreeClipDeep": "Паста на уровне деревьев",
         "areaTreeRowDrag": "Перетаскивать и перетаскивать",
         "areaTreeRowColDrag": "Потаскивать и перетаскивать строку и столбец",

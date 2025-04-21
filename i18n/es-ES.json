@@ -213,6 +213,7 @@
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "Pegar inserta automáticamente filas y columnas",
         "areaTree": "Estructura de árboles",
+        "areaTreeFilter": "筛选",
         "areaTreeClipDeep": "Pasta a nivel de árbol",
         "areaTreeRowDrag": "Arrastrar y arrastrar",
         "areaTreeRowColDrag": "Arrastre y arrastre la fila y la columna",

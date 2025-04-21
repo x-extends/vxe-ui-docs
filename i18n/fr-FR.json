@@ -213,6 +213,7 @@
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "Coller insère automatiquement les lignes et les colonnes",
         "areaTree": "Structure des arbres",
+        "areaTreeFilter": "筛选",
         "areaTreeClipDeep": "Paste au niveau des arbres",
         "areaTreeRowDrag": "Traîner et traîner",
         "areaTreeRowColDrag": "Faites glisser et glisser la ligne et la colonne",

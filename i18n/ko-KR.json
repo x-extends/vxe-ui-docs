@@ -213,6 +213,7 @@
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "붙여 넣기 행과 열을 자동으로 삽입합니다",
         "areaTree": "나무 구조",
+        "areaTreeFilter": "筛选",
         "areaTreeClipDeep": "나무 수준의 페이스트",
         "areaTreeRowDrag": "드래그 앤 드래그",
         "areaTreeRowColDrag": "줄과 열을 끌고 드래그합니다",

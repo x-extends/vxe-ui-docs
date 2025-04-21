@@ -213,6 +213,7 @@
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "粘贴自动插入行与列",
         "areaTree": "树结构",
+        "areaTreeFilter": "筛选",
         "areaTreeClipDeep": "树层级的粘贴",
         "areaTreeRowDrag": "行拖拽",
         "areaTreeRowColDrag": "行与列拖拽",

@@ -213,6 +213,7 @@
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "Fügen Sie automatisch Zeilen und Spalten ein ein",
         "areaTree": "Baumstruktur",
+        "areaTreeFilter": "筛选",
         "areaTreeClipDeep": "Paste auf Baumebene",
         "areaTreeRowDrag": "Ziehen und ziehen",
         "areaTreeRowColDrag": "Ziehen Sie Zeile und Spalte ab und ziehen Sie die Spalte",

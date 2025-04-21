@@ -213,6 +213,7 @@
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "لصق إدراج الصفوف والأعمدة تلقائيًا",
         "areaTree": "هيكل شجرة",
+        "areaTreeFilter": "筛选",
         "areaTreeClipDeep": "عجينة مستوى الشجرة",
         "areaTreeRowDrag": "السحب والسحب",
         "areaTreeRowColDrag": "السحب والسحب الصف والعمود",

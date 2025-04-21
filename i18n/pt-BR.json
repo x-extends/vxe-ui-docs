@@ -213,6 +213,7 @@
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "A pasta insere automaticamente linhas e colunas",
         "areaTree": "Estrutura da árvore",
+        "areaTreeFilter": "筛选",
         "areaTreeClipDeep": "Pasta em nível de árvore",
         "areaTreeRowDrag": "Arraste e arraste",
         "areaTreeRowColDrag": "Arraste e arraste a linha e coluna",

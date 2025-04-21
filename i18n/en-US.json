@@ -213,6 +213,7 @@
         "areaClipCustomClip": "Custom copy and paste methods",
         "areaClipIncrement": "Paste automatically inserts rows and columns",
         "areaTree": "tree structure",
+        "areaTreeFilter": "Filter",
         "areaTreeClipDeep": "Tree level pasting",
         "areaTreeRowDrag": "row drag",
         "areaTreeRowColDrag": "Row and column dragging",
