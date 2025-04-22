@@ -339,6 +339,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           children: [
             { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentTableCellRenderVxeSwitch' } },
             { title: 'VxeRadioGroup 单选组', routerLink: { name: 'ComponentTableCellRenderVxeRadioGroup' } },
+            { title: 'VxeCheckbox 复选框', routerLink: { name: 'ComponentTableCellRenderVxeCheckbox' } },
             { title: 'VxeCheckboxGroup 复选组', routerLink: { name: 'ComponentTableCellRenderVxeCheckboxGroup' } },
             { title: 'VxeButtonGroup 按钮组', routerLink: { name: 'ComponentTableCellRenderVxeButtonGroup' } },
             { title: 'VxeImage 图片', routerLink: { name: 'ComponentTableCellRenderVxeImage' } },
@@ -359,6 +360,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'VxeTag 标签', routerLink: { name: 'ComponentTableCellTemplateVxeTag' } },
             { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentTableCellTemplateVxeSwitch' } },
             { title: 'VxeRadioGroup 单选组', routerLink: { name: 'ComponentTableCellTemplateVxeRadioGroup' } },
+            { title: 'VxeCheckbox 复选框', routerLink: { name: 'ComponentTableCellTemplateVxeCheckbox' } },
             { title: 'VxeCheckboxGroup 复选组', routerLink: { name: 'ComponentTableCellTemplateVxeCheckboxGroup' } },
             { title: 'VxeButton 按钮', routerLink: { name: 'ComponentTableCellTemplateVxeButton' } },
             { title: 'VxeImage 图片', routerLink: { name: 'ComponentTableCellTemplateVxeImage' } },
@@ -1036,6 +1038,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           children: [
             { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentGridCellRenderVxeSwitch' } },
             { title: 'VxeRadioGroup 单选组', routerLink: { name: 'ComponentGridCellRenderVxeRadioGroup' } },
+            { title: 'VxeCheckbox 复选框', routerLink: { name: 'ComponentGridCellRenderVxeCheckbox' } },
             { title: 'VxeCheckboxGroup 复选组', routerLink: { name: 'ComponentGridCellRenderVxeCheckboxGroup' } },
             { title: 'VxeButtonGroup 按钮组', routerLink: { name: 'ComponentGridCellRenderVxeButtonGroup' } },
             { title: 'VxeImage 图片', routerLink: { name: 'ComponentGridCellRenderVxeImage' } },

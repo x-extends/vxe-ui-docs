@@ -1431,6 +1431,11 @@ const tableRouteConfig: RouteConfig = {
           component: () => import('@/views/table/cellRender/vxe-radio-group/CodeExample.vue')
         },
         {
+          path: 'vxe-checkbox',
+          name: 'ComponentTableCellRenderVxeCheckbox',
+          component: () => import('@/views/table/cellRender/vxe-checkbox/CodeExample.vue')
+        },
+        {
           path: 'vxe-checkbox-group',
           name: 'ComponentTableCellRenderVxeCheckboxGroup',
           component: () => import('@/views/table/cellRender/vxe-checkbox-group/CodeExample.vue')
@@ -1490,6 +1495,11 @@ const tableRouteConfig: RouteConfig = {
           path: 'vxe-radio-group',
           name: 'ComponentTableCellTemplateVxeRadioGroup',
           component: () => import('@/views/table/cellTemplate/vxe-radio-group/CodeExample.vue')
+        },
+        {
+          path: 'vxe-checkbox',
+          name: 'ComponentTableCellTemplateVxeCheckbox',
+          component: () => import('@/views/table/cellTemplate/vxe-checkbox/CodeExample.vue')
         },
         {
           path: 'vxe-checkbox-group',
@@ -3381,6 +3391,11 @@ const gridRouteConfig: RouteConfig = {
         },
         {
           path: 'vxe-checkbox',
+          name: 'ComponentGridCellRenderVxeCheckbox',
+          component: () => import('@/views/grid/cellRender/vxe-checkbox/CodeExample.vue')
+        },
+        {
+          path: 'vxe-checkbox-group',
           name: 'ComponentGridCellRenderVxeCheckboxGroup',
           component: () => import('@/views/grid/cellRender/vxe-checkbox-group/CodeExample.vue')
         },

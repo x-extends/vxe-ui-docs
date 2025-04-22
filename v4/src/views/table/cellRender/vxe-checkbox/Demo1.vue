@@ -12,8 +12,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script lang="ts" setup>
+import { ref, reactive } from 'vue'
 import type { VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
@@ -24,27 +24,17 @@ interface RowVO {
   checked2: boolean
 }
 
-export default Vue.extend({
-  data () {
-    const tableData: RowVO[] = [
-      { id: 10001, name: 'Test1', role: 'Develop', checked1: false, checked2: false },
-      { id: 10002, name: 'Test2', role: 'Test', checked1: true, checked2: false },
-      { id: 10003, name: 'Test3', role: 'PM', checked1: false, checked2: true }
-    ]
-
-    const hc1CellRender: VxeColumnPropTypes.CellRender = {
-      name: 'VxeCheckbox'
-    }
-
-    const hc2CellRender: VxeColumnPropTypes.CellRender = {
-      name: 'VxeCheckbox'
-    }
-
-    return {
-      tableData,
-      hc1CellRender,
-      hc2CellRender
-    }
-  }
+const hc1CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'VxeCheckbox'
 })
+
+const hc2CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'VxeCheckbox'
+})
+
+const tableData = ref<RowVO[]>([
+  { id: 10001, name: 'Test1', role: 'Develop', checked1: false, checked2: false },
+  { id: 10002, name: 'Test2', role: 'Test', checked1: true, checked2: false },
+  { id: 10003, name: 'Test3', role: 'PM', checked1: false, checked2: true }
+])
 </script>

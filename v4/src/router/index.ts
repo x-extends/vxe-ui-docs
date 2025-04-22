@@ -1428,6 +1428,11 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/cellRender/vxe-radio-group/CodeExample.vue')
         },
         {
+          path: 'vxe-checkbox',
+          name: 'ComponentTableCellRenderVxeCheckbox',
+          component: () => import('@/views/table/cellRender/vxe-checkbox/CodeExample.vue')
+        },
+        {
           path: 'vxe-checkbox-group',
           name: 'ComponentTableCellRenderVxeCheckboxGroup',
           component: () => import('@/views/table/cellRender/vxe-checkbox-group/CodeExample.vue')
@@ -3383,6 +3388,11 @@ const gridRouteConfig: RouteRecordRaw = {
         },
         {
           path: 'vxe-checkbox',
+          name: 'ComponentGridCellRenderVxeCheckbox',
+          component: () => import('@/views/grid/cellRender/vxe-checkbox/CodeExample.vue')
+        },
+        {
+          path: 'vxe-checkbox-group',
           name: 'ComponentGridCellRenderVxeCheckboxGroup',
           component: () => import('@/views/grid/cellRender/vxe-checkbox-group/CodeExample.vue')
         },
