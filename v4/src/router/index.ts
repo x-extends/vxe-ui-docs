@@ -1489,6 +1489,11 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/cellTemplate/vxe-radio-group/CodeExample.vue')
         },
         {
+          path: 'vxe-checkbox',
+          name: 'ComponentTableCellTemplateVxeCheckbox',
+          component: () => import('@/views/table/cellTemplate/vxe-checkbox/CodeExample.vue')
+        },
+        {
           path: 'vxe-checkbox-group',
           name: 'ComponentTableCellTemplateVxeCheckboxGroup',
           component: () => import('@/views/table/cellTemplate/vxe-checkbox-group/CodeExample.vue')
