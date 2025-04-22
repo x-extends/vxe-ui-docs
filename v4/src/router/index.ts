@@ -3423,6 +3423,16 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/cellTemplate/vxe-tag/CodeExample.vue')
         },
         {
+          path: 'vxe-checkbox',
+          name: 'ComponentGridCellTemplateVxeCheckbox',
+          component: () => import('@/views/grid/cellTemplate/vxe-checkbox/CodeExample.vue')
+        },
+        {
+          path: 'vxe-checkbox-group',
+          name: 'ComponentGridCellTemplateVxeCheckboxGroup',
+          component: () => import('@/views/grid/cellTemplate/vxe-checkbox-group/CodeExample.vue')
+        },
+        {
           path: 'vxe-switch',
           name: 'ComponentGridCellTemplateVxeSwitch',
           component: () => import('@/views/grid/cellTemplate/vxe-switch/CodeExample.vue')
