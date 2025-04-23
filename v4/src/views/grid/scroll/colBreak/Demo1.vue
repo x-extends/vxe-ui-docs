@@ -19,6 +19,8 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
   loading: false,
   showOverflow: true,
+  showHeaderOverflow: false,
+  showFooterOverflow: true,
   height: 600,
   virtualYConfig: {
     enabled: true,
