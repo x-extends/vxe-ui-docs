@@ -37,7 +37,7 @@ export default Vue.extend({
     const splitOptions2: VxeSplitProps = {
       border: true,
       items: [
-        { slots: { default: 'leftContent' } },
+        { width: 100, slots: { default: 'leftContent' } },
         { slots: { default: 'rightContent' } }
       ]
     }

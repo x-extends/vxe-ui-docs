@@ -40,9 +40,9 @@ export default Vue.extend({
       border: true,
       vertical: true,
       items: [
-        { slots: { default: 'topContent' } },
+        { height: 100, slots: { default: 'topContent' } },
         { slots: { default: 'centerContent' } },
-        { slots: { default: 'bottomContent' } }
+        { height: 140, slots: { default: 'bottomContent' } }
       ]
     }
 

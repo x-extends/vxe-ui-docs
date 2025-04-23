@@ -3,7 +3,7 @@
     <vxe-split height="300" border>
       <vxe-split-pane>
         <vxe-split border vertical>
-          <vxe-split-pane>
+          <vxe-split-pane height="100">
             <div style="height: 100%;background-color: #f3e1e1;">顶部</div>
           </vxe-split-pane>
           <vxe-split-pane>

@@ -35,7 +35,7 @@ const splitOptions2 = reactive<VxeSplitProps>({
   border: true,
   vertical: true,
   items: [
-    { slots: { default: 'topContent' } },
+    { width: 100, slots: { default: 'topContent' } },
     { slots: { default: 'bottomContent' } }
   ]
 })

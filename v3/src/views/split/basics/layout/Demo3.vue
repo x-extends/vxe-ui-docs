@@ -6,7 +6,7 @@
       </vxe-split-pane>
       <vxe-split-pane>
         <vxe-split border>
-          <vxe-split-pane>
+          <vxe-split-pane width="100">
             <div style="height: 100%;background-color: #f3e1e1;">左侧</div>
           </vxe-split-pane>
           <vxe-split-pane>
