@@ -1,23 +1,5 @@
 <template>
   <div>
-    <p>
-      <vxe-button @click="loadDataAndColumns(5, 50)">5行50列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(1000, 12)">1k行12列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(5000, 100)">5k行100列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(10000, 150)">1w行150列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(50000, 200)">5w行200列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(100000, 200)">10w行200列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(300000, 1000)">30w行200列</vxe-button>
-    </p>
-    <p>
-      <vxe-button @click="loadDataAndColumns(5, 12)">5行12列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(50, 50)">50行100列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(80, 1000)">80行1k列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(100, 5000)">100行5k列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(150, 10000)">200行1w列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(200, 30000)">200行3w列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(1000, 50000)">200行5w列</vxe-button>
-    </p>
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
@@ -37,8 +19,6 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
   loading: false,
   showOverflow: true,
-  showHeaderOverflow: true,
-  showFooterOverflow: true,
   height: 600,
   virtualYConfig: {
     enabled: true,
@@ -59,7 +39,7 @@ const loadDataAndColumns = (rowSize: number, colSize: number) => {
     for (let i = 0; i < colSize; i++) {
       colList.push({
         field: `col${i}`,
-        title: `标题${i}`,
+        title: i % 5 === 0 ? `长长长标题长长长标题长长长标题长长长标题${i}` : (i % 3 === 0 ? `标题标题标题标题${i}` : `标题${i}`),
         width: 160
       })
     }
@@ -89,6 +69,6 @@ const loadDataAndColumns = (rowSize: number, colSize: number) => {
 }
 
 onMounted(() => {
-  loadDataAndColumns(50, 50)
+  loadDataAndColumns(200, 100)
 })
 </script>

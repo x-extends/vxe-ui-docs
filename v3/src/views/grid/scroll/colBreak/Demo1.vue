@@ -1,19 +1,5 @@
 <template>
   <div>
-    <p>
-      <vxe-button @click="loadDataAndColumns(100, 50)">100行50列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(1000, 80)">1k行80列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(5000, 100)">5k行100列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(10000, 150)">1w行150列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(30000, 200)">3w行200列</vxe-button>
-    </p>
-    <p>
-      <vxe-button @click="loadDataAndColumns(50, 50)">50行100列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(80, 1000)">80行1k列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(100, 5000)">100行5k列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(150, 10000)">200行1w列</vxe-button>
-      <vxe-button @click="loadDataAndColumns(200, 30000)">200行3w列</vxe-button>
-    </p>
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
@@ -33,8 +19,6 @@ export default Vue.extend({
       border: true,
       loading: false,
       showOverflow: true,
-      showHeaderOverflow: true,
-      showFooterOverflow: true,
       height: 600,
       virtualYConfig: {
         enabled: true,
@@ -60,7 +44,7 @@ export default Vue.extend({
         for (let i = 0; i < colSize; i++) {
           colList.push({
             field: `col${i}`,
-            title: `标题${i}`,
+            title: i % 5 === 0 ? `长长长标题长长长标题长长长标题长长长标题${i}` : (i % 3 === 0 ? `标题标题标题标题${i}` : `标题${i}`),
             width: 160
           })
         }
@@ -89,8 +73,8 @@ export default Vue.extend({
       }, 50)
     }
   },
-  mounted () {
-    this.loadDataAndColumns(50, 50)
+  created () {
+    this.loadDataAndColumns(200, 100)
   }
 })
 </script>

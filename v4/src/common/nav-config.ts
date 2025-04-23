@@ -1283,6 +1283,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           children: [
             { title: '纵向虚拟滚动', routerLink: { name: 'ComponentGridScrollVertical' } },
             { title: '横向虚拟滚动', routerLink: { name: 'ComponentGridScrollHorizontal' } },
+            { title: '列头自适应换行', routerLink: { name: 'ComponentGridScrollColBreak' } },
             { title: '纵向和横向', routerLink: { name: 'ComponentGridScrollHV' } },
             { title: '函数式加载数据', routerLink: { name: 'ComponentGridScrollLoadData' } },
             { title: '冻结列 + 复杂渲染', routerLink: { name: 'ComponentGridScrollFixed' } },

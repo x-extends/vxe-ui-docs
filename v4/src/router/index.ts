@@ -4142,6 +4142,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/scroll/horizontal/CodeExample.vue')
         },
         {
+          path: 'colBreak',
+          name: 'ComponentGridScrollColBreak',
+          component: () => import('@/views/grid/scroll/colBreak/CodeExample.vue')
+        },
+        {
           path: 'hv',
           name: 'ComponentGridScrollHV',
           component: () => import('@/views/grid/scroll/hv/CodeExample.vue')
