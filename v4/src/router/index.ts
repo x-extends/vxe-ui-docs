@@ -1621,6 +1621,11 @@ const tableRouteConfig: RouteRecordRaw = {
       component: RouteLayout,
       children: [
         {
+          path: 'vxe-button',
+          name: 'ComponentTableEditTemplateVxeButton',
+          component: () => import('@/views/table/editTemplate/vxe-button/CodeExample.vue')
+        },
+        {
           path: 'vxe-input',
           name: 'ComponentTableEditTemplateVxeInput',
           component: () => import('@/views/table/editTemplate/vxe-input/CodeExample.vue')
@@ -3758,6 +3763,11 @@ const gridRouteConfig: RouteRecordRaw = {
       path: 'editTemplate',
       component: RouteLayout,
       children: [
+        {
+          path: 'vxe-button',
+          name: 'ComponentGridEditTemplateVxeButton',
+          component: () => import('@/views/grid/editTemplate/vxe-button/CodeExample.vue')
+        },
         {
           path: 'vxe-input',
           name: 'ComponentGridEditTemplateVxeInput',

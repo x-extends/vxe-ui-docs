@@ -454,6 +454,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '可编辑 - 渲染 - 插槽式',
           children: [
+            { title: 'VxeButton 按钮', routerLink: { name: 'ComponentTableEditTemplateVxeButton' } },
             { title: 'VxeInput 输入框', routerLink: { name: 'ComponentTableEditTemplateVxeInput' } },
             { title: 'VxeNumberInput 数值输入', routerLink: { name: 'ComponentTableEditTemplateVxeNumberInput' } },
             { title: 'VxeIconPicker 图标选择', routerLink: { name: 'ComponentTableEditTemplateVxeIconPicker' } },
@@ -1132,6 +1133,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '可编辑 - 渲染 - 插槽式',
           children: [
+            { title: 'VxeButton 按钮', routerLink: { name: 'ComponentGridEditTemplateVxeButton' } },
             { title: 'VxeInput 输入框', routerLink: { name: 'ComponentGridEditTemplateVxeInput' } },
             { title: 'VxeNumberInput 数值输入框', routerLink: { name: 'ComponentGridEditTemplateVxeNumberInput' } },
             { title: 'VxeIconPicker 图标选择', routerLink: { name: 'ComponentGridEditTemplateVxeIconPicker' } },
