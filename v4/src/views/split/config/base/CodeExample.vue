@@ -11,6 +11,7 @@
         <vxe-tip status="primary">
           支持多个面板
         </vxe-tip>
+        <vxe-tip status="error">只支持存在一个未设置 width 的面板</vxe-tip>
       </template>
     </CodeLight>
   </div>

@@ -22,9 +22,9 @@ export default Vue.extend({
   data () {
     const splitOptions: VxeSplitProps = {
       items: [
-        { slots: { default: 'leftContent' } },
+        { width: 100, slots: { default: 'leftContent' } },
         { slots: { default: 'centerContent' } },
-        { slots: { default: 'rightContent' } }
+        { width: 200, slots: { default: 'rightContent' } }
       ]
     }
 

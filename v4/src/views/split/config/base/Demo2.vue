@@ -20,9 +20,9 @@ import { VxeSplitProps } from 'vxe-pc-ui'
 
 const splitOptions = reactive<VxeSplitProps>({
   items: [
-    { slots: { default: 'leftContent' } },
+    { width: 100, slots: { default: 'leftContent' } },
     { slots: { default: 'centerContent' } },
-    { slots: { default: 'rightContent' } }
+    { width: 200, slots: { default: 'rightContent' } }
   ]
 })
 </script>
