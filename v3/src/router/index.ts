@@ -4528,7 +4528,7 @@ const routes: Array<RouteConfig> = [
         component: () => import('@/views/start/cdn/CodeExample.vue')
       },
       {
-        path: 'global',
+        path: 'globalConfig',
         name: 'StartConfig',
         component: () => import('@/views/start/config/CodeExample.vue')
       },

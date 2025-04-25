@@ -26,6 +26,7 @@
         "lazyUseGlobal": "グローバルインストール - オンデマンドインポート",
         "lazyUseImport": "ローカルインストール - 個別にインポートします",
         "useCDN": "グローバルインストール-CDNフル紹介",
+        "useUI": "安装配套 UI 库",
         "globalConfig": "グローバルパラメーター",
         "globalTheme": "グローバルトピック",
         "globalIcon": "グローバルアイコン",

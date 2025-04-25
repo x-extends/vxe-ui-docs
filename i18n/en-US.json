@@ -26,6 +26,7 @@
         "lazyUseGlobal": "Global installation - import on demand",
         "lazyUseImport": "Partial installation - import separately",
         "useCDN": "Global installation - CDN full introduction",
+        "useUI": "Install the Vxe UI library",
         "globalConfig": "global parameters",
         "globalTheme": "global theme",
         "globalIcon": "global icon",
