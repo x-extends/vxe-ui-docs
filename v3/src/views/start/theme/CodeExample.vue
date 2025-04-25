@@ -11,6 +11,7 @@
         <pre>
           <pre-code language="javascript">
             import { VxeUI } from 'vxe-pc-ui'
+            // VxeUI 是 Vxe 库通用全局实例
 
             // 切换为默认主题
             // VxeUI.setTheme('light')

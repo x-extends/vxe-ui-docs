@@ -11,6 +11,7 @@
         <pre>
           <pre-code class="javascript">
             import { VxeUI } from 'vxe-pc-ui'
+            // VxeUI 是 Vxe 库通用全局实例
 
             import zhCN from 'vxe-pc-ui/lib/language/zh-CN' // 中文(简体)
             // import zhHK from 'vxe-pc-ui/lib/language/zh-HK' // 中文(香港)

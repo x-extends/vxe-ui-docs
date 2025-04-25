@@ -11,6 +11,7 @@
         <pre>
           <pre-code class="javascript">
             import { VxeUI } from 'vxe-pc-ui'
+            // VxeUI 是 Vxe 库通用全局实例
 
             VxeUI.setConfig({
               // size: null, // 全局尺寸
