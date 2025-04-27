@@ -66,12 +66,21 @@ export default Vue.extend({
           ],
           [
             {
-              name: '插入数据',
+              name: '插入单行数据',
               children: [
-                { code: 'INSERT_AT_ROW', name: '插入' },
-                { code: 'INSERT_NEXT_AT_ROW', name: '插入 next' },
-                { code: 'INSERT_AT_EDIT_ROW', name: '插入并编辑' },
-                { code: 'INSERT_NEXT_AT_EDIT_ROW', name: '插入并编辑 next' }
+                { code: 'INSERT_AT_ROW', name: '插入单行' },
+                { code: 'INSERT_NEXT_AT_ROW', name: '插入单行 next' },
+                { code: 'INSERT_AT_EDIT_ROW', name: '插入单行并编辑' },
+                { code: 'INSERT_NEXT_AT_EDIT_ROW', name: '插入单行 next 并编辑' }
+              ]
+            },
+            {
+              name: '插入多行数据',
+              children: [
+                { code: 'BATCH_INSERT_AT_ROW', name: '插入多行' },
+                { code: 'BATCH_INSERT_NEXT_AT_ROW', name: '插入多行 next' },
+                { code: 'BATCH_INSERT_AT_EDIT_ROW', name: '插入多行并编辑' },
+                { code: 'BATCH_INSERT_NEXT_AT_EDIT_ROW', name: '插入多行 next 并编辑 ' }
               ]
             }
           ],
