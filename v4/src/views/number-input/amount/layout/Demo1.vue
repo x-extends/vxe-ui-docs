@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-number-input v-model="val1" placeholder="显示到左侧" type="amount" :control-config="controlConfig"></vxe-number-input>
+    <vxe-number-input v-model="val1" placeholder="左右布局" type="amount" :control-config="controlConfig"></vxe-number-input>
   </div>
 </template>
 
@@ -11,6 +11,6 @@ import { VxeNumberInputPropTypes } from 'vxe-pc-ui'
 const val1 = ref(null)
 
 const controlConfig = reactive<VxeNumberInputPropTypes.ControlConfig>({
-  layout: 'left'
+  layout: 'default'
 })
 </script>

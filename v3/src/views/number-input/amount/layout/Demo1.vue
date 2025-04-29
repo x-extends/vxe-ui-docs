@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-number-input v-model="val1" placeholder="显示到左侧" type="amount" :control-config="controlConfig"></vxe-number-input>
+    <vxe-number-input v-model="val1" placeholder="左右布局" type="amount" :control-config="controlConfig"></vxe-number-input>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import { VxeNumberInputPropTypes } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const controlConfig: VxeNumberInputPropTypes.ControlConfig = {
-      layout: 'left'
+      layout: 'default'
     }
 
     return {
