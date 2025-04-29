@@ -26,6 +26,7 @@ const sexEditRender = reactive<VxeColumnPropTypes.EditRender>({
 const typeEditRender = reactive<VxeColumnPropTypes.EditRender>({
   name: 'select',
   optionGroups: [
+    { label: '', value: '' },
     {
       label: '分类1',
       options: [
@@ -66,6 +67,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
 // 模拟后端接口
 setTimeout(() => {
   sexEditRender.options = [
+    { label: '', value: '' },
     { label: '女', value: 'Women' },
     { label: '男', value: 'Man' }
   ]
