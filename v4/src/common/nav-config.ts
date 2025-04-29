@@ -2186,7 +2186,11 @@ export const navConfigList: NavVO[] = [
               { title: '只读模式', routerLink: { name: 'ComponentNumberInputNumberReadonly' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputNumberStep' } },
               { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputNumberRange' } },
-              { title: '控制按钮', routerLink: { name: 'ComponentNumberInputNumberControls' } }
+              { title: '控制按钮', routerLink: { name: 'ComponentNumberInputNumberControls' } },
+              { title: '按钮布局', routerLink: { name: 'ComponentNumberInputNumberLayout' } },
+              { title: '自定义按钮图标', routerLink: { name: 'ComponentNumberInputNumberControlIcon' } },
+              { title: '前缀后缀图标', routerLink: { name: 'ComponentNumberInputNumberIcon' } },
+              { title: '自定义模板', routerLink: { name: 'ComponentNumberInputNumberTemplate' } }
             ]
           },
           {
@@ -2217,6 +2221,7 @@ export const navConfigList: NavVO[] = [
             title: '金额',
             children: [
               { title: '基础', routerLink: { name: 'ComponentNumberInputAmountBase' } },
+              { title: '对其方式', routerLink: { name: 'ComponentNumberInputAmountAlign' } },
               { title: '可清除', routerLink: { name: 'ComponentNumberInputAmountClearable' } },
               { title: '只读模式', routerLink: { name: 'ComponentNumberInputAmountReadonly' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputAmountStep' } },
@@ -2224,7 +2229,11 @@ export const navConfigList: NavVO[] = [
               { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputAmountRange' } },
               { title: '自动补0', routerLink: { name: 'ComponentNumberInputAmountAutoFill' } },
               { title: '显示货币符号', routerLink: { name: 'ComponentNumberInputAmountShowCurrency' } },
-              { title: '控制按钮', routerLink: { name: 'ComponentNumberInputAmountControls' } }
+              { title: '控制按钮', routerLink: { name: 'ComponentNumberInputAmountControls' } },
+              { title: '按钮布局', routerLink: { name: 'ComponentNumberInputAmountLayout' } },
+              { title: '自定义按钮图标', routerLink: { name: 'ComponentNumberInputAmountControlIcon' } },
+              { title: '前缀后缀图标', routerLink: { name: 'ComponentNumberInputAmountIcon' } },
+              { title: '自定义模板', routerLink: { name: 'ComponentNumberInputAmountTemplate' } }
             ]
           }
         ]

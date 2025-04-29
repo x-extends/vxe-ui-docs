@@ -5759,6 +5759,26 @@ const routes: Array<RouteConfig> = [
                 path: 'controls',
                 name: 'ComponentNumberInputNumberControls',
                 component: () => import('@/views/number-input/number/controls/CodeExample.vue')
+              },
+              {
+                path: 'layout',
+                name: 'ComponentNumberInputNumberLayout',
+                component: () => import('@/views/number-input/number/layout/CodeExample.vue')
+              },
+              {
+                path: 'controlIcon',
+                name: 'ComponentNumberInputNumberControlIcon',
+                component: () => import('@/views/number-input/number/controlIcon/CodeExample.vue')
+              },
+              {
+                path: 'icon',
+                name: 'ComponentNumberInputNumberIcon',
+                component: () => import('@/views/number-input/number/icon/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                name: 'ComponentNumberInputNumberTemplate',
+                component: () => import('@/views/number-input/number/template/CodeExample.vue')
               }
             ]
           },
@@ -5829,6 +5849,11 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/number-input/amount/base/CodeExample.vue')
               },
               {
+                path: 'align',
+                name: 'ComponentNumberInputAmountAlign',
+                component: () => import('@/views/number-input/amount/align/CodeExample.vue')
+              },
+              {
                 path: 'clearable',
                 name: 'ComponentNumberInputAmountClearable',
                 component: () => import('@/views/number-input/amount/clearable/CodeExample.vue')
@@ -5852,6 +5877,26 @@ const routes: Array<RouteConfig> = [
                 path: 'controls',
                 name: 'ComponentNumberInputAmountControls',
                 component: () => import('@/views/number-input/amount/controls/CodeExample.vue')
+              },
+              {
+                path: 'layout',
+                name: 'ComponentNumberInputAmountLayout',
+                component: () => import('@/views/number-input/amount/layout/CodeExample.vue')
+              },
+              {
+                path: 'controlIcon',
+                name: 'ComponentNumberInputAmountControlIcon',
+                component: () => import('@/views/number-input/amount/controlIcon/CodeExample.vue')
+              },
+              {
+                path: 'icon',
+                name: 'ComponentNumberInputAmountIcon',
+                component: () => import('@/views/number-input/amount/icon/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                name: 'ComponentNumberInputAmountTemplate',
+                component: () => import('@/views/number-input/amount/template/CodeExample.vue')
               }
             ]
           }
