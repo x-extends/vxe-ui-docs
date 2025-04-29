@@ -20,10 +20,7 @@ interface RowVO {
 
 const sexEditRender = reactive<VxeColumnPropTypes.EditRender>({
   name: 'select',
-  options: [
-    { label: '女', value: 'Women' },
-    { label: '男', value: 'Man' }
-  ]
+  options: []
 })
 
 const typeEditRender = reactive<VxeColumnPropTypes.EditRender>({
@@ -65,4 +62,12 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { id: 10003, name: 'Test3', role: 'PM', sex: 'Man', sexList: [], type: '', typeList: [] }
   ]
 })
+
+// 模拟后端接口
+setTimeout(() => {
+  sexEditRender.options = [
+    { label: '女', value: 'Women' },
+    { label: '男', value: 'Man' }
+  ]
+}, 300)
 </script>
