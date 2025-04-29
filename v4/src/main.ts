@@ -16,7 +16,7 @@ import ApiLink from './components/ApiLink.vue'
 import axios from 'axios'
 import XEUtils from 'xe-utils'
 
-import VxeUI from 'vxe-pc-ui'
+import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
 import 'vxe-pc-ui/es/style.css'
 
 import VxeTable from 'vxe-table'
@@ -94,7 +94,7 @@ app.component('ApiLink', ApiLink)
 app.component('DemoUserSelectPulldown', DemoUserSelectPulldown)
 app.component('DemoRoleSelectPulldown', DemoRoleSelectPulldown)
 
-app.use(VxeUI)
+app.use(VxeUIAll)
 app.use(VxeTable)
 
 app.use(store)

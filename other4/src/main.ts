@@ -16,7 +16,7 @@ import ApiLink from './components/ApiLink.vue'
 import axios from 'axios'
 import XEUtils from 'xe-utils'
 
-import VxeUI from 'vxe-pc-ui'
+import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
 import 'vxe-pc-ui/lib/style.css'
 
 import VxeTable from 'vxe-table'
@@ -110,7 +110,7 @@ app.component('CodeRender', CodeRender)
 app.component('CodeUseVersion', CodeUseVersion)
 app.component('ApiLink', ApiLink)
 
-app.use(VxeUI)
+app.use(VxeUIAll)
 app.use(VxeTable)
 app.use(ElementPlus)
 app.use(Antd)
