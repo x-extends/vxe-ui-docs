@@ -201,10 +201,14 @@
               },
               noticeBar: {},
               numberInput: {
-                // size: null,
-                // transfer: false
                 digits: 2,
-                controls: true
+                autoFill: true,
+                controlConfig: {
+                  enabled: true,
+                  // layout: 'default',
+                  showButton: true,
+                  isWheel: true
+                }
               },
               optgroup: {},
               option: {},
