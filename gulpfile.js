@@ -243,7 +243,8 @@ gulp.task('build_latest_docs', () => {
   return gulp.src([
     'docs/v4/*.html',
     'docs/v4/*.ico',
-    'docs/v4/*.png'
+    'docs/v4/*.png',
+    'docs/v4/*.txt'
   ])
     .pipe(gulp.dest('docs'))
 })

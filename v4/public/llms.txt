@@ -1,8 +1,8 @@
 # Vxe UI
 
-Vxe UI 支持 vue2, vue3 的 PC 端组件库
+A vue based PC component library
 
-## 目录
+## Table of Contents
 
 - [vxe-alert API](/#/vxe-alert/api)
 - [vxe-anchor API](/#/vxe-anchor/api)
