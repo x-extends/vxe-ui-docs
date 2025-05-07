@@ -26,7 +26,7 @@ const sexEditRender = reactive<VxeColumnPropTypes.EditRender>({
 const typeEditRender = reactive<VxeColumnPropTypes.EditRender>({
   name: 'select',
   optionGroups: [
-    { label: '', value: '' },
+    { label: '', value: '', options: [] },
     {
       label: '分类1',
       options: [
