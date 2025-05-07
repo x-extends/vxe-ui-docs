@@ -36,7 +36,7 @@
             language="javascript"
             :content="`
             // ...
-            import VxeUI from 'vxe-pc-ui'
+            import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
             import VxeUITable from 'vxe-table'
             import 'vxe-table/lib/style.css'
@@ -46,7 +46,7 @@
             // 确保 window.ExcelJS 变量存在即表示安装完成
             VxeUI.use(VxeUIPluginExportXLSX)
 
-            Vue.use(VxeUI)
+            Vue.use(VxeUIAll)
             Vue.use(VxeUITable)
             //...
             `">
@@ -61,7 +61,7 @@
             language="javascript"
             :content="`
             // ...
-            import { VxeUI } from 'vxe-pc-ui'
+            import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
             import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
             import ExcelJS from 'exceljs'
             // ...
@@ -70,7 +70,7 @@
               ExcelJS
             })
 
-            Vue.use(VxeUI)
+            Vue.use(VxeUIAll)
             Vue.use(VxeUITable)
             //...
             `">
