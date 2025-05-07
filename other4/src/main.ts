@@ -40,6 +40,8 @@ import VxeUIPluginRenderIView from '@vxe-ui/plugin-render-iview'
 import '@vxe-ui/plugin-render-iview/dist/style.css'
 import VxeUIPluginRenderNaive from '@vxe-ui/plugin-render-naive'
 import '@vxe-ui/plugin-render-naive/dist/style.css'
+import VxeUIPluginRenderArco from '@vxe-ui/plugin-render-arco'
+import '@vxe-ui/plugin-render-arco/dist/style.css'
 
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
@@ -100,6 +102,7 @@ VxeUI.use(VxeUIPluginRenderWangEditor, {
 VxeUI.use(VxeUIPluginValidator)
 VxeUI.use(VxeUIPluginRenderIView)
 VxeUI.use(VxeUIPluginRenderNaive)
+VxeUI.use(VxeUIPluginRenderArco)
 
 const app = createApp(App)
 

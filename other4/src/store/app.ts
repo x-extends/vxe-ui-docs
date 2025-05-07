@@ -95,6 +95,7 @@ export const useAppStore = defineStore('app', {
     pluginRenderEchartsCDNLib: handleLibVersion('@vxe-ui/plugin-render-echarts'),
     pluginRenderElementCDNLib: handleLibVersion('@vxe-ui/plugin-render-element'),
     pluginRenderNaiveCDNLib: handleLibVersion('@vxe-ui/plugin-render-naive'),
+    pluginRenderArcoCDNLib: handleLibVersion('@vxe-ui/plugin-render-arco'),
     pluginRenderIViewCDNLib: handleLibVersion('@vxe-ui/plugin-render-iview'),
     pluginRenderWangEditorCDNLib: handleLibVersion('@vxe-ui/plugin-render-wangeditor'),
     pluginValidatorCDNLib: handleLibVersion('@vxe-ui/plugin-validator'),

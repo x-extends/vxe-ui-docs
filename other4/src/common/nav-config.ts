@@ -471,6 +471,18 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
+    title: '第三方插件 - 渲染 arco-design 组件',
+    isExpand: false,
+    children: [
+      {
+        title: '开发指南',
+        children: [
+          { title: '安装插件', routerLink: { name: 'PluginRenderArcoInstall' } }
+        ]
+      }
+    ]
+  },
+  {
     title: 'API',
     isExpand: false,
     children: []

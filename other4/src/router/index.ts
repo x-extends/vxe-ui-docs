@@ -863,6 +863,17 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
+    path: '/plugin-render-arco',
+    component: PageLayout,
+    children: [
+      {
+        path: 'install',
+        name: 'PluginRenderArcoInstall',
+        component: () => import('@/views/plugin-render-arco/install/CodeExample.vue')
+      }
+    ]
+  },
+  {
     path: '/plugin-render-wangeditor',
     component: PageLayout,
     children: [
