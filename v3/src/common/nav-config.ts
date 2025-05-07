@@ -1135,6 +1135,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '可编辑 - 渲染 - 插槽式',
           children: [
+            { title: 'input 原生-输入框', routerLink: { name: 'ComponentGridEditTemplateInput' } },
+            { title: 'select 原生-下拉框', routerLink: { name: 'ComponentGridEditTemplateSelect' } },
             { title: 'VxeButton 按钮', routerLink: { name: 'ComponentGridEditTemplateVxeButton' } },
             { title: 'VxeInput 输入框', routerLink: { name: 'ComponentGridEditTemplateVxeInput' } },
             { title: 'VxeNumberInput 数值输入框', routerLink: { name: 'ComponentGridEditTemplateVxeNumberInput' } },
