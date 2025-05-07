@@ -49,7 +49,13 @@ interface RowVO {
 const sexOptions = ref<VxeSelectPropTypes.Options>([])
 
 const typeOptions = ref([
-  { label: '', value: '', options: [] },
+  {
+    label: '',
+    value: '0',
+    options: [
+      { label: '', value: '' }
+    ]
+  },
   {
     label: '分类1',
     value: '1',

@@ -51,7 +51,13 @@ export default Vue.extend({
     const sexOptions: VxeSelectPropTypes.Options = []
 
     const typeOptions = [
-      { label: '', value: '', options: [] },
+      {
+        label: '',
+        value: '0',
+        options: [
+          { label: '', value: '' }
+        ]
+      },
       {
         label: '分类1',
         value: '1',
