@@ -4671,6 +4671,22 @@ const routes: Array<RouteRecordRaw> = [
         component: RouteLayout,
         children: [
           {
+            path: 'date-picker',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'api',
+                name: 'GlobalCommandsDatePickerAPI',
+                component: () => import('@/views/global/commands/date-picker/api/CodeExample.vue')
+              },
+              {
+                path: 'base',
+                name: 'GlobalCommandsDatePickerBase',
+                component: () => import('@/views/global/commands/date-picker/base/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'table',
             component: RouteLayout,
             children: [
@@ -6082,8 +6098,29 @@ const routes: Array<RouteRecordRaw> = [
               },
               {
                 path: 'shortcut',
-                name: 'ComponentDatePickerDateShortcut',
-                component: () => import('@/views/date-picker/date/shortcut/CodeExample.vue')
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'code',
+                    name: 'ComponentDatePickerDateShortcutCode',
+                    component: () => import('@/views/date-picker/date/shortcut/code/CodeExample.vue')
+                  },
+                  {
+                    path: 'status',
+                    name: 'ComponentDatePickerDateShortcutStatus',
+                    component: () => import('@/views/date-picker/date/shortcut/status/CodeExample.vue')
+                  },
+                  {
+                    path: 'position',
+                    name: 'ComponentDatePickerDateShortcutPosition',
+                    component: () => import('@/views/date-picker/date/shortcut/position/CodeExample.vue')
+                  },
+                  {
+                    path: 'custom',
+                    name: 'ComponentDatePickerDateShortcutCustom',
+                    component: () => import('@/views/date-picker/date/shortcut/custom/CodeExample.vue')
+                  }
+                ]
               },
               {
                 path: 'template',

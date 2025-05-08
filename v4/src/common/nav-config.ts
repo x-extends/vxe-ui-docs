@@ -2281,7 +2281,15 @@ export const navConfigList: NavVO[] = [
               { title: '单选', routerLink: { name: 'ComponentDatePickerDateBase' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerDateMultiple' } },
               { title: '禁用', routerLink: { name: 'ComponentDatePickerDateDisabled' } },
-              { title: '快捷按钮', routerLink: { name: 'ComponentDatePickerDateShortcut' } },
+              {
+                title: '快捷按钮',
+                children: [
+                  { title: '内置 Code', routerLink: { name: 'ComponentDatePickerDateShortcutCode' } },
+                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerDateShortcutStatus' } },
+                  { title: '显示位置', routerLink: { name: 'ComponentDatePickerDateShortcutPosition' } },
+                  { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerDateShortcutCustom' } }
+                ]
+              },
               {
                 title: '自定义插槽模板',
                 children: [
@@ -2374,10 +2382,22 @@ export const navConfigList: NavVO[] = [
               { title: '快捷按钮', routerLink: { name: 'ComponentDatePickerYearShortcut' } }
             ]
           },
-          { title: '禁用指定日期', routerLink: { name: 'ComponentDatePickerDisabledMethod' } },
-          { title: '可选日期限制', routerLink: { name: 'ComponentDatePickerMinMax' } },
-          { title: '实现日期带小圆点', routerLink: { name: 'ComponentDatePickerFestivalMethod' } },
-          { title: '实现农历及节假日', routerLink: { name: 'ComponentDatePickerHolidays' } }
+          {
+            title: '功能示例',
+            children: [
+              { title: '禁用指定日期', routerLink: { name: 'ComponentDatePickerDisabledMethod' } },
+              { title: '可选日期限制', routerLink: { name: 'ComponentDatePickerMinMax' } },
+              { title: '实现日期带小圆点', routerLink: { name: 'ComponentDatePickerFestivalMethod' } },
+              { title: '实现农历及节假日', routerLink: { name: 'ComponentDatePickerHolidays' } }
+            ]
+          },
+          {
+            title: '快捷按钮指令（全局复用）',
+            children: [
+              { title: 'API', routerLink: { name: 'GlobalCommandsDatePickerAPI' } },
+              { title: '快捷按钮', routerLink: { name: 'GlobalCommandsDatePickerBase' } }
+            ]
+          }
         ]
       },
       {
