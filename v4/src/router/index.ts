@@ -1595,6 +1595,11 @@ const tableRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/table/editRender/vxe-date-picker/CodeExample.vue')
         },
         {
+          path: 'vxe-date-range-picker',
+          name: 'ComponentTableEditRenderVxeDateRangePicker',
+          component: () => import('@/views/table/editRender/vxe-date-range-picker/CodeExample.vue')
+        },
+        {
           path: 'vxe-select',
           name: 'ComponentTableEditRenderVxeSelect',
           component: () => import('@/views/table/editRender/vxe-select/CodeExample.vue')
@@ -1644,6 +1649,11 @@ const tableRouteConfig: RouteRecordRaw = {
           path: 'vxe-date-picker',
           name: 'ComponentTableEditTemplateVxeDatePicker',
           component: () => import('@/views/table/editTemplate/vxe-date-picker/CodeExample.vue')
+        },
+        {
+          path: 'vxe-date-rangepicker',
+          name: 'ComponentTableEditTemplateVxeDateRangePicker',
+          component: () => import('@/views/table/editTemplate/vxe-date-range-picker/CodeExample.vue')
         },
         {
           path: 'vxe-select',
@@ -3733,6 +3743,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/editRender/vxe-date-picker/CodeExample.vue')
         },
         {
+          path: 'vxe-date-range-picker',
+          name: 'ComponentGridEditRenderVxeDateRangePicker',
+          component: () => import('@/views/grid/editRender/vxe-date-range-picker/CodeExample.vue')
+        },
+        {
           path: 'vxe-select',
           name: 'ComponentGridEditRenderVxeSelect',
           component: () => import('@/views/grid/editRender/vxe-select/CodeExample.vue')
@@ -3807,6 +3822,11 @@ const gridRouteConfig: RouteRecordRaw = {
           path: 'vxe-date-picker',
           name: 'ComponentGridEditTemplateVxeDatePicker',
           component: () => import('@/views/grid/editTemplate/vxe-date-picker/CodeExample.vue')
+        },
+        {
+          path: 'vxe-date-range-picker',
+          name: 'ComponentGridEditTemplateVxeDateRangePicker',
+          component: () => import('@/views/grid/editTemplate/vxe-date-range-picker/CodeExample.vue')
         },
         {
           path: 'vxe-select',
@@ -8904,6 +8924,11 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/basics/itemRender/vxe-date-picker/CodeExample.vue')
                   },
                   {
+                    path: 'vxe-date-range-picker',
+                    name: 'ComponentFormBasicsItemRenderVxeDateRangePicker',
+                    component: () => import('@/views/form/basics/itemRender/vxe-date-range-picker/CodeExample.vue')
+                  },
+                  {
                     path: 'vxe-tree-select',
                     name: 'ComponentFormBasicsItemRenderVxeTreeSelect',
                     component: () => import('@/views/form/basics/itemRender/vxe-tree-select/CodeExample.vue')
@@ -8993,6 +9018,11 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'vxe-date-picker',
                     name: 'ComponentFormBasicsItemTemplateVxeDatePicker',
                     component: () => import('@/views/form/basics/itemTemplate/vxe-date-picker/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-date-range-picker',
+                    name: 'ComponentFormBasicsItemTemplateVxeDateRangePicker',
+                    component: () => import('@/views/form/basics/itemTemplate/vxe-date-range-picker/CodeExample.vue')
                   },
                   {
                     path: 'vxe-tree-select',
@@ -9240,6 +9270,11 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/config/itemRender/vxe-date-picker/CodeExample.vue')
                   },
                   {
+                    path: 'vxe-date-range-picker',
+                    name: 'ComponentFormConfigItemRenderVxeDateRangePicker',
+                    component: () => import('@/views/form/config/itemRender/vxe-date-range-picker/CodeExample.vue')
+                  },
+                  {
                     path: 'vxe-tree-select',
                     name: 'ComponentFormConfigItemRenderVxeTreeSelect',
                     component: () => import('@/views/form/config/itemRender/vxe-tree-select/CodeExample.vue')
@@ -9339,6 +9374,11 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'vxe-date-picker',
                     name: 'ComponentFormConfigItemTemplateVxeDatePicker',
                     component: () => import('@/views/form/config/itemTemplate/vxe-date-picker/CodeExample.vue')
+                  },
+                  {
+                    path: 'vxe-date-range-picker',
+                    name: 'ComponentFormConfigItemTemplateVxeDateRangePicker',
+                    component: () => import('@/views/form/config/itemTemplate/vxe-date-range-picker/CodeExample.vue')
                   },
                   {
                     path: 'vxe-tree-select',
