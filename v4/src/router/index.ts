@@ -6181,8 +6181,29 @@ const routes: Array<RouteRecordRaw> = [
               },
               {
                 path: 'shortcut',
-                name: 'ComponentDatePickerWeekShortcut',
-                component: () => import('@/views/date-picker/week/shortcut/CodeExample.vue')
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'code',
+                    name: 'ComponentDatePickerWeekShortcutCode',
+                    component: () => import('@/views/date-picker/week/shortcut/code/CodeExample.vue')
+                  },
+                  {
+                    path: 'status',
+                    name: 'ComponentDatePickerWeekShortcutStatus',
+                    component: () => import('@/views/date-picker/week/shortcut/status/CodeExample.vue')
+                  },
+                  {
+                    path: 'position',
+                    name: 'ComponentDatePickerWeekShortcutPosition',
+                    component: () => import('@/views/date-picker/week/shortcut/position/CodeExample.vue')
+                  },
+                  {
+                    path: 'custom',
+                    name: 'ComponentDatePickerWeekShortcutCustom',
+                    component: () => import('@/views/date-picker/week/shortcut/custom/CodeExample.vue')
+                  }
+                ]
               },
               {
                 path: 'template',
@@ -6228,8 +6249,29 @@ const routes: Array<RouteRecordRaw> = [
               },
               {
                 path: 'shortcut',
-                name: 'ComponentDatePickerMonthShortcut',
-                component: () => import('@/views/date-picker/month/shortcut/CodeExample.vue')
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'code',
+                    name: 'ComponentDatePickerMonthShortcutCode',
+                    component: () => import('@/views/date-picker/month/shortcut/code/CodeExample.vue')
+                  },
+                  {
+                    path: 'status',
+                    name: 'ComponentDatePickerMonthShortcutStatus',
+                    component: () => import('@/views/date-picker/month/shortcut/status/CodeExample.vue')
+                  },
+                  {
+                    path: 'position',
+                    name: 'ComponentDatePickerMonthShortcutPosition',
+                    component: () => import('@/views/date-picker/month/shortcut/position/CodeExample.vue')
+                  },
+                  {
+                    path: 'custom',
+                    name: 'ComponentDatePickerMonthShortcutCustom',
+                    component: () => import('@/views/date-picker/month/shortcut/custom/CodeExample.vue')
+                  }
+                ]
               }
             ]
           },
@@ -6249,8 +6291,29 @@ const routes: Array<RouteRecordRaw> = [
               },
               {
                 path: 'shortcut',
-                name: 'ComponentDatePickerQuarterShortcut',
-                component: () => import('@/views/date-picker/quarter/shortcut/CodeExample.vue')
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'code',
+                    name: 'ComponentDatePickerQuarterShortcutCode',
+                    component: () => import('@/views/date-picker/quarter/shortcut/code/CodeExample.vue')
+                  },
+                  {
+                    path: 'status',
+                    name: 'ComponentDatePickerQuarterShortcutStatus',
+                    component: () => import('@/views/date-picker/quarter/shortcut/status/CodeExample.vue')
+                  },
+                  {
+                    path: 'position',
+                    name: 'ComponentDatePickerQuarterShortcutPosition',
+                    component: () => import('@/views/date-picker/quarter/shortcut/position/CodeExample.vue')
+                  },
+                  {
+                    path: 'custom',
+                    name: 'ComponentDatePickerQuarterShortcutCustom',
+                    component: () => import('@/views/date-picker/quarter/shortcut/custom/CodeExample.vue')
+                  }
+                ]
               }
             ]
           },
@@ -6270,8 +6333,29 @@ const routes: Array<RouteRecordRaw> = [
               },
               {
                 path: 'shortcut',
-                name: 'ComponentDatePickerYearShortcut',
-                component: () => import('@/views/date-picker/year/shortcut/CodeExample.vue')
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'code',
+                    name: 'ComponentDatePickerYearShortcutCode',
+                    component: () => import('@/views/date-picker/year/shortcut/code/CodeExample.vue')
+                  },
+                  {
+                    path: 'status',
+                    name: 'ComponentDatePickerYearShortcutStatus',
+                    component: () => import('@/views/date-picker/year/shortcut/status/CodeExample.vue')
+                  },
+                  {
+                    path: 'position',
+                    name: 'ComponentDatePickerYearShortcutPosition',
+                    component: () => import('@/views/date-picker/year/shortcut/position/CodeExample.vue')
+                  },
+                  {
+                    path: 'custom',
+                    name: 'ComponentDatePickerYearShortcutCustom',
+                    component: () => import('@/views/date-picker/year/shortcut/custom/CodeExample.vue')
+                  }
+                ]
               }
             ]
           },
@@ -6296,8 +6380,29 @@ const routes: Array<RouteRecordRaw> = [
               },
               {
                 path: 'shortcut',
-                name: 'ComponentDatePickerTimeShortcut',
-                component: () => import('@/views/date-picker/time/shortcut/CodeExample.vue')
+                component: RouteLayout,
+                children: [
+                  // {
+                  //   path: 'code',
+                  //   name: 'ComponentDatePickerTimeShortcutCode',
+                  //   component: () => import('@/views/date-picker/time/shortcut/code/CodeExample.vue')
+                  // },
+                  // {
+                  //   path: 'status',
+                  //   name: 'ComponentDatePickerTimeShortcutStatus',
+                  //   component: () => import('@/views/date-picker/time/shortcut/status/CodeExample.vue')
+                  // },
+                  // {
+                  //   path: 'position',
+                  //   name: 'ComponentDatePickerTimeShortcutPosition',
+                  //   component: () => import('@/views/date-picker/time/shortcut/position/CodeExample.vue')
+                  // },
+                  {
+                    path: 'custom',
+                    name: 'ComponentDatePickerTimeShortcutCustom',
+                    component: () => import('@/views/date-picker/time/shortcut/custom/CodeExample.vue')
+                  }
+                ]
               },
               {
                 path: 'template',
@@ -6353,8 +6458,29 @@ const routes: Array<RouteRecordRaw> = [
               },
               {
                 path: 'shortcut',
-                name: 'ComponentDatePickerDatetimeShortcut',
-                component: () => import('@/views/date-picker/week/shortcut/CodeExample.vue')
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'code',
+                    name: 'ComponentDatePickerDatetimeShortcutCode',
+                    component: () => import('@/views/date-picker/datetime/shortcut/code/CodeExample.vue')
+                  },
+                  {
+                    path: 'status',
+                    name: 'ComponentDatePickerDatetimeShortcutStatus',
+                    component: () => import('@/views/date-picker/datetime/shortcut/status/CodeExample.vue')
+                  },
+                  {
+                    path: 'position',
+                    name: 'ComponentDatePickerDatetimeShortcutPosition',
+                    component: () => import('@/views/date-picker/datetime/shortcut/position/CodeExample.vue')
+                  },
+                  {
+                    path: 'custom',
+                    name: 'ComponentDatePickerDatetimeShortcutCustom',
+                    component: () => import('@/views/date-picker/datetime/shortcut/custom/CodeExample.vue')
+                  }
+                ]
               },
               {
                 path: 'template',

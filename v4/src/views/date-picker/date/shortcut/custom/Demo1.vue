@@ -22,14 +22,14 @@ const shortcutConfig = reactive<VxeDatePickerPropTypes.ShortcutConfig>({
     },
     {
       name: '2',
-      content: '上一天',
+      content: '昨天',
       clickMethod () {
         val1.value = XEUtils.toDateString(XEUtils.getWhatDay(new Date(), -1), 'yyyy-MM-dd')
       }
     },
     {
       name: '3',
-      content: '下一天',
+      content: '明天',
       clickMethod () {
         val1.value = XEUtils.toDateString(XEUtils.getWhatDay(new Date(), 1), 'yyyy-MM-dd')
       }

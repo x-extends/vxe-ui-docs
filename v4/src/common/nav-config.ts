@@ -2307,7 +2307,15 @@ export const navConfigList: NavVO[] = [
               { title: '单选', routerLink: { name: 'ComponentDatePickerTimeBase' } },
               { title: '禁用', routerLink: { name: 'ComponentDatePickerTimeDisabled' } },
               { title: '自定义格式', routerLink: { name: 'ComponentDatePickerTimeValueFormat' } },
-              { title: '快捷按钮', routerLink: { name: 'ComponentDatePickerTimeShortcut' } },
+              {
+                title: '快捷按钮',
+                children: [
+                  // { title: '内置 Code', routerLink: { name: 'ComponentDatePickerTimeShortcutCode' } },
+                  // { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerTimeShortcutStatus' } },
+                  // { title: '显示位置', routerLink: { name: 'ComponentDatePickerTimeShortcutPosition' } },
+                  { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerTimeShortcutCustom' } }
+                ]
+              },
               {
                 title: '自定义插槽模板',
                 children: [
@@ -2326,7 +2334,15 @@ export const navConfigList: NavVO[] = [
               { title: '禁用', routerLink: { name: 'ComponentDatePickerDatetimeDisabled' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerDatetimeMultiple' } },
               { title: '自定义格式', routerLink: { name: 'ComponentDatePickerDatetimeValueFormat' } },
-              { title: '快捷按钮', routerLink: { name: 'ComponentDatePickerDatetimeShortcut' } },
+              {
+                title: '快捷按钮',
+                children: [
+                  { title: '内置 Code', routerLink: { name: 'ComponentDatePickerDatetimeShortcutCode' } },
+                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerDatetimeShortcutStatus' } },
+                  { title: '显示位置', routerLink: { name: 'ComponentDatePickerDatetimeShortcutPosition' } },
+                  { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerDatetimeShortcutCustom' } }
+                ]
+              },
               {
                 title: '自定义插槽模板',
                 children: [
@@ -2346,7 +2362,15 @@ export const navConfigList: NavVO[] = [
               { title: '多选', routerLink: { name: 'ComponentDatePickerWeekMultiple' } },
               { title: '自定义开始日', routerLink: { name: 'ComponentDatePickerWeekStartDay' } },
               { title: '自定义返回值', routerLink: { name: 'ComponentDatePickerWeekSelectDay' } },
-              { title: '快捷按钮', routerLink: { name: 'ComponentDatePickerWeekShortcut' } },
+              {
+                title: '快捷按钮',
+                children: [
+                  { title: '内置 Code', routerLink: { name: 'ComponentDatePickerWeekShortcutCode' } },
+                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerWeekShortcutStatus' } },
+                  { title: '显示位置', routerLink: { name: 'ComponentDatePickerWeekShortcutPosition' } },
+                  { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerWeekShortcutCustom' } }
+                ]
+              },
               {
                 title: '自定义插槽模板',
                 children: [
@@ -2363,7 +2387,15 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '单选', routerLink: { name: 'ComponentDatePickerMonthBase' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerMonthMultiple' } },
-              { title: '快捷按钮', routerLink: { name: 'ComponentDatePickerMonthShortcut' } }
+              {
+                title: '快捷按钮',
+                children: [
+                  { title: '内置 Code', routerLink: { name: 'ComponentDatePickerMonthShortcutCode' } },
+                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerMonthShortcutStatus' } },
+                  { title: '显示位置', routerLink: { name: 'ComponentDatePickerMonthShortcutPosition' } },
+                  { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerMonthShortcutCustom' } }
+                ]
+              }
             ]
           },
           {
@@ -2371,7 +2403,15 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '单选', routerLink: { name: 'ComponentDatePickerQuarterBase' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerQuarterMultiple' } },
-              { title: '快捷按钮', routerLink: { name: 'ComponentDatePickerQuarterShortcut' } }
+              {
+                title: '快捷按钮',
+                children: [
+                  { title: '内置 Code', routerLink: { name: 'ComponentDatePickerQuarterShortcutCode' } },
+                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerQuarterShortcutStatus' } },
+                  { title: '显示位置', routerLink: { name: 'ComponentDatePickerQuarterShortcutPosition' } },
+                  { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerQuarterShortcutCustom' } }
+                ]
+              }
             ]
           },
           {
@@ -2379,7 +2419,15 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '单选', routerLink: { name: 'ComponentDatePickerYearBase' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerYearMultiple' } },
-              { title: '快捷按钮', routerLink: { name: 'ComponentDatePickerYearShortcut' } }
+              {
+                title: '快捷按钮',
+                children: [
+                  { title: '内置 Code', routerLink: { name: 'ComponentDatePickerYearShortcutCode' } },
+                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerYearShortcutStatus' } },
+                  { title: '显示位置', routerLink: { name: 'ComponentDatePickerYearShortcutPosition' } },
+                  { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerYearShortcutCustom' } }
+                ]
+              }
             ]
           },
           {
