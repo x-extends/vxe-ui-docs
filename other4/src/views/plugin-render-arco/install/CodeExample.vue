@@ -29,7 +29,9 @@
 
         <pre>
           <div>文件 src/main </div>
-          <pre-code language="javascript">
+          <pre-code
+            language="shell"
+            :content="`
             // ...
             import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
@@ -43,6 +45,7 @@
 
             createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
             // ...
+            `">
           </pre-code>
         </pre>
       </template>
