@@ -2279,6 +2279,7 @@ export const navConfigList: NavVO[] = [
             title: '日期类型',
             children: [
               { title: '单选', routerLink: { name: 'ComponentDatePickerDateBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentDatePickerDateClearable' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerDateMultiple' } },
               { title: '禁用', routerLink: { name: 'ComponentDatePickerDateDisabled' } },
               {
@@ -2444,6 +2445,177 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: 'API', routerLink: { name: 'GlobalCommandsDatePickerAPI' } },
               { title: '快捷按钮', routerLink: { name: 'GlobalCommandsDatePickerBase' } }
+            ]
+          }
+        ]
+      },
+      {
+        title: 'DateRangePicker 日期范围选择',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'date-range-picker' } } },
+          {
+            title: '日期类型',
+            children: [
+              { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerDateBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentDateRangePickerDateClearable' } },
+              { title: '禁用', routerLink: { name: 'ComponentDateRangePickerDateDisabled' } },
+              { title: '自动关闭', routerLink: { name: 'ComponentDateRangePickerDateAutoClose' } },
+              {
+                title: '快捷按钮',
+                children: [
+                  { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerDateShortcutCode' } },
+                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerDateShortcutStatus' } },
+                  { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerDateShortcutPosition' } },
+                  { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerDateShortcutCustom' } }
+                ]
+              },
+              {
+                title: '自定义插槽模板',
+                children: [
+                  { title: '自定义顶部模板', routerLink: { name: 'ComponentDateRangePickerDateTemplateTop' } },
+                  { title: '自定义底部模板', routerLink: { name: 'ComponentDateRangePickerDateTemplateBottom' } },
+                  { title: '自定义左侧模板', routerLink: { name: 'ComponentDateRangePickerDateTemplateLeft' } },
+                  { title: '自定义右侧模板', routerLink: { name: 'ComponentDateRangePickerDateTemplateRight' } }
+                ]
+              }
+            ]
+          },
+          {
+            title: '时间类型',
+            children: [
+              { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerTimeBase' } },
+              { title: '禁用', routerLink: { name: 'ComponentDateRangePickerTimeDisabled' } },
+              { title: '自定义格式', routerLink: { name: 'ComponentDateRangePickerTimeValueFormat' } },
+              {
+                title: '快捷按钮',
+                children: [
+                  // { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerTimeShortcutCode' } },
+                  // { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerTimeShortcutStatus' } },
+                  // { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerTimeShortcutPosition' } },
+                  { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerTimeShortcutCustom' } }
+                ]
+              },
+              {
+                title: '自定义插槽模板',
+                children: [
+                  { title: '自定义顶部模板', routerLink: { name: 'ComponentDateRangePickerTimeTemplateTop' } },
+                  { title: '自定义底部模板', routerLink: { name: 'ComponentDateRangePickerTimeTemplateBottom' } },
+                  { title: '自定义左侧模板', routerLink: { name: 'ComponentDateRangePickerTimeTemplateLeft' } },
+                  { title: '自定义右侧模板', routerLink: { name: 'ComponentDateRangePickerTimeTemplateRight' } }
+                ]
+              }
+            ]
+          },
+          {
+            title: '日期带时间类型',
+            children: [
+              { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerDatetimeBase' } },
+              { title: '禁用', routerLink: { name: 'ComponentDateRangePickerDatetimeDisabled' } },
+              { title: '自定义格式', routerLink: { name: 'ComponentDateRangePickerDatetimeValueFormat' } },
+              {
+                title: '快捷按钮',
+                children: [
+                  { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutCode' } },
+                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutStatus' } },
+                  { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutPosition' } },
+                  { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutCustom' } }
+                ]
+              },
+              {
+                title: '自定义插槽模板',
+                children: [
+                  { title: '自定义顶部模板', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateTop' } },
+                  { title: '自定义底部模板', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateBottom' } },
+                  { title: '自定义左侧模板', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateLeft' } },
+                  { title: '自定义右侧模板', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateRight' } }
+                ]
+              }
+            ]
+          },
+          {
+            title: '周类型',
+            children: [
+              { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerWeekBase' } },
+              { title: '禁用', routerLink: { name: 'ComponentDateRangePickerWeekDisabled' } },
+              { title: '自定义开始日', routerLink: { name: 'ComponentDateRangePickerWeekStartDay' } },
+              { title: '自定义返回值', routerLink: { name: 'ComponentDateRangePickerWeekSelectDay' } },
+              {
+                title: '快捷按钮',
+                children: [
+                  { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerWeekShortcutCode' } },
+                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerWeekShortcutStatus' } },
+                  { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerWeekShortcutPosition' } },
+                  { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerWeekShortcutCustom' } }
+                ]
+              },
+              {
+                title: '自定义插槽模板',
+                children: [
+                  { title: '自定义顶部模板', routerLink: { name: 'ComponentDateRangePickerWeekTemplateTop' } },
+                  { title: '自定义底部模板', routerLink: { name: 'ComponentDateRangePickerWeekTemplateBottom' } },
+                  { title: '自定义左侧模板', routerLink: { name: 'ComponentDateRangePickerWeekTemplateLeft' } },
+                  { title: '自定义右侧模板', routerLink: { name: 'ComponentDateRangePickerWeekTemplateRight' } }
+                ]
+              }
+            ]
+          },
+          {
+            title: '月度类型',
+            children: [
+              { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerMonthBase' } },
+              {
+                title: '快捷按钮',
+                children: [
+                  { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerMonthShortcutCode' } },
+                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerMonthShortcutStatus' } },
+                  { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerMonthShortcutPosition' } },
+                  { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerMonthShortcutCustom' } }
+                ]
+              }
+            ]
+          },
+          {
+            title: '季度类型',
+            children: [
+              { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerQuarterBase' } },
+              {
+                title: '快捷按钮',
+                children: [
+                  { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutCode' } },
+                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutStatus' } },
+                  { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutPosition' } },
+                  { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutCustom' } }
+                ]
+              }
+            ]
+          },
+          {
+            title: '年度类型',
+            children: [
+              { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerYearBase' } },
+              {
+                title: '快捷按钮',
+                children: [
+                  { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerYearShortcutCode' } },
+                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerYearShortcutStatus' } },
+                  { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerYearShortcutPosition' } },
+                  { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerYearShortcutCustom' } }
+                ]
+              }
+            ]
+          },
+          {
+            title: '功能示例',
+            children: [
+              { title: '实现日期带小圆点', routerLink: { name: 'ComponentDateRangePickerFestivalMethod' } },
+              { title: '实现农历及节假日', routerLink: { name: 'ComponentDateRangePickerHolidays' } }
+            ]
+          },
+          {
+            title: '快捷按钮指令（全局复用）',
+            children: [
+              { title: 'API', routerLink: { name: 'GlobalCommandsDateRangePickerAPI' } },
+              { title: '快捷按钮', routerLink: { name: 'GlobalCommandsDateRangePickerBase' } }
             ]
           }
         ]

@@ -4687,6 +4687,22 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'date-range-picker',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'api',
+                name: 'GlobalCommandsDateRangePickerAPI',
+                component: () => import('@/views/global/commands/date-range-picker/api/CodeExample.vue')
+              },
+              {
+                path: 'base',
+                name: 'GlobalCommandsDateRangePickerBase',
+                component: () => import('@/views/global/commands/date-range-picker/base/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'table',
             component: RouteLayout,
             children: [
@@ -6087,6 +6103,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/date-picker/date/base/CodeExample.vue')
               },
               {
+                path: 'clearable',
+                name: 'ComponentDatePickerDateClearable',
+                component: () => import('@/views/date-picker/date/clearable/CodeExample.vue')
+              },
+              {
                 path: 'disabled',
                 name: 'ComponentDatePickerDateDisabled',
                 component: () => import('@/views/date-picker/date/disabled/CodeExample.vue')
@@ -6529,6 +6550,435 @@ const routes: Array<RouteRecordRaw> = [
             path: 'holidays',
             name: 'ComponentDatePickerHolidays',
             component: () => import('@/views/date-picker/holidays/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'date-range-picker',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'date',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentDateRangePickerDateBase',
+                component: () => import('@/views/date-range-picker/date/base/CodeExample.vue')
+              },
+              {
+                path: 'clearable',
+                name: 'ComponentDateRangePickerDateClearable',
+                component: () => import('@/views/date-range-picker/date/clearable/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentDateRangePickerDateDisabled',
+                component: () => import('@/views/date-range-picker/date/disabled/CodeExample.vue')
+              },
+              {
+                path: 'autoClose',
+                name: 'ComponentDateRangePickerDateAutoClose',
+                component: () => import('@/views/date-range-picker/date/autoClose/CodeExample.vue')
+              },
+              {
+                path: 'shortcut',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'code',
+                    name: 'ComponentDateRangePickerDateShortcutCode',
+                    component: () => import('@/views/date-range-picker/date/shortcut/code/CodeExample.vue')
+                  },
+                  {
+                    path: 'status',
+                    name: 'ComponentDateRangePickerDateShortcutStatus',
+                    component: () => import('@/views/date-range-picker/date/shortcut/status/CodeExample.vue')
+                  },
+                  {
+                    path: 'position',
+                    name: 'ComponentDateRangePickerDateShortcutPosition',
+                    component: () => import('@/views/date-range-picker/date/shortcut/position/CodeExample.vue')
+                  },
+                  {
+                    path: 'custom',
+                    name: 'ComponentDateRangePickerDateShortcutCustom',
+                    component: () => import('@/views/date-range-picker/date/shortcut/custom/CodeExample.vue')
+                  }
+                ]
+              },
+              {
+                path: 'template',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'top',
+                    name: 'ComponentDateRangePickerDateTemplateTop',
+                    component: () => import('@/views/date-range-picker/date/template/top/CodeExample.vue')
+                  },
+                  {
+                    path: 'bottom',
+                    name: 'ComponentDateRangePickerDateTemplateBottom',
+                    component: () => import('@/views/date-range-picker/date/template/bottom/CodeExample.vue')
+                  },
+                  {
+                    path: 'left',
+                    name: 'ComponentDateRangePickerDateTemplateLeft',
+                    component: () => import('@/views/date-range-picker/date/template/left/CodeExample.vue')
+                  },
+                  {
+                    path: 'right',
+                    name: 'ComponentDateRangePickerDateTemplateRight',
+                    component: () => import('@/views/date-range-picker/date/template/right/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            path: 'week',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentDateRangePickerWeekBase',
+                component: () => import('@/views/date-range-picker/week/base/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentDateRangePickerWeekDisabled',
+                component: () => import('@/views/date-range-picker/week/disabled/CodeExample.vue')
+              },
+              {
+                path: 'startDay',
+                name: 'ComponentDateRangePickerWeekStartDay',
+                component: () => import('@/views/date-range-picker/week/startDay/CodeExample.vue')
+              },
+              {
+                path: 'selectDay',
+                name: 'ComponentDateRangePickerWeekSelectDay',
+                component: () => import('@/views/date-range-picker/week/selectDay/CodeExample.vue')
+              },
+              {
+                path: 'shortcut',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'code',
+                    name: 'ComponentDateRangePickerWeekShortcutCode',
+                    component: () => import('@/views/date-range-picker/week/shortcut/code/CodeExample.vue')
+                  },
+                  {
+                    path: 'status',
+                    name: 'ComponentDateRangePickerWeekShortcutStatus',
+                    component: () => import('@/views/date-range-picker/week/shortcut/status/CodeExample.vue')
+                  },
+                  {
+                    path: 'position',
+                    name: 'ComponentDateRangePickerWeekShortcutPosition',
+                    component: () => import('@/views/date-range-picker/week/shortcut/position/CodeExample.vue')
+                  },
+                  {
+                    path: 'custom',
+                    name: 'ComponentDateRangePickerWeekShortcutCustom',
+                    component: () => import('@/views/date-range-picker/week/shortcut/custom/CodeExample.vue')
+                  }
+                ]
+              },
+              {
+                path: 'template',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'top',
+                    name: 'ComponentDateRangePickerWeekTemplateTop',
+                    component: () => import('@/views/date-range-picker/week/template/top/CodeExample.vue')
+                  },
+                  {
+                    path: 'bottom',
+                    name: 'ComponentDateRangePickerWeekTemplateBottom',
+                    component: () => import('@/views/date-range-picker/week/template/bottom/CodeExample.vue')
+                  },
+                  {
+                    path: 'left',
+                    name: 'ComponentDateRangePickerWeekTemplateLeft',
+                    component: () => import('@/views/date-range-picker/week/template/left/CodeExample.vue')
+                  },
+                  {
+                    path: 'right',
+                    name: 'ComponentDateRangePickerWeekTemplateRight',
+                    component: () => import('@/views/date-range-picker/week/template/right/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            path: 'month',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentDateRangePickerMonthBase',
+                component: () => import('@/views/date-range-picker/month/base/CodeExample.vue')
+              },
+              {
+                path: 'shortcut',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'code',
+                    name: 'ComponentDateRangePickerMonthShortcutCode',
+                    component: () => import('@/views/date-range-picker/month/shortcut/code/CodeExample.vue')
+                  },
+                  {
+                    path: 'status',
+                    name: 'ComponentDateRangePickerMonthShortcutStatus',
+                    component: () => import('@/views/date-range-picker/month/shortcut/status/CodeExample.vue')
+                  },
+                  {
+                    path: 'position',
+                    name: 'ComponentDateRangePickerMonthShortcutPosition',
+                    component: () => import('@/views/date-range-picker/month/shortcut/position/CodeExample.vue')
+                  },
+                  {
+                    path: 'custom',
+                    name: 'ComponentDateRangePickerMonthShortcutCustom',
+                    component: () => import('@/views/date-range-picker/month/shortcut/custom/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            path: 'quarter',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentDateRangePickerQuarterBase',
+                component: () => import('@/views/date-range-picker/quarter/base/CodeExample.vue')
+              },
+              {
+                path: 'shortcut',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'code',
+                    name: 'ComponentDateRangePickerQuarterShortcutCode',
+                    component: () => import('@/views/date-range-picker/quarter/shortcut/code/CodeExample.vue')
+                  },
+                  {
+                    path: 'status',
+                    name: 'ComponentDateRangePickerQuarterShortcutStatus',
+                    component: () => import('@/views/date-range-picker/quarter/shortcut/status/CodeExample.vue')
+                  },
+                  {
+                    path: 'position',
+                    name: 'ComponentDateRangePickerQuarterShortcutPosition',
+                    component: () => import('@/views/date-range-picker/quarter/shortcut/position/CodeExample.vue')
+                  },
+                  {
+                    path: 'custom',
+                    name: 'ComponentDateRangePickerQuarterShortcutCustom',
+                    component: () => import('@/views/date-range-picker/quarter/shortcut/custom/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            path: 'year',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentDateRangePickerYearBase',
+                component: () => import('@/views/date-range-picker/year/base/CodeExample.vue')
+              },
+              {
+                path: 'shortcut',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'code',
+                    name: 'ComponentDateRangePickerYearShortcutCode',
+                    component: () => import('@/views/date-range-picker/year/shortcut/code/CodeExample.vue')
+                  },
+                  {
+                    path: 'status',
+                    name: 'ComponentDateRangePickerYearShortcutStatus',
+                    component: () => import('@/views/date-range-picker/year/shortcut/status/CodeExample.vue')
+                  },
+                  {
+                    path: 'position',
+                    name: 'ComponentDateRangePickerYearShortcutPosition',
+                    component: () => import('@/views/date-range-picker/year/shortcut/position/CodeExample.vue')
+                  },
+                  {
+                    path: 'custom',
+                    name: 'ComponentDateRangePickerYearShortcutCustom',
+                    component: () => import('@/views/date-range-picker/year/shortcut/custom/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            path: 'time',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentDateRangePickerTimeBase',
+                component: () => import('@/views/date-range-picker/time/base/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentDateRangePickerTimeDisabled',
+                component: () => import('@/views/date-range-picker/time/disabled/CodeExample.vue')
+              },
+              {
+                path: 'valueFormat',
+                name: 'ComponentDateRangePickerTimeValueFormat',
+                component: () => import('@/views/date-range-picker/time/valueFormat/CodeExample.vue')
+              },
+              {
+                path: 'shortcut',
+                component: RouteLayout,
+                children: [
+                  // {
+                  //   path: 'code',
+                  //   name: 'ComponentDateRangePickerTimeShortcutCode',
+                  //   component: () => import('@/views/date-range-picker/time/shortcut/code/CodeExample.vue')
+                  // },
+                  // {
+                  //   path: 'status',
+                  //   name: 'ComponentDateRangePickerTimeShortcutStatus',
+                  //   component: () => import('@/views/date-range-picker/time/shortcut/status/CodeExample.vue')
+                  // },
+                  // {
+                  //   path: 'position',
+                  //   name: 'ComponentDateRangePickerTimeShortcutPosition',
+                  //   component: () => import('@/views/date-range-picker/time/shortcut/position/CodeExample.vue')
+                  // },
+                  {
+                    path: 'custom',
+                    name: 'ComponentDateRangePickerTimeShortcutCustom',
+                    component: () => import('@/views/date-range-picker/time/shortcut/custom/CodeExample.vue')
+                  }
+                ]
+              },
+              {
+                path: 'template',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'top',
+                    name: 'ComponentDateRangePickerTimeTemplateTop',
+                    component: () => import('@/views/date-range-picker/time/template/top/CodeExample.vue')
+                  },
+                  {
+                    path: 'bottom',
+                    name: 'ComponentDateRangePickerTimeTemplateBottom',
+                    component: () => import('@/views/date-range-picker/time/template/bottom/CodeExample.vue')
+                  },
+                  {
+                    path: 'left',
+                    name: 'ComponentDateRangePickerTimeTemplateLeft',
+                    component: () => import('@/views/date-range-picker/time/template/left/CodeExample.vue')
+                  },
+                  {
+                    path: 'right',
+                    name: 'ComponentDateRangePickerTimeTemplateRight',
+                    component: () => import('@/views/date-range-picker/time/template/right/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            path: 'datetime',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'base',
+                name: 'ComponentDateRangePickerDatetimeBase',
+                component: () => import('@/views/date-range-picker/datetime/base/CodeExample.vue')
+              },
+              {
+                path: 'disabled',
+                name: 'ComponentDateRangePickerDatetimeDisabled',
+                component: () => import('@/views/date-range-picker/datetime/disabled/CodeExample.vue')
+              },
+              {
+                path: 'valueFormat',
+                name: 'ComponentDateRangePickerDatetimeValueFormat',
+                component: () => import('@/views/date-range-picker/datetime/valueFormat/CodeExample.vue')
+              },
+              {
+                path: 'shortcut',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'code',
+                    name: 'ComponentDateRangePickerDatetimeShortcutCode',
+                    component: () => import('@/views/date-range-picker/datetime/shortcut/code/CodeExample.vue')
+                  },
+                  {
+                    path: 'status',
+                    name: 'ComponentDateRangePickerDatetimeShortcutStatus',
+                    component: () => import('@/views/date-range-picker/datetime/shortcut/status/CodeExample.vue')
+                  },
+                  {
+                    path: 'position',
+                    name: 'ComponentDateRangePickerDatetimeShortcutPosition',
+                    component: () => import('@/views/date-range-picker/datetime/shortcut/position/CodeExample.vue')
+                  },
+                  {
+                    path: 'custom',
+                    name: 'ComponentDateRangePickerDatetimeShortcutCustom',
+                    component: () => import('@/views/date-range-picker/datetime/shortcut/custom/CodeExample.vue')
+                  }
+                ]
+              },
+              {
+                path: 'template',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'top',
+                    name: 'ComponentDateRangePickerDatetimeTemplateTop',
+                    component: () => import('@/views/date-range-picker/datetime/template/top/CodeExample.vue')
+                  },
+                  {
+                    path: 'bottom',
+                    name: 'ComponentDateRangePickerDatetimeTemplateBottom',
+                    component: () => import('@/views/date-range-picker/datetime/template/bottom/CodeExample.vue')
+                  },
+                  {
+                    path: 'left',
+                    name: 'ComponentDateRangePickerDatetimeTemplateLeft',
+                    component: () => import('@/views/date-range-picker/datetime/template/left/CodeExample.vue')
+                  },
+                  {
+                    path: 'right',
+                    name: 'ComponentDateRangePickerDatetimeTemplateRight',
+                    component: () => import('@/views/date-range-picker/datetime/template/right/CodeExample.vue')
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            path: 'festivalMethod',
+            name: 'ComponentDateRangePickerFestivalMethod',
+            component: () => import('@/views/date-range-picker/festivalMethod/CodeExample.vue')
+          },
+          {
+            path: 'holidays',
+            name: 'ComponentDateRangePickerHolidays',
+            component: () => import('@/views/date-range-picker/holidays/CodeExample.vue')
           }
         ]
       },

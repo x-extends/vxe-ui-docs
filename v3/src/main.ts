@@ -30,6 +30,8 @@ import '@/views/grid/footer/footerFormat/demo2.footerFormat'
 
 import '@/views/global/formats/table/base/demo1.table.formats'
 
+import '@/views/global/commands/date-picker/base/demo1.date-picker.commands'
+import '@/views/global/commands/date-range-picker/base/demo1.date-range-picker.commands'
 import '@/views/global/commands/table/base/demo1.table.commands'
 
 import '@/views/global/menus/table/base/demo1.table.menus'
