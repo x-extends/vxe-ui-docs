@@ -24,10 +24,12 @@ import 'vxe-table/lib/style.css'
 
 import enUS from 'vxe-pc-ui/lib/language/en-US'
 
+import '@/views/form/basics/format/demo2.format'
 import '@/views/table/base/format/demo2.format'
 import '@/views/table/footer/footerFormat/demo2.footerFormat'
 import '@/views/grid/footer/footerFormat/demo2.footerFormat'
 
+import '@/views/global/formats/form/base/demo1.form.formats'
 import '@/views/global/formats/table/base/demo1.table.formats'
 
 import '@/views/global/commands/date-picker/base/demo1.date-picker.commands'

@@ -1892,6 +1892,7 @@ export const navConfigList: NavVO[] = [
           { title: '标题后缀图标', routerLink: { name: 'ComponentFormBasicsTitleSuffix' } },
           { title: '边框', routerLink: { name: 'ComponentFormBasicsBorder' } },
           { title: '标题背景', routerLink: { name: 'ComponentFormBasicsTitleBackground' } },
+          { title: '格式化内容', routerLink: { name: 'ComponentFormBasicsFormat' } },
           { title: '分组/分行/分列', routerLink: { name: 'ComponentFormBasicsGroup' } },
           { title: '自定义布局', routerLink: { name: 'ComponentFormBasicsCustomLayout' } },
           {
@@ -1989,6 +1990,7 @@ export const navConfigList: NavVO[] = [
           { title: '文字提示', routerLink: { name: 'ComponentFormConfigTooltip' } },
           { title: '边框', routerLink: { name: 'ComponentFormConfigBorder' } },
           { title: '标题背景', routerLink: { name: 'ComponentFormConfigTitleBackground' } },
+          { title: '格式化内容', routerLink: { name: 'ComponentFormConfigFormat' } },
           { title: '分组/分行/分列', routerLink: { name: 'ComponentFormConfigGroup' } },
           {
             title: '折叠表单',
@@ -2064,6 +2066,14 @@ export const navConfigList: NavVO[] = [
               { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemRender/el-input` }
             ]
           },
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '自定义标题模板', routerLink: { name: 'ComponentFormConfigTemplateTitle' } },
+              { title: '自定义标题右侧模板', routerLink: { name: 'ComponentFormConfigTemplateExtra' } },
+              { title: '自定义内容模板', routerLink: { name: 'ComponentFormConfigTemplateContent' } }
+            ]
+          },
           { title: '在页签中使用', routerLink: { name: 'ComponentFormConfigTabs' } },
           { title: '实现简历模板', routerLink: { name: 'ComponentFormConfigResumeTemplate' } }
         ]
@@ -2074,6 +2084,13 @@ export const navConfigList: NavVO[] = [
           { title: 'API', routerLink: { name: 'GlobalValidatorsFormAPI' } },
           { title: '表单项校验', routerLink: { name: 'GlobalValidatorsFormBase' } },
           { title: '便捷校验配置插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-validator/form/base` }
+        ]
+      },
+      {
+        i18nKey: 'app.aside.menu.formGlobalFormats',
+        children: [
+          { title: 'API', routerLink: { name: 'GlobalFormatsFormAPI' } },
+          { title: '表单项', routerLink: { name: 'GlobalFormatsFormBase' } }
         ]
       },
       {

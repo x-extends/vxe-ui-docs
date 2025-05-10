@@ -4652,19 +4652,19 @@ const routes: Array<RouteRecordRaw> = [
         component: RouteLayout,
         children: [
           {
+            path: 'form',
+            component: RouteLayout,
+            children: [
+              { path: 'api', name: 'GlobalFormatsFormAPI', component: () => import('@/views/global/formats/form/api/CodeExample.vue') },
+              { path: 'base', name: 'GlobalFormatsFormBase', component: () => import('@/views/global/formats/form/base/CodeExample.vue') }
+            ]
+          },
+          {
             path: 'table',
             component: RouteLayout,
             children: [
-              {
-                path: 'api',
-                name: 'GlobalFormatsTableAPI',
-                component: () => import('@/views/global/formats/table/api/CodeExample.vue')
-              },
-              {
-                path: 'base',
-                name: 'GlobalFormatsTableBase',
-                component: () => import('@/views/global/formats/table/base/CodeExample.vue')
-              }
+              { path: 'api', name: 'GlobalFormatsTableAPI', component: () => import('@/views/global/formats/table/api/CodeExample.vue') },
+              { path: 'base', name: 'GlobalFormatsTableBase', component: () => import('@/views/global/formats/table/base/CodeExample.vue') }
             ]
           }
         ]
@@ -8813,6 +8813,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/form/basics/vertical/CodeExample.vue')
               },
               {
+                path: 'format',
+                name: 'ComponentFormBasicsFormat',
+                component: () => import('@/views/form/basics/format/CodeExample.vue')
+              },
+              {
                 path: 'collapse',
                 component: RouteLayout,
                 children: [
@@ -9159,6 +9164,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/form/config/vertical/CodeExample.vue')
               },
               {
+                path: 'format',
+                name: 'ComponentFormConfigFormat',
+                component: () => import('@/views/form/config/format/CodeExample.vue')
+              },
+              {
                 path: 'collapse',
                 component: RouteLayout,
                 children: [
@@ -9429,6 +9439,27 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'vxe-upload',
                     name: 'ComponentFormConfigItemTemplateVxeUpload',
                     component: () => import('@/views/form/config/itemTemplate/vxe-upload/CodeExample.vue')
+                  }
+                ]
+              },
+              {
+                path: 'template',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'title',
+                    name: 'ComponentFormConfigTemplateTitle',
+                    component: () => import('@/views/form/config/template/title/CodeExample.vue')
+                  },
+                  {
+                    path: 'extra',
+                    name: 'ComponentFormConfigTemplateExtra',
+                    component: () => import('@/views/form/config/template/extra/CodeExample.vue')
+                  },
+                  {
+                    path: 'content',
+                    name: 'ComponentFormConfigTemplateContent',
+                    component: () => import('@/views/form/config/template/content/CodeExample.vue')
                   }
                 ]
               },

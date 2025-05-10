@@ -1,11 +1,6 @@
 <template>
   <div>
-    <vxe-form
-      ref="formRef"
-      title-bold
-      :data="formData"
-      @submit="submitEvent"
-      @reset="resetEvent">
+    <vxe-form :data="formData" >
       <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
         <template #title>
           <vxe-checkbox v-model="formData.isEnableName"></vxe-checkbox>
@@ -29,19 +24,12 @@
           <vxe-input v-model="formData.age"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item align="center" span="24" :item-render="{}">
-        <template #default>
-          <vxe-button type="submit" status="primary" content="提交"></vxe-button>
-          <vxe-button type="reset" content="重置"></vxe-button>
-        </template>
-      </vxe-form-item>
     </vxe-form>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeUI, VxeFormInstance } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -65,20 +53,6 @@ export default Vue.extend({
 
     return {
       formData
-    }
-  },
-  methods: {
-    changeEvent  (params: any) {
-      const $form = this.$refs.formRef as VxeFormInstance
-      if ($form) {
-        $form.updateStatus(params)
-      }
-    },
-    submitEvent () {
-      VxeUI.modal.message({ content: '保存成功', status: 'success' })
-    },
-    resetEvent () {
-      VxeUI.modal.message({ content: '重置事件', status: 'info' })
     }
   }
 })

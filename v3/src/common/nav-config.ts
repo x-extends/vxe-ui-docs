@@ -1894,6 +1894,7 @@ export const navConfigList: NavVO[] = [
           { title: '标题后缀图标', routerLink: { name: 'ComponentFormBasicsTitleSuffix' } },
           { title: '边框', routerLink: { name: 'ComponentFormBasicsBorder' } },
           { title: '标题背景', routerLink: { name: 'ComponentFormBasicsTitleBackground' } },
+          { title: '格式化内容', routerLink: { name: 'ComponentFormBasicsFormat' } },
           { title: '分组/分行/分列', routerLink: { name: 'ComponentFormBasicsGroup' } },
           { title: '自定义布局', routerLink: { name: 'ComponentFormBasicsCustomLayout' } },
           {
@@ -1927,8 +1928,9 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeInput 输入框', routerLink: { name: 'ComponentFormBasicsItemRenderVxeInput' } },
               { title: 'VxeNumberInput 数值输入框', routerLink: { name: 'ComponentFormBasicsItemRenderVxeNumberInput' } },
               { title: 'VxeTextarea 文本域', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTextarea' } },
-              { title: 'VxeSelect 下拉选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSelect' } },
+              { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSelect' } },
               { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeDatePicker' } },
+              { title: 'VxeDateRangePicker 日期范围选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeDateRangePicker' } },
               { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTreeSelect' } },
               { title: 'VxeTableSelect 下拉表格选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTableSelect' } },
               { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSwitch' } },
@@ -1951,8 +1953,9 @@ export const navConfigList: NavVO[] = [
               { title: 'VxeInput 输入框', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeInput' } },
               { title: 'VxeNumberInput 数值输入框', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeNumberInput' } },
               { title: 'VxeTextarea 文本域', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeTextarea' } },
-              { title: 'VxeSelect 下拉选择', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSelect' } },
+              { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSelect' } },
               { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDatePicker' } },
+              { title: 'VxeDateRangePicker 日期范围选择', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDateRangePicker' } },
               { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeTreeSelect' } },
               { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSwitch' } },
               { title: 'VxeRadioGroup 单选组', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeRadioGroup' } },
@@ -1989,6 +1992,7 @@ export const navConfigList: NavVO[] = [
           { title: '文字提示', routerLink: { name: 'ComponentFormConfigTooltip' } },
           { title: '边框', routerLink: { name: 'ComponentFormConfigBorder' } },
           { title: '标题背景', routerLink: { name: 'ComponentFormConfigTitleBackground' } },
+          { title: '格式化内容', routerLink: { name: 'ComponentFormConfigFormat' } },
           { title: '分组/分行/分列', routerLink: { name: 'ComponentFormConfigGroup' } },
           {
             title: '折叠表单',
@@ -2064,6 +2068,14 @@ export const navConfigList: NavVO[] = [
               { title: '更多扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form/itemRender/el-input` }
             ]
           },
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '自定义标题模板', routerLink: { name: 'ComponentFormConfigTemplateTitle' } },
+              { title: '自定义标题右侧模板', routerLink: { name: 'ComponentFormConfigTemplateExtra' } },
+              { title: '自定义内容模板', routerLink: { name: 'ComponentFormConfigTemplateContent' } }
+            ]
+          },
           { title: '在页签中使用', routerLink: { name: 'ComponentFormConfigTabs' } },
           { title: '实现简历模板', routerLink: { name: 'ComponentFormConfigResumeTemplate' } }
         ]
@@ -2074,6 +2086,13 @@ export const navConfigList: NavVO[] = [
           { title: 'API', routerLink: { name: 'GlobalValidatorsFormAPI' } },
           { title: '表单项校验', routerLink: { name: 'GlobalValidatorsFormBase' } },
           { title: '便捷校验配置插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-validator/form/base` }
+        ]
+      },
+      {
+        i18nKey: 'app.aside.menu.formGlobalFormats',
+        children: [
+          { title: 'API', routerLink: { name: 'GlobalFormatsFormAPI' } },
+          { title: '表单项', routerLink: { name: 'GlobalFormatsFormBase' } }
         ]
       },
       {
