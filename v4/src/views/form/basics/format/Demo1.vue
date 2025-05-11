@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-form border title-bold :data="formData">
+    <vxe-form border :title-width="100" :data="formData">
       <vxe-form-item title="名称" field="name" span="12"></vxe-form-item>
       <vxe-form-item title="性别" field="sex" span="12" :formatter="formatSex"></vxe-form-item>
       <vxe-form-item title="银行卡" field="bankCard" span="12" :formatter="formatBankCard"></vxe-form-item>
