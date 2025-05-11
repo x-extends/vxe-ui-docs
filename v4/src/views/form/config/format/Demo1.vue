@@ -27,6 +27,7 @@ const sexList = [
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
   border: true,
   titleWidth: 100,
+  titleBackground: true,
   data: {
     name: 'test1',
     nickname: 'Testing',

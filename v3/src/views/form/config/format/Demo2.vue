@@ -23,6 +23,7 @@ export default Vue.extend({
     const formOptions: VxeFormProps<FormDataVO> = {
       border: true,
       titleWidth: 100,
+      titleBackground: true,
       data: {
         name: 'test1',
         nickname: 'Testing',
