@@ -64,9 +64,7 @@
               },
               collapsePane: {},
               countdown: {},
-              datePicker: {
-                // size: null,
-                // transfer: false
+              datePanel: {
                 // parseFormat: 'yyyy-MM-dd HH:mm:ss.SSS',
                 // labelFormat: '',
                 // valueFormat: '',
@@ -74,6 +72,37 @@
                 endDate: new Date(2100, 0, 1),
                 startDay: 1,
                 selectDay: 1
+              },
+              datePicker: {
+                // size: null,
+                // transfer: false,
+                shortcutConfig: {
+                  // position: 'left',
+                  align: 'left',
+                  mode: 'text',
+                  autoClose: true
+                },
+                startDay: 1,
+                selectDay: 1,
+                autoClose: true,
+                showClearButton: null,
+                showConfirmButton: null
+              },
+              dateRangePicker: {
+                // size: null,
+                // transfer: false,
+                shortcutConfig: {
+                  // position: 'left',
+                  align: 'left',
+                  mode: 'text',
+                  autoClose: true
+                },
+                startDay: 1,
+                selectDay: 1,
+                separator: ' ~ ',
+                autoClose: true,
+                showClearButton: null,
+                showConfirmButton: null
               },
               drawer: {
                 // size: null,

@@ -17,6 +17,8 @@ interface FormDataVO {
   name: string
   nickname: string
   sex: string
+  selectDate: string
+  dates: string[]
   startDate: string
   endDate: string
   address: string
@@ -28,13 +30,17 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     name: 'test1',
     nickname: 'Testing',
     sex: '',
-    startDate: '',
-    endDate: '',
+    selectDate: '2025-05-10,2025-05-15',
+    dates: ['2025-05-02', '2025-05-08'],
+    endDate: '2025-05-20',
+    startDate: '2025-06-01',
     address: ''
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
-    { field: 'startAndEnd', title: '日期范围选择', span: 24, itemRender: { name: 'VxeDateRangePicker', startField: 'startDate', endField: 'endDate' } },
+    { field: 'selectDate', title: '字符串格式', span: 24, itemRender: { name: 'VxeDateRangePicker' } },
+    { field: 'dates', title: '数组格式', span: 24, itemRender: { name: 'VxeDateRangePicker' } },
+    { field: 'startAndEnd', title: '2个字段格式', span: 24, itemRender: { name: 'VxeDateRangePicker', startField: 'startDate', endField: 'endDate' } },
     { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })

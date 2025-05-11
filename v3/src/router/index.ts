@@ -6075,25 +6075,20 @@ const routes: Array<RouteConfig> = [
             path: 'date',
             component: RouteLayout,
             children: [
-              {
-                path: 'base',
-                name: 'ComponentDatePickerDateBase',
-                component: () => import('@/views/date-picker/date/base/CodeExample.vue')
-              },
-              {
-                path: 'clearable',
-                name: 'ComponentDatePickerDateClearable',
-                component: () => import('@/views/date-picker/date/clearable/CodeExample.vue')
-              },
-              {
-                path: 'disabled',
-                name: 'ComponentDatePickerDateDisabled',
-                component: () => import('@/views/date-picker/date/disabled/CodeExample.vue')
-              },
+              { path: 'size', name: 'ComponentDatePickerDateSize', component: () => import('@/views/date-picker/date/size/CodeExample.vue') },
+              { path: 'base', name: 'ComponentDatePickerDateBase', component: () => import('@/views/date-picker/date/base/CodeExample.vue') },
+              { path: 'clearable', name: 'ComponentDatePickerDateClearable', component: () => import('@/views/date-picker/date/clearable/CodeExample.vue') },
+              { path: 'disabled', name: 'ComponentDatePickerDateDisabled', component: () => import('@/views/date-picker/date/disabled/CodeExample.vue') },
+              { path: 'readonly', name: 'ComponentDatePickerDateReadonly', component: () => import('@/views/date-picker/date/readonly/CodeExample.vue') },
               {
                 path: 'multiple',
                 name: 'ComponentDatePickerDateMultiple',
                 component: () => import('@/views/date-picker/date/multiple/CodeExample.vue')
+              },
+              {
+                path: 'autoClose',
+                name: 'ComponentDatePickerDateAutoClose',
+                component: () => import('@/views/date-picker/date/autoClose/CodeExample.vue')
               },
               {
                 path: 'shortcut',
@@ -6121,6 +6116,10 @@ const routes: Array<RouteConfig> = [
                   }
                 ]
               },
+              { path: 'minMax', name: 'ComponentDatePickerDateMinMax', component: () => import('@/views/date-picker/date/minMax/CodeExample.vue') },
+              { path: 'disabledMethod', name: 'ComponentDatePickerDateDisabledMethod', component: () => import('@/views/date-picker/date/disabledMethod/CodeExample.vue') },
+              { path: 'prefixIcon', name: 'ComponentDatePickerDatePrefixIcon', component: () => import('@/views/date-picker/date/prefixIcon/CodeExample.vue') },
+              { path: 'suffixIcon', name: 'ComponentDatePickerDateSuffixIcon', component: () => import('@/views/date-picker/date/suffixIcon/CodeExample.vue') },
               {
                 path: 'template',
                 component: RouteLayout,
@@ -6508,16 +6507,6 @@ const routes: Array<RouteConfig> = [
                 ]
               }
             ]
-          },
-          {
-            path: 'disabledMethod',
-            name: 'ComponentDatePickerDisabledMethod',
-            component: () => import('@/views/date-picker/disabledMethod/CodeExample.vue')
-          },
-          {
-            path: 'minMax',
-            name: 'ComponentDatePickerMinMax',
-            component: () => import('@/views/date-picker/minMax/CodeExample.vue')
           },
           {
             path: 'festivalMethod',
