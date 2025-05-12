@@ -22,7 +22,7 @@ import { VxeUI, VxePrintInstance, VxePrintPropTypes } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const pageStyle: VxePrintPropTypes.PageStyle = {
-      margin: 16
+      margin: 0
     }
 
     return {

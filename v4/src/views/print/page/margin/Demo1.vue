@@ -22,7 +22,7 @@ import { VxeUI, VxePrintInstance, VxePrintPropTypes } from 'vxe-pc-ui'
 const printRef = ref<VxePrintInstance>()
 
 const pageStyle = ref<VxePrintPropTypes.PageStyle>({
-  margin: 16
+  margin: 0
 })
 
 const printEvent1 = () => {
