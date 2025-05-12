@@ -4130,6 +4130,11 @@ const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/print/footer/CodeExample.vue')
         },
         {
+          path: 'margin',
+          name: 'ComponentGridPrintMargin',
+          component: () => import('@/views/grid/print/margin/CodeExample.vue')
+        },
+        {
           path: 'template',
           component: RouteLayout,
           children: [
@@ -8174,21 +8179,10 @@ const routes: Array<RouteRecordRaw> = [
             path: 'page',
             component: RouteLayout,
             children: [
-              {
-                path: 'basics',
-                name: 'ComponentPrintPageBasics',
-                component: () => import('@/views/print/page/basics/CodeExample.vue')
-              },
-              {
-                path: 'header',
-                name: 'ComponentPrintPageHeader',
-                component: () => import('@/views/print/page/header/CodeExample.vue')
-              },
-              {
-                path: 'footer',
-                name: 'ComponentPrintPageFooter',
-                component: () => import('@/views/print/page/footer/CodeExample.vue')
-              },
+              { path: 'basics', name: 'ComponentPrintPageBasics', component: () => import('@/views/print/page/basics/CodeExample.vue') },
+              { path: 'header', name: 'ComponentPrintPageHeader', component: () => import('@/views/print/page/header/CodeExample.vue') },
+              { path: 'footer', name: 'ComponentPrintPageFooter', component: () => import('@/views/print/page/footer/CodeExample.vue') },
+              { path: 'margin', name: 'ComponentPrintPageMargin', component: () => import('@/views/print/page/margin/CodeExample.vue') },
               {
                 path: 'image',
                 name: 'ComponentPrintPageImage',

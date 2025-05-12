@@ -1271,6 +1271,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '指定列', routerLink: { name: 'ComponentGridPrintColumns' } },
             { title: '自定义页眉/标题', routerLink: { name: 'ComponentGridPrintHeader' } },
             { title: '自定义页尾/页码', routerLink: { name: 'ComponentGridPrintFooter' } },
+            { title: '设置边距', routerLink: { name: 'ComponentGridPrintMargin' } },
             {
               title: '自定义插槽模板',
               children: [
@@ -3177,6 +3178,7 @@ export const navConfigList: NavVO[] = [
               { title: '基础', routerLink: { name: 'ComponentPrintPageBasics' } },
               { title: '页眉/标题', routerLink: { name: 'ComponentPrintPageHeader' } },
               { title: '页尾/页码', routerLink: { name: 'ComponentPrintPageFooter' } },
+              { title: '设置边距', routerLink: { name: 'ComponentPrintPageMargin' } },
               { title: '批量打印图片', routerLink: { name: 'ComponentPrintPageImage' } },
               { title: '分页打印表格', routerLink: { name: 'ComponentPrintPageTable' } },
               { title: '自定义模板', routerLink: { name: 'ComponentPrintPageTemplate' } }
