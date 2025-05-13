@@ -264,7 +264,8 @@
         "loadMoreVertical": "實現加載行",
         "loadMoreHorizontal": "實現加載列",
         "other": "功能示例",
-        "bookkeepingVoucher": "記賬憑證"
+        "bookkeepingVoucher": "記賬憑證",
+        "editCursorLock": "方向键锁定光标"
       }
     },
     "filtersComplexInput": {

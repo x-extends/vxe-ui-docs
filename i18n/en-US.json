@@ -264,7 +264,8 @@
         "loadMoreVertical": "Implement loading rows",
         "loadMoreHorizontal": "Implement loading columns",
         "other": "Function example",
-        "bookkeepingVoucher": "Accounting voucher"
+        "bookkeepingVoucher": "Accounting voucher",
+        "editCursorLock": "方向键锁定光标"
       }
     },
     "filtersComplexInput": {

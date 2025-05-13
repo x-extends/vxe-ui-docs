@@ -264,7 +264,8 @@
         "loadMoreVertical": "Implementar linhas de carregamento",
         "loadMoreHorizontal": "Implementar colunas de carregamento",
         "other": "Exemplos funcionais",
-        "bookkeepingVoucher": "Coloque contábil"
+        "bookkeepingVoucher": "Coloque contábil",
+        "editCursorLock": "方向键锁定光标"
       }
     },
     "filtersComplexInput": {

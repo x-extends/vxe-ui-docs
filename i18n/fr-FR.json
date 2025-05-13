@@ -264,7 +264,8 @@
         "loadMoreVertical": "Implémentez les lignes de chargement",
         "loadMoreHorizontal": "Implémenter des colonnes de chargement",
         "other": "Exemples fonctionnels",
-        "bookkeepingVoucher": "Bon de comptabilité"
+        "bookkeepingVoucher": "Bon de comptabilité",
+        "editCursorLock": "方向键锁定光标"
       }
     },
     "filtersComplexInput": {

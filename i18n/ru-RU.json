@@ -264,7 +264,8 @@
         "loadMoreVertical": "Реализуйте загрузочные строки",
         "loadMoreHorizontal": "Реализуйте загрузочные столбцы",
         "other": "Функциональные примеры",
-        "bookkeepingVoucher": "Бухгалтерский ваучер"
+        "bookkeepingVoucher": "Бухгалтерский ваучер",
+        "editCursorLock": "方向键锁定光标"
       }
     },
     "filtersComplexInput": {

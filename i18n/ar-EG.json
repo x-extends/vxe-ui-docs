@@ -264,7 +264,8 @@
         "loadMoreVertical": "تنفيذ صفوف التحميل",
         "loadMoreHorizontal": "تنفيذ أعمدة التحميل",
         "other": "أمثلة وظيفية",
-        "bookkeepingVoucher": "قسيمة المحاسبة"
+        "bookkeepingVoucher": "قسيمة المحاسبة",
+        "editCursorLock": "方向键锁定光标"
       }
     },
     "filtersComplexInput": {

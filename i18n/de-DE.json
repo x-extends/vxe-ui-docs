@@ -264,7 +264,8 @@
         "loadMoreVertical": "Ladezreihen implementieren",
         "loadMoreHorizontal": "Ladespalten implementieren",
         "other": "Funktionale Beispiele",
-        "bookkeepingVoucher": "Buchhaltungsgutschein"
+        "bookkeepingVoucher": "Buchhaltungsgutschein",
+        "editCursorLock": "方向键锁定光标"
       }
     },
     "filtersComplexInput": {

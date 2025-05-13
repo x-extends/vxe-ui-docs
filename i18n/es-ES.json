@@ -264,7 +264,8 @@
         "loadMoreVertical": "Implementar la carga de filas",
         "loadMoreHorizontal": "Implementar columnas de carga",
         "other": "Ejemplos funcionales",
-        "bookkeepingVoucher": "Cupón de contabilidad"
+        "bookkeepingVoucher": "Cupón de contabilidad",
+        "editCursorLock": "方向键锁定光标"
       }
     },
     "filtersComplexInput": {

@@ -264,7 +264,8 @@
         "loadMoreVertical": "Впровадити завантажувальні рядки",
         "loadMoreHorizontal": "Впровадити стовпці завантаження",
         "other": "Функціональні приклади",
-        "bookkeepingVoucher": "Ваучер"
+        "bookkeepingVoucher": "Ваучер",
+        "editCursorLock": "方向键锁定光标"
       }
     },
     "filtersComplexInput": {

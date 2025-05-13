@@ -264,7 +264,8 @@
         "loadMoreVertical": "ロード行を実装します",
         "loadMoreHorizontal": "読み込み列を実装します",
         "other": "機能的な例",
-        "bookkeepingVoucher": "会計バウチャー"
+        "bookkeepingVoucher": "会計バウチャー",
+        "editCursorLock": "方向键锁定光标"
       }
     },
     "filtersComplexInput": {
