@@ -2195,6 +2195,7 @@ const gridRouteConfig: RouteRecordRaw = {
       path: 'sort',
       component: RouteLayout,
       children: [
+        { path: 'base', name: 'ComponentGridSortBase', component: () => import('@/views/grid/sort/base/CodeExample.vue') },
         {
           path: 'multiple',
           name: 'ComponentGridSortMultiple',
