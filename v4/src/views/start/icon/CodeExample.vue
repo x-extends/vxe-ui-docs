@@ -30,6 +30,7 @@
               SELECT_LOADED: 'vxe-icon-spinner roll',
               SELECT_OPEN: 'vxe-icon-caret-down rotate180',
               SELECT_CLOSE: 'vxe-icon-caret-down',
+              ADD_OPTION: 'vxe-icon-add',
 
               // icon-picker
               ICON_PICKER_OPEN: 'vxe-icon-caret-down rotate180',
@@ -56,10 +57,12 @@
               // input
               INPUT_CLEAR: 'vxe-icon-error-circle-fill',
               INPUT_SEARCH: 'vxe-icon-search',
+              INPUT_PLUS_NUM: 'vxe-icon-caret-up',
+              INPUT_MINUS_NUM: 'vxe-icon-caret-down',
 
               // number-picker
-              NUMBER_INPUT_PREV_NUM: 'vxe-icon-caret-up',
-              NUMBER_INPUT_NEXT_NUM: 'vxe-icon-caret-down',
+              NUMBER_INPUT_MINUS_NUM: 'vxe-icon-minus',
+              NUMBER_INPUT_PLUS_NUM: 'vxe-icon-add',
 
               // date-picker
               DATE_PICKER_DATE: 'vxe-icon-calendar',
@@ -203,7 +206,61 @@
 
               // rate
               RATE_CHECKED: 'vxe-icon-star-fill',
-              RATE_UNCHECKED: 'vxe-icon-star'
+              RATE_UNCHECKED: 'vxe-icon-star',
+
+              // color-picker
+              COLOR_COPY: 'vxe-icon-copy',
+              EYE_DROPPER: 'vxe-icon-dropper',
+
+              // split
+              SPLIT_TOP_ACTION: 'vxe-icon-arrow-up',
+              SPLIT_BOTTOM_ACTION: 'vxe-icon-arrow-down',
+              SPLIT_LEFT_ACTION: 'vxe-icon-arrow-left',
+              SPLIT_RIGHT_ACTION: 'vxe-icon-arrow-right',
+
+              // table
+              TABLE_SORT_ASC: 'vxe-icon-caret-up',
+              TABLE_SORT_DESC: 'vxe-icon-caret-down',
+              TABLE_FILTER_NONE: 'vxe-icon-funnel',
+              TABLE_FILTER_MATCH: 'vxe-icon-funnel',
+              TABLE_EDIT: 'vxe-icon-edit',
+              TABLE_TITLE_PREFIX: 'vxe-icon-question-circle-fill',
+              TABLE_TITLE_SUFFIX: 'vxe-icon-question-circle-fill',
+              TABLE_TREE_LOADED: 'vxe-icon-spinner roll',
+              TABLE_TREE_OPEN: 'vxe-icon-caret-right rotate90',
+              TABLE_TREE_CLOSE: 'vxe-icon-caret-right',
+              TABLE_EXPAND_LOADED: 'vxe-icon-spinner roll',
+              TABLE_EXPAND_OPEN: 'vxe-icon-arrow-right rotate90',
+              TABLE_EXPAND_CLOSE: 'vxe-icon-arrow-right',
+              TABLE_CHECKBOX_CHECKED: 'vxe-icon-checkbox-checked-fill',
+              TABLE_CHECKBOX_UNCHECKED: 'vxe-icon-checkbox-unchecked',
+              TABLE_CHECKBOX_INDETERMINATE: 'vxe-icon-checkbox-indeterminate-fill',
+              TABLE_RADIO_CHECKED: 'vxe-icon-radio-checked-fill',
+              TABLE_RADIO_UNCHECKED: 'vxe-icon-radio-unchecked',
+              TABLE_CUSTOM_SORT: 'vxe-icon-drag-handle',
+              TABLE_MENU_OPTIONS: 'vxe-icon-arrow-right',
+              TABLE_DRAG_ROW: 'vxe-icon-drag-handle',
+              TABLE_DRAG_COLUMN: 'vxe-icon-drag-handle',
+              TABLE_DRAG_STATUS_ROW: 'vxe-icon-sort',
+              TABLE_DRAG_STATUS_SUB_ROW: 'vxe-icon-add-sub',
+              TABLE_DRAG_STATUS_COLUMN: 'vxe-icon-swap',
+              TABLE_DRAG_DISABLED: 'vxe-icon-no-drop',
+              TABLE_ROW_GROUP_OPEN: 'vxe-icon-arrow-right rotate90',
+              TABLE_ROW_GROUP_CLOSE: 'vxe-icon-arrow-right',
+
+              // toolbar
+              TOOLBAR_TOOLS_REFRESH: 'vxe-icon-repeat',
+              TOOLBAR_TOOLS_REFRESH_LOADING: 'vxe-icon-repeat roll',
+              TOOLBAR_TOOLS_IMPORT: 'vxe-icon-upload',
+              TOOLBAR_TOOLS_EXPORT: 'vxe-icon-download',
+              TOOLBAR_TOOLS_PRINT: 'vxe-icon-print',
+              TOOLBAR_TOOLS_FULLSCREEN: 'vxe-icon-fullscreen',
+              TOOLBAR_TOOLS_MINIMIZE: 'vxe-icon-minimize',
+              TOOLBAR_TOOLS_CUSTOM: 'vxe-icon-custom-column',
+              TOOLBAR_TOOLS_FIXED_LEFT: 'vxe-icon-fixed-left',
+              TOOLBAR_TOOLS_FIXED_LEFT_ACTIVE: 'vxe-icon-fixed-left-fill',
+              TOOLBAR_TOOLS_FIXED_RIGHT: 'vxe-icon-fixed-right',
+              TOOLBAR_TOOLS_FIXED_RIGHT_ACTIVE: 'vxe-icon-fixed-right-fill'
             })
           </pre-code>
         </pre>

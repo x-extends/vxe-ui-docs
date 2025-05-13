@@ -64,6 +64,14 @@
               },
               collapsePane: {},
               countdown: {},
+              colorPicker: {
+                type: 'hex',
+                clearable: true,
+                showAlpha: true,
+                clickToCopy: true,
+                showColorExtractor: true,
+                showQuick: true
+              },
               datePanel: {
                 // parseFormat: 'yyyy-MM-dd HH:mm:ss.SSS',
                 // labelFormat: '',
@@ -101,7 +109,7 @@
                 selectDay: 1,
                 separator: ' ~ ',
                 autoClose: true,
-                showClearButton: null,
+                showClearButton: true,
                 showConfirmButton: null
               },
               drawer: {
@@ -148,7 +156,8 @@
               },
               image: {
                 showPreview: true,
-                showPrintButton: true
+                showPrintButton: true,
+                maskClosable: true
               },
               imageGroup: {
                 showPreview: true,
@@ -207,6 +216,7 @@
                 marginSize: 0,
                 dblclickZoom: true,
                 showTitleOverflow: true,
+                animat: true,
                 showClose: true,
                 padding: true,
                 draggable: true,
@@ -230,11 +240,13 @@
               },
               noticeBar: {},
               numberInput: {
+                // size: null,
+                // transfer: false
                 digits: 2,
                 autoFill: true,
                 controlConfig: {
                   enabled: true,
-                  // layout: 'default',
+                  layout: 'right',
                   showButton: true,
                   isWheel: true
                 }
@@ -251,7 +263,9 @@
                 // pageSizes: [10, 15, 20, 50, 100],
                 // layouts: ['PrevJump', 'PrevPage', 'Jump', 'PageCount', 'NextPage', 'NextJump', 'Sizes', 'Total']
               },
-              print: {},
+              print: {
+                pageStyle: {}
+              },
               passwordInput: {
                 controls: true
               },
@@ -273,12 +287,24 @@
               row: {},
               select: {
                 multiCharOverflow: 8,
+                remoteConfig: {
+                  enabled: true,
+                  autoLoad: true
+                },
                 virtualYConfig: {
                   enabled: true,
                   gt: 100,
                   oSize: 2
                 }
               },
+              split: {
+                resize: true,
+                itemConfig: {
+                  minWidth: 40,
+                  minHeight: 40
+                }
+              },
+              splitPane: {},
               slider: {
                 max: 100,
                 min: 0
@@ -306,7 +332,9 @@
               },
               tabs: {},
               tag: {},
-              textEllipsis: {},
+              textEllipsis: {
+                underline: true
+              },
               text: {},
               textarea: {
                 resize: 'none'
@@ -344,7 +372,9 @@
                 showButtonIcon: true,
                 showPreview: true,
                 dragToUpload: true,
-                imageConfig: {}
+                // imageConfig: {},
+                showLimitSize: true,
+                showLimitCount: true
               },
               watermark: {
                 rotate: -30,
@@ -352,14 +382,13 @@
               },
               table: {
                 showHeader: true,
-                delayHover: 250,
                 autoResize: true,
+                padding: true,
                 minHeight: 144,
                 // keepSource: false,
                 // showOverflow: null,
                 // showHeaderOverflow: null,
                 // showFooterOverflow: null,
-                // resizeInterval: 500,
                 // size: null,
                 // zIndex: null,
                 // stripe: false,
@@ -372,9 +401,6 @@
                 // rowConfig: {
                 //   keyField: '_X_ROW_KEY' // 行数据的唯一主键字段名
                 // },
-                resizeConfig: {
-                  // refreshDelay: 20
-                },
                 resizableConfig: {
                   dragMode: 'auto',
                   showDragTip: true,
@@ -388,11 +414,13 @@
                 },
                 rowDragConfig: {
                   showIcon: true,
+                  animation: true,
                   showGuidesStatus: true,
                   showDragTip: true
                 },
                 columnDragConfig: {
                   showIcon: true,
+                  animation: true,
                   showGuidesStatus: true,
                   showDragTip: true
                 },
@@ -467,7 +495,17 @@
                   // isEvery: false,
                   showIcon: true
                 },
+                rowGroupConfig: {
+                  padding: true,
+                  rowField: 'id',
+                  parentField: '_X_ROW_PARENT_KEY',
+                  childrenField: '_X_ROW_CHILDREN',
+                  mapChildrenField: '_X_ROW_CHILD_LIST',
+                  indent: 20,
+                  showIcon: true
+                },
                 treeConfig: {
+                  padding: true,
                   rowField: 'id',
                   parentField: 'parentId',
                   childrenField: 'children',
@@ -532,20 +570,20 @@
                   isReplace: true
                 },
                 virtualXConfig: {
-                  enabled: true,
-                  gt: 60,
+                  enabled: false,
+                  gt: 24,
                   preSize: 0,
-                  oSize: 1
+                  oSize: 0
                 },
                 virtualYConfig: {
-                  enabled: true,
+                  enabled: false,
                   gt: 100,
                   preSize: 1,
-                  oSize: 2
+                  oSize: 0
                 },
                 scrollbarConfig: {
-                  // width: 0,
-                  // height: 0
+                  // width: 14,
+                  // height: 14
                 }
               },
               // export: {
