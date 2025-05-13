@@ -99,7 +99,9 @@
               VxeCollapsePane,
               VxeColorPicker,
               VxeCountdown,
+              VxeDatePanel,
               VxeDatePicker,
+              VxeDateRangePicker,
               VxeDrawer,
               VxeEmpty,
               VxeForm,
@@ -142,6 +144,8 @@
               VxeResult,
               VxeRow,
               VxeSelect,
+              VxeSplit,
+              VxeSplitPane,
               VxeSlider,
               VxeSteps,
               VxeSwitch,
@@ -199,7 +203,9 @@
               app.use(VxeCollapsePane)
               app.use(VxeColorPicker)
               app.use(VxeCountdown)
+              app.use(VxeDatePanel)
               app.use(VxeDatePicker)
+              app.use(VxeDateRangePicker)
               app.use(VxeDrawer)
               app.use(VxeEmpty)
               app.use(VxeForm)
@@ -242,6 +248,8 @@
               app.use(VxeResult)
               app.use(VxeRow)
               app.use(VxeSelect)
+              app.use(VxeSplit)
+              app.use(VxeSplitPane)
               app.use(VxeSlider)
               app.use(VxeSteps)
               app.use(VxeSwitch)

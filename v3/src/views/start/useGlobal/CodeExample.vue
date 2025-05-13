@@ -63,15 +63,15 @@
               VxeCollapsePane,
               VxeColorPicker,
               VxeCountdown,
+              VxeDatePanel,
               VxeDatePicker,
+              VxeDateRangePicker,
               VxeDrawer,
               VxeEmpty,
               VxeForm,
-              VxeFormDesign,
               VxeFormGather,
               VxeFormGroup,
               VxeFormItem,
-              VxeFormView,
               VxeIcon,
               VxeIconPicker,
               VxeImage,
@@ -84,8 +84,6 @@
               VxeLayoutFooter,
               VxeLayoutHeader,
               VxeLink,
-              VxeListDesign,
-              VxeListView,
               VxeList,
               VxeLoading,
               VxeMenu,
@@ -106,6 +104,8 @@
               VxeResult,
               VxeRow,
               VxeSelect,
+              VxeSplit,
+              VxeSplitPane,
               VxeSlider,
               VxeSteps,
               VxeSwitch,
@@ -163,15 +163,15 @@
               app.use(VxeCollapsePane)
               app.use(VxeColorPicker)
               app.use(VxeCountdown)
+              app.use(VxeDatePanel)
               app.use(VxeDatePicker)
+              app.use(VxeDateRangePicker)
               app.use(VxeDrawer)
               app.use(VxeEmpty)
               app.use(VxeForm)
-              app.use(VxeFormDesign)
               app.use(VxeFormGather)
               app.use(VxeFormGroup)
               app.use(VxeFormItem)
-              app.use(VxeFormView)
               app.use(VxeIcon)
               app.use(VxeIconPicker)
               app.use(VxeImage)
@@ -184,8 +184,6 @@
               app.use(VxeLayoutFooter)
               app.use(VxeLayoutHeader)
               app.use(VxeLink)
-              app.use(VxeListDesign)
-              app.use(VxeListView)
               app.use(VxeList)
               app.use(VxeLoading)
               app.use(VxeMenu)
@@ -206,6 +204,8 @@
               app.use(VxeResult)
               app.use(VxeRow)
               app.use(VxeSelect)
+              app.use(VxeSplit)
+              app.use(VxeSplitPane)
               app.use(VxeSlider)
               app.use(VxeSteps)
               app.use(VxeSwitch)
