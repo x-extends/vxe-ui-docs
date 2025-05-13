@@ -231,7 +231,7 @@
         "areaCellMenu": "Cell right-click menu",
         "areaEdit": "Editable",
         "areaEditDisabled": "Disable cell editing",
-        "areaEditValid": "Copy-paste and data verification",
+        "areaEditValid": "数据校验",
         "areaEditTemp": "Temporary data - additions, deletions and modifications",
         "areaEditTempInsert": "New",
         "areaEditTempRemove": "delete",

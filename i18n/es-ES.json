@@ -231,7 +231,7 @@
         "areaCellMenu": "Haga clic con el botón derecho en el menú de la celda",
         "areaEdit": "Editable",
         "areaEditDisabled": "Deshabilitar la edición celular",
-        "areaEditValid": "Copiar y pegar y verificación de datos",
+        "areaEditValid": "数据校验",
         "areaEditTemp": "Datos temporales: agregar, eliminar y modificar",
         "areaEditTempInsert": "Nuevo",
         "areaEditTempRemove": "borrar",

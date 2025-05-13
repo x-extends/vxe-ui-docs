@@ -231,7 +231,7 @@
         "areaCellMenu": "Klicken Sie mit der rechten Maustaste auf das Zellenmenü",
         "areaEdit": "Bearbeitet",
         "areaEditDisabled": "Zellbearbeitung deaktivieren",
-        "areaEditValid": "Kopieren und Einfügen und Datenüberprüfung",
+        "areaEditValid": "数据校验",
         "areaEditTemp": "Temporäre Daten - hinzufügen, löschen und ändern",
         "areaEditTempInsert": "Neu",
         "areaEditTempRemove": "löschen",

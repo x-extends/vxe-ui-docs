@@ -231,7 +231,7 @@
         "areaCellMenu": "انقر بزر الماوس الأيمن فوق قائمة الخلية",
         "areaEdit": "قابلة للتحرير",
         "areaEditDisabled": "تعطيل تحرير الخلايا",
-        "areaEditValid": "نسخ والصق والتحقق من البيانات",
+        "areaEditValid": "数据校验",
         "areaEditTemp": "البيانات المؤقتة - إضافة وحذف وتعديل",
         "areaEditTempInsert": "جديد",
         "areaEditTempRemove": "يمسح",

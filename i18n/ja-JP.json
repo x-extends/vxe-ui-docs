@@ -231,7 +231,7 @@
         "areaCellMenu": "セルメニューを右クリックします",
         "areaEdit": "編集可能",
         "areaEditDisabled": "セルの編集を無効にします",
-        "areaEditValid": "コピーして貼り付け、データ検証",
+        "areaEditValid": "数据校验",
         "areaEditTemp": "一時データ - 追加、削除、変更",
         "areaEditTempInsert": "新しい",
         "areaEditTempRemove": "消去",

@@ -231,7 +231,7 @@
         "areaCellMenu": "Cliquez avec le bouton droit sur le menu cellulaire",
         "areaEdit": "Modifiable",
         "areaEditDisabled": "Désactiver l'édition de cellules",
-        "areaEditValid": "Copier et coller et vérifier les données",
+        "areaEditValid": "数据校验",
         "areaEditTemp": "Données temporaires - Ajouter, supprimer et modifier",
         "areaEditTempInsert": "Nouveau",
         "areaEditTempRemove": "supprimer",

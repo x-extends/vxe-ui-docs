@@ -231,7 +231,7 @@
         "areaCellMenu": "Клацніть правою кнопкою миші меню комірок",
         "areaEdit": "Редагований",
         "areaEditDisabled": "Вимкнути редагування клітин",
-        "areaEditValid": "Скопіюйте та вставте та перевірку даних",
+        "areaEditValid": "数据校验",
         "areaEditTemp": "Тимчасові дані - додавання, видалення та зміну",
         "areaEditTempInsert": "Новачок",
         "areaEditTempRemove": "видаляти",

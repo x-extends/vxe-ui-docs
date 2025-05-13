@@ -231,7 +231,7 @@
         "areaCellMenu": "셀 메뉴를 마우스 오른쪽 버튼으로 클릭하십시오",
         "areaEdit": "편집 가능한",
         "areaEditDisabled": "셀 편집을 비활성화합니다",
-        "areaEditValid": "복사 및 붙여 넣기 및 데이터 확인",
+        "areaEditValid": "数据校验",
         "areaEditTemp": "임시 데이터 - 추가, 삭제 및 수정",
         "areaEditTempInsert": "새로운",
         "areaEditTempRemove": "삭제",

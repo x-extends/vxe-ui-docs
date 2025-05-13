@@ -231,7 +231,7 @@
         "areaCellMenu": "Щелкните правой кнопкой мыши в меню ячейки",
         "areaEdit": "Редактируемый",
         "areaEditDisabled": "Отключить редактирование клеток",
-        "areaEditValid": "Копировать и вставить и проверить данные",
+        "areaEditValid": "数据校验",
         "areaEditTemp": "Временные данные - добавить, удалить и изменить",
         "areaEditTempInsert": "Новый",
         "areaEditTempRemove": "удалить",
