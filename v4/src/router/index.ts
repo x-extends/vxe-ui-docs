@@ -5446,11 +5446,6 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/button/tipIcon/CodeExample.vue')
           },
           {
-            path: 'trigger',
-            name: 'ComponentButtonTrigger',
-            component: () => import('@/views/button/trigger/CodeExample.vue')
-          },
-          {
             path: 'loading',
             name: 'ComponentButtonLoading',
             component: () => import('@/views/button/loading/CodeExample.vue')
@@ -5467,8 +5462,16 @@ const routes: Array<RouteRecordRaw> = [
           },
           {
             path: 'dropdown',
-            name: 'ComponentButtonDropdown',
-            component: () => import('@/views/button/dropdown/CodeExample.vue')
+            component: RouteLayout,
+            children: [
+              { path: 'options', name: 'ComponentButtonDropdownOptions', component: () => import('@/views/button/dropdown/options/CodeExample.vue') },
+              { path: 'status', name: 'ComponentButtonDropdownStatus', component: () => import('@/views/button/dropdown/status/CodeExample.vue') },
+              { path: 'trigger', name: 'ComponentButtonDropdownTrigger', component: () => import('@/views/button/dropdown/trigger/CodeExample.vue') },
+              { path: 'placement', name: 'ComponentButtonDropdownPlacement', component: () => import('@/views/button/dropdown/placement/CodeExample.vue') },
+              { path: 'teleportTo', name: 'ComponentButtonDropdownTeleportTo', component: () => import('@/views/button/dropdown/teleportTo/CodeExample.vue') },
+              { path: 'template', name: 'ComponentButtonDropdownTemplate', component: () => import('@/views/button/dropdown/template/CodeExample.vue') },
+              { path: 'permissionCode', name: 'ComponentButtonDropdownPermissionCode', component: () => import('@/views/button/dropdown/permissionCode/CodeExample.vue') }
+            ]
           },
           {
             path: 'disabled',

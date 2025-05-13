@@ -1584,10 +1584,20 @@ export const navConfigList: NavVO[] = [
           { title: '圆形', routerLink: { name: 'ComponentButtonCircle' } },
           { title: '前缀、后缀提示', routerLink: { name: 'ComponentButtonTipIcon' } },
           { title: '加载中', routerLink: { name: 'ComponentButtonLoading' } },
-          { title: '触发方式', routerLink: { name: 'ComponentButtonTrigger' } },
           { title: '按钮组', routerLink: { name: 'ComponentButtonGroup' } },
           { title: '排版方式', routerLink: { name: 'ComponentButtonVertical' } },
-          { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdown' } },
+          {
+            title: '下拉按钮',
+            children: [
+              { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdownOptions' } },
+              { title: '状态颜色', routerLink: { name: 'ComponentButtonDropdownStatus' } },
+              { title: '触发方式', routerLink: { name: 'ComponentButtonDropdownTrigger' } },
+              { title: '固定方向', routerLink: { name: 'ComponentButtonDropdownPlacement' } },
+              { title: '下拉面板挂载 Body', routerLink: { name: 'ComponentButtonDropdownTeleportTo' } },
+              { title: '自定义插槽模板', routerLink: { name: 'ComponentButtonDropdownTemplate' } },
+              { title: '权限码', routerLink: { name: 'ComponentButtonDropdownPermissionCode' } }
+            ]
+          },
           { title: '禁用', routerLink: { name: 'ComponentButtonDisabled' } },
           { title: '权限码', routerLink: { name: 'ComponentButtonPermissionCode' } }
         ]

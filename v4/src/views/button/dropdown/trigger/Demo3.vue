@@ -1,13 +1,6 @@
 <template>
   <div>
-    <vxe-button ref="buttonRef" trigger="manual">
-      <template #default>手动模式</template>
-      <template #dropdowns>
-        <vxe-button mode="text" content="下拉按钮1"></vxe-button>
-        <vxe-button mode="text" content="下拉按钮2"></vxe-button>
-        <vxe-button mode="text" content="下拉按钮3"></vxe-button>
-      </template>
-    </vxe-button>
+    <vxe-button ref="buttonRef" trigger="manual" :options="downBtns">手动模式</vxe-button>
     <vxe-button @click="openEvent">打开</vxe-button>
     <vxe-button @click="closeEvent">关闭</vxe-button>
   </div>
@@ -15,9 +8,15 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeButtonInstance } from 'vxe-pc-ui'
+import { VxeButtonInstance, VxeButtonPropTypes } from 'vxe-pc-ui'
 
 const buttonRef = ref<VxeButtonInstance>()
+
+const downBtns = ref<VxeButtonPropTypes.Options>([
+  { name: '1', content: '下拉按钮1' },
+  { name: '2', content: '下拉按钮2' },
+  { name: '3', content: '下拉按钮3' }
+])
 
 const openEvent = () => {
   const $button = buttonRef.value
