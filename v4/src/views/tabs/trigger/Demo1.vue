@@ -47,14 +47,14 @@ const tabList = ref<VxeTabsPropTypes.Options>([
 const prevEvent = () => {
   const $tabs = tabsRef.value
   if ($tabs) {
-    $tabs.prevTab()
+    $tabs.prev()
   }
 }
 
 const nextEvent = () => {
   const $tabs = tabsRef.value
   if ($tabs) {
-    $tabs.nextTab()
+    $tabs.next()
   }
 }
 </script>

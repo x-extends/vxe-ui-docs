@@ -51,13 +51,13 @@ export default Vue.extend({
     prevEvent () {
       const $tabs = this.$refs.tabsRef as VxeTabsInstance
       if ($tabs) {
-        $tabs.prevTab()
+        $tabs.prev()
       }
     },
     nextEvent  () {
       const $tabs = this.$refs.tabsRef as VxeTabsInstance
       if ($tabs) {
-        $tabs.nextTab()
+        $tabs.next()
       }
     }
   }
