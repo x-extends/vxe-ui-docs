@@ -54,7 +54,7 @@ export default Vue.extend({
             { code: 'COPY_TITLE', name: '复制列标题' },
             { code: 'HIDDEN_COLUMN', name: '隐藏列' },
             { code: 'CLEAR_SORT', name: '清除排序' },
-            { code: 'RESET_COLUMN', name: '重置自定义列' }
+            { code: 'RESET_COLUMN', name: '重置个性化列' }
           ]
         ]
       },

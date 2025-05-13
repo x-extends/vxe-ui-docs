@@ -43,7 +43,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
         [
           { code: 'COPY_TITLE', name: '复制列标题' },
           { code: 'HIDDEN_COLUMN', name: '隐藏列' },
-          { code: 'RESET_COLUMN', name: '重置自定义列' }
+          { code: 'RESET_COLUMN', name: '重置个性化列' }
         ]
       ]
     }
