@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button @click="getSortEvent">获取排序后数据</vxe-button>
+    <vxe-button @click="getDataEvent">获取排序后数据</vxe-button>
 
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
@@ -50,7 +50,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   ]
 })
 
-const getSortEvent = () => {
+const getDataEvent = () => {
   const $grid = gridRef.value
   if ($grid) {
     const { visibleData } = $grid.getTableData()

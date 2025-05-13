@@ -2227,6 +2227,7 @@ const gridRouteConfig: RouteRecordRaw = {
       path: 'filter',
       component: RouteLayout,
       children: [
+        { path: 'base', name: 'ComponentGridFilterBase', component: () => import('@/views/grid/filter/base/CodeExample.vue') },
         {
           path: 'remote',
           name: 'ComponentGridFilterRemote',

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button @click="getSortEvent">获取排序后数据</vxe-button>
+    <vxe-button @click="getDataEvent">获取排序后数据</vxe-button>
 
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
@@ -55,7 +55,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    getSortEvent () {
+    getDataEvent () {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
       if ($grid) {
         const { visibleData } = $grid.getTableData()
