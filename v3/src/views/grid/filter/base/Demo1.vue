@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button @click="getDataEvent">获取筛选后数据</vxe-button>
+    <vxe-button status="success" @click="getDataEvent">获取筛选后数据</vxe-button>
 
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
