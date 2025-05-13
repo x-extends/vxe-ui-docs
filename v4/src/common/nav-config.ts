@@ -2339,6 +2339,7 @@ export const navConfigList: NavVO[] = [
           {
             title: '时间类型',
             children: [
+              { title: '尺寸大小', routerLink: { name: 'ComponentDatePickerTimeSize' } },
               { title: '单选', routerLink: { name: 'ComponentDatePickerTimeBase' } },
               { title: '禁用', routerLink: { name: 'ComponentDatePickerTimeDisabled' } },
               { title: '自定义格式', routerLink: { name: 'ComponentDatePickerTimeValueFormat' } },
@@ -2488,6 +2489,7 @@ export const navConfigList: NavVO[] = [
           {
             title: '日期类型',
             children: [
+              { title: '尺寸大小', routerLink: { name: 'ComponentDateRangePickerDateSize' } },
               { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerDateBase' } },
               { title: '可清除', routerLink: { name: 'ComponentDateRangePickerDateClearable' } },
               { title: '禁用', routerLink: { name: 'ComponentDateRangePickerDateDisabled' } },
@@ -2501,6 +2503,8 @@ export const navConfigList: NavVO[] = [
                   { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerDateShortcutCustom' } }
                 ]
               },
+              { title: '前缀图标', routerLink: { name: 'ComponentDateRangePickerDatePrefixIcon' } },
+              { title: '后缀图标', routerLink: { name: 'ComponentDateRangePickerDateSuffixIcon' } },
               {
                 title: '自定义插槽模板',
                 children: [
@@ -2515,6 +2519,7 @@ export const navConfigList: NavVO[] = [
           {
             title: '时间类型',
             children: [
+              { title: '尺寸大小', routerLink: { name: 'ComponentDateRangePickerTimeSize' } },
               { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerTimeBase' } },
               { title: '禁用', routerLink: { name: 'ComponentDateRangePickerTimeDisabled' } },
               { title: '自定义格式', routerLink: { name: 'ComponentDateRangePickerTimeValueFormat' } },

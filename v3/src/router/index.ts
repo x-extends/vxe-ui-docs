@@ -6366,6 +6366,7 @@ const routes: Array<RouteConfig> = [
             path: 'time',
             component: RouteLayout,
             children: [
+              { path: 'size', name: 'ComponentDatePickerTimeSize', component: () => import('@/views/date-picker/time/size/CodeExample.vue') },
               {
                 path: 'base',
                 name: 'ComponentDatePickerTimeBase',
@@ -6533,6 +6534,7 @@ const routes: Array<RouteConfig> = [
             path: 'date',
             component: RouteLayout,
             children: [
+              { path: 'size', name: 'ComponentDateRangePickerDateSize', component: () => import('@/views/date-range-picker/date/size/CodeExample.vue') },
               {
                 path: 'base',
                 name: 'ComponentDateRangePickerDateBase',
@@ -6579,6 +6581,8 @@ const routes: Array<RouteConfig> = [
                   }
                 ]
               },
+              { path: 'prefixIcon', name: 'ComponentDateRangePickerDatePrefixIcon', component: () => import('@/views/date-range-picker/date/prefixIcon/CodeExample.vue') },
+              { path: 'suffixIcon', name: 'ComponentDateRangePickerDateSuffixIcon', component: () => import('@/views/date-range-picker/date/suffixIcon/CodeExample.vue') },
               {
                 path: 'template',
                 component: RouteLayout,
@@ -6800,6 +6804,7 @@ const routes: Array<RouteConfig> = [
             path: 'time',
             component: RouteLayout,
             children: [
+              { path: 'size', name: 'ComponentDateRangePickerTimeSize', component: () => import('@/views/date-range-picker/time/size/CodeExample.vue') },
               {
                 path: 'base',
                 name: 'ComponentDateRangePickerTimeBase',
