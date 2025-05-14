@@ -3,18 +3,8 @@
     <vxe-form
       title-width="120"
       :data="formData">
-      <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
-      <vxe-form-item title="输入框" field="nickname" span="24" :item-render="{ name: 'VxeInput', props: { clearable: true } }"></vxe-form-item>
-      <vxe-form-item title="数字" field="num" span="24" :item-render="{ name: 'VxeInput', props: { type: 'number' } }"></vxe-form-item>
-      <vxe-form-item title="整数" field="integer" span="24" :item-render="{ name: 'VxeInput', props: { type: 'integer' } }"></vxe-form-item>
-      <vxe-form-item title="小数" field="float" span="24" :item-render="{ name: 'VxeInput', props: { type: 'float' } }"></vxe-form-item>
-      <vxe-form-item title="日期" field="date" span="24" :item-render="{ name: 'VxeInput', props: { type: 'date' } }"></vxe-form-item>
-      <vxe-form-item title="年份" field="year" span="24" :item-render="{ name: 'VxeInput', props: { type: 'year' } }"></vxe-form-item>
-      <vxe-form-item title="季度" field="quarter" span="24" :item-render="{ name: 'VxeInput', props: { type: 'quarter' } }"></vxe-form-item>
-      <vxe-form-item title="月份" field="month" span="24" :item-render="{ name: 'VxeInput', props: { type: 'month' } }"></vxe-form-item>
-      <vxe-form-item title="周" field="week" span="24" :item-render="{ name: 'VxeInput', props: { type: 'week' } }"></vxe-form-item>
-      <vxe-form-item title="时间" field="time" span="24" :item-render="{ name: 'VxeInput', props: { type: 'time' } }"></vxe-form-item>
-      <vxe-form-item title="日期带时间" field="datetime" span="24" :item-render="{ name: 'VxeInput', props: { type: 'datetime' } }"></vxe-form-item>
+      <vxe-form-item title="名称" field="name" span="24" :item-render="nameItemRender"></vxe-form-item>
+      <vxe-form-item title="输入框" field="role" span="24" :item-render="roleItemRender"></vxe-form-item>
       <vxe-form-item align="center" span="24">
         <template #default>
           <vxe-button type="reset">重置</vxe-button>
@@ -27,21 +17,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { VxeFormItemPropTypes } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
   nickname: string
   sex: string
-  num: string
-  float: string
-  integer: string
-  date: string
-  time: string
-  year: string
-  quarter: string
-  month: string
-  week: string
-  datetime: string
+  role: string
   address: string
 }
 
@@ -50,22 +32,32 @@ export default Vue.extend({
     const formData: FormDataVO = {
       name: 'test1',
       nickname: 'Testing',
+      role: '',
       sex: '',
-      num: '',
-      integer: '',
-      float: '',
-      date: '',
-      time: '',
-      year: '',
-      quarter: '',
-      month: '',
-      week: '',
-      datetime: '',
       address: ''
     }
 
+    const nameItemRender: VxeFormItemPropTypes.ItemRender<FormDataVO> = {
+      name: 'VxeInput'
+    }
+
+    const roleItemRender: VxeFormItemPropTypes.ItemRender<FormDataVO> = {
+      name: 'VxeInput',
+      props: {
+        clearable: true
+      },
+      events: {
+        input (itemParams, eventParams) {
+          const { item } = itemParams
+          console.log('input', item.field, eventParams.value)
+        }
+      }
+    }
+
     return {
-      formData
+      formData,
+      nameItemRender,
+      roleItemRender
     }
   }
 })
