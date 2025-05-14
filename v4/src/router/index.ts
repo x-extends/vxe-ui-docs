@@ -3103,6 +3103,11 @@ const gridRouteConfig: RouteRecordRaw = {
         //   component: () => import('@/views/grid/custom/template/CodeExample.vue')
         // },
         {
+          path: 'customBtn',
+          name: 'ComponentGridCustomCustomBtn',
+          component: () => import('@/views/grid/custom/customBtn/CodeExample.vue')
+        },
+        {
           path: 'placement',
           name: 'ComponentGridCustomPlacement',
           component: () => import('@/views/grid/custom/placement/CodeExample.vue')
