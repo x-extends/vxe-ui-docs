@@ -5713,61 +5713,61 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentInputSearch',
             component: () => import('@/views/input/search/CodeExample.vue')
           },
-          {
-            path: 'password',
-            name: 'ComponentInputPassword',
-            component: () => import('@/views/input/password/CodeExample.vue')
-          },
-          {
-            path: 'date',
-            name: 'ComponentInputDate',
-            component: () => import('@/views/input/date/CodeExample.vue')
-          },
-          {
-            path: 'week',
-            name: 'ComponentInputWeek',
-            component: () => import('@/views/input/week/CodeExample.vue')
-          },
-          {
-            path: 'month',
-            name: 'ComponentInputMonth',
-            component: () => import('@/views/input/month/CodeExample.vue')
-          },
-          {
-            path: 'quarter',
-            name: 'ComponentInputQuarter',
-            component: () => import('@/views/input/quarter/CodeExample.vue')
-          },
-          {
-            path: 'year',
-            name: 'ComponentInputYear',
-            component: () => import('@/views/input/year/CodeExample.vue')
-          },
-          {
-            path: 'time',
-            name: 'ComponentInputTime',
-            component: () => import('@/views/input/time/CodeExample.vue')
-          },
-          {
-            path: 'datetime',
-            name: 'ComponentInputDatetime',
-            component: () => import('@/views/input/datetime/CodeExample.vue')
-          },
-          {
-            path: 'number',
-            name: 'ComponentInputNumber',
-            component: () => import('@/views/input/number/CodeExample.vue')
-          },
-          {
-            path: 'integer',
-            name: 'ComponentInputInteger',
-            component: () => import('@/views/input/integer/CodeExample.vue')
-          },
-          {
-            path: 'float',
-            name: 'ComponentInputFloat',
-            component: () => import('@/views/input/float/CodeExample.vue')
-          },
+          // {
+          //   path: 'password',
+          //   name: 'ComponentInputPassword',
+          //   component: () => import('@/views/input/password/CodeExample.vue')
+          // },
+          // {
+          //   path: 'date',
+          //   name: 'ComponentInputDate',
+          //   component: () => import('@/views/input/date/CodeExample.vue')
+          // },
+          // {
+          //   path: 'week',
+          //   name: 'ComponentInputWeek',
+          //   component: () => import('@/views/input/week/CodeExample.vue')
+          // },
+          // {
+          //   path: 'month',
+          //   name: 'ComponentInputMonth',
+          //   component: () => import('@/views/input/month/CodeExample.vue')
+          // },
+          // {
+          //   path: 'quarter',
+          //   name: 'ComponentInputQuarter',
+          //   component: () => import('@/views/input/quarter/CodeExample.vue')
+          // },
+          // {
+          //   path: 'year',
+          //   name: 'ComponentInputYear',
+          //   component: () => import('@/views/input/year/CodeExample.vue')
+          // },
+          // {
+          //   path: 'time',
+          //   name: 'ComponentInputTime',
+          //   component: () => import('@/views/input/time/CodeExample.vue')
+          // },
+          // {
+          //   path: 'datetime',
+          //   name: 'ComponentInputDatetime',
+          //   component: () => import('@/views/input/datetime/CodeExample.vue')
+          // },
+          // {
+          //   path: 'number',
+          //   name: 'ComponentInputNumber',
+          //   component: () => import('@/views/input/number/CodeExample.vue')
+          // },
+          // {
+          //   path: 'integer',
+          //   name: 'ComponentInputInteger',
+          //   component: () => import('@/views/input/integer/CodeExample.vue')
+          // },
+          // {
+          //   path: 'float',
+          //   name: 'ComponentInputFloat',
+          //   component: () => import('@/views/input/float/CodeExample.vue')
+          // },
           {
             path: 'count',
             name: 'ComponentInputCount',
