@@ -8357,6 +8357,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentTreeCheckboxHighlight',
                 component: () => import('@/views/tree/checkbox/highlight/CodeExample.vue')
               },
+              { path: 'defaultSelect', name: 'ComponentTreeCheckboxDefaultSelect', component: () => import('@/views/tree/checkbox/defaultSelect/CodeExample.vue') },
               {
                 path: 'checkStrictly',
                 name: 'ComponentTreeCheckboxCheckStrictly',
@@ -8393,6 +8394,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentTreeRadioHighlight',
                 component: () => import('@/views/tree/radio/highlight/CodeExample.vue')
               },
+              { path: 'defaultSelect', name: 'ComponentTreeRadioDefaultSelect', component: () => import('@/views/tree/radio/defaultSelect/CodeExample.vue') },
               {
                 path: 'checkMethod',
                 name: 'ComponentTreeRadioCheckMethod',

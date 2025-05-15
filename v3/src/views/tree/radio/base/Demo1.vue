@@ -54,7 +54,7 @@ export default Vue.extend({
     }
 
     return {
-      checkNodeKey: '3' as VxeTreePropTypes.CheckNodeKey,
+      checkNodeKey: null as VxeTreePropTypes.CheckNodeKey,
       treeOptions
     }
   },

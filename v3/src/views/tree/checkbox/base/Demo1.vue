@@ -28,7 +28,7 @@ interface NodeVO {
 
 export default Vue.extend({
   data () {
-    const checkNodeKeys: VxeTreePropTypes.CheckNodeKeys = [3, 31, 331]
+    const checkNodeKeys: VxeTreePropTypes.CheckNodeKeys = []
 
     const treeOptions: VxeTreeProps = {
       transform: true,

@@ -2,7 +2,7 @@
   <div>
     <vxe-tree
       v-bind="treeOptions"
-      v-model:check-node-key="checkNodeKey">
+      v-model:check-node-keys="checkNodeKeys">
     </vxe-tree>
   </div>
 </template>
@@ -17,13 +17,14 @@ interface NodeVO {
   parentId?: string | null
 }
 
-const checkNodeKey = ref<VxeTreePropTypes.CheckNodeKey>(3)
+const checkNodeKeys = ref<VxeTreePropTypes.CheckNodeKeys>([31, 331, 5])
 
 const treeOptions = reactive<VxeTreeProps<NodeVO>>({
+  loading: false,
   transform: true,
-  showRadio: true,
+  showCheckbox: true,
   keyField: 'id',
-  radioConfig: {
+  checkboxConfig: {
     highlight: true
   },
   nodeConfig: {

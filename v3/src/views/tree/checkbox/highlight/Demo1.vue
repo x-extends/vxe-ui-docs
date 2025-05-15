@@ -19,7 +19,7 @@ interface NodeVO {
 
 export default Vue.extend({
   data () {
-    const checkNodeKeys: VxeTreePropTypes.CheckNodeKeys = [3, 31, 331]
+    const checkNodeKeys: VxeTreePropTypes.CheckNodeKeys = [5]
 
     const treeOptions: VxeTreeProps<NodeVO> = {
       transform: true,
@@ -31,7 +31,19 @@ export default Vue.extend({
       nodeConfig: {
         isHover: true
       },
-      data: [
+      data: []
+    }
+
+    return {
+      checkNodeKeys,
+      treeOptions
+    }
+  },
+  created () {
+    // 模拟后端接口
+    this.treeOptions.loading = true
+    setTimeout(() => {
+      this.treeOptions.data = [
         { title: '节点2', id: '2', parentId: null },
         { title: '节点3', id: '3', parentId: null },
         { title: '节点3-1', id: '31', parentId: '3' },
@@ -53,12 +65,8 @@ export default Vue.extend({
         { title: '节点4-3-2', id: '432', parentId: '43' },
         { title: '节点5', id: '5', parentId: null }
       ]
-    }
-
-    return {
-      checkNodeKeys,
-      treeOptions
-    }
+      this.treeOptions.loading = false
+    }, 350)
   }
 })
 </script>

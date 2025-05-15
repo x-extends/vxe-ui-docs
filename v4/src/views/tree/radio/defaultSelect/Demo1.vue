@@ -17,7 +17,7 @@ interface NodeVO {
   parentId?: string | null
 }
 
-const checkNodeKey = ref<VxeTreePropTypes.CheckNodeKey>(3)
+const checkNodeKey = ref<VxeTreePropTypes.CheckNodeKey>('3')
 
 const treeOptions = reactive<VxeTreeProps<NodeVO>>({
   transform: true,

@@ -17,9 +17,10 @@ interface NodeVO {
   parentId?: string | null
 }
 
-const checkNodeKeys = ref<VxeTreePropTypes.CheckNodeKeys>([3, 31, 331])
+const checkNodeKeys = ref<VxeTreePropTypes.CheckNodeKeys>(['5'])
 
 const treeOptions = reactive<VxeTreeProps<NodeVO>>({
+  loading: false,
   transform: true,
   showCheckbox: true,
   keyField: 'id',
@@ -29,7 +30,13 @@ const treeOptions = reactive<VxeTreeProps<NodeVO>>({
   nodeConfig: {
     isHover: true
   },
-  data: [
+  data: []
+})
+
+// 模拟后端接口
+treeOptions.loading = true
+setTimeout(() => {
+  treeOptions.data = [
     { title: '节点2', id: '2', parentId: null },
     { title: '节点3', id: '3', parentId: null },
     { title: '节点3-1', id: '31', parentId: '3' },
@@ -51,5 +58,6 @@ const treeOptions = reactive<VxeTreeProps<NodeVO>>({
     { title: '节点4-3-2', id: '432', parentId: '43' },
     { title: '节点5', id: '5', parentId: null }
   ]
-})
+  treeOptions.loading = false
+}, 350)
 </script>

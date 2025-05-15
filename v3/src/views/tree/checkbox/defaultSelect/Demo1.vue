@@ -19,18 +19,31 @@ interface NodeVO {
 
 export default Vue.extend({
   data () {
-    const checkNodeKeys: VxeTreePropTypes.CheckNodeKeys = []
+    const checkNodeKeys: VxeTreePropTypes.CheckNodeKeys = [31, 331, 5]
 
     const treeOptions: VxeTreeProps<NodeVO> = {
       transform: true,
       showCheckbox: true,
       keyField: 'id',
       checkboxConfig: {
-        checkMethod ({ node }) {
-          return node.id !== '3'
-        }
+        highlight: true
       },
-      data: [
+      nodeConfig: {
+        isHover: true
+      },
+      data: []
+    }
+
+    return {
+      checkNodeKeys,
+      treeOptions
+    }
+  },
+  created () {
+    // 模拟后端接口
+    this.treeOptions.loading = true
+    setTimeout(() => {
+      this.treeOptions.data = [
         { title: '节点2', id: '2', parentId: null },
         { title: '节点3', id: '3', parentId: null },
         { title: '节点3-1', id: '31', parentId: '3' },
@@ -52,12 +65,8 @@ export default Vue.extend({
         { title: '节点4-3-2', id: '432', parentId: '43' },
         { title: '节点5', id: '5', parentId: null }
       ]
-    }
-
-    return {
-      checkNodeKeys,
-      treeOptions
-    }
+      this.treeOptions.loading = false
+    }, 350)
   }
 })
 </script>
