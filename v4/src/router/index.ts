@@ -5279,11 +5279,8 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentImageShowPrintButton',
             component: () => import('@/views/image/showPrintButton/CodeExample.vue')
           },
-          {
-            path: 'showDownloadButton',
-            name: 'ComponentImageShowDownloadButton',
-            component: () => import('@/views/image/showDownloadButton/CodeExample.vue')
-          }
+          { path: 'toolBtn', name: 'ComponentImageToolBtn', component: () => import('@/views/image/toolBtn/CodeExample.vue') },
+          { path: 'toolIcon', name: 'ComponentImageToolIcon', component: () => import('@/views/image/toolIcon/CodeExample.vue') }
         ]
       },
       {

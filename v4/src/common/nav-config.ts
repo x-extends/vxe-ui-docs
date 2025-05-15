@@ -1797,8 +1797,9 @@ export const navConfigList: NavVO[] = [
           { title: '懒加载', routerLink: { name: 'ComponentImageLazy' } },
           { title: '预览', routerLink: { name: 'ComponentImageShowPreview' } },
           { title: '点击遮罩层关闭', routerLink: { name: 'ComponentImageMaskClosable' } },
-          { title: '打印按钮', routerLink: { name: 'ComponentImageShowPrintButton' } },
-          { title: '下载按钮', routerLink: { name: 'ComponentImageShowDownloadButton' } }
+          // { title: '打印按钮', routerLink: { name: 'ComponentImageShowPrintButton' } },
+          { title: '工具栏按钮', routerLink: { name: 'ComponentImageToolBtn' } },
+          { title: '工具栏图标', routerLink: { name: 'ComponentImageToolIcon' } }
         ]
       },
       {
