@@ -83,8 +83,8 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     pageSize: 10
   },
   exportConfig: {
-    // 也可以自定义选项列表
-    // modes: ['current', 'all']
+    mode: 'all',
+    modes: ['current', 'all']
   },
   toolbarConfig: {
     export: true
@@ -103,6 +103,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
         // 默认接收 Promise<{ result: [], page: { total: 100 } }>
         return findPageList(page.pageSize, page.currentPage)
       },
+      // 当触发 mode=all 导出全量数据时调用
       queryAll: () => {
         // 默认接收 Promise<any[]>
         return findAllList()
