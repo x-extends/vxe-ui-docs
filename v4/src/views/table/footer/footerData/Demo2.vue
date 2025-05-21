@@ -2,10 +2,10 @@
   <div>
     <vxe-table
       border
-      show-footer
       show-overflow
       height="400"
       :loading="loading"
+      :show-footer="showFooter"
       :data="tableData"
       :footer-data="footerData">
       <vxe-column field="seq" type="seq" width="70" fixed="left"></vxe-column>
@@ -33,6 +33,8 @@ interface RowVO {
 
 const loading = ref(false)
 const tableData = ref<RowVO[]>([])
+
+const showFooter = ref(false)
 
 const footerData = ref<VxeTablePropTypes.FooterData>([
   { seq: '合计', num: '-' },
