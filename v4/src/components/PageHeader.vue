@@ -25,7 +25,7 @@
 
         <template #dropdown>
           <ul class="plugin-app-wrapper">
-            <li v-for="(item, index) in pluginAppList" :key="index">
+            <li v-for="(item, index) in appStore.pluginAppList" :key="index">
               <vxe-link :href="`${tablePluginDocsUrl}/${item.uri}`" :content="$t(`shopping.apps.${item.code}`)"></vxe-link>
             </li>
           </ul>
@@ -93,7 +93,6 @@ import { useAppStore } from '@/store/app'
 import { VxePulldownEvents } from 'vxe-pc-ui'
 import { tablePluginDocsUrl } from '@/common/nav-config'
 import i18n from '@/i18n'
-import XEUtils from 'xe-utils'
 
 const appStore = useAppStore()
 const pageTitle = computed(() => appStore.pageTitle)
@@ -107,13 +106,6 @@ const siteBaseUrl = computed(() => appStore.siteBaseUrl)
 const pluginType = inject('pluginType', '' as string)
 
 const showPluginApp = ref(false)
-const pluginAppList = ref<{
-  value: string
-  label: string
-  code: string
-  uri: string
-  isEnterprise: boolean
-}[]>([])
 
 const showSystemMenu = ref(false)
 const systemMenuList = ref<any[]>()
@@ -131,7 +123,7 @@ const currBuyPluginBUrl = computed(() => {
 })
 
 const currBuyPluginName = computed(() => {
-  const appItem = pluginAppList.value.find(item => item.value === pluginType)
+  const appItem = appStore.pluginAppList.find(item => item.value === pluginType)
   return appItem ? appItem.label : pluginType
 })
 
@@ -251,18 +243,10 @@ fetch(`${siteBaseUrl.value}/component-api/system-list.json?v=?v=${process.env.VU
 })
 
 if (isPluginDocs.value) {
+  appStore.getPluginAppList()
   fetch(`${siteBaseUrl.value}/component-api/vxe-plugin-url.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
     res.json().then(data => {
       pluginUrlMaps.value = data
-    })
-  })
-  fetch(`${siteBaseUrl.value}/component-api/vxe-plugin-app-list.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
-    res.json().then(data => {
-      pluginAppList.value = data.map(item => {
-        item.label = i18n.global.t(`shopping.apps.${item.code}`)
-        item.value = XEUtils.kebabCase(item.code)
-        return item
-      })
     })
   })
   fetch(`${siteBaseUrl.value}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-plugin-version.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {

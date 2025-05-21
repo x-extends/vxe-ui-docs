@@ -271,6 +271,8 @@ watch(() => appStore.compApiMaps, () => {
 nextTick(() => {
   loadList()
 })
+
+appStore.getPluginAppList()
 </script>
 
 <style lang="scss" scoped>
