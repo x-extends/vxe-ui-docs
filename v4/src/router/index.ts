@@ -233,6 +233,11 @@ const tableRouteConfig: RouteRecordRaw = {
       component: RouteLayout,
       children: [
         {
+          path: 'showFooter',
+          name: 'ComponentTableFooterShowFooter',
+          component: () => import('@/views/table/footer/showFooter/CodeExample.vue')
+        },
+        {
           path: 'footerData',
           name: 'ComponentTableFooterFooterData',
           component: () => import('@/views/table/footer/footerData/CodeExample.vue')
@@ -2668,6 +2673,11 @@ const gridRouteConfig: RouteRecordRaw = {
       path: 'footer',
       component: RouteLayout,
       children: [
+        {
+          path: 'showFooter',
+          name: 'ComponentGridFooterShowFooter',
+          component: () => import('@/views/grid/footer/showFooter/CodeExample.vue')
+        },
         {
           path: 'footerData',
           name: 'ComponentGridFooterFooterData',

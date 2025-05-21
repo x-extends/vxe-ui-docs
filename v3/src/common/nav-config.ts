@@ -94,6 +94,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '表尾数据',
           children: [
+            { title: '是否启用表尾', routerLink: { name: 'ComponentTableFooterShowFooter' } },
             { title: '标准结构', routerLink: { name: 'ComponentTableFooterFooterData' } },
             { title: '自定义数据方法', routerLink: { name: 'ComponentTableFooterFooterMethod' } },
             { title: '格式化表尾内容', routerLink: { name: 'ComponentTableFooterFooterFormat' } },
@@ -682,6 +683,7 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         {
           title: '表尾数据',
           children: [
+            { title: '是否启用表尾', routerLink: { name: 'ComponentGridFooterShowFooter' } },
             { title: '标准结构', routerLink: { name: 'ComponentGridFooterFooterData' } },
             { title: '自定义数据方法', routerLink: { name: 'ComponentGridFooterFooterMethod' } },
             { title: '格式化表尾内容', routerLink: { name: 'ComponentGridFooterFooterFormat' } },

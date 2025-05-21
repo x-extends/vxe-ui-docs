@@ -236,6 +236,11 @@ const tableRouteConfig: RouteConfig = {
       component: RouteLayout,
       children: [
         {
+          path: 'showFooter',
+          name: 'ComponentTableFooterShowFooter',
+          component: () => import('@/views/table/footer/showFooter/CodeExample.vue')
+        },
+        {
           path: 'footerData',
           name: 'ComponentTableFooterFooterData',
           component: () => import('@/views/table/footer/footerData/CodeExample.vue')
@@ -2672,6 +2677,11 @@ const gridRouteConfig: RouteConfig = {
       component: RouteLayout,
       children: [
         {
+          path: 'showFooter',
+          name: 'ComponentGridFooterShowFooter',
+          component: () => import('@/views/grid/footer/showFooter/CodeExample.vue')
+        },
+        {
           path: 'footerData',
           name: 'ComponentGridFooterFooterData',
           component: () => import('@/views/grid/footer/footerData/CodeExample.vue')
@@ -3105,6 +3115,11 @@ const gridRouteConfig: RouteConfig = {
         //   name: 'ComponentGridCustomTemplate',
         //   component: () => import('@/views/grid/custom/template/CodeExample.vue')
         // },
+        {
+          path: 'customBtn',
+          name: 'ComponentGridCustomCustomBtn',
+          component: () => import('@/views/grid/custom/customBtn/CodeExample.vue')
+        },
         {
           path: 'placement',
           name: 'ComponentGridCustomPlacement',

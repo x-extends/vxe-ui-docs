@@ -1,12 +1,11 @@
 <template>
   <div>
-    <vxe-switch v-model="showFooter">表尾开关</vxe-switch>
     <vxe-table
       border
       show-overflow
+      show-footer
       height="400"
       :loading="loading"
-      :show-footer="showFooter"
       :data="tableData"
       :footer-data="footerData">
       <vxe-column field="seq" type="seq" width="70" fixed="left"></vxe-column>
@@ -35,7 +34,6 @@ interface RowVO {
 export default Vue.extend({
   data () {
     const tableData: RowVO[] = []
-    const showFooter = true
 
     const footerData: VxeTablePropTypes.FooterData = [
       { seq: '合计', num: '-' },
@@ -44,7 +42,6 @@ export default Vue.extend({
 
     return {
       loading: false,
-      showFooter,
       tableData,
       footerData
     }
