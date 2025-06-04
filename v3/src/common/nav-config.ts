@@ -861,8 +861,10 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '分组排序', routerLink: { name: 'ComponentGridRowGroupSort' } },
             { title: '同时使用展开行', routerLink: { name: 'ComponentGridRowGroupExpand' } },
             { title: '显示分组统计', routerLink: { name: 'ComponentGridRowGroupTotal' } },
+            { title: '显示多列合计', routerLink: { name: 'ComponentGridRowGroupCount' } },
             { title: '自定义分组内容', routerLink: { name: 'ComponentGridRowGroupContentMethod' } },
             { title: '自定义合并', routerLink: { name: 'ComponentGridRowGroupSpanMethod' } },
+            { title: '展示方式', routerLink: { name: 'ComponentGridRowGroupGroupMode' } },
             { title: '触发方式', routerLink: { name: 'ComponentGridRowGroupTrigger' } },
             { title: '手动操作', routerLink: { name: 'ComponentGridRowGroupHandleSet' } }
           ]
