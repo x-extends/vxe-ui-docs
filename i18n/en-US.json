@@ -272,7 +272,8 @@
     },
     "extendPivotTable": {
       "nav": {
-        "aggregation": "Aggregation"
+        "aggregation": "Aggregation",
+        "dynamicInteraction": "Dynamic interaction"
       }
     },
     "filtersComplexInput": {
