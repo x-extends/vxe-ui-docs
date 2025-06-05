@@ -270,6 +270,9 @@
         "editCursorLock": "方向键锁定光标"
       }
     },
+    "extendPivotTable": {
+      "aggregation": "分类与汇总"
+    },
     "filtersComplexInput": {
       "nav": {
         "complexSimpleFilter": "Ingresar filtro",
