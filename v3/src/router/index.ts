@@ -2238,6 +2238,7 @@ const gridRouteConfig: RouteConfig = {
       component: RouteLayout,
       children: [
         { path: 'base', name: 'ComponentGridFilterBase', component: () => import('@/views/grid/filter/base/CodeExample.vue') },
+        { path: 'icon', name: 'ComponentGridFilterIcon', component: () => import('@/views/grid/filter/icon/CodeExample.vue') },
         {
           path: 'remote',
           name: 'ComponentGridFilterRemote',
