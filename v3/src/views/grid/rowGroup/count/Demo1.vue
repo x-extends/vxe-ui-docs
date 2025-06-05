@@ -26,7 +26,7 @@ export default Vue.extend({
       rowGroupConfig: {
         groupFields: ['role'],
         countFields: ['sex', 'age'],
-        countMethod ({ column, children }) {
+        aggregateMethod ({ column, children }) {
           return `${column.field}（${children.length}）`
         }
       },
@@ -34,8 +34,8 @@ export default Vue.extend({
         { type: 'seq', width: 70 },
         { field: 'name', title: 'Name', minWidth: 300, rowGroupNode: true },
         { field: 'role', title: 'Role' },
-        { field: 'sex', title: 'Sex' },
-        { field: 'age', title: 'Age' },
+        { field: 'sex', title: 'Sex', aggFunc: true },
+        { field: 'age', title: 'Age', aggFunc: true },
         { field: 'address', title: 'Address' }
       ],
       data: [
