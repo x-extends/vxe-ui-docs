@@ -216,6 +216,7 @@
         "areaCellToRow": "Выберите всю строку",
         "areaClip": "Копировать и вставить",
         "areaDisabledClip": "Отключить копию и вставьте",
+        "copyWithHead": "复制带表头",
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "Вставьте автоматически вставки ряды и столбцы",
         "areaTree": "Дерево структура",

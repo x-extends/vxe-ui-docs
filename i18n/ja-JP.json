@@ -216,6 +216,7 @@
         "areaCellToRow": "行全体を選択します",
         "areaClip": "コピーして貼り付けます",
         "areaDisabledClip": "コピーと貼り付けを無効にします",
+        "copyWithHead": "复制带表头",
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "貼り付けは行と列を自動的に挿入します",
         "areaTree": "ツリー構造",
