@@ -271,7 +271,9 @@
       }
     },
     "extendPivotTable": {
-      "aggregation": "Aggregation"
+      "nav": {
+        "aggregation": "Aggregation"
+      }
     },
     "filtersComplexInput": {
       "nav": {
