@@ -1413,8 +1413,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
         { title: '字体颜色', routerLink: { name: 'CssVarTableFontColor' } },
         { title: '单元格边框', routerLink: { name: 'CssVarTableBorder' } },
         { title: '表格背景色', routerLink: { name: 'CssVarTableBackground' } },
-        { title: '行上移背景色', routerLink: { name: 'CssVarTableRowHover' } },
-        { title: '当前行背景色', routerLink: { name: 'CssVarTableRowCurrent' } },
+        { title: '行与列上移背景色', routerLink: { name: 'CssVarTableRowColHover' } },
+        { title: '当前行与列背景色', routerLink: { name: 'CssVarTableRowColCurrent' } },
         { title: '单元格高度', routerLink: { name: 'CssVarTableRowHeight' } }
       ]
     },

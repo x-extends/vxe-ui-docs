@@ -5,7 +5,8 @@
     <vxe-grid
       v-bind="gridOptions"
       :style="{
-        '--vxe-ui-table-row-hover-background-color': hoverBgColor
+        '--vxe-ui-table-row-hover-background-color': hoverBgColor,
+        '--vxe-ui-table-column-hover-background-color': hoverBgColor
       }">
     </vxe-grid>
   </div>
@@ -28,6 +29,9 @@ export default Vue.extend({
   data () {
     const gridOptions: VxeGridProps<RowVO> = {
       border: true,
+      columnConfig: {
+        isHover: true
+      },
       rowConfig: {
         isHover: true
       },

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <vxe-color-picker v-model="currentBgColor" :colors="colorList" clearable></vxe-color-picker>
+    <vxe-color-picker v-model="hoverBgColor" :colors="colorList" clearable></vxe-color-picker>
 
     <vxe-grid
       v-bind="gridOptions"
       :style="{
-        '--vxe-ui-table-row-current-background-color': currentBgColor,
-        '--vxe-ui-table-row-hover-current-background-color': currentBgColor
+        '--vxe-ui-table-row-hover-background-color': hoverBgColor,
+        '--vxe-ui-table-column-hover-background-color': hoverBgColor
       }">
     </vxe-grid>
   </div>
@@ -25,7 +25,7 @@ interface RowVO {
   address: string
 }
 
-const currentBgColor = ref('#66DD82')
+const hoverBgColor = ref('#f4f2a3')
 
 const colorList = ref([
   '#DC143C', '#FF1493', '#FF00FF', '#9932CC', '#6A5ACD',
@@ -38,9 +38,11 @@ const colorList = ref([
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
+  columnConfig: {
+    isHover: true
+  },
   rowConfig: {
-    isHover: true,
-    isCurrent: true
+    isHover: true
   },
   columns: [
     { field: 'seq', type: 'seq', width: 70 },

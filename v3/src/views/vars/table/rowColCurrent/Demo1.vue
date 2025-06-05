@@ -1,12 +1,16 @@
 <template>
   <div>
     <vxe-color-picker v-model="currentBgColor" :colors="colorList" clearable></vxe-color-picker>
+    <vxe-color-picker v-model="currentHoverBgColor" :colors="colorList" clearable></vxe-color-picker>
 
     <vxe-grid
       v-bind="gridOptions"
       :style="{
         '--vxe-ui-table-row-current-background-color': currentBgColor,
-        '--vxe-ui-table-row-hover-current-background-color': currentBgColor
+        '--vxe-ui-table-row-hover-current-background-color': currentHoverBgColor,
+        '--vxe-ui-table-column-hover-background-color': currentHoverBgColor,
+        '--vxe-ui-table-column-current-background-color': currentBgColor,
+        '--vxe-ui-table-column-hover-current-background-color': currentHoverBgColor
       }">
     </vxe-grid>
   </div>
@@ -29,6 +33,10 @@ export default Vue.extend({
   data () {
     const gridOptions: VxeGridProps<RowVO> = {
       border: true,
+      columnConfig: {
+        isHover: true,
+        isCurrent: true
+      },
       rowConfig: {
         isHover: true,
         isCurrent: true
@@ -51,6 +59,7 @@ export default Vue.extend({
     }
 
     const currentBgColor = '#66DD82'
+    const currentHoverBgColor = '#98EAAB'
 
     const colorList = [
       '#DC143C', '#FF1493', '#FF00FF', '#9932CC', '#6A5ACD',
@@ -64,6 +73,7 @@ export default Vue.extend({
     return {
       gridOptions,
       currentBgColor,
+      currentHoverBgColor,
       colorList
     }
   }
