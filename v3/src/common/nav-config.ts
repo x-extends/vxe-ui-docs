@@ -665,7 +665,8 @@ const tableNavConfig: NavVO & { children: NavVO[] } = {
           children: [
             { title: '宽度', routerLink: { name: 'ComponentGridCellWidth' } },
             { title: '边距', routerLink: { name: 'ComponentGridCellPadding' } },
-            { title: '高度', routerLink: { name: 'ComponentGridCellHeight' } }
+            { title: '高度', routerLink: { name: 'ComponentGridCellHeight' } },
+            { title: '垂直对齐', routerLink: { name: 'ComponentGridCellVerticalAlign' } }
           ]
         },
         {

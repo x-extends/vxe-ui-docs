@@ -2195,6 +2195,7 @@ const gridRouteConfig: RouteRecordRaw = {
       children: [
         { path: 'width', name: 'ComponentGridCellWidth', component: () => import('@/views/grid/cell/width/CodeExample.vue') },
         { path: 'padding', name: 'ComponentGridCellPadding', component: () => import('@/views/grid/cell/padding/CodeExample.vue') },
+        { path: 'verticalAlign', name: 'ComponentGridCellVerticalAlign', component: () => import('@/views/grid/cell/verticalAlign/CodeExample.vue') },
         { path: 'height', name: 'ComponentGridCellHeight', component: () => import('@/views/grid/cell/height/CodeExample.vue') }
       ]
     },

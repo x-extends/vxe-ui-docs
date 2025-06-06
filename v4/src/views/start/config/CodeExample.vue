@@ -494,7 +494,7 @@
                   // isEvery: false,
                   showIcon: true
                 },
-                rowGroupConfig: {
+                aggregateConfig: {
                   padding: true,
                   rowField: 'id',
                   parentField: '_X_ROW_PARENT_KEY',
