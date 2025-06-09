@@ -17,7 +17,7 @@
     "vue-i18n": "^8.15.1",
     "vue-router": "^3.5.1",
     "vuex": "^3.4.0",
-    "vxe-pc-ui": "^3.6.17",
+    "vxe-pc-ui": "^3.6.18",
     "vxe-table": "^3.15.36"
   },
   "devDependencies": {
