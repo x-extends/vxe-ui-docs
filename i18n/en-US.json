@@ -283,6 +283,7 @@
     "filtersComplexInput": {
       "nav": {
         "complexSimpleFilter": "Enter filter",
+        "complexRemoteFilter": "Remote filter",
         "complexInputTitle": "Filter with conditions",
         "stringFilter": "String type filter",
         "numberFilter": "Numeric type filter",
@@ -292,6 +293,7 @@
     "filtersCombination": {
       "nav": {
         "aggregationFilter": "Basic screening",
+        "combinationRemoteFilter": "Remote filter",
         "combinationTitle": "Complex filtering",
         "combinationStringFilter": "String type filter",
         "combinationNumberFilter": "Numeric type filter",

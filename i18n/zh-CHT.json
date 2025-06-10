@@ -283,6 +283,7 @@
     "filtersComplexInput": {
       "nav": {
         "complexSimpleFilter": "輸入篩選",
+        "complexRemoteFilter": "服务端筛选",
         "complexInputTitle": "帶條件篩選",
         "stringFilter": "字符串類型篩選",
         "numberFilter": "數值類型篩選",
@@ -292,6 +293,7 @@
     "filtersCombination": {
       "nav": {
         "aggregationFilter": "基礎篩選",
+        "combinationRemoteFilter": "服务端筛选",
         "combinationTitle": "複雜篩選",
         "combinationStringFilter": "字符串類型篩選",
         "combinationNumberFilter": "數值類型篩選",

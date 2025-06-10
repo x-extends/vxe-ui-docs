@@ -283,6 +283,7 @@
     "filtersComplexInput": {
       "nav": {
         "complexSimpleFilter": "フィルターを入力します",
+        "complexRemoteFilter": "服务端筛选",
         "complexInputTitle": "条件付きフィルター",
         "stringFilter": "文字列型フィルタリング",
         "numberFilter": "数値フィルタリング",
@@ -292,6 +293,7 @@
     "filtersCombination": {
       "nav": {
         "aggregationFilter": "基本的なフィルタリング",
+        "combinationRemoteFilter": "服务端筛选",
         "combinationTitle": "複雑なフィルタリング",
         "combinationStringFilter": "文字列型フィルタリング",
         "combinationNumberFilter": "数値フィルタリング",

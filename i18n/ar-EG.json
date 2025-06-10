@@ -283,6 +283,7 @@
     "filtersComplexInput": {
       "nav": {
         "complexSimpleFilter": "أدخل المرشح",
+        "complexRemoteFilter": "服务端筛选",
         "complexInputTitle": "تصفية مع الظروف",
         "stringFilter": "تصفية نوع السلسلة",
         "numberFilter": "تصفية النوع العددي",
@@ -292,6 +293,7 @@
     "filtersCombination": {
       "nav": {
         "aggregationFilter": "التصفية الأساسية",
+        "combinationRemoteFilter": "服务端筛选",
         "combinationTitle": "تصفية معقدة",
         "combinationStringFilter": "تصفية نوع السلسلة",
         "combinationNumberFilter": "تصفية النوع العددي",

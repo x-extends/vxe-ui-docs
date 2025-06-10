@@ -283,6 +283,7 @@
     "filtersComplexInput": {
       "nav": {
         "complexSimpleFilter": "Введите фильтр",
+        "complexRemoteFilter": "服务端筛选",
         "complexInputTitle": "Фильтр с условиями",
         "stringFilter": "Фильтрация типа строки",
         "numberFilter": "Фильтрация численного типа",
@@ -292,6 +293,7 @@
     "filtersCombination": {
       "nav": {
         "aggregationFilter": "Основная фильтрация",
+        "combinationRemoteFilter": "服务端筛选",
         "combinationTitle": "Сложная фильтрация",
         "combinationStringFilter": "Фильтрация типа строки",
         "combinationNumberFilter": "Фильтрация численного типа",

@@ -283,6 +283,7 @@
     "filtersComplexInput": {
       "nav": {
         "complexSimpleFilter": "Filter eingeben",
+        "complexRemoteFilter": "服务端筛选",
         "complexInputTitle": "Filtern mit Bedingungen",
         "stringFilter": "String Type Filterung",
         "numberFilter": "Numerische Typfilterung",
@@ -292,6 +293,7 @@
     "filtersCombination": {
       "nav": {
         "aggregationFilter": "Grundfilterung",
+        "combinationRemoteFilter": "服务端筛选",
         "combinationTitle": "Komplexe Filterung",
         "combinationStringFilter": "String Type Filterung",
         "combinationNumberFilter": "Numerische Typfilterung",
