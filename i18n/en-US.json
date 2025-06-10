@@ -282,7 +282,7 @@
     },
     "filtersComplexInput": {
       "nav": {
-        "complexSimpleFilter": "Enter filter",
+        "complexSimpleFilter": "Basic filter",
         "complexRemoteFilter": "Remote filter",
         "complexInputTitle": "Filter with conditions",
         "stringFilter": "String type filter",

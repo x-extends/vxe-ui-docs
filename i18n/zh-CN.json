@@ -282,7 +282,7 @@
     },
     "filtersComplexInput": {
       "nav": {
-        "complexSimpleFilter": "输入筛选",
+        "complexSimpleFilter": "基础筛选",
         "complexRemoteFilter": "服务端筛选",
         "complexInputTitle": "带条件筛选",
         "stringFilter": "字符串类型筛选",
