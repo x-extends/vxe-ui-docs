@@ -62,7 +62,8 @@ export const navConfigList: NavVO[] = [
       {
         title: '开发指南',
         children: [
-          { title: '安装插件', routerLink: { name: 'PluginValidator' } }
+          { title: 'NPM 安装插件', routerLink: { name: 'PluginValidatorStartNpmInstall' } },
+          { title: 'CDN 安装插件', routerLink: { name: 'PluginValidatorStartCdnInstall' } }
         ]
       },
       {
@@ -180,7 +181,8 @@ export const navConfigList: NavVO[] = [
       {
         title: '开发指南',
         children: [
-          { title: '安装插件', routerLink: { name: 'PluginExportPdfInstall' } }
+          { title: 'NPM 安装插件', routerLink: { name: 'PluginExportPdfStartNpmInstall' } },
+          { title: 'CDN 安装插件', routerLink: { name: 'PluginExportPdfStartCdnInstall' } }
         ]
       },
       {

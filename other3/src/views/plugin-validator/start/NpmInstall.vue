@@ -3,7 +3,7 @@
     <CodeLight>
       <template #tip>
         <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-validator">
-          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/main/plugin-validator" target="_blank"></vxe-link> 该插件在表格或表单中提供了常用的校验
+          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/v3/plugin-validator" target="_blank"></vxe-link> 该插件在表格或表单中提供了常用的校验
         </vxe-tip>
       </template>
 
@@ -21,7 +21,7 @@
           </pre-code>
         </pre>
 
-        <vxe-tip status="primary" title="方式一">使用 NPM 安装</vxe-tip>
+        <vxe-tip status="primary" title="使用 NPM 安装，方式一"></vxe-tip>
 
         <pre>
           <div>文件 src/main </div>
@@ -36,8 +36,9 @@
 
             VxeUI.use(VxeUIPluginValidator)
 
-            createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
-            // ...
+            Vue.use(VxeUIAll)
+            Vue.use(VxeUITable)
+            //...
           </pre-code>
         </pre>
       </template>
@@ -45,12 +46,17 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { computed } from 'vue'
-import { useAppStore } from '@/store/app'
+<script lang="ts">
+import Vue from 'vue'
+import { mapGetters } from 'vuex'
 
-const appStore = useAppStore()
-const uiCDNLib = computed(() => appStore.uiCDNLib)
-const tableCDNLib = computed(() => appStore.tableCDNLib)
-const pluginValidatorCDNLib = computed(() => appStore.pluginValidatorCDNLib)
+export default Vue.extend({
+  computed: {
+    ...mapGetters([
+      'uiCDNLib',
+      'tableCDNLib',
+      'pluginValidatorCDNLib'
+    ])
+  }
+})
 </script>

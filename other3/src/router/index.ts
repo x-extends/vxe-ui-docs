@@ -378,8 +378,25 @@ const routes: Array<RouteConfig> = [
     children: [
       {
         path: 'install',
-        name: 'PluginExportPdfInstall',
-        component: () => import('@/views/plugin-export-pdf/install/CodeExample.vue')
+        redirect: {
+          name: 'PluginExportPdfStartNpmInstall'
+        }
+      },
+      {
+        path: 'start',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'npmInstall',
+            name: 'PluginExportPdfStartNpmInstall',
+            component: () => import('@/views/plugin-export-pdf/start/NpmInstall.vue')
+          },
+          {
+            path: 'cdnInstall',
+            name: 'PluginExportPdfStartCdnInstall',
+            component: () => import('@/views/plugin-export-pdf/start/CdnInstall.vue')
+          }
+        ]
       },
       {
         path: 'table',
@@ -989,8 +1006,25 @@ const routes: Array<RouteConfig> = [
     children: [
       {
         path: 'install',
-        name: 'PluginValidator',
-        component: () => import('@/views/plugin-validator/install/CodeExample.vue')
+        redirect: {
+          name: 'PluginValidatorStartNpmInstall'
+        }
+      },
+      {
+        path: 'start',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'npmInstall',
+            name: 'PluginValidatorStartNpmInstall',
+            component: () => import('@/views/plugin-validator/start/NpmInstall.vue')
+          },
+          {
+            path: 'cdnInstall',
+            name: 'PluginValidatorStartCdnInstall',
+            component: () => import('@/views/plugin-validator/start/CdnInstall.vue')
+          }
+        ]
       },
       {
         path: 'form',
