@@ -55,6 +55,12 @@ const routes: Array<RouteConfig> = [
     component: PageLayout,
     children: [
       {
+        path: 'install',
+        redirect: {
+          name: 'PluginChartStartNpmInstall'
+        }
+      },
+      {
         path: 'start',
         component: RouteLayout,
         children: [
@@ -118,6 +124,12 @@ const routes: Array<RouteConfig> = [
     path: '/plugin-menu',
     component: PageLayout,
     children: [
+      {
+        path: 'install',
+        redirect: {
+          name: 'PluginMenuStartNpmInstall'
+        }
+      },
       {
         path: 'start',
         component: RouteLayout,
@@ -192,6 +204,12 @@ const routes: Array<RouteConfig> = [
     path: '/plugin-export-xlsx',
     component: PageLayout,
     children: [
+      {
+        path: 'install',
+        redirect: {
+          name: 'PluginExportXlsxStartNpmInstall'
+        }
+      },
       {
         path: 'start',
         component: RouteLayout,
@@ -941,6 +959,12 @@ const routes: Array<RouteConfig> = [
     path: '/plugin-render-echarts',
     component: PageLayout,
     children: [
+      {
+        path: 'install',
+        redirect: {
+          name: 'PluginEchartsStartNpmInstall'
+        }
+      },
       {
         path: 'start',
         component: RouteLayout,
