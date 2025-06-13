@@ -210,7 +210,8 @@ export const navConfigList: NavVO[] = [
       {
         title: '开发指南',
         children: [
-          { title: '安装插件', routerLink: { name: 'PluginRenderWangEditorInstall' } }
+          { title: 'NPM 安装插件', routerLink: { name: 'PluginRenderWangEditorStartNpmInstall' } },
+          { title: 'CDN 安装插件', routerLink: { name: 'PluginRenderWangEditorStartCdnInstall' } }
         ]
       },
       {
@@ -237,8 +238,8 @@ export const navConfigList: NavVO[] = [
       {
         title: '开发指南',
         children: [
-          { title: 'NPM 安装插件', routerLink: { name: 'PluginEchartsStartNpmInstall' } },
-          { title: 'CDN 安装插件', routerLink: { name: 'PluginEchartsStartCdnInstall' } }
+          { title: 'NPM 安装插件', routerLink: { name: 'PluginRenderEchartsStartNpmInstall' } },
+          { title: 'CDN 安装插件', routerLink: { name: 'PluginRenderEchartsStartCdnInstall' } }
         ]
       },
       {

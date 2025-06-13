@@ -947,8 +947,25 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: 'install',
-        name: 'PluginRenderWangEditorInstall',
-        component: () => import('@/views/plugin-render-wangeditor/install/CodeExample.vue')
+        redirect: {
+          name: 'PluginRenderWangEditorStartNpmInstall'
+        }
+      },
+      {
+        path: 'start',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'npmInstall',
+            name: 'PluginRenderWangEditorStartNpmInstall',
+            component: () => import('@/views/plugin-render-wangeditor/start/NpmInstall.vue')
+          },
+          {
+            path: 'cdnInstall',
+            name: 'PluginRenderWangEditorStartCdnInstall',
+            component: () => import('@/views/plugin-render-wangeditor/start/CdnInstall.vue')
+          }
+        ]
       },
       {
         path: 'form',
@@ -998,7 +1015,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'install',
         redirect: {
-          name: 'PluginEchartsStartNpmInstall'
+          name: 'PluginRenderEchartsStartNpmInstall'
         }
       },
       {
@@ -1007,12 +1024,12 @@ const routes: Array<RouteRecordRaw> = [
         children: [
           {
             path: 'npmInstall',
-            name: 'PluginEchartsStartNpmInstall',
+            name: 'PluginRenderEchartsStartNpmInstall',
             component: () => import('@/views/plugin-render-echarts/start/NpmInstall.vue')
           },
           {
             path: 'cdnInstall',
-            name: 'PluginEchartsStartCdnInstall',
+            name: 'PluginRenderEchartsStartCdnInstall',
             component: () => import('@/views/plugin-render-echarts/start/CdnInstall.vue')
           }
         ]
