@@ -89,8 +89,8 @@
     },
     "header": {
       "moreProducts": "ecology",
-      "morePlugin": "Plugin",
-      "pluginDocs": "Plugin documentation",
+      "morePlugin": "🔥Plugin",
+      "pluginDocs": "🔥Plugin documentation",
       "pluginStore": "plug-in market",
       "enterpriseVersion": "Enterprise Edition",
       "buyPlugin": "Purchase the enterprise version license",
@@ -105,20 +105,20 @@
     },
     "version": {
       "vxe-table": {
-        "v1": "v1.x (vue 2.6+ stop maintenance) ~ 2020-04-01 stop update",
-        "v1dx": "v1.x (vue 2.6+ stop maintenance) ~ 2020-04-01 stop update",
-        "v2": "v2.x (vue 2.6+ stop maintenance) ~ 2021-12-01 stop update",
-        "v2dx": "v2.x (vue 2.6+ stop maintenance) ~ 2021-12-01 stop update",
-        "v3d8": "v3.0~3.8 (vue 2.6+ stop maintenance) ~ 2024-12-01 stop update",
+        "v1": "v1.x (vue 2.6+ stop maintenance) ~ 2020-04-01 stop update⚠️",
+        "v1dx": "v1.x (vue 2.6+ stop maintenance) ~ 2020-04-01 stop update⚠️",
+        "v2": "v2.x (vue 2.6+ stop maintenance) ~ 2021-12-01 stop update⚠️",
+        "v2dx": "v2.x (vue 2.6+ stop maintenance) ~ 2021-12-01 stop update⚠️",
+        "v3d8": "v3.0~3.8 (vue 2.6+ stop maintenance) ~ 2024-12-01 stop update⚠️",
         "v3": "v3.9+ (vue 2.6+ LTS)",
         "v3dx": "v3.x (vue 2.6+ LTS)",
-        "v4d6": "v4.0~4.6 (vue 3.x stops maintenance) ~ 2024-12-01 stops update",
+        "v4d6": "v4.0~4.6 (vue 3.x stops maintenance) ~ 2024-12-01 stops update⚠️",
         "v4": "v4.7+ (vue 3.x Latest)",
         "v4dx": "v4.x (vue 3.x Latest)"
       },
       "vxe-pc-ui": {
-        "v1": "v1.x (vue 2.6+ stop maintenance) ~ 2024-08-01 stop update",
-        "v2": "v2.x (vue 2.6+ stop maintenance) ~ 2024-08-01 stop update",
+        "v1": "v1.x (vue 2.6+ stop maintenance) ~ 2024-08-01 stop update⚠️",
+        "v2": "v2.x (vue 2.6+ stop maintenance) ~ 2024-08-01 stop update⚠️",
         "v3": "v3.x (vue 2.6+ LTS)",
         "v4": "v4.x (vue 3.x Latest)"
       }
