@@ -109,7 +109,7 @@ const routes: Array<RouteRecordRaw> = [
         component: RouteLayout,
         children: [
           {
-            path: 'npmInstall',
+            path: 'install',
             name: 'PluginMenuStartNpmInstall',
             component: () => import('@/views/plugin-menu/start/NpmInstall.vue')
           },
@@ -183,7 +183,7 @@ const routes: Array<RouteRecordRaw> = [
         component: RouteLayout,
         children: [
           {
-            path: 'npmInstall',
+            path: 'install',
             name: 'PluginExportXlsxStartNpmInstall',
             component: () => import('@/views/plugin-export-xlsx/start/NpmInstall.vue')
           },
