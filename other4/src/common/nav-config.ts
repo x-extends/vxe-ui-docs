@@ -33,7 +33,8 @@ export const navConfigList: NavVO[] = [
       {
         title: '开发指南',
         children: [
-          { title: '安装插件', routerLink: { name: 'PluginRenderChartInstall' } }
+          { title: 'NPM 安装插件', routerLink: { name: 'PluginChartStartNpmInstall' } },
+          { title: 'CDN 安装插件', routerLink: { name: 'PluginChartStartCdnInstall' } }
         ]
       },
       {
@@ -234,7 +235,8 @@ export const navConfigList: NavVO[] = [
       {
         title: '开发指南',
         children: [
-          { title: '安装插件', routerLink: { name: 'PluginRenderEcharts' } }
+          { title: 'NPM 安装插件', routerLink: { name: 'PluginEchartsStartNpmInstall' } },
+          { title: 'CDN 安装插件', routerLink: { name: 'PluginEchartsStartCdnInstall' } }
         ]
       },
       {

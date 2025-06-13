@@ -2,8 +2,8 @@
   <div>
     <CodeLight>
       <template #tip>
-        <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-menu">
-          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/main/plugin-menu" target="_blank"></vxe-link> 该插件提供了在表格中提供便捷的右键菜单操作
+        <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-render-chart">
+          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/main/plugin-render-chart" target="_blank"></vxe-link> 该插件提供了在表格中渲染高性能的轻量级图表
         </vxe-tip>
       </template>
 
@@ -12,11 +12,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginMenuCDNLib}
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderChartCDNLib}
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginMenuCDNLib}
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderChartCDNLib}
             # 或者
-            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginMenuCDNLib}
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderChartCDNLib}
             `">
           </pre-code>
         </pre>
@@ -25,20 +25,23 @@
 
         <pre>
           <div>文件 src/main </div>
-          <pre-code language="javascript">
+          <pre-code
+            language="javascript"
+            :content="`
             // ...
             import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
             import VxeUITable from 'vxe-table'
             import 'vxe-table/lib/style.css'
-            import VxeUIPluginMenu from '@vxe-ui/plugin-menu'
-            import '@vxe-ui/plugin-menu/dist/style.css'
+            import VxeUIPluginRenderChart from '@vxe-ui/plugin-render-chart'
+            import '@vxe-ui/plugin-render-chart/dist/style.css'
             // ...
 
-            VxeUI.use(VxeUIPluginMenu)
+            VxeUI.use(VxeUIPluginRenderChart)
 
             createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
             // ...
+            `">
           </pre-code>
         </pre>
       </template>
@@ -47,11 +50,11 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { ref, computed } from 'vue'
 import { useAppStore } from '@/store/app'
 
 const appStore = useAppStore()
 const uiCDNLib = computed(() => appStore.uiCDNLib)
 const tableCDNLib = computed(() => appStore.tableCDNLib)
-const pluginMenuCDNLib = computed(() => appStore.pluginMenuCDNLib)
+const pluginRenderChartCDNLib = computed(() => appStore.pluginRenderChartCDNLib)
 </script>

@@ -21,7 +21,7 @@
           </pre-code>
         </pre>
 
-        <vxe-tip status="primary" title="方式一">使用 NPM 安装</vxe-tip>
+        <vxe-tip status="primary" title="使用 NPM 安装，方式一"></vxe-tip>
 
         <pre>
           <div>文件 src/main </div>

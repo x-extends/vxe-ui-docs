@@ -52,9 +52,20 @@ const routes: Array<RouteRecordRaw> = [
     component: PageLayout,
     children: [
       {
-        path: 'install',
-        name: 'PluginRenderChartInstall',
-        component: () => import('@/views/plugin-render-chart/install/CodeExample.vue')
+        path: 'start',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'npmInstall',
+            name: 'PluginChartStartNpmInstall',
+            component: () => import('@/views/plugin-render-chart/start/NpmInstall.vue')
+          },
+          {
+            path: 'cdnInstall',
+            name: 'PluginChartStartCdnInstall',
+            component: () => import('@/views/plugin-render-chart/start/CdnInstall.vue')
+          }
+        ]
       },
       {
         path: 'table',
@@ -950,9 +961,20 @@ const routes: Array<RouteRecordRaw> = [
     component: PageLayout,
     children: [
       {
-        path: 'install',
-        name: 'PluginRenderEcharts',
-        component: () => import('@/views/plugin-render-echarts/install/CodeExample.vue')
+        path: 'start',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'npmInstall',
+            name: 'PluginEchartsStartNpmInstall',
+            component: () => import('@/views/plugin-render-echarts/start/NpmInstall.vue')
+          },
+          {
+            path: 'cdnInstall',
+            name: 'PluginEchartsStartCdnInstall',
+            component: () => import('@/views/plugin-render-echarts/start/CdnInstall.vue')
+          }
+        ]
       }
     ]
   },

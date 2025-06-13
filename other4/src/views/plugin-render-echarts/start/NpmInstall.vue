@@ -3,7 +3,7 @@
     <CodeLight>
       <template #tip>
         <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-render-echarts">
-          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/v3/plugin-render-echarts" target="_blank"></vxe-link> 该插件提供了在表格中通过鼠标选取单元格后渲染 echarts 图表
+          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/main/plugin-render-echarts" target="_blank"></vxe-link> 该插件提供了在表格中通过鼠标选取单元格后渲染 <vxe-link href="https://www.npmjs.com/package/echarts" target="_blank">echarts</vxe-link> 图表
         </vxe-tip>
         <vxe-tip status="error">该导出插件基于 <vxe-link href="https://github.com/apache/echarts" target="_blank">echarts</vxe-link> 库实现，具体开源协议请自行去查看对应的库</vxe-tip>
       </template>
@@ -13,16 +13,16 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts@5.4.3
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts@5.4.3
             # 或者
-            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts@5.4.3
             `">
           </pre-code>
         </pre>
 
-        <vxe-tip status="primary" title="方式一（推荐）">在 html 引入插件库，使用第三方 CDN 方式记得锁定版本号，避免受到非兼容性更新的影响</vxe-tip>
+        <vxe-tip status="primary" title="使用 NPM 安装，方式一（推荐）">在 html 引入插件库，使用第三方 CDN 方式记得锁定版本号，避免受到非兼容性更新的影响</vxe-tip>
         <vxe-tip status="error">不建议将第三方的 CDN 地址用于正式环境，因为该连接随时都可能会失效，建议将对应的包下载到本地后在引入</vxe-tip>
 
         <pre>
@@ -46,14 +46,13 @@
             // 确保 window.echarts 变量存在即表示安装完成
             VxeUI.use(VxeUIPluginRenderEcharts)
 
-            Vue.use(VxeUIAll)
-            Vue.use(VxeUITable)
-            //...
+            createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
+            // ...
             `">
           </pre-code>
         </pre>
 
-        <vxe-tip status="primary" title="方式二">使用 NPM 安装</vxe-tip>
+        <vxe-tip status="primary" title="使用 NPM 安装，方式二"></vxe-tip>
 
         <pre>
           <div>文件 src/main </div>
@@ -73,32 +72,22 @@
               echarts
             })
 
-            Vue.use(VxeUIAll)
-            Vue.use(VxeUITable)
-            //...
+            createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
+            // ...
             `">
           </pre-code>
         </pre>
-      </template>
-
-      <template #preview>
-        <vxe-image src="https://vxeui.com/pluginDocs/table/static/img/areaBasicsEcharts.de733354.gif"></vxe-image>
       </template>
     </CodeLight>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-import { mapGetters } from 'vuex'
+<script lang="ts" setup>
+import { computed } from 'vue'
+import { useAppStore } from '@/store/app'
 
-export default Vue.extend({
-  computed: {
-    ...mapGetters([
-      'uiCDNLib',
-      'tableCDNLib',
-      'pluginRenderEchartsCDNLib'
-    ])
-  }
-})
+const appStore = useAppStore()
+const uiCDNLib = computed(() => appStore.uiCDNLib)
+const tableCDNLib = computed(() => appStore.tableCDNLib)
+const pluginRenderEchartsCDNLib = computed(() => appStore.pluginRenderEchartsCDNLib)
 </script>

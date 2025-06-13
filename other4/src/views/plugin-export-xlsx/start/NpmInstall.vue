@@ -22,7 +22,7 @@
           </pre-code>
         </pre>
 
-        <vxe-tip status="primary" title="方式一（推荐）">在 html 引入插件库，使用第三方 CDN 方式记得锁定版本号，避免受到非兼容性更新的影响</vxe-tip>
+        <vxe-tip status="primary" title="使用 NPM 安装，方式一（推荐）">在 html 引入插件库，使用第三方 CDN 方式记得锁定版本号，避免受到非兼容性更新的影响</vxe-tip>
         <vxe-tip status="error">不建议将第三方的 CDN 地址用于正式环境，因为该连接随时都可能会失效，建议将对应的包下载到本地后在引入</vxe-tip>
 
         <pre>
@@ -52,7 +52,7 @@
           </pre-code>
         </pre>
 
-        <vxe-tip status="primary" title="方式二">直接导入</vxe-tip>
+        <vxe-tip status="primary" title="使用 NPM 安装，方式二"></vxe-tip>
 
         <pre>
           <div>文件 src/main </div>

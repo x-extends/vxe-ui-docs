@@ -8,43 +8,6 @@
       </template>
 
       <template #use>
-        <pre>
-          <pre-code
-            language="shell"
-            :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderChartCDNLib}
-            # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderChartCDNLib}
-            # 或者
-            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderChartCDNLib}
-            `">
-          </pre-code>
-        </pre>
-
-        <vxe-tip status="primary" title="使用 NPM 安装">方式一</vxe-tip>
-
-        <pre>
-          <div>文件 src/main </div>
-          <pre-code
-            language="javascript"
-            :content="`
-            // ...
-            import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
-            import 'vxe-pc-ui/lib/style.css'
-            import VxeUITable from 'vxe-table'
-            import 'vxe-table/lib/style.css'
-            import VxeUIPluginRenderChart from '@vxe-ui/plugin-render-chart'
-            import '@vxe-ui/plugin-render-chart/dist/style.css'
-            // ...
-
-            VxeUI.use(VxeUIPluginRenderChart)
-
-            createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
-            // ...
-            `">
-          </pre-code>
-        </pre>
-
         <vxe-tip status="primary" title="使用 CDN 安装"></vxe-tip>
         <vxe-tip status="error" title="">
           <div>不建议将不受信任的第三方 CDN 用于正式环境，如确实需要使用第三方 CDN 链接记得锁定版本号，锁定版本的方法请查看第三方的说明。</div>
@@ -65,9 +28,6 @@ import { useAppStore } from '@/store/app'
 
 const appStore = useAppStore()
 const docsVersion = computed(() => appStore.docsVersion)
-const uiCDNLib = computed(() => appStore.uiCDNLib)
-const tableCDNLib = computed(() => appStore.tableCDNLib)
-const pluginRenderChartCDNLib = computed(() => appStore.pluginRenderChartCDNLib)
 
 const cdnCode = ref('')
 

@@ -21,7 +21,7 @@
           </pre-code>
         </pre>
 
-        <vxe-tip status="primary" title="方式一">使用 NPM 安装</vxe-tip>
+        <vxe-tip status="primary" title="使用 NPM 安装，方式一"></vxe-tip>
 
         <pre>
           <div>文件 src/main </div>
@@ -42,16 +42,6 @@
             //...
           </pre-code>
         </pre>
-
-        <vxe-tip status="primary" title="使用 CDN 安装"></vxe-tip>
-        <vxe-tip status="error" title="">
-          <div>不建议将不受信任的第三方 CDN 用于正式环境，如确实需要使用第三方 CDN 链接记得锁定版本号，锁定版本的方法请查看第三方的说明。</div>
-        </vxe-tip>
-
-        <pre>
-          <iframe :src="cdnUrl" style="display: block;width: 100%;height: 480px;border: 1px solid #000;"></iframe>
-          <code-render language="html" :code="cdnCode"></code-render>
-        </pre>
       </template>
     </CodeLight>
   </div>
@@ -62,36 +52,12 @@ import Vue from 'vue'
 import { mapState, mapGetters } from 'vuex'
 
 export default Vue.extend({
-  data () {
-    return {
-      cdnCode: ''
-    }
-  },
   computed: {
-    ...mapState([
-      'packName',
-      'docsVersion'
-    ]) as {
-      packName(): string
-      docsVersion(): string
-    },
     ...mapGetters([
       'uiCDNLib',
       'tableCDNLib',
       'pluginRenderChartCDNLib'
-    ]) as {
-      uiCDNLib(): string
-      tableCDNLib(): string
-      pluginRenderChartCDNLib(): string
-    },
-    cdnUrl (): string {
-      return `/resource/cdn/plugin-render-chart-v${this.docsVersion}.html?v=${process.env.VUE_APP_DATE_NOW}`
-    }
-  },
-  created () {
-    fetch(this.cdnUrl as string).then(res => res.text()).then(html => {
-      this.cdnCode = html
-    })
+    ])
   }
 })
 </script>

@@ -2,10 +2,10 @@
   <div>
     <CodeLight>
       <template #tip>
-        <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-export-xlsx">
-          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/v3/plugin-export-xlsx" target="_blank"></vxe-link> 该插件用于支持在表格中导出导入导出 XLSX 文件，基于 <vxe-link href="https://github.com/exceljs/exceljs" target="_blank">exceljs</vxe-link> 实现
+        <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-render-echarts">
+          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/v3/plugin-render-echarts" target="_blank"></vxe-link> 该插件提供了在表格中通过鼠标选取单元格后渲染 echarts 图表
         </vxe-tip>
-        <vxe-tip status="error">该导出插件基于 <vxe-link href="https://github.com/exceljs/exceljs" target="_blank">exceljs</vxe-link> 库实现，具体开源协议请自行去查看对应的库</vxe-tip>
+        <vxe-tip status="error">该导出插件基于 <vxe-link href="https://github.com/apache/echarts" target="_blank">echarts</vxe-link> 库实现，具体开源协议请自行去查看对应的库</vxe-tip>
       </template>
 
       <template #use>
@@ -13,11 +13,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs@4.4.0
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs@4.4.0
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts
             # 或者
-            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportXlsxCDNLib} exceljs@4.4.0
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts
             `">
           </pre-code>
         </pre>
@@ -29,7 +29,7 @@
           <div>文件 index.html</div>
           <pre-code
             language="html"
-            content="%3Cscript%20type%3D%22text%2Fjavascript%22%20src%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2Fexceljs%404.4.0%2Fdist%2Fexceljs.min.js%22%3E%3C%2Fscript%3E">
+            content="%3Cscript%20type%3D%22text%2Fjavascript%22%20src%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2Fecharts%405.4.3%2Fdist%2Fecharts.min.js%22%3E%3C%2Fscript%3E">
           </pre-code>
           <div>文件 src/main </div>
           <pre-code
@@ -40,11 +40,11 @@
             import 'vxe-pc-ui/lib/style.css'
             import VxeUITable from 'vxe-table'
             import 'vxe-table/lib/style.css'
-            import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
+            import VxeUIPluginRenderEcharts from '@vxe-ui/plugin-render-echarts'
             // ...
 
-            // 确保 window.ExcelJS 变量存在即表示安装完成
-            VxeUI.use(VxeUIPluginExportXLSX)
+            // 确保 window.echarts 变量存在即表示安装完成
+            VxeUI.use(VxeUIPluginRenderEcharts)
 
             Vue.use(VxeUIAll)
             Vue.use(VxeUITable)
@@ -62,12 +62,15 @@
             :content="`
             // ...
             import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
-            import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
-            import ExcelJS from 'exceljs'
+            import 'vxe-pc-ui/lib/style.css'
+            import VxeUITable from 'vxe-table'
+            import 'vxe-table/lib/style.css'
+            import VxeUIPluginRenderEcharts from '@vxe-ui/plugin-render-echarts'
+            import * as echarts from 'echarts'
             // ...
 
-            VxeUI.use(VxeUIPluginExportXLSX, {
-              ExcelJS
+            VxeUI.use(VxeUIPluginRenderEcharts, {
+              echarts
             })
 
             Vue.use(VxeUIAll)
@@ -83,14 +86,14 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { mapState, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default Vue.extend({
   computed: {
     ...mapGetters([
       'uiCDNLib',
       'tableCDNLib',
-      'pluginExportXlsxCDNLib'
+      'pluginRenderEchartsCDNLib'
     ])
   }
 })
