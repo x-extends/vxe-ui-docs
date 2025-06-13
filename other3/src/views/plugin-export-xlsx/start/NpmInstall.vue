@@ -46,8 +46,9 @@
             // 确保 window.ExcelJS 变量存在即表示安装完成
             VxeUI.use(VxeUIPluginExportXLSX)
 
-            createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
-            // ...
+            Vue.use(VxeUIAll)
+            Vue.use(VxeUITable)
+            //...
             `">
           </pre-code>
         </pre>
@@ -61,9 +62,6 @@
             :content="`
             // ...
             import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
-            import 'vxe-pc-ui/lib/style.css'
-            import VxeUITable from 'vxe-table'
-            import 'vxe-table/lib/style.css'
             import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx'
             import ExcelJS from 'exceljs'
             // ...
@@ -72,43 +70,39 @@
               ExcelJS
             })
 
-            createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
-            // ...
+            Vue.use(VxeUIAll)
+            Vue.use(VxeUITable)
+            //...
             `">
           </pre-code>
-        </pre>
-
-        <vxe-tip status="primary" title="使用 CDN 安装"></vxe-tip>
-        <vxe-tip status="error" title="">
-          <div>不建议将不受信任的第三方 CDN 用于正式环境，如确实需要使用第三方 CDN 链接记得锁定版本号，锁定版本的方法请查看第三方的说明。</div>
-        </vxe-tip>
-
-        <pre>
-          <iframe :src="cdnUrl" style="display: block;width: 100%;height: 680px;border: 1px solid #000;"></iframe>
-          <code-render language="html" :code="cdnCode"></code-render>
         </pre>
       </template>
     </CodeLight>
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref, computed } from 'vue'
-import { useAppStore } from '@/store/app'
+<script lang="ts">
+import Vue from 'vue'
+import { mapState, mapGetters } from 'vuex'
 
-const appStore = useAppStore()
-const docsVersion = computed(() => appStore.docsVersion)
-const uiCDNLib = computed(() => appStore.uiCDNLib)
-const tableCDNLib = computed(() => appStore.tableCDNLib)
-const pluginExportXlsxCDNLib = computed(() => appStore.pluginExportXlsxCDNLib)
-
-const cdnCode = ref('')
-
-const cdnUrl = computed(() => {
-  return `/resource/cdn/plugin-export-xlsx-v${docsVersion.value}.html?v=${process.env.VUE_APP_DATE_NOW}`
-})
-
-fetch(cdnUrl.value).then(res => res.text()).then(html => {
-  cdnCode.value = html
+export default Vue.extend({
+  computed: {
+    ...mapState([
+      'packName',
+      'docsVersion'
+    ]) as {
+      packName(): string
+      docsVersion(): string
+    },
+    ...mapGetters([
+      'uiCDNLib',
+      'tableCDNLib',
+      'pluginExportXlsxCDNLib'
+    ]) as {
+      uiCDNLib(): string
+      tableCDNLib(): string
+      pluginExportXlsxCDNLib(): string
+    }
+  }
 })
 </script>

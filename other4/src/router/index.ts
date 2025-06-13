@@ -105,9 +105,20 @@ const routes: Array<RouteRecordRaw> = [
     component: PageLayout,
     children: [
       {
-        path: 'install',
-        name: 'PluginMenuInstall',
-        component: () => import('@/views/plugin-menu/install/CodeExample.vue')
+        path: 'start',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'npmInstall',
+            name: 'PluginMenuStartNpmInstall',
+            component: () => import('@/views/plugin-menu/start/NpmInstall.vue')
+          },
+          {
+            path: 'cdnInstall',
+            name: 'PluginMenuStartCdnInstall',
+            component: () => import('@/views/plugin-menu/start/CdnInstall.vue')
+          }
+        ]
       },
       {
         path: 'table',
@@ -168,9 +179,20 @@ const routes: Array<RouteRecordRaw> = [
     component: PageLayout,
     children: [
       {
-        path: 'install',
-        name: 'PluginExportXlsxInstall',
-        component: () => import('@/views/plugin-export-xlsx/install/CodeExample.vue')
+        path: 'start',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'npmInstall',
+            name: 'PluginExportXlsxStartNpmInstall',
+            component: () => import('@/views/plugin-export-xlsx/start/NpmInstall.vue')
+          },
+          {
+            path: 'cdnInstall',
+            name: 'PluginExportXlsxStartCdnInstall',
+            component: () => import('@/views/plugin-export-xlsx/start/CdnInstall.vue')
+          }
+        ]
       },
       {
         path: 'table',
