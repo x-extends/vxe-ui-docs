@@ -18,7 +18,9 @@ import axios from 'axios'
 import { VxeUploadPropTypes } from 'vxe-pc-ui'
 
 const fileList = ref([
-  { name: 'fj577.jpg', url: 'https://vxeui.com/resource/img/fj577.jpg' }
+  { name: 'fj577.jpg', url: 'https://vxeui.com/resource/img/fj577.jpg' },
+  { name: 'fj562.png', url: 'https://vxeui.com/resource/img/fj562.png' },
+  { name: 'fj573.jpeg', url: 'https://vxeui.com/resource/img/fj573.jpeg' }
 ])
 
 const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file }) => {
