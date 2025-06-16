@@ -2,10 +2,10 @@
   <div>
     <vxe-split v-bind="splitOptions">
       <template #topContent>
-        <div style="height: 200px;background-color: #f3e1e1;">顶部</div>
+        <div style="height: 100%;background-color: #f3e1e1;">顶部</div>
       </template>
       <template #bottomContent>
-        <div style="height: 400px;background-color: #d8d8f9;">底部</div>
+        <div style="height: 100%;background-color: #d8d8f9;">底部</div>
       </template>
     </vxe-split>
   </div>
@@ -20,7 +20,7 @@ const splitOptions = reactive<VxeSplitProps>({
   border: true,
   vertical: true,
   items: [
-    { slots: { default: 'topContent' } },
+    { height: 100, slots: { default: 'topContent' } },
     { slots: { default: 'bottomContent' } }
   ]
 })
