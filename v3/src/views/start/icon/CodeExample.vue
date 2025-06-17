@@ -247,6 +247,9 @@
               TABLE_DRAG_DISABLED: 'vxe-icon-no-drop',
               TABLE_ROW_GROUP_OPEN: 'vxe-icon-arrow-right rotate90',
               TABLE_ROW_GROUP_CLOSE: 'vxe-icon-arrow-right',
+              TABLE_AGGREGATION_GROUPING: 'vxe-icon-grouping',
+              TABLE_AGGREGATION_VALUES: 'vxe-icon-values',
+              TABLE_AGGREGATION_DELETE: 'vxe-icon-close',
 
               // toolbar
               TOOLBAR_TOOLS_REFRESH: 'vxe-icon-repeat',
