@@ -2337,7 +2337,7 @@ export const navConfigList: NavVO[] = [
             title: '日期类型',
             children: [
               { title: '尺寸大小', routerLink: { name: 'ComponentDatePickerDateSize' } },
-              { title: '单选', routerLink: { name: 'ComponentDatePickerDateBase' } },
+              { title: '绑定值', routerLink: { name: 'ComponentDatePickerDateBase' } },
               { title: '可清除', routerLink: { name: 'ComponentDatePickerDateClearable' } },
               { title: '禁用', routerLink: { name: 'ComponentDatePickerDateDisabled' } },
               { title: '查看模式', routerLink: { name: 'ComponentDatePickerDateReadonly' } },
@@ -2371,7 +2371,7 @@ export const navConfigList: NavVO[] = [
             title: '时间类型',
             children: [
               { title: '尺寸大小', routerLink: { name: 'ComponentDatePickerTimeSize' } },
-              { title: '单选', routerLink: { name: 'ComponentDatePickerTimeBase' } },
+              { title: '绑定值', routerLink: { name: 'ComponentDatePickerTimeBase' } },
               { title: '禁用', routerLink: { name: 'ComponentDatePickerTimeDisabled' } },
               { title: '自定义格式', routerLink: { name: 'ComponentDatePickerTimeValueFormat' } },
               {
@@ -2397,7 +2397,7 @@ export const navConfigList: NavVO[] = [
           {
             title: '日期带时间类型',
             children: [
-              { title: '单选', routerLink: { name: 'ComponentDatePickerDatetimeBase' } },
+              { title: '绑定值', routerLink: { name: 'ComponentDatePickerDatetimeBase' } },
               { title: '禁用', routerLink: { name: 'ComponentDatePickerDatetimeDisabled' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerDatetimeMultiple' } },
               { title: '自定义格式', routerLink: { name: 'ComponentDatePickerDatetimeValueFormat' } },
@@ -2424,7 +2424,7 @@ export const navConfigList: NavVO[] = [
           {
             title: '周类型',
             children: [
-              { title: '单选', routerLink: { name: 'ComponentDatePickerWeekBase' } },
+              { title: '绑定值', routerLink: { name: 'ComponentDatePickerWeekBase' } },
               { title: '禁用', routerLink: { name: 'ComponentDatePickerWeekDisabled' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerWeekMultiple' } },
               { title: '自定义开始日', routerLink: { name: 'ComponentDatePickerWeekStartDay' } },
@@ -2452,7 +2452,7 @@ export const navConfigList: NavVO[] = [
           {
             title: '月度类型',
             children: [
-              { title: '单选', routerLink: { name: 'ComponentDatePickerMonthBase' } },
+              { title: '绑定值', routerLink: { name: 'ComponentDatePickerMonthBase' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerMonthMultiple' } },
               {
                 title: '快捷按钮',
@@ -2468,7 +2468,7 @@ export const navConfigList: NavVO[] = [
           {
             title: '季度类型',
             children: [
-              { title: '单选', routerLink: { name: 'ComponentDatePickerQuarterBase' } },
+              { title: '绑定值', routerLink: { name: 'ComponentDatePickerQuarterBase' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerQuarterMultiple' } },
               {
                 title: '快捷按钮',
@@ -2484,7 +2484,7 @@ export const navConfigList: NavVO[] = [
           {
             title: '年度类型',
             children: [
-              { title: '单选', routerLink: { name: 'ComponentDatePickerYearBase' } },
+              { title: '绑定值', routerLink: { name: 'ComponentDatePickerYearBase' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerYearMultiple' } },
               {
                 title: '快捷按钮',
