@@ -1,6 +1,7 @@
 <template>
   <div>
     <vxe-date-picker v-model="val1" type="time" value-format="timestamp" clearable></vxe-date-picker>
+    <vxe-date-picker v-model="val2" type="time" value-format="timestamp" clearable></vxe-date-picker>
   </div>
 </template>
 
@@ -8,4 +9,5 @@
 import { ref } from 'vue'
 
 const val1 = ref(null)
+const val2 = ref(Date.now())
 </script>
