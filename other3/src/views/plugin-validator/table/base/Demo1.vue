@@ -60,7 +60,8 @@ export default Vue.extend({
     const tableData: RowVO[] = [
       { id: 10001, mobile: '', email: '', idCard: '', ipAddress: '', url: '', plateNumber: '' },
       { id: 10002, mobile: '13600000003', email: '456@163.com', idCard: '111111191211111111', ipAddress: '192.168.0.2', url: 'https://vxetable.cn', plateNumber: '粤A99999' },
-      { id: 10003, mobile: '13600000002', email: 'abc@163.com', idCard: '111111191311111511', ipAddress: '192.168.0.3', url: 'https://vxeui.com', plateNumber: '京A99999' }
+      { id: 10003, mobile: '13600000002', email: 'abc@163.com', idCard: '111111191311111511', ipAddress: '192.168.0.3', url: 'https://vxeui.com', plateNumber: '京A99999' },
+      { id: 10004, mobile: '13600000004', email: '2536@163.com', idCard: '111111125363581511', ipAddress: '192.168.0.4', url: 'https://vxeui.com', plateNumber: '京A99999' }
     ]
 
     return {
