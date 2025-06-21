@@ -24,6 +24,7 @@ export default Vue.extend({
   data () {
     const gridOptions: VxeGridProps<RowVO> = {
       border: true,
+      showOverflow: true,
       keepSource: true,
       editConfig: {
         trigger: 'click',

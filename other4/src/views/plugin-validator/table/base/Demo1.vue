@@ -4,6 +4,7 @@
     <vxe-table
       border
       keep-source
+      show-overflow
       ref="tableRef"
       :edit-config="{trigger: 'click', mode: 'row', showStatus: true}"
       :edit-rules="editRules"

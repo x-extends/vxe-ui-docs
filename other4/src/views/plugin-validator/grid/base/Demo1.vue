@@ -24,6 +24,7 @@ const gridRef = ref<VxeGridInstance>()
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
+  showOverflow: true,
   keepSource: true,
   editConfig: {
     trigger: 'click',
