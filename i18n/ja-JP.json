@@ -62,6 +62,7 @@
         "tableTitle": "テーブル",
         "tableTableTitle": "テーブルの基本テーブル",
         "tableGridTitle": "グリッド構成テーブル",
+        "tableOtherPlugin": "扩展插件库",
         "tableCssVar": "CSS変数",
         "formGlobalFormats": "表单项 - 格式化（全局复用）",
         "tableGlobalFormats": "单元格 - 格式化（全局复用）",

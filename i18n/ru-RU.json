@@ -62,6 +62,7 @@
         "tableTitle": "Стол",
         "tableTableTitle": "Таблица базовая таблица",
         "tableGridTitle": "Таблица конфигурации сетки",
+        "tableOtherPlugin": "扩展插件库",
         "tableCssVar": "Переменная CSS",
         "formGlobalFormats": "表单项 - 格式化（全局复用）",
         "tableGlobalFormats": "单元格 - 格式化（全局复用）",

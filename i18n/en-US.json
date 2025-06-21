@@ -62,6 +62,7 @@
         "tableTitle": "Table table",
         "tableTableTitle": "Table basic table",
         "tableGridTitle": "Grid configuration table",
+        "tableOtherPlugin": "扩展插件库",
         "tableCssVar": "Css variable",
         "formGlobalFormats": "Form item format (global reuse)",
         "tableGlobalFormats": "Table cell format (global reuse)",

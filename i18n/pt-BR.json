@@ -62,6 +62,7 @@
         "tableTitle": "Mesa",
         "tableTableTitle": "Tabela básica da tabela",
         "tableGridTitle": "Tabela de configuração da grade",
+        "tableOtherPlugin": "扩展插件库",
         "tableCssVar": "Variável CSS",
         "formGlobalFormats": "表单项 - 格式化（全局复用）",
         "tableGlobalFormats": "单元格 - 格式化（全局复用）",

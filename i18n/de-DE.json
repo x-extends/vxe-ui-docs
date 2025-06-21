@@ -62,6 +62,7 @@
         "tableTitle": "Tisch",
         "tableTableTitle": "Tabelle Basic Tabelle",
         "tableGridTitle": "Gitterkonfigurationstabelle",
+        "tableOtherPlugin": "扩展插件库",
         "tableCssVar": "CSS -Variable",
         "formGlobalFormats": "表单项 - 格式化（全局复用）",
         "tableGlobalFormats": "单元格 - 格式化（全局复用）",
