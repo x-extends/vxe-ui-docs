@@ -3,7 +3,7 @@
     <p>
       <vxe-card title="标题" :loading="loading" :height="200" :width="300">
         <template #extra>
-          <vxe-button mode="text" icon="vxe-icon-refresh" @click="loadData()"></vxe-button>
+          <vxe-button mode="text" icon="vxe-icon-refresh" :loading="loading" @click="loadData()"></vxe-button>
         </template>
 
         <template #default>
