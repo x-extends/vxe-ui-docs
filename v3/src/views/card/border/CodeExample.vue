@@ -3,7 +3,7 @@
     <CodeLight path="card/border/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="边框">
-          默认是显示边框的，可以通过 border 属性设置
+          通过 border 属性设置
         </vxe-tip>
       </template>
     </CodeLight>
