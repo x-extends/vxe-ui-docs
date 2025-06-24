@@ -1,7 +1,6 @@
 <template>
   <div>
-    <vxe-button status="primary" @click="exportEvent">直接导出</vxe-button>
-    <vxe-button status="primary" @click="openEvent">打开导出</vxe-button>
+    <vxe-button status="primary" @click="exportEvent">自定义顺序导出</vxe-button>
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
@@ -25,31 +24,18 @@ export default Vue.extend({
       border: true,
       showFooter: true,
       exportConfig: {
-        type: 'html',
         columns: [
-          { field: 'seq' },
-          { field: 'group2' },
+          { field: 'age' },
           { field: 'sex' },
-          { field: 'age' }
+          { field: 'seq' }
         ]
       },
       columns: [
         { field: 'seq', type: 'seq', width: 70 },
-        {
-          title: '分组1',
-          field: 'group1',
-          children: [
-            { field: 'name', title: 'Name' }
-          ]
-        },
-        {
-          title: '分组2',
-          field: 'group2',
-          children: [
-            { field: 'sex', title: 'Sex' },
-            { field: 'age', title: 'Age' }
-          ]
-        }
+        { field: 'name', title: 'Name' },
+        { field: 'sex', title: 'Sex' },
+        { field: 'age', title: 'Age' },
+        { field: 'address', title: 'Address' }
       ],
       data: [
         { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
@@ -71,13 +57,9 @@ export default Vue.extend({
     exportEvent () {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
       if ($grid) {
-        $grid.exportData()
-      }
-    },
-    openEvent () {
-      const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
-      if ($grid) {
-        $grid.openExport()
+        $grid.exportData({
+          type: 'csv'
+        })
       }
     }
   }
