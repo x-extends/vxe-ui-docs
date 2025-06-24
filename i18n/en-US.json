@@ -279,7 +279,8 @@
         "aggregation": "Aggregation",
         "handleRowGroup": "Row group",
         "rowGroupSummary": "Group summary",
-        "dynamicInteraction": "Dynamic interaction"
+        "dynamicInteraction": "Dynamic interaction",
+        "aggDragValues": "拖拽与数据汇总"
       }
     },
     "filtersComplexInput": {

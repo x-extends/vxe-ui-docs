@@ -279,7 +279,8 @@
         "aggregation": "分类与汇总",
         "handleRowGroup": "数据分组",
         "rowGroupSummary": "分组汇总",
-        "dynamicInteraction": "动态交互"
+        "dynamicInteraction": "动态交互",
+        "aggDragValues": "拖拽与数据汇总"
       }
     },
     "filtersComplexInput": {
