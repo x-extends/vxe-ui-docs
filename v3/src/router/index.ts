@@ -5607,6 +5607,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/checkbox/group/CodeExample.vue')
           },
           {
+            path: 'button',
+            name: 'ComponentCheckboxButton',
+            component: () => import('@/views/checkbox/button/CodeExample.vue')
+          },
+          {
             path: 'max',
             name: 'ComponentCheckboxMax',
             component: () => import('@/views/checkbox/max/CodeExample.vue')

@@ -2187,6 +2187,7 @@ export const navConfigList: NavVO[] = [
           { title: '禁用状态', routerLink: { name: 'ComponentCheckboxDisabled' } },
           { title: '自定义值', routerLink: { name: 'ComponentCheckboxValue' } },
           { title: '复选组', routerLink: { name: 'ComponentCheckboxGroup' } },
+          { title: '复选按钮', routerLink: { name: 'ComponentCheckboxButton' } },
           { title: '限制最大数量', routerLink: { name: 'ComponentCheckboxMax' } }
         ]
       },
