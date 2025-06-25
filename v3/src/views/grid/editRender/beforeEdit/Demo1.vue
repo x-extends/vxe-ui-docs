@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import type { VxeGridProps } from 'vxe-table'
+import { VxeUI, VxeGridProps } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -28,7 +28,7 @@ export default Vue.extend({
       showOverflow: true,
       editConfig: {
         trigger: 'click',
-        mode: 'row',
+        mode: 'cell',
         beforeEditMethod ({ rowIndex }) {
           if (rowIndex === 1) {
             return false
@@ -58,7 +58,10 @@ export default Vue.extend({
   },
   methods: {
     editDisabledEvent () {
-      console.log('禁止编辑')
+      VxeUI.modal.message({
+        content: '禁止编辑',
+        status: 'error'
+      })
     }
   }
 })
