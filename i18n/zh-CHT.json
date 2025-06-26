@@ -296,6 +296,7 @@
     "filtersCombination": {
       "nav": {
         "aggregationFilter": "基礎篩選",
+        "fixedGroup": "冻结分组列",
         "combinationRemoteFilter": "服务端筛选",
         "combinationTitle": "複雜篩選",
         "combinationStringFilter": "字符串類型篩選",

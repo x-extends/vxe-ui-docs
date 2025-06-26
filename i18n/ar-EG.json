@@ -296,6 +296,7 @@
     "filtersCombination": {
       "nav": {
         "aggregationFilter": "التصفية الأساسية",
+        "fixedGroup": "冻结分组列",
         "combinationRemoteFilter": "服务端筛选",
         "combinationTitle": "تصفية معقدة",
         "combinationStringFilter": "تصفية نوع السلسلة",

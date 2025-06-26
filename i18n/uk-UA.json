@@ -296,6 +296,7 @@
     "filtersCombination": {
       "nav": {
         "aggregationFilter": "Основна фільтрація",
+        "fixedGroup": "冻结分组列",
         "combinationRemoteFilter": "服务端筛选",
         "combinationTitle": "Складна фільтрація",
         "combinationStringFilter": "Фільтрування типу рядка",
