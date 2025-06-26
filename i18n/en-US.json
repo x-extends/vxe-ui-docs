@@ -298,7 +298,8 @@
     "filtersCombination": {
       "nav": {
         "aggregationFilter": "Basic screening",
-        "fixedGroup": "冻结分组列",
+        "fixed": "冻结列",
+        "sort": "排序",
         "combinationRemoteFilter": "Remote filter",
         "combinationTitle": "Complex filtering",
         "combinationStringFilter": "String type filter",
