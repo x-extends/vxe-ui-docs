@@ -1753,14 +1753,22 @@ export const navConfigList: NavVO[] = [
           { title: '页签图标', routerLink: { name: 'ComponentTabsIcon' } },
           { title: '页签触发方式', routerLink: { name: 'ComponentTabsRoundTrigger' } },
           { title: '页签显示位置', routerLink: { name: 'ComponentTabsRoundPosition' } },
+          { title: '是否显示面板内容', routerLink: { name: 'ComponentTabsRoundShowContent' } },
           { title: '预加载页签', routerLink: { name: 'ComponentTabsRoundPreload' } },
           { title: '页签超出可滚动', routerLink: { name: 'ComponentTabsOver' } },
-          { title: '自定义页签前缀', routerLink: { name: 'ComponentTabsPrefix' } },
-          { title: '自定义页签后缀', routerLink: { name: 'ComponentTabsSuffix' } },
           { title: '拦截页签切换', routerLink: { name: 'ComponentTabsBeforeChangeMethod' } },
           { title: '可关闭', routerLink: { name: 'ComponentTabsCloseConfig' } },
           { title: '拦截页签关闭', routerLink: { name: 'ComponentTabsBeforeClose' } },
           { title: '可刷新', routerLink: { name: 'ComponentTabsRefreshConfig' } },
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '自定义页签前缀', routerLink: { name: 'ComponentTabsTemplatePrefix' } },
+              { title: '自定义页签后缀', routerLink: { name: 'ComponentTabsTemplateSuffix' } },
+              { title: '自定义面板头部模板', routerLink: { name: 'ComponentTabsTemplateHeader' } },
+              { title: '自定义面板底部模板', routerLink: { name: 'ComponentTabsTemplateFooter' } }
+            ]
+          },
           { title: '权限码', routerLink: { name: 'ComponentTabsPermissionCode' } }
         ]
       },

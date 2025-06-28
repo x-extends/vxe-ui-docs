@@ -7792,6 +7792,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/tabs/position/CodeExample.vue')
           },
           {
+            path: 'showContent',
+            name: 'ComponentTabsRoundShowContent',
+            component: () => import('@/views/tabs/showContent/CodeExample.vue')
+          },
+          {
             path: 'preload',
             name: 'ComponentTabsRoundPreload',
             component: () => import('@/views/tabs/preload/CodeExample.vue')
@@ -7800,16 +7805,6 @@ const routes: Array<RouteConfig> = [
             path: 'over',
             name: 'ComponentTabsOver',
             component: () => import('@/views/tabs/over/CodeExample.vue')
-          },
-          {
-            path: 'prefix',
-            name: 'ComponentTabsPrefix',
-            component: () => import('@/views/tabs/prefix/CodeExample.vue')
-          },
-          {
-            path: 'suffix',
-            name: 'ComponentTabsSuffix',
-            component: () => import('@/views/tabs/suffix/CodeExample.vue')
           },
           {
             path: 'beforeChangeMethod',
@@ -7830,6 +7825,32 @@ const routes: Array<RouteConfig> = [
             path: 'refreshConfig',
             name: 'ComponentTabsRefreshConfig',
             component: () => import('@/views/tabs/refreshConfig/CodeExample.vue')
+          },
+          {
+            path: 'template',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'prefix',
+                name: 'ComponentTabsTemplatePrefix',
+                component: () => import('@/views/tabs/template/prefix/CodeExample.vue')
+              },
+              {
+                path: 'suffix',
+                name: 'ComponentTabsTemplateSuffix',
+                component: () => import('@/views/tabs/template/suffix/CodeExample.vue')
+              },
+              {
+                path: 'header',
+                name: 'ComponentTabsTemplateHeader',
+                component: () => import('@/views/tabs/template/header/CodeExample.vue')
+              },
+              {
+                path: 'footer',
+                name: 'ComponentTabsTemplateFooter',
+                component: () => import('@/views/tabs/template/footer/CodeExample.vue')
+              }
+            ]
           },
           {
             path: 'permissionCode',
