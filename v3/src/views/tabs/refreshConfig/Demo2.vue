@@ -23,7 +23,6 @@
         <div>内容2</div>
         <div>内容2</div>
         <div>内容2</div>
-        <div>内容2</div>
       </template>
 
       <template #default3>
@@ -32,7 +31,12 @@
         <div>内容3</div>
         <div>内容3</div>
         <div>内容3</div>
-        <div>内容3</div>
+      </template>
+
+      <template #default4>
+        <div>内容4</div>
+        <div>内容4</div>
+        <div>内容4</div>
       </template>
     </vxe-tabs>
   </div>
@@ -47,7 +51,8 @@ export default Vue.extend({
     const tabList: VxeTabsPropTypes.Options = [
       { name: '1', title: '标题1', slots: { default: 'default1' } },
       { name: '2', title: '标题2', slots: { default: 'default2' } },
-      { name: '3', title: '标题3', slots: { default: 'default3' } }
+      { name: '3', title: '标题3', slots: { default: 'default3' } },
+      { name: '4', title: '标题4', slots: { default: 'default4' } }
     ]
 
     const closeConfig: VxeTabsPropTypes.CloseConfig = {
@@ -61,7 +66,7 @@ export default Vue.extend({
         return new Promise<void>(resolve => {
           setTimeout(() => {
             resolve()
-          }, 500)
+          }, 3000)
         })
       },
       visibleMethod ({ name }) {

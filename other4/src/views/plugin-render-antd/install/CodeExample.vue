@@ -47,6 +47,38 @@
             // ...
           </pre-code>
         </pre>
+
+        <vxe-tip status="primary" title="方式二">使用了自动导入的插件</vxe-tip>
+        <vxe-tip status="error">由于是通过插件自动注入的，所以无法识别到组件，需手动定义组件</vxe-tip>
+
+        <pre>
+          <div>文件 src/main </div>
+          <pre-code language="javascript">
+            // ...
+            import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
+            import 'vxe-pc-ui/lib/style.css'
+            import VxeUITable from 'vxe-table'
+            import 'vxe-table/lib/style.css'
+            import VxeUIPluginRenderAntd from '@vxe-ui/plugin-render-element'
+            import '@vxe-ui/plugin-render-element/dist/style.css'
+            // ...
+
+            import { AInput, AInputNumber, ASelect, ACascader, ADatePicker, ATimePicker } from 'ant-design-vue'
+            // ...
+            VxeUIPluginRenderAntd.component(AInput)
+            VxeUIPluginRenderAntd.component(AInputNumber)
+            VxeUIPluginRenderAntd.component(ASelect)
+            VxeUIPluginRenderAntd.component(ACascader)
+            VxeUIPluginRenderAntd.component(ADatePicker)
+            VxeUIPluginRenderAntd.component(ATimePicker)
+            // ...
+
+            VxeUI.use(VxeUIPluginRenderAntd)
+
+            createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
+            // ...
+          </pre-code>
+        </pre>
       </template>
     </CodeLight>
   </div>

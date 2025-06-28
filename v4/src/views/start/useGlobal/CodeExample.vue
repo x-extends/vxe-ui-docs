@@ -93,6 +93,7 @@
               VxeCarousel,
               VxeCarouselItem,
               VxeCheckbox,
+              VxeCheckboxButton,
               VxeCheckboxGroup,
               VxeCol,
               VxeCollapse,
@@ -197,6 +198,7 @@
               app.use(VxeCarousel)
               app.use(VxeCarouselItem)
               app.use(VxeCheckbox)
+              app.use(VxeCheckboxButton)
               app.use(VxeCheckboxGroup)
               app.use(VxeCol)
               app.use(VxeCollapse)
