@@ -9,7 +9,7 @@
       </vxe-radio-group>
     </div>
 
-    <vxe-tabs v-model="selectTab" height="200" width="400" :position="tabPosition" type="round-card">
+    <vxe-tabs v-model="selectTab" :position="tabPosition" type="round-card">
       <vxe-tab-pane title="标题1" name="1">
         <div>内容1</div>
         <div>内容1</div>
@@ -35,52 +35,12 @@
         <div>内容3</div>
       </vxe-tab-pane>
       <vxe-tab-pane title="标题4" name="4">
-        <div>内容4</div>
-        <div>内容4</div>
-        <div>内容4</div>
-        <div>内容4</div>
-        <div>内容4</div>
-        <div>内容4</div>
-      </vxe-tab-pane>
-      <vxe-tab-pane title="标题5" name="5">
-        <div>内容5</div>
-        <div>内容5</div>
-        <div>内容5</div>
-        <div>内容5</div>
-        <div>内容5</div>
-        <div>内容5</div>
-      </vxe-tab-pane>
-      <vxe-tab-pane title="标题6" name="6">
-        <div>内容6</div>
-        <div>内容6</div>
-        <div>内容6</div>
-        <div>内容6</div>
-        <div>内容6</div>
-        <div>内容6</div>
-      </vxe-tab-pane>
-      <vxe-tab-pane title="标题7" name="7">
-        <div>内容7</div>
-        <div>内容7</div>
-        <div>内容7</div>
-        <div>内容7</div>
-        <div>内容7</div>
-        <div>内容7</div>
-      </vxe-tab-pane>
-      <vxe-tab-pane title="标题8" name="8">
-        <div>内容7</div>
-        <div>内容7</div>
-        <div>内容7</div>
-        <div>内容7</div>
-        <div>内容7</div>
-        <div>内容7</div>
-      </vxe-tab-pane>
-      <vxe-tab-pane title="标题9" name="9">
-        <div>内容7</div>
-        <div>内容7</div>
-        <div>内容7</div>
-        <div>内容7</div>
-        <div>内容7</div>
-        <div>内容7</div>
+        <div>内容3</div>
+        <div>内容3</div>
+        <div>内容3</div>
+        <div>内容3</div>
+        <div>内容3</div>
+        <div>内容3</div>
       </vxe-tab-pane>
     </vxe-tabs>
   </div>

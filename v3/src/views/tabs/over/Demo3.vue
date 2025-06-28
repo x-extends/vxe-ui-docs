@@ -1,6 +1,88 @@
 <template>
   <div>
-    <vxe-tabs v-model="selectTab" type="border-card" :options="tabList"></vxe-tabs>
+    <div style="margin-bottom: 16px;">
+      <vxe-radio-group v-model="tabPosition">
+        <vxe-radio-button label="top" content="顶部"></vxe-radio-button>
+        <vxe-radio-button label="bottom" content="底部"></vxe-radio-button>
+        <vxe-radio-button label="left" content="左侧"></vxe-radio-button>
+        <vxe-radio-button label="right" content="右侧"></vxe-radio-button>
+      </vxe-radio-group>
+    </div>
+
+    <vxe-tabs v-model="selectTab" height="200" width="400" type="border-card" :position="tabPosition">
+      <vxe-tab-pane title="标题1" name="1">
+        <div>内容1</div>
+        <div>内容1</div>
+        <div>内容1</div>
+        <div>内容1</div>
+        <div>内容1</div>
+        <div>内容1</div>
+      </vxe-tab-pane>
+      <vxe-tab-pane title="标题2" name="2">
+        <div>内容2</div>
+        <div>内容2</div>
+        <div>内容2</div>
+        <div>内容2</div>
+        <div>内容2</div>
+        <div>内容2</div>
+      </vxe-tab-pane>
+      <vxe-tab-pane title="标题3" name="3">
+        <div>内容3</div>
+        <div>内容3</div>
+        <div>内容3</div>
+        <div>内容3</div>
+        <div>内容3</div>
+        <div>内容3</div>
+      </vxe-tab-pane>
+      <vxe-tab-pane title="标题4" name="4">
+        <div>内容4</div>
+        <div>内容4</div>
+        <div>内容4</div>
+        <div>内容4</div>
+        <div>内容4</div>
+        <div>内容4</div>
+      </vxe-tab-pane>
+      <vxe-tab-pane title="标题5" name="5">
+        <div>内容5</div>
+        <div>内容5</div>
+        <div>内容5</div>
+        <div>内容5</div>
+        <div>内容5</div>
+        <div>内容5</div>
+      </vxe-tab-pane>
+      <vxe-tab-pane title="标题6" name="6">
+        <div>内容6</div>
+        <div>内容6</div>
+        <div>内容6</div>
+        <div>内容6</div>
+        <div>内容6</div>
+        <div>内容6</div>
+      </vxe-tab-pane>
+      <vxe-tab-pane title="标题7" name="7">
+        <div>内容7</div>
+        <div>内容7</div>
+        <div>内容7</div>
+        <div>内容7</div>
+        <div>内容7</div>
+        <div>内容7</div>
+      </vxe-tab-pane>
+      <vxe-tab-pane title="标题8" name="8">
+        <div>内容7</div>
+        <div>内容7</div>
+        <div>内容7</div>
+        <div>内容7</div>
+        <div>内容7</div>
+        <div>内容7</div>
+      </vxe-tab-pane>
+      <vxe-tab-pane title="标题9" name="9">
+        <div>内容7</div>
+        <div>内容7</div>
+        <div>内容7</div>
+        <div>内容7</div>
+        <div>内容7</div>
+        <div>内容7</div>
+      </vxe-tab-pane>
+    </vxe-tabs>
   </div>
 </template>
 
@@ -10,28 +92,12 @@ import { VxeTabsPropTypes } from 'vxe-pc-ui'
 
 export default Vue.extend({
   data () {
-    const tabList: VxeTabsPropTypes.Options = [
-      { name: '1', title: '标题1标题1标题1' },
-      { name: '2', title: '标题2' },
-      { name: '3', title: '标题3标题3标题3' },
-      { name: '4', title: '标题4标题4' },
-      { name: '5', title: '标题5标题5标题5' },
-      { name: '6', title: '标题6标题6标题6标题6标题6标题6' },
-      { name: '7', title: '标题7标题7标题7' },
-      { name: '8', title: '标题8标题8' },
-      { name: '9', title: '标题9标题9标题9' },
-      { name: '10', title: '标题10标题10标题10标题10' },
-      { name: '11', title: '标题11标题11标题11' },
-      { name: '12', title: '标题12标' },
-      { name: '13', title: '标题13标题13标题13' },
-      { name: '14', title: '标题14标题14' },
-      { name: '15', title: '标题15标题15标题15' },
-      { name: '16', title: '标题16标题16标题16标题16' }
-    ]
+    const selectTab = '1'
+    const tabPosition: VxeTabsPropTypes.Position = 'left'
 
     return {
-      selectTab: '1',
-      tabList
+      selectTab,
+      tabPosition
     }
   }
 })

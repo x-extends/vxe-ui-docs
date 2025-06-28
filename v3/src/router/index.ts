@@ -7787,6 +7787,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/tabs/trigger/CodeExample.vue')
           },
           {
+            path: 'position',
+            name: 'ComponentTabsRoundPosition',
+            component: () => import('@/views/tabs/position/CodeExample.vue')
+          },
+          {
             path: 'preload',
             name: 'ComponentTabsRoundPreload',
             component: () => import('@/views/tabs/preload/CodeExample.vue')
@@ -7797,9 +7802,14 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/tabs/over/CodeExample.vue')
           },
           {
-            path: 'extra',
-            name: 'ComponentTabsExtra',
-            component: () => import('@/views/tabs/extra/CodeExample.vue')
+            path: 'prefix',
+            name: 'ComponentTabsPrefix',
+            component: () => import('@/views/tabs/prefix/CodeExample.vue')
+          },
+          {
+            path: 'suffix',
+            name: 'ComponentTabsSuffix',
+            component: () => import('@/views/tabs/suffix/CodeExample.vue')
           },
           {
             path: 'beforeChangeMethod',
