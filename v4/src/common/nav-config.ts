@@ -2245,9 +2245,15 @@ export const navConfigList: NavVO[] = [
           // { title: '整数类型', routerLink: { name: 'ComponentInputInteger' } },
           // { title: '小数类型', routerLink: { name: 'ComponentInputFloat' } },
           { title: '显示字数统计', routerLink: { name: 'ComponentInputCount' } },
-          { title: '自定义前缀图标', routerLink: { name: 'ComponentInputPrefix' } },
-          { title: '自定义后缀图标', routerLink: { name: 'ComponentInputSuffix' } },
-          { title: '自定义插槽模板', routerLink: { name: 'ComponentInputTemplate' } }
+          { title: '前缀图标', routerLink: { name: 'ComponentInputPrefix' } },
+          { title: '后缀图标', routerLink: { name: 'ComponentInputSuffix' } },
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '前缀插槽模板', routerLink: { name: 'ComponentInputTemplatePrefix' } },
+              { title: '后缀插槽模板', routerLink: { name: 'ComponentInputTemplateSuffix' } }
+            ]
+          }
         ]
       },
       // { title: 'TextInput 单行文本输入' },

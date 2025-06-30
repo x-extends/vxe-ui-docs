@@ -5821,8 +5821,19 @@ const routes: Array<RouteConfig> = [
           },
           {
             path: 'template',
-            name: 'ComponentInputTemplate',
-            component: () => import('@/views/input/template/CodeExample.vue')
+            component: RouteLayout,
+            children: [
+              {
+                path: 'prefix',
+                name: 'ComponentInputTemplatePrefix',
+                component: () => import('@/views/input/template/prefix/CodeExample.vue')
+              },
+              {
+                path: 'suffix',
+                name: 'ComponentInputTemplateSuffix',
+                component: () => import('@/views/input/template/suffix/CodeExample.vue')
+              }
+            ]
           }
         ]
       },
