@@ -1,7 +1,7 @@
 <template>
   <div>
-    <vxe-color-picker v-model="val1" show-eye-dropper clearable></vxe-color-picker>
-    <vxe-color-picker v-model="val2" :colors="colorList" show-eye-dropper clearable></vxe-color-picker>
+    <vxe-color-picker v-model="val1" type="rgb" show-eye-dropper clearable></vxe-color-picker>
+    <vxe-color-picker v-model="val2" :colors="colorList" type="hex" show-eye-dropper clearable></vxe-color-picker>
   </div>
 </template>
 

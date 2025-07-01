@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-color-picker v-model="val1" :colors="colorList" clearable></vxe-color-picker>
+    <vxe-color-picker v-model="val1" :colors="colorList" type="hex" clearable></vxe-color-picker>
   </div>
 </template>
 
