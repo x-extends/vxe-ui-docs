@@ -54,6 +54,7 @@
               },
               carouselItem: {},
               checkbox: {},
+              checkboxButton: {},
               checkboxGroup: {},
               col: {},
               collapse: {
@@ -65,7 +66,7 @@
               collapsePane: {},
               countdown: {},
               colorPicker: {
-                type: 'hex',
+                type: 'rgb',
                 clearable: true,
                 showAlpha: true,
                 clickToCopy: true,
@@ -400,6 +401,9 @@
                 // rowConfig: {
                 //   keyField: '_X_ROW_KEY' // 行数据的唯一主键字段名
                 // },
+                resizeConfig: {
+                  // refreshDelay: 20
+                },
                 resizableConfig: {
                   dragMode: 'auto',
                   showDragTip: true,
@@ -439,6 +443,11 @@
                   theme: 'beautify'
                 },
                 columnConfig: {
+                  autoOptions: {
+                    isCalcHeader: true,
+                    isCalcBody: true,
+                    isCalcFooter: true
+                  },
                   maxFixedSize: 4
                 },
                 cellConfig: {
@@ -470,6 +479,7 @@
                     // rowGroup: false,
                     // aggFunc: false
                   },
+                  // autoAggGroupValues: false,
                   //  checkMethod () {},
                   modalOptions: {
                     showMaximize: true,
@@ -509,7 +519,9 @@
                   childrenField: '_X_ROW_CHILDREN',
                   mapChildrenField: '_X_ROW_CHILD_LIST',
                   indent: 20,
-                  showIcon: true
+                  showIcon: true,
+                  maxGroupSize: 4,
+                  showAggFuncTitle: true
                 },
                 treeConfig: {
                   padding: true,
@@ -533,8 +545,20 @@
                   autoFocus: true
                 },
                 importConfig: {
+                  _typeMaps: {
+                    csv: 1,
+                    html: 1,
+                    xml: 1,
+                    txt: 1
+                  }
                 },
                 exportConfig: {
+                  _typeMaps: {
+                    csv: 1,
+                    html: 1,
+                    xml: 1,
+                    txt: 1
+                  }
                 },
                 printConfig: {
                 },
@@ -542,6 +566,7 @@
                   extension: true
                 },
                 keyboardConfig: {
+                  isAll: true,
                   isEsc: true
                 },
                 areaConfig: {
@@ -565,13 +590,13 @@
                   isReplace: true
                 },
                 virtualXConfig: {
-                  enabled: false,
+                  // enabled: false,
                   gt: 24,
                   preSize: 1,
                   oSize: 0
                 },
                 virtualYConfig: {
-                  enabled: false,
+                  // enabled: false,
                   gt: 100,
                   preSize: 1,
                   oSize: 0
@@ -603,6 +628,7 @@
                 proxyConfig: {
                   enabled: true,
                   autoLoad: true,
+                  showLoading: true,
                   showResponseMsg: true,
                   showActiveMsg: true,
                   response: {

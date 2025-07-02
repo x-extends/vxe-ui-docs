@@ -30,7 +30,7 @@
               SELECT_LOADED: 'vxe-icon-spinner roll',
               SELECT_OPEN: 'vxe-icon-caret-down rotate180',
               SELECT_CLOSE: 'vxe-icon-caret-down',
-              ADD_OPTION: 'vxe-icon-add',
+              SELECT_ADD_OPTION: 'vxe-icon-add',
 
               // icon-picker
               ICON_PICKER_OPEN: 'vxe-icon-caret-down rotate180',
@@ -48,11 +48,13 @@
               // radio
               RADIO_CHECKED: 'vxe-icon-radio-checked-fill',
               RADIO_UNCHECKED: 'vxe-icon-radio-unchecked',
+              RADIO_DISABLED_UNCHECKED: 'vxe-icon-radio-unchecked-fill',
 
               // checkbox
               CHECKBOX_INDETERMINATE: 'vxe-icon-checkbox-indeterminate-fill',
               CHECKBOX_CHECKED: 'vxe-icon-checkbox-checked-fill',
               CHECKBOX_UNCHECKED: 'vxe-icon-checkbox-unchecked',
+              CHECKBOX_DISABLED_UNCHECKED: 'vxe-icon-checkbox-unchecked-fill',
 
               // input
               INPUT_CLEAR: 'vxe-icon-error-circle-fill',
@@ -173,6 +175,8 @@
               TABLE_SELECT_CLOSE: 'vxe-icon-caret-down',
 
               // tabs
+              TABS_TAB_BUTTON_TOP: 'vxe-icon-arrow-up',
+              TABS_TAB_BUTTON_BOTTOM: 'vxe-icon-arrow-down',
               TABS_TAB_BUTTON_LEFT: 'vxe-icon-arrow-left',
               TABS_TAB_BUTTON_RIGHT: 'vxe-icon-arrow-right',
               TABS_TAB_CLOSE: 'vxe-icon-close',
@@ -209,14 +213,16 @@
               RATE_UNCHECKED: 'vxe-icon-star',
 
               // color-picker
-              COLOR_COPY: 'vxe-icon-copy',
-              EYE_DROPPER: 'vxe-icon-dropper',
+              COLOR_PICKER_COLOR_COPY: 'vxe-icon-copy',
+              COLOR_PICKER_EYE_DROPPER: 'vxe-icon-dropper',
+              COLOR_PICKER_TPTY_OPEN: 'vxe-icon-arrow-down rotate180',
+              COLOR_PICKER_TPTY_CLOSE: 'vxe-icon-arrow-down',
 
               // split
               SPLIT_TOP_ACTION: 'vxe-icon-arrow-up',
               SPLIT_BOTTOM_ACTION: 'vxe-icon-arrow-down',
               SPLIT_LEFT_ACTION: 'vxe-icon-arrow-left',
-              SPLIT_RIGHT_ACTION: 'vxe-icon-arrow-right',
+              SPLIT_RIGHT_ACTION: 'vxe-icon-arrow-right'
 
               // table
               TABLE_SORT_ASC: 'vxe-icon-caret-up',
@@ -235,21 +241,26 @@
               TABLE_CHECKBOX_CHECKED: 'vxe-icon-checkbox-checked-fill',
               TABLE_CHECKBOX_UNCHECKED: 'vxe-icon-checkbox-unchecked',
               TABLE_CHECKBOX_INDETERMINATE: 'vxe-icon-checkbox-indeterminate-fill',
+              TABLE_CHECKBOX_DISABLED_UNCHECKED: 'vxe-icon-checkbox-unchecked-fill',
               TABLE_RADIO_CHECKED: 'vxe-icon-radio-checked-fill',
               TABLE_RADIO_UNCHECKED: 'vxe-icon-radio-unchecked',
+              TABLE_RADIO_DISABLED_UNCHECKED: 'vxe-icon-radio-unchecked-fill',
               TABLE_CUSTOM_SORT: 'vxe-icon-drag-handle',
               TABLE_MENU_OPTIONS: 'vxe-icon-arrow-right',
               TABLE_DRAG_ROW: 'vxe-icon-drag-handle',
               TABLE_DRAG_COLUMN: 'vxe-icon-drag-handle',
               TABLE_DRAG_STATUS_ROW: 'vxe-icon-sort',
               TABLE_DRAG_STATUS_SUB_ROW: 'vxe-icon-add-sub',
+              TABLE_DRAG_STATUS_AGG_GROUP: 'vxe-icon-grouping',
+              TABLE_DRAG_STATUS_AGG_VALUES: 'vxe-icon-values',
               TABLE_DRAG_STATUS_COLUMN: 'vxe-icon-swap',
               TABLE_DRAG_DISABLED: 'vxe-icon-no-drop',
               TABLE_ROW_GROUP_OPEN: 'vxe-icon-arrow-right rotate90',
               TABLE_ROW_GROUP_CLOSE: 'vxe-icon-arrow-right',
-              TABLE_AGGREGATION_GROUPING: 'vxe-icon-grouping',
-              TABLE_AGGREGATION_VALUES: 'vxe-icon-values',
-              TABLE_AGGREGATION_DELETE: 'vxe-icon-close',
+              TABLE_AGGREGATE_GROUPING: 'vxe-icon-grouping',
+              TABLE_AGGREGATE_VALUES: 'vxe-icon-values',
+              TABLE_AGGREGATE_SORT: 'vxe-icon-drag-handle',
+              TABLE_AGGREGATE_DELETE: 'vxe-icon-close',
 
               // toolbar
               TOOLBAR_TOOLS_REFRESH: 'vxe-icon-repeat',
