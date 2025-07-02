@@ -47,7 +47,7 @@
         </pre>
 
         <vxe-tip status="primary" title="方式二">使用了自动导入的插件</vxe-tip>
-        <vxe-tip status="error">由于是通过插件自动注入的，所以无法识别到组件，需手动定义组件</vxe-tip>
+        <vxe-tip status="error">由于是通过插件自动注入的，所以无法识别到组件，需手动注册组件</vxe-tip>
 
         <pre>
           <div>文件 src/main </div>
