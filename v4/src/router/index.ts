@@ -7336,11 +7336,8 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentNoticeBarDirection',
             component: () => import('@/views/notice-bar/direction/CodeExample.vue')
           },
-          {
-            path: 'speed',
-            name: 'ComponentNoticeBarSpeed',
-            component: () => import('@/views/notice-bar/speed/CodeExample.vue')
-          },
+          { path: 'speed', name: 'ComponentNoticeBarSpeed', component: () => import('@/views/notice-bar/speed/CodeExample.vue') },
+          { path: 'duration', name: 'ComponentNoticeBarDuration', component: () => import('@/views/notice-bar/duration/CodeExample.vue') },
           {
             path: 'template',
             component: RouteLayout,

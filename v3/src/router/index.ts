@@ -7284,16 +7284,8 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentNoticeBarHorizontal',
             component: () => import('@/views/notice-bar/horizontal/CodeExample.vue')
           },
-          {
-            path: 'direction',
-            name: 'ComponentNoticeBarDirection',
-            component: () => import('@/views/notice-bar/direction/CodeExample.vue')
-          },
-          {
-            path: 'speed',
-            name: 'ComponentNoticeBarSpeed',
-            component: () => import('@/views/notice-bar/speed/CodeExample.vue')
-          },
+          { path: 'speed', name: 'ComponentNoticeBarSpeed', component: () => import('@/views/notice-bar/speed/CodeExample.vue') },
+          { path: 'duration', name: 'ComponentNoticeBarDuration', component: () => import('@/views/notice-bar/duration/CodeExample.vue') },
           {
             path: 'template',
             component: RouteLayout,

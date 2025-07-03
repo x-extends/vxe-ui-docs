@@ -3020,7 +3020,8 @@ export const navConfigList: NavVO[] = [
           { title: '尺寸大小', routerLink: { name: 'ComponentNoticeBarSize' } },
           { title: '横向滚动', routerLink: { name: 'ComponentNoticeBarHorizontal' } },
           { title: '滚动方向', routerLink: { name: 'ComponentNoticeBarDirection' } },
-          { title: '速度', routerLink: { name: 'ComponentNoticeBarSpeed' } },
+          { title: '滚动速度', routerLink: { name: 'ComponentNoticeBarSpeed' } },
+          { title: '动画时间', routerLink: { name: 'ComponentNoticeBarDuration' } },
           {
             title: '自定义插槽模板',
             children: [
