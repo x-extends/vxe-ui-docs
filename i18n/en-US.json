@@ -301,6 +301,7 @@
         "fixed": "冻结列",
         "sort": "排序",
         "combinationRemoteFilter": "Remote filter",
+        "handleFilter": "手动设置选项",
         "combinationTitle": "Complex filtering",
         "combinationStringFilter": "String type filter",
         "combinationNumberFilter": "Numeric type filter",

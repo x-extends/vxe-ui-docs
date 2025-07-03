@@ -301,6 +301,7 @@
         "fixed": "冻结列",
         "sort": "排序",
         "combinationRemoteFilter": "服务端筛选",
+        "handleFilter": "手动设置选项",
         "combinationTitle": "تصفية معقدة",
         "combinationStringFilter": "تصفية نوع السلسلة",
         "combinationNumberFilter": "تصفية النوع العددي",
