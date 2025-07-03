@@ -1766,6 +1766,9 @@ export const navConfigList: NavVO[] = [
           {
             title: '自定义插槽模板',
             children: [
+              { title: '自定义标题', routerLink: { name: 'ComponentTabsTemplateTitle' } },
+              { title: '自定义标题前缀', routerLink: { name: 'ComponentTabsTemplateTitlePrefix' } },
+              { title: '自定义标题后缀', routerLink: { name: 'ComponentTabsTemplateTitleSuffix' } },
               { title: '自定义页签前缀', routerLink: { name: 'ComponentTabsTemplatePrefix' } },
               { title: '自定义页签后缀', routerLink: { name: 'ComponentTabsTemplateSuffix' } },
               { title: '自定义面板头部模板', routerLink: { name: 'ComponentTabsTemplateHeader' } },

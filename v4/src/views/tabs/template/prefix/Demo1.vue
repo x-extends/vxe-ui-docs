@@ -10,7 +10,7 @@
     </div>
 
     <vxe-tabs v-model="selectTab" :options="tabList" :position="tabPosition">
-      <template #prefix>
+      <template #tab-prefix>
         <vxe-pulldown :options="tabOptions" trigger="click" show-popup-shadow transfer
           @option-click="tabOptionClickEvent">
           <template #default>
@@ -37,7 +37,7 @@ import { ref } from 'vue'
 import { VxeUI, VxeTabsPropTypes } from 'vxe-pc-ui'
 
 const selectTab = ref('1')
-const tabPosition = ref<VxeTabsPropTypes.Position>('bottom')
+const tabPosition = ref<VxeTabsPropTypes.Position>('top')
 
 const tabList = ref<VxeTabsPropTypes.Options>([
   { name: '1', title: '标题1', slots: { default: 'myTab' } },

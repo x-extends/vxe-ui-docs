@@ -7896,6 +7896,21 @@ const routes: Array<RouteRecordRaw> = [
             component: RouteLayout,
             children: [
               {
+                path: 'title',
+                name: 'ComponentTabsTemplateTitle',
+                component: () => import('@/views/tabs/template/title/CodeExample.vue')
+              },
+              {
+                path: 'titlePrefix',
+                name: 'ComponentTabsTemplateTitlePrefix',
+                component: () => import('@/views/tabs/template/titlePrefix/CodeExample.vue')
+              },
+              {
+                path: 'titleSuffix',
+                name: 'ComponentTabsTemplateTitleSuffix',
+                component: () => import('@/views/tabs/template/titleSuffix/CodeExample.vue')
+              },
+              {
                 path: 'prefix',
                 name: 'ComponentTabsTemplatePrefix',
                 component: () => import('@/views/tabs/template/prefix/CodeExample.vue')

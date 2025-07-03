@@ -10,7 +10,7 @@
     </div>
 
     <vxe-tabs v-model="selectTab" :options="tabList" :position="tabPosition" type="card">
-      <template #suffix>
+      <template #tab-suffix>
         <vxe-pulldown :options="tabOptions" trigger="click" show-popup-shadow transfer
           @option-click="tabOptionClickEvent">
           <template #default>

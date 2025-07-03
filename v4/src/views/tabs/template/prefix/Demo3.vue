@@ -9,8 +9,8 @@
       </vxe-radio-group>
     </div>
 
-    <vxe-tabs v-model="selectTab" :options="tabList" :position="tabPosition">
-      <template #prefix>
+    <vxe-tabs v-model="selectTab" :options="tabList" :position="tabPosition" type="border-card">
+      <template #tab-prefix>
         <vxe-pulldown :options="tabOptions" trigger="click" show-popup-shadow transfer
           @option-click="tabOptionClickEvent">
           <template #default>
