@@ -9,7 +9,7 @@
       </vxe-radio-group>
     </div>
 
-    <vxe-tabs v-model="selectTab" height="200" width="400" :position="tabPosition" type="card">
+    <vxe-tabs v-model="selectTab" height="200" width="400" :position="tabPosition" type="card" padding>
       <vxe-tab-pane title="标题1" name="1">
         <div>内容1</div>
         <div>内容1</div>

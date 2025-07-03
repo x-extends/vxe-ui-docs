@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-tabs v-model="selectTab" :options="tabList">
+    <vxe-tabs v-model="selectTab" :options="tabList" padding>
       <template #default1>
         <div>内容1</div>
       </template>

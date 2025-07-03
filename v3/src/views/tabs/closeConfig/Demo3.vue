@@ -1,6 +1,7 @@
 <template>
   <div>
     <vxe-tabs
+      padding
       v-model="selectTab"
       type="round-card"
       :height="140"
