@@ -9776,6 +9776,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/upload/file/showError/CodeExample.vue')
               },
               {
+                path: 'manualSubmit',
+                name: 'ComponentUploadFileManualSubmit',
+                component: () => import('@/views/upload/file/manualSubmit/CodeExample.vue')
+              },
+              {
                 path: 'corner',
                 name: 'ComponentUploadFileCorner',
                 component: () => import('@/views/upload/file/corner/CodeExample.vue')
@@ -9920,6 +9925,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'showError',
                 name: 'ComponentUploadImageShowError',
                 component: () => import('@/views/upload/image/showError/CodeExample.vue')
+              },
+              {
+                path: 'manualSubmit',
+                name: 'ComponentUploadImageManualSubmit',
+                component: () => import('@/views/upload/image/manualSubmit/CodeExample.vue')
               },
               {
                 path: 'corner',

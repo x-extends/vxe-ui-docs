@@ -2880,7 +2880,9 @@ export const navConfigList: NavVO[] = [
               { title: '自定义上传按钮', routerLink: { name: 'ComponentUploadFileShowUploadButton' } },
               { title: '自动隐藏上传按钮', routerLink: { name: 'ComponentUploadFileAutoHidden' } },
               { title: '显示更多', routerLink: { name: 'ComponentUploadFileMoreBtn' } },
+              { title: '拖拽调整顺序', routerLink: { name: 'ComponentUploadFileDragSort' } },
               { title: '失败重新上传', routerLink: { name: 'ComponentUploadFileShowError' } },
+              { title: '手动上传', routerLink: { name: 'ComponentUploadFileManualSubmit' } },
               { title: '自定义操作按钮', routerLink: { name: 'ComponentUploadFileCorner' } }
             ]
           },
@@ -2912,7 +2914,9 @@ export const navConfigList: NavVO[] = [
               { title: '自定义上传按钮', routerLink: { name: 'ComponentUploadImageShowUploadButton' } },
               { title: '自动隐藏按钮', routerLink: { name: 'ComponentUploadImageAutoHidden' } },
               { title: '显示更多', routerLink: { name: 'ComponentUploadImageMoreBtn' } },
+              { title: '拖拽调整顺序', routerLink: { name: 'ComponentUploadImageDragSort' } },
               { title: '失败重新上传', routerLink: { name: 'ComponentUploadImageShowError' } },
+              { title: '手动上传', routerLink: { name: 'ComponentUploadImageManualSubmit' } },
               { title: '自定义操作按钮', routerLink: { name: 'ComponentUploadImageCorner' } }
             ]
           }

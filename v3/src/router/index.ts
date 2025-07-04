@@ -9704,9 +9704,19 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/upload/file/moreBtn/CodeExample.vue')
               },
               {
+                path: 'dragSort',
+                name: 'ComponentUploadFileDragSort',
+                component: () => import('@/views/upload/file/dragSort/CodeExample.vue')
+              },
+              {
                 path: 'showError',
                 name: 'ComponentUploadFileShowError',
                 component: () => import('@/views/upload/file/showError/CodeExample.vue')
+              },
+              {
+                path: 'manualSubmit',
+                name: 'ComponentUploadFileManualSubmit',
+                component: () => import('@/views/upload/file/manualSubmit/CodeExample.vue')
               },
               {
                 path: 'corner',
@@ -9845,9 +9855,19 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/upload/image/moreBtn/CodeExample.vue')
               },
               {
+                path: 'dragSort',
+                name: 'ComponentUploadImageDragSort',
+                component: () => import('@/views/upload/image/dragSort/CodeExample.vue')
+              },
+              {
                 path: 'showError',
                 name: 'ComponentUploadImageShowError',
                 component: () => import('@/views/upload/image/showError/CodeExample.vue')
+              },
+              {
+                path: 'manualSubmit',
+                name: 'ComponentUploadImageManualSubmit',
+                component: () => import('@/views/upload/image/manualSubmit/CodeExample.vue')
               },
               {
                 path: 'corner',

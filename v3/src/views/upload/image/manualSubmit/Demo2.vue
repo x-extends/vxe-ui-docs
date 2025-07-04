@@ -1,17 +1,29 @@
 <template>
   <div>
-    <vxe-upload v-model="imgList" mode="image" multiple show-progress show-error-status :upload-method="uploadMethod"></vxe-upload>
+    <vxe-button status="primary" @click="submitEvent">点击手动上传</vxe-button>
+
+    <vxe-upload
+      multiple
+      show-progress
+      show-submit-button
+      show-error-status
+      v-model="fileList"
+      ref="refUpload"
+      mode="image"
+      :auto-submit="false"
+      :upload-method="uploadMethod">
+    </vxe-upload>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import axios from 'axios'
-import { VxeUploadPropTypes } from 'vxe-pc-ui'
+import { VxeUploadPropTypes, VxeUploadInstance } from 'vxe-pc-ui'
 
 export default Vue.extend({
   data () {
-    const imgList = []
+    const fileList = []
 
     const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress }) => {
       const formData = new FormData()
@@ -27,9 +39,18 @@ export default Vue.extend({
         }
       })
     }
+
     return {
-      imgList,
+      fileList,
       uploadMethod
+    }
+  },
+  methods: {
+    submitEvent () {
+      const $upload = this.$refs.refUpload as VxeUploadInstance
+      if ($upload) {
+        $upload.submit(true)
+      }
     }
   }
 })
