@@ -17,10 +17,13 @@ import axios from 'axios'
 import XEUtils from 'xe-utils'
 
 import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
-import 'vxe-pc-ui/lib/style.css'
+import 'vxe-pc-ui/es/style.css'
 
-import VxeTable from 'vxe-table'
-import 'vxe-table/lib/style.css'
+import VxeUITable from 'vxe-table'
+import 'vxe-table/es/style.css'
+
+import VxeUIDesign from 'vxe-design'
+import 'vxe-design/lib/style.css'
 
 import enUS from 'vxe-pc-ui/lib/language/en-US'
 
@@ -99,7 +102,8 @@ VxeUI.use(VxeUIPluginValidator)
 VxeUI.use(VxeUIPluginRenderIView)
 
 Vue.use(VxeUIAll)
-Vue.use(VxeTable)
+Vue.use(VxeUITable)
+Vue.use(VxeUIDesign)
 Vue.use(Element)
 Vue.use(Antd)
 Vue.use(WangEditor)
