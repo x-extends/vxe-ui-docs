@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeFormDesignPropTypes, VxeFormDesignInstance } from 'vxe-pc-ui'
+import { VxeFormDesignPropTypes, VxeFormDesignInstance } from 'vxe-design'
 
 const formDesignRef = ref<VxeFormDesignInstance>()
 

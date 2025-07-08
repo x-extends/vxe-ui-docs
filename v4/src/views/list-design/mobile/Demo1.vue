@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeListDesignInstance } from 'vxe-pc-ui'
+import { VxeListDesignInstance } from 'vxe-design'
 
 const listDesignRef = ref<VxeListDesignInstance>()
 

@@ -29,7 +29,7 @@
 
 <script lang="ts" setup>
 import { ref, nextTick } from 'vue'
-import { VxeFormDesignInstance, VxeFormViewPropTypes } from 'vxe-pc-ui'
+import { VxeFormDesignInstance, VxeFormViewPropTypes } from 'vxe-design'
 
 const formDesignRef = ref<VxeFormDesignInstance>()
 const designConfig = ref<VxeFormViewPropTypes.Config>()
