@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="image-preview/Demo1" previewPath="/resource/ui/image-preview.gif">
+    <CodeLight path="image-preview/Demo1" previewPath="/resource/docsImg/image_preview_full.gif">
       <template #tip>
         <vxe-tip status="primary" title="图片预览">
           通过 VxeUI.previewImage 就可以非常简单调用图片预览
