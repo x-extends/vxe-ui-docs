@@ -28,10 +28,13 @@
                 lazyImport({
                   resolvers: [
                     VxeResolver({
+                      libraryName: 'vxe-pc-ui'
+                    }),
+                    VxeResolver({
                       libraryName: 'vxe-table'
                     }),
                     VxeResolver({
-                      libraryName: 'vxe-pc-ui'
+                      libraryName: 'vxe-design'
                     })
                   ]
                 })
@@ -57,8 +60,9 @@
 
             // ...
             plugins: [
+              ['import', { libraryName: 'vxe-pc-ui', style: true }, 'vxe-pc-ui'],
               ['import', { libraryName: 'vxe-table', style: true }, 'vxe-table'],
-              ['import', { libraryName: 'vxe-pc-ui', style: true }, 'vxe-pc-ui']
+              ['import', { libraryName: 'vxe-design', style: true }, 'vxe-design']
             ]
             // ...
           </pre-code>
@@ -106,11 +110,9 @@
               VxeDrawer,
               VxeEmpty,
               VxeForm,
-              VxeFormDesign,
               VxeFormGather,
               VxeFormGroup,
               VxeFormItem,
-              VxeFormView,
               VxeIcon,
               VxeIconPicker,
               VxeImage,
@@ -123,8 +125,6 @@
               VxeLayoutFooter,
               VxeLayoutHeader,
               VxeLink,
-              VxeListDesign,
-              VxeListView,
               VxeList,
               VxeLoading,
               VxeMenu,
@@ -173,9 +173,19 @@
               VxeToolbar
             } from 'vxe-table'
 
+            import {
+              VxeFlowDesign,
+              VxeFlowView,
+              VxeFormDesign,
+              VxeFormView,
+              VxeListDesign,
+              VxeListView,
+            } from 'vxe-design'
+
             // 导入主题变量，也可以重写主题变量
-            import 'vxe-table/styles/cssvar.scss'
             import 'vxe-pc-ui/styles/cssvar.scss'
+            import 'vxe-table/styles/cssvar.scss'
+            import 'vxe-design/styles/cssvar.scss'
 
             // 导入默认的语言
             import zhCN from 'vxe-pc-ui/lib/language/zh-CN'
@@ -211,11 +221,9 @@
               app.use(VxeDrawer)
               app.use(VxeEmpty)
               app.use(VxeForm)
-              app.use(VxeFormDesign)
               app.use(VxeFormGather)
               app.use(VxeFormGroup)
               app.use(VxeFormItem)
-              app.use(VxeFormView)
               app.use(VxeIcon)
               app.use(VxeIconPicker)
               app.use(VxeImage)
@@ -228,8 +236,6 @@
               app.use(VxeLayoutFooter)
               app.use(VxeLayoutHeader)
               app.use(VxeLink)
-              app.use(VxeListDesign)
-              app.use(VxeListView)
               app.use(VxeList)
               app.use(VxeLoading)
               app.use(VxeMenu)
@@ -278,7 +284,16 @@
               app.use(VxeToolbar)
             }
 
-            createApp(App).use(lazyVxeUI).use(lazyVxeTable).mount('#app')
+            function lazyVxeDesign (app) {
+              app.use(VxeFlowDesign)
+              app.use(VxeFlowView)
+              app.use(VxeFormDesign)
+              app.use(VxeFormView)
+              app.use(VxeListDesign)
+              app.use(VxeListView)
+            }
+
+            createApp(App).use(lazyVxeUI).use(lazyVxeTable).use(lazyVxeDesign).mount('#app')
           </pre-code>
         </pre>
       </template>
