@@ -118,6 +118,12 @@
         "v4": "v4.7+ (vue 3.x Latest)",
         "v4dx": "v4.x (vue 3.x Latest)"
       },
+      "vxe-design": {
+        "v1": "v1.x (vue 2.6+) 2024-08-01 停止更新⚠️",
+        "v2": "v2.x (vue 2.6+) 2024-08-01 停止更新⚠️",
+        "v3": "v3.x (vue 2.6+) 2025-07-01 ~ 长期维护",
+        "v4": "v4.x (vue 3.2+) 2025-07-01 ~ 长期维护"
+      },
       "vxe-pc-ui": {
         "v1": "v1.x (vue 2.6+ stop maintenance) ~ 2024-08-01 stop update⚠️",
         "v2": "v2.x (vue 2.6+ stop maintenance) ~ 2024-08-01 stop update⚠️",
