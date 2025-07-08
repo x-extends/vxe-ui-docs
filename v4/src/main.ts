@@ -19,8 +19,11 @@ import XEUtils from 'xe-utils'
 import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
 import 'vxe-pc-ui/es/style.css'
 
-import VxeTable from 'vxe-table'
+import VxeUITable from 'vxe-table'
 import 'vxe-table/es/style.css'
+
+import VxeUIDesign from 'vxe-design'
+import 'vxe-design/lib/style.css'
 
 import enUS from 'vxe-pc-ui/es/language/en-US'
 
@@ -99,7 +102,8 @@ app.component('DemoUserSelectPulldown', DemoUserSelectPulldown)
 app.component('DemoRoleSelectPulldown', DemoRoleSelectPulldown)
 
 app.use(VxeUIAll)
-app.use(VxeTable)
+app.use(VxeUITable)
+app.use(VxeUIDesign)
 
 app.use(store)
 app.use(router)

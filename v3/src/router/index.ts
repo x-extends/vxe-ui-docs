@@ -4596,6 +4596,65 @@ const gridRouteConfig: RouteConfig = {
   ]
 }
 
+const formDesignRouteConfig: RouteConfig = {
+  path: 'form-design',
+  component: RouteLayout,
+  children: [
+    // {
+    //   path: 'base',
+    //   name: 'ComponentFormDesignBase',
+    //   component: () => import('@/views/form-design/base/CodeExample.vue')
+    // },
+    // {
+    //   path: 'customGroup',
+    //   name: 'ComponentFormDesignCustomGroup',
+    //   component: () => import('@/views/form-design/customGroup/CodeExample.vue')
+    // },
+    // {
+    //   path: 'mobile',
+    //   name: 'ComponentFormDesignMobile',
+    //   component: () => import('@/views/form-design/mobile/CodeExample.vue')
+    // },
+    // {
+    //   path: 'pcAndMobile',
+    //   name: 'ComponentFormDesignPcAndMobile',
+    //   component: () => import('@/views/form-design/pcAndMobile/CodeExample.vue')
+    // },
+    // {
+    //   path: 'renderView',
+    //   name: 'ComponentFormDesignRenderView',
+    //   component: () => import('@/views/form-design/renderView/CodeExample.vue')
+    // }
+  ]
+}
+
+const listDesignRouteConfig: RouteConfig = {
+  path: 'list-design',
+  component: RouteLayout,
+  children: [
+    // {
+    //   path: 'base',
+    //   name: 'ComponentListDesignBase',
+    //   component: () => import('@/views/list-design/base/CodeExample.vue')
+    // },
+    // {
+    //   path: 'mobile',
+    //   name: 'ComponentListDesignMobile',
+    //   component: () => import('@/views/list-design/mobile/CodeExample.vue')
+    // },
+    // {
+    //   path: 'pcAndMobile',
+    //   name: 'ComponentListDesignPcAndMobile',
+    //   component: () => import('@/views/list-design/pcAndMobile/CodeExample.vue')
+    // },
+    // {
+    //   path: 'formAndList',
+    //   name: 'ComponentListDesignFormAndList',
+    //   component: () => import('@/views/list-design/formAndList/CodeExample.vue')
+    // }
+  ]
+}
+
 const routes: Array<RouteConfig> = [
   {
     path: '*',
@@ -9512,63 +9571,6 @@ const routes: Array<RouteConfig> = [
           }
         ]
       },
-      // {
-      //   path: 'form-design',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'base',
-      //       name: 'ComponentFormDesignBase',
-      //       component: () => import('@/views/form-design/base/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'customGroup',
-      //       name: 'ComponentFormDesignCustomGroup',
-      //       component: () => import('@/views/form-design/customGroup/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'mobile',
-      //       name: 'ComponentFormDesignMobile',
-      //       component: () => import('@/views/form-design/mobile/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'pcAndMobile',
-      //       name: 'ComponentFormDesignPcAndMobile',
-      //       component: () => import('@/views/form-design/pcAndMobile/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'renderView',
-      //       name: 'ComponentFormDesignRenderView',
-      //       component: () => import('@/views/form-design/renderView/CodeExample.vue')
-      //     }
-      //   ]
-      // },
-      // {
-      //   path: 'list-design',
-      //   component: RouteLayout,
-      //   children: [
-      //     {
-      //       path: 'base',
-      //       name: 'ComponentListDesignBase',
-      //       component: () => import('@/views/list-design/base/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'mobile',
-      //       name: 'ComponentListDesignMobile',
-      //       component: () => import('@/views/list-design/mobile/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'pcAndMobile',
-      //       name: 'ComponentListDesignPcAndMobile',
-      //       component: () => import('@/views/list-design/pcAndMobile/CodeExample.vue')
-      //     },
-      //     {
-      //       path: 'formAndList',
-      //       name: 'ComponentListDesignFormAndList',
-      //       component: () => import('@/views/list-design/formAndList/CodeExample.vue')
-      //     }
-      //   ]
-      // },
       {
         path: 'upload',
         component: RouteLayout,
@@ -9878,6 +9880,8 @@ const routes: Array<RouteConfig> = [
           }
         ]
       },
+      formDesignRouteConfig,
+      listDesignRouteConfig,
       tableRouteConfig,
       gridRouteConfig
     ]

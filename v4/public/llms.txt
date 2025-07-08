@@ -1,6 +1,6 @@
 # Vxe UI
 
-A vue based PC component library
+A vue based PC component library.
 
 ## Table of Contents
 
