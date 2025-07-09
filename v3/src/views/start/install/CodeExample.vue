@@ -16,11 +16,11 @@
           <pre-code
             language="shell"
             :content="`
-              npm install ${uiCDNLib } ${ tableCDNLib }
+              npm install ${uiCDNLib } ${ tableCDNLib } ${ designCDNLib }
               # 或者
-              yarn add ${uiCDNLib } ${ tableCDNLib }
+              yarn add ${uiCDNLib } ${ tableCDNLib } ${ designCDNLib }
               # 或者
-              pnpm add ${uiCDNLib } ${ tableCDNLib }
+              pnpm add ${uiCDNLib } ${ tableCDNLib } ${ designCDNLib }
             `">
           </pre-code>
           <pre-code
@@ -28,13 +28,18 @@
             :content="`
               // ...
               import VxeUIAll from 'vxe-pc-ui'
-              import 'vxe-pc-ui/lib/style.css'
+              import 'vxe-pc-ui/es/style.css'
+
               import VxeUITable from 'vxe-table'
-              import 'vxe-table/lib/style.css'
+              import 'vxe-table/es/style.css'
+
+              import VxeUIDesign from 'vxe-design'
+              import 'vxe-design/lib/style.css'
               // ...
 
               Vue.use(VxeUIAll)
               Vue.use(VxeUITable)
+              Vue.use(VxeUIDesign)
               //...
             `">
           </pre-code>
@@ -95,7 +100,8 @@ export default Vue.extend({
   computed: {
     ...mapGetters([
       'uiCDNLib',
-      'tableCDNLib'
+      'tableCDNLib',
+      'designCDNLib'
     ])
   }
 })

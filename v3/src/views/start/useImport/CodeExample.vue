@@ -21,8 +21,9 @@
 
             // ...
             plugins: [
+              ['import', { libraryName: 'vxe-pc-ui', style: true }, 'vxe-pc-ui'],
               ['import', { libraryName: 'vxe-table', style: true }, 'vxe-table'],
-              ['import', { libraryName: 'vxe-pc-ui', style: true }, 'vxe-pc-ui']
+              ['import', { libraryName: 'vxe-design', style: true }, 'vxe-design']
             ]
             // ...
           </pre-code>
