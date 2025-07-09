@@ -491,6 +491,14 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
+    title: '使用第三方 iconfont 图标',
+    isExpand: false,
+    children: [
+      { title: 'button', routerLink: { name: 'OtherIconfontButtonIcon' } },
+      { title: 'icon-picker', routerLink: { name: 'OtherIconfontIconPickerIcons' } }
+    ]
+  },
+  {
     title: 'API',
     isExpand: false,
     children: []

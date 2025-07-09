@@ -47,6 +47,36 @@ const routes: Array<RouteRecordRaw> = [
       }
     ]
   },
+
+  {
+    path: '/other-iconfont',
+    component: PageLayout,
+    children: [
+      {
+        path: 'button',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'icon',
+            name: 'OtherIconfontButtonIcon',
+            component: () => import('@/views/other-iconfont/button/icon/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'icon-picker',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'icons',
+            name: 'OtherIconfontIconPickerIcons',
+            component: () => import('@/views/other-iconfont/icon-picker/icons/CodeExample.vue')
+          }
+        ]
+      }
+    ]
+  },
+
   {
     path: '/plugin-render-chart',
     component: PageLayout,

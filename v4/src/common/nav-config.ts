@@ -2423,7 +2423,7 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon-picker' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentIconPickerSize' } },
           { title: '可清除', routerLink: { name: 'ComponentIconPickerClearable' } },
-          { title: '个性化列表', routerLink: { name: 'ComponentIconPickerIcons' } },
+          { title: '自定义图标', routerLink: { name: 'ComponentIconPickerIcons' } },
           { title: '图标颜色', routerLink: { name: 'ComponentIconPickerColor' } }
         ]
       },
