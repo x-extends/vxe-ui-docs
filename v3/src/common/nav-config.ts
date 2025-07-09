@@ -1552,7 +1552,7 @@ const designNavConfig: NavVO & { children: NavVO[] } = {
     {
       i18nKey: 'app.aside.menu.formDesignTitle',
       children: [
-        // { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-design' } } },
+        { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-design' } } }
         // {
         //   i18nKey: 'app.aside.menu.formDesignUse',
         //   children: [
@@ -1582,7 +1582,7 @@ const designNavConfig: NavVO & { children: NavVO[] } = {
     {
       i18nKey: 'app.aside.menu.listDesignTitle',
       children: [
-        // { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'list-design' } } },
+        { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'list-design' } } }
         // {
         //   i18nKey: 'app.aside.menu.listDesignUse',
         //   children: [
@@ -1593,11 +1593,11 @@ const designNavConfig: NavVO & { children: NavVO[] } = {
         //   ]
         // }
       ]
-    },
+    }
     // { title: 'FlowDesign 流程设计器' },
     // { title: 'PrintDesign 打印设计器' },
-    { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/' },
-    { title: '零代码平台模板', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/' }
+    // { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/' },
+    // { title: '零代码平台模板', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/' }
   ]
 }
 
