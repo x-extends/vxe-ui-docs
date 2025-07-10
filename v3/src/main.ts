@@ -76,6 +76,8 @@ import '@/views/global/renderer/form-design/widget/myTextareaWidget/demo1.form-d
 import '@/views/global/renderer/button/prefix/demo1.button.renderer'
 import '@/views/global/renderer/button/suffix/demo1.button.renderer'
 
+import '@/views/global/renderer/icon-picker/icon/demo1.icon-picker.renderer'
+
 import DemoUserSelectPulldown from '@/views/table/editTemplate/vxe-pulldown/DemoUserSelectPulldown.vue'
 import DemoRoleSelectPulldown from '@/views/table/editTemplate/vxe-pulldown/DemoRoleSelectPulldown.vue'
 
