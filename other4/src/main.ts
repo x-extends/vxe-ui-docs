@@ -52,6 +52,9 @@ import 'element-plus/dist/index.css'
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/reset.css'
 
+import '@/views/other-iconfont/symbol/button/icon/demo1.renderer'
+import '@/views/other-iconfont/symbol/icon-picker/icons/demo1.renderer'
+
 declare global {
   interface Window {
     XEUtils: typeof XEUtils;

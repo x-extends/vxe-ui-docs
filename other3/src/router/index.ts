@@ -56,24 +56,58 @@ const routes: Array<RouteConfig> = [
     component: PageLayout,
     children: [
       {
-        path: 'button',
+        path: 'font-class',
         component: RouteLayout,
         children: [
           {
-            path: 'icon',
-            name: 'OtherIconfontButtonIcon',
-            component: () => import('@/views/other-iconfont/button/icon/CodeExample.vue')
+            path: 'button',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'icon',
+                name: 'OtherIconfontFontClassButtonIcon',
+                component: () => import('@/views/other-iconfont/font-class/button/icon/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'icon-picker',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'icons',
+                name: 'OtherIconfontFontClassIconPickerIcons',
+                component: () => import('@/views/other-iconfont/font-class/icon-picker/icons/CodeExample.vue')
+              }
+            ]
           }
         ]
       },
       {
-        path: 'icon-picker',
+        path: 'symbol',
         component: RouteLayout,
         children: [
           {
-            path: 'icons',
-            name: 'OtherIconfontIconPickerIcons',
-            component: () => import('@/views/other-iconfont/icon-picker/icons/CodeExample.vue')
+            path: 'button',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'icon',
+                name: 'OtherIconfontSymbolButtonIcon',
+                component: () => import('@/views/other-iconfont/symbol/button/icon/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'icon-picker',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'icons',
+                name: 'OtherIconfontSymbolIconPickerIcons',
+                component: () => import('@/views/other-iconfont/symbol/icon-picker/icons/CodeExample.vue')
+              }
+            ]
           }
         ]
       }
