@@ -87,7 +87,9 @@
         "formDesignUse": "Utilisation du concepteur",
         "formDesignGlobalRenderer": "Rendu (multiplexage d'ordre élevé)",
         "listDesignTitle": "ListDesign List Designer",
-        "listDesignUse": "Utilisation du concepteur"
+        "listDesignUse": "Utilisation du concepteur",
+        "buttonGlobalRenderer": "渲染器（高阶复用）",
+        "iconPickerGlobalRenderer": "渲染器（高阶复用）"
       }
     },
     "header": {

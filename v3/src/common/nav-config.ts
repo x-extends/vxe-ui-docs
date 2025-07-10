@@ -1697,7 +1697,16 @@ export const navConfigList: NavVO[] = [
             ]
           },
           { title: '禁用', routerLink: { name: 'ComponentButtonDisabled' } },
-          { title: '权限码', routerLink: { name: 'ComponentButtonPermissionCode' } }
+          { title: '权限码', routerLink: { name: 'ComponentButtonPermissionCode' } },
+          {
+            i18nKey: 'app.aside.menu.buttonGlobalRenderer',
+            children: [
+              { title: 'API', routerLink: { name: 'GlobalRendererButtonAPI' } },
+              { title: '前缀图标', routerLink: { name: 'GlobalRendererButtonPrefix' } },
+              { title: '后缀图标', routerLink: { name: 'GlobalRendererButtonSuffix' } }
+            ]
+          },
+          { title: '使用第三方图标', isPlugin: true, linkUrl: `${otherUrl}/#/other-iconfont/symbol/button/icon` }
         ]
       }
     ]
@@ -2415,8 +2424,17 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon-picker' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentIconPickerSize' } },
           { title: '可清除', routerLink: { name: 'ComponentIconPickerClearable' } },
-          { title: '自定义图标', routerLink: { name: 'ComponentIconPickerIcons' } },
-          { title: '图标颜色', routerLink: { name: 'ComponentIconPickerColor' } }
+          { title: '内置图标', routerLink: { name: 'ComponentIconPickerIcons' } },
+          { title: '自定义图标', routerLink: { name: 'ComponentIconPickerCustomIcon' } },
+          { title: '图标颜色', routerLink: { name: 'ComponentIconPickerColor' } },
+          {
+            i18nKey: 'app.aside.menu.iconPickerGlobalRenderer',
+            children: [
+              { title: 'API', routerLink: { name: 'GlobalRendererIconPickerAPI' } },
+              { title: '选项图标', routerLink: { name: 'GlobalRendererIconPickerIcon' } }
+            ]
+          },
+          { title: '使用第三方图标', isPlugin: true, linkUrl: `${otherUrl}/#/other-iconfont/symbol/icon-picker/icons` }
         ]
       },
       {

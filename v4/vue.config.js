@@ -11,7 +11,7 @@ module.exports = defineConfig({
   transpileDependencies: true,
   productionSourceMap: false,
   devServer: {
-    port: 8084,
+    port: 8094,
     proxy: {
       '/example/': {
         target: 'https://vxeui.com',

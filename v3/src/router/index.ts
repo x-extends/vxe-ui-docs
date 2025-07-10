@@ -4928,6 +4928,43 @@ const routes: Array<RouteConfig> = [
         component: RouteLayout,
         children: [
           {
+            path: 'button',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'api',
+                name: 'GlobalRendererButtonAPI',
+                component: () => import('@/views/global/renderer/button/api/CodeExample.vue')
+              },
+              {
+                path: 'prefix',
+                name: 'GlobalRendererButtonPrefix',
+                component: () => import('@/views/global/renderer/button/prefix/CodeExample.vue')
+              },
+              {
+                path: 'suffix',
+                name: 'GlobalRendererButtonSuffix',
+                component: () => import('@/views/global/renderer/button/suffix/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'icon-picker',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'api',
+                name: 'GlobalRendererIconPickerAPI',
+                component: () => import('@/views/global/renderer/icon-picker/api/CodeExample.vue')
+              },
+              {
+                path: 'icon',
+                name: 'GlobalRendererIconPickerIcon',
+                component: () => import('@/views/global/renderer/icon-picker/icon/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'form',
             component: RouteLayout,
             children: [
@@ -6192,6 +6229,11 @@ const routes: Array<RouteConfig> = [
             path: 'icons',
             name: 'ComponentIconPickerIcons',
             component: () => import('@/views/icon-picker/icons/CodeExample.vue')
+          },
+          {
+            path: 'customIcon',
+            name: 'ComponentIconPickerCustomIcon',
+            component: () => import('@/views/icon-picker/customIcon/CodeExample.vue')
           },
           {
             path: 'color',

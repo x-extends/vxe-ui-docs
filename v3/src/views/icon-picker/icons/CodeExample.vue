@@ -7,13 +7,5 @@
         </vxe-tip>
       </template>
     </CodeLight>
-
-    <CodeLight path="icon-picker/icons/Demo2">
-      <template #tip>
-        <vxe-tip status="primary">
-          也可以使用任意自定义的 class 图标
-        </vxe-tip>
-      </template>
-    </CodeLight>
   </div>
 </template>

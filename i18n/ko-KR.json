@@ -87,7 +87,9 @@
         "formDesignUse": "디자이너 사용",
         "formDesignGlobalRenderer": "렌더러 (고차 멀티플렉싱)",
         "listDesignTitle": "ListDesign List Designer",
-        "listDesignUse": "디자이너 사용"
+        "listDesignUse": "디자이너 사용",
+        "buttonGlobalRenderer": "渲染器（高阶复用）",
+        "iconPickerGlobalRenderer": "渲染器（高阶复用）"
       }
     },
     "header": {

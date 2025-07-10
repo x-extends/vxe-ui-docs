@@ -87,7 +87,9 @@
         "formDesignUse": "Используя дизайнер",
         "formDesignGlobalRenderer": "Рендерер (мультиплексирование высокого порядка)",
         "listDesignTitle": "ListDesign Designer",
-        "listDesignUse": "Используя дизайнер"
+        "listDesignUse": "Используя дизайнер",
+        "buttonGlobalRenderer": "渲染器（高阶复用）",
+        "iconPickerGlobalRenderer": "渲染器（高阶复用）"
       }
     },
     "header": {

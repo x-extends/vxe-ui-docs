@@ -87,7 +87,9 @@
         "formDesignUse": "使用設計器",
         "formDesignGlobalRenderer": "渲染器（高階復用）",
         "listDesignTitle": "ListDesign 列表設計器",
-        "listDesignUse": "使用設計器"
+        "listDesignUse": "使用設計器",
+        "buttonGlobalRenderer": "渲染器（高阶复用）",
+        "iconPickerGlobalRenderer": "渲染器（高阶复用）"
       }
     },
     "header": {

@@ -87,7 +87,9 @@
         "formDesignUse": "デザイナーを使用します",
         "formDesignGlobalRenderer": "レンダラー（高次多重化）",
         "listDesignTitle": "ListDesignリストデザイナー",
-        "listDesignUse": "デザイナーを使用します"
+        "listDesignUse": "デザイナーを使用します",
+        "buttonGlobalRenderer": "渲染器（高阶复用）",
+        "iconPickerGlobalRenderer": "渲染器（高阶复用）"
       }
     },
     "header": {
