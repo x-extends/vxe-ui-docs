@@ -8669,6 +8669,22 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'search',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'query',
+                name: 'ComponentTreeSearchQuery',
+                component: () => import('@/views/tree/search/query/CodeExample.vue')
+              },
+              {
+                path: 'light',
+                name: 'ComponentTreeSearchLight',
+                component: () => import('@/views/tree/search/light/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'lazy',
             component: RouteLayout,
             children: [

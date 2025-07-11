@@ -3064,6 +3064,13 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: '搜索',
+        children: [
+          { title: '搜索节点', routerLink: { name: 'ComponentTreeSearchQuery' } },
+          { title: '搜索高亮关键字', routerLink: { name: 'ComponentTreeSearchLight' } }
+        ]
+      },
+      {
         title: '懒加载',
         children: [
           { title: '懒加载子节点', routerLink: { name: 'ComponentTreeLazyLoadMethod' } },
