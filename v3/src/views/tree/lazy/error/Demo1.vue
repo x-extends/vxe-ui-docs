@@ -41,7 +41,6 @@ export default Vue.extend({
       transform: true,
       lazy: true,
       showCheckbox: true,
-      showLine: true,
       nodeConfig: {
         isHover: true
       },

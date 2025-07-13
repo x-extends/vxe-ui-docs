@@ -2815,6 +2815,7 @@ export const navConfigList: NavVO[] = [
               { title: '多选', routerLink: { name: 'ComponentSelectBaseMultiple' } },
               { title: '限制最大数量', routerLink: { name: 'ComponentSelectBaseMax' } },
               { title: '可新增', routerLink: { name: 'ComponentSelectBaseAllowCreate' } },
+              { title: '操作按钮', routerLink: { name: 'ComponentSelectBaseOperBtn' } },
               { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectBaseTemplate' } },
               { title: '虚拟滚动（大量数据选项）', routerLink: { name: 'ComponentSelectBaseScroll' } }
             ]
@@ -2830,7 +2831,9 @@ export const navConfigList: NavVO[] = [
               { title: '分组', routerLink: { name: 'ComponentSelectConfigGroup' } },
               { title: '默认值', routerLink: { name: 'ComponentSelectConfigDefaultValue' } },
               { title: '多选', routerLink: { name: 'ComponentSelectConfigMultiple' } },
+              { title: '限制最大数量', routerLink: { name: 'ComponentSelectConfigMax' } },
               { title: '可新增', routerLink: { name: 'ComponentSelectConfigAllowCreate' } },
+              { title: '操作按钮', routerLink: { name: 'ComponentSelectConfigOperBtn' } },
               { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectConfigTemplate' } },
               { title: '虚拟滚动（大量数据选项）', routerLink: { name: 'ComponentSelectConfigScroll' } }
             ]
@@ -2872,10 +2875,31 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
+            title: '搜索',
+            children: [
+              { title: '过滤节点', routerLink: { name: 'ComponentTreeSelectSearchFilterValue' } },
+              { title: '自定义过滤方法', routerLink: { name: 'ComponentTreeSelectSearchFilterMethod' } }
+            ]
+          },
+          {
+            title: '操作按钮',
+            children: [
+              { title: '多选按钮', routerLink: { name: 'ComponentTreeSelectOperBtnChecked' } },
+              { title: '展开收起按钮', routerLink: { name: 'ComponentTreeSelectOperBtnAll' } }
+            ]
+          },
+          {
             title: '懒加载',
             children: [
               { title: '加载子节点', routerLink: { name: 'ComponentTreeSelectLazyBase' } },
               { title: '多选', routerLink: { name: 'ComponentTreeSelectLazyMultiple' } }
+            ]
+          },
+          {
+            title: '虚拟滚动',
+            children: [
+              { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTreeSelectScrollBasics' } },
+              { title: '可过滤', routerLink: { name: 'ComponentTreeSelectScrollFilter' } }
             ]
           }
         ]
@@ -3021,15 +3045,7 @@ export const navConfigList: NavVO[] = [
           { title: '自定义图标', routerLink: { name: 'ComponentTreeBaseIcon' } },
           { title: '手风琴展开效果', routerLink: { name: 'ComponentTreeBaseAccordion' } },
           { title: '连接线', routerLink: { name: 'ComponentTreeBaseShowLine' } },
-          { title: '默认展开', routerLink: { name: 'ComponentTreeBaseExpandAll' } },
-          {
-            title: '自定义插槽模板',
-            children: [
-              { title: '自定义标题模板', routerLink: { name: 'ComponentTreeBaseTemplateTitle' } },
-              { title: '自定义图标模板', routerLink: { name: 'ComponentTreeBaseTemplateIcon' } },
-              { title: '自定义右侧模板', routerLink: { name: 'ComponentTreeBaseTemplateExtra' } }
-            ]
-          }
+          { title: '默认展开', routerLink: { name: 'ComponentTreeBaseExpandAll' } }
         ]
       },
       {
@@ -3066,8 +3082,9 @@ export const navConfigList: NavVO[] = [
       {
         title: '搜索',
         children: [
-          { title: '搜索节点', routerLink: { name: 'ComponentTreeSearchQuery' } },
-          { title: '搜索高亮关键字', routerLink: { name: 'ComponentTreeSearchLight' } }
+          { title: '过滤节点', routerLink: { name: 'ComponentTreeSearchFilterValue' } },
+          { title: '自定义过滤方法', routerLink: { name: 'ComponentTreeSearchFilterMethod' } },
+          { title: '实现关键字高亮', routerLink: { name: 'ComponentTreeSearchLight' } }
         ]
       },
       {
@@ -3076,6 +3093,23 @@ export const navConfigList: NavVO[] = [
           { title: '懒加载子节点', routerLink: { name: 'ComponentTreeLazyLoadMethod' } },
           { title: '加载失败', routerLink: { name: 'ComponentTreeLazyError' } },
           { title: '显示连接线', routerLink: { name: 'ComponentTreeLazyShowLine' } }
+        ]
+      },
+      {
+        title: '虚拟滚动',
+        children: [
+          { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTreeScrollBasics' } },
+          { title: '函数式加载', routerLink: { name: 'ComponentTreeScrollLoadData' } }
+        ]
+      },
+      {
+        title: '自定义插槽模板',
+        children: [
+          { title: '自定义标题模板', routerLink: { name: 'ComponentTreeTemplateTitle' } },
+          { title: '自定义图标模板', routerLink: { name: 'ComponentTreeTemplateIcon' } },
+          { title: '自定义右侧模板', routerLink: { name: 'ComponentTreeTemplateExtra' } },
+          { title: '自定义头部模板', routerLink: { name: 'ComponentTreeTemplateHeader' } },
+          { title: '自定义尾部模板', routerLink: { name: 'ComponentTreeTemplateFooter' } }
         ]
       }
     ]

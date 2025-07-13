@@ -7198,6 +7198,11 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/select/base/allowCreate/CodeExample.vue')
               },
               {
+                path: 'operBtn',
+                name: 'ComponentSelectBaseOperBtn',
+                component: () => import('@/views/select/base/operBtn/CodeExample.vue')
+              },
+              {
                 path: 'template',
                 name: 'ComponentSelectBaseTemplate',
                 component: () => import('@/views/select/base/template/CodeExample.vue')
@@ -7254,9 +7259,19 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/select/config/multiple/CodeExample.vue')
               },
               {
+                path: 'max',
+                name: 'ComponentSelectConfigMax',
+                component: () => import('@/views/select/config/max/CodeExample.vue')
+              },
+              {
                 path: 'allowCreate',
                 name: 'ComponentSelectConfigAllowCreate',
                 component: () => import('@/views/select/config/allowCreate/CodeExample.vue')
+              },
+              {
+                path: 'operBtn',
+                name: 'ComponentSelectConfigOperBtn',
+                component: () => import('@/views/select/config/operBtn/CodeExample.vue')
               },
               {
                 path: 'template',
@@ -8502,27 +8517,6 @@ const routes: Array<RouteConfig> = [
                 path: 'expandAll',
                 name: 'ComponentTreeBaseExpandAll',
                 component: () => import('@/views/tree/base/expandAll/CodeExample.vue')
-              },
-              {
-                path: 'template',
-                component: RouteLayout,
-                children: [
-                  {
-                    path: 'title',
-                    name: 'ComponentTreeBaseTemplateTitle',
-                    component: () => import('@/views/tree/base/template/title/CodeExample.vue')
-                  },
-                  {
-                    path: 'icon',
-                    name: 'ComponentTreeBaseTemplateIcon',
-                    component: () => import('@/views/tree/base/template/icon/CodeExample.vue')
-                  },
-                  {
-                    path: 'extra',
-                    name: 'ComponentTreeBaseTemplateExtra',
-                    component: () => import('@/views/tree/base/template/extra/CodeExample.vue')
-                  }
-                ]
               }
             ]
           },
@@ -8621,9 +8615,14 @@ const routes: Array<RouteConfig> = [
             component: RouteLayout,
             children: [
               {
-                path: 'query',
-                name: 'ComponentTreeSearchQuery',
-                component: () => import('@/views/tree/search/query/CodeExample.vue')
+                path: 'filterValue',
+                name: 'ComponentTreeSearchFilterValue',
+                component: () => import('@/views/tree/search/filterValue/CodeExample.vue')
+              },
+              {
+                path: 'filterMethod',
+                name: 'ComponentTreeSearchFilterMethod',
+                component: () => import('@/views/tree/search/filterMethod/CodeExample.vue')
               },
               {
                 path: 'light',
@@ -8650,6 +8649,53 @@ const routes: Array<RouteConfig> = [
                 path: 'showLine',
                 name: 'ComponentTreeLazyShowLine',
                 component: () => import('@/views/tree/lazy/showLine/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'scroll',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'basics',
+                name: 'ComponentTreeScrollBasics',
+                component: () => import('@/views/tree/scroll/basics/CodeExample.vue')
+              },
+              {
+                path: 'loadData',
+                name: 'ComponentTreeScrollLoadData',
+                component: () => import('@/views/tree/scroll/loadData/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'template',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'title',
+                name: 'ComponentTreeTemplateTitle',
+                component: () => import('@/views/tree/template/title/CodeExample.vue')
+              },
+              {
+                path: 'icon',
+                name: 'ComponentTreeTemplateIcon',
+                component: () => import('@/views/tree/template/icon/CodeExample.vue')
+              },
+              {
+                path: 'extra',
+                name: 'ComponentTreeTemplateExtra',
+                component: () => import('@/views/tree/template/extra/CodeExample.vue')
+              },
+              {
+                path: 'header',
+                name: 'ComponentTreeTemplateHeader',
+                component: () => import('@/views/tree/template/header/CodeExample.vue')
+              },
+              {
+                path: 'footer',
+                name: 'ComponentTreeTemplateFooter',
+                component: () => import('@/views/tree/template/footer/CodeExample.vue')
               }
             ]
           }
@@ -8754,6 +8800,38 @@ const routes: Array<RouteConfig> = [
             ]
           },
           {
+            path: 'search',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'filterValue',
+                name: 'ComponentTreeSelectSearchFilterValue',
+                component: () => import('@/views/tree-select/search/filterValue/CodeExample.vue')
+              },
+              {
+                path: 'filterMethod',
+                name: 'ComponentTreeSelectSearchFilterMethod',
+                component: () => import('@/views/tree-select/search/filterMethod/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'operBtn',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'checked',
+                name: 'ComponentTreeSelectOperBtnChecked',
+                component: () => import('@/views/tree-select/operBtn/checked/CodeExample.vue')
+              },
+              {
+                path: 'all',
+                name: 'ComponentTreeSelectOperBtnAll',
+                component: () => import('@/views/tree-select/operBtn/all/CodeExample.vue')
+              }
+            ]
+          },
+          {
             path: 'lazy',
             component: RouteLayout,
             children: [
@@ -8766,6 +8844,22 @@ const routes: Array<RouteConfig> = [
                 path: 'multiple',
                 name: 'ComponentTreeSelectLazyMultiple',
                 component: () => import('@/views/tree-select/lazy/multiple/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'scroll',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'basics',
+                name: 'ComponentTreeSelectScrollBasics',
+                component: () => import('@/views/tree-select/scroll/basics/CodeExample.vue')
+              },
+              {
+                path: 'filter',
+                name: 'ComponentTreeSelectScrollFilter',
+                component: () => import('@/views/tree-select/scroll/filter/CodeExample.vue')
               }
             ]
           }

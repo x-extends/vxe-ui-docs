@@ -38,7 +38,6 @@ const treeOptions = reactive<VxeTreeProps<NodeVO>>({
   transform: true,
   lazy: true,
   showCheckbox: true,
-  showLine: true,
   nodeConfig: {
     isHover: true
   },

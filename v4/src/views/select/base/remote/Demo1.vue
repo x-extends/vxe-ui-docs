@@ -11,25 +11,32 @@ import { ref } from 'vue'
 import { VxeSelectPropTypes } from 'vxe-pc-ui'
 import XEUtils from 'xe-utils'
 
+// 模拟后端接口
+const getApiList = (quert: any) => {
+  let idKey = 1
+  return new Promise<{
+    value: number
+    label: string
+  }[]>(resolve => {
+    setTimeout(() => {
+      const list = XEUtils.range(0, XEUtils.random(1, 10)).map(() => {
+        return {
+          value: idKey++,
+          label: `选项${idKey}_${quert.searchValue}`
+        }
+      })
+      resolve(list)
+    }, 200)
+  })
+}
+
 const val1 = ref()
 const opts1 = ref<VxeSelectPropTypes.Options>([])
 
-let idKey = 1
-
 const remoteConfig: VxeSelectPropTypes.RemoteConfig = {
-  queryMethod: ({ searchValue }) => {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        const list = XEUtils.range(0, XEUtils.random(1, 10)).map(() => {
-          return {
-            value: idKey++,
-            label: `选项${idKey}_${searchValue}`
-          }
-        })
-        opts1.value = list
-        resolve()
-      }, 200)
-    })
+  async queryMethod ({ searchValue }) {
+    const list = await getApiList({ searchValue })
+    opts1.value = list
   }
 }
 </script>
