@@ -31,6 +31,20 @@ export default Vue.extend({
         trigger: 'click',
         mode: 'row'
       },
+      editRules: {
+        date1: [
+          { required: true, content: '请输入' }
+        ],
+        date2: [
+          { required: true, content: '请输入' }
+        ],
+        date3: [
+          { required: true, content: '请输入' }
+        ],
+        date4: [
+          { required: true, content: '请输入' }
+        ]
+      },
       columns: [
         { type: 'checkbox', width: 60 },
         { type: 'seq', title: 'Number', width: 80 },
@@ -39,7 +53,6 @@ export default Vue.extend({
         { field: 'date2', title: '日期带时间', width: 200, editRender: { name: 'ADatePicker', props: { showTime: true, valueFormat: 'YYYY-MM-DD HH:mm:ss' } } },
         { field: 'date3', title: '月份', width: 200, editRender: { name: 'ADatePicker', props: { picker: 'month', valueFormat: 'YYYY-MM' } } },
         { field: 'date4', title: '年份', width: 200, editRender: { name: 'ADatePicker', props: { picker: 'year', valueFormat: 'YYYY' } } }
-
       ],
       data: [
         { id: 10001, name: 'Test1', date1: '', date2: '', date3: '', date4: '' },

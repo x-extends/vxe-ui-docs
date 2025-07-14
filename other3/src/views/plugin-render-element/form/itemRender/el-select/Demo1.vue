@@ -100,6 +100,20 @@ export default Vue.extend({
         type: '',
         typeList: []
       },
+      rules: {
+        sex: [
+          { required: true, content: '请输入' }
+        ],
+        sexList: [
+          { required: true, type: 'array', content: '请输入' }
+        ],
+        type: [
+          { required: true, content: '请输入' }
+        ],
+        typeList: [
+          { required: true, type: 'array', content: '请输入' }
+        ]
+      },
       items: [
         { field: 'name', title: '名称', span: 24, itemRender: { name: 'AInput' } },
         { field: 'sex', title: '下拉框', span: 24, itemRender: sexItemRender },

@@ -34,6 +34,11 @@ export default Vue.extend({
         name: 'test1',
         nickname: ''
       },
+      rules: {
+        nickname: [
+          { required: true, content: '请输入' }
+        ]
+      },
       items: [
         { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
         { field: 'nickname', title: '输入框', span: 24, itemRender: { }, slots: { default: 'nickname' } },

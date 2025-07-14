@@ -40,6 +40,14 @@ export default Vue.extend({
         date1: '',
         date2: ''
       },
+      rules: {
+        date1: [
+          { required: true, content: '请输入' }
+        ],
+        date2: [
+          { required: true, content: '请输入' }
+        ]
+      },
       items: [
         { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
         { field: 'date1', title: '日期', span: 24, itemRender: { }, slots: { default: 'date1' } },

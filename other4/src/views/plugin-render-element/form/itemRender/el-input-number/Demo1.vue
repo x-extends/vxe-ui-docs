@@ -24,6 +24,11 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     name: 'test1',
     num: null
   },
+  rules: {
+    num: [
+      { required: true, content: '请输入' }
+    ]
+  },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'ElInput' } },
     { field: 'num', title: '数值输入', span: 24, itemRender: { name: 'ElInputNumber' } },

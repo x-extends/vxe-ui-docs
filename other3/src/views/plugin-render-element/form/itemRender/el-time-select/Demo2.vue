@@ -34,6 +34,11 @@ export default Vue.extend({
         name: 'test1',
         time: ''
       },
+      rules: {
+        time: [
+          { required: true, content: '请输入' }
+        ]
+      },
       items: [
         { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
         { field: 'time', title: '时间选择', span: 24, itemRender: { }, slots: { default: 'time' } },

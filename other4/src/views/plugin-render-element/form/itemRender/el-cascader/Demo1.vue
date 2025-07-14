@@ -58,9 +58,15 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     name: 'test1',
     region: []
   },
+  rules: {
+    region: [
+      { required: true, type: 'array', content: '请输入' }
+    ]
+  },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'ElInput' } },
-    { field: 'region', title: '级联选择', span: 24, itemRender: regionItemRender }
+    { field: 'region', title: '级联选择', span: 24, itemRender: regionItemRender },
+    { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
 </script>

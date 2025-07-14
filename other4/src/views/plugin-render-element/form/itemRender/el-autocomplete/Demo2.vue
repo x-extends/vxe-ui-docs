@@ -39,6 +39,11 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     name: 'test1',
     role: ''
   },
+  rules: {
+    role: [
+      { required: true, content: '请输入' }
+    ]
+  },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
     { field: 'role', title: '自动补全输入', span: 24, itemRender: { }, slots: { default: 'role' } },

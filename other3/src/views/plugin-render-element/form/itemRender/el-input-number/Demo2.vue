@@ -34,6 +34,11 @@ export default Vue.extend({
         name: 'test1',
         num: null
       },
+      rules: {
+        num: [
+          { required: true, content: '请输入' }
+        ]
+      },
       items: [
         { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
         { field: 'num', title: '数值输入', span: 24, itemRender: { }, slots: { default: 'num' } },

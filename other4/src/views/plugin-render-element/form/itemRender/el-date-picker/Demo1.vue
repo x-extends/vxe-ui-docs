@@ -26,10 +26,18 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     date1: '',
     date2: ''
   },
+  rules: {
+    date1: [
+      { required: true, content: '请输入' }
+    ],
+    date2: [
+      { required: true, content: '请输入' }
+    ]
+  },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'ElInput' } },
-    { field: 'nickname', title: '日期', span: 24, itemRender: { name: 'ElDatePicker', props: { type: 'date', valueFormat: 'YYYY-MM-DD' } } },
-    { field: 'nickname', title: '日期带时间', span: 24, itemRender: { name: 'ElDatePicker', props: { type: 'datetime', valueFormat: 'YYYY-MM-DD HH:mm:ss' } } },
+    { field: 'date1', title: '日期', span: 24, itemRender: { name: 'ElDatePicker', props: { type: 'date', valueFormat: 'YYYY-MM-DD' } } },
+    { field: 'date2', title: '日期带时间', span: 24, itemRender: { name: 'ElDatePicker', props: { type: 'datetime', valueFormat: 'YYYY-MM-DD HH:mm:ss' } } },
     { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })

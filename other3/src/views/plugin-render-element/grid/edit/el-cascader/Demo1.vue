@@ -62,6 +62,11 @@ export default Vue.extend({
         trigger: 'click',
         mode: 'row'
       },
+      editRules: {
+        region: [
+          { required: true, type: 'array', content: '请输入' }
+        ]
+      },
       columns: [
         { type: 'checkbox', width: 60 },
         { type: 'seq', title: 'Number', width: 80 },

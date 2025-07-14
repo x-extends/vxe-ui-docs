@@ -89,7 +89,7 @@ const typeListItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
 })
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
-  titleWidth: 120,
+  titleWidth: 130,
   data: {
     name: 'test1',
     nickname: 'Testing',
@@ -97,6 +97,20 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     sexList: [],
     type: '',
     typeList: []
+  },
+  rules: {
+    sex: [
+      { required: true, content: '请输入' }
+    ],
+    sexList: [
+      { required: true, type: 'array', content: '请输入' }
+    ],
+    type: [
+      { required: true, content: '请输入' }
+    ],
+    typeList: [
+      { required: true, type: 'array', content: '请输入' }
+    ]
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'AInput' } },

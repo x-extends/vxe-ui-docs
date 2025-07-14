@@ -29,13 +29,20 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     trigger: 'click',
     mode: 'row'
   },
+  editRules: {
+    date1: [
+      { required: true, content: '请输入' }
+    ],
+    date2: [
+      { required: true, content: '请输入' }
+    ]
+  },
   columns: [
     { type: 'checkbox', width: 60 },
     { type: 'seq', title: 'Number', width: 80 },
     { field: 'name', title: 'Name', minWidth: 140, editRender: { name: 'ElInput' } },
     { field: 'date1', title: '日期', width: 200, editRender: { name: 'ElDatePicker', props: { type: 'date', valueFormat: 'YYYY-MM-DD' } } },
     { field: 'date2', title: '日期带时间', width: 220, editRender: { name: 'ElDatePicker', props: { type: 'datetime', valueFormat: 'YYYY-MM-DD HH:mm:ss' } } }
-
   ],
   data: [
     { id: 10001, name: 'Test1', date1: '', date2: '' },
