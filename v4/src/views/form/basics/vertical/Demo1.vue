@@ -1,8 +1,13 @@
 <template>
   <div>
+    <vxe-radio-group v-model="vertical">
+      <vxe-radio-button :label="false" content="上下布局"></vxe-radio-button>
+      <vxe-radio-button :label="true" content="左右布局"></vxe-radio-button>
+    </vxe-radio-group>
+
     <vxe-form
       ref="formRef"
-      vertical
+      :vertical="vertical"
       :data="formData"
       @submit="submitEvent"
       @reset="resetEvent">
@@ -50,6 +55,7 @@ interface FormDataVO {
 
 const formRef = ref<VxeFormInstance<FormDataVO>>()
 
+const vertical = ref(true)
 const formData = ref<FormDataVO>({
   name: 'test1',
   nickname: '',

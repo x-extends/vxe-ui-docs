@@ -1,8 +1,13 @@
 <template>
   <div>
+    <vxe-radio-group v-model="vertical">
+      <vxe-radio-button :label="false" content="上下布局"></vxe-radio-button>
+      <vxe-radio-button :label="true" content="左右布局"></vxe-radio-button>
+    </vxe-radio-group>
+
     <vxe-form
       ref="formRef"
-      vertical
+      :vertical="vertical"
       :data="formData"
       @submit="submitEvent"
       @reset="resetEvent">
@@ -50,6 +55,7 @@ interface FormDataVO {
 
 export default Vue.extend({
   data () {
+    const vertical = true
     const formData: FormDataVO = {
       name: 'test1',
       nickname: '',
@@ -59,7 +65,8 @@ export default Vue.extend({
     }
 
     return {
-      formData
+      formData,
+      vertical
     }
   },
   methods: {
