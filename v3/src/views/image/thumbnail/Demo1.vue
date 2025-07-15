@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-image src="https://vxeui.com/resource/img/fj577.jpg" :get-thumbnail-url-method="getThumbnailUrlMethod" :width="100"></vxe-image>
+    <vxe-image :src="imgUrl" :get-thumbnail-url-method="getThumbnailUrlMethod" :width="100"></vxe-image>
   </div>
 </template>
 
@@ -8,6 +8,13 @@
 import Vue from 'vue'
 
 export default Vue.extend({
+  data () {
+    const imgUrl = 'https://vxeui.com/resource/img/fj577.jpg'
+
+    return {
+      imgUrl
+    }
+  },
   methods: {
     getThumbnailUrlMethod ({ url }) {
       // 返回对应预览图片的链接
