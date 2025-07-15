@@ -5430,7 +5430,8 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/image/showPrintButton/CodeExample.vue')
           },
           { path: 'toolBtn', name: 'ComponentImageToolBtn', component: () => import('@/views/image/toolBtn/CodeExample.vue') },
-          { path: 'toolIcon', name: 'ComponentImageToolIcon', component: () => import('@/views/image/toolIcon/CodeExample.vue') }
+          { path: 'toolIcon', name: 'ComponentImageToolIcon', component: () => import('@/views/image/toolIcon/CodeExample.vue') },
+          { path: 'events', name: 'ComponentImageEvents', component: () => import('@/views/image/events/CodeExample.vue') }
         ]
       },
       {

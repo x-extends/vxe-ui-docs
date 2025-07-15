@@ -1916,7 +1916,8 @@ export const navConfigList: NavVO[] = [
           { title: '点击遮罩层关闭', routerLink: { name: 'ComponentImageMaskClosable' } },
           // { title: '打印按钮', routerLink: { name: 'ComponentImageShowPrintButton' } },
           { title: '工具栏按钮', routerLink: { name: 'ComponentImageToolBtn' } },
-          { title: '工具栏图标', routerLink: { name: 'ComponentImageToolIcon' } }
+          { title: '工具栏图标', routerLink: { name: 'ComponentImageToolIcon' } },
+          { title: '事件监听', routerLink: { name: 'ComponentImageEvents' } }
         ]
       },
       {
