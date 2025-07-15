@@ -19,7 +19,7 @@
     "@vxe-ui/plugin-render-wangeditor": "^3.0.1",
     "@vxe-ui/plugin-shortcut-key": "^3.0.2",
     "@vxe-ui/plugin-validator": "^3.0.1",
-    "ant-design-vue": "1.7.9",
+    "ant-design-vue": "1.7.8",
     "axios": "^1.7.2",
     "core-js": "^3.8.3",
     "dayjs": "^1.11.13",
