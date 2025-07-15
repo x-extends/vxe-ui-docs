@@ -11,7 +11,7 @@ export default Vue.extend({
   methods: {
     getThumbnailUrlMethod ({ url }) {
       // 返回对应预览图片的链接
-      return `${url}?w=100&h=100`
+      return url ? `${url}?w=100&h=100` : url
     }
   }
 })
