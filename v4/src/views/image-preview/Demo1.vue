@@ -14,7 +14,15 @@ const clickEvent = () => {
       'https://vxeui.com/resource/img/fj573.jpeg',
       'https://vxeui.com/resource/img/fj562.png',
       'https://vxeui.com/resource/img/fj187.jpg'
-    ]
+    ],
+    events: {
+      change ({ url }) {
+        console.log(`切换事件 url=${url}`)
+      },
+      rotate ({ url, rotateValue }) {
+        console.log(`旋转事件 ${rotateValue}度 url=${url}`)
+      }
+    }
   })
 }
 </script>
