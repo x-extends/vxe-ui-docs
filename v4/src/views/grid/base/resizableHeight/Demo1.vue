@@ -1,12 +1,14 @@
 <template>
   <div>
+    <vxe-switch v-model="gridOptions.rowConfig.resizable"></vxe-switch>
+
     <vxe-grid v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import type { VxeGridProps } from 'vxe-table'
+import type { VxeGridProps, VxeTablePropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -17,18 +19,17 @@ interface RowVO {
   address: string
 }
 
-const gridOptions = reactive<VxeGridProps<RowVO>>({
-  border: true,
-  columnConfig: {
+const gridOptions = reactive<VxeGridProps<RowVO> & {
+  rowConfig: VxeTablePropTypes.RowConfig<RowVO>
+}>({
+  rowConfig: {
     resizable: true
   },
   columns: [
-    { type: 'seq', width: 70 },
-    { field: 'name', title: 'Name', minWidth: 400 },
-    { field: 'role', title: 'Role', width: 400 },
-    { field: 'sex', title: 'Sex', width: 300 },
-    { field: 'age', title: 'Age', width: 300 },
-    { field: 'address', title: 'Address', width: 400 }
+    { type: 'seq', width: 70, rowResize: true },
+    { field: 'name', title: 'Name' },
+    { field: 'sex', title: 'Sex' },
+    { field: 'age', title: 'Age' }
   ],
   data: [
     { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
