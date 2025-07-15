@@ -5395,6 +5395,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/image/circle/CodeExample.vue')
           },
           {
+            path: 'thumbnail',
+            name: 'ComponentImageThumbnail',
+            component: () => import('@/views/image/thumbnail/CodeExample.vue')
+          },
+          {
             path: 'multiple',
             name: 'ComponentImageMultiple',
             component: () => import('@/views/image/multiple/CodeExample.vue')

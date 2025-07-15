@@ -19,7 +19,7 @@
     "@vxe-ui/plugin-render-wangeditor": "^3.0.1",
     "@vxe-ui/plugin-shortcut-key": "^3.0.2",
     "@vxe-ui/plugin-validator": "^3.0.1",
-    "ant-design-vue": "1.7.8",
+    "ant-design-vue": "1.7.9",
     "axios": "^1.7.2",
     "core-js": "^3.8.3",
     "dayjs": "^1.11.13",
@@ -30,7 +30,7 @@
     "vue-i18n": "^8.15.1",
     "vue-router": "^3.5.1",
     "vuex": "^3.4.0",
-    "vxe-pc-ui": "^3.7.8",
+    "vxe-pc-ui": "^3.7.9",
     "vxe-design": "^3.0.0",
     "vxe-table": "^3.16.3"
   },

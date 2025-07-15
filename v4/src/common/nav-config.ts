@@ -1908,6 +1908,7 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image' } } },
           { title: '设置宽高', routerLink: { name: 'ComponentImageBase' } },
           { title: '圆形图片', routerLink: { name: 'ComponentImageCircle' } },
+          { title: '预览链接', routerLink: { name: 'ComponentImageThumbnail' } },
           { title: '预览多张图片', routerLink: { name: 'ComponentImageMultiple' } },
           { title: '懒加载', routerLink: { name: 'ComponentImageLazy' } },
           { title: '预览', routerLink: { name: 'ComponentImageShowPreview' } },
