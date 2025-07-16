@@ -138,7 +138,8 @@ export default Vue.extend({
       pagerConfig: pagerConfig,
       toolbarConfig: {
         custom: true,
-        refresh: {
+        refresh: true,
+        refreshOptions: {
           queryMethod: () => {
             return (this as any).loadData()
           }

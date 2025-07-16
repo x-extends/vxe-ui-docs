@@ -150,7 +150,8 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   pagerConfig: pagerConfig,
   toolbarConfig: {
     custom: true,
-    refresh: {
+    refresh: true,
+    refreshOptions: {
       queryMethod () {
         return loadData()
       }
