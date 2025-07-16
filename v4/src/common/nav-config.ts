@@ -1718,6 +1718,11 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Layout 页面布局',
         children: [
+          { title: 'Layout Container API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-container' } } },
+          { title: 'Layout Aside API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-aside' } } },
+          { title: 'Layout Header API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-header' } } },
+          { title: 'Layout Body API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-body' } } },
+          { title: 'Layout Footer API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-footer' } } },
           { title: '基础布局', routerLink: { name: 'ComponentLayoutBase' } },
           { title: '固定头部和底部', routerLink: { name: 'ComponentLayoutFixed' } },
           { title: '侧边栏，内容区滚动条', routerLink: { name: 'ComponentLayoutAside' } },
