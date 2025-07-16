@@ -232,27 +232,27 @@ export const navConfigList: NavVO[] = [
       }
     ]
   },
-  {
-    title: '第三方插件 - 渲染 echarts 图表',
-    isExpand: false,
-    children: [
-      {
-        title: '开发指南',
-        children: [
-          { title: 'NPM 安装插件', routerLink: { name: 'PluginRenderEchartsStartNpmInstall' } },
-          { title: 'CDN 安装插件', routerLink: { name: 'PluginRenderEchartsStartCdnInstall' } }
-        ]
-      },
-      {
-        title: 'Grid 配置式表格',
-        children: [
-          { title: '单元格 - 柱状图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' },
-          { title: '单元格 - 折线图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' },
-          { title: '单元格 - 饼图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' }
-        ]
-      }
-    ]
-  },
+  // {
+  //   title: '第三方插件 - 渲染 echarts 图表',
+  //   isExpand: false,
+  //   children: [
+  //     {
+  //       title: '开发指南',
+  //       children: [
+  //         { title: 'NPM 安装插件', routerLink: { name: 'PluginRenderEchartsStartNpmInstall' } },
+  //         { title: 'CDN 安装插件', routerLink: { name: 'PluginRenderEchartsStartCdnInstall' } }
+  //       ]
+  //     },
+  //     {
+  //       title: 'Grid 配置式表格',
+  //       children: [
+  //         { title: '单元格 - 柱状图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' },
+  //         { title: '单元格 - 折线图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' },
+  //         { title: '单元格 - 饼图', isEnterprise: true, linkUrl: 'https://vxetable.cn/pluginDocs/table/#/extendCellArea/grid/areaBasicsEcharts' }
+  //       ]
+  //     }
+  //   ]
+  // },
   {
     title: '第三方插件 - 渲染 element-plus 组件',
     isExpand: false,
