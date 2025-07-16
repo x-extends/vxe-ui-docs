@@ -7,13 +7,14 @@
         </vxe-layout-header>
 
         <vxe-layout-container>
-          <vxe-layout-aside class="bg2">
+          <vxe-layout-aside class="bg2" :collapsed="!showLeftAside">
             <div style="height: 400px">菜单</div>
             <div style="height: 400px">菜单</div>
           </vxe-layout-aside>
 
           <vxe-layout-container vertical>
             <vxe-layout-body class="bg3">
+              <vxe-button mode="text" status="error" @click="toggleLeftAside">点击展开/收起左侧</vxe-button>
               <div style="height: 400px">内容</div>
               <div style="height: 400px">内容</div>
             </vxe-layout-body>
@@ -27,6 +28,16 @@
     </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+import { ref } from 'vue'
+
+const showLeftAside = ref(true)
+
+const toggleLeftAside = () => {
+  showLeftAside.value = !showLeftAside.value
+}
+</script>
 
 <style lang="scss" scoped>
 .page-wrapper {
