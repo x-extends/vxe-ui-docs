@@ -5377,6 +5377,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/menu/accordion/CodeExample.vue')
           },
           {
+            path: 'collapsed',
+            name: 'ComponentMenuCollapsed',
+            component: () => import('@/views/menu/collapsed/CodeExample.vue')
+          },
+          {
             path: 'routerLink',
             name: 'ComponentMenuRouterLink',
             component: () => import('@/views/menu/routerLink/CodeExample.vue')
