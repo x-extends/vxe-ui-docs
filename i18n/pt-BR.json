@@ -232,6 +232,7 @@
         "areaDisabledClip": "Desativar cópia e colar",
         "copyWithHead": "复制带表头",
         "copyAcrossArea": "多区域复制粘贴",
+        "btnCopy": "实现自定义复制功能",
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "A pasta insere automaticamente linhas e colunas",
         "areaTree": "Estrutura da árvore",

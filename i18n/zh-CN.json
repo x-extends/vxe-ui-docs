@@ -232,6 +232,7 @@
         "areaDisabledClip": "禁用复制与粘贴",
         "copyWithHead": "复制带表头",
         "copyAcrossArea": "多区域复制粘贴",
+        "btnCopy": "实现自定义复制功能",
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "粘贴自动插入行与列",
         "areaTree": "树结构",

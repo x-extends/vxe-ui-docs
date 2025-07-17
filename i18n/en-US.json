@@ -232,6 +232,7 @@
         "areaDisabledClip": "Disable copy and paste",
         "copyWithHead": "Copy with header",
         "copyAcrossArea": "多区域复制粘贴",
+        "btnCopy": "实现自定义复制功能",
         "areaClipCustomClip": "Custom copy and paste methods",
         "areaClipIncrement": "Paste automatically inserts rows and columns",
         "areaTree": "tree structure",
