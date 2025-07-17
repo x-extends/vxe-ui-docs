@@ -18,7 +18,7 @@ const navList = ref<VxeMenuPropTypes.Options>([
     title: '表单文档',
     icon: 'vxe-icon-menu',
     children: [
-      { name: 'form', title: '表单', routerLink: { name: 'ComponentFormBasicsBase' } }
+      { name: 'form', title: '表单', routerLink: { name: 'ComponentFormBasicsBase', query: {} } }
     ]
   },
   {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div style="width: 260px">
-      <vxe-menu v-model="selectNav" :options="navList" @click="clickEvent"></vxe-menu>
+      <vxe-menu v-model="selectNav" :options="navList" accordion @click="clickEvent"></vxe-menu>
     </div>
   </div>
 </template>

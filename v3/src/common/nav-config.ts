@@ -1977,6 +1977,7 @@ export const navConfigList: NavVO[] = [
           { title: '基础', routerLink: { name: 'ComponentMenuBase' } },
           { title: '加载中', routerLink: { name: 'ComponentMenuLoading' } },
           { title: '图标', routerLink: { name: 'ComponentMenuIcon' } },
+          { title: '手风琴效果', routerLink: { name: 'ComponentMenuAccordion' } },
           { title: '路由模式', routerLink: { name: 'ComponentMenuRouterLink' } },
           { title: '权限码', routerLink: { name: 'ComponentMenuPermissionCode' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentMenuTemplate' } }

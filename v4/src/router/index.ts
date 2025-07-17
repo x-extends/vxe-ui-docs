@@ -5369,6 +5369,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/menu/icon/CodeExample.vue')
           },
           {
+            path: 'accordion',
+            name: 'ComponentMenuAccordion',
+            component: () => import('@/views/menu/accordion/CodeExample.vue')
+          },
+          {
             path: 'routerLink',
             name: 'ComponentMenuRouterLink',
             component: () => import('@/views/menu/routerLink/CodeExample.vue')
