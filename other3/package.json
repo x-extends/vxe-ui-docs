@@ -11,7 +11,7 @@
   "dependencies": {
     "@vxe-ui/plugin-export-pdf": "^3.2.0",
     "@vxe-ui/plugin-export-xlsx": "^3.2.2",
-    "@vxe-ui/plugin-menu": "^3.0.8",
+    "@vxe-ui/plugin-menu": "^3.0.9",
     "@vxe-ui/plugin-render-antd": "^3.0.8",
     "@vxe-ui/plugin-render-chart": "^3.0.2",
     "@vxe-ui/plugin-render-element": "^3.0.5",
