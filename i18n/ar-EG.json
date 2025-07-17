@@ -231,6 +231,7 @@
         "areaClip": "نسخ ولصق",
         "areaDisabledClip": "تعطيل النسخ واللصق",
         "copyWithHead": "复制带表头",
+        "copyAcrossArea": "多区域复制粘贴",
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "لصق إدراج الصفوف والأعمدة تلقائيًا",
         "areaTree": "هيكل شجرة",

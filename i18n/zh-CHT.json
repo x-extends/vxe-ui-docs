@@ -231,6 +231,7 @@
         "areaClip": "複製與粘貼",
         "areaDisabledClip": "禁用複制與粘貼",
         "copyWithHead": "复制带表头",
+        "copyAcrossArea": "多区域复制粘贴",
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "粘貼自動插入行與列",
         "areaTree": "樹結構",
