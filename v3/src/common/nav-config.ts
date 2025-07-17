@@ -1658,6 +1658,7 @@ export const navConfigList: NavVO[] = [
           { title: '状态颜色', routerLink: { name: 'ComponentLinkStatus' } },
           { title: '图标', routerLink: { name: 'ComponentLinkIcon' } },
           { title: '下划线', routerLink: { name: 'ComponentLinkUnderline' } },
+          { title: '禁用', routerLink: { name: 'ComponentLinkDisabled' } },
           { title: '超链接', routerLink: { name: 'ComponentLinkHref' } },
           { title: '路由模式', routerLink: { name: 'ComponentLinkRouter' } },
           { title: '权限码', routerLink: { name: 'ComponentLinkPermissionCode' } }

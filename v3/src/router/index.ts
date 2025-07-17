@@ -5539,6 +5539,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/link/underline/CodeExample.vue')
           },
           {
+            path: 'disabled',
+            name: 'ComponentLinkDisabled',
+            component: () => import('@/views/link/disabled/CodeExample.vue')
+          },
+          {
             path: 'href',
             name: 'ComponentLinkHref',
             component: () => import('@/views/link/href/CodeExample.vue')
