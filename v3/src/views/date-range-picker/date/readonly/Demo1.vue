@@ -2,7 +2,7 @@
   <div>
     <vxe-switch v-model="isReadonly"></vxe-switch>
 
-    <vxe-date-picker v-model="val1" :readonly="isReadonly"></vxe-date-picker>
+    <vxe-date-range-picker v-model="val1" :readonly="isReadonly"></vxe-date-range-picker>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default Vue.extend({
   data () {
     return {
       isReadonly: true,
-      val1: '2025-10-01'
+      val1: '2025-10-01,2025-10-07'
     }
   }
 })

@@ -2643,6 +2643,7 @@ export const navConfigList: NavVO[] = [
               { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerDateBase' } },
               { title: '可清除', routerLink: { name: 'ComponentDateRangePickerDateClearable' } },
               { title: '禁用', routerLink: { name: 'ComponentDateRangePickerDateDisabled' } },
+              { title: '查看模式', routerLink: { name: 'ComponentDateRangePickerDateReadonly' } },
               { title: '自动关闭', routerLink: { name: 'ComponentDateRangePickerDateAutoClose' } },
               {
                 title: '快捷按钮',
@@ -2653,6 +2654,7 @@ export const navConfigList: NavVO[] = [
                   { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerDateShortcutCustom' } }
                 ]
               },
+              { title: '限制指定日期', routerLink: { name: 'ComponentDateRangePickerDateDisabledMethod' } },
               { title: '前缀图标', routerLink: { name: 'ComponentDateRangePickerDatePrefixIcon' } },
               { title: '后缀图标', routerLink: { name: 'ComponentDateRangePickerDateSuffixIcon' } },
               {

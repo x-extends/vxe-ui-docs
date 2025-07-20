@@ -6793,6 +6793,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentDateRangePickerDateDisabled',
                 component: () => import('@/views/date-range-picker/date/disabled/CodeExample.vue')
               },
+              { path: 'readonly', name: 'ComponentDateRangePickerDateReadonly', component: () => import('@/views/date-range-picker/date/readonly/CodeExample.vue') },
               {
                 path: 'autoClose',
                 name: 'ComponentDateRangePickerDateAutoClose',
@@ -6824,6 +6825,7 @@ const routes: Array<RouteRecordRaw> = [
                   }
                 ]
               },
+              { path: 'disabledMethod', name: 'ComponentDateRangePickerDateDisabledMethod', component: () => import('@/views/date-range-picker/date/disabledMethod/CodeExample.vue') },
               { path: 'prefixIcon', name: 'ComponentDateRangePickerDatePrefixIcon', component: () => import('@/views/date-range-picker/date/prefixIcon/CodeExample.vue') },
               { path: 'suffixIcon', name: 'ComponentDateRangePickerDateSuffixIcon', component: () => import('@/views/date-range-picker/date/suffixIcon/CodeExample.vue') },
               {
