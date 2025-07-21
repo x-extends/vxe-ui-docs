@@ -1572,7 +1572,7 @@ const designNavConfig: NavVO & { children: NavVO[] } = {
         //   children: [
         //     { title: 'API', routerLink: { name: 'GlobalRendererFormDesignAPI' } },
         //     {
-        //       title: '控件',
+        //       title: '创建控件',
         //       children: [
         //         { title: '实现一个单行输入控件', routerLink: { name: 'GlobalRendererFormDesignWidgetMyInputWidget' } },
         //         { title: '实现一个多行输入控件', routerLink: { name: 'GlobalRendererFormDesignWidgetMyTextareaWidget' } }

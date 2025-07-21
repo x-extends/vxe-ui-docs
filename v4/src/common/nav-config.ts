@@ -1572,10 +1572,12 @@ const designNavConfig: NavVO & { children: NavVO[] } = {
           children: [
             { title: 'API', routerLink: { name: 'GlobalRendererFormDesignAPI' } },
             {
-              title: '控件',
+              title: '创建控件',
               children: [
-                { title: '实现一个单行输入控件', routerLink: { name: 'GlobalRendererFormDesignWidgetMyInputWidget' } },
-                { title: '实现一个多行输入控件', routerLink: { name: 'GlobalRendererFormDesignWidgetMyTextareaWidget' } }
+                { title: '单行输入', routerLink: { name: 'GlobalRendererFormDesignWidgetMyInputWidget' } },
+                { title: '多行输入', routerLink: { name: 'GlobalRendererFormDesignWidgetMyTextareaWidget' } },
+                { title: '下拉框', routerLink: { name: 'GlobalRendererFormDesignWidgetMySelectWidget' } },
+                { title: '日期选择', routerLink: { name: 'GlobalRendererFormDesignWidgetMyDatePickerWidget' } }
               ]
             }
           ]

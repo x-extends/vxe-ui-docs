@@ -5147,6 +5147,16 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'myTextareaWidget',
                     name: 'GlobalRendererFormDesignWidgetMyTextareaWidget',
                     component: () => import('@/views/global/renderer/form-design/widget/myTextareaWidget/CodeExample.vue')
+                  },
+                  {
+                    path: 'mySelectWidget',
+                    name: 'GlobalRendererFormDesignWidgetMySelectWidget',
+                    component: () => import('@/views/global/renderer/form-design/widget/mySelectWidget/CodeExample.vue')
+                  },
+                  {
+                    path: 'myDatePickerWidget',
+                    name: 'GlobalRendererFormDesignWidgetMyDatePickerWidget',
+                    component: () => import('@/views/global/renderer/form-design/widget/myDatePickerWidget/CodeExample.vue')
                   }
                 ]
               }
