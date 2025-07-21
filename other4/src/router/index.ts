@@ -77,6 +77,17 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/other-iconfont/font-class/icon-picker/icons/CodeExample.vue')
               }
             ]
+          },
+          {
+            path: 'toolbar',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'icons',
+                name: 'OtherIconfontFontClassToolbarIcon',
+                component: () => import('@/views/other-iconfont/font-class/toolbar/icon/CodeExample.vue')
+              }
+            ]
           }
         ]
       },

@@ -498,7 +498,8 @@ export const navConfigList: NavVO[] = [
         title: 'Font class',
         children: [
           { title: 'button', routerLink: { name: 'OtherIconfontFontClassButtonIcon' } },
-          { title: 'icon-picker', routerLink: { name: 'OtherIconfontFontClassIconPickerIcons' } }
+          { title: 'icon-picker', routerLink: { name: 'OtherIconfontFontClassIconPickerIcons' } },
+          { title: 'toolbar', routerLink: { name: 'OtherIconfontFontClassToolbarIcon' } }
         ]
       },
       {
