@@ -25,9 +25,10 @@ import 'vxe-table/es/style.css'
 import VxeUIDesign from 'vxe-design'
 import 'vxe-design/lib/style.css'
 
-//  import zhCN from 'vxe-pc-ui/lib/language/zh-CN' // 中文(简体)
+// import zhCN from 'vxe-pc-ui/lib/language/zh-CN' // 简体中文
+import zhCHT from 'vxe-pc-ui/lib/language/zh-CHT' // 繁体中文
 // import zhHK from 'vxe-pc-ui/lib/language/zh-HK' // 中文(香港)
-import zhTW from 'vxe-pc-ui/lib/language/zh-TW' // 中文(繁体)
+// import zhTW from 'vxe-pc-ui/lib/language/zh-TW' // 中文(台湾)
 // import zhMO from 'vxe-pc-ui/lib/language/zh-MO' // 中文(澳门)
 import arEG from 'vxe-pc-ui/lib/language/ar-EG' // 阿拉伯语(埃及)
 import deDE from 'vxe-pc-ui/lib/language/de-DE' // 德语(德国)
@@ -115,8 +116,9 @@ window.XEUtils = XEUtils
 axios.defaults.baseURL = process.env.VUE_APP_SERVE_API_URL
 
 // VxeUI.setI18n('zh-CN', zhCN)
+VxeUI.setI18n('zh-CHT', zhCHT)
 // VxeUI.setI18n('zh-HK', zhHK)
-VxeUI.setI18n('zh-TW', zhTW)
+// VxeUI.setI18n('zh-TW', zhTW)
 // VxeUI.setI18n('zh-MO', zhMO)
 VxeUI.setI18n('ar-EG', arEG)
 VxeUI.setI18n('de-DE', deDE)
