@@ -97,6 +97,8 @@ import '@/views/global/renderer/form-design/widget/myInputWidget/demo1.form-desi
 import '@/views/global/renderer/form-design/widget/myTextareaWidget/demo1.form-design.renderer'
 import '@/views/global/renderer/form-design/widget/mySelectWidget/demo1.form-design.renderer'
 import '@/views/global/renderer/form-design/widget/myDatePickerWidget/demo1.form-design.renderer'
+import '@/views/global/renderer/form-design/widget/myUploadFileWidget/demo1.form-design.renderer'
+import '@/views/global/renderer/form-design/widget/myUploadImageWidget/demo1.form-design.renderer'
 
 import '@/views/global/renderer/button/prefix/demo1.button.renderer'
 import '@/views/global/renderer/button/suffix/demo1.button.renderer'

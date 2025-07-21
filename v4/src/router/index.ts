@@ -5157,6 +5157,16 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'myDatePickerWidget',
                     name: 'GlobalRendererFormDesignWidgetMyDatePickerWidget',
                     component: () => import('@/views/global/renderer/form-design/widget/myDatePickerWidget/CodeExample.vue')
+                  },
+                  {
+                    path: 'myUploadFileWidget',
+                    name: 'GlobalRendererFormDesignWidgetMyUploadFileWidget',
+                    component: () => import('@/views/global/renderer/form-design/widget/myUploadFileWidget/CodeExample.vue')
+                  },
+                  {
+                    path: 'myUploadImageWidget',
+                    name: 'GlobalRendererFormDesignWidgetMyUploadImageWidget',
+                    component: () => import('@/views/global/renderer/form-design/widget/myUploadImageWidget/CodeExample.vue')
                   }
                 ]
               }
