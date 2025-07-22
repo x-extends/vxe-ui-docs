@@ -2114,7 +2114,8 @@ export const navConfigList: NavVO[] = [
             title: '自定义插槽模板',
             children: [
               { title: '自定义标题模板', routerLink: { name: 'ComponentFormBasicsTemplateTitle' } },
-              { title: '自定义标题右侧模板', routerLink: { name: 'ComponentFormBasicsTemplateExtra' } },
+              { title: '自定义标题前缀模板', routerLink: { name: 'ComponentFormBasicsTemplatePrefix' } },
+              { title: '自定义标题后缀模板', routerLink: { name: 'ComponentFormBasicsTemplateSuffix' } },
               { title: '自定义内容模板', routerLink: { name: 'ComponentFormBasicsTemplateContent' } }
             ]
           },
@@ -2215,7 +2216,8 @@ export const navConfigList: NavVO[] = [
             title: '自定义插槽模板',
             children: [
               { title: '自定义标题模板', routerLink: { name: 'ComponentFormConfigTemplateTitle' } },
-              { title: '自定义标题右侧模板', routerLink: { name: 'ComponentFormConfigTemplateExtra' } },
+              { title: '自定义标题前缀模板', routerLink: { name: 'ComponentFormConfigTemplatePrefix' } },
+              { title: '自定义标题后缀模板', routerLink: { name: 'ComponentFormConfigTemplateSuffix' } },
               { title: '自定义内容模板', routerLink: { name: 'ComponentFormConfigTemplateContent' } }
             ]
           },

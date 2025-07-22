@@ -1559,12 +1559,43 @@ const designNavConfig: NavVO & { children: NavVO[] } = {
         {
           i18nKey: 'app.aside.menu.formDesignUse',
           children: [
-            { title: '基础功能', routerLink: { name: 'ComponentFormDesignBase' } },
-            { title: '自定义控件分组', routerLink: { name: 'ComponentFormDesignCustomGroup' } },
-            { title: '移动端设计器', routerLink: { name: 'ComponentFormDesignMobile' } },
-            { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentFormDesignPcAndMobile' } },
-            { title: '渲染视图', routerLink: { name: 'ComponentFormDesignRenderView' } },
+            {
+              title: '基础配置',
+              children: [
+                { title: '内置控件配置', routerLink: { name: 'ComponentFormDesignBase' } },
+                { title: '自定义控件分组', routerLink: { name: 'ComponentFormDesignCustomGroup' } }
+              ]
+            },
+            {
+              title: '多端配置',
+              children: [
+                { title: '仅移动端', routerLink: { name: 'ComponentFormDesignMobile' } },
+                { title: '同时配置 PC 端和移动端', routerLink: { name: 'ComponentFormDesignPcAndMobile' } }
+              ]
+            },
+            {
+              title: '视图转换',
+              children: [
+                { title: '生成表单视图', routerLink: { name: 'ComponentFormDesignRenderView' } }
+              ]
+            },
+            {
+              title: '自定义插槽模板',
+              children: [
+                { title: '自定义标题模板', routerLink: { name: 'ComponentFormDesignTemplateTitle' } },
+                { title: '自定义标题前缀模板', routerLink: { name: 'ComponentFormDesignTemplateTitlePrefix' } },
+                { title: '自定义标题后缀模板', routerLink: { name: 'ComponentFormDesignTemplateTitleSuffix' } },
+                { title: '自定义头部模板', routerLink: { name: 'ComponentFormDesignTemplateHeader' } }
+              ]
+            },
             { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form-design/renderView` }
+          ]
+        },
+        {
+          title: '设计器模板',
+          children: [
+            { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/' },
+            { title: '零代码平台模板', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/' }
           ]
         },
         {
@@ -1578,6 +1609,8 @@ const designNavConfig: NavVO & { children: NavVO[] } = {
                 { title: '多行输入', routerLink: { name: 'GlobalRendererFormDesignWidgetMyTextareaWidget' } },
                 { title: '下拉框', routerLink: { name: 'GlobalRendererFormDesignWidgetMySelectWidget' } },
                 { title: '日期选择', routerLink: { name: 'GlobalRendererFormDesignWidgetMyDatePickerWidget' } },
+                { title: '数值输入', routerLink: { name: 'GlobalRendererFormDesignWidgetMyNumberInputWidget' } },
+                { title: '金额输入', routerLink: { name: 'GlobalRendererFormDesignWidgetMyAmountInputWidget' } },
                 { title: '上传附件', routerLink: { name: 'GlobalRendererFormDesignWidgetMyUploadFileWidget' } },
                 { title: '上传图片', routerLink: { name: 'GlobalRendererFormDesignWidgetMyUploadImageWidget' } }
               ]
@@ -1600,11 +1633,9 @@ const designNavConfig: NavVO & { children: NavVO[] } = {
           ]
         }
       ]
-    },
+    }
     // { title: 'FlowDesign 流程设计器' },
     // { title: 'PrintDesign 打印设计器' },
-    { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/' },
-    { title: '零代码平台模板', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/' }
   ]
 }
 
@@ -2117,7 +2148,8 @@ export const navConfigList: NavVO[] = [
             title: '自定义插槽模板',
             children: [
               { title: '自定义标题模板', routerLink: { name: 'ComponentFormBasicsTemplateTitle' } },
-              { title: '自定义标题右侧模板', routerLink: { name: 'ComponentFormBasicsTemplateExtra' } },
+              { title: '自定义标题前缀模板', routerLink: { name: 'ComponentFormBasicsTemplatePrefix' } },
+              { title: '自定义标题后缀模板', routerLink: { name: 'ComponentFormBasicsTemplateSuffix' } },
               { title: '自定义内容模板', routerLink: { name: 'ComponentFormBasicsTemplateContent' } }
             ]
           },
@@ -2218,7 +2250,8 @@ export const navConfigList: NavVO[] = [
             title: '自定义插槽模板',
             children: [
               { title: '自定义标题模板', routerLink: { name: 'ComponentFormConfigTemplateTitle' } },
-              { title: '自定义标题右侧模板', routerLink: { name: 'ComponentFormConfigTemplateExtra' } },
+              { title: '自定义标题前缀模板', routerLink: { name: 'ComponentFormConfigTemplatePrefix' } },
+              { title: '自定义标题后缀模板', routerLink: { name: 'ComponentFormConfigTemplateSuffix' } },
               { title: '自定义内容模板', routerLink: { name: 'ComponentFormConfigTemplateContent' } }
             ]
           },

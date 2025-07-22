@@ -4631,6 +4631,32 @@ const formDesignRouteConfig: RouteRecordRaw = {
       path: 'renderView',
       name: 'ComponentFormDesignRenderView',
       component: () => import('@/views/form-design/renderView/CodeExample.vue')
+    },
+    {
+      path: 'template',
+      component: RouteLayout,
+      children: [
+        {
+          path: 'title',
+          name: 'ComponentFormDesignTemplateTitle',
+          component: () => import('@/views/form-design/template/title/CodeExample.vue')
+        },
+        {
+          path: 'titlePrefix',
+          name: 'ComponentFormDesignTemplateTitlePrefix',
+          component: () => import('@/views/form-design/template/titlePrefix/CodeExample.vue')
+        },
+        {
+          path: 'titleSuffix',
+          name: 'ComponentFormDesignTemplateTitleSuffix',
+          component: () => import('@/views/form-design/template/titleSuffix/CodeExample.vue')
+        },
+        {
+          path: 'header',
+          name: 'ComponentFormDesignTemplateHeader',
+          component: () => import('@/views/form-design/template/header/CodeExample.vue')
+        }
+      ]
     }
   ]
 }
@@ -5157,6 +5183,16 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'myDatePickerWidget',
                     name: 'GlobalRendererFormDesignWidgetMyDatePickerWidget',
                     component: () => import('@/views/global/renderer/form-design/widget/myDatePickerWidget/CodeExample.vue')
+                  },
+                  {
+                    path: 'myNumberInputWidget',
+                    name: 'GlobalRendererFormDesignWidgetMyNumberInputWidget',
+                    component: () => import('@/views/global/renderer/form-design/widget/myNumberInputWidget/CodeExample.vue')
+                  },
+                  {
+                    path: 'myAmountInputWidget',
+                    name: 'GlobalRendererFormDesignWidgetMyAmountInputWidget',
+                    component: () => import('@/views/global/renderer/form-design/widget/myAmountInputWidget/CodeExample.vue')
                   },
                   {
                     path: 'myUploadFileWidget',
@@ -9442,9 +9478,14 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/basics/template/title/CodeExample.vue')
                   },
                   {
-                    path: 'extra',
-                    name: 'ComponentFormBasicsTemplateExtra',
-                    component: () => import('@/views/form/basics/template/extra/CodeExample.vue')
+                    path: 'prefix',
+                    name: 'ComponentFormBasicsTemplatePrefix',
+                    component: () => import('@/views/form/basics/template/prefix/CodeExample.vue')
+                  },
+                  {
+                    path: 'suffix',
+                    name: 'ComponentFormBasicsTemplateSuffix',
+                    component: () => import('@/views/form/basics/template/suffix/CodeExample.vue')
                   },
                   {
                     path: 'content',
@@ -9813,9 +9854,14 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/config/template/title/CodeExample.vue')
                   },
                   {
-                    path: 'extra',
-                    name: 'ComponentFormConfigTemplateExtra',
-                    component: () => import('@/views/form/config/template/extra/CodeExample.vue')
+                    path: 'prefix',
+                    name: 'ComponentFormConfigTemplatePrefix',
+                    component: () => import('@/views/form/config/template/prefix/CodeExample.vue')
+                  },
+                  {
+                    path: 'suffix',
+                    name: 'ComponentFormConfigTemplateSuffix',
+                    component: () => import('@/views/form/config/template/suffix/CodeExample.vue')
                   },
                   {
                     path: 'content',

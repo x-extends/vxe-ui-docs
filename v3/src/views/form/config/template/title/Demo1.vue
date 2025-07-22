@@ -21,24 +21,28 @@ interface FormDataVO {
   nickname: string
   sex: string
   age: string
-  address: string
+  isEnableName: boolean
+  isEnableSex: boolean
 }
 
 export default Vue.extend({
   data () {
     const formOptions: VxeFormProps<FormDataVO> = {
       border: true,
+      titleBackground: true,
+      titleWidth: 80,
       data: {
         name: 'test1',
         nickname: 'Testing',
-        sex: '男',
-        age: '46',
-        address: 'shanghai'
+        sex: '女',
+        age: '18',
+        isEnableName: false,
+        isEnableSex: false
       },
       items: [
         { field: 'name', title: '名称', span: 24 },
-        { field: 'sex', title: '性别', span: 12, slots: { default: 'sexDefault' } },
-        { field: 'age', title: '年龄', span: 12, slots: { default: 'ageDefault' } }
+        { field: 'sex', title: '性别', span: 12, slots: { title: 'sexTitle' } },
+        { field: 'age', title: '年龄', span: 12, slots: { title: 'ageTitle' } }
       ]
     }
 

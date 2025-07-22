@@ -1,25 +1,17 @@
 <template>
   <div>
-    <vxe-form vertical title-background :data="formData" >
+    <vxe-form :data="formData" title-width="80">
       <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
-        <template #title>
+        <template #prefix>
           <vxe-checkbox v-model="formData.isEnableName"></vxe-checkbox>
-          <span style="color: red;">名称</span>
-        </template>
-        <template #extra>
-          <vxe-button status="primary" mode="text">新增</vxe-button>
         </template>
         <template #default>
           <vxe-input v-model="formData.name"></vxe-input>
         </template>
       </vxe-form-item>
       <vxe-form-item title="性别" field="sex" span="24" :item-render="{}">
-        <template #title>
+        <template #prefix>
           <vxe-checkbox v-model="formData.isEnableSex"></vxe-checkbox>
-          <span style="color: blue;">性别</span>
-        </template>
-        <template #extra>
-          <vxe-button status="error" mode="text">删除</vxe-button>
         </template>
         <template #default>
           <vxe-input v-model="formData.sex"></vxe-input>
@@ -34,8 +26,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script lang="ts" setup>
+import { ref } from 'vue'
 
 interface FormDataVO {
   name: string
@@ -46,20 +38,12 @@ interface FormDataVO {
   isEnableSex: boolean
 }
 
-export default Vue.extend({
-  data () {
-    const formData: FormDataVO = {
-      name: 'test1',
-      nickname: 'Testing',
-      sex: '',
-      age: '',
-      isEnableName: false,
-      isEnableSex: false
-    }
-
-    return {
-      formData
-    }
-  }
+const formData = ref<FormDataVO>({
+  name: 'test1',
+  nickname: 'Testing',
+  sex: '',
+  age: '',
+  isEnableName: false,
+  isEnableSex: false
 })
 </script>

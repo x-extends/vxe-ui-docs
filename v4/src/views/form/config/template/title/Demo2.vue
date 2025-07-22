@@ -13,17 +13,21 @@ interface FormDataVO {
   nickname: string
   sex: string
   age: string
-  address: string
+  isEnableName: boolean
+  isEnableSex: boolean
 }
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
   border: true,
+  titleBackground: true,
+  vertical: true,
   data: {
     name: 'test1',
     nickname: 'Testing',
-    sex: '男',
-    age: '46',
-    address: 'shanghai'
+    sex: '女',
+    age: '18',
+    isEnableName: false,
+    isEnableSex: false
   },
   items: [
     { field: 'name', title: '名称', span: 24 },

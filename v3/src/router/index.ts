@@ -9360,9 +9360,14 @@ const routes: Array<RouteConfig> = [
                     component: () => import('@/views/form/basics/template/title/CodeExample.vue')
                   },
                   {
-                    path: 'extra',
-                    name: 'ComponentFormBasicsTemplateExtra',
-                    component: () => import('@/views/form/basics/template/extra/CodeExample.vue')
+                    path: 'prefix',
+                    name: 'ComponentFormBasicsTemplatePrefix',
+                    component: () => import('@/views/form/basics/template/prefix/CodeExample.vue')
+                  },
+                  {
+                    path: 'suffix',
+                    name: 'ComponentFormBasicsTemplateSuffix',
+                    component: () => import('@/views/form/basics/template/suffix/CodeExample.vue')
                   },
                   {
                     path: 'content',
@@ -9731,9 +9736,14 @@ const routes: Array<RouteConfig> = [
                     component: () => import('@/views/form/config/template/title/CodeExample.vue')
                   },
                   {
-                    path: 'extra',
-                    name: 'ComponentFormConfigTemplateExtra',
-                    component: () => import('@/views/form/config/template/extra/CodeExample.vue')
+                    path: 'prefix',
+                    name: 'ComponentFormConfigTemplatePrefix',
+                    component: () => import('@/views/form/config/template/prefix/CodeExample.vue')
+                  },
+                  {
+                    path: 'suffix',
+                    name: 'ComponentFormConfigTemplateSuffix',
+                    component: () => import('@/views/form/config/template/suffix/CodeExample.vue')
                   },
                   {
                     path: 'content',

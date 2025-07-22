@@ -3,7 +3,6 @@
     <vxe-form title-bold :data="formData">
       <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
         <template #title>
-          <vxe-checkbox v-model="formData.isEnableName"></vxe-checkbox>
           <span style="color: red;">名称</span>
         </template>
         <template #default>
@@ -12,7 +11,6 @@
       </vxe-form-item>
       <vxe-form-item title="性别" field="sex" span="24" :item-render="{}">
         <template #title>
-          <vxe-checkbox v-model="formData.isEnableSex"></vxe-checkbox>
           <span style="color: blue;">性别</span>
         </template>
         <template #default>
