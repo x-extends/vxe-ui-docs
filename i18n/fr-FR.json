@@ -29,7 +29,7 @@
         "lazyUseGlobal": "Installation mondiale - Import à la demande",
         "lazyUseImport": "Installation locale - Importer séparément",
         "useCDN": "Installation globale - CDN Introduction complète",
-        "useUI": "安装配套 UI 库",
+        "useUI": "使用配套 UI 库",
         "globalConfig": "Paramètres mondiaux",
         "globalTheme": "Sujet mondial",
         "globalIcon": "Icône mondiale",

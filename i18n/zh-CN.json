@@ -29,7 +29,7 @@
         "lazyUseGlobal": "全局安装 - 按需导入",
         "lazyUseImport": "局部安装 - 单独导入",
         "useCDN": "全局安装 - CDN 全量引入",
-        "useUI": "安装配套 UI 库",
+        "useUI": "使用配套 UI 库",
         "globalConfig": "全局参数",
         "globalTheme": "全局主题",
         "globalIcon": "全局图标",
