@@ -24,6 +24,7 @@
         "demoChart": "Chart Rendering - Demo",
         "demoExcel": "Excel Styles - Demo",
         "guide": "Development Guide",
+        "insrall": "Insrall",
         "globalInstall": "Global installation - full import",
         "lazyUseGlobal": "Global installation - import on demand",
         "lazyUseImport": "Partial installation - import separately",

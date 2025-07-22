@@ -24,6 +24,7 @@
         "demoChart": "チャートレンダリング - デモ",
         "demoExcel": "Excelスタイル - デモ",
         "guide": "開発ガイド",
+        "insrall": "安装",
         "globalInstall": "グローバルインストール - 完全なインポート",
         "lazyUseGlobal": "グローバルインストール - オンデマンドインポート",
         "lazyUseImport": "ローカルインストール - 個別にインポートします",

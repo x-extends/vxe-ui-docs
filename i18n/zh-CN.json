@@ -24,6 +24,7 @@
         "demoChart": "图表渲染 - 演示",
         "demoExcel": "Excel样式 - 演示",
         "guide": "开发指南",
+        "insrall": "安装",
         "globalInstall": "全局安装 - 全量导入",
         "lazyUseGlobal": "全局安装 - 按需导入",
         "lazyUseImport": "局部安装 - 单独导入",
