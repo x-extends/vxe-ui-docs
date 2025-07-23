@@ -13,11 +13,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts@5.4.3
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts@5.6.0
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts@5.4.3
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts@5.6.0
             # 或者
-            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts@5.4.3
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderEchartsCDNLib} echarts@5.6.0
             `">
           </pre-code>
         </pre>
