@@ -395,6 +395,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/plugin-export-xlsx/grid/advanced/CodeExample.vue')
           },
           {
+            path: 'openImport',
+            name: 'PluginExportXlsxGridOpenImport',
+            component: () => import('@/views/plugin-export-xlsx/grid/openImport/CodeExample.vue')
+          },
+          {
             path: 'scroll',
             name: 'PluginExportXlsxGridScroll',
             component: () => import('@/views/plugin-export-xlsx/grid/scroll/CodeExample.vue')

@@ -1,7 +1,6 @@
 <template>
   <div>
     <vxe-button status="primary" @click="exportEvent">高级导出</vxe-button>
-    <vxe-button status="primary" @click="importEvent">高级导入</vxe-button>
     <vxe-table
       border
       show-footer
@@ -9,7 +8,6 @@
       ref="tableRef"
       :column-config="columnConfig"
       :edit-config="editConfig"
-      :import-config="importConfig"
       :export-config="exportConfig"
       :data="tableData"
       :merge-cells="mergeCells"
@@ -68,10 +66,6 @@ const mergeCells = ref<VxeTablePropTypes.MergeCells>([
   { row: 2, col: 2, rowspan: 2, colspan: 1 }
 ])
 
-const importConfig = reactive<VxeTablePropTypes.ImportConfig>({
-  types: ['xlsx']
-})
-
 const exportConfig = reactive<VxeTablePropTypes.ExportConfig>({
   type: 'xlsx'
 })
@@ -88,13 +82,6 @@ const tableData = ref<RowVO[]>([
 const footerData = ref<VxeTablePropTypes.FooterData>([
   { checkbox: '合计', name: '12人', no1: 356 }
 ])
-
-const importEvent = () => {
-  const $table = tableRef.value
-  if ($table) {
-    $table.openImport()
-  }
-}
 
 const exportEvent = () => {
   const $table = tableRef.value

@@ -1,7 +1,6 @@
 <template>
   <div>
     <vxe-button status="primary" @click="exportEvent">高级导出</vxe-button>
-    <vxe-button status="primary" @click="importEvent">高级导入</vxe-button>
     <vxe-table
       border
       show-footer
@@ -9,7 +8,6 @@
       ref="tableRef"
       :column-config="columnConfig"
       :edit-config="editConfig"
-      :import-config="importConfig"
       :export-config="exportConfig"
       :data="tableData"
       :merge-cells="mergeCells"
@@ -81,10 +79,6 @@ export default Vue.extend({
       { row: 2, col: 2, rowspan: 2, colspan: 1 }
     ]
 
-    const importConfig: VxeTablePropTypes.ImportConfig = {
-      types: ['xlsx']
-    }
-
     const exportConfig: VxeTablePropTypes.ExportConfig = {
       type: 'xlsx'
     }
@@ -96,17 +90,10 @@ export default Vue.extend({
       columnConfig,
       editConfig,
       mergeCells,
-      importConfig,
       exportConfig
     }
   },
   methods: {
-    importEvent () {
-      const $table = this.$refs.tableRef as VxeTableInstance<RowVO>
-      if ($table) {
-        $table.openImport()
-      }
-    },
     exportEvent () {
       const $table = this.$refs.tableRef as VxeTableInstance<RowVO>
       if ($table) {
