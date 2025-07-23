@@ -1,6 +1,7 @@
 <template>
   <div>
     <vxe-button status="primary" @click="exportEvent">高级导出</vxe-button>
+    <vxe-button status="primary" @click="importEvent">高级导入</vxe-button>
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
@@ -45,6 +46,9 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { row: 0, col: 2, rowspan: 1, colspan: 2 },
     { row: 2, col: 2, rowspan: 2, colspan: 1 }
   ],
+  importConfig: {
+    types: ['xlsx']
+  },
   exportConfig: {
     type: 'xlsx'
   },
@@ -76,6 +80,13 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { checkbox: '合计', name: '12人', no1: 356 }
   ]
 })
+
+const importEvent = () => {
+  const $grid = gridRef.value
+  if ($grid) {
+    $grid.openImport()
+  }
+}
 
 const exportEvent = () => {
   const $grid = gridRef.value

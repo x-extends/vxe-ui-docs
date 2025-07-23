@@ -1,6 +1,7 @@
 <template>
   <div>
     <vxe-button status="primary" @click="exportEvent">高级导出</vxe-button>
+    <vxe-button status="primary" @click="importEvent">高级导入</vxe-button>
     <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
@@ -45,6 +46,9 @@ export default Vue.extend({
         { row: 0, col: 2, rowspan: 1, colspan: 2 },
         { row: 2, col: 2, rowspan: 2, colspan: 1 }
       ],
+      importConfig: {
+        types: ['xlsx']
+      },
       exportConfig: {
         type: 'xlsx'
       },
@@ -83,6 +87,12 @@ export default Vue.extend({
     }
   },
   methods: {
+    importEvent () {
+      const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
+      if ($grid) {
+        $grid.openImport()
+      }
+    },
     exportEvent () {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
       if ($grid) {
