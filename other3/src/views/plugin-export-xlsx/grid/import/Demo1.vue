@@ -23,6 +23,7 @@ export default Vue.extend({
   data () {
     const gridOptions: VxeGridProps<RowVO> = {
       border: true,
+      height: 500,
       columns: [
         { type: 'seq', width: 70 },
         { field: 'name', title: '名字' },

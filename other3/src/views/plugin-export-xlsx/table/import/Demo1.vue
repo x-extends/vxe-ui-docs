@@ -4,6 +4,7 @@
     <vxe-button @click="importEvent">直接导入 XLSX 文件</vxe-button>
     <vxe-table
       border
+      height="500"
       ref="tableRef"
       :data="tableData">
       <vxe-column type="seq" width="70"></vxe-column>
