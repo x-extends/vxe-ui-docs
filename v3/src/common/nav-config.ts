@@ -1613,14 +1613,35 @@ export const navConfigList: NavVO[] = [
     children: [
       {
         i18nKey: 'app.aside.menu.fullInsrall',
+        isExpand: true,
         children: [
-          { i18nKey: 'app.aside.menu.globalInstall', routerLink: { name: 'StartInstall' } },
-          { i18nKey: 'app.aside.menu.lazyUseGlobal', routerLink: { name: 'StartUseGlobal' } },
-          { i18nKey: 'app.aside.menu.lazyUseImport', routerLink: { name: 'StartUseImport' } },
-          { i18nKey: 'app.aside.menu.useCDN', routerLink: { name: 'StartCDN' } },
+          { i18nKey: 'app.aside.menu.globalInstall', routerLink: { name: 'StartUIInstall' } },
+          { i18nKey: 'app.aside.menu.lazyUseGlobal', routerLink: { name: 'StartUIUseGlobal' } },
+          { i18nKey: 'app.aside.menu.lazyUseImport', routerLink: { name: 'StartUIUseImport' } },
+          { i18nKey: 'app.aside.menu.useCDN', routerLink: { name: 'StartUICDN' } },
           { title: '后台管理系统模板', isTemplate: true, linkUrl: 'https://vxeui.com/admin-template/' }
         ]
       },
+      {
+        i18nKey: 'app.aside.menu.useTableInsrall',
+        children: [
+          { i18nKey: 'app.aside.menu.globalInstall', routerLink: { name: 'StartTableInstall' } },
+          { i18nKey: 'app.aside.menu.lazyUseGlobal', routerLink: { name: 'StartTableUseGlobal' } },
+          { i18nKey: 'app.aside.menu.lazyUseImport', routerLink: { name: 'StartTableUseImport' } },
+          { i18nKey: 'app.aside.menu.useCDN', routerLink: { name: 'StartTableCDN' } }
+        ]
+      },
+      // {
+      //   i18nKey: 'app.aside.menu.useDesignInsrall',
+      //   children: [
+      //     { i18nKey: 'app.aside.menu.globalInstall', routerLink: { name: 'StartDesignInstall' } },
+      //     { i18nKey: 'app.aside.menu.lazyUseGlobal', routerLink: { name: 'StartDesignUseGlobal' } },
+      //     { i18nKey: 'app.aside.menu.lazyUseImport', routerLink: { name: 'StartDesignUseImport' } },
+      //     { i18nKey: 'app.aside.menu.useCDN', routerLink: { name: 'StartDesignCDN' } },
+      //     { title: '使用第三方 UI 库', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form-design/renderView` },
+      //     { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/' }
+      //   ]
+      // },
       { i18nKey: 'app.aside.menu.globalConfig', routerLink: { name: 'StartConfig' } },
       { i18nKey: 'app.aside.menu.globalTheme', routerLink: { name: 'StartTheme' } },
       { i18nKey: 'app.aside.menu.globalIcon', routerLink: { name: 'StartIcons' } },
