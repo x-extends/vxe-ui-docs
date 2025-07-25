@@ -15,11 +15,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
+            npm install ${ designCDNLib } ${pluginRenderElementCDNLib}
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
+            yarn add ${ designCDNLib } ${pluginRenderElementCDNLib}
             # 或者
-            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
+            pnpm add ${ designCDNLib } ${pluginRenderElementCDNLib}
             `">
           </pre-code>
         </pre>
@@ -31,17 +31,15 @@
           <div>文件 src/main </div>
           <pre-code language="javascript">
             // ...
-            import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
-            import 'vxe-pc-ui/lib/style.css'
-            import VxeUITable from 'vxe-table'
-            import 'vxe-table/lib/style.css'
+            import VxeUIDesign, { VxeUI } from 'vxe-design'
+            import 'vxe-design/lib/style.css'
             import VxeUIPluginRenderElement from '@vxe-ui/plugin-render-element'
             import '@vxe-ui/plugin-render-element/dist/style.css'
             // ...
 
             VxeUI.use(VxeUIPluginRenderElement)
 
-            createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
+            createApp(App).use(VxeUIDesign).mount('#app')
             // ...
           </pre-code>
         </pre>
@@ -53,10 +51,8 @@
           <div>文件 src/main </div>
           <pre-code language="javascript">
             // ...
-            import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
-            import 'vxe-pc-ui/lib/style.css'
-            import VxeUITable from 'vxe-table'
-            import 'vxe-table/lib/style.css'
+            import VxeUIDesign, { VxeUI } from 'vxe-design'
+            import 'vxe-design/lib/style.css'
             import VxeUIPluginRenderElement from '@vxe-ui/plugin-render-element'
             import '@vxe-ui/plugin-render-element/dist/style.css'
             // ...
@@ -73,7 +69,7 @@
 
             VxeUI.use(VxeUIPluginRenderElement)
 
-            createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
+            createApp(App).use(VxeUIDesign).mount('#app')
             // ...
           </pre-code>
         </pre>
@@ -89,5 +85,6 @@ import { useAppStore } from '@/store/app'
 const appStore = useAppStore()
 const uiCDNLib = computed(() => appStore.uiCDNLib)
 const tableCDNLib = computed(() => appStore.tableCDNLib)
+const designCDNLib = computed(() => appStore.designCDNLib)
 const pluginRenderElementCDNLib = computed(() => appStore.pluginRenderElementCDNLib)
 </script>

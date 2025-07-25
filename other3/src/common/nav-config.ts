@@ -261,7 +261,25 @@ export const navConfigList: NavVO[] = [
       {
         title: '开发指南',
         children: [
-          { title: '安装插件', routerLink: { name: 'PluginRenderElementInstall' } }
+          {
+            i18nKey: 'app.aside.menu.fullInsrall',
+            children: [
+              { title: 'NPM 安装插件', routerLink: { name: 'PluginRenderElementStartFullNpmInstall' } }
+              // { title: 'CDN 安装插件', routerLink: { name: 'PluginRenderElementStartFullCdnInstall' } }
+            ]
+          },
+          {
+            i18nKey: 'app.aside.menu.useTableInsrall',
+            children: [
+              { title: 'NPM 安装插件', routerLink: { name: 'PluginRenderElementStartTableNpmInstall' } }
+            ]
+          },
+          {
+            i18nKey: 'app.aside.menu.useDesignInsrall',
+            children: [
+              { title: 'NPM 安装插件', routerLink: { name: 'PluginRenderElementStartDesignNpmInstall' } }
+            ]
+          }
         ]
       },
       {

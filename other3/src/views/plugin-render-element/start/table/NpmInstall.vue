@@ -15,11 +15,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
+            npm install ${ tableCDNLib } ${pluginRenderElementCDNLib}
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
+            yarn add ${ tableCDNLib } ${pluginRenderElementCDNLib}
             # 或者
-            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
+            pnpm add ${ tableCDNLib } ${pluginRenderElementCDNLib}
             `">
           </pre-code>
         </pre>
@@ -31,9 +31,7 @@
           <div>文件 src/main </div>
           <pre-code language="javascript">
             // ...
-            import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
-            import 'vxe-pc-ui/lib/style.css'
-            import VxeUITable from 'vxe-table'
+            import VxeUITable, { VxeUI } from 'vxe-table'
             import 'vxe-table/lib/style.css'
             import VxeUIPluginRenderElement from '@vxe-ui/plugin-render-element'
             import '@vxe-ui/plugin-render-element/dist/style.css'
@@ -41,7 +39,6 @@
 
             VxeUI.use(VxeUIPluginRenderElement)
 
-            Vue.use(VxeUIAll)
             Vue.use(VxeUITable)
             //...
           </pre-code>
@@ -60,6 +57,7 @@ export default Vue.extend({
     ...mapGetters([
       'uiCDNLib',
       'tableCDNLib',
+      'designCDNLib',
       'pluginRenderElementCDNLib'
     ])
   }

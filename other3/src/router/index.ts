@@ -516,9 +516,48 @@ const routes: Array<RouteConfig> = [
     component: PageLayout,
     children: [
       {
-        path: 'install',
-        name: 'PluginRenderElementInstall',
-        component: () => import('@/views/plugin-render-element/install/CodeExample.vue')
+        path: 'start',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'full',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'npmInstall',
+                name: 'PluginRenderElementStartFullNpmInstall',
+                component: () => import('@/views/plugin-render-element/start/full/NpmInstall.vue')
+              },
+              {
+                path: 'cdnInstall',
+                name: 'PluginRenderElementStartFullCdnInstall',
+                component: () => import('@/views/plugin-render-element/start/full/CdnInstall.vue')
+              }
+            ]
+          },
+          {
+            path: 'table',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'npmInstall',
+                name: 'PluginRenderElementStartTableNpmInstall',
+                component: () => import('@/views/plugin-render-element/start/table/NpmInstall.vue')
+              }
+            ]
+          },
+          {
+            path: 'design',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'npmInstall',
+                name: 'PluginRenderElementStartDesignNpmInstall',
+                component: () => import('@/views/plugin-render-element/start/design/NpmInstall.vue')
+              }
+            ]
+          }
+        ]
       },
       {
         path: 'form',
