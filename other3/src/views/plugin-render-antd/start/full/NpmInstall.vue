@@ -2,11 +2,11 @@
   <div>
     <CodeLight>
       <template #tip>
-        <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-render-element">
-          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/v3/plugin-render-element" target="_blank"></vxe-link> 该插件提供了在表格中渲染第三方组件，用于兼容 <vxe-link href="https://www.npmjs.com/package/element-ui" target="_blank">element-ui</vxe-link> 组件库
+        <vxe-tip status="primary" title="安装插件 @vxe-ui/plugin-render-antd">
+          <vxe-link icon="vxe-icon-github-fill" href="https://github.com/x-extends/vxe-ui-plugins/tree/v3/plugin-render-antd" target="_blank"></vxe-link> 该插件提供了在表格中渲染第三方组件，用于兼容 <vxe-link href="https://www.npmjs.com/package/ant-design-vue" target="_blank">ant-design-vue</vxe-link> 组件库
         </vxe-tip>
         <vxe-tip status="error">
-          对应的第三方组件库 <vxe-link href="https://www.npmjs.com/package/element-ui" target="_blank">element-ui</vxe-link> 需自行去安装，安装完成对应的组件库后就可以在表格中使用了
+          对应的第三方组件库 <vxe-link href="https://www.npmjs.com/package/ant-design-vue" target="_blank">ant-design-vue</vxe-link> 需自行去安装，安装完成对应的组件库后就可以在表格中使用了
         </vxe-tip>
       </template>
 
@@ -15,11 +15,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderAntdCDNLib}
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderAntdCDNLib}
             # 或者
-            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderAntdCDNLib}
             `">
           </pre-code>
         </pre>
@@ -35,15 +35,16 @@
             import 'vxe-pc-ui/lib/style.css'
             import VxeUITable from 'vxe-table'
             import 'vxe-table/lib/style.css'
-            import VxeUIPluginRenderElement from '@vxe-ui/plugin-render-element'
-            import '@vxe-ui/plugin-render-element/dist/style.css'
+            import VxeUIPluginRenderAntd from '@vxe-ui/plugin-render-antd'
+            import '@vxe-ui/plugin-render-antd/dist/style.css'
             // ...
 
-            VxeUI.use(VxeUIPluginRenderElement)
+            VxeUI.use(VxeUIPluginRenderAntd, {
+              // prefixCls: 'ant'
+            })
 
             Vue.use(VxeUIAll)
             Vue.use(VxeUITable)
-            Vue.use(VxeUIDesign)
             //...
           </pre-code>
         </pre>
@@ -62,7 +63,7 @@ export default Vue.extend({
       'uiCDNLib',
       'tableCDNLib',
       'designCDNLib',
-      'pluginRenderElementCDNLib'
+      'pluginRenderAntdCDNLib'
     ])
   }
 })

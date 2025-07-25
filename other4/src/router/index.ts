@@ -836,9 +836,48 @@ const routes: Array<RouteRecordRaw> = [
     component: PageLayout,
     children: [
       {
-        path: 'install',
-        name: 'PluginRenderAntdInstall',
-        component: () => import('@/views/plugin-render-antd/install/CodeExample.vue')
+        path: 'start',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'full',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'npmInstall',
+                name: 'PluginRenderAntdStartFullNpmInstall',
+                component: () => import('@/views/plugin-render-antd/start/full/NpmInstall.vue')
+              },
+              {
+                path: 'cdnInstall',
+                name: 'PluginRenderAntdStartFullCdnInstall',
+                component: () => import('@/views/plugin-render-antd/start/full/CdnInstall.vue')
+              }
+            ]
+          },
+          {
+            path: 'table',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'npmInstall',
+                name: 'PluginRenderAntdStartTableNpmInstall',
+                component: () => import('@/views/plugin-render-antd/start/table/NpmInstall.vue')
+              }
+            ]
+          },
+          {
+            path: 'design',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'npmInstall',
+                name: 'PluginRenderAntdStartDesignNpmInstall',
+                component: () => import('@/views/plugin-render-antd/start/design/NpmInstall.vue')
+              }
+            ]
+          }
+        ]
       },
       {
         path: 'form',
