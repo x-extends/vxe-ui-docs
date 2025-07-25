@@ -20,7 +20,7 @@
     "@vxe-ui/plugin-render-arco": "^4.0.3",
     "@vxe-ui/plugin-render-wangeditor": "^4.0.4",
     "@vxe-ui/plugin-shortcut-key": "^4.0.3",
-    "@vxe-ui/plugin-validator": "^4.0.2",
+    "@vxe-ui/plugin-validator": "^4.0.3",
     "ant-design-vue": "4.2.6",
     "axios": "^1.7.2",
     "core-js": "^3.8.3",
