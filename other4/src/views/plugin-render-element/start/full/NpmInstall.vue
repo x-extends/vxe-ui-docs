@@ -15,11 +15,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } ${ designCDNLib } ${pluginRenderElementCDNLib}
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } ${ designCDNLib } ${pluginRenderElementCDNLib}
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
             # 或者
-            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${ designCDNLib } ${pluginRenderElementCDNLib}
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginRenderElementCDNLib}
             `">
           </pre-code>
         </pre>
@@ -35,15 +35,13 @@
             import 'vxe-pc-ui/lib/style.css'
             import VxeUITable from 'vxe-table'
             import 'vxe-table/lib/style.css'
-            import VxeUIDesign from 'vxe-design'
-            import 'vxe-design/lib/style.css'
             import VxeUIPluginRenderElement from '@vxe-ui/plugin-render-element'
             import '@vxe-ui/plugin-render-element/dist/style.css'
             // ...
 
             VxeUI.use(VxeUIPluginRenderElement)
 
-            createApp(App).use(VxeUIAll).use(VxeUITable).use(VxeUIDesign).mount('#app')
+            createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
             // ...
           </pre-code>
         </pre>
@@ -59,8 +57,6 @@
             import 'vxe-pc-ui/lib/style.css'
             import VxeUITable from 'vxe-table'
             import 'vxe-table/lib/style.css'
-            import VxeUIDesign from 'vxe-design'
-            import 'vxe-design/lib/style.css'
             import VxeUIPluginRenderElement from '@vxe-ui/plugin-render-element'
             import '@vxe-ui/plugin-render-element/dist/style.css'
             // ...
@@ -77,7 +73,7 @@
 
             VxeUI.use(VxeUIPluginRenderElement)
 
-            createApp(App).use(VxeUIAll).use(VxeUITable).use(VxeUIDesign).mount('#app')
+            createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
             // ...
           </pre-code>
         </pre>
