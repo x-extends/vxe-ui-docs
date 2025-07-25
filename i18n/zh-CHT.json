@@ -299,7 +299,9 @@
         "rowGroupSummary": "分组汇总",
         "dynamicInteraction": "动态交互",
         "aggDragValues": "拖拽与数据汇总",
-        "defAggFunc": "设置默认聚合函数"
+        "defAggFunc": "设置默认聚合函数",
+        "disabledAggGroup": "禁用数据分组",
+        "disabledAggValues": "禁用聚合汇总"
       }
     },
     "filtersComplexInput": {
