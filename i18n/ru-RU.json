@@ -27,7 +27,7 @@
         "insrall": "安装",
         "fullInsrall": "默认安装",
         "useTableInsrall": "安装表格",
-        "useDesignInsrall": "安装设计器",
+        "useDesignInsrall": "安装可视化设计器",
         "globalInstall": "Глобальная установка - полный импорт",
         "lazyUseGlobal": "Глобальная установка - импорт по требованию",
         "lazyUseImport": "Местная установка - импорт отдельно",

@@ -27,7 +27,7 @@
         "insrall": "安装",
         "fullInsrall": "默认安装",
         "useTableInsrall": "安装表格",
-        "useDesignInsrall": "安装设计器",
+        "useDesignInsrall": "安装可视化设计器",
         "globalInstall": "Instalação global - importação total",
         "lazyUseGlobal": "Instalação global - importar sob demanda",
         "lazyUseImport": "Instalação local - importar separadamente",
