@@ -298,7 +298,8 @@
         "handleRowGroup": "Row group",
         "rowGroupSummary": "Group summary",
         "dynamicInteraction": "Dynamic interaction",
-        "aggDragValues": "拖拽与数据汇总"
+        "aggDragValues": "拖拽与数据汇总",
+        "defAggFunc": "设置默认聚合函数"
       }
     },
     "filtersComplexInput": {
