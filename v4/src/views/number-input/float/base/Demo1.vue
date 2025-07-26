@@ -9,5 +9,5 @@
 import { ref } from 'vue'
 
 const val1 = ref(null)
-const val2 = ref(123)
+const val2 = ref(123.67)
 </script>

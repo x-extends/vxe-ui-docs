@@ -1,7 +1,6 @@
 <template>
   <div>
-    <vxe-switch v-model="isReadonly"></vxe-switch>
-    <vxe-number-input v-model="val1" type="integer" :readonly="isReadonly"></vxe-number-input>
+    <vxe-number-input v-model="val1" placeholder="禁止输入" :editable="isEdit"></vxe-number-input>
   </div>
 </template>
 
@@ -12,7 +11,7 @@ export default Vue.extend({
   data () {
     return {
       val1: 123,
-      isReadonly: true
+      isEdit: false
     }
   }
 })

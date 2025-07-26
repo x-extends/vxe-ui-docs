@@ -1,7 +1,7 @@
 <template>
   <div>
-    <vxe-number-input v-model="val1" placeholder="禁止输入" :editable="false"></vxe-number-input>
-    <vxe-number-input v-model="val2" readonly></vxe-number-input>
+    <vxe-switch v-model="isReadonly"></vxe-switch>
+    <vxe-number-input v-model="val1" :readonly="isReadonly"></vxe-number-input>
   </div>
 </template>
 
@@ -9,5 +9,5 @@
 import { ref } from 'vue'
 
 const val1 = ref(123)
-const val2 = ref(123)
+const isReadonly = ref(true)
 </script>

@@ -12,7 +12,7 @@ export default Vue.extend({
   data () {
     return {
       val1: null,
-      val2: 123
+      val2: 123.67
     }
   }
 })
