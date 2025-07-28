@@ -237,6 +237,7 @@
         "copyWithHead": "复制带表头",
         "copyAcrossArea": "多区域复制粘贴",
         "btnCopy": "实现自定义复制功能",
+        "cllipBeforeAfter": "阻止粘贴",
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "貼り付けは行と列を自動的に挿入します",
         "areaTree": "ツリー構造",
