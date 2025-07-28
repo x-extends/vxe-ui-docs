@@ -1,17 +1,20 @@
 <template>
   <div>
-    <vxe-button status="primary" @click="changeCurrPage(1)">切换页数1</vxe-button>
-    <vxe-button status="primary" @click="changeCurrPage(2)">切换页数2</vxe-button>
-    <vxe-button status="primary" @click="changePageSize(10)">切换大小10</vxe-button>
-    <vxe-button status="primary" @click="changePageSize(20)">切换大小20</vxe-button>
+    <vxe-button @click="changeHomePageEvent">首页</vxe-button>
+    <vxe-button @click="changeEndPageEvent">末页</vxe-button>
+    <vxe-button @click="changeCurrPage($event, 1)">切换页数1</vxe-button>
+    <vxe-button @click="changeCurrPage($event, 2)">切换页数2</vxe-button>
+    <vxe-button @click="changePageSize($event, 10)">切换大小10</vxe-button>
+    <vxe-button @click="changePageSize($event, 20)">切换大小20</vxe-button>
     <vxe-button @click="reloadEvent">重新加载</vxe-button>
-    <vxe-grid ref="gridRef" v-bind="gridOptions" v-on="gridEvents"></vxe-grid>
+    <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref, reactive, nextTick } from 'vue'
-import type { VxeGridInstance, VxeGridProps, VxeGridPropTypes, VxeGridListeners } from 'vxe-table'
+<script lang="ts">
+import Vue from 'vue'
+import { VxeGridInstance, VxeGridProps } from 'vxe-table'
+import { VxeButtonDefines } from 'vxe-pc-ui'
 
 interface RowVO {
   id: number
@@ -22,8 +25,6 @@ interface RowVO {
   age: number
   address: string
 }
-
-const gridRef = ref<VxeGridInstance<RowVO>>()
 
 const list = [
   { id: 10001, name: 'Test1', nickname: 'T1', role: 'Develop', sex: 'Man', age: 28, address: 'Shenzhen' },
@@ -70,67 +71,70 @@ const findPageList = (pageSize: number, currentPage: number) => {
   })
 }
 
-const gridOptions = reactive<VxeGridProps<RowVO> & {
-  pagerConfig: VxeGridPropTypes.PagerConfig
-}>({
-  border: true,
-  height: 500,
-  pagerConfig: {
-    currentPage: 1,
-    pageSize: 10
-  },
-  proxyConfig: {
-    // showLoading: false, // 关闭加载中
-    seq: true, // 启用自动序号
-    // response: {
-    //   result: 'result', // 配置响应结果列表字段
-    //   total: 'page.total' // 配置响应结果总页数字段
-    // },
-    ajax: {
-      query: ({ page }) => {
-        // 默认接收 Promise<{ result: [], page: { total: 100 } }>
-        return findPageList(page.pageSize, page.currentPage)
-      }
+export default Vue.extend({
+  data () {
+    const gridOptions: VxeGridProps<RowVO> = {
+      border: true,
+      height: 300,
+      pagerConfig: {},
+      proxyConfig: {
+        // showLoading: false, // 关闭加载中
+        seq: true, // 启用自动序号
+        // response: {
+        //   result: 'result', // 配置响应结果列表字段
+        //   total: 'page.total' // 配置响应结果总页数字段
+        // },
+        ajax: {
+          query: ({ page }) => {
+            // 默认接收 Promise<{ result: [], page: { total: 100 } }>
+            return findPageList(page.pageSize, page.currentPage)
+          }
+        }
+      },
+      columns: [
+        { type: 'seq', width: 70 },
+        { field: 'name', title: 'Name' },
+        { field: 'nickname', title: 'Nickname' },
+        { field: 'role', title: 'Role' },
+        { field: 'address', title: 'Address', showOverflow: true }
+      ]
+    }
+
+    return {
+      gridOptions
     }
   },
-  columns: [
-    { type: 'seq', width: 70 },
-    { field: 'name', title: 'Name' },
-    { field: 'nickname', title: 'Nickname' },
-    { field: 'role', title: 'Role' },
-    { field: 'address', title: 'Address', showOverflow: true }
-  ]
+  methods: {
+    changeHomePageEvent (params) {
+      const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
+      if ($grid) {
+        $grid.homePageByEvent(params.$event)
+      }
+    },
+    changeEndPageEvent (params) {
+      const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
+      if ($grid) {
+        $grid.endPageByEvent(params.$event)
+      }
+    },
+    changeCurrPage (params: VxeButtonDefines.ClickEventParams, num: number) {
+      const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
+      if ($grid) {
+        $grid.setCurrentPageByEvent(params.$event, num)
+      }
+    },
+    changePageSize (params: VxeButtonDefines.ClickEventParams, num: number) {
+      const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
+      if ($grid) {
+        $grid.setPageSizeByEvent(params.$event, num)
+      }
+    },
+    reloadEvent () {
+      const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
+      if ($grid) {
+        $grid.commitProxy('reload')
+      }
+    }
+  }
 })
-
-const gridEvents: VxeGridListeners<RowVO> = {
-  pageChange ({ currentPage, pageSize }) {
-    gridOptions.pagerConfig.currentPage = currentPage
-    gridOptions.pagerConfig.pageSize = pageSize
-  }
-}
-
-const changeCurrPage = async (num: number) => {
-  gridOptions.pagerConfig.currentPage = num
-  await nextTick()
-  const $grid = gridRef.value
-  if ($grid) {
-    $grid.commitProxy('query')
-  }
-}
-
-const changePageSize = async (num: number) => {
-  gridOptions.pagerConfig.pageSize = num
-  await nextTick()
-  const $grid = gridRef.value
-  if ($grid) {
-    $grid.commitProxy('query')
-  }
-}
-
-const reloadEvent = () => {
-  const $grid = gridRef.value
-  if ($grid) {
-    $grid.commitProxy('reload')
-  }
-}
 </script>

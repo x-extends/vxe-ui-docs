@@ -1,17 +1,20 @@
 <template>
   <div>
-    <vxe-button status="primary" @click="changeCurrPage(1)">切换页数1</vxe-button>
-    <vxe-button status="primary" @click="changeCurrPage(2)">切换页数2</vxe-button>
-    <vxe-button status="primary" @click="changePageSize(10)">切换大小10</vxe-button>
-    <vxe-button status="primary" @click="changePageSize(20)">切换大小20</vxe-button>
-    <vxe-button @click="reloadEvent">重新加载</vxe-button>
-    <vxe-grid ref="gridRef" v-bind="gridOptions" @page-change="pageChangeEvent"></vxe-grid>
+    <vxe-button @click="handleSort('role', 'desc')">只修改 role 倒序</vxe-button>
+    <vxe-button @click="handleSort('role', 'asc')">只修改 role 升序</vxe-button>
+    <vxe-button @click="handleUpdateSort($event, 'role', 'desc')">修改并触发 role 倒序</vxe-button>
+    <vxe-button @click="handleUpdateSort($event, 'role', 'asc')">修改并触发 role 升序</vxe-button>
+    <vxe-button @click="handleClearEvent">清除排序</vxe-button>
+
+    <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import type { VxeGridInstance, VxeGridProps, VxeGridPropTypes } from 'vxe-table'
+import { VxeGridProps, VxeGridInstance } from 'vxe-table'
+import { VxeButtonDefines, VxeButtonEvents } from 'vxe-pc-ui'
+import XEUtils from 'xe-utils'
 
 interface RowVO {
   id: number
@@ -49,8 +52,12 @@ const list = [
 ]
 
 // 模拟接口
-const findPageList = (pageSize: number, currentPage: number) => {
+const findPageList = (pageSize: number, currentPage: number, sorts: any[]) => {
+  const sortItem = sorts[0]
   console.log(`调用查询接口 pageSize=${pageSize} currentPage=${currentPage}`)
+  if (sortItem) {
+    console.log(`排序参数 ${sortItem.field}=${sortItem.order}`)
+  }
   return new Promise<{
     result: RowVO[]
     page: {
@@ -58,47 +65,59 @@ const findPageList = (pageSize: number, currentPage: number) => {
     }
   }>(resolve => {
     setTimeout(() => {
+      const currList = sortItem
+        ? XEUtils.orderBy(list, {
+          field: sortItem.field,
+          order: sortItem.order
+        })
+        : list
       resolve({
-        result: list.slice((currentPage - 1) * pageSize, currentPage * pageSize),
+        result: currList.slice((currentPage - 1) * pageSize, currentPage * pageSize),
         page: {
-          total: list.length
+          total: currList.length
         }
       })
-    }, 100)
+    }, 300)
   })
 }
 
 export default Vue.extend({
   data () {
-    const gridOptions: VxeGridProps<RowVO> & {
-      pagerConfig: VxeGridPropTypes.PagerConfig
-    } = {
+    const gridOptions: VxeGridProps<RowVO> = {
       border: true,
+      showOverflow: true,
       height: 500,
-      pagerConfig: {
-        currentPage: 1,
-        pageSize: 10
+      sortConfig: {
+        remote: true,
+        multiple: true
+      },
+      pagerConfig: {},
+      toolbarConfig: {
+        buttons: [
+          { code: 'query', name: '点击查询（不重置条件）' },
+          { code: 'reload', name: '点击刷新（重置条件）' }
+        ],
+        refresh: true
       },
       proxyConfig: {
-        // showLoading: false, // 关闭加载中
-        seq: true, // 启用自动序号
         // response: {
         //   result: 'result', // 配置响应结果列表字段
         //   total: 'page.total' // 配置响应结果总页数字段
         // },
+        sort: true, // 启用排序请求代理
         ajax: {
-          query: ({ page }) => {
+          query: ({ page, sorts }) => {
             // 默认接收 Promise<{ result: [], page: { total: 100 } }>
-            return findPageList(page.pageSize, page.currentPage)
+            return findPageList(page.pageSize, page.currentPage, sorts)
           }
         }
       },
       columns: [
         { type: 'seq', width: 70 },
-        { field: 'name', title: 'Name' },
+        { field: 'name', title: 'Name', sortable: true },
         { field: 'nickname', title: 'Nickname' },
-        { field: 'role', title: 'Role' },
-        { field: 'address', title: 'Address', showOverflow: true }
+        { field: 'role', title: 'Role', sortable: true },
+        { field: 'address', title: 'Address' }
       ]
     }
 
@@ -107,30 +126,25 @@ export default Vue.extend({
     }
   },
   methods: {
-    pageChangeEvent ({ currentPage, pageSize }) {
-      this.gridOptions.pagerConfig.currentPage = currentPage
-      this.gridOptions.pagerConfig.pageSize = pageSize
-    },
-    async changeCurrPage (num: number) {
-      this.gridOptions.pagerConfig.currentPage = num
-      await this.$nextTick()
+    handleSort (field: string, order: 'asc' | 'desc') {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
       if ($grid) {
-        $grid.commitProxy('query')
+        // 设置排序状态，默认不会更新数据，调用该方法不会触发任何事件
+        $grid.setSort({ field, order })
       }
     },
-    async changePageSize (num: number) {
-      this.gridOptions.pagerConfig.pageSize = num
-      await this.$nextTick()
+    handleUpdateSort (params: VxeButtonDefines.ClickEventParams, field: string, order: 'asc' | 'desc') {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
       if ($grid) {
-        $grid.commitProxy('query')
+        // 设置排序状态，调用该方法会自动触发 sort-change 事件
+        $grid.setSortByEvent(params.$event, { field, order })
       }
     },
-    reloadEvent () {
+    handleClearEvent ({ $event }) {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
       if ($grid) {
-        $grid.commitProxy('reload')
+        // 单列排序模式，清除排序，调用该方法会自动触发 clear-sort 与 sort-change 事件
+        $grid.clearSortByEvent($event)
       }
     }
   }
