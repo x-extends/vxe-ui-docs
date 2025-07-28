@@ -321,6 +321,7 @@
         "fixed": "冻结列",
         "sort": "排序",
         "combinationRemoteFilter": "服务端筛选",
+        "combinationPageFilter": "服务端分页筛选",
         "handleFilter": "手动设置选项",
         "combinationTitle": "Komplexe Filterung",
         "combinationStringFilter": "String Type Filterung",
