@@ -905,6 +905,8 @@ export const navConfigList: NavVO[] = [
               { title: '限制指定日期', routerLink: { name: 'ComponentDatePickerDateDisabledMethod' } },
               { title: '前缀图标', routerLink: { name: 'ComponentDatePickerDatePrefixIcon' } },
               { title: '后缀图标', routerLink: { name: 'ComponentDatePickerDateSuffixIcon' } },
+              { title: '小圆点', routerLink: { name: 'ComponentDatePickerDateDot' } },
+              { title: '农历及节假日', routerLink: { name: 'ComponentDatePickerDateHolidays' } },
               {
                 title: '自定义插槽模板',
                 children: [
@@ -948,7 +950,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '绑定值', routerLink: { name: 'ComponentDatePickerDatetimeBase' } },
               { title: '禁用', routerLink: { name: 'ComponentDatePickerDatetimeDisabled' } },
-              { title: '禁止输入', routerLink: { name: 'ComponentDatePickerDattimeeEditable' } },
+              { title: '禁止输入', routerLink: { name: 'ComponentDatePickerDatetimeEditable' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerDatetimeMultiple' } },
               { title: '自定义格式', routerLink: { name: 'ComponentDatePickerDatetimeValueFormat' } },
               {
@@ -960,6 +962,8 @@ export const navConfigList: NavVO[] = [
                   { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerDatetimeShortcutCustom' } }
                 ]
               },
+              { title: '小圆点', routerLink: { name: 'ComponentDatePickerDatetimeDot' } },
+              { title: '农历及节假日', routerLink: { name: 'ComponentDatePickerDatetimeHolidays' } },
               {
                 title: '自定义插槽模板',
                 children: [
