@@ -298,6 +298,7 @@
         "aggregation": "Aggregation",
         "handleRowGroup": "Row group",
         "rowGroupSummary": "Group summary",
+        "allowGroup": "允许拖拽分组",
         "dynamicInteraction": "Dynamic interaction",
         "aggDragValues": "拖拽与数据汇总",
         "defAggFunc": "设置默认聚合函数",
