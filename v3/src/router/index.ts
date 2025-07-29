@@ -1644,6 +1644,7 @@ const routes: Array<RouteConfig> = [
               { path: 'clearable', name: 'ComponentDatePickerDateClearable', component: () => import('@/views/date-picker/date/clearable/CodeExample.vue') },
               { path: 'disabled', name: 'ComponentDatePickerDateDisabled', component: () => import('@/views/date-picker/date/disabled/CodeExample.vue') },
               { path: 'readonly', name: 'ComponentDatePickerDateReadonly', component: () => import('@/views/date-picker/date/readonly/CodeExample.vue') },
+              { path: 'editable', name: 'ComponentDatePickerDateEditable', component: () => import('@/views/date-picker/date/editable/CodeExample.vue') },
               {
                 path: 'multiple',
                 name: 'ComponentDatePickerDateMultiple',

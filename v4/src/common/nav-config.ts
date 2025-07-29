@@ -897,6 +897,7 @@ export const navConfigList: NavVO[] = [
               { title: '可清除', routerLink: { name: 'ComponentDatePickerDateClearable' } },
               { title: '禁用', routerLink: { name: 'ComponentDatePickerDateDisabled' } },
               { title: '查看模式', routerLink: { name: 'ComponentDatePickerDateReadonly' } },
+              { title: '禁用输入', routerLink: { name: 'ComponentDatePickerDateEditable' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerDateMultiple' } },
               { title: '自动关闭', routerLink: { name: 'ComponentDatePickerDateAutoClose' } },
               {
