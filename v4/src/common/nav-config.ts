@@ -956,6 +956,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '绑定值', routerLink: { name: 'ComponentDatePickerDatetimeBase' } },
               { title: '禁用', routerLink: { name: 'ComponentDatePickerDatetimeDisabled' } },
+              { title: '禁止输入', routerLink: { name: 'ComponentDatePickerDattimeeEditable' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerDatetimeMultiple' } },
               { title: '自定义格式', routerLink: { name: 'ComponentDatePickerDatetimeValueFormat' } },
               {

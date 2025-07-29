@@ -2010,6 +2010,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentDatePickerDatetimeDisabled',
                 component: () => import('@/views/date-picker/datetime/disabled/CodeExample.vue')
               },
+              { path: 'editable', name: 'ComponentDatePickerDattimeeEditable', component: () => import('@/views/date-picker/datetime/editable/CodeExample.vue') },
               {
                 path: 'multiple',
                 name: 'ComponentDatePickerDatetimeMultiple',
