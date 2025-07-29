@@ -9,6 +9,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const isEditable = ref(true)
+const isEditable = ref(false)
 const val1 = ref()
 </script>
