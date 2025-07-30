@@ -4062,7 +4062,8 @@ const routes: Array<RouteConfig> = [
                 path: 'loadData',
                 name: 'ComponentTreeScrollLoadData',
                 component: () => import('@/views/tree/scroll/loadData/CodeExample.vue')
-              }
+              },
+              { path: 'scrollTo', name: 'ComponentTreeScrollScrollTo', component: () => import('@/views/tree/scroll/scrollTo/CodeExample.vue') }
             ]
           },
           {

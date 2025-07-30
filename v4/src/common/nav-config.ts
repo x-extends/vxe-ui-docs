@@ -1561,7 +1561,8 @@ export const navConfigList: NavVO[] = [
         title: '虚拟滚动',
         children: [
           { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTreeScrollBasics' } },
-          { title: '函数式加载', routerLink: { name: 'ComponentTreeScrollLoadData' } }
+          { title: '函数式加载', routerLink: { name: 'ComponentTreeScrollLoadData' } },
+          { title: '滚动到指定位置', routerLink: { name: 'ComponentTreeScrollScrollTo' } }
         ]
       },
       {
