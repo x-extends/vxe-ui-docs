@@ -34,8 +34,8 @@ const openCustomAlert = () => {
 }
 </script>
 
-<styles lang="scss">
+<style lang="scss">
 .my-alert-icon-color {
   color: blue;
 }
-</styles>
+</style>

@@ -32,8 +32,8 @@ const openCustomNotification = () => {
 }
 </script>
 
-<styles lang="scss">
+<style lang="scss">
 .my-notification-icon-color {
   color: blue;
 }
-</styles>
+</style>

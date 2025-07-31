@@ -36,8 +36,8 @@ export default Vue.extend({
 })
 </script>
 
-<styles lang="scss">
+<style lang="scss">
 .my-notification-icon-color {
   color: blue;
 }
-</styles>
+</style>

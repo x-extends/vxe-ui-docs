@@ -32,8 +32,8 @@ const openCustomMessage = () => {
 }
 </script>
 
-<styles lang="scss">
+<style lang="scss">
 .my-message-icon-color {
   color: blue;
 }
-</styles>
+</style>
