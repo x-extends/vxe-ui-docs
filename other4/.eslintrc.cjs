@@ -24,9 +24,9 @@ module.exports = {
     defineModel: true
   },
   rules: {
-    'array-bracket-spacing': ['error', 'never'],
     'no-debugger': ['error'],
     'vue/no-v-model-argument': 'off',
-    'vue/multi-word-component-names': 'off'
+    'vue/multi-word-component-names': 'off',
+    'no-unused-vars': 'warn'
   }
 }
