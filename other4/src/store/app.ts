@@ -63,6 +63,7 @@ export const useAppStore = defineStore('app', {
       packName: import.meta.env.VITE_APP_PACKAGE_NAME,
       isExtendDocs: import.meta.env.VITE_APP_IS_EXTEND_DOCS === 'true',
       isPluginDocs: import.meta.env.VITE_APP_IS_PLUGIN_DOCS === 'true',
+      isUtilDocs: import.meta.env.VITE_APP_IS_UTIL_DOCS === 'true',
       theme: currTheme,
       primaryColor: currPrimaryColor,
       componentsSize: currComponentsSize,

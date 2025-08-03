@@ -66,6 +66,7 @@ export default new Vuex.Store({
     packName: process.env.VUE_APP_PACKAGE_NAME,
     isExtendDocs: process.env.VUE_APP_IS_EXTEND_DOCS === 'true',
     isPluginDocs: process.env.VUE_APP_IS_PLUGIN_DOCS === 'true',
+    isUtilDocs: process.env.VUE_APP_IS_UTIL_DOCS === 'true',
     theme: currTheme,
     primaryColor: currPrimaryColor,
     componentsSize: currComponentsSize,

@@ -115,6 +115,11 @@
       "apiSearch": "Search {0} API"
     },
     "version": {
+      "xe-utils": {
+        "v1": "v1.x 2016-02-01 ~ 2017-08-01 stop update⚠️",
+        "v2": "v2.x 2017-01-0 ~ 2019-02-01 stop update⚠️",
+        "v3": "v3.x 2019-02-01 ~ LTS"
+      },
       "vxe-table": {
         "v1": "v1.x (vue 2.6+ stop maintenance) ~ 2020-04-01 stop update⚠️",
         "v1dx": "v1.x (vue 2.6+ stop maintenance) ~ 2020-04-01 stop update⚠️",
