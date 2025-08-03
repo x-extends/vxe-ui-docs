@@ -4368,9 +4368,19 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/table-select/base/border/CodeExample.vue')
               },
               {
+                path: 'clearable',
+                name: 'ComponentTableSelectBaseClearable',
+                component: () => import('@/views/table-select/base/clearable/CodeExample.vue')
+              },
+              {
                 path: 'optionProps',
                 name: 'ComponentTableSelectBaseOptionProps',
                 component: () => import('@/views/table-select/base/optionProps/CodeExample.vue')
+              },
+              {
+                path: 'radioTrigger',
+                name: 'ComponentTableSelectBaseRadioTrigger',
+                component: () => import('@/views/table-select/base/radioTrigger/CodeExample.vue')
               },
               {
                 path: 'popupWH',
@@ -4392,6 +4402,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'base',
                 name: 'ComponentTableSelectCheckboxBase',
                 component: () => import('@/views/table-select/checkbox/base/CodeExample.vue')
+              },
+              {
+                path: 'clearable',
+                name: 'ComponentTableSelectCheckboxClearable',
+                component: () => import('@/views/table-select/checkbox/clearable/CodeExample.vue')
               },
               {
                 path: 'trigger',

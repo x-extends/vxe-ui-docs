@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="select/base/clearable/Demo1">
+    <CodeLight path="table-select/checkbox/clearable/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="可清除"></vxe-tip>
       </template>

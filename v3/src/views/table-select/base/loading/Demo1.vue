@@ -23,6 +23,7 @@ interface RowVO {
 export default Vue.extend({
   data () {
     const columnList : VxeTableSelectPropTypes.Columns = [
+      { type: 'radio', width: 70 },
       { field: 'label', title: 'Name' },
       { field: 'role', title: 'Role' },
       { field: 'sex', title: 'Sex' },

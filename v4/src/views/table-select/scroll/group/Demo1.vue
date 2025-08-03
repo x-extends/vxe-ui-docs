@@ -20,6 +20,7 @@ interface RowVO {
 const val1 = ref()
 
 const columnList = ref<VxeTableSelectPropTypes.Columns>([
+  { type: 'radio', width: 70 },
   { type: 'seq', width: 70 },
   {
     title: '分组1',

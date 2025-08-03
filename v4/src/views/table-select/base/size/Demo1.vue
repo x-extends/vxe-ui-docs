@@ -26,6 +26,7 @@ const val3 = ref()
 const val4 = ref(10004)
 
 const columnList = ref<VxeTableSelectPropTypes.Columns>([
+  { type: 'radio', width: 70 },
   { field: 'label', title: 'Name' },
   { field: 'role', title: 'Role' },
   { field: 'sex', title: 'Sex' },

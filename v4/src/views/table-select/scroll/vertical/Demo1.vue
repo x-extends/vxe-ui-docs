@@ -18,6 +18,7 @@ interface RowVO {
 const val1 = ref()
 
 const columnList = ref<VxeTableSelectPropTypes.Columns>([
+  { type: 'radio', width: 70 },
   { type: 'seq', width: 70 },
   { field: 'name', title: 'Name' },
   { field: 'role', title: 'Role' },

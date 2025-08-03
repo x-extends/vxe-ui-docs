@@ -20,6 +20,7 @@ interface RowVO {
 const val1 = ref()
 
 const columnList: VxeTableSelectPropTypes.Columns = [
+  { type: 'checkbox', width: 70 },
   { field: 'label', title: 'Name' },
   { field: 'role', title: 'Role' },
   { field: 'sex', title: 'Sex' },

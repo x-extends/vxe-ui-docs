@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-table-select v-model="val1" :columns="columnList" :options="tableData" multiple></vxe-table-select>
+    <vxe-table-select v-model="val1" :columns="columnList" :options="tableData" :grid-config="gridConfig" clearable></vxe-table-select>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ interface RowVO {
 export default Vue.extend({
   data () {
     const columnList: VxeTableSelectPropTypes.Columns = [
-      { type: 'checkbox', width: 70 },
+      { type: 'radio', width: 70 },
       { field: 'label', title: 'Name' },
       { field: 'role', title: 'Role' },
       { field: 'sex', title: 'Sex' },
@@ -34,10 +34,15 @@ export default Vue.extend({
       { value: 10004, label: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
     ]
 
+    const gridConfig : VxeTableSelectPropTypes.GridConfig = {
+      border: true
+    }
+
     return {
       val1: null,
       columnList,
-      tableData
+      tableData,
+      gridConfig
     }
   }
 })

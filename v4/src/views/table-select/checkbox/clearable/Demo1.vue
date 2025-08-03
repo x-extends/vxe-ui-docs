@@ -1,11 +1,11 @@
 <template>
   <div>
-    <vxe-table-select v-model="val1" :columns="columnList" :options="tableData" :grid-config="gridConfig" multiple></vxe-table-select>
+    <vxe-table-select v-model="val1" :columns="columnList" :options="tableData" :grid-config="gridConfig" clearable multiple></vxe-table-select>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 import { VxeTableSelectPropTypes } from 'vxe-pc-ui'
 
 interface RowVO {
@@ -34,9 +34,7 @@ const tableData : RowVO[] = [
   { value: 10004, label: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
 ]
 
-const gridConfig : VxeTableSelectPropTypes.GridConfig = {
-  checkboxConfig: {
-    trigger: 'row'
-  }
-}
+const gridConfig = reactive<VxeTableSelectPropTypes.GridConfig>({
+  border: true
+})
 </script>

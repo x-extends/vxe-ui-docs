@@ -43,7 +43,9 @@ const popupConfig = reactive<VxeTableSelectPropTypes.PopupConfig>({
 const loadDataAndColumns = (rowSize: number, colSize: number) => {
   loading.value = true
   setTimeout(() => {
-    const colList: VxeTableSelectPropTypes.Columns = []
+    const colList: VxeTableSelectPropTypes.Columns = [
+      { type: 'radio', width: 70 }
+    ]
     for (let i = 0; i < colSize; i++) {
       colList.push({
         field: `col${i}`,

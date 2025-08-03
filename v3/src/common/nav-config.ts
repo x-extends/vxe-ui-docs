@@ -1362,7 +1362,9 @@ export const navConfigList: NavVO[] = [
               { title: '尺寸大小', routerLink: { name: 'ComponentTableSelectBaseSize' } },
               { title: '加载中', routerLink: { name: 'ComponentTableSelectBaseLoading' } },
               { title: '边框', routerLink: { name: 'ComponentTableSelectBaseBorder' } },
+              { title: '可清除', routerLink: { name: 'ComponentTableSelectBaseClearable' } },
               { title: '自定义字段', routerLink: { name: 'ComponentTableSelectBaseOptionProps' } },
+              { title: '点击行自动选中', routerLink: { name: 'ComponentTableSelectBaseRadioTrigger' } },
               { title: '自定义宽高', routerLink: { name: 'ComponentTableSelectBasePopupWH' } },
               { title: '表尾数据', routerLink: { name: 'ComponentTableSelectBaseFooter' } }
             ]
@@ -1371,7 +1373,8 @@ export const navConfigList: NavVO[] = [
             title: '复选框',
             children: [
               { title: '显示复选框', routerLink: { name: 'ComponentTableSelectCheckboxBase' } },
-              { title: '选中子节点', routerLink: { name: 'ComponentTableSelectCheckboxTrigger' } }
+              { title: '可清除', routerLink: { name: 'ComponentTableSelectCheckboxClearable' } },
+              { title: '点击行自动选中', routerLink: { name: 'ComponentTableSelectCheckboxTrigger' } }
             ]
           },
           {
