@@ -48,10 +48,10 @@ const apiLangPromise: Record<string, Promise<any> | null> = {}
 
 const apiMapPromise: Record<string, Promise<any> | null> = {}
 
-function handleLibVersion (libName: string) {
+function handleLibVersion (libName: string, version?: string) {
   return function (status: any) {
     const uiConf = status.versionConfig[libName]
-    return `${libName}@${(uiConf ? uiConf[`v${status.docsVersion}-latest`] : '') || status.docsVersion}`
+    return `${libName}@${(uiConf ? uiConf[`v${version || status.docsVersion}-latest`] : '') || version || status.docsVersion}`
   }
 }
 
@@ -92,6 +92,7 @@ export const useAppStore = defineStore('app', {
     }
   },
   getters: {
+    utilCDNLib: handleLibVersion('xe-utils', import.meta.env.VITE_APP_UTIL_VERSION),
     vueCDNLib: handleLibVersion('vue'),
     uiCDNLib: handleLibVersion('vxe-pc-ui'),
     tableCDNLib: handleLibVersion('vxe-table'),
