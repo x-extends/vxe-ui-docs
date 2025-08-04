@@ -3,6 +3,7 @@ import path from 'path'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { createHtmlPlugin } from 'vite-plugin-html'
+import externalGlobals from 'rollup-plugin-external-globals'
 import XEUtils from 'xe-utils'
 
 // https://vite.dev/config/
@@ -52,7 +53,19 @@ export default defineConfig(({ mode, command }) => {
     build: {
       sourcemap: command === 'build' ? false : 'inline',
       outDir: 'dist',
-      assetsDir: 'static'
+      assetsDir: 'static',
+      rollupOptions: {
+        // 不打包依赖
+        axios: ['axios', 'highlight.js', 'tinycolor'],
+        plugins: [
+          // 不打包依赖映射的对象
+          externalGlobals({
+            axios: 'axios',
+            'highlight.js': 'hljs',
+            tinycolor: 'tinycolor'
+          })
+        ]
+      }
     }
   }
 })
