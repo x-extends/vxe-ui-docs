@@ -120,6 +120,7 @@
               UPLOAD_FILE_ADD: 'vxe-icon-upload',
               UPLOAD_FILE_REMOVE: 'vxe-icon-delete',
               UPLOAD_FILE_DOWNLOAD: 'vxe-icon-download',
+              UPLOAD_IMAGE_UPLOAD: 'vxe-icon-upload',
               UPLOAD_IMAGE_RE_UPLOAD: 'vxe-icon-repeat',
               UPLOAD_IMAGE_ADD: 'vxe-icon-add',
               UPLOAD_IMAGE_REMOVE: 'vxe-icon-close',
@@ -222,7 +223,7 @@
               SPLIT_TOP_ACTION: 'vxe-icon-arrow-up',
               SPLIT_BOTTOM_ACTION: 'vxe-icon-arrow-down',
               SPLIT_LEFT_ACTION: 'vxe-icon-arrow-left',
-              SPLIT_RIGHT_ACTION: 'vxe-icon-arrow-right'
+              SPLIT_RIGHT_ACTION: 'vxe-icon-arrow-right',
 
               // table
               TABLE_SORT_ASC: 'vxe-icon-caret-up',

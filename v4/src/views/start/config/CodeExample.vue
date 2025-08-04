@@ -205,6 +205,7 @@
                 showIcon: true,
                 showText: true
               },
+              menu: {},
               modal: {
                 // size: null,
                 top: 16,
@@ -294,7 +295,7 @@
                 },
                 virtualYConfig: {
                   enabled: true,
-                  gt: 100,
+                  gt: 50,
                   oSize: 2
                 }
               },
@@ -351,16 +352,32 @@
                 isArrow: true
               },
               tree: {
+                // autoResize: false,
                 indent: 20,
                 minHeight: 60,
                 radioConfig: {
                   strict: true
+                },
+                virtualYConfig: {
+                  enabled: true,
+                  gt: 50,
+                  oSize: 2
                 }
               },
               treeSelect: {
+                autoClose: true,
+                virtualYConfig: {
+                  enabled: true,
+                  gt: 0,
+                  oSize: 2
+                },
                 treeConfig: {
+                  maxHeight: 300,
                   radioConfig: {},
-                  checkboxConfig: {}
+                  checkboxConfig: {},
+                  filterConfig: {
+                    autoExpandAll: true
+                  }
                 }
               },
               upload: {
@@ -375,20 +392,25 @@
                 dragToUpload: true,
                 // imageConfig: {},
                 showLimitSize: true,
-                showLimitCount: true
+                showLimitCount: true,
+                autoSubmit: true,
+                maxSimultaneousUploads: 5
               },
               watermark: {
                 rotate: -30,
                 gap: [100, 100]
               },
+
               table: {
                 showHeader: true,
+                delayHover: 250,
                 autoResize: true,
                 minHeight: 144,
                 // keepSource: false,
                 // showOverflow: null,
                 // showHeaderOverflow: null,
                 // showFooterOverflow: null,
+                // resizeInterval: 500,
                 // size: null,
                 // zIndex: null,
                 // stripe: false,
@@ -510,6 +532,7 @@
                   // filterMethod: null,
                   // destroyOnClose: false,
                   // isEvery: false,
+                  multiple: true,
                   showIcon: true
                 },
                 aggregateConfig: {
@@ -545,20 +568,8 @@
                   autoFocus: true
                 },
                 importConfig: {
-                  _typeMaps: {
-                    csv: 1,
-                    html: 1,
-                    xml: 1,
-                    txt: 1
-                  }
                 },
                 exportConfig: {
-                  _typeMaps: {
-                    csv: 1,
-                    html: 1,
-                    xml: 1,
-                    txt: 1
-                  }
                 },
                 printConfig: {
                 },
@@ -597,6 +608,7 @@
                 },
                 virtualYConfig: {
                   // enabled: false,
+                  // mode: 'wheel',
                   gt: 100,
                   preSize: 1,
                   oSize: 0
@@ -630,7 +642,7 @@
                   autoLoad: true,
                   showLoading: true,
                   showResponseMsg: true,
-                  showActiveMsg: true,
+                  showActionMsg: true,
                   response: {
                     list: null,
                     result: 'result',
