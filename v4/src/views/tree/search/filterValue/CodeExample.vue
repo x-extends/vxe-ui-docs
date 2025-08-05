@@ -6,7 +6,7 @@
           通过 <ApiLink name="tree" prop="filter-value"/> 就可以设置过滤功能
         </vxe-tip>
         <vxe-tip status="error">
-          过滤功能只支持 <ApiLink name="tree" prop="transform"/> 模式
+          过滤功能只支持 <ApiLink name="tree" prop="transform"/> 模式，其他模式仅支持一级节点的过滤
         </vxe-tip>
       </template>
     </CodeLight>
