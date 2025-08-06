@@ -1,12 +1,18 @@
 <template>
   <div>
+    <div>
+      <vxe-button status="primary" @click="selectRadioEvent">选中节点4</vxe-button>
+      <vxe-button status="primary" @click="clearRadioEvent">取消节点4</vxe-button>
+      <vxe-button status="success" @click="getRadioEvent">获取已选</vxe-button>
+    </div>
+
     <vxe-tree v-bind="treeOptions" :check-node-key.sync="checkNodeKey"></vxe-tree>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeTreePropTypes, VxeTreeProps } from 'vxe-pc-ui'
+import { VxeUI, VxeTreePropTypes, VxeTreeProps } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
@@ -19,6 +25,7 @@ export default Vue.extend({
     const treeOptions: VxeTreeProps<NodeVO> = {
       transform: true,
       showRadio: true,
+      keyField: 'id',
       data: [
         { title: '节点2', id: '值2', parentId: null },
         { title: '节点3', id: '值3', parentId: null },
@@ -43,9 +50,22 @@ export default Vue.extend({
       ]
     }
 
+    const checkNodeKey = null as VxeTreePropTypes.CheckNodeKey
+
     return {
-      checkNodeKey: null as VxeTreePropTypes.CheckNodeKey,
-      treeOptions
+      treeOptions,
+      checkNodeKey
+    }
+  },
+  methods: {
+    selectRadioEvent () {
+      this.checkNodeKey = '值3'
+    },
+    clearRadioEvent () {
+      this.checkNodeKey = null
+    },
+    getRadioEvent () {
+      VxeUI.modal.alert(`${this.checkNodeKey}`)
     }
   }
 })

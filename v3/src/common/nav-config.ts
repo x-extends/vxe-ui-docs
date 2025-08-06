@@ -1511,6 +1511,7 @@ export const navConfigList: NavVO[] = [
         title: '单选框',
         children: [
           { title: '单选', routerLink: { name: 'ComponentTreeRadioBase' } },
+          { title: '手动操作', routerLink: { name: 'ComponentTreeRadioHandleManual' } },
           { title: '高亮选中节点', routerLink: { name: 'ComponentTreeRadioHighlight' } },
           { title: '默认选中', routerLink: { name: 'ComponentTreeRadioDefaultSelect' } },
           { title: '禁用', routerLink: { name: 'ComponentTreeRadioCheckMethod' } },
@@ -1522,6 +1523,7 @@ export const navConfigList: NavVO[] = [
         title: '复选框',
         children: [
           { title: '多选', routerLink: { name: 'ComponentTreeCheckboxBase' } },
+          { title: '手动操作', routerLink: { name: 'ComponentTreeCheckboxHandleManual' } },
           { title: '高亮选中节点', routerLink: { name: 'ComponentTreeCheckboxHighlight' } },
           { title: '默认选中', routerLink: { name: 'ComponentTreeCheckboxDefaultSelect' } },
           { title: '节点不关联', routerLink: { name: 'ComponentTreeCheckboxCheckStrictly' } },

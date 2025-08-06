@@ -1,12 +1,20 @@
 <template>
   <div>
-    <vxe-tree v-bind="treeOptions" v-model:check-node-key="checkNodeKey"></vxe-tree>
+    <div>
+      <vxe-button status="primary" @click="selectCheckboxEvent">选中节点</vxe-button>
+      <vxe-button status="primary" @click="clearCheckboxEvent">取消节点5</vxe-button>
+      <vxe-button status="primary" @click="selectAllEvent">选中所有</vxe-button>
+      <vxe-button status="primary" @click="clearAllEvent">取消所有</vxe-button>
+      <vxe-button status="success" @click="getCheckboxEvent">获取已选中</vxe-button>
+    </div>
+
+    <vxe-tree v-bind="treeOptions" v-model:check-node-keys="checkNodeKeys"></vxe-tree>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-import { VxeTreePropTypes, VxeTreeProps } from 'vxe-pc-ui'
+import { VxeUI, VxeTreePropTypes, VxeTreeProps } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
@@ -14,11 +22,11 @@ interface NodeVO {
   parentId?: string | null
 }
 
-const checkNodeKey = ref<VxeTreePropTypes.CheckNodeKey>()
+const checkNodeKeys = ref<VxeTreePropTypes.CheckNodeKeys>([])
 
-const treeOptions = reactive<VxeTreeProps<NodeVO>>({
+const treeOptions = reactive<VxeTreeProps<NodeVO> & { data: NodeVO[] }>({
   transform: true,
-  showRadio: true,
+  showCheckbox: true,
   keyField: 'id',
   data: [
     { title: '节点2', id: '值2', parentId: null },
@@ -43,4 +51,24 @@ const treeOptions = reactive<VxeTreeProps<NodeVO>>({
     { title: '节点5', id: '5', parentId: null }
   ]
 })
+
+const selectCheckboxEvent = () => {
+  checkNodeKeys.value = ['值31', '5']
+}
+
+const clearCheckboxEvent = () => {
+  checkNodeKeys.value = checkNodeKeys.value.filter(val => val !== '5')
+}
+
+const selectAllEvent = () => {
+  checkNodeKeys.value = treeOptions.data.map(item => item.id)
+}
+
+const clearAllEvent = () => {
+  checkNodeKeys.value = []
+}
+
+const getCheckboxEvent = () => {
+  VxeUI.modal.alert(checkNodeKeys.value.length)
+}
 </script>

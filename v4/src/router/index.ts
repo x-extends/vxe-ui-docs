@@ -4030,6 +4030,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/tree/checkbox/base/CodeExample.vue')
               },
               {
+                path: 'handleManual',
+                name: 'ComponentTreeCheckboxHandleManual',
+                component: () => import('@/views/tree/checkbox/handleManual/CodeExample.vue')
+              },
+              {
                 path: 'highlight',
                 name: 'ComponentTreeCheckboxHighlight',
                 component: () => import('@/views/tree/checkbox/highlight/CodeExample.vue')
@@ -4065,6 +4070,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'base',
                 name: 'ComponentTreeRadioBase',
                 component: () => import('@/views/tree/radio/base/CodeExample.vue')
+              },
+              {
+                path: 'handleManual',
+                name: 'ComponentTreeRadioHandleManual',
+                component: () => import('@/views/tree/radio/handleManual/CodeExample.vue')
               },
               {
                 path: 'highlight',

@@ -1,12 +1,22 @@
 <template>
   <div>
-    <vxe-tree v-bind="treeOptions" v-model:check-node-key="checkNodeKey"></vxe-tree>
+    <div>
+      <vxe-button status="primary" @click="selectRadioEvent">选中节点4</vxe-button>
+      <vxe-button status="primary" @click="clearRadioEvent">取消节点4</vxe-button>
+      <vxe-button status="success" @click="getRadioEvent">获取已选</vxe-button>
+    </div>
+
+    <vxe-tree
+      ref="treeRef"
+      v-bind="treeOptions"
+      v-model:check-node-key="checkNodeKey">
+    </vxe-tree>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-import { VxeTreePropTypes, VxeTreeProps } from 'vxe-pc-ui'
+import { VxeUI, VxeTreeInstance, VxeTreePropTypes, VxeTreeProps } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
@@ -14,9 +24,11 @@ interface NodeVO {
   parentId?: string | null
 }
 
+const treeRef = ref<VxeTreeInstance<NodeVO>>()
+
 const checkNodeKey = ref<VxeTreePropTypes.CheckNodeKey>()
 
-const treeOptions = reactive<VxeTreeProps<NodeVO>>({
+const treeOptions = reactive<VxeTreeProps>({
   transform: true,
   showRadio: true,
   keyField: 'id',
@@ -43,4 +55,26 @@ const treeOptions = reactive<VxeTreeProps<NodeVO>>({
     { title: '节点5', id: '5', parentId: null }
   ]
 })
+
+const selectRadioEvent = () => {
+  const $tree = treeRef.value
+  if ($tree) {
+    $tree.setRadioNodeId('值3')
+  }
+}
+
+const clearRadioEvent = () => {
+  const $tree = treeRef.value
+  if ($tree) {
+    $tree.clearRadioNode()
+  }
+}
+
+const getRadioEvent = () => {
+  const $tree = treeRef.value
+  if ($tree) {
+    const selectId = $tree.getRadioNodeId()
+    VxeUI.modal.alert(`${selectId}`)
+  }
+}
 </script>

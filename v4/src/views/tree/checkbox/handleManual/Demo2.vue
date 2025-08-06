@@ -1,12 +1,24 @@
 <template>
   <div>
-    <vxe-tree v-bind="treeOptions" v-model:check-node-keys="checkNodeKeys"></vxe-tree>
+    <div>
+      <vxe-button status="primary" @click="selectCheckboxEvent">选中节点</vxe-button>
+      <vxe-button status="primary" @click="clearCheckboxEvent">取消节点5</vxe-button>
+      <vxe-button status="primary" @click="selectAllEvent">选中所有</vxe-button>
+      <vxe-button status="primary" @click="clearAllEvent">取消所有</vxe-button>
+      <vxe-button status="success" @click="getCheckboxEvent">获取已选中</vxe-button>
+    </div>
+
+    <vxe-tree
+      ref="treeRef"
+      v-bind="treeOptions"
+      v-model:check-node-keys="checkNodeKeys">
+    </vxe-tree>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-import { VxeTreePropTypes, VxeTreeProps } from 'vxe-pc-ui'
+import { VxeUI, VxeTreeInstance, VxeTreePropTypes, VxeTreeProps } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
@@ -14,9 +26,11 @@ interface NodeVO {
   parentId?: string | null
 }
 
+const treeRef = ref<VxeTreeInstance<NodeVO>>()
+
 const checkNodeKeys = ref<VxeTreePropTypes.CheckNodeKeys>([])
 
-const treeOptions = reactive<VxeTreeProps<NodeVO>>({
+const treeOptions = reactive<VxeTreeProps>({
   transform: true,
   showCheckbox: true,
   keyField: 'id',
@@ -43,4 +57,40 @@ const treeOptions = reactive<VxeTreeProps<NodeVO>>({
     { title: '节点5', id: '5', parentId: null }
   ]
 })
+
+const selectCheckboxEvent = () => {
+  const $tree = treeRef.value
+  if ($tree) {
+    $tree.setCheckboxByNodeId(['值31', '5'], true)
+  }
+}
+
+const clearCheckboxEvent = () => {
+  const $tree = treeRef.value
+  if ($tree) {
+    $tree.setCheckboxByNodeId('5', false)
+  }
+}
+
+const selectAllEvent = () => {
+  const $tree = treeRef.value
+  if ($tree) {
+    $tree.setAllCheckboxNode(true)
+  }
+}
+
+const clearAllEvent = () => {
+  const $tree = treeRef.value
+  if ($tree) {
+    $tree.setAllCheckboxNode(false)
+  }
+}
+
+const getCheckboxEvent = () => {
+  const $tree = treeRef.value
+  if ($tree) {
+    const selectIds = $tree.getCheckboxNodeIds()
+    VxeUI.modal.alert(selectIds.length)
+  }
+}
 </script>
