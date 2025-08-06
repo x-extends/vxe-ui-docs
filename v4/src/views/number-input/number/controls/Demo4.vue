@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-number-input v-model="val1" placeholder="方向键上下操作" :control-config="controlConfig"></vxe-number-input>
+    <vxe-number-input v-model="val1" placeholder="关闭全部控制" :control-config="controlConfig"></vxe-number-input>
   </div>
 </template>
 
@@ -11,7 +11,9 @@ import { VxeNumberInputPropTypes } from 'vxe-pc-ui'
 const val1 = ref(null)
 
 const controlConfig = reactive<VxeNumberInputPropTypes.ControlConfig>({
+  enabled: false,
+  showButton: false,
   isWheel: false,
-  isArrow: true
+  isArrow: false
 })
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-number-input v-model="val1" placeholder="关闭鼠标滚轮" :control-config="controlConfig"></vxe-number-input>
+    <vxe-number-input v-model="val1" placeholder="方向键上下操作" :control-config="controlConfig"></vxe-number-input>
   </div>
 </template>
 
@@ -11,7 +11,8 @@ import { VxeNumberInputPropTypes } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const controlConfig: VxeNumberInputPropTypes.ControlConfig = {
-      enabled: false
+      isWheel: false,
+      isArrow: true
     }
 
     return {

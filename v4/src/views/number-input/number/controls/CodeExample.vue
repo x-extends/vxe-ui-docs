@@ -19,6 +19,14 @@
     <CodeLight path="number-input/number/controls/Demo3">
       <template #tip>
         <vxe-tip status="primary">
+          方向键操作，可以通过 <ApiLink name="number-input" prop="control-config"/>.<ApiLink name="number-input" prop="isArrow"/> 关闭
+        </vxe-tip>
+      </template>
+    </CodeLight>
+
+    <CodeLight path="number-input/number/controls/Demo4">
+      <template #tip>
+        <vxe-tip status="primary">
           全部关闭，可以通过 <ApiLink name="number-input" prop="control-config"/>.<ApiLink name="number-input" prop="enabled"/> 关闭
         </vxe-tip>
       </template>
