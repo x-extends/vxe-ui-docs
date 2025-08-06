@@ -43,14 +43,14 @@ const getList = (size: number) => {
   })
 }
 
-const loadData = async (size: number) => {
+const loadList = async (size: number) => {
   loading.value = true
   list.value = await getList(size)
   loading.value = false
 }
 
 onMounted(() => {
-  loadData(500)
+  loadList(500)
 })
 </script>
 

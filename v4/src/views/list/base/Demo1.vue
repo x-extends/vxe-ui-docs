@@ -1,11 +1,11 @@
 <template>
   <div>
     <p>
-      <vxe-button @click="loadData(10)">加载10条</vxe-button>
-      <vxe-button @click="loadData(500)">加载500条</vxe-button>
-      <vxe-button @click="loadData(10000)">加载1w条</vxe-button>
-      <vxe-button @click="loadData(100000)">加载10w条</vxe-button>
-      <vxe-button @click="loadData(250000)">加载25w条</vxe-button>
+      <vxe-button @click="loadList(10)">加载10条</vxe-button>
+      <vxe-button @click="loadList(500)">加载500条</vxe-button>
+      <vxe-button @click="loadList(10000)">加载1w条</vxe-button>
+      <vxe-button @click="loadList(100000)">加载10w条</vxe-button>
+      <vxe-button @click="loadList(250000)">加载25w条</vxe-button>
     </p>
 
     <vxe-list height="600" class="my-list" :loading="loading" :data="list" :virtual-y-config="{enabled: true}">
@@ -48,7 +48,7 @@ const getList = (size: number) => {
   })
 }
 
-const loadData = async (size: number) => {
+const loadList = async (size: number) => {
   loading.value = true
   list.value = await getList(size)
   loading.value = false
@@ -61,7 +61,7 @@ const loadData = async (size: number) => {
 }
 
 onMounted(async () => {
-  loadData(200)
+  loadList(200)
 })
 </script>
 

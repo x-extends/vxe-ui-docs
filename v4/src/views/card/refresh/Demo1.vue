@@ -3,7 +3,7 @@
     <p>
       <vxe-card title="标题" :loading="loading" :height="200" :width="300">
         <template #extra>
-          <vxe-button mode="text" icon="vxe-icon-refresh" :loading="loading" @click="loadData()"></vxe-button>
+          <vxe-button mode="text" icon="vxe-icon-refresh" :loading="loading" @click="loadList()"></vxe-button>
         </template>
 
         <template #default>
@@ -21,12 +21,12 @@ import { ref } from 'vue'
 
 const loading = ref(false)
 
-const loadData = () => {
+const loadList = () => {
   loading.value = true
   setTimeout(() => {
     loading.value = false
   }, 500)
 }
 
-loadData()
+loadList()
 </script>

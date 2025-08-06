@@ -52,7 +52,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    async loadData (size: number) {
+    async loadList (size: number) {
       this.loading = true
       this.list = await getList(size)
       this.loading = false
@@ -60,7 +60,7 @@ export default Vue.extend({
 
   },
   mounted () {
-    this.loadData(200)
+    this.loadList(200)
   }
 })
 </script>

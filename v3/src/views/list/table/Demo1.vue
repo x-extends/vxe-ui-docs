@@ -1,11 +1,11 @@
 <template>
   <div>
     <p>
-      <vxe-button @click="loadData(10)">加载10条</vxe-button>
-      <vxe-button @click="loadData(500)">加载500条</vxe-button>
-      <vxe-button @click="loadData(10000)">加载1w条</vxe-button>
-      <vxe-button @click="loadData(100000)">加载10w条</vxe-button>
-      <vxe-button @click="loadData(250000)">加载25w条</vxe-button>
+      <vxe-button @click="loadList(10)">加载10条</vxe-button>
+      <vxe-button @click="loadList(500)">加载500条</vxe-button>
+      <vxe-button @click="loadList(10000)">加载1w条</vxe-button>
+      <vxe-button @click="loadList(100000)">加载10w条</vxe-button>
+      <vxe-button @click="loadList(250000)">加载25w条</vxe-button>
     </p>
 
     <vxe-list class="my-table-list" height="600" :data="list" :virtual-y-config="{enabled: true, gt: 0, sItem: '.my-tr'}">
@@ -80,7 +80,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    async loadData (size: number) {
+    async loadList (size: number) {
       this.loading = true
       this.list = await getList(size)
       this.loading = false
@@ -94,7 +94,7 @@ export default Vue.extend({
 
   },
   mounted () {
-    this.loadData(200)
+    this.loadList(200)
   }
 })
 </script>

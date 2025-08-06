@@ -94,7 +94,7 @@ export default Vue.extend({
         refresh: true,
         refreshOptions: {
           queryMethod: () => {
-            return (this as any).loadData()
+            return (this as any).loadList()
           }
         },
         slots: {
@@ -122,12 +122,12 @@ export default Vue.extend({
   },
   methods: {
     showEvent () {
-      this.loadData()
+      this.loadList()
     },
     pageChangeEvent ({ currentPage, pageSize }) {
       this.pagerConfig.currentPage = currentPage
       this.pagerConfig.pageSize = pageSize
-      this.loadData()
+      this.loadList()
     },
     async addEvent () {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
@@ -156,7 +156,7 @@ export default Vue.extend({
         }
       }
     },
-    loadData () {
+    loadList () {
       // 模拟后端接口
       this.gridOptions.loading = true
       setTimeout(() => {

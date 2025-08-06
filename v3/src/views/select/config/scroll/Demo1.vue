@@ -1,10 +1,10 @@
 <template>
   <div>
     <p>
-      <vxe-button @click="loadData(1000)">加载1k条</vxe-button>
-      <vxe-button @click="loadData(10000)">加载1w条</vxe-button>
-      <vxe-button @click="loadData(100000)">加载10w条</vxe-button>
-      <vxe-button @click="loadData(300000)">加载30w条</vxe-button>
+      <vxe-button @click="loadList(1000)">加载1k条</vxe-button>
+      <vxe-button @click="loadList(10000)">加载1w条</vxe-button>
+      <vxe-button @click="loadList(100000)">加载10w条</vxe-button>
+      <vxe-button @click="loadList(300000)">加载30w条</vxe-button>
     </p>
     <vxe-select v-model="val1" v-bind="selectOptions"></vxe-select>
   </div>
@@ -34,7 +34,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    loadData (size: number) {
+    loadList (size: number) {
       const list: OptVO[] = []
       this.selectOptions.loading = true
       for (let i = 0; i < size; i++) {
@@ -57,7 +57,7 @@ export default Vue.extend({
     }
   },
   created () {
-    this.loadData(50)
+    this.loadList(50)
   }
 })
 </script>

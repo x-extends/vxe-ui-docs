@@ -37,7 +37,7 @@ const loadList = () => {
     treeOptions.loading = false
     const $tree = treeRef.value
     if ($tree) {
-      $tree.loadData(data)
+      $tree.reloadData(data)
     }
   })
 }

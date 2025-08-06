@@ -1,9 +1,9 @@
 <template>
   <div>
     <p>
-      <vxe-button @click="loadData(100)">加载100条</vxe-button>
-      <vxe-button @click="loadData(500)">加载500条</vxe-button>
-      <vxe-button @click="loadData(1000)">加载1k条</vxe-button>
+      <vxe-button @click="loadList(100)">加载100条</vxe-button>
+      <vxe-button @click="loadList(500)">加载500条</vxe-button>
+      <vxe-button @click="loadList(1000)">加载1k条</vxe-button>
     </p>
     <vxe-select v-model="val1" :options="opts1" :loading="loading" clearable filterable>
       <vxe-option v-for="item in opts1" :key="item.value" :value="item.value" :label="item.label"></vxe-option>
@@ -28,7 +28,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    loadData (size: number) {
+    loadList (size: number) {
       const list: OptVO[] = []
       this.loading = true
       for (let i = 0; i < size; i++) {
@@ -44,7 +44,7 @@ export default Vue.extend({
     }
   },
   created () {
-    this.loadData(50)
+    this.loadList(50)
   }
 })
 </script>

@@ -47,7 +47,7 @@ const modalOptions = reactive<VxeModalProps>({
 
 const modalEvents: VxeModalListeners = {
   show () {
-    loadData()
+    loadList()
   }
 }
 
@@ -100,7 +100,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     refresh: true,
     refreshOptions: {
       queryMethod () {
-        return loadData()
+        return loadList()
       }
     },
     slots: {
@@ -122,7 +122,7 @@ const gridEvents: VxeGridListeners = {
   pageChange ({ currentPage, pageSize }) {
     pagerConfig.currentPage = currentPage
     pagerConfig.pageSize = pageSize
-    loadData()
+    loadList()
   }
 }
 
@@ -156,7 +156,7 @@ const saveEvent = async () => {
   }
 }
 
-const loadData = () => {
+const loadList = () => {
   // 模拟后端接口
   gridOptions.loading = true
   setTimeout(() => {

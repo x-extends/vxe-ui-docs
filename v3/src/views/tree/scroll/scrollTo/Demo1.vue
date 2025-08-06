@@ -42,7 +42,7 @@ export default Vue.extend({
         this.treeOptions.loading = false
         const $tree = this.$refs.treeRef as VxeTreeInstance<NodeVO>
         if ($tree) {
-          $tree.loadData(data)
+          $tree.reloadData(data)
         }
       })
     },
