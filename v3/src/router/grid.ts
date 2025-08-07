@@ -2646,6 +2646,11 @@ export const gridRouteConfig: RouteConfig = {
           component: () => import('@/views/grid/other/lineEllipsis/CodeExample.vue')
         },
         {
+          path: 'minAutoRowHeight',
+          name: 'ComponentGridOtherMinAutoRowHeight',
+          component: () => import('@/views/grid/other/minAutoRowHeight/CodeExample.vue')
+        },
+        {
           path: 'yearMonth',
           name: 'ComponentGridOtherYearMonth',
           component: () => import('@/views/grid/other/yearMonth/CodeExample.vue')
