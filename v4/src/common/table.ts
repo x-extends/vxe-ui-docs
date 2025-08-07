@@ -786,6 +786,7 @@ export const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '双击自适应行高', routerLink: { name: 'ComponentGridRowResizableDblclickAutoHeight' } },
             { title: '所有单元格可拖拽', routerLink: { name: 'ComponentGridRowResizableAllRowDrag' } },
             { title: '手动操作行高', routerLink: { name: 'ComponentGridRowResizableManual' } },
+            { title: '手动刷新行高', routerLink: { name: 'ComponentGridRowResizableRecalcManual' } },
             { title: '自适应文本域', routerLink: { name: 'ComponentGridRowResizableTextarea' } }
           ]
         },

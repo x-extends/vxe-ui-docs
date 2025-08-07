@@ -599,6 +599,11 @@ export const gridRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/grid/rowResizable/manual/CodeExample.vue')
         },
         {
+          path: 'recalcManual',
+          name: 'ComponentGridRowResizableRecalcManual',
+          component: () => import('@/views/grid/rowResizable/recalcManual/CodeExample.vue')
+        },
+        {
           path: 'textarea',
           name: 'ComponentGridRowResizableTextarea',
           component: () => import('@/views/grid/rowResizable/textarea/CodeExample.vue')
