@@ -28,6 +28,7 @@
         "fullInsrall": "默认安装",
         "useTableInsrall": "表格安装",
         "useDesignInsrall": "可视化设计器安装",
+        "useGanttInsrall": "甘特图安装",
         "globalInstall": "グローバルインストール - 完全なインポート",
         "lazyUseGlobal": "グローバルインストール - オンデマンドインポート",
         "lazyUseImport": "ローカルインストール - 個別にインポートします",
@@ -95,7 +96,8 @@
         "listDesignTitle": "ListDesignリストデザイナー",
         "listDesignUse": "デザイナーを使用します",
         "buttonGlobalRenderer": "渲染器（高阶复用）",
-        "iconPickerGlobalRenderer": "渲染器（高阶复用）"
+        "iconPickerGlobalRenderer": "渲染器（高阶复用）",
+        "ganttTitle": "甘特图"
       }
     },
     "header": {

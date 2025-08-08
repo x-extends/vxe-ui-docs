@@ -28,6 +28,7 @@
         "fullInsrall": "Default Installation",
         "useTableInsrall": "Table Installation",
         "useDesignInsrall": "Design Installation",
+        "useGanttInsrall": "Gantt Installation",
         "globalInstall": "Global installation - full import",
         "lazyUseGlobal": "Global installation - import on demand",
         "lazyUseImport": "Partial installation - import separately",
@@ -95,7 +96,8 @@
         "listDesignTitle": "ListDesign list designer",
         "listDesignUse": "Use the designer",
         "buttonGlobalRenderer": "渲染器（高阶复用）",
-        "iconPickerGlobalRenderer": "渲染器（高阶复用）"
+        "iconPickerGlobalRenderer": "渲染器（高阶复用）",
+        "ganttTitle": "甘特图"
       }
     },
     "header": {

@@ -11,6 +11,7 @@ import PageLayout from '@/components/PageLayout.vue'
 import StartUIInstall from '@/views/start/useUI/install/CodeExample.vue'
 import StartTableInstall from '@/views/start/useTable/install/CodeExample.vue'
 import StartDesignInstall from '@/views/start/useDesign/install/CodeExample.vue'
+import StartGanttInstall from '@/views/start/useGantt/install/CodeExample.vue'
 import FreeDonation from '@/views/start/FreeDonation.vue'
 import JoinSponsor from '@/views/start/JoinSponsor.vue'
 import EnterprisePreview from '@/views/start/EnterprisePreview.vue'
@@ -60,6 +61,16 @@ const routes: Array<RouteRecordRaw> = [
           { path: 'useGlobal', name: 'StartDesignUseGlobal', component: () => import('@/views/start/useDesign/useGlobal/CodeExample.vue') },
           { path: 'useImport', name: 'StartDesignUseImport', component: () => import('@/views/start/useDesign/useImport/CodeExample.vue') },
           { path: 'cdn', name: 'StartDesignCDN', component: () => import('@/views/start/useDesign/cdn/CodeExample.vue') }
+        ]
+      },
+      {
+        path: 'useGantt',
+        component: RouteLayout,
+        children: [
+          { path: 'install', name: 'StartGanttInstall', component: StartGanttInstall },
+          { path: 'useGlobal', name: 'StartGanttUseGlobal', component: () => import('@/views/start/useGantt/useGlobal/CodeExample.vue') },
+          { path: 'useImport', name: 'StartGanttUseImport', component: () => import('@/views/start/useGantt/useImport/CodeExample.vue') },
+          { path: 'cdn', name: 'StartGanttCDN', component: () => import('@/views/start/useGantt/cdn/CodeExample.vue') }
         ]
       },
       {

@@ -28,6 +28,7 @@
         "fullInsrall": "默认安装",
         "useTableInsrall": "表格安装",
         "useDesignInsrall": "可视化设计器安装",
+        "useGanttInsrall": "甘特图安装",
         "globalInstall": "Глобальная установка - полный импорт",
         "lazyUseGlobal": "Глобальная установка - импорт по требованию",
         "lazyUseImport": "Местная установка - импорт отдельно",
@@ -95,7 +96,8 @@
         "listDesignTitle": "ListDesign Designer",
         "listDesignUse": "Используя дизайнер",
         "buttonGlobalRenderer": "渲染器（高阶复用）",
-        "iconPickerGlobalRenderer": "渲染器（高阶复用）"
+        "iconPickerGlobalRenderer": "渲染器（高阶复用）",
+        "ganttTitle": "甘特图"
       }
     },
     "header": {
