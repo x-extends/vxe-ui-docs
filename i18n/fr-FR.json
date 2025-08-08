@@ -120,37 +120,37 @@
       "xe-utils": {
         "v1": "v1.x 2016-02-01 ~ 2017-08-01 停止更新⚠️",
         "v2": "v2.x 2017-01-0 ~ 2019-02-01 停止更新⚠️",
-        "v3": "v3.x 2019-02-01 ~ 长期维护"
+        "v3": "v3.x 2019-02-01 ~ 最新版"
       },
       "vxe-table": {
-        "v1": "v1.x (Vue 2.6+ Stop Maintenance) ~ 2020-04-01 Stop Update",
-        "v1dx": "v1.x (Vue 2.6+ Stop Maintenance) ~ 2020-04-01 Stop Update",
-        "v2": "V2.x (Vue 2.6+ Stop Maintenance) ~ 2021-12-01 Stop Update",
-        "v2dx": "V2.x (Vue 2.6+ Stop Maintenance) ~ 2021-12-01 Stop Update",
-        "v3d8": "V3.0 ~ 3,8 (Vue 2.6+ Stop Maintenance) ~ 2024-12-01 Stop Update",
-        "v3": "V3.9 + (Vue 2.6+ Version de maintenance à long terme)",
-        "v3dx": "V3.x (Vue 2.6+ Version de maintenance à long terme)",
-        "v4d6": "V4.0 ~ 4.6 (Vue 3.x Arrête la maintenance) ~ 2024-12-01 Arrête la mise à jour",
-        "v4": "V4.7 + (Vue 3.x Dernière version)",
-        "v4dx": "V4.x (Vue 3.x Dernière version)"
+        "v1": "v1.x (vue 2.6+) 2018-02-01 ~ 2020-04-01 停止更新⚠️",
+        "v1dx": "v1.x (vue 2.6+) 2018-02-01 ~ 2020-04-01 停止更新⚠️",
+        "v2": "v2.x (vue 2.6+) 2019-03-01 ~ 2021-12-01 停止更新⚠️",
+        "v2dx": "v2.x (vue 2.6+) 2019-03-01 ~ 2021-12-01 停止更新⚠️",
+        "v3d8": "v3.0 ~ 3.8 (vue 2.6+) 2020-03-01 ~ 2024-12-01 停止更新⚠️",
+        "v3": "v3.9+ (vue 2.6+) 2023-06-01 ~ 长期维护",
+        "v3dx": "v3.x (vue 2.6+) 2023-06-01 ~ 长期维护",
+        "v4d6": "v4.0 ~ 4.6 (vue 3.2+) 2023-06-01 ~ 2024-12-01 停止更新⚠️",
+        "v4": "v4.7+ (vue 3.2+) 2023-06-01 ~ 最新版",
+        "v4dx": "v4.x (vue 3.2+) 2023-06-01 ~ 长期维护"
       },
       "vxe-design": {
         "v1": "v1.x (vue 2.6+) 2024-08-01 停止更新⚠️",
         "v2": "v2.x (vue 2.6+) 2024-08-01 停止更新⚠️",
-        "v3": "v3.x (vue 2.6+) 2025-07-20 ~ 长期维护",
-        "v4": "v4.x (vue 3.2+) 2025-07-20 ~ 长期维护"
+        "v3": "v3.x (vue 2.6+) 2025-07-20 ~ 即将发布",
+        "v4": "v4.x (vue 3.2+) 2025-07-20 ~ 最新版"
       },
       "vxe-gantt": {
         "v1": "v1.x (vue 2.6+) 2025-08-01 停止更新⚠️",
         "v2": "v2.x (vue 2.6+) 2025-08-01 停止更新⚠️",
-        "v3": "v3.x (vue 2.6+) 2025-07-15 ~ 长期维护",
-        "v4": "v4.x (vue 3.2+) 2025-07-15 ~ 长期维护"
+        "v3": "v3.x (vue 2.6+) 2025-07-15 ~ 即将发布",
+        "v4": "v4.x (vue 3.2+) 2025-07-15 ~ 最新版"
       },
       "vxe-pc-ui": {
-        "v1": "v1.x (Vue 2.6+ Stop Maintenance) ~ 2024-08-01 Stop Update",
-        "v2": "V2.x (Vue 2.6+ Stop Maintenance) ~ 2024-08-01 Stop Update",
-        "v3": "V3.x (Vue 2.6+ Version de maintenance à long terme)",
-        "v4": "V4.x (Vue 3.x Dernière version)"
+        "v1": "v1.x (vue 2.6+) 2024-08-01 停止更新⚠️",
+        "v2": "v2.x (vue 2.6+) 2024-08-01 停止更新⚠️",
+        "v3": "v3.x (vue 2.6+) 2024-08-01 ~ 长期维护",
+        "v4": "v4.x (vue 3.2+) 2024-08-01 ~ 最新版"
       }
     },
     "docs": {
