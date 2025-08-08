@@ -16,6 +16,7 @@ interface FormDataVO {
 }
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
+  titleWidth: 120,
   data: {
     name: 'test1',
     nickname: 'Testing',
@@ -24,8 +25,8 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
-    { field: 'sex', title: '性别', span: 12, titlePrefix: { content: '左边图标', icon: 'vxe-icon-user-fill' }, itemRender: { name: 'VxeInput' } },
-    { field: 'age', title: '年龄', span: 12, itemRender: { name: 'VxeInput' } },
+    { field: 'sex', title: '性别性别', span: 24, itemRender: { name: 'VxeInput' } },
+    { field: 'age', title: '年龄年', span: 24, itemRender: { name: 'VxeInput' } },
     {
       align: 'center',
       span: 24,

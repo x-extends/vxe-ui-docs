@@ -2,6 +2,7 @@
   <div>
     <vxe-form
       ref="formRef"
+      title-width="120"
       :data="formData"
       @submit="submitEvent"
       @reset="resetEvent">

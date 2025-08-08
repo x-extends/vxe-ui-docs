@@ -1,6 +1,7 @@
 <template>
   <div>
     <vxe-form
+      border
       align="right"
       :data="formData">
       <vxe-form-item title="名称" field="name" span="24">

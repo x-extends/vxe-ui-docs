@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="form/basics/width/Demo1">
+    <CodeLight path="form/config/width/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="标题宽度">
           默认自适应内容宽度
@@ -11,7 +11,7 @@
       </template>
     </CodeLight>
 
-    <CodeLight path="form/basics/width/Demo2">
+    <CodeLight path="form/config/width/Demo2">
       <template #tip>
         <vxe-tip status="primary">
           固定宽度，通过 <ApiLink name="form" prop="title-width"/> 设置
@@ -19,7 +19,7 @@
       </template>
     </CodeLight>
 
-    <CodeLight path="form/basics/width/Demo3">
+    <CodeLight path="form/config/width/Demo3">
       <template #tip>
         <vxe-tip status="primary">
           标题宽度支持自适应 <ApiLink name="form" prop="title-width"/>='auto'，会自适应调整为最大的宽度

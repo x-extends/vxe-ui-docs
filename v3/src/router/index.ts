@@ -4798,14 +4798,14 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/form/config/field/CodeExample.vue')
               },
               {
-                path: 'padding',
-                name: 'ComponentFormConfigPadding',
-                component: () => import('@/views/form/config/padding/CodeExample.vue')
-              },
-              {
                 path: 'colon',
                 name: 'ComponentFormConfigColon',
                 component: () => import('@/views/form/config/colon/CodeExample.vue')
+              },
+              {
+                path: 'padding',
+                name: 'ComponentFormConfigPadding',
+                component: () => import('@/views/form/config/padding/CodeExample.vue')
               },
               {
                 path: 'bold',
@@ -4813,9 +4813,34 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/form/config/bold/CodeExample.vue')
               },
               {
-                path: 'tooltip',
-                name: 'ComponentFormConfigTooltip',
-                component: () => import('@/views/form/config/tooltip/CodeExample.vue')
+                path: 'titleAlign',
+                name: 'ComponentFormConfigTitleAlign',
+                component: () => import('@/views/form/config/titleAlign/CodeExample.vue')
+              },
+              {
+                path: 'align',
+                name: 'ComponentFormConfigAlign',
+                component: () => import('@/views/form/config/align/CodeExample.vue')
+              },
+              {
+                path: 'titlePrefix',
+                name: 'ComponentFormConfigTitlePrefix',
+                component: () => import('@/views/form/config/titlePrefix/CodeExample.vue')
+              },
+              {
+                path: 'titleSuffix',
+                name: 'ComponentFormConfigTitleSuffix',
+                component: () => import('@/views/form/config/titleSuffix/CodeExample.vue')
+              },
+              {
+                path: 'width',
+                name: 'ComponentFormConfigWidth',
+                component: () => import('@/views/form/config/width/CodeExample.vue')
+              },
+              {
+                path: 'overflow',
+                name: 'ComponentFormConfigOverflow',
+                component: () => import('@/views/form/config/overflow/CodeExample.vue')
               },
               {
                 path: 'border',

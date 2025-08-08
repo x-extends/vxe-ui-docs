@@ -2,7 +2,6 @@
   <div>
     <vxe-form
       ref="formRef"
-      :title-width="120"
       :data="formData"
       @submit="submitEvent"
       @reset="resetEvent">
@@ -11,12 +10,12 @@
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="性别" field="sex" span="12" :item-render="{}">
+      <vxe-form-item title="性别性别" field="sex" span="12" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.sex" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="年龄" field="age" span="12" :item-render="{}">
+      <vxe-form-item title="年龄年" field="age" span="12" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.age" @change="changeEvent(params)"></vxe-input>
         </template>

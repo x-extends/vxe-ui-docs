@@ -2,6 +2,7 @@
   <div>
     <vxe-form
       ref="formRef"
+      title-width="120"
       :data="formData"
       @submit="submitEvent"
       @reset="resetEvent">
@@ -15,7 +16,7 @@
           <vxe-input v-model="formData.sex" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="年龄" field="age" span="24" :item-render="{}">
+      <vxe-form-item title="年龄年" field="age" span="24" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.age" @change="changeEvent(params)"></vxe-input>
         </template>
@@ -30,9 +31,9 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-import { VxeUI, VxeFormInstance } from 'vxe-pc-ui'
+<script lang="ts" setup>
+import { ref } from 'vue'
+import { VxeUI, VxeFormInstance, VxeFormEvents } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -41,32 +42,27 @@ interface FormDataVO {
   age: string
 }
 
-export default Vue.extend({
-  data () {
-    const formData: FormDataVO = {
-      name: 'test1',
-      nickname: 'Testing',
-      sex: '',
-      age: ''
-    }
+const formRef = ref<VxeFormInstance<FormDataVO>>()
 
-    return {
-      formData
-    }
-  },
-  methods: {
-    changeEvent  (params: any) {
-      const $form = this.$refs.formRef as VxeFormInstance
-      if ($form) {
-        $form.updateStatus(params)
-      }
-    },
-    submitEvent () {
-      VxeUI.modal.message({ content: '保存成功', status: 'success' })
-    },
-    resetEvent () {
-      VxeUI.modal.message({ content: '重置事件', status: 'info' })
-    }
-  }
+const formData = ref<FormDataVO>({
+  name: 'test1',
+  nickname: 'Testing',
+  sex: '',
+  age: ''
 })
+
+const changeEvent = (params: any) => {
+  const $form = formRef.value
+  if ($form) {
+    $form.updateStatus(params)
+  }
+}
+
+const submitEvent: VxeFormEvents.Submit = () => {
+  VxeUI.modal.message({ content: '保存成功', status: 'success' })
+}
+
+const resetEvent: VxeFormEvents.Reset = () => {
+  VxeUI.modal.message({ content: '重置事件', status: 'info' })
+}
 </script>
