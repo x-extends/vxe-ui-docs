@@ -118,33 +118,39 @@
     },
     "version": {
       "xe-utils": {
-        "v1": "v1.x 2016-02-01 ~ 2017-08-01 stop update⚠️",
-        "v2": "v2.x 2017-01-0 ~ 2019-02-01 stop update⚠️",
+        "v1": "v1.x 2016-02-01 ~ 2017-08-01 Stop ⚠️",
+        "v2": "v2.x 2017-01-0 ~ 2019-02-01 Stop ⚠️",
         "v3": "v3.x 2019-02-01 ~ LTS"
       },
       "vxe-table": {
-        "v1": "v1.x (vue 2.6+ stop maintenance) ~ 2020-04-01 stop update⚠️",
-        "v1dx": "v1.x (vue 2.6+ stop maintenance) ~ 2020-04-01 stop update⚠️",
-        "v2": "v2.x (vue 2.6+ stop maintenance) ~ 2021-12-01 stop update⚠️",
-        "v2dx": "v2.x (vue 2.6+ stop maintenance) ~ 2021-12-01 stop update⚠️",
-        "v3d8": "v3.0~3.8 (vue 2.6+ stop maintenance) ~ 2024-12-01 stop update⚠️",
-        "v3": "v3.9+ (vue 2.6+ LTS)",
-        "v3dx": "v3.x (vue 2.6+ LTS)",
-        "v4d6": "v4.0~4.6 (vue 3.x stops maintenance) ~ 2024-12-01 stops update⚠️",
-        "v4": "v4.7+ (vue 3.x Latest)",
-        "v4dx": "v4.x (vue 3.x Latest)"
+        "v1": "v1.x (vue 2.6+) 2018-02-01 ~ 2020-04-01 Stop ⚠️",
+        "v1dx": "v1.x (vue 2.6+) 2018-02-01 ~ 2020-04-01 Stop ⚠️",
+        "v2": "v2.x (vue 2.6+) 2019-03-01 ~ 2021-12-01 Stop ⚠️",
+        "v2dx": "v2.x (vue 2.6+) 2019-03-01 ~ 2021-12-01 Stop ⚠️",
+        "v3d8": "v3.0 ~ 3.8 (vue 2.6+) 2020-03-01 ~ 2024-12-01 Stop ⚠️",
+        "v3": "v3.9+ (vue 2.6+) 2023-06-01 ~ LTS",
+        "v3dx": "v3.x (vue 2.6+) 2023-06-01 ~ LTS",
+        "v4d6": "v4.0 ~ 4.6 (vue 3.2+) 2023-06-01 ~ 2024-12-01 Stop ⚠️",
+        "v4": "v4.7+ (vue 3.2+) 2023-06-01 ~ Latest",
+        "v4dx": "v4.x (vue 3.2+) 2023-06-01 ~ Latest"
       },
       "vxe-design": {
-        "v1": "v1.x (vue 2.6+) 2024-08-01 停止更新⚠️",
-        "v2": "v2.x (vue 2.6+) 2024-08-01 停止更新⚠️",
-        "v3": "v3.x (vue 2.6+) 2025-07-01 ~ 长期维护",
-        "v4": "v4.x (vue 3.2+) 2025-07-01 ~ 长期维护"
+        "v1": "v1.x (vue 2.6+) 2024-08-01 Stop ⚠️",
+        "v2": "v2.x (vue 2.6+) 2024-08-01 Stop ⚠️",
+        "v3": "v3.x (vue 2.6+) 2025-07-20 ~ LTS",
+        "v4": "v4.x (vue 3.2+) 2025-07-20 ~ Latest"
+      },
+      "vxe-gantt": {
+        "v1": "v1.x (vue 2.6+) 2025-08-01 Stop ⚠️",
+        "v2": "v2.x (vue 2.6+) 2025-08-01 Stop ⚠️",
+        "v3": "v3.x (vue 2.6+) 2025-07-15 ~ LTS",
+        "v4": "v4.x (vue 3.2+) 2025-07-15 ~ Latest"
       },
       "vxe-pc-ui": {
-        "v1": "v1.x (vue 2.6+ stop maintenance) ~ 2024-08-01 stop update⚠️",
-        "v2": "v2.x (vue 2.6+ stop maintenance) ~ 2024-08-01 stop update⚠️",
-        "v3": "v3.x (vue 2.6+ LTS)",
-        "v4": "v4.x (vue 3.x Latest)"
+        "v1": "v1.x (vue 2.6+) 2024-08-01 Stop ⚠️",
+        "v2": "v2.x (vue 2.6+) 2024-08-01 Stop ⚠️",
+        "v3": "v3.x (vue 2.6+) 2024-08-01 ~ LTS",
+        "v4": "v4.x (vue 3.2+) 2024-08-01 ~ Latest"
       }
     },
     "docs": {
