@@ -354,7 +354,8 @@
       "ExtendCellArea": "Region selection",
       "ExtendPivotTable": "Pivot table",
       "FiltersCombination": "Complex combination Filters",
-      "FiltersComplexInput": "Complex input Filters"
+      "FiltersComplexInput": "Complex input Filters",
+      "ChartGanttChart": "Gantt"
     },
     "menus": {
       "authList": "Authorization query",
