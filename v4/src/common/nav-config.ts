@@ -1,5 +1,6 @@
 import { NavVO, otherUrl } from './nav'
 import { tableNavConfig } from './table'
+// import { ganttNavConfig } from './gantt'
 import { designNavConfig } from './design'
 
 export const navConfigList: NavVO[] = [
@@ -1795,6 +1796,8 @@ export const navConfigList: NavVO[] = [
       }
     ]
   },
+  // ganttNavConfig,
+  designNavConfig,
   {
     i18nKey: 'app.aside.menu.otherTitle',
     children: [
@@ -1854,7 +1857,6 @@ export const navConfigList: NavVO[] = [
       }
     ]
   },
-  designNavConfig,
   {
     title: 'API',
     isExpand: true,

@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
 import { tableRouteConfig } from './table'
 import { gridRouteConfig } from './grid'
+import { ganttRouteConfig } from './gantt'
 import { formDesignRouteConfig } from './form-design'
 import { listDesignRouteConfig } from './list-design'
 
@@ -1488,7 +1489,7 @@ const routes: Array<RouteRecordRaw> = [
               {
                 path: 'range',
                 name: 'ComponentNumberInputIntegerRange',
-                component: () => import('@/views/number-input/number/range/CodeExample.vue')
+                component: () => import('@/views/number-input/integer/range/CodeExample.vue')
               },
               {
                 path: 'controls',
@@ -5601,7 +5602,8 @@ const routes: Array<RouteRecordRaw> = [
       formDesignRouteConfig,
       listDesignRouteConfig,
       tableRouteConfig,
-      gridRouteConfig
+      gridRouteConfig,
+      ganttRouteConfig
     ]
   },
   {

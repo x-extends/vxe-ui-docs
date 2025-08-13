@@ -1,5 +1,6 @@
 import { NavVO, otherUrl } from './nav'
 import { tableNavConfig } from './table'
+// import { ganttNavConfig } from './gantt'
 import { designNavConfig } from './design'
 
 export const navConfigList: NavVO[] = [
@@ -806,6 +807,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '基础', routerLink: { name: 'ComponentNumberInputNumberBase' } },
               { title: '可清除', routerLink: { name: 'ComponentNumberInputNumberClearable' } },
+              { title: '只读模式', routerLink: { name: 'ComponentNumberInputNumberReadonly' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputNumberStep' } },
               { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputNumberRange' } },
               { title: '控制按钮', routerLink: { name: 'ComponentNumberInputNumberControls' } },
@@ -820,7 +822,9 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '基础', routerLink: { name: 'ComponentNumberInputIntegerBase' } },
               { title: '可清除', routerLink: { name: 'ComponentNumberInputIntegerClearable' } },
+              { title: '只读模式', routerLink: { name: 'ComponentNumberInputIntegerReadonly' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputIntegerStep' } },
+              { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputIntegerRange' } },
               { title: '控制按钮', routerLink: { name: 'ComponentNumberInputIntegerControls' } }
             ]
           },
@@ -829,8 +833,11 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '基础', routerLink: { name: 'ComponentNumberInputFloatBase' } },
               { title: '可清除', routerLink: { name: 'ComponentNumberInputFloatClearable' } },
+              { title: '只读模式', routerLink: { name: 'ComponentNumberInputFloatReadonly' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputFloatStep' } },
               { title: '小数位数', routerLink: { name: 'ComponentNumberInputFloatDigits' } },
+              { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputFloatRange' } },
+              { title: '自动补0', routerLink: { name: 'ComponentNumberInputFloatAutoFill' } },
               { title: '控制按钮', routerLink: { name: 'ComponentNumberInputFloatControls' } }
             ]
           },
@@ -840,8 +847,11 @@ export const navConfigList: NavVO[] = [
               { title: '基础', routerLink: { name: 'ComponentNumberInputAmountBase' } },
               { title: '对其方式', routerLink: { name: 'ComponentNumberInputAmountAlign' } },
               { title: '可清除', routerLink: { name: 'ComponentNumberInputAmountClearable' } },
+              { title: '只读模式', routerLink: { name: 'ComponentNumberInputAmountReadonly' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputAmountStep' } },
               { title: '小数位数', routerLink: { name: 'ComponentNumberInputAmountDigits' } },
+              { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputAmountRange' } },
+              { title: '自动补0', routerLink: { name: 'ComponentNumberInputAmountAutoFill' } },
               { title: '显示货币符号', routerLink: { name: 'ComponentNumberInputAmountShowCurrency' } },
               { title: '控制按钮', routerLink: { name: 'ComponentNumberInputAmountControls' } },
               { title: '按钮布局', routerLink: { name: 'ComponentNumberInputAmountLayout' } },
@@ -1781,6 +1791,8 @@ export const navConfigList: NavVO[] = [
       }
     ]
   },
+  // ganttNavConfig,
+  designNavConfig,
   {
     i18nKey: 'app.aside.menu.otherTitle',
     children: [
@@ -1840,7 +1852,6 @@ export const navConfigList: NavVO[] = [
       }
     ]
   },
-  designNavConfig,
   {
     title: 'API',
     isExpand: true,

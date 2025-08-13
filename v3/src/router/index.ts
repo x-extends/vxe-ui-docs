@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router'
 
 import { tableRouteConfig } from './table'
 import { gridRouteConfig } from './grid'
+import { ganttRouteConfig } from './gantt'
 import { formDesignRouteConfig } from './form-design'
 import { listDesignRouteConfig } from './list-design'
 
@@ -1388,6 +1389,11 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/number-input/number/clearable/CodeExample.vue')
               },
               {
+                path: 'readonly',
+                name: 'ComponentNumberInputNumberReadonly',
+                component: () => import('@/views/number-input/number/readonly/CodeExample.vue')
+              },
+              {
                 path: 'step',
                 name: 'ComponentNumberInputNumberStep',
                 component: () => import('@/views/number-input/number/step/CodeExample.vue')
@@ -1439,9 +1445,19 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/number-input/integer/clearable/CodeExample.vue')
               },
               {
+                path: 'readonly',
+                name: 'ComponentNumberInputIntegerReadonly',
+                component: () => import('@/views/number-input/integer/readonly/CodeExample.vue')
+              },
+              {
                 path: 'step',
                 name: 'ComponentNumberInputIntegerStep',
                 component: () => import('@/views/number-input/integer/step/CodeExample.vue')
+              },
+              {
+                path: 'range',
+                name: 'ComponentNumberInputIntegerRange',
+                component: () => import('@/views/number-input/integer/range/CodeExample.vue')
               },
               {
                 path: 'controls',
@@ -1465,6 +1481,11 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/number-input/float/clearable/CodeExample.vue')
               },
               {
+                path: 'readonly',
+                name: 'ComponentNumberInputFloatReadonly',
+                component: () => import('@/views/number-input/float/readonly/CodeExample.vue')
+              },
+              {
                 path: 'digits',
                 name: 'ComponentNumberInputFloatDigits',
                 component: () => import('@/views/number-input/float/digits/CodeExample.vue')
@@ -1473,6 +1494,16 @@ const routes: Array<RouteConfig> = [
                 path: 'step',
                 name: 'ComponentNumberInputFloatStep',
                 component: () => import('@/views/number-input/float/step/CodeExample.vue')
+              },
+              {
+                path: 'range',
+                name: 'ComponentNumberInputFloatRange',
+                component: () => import('@/views/number-input/float/range/CodeExample.vue')
+              },
+              {
+                path: 'autoFill',
+                name: 'ComponentNumberInputFloatAutoFill',
+                component: () => import('@/views/number-input/float/autoFill/CodeExample.vue')
               },
               {
                 path: 'controls',
@@ -1501,6 +1532,11 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/number-input/amount/clearable/CodeExample.vue')
               },
               {
+                path: 'readonly',
+                name: 'ComponentNumberInputAmountReadonly',
+                component: () => import('@/views/number-input/amount/readonly/CodeExample.vue')
+              },
+              {
                 path: 'digits',
                 name: 'ComponentNumberInputAmountDigits',
                 component: () => import('@/views/number-input/amount/digits/CodeExample.vue')
@@ -1514,6 +1550,16 @@ const routes: Array<RouteConfig> = [
                 path: 'step',
                 name: 'ComponentNumberInputAmountStep',
                 component: () => import('@/views/number-input/amount/step/CodeExample.vue')
+              },
+              {
+                path: 'range',
+                name: 'ComponentNumberInputAmountRange',
+                component: () => import('@/views/number-input/amount/range/CodeExample.vue')
+              },
+              {
+                path: 'autoFill',
+                name: 'ComponentNumberInputAmountAutoFill',
+                component: () => import('@/views/number-input/amount/autoFill/CodeExample.vue')
               },
               {
                 path: 'controls',
@@ -5509,7 +5555,8 @@ const routes: Array<RouteConfig> = [
       formDesignRouteConfig,
       listDesignRouteConfig,
       tableRouteConfig,
-      gridRouteConfig
+      gridRouteConfig,
+      ganttRouteConfig
     ]
   },
   {
