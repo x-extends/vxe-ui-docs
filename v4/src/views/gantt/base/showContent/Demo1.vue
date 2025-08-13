@@ -23,7 +23,7 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     showContent: true
   },
   columns: [
-    { field: 'name', title: '任务名称' },
+    { field: 'title', title: '任务名称' },
     { field: 'start', title: '开始时间', width: 100 },
     { field: 'end', title: '结束时间', width: 100 }
   ],

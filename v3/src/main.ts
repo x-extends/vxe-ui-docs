@@ -22,6 +22,9 @@ import 'vxe-pc-ui/es/style.css'
 import VxeUITable from 'vxe-table'
 import 'vxe-table/es/style.css'
 
+import VxeUIGantt from 'vxe-gantt'
+import 'vxe-gantt/lib/style.css'
+
 import VxeUIDesign from 'vxe-design'
 import 'vxe-design/lib/style.css'
 
@@ -151,6 +154,7 @@ Vue.component('DemoRoleSelectPulldown', DemoRoleSelectPulldown)
 
 Vue.use(VxeUIAll)
 Vue.use(VxeUITable)
+Vue.use(VxeUIGantt)
 Vue.use(VxeUIDesign)
 
 Vue.config.productionTip = false
