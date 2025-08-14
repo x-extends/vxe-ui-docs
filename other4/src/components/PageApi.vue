@@ -19,7 +19,7 @@
         </span>
       </template>
       <template #default_version="{ row }">
-         <template v-if="row.isPlugin">
+        <template v-if="row.isPlugin">
           <a v-show="row.version" :href="getPluginDocsUrl(row)" class="compatibility enterprise-version" target="_blank">{{ getVersion(row) }}</a>
         </template>
         <template v-else-if="row.disabled">
@@ -40,9 +40,12 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-import { mapState, mapActions } from 'vuex'
+<script lang="ts" setup>
+import { ref, watch, nextTick, computed, reactive } from 'vue'
+import { useRoute } from 'vue-router'
+import { useAppStore } from '@/store/app'
+import { VxeGridProps, VxeGridPropTypes, VxeGridInstance } from 'vxe-table'
+import i18n from '@/i18n'
 import XEUtils from 'xe-utils'
 
 interface RowVO {
@@ -60,6 +63,200 @@ interface RowVO {
   abandoned?: boolean
   list: RowVO[]
 }
+
+const pluginAppNames = ['ExtendCellArea', 'ExtendPivotTable', 'FiltersCombination', 'FiltersComplexInput']
+const pluginAppRE = new RegExp(`^(${pluginAppNames.join('|')})(@(\\d{1,3}.\\d{1,3}.\\d{1,3}))?$`)
+
+const route = useRoute()
+const appStore = useAppStore()
+
+const gridRef = ref<VxeGridInstance<RowVO>>()
+
+const searchName = ref(`${route.query.q || ''}`)
+const tableData = ref<any[]>([])
+
+const apiName = computed(() => {
+  return route.params.name as string
+})
+
+const loadList = () => {
+  gridOptions.loading = true
+
+  return Promise.all([
+    appStore.getComponentApiConf(apiName.value),
+    appStore.getComponentI18nJSON()
+  ]).then(([data]) => {
+    const list = XEUtils.clone(data || [], true)
+    let firstI18nKey = ''
+    XEUtils.eachTree(list, (item, i, items, path, parent, nodes) => {
+      if (parent) {
+        item.i18nKey = `components.${apiName.value}.${nodes.map(item => `${XEUtils.kebabCase(item.name)}`.replace(/\(.*/, '')).join('_')}`
+        if (!firstI18nKey) {
+          firstI18nKey = item.i18nKey
+        }
+      } else {
+        item.i18nKey = `api.title.${item.name}`
+      }
+      item.i18nValue = i18n.global.t(item.i18nKey)
+      const pluginVersion = item.version ? item.version.match(pluginAppRE) : null
+      if (pluginVersion) {
+        const pName = pluginVersion[1]
+        const pVersion = pluginVersion[3]
+        item.isPlugin = true
+        item.pluginName = pName
+        item.pluginVersion = pVersion
+      } else {
+        item.isPlugin = false
+        item.pluginName = ''
+        item.pluginVersion = ''
+      }
+    }, { children: 'list' })
+    tableData.value = list
+    gridOptions.data = list
+    gridOptions.loading = false
+    handleSearch()
+  })
+}
+
+const gridOptions = reactive<VxeGridProps<RowVO>>({
+  id: 'document_api',
+  autoResize: true,
+  height: 'auto',
+  loading: false,
+  loadingConfig: {
+    text: '检测到 API 有更新，正在自动更新中，请稍后...'
+  },
+  rowConfig: {
+    useKey: true,
+    keyField: 'id',
+    isHover: true,
+    isCurrent: true
+  },
+  columnConfig: {
+    useKey: true,
+    resizable: true,
+    isHover: true,
+    isCurrent: true
+  },
+  cellClassName ({ row, column }) {
+    return {
+      'api-enterprise': row.isPlugin,
+      'api-disabled': row.disabled,
+      'api-abandoned': row.abandoned,
+      'disabled-line-through': (row.disabled) && column.field === 'name'
+    }
+  },
+  customConfig: {
+    storage: true,
+    checkMethod ({ column }) {
+      if (['name', 'i18nValue'].includes(column.field)) {
+        return false
+      }
+      return true
+    }
+  },
+  treeConfig: {
+    childrenField: 'list',
+    expandRowKeys: []
+  },
+  tooltipConfig: {
+    showAll: true,
+    contentMethod ({ type, row }) {
+      if (type === 'body') {
+        if (row.disabled) {
+          return '该参数已经被废弃了，除非不打算更新版本，否则不应该被使用'
+        } else if (row.abandoned) {
+          return '该参数属于评估阶段，谨慎使用，后续有可能会被废弃的风险'
+        }
+      }
+      return ''
+    }
+  },
+  toolbarConfig: {
+    custom: true,
+    refresh: true,
+    refreshOptions: {
+      query: loadList
+    },
+    slots: {
+      buttons: 'toolbarButtons'
+    }
+  },
+  data: []
+})
+
+const columns = computed<VxeGridPropTypes.Columns>(() => {
+  return [
+    {
+      field: 'name',
+      title: i18n.global.t('api.title.prop'),
+      type: 'html',
+      treeNode: true,
+      minWidth: 280,
+      titlePrefix: {
+        content: i18n.global.t('api.title.propHelp')
+      },
+      filters: [
+        { label: 'Props', value: 'Props' },
+        { label: 'Slots', value: 'Slots' },
+        { label: 'Events', value: 'Events' },
+        { label: 'Methods', value: 'Methods' }
+      ],
+      slots: { default: 'default_name' }
+    },
+    { field: 'i18nValue', title: i18n.global.t('api.title.desc'), type: 'html', minWidth: 300 },
+    { field: 'type', title: i18n.global.t('api.title.type'), type: 'html', minWidth: 140 },
+    { field: 'enum', title: i18n.global.t('api.title.enum'), type: 'html', minWidth: 150 },
+    { field: 'defVal', title: i18n.global.t('api.title.defVal'), type: 'html', minWidth: 160, titlePrefix: { content: i18n.global.t('api.title.defValHelp') } },
+    { field: 'version', title: i18n.global.t('api.title.version'), type: 'html', width: 180, titlePrefix: { content: i18n.global.t('api.title.versionHelp') }, slots: { default: 'default_version' } }
+  ]
+})
+
+const handleValueHighlight = (str: string, filterRE: RegExp) => {
+  return `${str || ''}`.replace(filterRE, (match) => `<span class="keyword-lighten">${match}</span>`)
+}
+
+const handleSearch = () => {
+  const filterName = XEUtils.toValueString(searchName.value).trim()
+  if (filterName) {
+    const options = { children: 'list' }
+    const spName = pluginAppNames.find(name => name === filterName || XEUtils.kebabCase(name) === filterName)
+    if (spName) {
+      const rest = XEUtils.searchTree(tableData.value, item => item.pluginName === spName, options)
+      gridOptions.data = rest
+    } else if (filterName === 'pro') {
+      const rest = XEUtils.searchTree(tableData.value, item => item.pluginName === 'ExtendCellArea', options)
+      gridOptions.data = rest
+    } else {
+      const filterRE = new RegExp(`${filterName}|${XEUtils.camelCase(filterName)}|${XEUtils.kebabCase(filterName)}`, 'i')
+      const rest = XEUtils.searchTree(tableData.value, item => {
+        return filterRE.test(item.name) || filterRE.test(item.i18nValue)
+      }, options)
+      XEUtils.eachTree(rest, item => {
+        item.name = handleValueHighlight(item.name, filterRE)
+        item.i18nValue = handleValueHighlight(item.i18nValue, filterRE)
+      }, options)
+      gridOptions.data = rest
+      setTimeout(() => {
+        const $grid = gridRef.value
+        if ($grid) {
+          $grid.setAllTreeExpand(true)
+        }
+      }, 100)
+    }
+  } else {
+    gridOptions.data = tableData.value.slice(0)
+    setTimeout(() => {
+      const $grid = gridRef.value
+      if ($grid) {
+        $grid.setTreeExpand(gridOptions.data, true)
+      }
+    }, 100)
+  }
+}
+
+// 调用频率间隔 500 毫秒
+const searchEvent = XEUtils.debounce(handleSearch, 500, { leading: false, trailing: true })
 
 const tableComponents = [
   'table',
@@ -82,266 +279,63 @@ const dganttComponents = [
   'gantt'
 ]
 
-const pluginAppNames = ['ExtendCellArea', 'ExtendPivotTable', 'FiltersCombination', 'FiltersComplexInput']
-const pluginAppRE = new RegExp(`^(${pluginAppNames.join('|')})(@(\\d{1,3}.\\d{1,3}.\\d{1,3}))?$`)
-
-export default Vue.extend({
-  data (this: any) {
-    const route = this.$route
-    return {
-      searchName: `${route.query.q || ''}`,
-      tableData: [] as RowVO[],
-
-      gridOptions: {
-        id: 'document_api',
-        autoResize: true,
-        height: 'auto',
-        loading: false,
-        loadingConfig: {
-          text: '检测到 API 有更新，正在自动更新中，请稍后...'
-        },
-        rowConfig: {
-          useKey: true,
-          keyField: 'id',
-          isHover: true,
-          isCurrent: true
-        },
-        columnConfig: {
-          useKey: true,
-          resizable: true,
-          isHover: true,
-          isCurrent: true
-        },
-        cellClassName ({ row, column }) {
-          return {
-            'api-enterprise': row.isPlugin,
-            'api-disabled': row.disabled,
-            'api-abandoned': row.abandoned,
-            'disabled-line-through': (row.disabled) && column.field === 'name'
-          }
-        },
-        customConfig: {
-          storage: true,
-          checkMethod ({ column }) {
-            if (['name', 'i18nValue'].includes(column.field)) {
-              return false
-            }
-            return true
-          }
-        },
-        treeConfig: {
-          childrenField: 'list',
-          expandRowKeys: []
-        },
-
-        tooltipConfig: {
-          showAll: true,
-          contentMethod ({ type, row }) {
-            if (type === 'body') {
-              if (row.disabled) {
-                return '该参数已经被废弃了，除非不打算更新版本，否则不应该被使用'
-              } else if (row.abandoned) {
-                return '该参数属于评估阶段，谨慎使用，后续有可能会被废弃的风险'
-              }
-            }
-            return ''
-          }
-        },
-        toolbarConfig: {
-          custom: true,
-          refresh: true,
-          refreshOptions: {
-            query: this.loadList
-          },
-          slots: {
-            buttons: 'toolbarButtons'
-          }
-        },
-        data: []
-      }
+const getVersion = (row: RowVO) => {
+  const { isPlugin, version, pluginName, pluginVersion } = row
+  if (isPlugin) {
+    if (pluginVersion) {
+      return `${i18n.global.t(`shopping.apps.${pluginName}`)}@${pluginVersion}`
     }
-  },
-  computed: {
-    ...mapState([
-      'pluginBuyUrl',
-      'pluginDocsUrl',
-      'compApiMaps',
-      'pluginAppList'
-    ]),
-    ...({} as {
-      pluginBuyUrl(): string
-    }),
-    apiName () {
-      const route = this.$route
-      return route.params.name as string
-    },
-    columns () {
-      return [
-        {
-          field: 'name',
-          title: this.$t('api.title.prop'),
-          type: 'html',
-          treeNode: true,
-          minWidth: 280,
-          titlePrefix: {
-            content: this.$t('api.title.propHelp')
-          },
-          filters: [
-            { label: 'Props', value: 'Props' },
-            { label: 'Slots', value: 'Slots' },
-            { label: 'Events', value: 'Events' },
-            { label: 'Methods', value: 'Methods' }
-          ],
-          slots: { default: 'default_name' }
-        },
-        { field: 'i18nValue', title: this.$t('api.title.desc'), type: 'html', minWidth: 300 },
-        { field: 'type', title: this.$t('api.title.type'), type: 'html', minWidth: 140 },
-        { field: 'enum', title: this.$t('api.title.enum'), type: 'html', minWidth: 150 },
-        { field: 'defVal', title: this.$t('api.title.defVal'), type: 'html', minWidth: 160, titlePrefix: { content: this.$t('api.title.defValHelp') } },
-        { field: 'version', title: this.$t('api.title.version'), type: 'html', width: 180, titlePrefix: { content: this.$t('api.title.versionHelp') }, slots: { default: 'default_version' } }
-      ]
-    }
-  },
-  watch: {
-    apiName (this: any) {
-      const $grid = this.$refs.gridRef
-      this.searchName = ''
-      if ($grid) {
-        $grid.clearAll()
-      }
-      this.loadList()
-    },
-    compApiMaps (this: any) {
-      this.loadList()
-    },
-    '$t.locale' (this: any) {
-      this.loadList()
-    }
-  },
-  methods: {
-    ...mapActions([
-      'getComponentApiConf',
-      'getComponentI18nJSON',
-      'getPluginAppList'
-    ]),
-    loadList (this: any) {
-      this.gridOptions.loading = true
-      Promise.all([
-        this.getComponentApiConf(this.apiName),
-        this.getComponentI18nJSON()
-      ]).then(([data]) => {
-        const list = XEUtils.clone(data || [], true)
-        XEUtils.eachTree(list, (item, i, items, path, parent, nodes) => {
-          if (parent) {
-            item.i18nKey = `components.${this.apiName}.${nodes.map(item => `${XEUtils.kebabCase(item.name)}`.replace(/\(.*/, '')).join('_')}`
-          } else {
-            item.i18nKey = `api.title.${item.name}`
-          }
-          item.i18nValue = this.$t(item.i18nKey)
-          const pluginVersion = item.version ? item.version.match(pluginAppRE) : null
-          if (pluginVersion) {
-            const pName = pluginVersion[1]
-            const pVersion = pluginVersion[3]
-            item.isPlugin = true
-            item.pluginName = pName
-            item.pluginVersion = pVersion
-          } else {
-            item.isPlugin = false
-            item.pluginName = ''
-            item.pluginVersion = ''
-          }
-        }, { children: 'list' })
-        this.tableData = list
-        this.gridOptions.data = list
-        this.gridOptions.loading = false
-        this.handleSearch()
-      })
-    },
-    handleValueHighlight  (str: string, filterRE: RegExp) {
-      return `${str || ''}`.replace(filterRE, (match) => `<span class="keyword-lighten">${match}</span>`)
-    },
-    handleSearch (this: any) {
-      const filterName = XEUtils.toValueString(this.searchName).trim()
-      if (filterName) {
-        const options = { children: 'list' }
-        const spName = pluginAppNames.find(name => name === filterName || XEUtils.kebabCase(name) === filterName)
-        if (spName) {
-          const rest = XEUtils.searchTree(this.tableData, (item: any) => item.pluginName === spName, options)
-          this.gridOptions.data = rest
-        } else if (filterName === 'pro') {
-          const rest = XEUtils.searchTree(this.tableData, (item: any) => item.pluginName === 'ExtendCellArea', options)
-          this.gridOptions.data = rest
-        } else {
-          const filterRE = new RegExp(`${filterName}|${XEUtils.camelCase(filterName)}|${XEUtils.kebabCase(filterName)}`, 'i')
-          const rest = XEUtils.searchTree(this.tableData, (item: any) => {
-            return filterRE.test(item.name) || filterRE.test(item.i18nValue)
-          }, options)
-          XEUtils.eachTree(rest, (item: any) => {
-            item.name = this.handleValueHighlight(item.name, filterRE)
-            item.i18nValue = this.handleValueHighlight(item.i18nValue, filterRE)
-          }, options)
-          this.gridOptions.data = rest
-          setTimeout(() => {
-            const $grid = this.$refs.gridRef
-            if ($grid) {
-              $grid.setAllTreeExpand(true)
-            }
-          }, 100)
-        }
-      } else {
-        this.gridOptions.data = this.tableData.slice(0)
-        setTimeout(() => {
-          const $grid = this.$refs.gridRef
-          if ($grid) {
-            $grid.setTreeExpand(this.gridOptions.data, true)
-          }
-        }, 100)
-      }
-    },
-    searchEvent: XEUtils.debounce(function (this: any) {
-      this.handleSearch()
-    }, 500, { leading: false, trailing: true }),
-    getVersion (this: any, row: RowVO) {
-      const { isPlugin, version, pluginName, pluginVersion } = row
-      if (isPlugin) {
-        if (pluginVersion) {
-          return `${XEUtils.kebabCase(pluginName)}@${pluginVersion}`
-        }
-        return `${XEUtils.kebabCase(pluginName)}`
-      }
-      if (version) {
-        if (/^\d{1,3}[.]\d{1,3}/.test(version)) {
-          if (tableComponents.includes(this.apiName)) {
-            return `vxe-table@${version}`
-          }
-          if (dganttComponents.includes(this.apiName)) {
-            return `vxe-gantt@${version}`
-          }
-          if (designComponents.includes(this.apiName)) {
-            return `vxe-design@${version}`
-          }
-        }
-        return `vxe-pc-ui@${version}`
-      }
-      return ''
-    },
-    getPluginDocsUrl (this: any, row: RowVO) {
-      if (row.isPlugin) {
-        const appItem = this.pluginAppList.find(item => item.code === row.pluginName)
-        if (appItem) {
-          return `${this.pluginDocsUrl}${appItem.uri}`
-        }
-      }
-      return this.pluginDocsUrl
-    }
-  },
-  created (this: any) {
-    this.$nextTick(() => {
-      this.loadList()
-    })
-    this.getPluginAppList()
+    return `${i18n.global.t(`shopping.apps.${pluginName}`)}`
   }
+  if (version) {
+    if (/^\d{1,3}[.]\d{1,3}/.test(version)) {
+      if (tableComponents.includes(apiName.value)) {
+        return `vxe-table@${version}`
+      }
+      if (dganttComponents.includes(apiName.value)) {
+        return `vxe-gantt@${version}`
+      }
+      if (designComponents.includes(apiName.value)) {
+        return `vxe-design@${version}`
+      }
+    }
+    return `vxe-pc-ui@${version}`
+  }
+  return ''
+}
+
+const getPluginDocsUrl = (row: RowVO) => {
+  if (row.isPlugin) {
+    const appItem = appStore.pluginAppList.find(item => item.code === row.pluginName)
+    if (appItem) {
+      return `${appStore.pluginDocsUrl}${appItem.uri}`
+    }
+  }
+  return appStore.pluginDocsUrl
+}
+
+watch(apiName, () => {
+  const $grid = gridRef.value
+  searchName.value = ''
+  if ($grid) {
+    $grid.clearAll()
+  }
+  loadList()
 })
+
+watch(() => appStore.compApiMaps, () => {
+  loadList()
+})
+
+watch(() => i18n.global.locale, () => {
+  loadList()
+})
+
+nextTick(() => {
+  loadList()
+})
+
+appStore.getPluginAppList()
 </script>
 
 <style lang="scss">
