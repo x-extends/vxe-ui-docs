@@ -143,7 +143,7 @@
       "vxe-gantt": {
         "v1": "v1.x (vue 2.6+) 2025-08-01 Stop ⚠️",
         "v2": "v2.x (vue 2.6+) 2025-08-01 Stop ⚠️",
-        "v3": "v3.x (vue 2.6+) 2025-07-15 ~ Upcoming release",
+        "v3": "v3.x (vue 2.6+) 2025-07-15 ~ LTS",
         "v4": "v4.x (vue 3.2+) 2025-07-15 ~ Latest"
       },
       "vxe-pc-ui": {
