@@ -17,7 +17,6 @@ interface RowVO {
 }
 
 const ganttOptions = reactive<VxeGanttProps<RowVO>>({
-  border: true,
   taskConfig: {
     startField: 'startDate',
     endField: 'endDate',

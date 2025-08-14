@@ -19,7 +19,6 @@ interface RowVO {
 export default Vue.extend({
   data () {
     const ganttOptions: VxeGanttProps<RowVO> = {
-      border: true,
       taskConfig: {
         startField: 'startDate',
         endField: 'endDate',

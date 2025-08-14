@@ -12,6 +12,7 @@ export const ganttRouteConfig: RouteRecordRaw = {
       children: [
         { path: 'size', name: 'ComponentGanttBaseSize', component: () => import('@/views/gantt/base/size/CodeExample.vue') },
         { path: 'field', name: 'ComponentGanttBaseField', component: () => import('@/views/gantt/base/field/CodeExample.vue') },
+        { path: 'border', name: 'ComponentGanttBaseBorder', component: () => import('@/views/gantt/base/border/CodeExample.vue') },
         { path: 'showProgress', name: 'ComponentGanttBaseShowProgress', component: () => import('@/views/gantt/base/showProgress/CodeExample.vue') },
         { path: 'showContent', name: 'ComponentGanttBaseShowContent', component: () => import('@/views/gantt/base/showContent/CodeExample.vue') },
         { path: 'resize', name: 'ComponentGanttBaseResize', component: () => import('@/views/gantt/base/resize/CodeExample.vue') }
