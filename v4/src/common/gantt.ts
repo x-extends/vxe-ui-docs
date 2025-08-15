@@ -34,6 +34,13 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
+      title: '表尾数据',
+      children: [
+        { title: '是否启用表尾', routerLink: { name: 'ComponentGanttFooterShowFooter' } },
+        { title: '标准结构', routerLink: { name: 'ComponentGanttFooterFooterData' } }
+      ]
+    },
+    {
       title: '单选框',
       children: [
         { title: '高亮选择行', routerLink: { name: 'ComponentGanttRadioHighlight' } },
@@ -141,6 +148,13 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       title: '虚拟滚动（超大数据量表格）',
       children: [
         { title: '纵向虚拟滚动', routerLink: { name: 'ComponentGanttScrollVertical' } }
+      ]
+    },
+    {
+      title: '滚动条',
+      children: [
+        { title: '滚动条样式', routerLink: { name: 'ComponentGantScrollbarBarStyle' } },
+        { title: '滚动条位置', routerLink: { name: 'ComponentGantScrollbarBarPos' } }
       ]
     }
   ]

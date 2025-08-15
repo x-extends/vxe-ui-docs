@@ -39,6 +39,14 @@ export const ganttRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'footer',
+      component: RouteLayout,
+      children: [
+        { path: 'showFooter', name: 'ComponentGanttFooterShowFooter', component: () => import('@/views/gantt/footer/showFooter/CodeExample.vue') },
+        { path: 'footerData', name: 'ComponentGanttFooterFooterData', component: () => import('@/views/gantt/footer/footerData/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'radio',
       component: RouteLayout,
       children: [
@@ -170,6 +178,14 @@ export const ganttRouteConfig: RouteRecordRaw = {
       component: RouteLayout,
       children: [
         { path: 'vertical', name: 'ComponentGanttScrollVertical', component: () => import('@/views/gantt/scroll/vertical/CodeExample.vue') }
+      ]
+    },
+    {
+      path: 'scrollbar',
+      component: RouteLayout,
+      children: [
+        { path: 'barStyle', name: 'ComponentGantScrollbarBarStyle', component: () => import('@/views/gantt/scrollbar/barStyle/CodeExample.vue') },
+        { path: 'barPos', name: 'ComponentGantScrollbarBarPos', component: () => import('@/views/gantt/scrollbar/barPos/CodeExample.vue') }
       ]
     }
   ]
