@@ -16,6 +16,7 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'stripe', name: 'ComponentGanttBaseStripe', component: () => import('@/views/gantt/base/stripe/CodeExample.vue') },
         { path: 'showProgress', name: 'ComponentGanttBaseShowProgress', component: () => import('@/views/gantt/base/showProgress/CodeExample.vue') },
         { path: 'showContent', name: 'ComponentGanttBaseShowContent', component: () => import('@/views/gantt/base/showContent/CodeExample.vue') },
+        { path: 'fixed', name: 'ComponentGanttBaseFixed', component: () => import('@/views/gantt/base/fixed/CodeExample.vue') },
         { path: 'loading', name: 'ComponentGanttBaseLoading', component: () => import('@/views/gantt/base/loading/CodeExample.vue') },
         { path: 'resize', name: 'ComponentGanttBaseResize', component: () => import('@/views/gantt/base/resize/CodeExample.vue') }
       ]
@@ -27,6 +28,14 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'tableWidth', name: 'ComponentGanttStyleTableWidth', component: () => import('@/views/gantt/style/tableWidth/CodeExample.vue') },
         { path: 'barColor', name: 'ComponentGanttStyleBarColor', component: () => import('@/views/gantt/style/barColor/CodeExample.vue') },
         { path: 'round', name: 'ComponentGanttStyleRound', component: () => import('@/views/gantt/style/round/CodeExample.vue') }
+      ]
+    },
+    {
+      path: 'cell',
+      component: RouteLayout,
+      children: [
+        { path: 'padding', name: 'ComponentGanttCellPadding', component: () => import('@/views/gantt/cell/padding/CodeExample.vue') },
+        { path: 'height', name: 'ComponentGanttCellHeight', component: () => import('@/views/gantt/cell/height/CodeExample.vue') }
       ]
     },
     {
@@ -74,6 +83,14 @@ export const ganttRouteConfig: RouteConfig = {
       ]
     },
     {
+      path: 'rowResizable',
+      component: RouteLayout,
+      children: [
+        { path: 'base', name: 'ComponentGanttRowResizableBase', component: () => import('@/views/gantt/rowResizable/base/CodeExample.vue') },
+        { path: 'fixed', name: 'ComponentGanttRowResizableFixed', component: () => import('@/views/gantt/rowResizable/fixed/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'rowDrag',
       component: RouteLayout,
       children: [
@@ -113,6 +130,22 @@ export const ganttRouteConfig: RouteConfig = {
             }
           ]
         }
+      ]
+    },
+    {
+      path: 'form',
+      component: RouteLayout,
+      children: [
+        { path: 'search', name: 'ComponentGanttFormSearch', component: () => import('@/views/gantt/form/search/CodeExample.vue') },
+        { path: 'collapse', name: 'ComponentGanttFormCollapse', component: () => import('@/views/gantt/form/collapse/CodeExample.vue') }
+      ]
+    },
+    {
+      path: 'toolbar',
+      component: RouteLayout,
+      children: [
+        { path: 'buttons', name: 'ComponentGanttToolbarButtons', component: () => import('@/views/gantt/toolbar/buttons/CodeExample.vue') },
+        { path: 'tools', name: 'ComponentGanttToolbarTools', component: () => import('@/views/gantt/toolbar/tools/CodeExample.vue') }
       ]
     },
     {

@@ -13,6 +13,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '斑马线样式', routerLink: { name: 'ComponentGanttBaseStripe' } },
         { title: '显示进度', routerLink: { name: 'ComponentGanttBaseShowProgress' } },
         { title: '显示内容', routerLink: { name: 'ComponentGanttBaseShowContent' } },
+        { title: '冻结列', routerLink: { name: 'ComponentGanttBaseFixed' } },
         { title: '加载中', routerLink: { name: 'ComponentGanttBaseLoading' } },
         { title: '拖拽调整视图宽度', routerLink: { name: 'ComponentGanttBaseResize' } }
       ]
@@ -23,6 +24,13 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '表格宽度', routerLink: { name: 'ComponentGanttStyleTableWidth' } },
         { title: '颜色', routerLink: { name: 'ComponentGanttStyleBarColor' } },
         { title: '圆角', routerLink: { name: 'ComponentGanttStyleRound' } }
+      ]
+    },
+    {
+      title: '单元格配置',
+      children: [
+        { title: '设置单元格边距', routerLink: { name: 'ComponentGanttCellPadding' } },
+        { title: '设置行高', routerLink: { name: 'ComponentGanttCellHeight' } }
       ]
     },
     {
@@ -65,6 +73,13 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
+      title: '行高调整',
+      children: [
+        { title: '行高拖拽', routerLink: { name: 'ComponentGanttRowResizableBase' } },
+        { title: '冻结列', routerLink: { name: 'ComponentGanttRowResizableFixed' } }
+      ]
+    },
+    {
       title: '行拖拽',
       children: [
         { title: '拖拽调整行顺序', routerLink: { name: 'ComponentGanttRowDragSort' } },
@@ -81,11 +96,38 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
+      title: '查询表单',
+      children: [
+        { title: '查询表单', routerLink: { name: 'ComponentGanttFormSearch' } },
+        { title: '带折叠的查询表单', routerLink: { name: 'ComponentGanttFormCollapse' } }
+      ]
+    },
+    {
+      title: '工具栏',
+      children: [
+        { title: '左侧按钮', routerLink: { name: 'ComponentGanttToolbarButtons' } },
+        { title: '右侧按钮', routerLink: { name: 'ComponentGanttToolbarTools' } }
+      ]
+    },
+    {
       title: '数据分页',
       children: [
         { title: '实现前端分页', routerLink: { name: 'ComponentGanttPagerMockPage' } },
         { title: '自定义布局', routerLink: { name: 'ComponentGanttPagerLayouts' } },
         { title: '自定义序号', routerLink: { name: 'ComponentGanttPagerStart' } }
+      ]
+    },
+    {
+      title: '依赖关系',
+      children: [
+        { title: '依赖线', isEnterprise: true, isDisabled: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: '111' }, query: { previewPath: '111' } } },
+        { title: '前置任务', isEnterprise: true, isDisabled: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: '222' }, query: { previewPath: '222' } } }
+      ]
+    },
+    {
+      title: '动态交互',
+      children: [
+        { title: '拖拽任务自动更新日期', isEnterprise: true, isDisabled: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: '333' }, query: { previewPath: '333' } } }
       ]
     },
     {
