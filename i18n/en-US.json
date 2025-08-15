@@ -214,7 +214,8 @@
         "useV4Old": "Install an older version v4.0 ~ v4.6.x",
         "useV3Old": "Install an older version v3.0 ~ v3.8.x",
         "table": "Table basic table",
-        "grid": "Grid configuration table"
+        "grid": "Grid configuration table",
+        "gantt": "Gantt 甘特图"
       }
     },
     "extendCellArea": {

@@ -214,7 +214,8 @@
         "useV4Old": "安装老版本插件 v4.0 ~ v4.6.x",
         "useV3Old": "安装老版本插件 v3.0 ~ v3.8.x",
         "table": "Table 基礎表格",
-        "grid": "Grid 配置式表格"
+        "grid": "Grid 配置式表格",
+        "gantt": "Gantt 甘特图"
       }
     },
     "extendCellArea": {
