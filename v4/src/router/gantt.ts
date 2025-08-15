@@ -30,6 +30,23 @@ export const ganttRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'radio',
+      component: RouteLayout,
+      children: [
+        { path: 'highlight', name: 'ComponentGanttRadioHighlight', component: () => import('@/views/gantt/radio/highlight/CodeExample.vue') },
+        { path: 'checkMethod', name: 'ComponentGanttRadioCheckMethod', component: () => import('@/views/gantt/radio/checkMethod/CodeExample.vue') }
+      ]
+    },
+    {
+      path: 'checkbox',
+      component: RouteLayout,
+      children: [
+        { path: 'highlight', name: 'ComponentGanttCheckboxHighlight', component: () => import('@/views/gantt/checkbox/highlight/CodeExample.vue') },
+        { path: 'field', name: 'ComponentGanttCheckboxField', component: () => import('@/views/gantt/checkbox/field/CodeExample.vue') },
+        { path: 'checkMethod', name: 'ComponentGanttCheckboxCheckMethod', component: () => import('@/views/gantt/checkbox/checkMethod/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'currentRow',
       component: RouteLayout,
       children: [
@@ -99,11 +116,27 @@ export const ganttRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'pager',
+      component: RouteLayout,
+      children: [
+        { path: 'mockPage', name: 'ComponentGanttPagerMockPage', component: () => import('@/views/gantt/pager/mockPage/CodeExample.vue') },
+        { path: 'layouts', name: 'ComponentGanttPagerLayouts', component: () => import('@/views/gantt/pager/layouts/CodeExample.vue') },
+        { path: 'start', name: 'ComponentGanttPagerStart', component: () => import('@/views/gantt/pager/start/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'proxy',
       component: RouteLayout,
       children: [
         { path: 'query', name: 'ComponentGanttProxyQuery', component: () => import('@/views/gantt/proxy/query/CodeExample.vue') },
         { path: 'pager', name: 'ComponentGanttProxyPager', component: () => import('@/views/gantt/proxy/pager/CodeExample.vue') }
+      ]
+    },
+    {
+      path: 'scroll',
+      component: RouteLayout,
+      children: [
+        { path: 'vertical', name: 'ComponentGanttScrollVertical', component: () => import('@/views/gantt/scroll/vertical/CodeExample.vue') }
       ]
     }
   ]

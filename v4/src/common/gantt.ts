@@ -26,6 +26,21 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
+      title: '单选框',
+      children: [
+        { title: '高亮选择行', routerLink: { name: 'ComponentGanttRadioHighlight' } },
+        { title: '禁用', routerLink: { name: 'ComponentGanttRadioCheckMethod' } }
+      ]
+    },
+    {
+      title: '复选框',
+      children: [
+        { title: '高亮选择行', routerLink: { name: 'ComponentGanttCheckboxHighlight' } },
+        { title: '绑定字段', routerLink: { name: 'ComponentGanttCheckboxField' } },
+        { title: '禁用', routerLink: { name: 'ComponentGanttCheckboxCheckMethod' } }
+      ]
+    },
+    {
       title: '高亮行',
       children: [
         { title: '当前行', routerLink: { name: 'ComponentGanttCurrentRowBase' } },
@@ -66,10 +81,24 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
+      title: '数据分页',
+      children: [
+        { title: '实现前端分页', routerLink: { name: 'ComponentGanttPagerMockPage' } },
+        { title: '自定义布局', routerLink: { name: 'ComponentGanttPagerLayouts' } },
+        { title: '自定义序号', routerLink: { name: 'ComponentGanttPagerStart' } }
+      ]
+    },
+    {
       title: '数据代理',
       children: [
         { title: '查询接口', routerLink: { name: 'ComponentGanttProxyQuery' } },
         { title: '分页查询接口', routerLink: { name: 'ComponentGanttProxyPager' } }
+      ]
+    },
+    {
+      title: '虚拟滚动（超大数据量表格）',
+      children: [
+        { title: '纵向虚拟滚动', routerLink: { name: 'ComponentGanttScrollVertical' } }
       ]
     }
   ]

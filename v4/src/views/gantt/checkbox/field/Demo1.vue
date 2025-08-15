@@ -1,0 +1,126 @@
+<template>
+  <div>
+    <p>
+      <vxe-button @click="toggleSelectRow(ganttOptions.data[1])">切换第二行选中</vxe-button>
+      <vxe-button @click="setSelectRow([ganttOptions.data[2], ganttOptions.data[3]], true)">设置第三、四行选中</vxe-button>
+      <vxe-button @click="selectAllEvent">设置所有行选中</vxe-button>
+      <vxe-button @click="clearSelectEvent">清除所有行选中</vxe-button>
+      <vxe-button status="success" @click="getSelectEvent">获取已选</vxe-button>
+    </p>
+
+    <vxe-gantt ref="ganttRef" v-bind="ganttOptions"></vxe-gantt>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { ref, reactive } from 'vue'
+import { VxeUI } from 'vxe-pc-ui'
+import type { VxeGanttInstance, VxeGanttProps } from 'vxe-gantt'
+
+interface RowVO {
+  id: number
+  parentId: number | null
+  title: string
+  start: string
+  end: string
+  progress: number
+}
+
+const ganttRef = ref<VxeGanttInstance<RowVO>>()
+
+const ganttOptions = reactive<VxeGanttProps<RowVO> & { data: RowVO[] }>({
+  border: true,
+  height: 500,
+  rowConfig: {
+    isHover: true
+  },
+  checkboxConfig: {
+    checkField: 'isChecked'
+  },
+  treeConfig: {
+    transform: true,
+    rowField: 'id',
+    parentField: 'parentId'
+  },
+  taskBarConfig: {
+    showProgress: true,
+    showContent: true
+  },
+  taskViewConfig: {
+    tableStyle: {
+      width: 480
+    }
+  },
+  columns: [
+    { type: 'checkbox', width: 60 },
+    { field: 'title', title: '任务名称', treeNode: true },
+    { field: 'start', title: '开始时间', width: 100 },
+    { field: 'end', title: '结束时间', width: 100 }
+  ],
+  data: [
+    { id: 10001, parentId: null, title: 'A项目', start: '2024-03-01', end: '2024-03-04', progress: 3 },
+    { id: 10002, parentId: 10001, title: '城市道路修理进度', start: '2024-03-03', end: '2024-03-08', progress: 10 },
+    { id: 10003, parentId: null, title: 'B大工程', start: '2024-03-03', end: '2024-03-11', progress: 90 },
+    { id: 10004, parentId: 10003, title: '超级大工程', start: '2024-03-05', end: '2024-03-11', progress: 15 },
+    { id: 10005, parentId: 10003, title: '地球净化项目', start: '2024-03-08', end: '2024-03-15', progress: 100 },
+    { id: 10006, parentId: 10003, title: '一个小目标项目', start: '2024-03-10', end: '2024-03-21', progress: 0 },
+    { id: 10007, parentId: 10005, title: '某某计划', start: '2024-03-15', end: '2024-03-24', progress: 70 },
+    { id: 10008, parentId: null, title: '某某科技项目', start: '2024-03-20', end: '2024-03-29', progress: 50 },
+    { id: 10009, parentId: 10008, title: '地铁建设工程', start: '2024-03-19', end: '2024-03-20', progress: 5 },
+    { id: 10010, parentId: 10008, title: '公寓装修计划2', start: '2024-03-12', end: '2024-03-20', progress: 30 },
+    { id: 10011, parentId: 10008, title: '两个小目标工程', start: '2024-03-01', end: '2024-03-04', progress: 20 },
+    { id: 10012, parentId: null, title: '蓝天计划', start: '2024-03-02', end: '2024-03-08', progress: 50 },
+    { id: 10013, parentId: 10010, title: 'C大项目', start: '2024-03-08', end: '2024-03-11', progress: 10 },
+    { id: 10014, parentId: 10010, title: 'H计划', start: '2024-03-12', end: '2024-03-16', progress: 100 },
+    { id: 10015, parentId: 10011, title: '铁路修建计划', start: '2024-03-05', end: '2024-03-06', progress: 0 },
+    { id: 10016, parentId: 10011, title: 'D项目', start: '2024-03-06', end: '2024-03-11', progress: 10 },
+    { id: 10017, parentId: 10011, title: '海外改造工程', start: '2024-03-08', end: '2024-03-09', progress: 0 },
+    { id: 10018, parentId: null, title: 'Z计划', start: '2024-03-24', end: '2024-03-26', progress: 80 },
+    { id: 10019, parentId: 10018, title: 'F工程', start: '2024-03-20', end: '2024-03-28', progress: 10 },
+    { id: 10020, parentId: 10018, title: '投资大项目', start: '2024-03-23', end: '2024-03-28', progress: 60 },
+    { id: 10021, parentId: 10018, title: 'X计划', start: '2024-03-16', end: '2024-03-25', progress: 10 },
+    { id: 10022, parentId: null, title: '上天计划', start: '2024-03-05', end: '2024-03-24', progress: 0 },
+    { id: 10023, parentId: null, title: 'G项目', start: '2024-03-08', end: '2024-03-28', progress: 5 },
+    { id: 10024, parentId: 10023, title: '下地计划', start: '2024-03-09', end: '2024-03-16', progress: 50 }
+  ]
+})
+
+const toggleSelectRow = (row: RowVO) => {
+  const $gantt = ganttRef.value
+  if ($gantt) {
+    $gantt.toggleCheckboxRow(row)
+  }
+}
+
+const setSelectRow = (rows: RowVO[], checked: boolean) => {
+  const $gantt = ganttRef.value
+  if ($gantt) {
+    $gantt.setCheckboxRow(rows, checked)
+  }
+}
+
+const selectAllEvent = () => {
+  const $gantt = ganttRef.value
+  if ($gantt) {
+    $gantt.setAllCheckboxRow(true)
+  }
+}
+
+const clearSelectEvent = () => {
+  const $gantt = ganttRef.value
+  if ($gantt) {
+    $gantt.clearCheckboxRow()
+  }
+}
+
+const getSelectEvent = () => {
+  const $gantt = ganttRef.value
+  if ($gantt) {
+    const selectRecords = $gantt.getCheckboxRecords()
+    VxeUI.modal.message({
+      content: `当前页勾选：${selectRecords.length} 条`,
+      status: 'success'
+    })
+  }
+}
+</script>
