@@ -2,10 +2,8 @@
   <div>
     <vxe-toolbar>
       <template #buttons>
-        <vxe-button @click="toggleFixedColumn('group0', 'left')">切换第一列固定</vxe-button>
-        <vxe-button @click="toggleFixedColumn('group1', 'left')">切换第二列固定</vxe-button>
-        <vxe-button @click="toggleFixedColumn('group3', 'right')">切换第四列固定</vxe-button>
-        <vxe-button @click="toggleFixedColumn('group4', 'right')">切换第五列固定</vxe-button>
+        <vxe-button @click="toggleFixedColumn('seq', 'left')">切换seq列固定</vxe-button>
+        <vxe-button @click="toggleFixedColumn('progress', 'right')">切换progress列固定</vxe-button>
       </template>
     </vxe-toolbar>
 
@@ -41,7 +39,7 @@ export default Vue.extend({
         }
       },
       columns: [
-        { type: 'seq', width: 70, fixed: 'left' },
+        { type: 'seq', field: 'seq', width: 70, fixed: 'left' },
         { field: 'title', title: '任务名称', minWidth: 300 },
         {
           title: '日期',
