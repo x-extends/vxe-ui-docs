@@ -14,6 +14,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '显示进度', routerLink: { name: 'ComponentGanttBaseShowProgress' } },
         { title: '显示内容', routerLink: { name: 'ComponentGanttBaseShowContent' } },
         { title: '冻结列', routerLink: { name: 'ComponentGanttBaseFixed' } },
+        { title: '分组表头', routerLink: { name: 'ComponentGanttBaseGroup' } },
         { title: '加载中', routerLink: { name: 'ComponentGanttBaseLoading' } },
         { title: '拖拽调整视图宽度', routerLink: { name: 'ComponentGanttBaseResize' } }
       ]
