@@ -13,8 +13,10 @@ export const ganttRouteConfig: RouteRecordRaw = {
         { path: 'size', name: 'ComponentGanttBaseSize', component: () => import('@/views/gantt/base/size/CodeExample.vue') },
         { path: 'field', name: 'ComponentGanttBaseField', component: () => import('@/views/gantt/base/field/CodeExample.vue') },
         { path: 'border', name: 'ComponentGanttBaseBorder', component: () => import('@/views/gantt/base/border/CodeExample.vue') },
+        { path: 'stripe', name: 'ComponentGanttBaseStripe', component: () => import('@/views/gantt/base/stripe/CodeExample.vue') },
         { path: 'showProgress', name: 'ComponentGanttBaseShowProgress', component: () => import('@/views/gantt/base/showProgress/CodeExample.vue') },
         { path: 'showContent', name: 'ComponentGanttBaseShowContent', component: () => import('@/views/gantt/base/showContent/CodeExample.vue') },
+        { path: 'loading', name: 'ComponentGanttBaseLoading', component: () => import('@/views/gantt/base/loading/CodeExample.vue') },
         { path: 'resize', name: 'ComponentGanttBaseResize', component: () => import('@/views/gantt/base/resize/CodeExample.vue') }
       ]
     },
@@ -54,7 +56,6 @@ export const ganttRouteConfig: RouteRecordRaw = {
         { path: 'taskBar', name: 'ComponentGanttEditTaskBar', component: () => import('@/views/gantt/edit/taskBar/CodeExample.vue') }
       ]
     },
-
     {
       path: 'rowDrag',
       component: RouteLayout,
@@ -95,6 +96,14 @@ export const ganttRouteConfig: RouteRecordRaw = {
             }
           ]
         }
+      ]
+    },
+    {
+      path: 'proxy',
+      component: RouteLayout,
+      children: [
+        { path: 'query', name: 'ComponentGanttProxyQuery', component: () => import('@/views/gantt/proxy/query/CodeExample.vue') },
+        { path: 'pager', name: 'ComponentGanttProxyPager', component: () => import('@/views/gantt/proxy/pager/CodeExample.vue') }
       ]
     }
   ]

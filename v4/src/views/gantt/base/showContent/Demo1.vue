@@ -37,7 +37,9 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     { id: 10007, title: '某某计划', start: '2024-03-15', end: '2024-03-24', progress: 70 },
     { id: 10008, title: '某某科技项目', start: '2024-03-20', end: '2024-03-29', progress: 50 },
     { id: 10009, title: '地铁建设工程', start: '2024-03-19', end: '2024-03-20', progress: 5 },
-    { id: 10010, title: '铁路修建计划', start: '2024-03-12', end: '2024-03-20', progress: 10 }
+    { id: 10010, title: '铁路修建计划', start: '2024-03-12', end: '2024-03-20', progress: 10 },
+    { id: 10011, title: '蓝天计划', start: '2024-03-02', end: '2024-03-42', progress: 0 },
+    { id: 10012, title: 'C计划', start: '2024-03-05', end: '2024-03-14', progress: 90 }
   ]
 })
 </script>

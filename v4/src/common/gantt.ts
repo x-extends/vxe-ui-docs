@@ -10,8 +10,10 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '尺寸大小', routerLink: { name: 'ComponentGanttBaseSize' } },
         { title: '自定义字段', routerLink: { name: 'ComponentGanttBaseField' } },
         { title: '边框', routerLink: { name: 'ComponentGanttBaseBorder' } },
+        { title: '斑马线样式', routerLink: { name: 'ComponentGanttBaseStripe' } },
         { title: '显示进度', routerLink: { name: 'ComponentGanttBaseShowProgress' } },
         { title: '显示内容', routerLink: { name: 'ComponentGanttBaseShowContent' } },
+        { title: '加载中', routerLink: { name: 'ComponentGanttBaseLoading' } },
         { title: '拖拽调整视图宽度', routerLink: { name: 'ComponentGanttBaseResize' } }
       ]
     },
@@ -61,6 +63,13 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
             { title: '拖拽成子级', routerLink: { name: 'ComponentGanttRowDragTreeToChildDrag' } }
           ]
         }
+      ]
+    },
+    {
+      title: '数据代理',
+      children: [
+        { title: '查询接口', routerLink: { name: 'ComponentGanttProxyQuery' } },
+        { title: '分页查询接口', routerLink: { name: 'ComponentGanttProxyPager' } }
       ]
     }
   ]
