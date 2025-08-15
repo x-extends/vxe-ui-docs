@@ -354,6 +354,7 @@
       "TemplateZeroCode": "零代码配套模板",
       "ExtendCellArea": "区域选取",
       "ExtendPivotTable": "数据透视表",
+      "ExtendGanttChart": "甘特图",
       "FiltersCombination": "组合筛选",
       "FiltersComplexInput": "输入筛选",
       "ChartGanttChart": "甘特图"

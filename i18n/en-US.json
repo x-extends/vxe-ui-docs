@@ -354,6 +354,7 @@
       "TemplateZeroCode": "Zero code system template",
       "ExtendCellArea": "Region selection",
       "ExtendPivotTable": "Pivot table",
+      "ExtendGanttChart": "Gantt",
       "FiltersCombination": "Complex combination Filters",
       "FiltersComplexInput": "Complex input Filters",
       "ChartGanttChart": "Gantt"
