@@ -19,14 +19,14 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '拖拽调整视图宽度', routerLink: { name: 'ComponentGanttBaseResize' } }
       ]
     },
-    {
-      title: '样式',
-      children: [
-        { title: '表格宽度', routerLink: { name: 'ComponentGanttStyleTableWidth' } },
-        { title: '颜色', routerLink: { name: 'ComponentGanttStyleBarColor' } },
-        { title: '圆角', routerLink: { name: 'ComponentGanttStyleRound' } }
-      ]
-    },
+    // {
+    //   title: '样式',
+    //   children: [
+    //     { title: '表格宽度', routerLink: { name: 'ComponentGanttStyleTableWidth' } },
+    //     { title: '颜色', routerLink: { name: 'ComponentGanttStyleBarColor' } },
+    //     { title: '圆角', routerLink: { name: 'ComponentGanttStyleRound' } }
+    //   ]
+    // },
     {
       title: '单元格配置',
       children: [
