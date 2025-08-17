@@ -9,6 +9,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       children: [
         { title: '尺寸大小', routerLink: { name: 'ComponentGanttBaseSize' } },
         { title: '自定义字段', routerLink: { name: 'ComponentGanttBaseField' } },
+        { title: '数据格式', routerLink: { name: 'ComponentGanttBaseData' } },
         { title: '边框', routerLink: { name: 'ComponentGanttBaseBorder' } },
         { title: '斑马线样式', routerLink: { name: 'ComponentGanttBaseStripe' } },
         { title: '显示进度', routerLink: { name: 'ComponentGanttBaseShowProgress' } },
