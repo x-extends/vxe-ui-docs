@@ -235,7 +235,7 @@
         "rowGroup": "Grouping of row",
         "rowGroupGroupFields": "Group by multiple fields",
         "rowGroupTotal": "Display total of combinations",
-        "rowGroupCount": "显示多列合计",
+        "rowGroupCount": "分组合计",
         "rowGroupHandleSet": "Manual manipulation",
         "footerTotal": "Select and total at the end of the table",
         "areaCheckbox": "Check box range selection",

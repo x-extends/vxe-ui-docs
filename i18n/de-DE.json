@@ -235,7 +235,7 @@
         "rowGroup": "行分组",
         "rowGroupGroupFields": "按多字段分组",
         "rowGroupTotal": "显示分组统计",
-        "rowGroupCount": "显示多列合计",
+        "rowGroupCount": "分组合计",
         "rowGroupHandleSet": "手动操作",
         "footerTotal": "Wählen Sie die Gesamtsumme mit dem Ende der Tabelle aus",
         "areaCheckbox": "Kontrollkästchen Reichweite Auswahl",

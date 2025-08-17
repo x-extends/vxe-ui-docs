@@ -235,7 +235,7 @@
         "rowGroup": "行分组",
         "rowGroupGroupFields": "按多字段分组",
         "rowGroupTotal": "显示分组统计",
-        "rowGroupCount": "显示多列合计",
+        "rowGroupCount": "分组合计",
         "rowGroupHandleSet": "手动操作",
         "footerTotal": "테이블 끝에서 총계를 선택하십시오",
         "areaCheckbox": "상자 범위 선택을 확인하십시오",
