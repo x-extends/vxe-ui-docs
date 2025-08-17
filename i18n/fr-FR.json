@@ -97,7 +97,7 @@
         "listDesignUse": "Utilisation du concepteur",
         "buttonGlobalRenderer": "渲染器（高阶复用）",
         "iconPickerGlobalRenderer": "渲染器（高阶复用）",
-        "ganttTitle": "甘特图"
+        "ganttTitle": "Gantt 甘特图"
       }
     },
     "header": {
