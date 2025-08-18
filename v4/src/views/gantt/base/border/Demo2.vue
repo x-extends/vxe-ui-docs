@@ -17,7 +17,14 @@ interface RowVO {
 }
 
 const ganttOptions = reactive<VxeGanttProps<RowVO>>({
-  border: true,
+  taskViewConfig: {
+    tableStyle: {
+      border: true
+    },
+    viewStyle: {
+      border: 'outer'
+    }
+  },
   columns: [
     { field: 'name', title: '任务名称' },
     { field: 'start', title: '开始时间', width: 100 },

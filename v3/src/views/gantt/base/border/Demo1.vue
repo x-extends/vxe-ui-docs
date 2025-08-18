@@ -1,5 +1,13 @@
 <template>
   <div>
+    <vxe-radio-group v-model="ganttOptions.border">
+      <vxe-radio-button label="default" content="显示默认边框"></vxe-radio-button>
+      <vxe-radio-button label="full" content="显示完整边框"></vxe-radio-button>
+      <vxe-radio-button label="outer" content="显示外边框"></vxe-radio-button>
+      <vxe-radio-button label="inner" content="显示内边框"></vxe-radio-button>
+      <vxe-radio-button label="none" content="隐藏边框"></vxe-radio-button>
+    </vxe-radio-group>
+
     <vxe-gantt v-bind="ganttOptions"></vxe-gantt>
   </div>
 </template>
@@ -19,6 +27,7 @@ interface RowVO {
 export default Vue.extend({
   data () {
     const ganttOptions: VxeGanttProps<RowVO> = {
+      border: 'default',
       columns: [
         { field: 'name', title: '任务名称' },
         { field: 'start', title: '开始时间', width: 100 },
