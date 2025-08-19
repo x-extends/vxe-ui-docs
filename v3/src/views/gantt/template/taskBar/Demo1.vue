@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-gantt v-bind="ganttOptions">
-      <template #taskBar="{ row }">
+      <template #task-bar="{ row }">
         <div style="background-color: #3db80f;">
           <div>已完成：{{ row.progress }}%</div>
           <div>剩余：{{ 100 - row.progress }}%</div>
