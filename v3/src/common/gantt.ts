@@ -69,7 +69,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       children: [
         { title: '平级结构', routerLink: { name: 'ComponentGanttTreeLeveling' } },
         { title: '层级结构', routerLink: { name: 'ComponentGanttTreeHierarchy' } },
-        { title: '斑马线条纹', routerLink: { name: 'ComponentGanttTreeStripe' } },
+        { title: '斑马线样式', routerLink: { name: 'ComponentGanttTreeStripe' } },
         { title: '序号', routerLink: { name: 'ComponentGanttTreeSeqMode' } },
         { title: '连接线', routerLink: { name: 'ComponentGanttTreeLine' } }
       ]
