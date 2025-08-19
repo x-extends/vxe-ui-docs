@@ -26,7 +26,12 @@ export default Vue.extend({
       },
       taskBarConfig: {
         showProgress: true,
-        showContent: true
+        showContent: true,
+        barStyle: {
+          round: true,
+          bgColor: '#fca60b',
+          completedBgColor: '#65c16f'
+        }
       },
       taskViewConfig: {
         tableStyle: {

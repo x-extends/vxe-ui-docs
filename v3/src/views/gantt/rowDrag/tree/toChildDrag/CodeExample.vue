@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="gantt/rowDrag/tree/toChildDrag/Demo1" previewPath="/resource/docsImg/table_row_drag_tree_to_child_drag.gif">
+    <CodeLight path="gantt/rowDrag/tree/toChildDrag/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="拖拽转成子节点">
           通过 <ApiLink name="gantt" prop="row-drag-config"/>.<ApiLink name="gantt" prop="isToChildDrag"/> 启用便捷拖拽成子节点，拖拽的同时按住 Ctrl 键可以自动拖放到该节点的子级
