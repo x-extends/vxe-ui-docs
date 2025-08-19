@@ -1,0 +1,17 @@
+<template>
+  <div>
+    <CodeLight path="gantt/custom/modal/Demo1">
+      <template #tip>
+        <vxe-tip status="primary" title="弹窗模式">通过设置 <ApiLink name="gantt" prop="custom-config"/>.<ApiLink name="gantt" prop="mode"/>='modal' 启用窗口模式</vxe-tip>
+      </template>
+    </CodeLight>
+
+    <CodeLight path="gantt/custom/modal/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          分组列头
+        </vxe-tip>
+      </template>
+    </CodeLight>
+  </div>
+</template>

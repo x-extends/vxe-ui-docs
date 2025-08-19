@@ -115,7 +115,17 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       title: '工具栏',
       children: [
         { title: '左侧按钮', routerLink: { name: 'ComponentGanttToolbarButtons' } },
-        { title: '右侧按钮', routerLink: { name: 'ComponentGanttToolbarTools' } }
+        { title: '右侧按钮', routerLink: { name: 'ComponentGanttToolbarTools' } },
+        { title: '最大化显示', routerLink: { name: 'ComponentGanttToolbarZoom' } },
+        { title: '刷新列表', routerLink: { name: 'ComponentGanttToolbarRefresh' } }
+      ]
+    },
+    {
+      title: '个性化列',
+      children: [
+        { title: '使用工具栏', routerLink: { name: 'ComponentGanttCustomsToolbar' } },
+        { title: '窗口模式', routerLink: { name: 'ComponentGanttCustomsModal' } },
+        { title: '抽屉模式', routerLink: { name: 'ComponentGanttCustomsDrawer' } }
       ]
     },
     {
@@ -157,6 +167,23 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       children: [
         { title: '滚动条样式', routerLink: { name: 'ComponentGantScrollbarBarStyle' } },
         { title: '滚动条位置', routerLink: { name: 'ComponentGantScrollbarBarPos' } }
+      ]
+    },
+    {
+      title: '自定义插槽模板',
+      children: [
+        { title: '自定义布局模板', routerLink: { name: 'ComponentGantTemplateLayout' } },
+        { title: '自定义表单模板', routerLink: { name: 'ComponentGantTemplateForm' } },
+        { title: '自定义单元格模板', routerLink: { name: 'ComponentGantTemplateDefault' } },
+        { title: '自定义表头模板', routerLink: { name: 'ComponentGantTemplateHeader' } },
+        { title: '自定义表尾模板', routerLink: { name: 'ComponentGantTemplateFooter' } },
+        { title: '自定义分页模板', routerLink: { name: 'ComponentGantTemplatePager' } },
+        { title: '自定义任务条模板', routerLink: { name: 'ComponentGantTemplateTaskBar' } },
+        { title: '自定义复选框模板', routerLink: { name: 'ComponentGantTemplateCheckbox' } },
+        { title: '自定义单选框模板', routerLink: { name: 'ComponentGantTemplateRadio' } },
+        { title: '自定义筛选模板', routerLink: { name: 'ComponentGantTemplateFilter' } },
+        { title: '自定义编辑模板', routerLink: { name: 'ComponentGantTemplateEdit' } },
+        { title: '自定义单元格校验模板', routerLink: { name: 'ComponentGantTemplateValid' } }
       ]
     }
   ]

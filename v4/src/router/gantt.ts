@@ -155,7 +155,18 @@ export const ganttRouteConfig: RouteRecordRaw = {
       component: RouteLayout,
       children: [
         { path: 'buttons', name: 'ComponentGanttToolbarButtons', component: () => import('@/views/gantt/toolbar/buttons/CodeExample.vue') },
-        { path: 'tools', name: 'ComponentGanttToolbarTools', component: () => import('@/views/gantt/toolbar/tools/CodeExample.vue') }
+        { path: 'tools', name: 'ComponentGanttToolbarTools', component: () => import('@/views/gantt/toolbar/tools/CodeExample.vue') },
+        { path: 'refresh', name: 'ComponentGanttToolbarRefresh', component: () => import('@/views/gantt/toolbar/refresh/CodeExample.vue') },
+        { path: 'zoom', name: 'ComponentGanttToolbarZoom', component: () => import('@/views/gantt/toolbar/zoom/CodeExample.vue') }
+      ]
+    },
+    {
+      path: 'custom',
+      component: RouteLayout,
+      children: [
+        { path: 'toolbar', name: 'ComponentGanttCustomsToolbar', component: () => import('@/views/gantt/custom/toolbar/CodeExample.vue') },
+        { path: 'modal', name: 'ComponentGanttCustomsModal', component: () => import('@/views/gantt/custom/modal/CodeExample.vue') },
+        { path: 'drawer', name: 'ComponentGanttCustomsDrawer', component: () => import('@/views/gantt/custom/drawer/CodeExample.vue') }
       ]
     },
     {
@@ -188,6 +199,24 @@ export const ganttRouteConfig: RouteRecordRaw = {
       children: [
         { path: 'barStyle', name: 'ComponentGantScrollbarBarStyle', component: () => import('@/views/gantt/scrollbar/barStyle/CodeExample.vue') },
         { path: 'barPos', name: 'ComponentGantScrollbarBarPos', component: () => import('@/views/gantt/scrollbar/barPos/CodeExample.vue') }
+      ]
+    },
+    {
+      path: 'template',
+      component: RouteLayout,
+      children: [
+        { path: 'layout', name: 'ComponentGantTemplateLayout', component: () => import('@/views/gantt/template/layout/CodeExample.vue') },
+        { path: 'taskBar', name: 'ComponentGantTemplateTaskBar', component: () => import('@/views/gantt/template/taskBar/CodeExample.vue') },
+        { path: 'form', name: 'ComponentGantTemplateForm', component: () => import('@/views/gantt/template/form/CodeExample.vue') },
+        { path: 'pager', name: 'ComponentGantTemplatePager', component: () => import('@/views/gantt/template/pager/CodeExample.vue') },
+        { path: 'default', name: 'ComponentGantTemplateDefault', component: () => import('@/views/gantt/template/default/CodeExample.vue') },
+        { path: 'header', name: 'ComponentGantTemplateHeader', component: () => import('@/views/gantt/template/header/CodeExample.vue') },
+        { path: 'footer', name: 'ComponentGantTemplateFooter', component: () => import('@/views/gantt/template/footer/CodeExample.vue') },
+        { path: 'radio', name: 'ComponentGantTemplateRadio', component: () => import('@/views/gantt/template/radio/CodeExample.vue') },
+        { path: 'checkbox', name: 'ComponentGantTemplateCheckbox', component: () => import('@/views/gantt/template/checkbox/CodeExample.vue') },
+        { path: 'filter', name: 'ComponentGantTemplateFilter', component: () => import('@/views/gantt/template/filter/CodeExample.vue') },
+        { path: 'edit', name: 'ComponentGantTemplateEdit', component: () => import('@/views/gantt/template/edit/CodeExample.vue') },
+        { path: 'valid', name: 'ComponentGantTemplateValid', component: () => import('@/views/gantt/template/valid/CodeExample.vue') }
       ]
     }
   ]

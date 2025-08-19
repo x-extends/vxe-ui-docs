@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import type { VxeGanttProps, VxeGanttListeners } from 'vxe-gantt'
+import type { VxeGanttProps } from 'vxe-gantt'
 
 interface RowVO {
   id: number
