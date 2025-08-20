@@ -97,7 +97,8 @@ export const ganttRouteConfig: RouteRecordRaw = {
       component: RouteLayout,
       children: [
         { path: 'base', name: 'ComponentGanttRowResizableBase', component: () => import('@/views/gantt/rowResizable/base/CodeExample.vue') },
-        { path: 'fixed', name: 'ComponentGanttRowResizableFixed', component: () => import('@/views/gantt/rowResizable/fixed/CodeExample.vue') }
+        { path: 'fixed', name: 'ComponentGanttRowResizableFixed', component: () => import('@/views/gantt/rowResizable/fixed/CodeExample.vue') },
+        { path: 'allRowDrag', name: 'ComponentGanttRowResizableAllRowDrag', component: () => import('@/views/gantt/rowResizable/allRowDrag/CodeExample.vue') }
       ]
     },
     {
