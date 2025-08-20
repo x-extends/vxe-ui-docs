@@ -89,6 +89,7 @@ export const ganttRouteConfig: RouteRecordRaw = {
       component: RouteLayout,
       children: [
         { path: 'tableCell', name: 'ComponentGanttEditTableCell', component: () => import('@/views/gantt/edit/tableCell/CodeExample.vue') },
+        { path: 'tableRow', name: 'ComponentGanttEditTableRow', component: () => import('@/views/gantt/edit/tableRow/CodeExample.vue') },
         { path: 'taskBar', name: 'ComponentGanttEditTaskBar', component: () => import('@/views/gantt/edit/taskBar/CodeExample.vue') }
       ]
     },

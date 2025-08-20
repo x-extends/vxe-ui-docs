@@ -86,7 +86,7 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     }
   },
   editConfig: {
-    mode: 'cell',
+    mode: 'row',
     trigger: 'click'
   },
   editRules: {

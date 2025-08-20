@@ -78,6 +78,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       title: '可编辑',
       children: [
         { title: '编辑表格单元格', routerLink: { name: 'ComponentGanttEditTableCell' } },
+        { title: '编辑表格行', routerLink: { name: 'ComponentGanttEditTableRow' } },
         { title: '编辑任务条', routerLink: { name: 'ComponentGanttEditTaskBar' } }
       ]
     },

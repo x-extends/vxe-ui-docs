@@ -90,7 +90,7 @@ export default Vue.extend({
         }
       },
       editConfig: {
-        mode: 'cell',
+        mode: 'row',
         trigger: 'click'
       },
       editRules: {
