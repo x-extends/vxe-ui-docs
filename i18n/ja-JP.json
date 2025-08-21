@@ -4,6 +4,8 @@
       "stableVersion": "安定したバージョン",
       "latestVersion": "新しいバージョンをお試しください",
       "enterpriseVersion": "エンタープライズエディション",
+      "pluginStableVersion": "插件版本",
+      "releaseTitle": "更新日志",
       "pluginVersion": "プラグイン",
       "templateVersion": "テンプレート",
       "docsSearch": "ドキュメント検索",

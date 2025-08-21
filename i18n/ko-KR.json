@@ -4,6 +4,8 @@
       "stableVersion": "안정적인 버전",
       "latestVersion": "새 버전을 시도하십시오",
       "enterpriseVersion": "엔터프라이즈 에디션",
+      "pluginStableVersion": "插件版本",
+      "releaseTitle": "更新日志",
       "pluginVersion": "플러그인",
       "templateVersion": "주형",
       "docsSearch": "문서 검색",

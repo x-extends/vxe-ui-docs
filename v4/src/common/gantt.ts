@@ -138,6 +138,13 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '自定义序号', routerLink: { name: 'ComponentGanttPagerStart' } }
       ]
     },
+    // {
+    //   title: '日期轴',
+    //   children: [
+    //     { title: '自定义日期轴', routerLink: { name: 'ComponentGanttScalesDefault' } },
+    //     { title: '星期-天', routerLink: { name: 'ComponentGanttScalesDayDate' } }
+    //   ]
+    // },
     {
       title: '依赖关系',
       children: [

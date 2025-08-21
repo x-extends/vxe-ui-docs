@@ -4,6 +4,8 @@
       "stableVersion": "Versão estável",
       "latestVersion": "Experimente a nova versão",
       "enterpriseVersion": "Enterprise Edition",
+      "pluginStableVersion": "插件版本",
+      "releaseTitle": "更新日志",
       "pluginVersion": "Plugin",
       "templateVersion": "modelo",
       "docsSearch": "Pesquisa de documentos",

@@ -4,6 +4,8 @@
       "stableVersion": "Стабільна версія",
       "latestVersion": "Спробуйте нову версію",
       "enterpriseVersion": "Enterprise Edition",
+      "pluginStableVersion": "插件版本",
+      "releaseTitle": "更新日志",
       "pluginVersion": "Плагін",
       "templateVersion": "шаблон",
       "docsSearch": "Пошук документів",

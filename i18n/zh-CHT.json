@@ -4,6 +4,8 @@
       "stableVersion": "穩定版",
       "latestVersion": "嚐鮮版",
       "enterpriseVersion": "企業版",
+      "pluginStableVersion": "插件版本",
+      "releaseTitle": "更新日志",
       "pluginVersion": "插件",
       "templateVersion": "模板",
       "docsSearch": "文檔搜索",

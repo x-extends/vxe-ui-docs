@@ -950,6 +950,11 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/tag/status/CodeExample.vue')
           },
           {
+            path: 'round',
+            name: 'ComponentTagRound',
+            component: () => import('@/views/tag/round/CodeExample.vue')
+          },
+          {
             path: 'icon',
             name: 'ComponentTagIcon',
             component: () => import('@/views/tag/icon/CodeExample.vue')

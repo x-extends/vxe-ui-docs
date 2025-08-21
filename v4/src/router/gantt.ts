@@ -181,6 +181,14 @@ export const ganttRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'scales',
+      component: RouteLayout,
+      children: [
+        { path: 'default', name: 'ComponentGanttScalesDefault', component: () => import('@/views/gantt/scales/default/CodeExample.vue') },
+        { path: 'dayDate', name: 'ComponentGanttScalesDayDate', component: () => import('@/views/gantt/scales/dayDate/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'proxy',
       component: RouteLayout,
       children: [

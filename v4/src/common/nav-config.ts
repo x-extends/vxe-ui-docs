@@ -107,7 +107,8 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tag' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentTagSize' } },
           { title: '状态', routerLink: { name: 'ComponentTagStatus' } },
-          { title: '图标', routerLink: { name: 'ComponentTagIcon' } }
+          { title: '图标', routerLink: { name: 'ComponentTagIcon' } },
+          { title: '圆角', routerLink: { name: 'ComponentTagRound' } }
         ]
       },
       {

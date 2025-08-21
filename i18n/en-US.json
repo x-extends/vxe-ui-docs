@@ -4,6 +4,8 @@
       "stableVersion": "Stable",
       "latestVersion": "Latest",
       "enterpriseVersion": "Enterprise Edition",
+      "pluginStableVersion": "Plugin version",
+      "releaseTitle": "Release log",
       "pluginVersion": "plug-in",
       "templateVersion": "template",
       "docsSearch": "Document search",
