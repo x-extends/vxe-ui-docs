@@ -78,6 +78,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       title: '可编辑',
       children: [
         { title: '编辑表格单元格', routerLink: { name: 'ComponentGanttEditTableCell' } },
+        { title: '编辑表格行', routerLink: { name: 'ComponentGanttEditTableRow' } },
         { title: '编辑任务条', routerLink: { name: 'ComponentGanttEditTaskBar' } }
       ]
     },
@@ -135,6 +136,18 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '实现前端分页', routerLink: { name: 'ComponentGanttPagerMockPage' } },
         { title: '自定义布局', routerLink: { name: 'ComponentGanttPagerLayouts' } },
         { title: '自定义序号', routerLink: { name: 'ComponentGanttPagerStart' } }
+      ]
+    },
+    {
+      title: '日期轴',
+      children: [
+        { title: '自定义日期轴', routerLink: { name: 'ComponentGanttScalesDefault' } },
+        { title: '年-月-日', routerLink: { name: 'ComponentGanttScalesYearMonthDate' } },
+        { title: '季-月-日', routerLink: { name: 'ComponentGanttScalesQuarterMonthDate' } },
+        { title: '月-日', routerLink: { name: 'ComponentGanttScalesMonthDate' } },
+        { title: '天-小时', routerLink: { name: 'ComponentGanttScalesDateHour' } },
+        { title: '小时-分钟', routerLink: { name: 'ComponentGanttScalesHourMinute' } },
+        { title: '分钟-秒', routerLink: { name: 'ComponentGanttScalesMinuteSecond' } }
       ]
     },
     {

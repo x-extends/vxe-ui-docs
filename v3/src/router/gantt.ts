@@ -89,6 +89,7 @@ export const ganttRouteConfig: RouteConfig = {
       component: RouteLayout,
       children: [
         { path: 'tableCell', name: 'ComponentGanttEditTableCell', component: () => import('@/views/gantt/edit/tableCell/CodeExample.vue') },
+        { path: 'tableRow', name: 'ComponentGanttEditTableRow', component: () => import('@/views/gantt/edit/tableRow/CodeExample.vue') },
         { path: 'taskBar', name: 'ComponentGanttEditTaskBar', component: () => import('@/views/gantt/edit/taskBar/CodeExample.vue') }
       ]
     },
@@ -177,6 +178,19 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'mockPage', name: 'ComponentGanttPagerMockPage', component: () => import('@/views/gantt/pager/mockPage/CodeExample.vue') },
         { path: 'layouts', name: 'ComponentGanttPagerLayouts', component: () => import('@/views/gantt/pager/layouts/CodeExample.vue') },
         { path: 'start', name: 'ComponentGanttPagerStart', component: () => import('@/views/gantt/pager/start/CodeExample.vue') }
+      ]
+    },
+    {
+      path: 'scales',
+      component: RouteLayout,
+      children: [
+        { path: 'default', name: 'ComponentGanttScalesDefault', component: () => import('@/views/gantt/scales/default/CodeExample.vue') },
+        { path: 'yearMonthDate', name: 'ComponentGanttScalesYearMonthDate', component: () => import('@/views/gantt/scales/yearMonthDate/CodeExample.vue') },
+        { path: 'quarterMonthDate', name: 'ComponentGanttScalesQuarterMonthDate', component: () => import('@/views/gantt/scales/quarterMonthDate/CodeExample.vue') },
+        { path: 'monthDate', name: 'ComponentGanttScalesMonthDate', component: () => import('@/views/gantt/scales/monthDate/CodeExample.vue') },
+        { path: 'dateHour', name: 'ComponentGanttScalesDateHour', component: () => import('@/views/gantt/scales/dateHour/CodeExample.vue') },
+        { path: 'hourMinute', name: 'ComponentGanttScalesHourMinute', component: () => import('@/views/gantt/scales/hourMinute/CodeExample.vue') },
+        { path: 'minuteSecond', name: 'ComponentGanttScalesMinuteSecond', component: () => import('@/views/gantt/scales/minuteSecond/CodeExample.vue') }
       ]
     },
     {
