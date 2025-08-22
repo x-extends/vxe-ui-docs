@@ -52,7 +52,9 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       title: '单选框',
       children: [
         { title: '高亮选择行', routerLink: { name: 'ComponentGanttRadioHighlight' } },
-        { title: '禁用', routerLink: { name: 'ComponentGanttRadioCheckMethod' } }
+        { title: '禁用', routerLink: { name: 'ComponentGanttRadioCheckMethod' } },
+        { title: '显示隐藏', routerLink: { name: 'ComponentGanttRadioTrigger' } },
+        { title: '触发方式', routerLink: { name: 'ComponentGanttRadioVisibleMethod' } }
       ]
     },
     {
@@ -60,7 +62,13 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       children: [
         { title: '高亮选择行', routerLink: { name: 'ComponentGanttCheckboxHighlight' } },
         { title: '绑定字段', routerLink: { name: 'ComponentGanttCheckboxField' } },
-        { title: '禁用', routerLink: { name: 'ComponentGanttCheckboxCheckMethod' } }
+        { title: '禁用', routerLink: { name: 'ComponentGanttCheckboxCheckMethod' } },
+        { title: '显示隐藏', routerLink: { name: 'ComponentGanttCheckboxVisibleMethod' } },
+        { title: '触发方式', routerLink: { name: 'ComponentGanttCheckboxTrigger' } },
+        { title: '分页保留选中状态', routerLink: { name: 'ComponentGanttCheckboxReserve' } },
+        { title: '分页显示保留选中状态', routerLink: { name: 'ComponentGanttCheckboxShowReserveStatus' } },
+        { title: '鼠标滑动范围选择', routerLink: { name: 'ComponentGanttCheckboxRange' } },
+        { title: '按键批量范围选择', routerLink: { name: 'ComponentGanttCheckboxBatch' } }
       ]
     },
     {
