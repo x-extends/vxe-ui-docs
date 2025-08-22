@@ -8,7 +8,7 @@
           </div>
           <div>
             <div>{{ row.title }}</div>
-            <div>已完成：{{ row.progress }}</div>
+            <div>已完成：{{ row.progress }}%</div>
           </div>
         </div>
       </template>
