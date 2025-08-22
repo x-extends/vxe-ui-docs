@@ -100,6 +100,8 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       title: '行拖拽',
       children: [
         { title: '拖拽调整行顺序', routerLink: { name: 'ComponentGanttRowDragSort' } },
+        { title: '冻结列', routerLink: { name: 'ComponentGanttRowDragFixed' } },
+        { title: '自定义图标', routerLink: { name: 'ComponentGanttRowDragIcon' } },
         {
           title: '子任务',
           children: [
@@ -109,7 +111,9 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
             { title: '自己拖拽给自己子级', routerLink: { name: 'ComponentGanttRowDragTreeSelfToChildDrag' } },
             { title: '拖拽成子级', routerLink: { name: 'ComponentGanttRowDragTreeToChildDrag' } }
           ]
-        }
+        },
+        { title: '拖拽拦截', routerLink: { name: 'ComponentGanttRowDragDragMethod' } },
+        { title: '手动移动', routerLink: { name: 'ComponentGanttRowDragManual' } }
       ]
     },
     {

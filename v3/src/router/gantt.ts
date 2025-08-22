@@ -113,42 +113,22 @@ export const ganttRouteConfig: RouteConfig = {
       path: 'rowDrag',
       component: RouteLayout,
       children: [
-        {
-          path: 'sort',
-          name: 'ComponentGanttRowDragSort',
-          component: () => import('@/views/gantt/rowDrag/sort/CodeExample.vue')
-        },
+        { path: 'sort', name: 'ComponentGanttRowDragSort', component: () => import('@/views/gantt/rowDrag/sort/CodeExample.vue') },
+        { path: 'fixed', name: 'ComponentGanttRowDragFixed', component: () => import('@/views/gantt/rowDrag/fixed/CodeExample.vue') },
+        { path: 'icon', name: 'ComponentGanttRowDragIcon', component: () => import('@/views/gantt/rowDrag/icon/CodeExample.vue') },
         {
           path: 'tree',
           component: RouteLayout,
           children: [
-            {
-              path: 'base',
-              name: 'ComponentGanttRowDragTreeBase',
-              component: () => import('@/views/gantt/rowDrag/tree/base/CodeExample.vue')
-            },
-            {
-              path: 'peerDrag',
-              name: 'ComponentGanttRowDragTreePeerDrag',
-              component: () => import('@/views/gantt/rowDrag/tree/peerDrag/CodeExample.vue')
-            },
-            {
-              path: 'cossDrag',
-              name: 'ComponentGanttRowDragTreeCossDrag',
-              component: () => import('@/views/gantt/rowDrag/tree/cossDrag/CodeExample.vue')
-            },
-            {
-              path: 'selfToChildDrag',
-              name: 'ComponentGanttRowDragTreeSelfToChildDrag',
-              component: () => import('@/views/gantt/rowDrag/tree/selfToChildDrag/CodeExample.vue')
-            },
-            {
-              path: 'toChildDrag',
-              name: 'ComponentGanttRowDragTreeToChildDrag',
-              component: () => import('@/views/gantt/rowDrag/tree/toChildDrag/CodeExample.vue')
-            }
+            { path: 'base', name: 'ComponentGanttRowDragTreeBase', component: () => import('@/views/gantt/rowDrag/tree/base/CodeExample.vue') },
+            { path: 'peerDrag', name: 'ComponentGanttRowDragTreePeerDrag', component: () => import('@/views/gantt/rowDrag/tree/peerDrag/CodeExample.vue') },
+            { path: 'cossDrag', name: 'ComponentGanttRowDragTreeCossDrag', component: () => import('@/views/gantt/rowDrag/tree/cossDrag/CodeExample.vue') },
+            { path: 'selfToChildDrag', name: 'ComponentGanttRowDragTreeSelfToChildDrag', component: () => import('@/views/gantt/rowDrag/tree/selfToChildDrag/CodeExample.vue') },
+            { path: 'toChildDrag', name: 'ComponentGanttRowDragTreeToChildDrag', component: () => import('@/views/gantt/rowDrag/tree/toChildDrag/CodeExample.vue') }
           ]
-        }
+        },
+        { path: 'dragMethod', name: 'ComponentGanttRowDragDragMethod', component: () => import('@/views/gantt/rowDrag/dragMethod/CodeExample.vue') },
+        { path: 'manual', name: 'ComponentGanttRowDragManual', component: () => import('@/views/gantt/rowDrag/manual/CodeExample.vue') }
       ]
     },
     {
