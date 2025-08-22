@@ -10,10 +10,9 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '尺寸大小', routerLink: { name: 'ComponentGanttBaseSize' } },
         { title: '自定义字段', routerLink: { name: 'ComponentGanttBaseField' } },
         { title: '数据格式', routerLink: { name: 'ComponentGanttBaseData' } },
+        { title: '表格宽度', routerLink: { name: 'ComponentGanttBaseTableWidth' } },
         { title: '边框', routerLink: { name: 'ComponentGanttBaseBorder' } },
         { title: '斑马线样式', routerLink: { name: 'ComponentGanttBaseStripe' } },
-        { title: '显示进度', routerLink: { name: 'ComponentGanttBaseShowProgress' } },
-        { title: '显示内容', routerLink: { name: 'ComponentGanttBaseShowContent' } },
         { title: '冻结列', routerLink: { name: 'ComponentGanttBaseFixed' } },
         { title: '分组表头', routerLink: { name: 'ComponentGanttBaseGroup' } },
         { title: '加载中', routerLink: { name: 'ComponentGanttBaseLoading' } },
@@ -21,11 +20,18 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
-      title: '样式',
+      title: '任务条',
       children: [
-        { title: '表格宽度', routerLink: { name: 'ComponentGanttStyleTableWidth' } },
-        { title: '颜色', routerLink: { name: 'ComponentGanttStyleBarColor' } },
-        { title: '圆角', routerLink: { name: 'ComponentGanttStyleRound' } }
+        { title: '显示进度', routerLink: { name: 'ComponentGanttTaskBarShowProgress' } },
+        { title: '显示标题', routerLink: { name: 'ComponentGanttTaskBarShowContent' } },
+        { title: '圆角', routerLink: { name: 'ComponentGanttTaskBarRound' } },
+        { title: '颜色', routerLink: { name: 'ComponentGanttTaskBarBarColor' } },
+        {
+          title: '自定义插槽模板',
+          children: [
+            { title: '自定义任务条内容', routerLink: { name: 'ComponentGanttTaskBarTemplateTaskBar' } }
+          ]
+        }
       ]
     },
     {
@@ -147,7 +153,14 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '月-日', routerLink: { name: 'ComponentGanttScalesMonthDate' } },
         { title: '天-小时', routerLink: { name: 'ComponentGanttScalesDateHour' } },
         { title: '小时-分钟', routerLink: { name: 'ComponentGanttScalesHourMinute' } },
-        { title: '分钟-秒', routerLink: { name: 'ComponentGanttScalesMinuteSecond' } }
+        { title: '分钟-秒', routerLink: { name: 'ComponentGanttScalesMinuteSecond' } },
+        { title: '自定义标题', routerLink: { name: 'ComponentGanttScalesTitleMethod' } },
+        {
+          title: '自定义插槽模板',
+          children: [
+            { title: '自定义标题模板', routerLink: { name: 'ComponentGanttScalesTemplateTitle' } }
+          ]
+        }
       ]
     },
     {
@@ -193,6 +206,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '自定义表尾模板', routerLink: { name: 'ComponentGantTemplateFooter' } },
         { title: '自定义分页模板', routerLink: { name: 'ComponentGantTemplatePager' } },
         { title: '自定义任务条模板', routerLink: { name: 'ComponentGantTemplateTaskBar' } },
+        { title: '自定义任务视图标题模板', routerLink: { name: 'ComponentGantTemplateTaskCellTitle' } },
         { title: '自定义复选框模板', routerLink: { name: 'ComponentGantTemplateCheckbox' } },
         { title: '自定义单选框模板', routerLink: { name: 'ComponentGantTemplateRadio' } },
         { title: '自定义筛选模板', routerLink: { name: 'ComponentGantTemplateFilter' } },

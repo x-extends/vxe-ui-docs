@@ -13,10 +13,9 @@ export const ganttRouteConfig: RouteRecordRaw = {
         { path: 'size', name: 'ComponentGanttBaseSize', component: () => import('@/views/gantt/base/size/CodeExample.vue') },
         { path: 'field', name: 'ComponentGanttBaseField', component: () => import('@/views/gantt/base/field/CodeExample.vue') },
         { path: 'data', name: 'ComponentGanttBaseData', component: () => import('@/views/gantt/base/data/CodeExample.vue') },
+        { path: 'tableWidth', name: 'ComponentGanttBaseTableWidth', component: () => import('@/views/gantt/base/tableWidth/CodeExample.vue') },
         { path: 'border', name: 'ComponentGanttBaseBorder', component: () => import('@/views/gantt/base/border/CodeExample.vue') },
         { path: 'stripe', name: 'ComponentGanttBaseStripe', component: () => import('@/views/gantt/base/stripe/CodeExample.vue') },
-        { path: 'showProgress', name: 'ComponentGanttBaseShowProgress', component: () => import('@/views/gantt/base/showProgress/CodeExample.vue') },
-        { path: 'showContent', name: 'ComponentGanttBaseShowContent', component: () => import('@/views/gantt/base/showContent/CodeExample.vue') },
         { path: 'fixed', name: 'ComponentGanttBaseFixed', component: () => import('@/views/gantt/base/fixed/CodeExample.vue') },
         { path: 'group', name: 'ComponentGanttBaseGroup', component: () => import('@/views/gantt/base/group/CodeExample.vue') },
         { path: 'loading', name: 'ComponentGanttBaseLoading', component: () => import('@/views/gantt/base/loading/CodeExample.vue') },
@@ -24,12 +23,20 @@ export const ganttRouteConfig: RouteRecordRaw = {
       ]
     },
     {
-      path: 'style',
+      path: 'taskBar',
       component: RouteLayout,
       children: [
-        { path: 'tableWidth', name: 'ComponentGanttStyleTableWidth', component: () => import('@/views/gantt/style/tableWidth/CodeExample.vue') },
-        { path: 'barColor', name: 'ComponentGanttStyleBarColor', component: () => import('@/views/gantt/style/barColor/CodeExample.vue') },
-        { path: 'round', name: 'ComponentGanttStyleRound', component: () => import('@/views/gantt/style/round/CodeExample.vue') }
+        { path: 'showProgress', name: 'ComponentGanttTaskBarShowProgress', component: () => import('@/views/gantt/taskBar/showProgress/CodeExample.vue') },
+        { path: 'showContent', name: 'ComponentGanttTaskBarShowContent', component: () => import('@/views/gantt/taskBar/showContent/CodeExample.vue') },
+        { path: 'barColor', name: 'ComponentGanttTaskBarBarColor', component: () => import('@/views/gantt/taskBar/barColor/CodeExample.vue') },
+        { path: 'round', name: 'ComponentGanttTaskBarRound', component: () => import('@/views/gantt/taskBar/round/CodeExample.vue') },
+        {
+          path: 'template',
+          component: RouteLayout,
+          children: [
+            { path: 'taskBar', name: 'ComponentGanttTaskBarTemplateTaskBar', component: () => import('@/views/gantt/taskBar/template/taskBar/CodeExample.vue') }
+          ]
+        }
       ]
     },
     {
@@ -190,7 +197,15 @@ export const ganttRouteConfig: RouteRecordRaw = {
         { path: 'monthDate', name: 'ComponentGanttScalesMonthDate', component: () => import('@/views/gantt/scales/monthDate/CodeExample.vue') },
         { path: 'dateHour', name: 'ComponentGanttScalesDateHour', component: () => import('@/views/gantt/scales/dateHour/CodeExample.vue') },
         { path: 'hourMinute', name: 'ComponentGanttScalesHourMinute', component: () => import('@/views/gantt/scales/hourMinute/CodeExample.vue') },
-        { path: 'minuteSecond', name: 'ComponentGanttScalesMinuteSecond', component: () => import('@/views/gantt/scales/minuteSecond/CodeExample.vue') }
+        { path: 'minuteSecond', name: 'ComponentGanttScalesMinuteSecond', component: () => import('@/views/gantt/scales/minuteSecond/CodeExample.vue') },
+        { path: 'titleMethod', name: 'ComponentGanttScalesTitleMethod', component: () => import('@/views/gantt/scales/titleMethod/CodeExample.vue') },
+        {
+          path: 'template',
+          component: RouteLayout,
+          children: [
+            { path: 'title', name: 'ComponentGanttScalesTemplateTitle', component: () => import('@/views/gantt/scales/template/title/CodeExample.vue') }
+          ]
+        }
       ]
     },
     {
@@ -222,6 +237,7 @@ export const ganttRouteConfig: RouteRecordRaw = {
       children: [
         { path: 'layout', name: 'ComponentGantTemplateLayout', component: () => import('@/views/gantt/template/layout/CodeExample.vue') },
         { path: 'taskBar', name: 'ComponentGantTemplateTaskBar', component: () => import('@/views/gantt/template/taskBar/CodeExample.vue') },
+        { path: 'taskCellTitle', name: 'ComponentGantTemplateTaskCellTitle', component: () => import('@/views/gantt/template/taskCellTitle/CodeExample.vue') },
         { path: 'form', name: 'ComponentGantTemplateForm', component: () => import('@/views/gantt/template/form/CodeExample.vue') },
         { path: 'pager', name: 'ComponentGantTemplatePager', component: () => import('@/views/gantt/template/pager/CodeExample.vue') },
         { path: 'default', name: 'ComponentGantTemplateDefault', component: () => import('@/views/gantt/template/default/CodeExample.vue') },
