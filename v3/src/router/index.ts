@@ -1193,6 +1193,11 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/split/basics/vertical/CodeExample.vue')
               },
               {
+                path: 'resize',
+                name: 'ComponentSplitBasicsResize',
+                component: () => import('@/views/split/basics/resize/CodeExample.vue')
+              },
+              {
                 path: 'action',
                 name: 'ComponentSplitBasicsAction',
                 component: () => import('@/views/split/basics/action/CodeExample.vue')
@@ -1232,6 +1237,11 @@ const routes: Array<RouteConfig> = [
                 path: 'vertical',
                 name: 'ComponentSplitConfigVertical',
                 component: () => import('@/views/split/config/vertical/CodeExample.vue')
+              },
+              {
+                path: 'resize',
+                name: 'ComponentSplitConfigResize',
+                component: () => import('@/views/split/config/resize/CodeExample.vue')
               },
               {
                 path: 'action',

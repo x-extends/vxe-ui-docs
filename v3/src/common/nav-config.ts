@@ -237,6 +237,7 @@ export const navConfigList: NavVO[] = [
               { title: '边框', routerLink: { name: 'ComponentSplitBasicsBorder' } },
               { title: '边距', routerLink: { name: 'ComponentSplitBasicsPadding' } },
               { title: '垂直布局', routerLink: { name: 'ComponentSplitBasicsVertical' } },
+              { title: '拖拽调整宽度', routerLink: { name: 'ComponentSplitBasicsResize' } },
               { title: '折叠按钮', routerLink: { name: 'ComponentSplitBasicsAction' } },
               { title: '组合布局', routerLink: { name: 'ComponentSplitBasicsLayout' } }
             ]
@@ -249,6 +250,7 @@ export const navConfigList: NavVO[] = [
               { title: '边框', routerLink: { name: 'ComponentSplitConfigBorder' } },
               { title: '边距', routerLink: { name: 'ComponentSplitConfigPadding' } },
               { title: '垂直布局', routerLink: { name: 'ComponentSplitConfigVertical' } },
+              { title: '拖拽调整宽度', routerLink: { name: 'ComponentSplitConfigResize' } },
               { title: '折叠按钮', routerLink: { name: 'ComponentSplitConfigAction' } },
               { title: '组合布局', routerLink: { name: 'ComponentSplitConfigLayout' } }
             ]
