@@ -1235,6 +1235,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/split/basics/action/CodeExample.vue')
               },
               {
+                path: 'actionConfig',
+                name: 'ComponentSplitBasicsActionConfig',
+                component: () => import('@/views/split/basics/actionConfig/CodeExample.vue')
+              },
+              {
                 path: 'layout',
                 name: 'ComponentSplitBasicsLayout',
                 component: () => import('@/views/split/basics/layout/CodeExample.vue')
@@ -1279,6 +1284,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'action',
                 name: 'ComponentSplitConfigAction',
                 component: () => import('@/views/split/config/action/CodeExample.vue')
+              },
+              {
+                path: 'actionConfig',
+                name: 'ComponentSplitConfigActionConfig',
+                component: () => import('@/views/split/config/actionConfig/CodeExample.vue')
               },
               {
                 path: 'layout',
