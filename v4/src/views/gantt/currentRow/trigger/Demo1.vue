@@ -81,6 +81,24 @@ const ganttEvents: VxeGanttListeners<RowVO> = {
       }
       ganttOptions.loading = false
     }, 300)
+  },
+  taskCellClick ({ row }) {
+    // 异步判断是否选中
+    ganttOptions.loading = true
+    setTimeout(() => {
+      if (row.progress > 30) {
+        const $gantt = ganttRef.value
+        if ($gantt) {
+          $gantt.setCurrentRow(row)
+        }
+      } else {
+        VxeUI.modal.message({
+          content: '禁止选中',
+          status: 'error'
+        })
+      }
+      ganttOptions.loading = false
+    }, 300)
   }
 }
 </script>

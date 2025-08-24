@@ -3,7 +3,8 @@
     <vxe-gantt
       ref="ganttRef"
       v-bind="ganttOptions"
-      @cell-click="cellClickEvent">
+      @cell-click="cellClickEvent"
+      @task-cell-click="taskCellClickEvent">
     </vxe-gantt>
   </div>
 </template>
@@ -73,6 +74,24 @@ export default Vue.extend({
   },
   methods: {
     cellClickEvent ({ row }) {
+      // 异步判断是否选中
+      this.ganttOptions.loading = true
+      setTimeout(() => {
+        if (row.progress > 30) {
+          const $gantt = this.$refs.ganttRef as VxeGanttInstance<RowVO>
+          if ($gantt) {
+            $gantt.setCurrentRow(row)
+          }
+        } else {
+          VxeUI.modal.message({
+            content: '禁止选中',
+            status: 'error'
+          })
+        }
+        this.ganttOptions.loading = false
+      }, 300)
+    },
+    taskCellClickEvent ({ row }) {
       // 异步判断是否选中
       this.ganttOptions.loading = true
       setTimeout(() => {
