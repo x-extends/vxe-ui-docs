@@ -125,6 +125,14 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
+      title: '行分组',
+      children: [
+        { title: '行分组', routerLink: { name: 'ComponentGanttRowGroupBasic' } },
+        { title: '按多字段分组', routerLink: { name: 'ComponentGanttRowGroupGroupFields' } },
+        { title: '手动操作', routerLink: { name: 'ComponentGanttRowGroupHandleSet' } }
+      ]
+    },
+    {
       title: '查询表单',
       children: [
         { title: '查询表单', routerLink: { name: 'ComponentGanttFormSearch' } },

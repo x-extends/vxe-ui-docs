@@ -140,6 +140,15 @@ export const ganttRouteConfig: RouteConfig = {
       ]
     },
     {
+      path: 'rowGroup',
+      component: RouteLayout,
+      children: [
+        { path: 'basic', name: 'ComponentGanttRowGroupBasic', component: () => import('@/views/gantt/rowGroup/basic/CodeExample.vue') },
+        { path: 'groupFields', name: 'ComponentGanttRowGroupGroupFields', component: () => import('@/views/gantt/rowGroup/groupFields/CodeExample.vue') },
+        { path: 'handleSet', name: 'ComponentGanttRowGroupHandleSet', component: () => import('@/views/gantt/rowGroup/handleSet/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'form',
       component: RouteLayout,
       children: [
