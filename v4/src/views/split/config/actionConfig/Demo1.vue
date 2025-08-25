@@ -1,16 +1,21 @@
 <template>
   <div>
-    <vxe-radio-group v-model="splitOptions.actionConfig.direction">
-      <vxe-radio-button label="prev" content="向左"></vxe-radio-button>
-      <vxe-radio-button label="next" content="向右"></vxe-radio-button>
-    </vxe-radio-group>
+    <vxe-switch v-model="actionConfig.showPrevButton"></vxe-switch>
+    <vxe-switch v-model="actionConfig.showNextButton"></vxe-switch>
 
-    <vxe-split v-bind="splitOptions">
+    <vxe-split v-bind="splitOptions1">
       <template #leftContent>
         <div style="height: 100%;background-color: #f3e1e1;">左侧</div>
       </template>
       <template #rightContent>
-        <div style="height: 600px;background-color: #d8d8f9;">右侧</div>
+        <vxe-split v-bind="splitOptions2">
+          <template #topContent>
+            <div style="height: 100%;background-color: #e1f3e5;">右上角</div>
+          </template>
+          <template #bottomContent>
+            <div style="height: 600px;background-color: #d8d8f9;">右下角</div>
+          </template>
+        </vxe-split>
       </template>
     </vxe-split>
   </div>
@@ -20,15 +25,28 @@
 import { reactive } from 'vue'
 import { VxeSplitProps, VxeSplitPropTypes } from 'vxe-pc-ui'
 
-const splitOptions = reactive<VxeSplitProps & { actionConfig: VxeSplitPropTypes.ActionConfig }>({
+const actionConfig = reactive<VxeSplitPropTypes.ActionConfig>({
+  showPrevButton: true,
+  showNextButton: true
+})
+
+const splitOptions1 = reactive<VxeSplitProps>({
   height: 300,
   border: true,
-  actionConfig: {
-    direction: 'next'
-  },
+  actionConfig,
   items: [
-    { showAction: true, width: 100, slots: { default: 'leftContent' } },
-    { showAction: true, slots: { default: 'rightContent' } }
+    { width: 100, slots: { default: 'leftContent' } },
+    { slots: { default: 'rightContent' } }
+  ]
+})
+
+const splitOptions2 = reactive<VxeSplitProps>({
+  border: true,
+  vertical: true,
+  actionConfig,
+  items: [
+    { height: 100, slots: { default: 'topContent' } },
+    { slots: { default: 'bottomContent' } }
   ]
 })
 </script>

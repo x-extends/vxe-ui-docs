@@ -19,9 +19,13 @@ const splitOptions = reactive<VxeSplitProps>({
   height: 300,
   border: true,
   vertical: true,
+  actionConfig: {
+    showPrevButton: true,
+    showNextButton: true
+  },
   items: [
     { width: 100, slots: { default: 'topContent' } },
-    { showAction: true, slots: { default: 'bottomContent' } }
+    { slots: { default: 'bottomContent' } }
   ]
 })
 </script>

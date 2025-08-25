@@ -1,16 +1,21 @@
 <template>
   <div>
-    <vxe-radio-group v-model="actionConfig.direction">
-      <vxe-radio-button label="prev" content="向左"></vxe-radio-button>
-      <vxe-radio-button label="next" content="向右"></vxe-radio-button>
-    </vxe-radio-group>
+    <vxe-switch v-model="actionConfig.showPrevButton"></vxe-switch>
+    <vxe-switch v-model="actionConfig.showNextButton"></vxe-switch>
 
     <vxe-split height="300" :action-config="actionConfig" border vertical>
       <vxe-split-pane height="100">
         <div style="height: 100%;background-color: #f3e1e1;">顶部</div>
       </vxe-split-pane>
-      <vxe-split-pane show-action>
-        <div style="height: 600px;background-color: #d8d8f9;">底部</div>
+      <vxe-split-pane>
+        <vxe-split :action-config="actionConfig" border>
+          <vxe-split-pane width="100">
+            <div style="height: 100%;background-color: #e1f3e5;">左下角</div>
+          </vxe-split-pane>
+          <vxe-split-pane>
+            <div style="height: 600px;background-color: #d8d8f9;">右下角</div>
+          </vxe-split-pane>
+        </vxe-split>
       </vxe-split-pane>
     </vxe-split>
   </div>
@@ -23,7 +28,8 @@ import { VxeSplitPropTypes } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const actionConfig: VxeSplitPropTypes.ActionConfig = {
-      direction: 'next'
+      showPrevButton: true,
+      showNextButton: true
     }
 
     return {

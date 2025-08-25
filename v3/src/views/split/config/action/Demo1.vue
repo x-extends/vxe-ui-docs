@@ -20,9 +20,13 @@ export default Vue.extend({
     const splitOptions: VxeSplitProps = {
       height: 300,
       border: true,
+      actionConfig: {
+        showPrevButton: true,
+        showNextButton: true
+      },
       items: [
         { width: 100, slots: { default: 'leftContent' } },
-        { showAction: true, slots: { default: 'rightContent' } }
+        { slots: { default: 'rightContent' } }
       ]
     }
 
