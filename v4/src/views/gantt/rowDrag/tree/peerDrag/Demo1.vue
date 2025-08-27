@@ -32,8 +32,8 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
   },
   treeConfig: {
     transform: true,
-    rowField: 'code',
-    parentField: 'parentCode'
+    rowField: 'id',
+    parentField: 'parentId'
   },
   taskBarConfig: {
     showProgress: true,

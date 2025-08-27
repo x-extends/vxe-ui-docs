@@ -32,8 +32,8 @@ export default Vue.extend({
       },
       treeConfig: {
         transform: true,
-        rowField: 'code',
-        parentField: 'parentCode'
+        rowField: 'id',
+        parentField: 'parentId'
       },
       taskBarConfig: {
         showProgress: true,
