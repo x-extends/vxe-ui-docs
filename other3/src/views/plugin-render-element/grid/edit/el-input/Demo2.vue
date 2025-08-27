@@ -5,7 +5,7 @@
 
     <vxe-grid ref="gridRef" v-bind="gridOptions">
       <template #edit_name="{ row }">
-        <el-input v-model="row.name"></el-input>
+        <t-input  v-model="row.name"></t-input>
       </template>
 
       <template #edit_nickname="{ row }">

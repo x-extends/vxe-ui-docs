@@ -835,6 +835,17 @@ const routes: Array<RouteConfig> = [
     ]
   },
   {
+    path: '/plugin-render-tdesign',
+    component: PageLayout,
+    children: [
+      {
+        path: 'install',
+        name: 'PluginRenderTDesignInstall',
+        component: () => import('@/views/plugin-render-tdesign/install/CodeExample.vue')
+      }
+    ]
+  },
+  {
     path: '/plugin-render-antd',
     component: PageLayout,
     children: [

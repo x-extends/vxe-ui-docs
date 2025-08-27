@@ -63,6 +63,8 @@ import '@vxe-ui/plugin-render-wangeditor/dist/style.css'
 import VxeUIPluginValidator from '@vxe-ui/plugin-validator'
 import VxeUIPluginRenderIView from '@vxe-ui/plugin-render-iview'
 import '@vxe-ui/plugin-render-iview/dist/style.css'
+import VxeUIPluginRenderTDesign from '@vxe-ui/plugin-render-tdesign'
+import '@vxe-ui/plugin-render-tdesign/dist/style.css'
 
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
@@ -146,6 +148,7 @@ VxeUI.use(VxeUIPluginRenderWangEditor, {
 })
 VxeUI.use(VxeUIPluginValidator)
 VxeUI.use(VxeUIPluginRenderIView)
+VxeUI.use(VxeUIPluginRenderTDesign)
 
 Vue.use(VxeUIAll)
 Vue.use(VxeUITable)
