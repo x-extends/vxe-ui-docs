@@ -49,7 +49,7 @@ export default Vue.extend({
       data: []
     }
 
-    const selectValue = '2025-01-01'
+    const selectValue = XEUtils.toDateString(new Date(), 'yyyy-MM-dd')
 
     return {
       ganttOptions,

@@ -19,7 +19,7 @@ interface RowVO {
   owner: string
 }
 
-const selectValue = ref('2025-01-01')
+const selectValue = ref(XEUtils.toDateString(new Date(), 'yyyy-MM-dd'))
 
 const ganttOptions = reactive<VxeGanttProps<RowVO>>({
   border: true,

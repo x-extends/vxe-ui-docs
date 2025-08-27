@@ -198,6 +198,7 @@ export const ganttRouteConfig: RouteRecordRaw = {
         { path: 'hourMinute', name: 'ComponentGanttScalesHourMinute', component: () => import('@/views/gantt/scales/hourMinute/CodeExample.vue') },
         { path: 'minuteSecond', name: 'ComponentGanttScalesMinuteSecond', component: () => import('@/views/gantt/scales/minuteSecond/CodeExample.vue') },
         { path: 'titleMethod', name: 'ComponentGanttScalesTitleMethod', component: () => import('@/views/gantt/scales/titleMethod/CodeExample.vue') },
+        { path: 'headerCellStyle', name: 'ComponentGanttScalesHeaderCellStyle', component: () => import('@/views/gantt/scales/headerCellStyle/CodeExample.vue') },
         {
           path: 'template',
           component: RouteLayout,
