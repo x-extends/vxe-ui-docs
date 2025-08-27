@@ -2,12 +2,12 @@
   <div>
     <div style="width: 260px">
       <vxe-menu v-model="selectNav" :options="navList" @click="clickEvent">
-        <template #changePassword="{ option }">
-          <span style="color: red">{{ option.title }}</span>
+        <template #homeTitle="{ option }">
+          <span style="color: red">🔥{{ option.title }}</span>
         </template>
 
-        <template #permission="{ option }">
-          <span style="color: orange">{{ option.title }}</span>
+        <template #changePasswordTitle="{ option }">
+          <span style="color: orange">{{ option.title }}🔥</span>
         </template>
       </vxe-menu>
     </div>
@@ -20,12 +20,12 @@ import { VxeMenuPropTypes, VxeMenuEvents } from 'vxe-pc-ui'
 
 const selectNav = ref('user')
 const navList = ref<VxeMenuPropTypes.Options>([
-  { name: 'home', title: '首页', slots: { default: 'permission' } },
+  { name: 'home', title: '首页', slots: { title: 'homeTitle' } },
   {
     name: 'user',
     title: '个人中心',
     children: [
-      { name: 'changePassword', title: '修改密码', slots: { default: 'changePassword' } }
+      { name: 'changePassword', title: '修改密码', slots: { title: 'changePasswordTitle' } }
     ]
   },
   {

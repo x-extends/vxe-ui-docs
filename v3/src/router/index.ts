@@ -768,8 +768,12 @@ const routes: Array<RouteConfig> = [
           },
           {
             path: 'template',
-            name: 'ComponentMenuTemplate',
-            component: () => import('@/views/menu/template/CodeExample.vue')
+            component: RouteLayout,
+            children: [
+              { path: 'icon', name: 'ComponentMenuTemplateIcon', component: () => import('@/views/menu/template/icon/CodeExample.vue') },
+              { path: 'title', name: 'ComponentMenuTemplateTitle', component: () => import('@/views/menu/template/title/CodeExample.vue') },
+              { path: 'option', name: 'ComponentMenuTemplateOption', component: () => import('@/views/menu/template/option/CodeExample.vue') }
+            ]
           }
         ]
       },

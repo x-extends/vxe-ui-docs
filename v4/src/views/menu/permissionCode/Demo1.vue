@@ -12,7 +12,7 @@ import { VxeMenuPropTypes } from 'vxe-pc-ui'
 
 const selectNav = ref('form')
 const navList = ref<VxeMenuPropTypes.Options>([
-  { name: 'home', title: '开发指南', permissionCode: 'xxx', routerLink: { name: 'StartInstall' } },
+  { name: 'home', title: '开发指南', permissionCode: 'xxx', routerLink: { name: 'StartUIInstall' } },
   {
     name: 'formGroup',
     title: '表单文档',

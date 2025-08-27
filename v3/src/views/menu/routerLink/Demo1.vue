@@ -13,7 +13,7 @@ import { VxeMenuPropTypes } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const navList: VxeMenuPropTypes.Options = [
-      { name: 'home', title: '开发指南', icon: 'vxe-icon-home', routerLink: { name: 'StartInstall' } },
+      { name: 'home', title: '开发指南', icon: 'vxe-icon-home', routerLink: { name: 'StartUIInstall' } },
       {
         name: 'formGroup',
         title: '表单文档',

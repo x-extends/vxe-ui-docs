@@ -423,7 +423,14 @@ export const navConfigList: NavVO[] = [
           { title: '可折叠', routerLink: { name: 'ComponentMenuCollapsed' } },
           { title: '路由模式', routerLink: { name: 'ComponentMenuRouterLink' } },
           { title: '权限码', routerLink: { name: 'ComponentMenuPermissionCode' } },
-          { title: '自定义插槽模板', routerLink: { name: 'ComponentMenuTemplate' } }
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '自定义菜单图标', routerLink: { name: 'ComponentMenuTemplateIcon' } },
+              { title: '自定义菜单标题', routerLink: { name: 'ComponentMenuTemplateTitle' } },
+              { title: '自定义菜单项', routerLink: { name: 'ComponentMenuTemplateOption' } }
+            ]
+          }
         ]
       },
       {
