@@ -13,6 +13,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '表格宽度', routerLink: { name: 'ComponentGanttBaseTableWidth' } },
         { title: '边框', routerLink: { name: 'ComponentGanttBaseBorder' } },
         { title: '斑马线样式', routerLink: { name: 'ComponentGanttBaseStripe' } },
+        { title: '高亮此刻线', routerLink: { name: 'ComponentGanttBaseShowNowLine' } },
         { title: '冻结列', routerLink: { name: 'ComponentGanttBaseFixed' } },
         { title: '分组表头', routerLink: { name: 'ComponentGanttBaseGroup' } },
         { title: '加载中', routerLink: { name: 'ComponentGanttBaseLoading' } },

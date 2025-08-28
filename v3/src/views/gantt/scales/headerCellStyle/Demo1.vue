@@ -21,6 +21,7 @@ export default Vue.extend({
     const ganttOptions: VxeGanttProps<RowVO> = {
       border: true,
       taskViewConfig: {
+        showNowLine: true,
         scales: [
           { type: 'month' },
           {

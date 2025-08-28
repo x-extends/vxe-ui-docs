@@ -19,6 +19,7 @@ interface RowVO {
 const ganttOptions = reactive<VxeGanttProps<RowVO>>({
   border: true,
   taskViewConfig: {
+    showNowLine: true,
     scales: [
       { type: 'month' },
       {

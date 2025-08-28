@@ -16,6 +16,7 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'tableWidth', name: 'ComponentGanttBaseTableWidth', component: () => import('@/views/gantt/base/tableWidth/CodeExample.vue') },
         { path: 'border', name: 'ComponentGanttBaseBorder', component: () => import('@/views/gantt/base/border/CodeExample.vue') },
         { path: 'stripe', name: 'ComponentGanttBaseStripe', component: () => import('@/views/gantt/base/stripe/CodeExample.vue') },
+        { path: 'showNowLine', name: 'ComponentGanttBaseShowNowLine', component: () => import('@/views/gantt/base/showNowLine/CodeExample.vue') },
         { path: 'fixed', name: 'ComponentGanttBaseFixed', component: () => import('@/views/gantt/base/fixed/CodeExample.vue') },
         { path: 'group', name: 'ComponentGanttBaseGroup', component: () => import('@/views/gantt/base/group/CodeExample.vue') },
         { path: 'loading', name: 'ComponentGanttBaseLoading', component: () => import('@/views/gantt/base/loading/CodeExample.vue') },
