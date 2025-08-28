@@ -110,6 +110,15 @@ export const ganttRouteConfig: RouteConfig = {
       ]
     },
     {
+      path: 'validate',
+      component: RouteLayout,
+      children: [
+        { path: 'mode', name: 'ComponentGanttValidateMode', component: () => import('@/views/gantt/validate/mode/CodeExample.vue') },
+        { path: 'validateField', name: 'ComponentGanttValidateValidateField', component: () => import('@/views/gantt/validate/validateField/CodeExample.vue') },
+        { path: 'theme', name: 'ComponentGanttValidateTheme', component: () => import('@/views/gantt/validate/theme/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'rowResizable',
       component: RouteLayout,
       children: [

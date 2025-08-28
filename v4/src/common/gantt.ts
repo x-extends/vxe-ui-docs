@@ -98,6 +98,14 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
+      title: '数据校验',
+      children: [
+        { title: '校验模式', routerLink: { name: 'ComponentGanttValidateMode' } },
+        { title: '校验指定单元格', routerLink: { name: 'ComponentGanttValidateValidateField' } },
+        { title: '错误提示样式', routerLink: { name: 'ComponentGanttValidateTheme' } }
+      ]
+    },
+    {
       title: '行高调整',
       children: [
         { title: '行高拖拽', routerLink: { name: 'ComponentGanttRowResizableBase' } },
