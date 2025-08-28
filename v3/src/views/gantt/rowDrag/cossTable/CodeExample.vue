@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="gantt/rowDrag/cossTable/Demo1">
+    <CodeLight path="gantt/rowDrag/cossTable/Demo1" previewPath="/resource/docsImg/gantt_row_drag_coss_table.gif">
       <template #tip>
         <vxe-tip status="primary" title="跨表拖拽">
           <ApiLink name="gantt" prop="row-drag-config"/>.<ApiLink name="gantt" prop="isCrossTableDrag"/> 启用跨表格、多表格互相拖拽。内置强大的 CRUD 管理器，可以轻松分析出数据的操作分布情况
