@@ -1842,6 +1842,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentDatePickerWeekBase',
                 component: () => import('@/views/date-picker/week/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDatePickerWeekClearable', component: () => import('@/views/date-picker/week/clearable/CodeExample.vue') },
               {
                 path: 'disabled',
                 name: 'ComponentDatePickerWeekDisabled',
@@ -1925,6 +1926,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentDatePickerMonthBase',
                 component: () => import('@/views/date-picker/month/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDatePickerMonthClearable', component: () => import('@/views/date-picker/month/clearable/CodeExample.vue') },
               {
                 path: 'multiple',
                 name: 'ComponentDatePickerMonthMultiple',
@@ -1967,6 +1969,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentDatePickerQuarterBase',
                 component: () => import('@/views/date-picker/quarter/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDatePickerQuarterClearable', component: () => import('@/views/date-picker/quarter/clearable/CodeExample.vue') },
               {
                 path: 'multiple',
                 name: 'ComponentDatePickerQuarterMultiple',
@@ -2009,6 +2012,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentDatePickerYearBase',
                 component: () => import('@/views/date-picker/year/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDatePickerYearClearable', component: () => import('@/views/date-picker/year/clearable/CodeExample.vue') },
               {
                 path: 'multiple',
                 name: 'ComponentDatePickerYearMultiple',
@@ -2057,6 +2061,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentDatePickerTimeDisabled',
                 component: () => import('@/views/date-picker/time/disabled/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDatePickerTimeClearable', component: () => import('@/views/date-picker/time/clearable/CodeExample.vue') },
               {
                 path: 'valueFormat',
                 name: 'ComponentDatePickerTimeValueFormat',
@@ -2131,6 +2136,7 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/date-picker/datetime/disabled/CodeExample.vue')
               },
               { path: 'editable', name: 'ComponentDatePickerDatetimeEditable', component: () => import('@/views/date-picker/datetime/editable/CodeExample.vue') },
+              { path: 'clearable', name: 'ComponentDatePickerDatetimeClearable', component: () => import('@/views/date-picker/datetime/clearable/CodeExample.vue') },
               {
                 path: 'multiple',
                 name: 'ComponentDatePickerDatetimeMultiple',
@@ -2223,11 +2229,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentDateRangePickerDateBase',
                 component: () => import('@/views/date-range-picker/date/base/CodeExample.vue')
               },
-              {
-                path: 'clearable',
-                name: 'ComponentDateRangePickerDateClearable',
-                component: () => import('@/views/date-range-picker/date/clearable/CodeExample.vue')
-              },
+              { path: 'clearable', name: 'ComponentDateRangePickerDateClearable', component: () => import('@/views/date-range-picker/date/clearable/CodeExample.vue') },
               {
                 path: 'disabled',
                 name: 'ComponentDateRangePickerDateDisabled',
@@ -2305,6 +2307,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentDateRangePickerWeekBase',
                 component: () => import('@/views/date-range-picker/week/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDateRangePickerWeekClearable', component: () => import('@/views/date-range-picker/week/clearable/CodeExample.vue') },
               {
                 path: 'disabled',
                 name: 'ComponentDateRangePickerWeekDisabled',
@@ -2383,6 +2386,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentDateRangePickerMonthBase',
                 component: () => import('@/views/date-range-picker/month/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDateRangePickerMonthClearable', component: () => import('@/views/date-range-picker/month/clearable/CodeExample.vue') },
               {
                 path: 'shortcut',
                 component: RouteLayout,
@@ -2420,6 +2424,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentDateRangePickerQuarterBase',
                 component: () => import('@/views/date-range-picker/quarter/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDateRangePickerQuarterClearable', component: () => import('@/views/date-range-picker/quarter/clearable/CodeExample.vue') },
               {
                 path: 'shortcut',
                 component: RouteLayout,
@@ -2457,6 +2462,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentDateRangePickerYearBase',
                 component: () => import('@/views/date-range-picker/year/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDateRangePickerYearClearable', component: () => import('@/views/date-range-picker/year/clearable/CodeExample.vue') },
               {
                 path: 'shortcut',
                 component: RouteLayout,
@@ -2495,6 +2501,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentDateRangePickerTimeBase',
                 component: () => import('@/views/date-range-picker/time/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDateRangePickerTimeClearable', component: () => import('@/views/date-range-picker/time/clearable/CodeExample.vue') },
               {
                 path: 'disabled',
                 name: 'ComponentDateRangePickerTimeDisabled',
@@ -2568,6 +2575,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentDateRangePickerDatetimeBase',
                 component: () => import('@/views/date-range-picker/datetime/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDateRangePickerDatetimeClearable', component: () => import('@/views/date-range-picker/datetime/clearable/CodeExample.vue') },
               {
                 path: 'disabled',
                 name: 'ComponentDateRangePickerDatetimeDisabled',

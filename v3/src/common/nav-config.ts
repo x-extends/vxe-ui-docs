@@ -38,17 +38,17 @@ export const navConfigList: NavVO[] = [
           { i18nKey: 'app.aside.menu.useGlobalCDN', routerLink: { name: 'StartGanttCDN' } }
         ]
       },
-      // {
-      //   i18nKey: 'app.aside.menu.useDesignInsrall',
-      //   children: [
-      //     { i18nKey: 'app.aside.menu.globalInstall', routerLink: { name: 'StartDesignInstall' } },
-      //     { i18nKey: 'app.aside.menu.lazyUseGlobal', routerLink: { name: 'StartDesignUseGlobal' } },
-      //     { i18nKey: 'app.aside.menu.lazyUseImport', routerLink: { name: 'StartDesignUseImport' } },
-      //     { i18nKey: 'app.aside.menu.useGlobalCDN', routerLink: { name: 'StartDesignCDN' } },
-      //     { title: '使用第三方 UI 库', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form-design/renderView` },
-      //     { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/' }
-      //   ]
-      // },
+      {
+        i18nKey: 'app.aside.menu.useDesignInsrall',
+        children: [
+          { i18nKey: 'app.aside.menu.globalInstall', routerLink: { name: 'StartDesignInstall' } },
+          { i18nKey: 'app.aside.menu.lazyUseGlobal', routerLink: { name: 'StartDesignUseGlobal' } },
+          { i18nKey: 'app.aside.menu.lazyUseImport', routerLink: { name: 'StartDesignUseImport' } },
+          { i18nKey: 'app.aside.menu.useGlobalCDN', routerLink: { name: 'StartDesignCDN' } },
+          { title: '使用第三方 UI 库', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form-design/renderView` },
+          { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/' }
+        ]
+      },
       { i18nKey: 'app.aside.menu.globalConfig', routerLink: { name: 'StartConfig' } },
       { i18nKey: 'app.aside.menu.globalTheme', routerLink: { name: 'StartTheme' } },
       { i18nKey: 'app.aside.menu.globalIcon', routerLink: { name: 'StartIcons' } },
@@ -298,7 +298,6 @@ export const navConfigList: NavVO[] = [
         title: 'Pulldown 下拉容器',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pulldown' } } },
-          { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split-pane' } } },
           { title: '基础', routerLink: { name: 'ComponentPulldownBase' } },
           { title: '配置列表', routerLink: { name: 'ComponentPulldownOptions' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentPulldownTemplate' } },
@@ -761,7 +760,7 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'slider' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentSliderSize' } },
-          { title: '基本', routerLink: { name: 'ComponentSliderBase' } },
+          { title: '基础', routerLink: { name: 'ComponentSliderBase' } },
           { title: '范围滑动', routerLink: { name: 'ComponentSliderRange' } },
           { title: '只读', routerLink: { name: 'ComponentSliderReadonly' } },
           { title: '禁用', routerLink: { name: 'ComponentSliderDisabled' } }
@@ -959,6 +958,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '尺寸大小', routerLink: { name: 'ComponentDatePickerTimeSize' } },
               { title: '绑定值', routerLink: { name: 'ComponentDatePickerTimeBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentDatePickerTimeClearable' } },
               { title: '禁用', routerLink: { name: 'ComponentDatePickerTimeDisabled' } },
               { title: '自定义格式', routerLink: { name: 'ComponentDatePickerTimeValueFormat' } },
               {
@@ -985,6 +985,7 @@ export const navConfigList: NavVO[] = [
             title: '日期带时间类型',
             children: [
               { title: '绑定值', routerLink: { name: 'ComponentDatePickerDatetimeBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentDatePickerDatetimeClearable' } },
               { title: '禁用', routerLink: { name: 'ComponentDatePickerDatetimeDisabled' } },
               { title: '禁止输入', routerLink: { name: 'ComponentDatePickerDatetimeEditable' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerDatetimeMultiple' } },
@@ -1015,6 +1016,7 @@ export const navConfigList: NavVO[] = [
             title: '周类型',
             children: [
               { title: '绑定值', routerLink: { name: 'ComponentDatePickerWeekBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentDatePickerWeekClearable' } },
               { title: '禁用', routerLink: { name: 'ComponentDatePickerWeekDisabled' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerWeekMultiple' } },
               { title: '自定义开始日', routerLink: { name: 'ComponentDatePickerWeekStartDay' } },
@@ -1043,6 +1045,7 @@ export const navConfigList: NavVO[] = [
             title: '月度类型',
             children: [
               { title: '绑定值', routerLink: { name: 'ComponentDatePickerMonthBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentDatePickerMonthClearable' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerMonthMultiple' } },
               {
                 title: '快捷按钮',
@@ -1059,6 +1062,7 @@ export const navConfigList: NavVO[] = [
             title: '季度类型',
             children: [
               { title: '绑定值', routerLink: { name: 'ComponentDatePickerQuarterBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentDatePickerQuarterClearable' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerQuarterMultiple' } },
               {
                 title: '快捷按钮',
@@ -1075,6 +1079,7 @@ export const navConfigList: NavVO[] = [
             title: '年度类型',
             children: [
               { title: '绑定值', routerLink: { name: 'ComponentDatePickerYearBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentDatePickerYearClearable' } },
               { title: '多选', routerLink: { name: 'ComponentDatePickerYearMultiple' } },
               {
                 title: '快捷按钮',
@@ -1144,6 +1149,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '尺寸大小', routerLink: { name: 'ComponentDateRangePickerTimeSize' } },
               { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerTimeBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentDateRangePickerTimeClearable' } },
               { title: '禁用', routerLink: { name: 'ComponentDateRangePickerTimeDisabled' } },
               { title: '自定义格式', routerLink: { name: 'ComponentDateRangePickerTimeValueFormat' } },
               {
@@ -1171,6 +1177,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerDatetimeBase' } },
               { title: '禁用', routerLink: { name: 'ComponentDateRangePickerDatetimeDisabled' } },
+              { title: '可清除', routerLink: { name: 'ComponentDateRangePickerDatetimeClearable' } },
               { title: '自定义格式', routerLink: { name: 'ComponentDateRangePickerDatetimeValueFormat' } },
               {
                 title: '快捷按钮',
@@ -1197,6 +1204,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerWeekBase' } },
               { title: '禁用', routerLink: { name: 'ComponentDateRangePickerWeekDisabled' } },
+              { title: '可清除', routerLink: { name: 'ComponentDateRangePickerWeekClearable' } },
               { title: '自定义开始日', routerLink: { name: 'ComponentDateRangePickerWeekStartDay' } },
               { title: '自定义返回值', routerLink: { name: 'ComponentDateRangePickerWeekSelectDay' } },
               {
@@ -1223,6 +1231,7 @@ export const navConfigList: NavVO[] = [
             title: '月度类型',
             children: [
               { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerMonthBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentDateRangePickerMonthClearable' } },
               {
                 title: '快捷按钮',
                 children: [
@@ -1238,6 +1247,7 @@ export const navConfigList: NavVO[] = [
             title: '季度类型',
             children: [
               { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerQuarterBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentDateRangePickerQuarterClearable' } },
               {
                 title: '快捷按钮',
                 children: [
@@ -1253,6 +1263,7 @@ export const navConfigList: NavVO[] = [
             title: '年度类型',
             children: [
               { title: '绑定值', routerLink: { name: 'ComponentDateRangePickerYearBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentDateRangePickerYearClearable' } },
               {
                 title: '快捷按钮',
                 children: [
@@ -1281,7 +1292,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'Select 下拉选择',
+        title: 'Select 下拉框',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'select' } } },
           {
@@ -1325,7 +1336,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'TreeSelect 下拉树选择器',
+        title: 'TreeSelect 下拉树选择',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tree-select' } } },
           {
@@ -1389,7 +1400,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'TableSelect 下拉表格选择器',
+        title: 'TableSelect 下拉表格选择',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'table-select' } } },
           {
@@ -1418,6 +1429,12 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '查询表单', routerLink: { name: 'ComponentTableSelectFormSearch' } },
               { title: '折叠表单', routerLink: { name: 'ComponentTableSelectFormCollapse' } }
+            ]
+          },
+          {
+            title: '分页',
+            children: [
+              { title: '数据分页', routerLink: { name: 'ComponentTableSelectPagerPage' } }
             ]
           },
           {

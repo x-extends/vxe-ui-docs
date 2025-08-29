@@ -22,7 +22,7 @@ Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
-    path: '*',
+    path: '/:pathMatch(.*)*',
     redirect: {
       name: 'StartUIInstall'
     }
@@ -507,27 +507,57 @@ const routes: Array<RouteConfig> = [
             path: 'form-design',
             component: RouteLayout,
             children: [
-              {
-                path: 'api',
-                name: 'GlobalRendererFormDesignAPI',
-                component: () => import('@/views/global/renderer/form-design/api/CodeExample.vue')
-              },
-              {
-                path: 'widget',
-                component: RouteLayout,
-                children: [
-                  {
-                    path: 'myInputWidget',
-                    name: 'GlobalRendererFormDesignWidgetMyInputWidget',
-                    component: () => import('@/views/global/renderer/form-design/widget/myInputWidget/CodeExample.vue')
-                  },
-                  {
-                    path: 'myTextareaWidget',
-                    name: 'GlobalRendererFormDesignWidgetMyTextareaWidget',
-                    component: () => import('@/views/global/renderer/form-design/widget/myTextareaWidget/CodeExample.vue')
-                  }
-                ]
-              }
+              // {
+              //   path: 'api',
+              //   name: 'GlobalRendererFormDesignAPI',
+              //   component: () => import('@/views/global/renderer/form-design/api/CodeExample.vue')
+              // },
+              // {
+              //   path: 'widget',
+              //   component: RouteLayout,
+              //   children: [
+              //     {
+              //       path: 'myInputWidget',
+              //       name: 'GlobalRendererFormDesignWidgetMyInputWidget',
+              //       component: () => import('@/views/global/renderer/form-design/widget/myInputWidget/CodeExample.vue')
+              //     },
+              //     {
+              //       path: 'myTextareaWidget',
+              //       name: 'GlobalRendererFormDesignWidgetMyTextareaWidget',
+              //       component: () => import('@/views/global/renderer/form-design/widget/myTextareaWidget/CodeExample.vue')
+              //     },
+              //     {
+              //       path: 'mySelectWidget',
+              //       name: 'GlobalRendererFormDesignWidgetMySelectWidget',
+              //       component: () => import('@/views/global/renderer/form-design/widget/mySelectWidget/CodeExample.vue')
+              //     },
+              //     {
+              //       path: 'myDatePickerWidget',
+              //       name: 'GlobalRendererFormDesignWidgetMyDatePickerWidget',
+              //       component: () => import('@/views/global/renderer/form-design/widget/myDatePickerWidget/CodeExample.vue')
+              //     },
+              //     {
+              //       path: 'myNumberInputWidget',
+              //       name: 'GlobalRendererFormDesignWidgetMyNumberInputWidget',
+              //       component: () => import('@/views/global/renderer/form-design/widget/myNumberInputWidget/CodeExample.vue')
+              //     },
+              //     {
+              //       path: 'myAmountInputWidget',
+              //       name: 'GlobalRendererFormDesignWidgetMyAmountInputWidget',
+              //       component: () => import('@/views/global/renderer/form-design/widget/myAmountInputWidget/CodeExample.vue')
+              //     },
+              //     {
+              //       path: 'myUploadFileWidget',
+              //       name: 'GlobalRendererFormDesignWidgetMyUploadFileWidget',
+              //       component: () => import('@/views/global/renderer/form-design/widget/myUploadFileWidget/CodeExample.vue')
+              //     },
+              //     {
+              //       path: 'myUploadImageWidget',
+              //       name: 'GlobalRendererFormDesignWidgetMyUploadImageWidget',
+              //       component: () => import('@/views/global/renderer/form-design/widget/myUploadImageWidget/CodeExample.vue')
+              //     }
+              //   ]
+              // }
             ]
           }
         ]
@@ -835,6 +865,11 @@ const routes: Array<RouteConfig> = [
           { path: 'showPrintButton', name: 'ComponentImageGroupShowPrintButton', component: () => import('@/views/image-group/showPrintButton/CodeExample.vue') },
           { path: 'showDownloadButton', name: 'ComponentImageGroupShowDownloadButton', component: () => import('@/views/image-group/showDownloadButton/CodeExample.vue') }
         ]
+      },
+      {
+        path: 'image-preview',
+        name: 'ComponentImagePreview',
+        component: () => import('@/views/image-preview/CodeExample.vue')
       },
       {
         path: 'anchor',
@@ -1810,6 +1845,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentDatePickerWeekBase',
                 component: () => import('@/views/date-picker/week/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDatePickerWeekClearable', component: () => import('@/views/date-picker/week/clearable/CodeExample.vue') },
               {
                 path: 'disabled',
                 name: 'ComponentDatePickerWeekDisabled',
@@ -1893,6 +1929,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentDatePickerMonthBase',
                 component: () => import('@/views/date-picker/month/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDatePickerMonthClearable', component: () => import('@/views/date-picker/month/clearable/CodeExample.vue') },
               {
                 path: 'multiple',
                 name: 'ComponentDatePickerMonthMultiple',
@@ -1935,6 +1972,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentDatePickerQuarterBase',
                 component: () => import('@/views/date-picker/quarter/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDatePickerQuarterClearable', component: () => import('@/views/date-picker/quarter/clearable/CodeExample.vue') },
               {
                 path: 'multiple',
                 name: 'ComponentDatePickerQuarterMultiple',
@@ -1977,6 +2015,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentDatePickerYearBase',
                 component: () => import('@/views/date-picker/year/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDatePickerYearClearable', component: () => import('@/views/date-picker/year/clearable/CodeExample.vue') },
               {
                 path: 'multiple',
                 name: 'ComponentDatePickerYearMultiple',
@@ -2025,6 +2064,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentDatePickerTimeDisabled',
                 component: () => import('@/views/date-picker/time/disabled/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDatePickerTimeClearable', component: () => import('@/views/date-picker/time/clearable/CodeExample.vue') },
               {
                 path: 'valueFormat',
                 name: 'ComponentDatePickerTimeValueFormat',
@@ -2099,6 +2139,7 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/date-picker/datetime/disabled/CodeExample.vue')
               },
               { path: 'editable', name: 'ComponentDatePickerDatetimeEditable', component: () => import('@/views/date-picker/datetime/editable/CodeExample.vue') },
+              { path: 'clearable', name: 'ComponentDatePickerDatetimeClearable', component: () => import('@/views/date-picker/datetime/clearable/CodeExample.vue') },
               {
                 path: 'multiple',
                 name: 'ComponentDatePickerDatetimeMultiple',
@@ -2191,11 +2232,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentDateRangePickerDateBase',
                 component: () => import('@/views/date-range-picker/date/base/CodeExample.vue')
               },
-              {
-                path: 'clearable',
-                name: 'ComponentDateRangePickerDateClearable',
-                component: () => import('@/views/date-range-picker/date/clearable/CodeExample.vue')
-              },
+              { path: 'clearable', name: 'ComponentDateRangePickerDateClearable', component: () => import('@/views/date-range-picker/date/clearable/CodeExample.vue') },
               {
                 path: 'disabled',
                 name: 'ComponentDateRangePickerDateDisabled',
@@ -2273,6 +2310,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentDateRangePickerWeekBase',
                 component: () => import('@/views/date-range-picker/week/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDateRangePickerWeekClearable', component: () => import('@/views/date-range-picker/week/clearable/CodeExample.vue') },
               {
                 path: 'disabled',
                 name: 'ComponentDateRangePickerWeekDisabled',
@@ -2351,6 +2389,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentDateRangePickerMonthBase',
                 component: () => import('@/views/date-range-picker/month/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDateRangePickerMonthClearable', component: () => import('@/views/date-range-picker/month/clearable/CodeExample.vue') },
               {
                 path: 'shortcut',
                 component: RouteLayout,
@@ -2388,6 +2427,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentDateRangePickerQuarterBase',
                 component: () => import('@/views/date-range-picker/quarter/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDateRangePickerQuarterClearable', component: () => import('@/views/date-range-picker/quarter/clearable/CodeExample.vue') },
               {
                 path: 'shortcut',
                 component: RouteLayout,
@@ -2425,6 +2465,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentDateRangePickerYearBase',
                 component: () => import('@/views/date-range-picker/year/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDateRangePickerYearClearable', component: () => import('@/views/date-range-picker/year/clearable/CodeExample.vue') },
               {
                 path: 'shortcut',
                 component: RouteLayout,
@@ -2463,6 +2504,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentDateRangePickerTimeBase',
                 component: () => import('@/views/date-range-picker/time/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDateRangePickerTimeClearable', component: () => import('@/views/date-range-picker/time/clearable/CodeExample.vue') },
               {
                 path: 'disabled',
                 name: 'ComponentDateRangePickerTimeDisabled',
@@ -2536,6 +2578,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentDateRangePickerDatetimeBase',
                 component: () => import('@/views/date-range-picker/datetime/base/CodeExample.vue')
               },
+              { path: 'clearable', name: 'ComponentDateRangePickerDatetimeClearable', component: () => import('@/views/date-range-picker/datetime/clearable/CodeExample.vue') },
               {
                 path: 'disabled',
                 name: 'ComponentDateRangePickerDatetimeDisabled',
@@ -2887,6 +2930,11 @@ const routes: Array<RouteConfig> = [
             path: 'horizontal',
             name: 'ComponentNoticeBarHorizontal',
             component: () => import('@/views/notice-bar/horizontal/CodeExample.vue')
+          },
+          {
+            path: 'direction',
+            name: 'ComponentNoticeBarDirection',
+            component: () => import('@/views/notice-bar/direction/CodeExample.vue')
           },
           { path: 'speed', name: 'ComponentNoticeBarSpeed', component: () => import('@/views/notice-bar/speed/CodeExample.vue') },
           { path: 'duration', name: 'ComponentNoticeBarDuration', component: () => import('@/views/notice-bar/duration/CodeExample.vue') },
@@ -4195,7 +4243,6 @@ const routes: Array<RouteConfig> = [
           }
         ]
       },
-
       {
         path: 'tree-select',
         component: RouteLayout,
@@ -4443,6 +4490,17 @@ const routes: Array<RouteConfig> = [
                 path: 'collapse',
                 name: 'ComponentTableSelectFormCollapse',
                 component: () => import('@/views/table-select/form/collapse/CodeExample.vue')
+              }
+            ]
+          },
+          {
+            path: 'pager',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'page',
+                name: 'ComponentTableSelectPagerPage',
+                component: () => import('@/views/table-select/pager/page/CodeExample.vue')
               }
             ]
           },
