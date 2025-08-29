@@ -1,6 +1,8 @@
 <template>
   <div>
     <vxe-switch v-model="vertical"></vxe-switch>
+    <vxe-button status="primary" @click="submitEvent">校验</vxe-button>
+    <vxe-button @click="resetEvent">重置</vxe-button>
 
     <vxe-form
       border
@@ -8,9 +10,7 @@
       ref="formRef"
       :vertical="vertical"
       :data="formData"
-      :rules="formRules"
-      @submit="submitEvent"
-      @reset="resetEvent">
+      :rules="formRules">
       <vxe-form-item title="名称" field="name" span="12" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>
@@ -21,19 +21,13 @@
           <vxe-input v-model="formData.role" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item align="center" span="24" :item-render="{}">
-        <template #default>
-          <vxe-button type="submit" status="primary" content="提交"></vxe-button>
-          <vxe-button type="reset" content="重置"></vxe-button>
-        </template>
-      </vxe-form-item>
     </vxe-form>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeUI, VxeFormInstance, VxeFormPropTypes, VxeFormEvents } from 'vxe-pc-ui'
+import { VxeUI, VxeFormInstance, VxeFormPropTypes } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -67,11 +61,21 @@ const changeEvent = (params: any) => {
   }
 }
 
-const submitEvent: VxeFormEvents.Submit = () => {
-  VxeUI.modal.message({ content: '保存成功', status: 'success' })
+const submitEvent = async () => {
+  const $form = formRef.value
+  if ($form) {
+    const errMaps = await $form.validate()
+    if (!errMaps) {
+      VxeUI.modal.message({ content: '验证成功', status: 'success' })
+    }
+  }
 }
 
-const resetEvent: VxeFormEvents.Reset = () => {
-  VxeUI.modal.message({ content: '重置事件', status: 'info' })
+const resetEvent = () => {
+  const $form = formRef.value
+  if ($form) {
+    $form.reset()
+    VxeUI.modal.message({ content: '重置事件', status: 'info' })
+  }
 }
 </script>

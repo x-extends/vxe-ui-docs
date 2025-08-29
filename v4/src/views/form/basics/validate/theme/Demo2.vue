@@ -10,6 +10,7 @@
       border
       title-background
       ref="formRef"
+      :vertical="vertical"
       :data="formData"
       :rules="formRules"
       :valid-config="validConfig"
