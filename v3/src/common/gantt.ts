@@ -43,6 +43,14 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
+      title: '单元格合并',
+      children: [
+        { title: '将多行进行合并', routerLink: { name: 'ComponentGanttMergeRow' } },
+        { title: '将多列进行合并', routerLink: { name: 'ComponentGanttMergeColumn' } },
+        { title: '表头合并', routerLink: { name: 'ComponentGanttMergeHeader' } }
+      ]
+    },
+    {
       title: '表尾数据',
       children: [
         { title: '是否启用表尾', routerLink: { name: 'ComponentGanttFooterShowFooter' } },

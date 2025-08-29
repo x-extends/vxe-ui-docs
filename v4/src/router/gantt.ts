@@ -49,6 +49,15 @@ export const ganttRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'merge',
+      component: RouteLayout,
+      children: [
+        { path: 'row', name: 'ComponentGanttMergeRow', component: () => import('@/views/gantt/merge/row/CodeExample.vue') },
+        { path: 'column', name: 'ComponentGanttMergeColumn', component: () => import('@/views/gantt/merge/column/CodeExample.vue') },
+        { path: 'header', name: 'ComponentGanttMergeHeader', component: () => import('@/views/gantt/merge/header/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'footer',
       component: RouteLayout,
       children: [
