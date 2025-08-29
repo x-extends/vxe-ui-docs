@@ -1,10 +1,6 @@
 <template>
   <div>
     <vxe-switch v-model="vertical"></vxe-switch>
-    <vxe-radio-group v-model="validConfig.theme">
-      <vxe-radio-button label="normal" content="简化"></vxe-radio-button>
-      <vxe-radio-button label="beautify" content="高亮"></vxe-radio-button>
-    </vxe-radio-group>
 
     <vxe-form
       border
@@ -12,22 +8,16 @@
       ref="formRef"
       :data="formData"
       :rules="formRules"
-      :valid-config="validConfig"
       @submit="submitEvent"
       @reset="resetEvent">
-      <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
+      <vxe-form-item title="名称" field="name" span="12" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="性别" field="sex" span="12" :item-render="{}">
+      <vxe-form-item title="角色" field="role" span="12" :item-render="{}">
         <template #default="params">
-          <vxe-select v-model="formData.sex" :options="sexOptions" @change="changeEvent(params)"></vxe-select>
-        </template>
-      </vxe-form-item>
-      <vxe-form-item title="年龄" field="age" span="12" :item-render="{}">
-        <template #default="params">
-          <vxe-input v-model="formData.age" @change="changeEvent(params)"></vxe-input>
+          <vxe-input v-model="formData.role" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
       <vxe-form-item align="center" span="24" :item-render="{}">
@@ -47,48 +37,32 @@ import { VxeUI, VxeFormInstance, VxeFormPropTypes } from 'vxe-pc-ui'
 interface FormDataVO {
   name: string
   nickname: string
-  sex: string
-  age: string
+  role: string
 }
 
 export default Vue.extend({
   data () {
-    const vertical = true
+    const vertical = false
 
     const formData: FormDataVO = {
       name: '',
       nickname: '',
-      sex: '',
-      age: ''
+      role: ''
     }
 
     const formRules: VxeFormPropTypes.Rules<FormDataVO> = {
       name: [
-        { required: true, message: '请输入名称' }
+        { required: true, message: '必须填写' }
       ],
-      sex: [
-        { required: true, message: '请选择性别' }
-      ],
-      age: [
-        { required: true, message: '请输入年龄' }
+      role: [
+        { required: true, message: '必须填写' }
       ]
     }
-
-    const validConfig: VxeFormPropTypes.ValidConfig = {
-      theme: 'beautify'
-    }
-
-    const sexOptions = [
-      { label: '女', value: 'Women' },
-      { label: '男', value: 'Man' }
-    ]
 
     return {
       vertical,
       formData,
-      formRules,
-      validConfig,
-      sexOptions
+      formRules
     }
   },
   methods: {

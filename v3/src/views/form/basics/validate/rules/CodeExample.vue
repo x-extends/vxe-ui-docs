@@ -6,5 +6,13 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="form/basics/validate/rules/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          带边框样式
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>
