@@ -1,5 +1,6 @@
 <template>
   <div>
+    <vxe-switch v-model="vertical"></vxe-switch>
     <vxe-radio-group v-model="validConfig.theme">
       <vxe-radio-button label="normal" content="简化"></vxe-radio-button>
       <vxe-radio-button label="beautify" content="高亮"></vxe-radio-button>
@@ -50,6 +51,8 @@ interface FormDataVO {
 
 export default Vue.extend({
   data () {
+    const vertical = false
+
     const formData: FormDataVO = {
       name: '',
       nickname: '',
@@ -79,6 +82,7 @@ export default Vue.extend({
     ]
 
     return {
+      vertical,
       formData,
       formRules,
       validConfig,

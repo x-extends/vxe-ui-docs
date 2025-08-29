@@ -38,9 +38,9 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref, reactive } from 'vue'
-import { VxeUI, VxeFormInstance, VxeFormPropTypes, VxeFormEvents } from 'vxe-pc-ui'
+<script lang="ts">
+import Vue from 'vue'
+import { VxeUI, VxeFormInstance, VxeFormPropTypes } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -49,50 +49,59 @@ interface FormDataVO {
   age: string
 }
 
-const formRef = ref<VxeFormInstance<FormDataVO>>()
+export default Vue.extend({
+  data () {
+    const vertical = true
 
-const vertical = ref(false)
+    const formData: FormDataVO = {
+      name: '',
+      nickname: '',
+      sex: '',
+      age: ''
+    }
 
-const formData = ref<FormDataVO>({
-  name: '',
-  nickname: '',
-  sex: '',
-  age: ''
-})
+    const formRules: VxeFormPropTypes.Rules<FormDataVO> = {
+      name: [
+        { required: true, message: '请输入名称' }
+      ],
+      sex: [
+        { required: true, message: '请选择性别' }
+      ],
+      age: [
+        { required: true, message: '请输入年龄' }
+      ]
+    }
 
-const formRules = ref<VxeFormPropTypes.Rules<FormDataVO>>({
-  name: [
-    { required: true, message: '请输入名称' }
-  ],
-  sex: [
-    { required: true, message: '请选择性别' }
-  ],
-  age: [
-    { required: true, message: '请输入年龄' }
-  ]
-})
+    const validConfig: VxeFormPropTypes.ValidConfig = {
+      theme: 'beautify'
+    }
 
-const validConfig = reactive<VxeFormPropTypes.ValidConfig>({
-  theme: 'beautify'
-})
+    const sexOptions = [
+      { label: '女', value: 'Women' },
+      { label: '男', value: 'Man' }
+    ]
 
-const sexOptions = ref([
-  { label: '女', value: 'Women' },
-  { label: '男', value: 'Man' }
-])
-
-const changeEvent = (params: any) => {
-  const $form = formRef.value
-  if ($form) {
-    $form.updateStatus(params)
+    return {
+      vertical,
+      formData,
+      formRules,
+      validConfig,
+      sexOptions
+    }
+  },
+  methods: {
+    changeEvent (params: any) {
+      const $form = this.$refs.formRef as VxeFormInstance<FormDataVO>
+      if ($form) {
+        $form.updateStatus(params)
+      }
+    },
+    submitEvent () {
+      VxeUI.modal.message({ content: '保存成功', status: 'success' })
+    },
+    resetEvent () {
+      VxeUI.modal.message({ content: '重置事件', status: 'info' })
+    }
   }
-}
-
-const submitEvent: VxeFormEvents.Submit = () => {
-  VxeUI.modal.message({ content: '保存成功', status: 'success' })
-}
-
-const resetEvent: VxeFormEvents.Reset = () => {
-  VxeUI.modal.message({ content: '重置事件', status: 'info' })
-}
+})
 </script>

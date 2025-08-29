@@ -6,5 +6,13 @@
         <vxe-tip status="error">标题背景只对 <ApiLink name="form" prop="border"/> 开启后有效</vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="form/basics/titleBackground/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          垂直布局
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>

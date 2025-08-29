@@ -34,7 +34,9 @@ const validConfig = reactive<VxeFormPropTypes.ValidConfig>({
 })
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
-  vertical: false,
+  border: true,
+  vertical: true,
+  titleBackground: true,
   validConfig,
   data: {
     name: '',

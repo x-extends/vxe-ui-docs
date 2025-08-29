@@ -20,7 +20,7 @@
     "vue-router": "^4.5.1",
     "vxe-design": "^4.0.2",
     "vxe-gantt": "^4.0.10",
-    "vxe-pc-ui": "^4.9.6",
+    "vxe-pc-ui": "^4.9.7",
     "vxe-table": "^4.16.1",
     "xe-utils": "^3.7.8"
   },

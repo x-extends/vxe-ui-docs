@@ -40,7 +40,9 @@ export default Vue.extend({
     }
 
     const formOptions: VxeFormProps<FormDataVO> = {
-      vertical: false,
+      border: true,
+      vertical: true,
+      titleBackground: true,
       validConfig,
       data: {
         name: '',

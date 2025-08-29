@@ -7,6 +7,8 @@
     </vxe-radio-group>
 
     <vxe-form
+      border
+      title-background
       ref="formRef"
       :data="formData"
       :rules="formRules"
@@ -51,7 +53,7 @@ interface FormDataVO {
 
 const formRef = ref<VxeFormInstance<FormDataVO>>()
 
-const vertical = ref(false)
+const vertical = ref(true)
 
 const formData = ref<FormDataVO>({
   name: '',
