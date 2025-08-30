@@ -502,6 +502,18 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
+    title: '第三方插件 - 渲染 tdesign-vue-next 组件',
+    isExpand: false,
+    children: [
+      {
+        title: '开发指南',
+        children: [
+          { title: '安装插件', routerLink: { name: 'PluginRenderTDesignInstall' } }
+        ]
+      }
+    ]
+  },
+  {
     title: '使用第三方 iconfont 图标',
     isExpand: false,
     children: [

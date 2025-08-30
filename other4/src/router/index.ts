@@ -1100,6 +1100,17 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
+    path: '/plugin-render-tdesign',
+    component: PageLayout,
+    children: [
+      {
+        path: 'install',
+        name: 'PluginRenderTDesignInstall',
+        component: () => import('@/views/plugin-render-tdesign/install/CodeExample.vue')
+      }
+    ]
+  },
+  {
     path: '/plugin-render-wangeditor',
     component: PageLayout,
     children: [
