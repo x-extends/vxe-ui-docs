@@ -6,7 +6,7 @@
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-item title="字符串格式" field="selectDate" span="24" :item-render="{ name: 'VxeDateRangePicker' }"></vxe-form-item>
       <vxe-form-item title="数组格式" field="dates" span="24" :item-render="{ name: 'VxeDateRangePicker' }"></vxe-form-item>
-      <vxe-form-item title="2个字段格式" field="startAndEnd" span="24" :item-render="{ name: 'VxeDateRangePicker', startField: 'startDate', endField: 'endDate' }"></vxe-form-item>
+      <vxe-form-item title="2个字段格式" field="_startAndEnd" span="24" :item-render="{ name: 'VxeDateRangePicker', startField: 'startDate', endField: 'endDate' }"></vxe-form-item>
       <vxe-form-item align="center" span="24">
         <template #default>
           <vxe-button type="reset">重置</vxe-button>

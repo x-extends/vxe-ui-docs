@@ -42,7 +42,7 @@ export default Vue.extend({
         { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
         { field: 'selectDate', title: '字符串格式', span: 24, itemRender: { name: 'VxeDateRangePicker' } },
         { field: 'dates', title: '数组格式', span: 24, itemRender: { name: 'VxeDateRangePicker' } },
-        { field: 'startAndEnd', title: '2个字段格式', span: 24, itemRender: { name: 'VxeDateRangePicker', startField: 'startDate', endField: 'endDate' } },
+        { field: '_startAndEnd', title: '2个字段格式', span: 24, itemRender: { name: 'VxeDateRangePicker', startField: 'startDate', endField: 'endDate' } },
         { align: 'center', span: 24, slots: { default: 'action' } }
       ]
     }

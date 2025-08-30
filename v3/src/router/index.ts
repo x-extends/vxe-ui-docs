@@ -22,7 +22,7 @@ Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
-    path: '/:pathMatch(.*)*',
+    path: '*',
     redirect: {
       name: 'StartUIInstall'
     }
