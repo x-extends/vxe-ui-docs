@@ -67,6 +67,8 @@ import VxeUIPluginRenderNaive from '@vxe-ui/plugin-render-naive'
 import '@vxe-ui/plugin-render-naive/dist/style.css'
 import VxeUIPluginRenderArco from '@vxe-ui/plugin-render-arco'
 import '@vxe-ui/plugin-render-arco/dist/style.css'
+import VxeUIPluginRenderTDesign from '@vxe-ui/plugin-render-tdesign'
+import '@vxe-ui/plugin-render-tdesign/dist/style.css'
 
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
@@ -152,6 +154,7 @@ VxeUI.use(VxeUIPluginValidator)
 VxeUI.use(VxeUIPluginRenderIView)
 VxeUI.use(VxeUIPluginRenderNaive)
 VxeUI.use(VxeUIPluginRenderArco)
+VxeUI.use(VxeUIPluginRenderTDesign)
 
 const app = createApp(App)
 
