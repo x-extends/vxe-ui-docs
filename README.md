@@ -2,7 +2,7 @@
 
 ## 组件依赖图
 
-[点击查看](https://github.com/x-extends/vxe-ui-docs/blob/main/framework.md)
+[点击查看](framework.md)
 
 ## 在线文档
 
