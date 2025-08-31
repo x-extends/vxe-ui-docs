@@ -1,5 +1,9 @@
 # Vxe UI 官方文档
 
+## 组件依赖图
+
+[点击查看](framework.md)
+
 ## 在线文档
 
 * Vxe UI [https://vxeui.com](https://vxeui.com)
