@@ -1,17 +1,17 @@
 <template>
   <div>
-    <CodeLight path="form/config/group/Demo1">
+    <CodeLight path="form/basics/children/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="分组">
-          实现分组
+        <vxe-tip status="primary" title="分行/分列">
+          分行/分列
         </vxe-tip>
       </template>
     </CodeLight>
 
-    <CodeLight path="form/config/group/Demo2">
+    <CodeLight path="form/basics/children/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          实现分行/分列
+          带边框背景
         </vxe-tip>
       </template>
     </CodeLight>

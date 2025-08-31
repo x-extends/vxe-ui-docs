@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="form/config/group/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="分组/分行/分列">
+        <vxe-tip status="primary" title="分组">
           实现分组
         </vxe-tip>
       </template>

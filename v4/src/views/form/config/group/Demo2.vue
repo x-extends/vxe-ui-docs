@@ -14,38 +14,72 @@ interface FormDataVO {
   sex: string
   age: number
   birthday: string
+  identityCard: string
+  health: string
   describe: string
+  address: string
 }
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
+  border: true,
+  titleBackground: true,
+  titleWidth: 'auto',
+  titleAlign: 'right',
   data: {
     name: '',
     nickname: '',
     sex: '0',
     age: 22,
     birthday: '',
-    describe: ''
+    identityCard: '',
+    health: '',
+    describe: '',
+    address: ''
   },
   items: [
     {
-      span: 12,
+      span: 24,
+      vertical: true,
+      titleBold: true,
+      title: '基础信息',
+      titlePrefix: {
+        icon: 'vxe-icon-user',
+        iconStatus: 'primary'
+      },
       children: [
-        { field: 'name', title: '名称', span: 12, itemRender: { name: 'VxeInput' } },
-        { field: 'sex', title: '性别', span: 12, itemRender: { name: 'VxeInput' } },
-        { field: 'age', title: '年龄', span: 24, itemRender: { name: 'VxeNumberInput' } },
-        { field: 'birthday', title: '生日', span: 24, itemRender: { name: 'VxeDatePicker' } }
-      ]
-    },
-    {
-      span: 12,
-      children: [
-        { field: 'nickname', title: '昵称', span: 24, itemRender: { name: 'VxeInput' } }
+        { field: 'name', title: '名称', span: 8, itemRender: { name: 'VxeInput' } },
+        { field: 'nickname', title: '昵称', span: 8, itemRender: { name: 'VxeInput' } },
+        { field: 'sex', title: '性别', span: 8, itemRender: { name: 'VxeInput' } },
+        { field: 'age', title: '年龄', span: 8, itemRender: { name: 'VxeNumberInput' } }
       ]
     },
     {
       span: 24,
+      vertical: true,
+      titleBold: true,
+      title: '隐私信息',
+      titlePrefix: {
+        icon: 'vxe-icon-lock',
+        iconStatus: 'primary'
+      },
       children: [
-        { field: 'describe', title: '描述', span: 24, itemRender: { name: 'VxeTextarea' } }
+        { field: 'birthday', title: '生日', span: 8, itemRender: { name: 'VxeDatePicker' } },
+        { field: 'identityCard', title: '身份证', span: 8, itemRender: { name: 'VxeInput' } },
+        { field: 'health', title: '健康状态', span: 8, itemRender: { name: 'VxeInput' } }
+      ]
+    },
+    {
+      span: 24,
+      vertical: true,
+      titleBold: true,
+      title: '其他信息',
+      titlePrefix: {
+        icon: 'vxe-icon-edit',
+        iconStatus: 'primary'
+      },
+      children: [
+        { field: 'describe', title: '备注', span: 24, itemRender: { name: 'VxeTextarea' } },
+        { field: 'address', title: '地址', span: 24, itemRender: { name: 'VxeTextarea' } }
       ]
     },
     {

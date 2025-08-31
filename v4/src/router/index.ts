@@ -4608,6 +4608,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/form/basics/titleBackground/CodeExample.vue')
               },
               {
+                path: 'children',
+                name: 'ComponentFormBasicsChildren',
+                component: () => import('@/views/form/basics/children/CodeExample.vue')
+              },
+              {
                 path: 'group',
                 name: 'ComponentFormBasicsGroup',
                 component: () => import('@/views/form/basics/group/CodeExample.vue')
@@ -4992,6 +4997,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'titleBackground',
                 name: 'ComponentFormConfigTitleBackground',
                 component: () => import('@/views/form/config/titleBackground/CodeExample.vue')
+              },
+              {
+                path: 'children',
+                name: 'ComponentFormConfigChildren',
+                component: () => import('@/views/form/config/children/CodeExample.vue')
               },
               {
                 path: 'group',

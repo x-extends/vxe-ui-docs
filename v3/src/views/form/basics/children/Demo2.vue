@@ -3,60 +3,43 @@
     <vxe-form
       border
       title-background
-      title-width="auto"
-      title-align="right"
       ref="formRef"
       :data="formData"
       @submit="submitEvent"
       @reset="resetEvent">
-      <vxe-form-group span="24" title="基础信息" :title-prefix="{icon: 'vxe-icon-user', iconStatus: 'primary'}" title-bold vertical>
-        <vxe-form-item title="名称" field="name" span="8" :item-render="{}">
+      <vxe-form-group span="12">
+        <vxe-form-item title="名称" field="name" span="12" :item-render="{}">
           <template #default="params">
             <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>
           </template>
         </vxe-form-item>
-        <vxe-form-item title="昵称" field="nickname" span="8" :item-render="{}">
-          <template #default="params">
-            <vxe-input v-model="formData.nickname" @change="changeEvent(params)"></vxe-input>
-          </template>
-        </vxe-form-item>
-        <vxe-form-item title="性别" field="sex" span="8" :item-render="{}">
+        <vxe-form-item title="性别" field="sex" span="12" :item-render="{}">
           <template #default="params">
             <vxe-input v-model="formData.sex" @change="changeEvent(params)"></vxe-input>
           </template>
         </vxe-form-item>
-        <vxe-form-item title="年龄" field="age" span="8" :item-render="{}">
+        <vxe-form-item title="年龄" field="age" span="24" :item-render="{}">
           <template #default="params">
             <vxe-number-input v-model="formData.age" @change="changeEvent(params)"></vxe-number-input>
           </template>
         </vxe-form-item>
-      </vxe-form-group>
-      <vxe-form-group span="24" title="隐私信息" :title-prefix="{icon: 'vxe-icon-lock', iconStatus: 'primary'}" title-bold vertical>
-        <vxe-form-item title="生日" field="birthday" span="8" :item-render="{}">
+        <vxe-form-item title="生日" field="birthday" span="24" :item-render="{}">
           <template #default="params">
             <vxe-date-picker v-model="formData.birthday" @change="changeEvent(params)"></vxe-date-picker>
           </template>
         </vxe-form-item>
-        <vxe-form-item title="身份证" field="identityCard" span="8" :item-render="{}">
+      </vxe-form-group>
+      <vxe-form-group span="12">
+        <vxe-form-item title="昵称" field="nickname" span="24" :item-render="{}">
           <template #default="params">
-            <vxe-input v-model="formData.identityCard" @change="changeEvent(params)"></vxe-input>
-          </template>
-        </vxe-form-item>
-        <vxe-form-item title="健康状态" field="health" span="8" :item-render="{}">
-          <template #default="params">
-            <vxe-input v-model="formData.health" @change="changeEvent(params)"></vxe-input>
+            <vxe-input v-model="formData.nickname" @change="changeEvent(params)"></vxe-input>
           </template>
         </vxe-form-item>
       </vxe-form-group>
-      <vxe-form-group span="24" title="其他信息" :title-prefix="{icon: 'vxe-icon-edit', iconStatus: 'primary'}" title-bold vertical>
+      <vxe-form-group span="24">
         <vxe-form-item title="描述" field="describe" span="24" :item-render="{}">
           <template #default="params">
             <vxe-textarea v-model="formData.describe" @change="changeEvent(params)"></vxe-textarea>
-          </template>
-        </vxe-form-item>
-        <vxe-form-item title="地址" field="address" span="24" :item-render="{}">
-          <template #default="params">
-            <vxe-textarea v-model="formData.address" @change="changeEvent(params)"></vxe-textarea>
           </template>
         </vxe-form-item>
       </vxe-form-group>
@@ -80,10 +63,7 @@ interface FormDataVO {
   sex: string
   age: number
   birthday: string
-  identityCard: string
-  health: string
   describe: string
-  address: string
 }
 
 export default Vue.extend({
@@ -94,10 +74,7 @@ export default Vue.extend({
       sex: '0',
       age: 22,
       birthday: '',
-      identityCard: '',
-      health: '',
-      describe: '',
-      address: ''
+      describe: ''
     }
 
     return {

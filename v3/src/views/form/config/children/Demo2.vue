@@ -16,24 +16,46 @@ interface FormDataVO {
   name: string
   nickname: string
   sex: string
-  age: string
+  age: number
+  birthday: string
+  describe: string
 }
 
 export default Vue.extend({
   data () {
     const formOptions: VxeFormProps<FormDataVO> = {
-      titleWidth: 120,
-      titleOverflow: true,
+      border: true,
+      titleBackground: true,
       data: {
-        name: 'test1',
-        nickname: 'Testing',
-        sex: '',
-        age: ''
+        name: '',
+        nickname: '',
+        sex: '0',
+        age: 22,
+        birthday: '',
+        describe: ''
       },
       items: [
-        { field: 'name', title: '超出隐藏，超出隐藏，超出隐藏，超出隐藏', span: 24, itemRender: { name: 'VxeInput' } },
-        { field: 'sex', title: '性别', span: 12, itemRender: { name: 'VxeInput' } },
-        { field: 'age', title: '年龄', span: 12, itemRender: { name: 'VxeInput' } },
+        {
+          span: 12,
+          children: [
+            { field: 'name', title: '名称', span: 12, itemRender: { name: 'VxeInput' } },
+            { field: 'sex', title: '性别', span: 12, itemRender: { name: 'VxeInput' } },
+            { field: 'age', title: '年龄', span: 24, itemRender: { name: 'VxeNumberInput' } },
+            { field: 'birthday', title: '生日', span: 24, itemRender: { name: 'VxeDatePicker' } }
+          ]
+        },
+        {
+          span: 12,
+          children: [
+            { field: 'nickname', title: '昵称', span: 24, itemRender: { name: 'VxeInput' } }
+          ]
+        },
+        {
+          span: 24,
+          children: [
+            { field: 'describe', title: '描述', span: 24, itemRender: { name: 'VxeTextarea' } }
+          ]
+        },
         {
           align: 'center',
           span: 24,

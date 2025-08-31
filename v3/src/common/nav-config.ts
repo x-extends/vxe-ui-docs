@@ -485,7 +485,8 @@ export const navConfigList: NavVO[] = [
           { title: '边框', routerLink: { name: 'ComponentFormBasicsBorder' } },
           { title: '标题背景', routerLink: { name: 'ComponentFormBasicsTitleBackground' } },
           { title: '格式化内容', routerLink: { name: 'ComponentFormBasicsFormat' } },
-          { title: '分组/分行/分列', routerLink: { name: 'ComponentFormBasicsGroup' } },
+          { title: '分行/分列', routerLink: { name: 'ComponentFormBasicsChildren' } },
+          { title: '分组', routerLink: { name: 'ComponentFormBasicsGroup' } },
           { title: '自定义布局', routerLink: { name: 'ComponentFormBasicsCustomLayout' } },
           {
             title: '折叠表单',
@@ -589,7 +590,8 @@ export const navConfigList: NavVO[] = [
           { title: '边框', routerLink: { name: 'ComponentFormConfigBorder' } },
           { title: '标题背景', routerLink: { name: 'ComponentFormConfigTitleBackground' } },
           { title: '格式化内容', routerLink: { name: 'ComponentFormConfigFormat' } },
-          { title: '分组/分行/分列', routerLink: { name: 'ComponentFormConfigGroup' } },
+          { title: '分行/分列', routerLink: { name: 'ComponentFormConfigChildren' } },
+          { title: '分组', routerLink: { name: 'ComponentFormConfigGroup' } },
           {
             title: '折叠表单',
             children: [
