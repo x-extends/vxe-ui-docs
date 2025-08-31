@@ -2,7 +2,7 @@
 
 ## 组件依赖图
 
-[点击查看](framework.md)
+[组件依赖关系](framework.md)
 
 ## 在线文档
 
