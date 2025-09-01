@@ -4,7 +4,8 @@
       v-model="widgetModel"
       :placeholder="currWidget.options.placeholder"
       :maxLength="currWidget.options.maxLength"
-      :show-word-count="currWidget.options.showWordCount">
+      :show-word-count="currWidget.options.showWordCount"
+      :align="currWidget.options.align">
     </vxe-input>
   </vxe-form-item>
 </template>

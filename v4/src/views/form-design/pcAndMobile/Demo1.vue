@@ -23,12 +23,7 @@ const formDesignWidgets = ref<VxeFormDesignPropTypes.Widgets>([
   {
     group: 'base',
     children: [
-      'VxeInput',
-      'VxeTextarea',
-      'VxeSelect',
-      'VxeSwitch',
-      'VxeRadioGroup',
-      'VxeCheckboxGroup'
+      'VxeInput'
     ]
   }
 ])

@@ -17,8 +17,7 @@ const formDesignWidgets = ref<VxeFormDesignPropTypes.Widgets>([
   {
     customGroup: '输入控件',
     children: [
-      'VxeInput',
-      'VxeTextarea'
+      'VxeInput'
     ]
   },
   {
@@ -36,8 +35,7 @@ const formDesignWidgets = ref<VxeFormDesignPropTypes.Widgets>([
   {
     customGroup: '其他控件',
     children: [
-      'VxeRadioGroup',
-      'VxeCheckboxGroup'
+      'VxeRadioGroup'
     ]
   }
 ])
