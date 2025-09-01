@@ -18,7 +18,7 @@ import { PropType } from 'vue'
 import { VxeUI, VxeGlobalRendererHandles } from 'vxe-pc-ui'
 import { FormDesignWidgetNumberInputProps } from './demoFormDesignNumberInputWidget'
 
-const { useWidgetView } = VxeUI.formDesign
+const { useWidgetView } = VxeUI.formDesignHandle
 
 const props = defineProps({
   renderOpts: {
