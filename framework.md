@@ -15,12 +15,12 @@ graph TD;
 
 ```mermaid
 graph TD;
-    Toolbar-->Grid[Grid 全功能];
-    Table[Table 基础]-->Grid;
+    Toolbar[工具类]-->Grid[Grid 全功能表格];
+    Table[Table 基础表格]-->Grid;
     Column-->Table;
     Colgroup-->Table;
-    Pager-->Grid;
-    Form-->Grid;
+    Pager[分页]-->Grid;
+    Form[表单]-->Grid;
     Form-->FormGroup;
     Form-->FormItem;
     Toolbar-->Grid;
@@ -62,7 +62,7 @@ graph TD;
 
 ```mermaid
 graph TD;
-    Grid-->Gantt[Gantt 继承 Grid 全功能];
+    Grid-->Gantt[Gantt 继承 Grid 全功能表格];
     chat[视图渲染]-->Gantt;
 ```
 
@@ -70,7 +70,7 @@ graph TD;
 
 ```mermaid
 graph TD;
-    Form-->FormGroup;
+    Form-->FormGroup[表单设计器];
     Form-->FormItem;
     Form-->FormDesign;
     Button-->FormDesign;
@@ -85,6 +85,6 @@ graph TD;
     Tip-->FormDesign;
     Form-->FormView;
     Button-->FormView;
-    Grid-->ListDesign;
+    Grid-->ListDesign[列表设计器];
     Grid-->ListView;
 ```
