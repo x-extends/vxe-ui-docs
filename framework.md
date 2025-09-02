@@ -70,9 +70,9 @@ graph TD;
 
 ```mermaid
 graph TD;
-    Form-->FormGroup[表单设计器];
+    Form-->FormGroup;
     Form-->FormItem;
-    Form-->FormDesign;
+    Form-->FormDesign[FormDesign 表单设计器];
     Button-->FormDesign;
     Switch-->FormDesign;
     Checkbox-->FormDesign;
@@ -85,6 +85,6 @@ graph TD;
     Tip-->FormDesign;
     Form-->FormView;
     Button-->FormView;
-    Grid-->ListDesign[列表设计器];
+    Grid-->ListDesign[ListDesign 列表设计器];
     Grid-->ListView;
 ```
