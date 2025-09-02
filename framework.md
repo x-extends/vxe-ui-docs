@@ -2,12 +2,12 @@
 
 ```mermaid
 graph TD;
-    xe-utils[Js 函数库<br><a href="https://github.com/x-extends/xe-utils" target="_blank">xe-utils</a>]-->vxe-core[Vxe 核心库<br><a href="https://github.com/x-extends/vxe-core" target="_blank">vxe-core</a>];
-    vxe-core-->vxe-pc-ui;
-    vxe-core-->vxe-table;
-    vxe-table-->vxe-gantt[甘特图<br><a href="https://github.com/x-extends/vxe-gantt" target="_blank">vxe-gantt</a>];
-    vxe-pc-ui[PC端组件库<br><a href="https://github.com/x-extends/vxe-pc-ui" target="_blank">vxe-pc-ui</a>]-->vxe-design[可视化设计器<br><a href="https://github.com/x-extends/vxe-design" target="_blank">vxe-design</a>];
-    vxe-table[PC端表格库<br><a href="https://github.com/x-extends/vxe-table" target="_blank">vxe-table</a>]-->vxe-design;
+    xe-utils[Js 函数库<br><a href="https://github.com/x-extends/xe-utils" target="_blank">xe-utils</a>]-->vxe-core[VxeUI 核心库<br><a href="https://github.com/x-extends/vxe-core" target="_blank">vxe-core</a>];
+    vxe-core-->vxe-pc-ui[VxeUIAll PC端组件库<br><a href="https://github.com/x-extends/vxe-pc-ui" target="_blank">vxe-pc-ui</a>];
+    vxe-core-->vxe-table[VxeUITable PC端表格库<br><a href="https://github.com/x-extends/vxe-table" target="_blank">vxe-table</a>];
+    vxe-table-->vxe-gantt[VxeUIGantt 甘特图<br><a href="https://github.com/x-extends/vxe-gantt" target="_blank">vxe-gantt</a>];
+    vxe-pc-ui-->vxe-design[VxeUIDesign 可视化设计器<br><a href="https://github.com/x-extends/vxe-design" target="_blank">vxe-design</a>];
+    vxe-table-->vxe-design;
 ```
 ## Vxe Table 组件依赖图
 
