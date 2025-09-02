@@ -2,7 +2,7 @@
 
 ```mermaid
 graph TD;
-    xe-utils[函数库、工具类<br><a href="https://github.com/x-extends/xe-utils" target="_blank">xe-utils</a>]-->vxe-core[Vxe 核心库<br><a href="https://github.com/x-extends/vxe-core" target="_blank">vxe-core</a>];
+    xe-utils[Js 函数库<br><a href="https://github.com/x-extends/xe-utils" target="_blank">xe-utils</a>]-->vxe-core[Vxe 核心库<br><a href="https://github.com/x-extends/vxe-core" target="_blank">vxe-core</a>];
     vxe-core-->vxe-pc-ui;
     vxe-core-->vxe-table;
     vxe-table-->vxe-gantt[甘特图<br><a href="https://github.com/x-extends/vxe-gantt" target="_blank">vxe-gantt</a>];
