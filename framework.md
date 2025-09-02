@@ -14,7 +14,7 @@ graph TD;
 ```mermaid
 graph TD;
     Toolbar-->Grid[Grid 全功能];
-    Table-->Grid;
+    Table[Table 基础]-->Grid;
     Column-->Table;
     Colgroup-->Table;
     Pager-->Grid;
