@@ -82,6 +82,7 @@ graph TD;
     Input-->FormDesign;
     Tab-->FormDesign;
     TabPane-->FormDesign;
+    Grid-->FormDesign;
     Tip-->FormDesign;
     Form-->FormView;
     Button-->FormView;
