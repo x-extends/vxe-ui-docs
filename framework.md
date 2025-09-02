@@ -9,7 +9,7 @@ graph TD;
     vxe-pc-ui-->vxe-design[VxeUIDesign<br>可视化设计器（桌面端）<br><a href="https://github.com/x-extends/vxe-design" target="_blank">vxe-design</a>];
     vxe-table-->vxe-design;
 ```
-## Vxe Table 组件依赖图
+## vxe-table 表格组件依赖关系
 
 ```mermaid
 graph TD;
@@ -56,7 +56,7 @@ graph TD;
     keyboard[按键导航]-->modules;
 ```
 
-## Vxe Gantt 组件依赖图
+## vxe-gantt 甘特图组件依赖关系
 
 ```mermaid
 graph TD;
@@ -64,7 +64,7 @@ graph TD;
     chat[视图渲染]-->Gantt;
 ```
 
-## Vxe Design 设计器组件依赖图
+## vxe-design 设计器组件依赖关系
 
 ```mermaid
 graph TD;
