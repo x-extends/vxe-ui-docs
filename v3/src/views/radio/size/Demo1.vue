@@ -1,9 +1,9 @@
 <template>
   <div>
-    <vxe-radio v-model="val1" label="1">默认尺寸</vxe-radio>
-    <vxe-radio v-model="val2" label="2" size="medium">中等尺寸</vxe-radio>
-    <vxe-radio v-model="val3" label="3" size="small">小型尺寸</vxe-radio>
-    <vxe-radio v-model="val4" label="4" size="mini">超小尺寸</vxe-radio>
+    <vxe-radio v-model="val1" checked-value="1">默认尺寸</vxe-radio>
+    <vxe-radio v-model="val2" checked-value="2" size="medium">中等尺寸</vxe-radio>
+    <vxe-radio v-model="val3" checked-value="3" size="small">小型尺寸</vxe-radio>
+    <vxe-radio v-model="val4" checked-value="4" size="mini">超小尺寸</vxe-radio>
   </div>
 </template>
 
