@@ -359,7 +359,7 @@
       "ExtendPivotTable": "Pivot table",
       "FiltersCombination": "Complex combination Filters",
       "FiltersComplexInput": "Complex input Filters",
-      "ChartGanttChart": "Gantt"
+      "ExtendGanttChart": "Gantt"
     },
     "menus": {
       "authList": "Authorization query",

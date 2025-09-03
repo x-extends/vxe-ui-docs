@@ -359,7 +359,7 @@
       "ExtendPivotTable": "数据透视表",
       "FiltersCombination": "组合筛选",
       "FiltersComplexInput": "输入筛选",
-      "ChartGanttChart": "甘特图"
+      "ExtendGanttChart": "甘特图"
     },
     "menus": {
       "authList": "授权查询",
