@@ -62,8 +62,8 @@ graph TD;
 
 ```mermaid
 graph TD;
-    Grid-->Gantt[Gantt 继承 Grid 全功能表格];
-    chat[视图渲染]-->Gantt;
+    Table-->Gantt[Gantt 继承 Grid 全功能表格];
+    chat[Task 视图渲染]-->Gantt;
 ```
 
 ## vxe-design 设计器组件依赖关系
