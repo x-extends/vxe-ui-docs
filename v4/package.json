@@ -21,7 +21,7 @@
     "vxe-design": "^4.0.4",
     "vxe-gantt": "^4.0.11",
     "vxe-pc-ui": "^4.9.14",
-    "vxe-table": "^4.16.5",
+    "vxe-table": "^4.16.6",
     "xe-utils": "^3.7.8"
   },
   "devDependencies": {

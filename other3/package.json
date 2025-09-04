@@ -35,7 +35,7 @@
     "vuex": "^3.4.0",
     "vxe-pc-ui": "^3.9.14",
     "vxe-design": "^3.0.0",
-    "vxe-table": "^3.18.4",
+    "vxe-table": "^3.18.6",
     "vxe-gantt": "^3.0.11",
     "xe-utils": "^3.7.8"
   },
