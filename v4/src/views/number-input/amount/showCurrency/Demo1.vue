@@ -7,5 +7,5 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const val1 = ref(null)
+const val1 = ref(100000000)
 </script>

@@ -10,7 +10,7 @@ import Vue from 'vue'
 export default Vue.extend({
   data () {
     return {
-      val1: null
+      val1: 100000000
     }
   }
 })
