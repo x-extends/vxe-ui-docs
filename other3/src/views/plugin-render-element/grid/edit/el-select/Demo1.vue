@@ -15,6 +15,7 @@ import { VxeGridInstance, VxeGridProps, VxeColumnPropTypes } from 'vxe-table'
 interface RowVO {
   id: number
   name: string
+  role: string
   sex: string
   sexList: string[]
 }
@@ -40,6 +41,37 @@ export default Vue.extend({
       ]
     }
 
+    const allList = [
+      { label: '前端', value: '前端' },
+      { label: '后端', value: '后端' },
+      { label: '测试', value: '测试' },
+      { label: '产品经理', value: '产品经理' }
+    ]
+
+    const roleEditRender: VxeColumnPropTypes.EditRender & { props: any } = {
+      name: 'ElSelect',
+      options: [],
+      props: {
+        remote: true,
+        loading: false,
+        filterable: true,
+        remoteShowSuffix: true,
+        remoteMethod (query: string) {
+          if (query) {
+            roleEditRender.props.loading = true
+            setTimeout(() => {
+              roleEditRender.props.loading = false
+              roleEditRender.options = allList.filter((item) => {
+                return item.label.toLowerCase().includes(query.toLowerCase())
+              })
+            }, 200)
+          } else {
+            roleEditRender.options = []
+          }
+        }
+      }
+    }
+
     const gridOptions: VxeGridProps<RowVO> = {
       border: true,
       showOverflow: true,
@@ -60,17 +92,23 @@ export default Vue.extend({
         { type: 'checkbox', width: 60 },
         { type: 'seq', title: 'Number', width: 80 },
         { field: 'name', title: 'Name', minWidth: 140, editRender: { name: 'ElInput' } },
-        { field: 'sex', title: '下拉框', width: 200, editRender: sexEditRender },
-        { field: 'sexList', title: '下拉框多选', width: 200, editRender: sexListEditRender }
+        { field: 'sex', title: '下拉框', width: 140, editRender: sexEditRender },
+        { field: 'sexList', title: '下拉框多选', width: 200, editRender: sexListEditRender },
+        { field: 'role', title: '远程搜索', width: 140, editRender: roleEditRender }
       ],
       data: [
-        { id: 10001, name: 'Test1', sex: '1', sexList: [] },
-        { id: 10002, name: 'Test2', sex: '', sexList: ['0', '1'] }
+        { id: 10001, name: 'Test1', role: '前端', sex: '1', sexList: [] },
+        { id: 10002, name: 'Test2', role: '后端', sex: '', sexList: ['0', '1'] },
+        { id: 10002, name: 'Test3', role: '', sex: '', sexList: ['0'] }
       ]
     }
 
     return {
-      gridOptions
+      gridOptions,
+      sexEditRender,
+      sexListEditRender,
+      roleEditRender,
+      allList
     }
   },
   methods: {
