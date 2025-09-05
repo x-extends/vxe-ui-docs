@@ -891,9 +891,19 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/text/status/CodeExample.vue')
           },
           {
+            path: 'loading',
+            name: 'ComponentTextLoading',
+            component: () => import('@/views/text/loading/CodeExample.vue')
+          },
+          {
             path: 'icon',
             name: 'ComponentTextIcon',
             component: () => import('@/views/text/icon/CodeExample.vue')
+          },
+          {
+            path: 'suffixIcon',
+            name: 'ComponentTextSuffixIcon',
+            component: () => import('@/views/text/suffixIcon/CodeExample.vue')
           },
           {
             path: 'clickToCopy',
