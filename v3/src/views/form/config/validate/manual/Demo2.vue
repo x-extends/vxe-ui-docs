@@ -16,6 +16,8 @@ interface FormDataVO {
   name: string
   nickname: string
   role: string
+  remark: string
+  address: string
 }
 
 export default Vue.extend({
@@ -27,7 +29,9 @@ export default Vue.extend({
       data: {
         name: '',
         nickname: '',
-        role: ''
+        role: '',
+        remark: '',
+        address: ''
       },
       rules: {
         name: [
@@ -35,11 +39,26 @@ export default Vue.extend({
         ],
         role: [
           { required: true, message: '必须填写' }
+        ],
+        remark: [
+          { required: true, message: '必须填写' }
+        ],
+        address: [
+          { required: true, message: '必须填写' }
         ]
       },
       items: [
         { field: 'name', title: '名称', span: 12, itemRender: { name: 'VxeInput' } },
-        { field: 'role', title: '角色', span: 12, itemRender: { name: 'VxeInput' } }
+        { field: 'role', title: '角色', span: 12, itemRender: { name: 'VxeInput' } },
+        {
+          title: '分组',
+          span: 24,
+          vertical: true,
+          children: [
+            { field: 'remark', title: '备注', span: 12, itemRender: { name: 'VxeInput' } },
+            { field: 'address', title: '地址', span: 12, itemRender: { name: 'VxeTextarea' } }
+          ]
+        }
       ]
     }
 

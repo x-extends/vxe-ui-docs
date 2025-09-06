@@ -21,6 +21,18 @@
           <vxe-input v-model="formData.role" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
+      <vxe-form-group title="分组" span="24" vertical>
+        <vxe-form-item title="备注" field="remark" span="12" :item-render="{}">
+          <template #default="params">
+            <vxe-input v-model="formData.remark" @change="changeEvent(params)"></vxe-input>
+          </template>
+        </vxe-form-item>
+        <vxe-form-item title="地址" field="address" span="12" :item-render="{}">
+          <template #default="params">
+            <vxe-textarea v-model="formData.address" @change="changeEvent(params)"></vxe-textarea>
+          </template>
+        </vxe-form-item>
+      </vxe-form-group>
     </vxe-form>
   </div>
 </template>
@@ -33,6 +45,8 @@ interface FormDataVO {
   name: string
   nickname: string
   role: string
+  remark: string
+  address: string
 }
 
 export default Vue.extend({
@@ -42,7 +56,9 @@ export default Vue.extend({
     const formData: FormDataVO = {
       name: '',
       nickname: '',
-      role: ''
+      role: '',
+      remark: '',
+      address: ''
     }
 
     const formRules: VxeFormPropTypes.Rules<FormDataVO> = {
@@ -50,6 +66,12 @@ export default Vue.extend({
         { required: true, message: '必须填写' }
       ],
       role: [
+        { required: true, message: '必须填写' }
+      ],
+      remark: [
+        { required: true, message: '必须填写' }
+      ],
+      address: [
         { required: true, message: '必须填写' }
       ]
     }
