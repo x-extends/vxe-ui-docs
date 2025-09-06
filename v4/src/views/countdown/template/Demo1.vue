@@ -10,6 +10,7 @@
           <span>分</span>
           <span class="my-countdown-num">{{ diffConf.ss }}</span>
           <span>秒</span>
+          <span>，完成状态：{{ diffConf.done }}</span>
         </span>
       </template>
     </vxe-countdown>
@@ -19,7 +20,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const val1 = ref(50000)
+const val1 = ref(30000)
 </script>
 
 <style lang="scss" scoped>
