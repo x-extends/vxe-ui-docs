@@ -38,7 +38,7 @@
     "src/**/*.d.ts",
     "src/**/*.tsx", 
     "src/**/*.vue"
-  ],
+, "src/views/grid/base/tooltip/Demo2.vue"  ],
   "exclude": [
     "node_modules"
   ]

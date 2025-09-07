@@ -11,7 +11,7 @@
     <CodeLight path="text/clickToCopy/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          通过 <ApiLink name="text" prop="copy-icon"/> 自定义复制功能的图标
+          通过 <ApiLink name="text" prop="copy-config"/>.<ApiLink name="text" prop="icon"/> 自定义复制功能的图标
         </vxe-tip>
       </template>
     </CodeLight>
@@ -19,7 +19,23 @@
     <CodeLight path="text/clickToCopy/Demo3">
       <template #tip>
         <vxe-tip status="primary">
-          通过 <ApiLink name="text" prop="copy-layout"/> 设置复制图标位置显示在右边
+          通过 <ApiLink name="text" prop="copy-config"/>.<ApiLink name="text" prop="layout"/> 设置复制图标位置显示在右边
+        </vxe-tip>
+      </template>
+    </CodeLight>
+
+    <CodeLight path="text/clickToCopy/Demo4">
+      <template #tip>
+        <vxe-tip status="primary">
+          通过 <ApiLink name="text" prop="copy-config"/>.<ApiLink name="text" prop="status"/> 设置按钮状态颜色
+        </vxe-tip>
+      </template>
+    </CodeLight>
+
+    <CodeLight path="text/clickToCopy/Demo5">
+      <template #tip>
+        <vxe-tip status="primary">
+          通过 <ApiLink name="text" prop="copy-config"/>.<ApiLink name="text" prop="trigger"/> 设置单击还是双击触发
         </vxe-tip>
       </template>
     </CodeLight>

@@ -3278,6 +3278,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/tooltip/enterable/CodeExample.vue')
           },
           {
+            path: 'style',
+            name: 'ComponentTooltipStyle',
+            component: () => import('@/views/tooltip/style/CodeExample.vue')
+          },
+          {
             path: 'manual',
             name: 'ComponentTooltipManual',
             component: () => import('@/views/tooltip/manual/CodeExample.vue')

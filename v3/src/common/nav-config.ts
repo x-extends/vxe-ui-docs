@@ -1728,6 +1728,7 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tooltip' } } },
           { title: '触发方式', routerLink: { name: 'ComponentTooltipTrigger' } },
           { title: '可操作', routerLink: { name: 'ComponentTooltipEnterable' } },
+          { title: '设置宽高', routerLink: { name: 'ComponentTooltipStyle' } },
           { title: '手动模式', routerLink: { name: 'ComponentTooltipManual' } },
           { title: '单例模式', routerLink: { name: 'ComponentTooltipSingle' } },
           { title: '在表格中使用', routerLink: { name: 'ComponentTooltipTable' } }
