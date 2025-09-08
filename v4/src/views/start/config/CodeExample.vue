@@ -250,7 +250,8 @@
                   enabled: true,
                   layout: 'right',
                   showButton: true,
-                  isWheel: true
+                  isWheel: true,
+                  isArrow: true
                 }
               },
               optgroup: {},
@@ -304,6 +305,10 @@
                 itemConfig: {
                   minWidth: 40,
                   minHeight: 40
+                },
+                resizeConfig: {
+                  // immediate: false,
+                  showTip: true
                 }
               },
               splitPane: {},
@@ -337,7 +342,11 @@
               textEllipsis: {
                 underline: true
               },
-              text: {},
+              text: {
+                copyConfig: {
+                  showMessage: true
+                }
+              },
               textarea: {
                 resize: 'none'
               },
@@ -405,7 +414,7 @@
                 showHeader: true,
                 delayHover: 250,
                 autoResize: true,
-                minHeight: 144,
+                // minHeight: null,
                 // keepSource: false,
                 // showOverflow: null,
                 // showHeaderOverflow: null,
@@ -615,12 +624,17 @@
                 },
                 scrollbarConfig: {
                   // width: 14,
-                  // height: 14
+                  // height: 14,
+                  x: {
+                    // position: 'bottom',
+                    visible: true
+                  },
+                  y: {
+                    // position: 'right',
+                    visible: true
+                  }
                 }
               },
-              // export: {
-              //   types: {}
-              // },
               grid: {
                 // size: null,
                 // zoomConfig: {
@@ -668,6 +682,59 @@
                 //   types: ['csv', 'html', 'xml', 'txt']
                 // },
                 // buttons: []
+              },
+
+              gantt: {
+                // size: null,
+                // zoomConfig: {
+                //   escRestore: true
+                // },
+                formConfig: {
+                  enabled: true
+                },
+                pagerConfig: {
+                  enabled: true
+                  // perfect: false
+                },
+                toolbarConfig: {
+                  enabled: true
+                  // perfect: false
+                },
+                proxyConfig: {
+                  enabled: true,
+                  autoLoad: true,
+                  showLoading: true,
+                  showResponseMsg: true,
+                  showActionMsg: true,
+                  response: {
+                    list: null,
+                    result: 'result',
+                    total: 'page.total',
+                    message: 'message'
+                  }
+                  // beforeItem: null,
+                  // beforeColumn: null,
+                  // beforeQuery: null,
+                  // afterQuery: null,
+                  // beforeDelete: null,
+                  // afterDelete: null,
+                  // beforeSave: null,
+                  // afterSave: null
+                },
+                taskViewScaleConfs: {
+                  week: {
+                    startDay: 1
+                  }
+                },
+                taskViewConfig: {
+                  showNowLine: true
+                },
+                taskSplitConfig: {
+                  enabled: true,
+                  resize: true,
+                  showCollapseTableButton: true,
+                  showCollapseTaskButton: true
+                }
               }
             })
           </pre-code>

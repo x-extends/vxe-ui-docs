@@ -275,7 +275,13 @@
               TOOLBAR_TOOLS_FIXED_LEFT: 'vxe-icon-fixed-left',
               TOOLBAR_TOOLS_FIXED_LEFT_ACTIVE: 'vxe-icon-fixed-left-fill',
               TOOLBAR_TOOLS_FIXED_RIGHT: 'vxe-icon-fixed-right',
-              TOOLBAR_TOOLS_FIXED_RIGHT_ACTIVE: 'vxe-icon-fixed-right-fill'
+              TOOLBAR_TOOLS_FIXED_RIGHT_ACTIVE: 'vxe-icon-fixed-right-fill',
+
+              // gantt
+              GANTT_VIEW_LEFT_OPEN: 'vxe-icon-arrow-left',
+              GANTT_VIEW_LEFT_CLOSE: 'vxe-icon-arrow-right',
+              GANTT_VIEW_RIGHT_OPEN: 'vxe-icon-arrow-right',
+              GANTT_VIEW_RIGHT_CLOSE: 'vxe-icon-arrow-left'
             })
           </pre-code>
         </pre>
