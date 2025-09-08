@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-pulldown v-model="showPull">
+    <vxe-pulldown v-model="showPull" show-popup-shadow>
       <template #default>
         <vxe-input v-model="searchName" placeholder="可搜索的下拉框" @focus="focusEvent" @keyup="keyupEvent"></vxe-input>
       </template>

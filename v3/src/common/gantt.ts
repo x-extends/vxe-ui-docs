@@ -244,6 +244,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '自定义单元格模板', routerLink: { name: 'ComponentGantTemplateDefault' } },
         { title: '自定义表头模板', routerLink: { name: 'ComponentGantTemplateHeader' } },
         { title: '自定义表尾模板', routerLink: { name: 'ComponentGantTemplateFooter' } },
+        { title: '自定义单元格提示模板', routerLink: { name: 'ComponentGantTemplateTooltip' } },
         { title: '自定义分页模板', routerLink: { name: 'ComponentGantTemplatePager' } },
         { title: '自定义任务条模板', routerLink: { name: 'ComponentGantTemplateTaskBar' } },
         { title: '自定义任务视图标题模板', routerLink: { name: 'ComponentGantTemplateTaskCellTitle' } },

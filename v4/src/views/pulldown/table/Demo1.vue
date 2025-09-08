@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-pulldown ref="pulldownRef" popup-class-name="dropdown-table" transfer>
+    <vxe-pulldown ref="pulldownRef" popup-class-name="dropdown-table" show-popup-shadow transfer>
       <template #default>
         <vxe-input v-model="searchName" suffix-icon="vxe-icon-table" placeholder="实现下拉分页表格" @keyup="keyupEvent" @focus="focusEvent"></vxe-input>
       </template>
@@ -134,15 +134,9 @@ loadList()
 
 <style lang="scss">
 .dropdown-table {
-  background-color: #fff;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
   .dropdown-table-body {
     width: 600px;
     height: 300px;
-  }
-
-  .dropdown-table-footer {
-    border-top: 1px solid #e8eaec;
   }
 }
 </style>

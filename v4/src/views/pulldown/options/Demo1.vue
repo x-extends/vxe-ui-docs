@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-pulldown :options="pullOptions" trigger="click" @option-click="optionClickEvent">
+    <vxe-pulldown :options="pullOptions" trigger="click" show-popup-shadow @option-click="optionClickEvent">
       <template #default>
         <vxe-button mode="text">下拉按钮</vxe-button>
         <vxe-icon name="arrow-down"></vxe-icon>

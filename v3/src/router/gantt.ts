@@ -262,6 +262,7 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'default', name: 'ComponentGantTemplateDefault', component: () => import('@/views/gantt/template/default/CodeExample.vue') },
         { path: 'header', name: 'ComponentGantTemplateHeader', component: () => import('@/views/gantt/template/header/CodeExample.vue') },
         { path: 'footer', name: 'ComponentGantTemplateFooter', component: () => import('@/views/gantt/template/footer/CodeExample.vue') },
+        { path: 'tooltip', name: 'ComponentGantTemplateTooltip', component: () => import('@/views/gantt/template/tooltip/CodeExample.vue') },
         { path: 'radio', name: 'ComponentGantTemplateRadio', component: () => import('@/views/gantt/template/radio/CodeExample.vue') },
         { path: 'checkbox', name: 'ComponentGantTemplateCheckbox', component: () => import('@/views/gantt/template/checkbox/CodeExample.vue') },
         { path: 'filter', name: 'ComponentGantTemplateFilter', component: () => import('@/views/gantt/template/filter/CodeExample.vue') },
