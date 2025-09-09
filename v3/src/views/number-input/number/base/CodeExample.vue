@@ -3,7 +3,7 @@
     <CodeLight path="number-input/number/base/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="数值输入框"></vxe-tip>
-        <vxe-tip status="error">需要注意，输出是 Number 类型</vxe-tip>
+        <vxe-tip status="error">需要注意，输出是 Number 类型，支持 null</vxe-tip>
       </template>
     </CodeLight>
   </div>
