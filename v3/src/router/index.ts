@@ -4520,6 +4520,13 @@ const routes: Array<RouteConfig> = [
             ]
           },
           {
+            path: 'proxy',
+            component: RouteLayout,
+            children: [
+              { path: 'query', name: 'ComponentTableSelectProxyQuery', component: () => import('@/views/table-select/proxy/query/CodeExample.vue') }
+            ]
+          },
+          {
             path: 'scroll',
             component: RouteLayout,
             children: [

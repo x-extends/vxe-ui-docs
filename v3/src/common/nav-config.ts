@@ -1442,6 +1442,12 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
+            title: '数据代理',
+            children: [
+              { title: '查询接口', routerLink: { name: 'ComponentTableSelectProxyQuery' } }
+            ]
+          },
+          {
             title: '虚拟滚动（大量数据选项）',
             children: [
               { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTableSelectScrollVertical' } },

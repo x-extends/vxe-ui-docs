@@ -213,6 +213,7 @@ export const ganttRouteConfig: RouteRecordRaw = {
         { path: 'default', name: 'ComponentGanttScalesDefault', component: () => import('@/views/gantt/scales/default/CodeExample.vue') },
         { path: 'yearMonthDate', name: 'ComponentGanttScalesYearMonthDate', component: () => import('@/views/gantt/scales/yearMonthDate/CodeExample.vue') },
         { path: 'quarterMonthDate', name: 'ComponentGanttScalesQuarterMonthDate', component: () => import('@/views/gantt/scales/quarterMonthDate/CodeExample.vue') },
+        { path: 'monthDayDate', name: 'ComponentGanttScalesMonthDayDate', component: () => import('@/views/gantt/scales/monthDayDate/CodeExample.vue') },
         { path: 'monthDate', name: 'ComponentGanttScalesMonthDate', component: () => import('@/views/gantt/scales/monthDate/CodeExample.vue') },
         { path: 'dateHour', name: 'ComponentGanttScalesDateHour', component: () => import('@/views/gantt/scales/dateHour/CodeExample.vue') },
         { path: 'hourMinute', name: 'ComponentGanttScalesHourMinute', component: () => import('@/views/gantt/scales/hourMinute/CodeExample.vue') },
