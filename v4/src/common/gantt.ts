@@ -14,6 +14,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '边框', routerLink: { name: 'ComponentGanttBaseBorder' } },
         { title: '斑马线样式', routerLink: { name: 'ComponentGanttBaseStripe' } },
         { title: '高亮此刻线', routerLink: { name: 'ComponentGanttBaseShowNowLine' } },
+        { title: '表格响应式高度', routerLink: { name: 'ComponentGanttBaseAutoHeight' } },
         { title: '冻结列', routerLink: { name: 'ComponentGanttBaseFixed' } },
         { title: '分组表头', routerLink: { name: 'ComponentGanttBaseGroup' } },
         { title: '加载中', routerLink: { name: 'ComponentGanttBaseLoading' } },
