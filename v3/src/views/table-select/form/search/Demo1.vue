@@ -26,6 +26,13 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
+    const allList = [
+      { value: 10001, label: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
+      { value: 10002, label: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },
+      { value: 10003, label: 'Test3', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai' },
+      { value: 10004, label: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
+    ]
+
     const columnList: VxeTableSelectPropTypes.Columns = [
       { type: 'radio', width: 70 },
       { field: 'label', title: 'Name' },
@@ -34,23 +41,20 @@ export default Vue.extend({
       { field: 'address', title: 'Address' }
     ]
 
-    const tableData: RowVO[] = [
-      { value: 10001, label: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
-      { value: 10002, label: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },
-      { value: 10003, label: 'Test3', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai' },
-      { value: 10004, label: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
-    ]
+    const tableData: RowVO[] = []
+
+    const formData = {
+      name: '',
+      role: '',
+      sex: '',
+      num: '',
+      address: ''
+    }
 
     const gridConfig: VxeTableSelectPropTypes.GridConfig = {
       border: true,
       formConfig: {
-        data: {
-          name: '',
-          role: '',
-          sex: '',
-          num: '',
-          address: ''
-        },
+        data: formData,
         items: [
           { field: 'name', title: 'Name', itemRender: { name: 'VxeInput' } },
           {
@@ -69,16 +73,37 @@ export default Vue.extend({
     return {
       val1: null,
       columnList,
+      formData,
       tableData,
-      gridConfig
+      gridConfig,
+      allList
     }
+  },
+  created () {
+    this.searchData()
   },
   methods: {
     formSubmitEvent () {
-      console.log('form submit')
+      this.searchData()
     },
     formResetEvent () {
-      console.log('form reset')
+      this.searchData()
+    },
+    searchData () {
+      if (this.formData.name) {
+        const searchVal = `${this.formData.name}`.toLowerCase()
+        this.tableData = this.allList.filter(row => {
+          if (`${row.label}`.toLowerCase().indexOf(searchVal) > -1) {
+            return true
+          }
+          if (`${row.role}`.toLowerCase().indexOf(searchVal) > -1) {
+            return true
+          }
+          return false
+        })
+      } else {
+        this.tableData = this.allList
+      }
     }
   }
 })

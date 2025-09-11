@@ -26,6 +26,13 @@ interface RowVO {
 
 const val1 = ref()
 
+const allList: RowVO[] = [
+  { value: 10001, label: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
+  { value: 10002, label: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },
+  { value: 10003, label: 'Test3', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai' },
+  { value: 10004, label: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
+]
+
 const columnList = ref<VxeTableSelectPropTypes.Columns>([
   { type: 'radio', width: 70 },
   { field: 'label', title: 'Name' },
@@ -34,23 +41,20 @@ const columnList = ref<VxeTableSelectPropTypes.Columns>([
   { field: 'address', title: 'Address' }
 ])
 
-const tableData = ref<RowVO[]>([
-  { value: 10001, label: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
-  { value: 10002, label: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },
-  { value: 10003, label: 'Test3', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai' },
-  { value: 10004, label: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
-])
+const tableData = ref<RowVO[]>([])
+
+const formData = reactive({
+  name: '',
+  role: '',
+  sex: '',
+  num: '',
+  address: ''
+})
 
 const gridConfig = reactive<VxeTableSelectPropTypes.GridConfig>({
   border: true,
   formConfig: {
-    data: {
-      name: '',
-      role: '',
-      sex: '',
-      num: '',
-      address: ''
-    },
+    data: formData,
     items: [
       { field: 'name', title: 'Name', itemRender: { name: 'VxeInput' } },
       {
@@ -66,11 +70,30 @@ const gridConfig = reactive<VxeTableSelectPropTypes.GridConfig>({
   }
 })
 
+const searchData = () => {
+  if (formData.name) {
+    const searchVal = `${formData.name}`.toLowerCase()
+    tableData.value = allList.filter(row => {
+      if (`${row.label}`.toLowerCase().indexOf(searchVal) > -1) {
+        return true
+      }
+      if (`${row.role}`.toLowerCase().indexOf(searchVal) > -1) {
+        return true
+      }
+      return false
+    })
+  } else {
+    tableData.value = allList
+  }
+}
+
 const formSubmitEvent: VxeTableSelectEvents.FormSubmit = () => {
-  console.log('form submit')
+  searchData()
 }
 
 const formResetEvent: VxeTableSelectEvents.FormReset = () => {
-  console.log('form reset')
+  searchData()
 }
+
+searchData()
 </script>
