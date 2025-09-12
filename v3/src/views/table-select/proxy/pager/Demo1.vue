@@ -96,6 +96,7 @@ export default Vue.extend({
     return {
       columnList,
       gridConfig,
+      popupConfig,
       val1
     }
   }
