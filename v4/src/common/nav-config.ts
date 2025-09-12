@@ -1444,7 +1444,9 @@ export const navConfigList: NavVO[] = [
           {
             title: '数据代理',
             children: [
-              { title: '查询接口', routerLink: { name: 'ComponentTableSelectProxyQuery' } }
+              { title: '查询接口', routerLink: { name: 'ComponentTableSelectProxyQuery' } },
+              { title: '分页查询接口', routerLink: { name: 'ComponentTableSelectProxyPager' } },
+              { title: '集成表单查询', routerLink: { name: 'ComponentTableSelectProxyForm' } }
             ]
           },
           {
