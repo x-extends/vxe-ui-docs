@@ -19,10 +19,10 @@ export default Vue.extend({
     const treeConfig: VxeTreeSelectPropTypes.TreeConfig = {}
 
     const treeList: VxeTreeSelectPropTypes.Options = [
-      { label: '节点2', value: '2', hasChild: true },
-      { label: '节点3', value: '3', hasChild: true },
-      { label: '节点4', value: '4', hasChild: true },
-      { label: '节点5', value: '5', hasChild: false }
+      { label: '节点2', value: '节点2', hasChild: true },
+      { label: '节点3', value: '节点3', hasChild: true },
+      { label: '节点4', value: '节点4', hasChild: true },
+      { label: '节点5', value: '节点5', hasChild: false }
     ]
 
     return {
@@ -45,8 +45,8 @@ export default Vue.extend({
         // 模拟后端接口
         setTimeout(() => {
           resolve([
-            { label: `${node.label}-1`, value: `${node.value}1`, hasChild: Math.random() * 10 < 6 },
-            { label: `${node.label}-2`, value: `${node.value}2`, hasChild: Math.random() * 10 < 6 }
+            { label: `${node.value}-1`, value: `${node.value}-1`, hasChild: Math.random() * 10 < 6 },
+            { label: `${node.value}-2`, value: `${node.value}-2`, hasChild: Math.random() * 10 < 6 }
           ])
         }, 500)
       })
