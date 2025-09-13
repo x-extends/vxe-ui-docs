@@ -2948,6 +2948,7 @@ const routes: Array<RouteConfig> = [
           },
           { path: 'speed', name: 'ComponentNoticeBarSpeed', component: () => import('@/views/notice-bar/speed/CodeExample.vue') },
           { path: 'duration', name: 'ComponentNoticeBarDuration', component: () => import('@/views/notice-bar/duration/CodeExample.vue') },
+          { path: 'loop', name: 'ComponentNoticeBarLoop', component: () => import('@/views/notice-bar/loop/CodeExample.vue') },
           {
             path: 'template',
             component: RouteLayout,
@@ -4720,6 +4721,16 @@ const routes: Array<RouteConfig> = [
                     component: () => import('@/views/form/basics/validate/custom/CodeExample.vue')
                   },
                   {
+                    path: 'showMessage',
+                    name: 'ComponentFormBasicsValidateShowMessage',
+                    component: () => import('@/views/form/basics/validate/showMessage/CodeExample.vue')
+                  },
+                  {
+                    path: 'showErrorIcon',
+                    name: 'ComponentFormBasicsValidateShowErrorIcon',
+                    component: () => import('@/views/form/basics/validate/showErrorIcon/CodeExample.vue')
+                  },
+                  {
                     path: 'theme',
                     name: 'ComponentFormBasicsValidateTheme',
                     component: () => import('@/views/form/basics/validate/theme/CodeExample.vue')
@@ -5106,9 +5117,19 @@ const routes: Array<RouteConfig> = [
                     component: () => import('@/views/form/config/validate/custom/CodeExample.vue')
                   },
                   {
+                    path: 'showMessage',
+                    name: 'ComponentFormConfigValidateShowMessage',
+                    component: () => import('@/views/form/config/validate/showMessage/CodeExample.vue')
+                  },
+                  {
                     path: 'theme',
                     name: 'ComponentFormConfigValidateTheme',
                     component: () => import('@/views/form/config/validate/theme/CodeExample.vue')
+                  },
+                  {
+                    path: 'showErrorIcon',
+                    name: 'ComponentFormConfigValidateShowErrorIcon',
+                    component: () => import('@/views/form/config/validate/showErrorIcon/CodeExample.vue')
                   },
                   {
                     path: 'manual',

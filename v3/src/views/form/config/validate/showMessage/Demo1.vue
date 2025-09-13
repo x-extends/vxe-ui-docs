@@ -2,10 +2,6 @@
   <div>
     垂直布局：<vxe-switch v-model="formOptions.vertical"></vxe-switch>
     显示提示：<vxe-switch v-model="validConfig.showErrorMessage"></vxe-switch>
-    样式：<vxe-radio-group v-model="validConfig.theme">
-      <vxe-radio-button label="normal" content="简化"></vxe-radio-button>
-      <vxe-radio-button label="beautify" content="高亮"></vxe-radio-button>
-    </vxe-radio-group>
 
     <vxe-form
       v-bind="formOptions"
@@ -22,8 +18,10 @@ import { VxeUI, VxeFormProps, VxeFormPropTypes, VxeFormItemPropTypes } from 'vxe
 interface FormDataVO {
   name: string
   nickname: string
+  role: string
   sex: string
   age: string
+  remark: string
 }
 
 export default Vue.extend({
@@ -37,20 +35,20 @@ export default Vue.extend({
     }
 
     const validConfig: VxeFormPropTypes.ValidConfig = {
-      theme: 'beautify',
-      showErrorMessage: true
+      showErrorMessage: false
     }
 
     const formOptions: VxeFormProps<FormDataVO> = {
-      border: true,
-      vertical: true,
-      titleBackground: true,
+      vertical: false,
+      titleColon: true,
       validConfig,
       data: {
         name: '',
         nickname: '',
+        role: '',
         sex: '',
-        age: ''
+        age: '',
+        remark: ''
       },
       rules: {
         name: [
@@ -59,14 +57,22 @@ export default Vue.extend({
         sex: [
           { required: true, message: '请选择性别' }
         ],
+        role: [
+          { required: true, message: '请选择性别' }
+        ],
         age: [
+          { required: true, message: '请输入年龄' }
+        ],
+        remark: [
           { required: true, message: '请输入年龄' }
         ]
       },
       items: [
         { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
         { field: 'sex', title: '性别', span: 12, itemRender: sexItemRender },
+        { field: 'role', title: '角色', span: 12, itemRender: { name: 'VxeInput' } },
         { field: 'age', title: '年龄', span: 12, itemRender: { name: 'VxeInput' } },
+        { field: 'remark', title: '备注', span: 12, itemRender: { name: 'VxeInput' } },
         {
           align: 'center',
           span: 24,

@@ -1,7 +1,8 @@
 <template>
   <div>
-    <vxe-switch v-model="formOptions.vertical"></vxe-switch>
-    <vxe-radio-group v-model="validConfig.theme">
+    垂直布局：<vxe-switch v-model="formOptions.vertical"></vxe-switch>
+    显示提示：<vxe-switch v-model="validConfig.showErrorMessage"></vxe-switch>
+    样式：<vxe-radio-group v-model="validConfig.theme">
       <vxe-radio-button label="normal" content="简化"></vxe-radio-button>
       <vxe-radio-button label="beautify" content="高亮"></vxe-radio-button>
     </vxe-radio-group>
@@ -36,7 +37,8 @@ export default Vue.extend({
     }
 
     const validConfig: VxeFormPropTypes.ValidConfig = {
-      theme: 'beautify'
+      theme: 'beautify',
+      showErrorMessage: true
     }
 
     const formOptions: VxeFormProps<FormDataVO> = {

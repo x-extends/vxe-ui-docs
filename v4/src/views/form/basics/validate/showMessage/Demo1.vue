@@ -2,14 +2,9 @@
   <div>
     垂直布局：<vxe-switch v-model="vertical"></vxe-switch>
     显示提示：<vxe-switch v-model="validConfig.showErrorMessage"></vxe-switch>
-    样式：<vxe-radio-group v-model="validConfig.theme">
-      <vxe-radio-button label="normal" content="简化"></vxe-radio-button>
-      <vxe-radio-button label="beautify" content="高亮"></vxe-radio-button>
-    </vxe-radio-group>
 
     <vxe-form
-      border
-      title-background
+      title-colon
       ref="formRef"
       :vertical="vertical"
       :data="formData"
@@ -27,9 +22,19 @@
           <vxe-select v-model="formData.sex" :options="sexOptions" @change="changeEvent(params)"></vxe-select>
         </template>
       </vxe-form-item>
+      <vxe-form-item title="角色" field="role" span="12" :item-render="{}">
+        <template #default="params">
+          <vxe-input v-model="formData.role" @change="changeEvent(params)"></vxe-input>
+        </template>
+      </vxe-form-item>
       <vxe-form-item title="年龄" field="age" span="12" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.age" @change="changeEvent(params)"></vxe-input>
+        </template>
+      </vxe-form-item>
+      <vxe-form-item title="备注" field="remark" span="12" :item-render="{}">
+        <template #default="params">
+          <vxe-input v-model="formData.remark" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
       <vxe-form-item align="center" span="24" :item-render="{}">
@@ -49,19 +54,23 @@ import { VxeUI, VxeFormInstance, VxeFormPropTypes, VxeFormEvents } from 'vxe-pc-
 interface FormDataVO {
   name: string
   nickname: string
+  role: string
   sex: string
   age: string
+  remark: string
 }
 
 const formRef = ref<VxeFormInstance<FormDataVO>>()
 
-const vertical = ref(true)
+const vertical = ref(false)
 
 const formData = ref<FormDataVO>({
   name: '',
   nickname: '',
+  role: '',
   sex: '',
-  age: ''
+  age: '',
+  remark: ''
 })
 
 const formRules = ref<VxeFormPropTypes.Rules<FormDataVO>>({
@@ -71,14 +80,19 @@ const formRules = ref<VxeFormPropTypes.Rules<FormDataVO>>({
   sex: [
     { required: true, message: '请选择性别' }
   ],
+  role: [
+    { required: true, message: '请选择性别' }
+  ],
   age: [
+    { required: true, message: '请输入年龄' }
+  ],
+  remark: [
     { required: true, message: '请输入年龄' }
   ]
 })
 
 const validConfig = reactive<VxeFormPropTypes.ValidConfig>({
-  theme: 'beautify',
-  showErrorMessage: true
+  showErrorMessage: false
 })
 
 const sexOptions = ref([

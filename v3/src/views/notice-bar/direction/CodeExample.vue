@@ -8,7 +8,9 @@
 
     <CodeLight path="notice-bar/direction/Demo2">
       <template #tip>
-        <vxe-tip status="primary" title="向右滚动"></vxe-tip>
+        <vxe-tip status="primary">
+          向右滚动
+        </vxe-tip>
       </template>
     </CodeLight>
   </div>

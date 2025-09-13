@@ -1,13 +1,10 @@
 <template>
   <div>
     垂直布局：<vxe-switch v-model="vertical"></vxe-switch>
-    显示提示：<vxe-switch v-model="validConfig.showErrorMessage"></vxe-switch>
-    样式：<vxe-radio-group v-model="validConfig.theme">
-      <vxe-radio-button label="normal" content="简化"></vxe-radio-button>
-      <vxe-radio-button label="beautify" content="高亮"></vxe-radio-button>
-    </vxe-radio-group>
+    显示图标：<vxe-switch v-model="validConfig.showErrorIcon"></vxe-switch>
 
     <vxe-form
+      title-colon
       ref="formRef"
       :vertical="vertical"
       :data="formData"
@@ -25,9 +22,19 @@
           <vxe-select v-model="formData.sex" :options="sexOptions" @change="changeEvent(params)"></vxe-select>
         </template>
       </vxe-form-item>
+      <vxe-form-item title="角色" field="role" span="12" :item-render="{}">
+        <template #default="params">
+          <vxe-input v-model="formData.role" @change="changeEvent(params)"></vxe-input>
+        </template>
+      </vxe-form-item>
       <vxe-form-item title="年龄" field="age" span="12" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.age" @change="changeEvent(params)"></vxe-input>
+        </template>
+      </vxe-form-item>
+      <vxe-form-item title="备注" field="remark" span="12" :item-render="{}">
+        <template #default="params">
+          <vxe-input v-model="formData.remark" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
       <vxe-form-item align="center" span="24" :item-render="{}">
@@ -47,8 +54,10 @@ import { VxeUI, VxeFormInstance, VxeFormPropTypes } from 'vxe-pc-ui'
 interface FormDataVO {
   name: string
   nickname: string
+  role: string
   sex: string
   age: string
+  remark: string
 }
 
 export default Vue.extend({
@@ -58,8 +67,10 @@ export default Vue.extend({
     const formData: FormDataVO = {
       name: '',
       nickname: '',
+      role: '',
       sex: '',
-      age: ''
+      age: '',
+      remark: ''
     }
 
     const formRules: VxeFormPropTypes.Rules<FormDataVO> = {
@@ -69,14 +80,20 @@ export default Vue.extend({
       sex: [
         { required: true, message: '请选择性别' }
       ],
+      role: [
+        { required: true, message: '请选择性别' }
+      ],
       age: [
+        { required: true, message: '请输入年龄' }
+      ],
+      remark: [
         { required: true, message: '请输入年龄' }
       ]
     }
 
     const validConfig: VxeFormPropTypes.ValidConfig = {
-      theme: 'beautify',
-      showErrorMessage: true
+      showErrorIcon: true,
+      showErrorMessage: false
     }
 
     const sexOptions = [

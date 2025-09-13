@@ -1,11 +1,7 @@
 <template>
   <div>
     垂直布局：<vxe-switch v-model="formOptions.vertical"></vxe-switch>
-    显示提示：<vxe-switch v-model="validConfig.showErrorMessage"></vxe-switch>
-    样式：<vxe-radio-group v-model="validConfig.theme">
-      <vxe-radio-button label="normal" content="简化"></vxe-radio-button>
-      <vxe-radio-button label="beautify" content="高亮"></vxe-radio-button>
-    </vxe-radio-group>
+    显示图标：<vxe-switch v-model="validConfig.showErrorIcon"></vxe-switch>
 
     <vxe-form v-bind="formOptions" v-on="formEvents" ></vxe-form>
   </div>
@@ -18,8 +14,10 @@ import { VxeUI, VxeFormProps, VxeFormPropTypes, VxeFormListeners, VxeFormItemPro
 interface FormDataVO {
   name: string
   nickname: string
+  role: string
   sex: string
   age: string
+  remark: string
 }
 
 const sexItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
@@ -31,20 +29,21 @@ const sexItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
 })
 
 const validConfig = reactive<VxeFormPropTypes.ValidConfig>({
-  theme: 'beautify',
-  showErrorMessage: true
+  showErrorIcon: true,
+  showErrorMessage: false
 })
 
 const formOptions = reactive<VxeFormProps<FormDataVO>>({
-  border: true,
-  vertical: true,
-  titleBackground: true,
+  vertical: false,
+  titleColon: true,
   validConfig,
   data: {
     name: '',
     nickname: '',
+    role: '',
     sex: '',
-    age: ''
+    age: '',
+    remark: ''
   },
   rules: {
     name: [
@@ -53,14 +52,22 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     sex: [
       { required: true, message: '请选择性别' }
     ],
+    role: [
+      { required: true, message: '请选择性别' }
+    ],
     age: [
+      { required: true, message: '请输入年龄' }
+    ],
+    remark: [
       { required: true, message: '请输入年龄' }
     ]
   },
   items: [
     { field: 'name', title: '名称', span: 24, itemRender: { name: 'VxeInput' } },
     { field: 'sex', title: '性别', span: 12, itemRender: sexItemRender },
+    { field: 'role', title: '角色', span: 12, itemRender: { name: 'VxeInput' } },
     { field: 'age', title: '年龄', span: 12, itemRender: { name: 'VxeInput' } },
+    { field: 'remark', title: '备注', span: 12, itemRender: { name: 'VxeInput' } },
     {
       align: 'center',
       span: 24,
