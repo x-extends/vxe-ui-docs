@@ -18,6 +18,7 @@ const componentsSize = computed(() => appStore.componentsSize)
 axios.get(`${siteBaseUrl.value}/component-api/system-config.json?v=${import.meta.env.VITE_APP_DATE_NOW}`).then(res => {
   appStore.setSystemConfig(res.data)
 })
+
 axios.get(`${siteBaseUrl.value}/component-api/vxe-version.json?v=${import.meta.env.VITE_APP_DATE_NOW}`).then(res => {
   appStore.setVersionConfig(res.data)
 })

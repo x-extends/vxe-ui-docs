@@ -28,6 +28,7 @@ export default Vue.extend({
     axios.get(`${this.siteBaseUrl}/component-api/system-config.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
       this.setSystemConfig(res.data)
     })
+
     axios.get(`${this.siteBaseUrl}/component-api/vxe-version.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
       this.setVersionConfig(res.data)
     })
