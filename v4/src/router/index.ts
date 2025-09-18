@@ -4061,6 +4061,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'expandAll',
                 name: 'ComponentTreeBaseExpandAll',
                 component: () => import('@/views/tree/base/expandAll/CodeExample.vue')
+              },
+              {
+                path: 'expandNodeKeys',
+                name: 'ComponentTreeBaseExpandNodeKeys',
+                component: () => import('@/views/tree/base/expandNodeKeys/CodeExample.vue')
               }
             ]
           },
@@ -4398,7 +4403,8 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'multiple',
                 name: 'ComponentTreeSelectLazyMultiple',
                 component: () => import('@/views/tree-select/lazy/multiple/CodeExample.vue')
-              }
+              },
+              { path: 'lazyOptions', name: 'ComponentTreeSelectLazyLazyOptions', component: () => import('@/views/tree-select/lazy/lazyOptions/CodeExample.vue') }
             ]
           },
           {
@@ -4431,6 +4437,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'size',
                 name: 'ComponentTableSelectBaseSize',
                 component: () => import('@/views/table-select/base/size/CodeExample.vue')
+              },
+              {
+                path: 'columns',
+                name: 'ComponentTableSelectBaseColumns',
+                component: () => import('@/views/table-select/base/columns/CodeExample.vue')
               },
               {
                 path: 'loading',

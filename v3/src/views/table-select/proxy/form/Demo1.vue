@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-table-select v-model="val1" :columns="columnList" :grid-config="gridConfig" :popup-config="popupConfig"></vxe-table-select>
+    <vxe-table-select v-model="val1" :grid-config="gridConfig" :popup-config="popupConfig"></vxe-table-select>
   </div>
 </template>
 
@@ -80,14 +80,6 @@ const findPageList = (pageSize: number, currentPage: number, formData: any) => {
 
 export default Vue.extend({
   data () {
-    const columnList: VxeTableSelectPropTypes.Columns = [
-      { type: 'radio', width: 70 },
-      { field: 'label', title: 'Name' },
-      { field: 'role', title: 'Role' },
-      { field: 'sex', title: 'Sex' },
-      { field: 'address', title: 'Address' }
-    ]
-
     const gridConfig: VxeTableSelectPropTypes.GridConfig = {
       border: true,
       pagerConfig: {},
@@ -113,7 +105,14 @@ export default Vue.extend({
             return findPageList(page.pageSize, page.currentPage, form)
           }
         }
-      }
+      },
+      columns: [
+        { type: 'radio', width: 70 },
+        { field: 'label', title: 'Name' },
+        { field: 'role', title: 'Role' },
+        { field: 'sex', title: 'Sex' },
+        { field: 'address', title: 'Address' }
+      ]
     }
 
     const popupConfig: VxeTableSelectPropTypes.PopupConfig = {
@@ -124,7 +123,6 @@ export default Vue.extend({
     const val1 = null
 
     return {
-      columnList,
       gridConfig,
       popupConfig,
       val1

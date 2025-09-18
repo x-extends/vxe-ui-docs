@@ -51,7 +51,7 @@ const tableData = ref<RowVO[]>([
 ])
 
 const popupConfig = reactive<VxeTableSelectPropTypes.PopupConfig>({
-  width: 500,
-  height: 400
+  width: 1000,
+  height: 600
 })
 </script>

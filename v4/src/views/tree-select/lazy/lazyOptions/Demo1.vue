@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-tree-select v-model="val1" :options="treeList" :treeConfig="treeConfig" multiple clearable></vxe-tree-select>
+    <vxe-tree-select v-model="val1" :options="treeList" :lazy-options="lazyList" :treeConfig="treeConfig" multiple clearable></vxe-tree-select>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ interface NodeVO {
   hasChild?: boolean
 }
 
-const val1 = ref()
+const val1 = ref(['4-2'])
 
 const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig>({
   lazy: true,
@@ -24,10 +24,14 @@ const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig>({
 })
 
 const treeList = ref<VxeTreeSelectPropTypes.Options>([
-  { label: '节点2', value: '节点2', hasChild: true },
-  { label: '节点3', value: '节点3', hasChild: true },
-  { label: '节点4', value: '节点4', hasChild: true },
-  { label: '节点5', value: '节点5', hasChild: false }
+  { label: '节点2', value: '2', hasChild: true },
+  { label: '节点3', value: '3', hasChild: true },
+  { label: '节点4', value: '4', hasChild: true },
+  { label: '节点5', value: '5', hasChild: false }
+])
+
+const lazyList = ref<VxeTreeSelectPropTypes.Options>([
+  { label: '节点4-2', value: '4-2' }
 ])
 
 let treeKey = 1

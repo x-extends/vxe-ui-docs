@@ -14,6 +14,8 @@ interface NodeVO {
   hasChild?: boolean
 }
 
+let treeKey = 1
+
 export default Vue.extend({
   data () {
     const treeConfig: VxeTreeSelectPropTypes.TreeConfig = { }
@@ -45,9 +47,10 @@ export default Vue.extend({
         // 模拟后端接口
         setTimeout(() => {
           resolve([
-            { label: `${node.value}-1`, value: `${node.value}-1`, hasChild: Math.random() * 10 < 6 },
-            { label: `${node.value}-2`, value: `${node.value}-2`, hasChild: Math.random() * 10 < 6 }
+            { label: `节点${node.value}-${treeKey}`, value: `节点${node.value}-${treeKey}`, hasChild: Math.random() * 10 < 6 },
+            { label: `节点${node.value}-${treeKey + 1}`, value: `节点${node.value}-${treeKey + 1}`, hasChild: Math.random() * 10 < 6 }
           ])
+          treeKey += 2
         }, 500)
       })
     }

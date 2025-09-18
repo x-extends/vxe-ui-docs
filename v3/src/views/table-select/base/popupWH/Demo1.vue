@@ -51,8 +51,8 @@ export default Vue.extend({
     ]
 
     const popupConfig: VxeTableSelectPropTypes.PopupConfig = {
-      width: 500,
-      height: 400
+      width: 1000,
+      height: 600
     }
 
     return {

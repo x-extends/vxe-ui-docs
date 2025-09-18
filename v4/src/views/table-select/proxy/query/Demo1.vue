@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-table-select v-model="val1" :columns="columnList" :grid-config="gridConfig"></vxe-table-select>
+    <vxe-table-select v-model="val1" :grid-config="gridConfig"></vxe-table-select>
   </div>
 </template>
 
@@ -19,14 +19,6 @@ interface RowVO {
 }
 
 const val1 = ref()
-
-const columnList = ref<VxeTableSelectPropTypes.Columns>([
-  { type: 'radio', width: 70 },
-  { field: 'label', title: 'Name' },
-  { field: 'role', title: 'Role' },
-  { field: 'sex', title: 'Sex' },
-  { field: 'address', title: 'Address' }
-])
 
 // 模拟接口
 const findList = () => {
@@ -59,6 +51,13 @@ const gridConfig = reactive<VxeTableSelectPropTypes.GridConfig>({
         return findList()
       }
     }
-  }
+  },
+  columns: [
+    { type: 'radio', width: 70 },
+    { field: 'label', title: 'Name' },
+    { field: 'role', title: 'Role' },
+    { field: 'sex', title: 'Sex' },
+    { field: 'address', title: 'Address' }
+  ]
 })
 </script>

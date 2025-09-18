@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-table-select v-model="val1" :columns="columnList" :options="tableData"  :option-props="{value: 'id', label: 'name'}" :grid-config="gridConfig"></vxe-table-select>
+    <vxe-table-select v-model="val1" :options="tableData" :option-props="{value: 'id', label: 'name'}" :grid-config="gridConfig"></vxe-table-select>
   </div>
 </template>
 
@@ -19,14 +19,6 @@ interface RowVO {
 
 const val1 = ref()
 
-const columnList = ref<VxeTableSelectPropTypes.Columns>([
-  { type: 'radio', width: 70 },
-  { field: 'name', title: 'Name' },
-  { field: 'role', title: 'Role' },
-  { field: 'sex', title: 'Sex' },
-  { field: 'address', title: 'Address' }
-])
-
 const tableData = ref<RowVO[]>([
   { id: 10001, name: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
   { id: 10002, name: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },
@@ -43,7 +35,14 @@ const gridConfig = reactive<VxeTableSelectPropTypes.GridConfig>({
   border: true,
   showFooter: true,
   footerData: [
-    { name: '合计', sex: '666' }
+    { radio: '合计', name: '567', role: '789', sex: '666' }
+  ],
+  columns: [
+    { field: 'radio', type: 'radio', width: 70 },
+    { field: 'name', title: 'Name' },
+    { field: 'role', title: 'Role' },
+    { field: 'sex', title: 'Sex' },
+    { field: 'address', title: 'Address' }
   ]
 })
 </script>

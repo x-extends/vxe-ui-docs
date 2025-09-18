@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-table-select v-model="val1" :columns="columnList" :options="tableData" :grid-config="gridConfig"></vxe-table-select>
+    <vxe-table-select v-model="val1" :options="tableData" :grid-config="gridConfig"></vxe-table-select>
   </div>
 </template>
 
@@ -19,14 +19,6 @@ interface RowVO {
 
 const val1 = ref()
 
-const columnList = ref<VxeTableSelectPropTypes.Columns>([
-  { type: 'radio', width: 70 },
-  { field: 'label', title: 'Name' },
-  { field: 'role', title: 'Role' },
-  { field: 'sex', title: 'Sex' },
-  { field: 'address', title: 'Address' }
-])
-
 const tableData = ref<RowVO[]>([
   { value: 10001, label: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
   { value: 10002, label: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },
@@ -35,6 +27,13 @@ const tableData = ref<RowVO[]>([
 ])
 
 const gridConfig = reactive<VxeTableSelectPropTypes.GridConfig>({
-  border: true
+  border: true,
+  columns: [
+    { type: 'radio', width: 70 },
+    { field: 'label', title: 'Name' },
+    { field: 'role', title: 'Role' },
+    { field: 'sex', title: 'Sex' },
+    { field: 'address', title: 'Address' }
+  ]
 })
 </script>

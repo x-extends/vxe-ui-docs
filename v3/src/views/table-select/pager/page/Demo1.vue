@@ -2,7 +2,6 @@
   <div>
     <vxe-table-select
       v-model="val1"
-      :columns="columnList"
       :options="tableData"
       :popup-config="popupConfig"
       :grid-config="gridConfig"
@@ -52,14 +51,6 @@ const allList: RowVO[] = [
 
 export default Vue.extend({
   data () {
-    const columnList: VxeTableSelectPropTypes.Columns = [
-      { type: 'radio', width: 70 },
-      { field: 'label', title: 'Name' },
-      { field: 'role', title: 'Role' },
-      { field: 'sex', title: 'Sex' },
-      { field: 'address', title: 'Address' }
-    ]
-
     const tableData: RowVO[] = []
 
     const popupConfig: VxeTableSelectPropTypes.PopupConfig = {
@@ -76,12 +67,18 @@ export default Vue.extend({
     const gridConfig: VxeTableSelectPropTypes.GridConfig = {
       border: true,
       loading: false,
-      pagerConfig
+      pagerConfig,
+      columns: [
+        { type: 'radio', width: 70 },
+        { field: 'label', title: 'Name' },
+        { field: 'role', title: 'Role' },
+        { field: 'sex', title: 'Sex' },
+        { field: 'address', title: 'Address' }
+      ]
     }
 
     return {
       val1: null,
-      columnList,
       tableData,
       popupConfig,
       pagerConfig,

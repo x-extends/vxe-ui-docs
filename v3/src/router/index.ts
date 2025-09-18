@@ -4401,7 +4401,8 @@ const routes: Array<RouteConfig> = [
                 path: 'multiple',
                 name: 'ComponentTreeSelectLazyMultiple',
                 component: () => import('@/views/tree-select/lazy/multiple/CodeExample.vue')
-              }
+              },
+              { path: 'lazyOptions', name: 'ComponentTreeSelectLazyLazyOptions', component: () => import('@/views/tree-select/lazy/lazyOptions/CodeExample.vue') }
             ]
           },
           {
@@ -4434,6 +4435,11 @@ const routes: Array<RouteConfig> = [
                 path: 'size',
                 name: 'ComponentTableSelectBaseSize',
                 component: () => import('@/views/table-select/base/size/CodeExample.vue')
+              },
+              {
+                path: 'columns',
+                name: 'ComponentTableSelectBaseColumns',
+                component: () => import('@/views/table-select/base/columns/CodeExample.vue')
               },
               {
                 path: 'loading',

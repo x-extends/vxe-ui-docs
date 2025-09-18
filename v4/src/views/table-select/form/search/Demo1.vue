@@ -2,7 +2,6 @@
   <div>
     <vxe-table-select
       v-model="val1"
-      :columns="columnList"
       :options="tableData"
       :grid-config="gridConfig"
       @form-submit="formSubmitEvent"
@@ -33,14 +32,6 @@ const allList: RowVO[] = [
   { value: 10004, label: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
 ]
 
-const columnList = ref<VxeTableSelectPropTypes.Columns>([
-  { type: 'radio', width: 70 },
-  { field: 'label', title: 'Name' },
-  { field: 'role', title: 'Role' },
-  { field: 'sex', title: 'Sex' },
-  { field: 'address', title: 'Address' }
-])
-
 const tableData = ref<RowVO[]>([])
 
 const formData = reactive({
@@ -53,6 +44,13 @@ const formData = reactive({
 
 const gridConfig = reactive<VxeTableSelectPropTypes.GridConfig>({
   border: true,
+  columns: [
+    { type: 'radio', width: 70 },
+    { field: 'label', title: 'Name' },
+    { field: 'role', title: 'Role' },
+    { field: 'sex', title: 'Sex' },
+    { field: 'address', title: 'Address' }
+  ],
   formConfig: {
     data: formData,
     items: [

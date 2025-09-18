@@ -2,7 +2,6 @@
   <div>
     <vxe-table-select
       v-model="val1"
-      :columns="columnList"
       :options="tableData"
       :popup-config="popupConfig"
       :grid-config="gridConfig"
@@ -52,14 +51,6 @@ const allList: RowVO[] = [
 
 const val1 = ref()
 
-const columnList = ref<VxeTableSelectPropTypes.Columns>([
-  { type: 'radio', width: 70 },
-  { field: 'label', title: 'Name' },
-  { field: 'role', title: 'Role' },
-  { field: 'sex', title: 'Sex' },
-  { field: 'address', title: 'Address' }
-])
-
 const tableData = ref<RowVO[]>([])
 
 const popupConfig = reactive<VxeTableSelectPropTypes.PopupConfig>({
@@ -75,7 +66,14 @@ const pagerConfig = reactive({
 
 const gridConfig = reactive<VxeTableSelectPropTypes.GridConfig>({
   border: true,
-  pagerConfig
+  pagerConfig,
+  columns: [
+    { type: 'radio', width: 70 },
+    { field: 'label', title: 'Name' },
+    { field: 'role', title: 'Role' },
+    { field: 'sex', title: 'Sex' },
+    { field: 'address', title: 'Address' }
+  ]
 })
 
 // 模拟前端分页

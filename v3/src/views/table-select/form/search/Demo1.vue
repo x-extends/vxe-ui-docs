@@ -2,7 +2,6 @@
   <div>
     <vxe-table-select
       v-model="val1"
-      :columns="columnList"
       :options="tableData"
       :grid-config="gridConfig"
       @form-submit="formSubmitEvent"
@@ -33,14 +32,6 @@ export default Vue.extend({
       { value: 10004, label: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
     ]
 
-    const columnList: VxeTableSelectPropTypes.Columns = [
-      { type: 'radio', width: 70 },
-      { field: 'label', title: 'Name' },
-      { field: 'role', title: 'Role' },
-      { field: 'sex', title: 'Sex' },
-      { field: 'address', title: 'Address' }
-    ]
-
     const tableData: RowVO[] = []
 
     const formData = {
@@ -67,12 +58,18 @@ export default Vue.extend({
             }
           }
         ]
-      }
+      },
+      columns: [
+        { type: 'radio', width: 70 },
+        { field: 'label', title: 'Name' },
+        { field: 'role', title: 'Role' },
+        { field: 'sex', title: 'Sex' },
+        { field: 'address', title: 'Address' }
+      ]
     }
 
     return {
       val1: null,
-      columnList,
       formData,
       tableData,
       gridConfig,

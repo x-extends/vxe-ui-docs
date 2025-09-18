@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-table-select v-model="val1" :columns="columnList" :grid-config="gridConfig" :popup-config="popupConfig"></vxe-table-select>
+    <vxe-table-select v-model="val1" :grid-config="gridConfig" :popup-config="popupConfig"></vxe-table-select>
   </div>
 </template>
 
@@ -45,14 +45,6 @@ const list = [
 
 const val1 = ref()
 
-const columnList = ref<VxeTableSelectPropTypes.Columns>([
-  { type: 'radio', width: 70 },
-  { field: 'label', title: 'Name' },
-  { field: 'role', title: 'Role' },
-  { field: 'sex', title: 'Sex' },
-  { field: 'address', title: 'Address' }
-])
-
 // 模拟接口
 const findPageList = (pageSize: number, currentPage: number) => {
   console.log(`调用查询接口 pageSize=${pageSize} currentPage=${currentPage}`)
@@ -83,7 +75,14 @@ const gridConfig = reactive<VxeTableSelectPropTypes.GridConfig>({
         return findPageList(page.pageSize, page.currentPage)
       }
     }
-  }
+  },
+  columns: [
+    { type: 'radio', width: 70 },
+    { field: 'label', title: 'Name' },
+    { field: 'role', title: 'Role' },
+    { field: 'sex', title: 'Sex' },
+    { field: 'address', title: 'Address' }
+  ]
 })
 
 const popupConfig = reactive<VxeTableSelectPropTypes.PopupConfig>({

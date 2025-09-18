@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-table-select v-model="val1" :options="tableData" :grid-config="gridConfig" clearable></vxe-table-select>
+    <vxe-table-select v-model="val1" :options="tableData" :grid-config="gridConfig"></vxe-table-select>
   </div>
 </template>
 
@@ -27,7 +27,6 @@ export default Vue.extend({
     ]
 
     const gridConfig : VxeTableSelectPropTypes.GridConfig = {
-      border: true,
       columns: [
         { type: 'radio', width: 70 },
         { field: 'label', title: 'Name' },

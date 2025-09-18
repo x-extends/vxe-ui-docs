@@ -1395,7 +1395,8 @@ export const navConfigList: NavVO[] = [
             title: '懒加载',
             children: [
               { title: '加载子节点', routerLink: { name: 'ComponentTreeSelectLazyBase' } },
-              { title: '多选', routerLink: { name: 'ComponentTreeSelectLazyMultiple' } }
+              { title: '多选', routerLink: { name: 'ComponentTreeSelectLazyMultiple' } },
+              { title: '处理回显', routerLink: { name: 'ComponentTreeSelectLazyLazyOptions' } }
             ]
           },
           {
@@ -1415,6 +1416,7 @@ export const navConfigList: NavVO[] = [
             title: '基础',
             children: [
               { title: '尺寸大小', routerLink: { name: 'ComponentTableSelectBaseSize' } },
+              { title: '列配置', routerLink: { name: 'ComponentTableSelectBaseColumns' } },
               { title: '加载中', routerLink: { name: 'ComponentTableSelectBaseLoading' } },
               { title: '边框', routerLink: { name: 'ComponentTableSelectBaseBorder' } },
               { title: '可清除', routerLink: { name: 'ComponentTableSelectBaseClearable' } },

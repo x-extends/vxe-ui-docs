@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-table-select v-model="val1" :columns="columnList" :grid-config="gridConfig"></vxe-table-select>
+    <vxe-table-select v-model="val1" :grid-config="gridConfig"></vxe-table-select>
   </div>
 </template>
 
@@ -42,14 +42,6 @@ const findList = () => {
 
 export default Vue.extend({
   data () {
-    const columnList: VxeTableSelectPropTypes.Columns = [
-      { type: 'radio', width: 70 },
-      { field: 'label', title: 'Name' },
-      { field: 'role', title: 'Role' },
-      { field: 'sex', title: 'Sex' },
-      { field: 'address', title: 'Address' }
-    ]
-
     const gridConfig: VxeTableSelectPropTypes.GridConfig = {
       border: true,
       proxyConfig: {
@@ -59,13 +51,19 @@ export default Vue.extend({
             return findList()
           }
         }
-      }
+      },
+      columns: [
+        { type: 'radio', width: 70 },
+        { field: 'label', title: 'Name' },
+        { field: 'role', title: 'Role' },
+        { field: 'sex', title: 'Sex' },
+        { field: 'address', title: 'Address' }
+      ]
     }
 
     const val1 = null
 
     return {
-      columnList,
       gridConfig,
       val1
     }
