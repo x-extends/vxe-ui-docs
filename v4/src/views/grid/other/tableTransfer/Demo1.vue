@@ -2,6 +2,7 @@
   <div>
     <div class="my-table-transfer">
       <div class="my-table-transfer-left">
+        <vxe-button status="success" @click="resultEvent1">获取数据1</vxe-button>
         <vxe-grid ref="gridRef1" v-bind="gridOptions1"></vxe-grid>
       </div>
       <div class="my-table-transfer-handle">
@@ -9,6 +10,7 @@
         <vxe-button status="error" icon="vxe-icon-arrow-double-left" style="width: 100%;" @click="delEvent"></vxe-button>
       </div>
       <div class="my-table-transfer-right">
+        <vxe-button status="success" @click="resultEvent2">获取数据2</vxe-button>
         <vxe-grid ref="gridRef2" v-bind="gridOptions2"></vxe-grid>
       </div>
     </div>
@@ -129,6 +131,30 @@ const delEvent = () => {
         status: 'warning'
       })
     }
+  }
+}
+
+const resultEvent1 = () => {
+  const $grid = gridRef1.value
+  if ($grid) {
+    const { insertRecords, removeRecords } = $grid.getRecordset()
+    const tableData = $grid.getFullData()
+    VxeUI.modal.message({
+      content: `新增：${insertRecords.length} 删除：${removeRecords.length} 现有：${tableData.length}`,
+      status: 'success'
+    })
+  }
+}
+
+const resultEvent2 = () => {
+  const $grid = gridRef2.value
+  if ($grid) {
+    const { insertRecords, removeRecords } = $grid.getRecordset()
+    const tableData = $grid.getFullData()
+    VxeUI.modal.message({
+      content: `新增：${insertRecords.length} 删除：${removeRecords.length} 现有：${tableData.length}`,
+      status: 'success'
+    })
   }
 }
 </script>
