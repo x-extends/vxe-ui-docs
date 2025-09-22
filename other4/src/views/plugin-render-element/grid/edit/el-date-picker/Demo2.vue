@@ -3,14 +3,22 @@
     <vxe-button @click="insertEvent">新增</vxe-button>
     <vxe-button @click="saveEvent">保存</vxe-button>
 
-    <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
+    <vxe-grid ref="gridRef" v-bind="gridOptions">
+      <template #edit_date1="{ row }">
+        <el-date-picker v-model="row.date1" type="date" value-format="YYYY-MM-DD"></el-date-picker>
+      </template>
+
+      <template #edit_date2="{ row }">
+        <el-date-picker v-model="row.date2" type="datetime" value-format="YYYY-MM-DD HH:mm:ss" @change="date2ChangeEvent"></el-date-picker>
+      </template>
+    </vxe-grid>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { reactive, ref } from 'vue'
+import { ref } from 'vue'
 import { ElMessageBox } from 'element-plus'
-import type { VxeGridInstance, VxeGridProps, VxeColumnPropTypes } from 'vxe-table'
+import type { VxeGridInstance, VxeGridProps } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -21,29 +29,7 @@ interface RowVO {
 
 const gridRef = ref<VxeGridInstance<RowVO>>()
 
-const date1EditRender = reactive<VxeColumnPropTypes.EditRender>({
-  name: 'ElDatePicker',
-  props: {
-    type: 'date',
-    valueFormat: 'YYYY-MM-DD'
-  }
-})
-
-const date2EditRender = reactive<VxeColumnPropTypes.EditRender>({
-  name: 'ElDatePicker',
-  props: {
-    type: 'datetime',
-    valueFormat: 'YYYY-MM-DD HH:mm:ss'
-  },
-  events: {
-    change (cellParams, eventParams) {
-      const { row, column } = cellParams
-      console.log('change', row, column.field, eventParams.value)
-    }
-  }
-})
-
-const gridOptions = reactive<VxeGridProps<RowVO>>({
+const gridOptions: VxeGridProps<RowVO> = {
   border: true,
   showOverflow: true,
   keepSource: true,
@@ -63,14 +49,19 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     { type: 'checkbox', width: 60 },
     { type: 'seq', title: 'Number', width: 80 },
     { field: 'name', title: 'Name', minWidth: 140, editRender: { name: 'ElInput' } },
-    { field: 'date1', title: '日期', width: 200, editRender: date1EditRender },
-    { field: 'date2', title: '日期带时间', width: 220, editRender: date2EditRender }
+    { field: 'date1', title: '日期', width: 200, editRender: { autofocus: '.el-input__inner' }, slots: { edit: 'edit_date1' } },
+    { field: 'date2', title: '日期带时间', width: 220, editRender: { autofocus: '.el-input__inner' }, slots: { edit: 'edit_date2' } }
+
   ],
   data: [
     { id: 10001, name: 'Test1', date1: '', date2: '' },
     { id: 10002, name: 'Test2', date1: '2018-01-01', date2: '2018-01-01 10:10:30' }
   ]
-})
+}
+
+const date2ChangeEvent = (eventParams) => {
+  console.log(eventParams.value)
+}
 
 const insertEvent = async () => {
   const $grid = gridRef.value

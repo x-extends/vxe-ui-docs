@@ -51,6 +51,12 @@ const regionEditRender = reactive<VxeColumnPropTypes.EditRender>({
   name: 'ElCascader',
   props: {
     options: regionList
+  },
+  events: {
+    change (cellParams, eventParams) {
+      const { row, column } = cellParams
+      console.log('change', row, column.field, eventParams.value)
+    }
   }
 })
 

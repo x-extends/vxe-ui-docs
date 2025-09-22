@@ -10,7 +10,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { MessageBox } from 'element-ui'
-import type { VxeGridInstance, VxeGridProps } from 'vxe-table'
+import type { VxeGridInstance, VxeGridProps, VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -21,6 +21,28 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
+    const date1EditRender: VxeColumnPropTypes.EditRender = {
+      name: 'ElDatePicker',
+      props: {
+        type: 'date',
+        valueFormat: 'YYYY-MM-DD'
+      }
+    }
+
+    const date2EditRender: VxeColumnPropTypes.EditRender = {
+      name: 'ElDatePicker',
+      props: {
+        type: 'datetime',
+        valueFormat: 'YYYY-MM-DD HH:mm:ss'
+      },
+      events: {
+        change (cellParams, eventParams) {
+          const { row, column } = cellParams
+          console.log('change', row, column.field, eventParams.value)
+        }
+      }
+    }
+
     const gridOptions: VxeGridProps<RowVO> = {
       border: true,
       showOverflow: true,
@@ -41,8 +63,8 @@ export default Vue.extend({
         { type: 'checkbox', width: 60 },
         { type: 'seq', title: 'Number', width: 80 },
         { field: 'name', title: 'Name', minWidth: 140, editRender: { name: 'ElInput' } },
-        { field: 'date1', title: '日期', width: 200, editRender: { name: 'ElDatePicker', props: { type: 'date', valueFormat: 'yyyy-MM-dd' } } },
-        { field: 'date2', title: '日期带时间', width: 220, editRender: { name: 'ElDatePicker', props: { type: 'datetime', valueFormat: 'yyyy-MM-dd HH:mm:ss' } } }
+        { field: 'date1', title: '日期', width: 200, editRender: date1EditRender },
+        { field: 'date2', title: '日期带时间', width: 220, editRender: date2EditRender }
 
       ],
       data: [

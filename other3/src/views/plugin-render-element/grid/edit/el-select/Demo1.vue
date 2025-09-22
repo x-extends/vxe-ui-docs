@@ -38,7 +38,13 @@ export default Vue.extend({
       options: [
         { label: '男', value: '1' },
         { label: '女', value: '0' }
-      ]
+      ],
+      events: {
+        change (cellParams, eventParams) {
+          const { row, column } = cellParams
+          console.log('change', row, column.field, eventParams.value)
+        }
+      }
     }
 
     const allList = [

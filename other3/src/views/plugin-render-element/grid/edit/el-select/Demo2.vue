@@ -21,7 +21,7 @@
         <span>{{ formatSexLabel(row.sexList) }}</span>
       </template>
       <template #edit_sexList="{ row }">
-        <el-select v-model="row.sexList" multiple>
+        <el-select v-model="row.sexList" multiple @change="sexListChangeEvent">
           <el-option v-for="item in sexOptions" :key="item.value" :value="item.value" :label="item.label"></el-option>
         </el-select>
       </template>
@@ -128,6 +128,9 @@ export default Vue.extend({
       } else {
         this.roleOptions = []
       }
+    },
+    sexListChangeEvent (eventParams) {
+      console.log(eventParams.value)
     },
     async insertEvent () {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>

@@ -9,7 +9,7 @@
       </template>
 
       <template #edit_date2="{ row }">
-        <el-date-picker v-model="row.date2" type="datetime" value-format="yyyy-MM-dd HH:mm:ss"></el-date-picker>
+        <el-date-picker v-model="row.date2" type="datetime" value-format="yyyy-MM-dd HH:mm:ss" @change="date2ChangeEvent"></el-date-picker>
       </template>
     </vxe-grid>
   </div>
@@ -64,6 +64,9 @@ export default Vue.extend({
     }
   },
   methods: {
+    date2ChangeEvent (eventParams) {
+      console.log(eventParams.value)
+    },
     async insertEvent () {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
       if ($grid) {
