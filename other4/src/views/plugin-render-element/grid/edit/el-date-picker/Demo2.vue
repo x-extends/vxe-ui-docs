@@ -60,7 +60,7 @@ const gridOptions: VxeGridProps<RowVO> = {
 }
 
 const date2ChangeEvent = (eventParams) => {
-  console.log(eventParams.value)
+  console.log(eventParams)
 }
 
 const insertEvent = async () => {

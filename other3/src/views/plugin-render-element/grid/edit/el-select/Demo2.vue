@@ -130,7 +130,7 @@ export default Vue.extend({
       }
     },
     sexListChangeEvent (eventParams) {
-      console.log(eventParams.value)
+      console.log(eventParams)
     },
     async insertEvent () {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>

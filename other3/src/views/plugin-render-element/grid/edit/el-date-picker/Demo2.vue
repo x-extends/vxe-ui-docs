@@ -65,7 +65,7 @@ export default Vue.extend({
   },
   methods: {
     date2ChangeEvent (eventParams) {
-      console.log(eventParams.value)
+      console.log(eventParams)
     },
     async insertEvent () {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>

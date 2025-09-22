@@ -42,7 +42,7 @@ const sexListEditRender = reactive<VxeColumnPropTypes.EditRender>({
   events: {
     change (cellParams, eventParams) {
       const { row, column } = cellParams
-      console.log('change', row, column.field, eventParams.value)
+      console.log('change', row, column.field, eventParams)
     }
   }
 })

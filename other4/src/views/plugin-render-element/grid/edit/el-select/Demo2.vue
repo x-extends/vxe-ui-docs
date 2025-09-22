@@ -122,7 +122,7 @@ const roleRemoteMethod = (query: string) => {
   }
 }
 const sexListChangeEvent = (eventParams) => {
-  console.log(eventParams.value)
+  console.log(eventParams)
 }
 
 const insertEvent = async () => {
