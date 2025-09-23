@@ -376,6 +376,7 @@
       "depVersionTitle": "Dependent version",
       "releaseTitle": "Release log",
       "backBtn": "Go back",
+      "fnListBtn": "功能清单",
       "demoBtn": "Documentation and online presentations",
       "apiBtn": "View API",
       "trialBtn": "Apply for probation",
