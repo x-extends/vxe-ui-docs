@@ -7,6 +7,7 @@
       "pluginStableVersion": "插件版本",
       "releaseTitle": "更新日志",
       "pluginVersion": "插件",
+      "pluginStore": "插件市场",
       "templateVersion": "模板",
       "docsSearch": "文檔搜索",
       "searchPlaceholder": "輸入關鍵字搜索文檔",
@@ -363,7 +364,7 @@
     },
     "menus": {
       "authList": "授权查询",
-      "pluginMarket": "插件市场",
+      "pluginStore": "插件市场",
       "personaCenter": "用户中心",
       "authorizedList": "已授权的插件",
       "myOrder": "我的订单",

@@ -7,6 +7,7 @@
       "pluginStableVersion": "插件版本",
       "releaseTitle": "更新日志",
       "pluginVersion": "البرنامج المساعد",
+      "pluginStore": "插件市场",
       "templateVersion": "نموذج",
       "docsSearch": "البحث عن المستندات",
       "searchPlaceholder": "أدخل الكلمات الرئيسية للبحث عن المستندات",
@@ -363,7 +364,7 @@
     },
     "menus": {
       "authList": "Authorization query",
-      "pluginMarket": "Plugin market",
+      "pluginStore": "Plugin market",
       "personaCenter": "My",
       "authorizedList": "An authorized plugin",
       "myOrder": "My order",

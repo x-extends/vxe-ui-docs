@@ -7,6 +7,7 @@
       "pluginStableVersion": "插件版本",
       "releaseTitle": "更新日志",
       "pluginVersion": "Plugin",
+      "pluginStore": "插件市场",
       "templateVersion": "modèle",
       "docsSearch": "Recherche de documents",
       "searchPlaceholder": "Entrez les mots clés pour rechercher des documents",
@@ -363,7 +364,7 @@
     },
     "menus": {
       "authList": "Authorization query",
-      "pluginMarket": "Plugin market",
+      "pluginStore": "Plugin market",
       "personaCenter": "My",
       "authorizedList": "An authorized plugin",
       "myOrder": "My order",
