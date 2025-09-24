@@ -110,6 +110,7 @@
       "pluginVersion": "Plugin",
       "pluginStore": "Plugin store",
       "enterpriseVersion": "Enterprise Edition",
+      "enterprisePluginVersion": "Plugin",
       "buyPlugin": "Purchase the enterprise version license",
       "supportUs": "support us"
     },
