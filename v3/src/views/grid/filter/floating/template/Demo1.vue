@@ -88,7 +88,7 @@ export default Vue.extend({
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
       if ($grid) {
         $grid.updateFilterOptionStatus(option, !!option.data)
-        $grid.saveFilter(column)
+        $grid.saveFilter(column) // $table.saveFilterByEvent(new Event('keydown'), column)
       }
     }, 500, { leading: false, trailing: true })
   }

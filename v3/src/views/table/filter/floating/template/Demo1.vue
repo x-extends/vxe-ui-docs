@@ -82,7 +82,7 @@ export default Vue.extend({
       const $table = this.$refs.tableRef as VxeTableInstance<RowVO>
       if ($table) {
         $table.updateFilterOptionStatus(option, !!option.data)
-        $table.saveFilter(column)
+        $table.saveFilter(column) // $table.saveFilterByEvent(new Event('keydown'), column)
       }
     }, 500, { leading: false, trailing: true })
   }

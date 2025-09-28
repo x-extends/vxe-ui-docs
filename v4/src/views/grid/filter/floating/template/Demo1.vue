@@ -84,7 +84,7 @@ const changeNameFilter = XEUtils.debounce((option, column) => {
   const $grid = gridRef.value
   if ($grid) {
     $grid.updateFilterOptionStatus(option, !!option.data)
-    $grid.saveFilter(column)
+    $grid.saveFilter(column) // $table.saveFilterByEvent(new Event('keydown'), column)
   }
 }, 500, { leading: false, trailing: true })
 </script>
