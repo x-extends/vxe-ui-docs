@@ -405,7 +405,8 @@ export const tableRouteConfig: RouteConfig = {
             { path: 'vxe-number-input', name: 'ComponentTableFilterFloatingVxeNumberInput', component: () => import('@/views/table/filter/floating/vxe-number-input/CodeExample.vue') },
             { path: 'vxe-date-picker', name: 'ComponentTableFilterFloatingVxeDatePicker', component: () => import('@/views/table/filter/floating/vxe-date-picker/CodeExample.vue') },
             { path: 'vxe-select', name: 'ComponentTableFilterFloatingVxeSelect', component: () => import('@/views/table/filter/floating/vxe-select/CodeExample.vue') },
-            { path: 'base', name: 'ComponentTableFilterFloatingFull', component: () => import('@/views/table/filter/floating/full/CodeExample.vue') }
+            { path: 'full', name: 'ComponentTableFilterFloatingFull', component: () => import('@/views/table/filter/floating/full/CodeExample.vue') },
+            { path: 'template', name: 'ComponentTableFilterFloatingTemplate', component: () => import('@/views/grid/filter/floating/template/CodeExample.vue') }
           ]
         }
       ]

@@ -187,7 +187,8 @@ export const tableNavConfig: NavVO & { children: NavVO[] } = {
                 { title: 'VxeNumberInput', routerLink: { name: 'ComponentTableFilterFloatingVxeNumberInput' } },
                 { title: 'VxeSelect', routerLink: { name: 'ComponentTableFilterFloatingVxeSelect' } },
                 { title: 'VxeDatePicker', routerLink: { name: 'ComponentTableFilterFloatingVxeDatePicker' } },
-                { title: '完整筛选', routerLink: { name: 'ComponentTableFilterFloatingFull' } }
+                { title: '完整筛选', routerLink: { name: 'ComponentTableFilterFloatingFull' } },
+                { title: '自定义插槽模板', routerLink: { name: 'ComponentTableFilterFloatingTemplate' } }
               ]
             },
             { title: '输入筛选', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'filters_complex_input_table_complex_string_filter' }, query: { previewPath: '%2FfiltersComplexInput%2Ftable%2Fcomplex%2FstringFilter' } } },
@@ -920,7 +921,8 @@ export const tableNavConfig: NavVO & { children: NavVO[] } = {
                 { title: 'VxeNumberInput', routerLink: { name: 'ComponentGridFilterFloatingVxeNumberInput' } },
                 { title: 'VxeSelect', routerLink: { name: 'ComponentGridFilterFloatingVxeSelect' } },
                 { title: 'VxeDatePicker', routerLink: { name: 'ComponentGridFilterFloatingVxeDatePicker' } },
-                { title: '完整筛选', routerLink: { name: 'ComponentGridFilterFloatingFull' } }
+                { title: '完整筛选', routerLink: { name: 'ComponentGridFilterFloatingFull' } },
+                { title: '自定义插槽模板', routerLink: { name: 'ComponentGridFilterFloatingTemplate' } }
               ]
             },
             { title: '输入筛选', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'filters_complex_input_table_complex_string_filter' }, query: { previewPath: '%2FfiltersComplexInput%2Fgrid%2Fcomplex%2FstringFilter' } } },

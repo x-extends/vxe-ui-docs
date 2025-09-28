@@ -323,7 +323,8 @@ export const gridRouteConfig: RouteRecordRaw = {
             { path: 'vxe-number-input', name: 'ComponentGridFilterFloatingVxeNumberInput', component: () => import('@/views/grid/filter/floating/vxe-number-input/CodeExample.vue') },
             { path: 'vxe-date-picker', name: 'ComponentGridFilterFloatingVxeDatePicker', component: () => import('@/views/grid/filter/floating/vxe-date-picker/CodeExample.vue') },
             { path: 'vxe-select', name: 'ComponentGridFilterFloatingVxeSelect', component: () => import('@/views/grid/filter/floating/vxe-select/CodeExample.vue') },
-            { path: 'base', name: 'ComponentGridFilterFloatingFull', component: () => import('@/views/grid/filter/floating/full/CodeExample.vue') }
+            { path: 'full', name: 'ComponentGridFilterFloatingFull', component: () => import('@/views/grid/filter/floating/full/CodeExample.vue') },
+            { path: 'template', name: 'ComponentGridFilterFloatingTemplate', component: () => import('@/views/grid/filter/floating/template/CodeExample.vue') }
           ]
         }
       ]
