@@ -36,6 +36,8 @@ interface RowVO {
   date: string
 }
 
+const tableRef = ref<VxeTableInstance<RowVO>>()
+
 const floatingFilterConfig = reactive<VxeTablePropTypes.FloatingFilterConfig<RowVO>>({
   enabled: true
 })
@@ -65,14 +67,14 @@ const filterNameMethod = ({ option, row, column }) => {
 }
 
 const updateNameFilterStatus = (option) => {
-  const $table = this.$refs.tableRef as VxeTableInstance<RowVO>
+  const $table = tableRef.value
   if ($table) {
     $table.updateFilterOptionStatus(option, !!option.data)
   }
 }
 
 const changeNameFilter = XEUtils.debounce(function (option, column) {
-  const $table = this.$refs.tableRef as VxeTableInstance<RowVO>
+  const $table = tableRef.value
   if ($table) {
     $table.updateFilterOptionStatus(option, !!option.data)
     $table.saveFilter(column)
