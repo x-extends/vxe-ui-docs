@@ -110,7 +110,11 @@ export const navConfigList: NavVO[] = [
           { title: '尺寸大小', routerLink: { name: 'ComponentTagSize' } },
           { title: '状态', routerLink: { name: 'ComponentTagStatus' } },
           { title: '图标', routerLink: { name: 'ComponentTagIcon' } },
-          { title: '圆角', routerLink: { name: 'ComponentTagRound' } }
+          { title: '圆角', routerLink: { name: 'ComponentTagRound' } },
+          { title: '边框', routerLink: { name: 'ComponentTagBorder' } },
+          { title: '加载中', routerLink: { name: 'ComponentTagLoading' } },
+          { title: '颜色', routerLink: { name: 'ComponentTagColor' } },
+          { title: '可关闭', routerLink: { name: 'ComponentTagClosable' } }
         ]
       },
       {

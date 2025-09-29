@@ -1004,7 +1004,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'icon',
             name: 'ComponentTagIcon',
             component: () => import('@/views/tag/icon/CodeExample.vue')
-          }
+          },
+          { path: 'border', name: 'ComponentTagBorder', component: () => import('@/views/tag/border/CodeExample.vue') },
+          { path: 'loading', name: 'ComponentTagLoading', component: () => import('@/views/tag/loading/CodeExample.vue') },
+          { path: 'color', name: 'ComponentTagColor', component: () => import('@/views/tag/color/CodeExample.vue') },
+          { path: 'closable', name: 'ComponentTagClosable', component: () => import('@/views/tag/closable/CodeExample.vue') }
         ]
       },
       {
