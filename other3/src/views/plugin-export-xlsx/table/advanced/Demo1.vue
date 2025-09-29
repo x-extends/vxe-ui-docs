@@ -9,6 +9,7 @@
       :column-config="columnConfig"
       :edit-config="editConfig"
       :export-config="exportConfig"
+      :menu-config="menuConfig"
       :data="tableData"
       :merge-cells="mergeCells"
       :footer-data="footerData">
@@ -83,6 +84,16 @@ export default Vue.extend({
       type: 'xlsx'
     }
 
+    const menuConfig: VxeTablePropTypes.MenuConfig = {
+      body: {
+        options: [
+          [
+            { code: 'EXPORT_ALL', name: '导出.xlsx' }
+          ]
+        ]
+      }
+    }
+
     return {
       tableData,
       footerData,
@@ -90,7 +101,8 @@ export default Vue.extend({
       columnConfig,
       editConfig,
       mergeCells,
-      exportConfig
+      exportConfig,
+      menuConfig
     }
   },
   methods: {

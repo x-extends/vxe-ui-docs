@@ -9,6 +9,7 @@
       :column-config="columnConfig"
       :edit-config="editConfig"
       :export-config="exportConfig"
+      :menu-config="menuConfig"
       :data="tableData"
       :merge-cells="mergeCells"
       :footer-data="footerData">
@@ -68,6 +69,16 @@ const mergeCells = ref<VxeTablePropTypes.MergeCells>([
 
 const exportConfig = reactive<VxeTablePropTypes.ExportConfig>({
   type: 'xlsx'
+})
+
+const menuConfig = reactive<VxeTablePropTypes.MenuConfig>({
+  body: {
+    options: [
+      [
+        { code: 'EXPORT_ALL', name: '导出.xlsx' }
+      ]
+    ]
+  }
 })
 
 const tableData = ref<RowVO[]>([

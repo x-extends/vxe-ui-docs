@@ -48,6 +48,15 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   exportConfig: {
     type: 'xlsx'
   },
+  menuConfig: {
+    body: {
+      options: [
+        [
+          { code: 'EXPORT_ALL', name: '导出.xlsx' }
+        ]
+      ]
+    }
+  },
   columns: [
     { field: 'checkbox', type: 'checkbox', width: 70 },
     { field: 'seq', type: 'seq', width: 70 },
