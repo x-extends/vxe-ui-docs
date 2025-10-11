@@ -36,6 +36,7 @@ export default defineConfig(({ mode, command }) => {
     },
     server: {
       host: '0.0.0.0',
+      allowedHosts: true,
       port: Number(env.VITE_APP_SERVER_PORT),
       proxy: {
         '/example/': {

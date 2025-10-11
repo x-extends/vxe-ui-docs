@@ -19,8 +19,8 @@
     "vue-router": "^4.5.1",
     "vxe-design": "^4.0.5",
     "vxe-gantt": "^4.0.14",
-    "vxe-pc-ui": "^4.9.41",
-    "vxe-table": "~4.17.0-beta.4",
+    "vxe-pc-ui": "^4.9.42",
+    "vxe-table": "~4.17.0-beta.5",
     "xe-utils": "^3.7.9"
   },
   "devDependencies": {
