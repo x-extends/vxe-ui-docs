@@ -3,6 +3,9 @@
     <CodeLight path="select/base/size/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="尺寸大小"></vxe-tip>
+        <vxe-tip status="error">
+          需要注意，value 值不能包含逗号，逗号属于分割值
+        </vxe-tip>
       </template>
 
       <template #describe>
