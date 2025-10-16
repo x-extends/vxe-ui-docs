@@ -1342,7 +1342,8 @@ export const navConfigList: NavVO[] = [
               { title: '可新增', routerLink: { name: 'ComponentSelectConfigAllowCreate' } },
               { title: '操作按钮', routerLink: { name: 'ComponentSelectConfigOperBtn' } },
               { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectConfigTemplate' } },
-              { title: '虚拟滚动（大量数据选项）', routerLink: { name: 'ComponentSelectConfigScroll' } }
+              { title: '虚拟滚动（大量数据选项）', routerLink: { name: 'ComponentSelectConfigScroll' } },
+              { title: '实现人员选择', routerLink: { name: 'ComponentSelectConfigUserSelect' } }
             ]
           }
         ]

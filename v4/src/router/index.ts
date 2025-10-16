@@ -2819,7 +2819,8 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'scroll',
                 name: 'ComponentSelectConfigScroll',
                 component: () => import('@/views/select/config/scroll/CodeExample.vue')
-              }
+              },
+              { path: 'userSelect', name: 'ComponentSelectConfigUserSelect', component: () => import('@/views/select/config/userSelect/CodeExample.vue') }
             ]
           }
         ]
