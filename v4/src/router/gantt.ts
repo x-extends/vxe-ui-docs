@@ -175,6 +175,16 @@ export const ganttRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'menu',
+      component: RouteLayout,
+      children: [
+        { path: 'prefixConfig', name: 'ComponentGanttMenuPrefixConfig', component: () => import('@/views/gantt/menu/prefixConfig/CodeExample.vue') },
+        { path: 'suffixConfig', name: 'ComponentGanttMenuSuffixConfig', component: () => import('@/views/gantt/menu/suffixConfig/CodeExample.vue') },
+        { path: 'full', name: 'ComponentGanttMenuFull', component: () => import('@/views/gantt/menu/full/CodeExample.vue') },
+        { path: 'privilege', name: 'ComponentGanttMenuPrivilege', component: () => import('@/views/gantt/menu/privilege/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'form',
       component: RouteLayout,
       children: [

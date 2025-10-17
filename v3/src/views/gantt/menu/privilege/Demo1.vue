@@ -1,28 +1,27 @@
 <template>
   <div>
     <vxe-switch v-model="menuConfig.enabled"></vxe-switch>
-    <vxe-grid
-      ref="gridRef"
-      v-bind="gridOptions"
+    <vxe-gantt
+      ref="ganttRef"
+      v-bind="ganttOptions"
       @cell-menu="cellMenuEvent"
       @menu-click="menuClickEvent">
-    </vxe-grid>
+    </vxe-gantt>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import { VxeUI } from 'vxe-pc-ui'
-import type { VxeGridInstance, VxeTablePropTypes, VxeGridProps } from 'vxe-table'
+import type { VxeGanttInstance, VxeGanttProps } from 'vxe-gantt'
+import type { VxeTablePropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
-  name: string
-  nickname: string
-  role: string
-  sex: string
-  age: number
-  address: string
+  title: string
+  start: string
+  end: string
+  progress: number
 }
 
 export default Vue.extend({
@@ -57,12 +56,12 @@ export default Vue.extend({
         ]
       },
       visibleMethod ({ options, row, column }) {
-        // 示例：只有 name 列允许操作，清除按钮只能在 age 才显示
+        // 示例：只有 title 列允许操作，清除按钮只能在 start,end 才显示
         // 显示之前处理按钮的操作权限
-        const isCopyDisabled = !column || column.field !== 'name'
-        const isClearVisible = column && column.field === 'age'
-        const isMyPrintVisible = row && ['Test3', 'Test4'].includes(row.name)
-        const isMyExportVisible = row && ['Test2', 'Test3'].includes(row.name)
+        const isCopyDisabled = !column || column.field !== 'title'
+        const isClearVisible = column && column.field === 'title'
+        const isMyPrintVisible = row && row.progress < 30
+        const isMyExportVisible = row && row.progress > 80
         options.forEach(list => {
           list.forEach(item => {
             if (item.code === 'copy') {
@@ -83,7 +82,7 @@ export default Vue.extend({
       }
     }
 
-    const gridOptions: VxeGridProps<RowVO> = {
+    const ganttOptions: VxeGanttProps<RowVO> = {
       border: true,
       showFooter: true,
       height: 400,
@@ -93,59 +92,65 @@ export default Vue.extend({
       columnConfig: {
         resizable: true
       },
+      taskBarConfig: {
+        showProgress: true,
+        showContent: true
+      },
+      taskViewConfig: {
+        tableStyle: {
+          width: 480
+        }
+      },
       columns: [
-        { field: 'checkbox', type: 'checkbox', width: 50 },
-        { type: 'seq', width: 70 },
-        { field: 'name', title: 'Name' },
-        { field: 'nickname', title: 'Nickname' },
-        { field: 'age', title: 'Age' },
-        { field: 'role', title: 'Role' },
-        { field: 'address', title: 'Address', showOverflow: true }
+        { field: 'title', title: '任务名称' },
+        { field: 'start', title: '开始时间', width: 100 },
+        { field: 'end', title: '结束时间', width: 100 }
       ],
       data: [
-        { id: 10001, name: 'Test1', nickname: 'T1', role: 'Develop', sex: 'Man', age: 28, address: 'Shenzhen' },
-        { id: 10002, name: 'Test2', nickname: 'T2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },
-        { id: 10003, name: 'Test3', nickname: 'T3', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai' },
-        { id: 10004, name: 'Test4', nickname: 'T4', role: 'Designer', sex: 'Women', age: 23, address: 'Shenzhen' },
-        { id: 10005, name: 'Test5', nickname: 'T5', role: 'Develop', sex: 'Women', age: 30, address: 'Shanghai' }
+        { id: 10001, title: 'A项目', start: '2024-03-01', end: '2024-03-04', progress: 3 },
+        { id: 10002, title: '城市道路修理进度', start: '2024-03-03', end: '2024-03-08', progress: 10 },
+        { id: 10003, title: 'B大工程', start: '2024-03-03', end: '2024-03-11', progress: 90 },
+        { id: 10004, title: '超级大工程', start: '2024-03-05', end: '2024-03-11', progress: 15 },
+        { id: 10005, title: '地球净化项目', start: '2024-03-08', end: '2024-03-15', progress: 100 },
+        { id: 10006, title: '一个小目标项目', start: '2024-03-10', end: '2024-03-21', progress: 5 },
+        { id: 10007, title: '某某计划', start: '2024-03-15', end: '2024-03-24', progress: 70 },
+        { id: 10008, title: '某某科技项目', start: '2024-03-20', end: '2024-03-29', progress: 50 },
+        { id: 10009, title: '地铁建设工程', start: '2024-03-19', end: '2024-03-20', progress: 5 },
+        { id: 10010, title: '铁路修建计划', start: '2024-03-12', end: '2024-03-20', progress: 10 }
       ],
       menuConfig,
       footerData: [
-        { checkbox: '合计', age: 135 }
+        { title: '合计', start: 111, end: 222 }
       ]
     }
 
     return {
-      gridOptions,
+      ganttOptions,
       menuConfig
     }
   },
   methods: {
     cellMenuEvent ({ row }) {
-      const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
-      if ($grid) {
-        $grid.setCurrentRow(row)
+      const $gantt = this.$refs.ganttRef as VxeGanttInstance<RowVO>
+      if ($gantt) {
+        $gantt.setCurrentRow(row)
       }
     },
     menuClickEvent ({ menu, row, column }) {
-      const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
-      if ($grid) {
+      const $gantt = this.$refs.ganttRef as VxeGanttInstance<RowVO>
+      if ($gantt) {
         switch (menu.code) {
           case 'copy':
-            if (row && column) {
-              if (VxeUI.clipboard.copy(row[column.field])) {
-                VxeUI.modal.message({ content: '已复制到剪贴板！', status: 'success' })
-              }
-            }
+            VxeUI.modal.message({ content: `点击了 "${menu.name}"`, status: 'info' })
             break
           case 'clear':
-            $grid.clearData(row, column.field)
+            $gantt.clearData(row, column.field)
             break
           case 'myPrint':
-            $grid.print()
+            $gantt.print()
             break
           case 'myExport':
-            $grid.exportData()
+            $gantt.exportData()
             break
         }
       }

@@ -157,6 +157,16 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
+      title: '右键菜单',
+      children: [
+        { title: '自定义前缀', routerLink: { name: 'ComponentGanttMenuPrefixConfig' } },
+        { title: '自定义后缀', routerLink: { name: 'ComponentGanttMenuSuffixConfig' } },
+        { title: '完整右键菜单', routerLink: { name: 'ComponentGanttMenuFull' } },
+        { title: '菜单权限控制', routerLink: { name: 'ComponentGanttMenuPrivilege' } }
+
+      ]
+    },
+    {
       title: '查询表单',
       children: [
         { title: '查询表单', routerLink: { name: 'ComponentGanttFormSearch' } },
