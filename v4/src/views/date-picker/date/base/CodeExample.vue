@@ -17,5 +17,11 @@
         <vxe-tip status="primary">通过 <ApiLink name="date-picker" prop="value-format"/>="timestamp" 设置为 number 时间戳</vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="date-picker/date/base/Demo4">
+      <template #tip>
+        <vxe-tip status="primary">通过 <ApiLink name="date-picker" prop="value-format"/>=dd/MM/yyyy" 设置自定义的格式</vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>
