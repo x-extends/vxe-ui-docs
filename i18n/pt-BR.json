@@ -230,6 +230,7 @@
         "areaBasic": "基础功能",
         "singleArea": "Selecione uma única área",
         "multiArea": "Seleção de múltiplas áreas",
+        "currentRow": "高亮行",
         "areaDisabled": "Desative a seleção de área",
         "areaExtension": "Arraste a área de extensão",
         "areaExtendCalcFill": "拖动自动填充",

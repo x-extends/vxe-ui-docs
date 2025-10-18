@@ -230,6 +230,7 @@
         "areaBasic": "基础功能",
         "singleArea": "단일 영역을 선택하십시오",
         "multiArea": "다중 영역 선택",
+        "currentRow": "高亮行",
         "areaDisabled": "영역 선택을 비활성화합니다",
         "areaExtension": "확장 영역을 드래그하십시오",
         "areaExtendCalcFill": "拖动自动填充",

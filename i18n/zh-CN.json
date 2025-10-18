@@ -230,6 +230,7 @@
         "areaBasic": "基础功能",
         "singleArea": "单个区域选取",
         "multiArea": "多重区域选取",
+        "currentRow": "高亮行",
         "areaDisabled": "禁用区域选取",
         "areaExtension": "拖动扩展区域",
         "areaExtendCalcFill": "拖动自动填充",

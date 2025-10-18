@@ -230,6 +230,7 @@
         "areaBasic": "Basic",
         "singleArea": "Single area selection",
         "multiArea": "Multiple area selection",
+        "currentRow": "高亮行",
         "areaDisabled": "Disable area selection",
         "areaExtension": "Drag the expanded area",
         "areaExtendCalcFill": "Drag to autofill",

@@ -230,6 +230,7 @@
         "areaBasic": "基础功能",
         "singleArea": "Виберіть одну область",
         "multiArea": "Вибір декількох областей",
+        "currentRow": "高亮行",
         "areaDisabled": "Вимкнути вибір області",
         "areaExtension": "Перетягніть область розширення",
         "areaExtendCalcFill": "拖动自动填充",

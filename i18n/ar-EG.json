@@ -230,6 +230,7 @@
         "areaBasic": "基础功能",
         "singleArea": "حدد منطقة واحدة",
         "multiArea": "اختيار منطقة متعددة",
+        "currentRow": "高亮行",
         "areaDisabled": "تعطيل اختيار المنطقة",
         "areaExtension": "اسحب منطقة التمديد",
         "areaExtendCalcFill": "拖动自动填充",

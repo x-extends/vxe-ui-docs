@@ -230,6 +230,7 @@
         "areaBasic": "基础功能",
         "singleArea": "Выберите одну область",
         "multiArea": "Несколько площадей",
+        "currentRow": "高亮行",
         "areaDisabled": "Отключить выбор площади",
         "areaExtension": "Перетащите область удлинителя",
         "areaExtendCalcFill": "拖动自动填充",
