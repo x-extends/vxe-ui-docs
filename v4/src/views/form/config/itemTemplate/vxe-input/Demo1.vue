@@ -6,7 +6,7 @@
       </template>
 
       <template #role="{ data, item }">
-        <vxe-input v-model="data.role" clearable @input="roleInput($event, item)"></vxe-input>
+        <vxe-input v-model="data.role" placeholder="输入内容" clearable @input="roleInput($event, item)"></vxe-input>
       </template>
 
       <template #action>

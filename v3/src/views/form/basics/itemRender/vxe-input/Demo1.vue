@@ -44,7 +44,8 @@ export default Vue.extend({
     const roleItemRender: VxeFormItemPropTypes.ItemRender<FormDataVO> = {
       name: 'VxeInput',
       props: {
-        clearable: true
+        clearable: true,
+        placeholder: '输入内容'
       },
       events: {
         input (itemParams, eventParams) {

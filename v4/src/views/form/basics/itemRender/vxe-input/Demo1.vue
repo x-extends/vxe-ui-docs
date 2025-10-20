@@ -42,7 +42,8 @@ const nameItemRender = reactive<VxeFormItemPropTypes.ItemRender<FormDataVO>>({
 const roleItemRender = reactive<VxeFormItemPropTypes.ItemRender<FormDataVO>>({
   name: 'VxeInput',
   props: {
-    clearable: true
+    clearable: true,
+    placeholder: '输入内容'
   },
   events: {
     input (itemParams, eventParams) {

@@ -10,7 +10,7 @@
       </vxe-form-item>
       <vxe-form-item title="输入框" field="role" span="24" :item-render="{}">
         <template #default="{ item }">
-          <vxe-input v-model="formData.role" clearable @input="roleInput($event, item)"></vxe-input>
+          <vxe-input v-model="formData.role" placeholder="输入内容" clearable @input="roleInput($event, item)"></vxe-input>
         </template>
       </vxe-form-item>
       <vxe-form-item align="center" span="24">
