@@ -4,22 +4,26 @@
 
     <vxe-modal v-model="showPopup" v-bind="modalOptions" @show="showEvent">
       <template #default>
-        <vxe-split height="600" border padding>
+        <vxe-split height="600" :action-config="actionConfig" border padding>
           <vxe-split-pane width="200" min-width="100">
-            <vxe-tree v-bind="treeOptions" @current-change="currentChangeEvent"></vxe-tree>
+            <template #default>
+              <vxe-tree v-bind="treeOptions" @current-change="currentChangeEvent"></vxe-tree>
+            </template>
           </vxe-split-pane>
 
-          <vxe-split-pane min-width="300" show-action>
-            <vxe-grid ref="gridRef" v-bind="gridOptions" @page-change="pageChangeEvent">
-              <template #toolbarButtons>
-                <vxe-button status="primary" icon="vxe-icon-add" @click="addEvent">新增</vxe-button>
-                <vxe-button status="success" icon="vxe-icon-save" @click="saveEvent">保存</vxe-button>
-              </template>
+          <vxe-split-pane min-width="300">
+            <template #default>
+              <vxe-grid ref="gridRef" v-bind="gridOptions" @page-change="pageChangeEvent">
+                <template #toolbarButtons>
+                  <vxe-button status="primary" icon="vxe-icon-add" @click="addEvent">新增</vxe-button>
+                  <vxe-button status="success" icon="vxe-icon-save" @click="saveEvent">保存</vxe-button>
+                </template>
 
-              <template #action="{ row }">
-                <vxe-button mode="text" status="error" icon="vxe-icon-delete" @click="removeRow(row)"></vxe-button>
-              </template>
-            </vxe-grid>
+                <template #action="{ row }">
+                  <vxe-button mode="text" status="error" icon="vxe-icon-delete" @click="removeRow(row)"></vxe-button>
+                </template>
+              </vxe-grid>
+            </template>
           </vxe-split-pane>
         </vxe-split>
       </template>
@@ -29,7 +33,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeModalProps, VxeTreeProps } from 'vxe-pc-ui'
+import { VxeModalProps, VxeTreeProps, VxeSplitPropTypes } from 'vxe-pc-ui'
 import { VxeGridInstance, VxeGridProps, VxeColumnPropTypes } from 'vxe-table'
 
 interface NodeVO {
@@ -49,6 +53,11 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
+    const actionConfig: VxeSplitPropTypes.ActionConfig = {
+      showPrevButton: true,
+      showNextButton: true
+    }
+
     const showPopup = false
     const modalOptions: VxeModalProps = {
       title: '在弹窗中使用表格',
@@ -160,6 +169,7 @@ export default Vue.extend({
     }
 
     return {
+      actionConfig,
       showPopup,
       modalOptions,
       treeOptions,

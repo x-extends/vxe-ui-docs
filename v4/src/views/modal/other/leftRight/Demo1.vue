@@ -4,22 +4,26 @@
 
     <vxe-modal v-model="showPopup" v-bind="modalOptions" v-on="modalEvents">
       <template #default>
-        <vxe-split border padding>
+        <vxe-split :action-config="actionConfig" border padding>
           <vxe-split-pane width="200" min-width="100">
-            <vxe-tree v-bind="treeOptions" v-on="treeEvents"></vxe-tree>
+            <template #default>
+              <vxe-tree v-bind="treeOptions" v-on="treeEvents"></vxe-tree>
+            </template>
           </vxe-split-pane>
 
-          <vxe-split-pane min-width="300" show-action>
-            <vxe-grid ref="gridRef" v-bind="gridOptions" v-on="gridEvents">
-              <template #toolbarButtons>
-                <vxe-button status="primary" icon="vxe-icon-add" @click="addEvent">新增</vxe-button>
-                <vxe-button status="success" icon="vxe-icon-save" @click="saveEvent">保存</vxe-button>
-              </template>
+          <vxe-split-pane min-width="300">
+            <template #default>
+              <vxe-grid ref="gridRef" v-bind="gridOptions" v-on="gridEvents">
+                <template #toolbarButtons>
+                  <vxe-button status="primary" icon="vxe-icon-add" @click="addEvent">新增</vxe-button>
+                  <vxe-button status="success" icon="vxe-icon-save" @click="saveEvent">保存</vxe-button>
+                </template>
 
-              <template #action="{ row }">
-                <vxe-button mode="text" status="error" icon="vxe-icon-delete" @click="removeRow(row)"></vxe-button>
-              </template>
-            </vxe-grid>
+                <template #action="{ row }">
+                  <vxe-button mode="text" status="error" icon="vxe-icon-delete" @click="removeRow(row)"></vxe-button>
+                </template>
+              </vxe-grid>
+            </template>
           </vxe-split-pane>
         </vxe-split>
       </template>
@@ -29,7 +33,7 @@
 
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-import { VxeModalProps, VxeModalListeners, VxeTreeProps, VxeTreeListeners } from 'vxe-pc-ui'
+import { VxeModalProps, VxeModalListeners, VxeTreeProps, VxeTreeListeners, VxeSplitPropTypes } from 'vxe-pc-ui'
 import { VxeGridInstance, VxeGridProps, VxeColumnPropTypes, VxeGridListeners } from 'vxe-table'
 
 interface NodeVO {
@@ -48,6 +52,11 @@ interface RowVO {
 }
 
 const gridRef = ref<VxeGridInstance<RowVO>>()
+
+const actionConfig = reactive<VxeSplitPropTypes.ActionConfig>({
+  showPrevButton: true,
+  showNextButton: true
+})
 
 const showPopup = ref(false)
 const modalOptions = reactive<VxeModalProps>({

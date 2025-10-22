@@ -2,10 +2,14 @@
   <div>
     <vxe-split height="300">
       <vxe-split-pane>
-        <div style="height: 600px;background-color: #f3e1e1;">左侧</div>
+        <template #default>
+          <div style="height: 600px;background-color: #f3e1e1;">左侧</div>
+        </template>
       </vxe-split-pane>
       <vxe-split-pane>
-        <div style="height: 400px;background-color: #d8d8f9;">右侧</div>
+        <template #default>
+          <div style="height: 400px;background-color: #d8d8f9;">右侧</div>
+        </template>
       </vxe-split-pane>
     </vxe-split>
   </div>
