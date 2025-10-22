@@ -9,7 +9,7 @@
       <vxe-split-pane>
         <template #default>
           <div style="height: 100%;background-color: #d8d8f9;">底部</div>
-        </template
+        </template>
       </vxe-split-pane>
     </vxe-split>
   </div>
