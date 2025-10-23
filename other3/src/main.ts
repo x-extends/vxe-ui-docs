@@ -16,7 +16,7 @@ import ApiLink from './components/ApiLink.vue'
 import axios from 'axios'
 import XEUtils from 'xe-utils'
 
-import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
+import VxeUIBase, { VxeUI } from 'vxe-pc-ui'
 import 'vxe-pc-ui/es/style.css'
 
 import VxeUITable from 'vxe-table'
@@ -150,7 +150,7 @@ VxeUI.use(VxeUIPluginValidator)
 VxeUI.use(VxeUIPluginRenderIView)
 VxeUI.use(VxeUIPluginRenderTDesign)
 
-Vue.use(VxeUIAll)
+Vue.use(VxeUIBase)
 Vue.use(VxeUITable)
 Vue.use(VxeUIDesign)
 Vue.use(Element)

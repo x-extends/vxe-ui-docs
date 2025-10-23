@@ -31,7 +31,7 @@
           <div>文件 src/main </div>
           <pre-code language="javascript">
             // ...
-            import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
+            import VxeUIBase, { VxeUI } from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
             import VxeUITable from 'vxe-table'
             import 'vxe-table/lib/style.css'
@@ -43,7 +43,7 @@
               // prefixCls: 'ant'
             })
 
-            createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
+            createApp(App).use(VxeUIBase).use(VxeUITable).mount('#app')
             // ...
           </pre-code>
         </pre>
@@ -55,7 +55,7 @@
           <div>文件 src/main </div>
           <pre-code language="javascript">
             // ...
-            import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
+            import VxeUIBase, { VxeUI } from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
             import VxeUITable from 'vxe-table'
             import 'vxe-table/lib/style.css'
@@ -75,7 +75,7 @@
 
             VxeUI.use(VxeUIPluginRenderAntd)
 
-            createApp(App).use(VxeUIAll).use(VxeUITable).mount('#app')
+            createApp(App).use(VxeUIBase).use(VxeUITable).mount('#app')
             // ...
           </pre-code>
         </pre>

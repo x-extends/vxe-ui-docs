@@ -31,7 +31,7 @@
           <div>文件 src/main </div>
           <pre-code language="javascript">
             // ...
-            import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
+            import VxeUIBase, { VxeUI } from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
             import VxeUITable from 'vxe-table'
             import 'vxe-table/lib/style.css'
@@ -43,7 +43,7 @@
               // prefixCls: 'ant'
             })
 
-            Vue.use(VxeUIAll)
+            Vue.use(VxeUIBase)
             Vue.use(VxeUITable)
             //...
           </pre-code>

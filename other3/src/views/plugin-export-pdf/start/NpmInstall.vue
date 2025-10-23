@@ -36,7 +36,7 @@
             language="javascript"
             :content="`
             // ...
-            import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
+            import VxeUIBase, { VxeUI } from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
             import VxeUITable from 'vxe-table'
             import 'vxe-table/lib/style.css'
@@ -55,7 +55,7 @@
               // ]
             })
 
-            Vue.use(VxeUIAll)
+            Vue.use(VxeUIBase)
             Vue.use(VxeUITable)
             //...
             `">
@@ -70,7 +70,7 @@
             language="javascript"
             :content="`
             // ...
-            import VxeUIAll, { VxeUI } from 'vxe-pc-ui'
+            import VxeUIBase, { VxeUI } from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
             import VxeUITable from 'vxe-table'
             import 'vxe-table/lib/style.css'
@@ -90,7 +90,7 @@
               // ]
             })
 
-            Vue.use(VxeUIAll)
+            Vue.use(VxeUIBase)
             Vue.use(VxeUITable)
             //...
             `">
