@@ -24,7 +24,8 @@ axios.get(`${siteBaseUrl.value}/component-api/vxe-version.json?v=${import.meta.e
   appStore.setVersionConfig(res.data)
 })
 
-if (!localStorage.getItem('VXE_VOTE_2025')) {
+const voteKey = 'VXE_VOTE_2025_4'
+if (!localStorage.getItem(voteKey)) {
   VxeUI.modal.confirm({
     width: 500,
     title: 'vxe-table 正在参加 Gitee 2025 最受欢迎的开源软件投票活动',
@@ -40,10 +41,10 @@ if (!localStorage.getItem('VXE_VOTE_2025')) {
     }
   }).then((type) => {
     if (type === 'confirm') {
-      localStorage.setItem('VXE_VOTE_2025', '1')
+      localStorage.setItem(voteKey, '1')
       open('https://gitee.com/activity/2025opensource?ident=IX0B8Q')
     } else if (type === 'cancel') {
-      localStorage.setItem('VXE_VOTE_2025', '1')
+      localStorage.setItem(voteKey, '1')
     }
   })
 }
