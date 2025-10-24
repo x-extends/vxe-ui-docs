@@ -8,7 +8,7 @@
 <script lang="tsx" setup>
 import { computed } from 'vue'
 import { useAppStore } from '@/store/app'
-import { VxeUI, VxeLink } from 'vxe-pc-ui'
+import { VxeUI } from 'vxe-pc-ui'
 import axios from 'axios'
 
 const appStore = useAppStore()
@@ -34,7 +34,7 @@ if (!localStorage.getItem('VXE_VOTE_2025')) {
       default () {
         return <div>
         <div>如果该项目对您有帮助，快来投票！</div>
-        <div><VxeLink status="primary" href="https://gitee.com/activity/2025opensource?ident=IX0B8Q" target="_blank">https://gitee.com/activity/2025opensource?ident=IX0B8Q</VxeLink></div>
+        <div><vxe-link status="primary" href="https://gitee.com/activity/2025opensource?ident=IX0B8Q" target="_blank">https://gitee.com/activity/2025opensource?ident=IX0B8Q</vxe-link></div>
       </div>
       }
     }
