@@ -33,9 +33,9 @@
     "vue-i18n": "^8.15.1",
     "vue-router": "^3.5.1",
     "vuex": "^3.4.0",
-    "vxe-pc-ui": "^3.10.7",
+    "vxe-pc-ui": "^3.10.8",
     "vxe-design": "^3.0.0",
-    "vxe-table": "~3.19.1",
+    "vxe-table": "~3.19.2",
     "vxe-gantt": "^3.0.17",
     "xe-utils": "^3.7.9"
   },
