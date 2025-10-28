@@ -1,0 +1,42 @@
+<template>
+  <div>
+    <vxe-split height="300" :resize-config="resizeConfig" border resize>
+      <vxe-split-pane>
+        <vxe-split :resize-config="resizeConfig" border vertical>
+          <vxe-split-pane height="100">
+            <template #default>
+              <div style="height: 100%;background-color: #f3e1e1;">顶部</div>
+            </template>
+          </vxe-split-pane>
+          <vxe-split-pane>
+            <template #default>
+              <div style="height: 100%;background-color: #d8d8f9;">底部</div>
+            </template>
+          </vxe-split-pane>
+        </vxe-split>
+      </vxe-split-pane>
+      <vxe-split-pane width="200">
+        <template #default>
+          <div style="height: 100%;background-color: #f3d0ec;">右侧</div>
+        </template>
+      </vxe-split-pane>
+    </vxe-split>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+import { VxeSplitterPropTypes } from 'vxe-pc-ui'
+
+export default Vue.extend({
+  data () {
+    const resizeConfig: VxeSplitterPropTypes.ResizeConfig = {
+      immediate: true
+    }
+
+    return {
+      resizeConfig
+    }
+  }
+})
+</script>

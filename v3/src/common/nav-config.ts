@@ -231,36 +231,36 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'Split 分割面板',
+        title: 'Splitter 分割面板',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split' } } },
-          { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'split-pane' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'splitter' } } },
+          { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'splitter-panel' } } },
           {
             title: '基础',
             children: [
-              { title: '基础', routerLink: { name: 'ComponentSplitBasicsBase' } },
-              { title: '高度', routerLink: { name: 'ComponentSplitBasicsHeight' } },
-              { title: '边框', routerLink: { name: 'ComponentSplitBasicsBorder' } },
-              { title: '边距', routerLink: { name: 'ComponentSplitBasicsPadding' } },
-              { title: '垂直布局', routerLink: { name: 'ComponentSplitBasicsVertical' } },
-              { title: '拖拽调整宽度', routerLink: { name: 'ComponentSplitBasicsResize' } },
-              { title: '组合布局', routerLink: { name: 'ComponentSplitBasicsLayout' } },
-              { title: '可折叠', routerLink: { name: 'ComponentSplitBasicsAction' } },
-              { title: '显示隐藏折叠按钮', routerLink: { name: 'ComponentSplitBasicsActionConfig' } }
+              { title: '基础', routerLink: { name: 'ComponentSplitterBasicsBase' } },
+              { title: '高度', routerLink: { name: 'ComponentSplitterBasicsHeight' } },
+              { title: '边框', routerLink: { name: 'ComponentSplitterBasicsBorder' } },
+              { title: '边距', routerLink: { name: 'ComponentSplitterBasicsPadding' } },
+              { title: '垂直布局', routerLink: { name: 'ComponentSplitterBasicsVertical' } },
+              { title: '拖拽调整宽度', routerLink: { name: 'ComponentSplitterBasicsResize' } },
+              { title: '组合布局', routerLink: { name: 'ComponentSplitterBasicsLayout' } },
+              { title: '可折叠', routerLink: { name: 'ComponentSplitterBasicsAction' } },
+              { title: '显示隐藏折叠按钮', routerLink: { name: 'ComponentSplitterBasicsActionConfig' } }
             ]
           },
           {
             title: '配置式',
             children: [
-              { title: '基础', routerLink: { name: 'ComponentSplitConfigBase' } },
-              { title: '高度', routerLink: { name: 'ComponentSplitConfigHeight' } },
-              { title: '边框', routerLink: { name: 'ComponentSplitConfigBorder' } },
-              { title: '边距', routerLink: { name: 'ComponentSplitConfigPadding' } },
-              { title: '垂直布局', routerLink: { name: 'ComponentSplitConfigVertical' } },
-              { title: '拖拽调整宽度', routerLink: { name: 'ComponentSplitConfigResize' } },
-              { title: '组合布局', routerLink: { name: 'ComponentSplitConfigLayout' } },
-              { title: '可折叠', routerLink: { name: 'ComponentSplitConfigAction' } },
-              { title: '显示隐藏折叠按钮', routerLink: { name: 'ComponentSplitConfigActionConfig' } }
+              { title: '基础', routerLink: { name: 'ComponentSplitterConfigBase' } },
+              { title: '高度', routerLink: { name: 'ComponentSplitterConfigHeight' } },
+              { title: '边框', routerLink: { name: 'ComponentSplitterConfigBorder' } },
+              { title: '边距', routerLink: { name: 'ComponentSplitterConfigPadding' } },
+              { title: '垂直布局', routerLink: { name: 'ComponentSplitterConfigVertical' } },
+              { title: '拖拽调整宽度', routerLink: { name: 'ComponentSplitterConfigResize' } },
+              { title: '组合布局', routerLink: { name: 'ComponentSplitterConfigLayout' } },
+              { title: '可折叠', routerLink: { name: 'ComponentSplitterConfigAction' } },
+              { title: '显示隐藏折叠按钮', routerLink: { name: 'ComponentSplitterConfigActionConfig' } }
             ]
           }
         ]
