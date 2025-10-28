@@ -3,21 +3,21 @@
     <vxe-switch v-model="actionConfig.showPrevButton"></vxe-switch>
     <vxe-switch v-model="actionConfig.showNextButton"></vxe-switch>
 
-    <vxe-split v-bind="splitOptions1">
+    <vxe-splitter v-bind="splitOptions1">
       <template #topContent>
         <div style="height: 100%;background-color: #f3e1e1;">顶部</div>
       </template>
       <template #bottomContent>
-        <vxe-split v-bind="splitOptions2">
+        <vxe-splitter v-bind="splitOptions2">
           <template #leftContent>
             <div style="height: 100%;background-color: #e1f3e5;">左下角</div>
           </template>
           <template #rightContent>
             <div style="height: 600px;background-color: #d8d8f9;">右下角</div>
           </template>
-        </vxe-split>
+        </vxe-splitter>
       </template>
-    </vxe-split>
+    </vxe-splitter>
   </div>
 </template>
 

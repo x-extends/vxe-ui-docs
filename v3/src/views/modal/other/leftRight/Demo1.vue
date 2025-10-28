@@ -4,14 +4,14 @@
 
     <vxe-modal v-model="showPopup" v-bind="modalOptions" @show="showEvent">
       <template #default>
-        <vxe-split height="600" :action-config="actionConfig" border padding>
-          <vxe-split-pane width="200" min-width="100">
+        <vxe-splitter height="600" :action-config="actionConfig" border padding>
+          <vxe-splitter-panel width="200" min-width="100">
             <template #default>
               <vxe-tree v-bind="treeOptions" @current-change="currentChangeEvent"></vxe-tree>
             </template>
-          </vxe-split-pane>
+          </vxe-splitter-panel>
 
-          <vxe-split-pane min-width="300">
+          <vxe-splitter-panel min-width="300">
             <template #default>
               <vxe-grid ref="gridRef" v-bind="gridOptions" @page-change="pageChangeEvent">
                 <template #toolbarButtons>
@@ -24,8 +24,8 @@
                 </template>
               </vxe-grid>
             </template>
-          </vxe-split-pane>
-        </vxe-split>
+          </vxe-splitter-panel>
+        </vxe-splitter>
       </template>
     </vxe-modal>
   </div>

@@ -1,13 +1,13 @@
 <template>
   <div>
-    <vxe-split v-bind="splitOptions">
+    <vxe-splitter v-bind="splitOptions">
       <template #topContent>
         <div style="height: 100%;background-color: #f3e1e1;">顶部</div>
       </template>
       <template #bottomContent>
         <div style="height: 100%;background-color: #d8d8f9;">底部</div>
       </template>
-    </vxe-split>
+    </vxe-splitter>
   </div>
 </template>
 

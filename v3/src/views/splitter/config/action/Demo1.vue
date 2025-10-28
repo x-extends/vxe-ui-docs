@@ -3,14 +3,14 @@
     <vxe-button @click="hidePanel">隐藏左侧</vxe-button>
     <vxe-button @click="showPanel">显示左侧</vxe-button>
 
-    <vxe-split ref="splitterRef" v-bind="splitOptions">
+    <vxe-splitter ref="splitterRef" v-bind="splitOptions">
       <template #leftContent>
         <div style="height: 100%;background-color: #f3e1e1;">左侧</div>
       </template>
       <template #rightContent>
         <div style="height: 600px;background-color: #d8d8f9;">右侧</div>
       </template>
-    </vxe-split>
+    </vxe-splitter>
   </div>
 </template>
 

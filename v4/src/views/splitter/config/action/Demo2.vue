@@ -3,14 +3,14 @@
     <vxe-button @click="hidePanel">隐藏顶部</vxe-button>
     <vxe-button @click="showPanel">显示顶部</vxe-button>
 
-    <vxe-split ref="splitterRef" v-bind="splitOptions">
+    <vxe-splitter ref="splitterRef" v-bind="splitOptions">
       <template #topContent>
         <div style="height: 100%;background-color: #f3e1e1;">顶部</div>
       </template>
       <template #bottomContent>
         <div style="height: 600px;background-color: #d8d8f9;">底部</div>
       </template>
-    </vxe-split>
+    </vxe-splitter>
   </div>
 </template>
 

@@ -1,17 +1,17 @@
 <template>
   <div>
     <vxe-split>
-      <vxe-split-pane>
+      <vxe-splitter-panel>
         <template #default>
           <div style="background-color: #f3e1e1;">左侧</div>
         </template>
-      </vxe-split-pane>
-      <vxe-split-pane>
+      </vxe-splitter-panel>
+      <vxe-splitter-panel>
         <template #default>
           <div style="background-color: #d8d8f9;">右侧</div>
         </template>
-      </vxe-split-pane>
-    </vxe-split>
+      </vxe-splitter-panel>
+    </vxe-splitter>
   </div>
 </template>
 

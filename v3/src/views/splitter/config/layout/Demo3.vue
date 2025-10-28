@@ -1,20 +1,20 @@
 <template>
   <div>
-    <vxe-split v-bind="splitOptions1">
+    <vxe-splitter v-bind="splitOptions1">
       <template #topContent>
         <div style="height: 100%;background-color: #f3d0ec;">顶部</div>
       </template>
       <template #bottomContent>
-        <vxe-split v-bind="splitOptions2">
+        <vxe-splitter v-bind="splitOptions2">
           <template #leftContent>
             <div style="height: 100%;background-color: #f3e1e1;">左侧</div>
           </template>
           <template #rightContent>
             <div style="height: 100%;background-color: #d8d8f9;">右侧</div>
           </template>
-        </vxe-split>
+        </vxe-splitter>
       </template>
-    </vxe-split>
+    </vxe-splitter>
   </div>
 </template>
 
