@@ -1,5 +1,8 @@
 <template>
   <div>
+    显示连接线：<vxe-switch v-model="treeConfig.showLine"></vxe-switch>
+    显示根节点线：<vxe-switch v-model="treeConfig.showRootLine"></vxe-switch>
+
     <vxe-gantt v-bind="ganttOptions"></vxe-gantt>
   </div>
 </template>
@@ -7,6 +10,7 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
 import type { VxeGanttProps } from 'vxe-gantt'
+import type { VxeTablePropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -17,6 +21,12 @@ interface RowVO {
   progress: number
 }
 
+const treeConfig = reactive<VxeTablePropTypes.TreeConfig>({
+  transform: true,
+  showLine: true,
+  showRootLine: true
+})
+
 const ganttOptions = reactive<VxeGanttProps<RowVO>>({
   showOverflow: true,
   border: 'outer',
@@ -26,10 +36,7 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
   columnConfig: {
     resizable: true
   },
-  treeConfig: {
-    transform: true,
-    showLine: true
-  },
+  treeConfig,
   taskBarConfig: {
     showProgress: true,
     showContent: true
