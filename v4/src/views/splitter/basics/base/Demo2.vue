@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-split>
+    <vxe-splitter>
       <vxe-splitter-panel width="20%">
         <template #default>
           <div style="background-color: #f3e1e1;">左</div>
