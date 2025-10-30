@@ -300,6 +300,7 @@
         "areaCellChart": "簡単なチャートをレンダリングします",
         "areaEcharts": "サードパーティのプラグイン - エチャートチャート",
         "areaBasicsEcharts": "セルチャート",
+        "formatCell": "格式化单元格",
         "areaExceljs": "サードパーティのプラグイン -  Exceljsのインポートとエクスポート",
         "areaExportExceljs": "XLSXをエクスポートします",
         "areaJspdf": "サードパーティプラグイン-JSPDFエクスポート",

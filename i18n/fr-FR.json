@@ -300,6 +300,7 @@
         "areaCellChart": "Rendre des graphiques simples",
         "areaEcharts": "Plug-ins tiers - graphiques Echarts",
         "areaBasicsEcharts": "Graphique cellulaire",
+        "formatCell": "格式化单元格",
         "areaExceljs": "Plug-in tiers - Exceljs Importer et exporter",
         "areaExportExceljs": "Exporter xlsx",
         "areaJspdf": "Plug-in tiers - exportation JSPDF",

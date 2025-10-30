@@ -300,6 +300,7 @@
         "areaCellChart": "渲染简单图表",
         "areaEcharts": "第三方插件 - echarts 图表",
         "areaBasicsEcharts": "单元格图表",
+        "formatCell": "格式化单元格",
         "areaExceljs": "第三方插件 - exceljs 导入导出",
         "areaExportExceljs": "导出 xlsx",
         "areaJspdf": "第三方插件 - jspdf 导出",

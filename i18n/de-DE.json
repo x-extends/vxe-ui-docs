@@ -300,6 +300,7 @@
         "areaCellChart": "Einfache Diagramme rendern",
         "areaEcharts": "Plug-Ins-Ins-Echarts-Diagramme von Drittanbietern",
         "areaBasicsEcharts": "Zelldiagramm",
+        "formatCell": "格式化单元格",
         "areaExceljs": "Drittanbieter-Plug-In-ExcelJS-Import und Exportieren",
         "areaExportExceljs": "Exportieren Sie XLSX",
         "areaJspdf": "Plug-in-JSPDF-Export von Drittanbietern",

@@ -300,6 +300,7 @@
         "areaCellChart": "간단한 차트를 렌더링합니다",
         "areaEcharts": "타사 플러그인 -ECHARTS 차트",
         "areaBasicsEcharts": "셀 차트",
+        "formatCell": "格式化单元格",
         "areaExceljs": "타사 플러그인-Exceljs 가져 오기 및 내보내기",
         "areaExportExceljs": "XLSX 내보내기",
         "areaJspdf": "타사 플러그인 -JSPDF 내보내기",

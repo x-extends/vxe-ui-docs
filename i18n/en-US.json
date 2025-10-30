@@ -300,6 +300,7 @@
         "areaCellChart": "Render a simple chart",
         "areaEcharts": "Third-party plug-ins - echarts charts",
         "areaBasicsEcharts": "cell chart",
+        "formatCell": "格式化单元格",
         "areaExceljs": "Third-party plug-in - exceljs import and export",
         "areaExportExceljs": "export xlsx",
         "areaJspdf": "Third-party plug-in - jspdf export",

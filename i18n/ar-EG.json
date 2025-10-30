@@ -300,6 +300,7 @@
         "areaCellChart": "تقديم مخططات بسيطة",
         "areaEcharts": "المكونات الإضافية لجهة خارجية-مخططات Echarts",
         "areaBasicsEcharts": "مخطط الخلايا",
+        "formatCell": "格式化单元格",
         "areaExceljs": "المكون الإضافي لجهات خارجية-استيراد وتصدير Exceljs",
         "areaExportExceljs": "التصدير xlsx",
         "areaJspdf": "مكون إضافي لجهة خارجية-تصدير JSPDF",

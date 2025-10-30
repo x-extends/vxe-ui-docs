@@ -300,6 +300,7 @@
         "areaCellChart": "Рендерировать простые диаграммы",
         "areaEcharts": "Сторонние плагины-диаграммы Echarts",
         "areaBasicsEcharts": "Клеточная карта",
+        "formatCell": "格式化单元格",
         "areaExceljs": "Сторонний плагин-импорт и экспорт Exceljs",
         "areaExportExceljs": "Экспорт XLSX",
         "areaJspdf": "Сторонний плагин-экспорт JSPDF",

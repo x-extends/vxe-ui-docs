@@ -300,6 +300,7 @@
         "areaCellChart": "Надати прості діаграми",
         "areaEcharts": "Сторонні плагіни-графіки Echarts",
         "areaBasicsEcharts": "Клітинна діаграма",
+        "formatCell": "格式化单元格",
         "areaExceljs": "Сторонній плагін-імпорт та експорт ExcelJS",
         "areaExportExceljs": "Експорт XLSX",
         "areaJspdf": "Сторонній плагін-Export JSPDF",
