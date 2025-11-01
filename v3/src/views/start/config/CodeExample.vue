@@ -545,8 +545,9 @@
                 filterConfig: {
                   // remote: false,
                   // filterMethod: null,
-                  // destroyOnClose: false,
                   // isEvery: false,
+                  // transfer: false,
+                  destroyOnClose: true,
                   multiple: true,
                   showIcon: true
                 },
