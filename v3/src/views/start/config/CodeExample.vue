@@ -152,7 +152,7 @@
               formItem: {},
               formView: {},
               icon: {},
-              iconPicker: {
+              iconPicr: {
                 icons: ['home', 'company', 'comment', 'setting', 'send', 'envelope', 'envelope-open', 'bell', 'search', 'print', 'pc', 'goods', 'chart-line', 'edit', 'delete', 'save', 'folder', 'microphone', 'flag', 'link', 'location', 'sunny', 'rmb', 'usd', 'user', 'add-user', 'add-users', 'star', 'unlock', 'time', 'text', 'feedback', 'calendar', 'association-form', 'cloud-download', 'cloud-upload', 'file', 'subtable', 'chart-bar-x', 'chart-bar-y', 'chart-line', 'chart-pie', 'chart-radar']
               },
               image: {
@@ -242,17 +242,17 @@
               },
               noticeBar: {},
               numberInput: {
-                // size: null,
-                // transfer: false
-                digits: 2,
-                autoFill: true,
-                controlConfig: {
-                  enabled: true,
-                  layout: 'right',
-                  showButton: true,
-                  isWheel: true,
-                  isArrow: true
-                }
+              // size: null,
+              // transfer: false
+              digits: 2,
+              autoFill: true,
+              controlConfig: {
+                enabled: true,
+                layout: 'right',
+                showButton: true,
+                isWheel: true,
+                isArrow: true
+              }
               },
               optgroup: {},
               option: {},
