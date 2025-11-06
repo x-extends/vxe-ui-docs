@@ -3,7 +3,7 @@
     <CodeLight path="gantt/tree/line/Demo1">
       <template #tip>
         <vxe-tip status="primary">
-          树表格，通过配置 <ApiLink name="gantt" prop="tree-config"/>={<ApiLink name="gantt" prop="showLine"/>: true} 属性来开启树节点连接线<br>
+          树表格，通过配置 <ApiLink name="gantt" prop="tree-config"/>.<ApiLink name="gantt" prop="showLine"/> 属性来开启树节点连接线，<ApiLink name="gantt" prop="tree-config"/>.<ApiLink name="gantt" prop="showRootLine"/> 用于控制是否显示根节点连接线<br>
         </vxe-tip>
       </template>
     </CodeLight>
