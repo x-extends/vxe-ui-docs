@@ -3,7 +3,7 @@
     <CodeLight path="number-input/number/controls/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="控制按钮">
-          操作按钮，可以通过 <ApiLink name="number-input" prop="control-config"/>.<ApiLink name="number-input" prop="showButton"/> 关闭
+          操作按钮，可以通过 <ApiLink name="number-input" prop="control-config"/>.<ApiLink name="number-input" prop="showButton"/> 关闭，保留鼠标滚轮
         </vxe-tip>
       </template>
     </CodeLight>
