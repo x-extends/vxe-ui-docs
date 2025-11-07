@@ -44,7 +44,7 @@ const tableData = ref<RowVO[]>([
 ])
 
 const footerData = ref<VxeTablePropTypes.FooterData>([
-  { seq: '合计', name: '12人', no1: '356' }
+  { seq: '合计', name: '12人', age: '999', no1: '356' }
 ])
 
 const ageFormatter: VxeColumnPropTypes.Formatter = ({ cellValue }) => {

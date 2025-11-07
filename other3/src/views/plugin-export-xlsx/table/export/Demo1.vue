@@ -43,7 +43,7 @@ export default Vue.extend({
     ]
 
     const footerData: VxeTablePropTypes.FooterData = [
-      { seq: '合计', name: '12人', no1: 356 }
+      { seq: '合计', name: '12人', age: '999', no1: 356 }
     ]
 
     return {
