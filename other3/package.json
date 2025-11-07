@@ -11,8 +11,8 @@
     "format:examples": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx,.vue dist/example/**"
   },
   "dependencies": {
-    "@vxe-ui/plugin-export-pdf": "^3.2.3",
-    "@vxe-ui/plugin-export-xlsx": "^3.3.0",
+    "@vxe-ui/plugin-export-pdf": "^3.2.4",
+    "@vxe-ui/plugin-export-xlsx": "^3.3.1",
     "@vxe-ui/plugin-menu": "^3.1.0",
     "@vxe-ui/plugin-render-antd": "^3.1.1",
     "@vxe-ui/plugin-render-chart": "^3.1.0",
