@@ -13,6 +13,7 @@
         <vxe-column field="role" title="Role"></vxe-column>
       </vxe-colgroup>
       <vxe-column field="sex" title="Sex"></vxe-column>
+      <vxe-column field="age" title="Age" :formatter="ageFormatter" :footer-formatter="ageFooterFormatter"></vxe-column>
       <vxe-column field="no1" title="NO1"></vxe-column>
       <vxe-column field="no2" title="NO2" cell-type="string"></vxe-column>
     </vxe-table>
@@ -21,13 +22,14 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import type { VxeTableInstance, VxeTablePropTypes } from 'vxe-table'
+import type { VxeTableInstance, VxeTablePropTypes, VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
   name: string
   role: string
   sex: string
+  age: number
   no1: string
   no2: string
 }
@@ -35,15 +37,23 @@ interface RowVO {
 const tableRef = ref<VxeTableInstance>()
 
 const tableData = ref<RowVO[]>([
-  { id: 10001, name: '张三', role: 'Develop', sex: 'Man', no1: '028', no2: '028' },
-  { id: 10002, name: '李四', role: '研发', sex: 'Women', no1: '220', no2: '220' },
-  { id: 10003, name: '王五', role: '产品经理', sex: 'Man', no1: '003200', no2: '003200' },
-  { id: 10004, name: '老六', role: 'Designer', sex: 'Women', no1: '02040', no2: '02040' }
+  { id: 10001, name: '张三', role: 'Develop', sex: 'Man', age: 28, no1: '028', no2: '028' },
+  { id: 10002, name: '李四', role: '研发', sex: 'Women', age: 36, no1: '220', no2: '220' },
+  { id: 10003, name: '王五', role: '产品经理', sex: 'Man', age: 44, no1: '003200', no2: '003200' },
+  { id: 10004, name: '老六', role: 'Designer', sex: 'Women', age: 38, no1: '02040', no2: '02040' }
 ])
 
 const footerData = ref<VxeTablePropTypes.FooterData>([
   { seq: '合计', name: '12人', no1: '356' }
 ])
+
+const ageFormatter: VxeColumnPropTypes.Formatter = ({ cellValue }) => {
+  return `内容：${cellValue}`
+}
+
+const ageFooterFormatter: VxeColumnPropTypes.FooterFormatter = ({ itemValue }) => {
+  return `尾部：${itemValue}`
+}
 
 const exportEvent = () => {
   const $table = tableRef.value
