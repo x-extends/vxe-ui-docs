@@ -11,7 +11,7 @@ import { ref } from 'vue'
 import axios from 'axios'
 import { VxeUploadPropTypes } from 'vxe-pc-ui'
 
-const fileList1 = ref('https://vxeui.com/resource/img/fj577.jpg')
+const fileList1 = ref('https://vxeui.com/resource/img/fj577.jpg?name=图片1.jpg')
 
 const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file }) => {
   const formData = new FormData()

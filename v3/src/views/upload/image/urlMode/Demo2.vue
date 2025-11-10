@@ -14,7 +14,7 @@ import { VxeUploadPropTypes } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const imgList1 = [
-      'https://vxeui.com/resource/img/fj577.jpg'
+      'https://vxeui.com/resource/img/fj577.jpg?name=图片1.jpg'
     ]
 
     const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file }) => {

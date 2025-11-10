@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>
-      <vxe-upload v-model="imgList1" mode="image" url-mode show-progress :upload-method="uploadMethod"></vxe-upload>
+      <vxe-upload v-model="imgList1" mode="image" url-mode url-args show-progress :upload-method="uploadMethod"></vxe-upload>
     </p>
   </div>
 </template>
@@ -21,7 +21,7 @@ export default Vue.extend({
       const formData = new FormData()
       formData.append('file', file)
       return axios.post('/api/pub/upload/single', formData).then((res) => {
-        // { url: '' }
+        // { url: 'https://xxx' } 当设置 url-args 后会自动拼接 https://xxx?name=ooo ，也可以自行拼接
         return {
           ...res.data
         }
