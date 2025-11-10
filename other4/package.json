@@ -34,7 +34,7 @@
     "vue-router": "^4.5.1",
     "vxe-design": "^4.0.6",
     "vxe-pc-ui": "^4.10.21",
-    "vxe-table": "~4.17.12",
+    "vxe-table": "~4.17.13",
     "vxe-gantt": "~4.0.21",
     "xe-utils": "^3.7.9"
   },
