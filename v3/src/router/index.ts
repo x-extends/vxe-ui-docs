@@ -1820,6 +1820,7 @@ const routes: Array<RouteConfig> = [
               { path: 'disabledMethod', name: 'ComponentDatePickerDateDisabledMethod', component: () => import('@/views/date-picker/date/disabledMethod/CodeExample.vue') },
               { path: 'prefixIcon', name: 'ComponentDatePickerDatePrefixIcon', component: () => import('@/views/date-picker/date/prefixIcon/CodeExample.vue') },
               { path: 'suffixIcon', name: 'ComponentDatePickerDateSuffixIcon', component: () => import('@/views/date-picker/date/suffixIcon/CodeExample.vue') },
+              { path: 'defVal', name: 'ComponentDatePickerDateDefVal', component: () => import('@/views/date-picker/date/defVal/CodeExample.vue') },
               { path: 'dot', name: 'ComponentDatePickerDateDot', component: () => import('@/views/date-picker/date/dot/CodeExample.vue') },
               { path: 'holidays', name: 'ComponentDatePickerDateHolidays', component: () => import('@/views/date-picker/date/holidays/CodeExample.vue') },
               {

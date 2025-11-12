@@ -952,6 +952,7 @@ export const navConfigList: NavVO[] = [
               { title: '限制指定日期', routerLink: { name: 'ComponentDatePickerDateDisabledMethod' } },
               { title: '前缀图标', routerLink: { name: 'ComponentDatePickerDatePrefixIcon' } },
               { title: '后缀图标', routerLink: { name: 'ComponentDatePickerDateSuffixIcon' } },
+              { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerDateDefVal' } },
               { title: '小圆点', routerLink: { name: 'ComponentDatePickerDateDot' } },
               { title: '农历及节假日', routerLink: { name: 'ComponentDatePickerDateHolidays' } },
               {
