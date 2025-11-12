@@ -983,6 +983,7 @@ export const navConfigList: NavVO[] = [
                   { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerTimeShortcutCustom' } }
                 ]
               },
+              { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerTimeDefVal' } },
               {
                 title: '自定义插槽模板',
                 children: [
@@ -1012,6 +1013,7 @@ export const navConfigList: NavVO[] = [
                   { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerDatetimeShortcutCustom' } }
                 ]
               },
+              { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerDatetimeDefVal' } },
               { title: '小圆点', routerLink: { name: 'ComponentDatePickerDatetimeDot' } },
               { title: '农历及节假日', routerLink: { name: 'ComponentDatePickerDatetimeHolidays' } },
               {
@@ -1043,6 +1045,7 @@ export const navConfigList: NavVO[] = [
                   { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerWeekShortcutCustom' } }
                 ]
               },
+              { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerWeekDefVal' } },
               {
                 title: '自定义插槽模板',
                 children: [
@@ -1068,7 +1071,8 @@ export const navConfigList: NavVO[] = [
                   { title: '显示位置', routerLink: { name: 'ComponentDatePickerMonthShortcutPosition' } },
                   { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerMonthShortcutCustom' } }
                 ]
-              }
+              },
+              { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerMonthDefVal' } }
             ]
           },
           {
@@ -1085,7 +1089,8 @@ export const navConfigList: NavVO[] = [
                   { title: '显示位置', routerLink: { name: 'ComponentDatePickerQuarterShortcutPosition' } },
                   { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerQuarterShortcutCustom' } }
                 ]
-              }
+              },
+              { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerQuarterDefVal' } }
             ]
           },
           {
@@ -1102,7 +1107,8 @@ export const navConfigList: NavVO[] = [
                   { title: '显示位置', routerLink: { name: 'ComponentDatePickerYearShortcutPosition' } },
                   { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerYearShortcutCustom' } }
                 ]
-              }
+              },
+              { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerYearDefVal' } }
             ]
           },
           {
@@ -1146,6 +1152,7 @@ export const navConfigList: NavVO[] = [
               { title: '限制指定日期', routerLink: { name: 'ComponentDateRangePickerDateDisabledMethod' } },
               { title: '前缀图标', routerLink: { name: 'ComponentDateRangePickerDatePrefixIcon' } },
               { title: '后缀图标', routerLink: { name: 'ComponentDateRangePickerDateSuffixIcon' } },
+              { title: '面板的默认日期', routerLink: { name: 'ComponentDateRangePickerDateDefVal' } },
               {
                 title: '自定义插槽模板',
                 children: [
@@ -1174,6 +1181,7 @@ export const navConfigList: NavVO[] = [
                   { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerTimeShortcutCustom' } }
                 ]
               },
+              { title: '面板的默认日期', routerLink: { name: 'ComponentDateRangePickerTimeDefVal' } },
               {
                 title: '自定义插槽模板',
                 children: [
@@ -1201,6 +1209,7 @@ export const navConfigList: NavVO[] = [
                   { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutCustom' } }
                 ]
               },
+              { title: '面板的默认日期', routerLink: { name: 'ComponentDateRangePickerDatetimeDefVal' } },
               {
                 title: '自定义插槽模板',
                 children: [

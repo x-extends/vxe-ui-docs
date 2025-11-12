@@ -1,0 +1,18 @@
+<template>
+  <div>
+    <vxe-date-range-picker :start-value.sync="startDate" :end-value.sync="endDate" placeholder="面板默认值" :default-date="['2025-02-01', '2025-03-01']"></vxe-date-range-picker>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  data () {
+    return {
+      startDate: '',
+      endDate: ''
+    }
+  }
+})
+</script>

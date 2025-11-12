@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-date-picker v-model="val1" placeholder="面板默认值" default-date="2025-02-01"></vxe-date-picker>
+    <vxe-date-picker v-model="val1" placeholder="面板默认值" type="time" default-time="10:30:10"></vxe-date-picker>
   </div>
 </template>
 

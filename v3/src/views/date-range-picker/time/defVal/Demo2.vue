@@ -1,0 +1,18 @@
+<template>
+  <div>
+    <vxe-date-range-picker :start-value.sync="startDate" :end-value.sync="endDate" placeholder="面板默认值" type="time" :default-time="['08:30:00', '12:30:00']"></vxe-date-range-picker>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  data () {
+    return {
+      startDate: '',
+      endDate: ''
+    }
+  }
+})
+</script>
