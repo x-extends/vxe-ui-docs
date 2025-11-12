@@ -11,10 +11,21 @@
     <CodeLight path="date-range-picker/date/defVal/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          分别设置面板不同的默认时间
+          字符串类型逗号分隔，分别设置面板不同的默认时间
         </vxe-tip>
         <vxe-tip status="error">
-          当设置数为数组时，需要注意结束时间必须大于或等于开始时间，否则将会出现错误
+          需要注意结束时间必须大于或等于开始时间，否则将会出现错误
+        </vxe-tip>
+      </template>
+    </CodeLight>
+
+    <CodeLight path="date-range-picker/date/defVal/Demo3">
+      <template #tip>
+        <vxe-tip status="primary">
+          数组类型逗号，分别设置面板不同的默认时间
+        </vxe-tip>
+        <vxe-tip status="error">
+          需要注意结束时间必须大于或等于开始时间，否则将会出现错误
         </vxe-tip>
       </template>
     </CodeLight>

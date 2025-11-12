@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-date-range-picker :start-value.sync="startDate" :end-value.sync="endDate" placeholder="面板默认值" default-date="2025-02-01,2025-03-01"></vxe-date-range-picker>
+    <vxe-date-range-picker :start-value.sync="startDate" :end-value.sync="endDate" placeholder="面板默认值" type="time" :default-time="['08:30:00', '12:30:00']"></vxe-date-range-picker>
   </div>
 </template>
 
