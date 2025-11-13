@@ -1,8 +1,8 @@
 <template>
   <div>
     <vxe-upload v-model="fileList">
-      <template #default>
-        <vxe-button status="error">自定义插槽的按钮</vxe-button>
+      <template #option="{ option }">
+        <span style="color: red;">整行自定义：{{ option.name }}</span>
       </template>
     </vxe-upload>
   </div>

@@ -5558,9 +5558,20 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/upload/file/manualSubmit/CodeExample.vue')
               },
               {
-                path: 'corner',
-                name: 'ComponentUploadFileCorner',
-                component: () => import('@/views/upload/file/corner/CodeExample.vue')
+                path: 'action',
+                name: 'ComponentUploadFileAction',
+                component: () => import('@/views/upload/file/action/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                children: [
+                  { path: 'default', name: 'ComponentUploadFileTemplateDefault', component: () => import('@/views/upload/file/template/default/CodeExample.vue') },
+                  { path: 'tip', name: 'ComponentUploadFileTemplateTip', component: () => import('@/views/upload/file/template/tip/CodeExample.vue') },
+                  { path: 'name', name: 'ComponentUploadFileTemplateName', component: () => import('@/views/upload/file/template/name/CodeExample.vue') },
+                  { path: 'corner', name: 'ComponentUploadFileTemplateCorner', component: () => import('@/views/upload/file/template/corner/CodeExample.vue') },
+                  { path: 'action', name: 'ComponentUploadFileTemplateAction', component: () => import('@/views/upload/file/template/action/CodeExample.vue') },
+                  { path: 'option', name: 'ComponentUploadFileTemplateOption', component: () => import('@/views/upload/file/template/option/CodeExample.vue') }
+                ]
               }
             ]
           },
@@ -5709,9 +5720,20 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/upload/image/manualSubmit/CodeExample.vue')
               },
               {
-                path: 'corner',
-                name: 'ComponentUploadImageCorner',
-                component: () => import('@/views/upload/image/corner/CodeExample.vue')
+                path: 'action',
+                name: 'ComponentUploadImageAction',
+                component: () => import('@/views/upload/image/action/CodeExample.vue')
+              },
+              {
+                path: 'template',
+                children: [
+                  { path: 'default', name: 'ComponentUploadImageTemplateDefault', component: () => import('@/views/upload/image/template/default/CodeExample.vue') },
+                  { path: 'tip', name: 'ComponentUploadImageTemplateTip', component: () => import('@/views/upload/image/template/tip/CodeExample.vue') },
+                  { path: 'name', name: 'ComponentUploadImageTemplateName', component: () => import('@/views/upload/image/template/name/CodeExample.vue') },
+                  { path: 'corner', name: 'ComponentUploadImageTemplateCorner', component: () => import('@/views/upload/image/template/corner/CodeExample.vue') },
+                  { path: 'action', name: 'ComponentUploadImageTemplateAction', component: () => import('@/views/upload/image/template/action/CodeExample.vue') },
+                  { path: 'option', name: 'ComponentUploadImageTemplateOption', component: () => import('@/views/upload/image/template/option/CodeExample.vue') }
+                ]
               }
             ]
           }
