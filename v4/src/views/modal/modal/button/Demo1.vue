@@ -8,7 +8,9 @@
       :width="600"
       :height="400"
       @confirm="confirmEvent">
-      <div>显示确认按钮</div>
+      <template #default>
+        <div>显示确认按钮</div>
+      </template>
     </vxe-modal>
   </div>
 </template>

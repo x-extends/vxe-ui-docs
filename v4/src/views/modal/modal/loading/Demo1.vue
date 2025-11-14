@@ -9,7 +9,9 @@
       :width="600"
       :height="400"
       :loading="loading">
-      <div>显示加载中</div>
+      <template #default>
+        <div>显示加载中</div>
+      </template>
     </vxe-modal>
   </div>
 </template>

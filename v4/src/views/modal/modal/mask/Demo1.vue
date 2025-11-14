@@ -2,7 +2,9 @@
   <div>
     <vxe-button content="点击弹出" @click="showPopup = true"></vxe-button>
     <vxe-modal v-model="showPopup" :width="600" :height="400">
-      <div>显示遮罩层</div>
+      <template #default>
+        <div>显示遮罩层</div>
+      </template>
     </vxe-modal>
   </div>
 </template>

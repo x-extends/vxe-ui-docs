@@ -12,9 +12,11 @@
       cancel-button-text="自定义取消"
       :width="600"
       :height="400">
-      <div>支持移动窗口</div>
-      <div>支持调整宽高</div>
-      <div>支持最大化、最小化</div>
+      <template #default>
+        <div>支持移动窗口</div>
+        <div>支持调整宽高</div>
+        <div>支持最大化、最小化</div>
+      </template>
     </vxe-modal>
   </div>
 </template>

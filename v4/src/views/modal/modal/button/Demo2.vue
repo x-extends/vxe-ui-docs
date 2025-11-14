@@ -10,7 +10,9 @@
       :height="400"
       @confirm="confirmEvent"
       @cancel="cancelEvent">
-      <div>显示确认和取消按钮</div>
+      <template #default>
+        <div>显示确认和取消按钮</div>
+      </template>
     </vxe-modal>
   </div>
 </template>

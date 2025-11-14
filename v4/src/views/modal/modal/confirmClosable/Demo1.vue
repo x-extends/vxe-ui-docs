@@ -10,7 +10,9 @@
       :width="600"
       :height="400"
       :confirm-closable="false">
-      <div>点击确认按钮不可关闭</div>
+      <template #default>
+        <div>点击确认按钮不可关闭</div>
+      </template>
     </vxe-modal>
   </div>
 </template>

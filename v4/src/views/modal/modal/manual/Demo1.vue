@@ -12,12 +12,14 @@
       resize
       show-maximize
       show-minimize>
-      <div>手动调用窗口方法</div>
-      <div>
-        <vxe-button content="还原" @click="revertEvent"></vxe-button>
-        <vxe-button content="最小化" @click="minEvent"></vxe-button>
-        <vxe-button content="最大化" @click="maxEvent"></vxe-button>
-      </div>
+      <template #default>
+        <div>手动调用窗口方法</div>
+        <div>
+          <vxe-button content="还原" @click="revertEvent"></vxe-button>
+          <vxe-button content="最小化" @click="minEvent"></vxe-button>
+          <vxe-button content="最大化" @click="maxEvent"></vxe-button>
+        </div>
+      </template>
     </vxe-modal>
   </div>
 </template>

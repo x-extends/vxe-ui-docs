@@ -10,7 +10,9 @@
       :width="600"
       :height="400"
       :cancel-closable="false">
-      <div>点击取消按钮不可关闭</div>
+      <template #default>
+        <div>点击取消按钮不可关闭</div>
+      </template>
     </vxe-modal>
   </div>
 </template>

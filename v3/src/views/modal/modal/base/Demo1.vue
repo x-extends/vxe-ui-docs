@@ -2,7 +2,9 @@
   <div>
     <vxe-button content="点击弹出" @click="showPopup = true"></vxe-button>
     <vxe-modal v-model="showPopup" :width="600" :height="400">
-      <div>基础窗口使用</div>
+      <template #default>
+        <div>基础窗口使用</div>
+      </template>
     </vxe-modal>
   </div>
 </template>
