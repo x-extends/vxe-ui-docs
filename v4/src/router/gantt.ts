@@ -138,7 +138,9 @@ export const ganttRouteConfig: RouteRecordRaw = {
       children: [
         { path: 'base', name: 'ComponentGanttRowResizableBase', component: () => import('@/views/gantt/rowResizable/base/CodeExample.vue') },
         { path: 'fixed', name: 'ComponentGanttRowResizableFixed', component: () => import('@/views/gantt/rowResizable/fixed/CodeExample.vue') },
-        { path: 'allRowDrag', name: 'ComponentGanttRowResizableAllRowDrag', component: () => import('@/views/gantt/rowResizable/allRowDrag/CodeExample.vue') }
+        { path: 'dblclickAutoHeight', name: 'ComponentGanttRowResizableDblclickAutoHeight', component: () => import('@/views/gantt/rowResizable/dblclickAutoHeight/CodeExample.vue') },
+        { path: 'allRowDrag', name: 'ComponentGanttRowResizableAllRowDrag', component: () => import('@/views/gantt/rowResizable/allRowDrag/CodeExample.vue') },
+        { path: 'manual', name: 'ComponentGanttRowResizableManual', component: () => import('@/views/gantt/rowResizable/manual/CodeExample.vue') }
       ]
     },
     {

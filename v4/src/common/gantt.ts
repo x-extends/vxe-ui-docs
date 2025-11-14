@@ -123,7 +123,9 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       children: [
         { title: '行高拖拽', routerLink: { name: 'ComponentGanttRowResizableBase' } },
         { title: '冻结列', routerLink: { name: 'ComponentGanttRowResizableFixed' } },
-        { title: '所有单元格可拖拽', routerLink: { name: 'ComponentGanttRowResizableAllRowDrag' } }
+        { title: '双击自适应行高', routerLink: { name: 'ComponentGanttRowResizableDblclickAutoHeight' } },
+        { title: '所有单元格可拖拽', routerLink: { name: 'ComponentGanttRowResizableAllRowDrag' } },
+        { title: '手动操作行高', routerLink: { name: 'ComponentGanttRowResizableManual' } }
       ]
     },
     {
