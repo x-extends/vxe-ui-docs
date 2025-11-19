@@ -37,7 +37,8 @@ export default Vue.extend({
         showStatus: true
       },
       importConfig: {
-        types: ['xlsx']
+        types: ['xlsx'],
+        modes: ['covering', 'insertTop', 'insertBottom']
       },
       exportConfig: {
         type: 'xlsx'
