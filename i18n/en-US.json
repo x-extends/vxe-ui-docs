@@ -339,8 +339,9 @@
         "complexSimpleFilter": "Basic filter",
         "complexRemoteFilter": "Remote filter",
         "complexInputTitle": "Filter with conditions",
-        "stringFilter": "String type filter",
-        "numberFilter": "Numeric type filter",
+        "stringFilter": "String filters",
+        "numberFilter": "Number filters",
+        "dateFilter": "Date filters",
         "treeFilter": "Tree filter"
       }
     },

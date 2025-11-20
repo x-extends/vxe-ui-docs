@@ -341,6 +341,7 @@
         "complexInputTitle": "조건으로 필터링하십시오",
         "stringFilter": "문자열 유형 필터링",
         "numberFilter": "숫자 유형 필터링",
+        "dateFilter": "日期类型筛选",
         "treeFilter": "树结构筛选"
       }
     },

@@ -341,6 +341,7 @@
         "complexInputTitle": "Filtrer avec des conditions",
         "stringFilter": "Filtrage de type de chaîne",
         "numberFilter": "Filtrage de type numérique",
+        "dateFilter": "日期类型筛选",
         "treeFilter": "树结构筛选"
       }
     },

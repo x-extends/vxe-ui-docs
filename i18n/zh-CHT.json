@@ -340,6 +340,7 @@
         "complexInputTitle": "帶條件篩選",
         "stringFilter": "字符串類型篩選",
         "numberFilter": "數值類型篩選",
+        "dateFilter": "日期类型筛选",
         "treeFilter": "树结构筛选"
       }
     },

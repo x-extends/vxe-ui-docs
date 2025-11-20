@@ -341,6 +341,7 @@
         "complexInputTitle": "تصفية مع الظروف",
         "stringFilter": "تصفية نوع السلسلة",
         "numberFilter": "تصفية النوع العددي",
+        "dateFilter": "日期类型筛选",
         "treeFilter": "树结构筛选"
       }
     },

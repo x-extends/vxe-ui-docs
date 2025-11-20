@@ -341,6 +341,7 @@
         "complexInputTitle": "带条件筛选",
         "stringFilter": "字符串类型筛选",
         "numberFilter": "数值类型筛选",
+        "dateFilter": "日期类型筛选",
         "treeFilter": "树结构筛选"
       }
     },

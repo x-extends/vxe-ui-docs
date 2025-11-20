@@ -341,6 +341,7 @@
         "complexInputTitle": "Фильтр с условиями",
         "stringFilter": "Фильтрация типа строки",
         "numberFilter": "Фильтрация численного типа",
+        "dateFilter": "日期类型筛选",
         "treeFilter": "树结构筛选"
       }
     },
