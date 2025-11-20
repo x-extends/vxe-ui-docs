@@ -356,6 +356,7 @@
         "combinationTitle": "복잡한 필터링",
         "combinationStringFilter": "문자열 유형 필터링",
         "combinationNumberFilter": "숫자 유형 필터링",
+        "combinationDateFilter": "日期类型筛选",
         "treeFilter": "树结构筛选"
       }
     }

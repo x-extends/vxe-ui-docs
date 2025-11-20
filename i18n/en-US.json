@@ -354,8 +354,9 @@
         "combinationPageFilter": "服务端分页筛选",
         "handleFilter": "手动设置选项",
         "combinationTitle": "Complex filtering",
-        "combinationStringFilter": "String type filter",
-        "combinationNumberFilter": "Numeric type filter",
+        "combinationStringFilter": "String filters",
+        "combinationNumberFilter": "Number filters",
+        "combinationDateFilter": "Date filters",
         "treeFilter": "Tree filter"
       }
     }

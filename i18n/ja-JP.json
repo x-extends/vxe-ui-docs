@@ -356,6 +356,7 @@
         "combinationTitle": "複雑なフィルタリング",
         "combinationStringFilter": "文字列型フィルタリング",
         "combinationNumberFilter": "数値フィルタリング",
+        "combinationDateFilter": "日期类型筛选",
         "treeFilter": "树结构筛选"
       }
     }

@@ -355,6 +355,7 @@
         "combinationTitle": "複雜篩選",
         "combinationStringFilter": "字符串類型篩選",
         "combinationNumberFilter": "數值類型篩選",
+        "combinationDateFilter": "日期类型筛选",
         "treeFilter": "树结构筛选"
       }
     }

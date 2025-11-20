@@ -356,6 +356,7 @@
         "combinationTitle": "Сложная фильтрация",
         "combinationStringFilter": "Фильтрация типа строки",
         "combinationNumberFilter": "Фильтрация численного типа",
+        "combinationDateFilter": "日期类型筛选",
         "treeFilter": "树结构筛选"
       }
     }

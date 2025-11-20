@@ -356,6 +356,7 @@
         "combinationTitle": "Filtrage complexe",
         "combinationStringFilter": "Filtrage de type de chaîne",
         "combinationNumberFilter": "Filtrage de type numérique",
+        "combinationDateFilter": "日期类型筛选",
         "treeFilter": "树结构筛选"
       }
     }
