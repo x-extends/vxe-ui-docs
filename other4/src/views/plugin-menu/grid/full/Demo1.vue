@@ -61,6 +61,11 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     body: {
       options: [
         [
+          { code: 'SYSTEM_PAGE_REFRESH', name: '重新加载 (F5)' },
+          { code: 'SYSTEM_PAGE_BACK', name: '后退 (Alt+向左箭头)' },
+          { code: 'SYSTEM_PAGE_FORWARD', name: '前进 (Alt+向右箭头)' }
+        ],
+        [
           { code: 'CLEAR_CELL', name: '清除值' },
           { code: 'REVERT_CELL', name: '还原值' }
         ],
