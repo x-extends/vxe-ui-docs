@@ -390,6 +390,8 @@
       "apiBtn": "View API",
       "trialBtn": "Apply for probation",
       "buyBtn": "Purchase authorization",
+      "pyBuyBtn": "替客户购买",
+      "ltBuyBtn": "限时发售",
       "histVersion": "Historical version release",
       "registerBtn": "Register",
       "loginBtn": "Login",
