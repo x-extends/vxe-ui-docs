@@ -262,6 +262,7 @@
         "copyAcrossArea": "多区域复制粘贴",
         "btnCopy": "实现自定义复制功能",
         "cllipBeforeAfter": "阻止粘贴",
+        "areaClipCopyLabel": "复制对应内容",
         "areaClipCustomClip": "自定义复制和粘贴方法",
         "areaClipIncrement": "粘貼自動插入行與列",
         "areaTree": "樹結構",
