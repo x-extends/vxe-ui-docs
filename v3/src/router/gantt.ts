@@ -46,6 +46,17 @@ export const ganttRouteConfig: RouteConfig = {
       ]
     },
     {
+      path: 'taskView',
+      component: RouteLayout,
+      children: [
+        { path: 'border', name: 'ComponentGanttTaskViewBorder', component: () => import('@/views/gantt/taskView/border/CodeExample.vue') },
+        { path: 'rowClass', name: 'ComponentGanttTaskViewRowClass', component: () => import('@/views/gantt/taskView/rowClass/CodeExample.vue') },
+        { path: 'rowStyle', name: 'ComponentGanttTaskViewRowStyle', component: () => import('@/views/gantt/taskView/rowStyle/CodeExample.vue') },
+        { path: 'cellClass', name: 'ComponentGanttTaskViewCellClass', component: () => import('@/views/gantt/taskView/cellClass/CodeExample.vue') },
+        { path: 'cellStyle', name: 'ComponentGanttTaskViewCellStyle', component: () => import('@/views/gantt/taskView/cellStyle/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'cell',
       component: RouteLayout,
       children: [
