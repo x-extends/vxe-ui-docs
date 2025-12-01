@@ -12,7 +12,7 @@
     <CodeLight path="gantt/validate/theme/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          同时显示多个错误提示，调用 fullValidate 方法校验，用法是一样的。
+          通过设置 <ApiLink name="gantt" prop="valid-config"/>.<ApiLink name="gantt" prop="msgMode"/>='full'，同时显示多个错误提示，调用 fullValidate 方法校验，用法是一样的。
         </vxe-tip>
       </template>
     </CodeLight>
