@@ -5456,6 +5456,11 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/upload/file/multiple/CodeExample.vue')
               },
               {
+                path: 'customReview',
+                name: 'ComponentUploadFileCustomReview',
+                component: () => import('@/views/upload/file/customReview/CodeExample.vue')
+              },
+              {
                 path: 'uploadMethod',
                 name: 'ComponentUploadFileUploadMethod',
                 component: () => import('@/views/upload/file/uploadMethod/CodeExample.vue')
@@ -5606,6 +5611,11 @@ const routes: Array<RouteConfig> = [
                 path: 'disabled',
                 name: 'ComponentUploadImageDisabled',
                 component: () => import('@/views/upload/image/disabled/CodeExample.vue')
+              },
+              {
+                path: 'customReview',
+                name: 'ComponentUploadImageCustomReview',
+                component: () => import('@/views/upload/image/customReview/CodeExample.vue')
               },
               {
                 path: 'multiple',

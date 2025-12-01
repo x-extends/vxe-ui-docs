@@ -32,7 +32,7 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     }
   },
   columns: [
-    { type: 'seq', width: 70 },
+    { type: 'seq', width: 70, rowResize: true },
     { field: 'title', title: '任务名称', width: 260 },
     { field: 'start', title: '开始时间', width: 140 },
     { field: 'end', title: '结束时间', width: 140 },
