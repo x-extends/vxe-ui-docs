@@ -1115,6 +1115,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentRadioSize',
             component: () => import('@/views/radio/size/CodeExample.vue')
           },
+          { path: 'value', name: 'ComponentRadioValue', component: () => import('@/views/radio/value/CodeExample.vue') },
           {
             path: 'disabled',
             name: 'ComponentRadioDisabled',
@@ -1134,7 +1135,9 @@ const routes: Array<RouteRecordRaw> = [
             path: 'button',
             name: 'ComponentRadioButton',
             component: () => import('@/views/radio/button/CodeExample.vue')
-          }
+          },
+          { path: 'options', name: 'ComponentRadioOptions', component: () => import('@/views/radio/options/CodeExample.vue') },
+          { path: 'defaultValue', name: 'ComponentRadioDefaultValue', component: () => import('@/views/radio/defaultValue/CodeExample.vue') }
         ]
       },
       {
@@ -1175,7 +1178,9 @@ const routes: Array<RouteRecordRaw> = [
             path: 'max',
             name: 'ComponentCheckboxMax',
             component: () => import('@/views/checkbox/max/CodeExample.vue')
-          }
+          },
+          { path: 'options', name: 'ComponentCheckboxOptions', component: () => import('@/views/checkbox/options/CodeExample.vue') },
+          { path: 'defaultValue', name: 'ComponentCheckboxDefaultValue', component: () => import('@/views/checkbox/defaultValue/CodeExample.vue') }
         ]
       },
       {

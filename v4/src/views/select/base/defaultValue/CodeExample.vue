@@ -14,7 +14,7 @@
     <CodeLight path="select/base/defaultValue/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          异步加载
+          异步加载，会在首次加载完成后触发默认行为
         </vxe-tip>
       </template>
     </CodeLight>

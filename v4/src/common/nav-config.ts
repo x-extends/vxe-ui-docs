@@ -739,10 +739,13 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'radio' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentRadioSize' } },
+          { title: '自定义值', routerLink: { name: 'ComponentRadioValue' } },
           { title: '禁用状态', routerLink: { name: 'ComponentRadioDisabled' } },
           { title: '允许取消', routerLink: { name: 'ComponentRadioStrict' } },
           { title: '单选组', routerLink: { name: 'ComponentRadioGroup' } },
-          { title: '单选按钮', routerLink: { name: 'ComponentRadioButton' } }
+          { title: '单选按钮', routerLink: { name: 'ComponentRadioButton' } },
+          { title: '配置式选项', routerLink: { name: 'ComponentRadioOptions' } },
+          { title: '默认值', routerLink: { name: 'ComponentRadioDefaultValue' } }
         ]
       },
       {
@@ -751,11 +754,13 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'checkbox' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentCheckboxSize' } },
           { title: '半选状态', routerLink: { name: 'ComponentCheckboxIndeterminate' } },
-          { title: '禁用状态', routerLink: { name: 'ComponentCheckboxDisabled' } },
           { title: '自定义值', routerLink: { name: 'ComponentCheckboxValue' } },
+          { title: '禁用状态', routerLink: { name: 'ComponentCheckboxDisabled' } },
           { title: '复选组', routerLink: { name: 'ComponentCheckboxGroup' } },
           { title: '复选按钮', routerLink: { name: 'ComponentCheckboxButton' } },
-          { title: '限制最大数量', routerLink: { name: 'ComponentCheckboxMax' } }
+          { title: '限制最大数量', routerLink: { name: 'ComponentCheckboxMax' } },
+          { title: '配置式选项', routerLink: { name: 'ComponentCheckboxOptions' } },
+          { title: '默认值', routerLink: { name: 'ComponentCheckboxDefaultValue' } }
         ]
       },
       {
