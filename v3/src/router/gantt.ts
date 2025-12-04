@@ -235,6 +235,7 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'dateHour', name: 'ComponentGanttScalesDateHour', component: () => import('@/views/gantt/scales/dateHour/CodeExample.vue') },
         { path: 'hourMinute', name: 'ComponentGanttScalesHourMinute', component: () => import('@/views/gantt/scales/hourMinute/CodeExample.vue') },
         { path: 'minuteSecond', name: 'ComponentGanttScalesMinuteSecond', component: () => import('@/views/gantt/scales/minuteSecond/CodeExample.vue') },
+        { path: 'titleFormat', name: 'ComponentGanttScalesTitleFormat', component: () => import('@/views/gantt/scales/titleFormat/CodeExample.vue') },
         { path: 'titleMethod', name: 'ComponentGanttScalesTitleMethod', component: () => import('@/views/gantt/scales/titleMethod/CodeExample.vue') },
         { path: 'headerCellStyle', name: 'ComponentGanttScalesHeaderCellStyle', component: () => import('@/views/gantt/scales/headerCellStyle/CodeExample.vue') },
         {

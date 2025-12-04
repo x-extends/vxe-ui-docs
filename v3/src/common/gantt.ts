@@ -211,6 +211,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '天-小时', routerLink: { name: 'ComponentGanttScalesDateHour' } },
         { title: '小时-分钟', routerLink: { name: 'ComponentGanttScalesHourMinute' } },
         { title: '分钟-秒', routerLink: { name: 'ComponentGanttScalesMinuteSecond' } },
+        { title: '格式化列头标题', routerLink: { name: 'ComponentGanttScalesTitleFormat' } },
         { title: '自定义列头标题', routerLink: { name: 'ComponentGanttScalesTitleMethod' } },
         { title: '自定义列头样式', routerLink: { name: 'ComponentGanttScalesHeaderCellStyle' } },
         {
