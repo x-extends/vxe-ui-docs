@@ -233,6 +233,13 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
+      title: '多维度显示',
+      children: [
+        { title: '日期多维度切换', routerLink: { name: 'ComponentGanttDimensionDate' } },
+        { title: '时间多维度切换', routerLink: { name: 'ComponentGanttDimensionTime' } }
+      ]
+    },
+    {
       title: '依赖关系',
       children: [
         { title: '依赖线', isEnterprise: true, isDisabled: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: '111' }, query: { previewPath: '111' } } },

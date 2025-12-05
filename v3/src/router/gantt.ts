@@ -248,6 +248,14 @@ export const ganttRouteConfig: RouteConfig = {
       ]
     },
     {
+      path: 'dimension',
+      component: RouteLayout,
+      children: [
+        { path: 'date', name: 'ComponentGanttDimensionDate', component: () => import('@/views/gantt/dimension/date/CodeExample.vue') },
+        { path: 'time', name: 'ComponentGanttDimensionTime', component: () => import('@/views/gantt/dimension/time/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'proxy',
       component: RouteLayout,
       children: [

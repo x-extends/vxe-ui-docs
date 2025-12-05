@@ -19,10 +19,10 @@
     "vue-router": "^3.5.1",
     "vuex": "^3.4.0",
     "vxe-design": "^3.0.0",
-    "vxe-gantt": "~3.0.27",
-    "vxe-pc-ui": "~3.10.42",
+    "vxe-gantt": "~3.1.0",
+    "vxe-pc-ui": "~3.10.43",
     "vxe-table": "~3.19.26",
-    "xe-utils": "^3.7.9"
+    "xe-utils": "^3.8.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "~6.21.0",
