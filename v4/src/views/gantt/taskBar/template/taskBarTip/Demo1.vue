@@ -12,6 +12,15 @@
           </div>
         </div>
       </template>
+
+      <template #task-bar-tooltip="{ row }">
+        <div>
+          <div>任务名称：{{ row.title }}</div>
+          <div>开始时间：{{ row.start }}</div>
+          <div>结束时间：{{ row.end }}</div>
+          <div>进度：{{ row.progress }}%</div>
+        </div>
+      </template>
     </vxe-gantt>
   </div>
 </template>
@@ -38,6 +47,7 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     }
   },
   taskBarConfig: {
+    showTooltip: true,
     barStyle: {
       round: true
     }

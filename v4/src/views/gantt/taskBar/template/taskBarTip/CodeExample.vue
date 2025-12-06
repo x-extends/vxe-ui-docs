@@ -1,0 +1,11 @@
+<template>
+  <div>
+    <CodeLight path="gantt/taskBar/template/taskBarTip/Demo1">
+      <template #tip>
+        <vxe-tip status="primary" title="自定义任务条提示">
+          通过设置 <ApiLink name="gantt" prop="taskBarTooltip"/> 插槽来自定义模板
+        </vxe-tip>
+      </template>
+    </CodeLight>
+  </div>
+</template>

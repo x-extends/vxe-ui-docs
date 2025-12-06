@@ -36,11 +36,13 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'showContent', name: 'ComponentGanttTaskBarShowContent', component: () => import('@/views/gantt/taskBar/showContent/CodeExample.vue') },
         { path: 'barColor', name: 'ComponentGanttTaskBarBarColor', component: () => import('@/views/gantt/taskBar/barColor/CodeExample.vue') },
         { path: 'round', name: 'ComponentGanttTaskBarRound', component: () => import('@/views/gantt/taskBar/round/CodeExample.vue') },
+        { path: 'showTooltip', name: 'ComponentGanttTaskBarShowTooltip', component: () => import('@/views/gantt/taskBar/showTooltip/CodeExample.vue') },
         {
           path: 'template',
           component: RouteLayout,
           children: [
-            { path: 'taskBar', name: 'ComponentGanttTaskBarTemplateTaskBar', component: () => import('@/views/gantt/taskBar/template/taskBar/CodeExample.vue') }
+            { path: 'taskBar', name: 'ComponentGanttTaskBarTemplateTaskBar', component: () => import('@/views/gantt/taskBar/template/taskBar/CodeExample.vue') },
+            { path: 'taskBarTip', name: 'ComponentGanttTaskBarTemplateTaskBarTip', component: () => import('@/views/gantt/taskBar/template/taskBarTip/CodeExample.vue') }
           ]
         }
       ]
@@ -230,6 +232,7 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'default', name: 'ComponentGanttScalesDefault', component: () => import('@/views/gantt/scales/default/CodeExample.vue') },
         { path: 'yearMonthDate', name: 'ComponentGanttScalesYearMonthDate', component: () => import('@/views/gantt/scales/yearMonthDate/CodeExample.vue') },
         { path: 'quarterMonthDate', name: 'ComponentGanttScalesQuarterMonthDate', component: () => import('@/views/gantt/scales/quarterMonthDate/CodeExample.vue') },
+        { path: 'yearWeekDate', name: 'ComponentGanttScalesYearWeekDate', component: () => import('@/views/gantt/scales/yearWeekDate/CodeExample.vue') },
         { path: 'monthDayDate', name: 'ComponentGanttScalesMonthDayDate', component: () => import('@/views/gantt/scales/monthDayDate/CodeExample.vue') },
         { path: 'monthDate', name: 'ComponentGanttScalesMonthDate', component: () => import('@/views/gantt/scales/monthDate/CodeExample.vue') },
         { path: 'dateHour', name: 'ComponentGanttScalesDateHour', component: () => import('@/views/gantt/scales/dateHour/CodeExample.vue') },
@@ -285,6 +288,7 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'layout', name: 'ComponentGantTemplateLayout', component: () => import('@/views/gantt/template/layout/CodeExample.vue') },
         { path: 'taskBar', name: 'ComponentGantTemplateTaskBar', component: () => import('@/views/gantt/template/taskBar/CodeExample.vue') },
         { path: 'taskCellTitle', name: 'ComponentGantTemplateTaskCellTitle', component: () => import('@/views/gantt/template/taskCellTitle/CodeExample.vue') },
+        { path: 'taskBarTip', name: 'ComponentGantTemplateTaskBarTip', component: () => import('@/views/gantt/template/taskBarTip/CodeExample.vue') },
         { path: 'form', name: 'ComponentGantTemplateForm', component: () => import('@/views/gantt/template/form/CodeExample.vue') },
         { path: 'pager', name: 'ComponentGantTemplatePager', component: () => import('@/views/gantt/template/pager/CodeExample.vue') },
         { path: 'default', name: 'ComponentGantTemplateDefault', component: () => import('@/views/gantt/template/default/CodeExample.vue') },
@@ -296,6 +300,13 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'filter', name: 'ComponentGantTemplateFilter', component: () => import('@/views/gantt/template/filter/CodeExample.vue') },
         { path: 'edit', name: 'ComponentGantTemplateEdit', component: () => import('@/views/gantt/template/edit/CodeExample.vue') },
         { path: 'valid', name: 'ComponentGantTemplateValid', component: () => import('@/views/gantt/template/valid/CodeExample.vue') }
+      ]
+    },
+    {
+      path: 'other',
+      component: RouteLayout,
+      children: [
+        { path: 'productPlan', name: 'ComponentGanttOtherProductPlan', component: () => import('@/views/gantt/other/productPlan/CodeExample.vue') }
       ]
     }
   ]

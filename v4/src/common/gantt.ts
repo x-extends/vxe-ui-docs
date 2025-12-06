@@ -32,10 +32,12 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '显示标题', routerLink: { name: 'ComponentGanttTaskBarShowContent' } },
         { title: '圆角', routerLink: { name: 'ComponentGanttTaskBarRound' } },
         { title: '颜色', routerLink: { name: 'ComponentGanttTaskBarBarColor' } },
+        { title: '提示信息', routerLink: { name: 'ComponentGanttTaskBarShowTooltip' } },
         {
           title: '自定义插槽模板',
           children: [
-            { title: '自定义任务条内容', routerLink: { name: 'ComponentGanttTaskBarTemplateTaskBar' } }
+            { title: '自定义任务条内容', routerLink: { name: 'ComponentGanttTaskBarTemplateTaskBar' } },
+            { title: '自定义任务条提示', routerLink: { name: 'ComponentGanttTaskBarTemplateTaskBarTip' } }
           ]
         }
       ]
@@ -215,6 +217,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       children: [
         { title: '自定义日期轴', routerLink: { name: 'ComponentGanttScalesDefault' } },
         { title: '年-月-日', routerLink: { name: 'ComponentGanttScalesYearMonthDate' } },
+        { title: '年-周-日', routerLink: { name: 'ComponentGanttScalesYearWeekDate' } },
         { title: '季-月-日', routerLink: { name: 'ComponentGanttScalesQuarterMonthDate' } },
         { title: '周-星期-日', routerLink: { name: 'ComponentGanttScalesMonthDayDate' } },
         { title: '月-日', routerLink: { name: 'ComponentGanttScalesMonthDate' } },
@@ -284,11 +287,18 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '自定义分页模板', routerLink: { name: 'ComponentGantTemplatePager' } },
         { title: '自定义任务条模板', routerLink: { name: 'ComponentGantTemplateTaskBar' } },
         { title: '自定义任务视图标题模板', routerLink: { name: 'ComponentGantTemplateTaskCellTitle' } },
+        { title: '自定义任务条提示模板', routerLink: { name: 'ComponentGantTemplateTaskBarTip' } },
         { title: '自定义复选框模板', routerLink: { name: 'ComponentGantTemplateCheckbox' } },
         { title: '自定义单选框模板', routerLink: { name: 'ComponentGantTemplateRadio' } },
         { title: '自定义筛选模板', routerLink: { name: 'ComponentGantTemplateFilter' } },
         { title: '自定义编辑模板', routerLink: { name: 'ComponentGantTemplateEdit' } },
         { title: '自定义单元格校验模板', routerLink: { name: 'ComponentGantTemplateValid' } }
+      ]
+    },
+    {
+      title: '功能示例',
+      children: [
+        { title: '商品计划进度', routerLink: { name: 'ComponentGanttOtherProductPlan' } }
       ]
     }
   ]
