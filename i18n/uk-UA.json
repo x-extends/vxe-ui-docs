@@ -225,7 +225,10 @@
         "useV3Old": "安装老版本插件 v3.0 ~ v3.8.x",
         "table": "Таблиця таблиці таблиця",
         "grid": "Таблиця конфігурації сітки",
-        "gantt": "Gantt 甘特图"
+        "gantt": "Gantt 甘特图",
+        "demoProductList": "产品进度列表 - 演示",
+        "demoProductTree": "子产品进度 - 演示",
+        "demoViewList": "多维视图切换 - 演示"
       }
     },
     "extendCellArea": {

@@ -208,8 +208,8 @@
         "demoList": "Normal List - Demo",
         "demoProduct": "Product List - Demo",
         "demoRealTime": "Real-time update - Demo",
-        "demoRoll": "自动滚动 - 演示",
-        "demoCompare": "产品对比表 - 演示",
+        "demoRoll": "Autoscroll - Demo",
+        "demoCompare": "Product Comparison Table - Demo",
         "demoTree": "Hierarchy List - Demo",
         "demoBig": "Mega list - Demo",
         "demoCrud": "Add, delete, modify and check - Demo",
@@ -225,7 +225,10 @@
         "useV3Old": "Install an older version v3.0 ~ v3.8.x",
         "table": "Table basic table",
         "grid": "Grid configuration table",
-        "gantt": "Gantt"
+        "gantt": "Gantt",
+        "demoProductList": "Task list - Demo",
+        "demoProductTree": "Subtask tree - Demo",
+        "demoViewList": "Multidimensional view - Demo"
       }
     },
     "extendCellArea": {
