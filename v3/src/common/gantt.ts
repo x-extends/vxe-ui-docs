@@ -240,7 +240,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
-      title: '动态交互',
+      title: '任务可拖拽',
       children: [
         { title: '拖拽任务自动更新日期', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_task_drag_drag' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2FtaskDrag%2Fdrag' } } }
       ]
