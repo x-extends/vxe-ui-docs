@@ -19,7 +19,9 @@ interface RowVO {
 const ganttOptions = reactive<VxeGanttProps<RowVO>>({
   border: true,
   taskViewConfig: {
-    scales: ['date']
+    scales: [
+      { type: 'date', titleFormat: 'M/d' }
+    ]
   },
   columns: [
     { field: 'name', title: '任务名称' },
