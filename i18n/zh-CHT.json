@@ -366,6 +366,12 @@
         "combinationDateFilter": "日期类型筛选",
         "treeFilter": "树结构筛选"
       }
+    },
+    "extendGanttChart": {
+      "nav": {
+        "taskDrag": "任务可拖拽",
+        "taskDragBase": "拖拽任务调整日期"
+      }
     }
   },
   "shopping": {
