@@ -323,7 +323,9 @@
         "loadMoreHorizontal": "로딩 열을 구현합니다",
         "other": "기능적 예",
         "bookkeepingVoucher": "회계 바우처",
-        "editCursorLock": "方向键锁定光标"
+        "editCursorLock": "方向键锁定光标",
+        "keypadDelMethod": "自定义按键删除",
+        "keypadBeforeEditMethod": "阻止编辑"
       }
     },
     "extendPivotTable": {

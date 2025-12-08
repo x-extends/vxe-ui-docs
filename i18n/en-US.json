@@ -323,7 +323,9 @@
         "loadMoreHorizontal": "Implement loading columns",
         "other": "Function example",
         "bookkeepingVoucher": "Accounting voucher",
-        "editCursorLock": "Direction keys lock the cursor"
+        "editCursorLock": "Direction keys lock the cursor",
+        "keypadDelMethod": "自定义按键删除",
+        "keypadBeforeEditMethod": "阻止编辑"
       }
     },
     "extendPivotTable": {

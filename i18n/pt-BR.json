@@ -323,7 +323,9 @@
         "loadMoreHorizontal": "Implementar colunas de carregamento",
         "other": "Exemplos funcionais",
         "bookkeepingVoucher": "Coloque contábil",
-        "editCursorLock": "方向键锁定光标"
+        "editCursorLock": "方向键锁定光标",
+        "keypadDelMethod": "自定义按键删除",
+        "keypadBeforeEditMethod": "阻止编辑"
       }
     },
     "extendPivotTable": {

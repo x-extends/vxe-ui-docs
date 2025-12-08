@@ -323,7 +323,9 @@
         "loadMoreHorizontal": "読み込み列を実装します",
         "other": "機能的な例",
         "bookkeepingVoucher": "会計バウチャー",
-        "editCursorLock": "方向键锁定光标"
+        "editCursorLock": "方向键锁定光标",
+        "keypadDelMethod": "自定义按键删除",
+        "keypadBeforeEditMethod": "阻止编辑"
       }
     },
     "extendPivotTable": {
