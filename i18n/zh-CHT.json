@@ -323,7 +323,8 @@
         "other": "功能示例",
         "bookkeepingVoucher": "記賬憑證",
         "editCursorLock": "方向键锁定光标",
-        "keypadDelMethod": "自定义按键删除",
+        "keypadDelMethod": "自定义按 Delete 键删除",
+        "keypadBackMethod": "自定义按 Backspace 键删除",
         "keypadBeforeEditMethod": "阻止编辑"
       }
     },
