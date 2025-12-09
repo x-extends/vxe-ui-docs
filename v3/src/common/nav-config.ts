@@ -136,6 +136,7 @@ export const navConfigList: NavVO[] = [
               { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdownOptions' } },
               { title: '状态颜色', routerLink: { name: 'ComponentButtonDropdownStatus' } },
               { title: '触发方式', routerLink: { name: 'ComponentButtonDropdownTrigger' } },
+              { title: '提示图标', routerLink: { name: 'ComponentButtonDropdownTipIcon' } },
               { title: '固定方向', routerLink: { name: 'ComponentButtonDropdownPlacement' } },
               { title: '下拉面板挂载 Body', routerLink: { name: 'ComponentButtonDropdownTeleportTo' } },
               { title: '自定义插槽模板', routerLink: { name: 'ComponentButtonDropdownTemplate' } },

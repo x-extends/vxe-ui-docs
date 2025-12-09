@@ -1067,6 +1067,7 @@ const routes: Array<RouteRecordRaw> = [
               { path: 'options', name: 'ComponentButtonDropdownOptions', component: () => import('@/views/button/dropdown/options/CodeExample.vue') },
               { path: 'status', name: 'ComponentButtonDropdownStatus', component: () => import('@/views/button/dropdown/status/CodeExample.vue') },
               { path: 'trigger', name: 'ComponentButtonDropdownTrigger', component: () => import('@/views/button/dropdown/trigger/CodeExample.vue') },
+              { path: 'tipIcon', name: 'ComponentButtonDropdownTipIcon', component: () => import('@/views/button/dropdown/tipIcon/CodeExample.vue') },
               { path: 'placement', name: 'ComponentButtonDropdownPlacement', component: () => import('@/views/button/dropdown/placement/CodeExample.vue') },
               { path: 'teleportTo', name: 'ComponentButtonDropdownTeleportTo', component: () => import('@/views/button/dropdown/teleportTo/CodeExample.vue') },
               { path: 'template', name: 'ComponentButtonDropdownTemplate', component: () => import('@/views/button/dropdown/template/CodeExample.vue') },
