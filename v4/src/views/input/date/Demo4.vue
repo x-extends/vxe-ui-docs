@@ -35,7 +35,7 @@ const noticeMaps: Record<string, VxeInputDefines.DateFestivalInfo> = {
 
 const festivalNoticeMethod: VxeInputPropTypes.FestivalMethod = (params) => {
   const { date, viewType } = params
-  if (viewType === 'day') {
+  if (viewType === 'date' || viewType === 'day') {
     const ymd = XEUtils.toDateString(date, 'yyyyMMdd')
     return noticeMaps[ymd] || { label: '无' }
   }

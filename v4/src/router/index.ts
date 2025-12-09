@@ -3880,6 +3880,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/calendar/year/CodeExample.vue')
           },
           {
+            path: 'cellStyle',
+            name: 'ComponentCalendarCellStyle',
+            component: () => import('@/views/calendar/cellStyle/CodeExample.vue')
+          },
+          {
             path: 'festivalMethod',
             name: 'ComponentCalendarFestivalMethod',
             component: () => import('@/views/calendar/festivalMethod/CodeExample.vue')

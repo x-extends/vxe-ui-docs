@@ -40,7 +40,6 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
             backgroundColor: '#c0f9f3'
           }
         }
-        return {}
       }
     }
   },

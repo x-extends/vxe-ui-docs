@@ -403,6 +403,7 @@ export const navConfigList: NavVO[] = [
           { title: '月度图', routerLink: { name: 'ComponentCalendarMonth' } },
           { title: '季度图', routerLink: { name: 'ComponentCalendarQuarter' } },
           { title: '年度视图', routerLink: { name: 'ComponentCalendarYear' } },
+          { title: '自定义样式', routerLink: { name: 'ComponentCalendarCellStyle' } },
           { title: '显示节假日', routerLink: { name: 'ComponentCalendarFestivalMethod' } },
           { title: '事件监听', routerLink: { name: 'ComponentCalendarFestivalEvents' } }
         ]

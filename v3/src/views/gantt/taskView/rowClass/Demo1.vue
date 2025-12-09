@@ -36,7 +36,6 @@ export default Vue.extend({
             if (row.progress < 50) {
               return 'status-2'
             }
-            return ''
           }
         }
       },

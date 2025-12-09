@@ -64,7 +64,7 @@ export default Vue.extend({
 
     const festivalCalendarMethod: VxeInputPropTypes.FestivalMethod = (params) => {
       const { date, viewType } = params
-      if (viewType === 'day') {
+      if (viewType === 'date' || viewType === 'day') {
         const ymd = XEUtils.toDateString(date, 'yyyyMMdd')
         return calendarMaps[ymd] || { label: '无' }
       }

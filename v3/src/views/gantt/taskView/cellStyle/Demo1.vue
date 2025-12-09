@@ -42,7 +42,6 @@ export default Vue.extend({
                 backgroundColor: '#c0f9f3'
               }
             }
-            return {}
           }
         }
       },

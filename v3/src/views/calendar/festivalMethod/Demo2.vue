@@ -39,7 +39,7 @@ export default Vue.extend({
   methods: {
     festivalNoticeMethod (params) {
       const { date, viewType } = params
-      if (viewType === 'day') {
+      if (viewType === 'date' || viewType === 'day') {
         const ymd = XEUtils.toDateString(date, 'yyyyMMdd')
         return this.noticeMaps[ymd] || { label: '无' }
       }

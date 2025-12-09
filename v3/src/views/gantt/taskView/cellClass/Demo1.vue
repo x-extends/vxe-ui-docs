@@ -38,7 +38,6 @@ export default Vue.extend({
             if (dateObj.e === 2) {
               return 'status-b'
             }
-            return {}
           }
         }
       },

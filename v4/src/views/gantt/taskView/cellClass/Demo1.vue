@@ -36,7 +36,6 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
         if (dateObj.e === 2) {
           return 'status-b'
         }
-        return {}
       }
     }
   },
