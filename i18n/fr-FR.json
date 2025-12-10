@@ -9,6 +9,7 @@
       "pluginVersion": "Plugin",
       "enterprisePluginVersion": "插件",
       "templateVersion": "modèle",
+      "process Version": "开发中",
       "docsSearch": "Recherche de documents",
       "searchPlaceholder": "Entrez les mots clés pour rechercher des documents",
       "searchResultHtml": "Aucun résultat trouvé lié à \"<span class =\" keyword-light \"> {0} </span>\"!",
