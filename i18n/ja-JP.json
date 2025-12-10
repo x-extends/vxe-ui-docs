@@ -7,7 +7,7 @@
       "pluginStableVersion": "插件版本",
       "releaseTitle": "更新日志",
       "pluginVersion": "プラグイン",
-      "enterprisePluginVersion": "插件",
+      "enterprisePluginVersion": "企业版插件",
       "templateVersion": "テンプレート",
       "processVersion": "即将支持",
       "docsSearch": "ドキュメント検索",
@@ -114,7 +114,7 @@
       "pluginDocs": "🔥插件文档",
       "pluginVersion": "插件",
       "pluginStore": "プラグインマーケット",
-      "enterprisePluginVersion": "插件",
+      "enterprisePluginVersion": "企业版插件",
       "enterpriseVersion": "エンタープライズエディション",
       "buyPlugin": "获取插件授权",
       "supportUs": "私たちをサポートしてください"
