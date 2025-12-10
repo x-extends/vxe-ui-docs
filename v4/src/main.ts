@@ -28,7 +28,7 @@ import 'vxe-gantt/lib/style.css'
 import VxeUIDesign from 'vxe-design'
 import 'vxe-design/lib/style.css'
 
-// import zhCN from 'vxe-pc-ui/lib/language/zh-CN' // 简体中文 
+// import zhCN from 'vxe-pc-ui/lib/language/zh-CN' // 简体中文
 import zhCHT from 'vxe-pc-ui/lib/language/zh-CHT' // 繁体中文
 // import zhHK from 'vxe-pc-ui/lib/language/zh-HK' // 中文(香港)
 // import zhTW from 'vxe-pc-ui/lib/language/zh-TW' // 中文(台湾)
