@@ -2746,6 +2746,11 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/select/base/max/CodeExample.vue')
               },
               {
+                path: 'popupWH',
+                name: 'ComponentSelectBasePopupWH',
+                component: () => import('@/views/select/base/popupWH/CodeExample.vue')
+              },
+              {
                 path: 'allowCreate',
                 name: 'ComponentSelectBaseAllowCreate',
                 component: () => import('@/views/select/base/allowCreate/CodeExample.vue')
@@ -2815,6 +2820,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'max',
                 name: 'ComponentSelectConfigMax',
                 component: () => import('@/views/select/config/max/CodeExample.vue')
+              },
+              {
+                path: 'popupWH',
+                name: 'ComponentSelectConfigPopupWH',
+                component: () => import('@/views/select/config/popupWH/CodeExample.vue')
               },
               {
                 path: 'allowCreate',
