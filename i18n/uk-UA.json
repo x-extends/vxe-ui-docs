@@ -9,7 +9,7 @@
       "pluginVersion": "Плагін",
       "enterprisePluginVersion": "插件",
       "templateVersion": "шаблон",
-      "process Version": "开发中",
+      "processVersion": "开发中",
       "docsSearch": "Пошук документів",
       "searchPlaceholder": "Введіть ключові слова для пошуку документів",
       "searchResultHtml": "Не знайдено жодних результатів, пов’язаних із \"<span class =\" ключове слово-lighten \"> {0} </span>\"!",

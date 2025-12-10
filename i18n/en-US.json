@@ -9,7 +9,7 @@
       "pluginVersion": "Plugin",
       "enterprisePluginVersion": "Plugin",
       "templateVersion": "template",
-      "process Version": "in development",
+      "processVersion": "in development",
       "docsSearch": "Document search",
       "searchPlaceholder": "Enter keywords to search documents",
       "searchResultHtml": "No results found for \"<span class=\"keyword-lighten\">{0}</span>\"!",

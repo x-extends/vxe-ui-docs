@@ -9,7 +9,7 @@
       "pluginVersion": "プラグイン",
       "enterprisePluginVersion": "插件",
       "templateVersion": "テンプレート",
-      "process Version": "开发中",
+      "processVersion": "开发中",
       "docsSearch": "ドキュメント検索",
       "searchPlaceholder": "キーワードを入力してドキュメントを検索します",
       "searchResultHtml": "「<span class = \"keyword-lighten\"> {0} </span>」に関連する結果は見つかりませんでした！",

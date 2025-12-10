@@ -59,12 +59,14 @@
               <span v-if="item2.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterprisePluginVersion') }}</span>
               <span v-else-if="item2.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
               <span v-else-if="item2.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+              <span v-else-if="item2.isProcess" class="nav-item-process-icon">{{ $t('app.aside.processVersion') }}</span>
             </vxe-link>
             <vxe-link v-else-if="item2.linkUrl" class="nav-item-link" :status="item2.linkStatus" :href="item2.linkUrl" :disabled="item2.isDisabled || item2.isProcess" :target="item2.linkTarget || '_blank'">
               <span>{{ item2.title }}</span>
               <span v-if="item2.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterprisePluginVersion') }}</span>
               <span v-else-if="item2.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
               <span v-else-if="item2.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+              <span v-else-if="item2.isProcess" class="nav-item-process-icon">{{ $t('app.aside.processVersion') }}</span>
             </vxe-link>
             <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-right" :content="item2.title"></vxe-text>
           </div>
@@ -76,12 +78,14 @@
                   <span v-if="item3.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterprisePluginVersion') }}</span>
                   <span v-else-if="item3.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
                   <span v-else-if="item3.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+                  <span v-else-if="item3.isProcess" class="nav-item-process-icon">{{ $t('app.aside.processVersion') }}</span>
                 </vxe-link>
                 <vxe-link v-else-if="item3.linkUrl" class="nav-item-link" :status="item3.linkStatus" :href="item3.linkUrl" :disabled="item3.isDisabled || item3.isProcess" :target="item3.linkTarget || '_blank'">
                   <span>{{ item3.title }}</span>
                   <span v-if="item3.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterprisePluginVersion') }}</span>
                   <span v-else-if="item3.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
                   <span v-else-if="item3.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+                  <span v-else-if="item3.isProcess" class="nav-item-process-icon">{{ $t('app.aside.processVersion') }}</span>
                 </vxe-link>
                 <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-right" :content="item3.title"></vxe-text>
               </div>
@@ -93,12 +97,14 @@
                       <span v-if="item4.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterprisePluginVersion') }}</span>
                       <span v-else-if="item4.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
                       <span v-else-if="item4.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+                      <span v-else-if="item4.isProcess" class="nav-item-process-icon">{{ $t('app.aside.processVersion') }}</span>
                     </vxe-link>
                     <vxe-link v-else-if="item4.linkUrl" class="nav-item-link" :status="item4.linkStatus" :href="item4.linkUrl" :disabled="item4.isDisabled || item4.isProcess" :target="item4.linkTarget || '_blank'">
                       <span>{{ item4.title }}</span>
                       <span v-if="item4.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterprisePluginVersion') }}</span>
                       <span v-else-if="item4.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
                       <span v-else-if="item4.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+                      <span v-else-if="item4.isProcess" class="nav-item-process-icon">{{ $t('app.aside.processVersion') }}</span>
                     </vxe-link>
                     <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-right" :content="item4.title"></vxe-text>
                   </div>
@@ -110,12 +116,14 @@
                           <span v-if="item5.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterprisePluginVersion') }}</span>
                           <span v-else-if="item5.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
                           <span v-else-if="item5.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+                          <span v-else-if="item5.isProcess" class="nav-item-process-icon">{{ $t('app.aside.processVersion') }}</span>
                         </vxe-link>
                         <vxe-link v-else-if="item5.linkUrl" class="nav-item-link" :status="item5.linkStatus" :href="item5.linkUrl"  :disabled="item5.isDisabled || item5.isProcess" :target="item5.linkTarget || '_blank'">
                           <span>{{ item5.title }}</span>
                           <span v-if="item5.isEnterprise" class="nav-item-enterprise-icon">{{ $t('app.aside.enterprisePluginVersion') }}</span>
                           <span v-else-if="item5.isPlugin" class="nav-item-plugin-icon">{{ $t('app.aside.pluginVersion') }}</span>
                           <span v-else-if="item5.isTemplate" class="nav-item-template-icon">{{ $t('app.aside.templateVersion') }}</span>
+                          <span v-else-if="item5.isProcess" class="nav-item-process-icon">{{ $t('app.aside.processVersion') }}</span>
                         </vxe-link>
                         <vxe-text v-else class="nav-item-text" icon="vxe-icon-arrow-right" :content="item5.title"></vxe-text>
                       </div>
