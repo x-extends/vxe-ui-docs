@@ -4217,6 +4217,25 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'drag',
+            component: RouteLayout,
+            children: [
+              { path: 'sort', name: 'ComponentTreeDragSort', component: () => import('@/views/tree/drag/sort/CodeExample.vue') },
+              { path: 'icon', name: 'ComponentTreeDragIcon', component: () => import('@/views/tree/drag/icon/CodeExample.vue') },
+              { path: 'showGuidesStatus', name: 'ComponentTreeDragShowGuidesStatus', component: () => import('@/views/tree/drag/showGuidesStatus/CodeExample.vue') },
+              { path: 'trigger', name: 'ComponentTreeDragTrigger', component: () => import('@/views/tree/drag/trigger/CodeExample.vue') },
+              { path: 'events', name: 'ComponentTreeDragEvents', component: () => import('@/views/tree/drag/events/CodeExample.vue') },
+              { path: 'tooltipMethod', name: 'ComponentTreeDragTooltipMethod', component: () => import('@/views/tree/drag/tooltipMethod/CodeExample.vue') },
+              { path: 'disabledMethod', name: 'ComponentTreeDragDisabledMethod', component: () => import('@/views/tree/drag/disabledMethod/CodeExample.vue') },
+              { path: 'visibleMethod', name: 'ComponentTreeDragVisibleMethod', component: () => import('@/views/tree/drag/visibleMethod/CodeExample.vue') },
+              { path: 'peerDrag', name: 'ComponentTreeDragPeerDrag', component: () => import('@/views/tree/drag/peerDrag/CodeExample.vue') },
+              { path: 'cossDrag', name: 'ComponentTreeDragCossDrag', component: () => import('@/views/tree/drag/cossDrag/CodeExample.vue') },
+              { path: 'selfToChildDrag', name: 'ComponentTreeDragSelfToChildDrag', component: () => import('@/views/tree/drag/selfToChildDrag/CodeExample.vue') },
+              { path: 'toChildDrag', name: 'ComponentTreeDragToChildDrag', component: () => import('@/views/tree/drag/toChildDrag/CodeExample.vue') },
+              { path: 'dragMethod', name: 'ComponentTreeDragDragMethod', component: () => import('@/views/tree/drag/dragMethod/CodeExample.vue') }
+            ]
+          },
+          {
             path: 'lazy',
             component: RouteLayout,
             children: [

@@ -1659,6 +1659,24 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: '拖拽',
+        children: [
+          { title: '拖拽调整节点顺序', routerLink: { name: 'ComponentTreeDragSort' } },
+          { title: '自定义图标', routerLink: { name: 'ComponentTreeDragIcon' } },
+          { title: '拖拽辅助样式', routerLink: { name: 'ComponentTreeDragShowGuidesStatus' } },
+          { title: '触发方式', routerLink: { name: 'ComponentTreeDragTrigger' } },
+          { title: '拖拽事件', routerLink: { name: 'ComponentTreeDragEvents' } },
+          { title: '自定义提示', routerLink: { name: 'ComponentTreeDragTooltipMethod' } },
+          { title: '禁用拖拽按钮', routerLink: { name: 'ComponentTreeDragDisabledMethod' } },
+          { title: '拖拽按钮可视', routerLink: { name: 'ComponentTreeDragVisibleMethod' } },
+          { title: '同层级拖拽', routerLink: { name: 'ComponentTreeDragPeerDrag' } },
+          { title: '跨层级拖拽', routerLink: { name: 'ComponentTreeDragCossDrag' } },
+          { title: '自己拖拽给自己子级', routerLink: { name: 'ComponentTreeDragSelfToChildDrag' } },
+          { title: '拖拽转成子节点', routerLink: { name: 'ComponentTreeDragToChildDrag' } },
+          { title: '拖拽拦截', routerLink: { name: 'ComponentTreeDragDragMethod' } }
+        ]
+      },
+      {
         title: '懒加载',
         children: [
           { title: '懒加载子节点', routerLink: { name: 'ComponentTreeLazyLoadMethod' } },
