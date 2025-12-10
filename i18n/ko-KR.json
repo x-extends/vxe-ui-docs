@@ -9,7 +9,7 @@
       "pluginVersion": "플러그인",
       "enterprisePluginVersion": "插件",
       "templateVersion": "주형",
-      "processVersion": "开发中",
+      "processVersion": "即将支持",
       "docsSearch": "문서 검색",
       "searchPlaceholder": "키워드를 입력하여 문서를 검색하십시오",
       "searchResultHtml": "\"<span class =\"keyword-lighten \"> {0} </span>\"과 관련된 결과가 없습니다!",

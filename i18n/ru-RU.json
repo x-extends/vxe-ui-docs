@@ -9,7 +9,7 @@
       "pluginVersion": "Плагин",
       "enterprisePluginVersion": "插件",
       "templateVersion": "шаблон",
-      "processVersion": "开发中",
+      "processVersion": "即将支持",
       "docsSearch": "Поиск документов",
       "searchPlaceholder": "Введите ключевые слова для поиска документов",
       "searchResultHtml": "Нет результатов, связанных с \"<span class =\" listen \"> {0} </span>\"!",

@@ -9,7 +9,7 @@
       "pluginVersion": "插件",
       "enterprisePluginVersion": "插件",
       "templateVersion": "模板",
-      "processVersion": "开发中",
+      "processVersion": "即将支持",
       "docsSearch": "文档搜索",
       "searchPlaceholder": "输入关键字搜索文档",
       "searchResultHtml": "找不到与 “<span class=\"keyword-lighten\">{0}</span>” 相关的结果！",

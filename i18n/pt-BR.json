@@ -9,7 +9,7 @@
       "pluginVersion": "Plugin",
       "enterprisePluginVersion": "插件",
       "templateVersion": "modelo",
-      "processVersion": "开发中",
+      "processVersion": "即将支持",
       "docsSearch": "Pesquisa de documentos",
       "searchPlaceholder": "Digite palavras -chave para procurar documentos",
       "searchResultHtml": "Nenhum resultado encontrado relacionado a \"<span Class =\" Palavra-chave-Lighten \"> {0} </span>\"!",
