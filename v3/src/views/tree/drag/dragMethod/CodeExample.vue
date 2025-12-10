@@ -8,7 +8,7 @@
       </template>
     </CodeLight>
 
-    <CodeLight path="tree/drag/dragMethod/Demo2">
+    <CodeLight path="tree/drag/dragMethod/Demo2" previewPath="/resource/docsImg/tree_drag_drag_method.gif">
       <template #tip>
         <vxe-tip status="primary">
           通过 <ApiLink name="tree" prop="drag-config"/>.<ApiLink name="tree" prop="dragEndMethod"/> 可以自定义处理拖拽结束时的拖动
