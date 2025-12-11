@@ -265,6 +265,34 @@ const routes: Array<RouteConfig> = [
     ]
   },
   {
+    path: '/plugin-shortcut-key',
+    component: PageLayout,
+    children: [
+      {
+        path: 'install',
+        redirect: {
+          name: 'PluginShortcutKeyStartNpmInstall'
+        }
+      },
+      {
+        path: 'start',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'npmInstall',
+            name: 'PluginShortcutKeyStartNpmInstall',
+            component: () => import('@/views/plugin-shortcut-key/start/NpmInstall.vue')
+          },
+          {
+            path: 'cdnInstall',
+            name: 'PluginShortcutKeyStartCdnInstall',
+            component: () => import('@/views/plugin-shortcut-key/start/CdnInstall.vue')
+          }
+        ]
+      }
+    ]
+  },
+  {
     path: '/plugin-export-xlsx',
     component: PageLayout,
     children: [

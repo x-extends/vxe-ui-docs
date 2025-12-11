@@ -31,6 +31,19 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
+    title: '官方插件 - 快捷键',
+    isExpand: false,
+    children: [
+      {
+        title: '开发指南',
+        children: [
+          { title: 'NPM 安装插件', routerLink: { name: 'PluginShortcutKeyStartNpmInstall' } },
+          { title: 'CDN 安装插件', routerLink: { name: 'PluginShortcutKeyStartCdnInstall' } }
+        ]
+      }
+    ]
+  },
+  {
     title: '官方插件 - 数据校验',
     isExpand: false,
     children: [
