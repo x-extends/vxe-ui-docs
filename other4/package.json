@@ -21,7 +21,7 @@
     "@vxe-ui/plugin-render-arco": "^4.0.4",
     "@vxe-ui/plugin-render-tdesign": "^4.0.0",
     "@vxe-ui/plugin-render-wangeditor": "^4.0.5",
-    "@vxe-ui/plugin-shortcut-key": "^4.0.4",
+    "@vxe-ui/plugin-shortcut-key": "^4.0.6",
     "@vxe-ui/plugin-validator": "^4.1.0",
     "ant-design-vue": "4.2.6",
     "axios": "^1.7.2",
