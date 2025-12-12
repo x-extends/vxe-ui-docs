@@ -21,7 +21,6 @@ export default Vue.extend({
       drag: true,
       dragConfig: {
         isCrossDrag: true,
-        isSelfToChildDrag: true,
         showGuidesStatus: true,
         async dragEndMethod () {
           const type = await VxeUI.modal.confirm({

@@ -19,7 +19,6 @@ const treeOptions = reactive<VxeTreeProps<NodeVO>>({
   drag: true,
   dragConfig: {
     isCrossDrag: true,
-    isSelfToChildDrag: true,
     showGuidesStatus: true,
     async dragEndMethod () {
       const type = await VxeUI.modal.confirm({

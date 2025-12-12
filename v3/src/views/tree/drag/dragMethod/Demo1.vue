@@ -21,7 +21,6 @@ export default Vue.extend({
       drag: true,
       dragConfig: {
         isCrossDrag: true,
-        isSelfToChildDrag: true,
         showGuidesStatus: true,
         dragStartMethod  ({ node }) {
           if (node.title === '节点3') {
