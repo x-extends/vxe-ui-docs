@@ -10,18 +10,18 @@
       </template>
 
       <template #use>
-        <vxe-tip status="success" title="完整安装">
-          可以使用完整功能组件
+        <vxe-tip status="success" title="安装基础 UI">
+          可以使用基础的 UI 组件
         </vxe-tip>
         <pre>
           <pre-code
             language="shell"
             :content="`
-            npm install ${utilCDNLib} ${uiCDNLib } ${ tableCDNLib }
+            npm install ${utilCDNLib} ${uiCDNLib}
             # 或者
-            yarn add ${utilCDNLib} ${uiCDNLib } ${ tableCDNLib }
+            yarn add ${utilCDNLib} ${uiCDNLib}
             # 或者
-            pnpm add ${utilCDNLib} ${uiCDNLib } ${ tableCDNLib }
+            pnpm add ${utilCDNLib} ${uiCDNLib}
             `">
           </pre-code>
           <pre-code
@@ -30,12 +30,9 @@
             // ...
             import VxeUIBase from 'vxe-pc-ui'
             import 'vxe-pc-ui/es/style.css'
-
-            import VxeUITable from 'vxe-table'
-            import 'vxe-table/es/style.css'
             // ...
 
-            createApp(App).use(VxeUIBase).use(VxeUITable).mount('#app')
+            createApp(App).use(VxeUIBase).mount('#app')
             // ...">
           </pre-code>
         </pre>
@@ -49,7 +46,6 @@
             {
               ...
               "vxe-pc-ui": "^${uiLibVersion}",
-              "vxe-table": "^${tableLibVersion}"
               ...
             }
             `'>
@@ -61,7 +57,6 @@
             {
               ...
               "vxe-pc-ui": "~${uiLibVersion}",
-              "vxe-table": "~${tableLibVersion}"
               ...
             }
             `'>
