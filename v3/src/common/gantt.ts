@@ -233,16 +233,10 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
-      title: '依赖关系',
-      children: [
-        { title: '依赖线', isEnterprise: true, isDisabled: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: '111' }, query: { previewPath: '111' } } },
-        { title: '前置任务', isEnterprise: true, isDisabled: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: '222' }, query: { previewPath: '222' } } }
-      ]
-    },
-    {
       title: '任务可拖拽',
       children: [
-        { title: '拖拽任务自动更新日期', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_task_drag_drag' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2FtaskDrag%2Fdrag' } } }
+        { title: '任务拖拽自动移动日期', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_task_drag_drag' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2FtaskDrag%2Fdrag' } } },
+        { title: '任务拖拽自动调整日期', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_task_drag_resize' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2FtaskDrag%2Fresize' } } }
       ]
     },
     {
