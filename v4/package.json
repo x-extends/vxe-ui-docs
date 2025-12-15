@@ -18,8 +18,8 @@
     "vue-i18n": "^10.0.8",
     "vue-router": "^4.5.1",
     "vxe-design": "^4.0.7",
-    "vxe-gantt": "~4.1.5",
-    "vxe-pc-ui": "~4.11.5",
+    "vxe-gantt": "~4.1.6",
+    "vxe-pc-ui": "~4.11.6",
     "vxe-table": "~4.17.29",
     "xe-utils": "^3.8.0"
   },

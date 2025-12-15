@@ -374,7 +374,9 @@
     "extendGanttChart": {
       "nav": {
         "taskDrag": "任务可拖拽",
-        "taskDragBase": "拖拽任务调整日期"
+        "taskDragBase": "拖拽移动日期",
+        "taskDragDragMethod": "拦截拖拽移动",
+        "taskDragResize": "拖拽调整日期"
       }
     }
   },

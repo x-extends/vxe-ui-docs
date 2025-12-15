@@ -13,11 +13,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginExportPdfCDNLib} jspdf@2.5.2
+            npm install ${ uiCDNLib } ${ tableCDNLib } ${pluginExportPdfCDNLib} jspdf@3.0.4
             # 或者
-            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportPdfCDNLib} jspdf@2.5.2
+            yarn add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportPdfCDNLib} jspdf@3.0.4
             # 或者
-            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportPdfCDNLib} jspdf@2.5.2
+            pnpm add ${ uiCDNLib } ${ tableCDNLib } ${pluginExportPdfCDNLib} jspdf@3.0.4
             `">
           </pre-code>
         </pre>

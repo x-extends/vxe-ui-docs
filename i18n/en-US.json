@@ -375,7 +375,9 @@
     "extendGanttChart": {
       "nav": {
         "taskDrag": "Tasks drag and drop",
-        "taskDragBase": "Drag and drop tasks to adjust dates."
+        "taskDragBase": "Drag and move the date",
+        "taskDragDragMethod": "拦截拖拽移动",
+        "taskDragResize": "拖拽调整日期"
       }
     }
   },
