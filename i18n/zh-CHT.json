@@ -378,7 +378,13 @@
         "taskDrag": "任务可拖拽",
         "taskDragBase": "拖拽移动日期",
         "taskDragDragMethod": "拦截拖拽移动",
-        "taskDragResize": "拖拽调整日期"
+        "taskDragResize": "拖拽调整日期",
+        "dimension": "多维度显示",
+        "dimensionDate": "日期多维度切换",
+        "dimensionTime": "时间多维度切换",
+        "edit": "可编辑",
+        "editTableCell": "编辑表格单元格",
+        "editTaskBar": "编辑任务条"
       }
     }
   },
