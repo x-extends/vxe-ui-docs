@@ -47,6 +47,8 @@
         "globalZIndex": "全局 z-index",
         "globalPermission": "全局权限控制",
         "i18n": "国际化",
+        "configI18n": "对组件内置内容进行翻译",
+        "configTranslate": "支持对组件中特定的字段进行翻译",
         "tools": "工具类",
         "functions": " 函数类",
         "clipboard": "剪贴板",

@@ -47,6 +47,8 @@
         "globalZIndex": "글로벌 Z- 안개",
         "globalPermission": "글로벌 허가 관리",
         "i18n": "국제화",
+        "configI18n": "对组件内置内容进行翻译",
+        "configTranslate": "支持对组件中特定的字段进行翻译",
         "tools": "도구",
         "functions": "기능 클래스",
         "clipboard": "클립 보드",

@@ -47,6 +47,8 @@
         "globalZIndex": "Z-Index العالمية",
         "globalPermission": "السيطرة على الإذن العالمي",
         "i18n": "تدويل",
+        "configI18n": "对组件内置内容进行翻译",
+        "configTranslate": "支持对组件中特定的字段进行翻译",
         "tools": "أدوات",
         "functions": "فئة الوظيفة",
         "clipboard": "الحافظة",
