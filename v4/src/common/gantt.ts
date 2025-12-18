@@ -45,6 +45,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
     {
       title: '任务视图',
       children: [
+        { title: '网格样式', routerLink: { name: 'ComponentGanttTaskViewGridding' } },
         { title: '边框', routerLink: { name: 'ComponentGanttTaskViewBorder' } },
         { title: '行样式', routerLink: { name: 'ComponentGanttTaskViewRowStyle' } },
         { title: '行附加 className', routerLink: { name: 'ComponentGanttTaskViewRowClass' } },

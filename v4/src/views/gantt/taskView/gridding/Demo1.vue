@@ -26,21 +26,9 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     }
   },
   taskViewConfig: {
-    viewStyle: {
-      cellStyle ({ dateObj }) {
-        // 高亮周日
-        if (dateObj.e === 0) {
-          return {
-            backgroundColor: '#f8e4e4'
-          }
-        }
-        // 高亮周三
-        if (dateObj.e === 2) {
-          return {
-            backgroundColor: '#c0f9f3'
-          }
-        }
-      }
+    gridding: {
+      leftSpacing: 3,
+      rightSpacing: 3
     }
   },
   columns: [
