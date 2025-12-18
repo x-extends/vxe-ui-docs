@@ -125,6 +125,11 @@ window.XEUtils = XEUtils
 axios.defaults.baseURL = import.meta.env.VITE_APP_SERVE_API_URL
 
 VxeUI.setConfig({
+  // table: {
+  //   virtualYConfig: {
+  //     mode: 'scroll'
+  //   }
+  // }
   // scrollMarginStyle: 'obsolete'
 })
 
