@@ -250,6 +250,12 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
+      title: '依赖线',
+      children: [
+        { title: '配置连接线', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_dependency_links' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2Fdependency%2Flinks' } } }
+      ]
+    },
+    {
       title: '数据代理',
       children: [
         { title: '查询接口', routerLink: { name: 'ComponentGanttProxyQuery' } },
