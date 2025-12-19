@@ -392,7 +392,7 @@
         "dependencyLinks": "配连连接线",
         "dependencyLineStatus": "线状态颜色",
         "dependencyLineType": "线样式类型",
-        "dependencyTreeLinks": ""
+        "dependencyTreeLinks": "连接线"
       }
     }
   },
