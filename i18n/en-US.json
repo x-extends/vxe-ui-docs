@@ -105,9 +105,11 @@
         "buttonGlobalRenderer": "渲染器（高阶复用）",
         "iconPickerGlobalRenderer": "渲染器（高阶复用）",
         "ganttTitle": "Gantt 甘特图",
-        "demoProductList": "产品进度列表 - 演示",
-        "demoProductTree": "子产品进度 - 演示",
-        "demoViewList": "多维视图切换 - 演示"
+        "demoProductList": "Task list - Demo",
+        "demoProductTree": "Subtask tree - Demo",
+        "demoViewList": "Multidimensional view - Demo",
+        "demoTaskMove": "Draggable - Demo",
+        "demoTaskLink": "Dependence line - Demo"
       }
     },
     "header": {
@@ -231,7 +233,9 @@
         "gantt": "Gantt",
         "demoProductList": "Task list - Demo",
         "demoProductTree": "Subtask tree - Demo",
-        "demoViewList": "Multidimensional view - Demo"
+        "demoViewList": "Multidimensional view - Demo",
+        "demoTaskMove": "Draggable - Demo",
+        "demoTaskLink": "Dependence line - Demo"
       }
     },
     "extendCellArea": {
