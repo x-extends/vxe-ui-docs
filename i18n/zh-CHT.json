@@ -375,6 +375,9 @@
     },
     "extendGanttChart": {
       "nav": {
+        "basics": "基础功能",
+        "taskList": "任务列表",
+        "subTask": "子任务",
         "taskDrag": "任务可拖拽",
         "taskDragBase": "拖拽移动日期",
         "taskDragDragMethod": "拦截拖拽移动",
@@ -388,7 +391,8 @@
         "dependency": "依赖关系",
         "dependencyLinks": "配连连接线",
         "dependencyLineStatus": "线状态颜色",
-        "dependencyLineType": "线样式类型"
+        "dependencyLineType": "线样式类型",
+        "dependencyTreeLinks": ""
       }
     }
   },

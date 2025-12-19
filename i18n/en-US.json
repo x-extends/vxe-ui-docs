@@ -376,8 +376,11 @@
     },
     "extendGanttChart": {
       "nav": {
-        "taskDrag": "Tasks drag and drop",
-        "taskDragBase": "Drag and move the date",
+        "basics": "基础功能",
+        "taskList": "任务列表",
+        "subTask": "子任务",
+        "taskDrag": "任务可拖拽",
+        "taskDragBase": "拖拽移动日期",
         "taskDragDragMethod": "拦截拖拽移动",
         "taskDragResize": "拖拽调整日期",
         "dimension": "多维度显示",
@@ -389,7 +392,8 @@
         "dependency": "依赖关系",
         "dependencyLinks": "配连连接线",
         "dependencyLineStatus": "线状态颜色",
-        "dependencyLineType": "线样式类型"
+        "dependencyLineType": "线样式类型",
+        "dependencyTreeLinks": ""
       }
     }
   },
