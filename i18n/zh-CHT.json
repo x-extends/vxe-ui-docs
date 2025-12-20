@@ -348,7 +348,10 @@
         "disabledAggValues": "禁用聚合汇总",
         "sort": "排序",
         "aggGroupMode": "分组列展示方式",
-        "customStorage": "列操作状态本地保存"
+        "customStorage": "列操作状态本地保存",
+        "template": "自定义插槽模板",
+        "templateGroupContent": "自定义分组内容模版",
+        "templateGroupValues": "自定义分组列聚合数据模板"
       }
     },
     "filtersComplexInput": {
