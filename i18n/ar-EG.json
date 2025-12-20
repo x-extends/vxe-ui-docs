@@ -339,7 +339,7 @@
     "extendPivotTable": {
       "nav": {
         "aggregation": "分类与汇总",
-        "handleRowGroup": "数据分组",
+        "handleRowGroup": "数据分组"
         "rowGroupSummary": "分组汇总",
         "allowGroup": "允许拖拽分组",
         "dynamicInteraction": "动态交互",
