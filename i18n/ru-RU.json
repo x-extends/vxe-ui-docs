@@ -401,7 +401,9 @@
         "dependencyLineStatus": "线状态颜色",
         "dependencyLineType": "线样式类型",
         "dependencyTreeLinks": "连接线",
-        "dependencyManual": "手动操作连接线"
+        "dependencyManual": "手动操作连接线",
+        "dependencyLineWidth": "自定义线宽度",
+        "dependencyLineColor": "自定义线颜色"
       }
     }
   },

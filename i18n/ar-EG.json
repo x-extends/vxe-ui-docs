@@ -339,7 +339,7 @@
     "extendPivotTable": {
       "nav": {
         "aggregation": "分类与汇总",
-        "handleRowGroup": "数据分组"
+        "handleRowGroup": "数据分组",
         "rowGroupSummary": "分组汇总",
         "allowGroup": "允许拖拽分组",
         "dynamicInteraction": "动态交互",
@@ -401,7 +401,9 @@
         "dependencyLineStatus": "线状态颜色",
         "dependencyLineType": "线样式类型",
         "dependencyTreeLinks": "连接线",
-        "dependencyManual": "手动操作连接线"
+        "dependencyManual": "手动操作连接线",
+        "dependencyLineWidth": "自定义线宽度",
+        "dependencyLineColor": "自定义线颜色"
       }
     }
   },
