@@ -1,11 +1,11 @@
 <template>
   <div>
     <vxe-radio-group v-model="viewMode" @change="changeViewEvent">
-      <vxe-radio-button label="1" content="年视图"></vxe-radio-button>
-      <vxe-radio-button label="2" content="季度视图"></vxe-radio-button>
-      <vxe-radio-button label="3" content="月视图"></vxe-radio-button>
-      <vxe-radio-button label="4" content="周视图"></vxe-radio-button>
-      <vxe-radio-button label="5" content="日视图"></vxe-radio-button>
+      <vxe-radio-button checked-value="1" content="年视图"></vxe-radio-button>
+      <vxe-radio-button checked-value="2" content="季度视图"></vxe-radio-button>
+      <vxe-radio-button checked-value="3" content="月视图"></vxe-radio-button>
+      <vxe-radio-button checked-value="4" content="周视图"></vxe-radio-button>
+      <vxe-radio-button checked-value="5" content="日视图"></vxe-radio-button>
     </vxe-radio-group>
 
     <vxe-gantt v-bind="ganttOptions"></vxe-gantt>

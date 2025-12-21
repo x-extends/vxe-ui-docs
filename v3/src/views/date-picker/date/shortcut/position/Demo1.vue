@@ -2,10 +2,10 @@
   <div>
     <div>
       <vxe-radio-group v-model="shortcutConfig.position">
-        <vxe-radio-button label="top" content="顶部"></vxe-radio-button>
-        <vxe-radio-button label="bottom" content="底部"></vxe-radio-button>
-        <vxe-radio-button label="left" content="左侧"></vxe-radio-button>
-        <vxe-radio-button label="right" content="右侧"></vxe-radio-button>
+        <vxe-radio-button checked-value="top" content="顶部"></vxe-radio-button>
+        <vxe-radio-button checked-value="bottom" content="底部"></vxe-radio-button>
+        <vxe-radio-button checked-value="left" content="左侧"></vxe-radio-button>
+        <vxe-radio-button checked-value="right" content="右侧"></vxe-radio-button>
       </vxe-radio-group>
     </div>
 
