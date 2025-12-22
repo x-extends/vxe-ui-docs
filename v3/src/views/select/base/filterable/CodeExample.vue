@@ -7,5 +7,13 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="select/base/filterable/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          通过 <ApiLink name="select" prop="filterMethod"/> 自定义搜索方法的处理逻辑
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>

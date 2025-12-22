@@ -7,22 +7,30 @@
 <script lang="ts">
 import Vue from 'vue'
 import { VxeSelectProps } from 'vxe-pc-ui'
-import XEUtils from 'xe-utils'
 
 // 模拟后端接口
 const getApiList = (quert: any) => {
-  let idKey = 1
+  const allList = [
+    { value: 1001, label: 'table' },
+    { value: 1002, label: 'grid' },
+    { value: 1003, label: 'button' },
+    { value: 1004, label: 'toolbar' },
+    { value: 1005, label: 'tooltip' },
+    { value: 1006, label: 'pager' },
+    { value: 1007, label: 'print' },
+    { value: 1008, label: 'export' },
+    { value: 1009, label: 'import' },
+    { value: 1010, label: 'select' },
+    { value: 1012, label: 'checkbox' },
+    { value: 1013, label: 'group' }
+  ]
+
   return new Promise<{
     value: number
     label: string
   }[]>(resolve => {
     setTimeout(() => {
-      const list = XEUtils.range(0, XEUtils.random(1, 10)).map(() => {
-        return {
-          value: idKey++,
-          label: `选项${idKey}_${quert.searchValue}`
-        }
-      })
+      const list = allList.filter(item => item.label.toLowerCase().indexOf(`${quert.searchValue}`.toLowerCase()) > -1)
       resolve(list)
     }, 200)
   })
