@@ -784,6 +784,22 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'el-date-picker',
                 name: 'PluginRenderElementGridFilterElDatePicker',
                 component: () => import('@/views/plugin-render-element/grid/filter/el-date-picker/CodeExample.vue')
+              },
+              {
+                path: 'floating',
+                component: RouteLayout,
+                children: [
+                  {
+                    path: 'el-input',
+                    name: 'PluginRenderElementGridFilterFloatingElInput',
+                    component: () => import('@/views/plugin-render-element/grid/filter/floating/el-input/CodeExample.vue')
+                  },
+                  {
+                    path: 'el-date-picker',
+                    name: 'PluginRenderElementGridFilterFloatingElDatePicker',
+                    component: () => import('@/views/plugin-render-element/grid/filter/floating/el-date-picker/CodeExample.vue')
+                  }
+                ]
               }
             ]
           },

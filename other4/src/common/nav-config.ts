@@ -337,7 +337,14 @@ export const navConfigList: NavVO[] = [
             title: '筛选 - 渲染',
             children: [
               { title: 'ElInput', routerLink: { name: 'PluginRenderElementGridFilterElInput' } },
-              { title: 'ElDatePicker', routerLink: { name: 'PluginRenderElementGridFilterElDatePicker' } }
+              { title: 'ElDatePicker', routerLink: { name: 'PluginRenderElementGridFilterElDatePicker' } },
+              {
+                title: '浮动筛选',
+                children: [
+                  { title: 'ElInput', routerLink: { name: 'PluginRenderElementGridFilterFloatingElInput' } },
+                  { title: 'ElDatePicker', routerLink: { name: 'PluginRenderElementGridFilterFloatingElDatePicker' } }
+                ]
+              }
             ]
           },
           {
