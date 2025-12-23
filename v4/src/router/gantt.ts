@@ -262,6 +262,16 @@ export const ganttRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'milestone',
+      component: RouteLayout,
+      children: [
+        { path: 'type', name: 'ComponentGanttMilestoneType', component: () => import('@/views/gantt/milestone/type/CodeExample.vue') },
+        { path: 'icon', name: 'ComponentGanttMilestoneIcon', component: () => import('@/views/gantt/milestone/icon/CodeExample.vue') },
+        { path: 'iconStatus', name: 'ComponentGanttMilestoneIconStatus', component: () => import('@/views/gantt/milestone/iconStatus/CodeExample.vue') },
+        { path: 'iconStyle', name: 'ComponentGanttMilestoneIconStyle', component: () => import('@/views/gantt/milestone/iconStyle/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'dimension',
       component: RouteLayout,
       children: [

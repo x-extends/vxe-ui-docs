@@ -402,7 +402,10 @@
         "dependencyTreeLinks": "连接线",
         "dependencyManual": "手动操作连接线",
         "dependencyLineWidth": "自定义线宽度",
-        "dependencyLineColor": "自定义线颜色"
+        "dependencyLineColor": "自定义线颜色",
+        "milestone": "里程碑",
+        "milestoneType": "配置里程碑",
+        "milestoneIcon": "自定义图标"
       }
     }
   },

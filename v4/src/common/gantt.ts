@@ -237,6 +237,15 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
+      title: '里程碑',
+      children: [
+        { title: '里程碑配置', routerLink: { name: 'ComponentGanttMilestoneType' } },
+        { title: '自定义图标', routerLink: { name: 'ComponentGanttMilestoneIcon' } },
+        { title: '图标状态颜色', routerLink: { name: 'ComponentGanttMilestoneIconStatus' } },
+        { title: '图标状态样式', routerLink: { name: 'ComponentGanttMilestoneIconStyle' } }
+      ]
+    },
+    {
       title: '多维度显示',
       children: [
         { title: '日期多维度切换', routerLink: { name: 'ComponentGanttDimensionDate' } },
