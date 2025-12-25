@@ -35,6 +35,7 @@ export default Vue.extend({
   },
   computed: {
     ...mapState([
+      'resBaseUrl',
       'siteBaseUrl',
       'pageTitle'
     ])

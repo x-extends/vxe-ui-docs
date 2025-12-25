@@ -164,6 +164,7 @@ export default Vue.extend({
       componentsSize(): string
       packName(): string
       language(): string
+      resBaseUrl(): string
       siteBaseUrl(): string
       pageTitle(): string
       isExtendDocs(): boolean
