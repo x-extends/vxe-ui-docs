@@ -109,7 +109,8 @@
         "demoProductTree": "Subtask tree - Demo",
         "demoViewList": "Multidimensional view - Demo",
         "demoTaskMove": "Draggable - Demo",
-        "demoTaskLink": "Dependence line - Demo"
+        "demoTaskLink": "Dependence line - Demo",
+        "demoMilestoneLink": "Milestone - Demo"
       }
     },
     "header": {
@@ -235,7 +236,8 @@
         "demoProductTree": "Subtask tree - Demo",
         "demoViewList": "Multidimensional view - Demo",
         "demoTaskMove": "Draggable - Demo",
-        "demoTaskLink": "Dependence line - Demo"
+        "demoTaskLink": "Dependence line - Demo",
+        "demoMilestoneLink": "Milestone - Demo"
       }
     },
     "extendCellArea": {

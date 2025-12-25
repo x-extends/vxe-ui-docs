@@ -109,7 +109,8 @@
         "demoProductTree": "子产品进度 - 演示",
         "demoViewList": "多维视图切换 - 演示",
         "demoTaskMove": "可拖拽 - 演示",
-        "demoTaskLink": "依赖线 - 演示"
+        "demoTaskLink": "依赖线 - 演示",
+        "demoMilestoneLink": "里程碑 - 演示"
       }
     },
     "header": {
@@ -235,7 +236,8 @@
         "demoProductTree": "子产品进度 - 演示",
         "demoViewList": "多维视图切换 - 演示",
         "demoTaskMove": "可拖拽 - 演示",
-        "demoTaskLink": "依赖线 - 演示"
+        "demoTaskLink": "依赖线 - 演示",
+        "demoMilestoneLink": "里程碑 - 演示"
       }
     },
     "extendCellArea": {
