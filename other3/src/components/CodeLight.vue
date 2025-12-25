@@ -130,10 +130,16 @@ export default Vue.extend({
   },
   computed: {
     isPluginDocs () {
-      return this.$store.state.isPluginDocs
+      return this.$store.state.isPluginDocs as string
+    },
+    resBaseUrl () {
+      return this.$store.state.resBaseUrl as string
     },
     siteBaseUrl () {
-      return this.$store.state.siteBaseUrl
+      return this.$store.state.siteBaseUrl as string
+    },
+    systemConfig () {
+      return this.$store.state.systemConfig as string
     },
     gitDir () {
       return `${process.env.VUE_APP_DOCS_GITHUB_URL}/src/views/${(this as any).compDir}`
@@ -148,7 +154,7 @@ export default Vue.extend({
         if (/^http/.test(previewPath)) {
           return previewPath
         }
-        return `${(this as any).siteBaseUrl}${previewPath}`
+        return `${(this as any).resBaseUrl}${previewPath}?v=${(this as any).systemConfig.previewVersion}`
       }
       return ''
     }
@@ -158,7 +164,7 @@ export default Vue.extend({
       return path.split('/').slice(-1)[0]
     },
     transformFilePath  (path: string) {
-      return path.replace(/^\.\//, `${this.compDir}/`)
+      return path.replace(/^\.\//, `${(this as any).compDir}/`)
     },
     parseFilePath  (this: any, path: string) {
       const [, filePath, fileType] = path.match(/(.*)\.(vue|js|jsx|ts|tsx)$/) || [path, '.vue', 'vue']
