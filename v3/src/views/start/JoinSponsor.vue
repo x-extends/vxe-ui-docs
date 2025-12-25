@@ -40,7 +40,7 @@ export default Vue.extend({
     ])
   },
   created () {
-    axios.get(`${this.siteBaseUrl}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-sponsor-config.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+    axios.get(`${this.resBaseUrl}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-sponsor-config.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
       this.supportOptions = res.data ? res.data.sponsors : []
     })
   }
