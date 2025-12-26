@@ -371,6 +371,7 @@
     "filtersCombination": {
       "nav": {
         "aggregationFilter": "Filtrado básico",
+        "options": "自定义选项列表",
         "fixed": "冻结列",
         "sort": "排序",
         "combinationRemoteFilter": "服务端筛选",
