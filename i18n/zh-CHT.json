@@ -408,7 +408,8 @@
         "dependencyLineColor": "自定义线颜色",
         "milestone": "里程碑",
         "milestoneType": "配置里程碑",
-        "milestoneIcon": "自定义图标"
+        "milestoneIcon": "自定义图标",
+        "dependencyCreateLink": "创建连接线"
       }
     }
   },
