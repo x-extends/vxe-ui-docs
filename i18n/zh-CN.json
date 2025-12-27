@@ -410,7 +410,9 @@
         "milestone": "里程碑",
         "milestoneType": "配置里程碑",
         "milestoneIcon": "自定义图标",
-        "dependencyCreateLink": "创建连接线"
+        "dependencyCreateLink": "创建连接线",
+        "dependencyIsCurrent": "高亮当前线",
+        "dependencyDblclickToRemove": "双击可删除线"
       }
     }
   },
