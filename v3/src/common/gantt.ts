@@ -266,7 +266,8 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
     {
       title: '虚拟滚动（超大数据量表格）',
       children: [
-        { title: '纵向虚拟滚动', routerLink: { name: 'ComponentGanttScrollVertical' } }
+        { title: '纵向虚拟滚动', routerLink: { name: 'ComponentGanttScrollVertical' } },
+        { title: '子任务纵向虚拟滚动', routerLink: { name: 'ComponentGanttScrollTree' } }
       ]
     },
     {

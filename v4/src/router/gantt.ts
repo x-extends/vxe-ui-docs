@@ -292,7 +292,8 @@ export const ganttRouteConfig: RouteRecordRaw = {
       path: 'scroll',
       component: RouteLayout,
       children: [
-        { path: 'vertical', name: 'ComponentGanttScrollVertical', component: () => import('@/views/gantt/scroll/vertical/CodeExample.vue') }
+        { path: 'vertical', name: 'ComponentGanttScrollVertical', component: () => import('@/views/gantt/scroll/vertical/CodeExample.vue') },
+        { path: 'tree', name: 'ComponentGanttScrollTree', component: () => import('@/views/gantt/scroll/tree/CodeExample.vue') }
       ]
     },
     {
