@@ -110,7 +110,8 @@
         "demoViewList": "Multidimensional view - Demo",
         "demoTaskMove": "Draggable - Demo",
         "demoTaskLink": "Dependence line - Demo",
-        "demoMilestoneLink": "Milestone - Demo"
+        "demoMilestoneLink": "Milestone - Demo",
+        "demoCreateLink": "Create dependency line - Demo"
       }
     },
     "header": {
@@ -237,7 +238,8 @@
         "demoViewList": "Multidimensional view - Demo",
         "demoTaskMove": "Draggable - Demo",
         "demoTaskLink": "Dependence line - Demo",
-        "demoMilestoneLink": "Milestone - Demo"
+        "demoMilestoneLink": "Milestone - Demo",
+        "demoCreateLink": "Create dependency line - Demo"
       }
     },
     "extendCellArea": {
