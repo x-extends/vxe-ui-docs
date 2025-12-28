@@ -413,7 +413,9 @@
         "milestoneIcon": "自定义图标",
         "dependencyCreateLink": "创建连接线",
         "dependencyIsCurrent": "高亮当前线",
-        "dependencyDblclickToRemove": "双击可删除线"
+        "dependencyDblclickToRemove": "双击可删除线",
+        "dependencyBeforeRemove": "拦截删除线",
+        "dependencyCreateStart": "创建线二次确认"
       }
     }
   },
