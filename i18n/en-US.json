@@ -416,7 +416,10 @@
         "dependencyIsCurrent": "高亮当前线",
         "dependencyDblclickToRemove": "双击可删除线",
         "dependencyBeforeRemove": "拦截删除线",
-        "dependencyCreateStart": "创建线二次确认"
+        "dependencyCreateStart": "创建线二次确认",
+        "scroll": "虚拟滚动（超大数据量）",
+        "scrollVertical": "纵向虚拟滚动",
+        "scrollTree": "树形虚拟滚动"
       }
     }
   },
