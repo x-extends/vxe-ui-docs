@@ -166,7 +166,7 @@ Vue.component('ApiLink', ApiLink)
 
 Vue.config.productionTip = false
 
-axios.get(`${process.env.VITE_APP_RES_URL}/i18n/${i18n.locale}.json?v=${process.env.VUE_APP_DATE_NOW}`).then(appRes => {
+axios.get(`${process.env.VUE_APP_RES_URL}/i18n/${i18n.locale}.json?v=${process.env.VUE_APP_DATE_NOW}`).then(appRes => {
   i18n.setLocaleMessage(i18n.locale, appRes.data)
 }).catch(e => e).then(() => {
   new Vue({
