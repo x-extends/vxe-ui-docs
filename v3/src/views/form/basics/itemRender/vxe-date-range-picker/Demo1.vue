@@ -39,8 +39,8 @@ export default Vue.extend({
       sex: '',
       selectDate: '2025-05-10,2025-05-15',
       dates: ['2025-05-02', '2025-05-08'],
-      endDate: '2025-05-20',
-      startDate: '2025-06-01',
+      startDate: '2025-05-01',
+      endDate: '2025-06-20',
       address: ''
     }
 

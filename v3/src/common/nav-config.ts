@@ -351,6 +351,7 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'badge' } } },
           { title: '基础', routerLink: { name: 'ComponentBadgeBase' } },
           { title: '尺寸大小', routerLink: { name: 'ComponentBadgerSize' } },
+          { title: '图标', routerLink: { name: 'ComponentBadgerIcon' } },
           { title: '小圆点', routerLink: { name: 'ComponentBadgerDot' } }
         ]
       },

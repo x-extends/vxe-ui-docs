@@ -746,11 +746,8 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentBadgeBase',
             component: () => import('@/views/badge/base/CodeExample.vue')
           },
-          {
-            path: 'size',
-            name: 'ComponentBadgerSize',
-            component: () => import('@/views/badge/size/CodeExample.vue')
-          },
+          { path: 'size', name: 'ComponentBadgerSize', component: () => import('@/views/badge/size/CodeExample.vue') },
+          { path: 'icon', name: 'ComponentBadgerIcon', component: () => import('@/views/badge/icon/CodeExample.vue') },
           {
             path: 'dot',
             name: 'ComponentBadgerDot',
