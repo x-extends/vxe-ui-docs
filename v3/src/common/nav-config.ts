@@ -522,6 +522,7 @@ export const navConfigList: NavVO[] = [
               { title: '显示提示消息', routerLink: { name: 'ComponentFormBasicsValidateShowMessage' } },
               { title: '显示提示图标', routerLink: { name: 'ComponentFormBasicsValidateShowErrorIcon' } },
               { title: '错误提示样式', routerLink: { name: 'ComponentFormBasicsValidateTheme' } },
+              // { title: '值改变时自动提交', routerLink: { name: 'ComponentFormBasicsValidateChangeToSubmit' } },
               { title: '手动调用', routerLink: { name: 'ComponentFormBasicsValidateManual' } }
             ]
           },
@@ -628,6 +629,7 @@ export const navConfigList: NavVO[] = [
               { title: '显示提示消息', routerLink: { name: 'ComponentFormConfigValidateShowMessage' } },
               { title: '显示提示图标', routerLink: { name: 'ComponentFormConfigValidateShowErrorIcon' } },
               { title: '错误提示样式', routerLink: { name: 'ComponentFormConfigValidateTheme' } },
+              { title: '值改变时自动提交', routerLink: { name: 'ComponentFormConfigValidateChangeToSubmit' } },
               { title: '手动调用', routerLink: { name: 'ComponentFormConfigValidateManual' } }
             ]
           },

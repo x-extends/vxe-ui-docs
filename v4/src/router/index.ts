@@ -4806,6 +4806,11 @@ const routes: Array<RouteRecordRaw> = [
                     component: () => import('@/views/form/basics/validate/theme/CodeExample.vue')
                   },
                   {
+                    path: 'changeToSubmit',
+                    name: 'ComponentFormBasicsValidateChangeToSubmit',
+                    component: () => import('@/views/form/basics/validate/changeToSubmit/CodeExample.vue')
+                  },
+                  {
                     path: 'manual',
                     name: 'ComponentFormBasicsValidateManual',
                     component: () => import('@/views/form/basics/validate/manual/CodeExample.vue')
@@ -5200,6 +5205,11 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'theme',
                     name: 'ComponentFormConfigValidateTheme',
                     component: () => import('@/views/form/config/validate/theme/CodeExample.vue')
+                  },
+                  {
+                    path: 'changeToSubmit',
+                    name: 'ComponentFormConfigValidateChangeToSubmit',
+                    component: () => import('@/views/form/config/validate/changeToSubmit/CodeExample.vue')
                   },
                   {
                     path: 'manual',
