@@ -26,5 +26,13 @@
         </pre>
       </template>
     </CodeLight>
+
+    <CodeLight path="list/table/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          实现带冻结列的的表格
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>
