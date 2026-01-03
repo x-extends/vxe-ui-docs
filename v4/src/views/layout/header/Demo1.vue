@@ -13,7 +13,7 @@
           </vxe-layout-aside>
 
           <vxe-layout-container vertical>
-            <vxe-layout-body class="bg3">
+            <vxe-layout-body class="bg3" show-backtop :backtop-config="backtopConfig">
               <vxe-button mode="text" status="error" @click="toggleLeftAside">点击展开/收起左侧</vxe-button>
               <div style="height: 400px">内容</div>
               <div style="height: 400px">内容</div>
@@ -30,9 +30,15 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
+import { VxeLayoutBodyPropTypes } from 'vxe-pc-ui'
 
 const showLeftAside = ref(true)
+
+const backtopConfig = reactive<VxeLayoutBodyPropTypes.BacktopConfig>({
+  circle: true,
+  status: 'success'
+})
 
 const toggleLeftAside = () => {
   showLeftAside.value = !showLeftAside.value

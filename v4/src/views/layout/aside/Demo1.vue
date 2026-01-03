@@ -13,7 +13,7 @@
             <div style="height: 50px">头部</div>
           </vxe-layout-header>
 
-          <vxe-layout-body class="bg3">
+          <vxe-layout-body class="bg3" show-backtop>
             <vxe-button mode="text" status="error" @click="toggleLeftAside">点击展开/收起左侧</vxe-button>
             <div style="height: 400px">内容</div>
             <div style="height: 400px">内容</div>

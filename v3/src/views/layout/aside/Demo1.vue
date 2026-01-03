@@ -9,7 +9,7 @@
         </vxe-layout-aside>
 
         <vxe-layout-container vertical>
-          <vxe-layout-header fixed class="bg1">
+          <vxe-layout-header fixed class="bg1" show-backtop>
             <div style="height: 50px">头部</div>
           </vxe-layout-header>
 

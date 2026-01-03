@@ -648,6 +648,25 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'backtop',
+        component: RouteLayout,
+        children: [
+          { path: 'size', name: 'ComponentBacktopSize', component: () => import('@/views/backtop/size/CodeExample.vue') },
+          { path: 'status', name: 'ComponentBacktopStatus', component: () => import('@/views/backtop/status/CodeExample.vue') },
+          { path: 'circle', name: 'ComponentBacktopCircle', component: () => import('@/views/backtop/circle/CodeExample.vue') },
+          { path: 'icon', name: 'ComponentBacktopIcon', component: () => import('@/views/backtop/icon/CodeExample.vue') },
+          { path: 'content', name: 'ComponentBacktopContent', component: () => import('@/views/backtop/content/CodeExample.vue') },
+          { path: 'pos', name: 'ComponentBacktopPos', component: () => import('@/views/backtop/pos/CodeExample.vue') },
+          {
+            path: 'template',
+            component: RouteLayout,
+            children: [
+              { path: 'default', name: 'ComponentBacktopTemplateDefault', component: () => import('@/views/backtop/template/default/CodeExample.vue') }
+            ]
+          }
+        ]
+      },
+      {
         path: 'row',
         component: RouteLayout,
         children: [
@@ -1086,6 +1105,24 @@ const routes: Array<RouteRecordRaw> = [
             path: 'permissionCode',
             name: 'ComponentButtonPermissionCode',
             component: () => import('@/views/button/permissionCode/CodeExample.vue')
+          }
+        ]
+      },
+      {
+        path: 'segmented',
+        component: RouteLayout,
+        children: [
+          { path: 'size', name: 'ComponentSegmentedSize', component: () => import('@/views/segmented/size/CodeExample.vue') },
+          { path: 'status', name: 'ComponentSegmentedStatus', component: () => import('@/views/segmented/status/CodeExample.vue') },
+          { path: 'disabled', name: 'ComponentSegmentedDisabled', component: () => import('@/views/segmented/disabled/CodeExample.vue') },
+          { path: 'type', name: 'ComponentSegmentedType', component: () => import('@/views/segmented/type/CodeExample.vue') },
+          { path: 'width', name: 'ComponentSegmentedWidth', component: () => import('@/views/segmented/width/CodeExample.vue') },
+          {
+            path: 'template',
+            component: RouteLayout,
+            children: [
+              { path: 'default', name: 'ComponentSegmentedTemplateDefault', component: () => import('@/views/segmented/template/default/CodeExample.vue') }
+            ]
           }
         ]
       },

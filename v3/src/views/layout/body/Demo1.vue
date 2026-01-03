@@ -13,7 +13,7 @@
           </vxe-layout-aside>
 
           <vxe-layout-container vertical>
-            <vxe-layout-body class="bg3" :loading="loading">
+            <vxe-layout-body class="bg3" show-backtop :backtop-config="backtopConfig" :loading="loading">
               <vxe-button mode="text" status="error" @click="openLoading">点击加载中</vxe-button>
               <vxe-button mode="text" status="error" @click="toggleLeftAside">点击展开/收起左侧</vxe-button>
               <div style="height: 400px">内容</div>
@@ -32,12 +32,19 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { VxeLayoutBodyPropTypes } from 'vxe-pc-ui'
 
 export default Vue.extend({
   data () {
+    const backtopConfig: VxeLayoutBodyPropTypes.BacktopConfig = {
+      circle: true,
+      status: 'primary'
+    }
+
     return {
       loading: false,
-      showLeftAside: true
+      showLeftAside: true,
+      backtopConfig
     }
   },
   methods: {

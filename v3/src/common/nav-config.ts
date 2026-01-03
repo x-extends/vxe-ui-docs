@@ -161,6 +161,23 @@ export const navConfigList: NavVO[] = [
           },
           { title: '使用第三方图标', isPlugin: true, linkUrl: `${otherUrl}/#/other-iconfont/symbol/button/icon` }
         ]
+      },
+      {
+        title: 'Segmented 分段器',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'segmented' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentSegmentedSize' } },
+          { title: '状态颜色', routerLink: { name: 'ComponentSegmentedStatus' } },
+          { title: '禁用', routerLink: { name: 'ComponentSegmentedDisabled' } },
+          { title: '类型样式', routerLink: { name: 'ComponentSegmentedType' } },
+          { title: '宽度', routerLink: { name: 'ComponentSegmentedWidth' } },
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '自定义内容模板', routerLink: { name: 'ComponentSegmentedTemplateDefault' } }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -180,6 +197,24 @@ export const navConfigList: NavVO[] = [
           { title: '侧边栏，内容区滚动条', routerLink: { name: 'ComponentLayoutAside' } },
           { title: '头部固定，中间内容区滚动', routerLink: { name: 'ComponentLayoutHeader' } },
           { title: '左侧与内容区滚动', routerLink: { name: 'ComponentLayoutBody' } }
+        ]
+      },
+      {
+        title: 'Backtop 回到顶部',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'backtop' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentBacktopSize' } },
+          { title: '状态颜色', routerLink: { name: 'ComponentBacktopStatus' } },
+          { title: '圆形', routerLink: { name: 'ComponentBacktopCircle' } },
+          { title: '图标', routerLink: { name: 'ComponentBacktopIcon' } },
+          { title: '文字', routerLink: { name: 'ComponentBacktopContent' } },
+          { title: '自定义位置', routerLink: { name: 'ComponentBacktopPos' } },
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '自定义内容模板', routerLink: { name: 'ComponentBacktopTemplateDefault' } }
+            ]
+          }
         ]
       },
       {

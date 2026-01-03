@@ -1,0 +1,9 @@
+<template>
+  <div>
+    <CodeLight path="segmented/disabled/Demo1">
+      <template #tip>
+        <vxe-tip status="primary" title="禁用状态"></vxe-tip>
+      </template>
+    </CodeLight>
+  </div>
+</template>
