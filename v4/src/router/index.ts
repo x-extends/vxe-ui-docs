@@ -1114,6 +1114,7 @@ const routes: Array<RouteRecordRaw> = [
         children: [
           { path: 'size', name: 'ComponentSegmentedSize', component: () => import('@/views/segmented/size/CodeExample.vue') },
           { path: 'status', name: 'ComponentSegmentedStatus', component: () => import('@/views/segmented/status/CodeExample.vue') },
+          { path: 'icon', name: 'ComponentSegmentedIcon', component: () => import('@/views/segmented/icon/CodeExample.vue') },
           { path: 'disabled', name: 'ComponentSegmentedDisabled', component: () => import('@/views/segmented/disabled/CodeExample.vue') },
           { path: 'type', name: 'ComponentSegmentedType', component: () => import('@/views/segmented/type/CodeExample.vue') },
           { path: 'width', name: 'ComponentSegmentedWidth', component: () => import('@/views/segmented/width/CodeExample.vue') },

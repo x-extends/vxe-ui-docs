@@ -168,6 +168,7 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'segmented' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentSegmentedSize' } },
           { title: '状态颜色', routerLink: { name: 'ComponentSegmentedStatus' } },
+          { title: '图标', routerLink: { name: 'ComponentSegmentedIcon' } },
           { title: '禁用', routerLink: { name: 'ComponentSegmentedDisabled' } },
           { title: '类型样式', routerLink: { name: 'ComponentSegmentedType' } },
           { title: '宽度', routerLink: { name: 'ComponentSegmentedWidth' } },
