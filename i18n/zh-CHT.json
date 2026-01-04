@@ -418,7 +418,16 @@
         "dependencyCreateStart": "创建线二次确认",
         "scroll": "虚拟滚动（超大数据量）",
         "scrollVertical": "纵向虚拟滚动",
-        "scrollTree": "树形虚拟滚动"
+        "scrollTree": "树形虚拟滚动",
+        "areaEdit": "可编辑",
+        "areaEditDisabled": "禁用单元格编辑",
+        "areaEditValid": "数据校验",
+        "areaEditTemp": "临时数据 - 增删改",
+        "areaEditTempInsert": "新增",
+        "areaEditTempRemove": "删除",
+        "areaEditTempPending": "标记",
+        "areaEditTempUpdate": "修改",
+        "areaEditTempRestore": "还原"
       }
     }
   },
