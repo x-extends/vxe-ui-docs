@@ -196,6 +196,7 @@
       "propHelp": "Parameter name and usage. If you are using kebab-case (short horizontal line type) in a CDN environment, you can use camelCase (camel type) if the project is based on vue-cli scaffolding.",
       "desc": "illustrate",
       "type": "Type / Return Type",
+      "typeDesc": "Type describe",
       "enum": "Optional value",
       "defVal": "Default value/parameters",
       "defValHelp": "Some parameters can support global settings. Please refer to the relevant instructions for details.",

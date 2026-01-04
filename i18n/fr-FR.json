@@ -196,6 +196,7 @@
       "propHelp": "Nom et utilisation du paramètre.",
       "desc": "illustrer",
       "type": "Type / type de retour",
+      "typeDesc": "类型描述",
       "enum": "Valeur facultative",
       "defVal": "Valeur / paramètres par défaut",
       "defValHelp": "Certains paramètres peuvent prendre en charge les paramètres globaux.",

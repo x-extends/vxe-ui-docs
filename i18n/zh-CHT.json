@@ -195,6 +195,7 @@
       "propHelp": "參數名稱及使用，如果是在 CDN 環境中使用 kebab-case（短橫線式），如果項目基於 vue-cli 腳手架可以使用 camelCase（駝峰式）",
       "desc": "說明",
       "type": "類型 / 返回類型",
+      "typeDesc": "类型描述",
       "enum": "可選值",
       "defVal": "默認值 / 參數",
       "defValHelp": "部分參數可支持全局設置，具體請查閱相關說明",

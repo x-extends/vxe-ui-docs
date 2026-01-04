@@ -196,6 +196,7 @@
       "propHelp": "Parametername und -verwendung.",
       "desc": "veranschaulichen",
       "type": "Typ / Rückgabeart",
+      "typeDesc": "类型描述",
       "enum": "Optionaler Wert",
       "defVal": "Standardwert/Parameter",
       "defValHelp": "Einige Parameter können globale Einstellungen unterstützen.",
