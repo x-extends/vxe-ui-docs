@@ -429,7 +429,10 @@
         "areaEditTempRemove": "删除",
         "areaEditTempPending": "标记",
         "areaEditTempUpdate": "修改",
-        "areaEditTempRestore": "还原"
+        "areaEditTempRestore": "还原",
+        "menu": "右键菜单",
+        "menuLoading": "异步权限控制",
+        "menuFull": "同步权限控制"
       }
     }
   },
