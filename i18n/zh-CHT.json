@@ -431,7 +431,11 @@
         "areaEditTempRestore": "还原",
         "menu": "右键菜单",
         "menuLoading": "异步权限控制",
-        "menuFull": "同步权限控制"
+        "menuFull": "同步权限控制",
+        "custom": "个性化列",
+        "customToolbar": "使用工具栏",
+        "customModal": "窗口模式",
+        "customDrawer": "抽屉模式"
       }
     }
   },
