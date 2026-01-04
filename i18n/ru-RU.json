@@ -436,7 +436,10 @@
         "custom": "个性化列",
         "customToolbar": "使用工具栏",
         "customModal": "窗口模式",
-        "customDrawer": "抽屉模式"
+        "customDrawer": "抽屉模式",
+        "pager": "分页",
+        "pagerMockPage": "模拟前端分页",
+        "pagerStart": "自定义序号"
       }
     }
   },
