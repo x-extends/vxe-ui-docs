@@ -272,6 +272,7 @@
         "areaKeypadHandle": "Приклад ключової функції",
         "areaKeypadHandleEditAppend": "Редагувати за допомогою методу додатку",
         "areaKeypadHandleEnterAddRow": "Додайте нові рядки для введення",
+        "keypadEnterToTab": "回车键替换 Tab 键",
         "areaStatus": "Показати стан вибору комірок",
         "areaCellToRow": "Виберіть цілий рядок",
         "areaClip": "Скопіюйте та вставте",

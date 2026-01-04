@@ -272,6 +272,7 @@
         "areaKeypadHandle": "مثال وظيفة المفتاح",
         "areaKeypadHandleEditAppend": "تحرير باستخدام طريقة إلحاق",
         "areaKeypadHandleEnterAddRow": "إضافة خطوط جديدة للدخول",
+        "keypadEnterToTab": "回车键替换 Tab 键",
         "areaStatus": "عرض حالة اختيار الخلية",
         "areaCellToRow": "حدد صف كامل",
         "areaClip": "نسخ ولصق",

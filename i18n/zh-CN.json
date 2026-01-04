@@ -272,6 +272,7 @@
         "areaKeypadHandle": "按键功能示例",
         "areaKeypadHandleEditAppend": "使用追加方式编辑",
         "areaKeypadHandleEnterAddRow": "回车键追加新行",
+        "keypadEnterToTab": "回车键替换 Tab 键",
         "areaStatus": "显示单元格选取状态",
         "areaCellToRow": "选择一整行",
         "areaClip": "复制与粘贴",

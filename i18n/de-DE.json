@@ -272,6 +272,7 @@
         "areaKeypadHandle": "Beispiel für Schlüsselfunktion",
         "areaKeypadHandleEditAppend": "Bearbeiten Sie mithilfe der Append -Methode",
         "areaKeypadHandleEnterAddRow": "Fügen Sie neue Zeilen hinzu, um einzugeben",
+        "keypadEnterToTab": "回车键替换 Tab 键",
         "areaStatus": "Zellauswahlstatus anzeigen",
         "areaCellToRow": "Wählen Sie eine ganze Zeile aus",
         "areaClip": "Kopieren und einfügen",

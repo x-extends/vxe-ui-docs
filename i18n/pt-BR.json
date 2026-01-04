@@ -272,6 +272,7 @@
         "areaKeypadHandle": "Exemplo de função -chave",
         "areaKeypadHandleEditAppend": "Editar usando o método de apêndice",
         "areaKeypadHandleEnterAddRow": "Adicione novas linhas para entrar",
+        "keypadEnterToTab": "回车键替换 Tab 键",
         "areaStatus": "Mostrar status de seleção de células",
         "areaCellToRow": "Selecione uma linha inteira",
         "areaClip": "Copiar e colar",

@@ -272,6 +272,7 @@
         "areaKeypadHandle": "Ключевой пример",
         "areaKeypadHandleEditAppend": "Редактировать, используя метод добавления",
         "areaKeypadHandleEnterAddRow": "Добавить новые линии, чтобы ввести",
+        "keypadEnterToTab": "回车键替换 Tab 键",
         "areaStatus": "Показать состояние выбора ячеек",
         "areaCellToRow": "Выберите всю строку",
         "areaClip": "Копировать и вставить",
