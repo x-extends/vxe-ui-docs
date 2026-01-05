@@ -3982,6 +3982,7 @@ const routes: Array<RouteRecordRaw> = [
             component: RouteLayout,
             children: [
               { path: 'basics', name: 'ComponentPrintPageBasics', component: () => import('@/views/print/page/basics/CodeExample.vue') },
+              { path: 'style', name: 'ComponentPrintPageStyle', component: () => import('@/views/print/page/style/CodeExample.vue') },
               { path: 'header', name: 'ComponentPrintPageHeader', component: () => import('@/views/print/page/header/CodeExample.vue') },
               { path: 'footer', name: 'ComponentPrintPageFooter', component: () => import('@/views/print/page/footer/CodeExample.vue') },
               { path: 'margin', name: 'ComponentPrintPageMargin', component: () => import('@/views/print/page/margin/CodeExample.vue') },
@@ -4354,6 +4355,13 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentTreeTemplateFooter',
                 component: () => import('@/views/tree/template/footer/CodeExample.vue')
               }
+            ]
+          },
+          {
+            path: 'other',
+            component: RouteLayout,
+            children: [
+              { path: 'extra', name: 'ComponentTreeOtherExtra', component: () => import('@/views/tree/other/extra/CodeExample.vue') }
             ]
           }
         ]

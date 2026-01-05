@@ -1748,6 +1748,12 @@ export const navConfigList: NavVO[] = [
           { title: '自定义头部模板', routerLink: { name: 'ComponentTreeTemplateHeader' } },
           { title: '自定义尾部模板', routerLink: { name: 'ComponentTreeTemplateFooter' } }
         ]
+      },
+      {
+        title: '功能示例',
+        children: [
+          { title: '实现右侧下拉按钮', routerLink: { name: 'ComponentTreeOtherExtra' } }
+        ]
       }
     ]
   },
@@ -2001,6 +2007,7 @@ export const navConfigList: NavVO[] = [
             title: '分页打印',
             children: [
               { title: '基础', routerLink: { name: 'ComponentPrintPageBasics' } },
+              { title: '设置样式', routerLink: { name: 'ComponentPrintPageStyle' } },
               { title: '页眉/标题', routerLink: { name: 'ComponentPrintPageHeader' } },
               { title: '页尾/页码', routerLink: { name: 'ComponentPrintPageFooter' } },
               { title: '设置边距', routerLink: { name: 'ComponentPrintPageMargin' } },
