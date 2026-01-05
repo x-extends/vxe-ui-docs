@@ -2008,6 +2008,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '基础', routerLink: { name: 'ComponentPrintPageBasics' } },
               { title: '设置样式', routerLink: { name: 'ComponentPrintPageStyle' } },
+              { title: '引入样式文件', routerLink: { name: 'ComponentPrintPageStyleUrls' } },
               { title: '页眉/标题', routerLink: { name: 'ComponentPrintPageHeader' } },
               { title: '页尾/页码', routerLink: { name: 'ComponentPrintPageFooter' } },
               { title: '设置边距', routerLink: { name: 'ComponentPrintPageMargin' } },

@@ -3983,6 +3983,7 @@ const routes: Array<RouteRecordRaw> = [
             children: [
               { path: 'basics', name: 'ComponentPrintPageBasics', component: () => import('@/views/print/page/basics/CodeExample.vue') },
               { path: 'style', name: 'ComponentPrintPageStyle', component: () => import('@/views/print/page/style/CodeExample.vue') },
+              { path: 'styleUrls', name: 'ComponentPrintPageStyleUrls', component: () => import('@/views/print/page/styleUrls/CodeExample.vue') },
               { path: 'header', name: 'ComponentPrintPageHeader', component: () => import('@/views/print/page/header/CodeExample.vue') },
               { path: 'footer', name: 'ComponentPrintPageFooter', component: () => import('@/views/print/page/footer/CodeExample.vue') },
               { path: 'margin', name: 'ComponentPrintPageMargin', component: () => import('@/views/print/page/margin/CodeExample.vue') },
