@@ -4043,6 +4043,25 @@ const routes: Array<RouteRecordRaw> = [
         ]
       },
       {
+        path: 'context-menu',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'global',
+            component: RouteLayout,
+            children: [
+              { path: 'contextMenu', name: 'ComponentContextMenuGlobalContextMenu', component: () => import('@/views/context-menu/global/contextMenu/CodeExample.vue') }
+            ]
+          },
+          { path: 'base', name: 'ComponentContextMenuBase', component: () => import('@/views/context-menu/base/CodeExample.vue') },
+          { path: 'icon', name: 'ComponentContextMenuIcon', component: () => import('@/views/context-menu/icon/CodeExample.vue') },
+          { path: 'disabled', name: 'ComponentContextMenuDisabled', component: () => import('@/views/context-menu/disabled/CodeExample.vue') },
+          { path: 'visible', name: 'ComponentContextMenuVisible', component: () => import('@/views/context-menu/visible/CodeExample.vue') },
+          { path: 'loading', name: 'ComponentContextMenuLoading', component: () => import('@/views/context-menu/loading/CodeExample.vue') },
+          { path: 'style', name: 'ComponentContextMenuStyle', component: () => import('@/views/context-menu/style/CodeExample.vue') }
+        ]
+      },
+      {
         path: 'countdown',
         component: RouteLayout,
         children: [

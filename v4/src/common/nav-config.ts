@@ -508,6 +508,24 @@ export const navConfigList: NavVO[] = [
             ]
           }
         ]
+      },
+      {
+        title: 'ContextMenu 右键菜单',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'context-menu' } } },
+          {
+            title: '全局调用',
+            children: [
+              { title: '操作右键菜单', routerLink: { name: 'ComponentContextMenuGlobalContextMenu' } }
+            ]
+          },
+          { title: '菜单配置', routerLink: { name: 'ComponentContextMenuBase' } },
+          { title: '前缀与后缀', routerLink: { name: 'ComponentContextMenuIcon' } },
+          { title: '是否禁用', routerLink: { name: 'ComponentContextMenuDisabled' } },
+          { title: '是否显示', routerLink: { name: 'ComponentContextMenuVisible' } },
+          { title: '是否加载中', routerLink: { name: 'ComponentContextMenuLoading' } },
+          { title: '自定义样式', routerLink: { name: 'ComponentContextMenuStyle' } }
+        ]
       }
     ]
   },
