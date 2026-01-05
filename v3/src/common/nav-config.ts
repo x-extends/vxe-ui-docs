@@ -150,6 +150,7 @@ export const navConfigList: NavVO[] = [
             ]
           },
           { title: '禁用', routerLink: { name: 'ComponentButtonDisabled' } },
+          { title: '使用右键菜单', routerLink: { name: 'ComponentButtonMenu' } },
           { title: '权限码', routerLink: { name: 'ComponentButtonPermissionCode' } },
           {
             i18nKey: 'app.aside.menu.buttonGlobalRenderer',
@@ -448,7 +449,8 @@ export const navConfigList: NavVO[] = [
           { title: '年度视图', routerLink: { name: 'ComponentCalendarYear' } },
           { title: '自定义样式', routerLink: { name: 'ComponentCalendarCellStyle' } },
           { title: '显示节假日', routerLink: { name: 'ComponentCalendarFestivalMethod' } },
-          { title: '事件监听', routerLink: { name: 'ComponentCalendarFestivalEvents' } }
+          { title: '事件监听', routerLink: { name: 'ComponentCalendarFestivalEvents' } },
+          { title: '使用右键菜单', routerLink: { name: 'ComponentCalendarMenu' } }
         ]
       }
     ]

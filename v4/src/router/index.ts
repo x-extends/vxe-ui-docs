@@ -1101,6 +1101,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentButtonDisabled',
             component: () => import('@/views/button/disabled/CodeExample.vue')
           },
+          { path: 'menu', name: 'ComponentButtonMenu', component: () => import('@/views/button/menu/CodeExample.vue') },
           {
             path: 'permissionCode',
             name: 'ComponentButtonPermissionCode',
@@ -3944,7 +3945,8 @@ const routes: Array<RouteRecordRaw> = [
             path: 'events',
             name: 'ComponentCalendarFestivalEvents',
             component: () => import('@/views/calendar/events/CodeExample.vue')
-          }
+          },
+          { path: 'menu', name: 'ComponentCalendarMenu', component: () => import('@/views/calendar/menu/CodeExample.vue') }
         ]
       },
       {
