@@ -1705,6 +1705,13 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: '右键菜单',
+        children: [
+          { title: '配置菜单', routerLink: { name: 'ComponentTreeMenuBasics' } },
+          { title: '权限控制', routerLink: { name: 'ComponentTreeMenuVisibleMethod' } }
+        ]
+      },
+      {
         title: '拖拽',
         children: [
           { title: '拖拽调整节点顺序', routerLink: { name: 'ComponentTreeDragSort' } },

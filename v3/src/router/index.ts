@@ -4268,6 +4268,14 @@ const routes: Array<RouteConfig> = [
             ]
           },
           {
+            path: 'menu',
+            component: RouteLayout,
+            children: [
+              { path: 'basics', name: 'ComponentTreeMenuBasics', component: () => import('@/views/tree/menu/basics/CodeExample.vue') },
+              { path: 'visibleMethod', name: 'ComponentTreeMenuVisibleMethod', component: () => import('@/views/tree/menu/visibleMethod/CodeExample.vue') }
+            ]
+          },
+          {
             path: 'drag',
             component: RouteLayout,
             children: [
