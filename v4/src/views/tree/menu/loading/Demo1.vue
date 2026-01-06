@@ -30,7 +30,7 @@ const treeOptions = reactive<VxeTreeProps<NodeVO>>({
           name: '审批',
           loading: true,
           children: [
-            { code: '4', name: '通过', prefixIcon: 'vxe-icon-check', loading: true },
+            { code: '4', name: '通过', prefixIcon: 'vxe-icon-check', loading: false },
             { code: '5', name: '不通过', prefixIcon: 'vxe-icon-close', loading: false }
           ]
         },
@@ -62,7 +62,7 @@ const treeOptions = reactive<VxeTreeProps<NodeVO>>({
             }
           })
         })
-      }, 100)
+      }, 300)
       return true
     }
   },

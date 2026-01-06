@@ -35,7 +35,7 @@ export default Vue.extend({
               name: '审批',
               loading: true,
               children: [
-                { code: '4', name: '通过', prefixIcon: 'vxe-icon-check', loading: true },
+                { code: '4', name: '通过', prefixIcon: 'vxe-icon-check', loading: false },
                 { code: '5', name: '不通过', prefixIcon: 'vxe-icon-close', loading: false }
               ]
             },
@@ -67,7 +67,7 @@ export default Vue.extend({
                 }
               })
             })
-          }, 100)
+          }, 300)
           return true
         }
       },
