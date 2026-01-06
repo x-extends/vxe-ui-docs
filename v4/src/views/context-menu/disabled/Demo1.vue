@@ -53,6 +53,8 @@ const menuEvents: VxeContextMenuListeners = {
 }
 
 const showMenuEvent: VxeButtonEvents.Click = ({ $event }) => {
+  $event.preventDefault()
+  $event.stopPropagation()
   menuOptions.x = $event.clientX
   menuOptions.y = $event.clientY
   showMenu.value = true

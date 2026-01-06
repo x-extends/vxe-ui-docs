@@ -51,6 +51,8 @@ export default Vue.extend({
   },
   methods: {
     showMenuEvent ({ $event }) {
+      $event.preventDefault()
+      $event.stopPropagation()
       this.menuOptions.x = $event.clientX
       this.menuOptions.y = $event.clientY
       this.showMenu = true
