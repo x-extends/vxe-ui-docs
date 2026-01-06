@@ -1,13 +1,13 @@
 <template>
   <div>
-    <vxe-button status="primary" @click="showMenuEvent">点击弹出右键菜单</vxe-button>
+    <vxe-button status="primary" @contextmenu="showMenuEvent">弹出右键菜单</vxe-button>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { VxeUI, VxeButtonEvents } from 'vxe-pc-ui'
 
-const showMenuEvent: VxeButtonEvents.Click = ({ $event }) => {
+const showMenuEvent: VxeButtonEvents.Contextmenu = ({ $event }) => {
   VxeUI.contextMenu.openByEvent($event, {
     options: [
       [

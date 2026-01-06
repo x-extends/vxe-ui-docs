@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button status="primary" @click="showMenuEvent">点击弹出右键菜单</vxe-button>
+    <vxe-button status="primary" @contextmenu="showMenuEvent">弹出右键菜单</vxe-button>
   </div>
 </template>
 

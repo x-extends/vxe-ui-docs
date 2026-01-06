@@ -1,14 +1,16 @@
 <template>
   <div>
-    <vxe-button @click="showMenuEvent1">open 显示</vxe-button>
-    <vxe-button @click="showMenuEvent2">openByEvent 显示</vxe-button>
+    <vxe-button @contextmenu="showMenuEvent1">open 显示</vxe-button>
+    <vxe-button @contextmenu="showMenuEvent2">openByEvent 显示</vxe-button>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { VxeUI, VxeButtonEvents } from 'vxe-pc-ui'
 
-const showMenuEvent1: VxeButtonEvents.Click = ({ $event }) => {
+const showMenuEvent1: VxeButtonEvents.Contextmenu = ({ $event }) => {
+  $event.preventDefault()
+  $event.stopPropagation()
   const x = $event.clientX
   const y = $event.clientY
   VxeUI.contextMenu.open({
@@ -51,7 +53,7 @@ const showMenuEvent1: VxeButtonEvents.Click = ({ $event }) => {
   })
 }
 
-const showMenuEvent2: VxeButtonEvents.Click = ({ $event }) => {
+const showMenuEvent2: VxeButtonEvents.Contextmenu = ({ $event }) => {
   VxeUI.contextMenu.openByEvent($event, {
     options: [
       [

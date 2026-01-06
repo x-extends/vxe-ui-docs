@@ -1,7 +1,7 @@
 <template>
   <div>
-    <vxe-button @click="showMenuEvent1">open 显示</vxe-button>
-    <vxe-button @click="showMenuEvent2">openByEvent 显示</vxe-button>
+    <vxe-button @contextmenu="showMenuEvent1">open 显示</vxe-button>
+    <vxe-button @contextmenu="showMenuEvent2">openByEvent 显示</vxe-button>
   </div>
 </template>
 
@@ -15,6 +15,8 @@ export default Vue.extend({
   },
   methods: {
     showMenuEvent1 ({ $event }) {
+      $event.preventDefault()
+      $event.stopPropagation()
       const x = $event.clientX
       const y = $event.clientY
       VxeUI.contextMenu.open({
