@@ -1728,6 +1728,10 @@ export const navConfigList: NavVO[] = [
         title: '右键菜单',
         children: [
           { title: '配置菜单', routerLink: { name: 'ComponentTreeMenuBasics' } },
+          { title: '前缀与后缀', routerLink: { name: 'ComponentTreeMenuIcon' } },
+          { title: '是否禁用', routerLink: { name: 'ComponentTreeMenuDisabled' } },
+          { title: '是否显示', routerLink: { name: 'ComponentTreeMenuVisible' } },
+          { title: '异步加载中', routerLink: { name: 'ComponentTreeMenuLoading' } },
           { title: '权限控制', routerLink: { name: 'ComponentTreeMenuVisibleMethod' } }
         ]
       },

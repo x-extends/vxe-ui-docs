@@ -4295,6 +4295,10 @@ const routes: Array<RouteRecordRaw> = [
             component: RouteLayout,
             children: [
               { path: 'basics', name: 'ComponentTreeMenuBasics', component: () => import('@/views/tree/menu/basics/CodeExample.vue') },
+              { path: 'icon', name: 'ComponentTreeMenuIcon', component: () => import('@/views/tree/menu/icon/CodeExample.vue') },
+              { path: 'disabled', name: 'ComponentTreeMenuDisabled', component: () => import('@/views/tree/menu/disabled/CodeExample.vue') },
+              { path: 'visible', name: 'ComponentTreeMenuVisible', component: () => import('@/views/tree/menu/visible/CodeExample.vue') },
+              { path: 'loading', name: 'ComponentTreeMenuLoading', component: () => import('@/views/tree/menu/loading/CodeExample.vue') },
               { path: 'visibleMethod', name: 'ComponentTreeMenuVisibleMethod', component: () => import('@/views/tree/menu/visibleMethod/CodeExample.vue') }
             ]
           },
