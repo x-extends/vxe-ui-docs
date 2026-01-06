@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button @click="showMenuEvent">显示</vxe-button>
+    <vxe-button @contextmenu="showMenuEvent">右键显示</vxe-button>
     <vxe-context-menu
       v-model="showMenu"
       v-bind="menuOptions"
