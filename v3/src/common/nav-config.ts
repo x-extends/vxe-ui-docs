@@ -1488,11 +1488,28 @@ export const navConfigList: NavVO[] = [
               { title: '处理回显', routerLink: { name: 'ComponentTreeSelectLazyLazyOptions' } }
             ]
           },
+          // {
+          //   title: '右键菜单',
+          //   children: [
+          //     { title: '配置菜单', routerLink: { name: 'ComponentTreeSelectMenuBasics' } },
+          //     { title: '权限控制', routerLink: { name: 'ComponentTreeSelectMenuVisibleMethod' } }
+          //   ]
+          // },
           {
             title: '虚拟滚动',
             children: [
               { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTreeSelectScrollBasics' } },
               { title: '可过滤', routerLink: { name: 'ComponentTreeSelectScrollFilter' } }
+            ]
+          },
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '自定义头部模板', routerLink: { name: 'ComponentTreeSelectTemplateHeader' } },
+              { title: '自定义尾部模板', routerLink: { name: 'ComponentTreeSelectTemplateFooter' } },
+              { title: '自定义树节点标题模板', routerLink: { name: 'ComponentTreeSelectTemplateTreeTitle' } },
+              { title: '自定义树节点图标模板', routerLink: { name: 'ComponentTreeSelectTemplateTreeIcon' } },
+              { title: '自定义树节点右侧模板', routerLink: { name: 'ComponentTreeSelectTemplateTreeExtra' } }
             ]
           }
         ]

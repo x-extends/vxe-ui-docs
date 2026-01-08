@@ -4547,6 +4547,14 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'menu',
+            component: RouteLayout,
+            children: [
+              { path: 'basics', name: 'ComponentTreeSelectMenuBasics', component: () => import('@/views/tree-select/menu/basics/CodeExample.vue') },
+              { path: 'visibleMethod', name: 'ComponentTreeSelectMenuVisibleMethod', component: () => import('@/views/tree-select/menu/visibleMethod/CodeExample.vue') }
+            ]
+          },
+          {
             path: 'scroll',
             component: RouteLayout,
             children: [
@@ -4560,6 +4568,17 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentTreeSelectScrollFilter',
                 component: () => import('@/views/tree-select/scroll/filter/CodeExample.vue')
               }
+            ]
+          },
+          {
+            path: 'template',
+            component: RouteLayout,
+            children: [
+              { path: 'header', name: 'ComponentTreeSelectTemplateHeader', component: () => import('@/views/tree-select/template/header/CodeExample.vue') },
+              { path: 'footer', name: 'ComponentTreeSelectTemplateFooter', component: () => import('@/views/tree-select/template/footer/CodeExample.vue') },
+              { path: 'treeTitle', name: 'ComponentTreeSelectTemplateTreeTitle', component: () => import('@/views/tree-select/template/title/CodeExample.vue') },
+              { path: 'treeIcon', name: 'ComponentTreeSelectTemplateTreeIcon', component: () => import('@/views/tree-select/template/icon/CodeExample.vue') },
+              { path: 'treeExtra', name: 'ComponentTreeSelectTemplateTreeExtra', component: () => import('@/views/tree-select/template/extra/CodeExample.vue') }
             ]
           }
         ]
