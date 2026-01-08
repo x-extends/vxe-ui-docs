@@ -33,10 +33,10 @@
     "vue-i18n": "^10.0.8",
     "vue-router": "^4.5.1",
     "vxe-design": "^4.0.7",
-    "vxe-pc-ui": "~4.11.36",
+    "vxe-pc-ui": "~4.11.37",
     "vxe-table": "~4.17.40",
     "vxe-gantt": "~4.2.3",
-    "xe-utils": "^3.8.3"
+    "xe-utils": "^3.8.4"
   },
   "devDependencies": {
     "@types/node": "^24.1.0",
