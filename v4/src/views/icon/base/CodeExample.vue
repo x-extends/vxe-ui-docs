@@ -108,7 +108,26 @@ const groupList: { name: string, children: VxeIconPropTypes.Name[] }[] = [
       'star', 'star-half', 'star-fill',
       'flag', 'flag-fill',
       'fixed-left', 'fixed-left-fill', 'fixed-right', 'fixed-right-fill',
-      'lock', 'lock-fill'
+      'lock', 'lock-fill', 'unlock', 'unlock-fill'
+    ]
+  },
+  {
+    name: '控件',
+    children: [
+      'calendar', 'time', 'input', 'textarea', 'rich-text', 'select', 'text', 'tree-select', 'tabs', 'table', 'switch', 'subtable', 'slider', 'values',
+      'minus', 'num-list', 'number', 'row-col', 'voice', 'voice-fill', 'rmb', 'usd'
+    ]
+  },
+  {
+    name: '表单',
+    children: [
+      'checkbox-checked', 'checkbox-checked-fill', 'checkbox-unchecked-fill', 'checkbox-indeterminate-fill', 'checkbox-unchecked',
+      'radio-checked', 'radio-checked-fill', 'radio-unchecked', 'radio-unchecked-fill',
+      'square-checked-fill', 'square-checked', 'square-close-fill', 'square-close',
+      'square-minus-fill', 'square-minus', 'square-plus-fill', 'square-plus',
+      'square-down-fill', 'square-down', 'square-left-fill', 'square-left', 'square-up-fill', 'square-up', 'square-right-fill', 'square-right',
+      'square-caret-right-fill', 'square-caret-right', 'square-fill', 'square',
+      'square-plus-square'
     ]
   },
   {
