@@ -280,7 +280,7 @@
         "areaDisabledClip": "Désactiver la copie et coller",
         "copyWithHead": "复制带表头",
         "copyAcrossArea": "多区域复制粘贴",
-        "btnCopy": "实现自定义复制功能",
+        "btnCopy": "去掉复制内容的首尾换行符",
         "cllipBeforeAfter": "阻止粘贴",
         "areaClipCopyLabel": "复制对应内容",
         "areaClipCustomClip": "自定义复制和粘贴方法",
