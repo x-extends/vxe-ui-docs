@@ -12,8 +12,8 @@
         <div style="height: 150px;">内容888</div>
       </div>
       <vxe-backtop target="#bTmpl1">
-        <template #default>
-          <vxe-button icon="vxe-icon-arrows-up"></vxe-button>
+        <template #top>
+          <vxe-button icon="vxe-icon-wechat"></vxe-button>
         </template>
       </vxe-backtop>
     </div>

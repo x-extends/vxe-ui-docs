@@ -13,7 +13,7 @@
       </div>
       <vxe-backtop target="#bTmpl1">
         <template #default>
-          <vxe-icon name="arrows-up"></vxe-icon>
+          <vxe-button icon="vxe-icon-arrows-up"></vxe-button>
         </template>
       </vxe-backtop>
     </div>

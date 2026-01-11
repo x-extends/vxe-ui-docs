@@ -661,7 +661,9 @@ const routes: Array<RouteRecordRaw> = [
             path: 'template',
             component: RouteLayout,
             children: [
-              { path: 'default', name: 'ComponentBacktopTemplateDefault', component: () => import('@/views/backtop/template/default/CodeExample.vue') }
+              { path: 'default', name: 'ComponentBacktopTemplateDefault', component: () => import('@/views/backtop/template/default/CodeExample.vue') },
+              { path: 'top', name: 'ComponentBacktopTemplateTop', component: () => import('@/views/backtop/template/top/CodeExample.vue') },
+              { path: 'bottom', name: 'ComponentBacktopTemplateBottom', component: () => import('@/views/backtop/template/bottom/CodeExample.vue') }
             ]
           }
         ]

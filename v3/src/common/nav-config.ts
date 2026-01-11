@@ -214,7 +214,9 @@ export const navConfigList: NavVO[] = [
           {
             title: '自定义插槽模板',
             children: [
-              { title: '自定义内容模板', routerLink: { name: 'ComponentBacktopTemplateDefault' } }
+              { title: '自定义内容模板', routerLink: { name: 'ComponentBacktopTemplateDefault' } },
+              { title: '自定义顶部模板', routerLink: { name: 'ComponentBacktopTemplateTop' } },
+              { title: '自定义底部模板', routerLink: { name: 'ComponentBacktopTemplateBottom' } }
             ]
           }
         ]

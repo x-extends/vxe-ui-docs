@@ -11,7 +11,7 @@
         <div style="height: 150px;">内容777</div>
         <div style="height: 150px;">内容888</div>
       </div>
-      <vxe-backtop target="#bIcon1" icon="vxe-icon-caret-up"></vxe-backtop>
+      <vxe-backtop target="#bIcon1" icon="vxe-icon-service"></vxe-backtop>
     </div>
   </div>
 </template>
