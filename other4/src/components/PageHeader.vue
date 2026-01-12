@@ -2,7 +2,7 @@
   <div class="page-header">
     <div class="header-left">
       <a class="logo" :href="siteBaseUrl">
-        <img :src="`${siteBaseUrl}/logo.png`">
+        <img :src="`${resBaseUrl}/logo.png`">
         <span class="title">{{ pageTitle }}</span>
       </a>
       <a :href='`https://gitee.com/x-extends/${packName}/stargazers`'>
@@ -62,7 +62,7 @@
         :close-label="$t('app.base.dark')">
       </vxe-switch>
 
-      <vxe-color-picker class="switch-primary-color" v-model="currPrimaryColor" :colors="colorList" size="mini" show-eye-dropper click-to-copy></vxe-color-picker>
+      <vxe-color-picker class="switch-primary-color" v-model="currPrimaryColor" :colors="colorList" type="rgb" size="mini" show-eye-dropper click-to-copy></vxe-color-picker>
 
       <vxe-radio-group class="switch-size" v-model="currCompSize" :options="sizeOptions" type="button" size="mini"></vxe-radio-group>
 
@@ -90,204 +90,234 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref, computed, inject } from 'vue'
-import { useAppStore } from '@/store/app'
-import { VxePulldownEvents } from 'vxe-pc-ui'
+<script lang="ts">
+import Vue from 'vue'
+import { mapMutations, mapState } from 'vuex'
 import { tablePluginDocsUrl } from '@/common/nav'
-import i18n from '@/i18n'
 import XEUtils from 'xe-utils'
 
-const appStore = useAppStore()
-const pageTitle = computed(() => appStore.pageTitle)
-const packName = computed(() => appStore.packName)
-const showTopMenuMsgFlag = computed(() => appStore.showTopMenuMsgFlag)
-const showAuthMsgFlag = computed(() => appStore.showAuthMsgFlag)
-const isExtendDocs = computed(() => appStore.isExtendDocs)
-const isPluginDocs = computed(() => appStore.isPluginDocs)
-const resBaseUrl = computed(() => appStore.resBaseUrl)
-const siteBaseUrl = computed(() => appStore.siteBaseUrl)
-
-const pluginType = inject('pluginType', '' as string)
-
-const showPluginApp = ref(false)
-const pluginAppList = ref<{
-  value: string
-  label: string
-  code: string
-  uri: string
-  isEnterprise: boolean
-}[]>([])
-
-const showSystemMenu = ref(false)
-const systemMenuList = ref<any[]>()
-
-const prevSysVersion = ref(import.meta.env.VITE_APP_VXE_VERSION)
-const currSysVersion = ref(import.meta.env.VITE_APP_VXE_VERSION)
-const systemVersionList = ref<any[]>([])
-const pluginUrlMaps = ref<Record<string, string>>({})
-
-const currBuyPluginBUrl = computed(() => {
-  if (pluginUrlMaps.value[pluginType]) {
-    return `${appStore.pluginBuyUrl}#${pluginUrlMaps.value[pluginType]}`
-  }
-  return appStore.pluginBuyUrl
-})
-
-const currBuyPluginName = computed(() => {
-  const appItem = pluginAppList.value.find(item => item.value === pluginType)
-  return appItem ? appItem.label : pluginType
-})
-
-const currTheme = computed({
-  get () {
-    return appStore.theme
+export default Vue.extend({
+  inject: {
+    pluginType: {
+      default: ''
+    }
   },
-  set (name) {
-    appStore.setTheme(name)
-  }
-})
-
-const currPrimaryColor = computed({
-  get () {
-    return appStore.primaryColor
-  },
-  set (color) {
-    appStore.setPrimaryColor(color || '')
-  }
-})
-
-const currCompSize = computed({
-  get () {
-    return appStore.componentsSize
-  },
-  set (size) {
-    appStore.setComponentsSize(size)
-  }
-})
-
-const langOptions = ref<{
-  value: string
-  label: string
-}[]>([])
-
-const colorList = ref([
-  '#409eff', '#29D2F8', '#31FC49', '#3FF2B3', '#B52DFE', '#FC3243', '#FA3077', '#D1FC44', '#FEE529', '#FA9A2C'
-])
-
-const sizeOptions = ref([
-  { label: '默认', value: '' },
-  { label: '中', value: 'medium' },
-  { label: '小', value: 'small' },
-  { label: '迷你', value: 'mini' }
-])
-
-const currLanguage = computed(() => {
-  return langOptions.value.find(item => item.value === appStore.language)
-})
-
-const currLangLabel = computed(() => {
-  return currLanguage.value ? currLanguage.value.label : appStore.language
-})
-
-const githubUrl = computed(() => {
-  return `https://github.com/x-extends/${appStore.packName}`
-})
-
-const giteeUrl = computed(() => {
-  return `https://gitee.com/x-extends/${appStore.packName}`
-})
-
-const sysVersionOptions = computed(() => {
-  return systemVersionList.value.map(item => {
+  data () {
     return {
-      label: i18n.global.t(`app.version.${import.meta.env.VITE_APP_PACKAGE_NAME}.v${(item.i18nKey || item.version).replace('.', 'd')}`),
-      value: item.version,
-      disabled: !!item.isDisabled,
-      className: item.isStop ? 'due-to-stop' : (item.isAbandoned ? 'about-to-stop' : '')
+      tablePluginDocsUrl,
+
+      showPluginApp: false,
+      pluginAppList: [] as {
+        value: string
+        label: string
+        code: string
+        uri: string
+        isEnterprise: boolean
+      }[],
+
+      showSystemMenu: false,
+      systemMenuList: [] as any[],
+
+      prevSysVersion: process.env.VUE_APP_VXE_VERSION as string,
+      currSysVersion: process.env.VUE_APP_VXE_VERSION as string,
+      systemVersionList: [] as any[],
+
+      langOptions: [] as {
+        value: string
+        label: string
+      }[],
+
+      colorList: [
+        '#409eff', '#29D2F8', '#31FC49', '#3FF2B3', '#B52DFE', '#FC3243', '#FA3077', '#D1FC44', '#FEE529', '#FA9A2C'
+      ],
+
+      sizeOptions: [
+        { label: '默认', value: '' },
+        { label: '中', value: 'medium' },
+        { label: '小', value: 'small' },
+        { label: '迷你', value: 'mini' }
+      ],
+
+      pluginUrlMaps: {} as Record<string, string>
     }
-  })
-})
+  },
+  computed: {
+    ...mapState([
+      'packName',
+      'theme',
+      'primaryColor',
+      'componentsSize',
+      'language',
+      'pageTitle',
+      'isExtendDocs',
+      'isPluginDocs',
+      'resBaseUrl',
+      'siteBaseUrl',
+      'pluginBuyUrl',
+      'showTopMenuMsgFlag',
+      'showAuthMsgFlag'
+    ]),
+    ...({} as {
+      pluginType () : string
+      theme(): string
+      primaryColor(): string
+      componentsSize(): string
+      packName(): string
+      language(): string
+      resBaseUrl(): string
+      siteBaseUrl(): string
+      pageTitle(): string
+      isExtendDocs(): boolean
+      isPluginDocs(): boolean
+      pluginBuyUrl(): string
+      showTopMenuMsgFlag(): boolean
+      showAuthMsgFlag(): boolean
+    }),
+    currBuyPluginBUrl () {
+      const { pluginType, pluginUrlMaps } = this
+      if (pluginUrlMaps[pluginType]) {
+        return `${this.pluginBuyUrl}#${pluginUrlMaps[pluginType]}`
+      }
+      return this.pluginBuyUrl
+    },
+    currBuyPluginName () {
+      const appItem = this.pluginAppList.find(item => item.value === this.pluginType)
+      return appItem ? appItem.label : this.pluginType
+    },
+    currTheme: {
+      get () {
+        return this.theme
+      },
+      set (name) {
+        this.setTheme(name)
+      }
+    } as any,
+    currPrimaryColor: {
+      get () {
+        return this.primaryColor
+      },
+      set (color) {
+        this.setPrimaryColor(color || '')
+      }
+    } as any,
+    currCompSize: {
+      get () {
+        return this.componentsSize
+      },
+      set (size) {
+        this.setComponentsSize(size)
+      }
+    } as any,
+    currLanguage (): any {
+      return this.langOptions.find(item => item.value === this.language)
+    },
+    currLangLabel (this: any) {
+      return this.currLanguage ? this.currLanguage.label : this.language
+    },
+    githubUrl () {
+      return `https://github.com/x-extends/${this.packName}`
+    },
+    giteeUrl () {
+      return `https://gitee.com/x-extends/${this.packName}`
+    },
+    sysVersionOptions () {
+      return this.systemVersionList.map(item => {
+        return {
+          label: this.$t(`app.version.${process.env.VUE_APP_PACKAGE_NAME}.v${(item.i18nKey || item.version).replace('.', 'd')}`),
+          value: item.version,
+          disabled: !!item.isDisabled,
+          className: item.isStop ? 'due-to-stop' : (item.isAbandoned ? 'about-to-stop' : '')
+        }
+      })
+    },
+    selectSysVersion (): any {
+      return this.systemVersionList.find(item => item.version === this.currSysVersion)
+    }
 
-const selectSysVersion = computed(() => {
-  return systemVersionList.value.find(item => item.version === currSysVersion.value)
-})
+  },
+  methods: {
+    ...mapMutations([
+      'setTheme',
+      'setLanguage',
+      'setPrimaryColor',
+      'setComponentsSize',
+      'readTopMenuMsgFlagVisible',
+      'readAuthMsgFlagVisible'
+    ]),
+    langClickEvent (this: any, { option }: any) {
+      this.setLanguage(option.value as any)
+    },
+    togglePluginAppEvent () {
+      this.showPluginApp = !this.showPluginApp
+    },
+    toggleSystemMenuEvent  (this: any) {
+      this.showSystemMenu = !this.showSystemMenu
+      this.readTopMenuMsgFlagVisible()
+    },
+    vChangeEvent (this: any) {
+      const selectSysItem = this.selectSysVersion
+      if (selectSysItem) {
+        const oldItem = this.systemVersionList.find(item => item.version === this.prevSysVersion)
+        if (oldItem && oldItem.isSync && selectSysItem.isSync) {
+          location.href = selectSysItem.url + location.hash
+        } else {
+          location.href = selectSysItem.url
+        }
+      }
+    },
+    openPluginEvent (this: any) {
+      this.readAuthMsgFlagVisible()
+    }
+  },
+  created () {
+    fetch(`${this.resBaseUrl}/component-api/language-list.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+      res.json().then(data => {
+        this.langOptions = data
+      })
+    })
 
-const langClickEvent: VxePulldownEvents.OptionClick = ({ option }) => {
-  appStore.setLanguage(option.value as any)
-}
+    fetch(`${this.resBaseUrl}/component-api/system-list.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+      res.json().then(data => {
+        this.systemMenuList = data
+      })
+    })
 
-const togglePluginAppEvent = () => {
-  showPluginApp.value = !showPluginApp.value
-}
+    fetch(`${this.resBaseUrl}/component-api/vxe-plugin-app-list.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+      res.json().then(data => {
+        this.pluginAppList = data.map(item => {
+          item.label = this.$t(`shopping.apps.${item.code}`)
+          item.value = XEUtils.kebabCase(item.code)
+          return item
+        })
+      })
+    })
 
-const toggleSystemMenuEvent = () => {
-  showSystemMenu.value = !showSystemMenu.value
-  appStore.readTopMenuMsgFlagVisible()
-}
-
-const vChangeEvent = () => {
-  const selectSysItem = selectSysVersion.value
-  if (selectSysItem) {
-    const oldItem = systemVersionList.value.find(item => item.version === prevSysVersion.value)
-    if (oldItem && oldItem.isSync && selectSysItem.isSync) {
-      location.href = selectSysItem.url + location.hash
+    if (this.isPluginDocs) {
+      fetch(`${this.resBaseUrl}/component-api/vxe-plugin-url.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+        res.json().then(data => {
+          this.pluginUrlMaps = data
+        })
+      })
+      fetch(`${this.resBaseUrl}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-plugin-version.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+        res.json().then(data => {
+          this.systemVersionList = data
+        })
+      })
+    } else if (this.isExtendDocs) {
+      fetch(`${this.resBaseUrl}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-extend-version.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+        res.json().then(data => {
+          this.systemVersionList = data
+        })
+      })
     } else {
-      location.href = selectSysItem.url
+      fetch(`${this.resBaseUrl}/component-api/${process.env.VUE_APP_PACKAGE_NAME}-version.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+        res.json().then(data => {
+          this.systemVersionList = data
+        })
+      })
     }
   }
-}
-
-const openPluginEvent = () => {
-  appStore.readAuthMsgFlagVisible()
-}
-
-fetch(`${resBaseUrl.value}/component-api/language-list.json?v=?v=${import.meta.env.VITE_APP_DATE_NOW}`).then(res => {
-  res.json().then(data => {
-    langOptions.value = data
-  })
 })
-
-fetch(`${resBaseUrl.value}/component-api/system-list.json?v=?v=${import.meta.env.VITE_APP_DATE_NOW}`).then(res => {
-  res.json().then(data => {
-    systemMenuList.value = data
-  })
-})
-
-fetch(`${resBaseUrl.value}/component-api/vxe-plugin-app-list.json?v=?v=${import.meta.env.VITE_APP_DATE_NOW}`).then(res => {
-  res.json().then(data => {
-    pluginAppList.value = data.map(item => {
-      item.label = i18n.global.t(`shopping.apps.${item.code}`)
-      item.value = XEUtils.kebabCase(item.code)
-      return item
-    })
-  })
-})
-
-if (isPluginDocs.value) {
-  fetch(`${resBaseUrl.value}/component-api/vxe-plugin-url.json?v=?v=${import.meta.env.VITE_APP_DATE_NOW}`).then(res => {
-    res.json().then(data => {
-      pluginUrlMaps.value = data
-    })
-  })
-  fetch(`${resBaseUrl.value}/component-api/${import.meta.env.VITE_APP_PACKAGE_NAME}-plugin-version.json?v=${import.meta.env.VITE_APP_DATE_NOW}`).then(res => {
-    res.json().then(data => {
-      systemVersionList.value = data
-    })
-  })
-} else if (isExtendDocs.value) {
-  fetch(`${resBaseUrl.value}/component-api/${import.meta.env.VITE_APP_PACKAGE_NAME}-extend-version.json?v=${import.meta.env.VITE_APP_DATE_NOW}`).then(res => {
-    res.json().then(data => {
-      systemVersionList.value = data
-    })
-  })
-} else {
-  fetch(`${resBaseUrl.value}/component-api/${import.meta.env.VITE_APP_PACKAGE_NAME}-version.json?v=${import.meta.env.VITE_APP_DATE_NOW}`).then(res => {
-    res.json().then(data => {
-      systemVersionList.value = data
-    })
-  })
-}
 </script>
 
 <style lang="scss" scoped>
