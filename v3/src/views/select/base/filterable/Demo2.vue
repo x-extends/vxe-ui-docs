@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-select v-model="val1" placeholder="本地搜索" :filter-method="filterMethod" clearable filterable>
+    <vxe-select v-model="val1" placeholder="本地搜索" :filter-config="filterConfig" clearable filterable>
       <vxe-option value="1" label="选项1"></vxe-option>
       <vxe-option value="2" label="选项2"></vxe-option>
       <vxe-option value="3" label="选项3"></vxe-option>
@@ -15,16 +15,18 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { VxeSelectPropTypes } from 'vxe-pc-ui'
 
 export default Vue.extend({
   data () {
-    return {
-      val1: null
+    const filterConfig: VxeSelectPropTypes.FilterConfig = {
+      filterMethod ({ searchValue, option }) {
+        return option.label && option.label.indexOf(searchValue) > -1
+      }
     }
-  },
-  methods: {
-    filterMethod ({ searchValue, option }) {
-      return option.label && option.label.indexOf(searchValue) > -1
+    return {
+      val1: null,
+      filterConfig
     }
   }
 })

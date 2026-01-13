@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-select v-model="val1" placeholder="本地搜索" :filter-method="filterMethod" clearable filterable>
+    <vxe-select v-model="val1" placeholder="本地搜索" :filter-config="filterConfig" clearable filterable>
       <vxe-option value="1" label="选项1"></vxe-option>
       <vxe-option value="2" label="选项2"></vxe-option>
       <vxe-option value="3" label="选项3"></vxe-option>
@@ -14,12 +14,14 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 import { VxeSelectPropTypes } from 'vxe-pc-ui'
 
 const val1 = ref()
 
-const filterMethod: VxeSelectPropTypes.FilterMethod = ({ searchValue, option }) => {
-  return option.label && option.label.indexOf(searchValue) > -1
-}
+const filterConfig = reactive<VxeSelectPropTypes.FilterConfig>({
+  filterMethod ({ searchValue, option }) {
+    return option.label && option.label.indexOf(searchValue) > -1
+  }
+})
 </script>
