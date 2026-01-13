@@ -14,8 +14,10 @@ export default Vue.extend({
       filterable: true,
       clearable: true,
       placeholder: '本地搜索',
-      filterMethod ({ searchValue, option }) {
-        return option.label && option.label.indexOf(searchValue) > -1
+      filterConfig: {
+        filterMethod ({ searchValue, option }) {
+          return option.label && option.label.indexOf(searchValue) > -1
+        }
       },
       options: [
         { value: 1001, label: 'table' },
