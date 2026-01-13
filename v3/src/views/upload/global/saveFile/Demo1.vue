@@ -21,11 +21,11 @@ export default Vue.extend({
       })
     },
     saveFile2Event  () {
-      fetch('https://api.vxetable.cn/demo/resource/upload/255dcdd22bbec527be66b7a14b59c238')
+      fetch('https://vxeui.com/resource/avatarImg/avatar1.jpeg')
         .then(response => response.blob())
         .then(blob => {
           VxeUI.saveFile({
-            filename: '文件名',
+            filename: 'avatar1.jpeg',
             content: blob
           })
         })
