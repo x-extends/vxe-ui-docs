@@ -12,15 +12,15 @@
     <vxe-tabs v-model="supportAuthor" >
       <vxe-tab-pane title="QQ交流群" name="1">
         <div style="text-align: center;padding: 32px;">
-          <vxe-image :src="`${siteBaseUrl}/resource/donation/qq1.png`" style="max-width: 300px;margin: 0 16px;"></vxe-image>
-          <vxe-image :src="`${siteBaseUrl}/resource/donation/qq2.png`" style="max-width: 300px;margin: 0 16px;"></vxe-image>
+          <vxe-image :src="`${resBaseUrl}/resource/donation/qq1.png`" style="max-width: 300px;margin: 0 16px;"></vxe-image>
+          <vxe-image :src="`${resBaseUrl}/resource/donation/qq2.png`" style="max-width: 300px;margin: 0 16px;"></vxe-image>
         </div>
       </vxe-tab-pane>
       <vxe-tab-pane title="赞助作者" name="2">
         <div style="text-align: center;">
           <h2 style="padding: 40px 0 20px 0;">如果该项目帮助了您，请作者喝杯咖啡吧</h2>
-          <vxe-image :src="`${siteBaseUrl}/resource/donation/pay.jpg`"></vxe-image>
-          <div style="margin-top: 38px;font-size: 18px;">感谢您的支持，送一份 <vxe-link status="success" href="https://vxetable.cn/demo/vxe-ui-renderer-vue3-vite" target="_blank">渲染器详细教程文档</vxe-link>（<vxe-link status="primary" href="https://api.vxetable.cn/vxe/api/pub/vxeui/sponsor/demo/download?name=vxe-ui-renderer-vue3-vite" target="_blank">点击下载 vxe-table v4.7+ 版本</vxe-link>） ，所有支持过的用户都可以下载查看。</div>
+          <vxe-image :src="`${resBaseUrl}/resource/donation/pay.jpg`"></vxe-image>
+          <div style="margin-top: 38px;font-size: 18px;">感谢您的支持，送一份 <vxe-link status="success" href="https://vxeui.com/demo/vxe-ui-renderer-vue3-vite" target="_blank">渲染器详细教程文档</vxe-link>（<vxe-link status="primary" href="https://api.vxeui.com/store/api/pub/vxeui/sponsor/demo/download?name=vxe-ui-renderer-vue3-vite" target="_blank">点击下载 vxe-table v4.7+ 版本</vxe-link>） ，所有支持过的用户都可以下载查看。</div>
         </div>
       </vxe-tab-pane>
     </vxe-tabs>
@@ -32,7 +32,7 @@ import { computed, ref } from 'vue'
 import { useAppStore } from '@/store/app'
 
 const appStore = useAppStore()
-const siteBaseUrl = computed(() => appStore.siteBaseUrl)
+const resBaseUrl = computed(() => appStore.resBaseUrl)
 
 const supportAuthor = ref('1')
 </script>

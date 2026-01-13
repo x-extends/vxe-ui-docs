@@ -116,7 +116,7 @@ declare global {
 
 window.XEUtils = XEUtils
 
-axios.defaults.baseURL = process.env.VUE_APP_TEST_API_URL
+axios.defaults.baseURL = process.env.VUE_APP_PUBLIC_API_URL
 
 VxeUI.setConfig({
   // scrollMarginStyle: 'obsolete'
