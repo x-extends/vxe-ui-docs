@@ -4,7 +4,7 @@
       <template #tip>
         <vxe-tip status="primary" title="NPM 方式">
           <div>可以配合 <vxe-link  href="https://webpack.js.org/">webpack</vxe-link>、<vxe-link  href="https://vitejs.dev/">vite</vxe-link> 等打包工具配合使用按需加载。</div>
-          <div>依赖库：<vxe-link href="https://vxeui.com/xe-utils/" target="_blank">xe-utils 3.0+</vxe-link>、<vxe-link  href="https://v2.cn.vuejs.org/">vue 2.6+</vxe-link></div>
+          <div>依赖库：<vxe-link href="https://util.vxeui.com" target="_blank">xe-utils 3.0+</vxe-link>、<vxe-link  href="https://v2.cn.vuejs.org/">vue 2.6+</vxe-link></div>
         </vxe-tip>
       </template>
 
