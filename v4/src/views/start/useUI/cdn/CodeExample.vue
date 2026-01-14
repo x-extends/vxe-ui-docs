@@ -24,12 +24,13 @@ import { useAppStore } from '@/store/app'
 
 const appStore = useAppStore()
 const packName = computed(() => appStore.packName)
+const resBaseUrl = computed(() => appStore.resBaseUrl)
 const docsVersion = computed(() => appStore.docsVersion)
 
 const cdnCode = ref('')
 
 const cdnUrl = computed(() => {
-  return `/resource/cdn/${packName.value}-v${docsVersion.value}.html?v=${import.meta.env.VITE_APP_DATE_NOW}`
+  return `${resBaseUrl.value}/resource/cdn/${packName.value}-v${docsVersion.value}.html?v=${import.meta.env.VITE_APP_DATE_NOW}`
 })
 
 fetch(cdnUrl.value).then(res => res.text()).then(html => {

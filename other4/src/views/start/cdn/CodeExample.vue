@@ -11,7 +11,7 @@
       </template>
 
       <template #use>
-        <iframe :src="cdnUrl" style="display: block;width: 100%;height: 480px;border: 1px solid #000;"></iframe>
+        <iframe :src="cdnUrl" style="display: block;width: 100%;height: 1060px;border: 1px solid #000;"></iframe>
         <code-render language="html" :code="cdnCode"></code-render>
       </template>
     </CodeLight>
@@ -24,12 +24,13 @@ import { useAppStore } from '@/store/app'
 
 const appStore = useAppStore()
 const packName = computed(() => appStore.packName)
+const resBaseUrl = computed(() => appStore.resBaseUrl)
 const docsVersion = computed(() => appStore.docsVersion)
 
 const cdnCode = ref('')
 
 const cdnUrl = computed(() => {
-  return `/resource/cdn/${packName.value}-v${docsVersion.value}.html?v=${import.meta.env.VITE_APP_DATE_NOW}`
+  return `${resBaseUrl.value}/resource/cdn/${packName.value}-v${docsVersion.value}.html?v=${import.meta.env.VITE_APP_DATE_NOW}`
 })
 
 fetch(cdnUrl.value).then(res => res.text()).then(html => {

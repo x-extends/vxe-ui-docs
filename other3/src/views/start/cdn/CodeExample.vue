@@ -11,7 +11,7 @@
       </template>
 
       <template #use>
-        <iframe :src="cdnUrl" style="display: block;width: 100%;height: 480px;border: 1px solid #000;"></iframe>
+        <iframe :src="cdnUrl" style="display: block;width: 100%;height: 1060px;border: 1px solid #000;"></iframe>
         <code-render language="html" :code="cdnCode"></code-render>
       </template>
     </CodeLight>
@@ -31,13 +31,15 @@ export default Vue.extend({
   computed: {
     ...mapState([
       'packName',
+      'resBaseUrl',
       'docsVersion'
     ]) as {
       packName(): string
+      resBaseUrl(): string
       docsVersion(): string
     },
     cdnUrl (): string {
-      return `/resource/cdn/${this.packName}-v${this.docsVersion}.html?v=${process.env.VUE_APP_DATE_NOW}`
+      return `${this.resBaseUrl}/resource/cdn/${this.packName}-v${this.docsVersion}.html?v=${process.env.VUE_APP_DATE_NOW}`
     }
   },
   created () {
