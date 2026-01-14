@@ -32,7 +32,7 @@ const docsVersion = computed(() => appStore.docsVersion)
 const cdnCode = ref('')
 
 const cdnUrl = computed(() => {
-  return `/resource/cdn/plugin-menu-v${docsVersion.value}.html?v=${import.meta.env.VITE_APP_DATE_NOW}`
+  return `/resource/useCdn/plugin-menu-v${docsVersion.value}.html?v=${import.meta.env.VITE_APP_DATE_NOW}`
 })
 
 fetch(cdnUrl.value).then(res => res.text()).then(html => {

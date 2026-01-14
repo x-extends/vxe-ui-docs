@@ -33,7 +33,7 @@ const docsVersion = computed(() => appStore.docsVersion)
 const cdnCode = ref('')
 
 const cdnUrl = computed(() => {
-  return `/resource/cdn/plugin-export-xlsx-v${docsVersion.value}.html?v=${import.meta.env.VITE_APP_DATE_NOW}`
+  return `/resource/useCdn/plugin-export-xlsx-v${docsVersion.value}.html?v=${import.meta.env.VITE_APP_DATE_NOW}`
 })
 
 fetch(cdnUrl.value).then(res => res.text()).then(html => {

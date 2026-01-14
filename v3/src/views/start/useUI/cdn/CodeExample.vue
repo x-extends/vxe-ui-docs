@@ -39,7 +39,7 @@ export default Vue.extend({
       docsVersion(): string
     },
     cdnUrl (): string {
-      return `${this.resBaseUrl}/resource/cdn/${this.packName}-v${this.docsVersion}.html?v=${process.env.VUE_APP_DATE_NOW}`
+      return `${this.resBaseUrl}/resource/useCdn/${this.packName}-v${this.docsVersion}.html?v=${process.env.VUE_APP_DATE_NOW}`
     }
   },
   created () {

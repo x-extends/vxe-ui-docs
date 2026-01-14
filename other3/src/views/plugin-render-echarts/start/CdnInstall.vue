@@ -42,7 +42,7 @@ export default Vue.extend({
       docsVersion(): string
     },
     cdnUrl (): string {
-      return `/resource/cdn/plugin-render-echarts-v${this.docsVersion}.html?v=${process.env.VUE_APP_DATE_NOW}`
+      return `/resource/useCdn/plugin-render-echarts-v${this.docsVersion}.html?v=${process.env.VUE_APP_DATE_NOW}`
     }
   },
   created () {
