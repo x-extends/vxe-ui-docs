@@ -329,6 +329,7 @@
         "scrollVertical": "수직 스크롤",
         "scrollHorizontal": "수평 가상 스크롤",
         "scrollAutoHeight": "적응력 높이",
+        "scrollCompactV": "紧凑型单元格",
         "scrollTree": "트리 가상 스크롤",
         "scrollMerge": "单元格合并",
         "loadMore": "무한 스크롤",

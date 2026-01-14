@@ -329,6 +329,7 @@
         "scrollVertical": "Desplazamiento vertical",
         "scrollHorizontal": "Desplazamiento virtual horizontal",
         "scrollAutoHeight": "Altura adaptativa",
+        "scrollCompactV": "紧凑型单元格",
         "scrollTree": "Scrolling virtual de los árboles",
         "scrollMerge": "单元格合并",
         "loadMore": "Desplazamiento infinito",

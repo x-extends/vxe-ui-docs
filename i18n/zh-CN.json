@@ -329,6 +329,7 @@
         "scrollVertical": "纵向虚拟滚动",
         "scrollHorizontal": "横向虚拟滚动",
         "scrollAutoHeight": "自适应行高",
+        "scrollCompactV": "紧凑型单元格",
         "scrollTree": "树形虚拟滚动",
         "scrollMerge": "单元格合并",
         "loadMore": "无限滚动",

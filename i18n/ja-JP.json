@@ -329,6 +329,7 @@
         "scrollVertical": "垂直スクロール",
         "scrollHorizontal": "水平な仮想スクロール",
         "scrollAutoHeight": "適応高さ",
+        "scrollCompactV": "紧凑型单元格",
         "scrollTree": "ツリー仮想スクロール",
         "scrollMerge": "单元格合并",
         "loadMore": "無限のスクロール",

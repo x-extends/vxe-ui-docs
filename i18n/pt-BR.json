@@ -329,6 +329,7 @@
         "scrollVertical": "Rolagem vertical",
         "scrollHorizontal": "Rolagem virtual horizontal",
         "scrollAutoHeight": "Altura adaptativa",
+        "scrollCompactV": "紧凑型单元格",
         "scrollTree": "Rolagem virtual de árvore",
         "scrollMerge": "单元格合并",
         "loadMore": "Rolagem infinita",

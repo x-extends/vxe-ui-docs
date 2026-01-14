@@ -329,6 +329,7 @@
         "scrollVertical": "Vertical scrolling",
         "scrollHorizontal": "Horizontal virtual scrolling",
         "scrollAutoHeight": "Adaptive line height",
+        "scrollCompactV": "紧凑型单元格",
         "scrollTree": "Tree virtual scrolling",
         "scrollMerge": "Cell merge",
         "loadMore": "infinite scroll",

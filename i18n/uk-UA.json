@@ -329,6 +329,7 @@
         "scrollVertical": "Вертикальна прокрутка",
         "scrollHorizontal": "Горизонтальна віртуальна прокрутка",
         "scrollAutoHeight": "Адаптивна висота",
+        "scrollCompactV": "紧凑型单元格",
         "scrollTree": "Віртуальна прокрутка дерева",
         "scrollMerge": "单元格合并",
         "loadMore": "Нескінченна прокрутка",
