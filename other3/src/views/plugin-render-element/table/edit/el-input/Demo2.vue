@@ -8,6 +8,7 @@
       show-overflow
       keep-source
       ref="tableRef"
+      :edit-rules="editRules"
       :edit-config="{ trigger: 'click', mode: 'row'}"
       :data="tableData">
       <vxe-column type="checkbox" width="60"></vxe-column>
@@ -35,7 +36,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { MessageBox } from 'element-ui'
-import type { VxeTableInstance } from 'vxe-table'
+import type { VxeTableInstance, VxeTablePropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -50,8 +51,15 @@ export default Vue.extend({
       { id: 10002, name: 'Test2', nickname: '' }
     ]
 
+    const editRules: VxeTablePropTypes.EditRules = {
+      nickname: [
+        { required: true, content: '请输入' }
+      ]
+    }
+
     return {
-      tableData
+      tableData,
+      editRules
     }
   },
   methods: {

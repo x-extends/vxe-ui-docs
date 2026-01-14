@@ -8,6 +8,7 @@
       show-overflow
       keep-source
       ref="tableRef"
+      :edit-rules="editRules"
       :edit-config="{ trigger: 'click', mode: 'row'}"
       :data="tableData">
       <vxe-column type="checkbox" width="60"></vxe-column>
@@ -19,9 +20,9 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 import { ElMessageBox } from 'element-plus'
-import type { VxeTableInstance } from 'vxe-table'
+import type { VxeTableInstance, VxeTablePropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -30,6 +31,12 @@ interface RowVO {
 }
 
 const tableRef = ref<VxeTableInstance<RowVO>>()
+
+const editRules = reactive<VxeTablePropTypes.EditRules>({
+  nickname: [
+    { required: true, content: '请输入' }
+  ]
+})
 
 const tableData = ref<RowVO[]>([
   { id: 10001, name: 'Test1', nickname: 'Nickname11' },
