@@ -71,6 +71,13 @@ export const designNavConfig: NavVO & { children: NavVO[] } = {
                 { title: '上传附件', routerLink: { name: 'GlobalRendererFormDesignWidgetMyUploadFileWidget' } },
                 { title: '上传图片', routerLink: { name: 'GlobalRendererFormDesignWidgetMyUploadImageWidget' } }
               ]
+            },
+            {
+              title: '创建表单',
+              children: [
+                { title: '自定义表单1', routerLink: { name: 'GlobalRendererFormDesignMyform1' } },
+                { title: '自定义表单2', routerLink: { name: 'GlobalRendererFormDesignMyform2' } }
+              ]
             }
           ]
         }

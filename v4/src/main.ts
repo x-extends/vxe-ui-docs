@@ -96,6 +96,8 @@ import '@/views/global/renderer/table/empty/myEmptyText/demo1.table.renderer'
 import '@/views/global/renderer/form/item/myItemAmount/demo1.form.renderer'
 import '@/views/global/renderer/form/item/myItemUpload/demo1.form.renderer'
 
+import '@/views/global/renderer/form-design/myform1/demo1.form-design.renderer'
+import '@/views/global/renderer/form-design/myform2/demo1.form-design.renderer'
 import '@/views/global/renderer/form-design/widget/myInputWidget/demo1.form-design.renderer'
 import '@/views/global/renderer/form-design/widget/myTextareaWidget/demo1.form-design.renderer'
 import '@/views/global/renderer/form-design/widget/mySelectWidget/demo1.form-design.renderer'

@@ -515,6 +515,14 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import('@/views/global/renderer/form-design/api/CodeExample.vue')
               },
               {
+                path: 'myform',
+                component: RouteLayout,
+                children: [
+                  { path: 'myform1', name: 'GlobalRendererFormDesignMyform1', component: () => import('@/views/global/renderer/form-design/myform1/CodeExample.vue') },
+                  { path: 'myform2', name: 'GlobalRendererFormDesignMyform2', component: () => import('@/views/global/renderer/form-design/myform2/CodeExample.vue') }
+                ]
+              },
+              {
                 path: 'widget',
                 component: RouteLayout,
                 children: [
