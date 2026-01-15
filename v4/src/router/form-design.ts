@@ -17,6 +17,13 @@ export const formDesignRouteConfig: RouteRecordRaw = {
       component: () => import('@/views/form-design/customGroup/CodeExample.vue')
     },
     {
+      path: 'menu',
+      component: RouteLayout,
+      children: [
+        { path: 'basics', name: 'ComponentFormDesignMenuBasics', component: () => import('@/views/form-design/menu/basics/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'mobile',
       name: 'ComponentFormDesignMobile',
       component: () => import('@/views/form-design/mobile/CodeExample.vue')

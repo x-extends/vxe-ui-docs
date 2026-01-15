@@ -18,6 +18,12 @@ export const designNavConfig: NavVO & { children: NavVO[] } = {
               ]
             },
             {
+              title: '右键菜单',
+              children: [
+                { title: '生成表单视图', routerLink: { name: 'ComponentFormDesignMenuBasics' } }
+              ]
+            },
+            {
               title: '多端配置',
               children: [
                 { title: '仅移动端', routerLink: { name: 'ComponentFormDesignMobile' } },
