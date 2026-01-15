@@ -452,7 +452,17 @@ export const navConfigList: NavVO[] = [
           { title: '自定义样式', routerLink: { name: 'ComponentCalendarCellStyle' } },
           { title: '显示节假日', routerLink: { name: 'ComponentCalendarFestivalMethod' } },
           { title: '事件监听', routerLink: { name: 'ComponentCalendarFestivalEvents' } },
-          { title: '使用右键菜单', routerLink: { name: 'ComponentCalendarMenu' } }
+          {
+            title: '右键菜单',
+            children: [
+              { title: '配置菜单', routerLink: { name: 'ComponentCalendarMenuBasics' } },
+              { title: '前缀与后缀', routerLink: { name: 'ComponentCalendarMenuIcon' } },
+              { title: '是否禁用', routerLink: { name: 'ComponentCalendarMenuDisabled' } },
+              { title: '是否显示', routerLink: { name: 'ComponentCalendarMenuVisible' } },
+              { title: '异步加载中', routerLink: { name: 'ComponentCalendarMenuLoading' } },
+              { title: '权限控制', routerLink: { name: 'ComponentCalendarMenuVisibleMethod' } }
+            ]
+          }
         ]
       }
     ]
@@ -478,6 +488,17 @@ export const navConfigList: NavVO[] = [
           { title: '可折叠', routerLink: { name: 'ComponentMenuCollapsed' } },
           { title: '路由模式', routerLink: { name: 'ComponentMenuRouterLink' } },
           { title: '权限码', routerLink: { name: 'ComponentMenuPermissionCode' } },
+          {
+            title: '右键菜单',
+            children: [
+              { title: '配置菜单', routerLink: { name: 'ComponentMenuMenuBasics' } },
+              { title: '前缀与后缀', routerLink: { name: 'ComponentMenuMenuIcon' } },
+              { title: '是否禁用', routerLink: { name: 'ComponentMenuMenuDisabled' } },
+              { title: '是否显示', routerLink: { name: 'ComponentMenuMenuVisible' } },
+              { title: '异步加载中', routerLink: { name: 'ComponentMenuMenuLoading' } },
+              { title: '权限控制', routerLink: { name: 'ComponentMenuMenuVisibleMethod' } }
+            ]
+          },
           {
             title: '自定义插槽模板',
             children: [

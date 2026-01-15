@@ -818,6 +818,18 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/menu/permissionCode/CodeExample.vue')
           },
           {
+            path: 'menu',
+            component: RouteLayout,
+            children: [
+              { path: 'basics', name: 'ComponentMenuMenuBasics', component: () => import('@/views/menu/menu/basics/CodeExample.vue') },
+              { path: 'icon', name: 'ComponentMenuMenuIcon', component: () => import('@/views/menu/menu/icon/CodeExample.vue') },
+              { path: 'disabled', name: 'ComponentMenuMenuDisabled', component: () => import('@/views/menu/menu/disabled/CodeExample.vue') },
+              { path: 'visible', name: 'ComponentMenuMenuVisible', component: () => import('@/views/menu/menu/visible/CodeExample.vue') },
+              { path: 'loading', name: 'ComponentMenuMenuLoading', component: () => import('@/views/menu/menu/loading/CodeExample.vue') },
+              { path: 'visibleMethod', name: 'ComponentMenuMenuVisibleMethod', component: () => import('@/views/menu/menu/visibleMethod/CodeExample.vue') }
+            ]
+          },
+          {
             path: 'template',
             component: RouteLayout,
             children: [
@@ -3948,7 +3960,18 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentCalendarFestivalEvents',
             component: () => import('@/views/calendar/events/CodeExample.vue')
           },
-          { path: 'menu', name: 'ComponentCalendarMenu', component: () => import('@/views/calendar/menu/CodeExample.vue') }
+          {
+            path: 'menu',
+            component: RouteLayout,
+            children: [
+              { path: 'basics', name: 'ComponentCalendarMenuBasics', component: () => import('@/views/calendar/menu/basics/CodeExample.vue') },
+              { path: 'icon', name: 'ComponentCalendarMenuIcon', component: () => import('@/views/calendar/menu/icon/CodeExample.vue') },
+              { path: 'disabled', name: 'ComponentCalendarMenuDisabled', component: () => import('@/views/calendar/menu/disabled/CodeExample.vue') },
+              { path: 'visible', name: 'ComponentCalendarMenuVisible', component: () => import('@/views/calendar/menu/visible/CodeExample.vue') },
+              { path: 'loading', name: 'ComponentCalendarMenuLoading', component: () => import('@/views/calendar/menu/loading/CodeExample.vue') },
+              { path: 'visibleMethod', name: 'ComponentCalendarMenuVisibleMethod', component: () => import('@/views/calendar/menu/visibleMethod/CodeExample.vue') }
+            ]
+          }
         ]
       },
       {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-tip status="primary" title="全局格式化">将表格右键菜单的处理逻辑注册成全局可复用</vxe-tip>
+    <vxe-tip status="primary" title="表格-右键菜单">将右键菜单的处理逻辑注册成全局可复用</vxe-tip>
     <vxe-tip status="success">
       <div>调用方式： VxeUI.menus.add(code, options)</div>
     </vxe-tip>
@@ -34,6 +34,7 @@ const tableData = ref([
       {
         name: 'tableMenuMethod',
         desc: '表格 - 自定义菜单方法',
+        version: '',
         type: '',
         enum: '',
         defVal: '({ menu, type, row, rowIndex, column, columnIndex, $grid, $table, $event }) => void',

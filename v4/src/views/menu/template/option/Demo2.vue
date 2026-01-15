@@ -2,12 +2,12 @@
   <div>
     <div style="width: 260px">
       <vxe-menu v-model="selectNav" :options="navList" @click="clickEvent">
-        <template #homeOption="{ option }">
-          <span style="color: red">无间距：{{ option.title }}</span>
+        <template #homeOption="{ currentMenu }">
+          <span style="color: red">无间距：{{ currentMenu.title }}</span>
         </template>
 
-        <template #changePasswordOption="{ option }">
-          <span style="color: orange">无间距：{{ option.title }}</span>
+        <template #changePasswordOption="{ currentMenu }">
+          <span style="color: orange">无间距：{{ currentMenu.title }}</span>
         </template>
       </vxe-menu>
     </div>

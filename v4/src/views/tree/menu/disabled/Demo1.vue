@@ -42,7 +42,7 @@ const treeOptions = reactive<VxeTreeProps<NodeVO>>({
           disabled: false,
           children: [
             { code: '13', name: '编辑', prefixIcon: 'vxe-icon-feedback', disabled: true },
-            { code: '14', name: '取消', disabled: true }
+            { code: '14', name: '取消', disabled: false }
           ]
         },
         { code: '10', name: '驳回', prefixIcon: 'vxe-icon-undo', disabled: true }
