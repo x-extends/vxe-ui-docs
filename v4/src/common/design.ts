@@ -13,8 +13,9 @@ export const designNavConfig: NavVO & { children: NavVO[] } = {
             {
               title: '基础配置',
               children: [
-                { title: '内置控件配置', routerLink: { name: 'ComponentFormDesignBase' } },
-                { title: '自定义控件分组', routerLink: { name: 'ComponentFormDesignCustomGroup' } }
+                { title: '内置控件配置', routerLink: { name: 'ComponentFormDesignBasicsBase' } },
+                { title: '自定义控件分组', routerLink: { name: 'ComponentFormDesignBasicsCustomGroup' } },
+                { title: '显示样式配置', routerLink: { name: 'ComponentFormDesignBasicsStyleSetting' } }
               ]
             },
             {

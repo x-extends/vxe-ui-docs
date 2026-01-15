@@ -8,13 +8,12 @@ export const formDesignRouteConfig: RouteRecordRaw = {
   children: [
     {
       path: 'base',
-      name: 'ComponentFormDesignBase',
-      component: () => import('@/views/form-design/base/CodeExample.vue')
-    },
-    {
-      path: 'customGroup',
-      name: 'ComponentFormDesignCustomGroup',
-      component: () => import('@/views/form-design/customGroup/CodeExample.vue')
+      component: RouteLayout,
+      children: [
+        { path: 'basics', name: 'ComponentFormDesignBasicsBase', component: () => import('@/views/form-design/base/basics/CodeExample.vue') },
+        { path: 'customGroup', name: 'ComponentFormDesignBasicsCustomGroup', component: () => import('@/views/form-design/base/customGroup/CodeExample.vue') },
+        { path: 'styleSetting', name: 'ComponentFormDesignBasicsStyleSetting', component: () => import('@/views/form-design/base/styleSetting/CodeExample.vue') }
+      ]
     },
     {
       path: 'menu',
