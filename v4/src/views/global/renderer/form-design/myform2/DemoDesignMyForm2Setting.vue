@@ -23,7 +23,7 @@
 <script lang="ts" setup>
 import { PropType } from 'vue'
 import { VxeUI, VxeGlobalRendererHandles } from 'vxe-pc-ui'
-import { DemoDesignMyForm2Data } from './data'
+import { DemoDesignMyForm2Data } from './demo1.form-design.data'
 
 const { useFormView } = VxeUI.formDesignHandle
 

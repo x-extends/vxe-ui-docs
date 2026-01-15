@@ -17,7 +17,7 @@
 <script lang="ts" setup>
 import { PropType } from 'vue'
 import { VxeUI, VxeGlobalRendererHandles } from 'vxe-pc-ui'
-import { DemoDesignMyForm1Data } from './data'
+import { DemoDesignMyForm1Data } from './demo1.form-design.data'
 
 const { useFormView } = VxeUI.formDesignHandle
 
