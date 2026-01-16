@@ -2,7 +2,7 @@
   <div>
     <div class="row-wrapper">
       <vxe-button status="primary" @click="clickEvent">获取json</vxe-button>
-      <vxe-form-design ref="formDesignRef" :widgets="formDesignWidgets" :menu-config="menuConfig" :height="800" />
+      <vxe-form-design ref="formDesignRef" :widgets="formDesignWidgets" :menu-config="menuConfig" :height="800" show-style-setting></vxe-form-design>
     </div>
   </div>
 </template>

@@ -8,7 +8,7 @@
 
       <vxe-tabs v-model="selectTab" padding>
         <vxe-tab-pane title="第一步，创建JSON" name="1">
-          <vxe-form-design ref="formDesignRef" :height="800" show-mobile />
+          <vxe-form-design ref="formDesignRef" :height="800" show-mobile show-style-setting></vxe-form-design>
         </vxe-tab-pane>
 
         <vxe-tab-pane title="第二步，生成视图" name="2">

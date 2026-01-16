@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row-wrapper">
-      <vxe-form-design ref="formDesignRef" :widgets="formDesignWidgets" :height="800">
+      <vxe-form-design :widgets="formDesignWidgets" :height="800" show-style-setting>
         <template #title-prefix>
           <vxe-button status="primary">按钮1</vxe-button>
           <vxe-button status="success">按钮2</vxe-button>
@@ -14,9 +14,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { VxeFormDesignPropTypes, VxeFormDesignInstance } from 'vxe-design'
-
-const formDesignRef = ref<VxeFormDesignInstance>()
+import { VxeFormDesignPropTypes } from 'vxe-design'
 
 const formDesignWidgets = ref<VxeFormDesignPropTypes.Widgets>([
   {
