@@ -28,11 +28,12 @@ import { useAppStore } from '@/store/app'
 
 const appStore = useAppStore()
 const docsVersion = computed(() => appStore.docsVersion)
+const resBaseUrl = computed(() => appStore.resBaseUrl)
 
 const cdnCode = ref('')
 
 const cdnUrl = computed(() => {
-  return `/resource/useCdn/plugin-menu-v${docsVersion.value}.html?v=${import.meta.env.VITE_APP_DATE_NOW}`
+  return `${resBaseUrl.value}/resource/useCdn/plugin-menu-v${docsVersion.value}.html?v=${import.meta.env.VITE_APP_DATE_NOW}`
 })
 
 fetch(cdnUrl.value).then(res => res.text()).then(html => {
