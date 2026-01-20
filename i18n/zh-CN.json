@@ -382,7 +382,7 @@
         "combinationRemoteFilter": "服务端筛选",
         "combinationPageFilter": "服务端分页筛选",
         "handleFilter": "手动设置选项",
-        "combinationTitle": "复杂筛选",
+        "combinationTitle": "字段类型",
         "combinationStringFilter": "字符串类型筛选",
         "combinationNumberFilter": "数值类型筛选",
         "combinationDateFilter": "日期类型筛选",

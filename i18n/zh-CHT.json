@@ -381,7 +381,7 @@
         "combinationRemoteFilter": "服务端筛选",
         "combinationPageFilter": "服务端分页筛选",
         "handleFilter": "手动设置选项",
-        "combinationTitle": "複雜篩選",
+        "combinationTitle": "字段类型",
         "combinationStringFilter": "字符串類型篩選",
         "combinationNumberFilter": "數值類型篩選",
         "combinationDateFilter": "日期类型筛选",
