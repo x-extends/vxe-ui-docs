@@ -387,10 +387,10 @@
         "combinationNumberFilter": "숫자 유형 필터링",
         "combinationDateFilter": "日期类型筛选",
         "treeFilter": "树结构筛选",
-        "cellRender": "字段类型",
-        "cellRenderVxeNumberInput": "NumberInput 数值",
-        "cellRenderVxeVxeDatePicker": "VxeSelect 日期选择",
-        "cellRenderVxeSelect": "VxeSelect 下拉框"
+        "editRender": "编辑表格 -字段类型",
+        "editRenderVxeNumberInput": "NumberInput 数值",
+        "editRenderVxeVxeDatePicker": "VxeSelect 日期选择",
+        "editRenderVxeSelect": "VxeSelect 下拉框"
       }
     },
     "extendGanttChart": {
