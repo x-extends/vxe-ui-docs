@@ -386,7 +386,11 @@
         "combinationStringFilter": "String Type Filterung",
         "combinationNumberFilter": "Numerische Typfilterung",
         "combinationDateFilter": "日期类型筛选",
-        "treeFilter": "树结构筛选"
+        "treeFilter": "树结构筛选",
+        "cellRender": "字段类型",
+        "cellRenderVxeNumberInput": "NumberInput 数值",
+        "cellRenderVxeVxeDatePicker": "VxeSelect 日期选择",
+        "cellRenderVxeSelect": "VxeSelect 下拉框"
       }
     },
     "extendGanttChart": {

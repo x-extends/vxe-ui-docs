@@ -382,11 +382,15 @@
         "combinationRemoteFilter": "Remote filter",
         "combinationPageFilter": "服务端分页筛选",
         "handleFilter": "手动设置选项",
-        "combinationTitle": "field type",
+        "combinationTitle": "复杂筛选",
         "combinationStringFilter": "String filters",
         "combinationNumberFilter": "Number filters",
         "combinationDateFilter": "Date filters",
-        "treeFilter": "Tree filter"
+        "treeFilter": "Tree filter",
+        "cellRender": "字段类型",
+        "cellRenderVxeNumberInput": "NumberInput 数值",
+        "cellRenderVxeVxeDatePicker": "VxeSelect 日期选择",
+        "cellRenderVxeSelect": "VxeSelect 下拉框"
       }
     },
     "extendGanttChart": {
