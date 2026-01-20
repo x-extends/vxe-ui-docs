@@ -389,7 +389,7 @@
         "treeFilter": "树结构筛选",
         "editRender": "编辑表格 -字段类型",
         "editRenderVxeNumberInput": "VxeNumberInput 数值",
-        "editRenderVxeDatePicker": "VxeSelect 日期选择",
+        "editRenderVxeDatePicker": "VxeDatePicker 日期选择",
         "editRenderVxeSelect": "VxeSelect 下拉框"
       }
     },
