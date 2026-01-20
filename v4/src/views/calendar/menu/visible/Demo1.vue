@@ -41,9 +41,9 @@ const menuConfig = reactive<VxeCalendarPropTypes.MenuConfig>({
   ]
 })
 
-const menuClickEvent: VxeCalendarEvents.MenuClick = ({ option }) => {
+const menuClickEvent: VxeCalendarEvents.MenuClick = ({ menu }) => {
   VxeUI.modal.message({
-    content: `点击了 code=${option.code}`,
+    content: `点击了 code=${menu.code}`,
     status: 'success'
   })
 }

@@ -83,9 +83,9 @@ export default Vue.extend({
     }
   },
   methods: {
-    menuClickEvent ({ node, option }) {
+    menuClickEvent ({ node, menu }) {
       VxeUI.modal.message({
-        content: `点击了${node.title} - code=${option.code}`,
+        content: `点击了${node.title} - code=${menu.code}`,
         status: 'success'
       })
     }

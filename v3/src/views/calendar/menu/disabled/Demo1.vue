@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeUI, VxeCalendarPropTypes, VxeCalendarEvents } from 'vxe-pc-ui'
+import { VxeUI, VxeCalendarPropTypes } from 'vxe-pc-ui'
 
 export default Vue.extend({
   data () {
@@ -48,9 +48,9 @@ export default Vue.extend({
     }
   },
   methods: {
-    menuClickEvent ({ option }) {
+    menuClickEvent ({ menu }) {
       VxeUI.modal.message({
-        content: `点击了 code=${option.code}`,
+        content: `点击了 code=${menu.code}`,
         status: 'success'
       })
     }

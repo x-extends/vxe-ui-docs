@@ -96,9 +96,9 @@ const menuConfig = reactive<VxeMenuPropTypes.MenuConfig>({
   ]
 })
 
-const menuClickEvent: VxeMenuEvents.MenuClick = ({ option }) => {
+const menuClickEvent: VxeMenuEvents.MenuClick = ({ menu }) => {
   VxeUI.modal.message({
-    content: `点击了 code=${option.code}`,
+    content: `点击了 code=${menu.code}`,
     status: 'success'
   })
 }

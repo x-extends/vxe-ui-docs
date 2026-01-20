@@ -90,9 +90,9 @@ const treeOptions = reactive<VxeTreeProps<NodeVO>>({
 })
 
 const treeEvents: VxeTreeListeners<NodeVO> = {
-  menuClick ({ node, option }) {
+  menuClick ({ node, menu }) {
     VxeUI.modal.message({
-      content: `点击了${node.title} - code=${option.code}`,
+      content: `点击了${node.title} - code=${menu.code}`,
       status: 'success'
     })
   }
