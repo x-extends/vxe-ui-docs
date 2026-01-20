@@ -20,7 +20,7 @@
     "vxe-design": "^4.1.0",
     "vxe-gantt": "~4.2.3",
     "vxe-pc-ui": "~4.12.6",
-    "vxe-table": "~4.18.0-beta.9",
+    "vxe-table": "~4.18.0-beta.10",
     "xe-utils": "^3.8.4"
   },
   "devDependencies": {
