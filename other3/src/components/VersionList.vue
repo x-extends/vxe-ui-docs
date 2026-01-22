@@ -1,89 +1,191 @@
 <template>
-  <VxeLayoutContainer :class="['app-container', pageName]" vertical>
-    <VxeLayoutHeader>
-      <PageHeader />
-    </VxeLayoutHeader>
-    <VxeLayoutContainer>
-      <VxeLayoutAside class="layout-aside" width="360" :collapsed="!showLeft">
-        <PageAside :navConfigList="navConfigList" />
-      </VxeLayoutAside>
-      <VxeLayoutContainer class="layout-content-container" vertical>
-        <VxeLayoutBody class="layout-body" show-backtop :backtop-config="backtopConfig">
-          <template #default>
-            <RouterView />
-          </template>
-          <template #backtop-top>
-            <VxeButton status="success" icon="vxe-icon-wechat" title="企业版在线客服" circle shadow @click="wxKfEvent"></VxeButton>
-          </template>
-        </VxeLayoutBody>
-        <VxeLayoutFooter class="layout-footer">
-          <PageFooter></PageFooter>
-        </VxeLayoutFooter>
-        <div v-if="showOperBtn" class="oper-wrapper">
-          <vxe-button class="oper-btn" status="info" :icon="showLeft ? 'vxe-icon-arrow-left' : 'vxe-icon-arrow-right'" @click="showLeft = !showLeft"></vxe-button>
-        </div>
-      </VxeLayoutContainer>
-    </VxeLayoutContainer>
-  </VxeLayoutContainer>
+  <div v-if="pluginType && selectPluginVersion" class="version-list">
+    <span class="title">{{ $t('app.aside.stableVersion') }}</span>
+    <span>{{ pluginType }}@{{ selectPluginVersion }}</span>
+    <vxe-link :href="currBuyPluginBUrl" status="primary" target="_blank">{{ $t('app.aside.releaseTitle') }}</vxe-link>
+  </div>
+  <div v-else class="version-list">
+    <span>
+      <span class="version-title">{{ $t('app.aside.stableVersion') }}</span>
+      <span>{{ packName }}@{{ selectStableVersion }}</span>
+    </span>
+    <span v-if="showBetaVersion" style="margin-left: 0.5em;">
+      <span class="version-title">{{ $t('app.aside.latestVersion') }}</span>
+      <span>@{{ selectBetaVersion }}</span>
+    </span>
+    <vxe-link style="margin-left: 0.5em;" status="primary" :href="`https://github.com/x-extends/${packName}/releases`" target="_blank">更新日志</vxe-link>
+  </div>
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from 'vue'
-import { VxeLayoutBodyPropTypes } from 'vxe-pc-ui'
-import { NavVO } from '@/common/nav'
+import Vue from 'vue'
 import { mapState } from 'vuex'
 import XEUtils from 'xe-utils'
-import PageHeader from '@/components/PageHeader.vue'
-import PageAside from '@/components/PageAside.vue'
-import PageFooter from '@/components/PageFooter.vue'
+import axios from 'axios'
 
 export default Vue.extend({
-  components: {
-    PageHeader,
-    PageAside,
-    PageFooter
-  },
-  props: {
-    pluginType: String,
-    navConfigList: Array as PropType<NavVO[]>
-  },
-  provide () {
-    return {
-      pluginType: (this as any).pluginType || ''
+  inject: {
+    pluginType: {
+      default: ''
     }
   },
   data () {
-    const showLeft = true
-
-    const backtopConfig: VxeLayoutBodyPropTypes.BacktopConfig = {
-      circle: true,
-      showTop: (this as any).isPluginDocs,
-      position: 'fixed'
-    }
-
     return {
-      showLeft,
-      backtopConfig
+      stableVersionList: [] as any[],
+      betaVersionList: [] as any[],
+
+      selectPluginVersion: '',
+      selectStableVersion: '',
+      selectBetaVersion: '',
+
+      pluginUrlMaps: {} as Record<string, string>
     }
   },
   computed: {
     ...mapState([
+      'packName',
+      'docsVersion',
+      'pluginBuyUrl',
       'isPluginDocs',
-      'pluginBuyUrl'
+      'resBaseUrl',
+      'siteBaseUrl',
+      'apiBaseUrl'
     ]),
-    pageName () {
-      const route = this.$route
-      return route ? XEUtils.kebabCase(`${String(route.name).replace('VxeIcon', 'VxeIco')}`) : ''
+    ...({} as {
+      packName () : string
+      pluginType () : string
+      pluginBuyUrl () : string
+      isPluginDocs(): boolean
+      resBaseUrl(): string
+      siteBaseUrl(): string
+    }),
+    currBuyPluginBUrl () {
+      const { pluginType, pluginUrlMaps } = this
+      if (pluginUrlMaps[pluginType]) {
+        return `${this.pluginBuyUrl}#${pluginUrlMaps[pluginType]}?rl=1`
+      }
+      return this.pluginBuyUrl
     },
-    showOperBtn () {
-      const route = this.$route
-      return route.name === 'DocsApi'
+    showBetaVersion () {
+      const betaList = this.betaVersionList
+      if (this.selectStableVersion) {
+        if (betaList.length) {
+          const stableNums = this.selectStableVersion.split('-')[0].split('.')
+          const stable1 = XEUtils.toNumber(stableNums[0])
+          const stable2 = XEUtils.toNumber(stableNums[1])
+          const stable3 = XEUtils.toNumber(stableNums[2])
+          const betaNums = betaList[0].value.split('-')[0].split('.')
+          const beta1 = XEUtils.toNumber(betaNums[0])
+          const beta2 = XEUtils.toNumber(betaNums[1])
+          const beta3 = XEUtils.toNumber(betaNums[2])
+          if (beta1 > stable1) {
+            return true
+          } else if (beta1 === stable1) {
+            if (beta2 > stable2) {
+              return true
+            } else if (beta2 === stable2) {
+              if (beta3 > stable3) {
+                return true
+              }
+            }
+          }
+        }
+      } else {
+        return betaList.some((item) => item.value.indexOf('4.') === 0)
+      }
+      return false
+    },
+    newBetsVersionList () {
+      const betaList = this.betaVersionList
+      const stableList = this.stableVersionList
+      if (this.selectStableVersion) {
+        if (betaList.length) {
+          const stableNums = this.selectStableVersion.split('-')[0].split('.')
+          const stable1 = XEUtils.toNumber(stableNums[0])
+          const stable2 = XEUtils.toNumber(stableNums[1])
+          const stable3 = XEUtils.toNumber(stableNums[2])
+          return betaList.filter((pack) => {
+            const betaNums = pack.value.split('-')[0].split('.')
+            const beta1 = XEUtils.toNumber(betaNums[0])
+            const beta2 = XEUtils.toNumber(betaNums[1])
+            const beta3 = XEUtils.toNumber(betaNums[2])
+            if (beta1 > stable1) {
+              return true
+            } else if (beta1 === stable1) {
+              if (beta2 > stable2) {
+                return true
+              } else if (beta2 === stable2) {
+                if (beta3 > stable3) {
+                  return true
+                }
+              }
+            }
+            return false
+          })
+        }
+      } else {
+        return betaList.filter((item) => item.value.indexOf('4.') === 0)
+      }
+      return stableList
     }
   },
   methods: {
-    wxKfEvent () {
-      open(`${(this as any).pluginBuyUrl}?wx=1`)
+    getVersion (this: any) {
+      if (this.isPluginDocs) {
+        fetch(`${this.resBaseUrl}/component-api/vxe-plugin-url.json?v=?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+          res.json().then(data => {
+            this.pluginUrlMaps = data
+          })
+        })
+        axios.get(`${this.resBaseUrl}/component-api/vxe-plugin-version.json?v=${process.env.VUE_APP_DATE_NOW}`).then(res => {
+          const vData = res.data || {}
+          const tags = vData[this.pluginType]
+          this.selectPluginVersion = tags ? tags[`v${this.docsVersion}-latest`] : ''
+        })
+      }
+      fetch(`${this.apiBaseUrl}/baseapi/api/npm/versions/${process.env.VUE_APP_PACKAGE_NAME}`, { method: 'GET' })
+        .then(response => response.json())
+        .then((data) => {
+          const { time, tags } = data
+          const stableList = data[`v${this.docsVersion}StableList`].map(value => ({ value, label: value }))
+          const betaList = data[`v${this.docsVersion}BetaList`].map(value => ({ value, label: value }))
+          this.stableVersionList = stableList
+          this.betaVersionList = betaList
+          if (stableList.length) {
+            this.selectStableVersion = tags[`v${this.docsVersion}-latest`] || stableList[0].value
+          }
+          if (betaList.length) {
+            this.selectBetaVersion = betaList[0].value
+          }
+
+          // 清明节
+          const serveDate = XEUtils.toStringDate(time)
+          const yymmdd = XEUtils.toDateString(serveDate, 'yyyyMMdd')
+          if (['20230405', '20240404', '20250404', '20260405', '20270405', '20280404'].includes(yymmdd)) {
+            document.documentElement.setAttribute('qingmingjie', '1')
+          }
+        }).catch(e => e)
     }
+  },
+  created () {
+    this.getVersion()
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.version-list {
+  font-size: 12px;
+  margin-bottom: 10px;
+  .version-title {
+    font-weight: 700;
+    margin: 0 6px;
+  }
+  .stable-select {
+    width: 85px;
+  }
+  .latest-select {
+    width: 136px;
+  }
+}
+</style>
