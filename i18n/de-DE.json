@@ -311,6 +311,7 @@
         "areaEditCell": "Beispiel für Bearbeitungsfunktion",
         "areaEditCellUpload": "Laden Sie Anhänge hoch",
         "areaEditCellLeftRight": "实现左边树和右边表格",
+        "linkageEdit": "联动编辑计算",
         "areaCustom": "Passen Sie die Spalteneinstellungen an",
         "areaLoadMore": "Unendliches Scrollen",
         "areaHandle": "Zelloperationen",

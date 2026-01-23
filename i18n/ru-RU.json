@@ -311,6 +311,7 @@
         "areaEditCell": "Пример функции редактирования",
         "areaEditCellUpload": "Загрузить вложения",
         "areaEditCellLeftRight": "实现左边树和右边表格",
+        "linkageEdit": "联动编辑计算",
         "areaCustom": "Настроить настройки столбца",
         "areaLoadMore": "Бесконечная прокрутка",
         "areaHandle": "Ячейки",

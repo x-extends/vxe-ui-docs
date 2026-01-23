@@ -311,6 +311,7 @@
         "areaEditCell": "Edit function example",
         "areaEditCellUpload": "Upload attachment",
         "areaEditCellLeftRight": "Implement the left tree and the right table",
+        "linkageEdit": "联动编辑计算",
         "areaCustom": "Custom column settings",
         "areaLoadMore": "infinite scroll",
         "areaHandle": "Cell operations",

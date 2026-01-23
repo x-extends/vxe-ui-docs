@@ -311,6 +311,7 @@
         "areaEditCell": "편집 기능 예제",
         "areaEditCellUpload": "첨부 파일을 업로드하십시오",
         "areaEditCellLeftRight": "实现左边树和右边表格",
+        "linkageEdit": "联动编辑计算",
         "areaCustom": "열 설정을 사용자 정의하십시오",
         "areaLoadMore": "무한 스크롤",
         "areaHandle": "셀 작동",
