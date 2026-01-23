@@ -273,6 +273,7 @@
         "areaKeypadHandle": "Ejemplo de función clave",
         "areaKeypadHandleEditAppend": "Editar usando el método de append",
         "areaKeypadHandleEnterAddRow": "Agregue nuevas líneas para ingresar",
+        "areaKeypadHandleTabAddRow": "Tab键追加新行",
         "keypadEnterToTab": "回车键替换 Tab 键",
         "areaStatus": "Mostrar el estado de selección de celdas",
         "areaCellToRow": "Seleccione una fila completa",

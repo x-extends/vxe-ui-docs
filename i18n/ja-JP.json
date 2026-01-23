@@ -273,6 +273,7 @@
         "areaKeypadHandle": "重要な関数の例",
         "areaKeypadHandleEditAppend": "追加メソッドを使用して編集します",
         "areaKeypadHandleEnterAddRow": "入力する新しい行を追加します",
+        "areaKeypadHandleTabAddRow": "Tab键追加新行",
         "keypadEnterToTab": "回车键替换 Tab 键",
         "areaStatus": "セル選択ステータスを表示します",
         "areaCellToRow": "行全体を選択します",

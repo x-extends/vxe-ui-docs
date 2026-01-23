@@ -273,6 +273,7 @@
         "areaKeypadHandle": "키 기능 예제",
         "areaKeypadHandleEditAppend": "Append 메소드를 사용하여 편집하십시오",
         "areaKeypadHandleEnterAddRow": "입력 할 새 줄을 추가하십시오",
+        "areaKeypadHandleTabAddRow": "Tab键追加新行",
         "keypadEnterToTab": "回车键替换 Tab 键",
         "areaStatus": "셀 선택 상태를 보여줍니다",
         "areaCellToRow": "전체 행을 선택하십시오",
