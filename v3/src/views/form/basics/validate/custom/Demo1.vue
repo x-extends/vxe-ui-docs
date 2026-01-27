@@ -28,7 +28,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeUI, VxeFormInstance, VxeFormPropTypes, VxeFormEvents } from 'vxe-pc-ui'
+import { VxeUI, VxeFormInstance, VxeFormPropTypes } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string

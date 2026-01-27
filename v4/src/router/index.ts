@@ -4914,6 +4914,7 @@ const routes: Array<RouteRecordRaw> = [
                     name: 'ComponentFormBasicsValidateArray',
                     component: () => import('@/views/form/basics/validate/array/CodeExample.vue')
                   },
+                  { path: 'field', name: 'ComponentFormBasicsValidateField', component: () => import('@/views/form/basics/validate/field/CodeExample.vue') },
                   {
                     path: 'custom',
                     name: 'ComponentFormBasicsValidateCustom',
@@ -5315,6 +5316,7 @@ const routes: Array<RouteRecordRaw> = [
                     name: 'ComponentFormConfigValidateArray',
                     component: () => import('@/views/form/config/validate/array/CodeExample.vue')
                   },
+                  { path: 'field', name: 'ComponentFormConfigValidateField', component: () => import('@/views/form/config/validate/field/CodeExample.vue') },
                   {
                     path: 'custom',
                     name: 'ComponentFormConfigValidateCustom',
