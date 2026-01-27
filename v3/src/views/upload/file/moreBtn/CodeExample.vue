@@ -23,5 +23,13 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="upload/file/moreBtn/Demo4">
+      <template #tip>
+        <vxe-tip status="primary">
+          精简模式
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>

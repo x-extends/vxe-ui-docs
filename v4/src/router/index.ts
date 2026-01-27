@@ -5643,6 +5643,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentUploadFileMultiple',
                 component: () => import('@/views/upload/file/multiple/CodeExample.vue')
               },
+              { path: 'showList', name: 'ComponentUploadFileShowList', component: () => import('@/views/upload/file/showList/CodeExample.vue') },
               {
                 path: 'customReview',
                 name: 'ComponentUploadFileCustomReview',
@@ -5810,6 +5811,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentUploadImageMultiple',
                 component: () => import('@/views/upload/image/multiple/CodeExample.vue')
               },
+              { path: 'showList', name: 'ComponentUploadImageShowList', component: () => import('@/views/upload/image/showList/CodeExample.vue') },
               {
                 path: 'uploadMethod',
                 name: 'ComponentUploadImageUploadMethod',
