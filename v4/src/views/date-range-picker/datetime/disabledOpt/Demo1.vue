@@ -11,7 +11,7 @@ import { VxeDateRangePickerPropTypes } from 'vxe-pc-ui'
 const startDate = ref('')
 const endDate = ref('')
 
-const timeConfig = reactive<VxeDatePickerPropTypes.TimeConfig>({
+const timeConfig = reactive<VxeDateRangePickerPropTypes.TimeConfig>({
   hourDisabledMethod ({ hour }) {
     return hour % 2 === 0
   },
