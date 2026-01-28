@@ -2824,6 +2824,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentSelectBaseOperBtn',
                 component: () => import('@/views/select/base/operBtn/CodeExample.vue')
               },
+              { path: 'trigger', name: 'ComponentSelectBaseTrigger', component: () => import('@/views/select/base/trigger/CodeExample.vue') },
               {
                 path: 'template',
                 name: 'ComponentSelectBaseTemplate',
@@ -2900,6 +2901,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentSelectConfigOperBtn',
                 component: () => import('@/views/select/config/operBtn/CodeExample.vue')
               },
+              { path: 'trigger', name: 'ComponentSelectConfigTrigger', component: () => import('@/views/select/config/trigger/CodeExample.vue') },
               {
                 path: 'template',
                 name: 'ComponentSelectConfigTemplate',
@@ -4428,7 +4430,8 @@ const routes: Array<RouteRecordRaw> = [
             path: 'other',
             component: RouteLayout,
             children: [
-              { path: 'extra', name: 'ComponentTreeOtherExtra', component: () => import('@/views/tree/other/extra/CodeExample.vue') }
+              { path: 'extra', name: 'ComponentTreeOtherExtra', component: () => import('@/views/tree/other/extra/CodeExample.vue') },
+              { path: 'scrollTo', name: 'ComponentTreeOtherScrollTo', component: () => import('@/views/tree/other/scrollTo/CodeExample.vue') }
             ]
           }
         ]

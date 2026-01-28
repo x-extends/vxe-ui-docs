@@ -1431,6 +1431,7 @@ export const navConfigList: NavVO[] = [
               { title: '自定义宽高', routerLink: { name: 'ComponentSelectBasePopupWH' } },
               { title: '可新增', routerLink: { name: 'ComponentSelectBaseAllowCreate' } },
               { title: '操作按钮', routerLink: { name: 'ComponentSelectBaseOperBtn' } },
+              { title: '触发方式', routerLink: { name: 'ComponentSelectBaseTrigger' } },
               { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectBaseTemplate' } },
               { title: '虚拟滚动（大量数据选项）', routerLink: { name: 'ComponentSelectBaseScroll' } }
             ]
@@ -1450,6 +1451,7 @@ export const navConfigList: NavVO[] = [
               { title: '自定义宽高', routerLink: { name: 'ComponentSelectConfigPopupWH' } },
               { title: '可新增', routerLink: { name: 'ComponentSelectConfigAllowCreate' } },
               { title: '操作按钮', routerLink: { name: 'ComponentSelectConfigOperBtn' } },
+              { title: '触发方式', routerLink: { name: 'ComponentSelectConfigTrigger' } },
               { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectConfigTemplate' } },
               { title: '虚拟滚动（大量数据选项）', routerLink: { name: 'ComponentSelectConfigScroll' } },
               { title: '实现人员选择', routerLink: { name: 'ComponentSelectConfigUserSelect' } }
@@ -1827,7 +1829,8 @@ export const navConfigList: NavVO[] = [
       {
         title: '功能示例',
         children: [
-          { title: '实现右侧下拉按钮', routerLink: { name: 'ComponentTreeOtherExtra' } }
+          { title: '实现右侧下拉按钮', routerLink: { name: 'ComponentTreeOtherExtra' } },
+          { title: '滚动到节点', routerLink: { name: 'ComponentTreeOtherScrollTo' } }
         ]
       }
     ]
