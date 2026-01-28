@@ -35,8 +35,8 @@ const formData = ref<FormDataVO>({
 
 const formRules = ref<VxeFormPropTypes.Rules<FormDataVO>>({
   _startAndEnd: [
-    { to: 'startDate', required: true, message: '请选择开始时间' },
-    { to: 'endDate', required: true, message: '请选择结束时间' }
+    { field: 'startDate', required: true, message: '请选择开始时间' },
+    { field: 'endDate', required: true, message: '请选择结束时间' }
   ]
 })
 
