@@ -8,11 +8,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeButtonProps } from 'vxe-pc-ui'
+import { VxeButtonGroupPropTypes } from 'vxe-pc-ui'
 
 export default Vue.extend({
   data () {
-    const btnList: VxeButtonProps[] = [
+    const btnList: VxeButtonGroupPropTypes.Options = [
       { content: '按钮1', status: 'warning', name: 1 },
       { content: '按钮1', status: 'success', name: 2 },
       { content: '按钮1', status: 'error', name: 3 }
