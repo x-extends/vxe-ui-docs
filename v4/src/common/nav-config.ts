@@ -1081,6 +1081,8 @@ export const navConfigList: NavVO[] = [
                 ]
               },
               { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerTimeDefVal' } },
+              { title: '禁用时间选项', routerLink: { name: 'ComponentDatePickerTimeDisabledOpt' } },
+              { title: '自定义时间选项', routerLink: { name: 'ComponentDatePickerTimeOpts' } },
               {
                 title: '自定义插槽模板',
                 children: [
@@ -1111,6 +1113,8 @@ export const navConfigList: NavVO[] = [
                 ]
               },
               { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerDatetimeDefVal' } },
+              { title: '禁用时间选项', routerLink: { name: 'ComponentDatePickerDatetimeDisabledOpt' } },
+              { title: '自定义时间选项', routerLink: { name: 'ComponentDatePickerDatetimeOpts' } },
               { title: '小圆点', routerLink: { name: 'ComponentDatePickerDatetimeDot' } },
               { title: '农历及节假日', routerLink: { name: 'ComponentDatePickerDatetimeHolidays' } },
               {
@@ -1279,6 +1283,8 @@ export const navConfigList: NavVO[] = [
                 ]
               },
               { title: '面板的默认日期', routerLink: { name: 'ComponentDateRangePickerTimeDefVal' } },
+              { title: '禁用时间选项', routerLink: { name: 'ComponentDateRangePickerTimeDisabledOpt' } },
+              { title: '自定义时间选项', routerLink: { name: 'ComponentDateRangePickerTimeOpts' } },
               {
                 title: '自定义插槽模板',
                 children: [
@@ -1307,6 +1313,8 @@ export const navConfigList: NavVO[] = [
                 ]
               },
               { title: '面板的默认日期', routerLink: { name: 'ComponentDateRangePickerDatetimeDefVal' } },
+              { title: '禁用时间选项', routerLink: { name: 'ComponentDateRangePickerDatetimeDisabledOpt' } },
+              { title: '自定义时间选项', routerLink: { name: 'ComponentDateRangePickerDatetimeOpts' } },
               {
                 title: '自定义插槽模板',
                 children: [

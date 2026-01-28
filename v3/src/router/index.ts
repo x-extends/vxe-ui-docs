@@ -2178,6 +2178,8 @@ const routes: Array<RouteConfig> = [
                 ]
               },
               { path: 'defVal', name: 'ComponentDatePickerTimeDefVal', component: () => import('@/views/date-picker/time/defVal/CodeExample.vue') },
+              { path: 'disabledOpt', name: 'ComponentDatePickerTimeDisabledOpt', component: () => import('@/views/date-picker/time/disabledOpt/CodeExample.vue') },
+              { path: 'opts', name: 'ComponentDatePickerTimeOpts', component: () => import('@/views/date-picker/time/opts/CodeExample.vue') },
               {
                 path: 'template',
                 component: RouteLayout,
@@ -2259,6 +2261,8 @@ const routes: Array<RouteConfig> = [
                 ]
               },
               { path: 'defVal', name: 'ComponentDatePickerDatetimeDefVal', component: () => import('@/views/date-picker/datetime/defVal/CodeExample.vue') },
+              { path: 'disabledOpt', name: 'ComponentDatePickerDatetimeDisabledOpt', component: () => import('@/views/date-picker/datetime/disabledOpt/CodeExample.vue') },
+              { path: 'opts', name: 'ComponentDatePickerDatetimeOpts', component: () => import('@/views/date-picker/datetime/opts/CodeExample.vue') },
               { path: 'dot', name: 'ComponentDatePickerDatetimeDot', component: () => import('@/views/date-picker/datetime/dot/CodeExample.vue') },
               { path: 'holidays', name: 'ComponentDatePickerDatetimeHolidays', component: () => import('@/views/date-picker/datetime/holidays/CodeExample.vue') },
               {
@@ -2626,6 +2630,8 @@ const routes: Array<RouteConfig> = [
                 ]
               },
               { path: 'defVal', name: 'ComponentDateRangePickerTimeDefVal', component: () => import('@/views/date-range-picker/time/defVal/CodeExample.vue') },
+              { path: 'disabledOpt', name: 'ComponentDateRangePickerTimeDisabledOpt', component: () => import('@/views/date-range-picker/time/disabledOpt/CodeExample.vue') },
+              { path: 'opts', name: 'ComponentDateRangePickerTimeOpts', component: () => import('@/views/date-range-picker/time/opts/CodeExample.vue') },
               {
                 path: 'template',
                 component: RouteLayout,
@@ -2675,6 +2681,8 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/date-range-picker/datetime/valueFormat/CodeExample.vue')
               },
               { path: 'defVal', name: 'ComponentDateRangePickerDatetimeDefVal', component: () => import('@/views/date-range-picker/datetime/defVal/CodeExample.vue') },
+              { path: 'disabledOpt', name: 'ComponentDateRangePickerDatetimeDisabledOpt', component: () => import('@/views/date-range-picker/datetime/disabledOpt/CodeExample.vue') },
+              { path: 'opts', name: 'ComponentDateRangePickerDatetimeOpts', component: () => import('@/views/date-range-picker/datetime/opts/CodeExample.vue') },
               {
                 path: 'shortcut',
                 component: RouteLayout,
