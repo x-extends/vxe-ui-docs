@@ -32,7 +32,6 @@ export default Vue.extend({
         showOverview: true
       },
       taskBarConfig: {
-        showProgress: true,
         showContent: true,
         barStyle: {
           round: true
@@ -44,7 +43,7 @@ export default Vue.extend({
         }
       },
       columns: [
-        { field: 'title', title: '任务名称', treeNode: true },
+        { field: 'title', title: '任务名称', minWidth: 140, treeNode: true },
         { field: 'start', title: '开始时间', width: 100 },
         { field: 'end', title: '结束时间', width: 100 },
         { field: 'progress', title: '进度(%)', width: 80 }
