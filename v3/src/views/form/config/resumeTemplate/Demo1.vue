@@ -50,7 +50,7 @@ export default Vue.extend({
         { field: 'name', title: '名称', span: 12, itemRender: { name: 'VxeInput' } },
         { field: 'sex', title: '性别', span: 12, itemRender: { name: 'VxeInput' } },
         { field: 'age', title: '年龄', span: 12, itemRender: { name: 'VxeNumberInput', props: { type: 'integer' } } },
-        { field: 'mobile', title: '联系电话', span: 12, itemRender: { name: 'VxeInput', props: { type: 'integer' } } },
+        { field: 'mobile', title: '联系电话', span: 12, itemRender: { name: 'VxeNumberInput', props: { type: 'integer' } } },
         { field: 'educationExperience', title: '教育经历', span: 24, vertical: true, itemRender: { name: 'VxeTextarea', props: { autosize: { minRows: 2, maxRows: 8 } } } },
         { field: 'professionalSkill', title: '专业技能', span: 24, vertical: true, itemRender: { name: 'VxeTextarea', props: { autosize: { minRows: 4, maxRows: 8 } } } },
         { field: 'workExperience', title: '工作经历', span: 24, vertical: true, itemRender: { name: 'VxeTextarea', props: { autosize: { minRows: 4, maxRows: 8 } } } },
