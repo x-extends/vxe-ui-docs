@@ -24,7 +24,7 @@ export default Vue.extend({
         showProgress: true,
         barStyle: {
           round: true,
-          bgColor: '#fca60b',
+          bgColor: '#f56565',
           completedBgColor: '#65c16f'
         }
       },

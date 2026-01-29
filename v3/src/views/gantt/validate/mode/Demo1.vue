@@ -72,7 +72,7 @@ export default Vue.extend({
         showProgress: true,
         showContent: true,
         barStyle: {
-          bgColor: '#fca60b',
+          bgColor: '#f56565',
           completedBgColor: '#65c16f'
         }
       },

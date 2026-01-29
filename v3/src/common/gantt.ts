@@ -112,7 +112,15 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '层级结构', routerLink: { name: 'ComponentGanttTreeHierarchy' } },
         { title: '斑马线样式', routerLink: { name: 'ComponentGanttTreeStripe' } },
         { title: '序号', routerLink: { name: 'ComponentGanttTreeSeqMode' } },
-        { title: '连接线', routerLink: { name: 'ComponentGanttTreeLine' } }
+        { title: '连接线', routerLink: { name: 'ComponentGanttTreeLine' } },
+        {
+          title: '行内展示子任务',
+          children: [
+            { title: '父级行内展示子任务', routerLink: { name: 'ComponentGanttTreeSubviewInline' } },
+            { title: '是否显示总览任务', routerLink: { name: 'ComponentGanttTreeSubviewShowOverview' } },
+            { title: '总览任务条样式', routerLink: { name: 'ComponentGanttTreeSubviewBarColor' } }
+          ]
+        }
       ]
     },
     {

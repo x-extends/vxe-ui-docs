@@ -30,7 +30,7 @@ export default Vue.extend({
         showContent: true,
         barStyle: {
           round: true,
-          bgColor: '#fca60b',
+          bgColor: '#f56565',
           completedBgColor: '#65c16f'
         }
       },
