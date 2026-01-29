@@ -880,8 +880,11 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'input' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentInputSize' } },
-          { title: '文本类型', routerLink: { name: 'ComponentInputText' } },
-          { title: '搜索类型', routerLink: { name: 'ComponentInputSearch' } },
+          { title: '类型', routerLink: { name: 'ComponentInputType' } },
+          { title: '查看模式', routerLink: { name: 'ComponentInputReadonly' } },
+          { title: '不可编辑', routerLink: { name: 'ComponentInputEditable' } },
+          { title: '禁用', routerLink: { name: 'ComponentInputDisabled' } },
+          { title: '自动去掉左右空格', routerLink: { name: 'ComponentInputTrim' } },
           // { title: '密码类型', routerLink: { name: 'ComponentInputPassword' } },
           // { title: '时间类型', routerLink: { name: 'ComponentInputTime' } },
           // { title: '日期类型', routerLink: { name: 'ComponentInputDate' } },
@@ -911,8 +914,10 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'textarea' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentTextareaSize' } },
-          { title: '禁用状态', routerLink: { name: 'ComponentTextareaDisabled' } },
-          { title: '只读状态', routerLink: { name: 'ComponentTextareaReadonly' } },
+          { title: '查看模式', routerLink: { name: 'ComponentTextareaReadonly' } },
+          { title: '不可编辑', routerLink: { name: 'ComponentTextareaEditable' } },
+          { title: '自动去掉左右空格', routerLink: { name: 'ComponentTextareaTrim' } },
+          { title: '禁用', routerLink: { name: 'ComponentTextareaDisabled' } },
           { title: '字数统计', routerLink: { name: 'ComponentTextareaCount' } },
           { title: '自适应高度', routerLink: { name: 'ComponentTextareaAutosize' } },
           { title: '可调节高度', routerLink: { name: 'ComponentTextareaResize' } }

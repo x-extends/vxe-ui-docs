@@ -1,7 +1,7 @@
 <template>
   <div>
-    <vxe-switch v-model="isReadonly"></vxe-switch>
-    <vxe-textarea v-model="val1" :readonly="isReadonly"></vxe-textarea>
+    <vxe-switch v-model="isEditable"></vxe-switch>
+    <vxe-input v-model="val1" :editable="isEditable"></vxe-input>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default Vue.extend({
   data () {
     return {
       val1: '内容111',
-      isReadonly: true
+      isEditable: false
     }
   }
 })

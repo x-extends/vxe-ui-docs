@@ -1396,16 +1396,11 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentInputSize',
             component: () => import('@/views/input/size/CodeExample.vue')
           },
-          {
-            path: 'text',
-            name: 'ComponentInputText',
-            component: () => import('@/views/input/text/CodeExample.vue')
-          },
-          {
-            path: 'search',
-            name: 'ComponentInputSearch',
-            component: () => import('@/views/input/search/CodeExample.vue')
-          },
+          { path: 'type', name: 'ComponentInputType', component: () => import('@/views/input/type/CodeExample.vue') },
+          { path: 'readonly', name: 'ComponentInputReadonly', component: () => import('@/views/input/readonly/CodeExample.vue') },
+          { path: 'editable', name: 'ComponentInputEditable', component: () => import('@/views/input/editable/CodeExample.vue') },
+          { path: 'disabled', name: 'ComponentInputDisabled', component: () => import('@/views/input/disabled/CodeExample.vue') },
+          { path: 'trim', name: 'ComponentInputTrim', component: () => import('@/views/input/trim/CodeExample.vue') },
           // {
           //   path: 'password',
           //   name: 'ComponentInputPassword',
@@ -1744,16 +1739,10 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentTextareaSize',
             component: () => import('@/views/textarea/size/CodeExample.vue')
           },
-          {
-            path: 'disabled',
-            name: 'ComponentTextareaDisabled',
-            component: () => import('@/views/textarea/disabled/CodeExample.vue')
-          },
-          {
-            path: 'readonly',
-            name: 'ComponentTextareaReadonly',
-            component: () => import('@/views/textarea/readonly/CodeExample.vue')
-          },
+          { path: 'disabled', name: 'ComponentTextareaDisabled', component: () => import('@/views/textarea/disabled/CodeExample.vue') },
+          { path: 'readonly', name: 'ComponentTextareaReadonly', component: () => import('@/views/textarea/readonly/CodeExample.vue') },
+          { path: 'editable', name: 'ComponentTextareaEditable', component: () => import('@/views/textarea/editable/CodeExample.vue') },
+          { path: 'trim', name: 'ComponentTextareaTrim', component: () => import('@/views/textarea/trim/CodeExample.vue') },
           {
             path: 'count',
             name: 'ComponentTextareaCount',

@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-switch v-model="isDisabled"></vxe-switch>
-    <vxe-textarea v-model="val1" placeholder="禁用" :disabled="isDisabled"></vxe-textarea>
+    <vxe-input v-model="val1" placeholder="禁用" :disabled="isDisabled"></vxe-input>
   </div>
 </template>
 

@@ -11,7 +11,7 @@
     <CodeLight path="number-input/float/readonly/Demo2">
       <template #tip>
         <vxe-tip status="primary" title="编辑模式">
-          通过 <ApiLink name="number-input" prop="editable"/> 设置禁止输入
+          通过 <ApiLink name="number-input" prop="editable"/> 设置禁止输入，但是依然可以通过点击控制按钮调整数值
         </vxe-tip>
       </template>
     </CodeLight>

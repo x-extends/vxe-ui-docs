@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-switch v-model="isReadonly"></vxe-switch>
-    <vxe-textarea v-model="val1" :readonly="isReadonly"></vxe-textarea>
+    <vxe-input v-model="val1" :readonly="isReadonly"></vxe-input>
   </div>
 </template>
 
