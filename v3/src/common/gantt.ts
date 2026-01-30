@@ -112,15 +112,17 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '层级结构', routerLink: { name: 'ComponentGanttTreeHierarchy' } },
         { title: '斑马线样式', routerLink: { name: 'ComponentGanttTreeStripe' } },
         { title: '序号', routerLink: { name: 'ComponentGanttTreeSeqMode' } },
-        { title: '连接线', routerLink: { name: 'ComponentGanttTreeLine' } },
-        {
-          title: '行内展示子任务',
-          children: [
-            { title: '父级行内展示子任务', routerLink: { name: 'ComponentGanttTreeSubviewInline' } },
-            { title: '是否显示总览任务', routerLink: { name: 'ComponentGanttTreeSubviewShowOverview' } },
-            { title: '总览任务条样式', routerLink: { name: 'ComponentGanttTreeSubviewBarColor' } }
-          ]
-        }
+        { title: '连接线', routerLink: { name: 'ComponentGanttTreeLine' } }
+      ]
+    },
+    {
+      title: '行内展示子任务',
+      children: [
+        { title: '父级行内展示子任务', routerLink: { name: 'ComponentGanttTreeSubviewInline' } },
+        { title: '是否显示总览任务', routerLink: { name: 'ComponentGanttTreeSubviewShowOverview' } },
+        { title: '总览任务条样式', routerLink: { name: 'ComponentGanttTreeSubviewBarColor' } },
+        { title: '任务条可拖拽', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_subview_drag' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2Fsubview%2Fdrag' } } },
+        { title: '连接线', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_subview_links' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2Fsubview%2Flinks' } } }
       ]
     },
     {
