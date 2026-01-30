@@ -298,6 +298,7 @@
         "areaColDrag": "column drag",
         "areaRowColDrag": "Simultaneous row and column dragging",
         "areaFNR": "Find and Replace",
+        "multiLine": "多行文本",
         "areaMenu": "Official plug-in - right-click menu",
         "areaCellMenu": "Cell right-click menu",
         "areaEdit": "Editable",

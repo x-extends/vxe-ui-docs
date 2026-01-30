@@ -298,6 +298,7 @@
         "areaColDrag": "Traînée de colonne",
         "areaRowColDrag": "Faites glisser et glisser la ligne et la colonne en même temps",
         "areaFNR": "Rechercher et remplacer",
+        "multiLine": "多行文本",
         "areaMenu": "Plugin officiel - Menu avec le bouton droit",
         "areaCellMenu": "Cliquez avec le bouton droit sur le menu cellulaire",
         "areaEdit": "Modifiable",

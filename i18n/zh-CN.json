@@ -298,6 +298,7 @@
         "areaColDrag": "列拖拽",
         "areaRowColDrag": "同时行与列拖拽",
         "areaFNR": "查找与替换",
+        "multiLine": "多行文本",
         "areaMenu": "官方插件 - 右键菜单",
         "areaCellMenu": "单元格右键菜单",
         "areaEdit": "可编辑",

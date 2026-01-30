@@ -298,6 +298,7 @@
         "areaColDrag": "열 드래그",
         "areaRowColDrag": "동시에 행과 열을 드래그 앤 드래그",
         "areaFNR": "검색 및 교체",
+        "multiLine": "多行文本",
         "areaMenu": "공식 플러그인 - 마우스 오른쪽 버튼 클릭 메뉴",
         "areaCellMenu": "셀 메뉴를 마우스 오른쪽 버튼으로 클릭하십시오",
         "areaEdit": "편집 가능한",

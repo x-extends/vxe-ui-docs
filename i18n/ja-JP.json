@@ -298,6 +298,7 @@
         "areaColDrag": "列のドラッグ",
         "areaRowColDrag": "同時に行と列をドラッグアンドドラッグします",
         "areaFNR": "検索と交換",
+        "multiLine": "多行文本",
         "areaMenu": "公式プラグイン - メニューを右クリックします",
         "areaCellMenu": "セルメニューを右クリックします",
         "areaEdit": "編集可能",
