@@ -125,16 +125,16 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'hierarchy', name: 'ComponentGanttTreeHierarchy', component: () => import('@/views/gantt/tree/hierarchy/CodeExample.vue') },
         { path: 'stripe', name: 'ComponentGanttTreeStripe', component: () => import('@/views/gantt/tree/stripe/CodeExample.vue') },
         { path: 'seqMode', name: 'ComponentGanttTreeSeqMode', component: () => import('@/views/gantt/tree/seqMode/CodeExample.vue') },
-        { path: 'line', name: 'ComponentGanttTreeLine', component: () => import('@/views/gantt/tree/line/CodeExample.vue') },
-        {
-          path: 'subview',
-          component: RouteLayout,
-          children: [
-            { path: 'inline', name: 'ComponentGanttTreeSubviewInline', component: () => import('@/views/gantt/tree/subview/inline/CodeExample.vue') },
-            { path: 'showOverview', name: 'ComponentGanttTreeSubviewShowOverview', component: () => import('@/views/gantt/tree/subview/showOverview/CodeExample.vue') },
-            { path: 'barColor', name: 'ComponentGanttTreeSubviewBarColor', component: () => import('@/views/gantt/tree/subview/barColor/CodeExample.vue') }
-          ]
-        }
+        { path: 'line', name: 'ComponentGanttTreeLine', component: () => import('@/views/gantt/tree/line/CodeExample.vue') }
+      ]
+    },
+    {
+      path: 'subview',
+      component: RouteLayout,
+      children: [
+        { path: 'inline', name: 'ComponentGanttTreeSubviewInline', component: () => import('@/views/gantt/tree/subview/inline/CodeExample.vue') },
+        { path: 'showOverview', name: 'ComponentGanttTreeSubviewShowOverview', component: () => import('@/views/gantt/tree/subview/showOverview/CodeExample.vue') },
+        { path: 'barColor', name: 'ComponentGanttTreeSubviewBarColor', component: () => import('@/views/gantt/tree/subview/barColor/CodeExample.vue') }
       ]
     },
     {
