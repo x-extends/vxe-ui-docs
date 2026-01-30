@@ -5636,6 +5636,7 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/upload/file/multiple/CodeExample.vue')
               },
               { path: 'showList', name: 'ComponentUploadFileShowList', component: () => import('@/views/upload/file/showList/CodeExample.vue') },
+              { path: 'beforeSelectMethod', name: 'ComponentUploadFileBeforeSelectMethod', component: () => import('@/views/upload/file/beforeSelectMethod/CodeExample.vue') },
               {
                 path: 'customReview',
                 name: 'ComponentUploadFileCustomReview',
@@ -5804,6 +5805,7 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/upload/image/multiple/CodeExample.vue')
               },
               { path: 'showList', name: 'ComponentUploadImageShowList', component: () => import('@/views/upload/image/showList/CodeExample.vue') },
+              { path: 'beforeSelectMethod', name: 'ComponentUploadImageBeforeSelectMethod', component: () => import('@/views/upload/image/beforeSelectMethod/CodeExample.vue') },
               {
                 path: 'uploadMethod',
                 name: 'ComponentUploadImageUploadMethod',

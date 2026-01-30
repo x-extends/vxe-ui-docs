@@ -70,7 +70,7 @@ const formData = ref<FormDataVO>({
 const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file }) => {
   const formData = new FormData()
   formData.append('file', file)
-  return axios.post('/api/pub/upload/single', formData).then((res) => {
+  return axios.post('/publicapi/api/pub/upload/single', formData).then((res) => {
     // { url: ''}
     return {
       ...res.data

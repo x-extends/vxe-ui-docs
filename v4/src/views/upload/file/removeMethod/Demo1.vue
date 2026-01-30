@@ -26,7 +26,7 @@ const fileList = ref([
 const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file }) => {
   const formData = new FormData()
   formData.append('file', file)
-  return axios.post('/api/pub/upload/single', formData).then((res) => {
+  return axios.post('/publicapi/api/pub/upload/single', formData).then((res) => {
     return {
       ...res.data
     }
@@ -36,7 +36,7 @@ const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file }) => {
 const removeMethod: VxeUploadPropTypes.RemoveMethod = async ({ option }) => {
   if (option.id) {
     // 本地删除的同时，服务端也一起删除
-    await axios.delete(`/api/pub/delete/${option.id}`)
+    await axios.delete(`/publicapi/api/pub/delete/${option.id}`)
   }
 }
 </script>

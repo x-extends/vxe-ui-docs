@@ -16,7 +16,7 @@ export default Vue.extend({
     const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress }) => {
       const formData = new FormData()
       formData.append('file', file)
-      return axios.post('/api/pub/upload/single?randomError=1', formData, {
+      return axios.post('/publicapi/api/pub/upload/single?randomError=1', formData, {
         onUploadProgress (progressEvent) {
           const percentCompleted = Math.round((progressEvent.loaded * 100) / (progressEvent.total || 0))
           updateProgress(percentCompleted)
