@@ -408,6 +408,7 @@
         "dimensionTime": "时间多维度切换",
         "subview": "行内展示子任务",
         "subviewInline": "子视图",
+        "subviewLinks": "连接线",
         "edit": "可编辑",
         "editTableCell": "编辑表格单元格",
         "editTaskBar": "编辑任务条",
