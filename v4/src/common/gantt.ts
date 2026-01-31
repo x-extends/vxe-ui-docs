@@ -121,6 +121,13 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
         { title: '父级行内展示子任务', routerLink: { name: 'ComponentGanttTreeSubviewInline' } },
         { title: '是否显示总览任务', routerLink: { name: 'ComponentGanttTreeSubviewShowOverview' } },
         { title: '总览任务条样式', routerLink: { name: 'ComponentGanttTreeSubviewBarColor' } },
+        {
+          title: '自定义插槽模板',
+          children: [
+            { title: '任务条模板', routerLink: { name: 'ComponentGanttTreeSubviewTemplateTaskBar' } },
+            { title: '任务条总览模板', routerLink: { name: 'ComponentGanttTreeSubviewTemplateTaskBarOverview' } }
+          ]
+        },
         { title: '任务条可拖拽', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_subview_drag' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2Fsubview%2Fdrag' } } },
         { title: '连接线', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_subview_links' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2Fsubview%2Flinks' } } }
       ]

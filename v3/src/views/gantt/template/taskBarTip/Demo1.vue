@@ -37,6 +37,7 @@ export default Vue.extend({
         }
       },
       taskBarConfig: {
+        showContent: true,
         showTooltip: true,
         barStyle: {
           round: true

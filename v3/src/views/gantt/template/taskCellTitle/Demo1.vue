@@ -20,6 +20,9 @@ export default Vue.extend({
   data () {
     const ganttOptions: VxeGanttProps<RowVO> = {
       border: true,
+      taskBarConfig: {
+        showContent: true
+      },
       taskViewConfig: {
         scales: [
           {

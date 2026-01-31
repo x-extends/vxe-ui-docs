@@ -134,7 +134,15 @@ export const ganttRouteConfig: RouteConfig = {
       children: [
         { path: 'inline', name: 'ComponentGanttTreeSubviewInline', component: () => import('@/views/gantt/tree/subview/inline/CodeExample.vue') },
         { path: 'showOverview', name: 'ComponentGanttTreeSubviewShowOverview', component: () => import('@/views/gantt/tree/subview/showOverview/CodeExample.vue') },
-        { path: 'barColor', name: 'ComponentGanttTreeSubviewBarColor', component: () => import('@/views/gantt/tree/subview/barColor/CodeExample.vue') }
+        { path: 'barColor', name: 'ComponentGanttTreeSubviewBarColor', component: () => import('@/views/gantt/tree/subview/barColor/CodeExample.vue') },
+        {
+          path: 'template',
+          component: RouteLayout,
+          children: [
+            { path: 'taskBar', name: 'ComponentGanttTreeSubviewTemplateTaskBar', component: () => import('@/views/gantt/tree/subview/template/taskBar/CodeExample.vue') },
+            { path: 'taskBarOverview', name: 'ComponentGanttTreeSubviewTemplateTaskBarOverview', component: () => import('@/views/gantt/tree/subview/template/taskBarOverview/CodeExample.vue') }
+          ]
+        }
       ]
     },
     {
