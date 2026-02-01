@@ -408,6 +408,7 @@
         "dimension": "多维度显示",
         "dimensionDate": "日期多维度切换",
         "dimensionTime": "时间多维度切换",
+        "demoSubview": "行内展示子任务",
         "subview": "行内展示子任务",
         "subviewInline": "子视图",
         "subviewDrag": "可拖拽",
