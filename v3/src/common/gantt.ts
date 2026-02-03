@@ -2,6 +2,7 @@ import { NavVO } from './nav'
 
 export const ganttNavConfig: NavVO & { children: NavVO[] } = {
   i18nKey: 'app.aside.menu.ganttTitle',
+  keywords: 'vxe-gantt',
   children: [
     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'gantt' } } },
     {

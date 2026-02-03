@@ -76,7 +76,7 @@ export const navConfigList: NavVO[] = [
       {
         i18nKey: 'app.aside.menu.iconTitle',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon' } }, keywords: 'vxe-icon' },
           { title: '图标列表', routerLink: { name: 'ComponentIconBase' } },
           { title: '尺寸大小', routerLink: { name: 'ComponentIconSize' } },
           { title: '效果', routerLink: { name: 'ComponentIconAnimation' } },
@@ -86,7 +86,7 @@ export const navConfigList: NavVO[] = [
       {
         i18nKey: 'app.aside.menu.textTitle',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'text' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'text' } }, keywords: 'vxe-textT' },
           { title: '尺寸大小', routerLink: { name: 'ComponentTextSize' } },
           { title: '状态颜色', routerLink: { name: 'ComponentTextStatus' } },
           { title: '加载中', routerLink: { name: 'ComponentTextLoading' } },
@@ -98,7 +98,7 @@ export const navConfigList: NavVO[] = [
       {
         i18nKey: 'app.aside.menu.linkTitle',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'link' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'link' } }, keywords: 'vxe-link' },
           { title: '尺寸大小', routerLink: { name: 'ComponentLinkSize' } },
           { title: '状态颜色', routerLink: { name: 'ComponentLinkStatus' } },
           { title: '图标', routerLink: { name: 'ComponentLinkIcon' } },
@@ -112,7 +112,7 @@ export const navConfigList: NavVO[] = [
       {
         i18nKey: 'app.aside.menu.tagTitle',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tag' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tag' } }, keywords: 'vxe-tag' },
           { title: '尺寸大小', routerLink: { name: 'ComponentTagSize' } },
           { title: '状态', routerLink: { name: 'ComponentTagStatus' } },
           { title: '图标', routerLink: { name: 'ComponentTagIcon' } },
@@ -126,9 +126,9 @@ export const navConfigList: NavVO[] = [
       {
         i18nKey: 'app.aside.menu.buttonTitle',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'button' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'button' } }, keywords: 'vxe-button' },
           { title: '尺寸大小', routerLink: { name: 'ComponentButtonSize' } },
-          { title: '状态', routerLink: { name: 'ComponentButtonStatus' } },
+          { title: '状态颜色', routerLink: { name: 'ComponentButtonStatus' } },
           { title: '圆角', routerLink: { name: 'ComponentButtonRound' } },
           { title: '圆形', routerLink: { name: 'ComponentButtonCircle' } },
           { title: '图标', routerLink: { name: 'ComponentButtonIcon' } },
@@ -166,7 +166,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Segmented 分段器',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'segmented' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'segmented' } }, keywords: 'vxe-segmented' },
           { title: '尺寸大小', routerLink: { name: 'ComponentSegmentedSize' } },
           { title: '状态颜色', routerLink: { name: 'ComponentSegmentedStatus' } },
           { title: '图标', routerLink: { name: 'ComponentSegmentedIcon' } },
@@ -189,11 +189,11 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Layout 页面布局',
         children: [
-          { title: 'Layout Container API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-container' } } },
-          { title: 'Layout Aside API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-aside' } } },
-          { title: 'Layout Header API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-header' } } },
-          { title: 'Layout Body API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-body' } } },
-          { title: 'Layout Footer API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-footer' } } },
+          { title: 'Layout Container API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-container' } }, keywords: 'vxe-layout-container' },
+          { title: 'Layout Aside API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-aside' } }, keywords: 'vxe-layout-aside' },
+          { title: 'Layout Header API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-header' } }, keywords: 'vxe-layout-header' },
+          { title: 'Layout Body API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-body' } }, keywords: 'vxe-layout-body' },
+          { title: 'Layout Footer API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-footer' } }, keywords: 'vxe-layout-footer' },
           { title: '基础布局', routerLink: { name: 'ComponentLayoutBase' } },
           { title: '固定头部和底部', routerLink: { name: 'ComponentLayoutFixed' } },
           { title: '侧边栏，内容区滚动条', routerLink: { name: 'ComponentLayoutAside' } },
@@ -204,7 +204,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Backtop 回到顶部',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'backtop' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'backtop' } }, keywords: 'vxe-backtop' },
           { title: '尺寸大小', routerLink: { name: 'ComponentBacktopSize' } },
           { title: '状态颜色', routerLink: { name: 'ComponentBacktopStatus' } },
           { title: '圆形', routerLink: { name: 'ComponentBacktopCircle' } },
@@ -224,8 +224,8 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Row 行与列',
         children: [
-          { title: 'Row API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'row' } } },
-          { title: 'Col API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'col' } } },
+          { title: 'Row API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'row' } }, keywords: 'vxe-row' },
+          { title: 'Col API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'col' } }, keywords: 'vxe-col' },
           { title: '占比', routerLink: { name: 'ComponentRowBase' } },
           { title: '垂直布局', routerLink: { name: 'ComponentRowVertical' } },
           { title: '自动换行', routerLink: { name: 'ComponentRowWrap' } },
@@ -240,7 +240,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Card 卡片',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'card' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'card' } }, keywords: 'vxe-card' },
           { title: '基础', routerLink: { name: 'ComponentCardBase' } },
           { title: '宽度', routerLink: { name: 'ComponentCardWidth' } },
           { title: '高度', routerLink: { name: 'ComponentCardHeight' } },
@@ -255,7 +255,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Carousel 轮播图',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'carousel' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'carousel' } }, keywords: 'vxe-carousel' },
           { title: '基础', routerLink: { name: 'ComponentCarouselBase' } },
           { title: '高度', routerLink: { name: 'ComponentCarouselHeight' } },
           { title: '纵向排版', routerLink: { name: 'ComponentCarouselVertical' } },
@@ -268,7 +268,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Collapse 折叠面板',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'collapse' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'collapse' } }, keywords: 'vxe-collapse' },
           { title: '基础', routerLink: { name: 'ComponentCollapseBase' } },
           { title: '图标', routerLink: { name: 'ComponentCollapseIon' } },
           { title: '配置式', routerLink: { name: 'ComponentCollapseOptions' } },
@@ -279,8 +279,8 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Splitter 分割面板',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'splitter' } } },
-          { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'splitter-panel' } } },
+          { title: 'Splitter API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'splitter' } }, keywords: 'vxe-splitter' },
+          { title: 'Splitter Panel API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'splitter-panel' } }, keywords: 'vxe-splitter-panel' },
           {
             title: '基础',
             children: [
@@ -314,7 +314,8 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Tabs 页签',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tabs' } } },
+          { title: 'Tabs API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tabs' } }, keywords: 'vxe-tabs' },
+          { title: 'Tab Pane API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tab-pane' } }, keywords: 'vxe-tab-pane' },
           { title: '基础', routerLink: { name: 'ComponentTabsBase' } },
           { title: '样式 - 卡片风格', routerLink: { name: 'ComponentTabsCard' } },
           { title: '样式 - 边框背景', routerLink: { name: 'ComponentTabsBorderCard' } },
@@ -349,7 +350,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Pulldown 下拉容器',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pulldown' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pulldown' } }, keywords: 'vxe-pulldown' },
           { title: '基础', routerLink: { name: 'ComponentPulldownBase' } },
           { title: '配置列表', routerLink: { name: 'ComponentPulldownOptions' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentPulldownTemplate' } },
@@ -360,7 +361,7 @@ export const navConfigList: NavVO[] = [
       {
         title: 'List 虚拟列表',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'list' } } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'list' } }, keywords: 'vxe-list' },
           { title: '纵向虚拟列表', routerLink: { name: 'ComponentListBase' } },
           { title: '响应式高度', routerLink: { name: 'ComponentListAutoResize' } },
           { title: '实现轻量级虚拟表格', routerLink: { name: 'ComponentListTable' } }
@@ -557,8 +558,9 @@ export const navConfigList: NavVO[] = [
   {
     i18nKey: 'app.aside.menu.formTitle',
     children: [
-      { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form' } } },
-      { title: 'Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-item' } } },
+      { title: 'Form API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form' } }, keywords: 'vxe-form' },
+      { title: 'Form Group API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-group' } }, keywords: 'vxe-form-group' },
+      { title: 'Form Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-item' } }, keywords: 'vxe-form-item' },
       {
         i18nKey: 'app.aside.menu.formBaseTitle',
         children: [

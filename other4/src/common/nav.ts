@@ -1,6 +1,7 @@
 export interface NavVO {
   title?: string
   describe?: string
+  componentName?: string
   name?: string
   i18nKey?: string
   isDisabled?: boolean

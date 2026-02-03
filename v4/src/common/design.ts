@@ -6,7 +6,7 @@ export const designNavConfig: NavVO & { children: NavVO[] } = {
     {
       i18nKey: 'app.aside.menu.formDesignTitle',
       children: [
-        { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-design' } } },
+        { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-design' } }, keywords: 'vxe-design' },
         {
           i18nKey: 'app.aside.menu.formDesignUse',
           children: [
