@@ -14,7 +14,7 @@
       </template>
 
       <template #sexList="{ data }">
-        <a-select v-model="data.sexList" multiple>
+        <a-select v-model="data.sexList" mode="multiple">
           <a-select-option v-for="(item, index) in sexOptions" :key="index" :label="item.label" :value="item.value">
             <span>{{ item.label }}</span>
           </a-select-option>
@@ -32,7 +32,7 @@
       </template>
 
       <template #typeList="{ data }">
-        <a-select v-model="data.typeList" multiple>
+        <a-select v-model="data.typeList" mode="multiple">
           <a-select-opt-group v-for="(item, i) in typeOptions" :key="i" :label="item.label">
             <a-select-option v-for="(child, j) in item.options" :key="j" :label="child.label" :value="child.value">
               <span>{{ child.label }}</span>

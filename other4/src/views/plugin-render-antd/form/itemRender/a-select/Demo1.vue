@@ -33,7 +33,7 @@ const sexItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
 const sexListItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
   name: 'ASelect',
   props: {
-    multiple: true
+    mode: 'multiple'
   },
   options: [
     { label: '女', value: 'Women' },
@@ -66,7 +66,7 @@ const typeItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
 const typeListItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
   name: 'ASelect',
   props: {
-    multiple: true
+    mode: 'multiple'
   },
   optionGroups: [
     {

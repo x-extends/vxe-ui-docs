@@ -35,7 +35,8 @@ export default Vue.extend({
     const sexListItemRender: VxeFormItemPropTypes.ItemRender = {
       name: 'ASelect',
       props: {
-        multiple: true
+
+        mode: 'multiple'
       },
       options: [
         { label: '女', value: 'Women' },
@@ -68,7 +69,7 @@ export default Vue.extend({
     const typeListItemRender: VxeFormItemPropTypes.ItemRender = {
       name: 'ASelect',
       props: {
-        multiple: true
+        mode: 'multiple'
       },
       optionGroups: [
         {
