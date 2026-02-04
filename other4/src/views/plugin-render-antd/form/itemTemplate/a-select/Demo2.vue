@@ -17,7 +17,7 @@
       </vxe-form-item>
       <vxe-form-item title="下拉框多选" field="sexList" span="24" :item-render="{}">
         <template #default>
-          <a-select v-model="formData.sexList" multiple>
+          <a-select v-model="formData.sexList" mode="multiple">
             <a-select-option v-for="(item, index) in sexOptions" :key="index" :label="item.label" :value="item.value"></a-select-option>
           </a-select>
         </template>
@@ -33,7 +33,7 @@
       </vxe-form-item>
       <vxe-form-item title="下拉框分组多选" field="typeList" span="24" :item-render="{}">
         <template #default>
-          <a-select v-model="formData.typeList" multiple>
+          <a-select v-model="formData.typeList" mode="multiple">
             <a-select-opt-group v-for="(item, i) in typeOptions" :key="i" :label="item.label">
               <a-select-option v-for="(child, j) in item.options" :key="j" :label="child.label" :value="child.value"></a-select-option>
             </a-select-opt-group>
