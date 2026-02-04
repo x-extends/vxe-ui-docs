@@ -69,16 +69,16 @@ export default Vue.extend({
           label: '分类1',
           value: '1',
           options: [
-            { label: '苹果', value: '1-1' },
-            { label: '雪梨', value: '1-2' }
+            { label: '跑步', value: '1-1' },
+            { label: '游泳', value: '1-2' }
           ]
         },
         {
           label: '分类2',
           value: '3',
           options: [
-            { label: '草莓', value: '2-1' },
-            { label: '猕猴桃', value: '2-2' }
+            { label: '爬山', value: '2-1' },
+            { label: '徒步', value: '2-2' }
           ]
         }
       ]
@@ -94,16 +94,16 @@ export default Vue.extend({
           label: '分类1',
           value: '1',
           options: [
-            { label: '苹果', value: '1-1' },
-            { label: '雪梨', value: '1-2' }
+            { label: '跑步', value: '1-1' },
+            { label: '游泳', value: '1-2' }
           ]
         },
         {
           label: '分类2',
           value: '3',
           options: [
-            { label: '草莓', value: '2-1' },
-            { label: '猕猴桃', value: '2-2' }
+            { label: '爬山', value: '2-1' },
+            { label: '徒步', value: '2-2' }
           ]
         }
       ]
