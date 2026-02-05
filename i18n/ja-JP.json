@@ -258,6 +258,7 @@
         "areaExtendCalcFill": "拖动自动填充",
         "areaExtendCalcFillExtendByCopy": "复制填充",
         "areaExtendCalcFillExtendByCalc": "运算规则",
+        "calcFillExtendSetMethod": "自定义扩展区域赋值方法",
         "areaExcel": "Excel 样式",
         "areaFixed": "カラム選択をフリーズします",
         "rowGroup": "行分组",

@@ -258,6 +258,7 @@
         "areaExtendCalcFill": "Drag to autofill",
         "areaExtendCalcFillExtendByCopy": "Copy and fill in",
         "areaExtendCalcFillExtendByCalc": "Operational rule",
+        "calcFillExtendSetMethod": "自定义扩展区域赋值方法",
         "areaExcel": "Excel",
         "areaFixed": "Freeze column selection",
         "rowGroup": "Grouping of row",
