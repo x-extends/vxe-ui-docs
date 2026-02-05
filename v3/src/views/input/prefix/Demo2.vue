@@ -1,7 +1,6 @@
 <template>
   <div>
-    <vxe-input v-model="val1" prefix-icon="vxe-icon-user-fill" placeholder="自定义前缀图标"></vxe-input>
-    <vxe-input v-model="val2" :prefix-config="prefixConfig" placeholder="自定义前缀图标"></vxe-input>
+    <vxe-input v-model="val1" :prefix-config="prefixConfig" placeholder="自定义前缀文本"></vxe-input>
   </div>
 </template>
 
@@ -12,12 +11,11 @@ import { VxeInputPropTypes } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const prefixConfig: VxeInputPropTypes.PrefixConfig = {
-      icon: 'vxe-icon-user-fill'
+      content: '￥'
     }
 
     return {
       val1: '',
-      val2: '',
       prefixConfig
     }
   }

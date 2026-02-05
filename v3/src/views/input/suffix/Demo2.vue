@@ -1,7 +1,6 @@
 <template>
   <div>
-    <vxe-input v-model="val1" suffix-icon="vxe-icon-warning-circle-fill" placeholder="自定义后缀图标"></vxe-input>
-    <vxe-input v-model="val2" :suffix-config="suffixConfig" placeholder="自定义后缀图标"></vxe-input>
+    <vxe-input v-model="val1" :suffix-config="suffixConfig" placeholder="自定义后缀文本"></vxe-input>
   </div>
 </template>
 
@@ -12,12 +11,11 @@ import { VxeInputPropTypes } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const suffixConfig: VxeInputPropTypes.SuffixConfig = {
-      icon: 'vxe-icon-warning-circle-fill'
+      content: 'KG'
     }
 
     return {
       val1: '',
-      val2: '',
       suffixConfig
     }
   }
