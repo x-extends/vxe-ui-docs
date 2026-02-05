@@ -899,8 +899,8 @@ export const navConfigList: NavVO[] = [
           // { title: '整数类型', routerLink: { name: 'ComponentInputInteger' } },
           // { title: '小数类型', routerLink: { name: 'ComponentInputFloat' } },
           { title: '显示字数统计', routerLink: { name: 'ComponentInputCount' } },
-          { title: '前缀图标', routerLink: { name: 'ComponentInputPrefix' } },
-          { title: '后缀图标', routerLink: { name: 'ComponentInputSuffix' } },
+          { title: '前缀', routerLink: { name: 'ComponentInputPrefix' } },
+          { title: '后缀', routerLink: { name: 'ComponentInputSuffix' } },
           {
             title: '自定义插槽模板',
             children: [
