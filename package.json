@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "update": "pnpm i",
+    "update": "npm install --legacy-peer-deps",
     "update:other3": "cd other3 && npm run update",
     "update:other4": "cd other4 && npm run update",
     "update:v3": "cd v3 && npm run update",

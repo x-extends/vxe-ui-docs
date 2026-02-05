@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "private": true,
   "scripts": {
-    "update": "pnpm i",
+    "update": "npm install --legacy-peer-deps",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --no-module",
     "pack": "npm run build && gulp build_examples",
