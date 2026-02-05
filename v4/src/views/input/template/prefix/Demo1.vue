@@ -31,6 +31,14 @@
         </template>
       </vxe-input>
     </div>
+
+    <div>
+      <vxe-input v-model="val6">
+        <template #prefix>
+          <span>￥</span>
+        </template>
+      </vxe-input>
+    </div>
   </div>
 </template>
 
@@ -42,4 +50,5 @@ const val2 = ref('')
 const val3 = ref(false)
 const val4 = ref('')
 const val5 = ref('')
+const val6 = ref('')
 </script>

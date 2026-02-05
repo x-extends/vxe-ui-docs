@@ -31,6 +31,14 @@
         </template>
       </vxe-input>
     </div>
+
+    <div>
+      <vxe-input v-model="val6">
+        <template #suffix>
+          <span>KG</span>
+        </template>
+      </vxe-input>
+    </div>
   </div>
 </template>
 
@@ -44,7 +52,8 @@ export default Vue.extend({
       val2: '',
       val3: false,
       val4: '',
-      val5: ''
+      val5: '',
+      val6: ''
     }
   }
 })
