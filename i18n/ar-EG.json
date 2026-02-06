@@ -466,7 +466,8 @@
       "ExtendPivotTable": "数据透视表",
       "FiltersCombination": "组合筛选",
       "FiltersComplexInput": "输入筛选",
-      "ExtendGanttChart": "甘特图"
+      "ExtendGanttChart": "甘特图",
+      "EditDownTextarea": "下拉文本编辑"
     },
     "menus": {
       "authList": "Authorization query",

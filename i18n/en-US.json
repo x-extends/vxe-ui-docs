@@ -466,7 +466,8 @@
       "ExtendPivotTable": "Pivot table",
       "FiltersCombination": "Complex combination Filters",
       "FiltersComplexInput": "Complex input Filters",
-      "ExtendGanttChart": "Gantt"
+      "ExtendGanttChart": "Gantt",
+      "EditDownTextarea": "下拉文本编辑"
     },
     "menus": {
       "authList": "Authorization query",
