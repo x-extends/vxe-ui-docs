@@ -472,7 +472,7 @@
       "FiltersCombination": "Complex combination Filters",
       "FiltersComplexInput": "Complex input Filters",
       "ExtendGanttChart": "Gantt",
-      "EditDownTextarea": "下拉文本编辑"
+      "EditDownTextarea": "下拉文本域"
     },
     "menus": {
       "authList": "Authorization query",
