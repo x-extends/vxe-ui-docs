@@ -457,6 +457,11 @@
         "pagerMockPage": "模拟前端分页",
         "pagerStart": "自定义序号"
       }
+    },
+    "editDownTextarea": {
+      "nav": {
+        "pulldown": "下拉多行编辑"
+      }
     }
   },
   "shopping": {
