@@ -472,7 +472,7 @@
       "FiltersCombination": "组合筛选",
       "FiltersComplexInput": "输入筛选",
       "ExtendGanttChart": "甘特图",
-      "EditDownTextarea": "下拉文本编辑"
+      "EditDownTextarea": "下拉文本域"
     },
     "menus": {
       "authList": "Authorization query",
