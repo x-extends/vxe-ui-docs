@@ -132,15 +132,15 @@ export const ganttRouteConfig: RouteConfig = {
       path: 'subview',
       component: RouteLayout,
       children: [
-        { path: 'inline', name: 'ComponentGanttTreeSubviewInline', component: () => import('@/views/gantt/tree/subview/inline/CodeExample.vue') },
-        { path: 'showOverview', name: 'ComponentGanttTreeSubviewShowOverview', component: () => import('@/views/gantt/tree/subview/showOverview/CodeExample.vue') },
-        { path: 'barColor', name: 'ComponentGanttTreeSubviewBarColor', component: () => import('@/views/gantt/tree/subview/barColor/CodeExample.vue') },
+        { path: 'inline', name: 'ComponentGanttTreeSubviewInline', component: () => import('@/views/gantt/subview/inline/CodeExample.vue') },
+        { path: 'showOverview', name: 'ComponentGanttTreeSubviewShowOverview', component: () => import('@/views/gantt/subview/showOverview/CodeExample.vue') },
+        { path: 'barColor', name: 'ComponentGanttTreeSubviewBarColor', component: () => import('@/views/gantt/subview/barColor/CodeExample.vue') },
         {
           path: 'template',
           component: RouteLayout,
           children: [
-            { path: 'taskBar', name: 'ComponentGanttTreeSubviewTemplateTaskBar', component: () => import('@/views/gantt/tree/subview/template/taskBar/CodeExample.vue') },
-            { path: 'taskBarOverview', name: 'ComponentGanttTreeSubviewTemplateTaskBarOverview', component: () => import('@/views/gantt/tree/subview/template/taskBarOverview/CodeExample.vue') }
+            { path: 'taskBar', name: 'ComponentGanttTreeSubviewTemplateTaskBar', component: () => import('@/views/gantt/subview/template/taskBar/CodeExample.vue') },
+            { path: 'taskBarOverview', name: 'ComponentGanttTreeSubviewTemplateTaskBarOverview', component: () => import('@/views/gantt/subview/template/taskBarOverview/CodeExample.vue') }
           ]
         }
       ]
@@ -336,7 +336,8 @@ export const ganttRouteConfig: RouteConfig = {
       path: 'other',
       component: RouteLayout,
       children: [
-        { path: 'productPlan', name: 'ComponentGanttOtherProductPlan', component: () => import('@/views/gantt/other/productPlan/CodeExample.vue') }
+        { path: 'productPlan', name: 'ComponentGanttOtherProductPlan', component: () => import('@/views/gantt/other/productPlan/CodeExample.vue') },
+        { path: 'multiBar', name: 'ComponentGanttOtherMultiBar', component: () => import('@/views/gantt/other/multiBar/CodeExample.vue') }
       ]
     }
   ]
