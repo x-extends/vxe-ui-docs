@@ -112,7 +112,8 @@
         "demoTaskMove": "可拖拽 - 演示",
         "demoTaskLink": "依赖线 - 演示",
         "demoMilestoneLink": "里程碑 - 演示",
-        "demoCreateLink": "可视化依赖线 - 演示"
+        "demoCreateLink": "可视化依赖线 - 演示",
+        "demoMultiBar": "拆分多个任务条"
       }
     },
     "header": {
@@ -242,7 +243,8 @@
         "demoTaskMove": "可拖拽 - 演示",
         "demoTaskLink": "依赖线 - 演示",
         "demoMilestoneLink": "里程碑 - 演示",
-        "demoCreateLink": "可视化依赖线 - 演示"
+        "demoCreateLink": "可视化依赖线 - 演示",
+        "demoMultiBar": "拆分多个任务条"
       }
     },
     "extendCellArea": {

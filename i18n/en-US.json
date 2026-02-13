@@ -112,7 +112,8 @@
         "demoTaskMove": "Draggable - Demo",
         "demoTaskLink": "Dependence line - Demo",
         "demoMilestoneLink": "Milestone - Demo",
-        "demoCreateLink": "Create dependency line - Demo"
+        "demoCreateLink": "Create dependency line - Demo",
+        "demoMultiBar": "拆分多个任务条"
       }
     },
     "header": {
@@ -242,7 +243,8 @@
         "demoTaskMove": "Draggable - Demo",
         "demoTaskLink": "Dependence line - Demo",
         "demoMilestoneLink": "Milestone - Demo",
-        "demoCreateLink": "Create dependency line - Demo"
+        "demoCreateLink": "Create dependency line - Demo",
+        "demoMultiBar": "拆分多个任务条"
       }
     },
     "extendCellArea": {
