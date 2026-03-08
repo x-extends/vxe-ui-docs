@@ -79,12 +79,14 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { mapGetters } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default Vue.extend({
   computed: {
+    ...mapState([
+      'packName'
+    ]),
     ...mapGetters([
-      'packName',
       'utilCDNLib',
       'uiCDNLib',
       'tableCDNLib',
