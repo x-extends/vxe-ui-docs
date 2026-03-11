@@ -43,8 +43,8 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
   },
   // 滚动条宽高需与自定义的样式对应
   scrollbarConfig: {
-    width: 28,
-    height: 28
+    width: 18,
+    height: 18
   },
   columns: [
     { type: 'seq', field: 'seq', width: 70 },
@@ -79,8 +79,8 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
 <style lang="scss">
 .mygantt-scrollbar {
   ::-webkit-scrollbar {
-    width: 28px;
-    height: 28px;
+    width: 18px;
+    height: 18px;
   }
   ::-webkit-scrollbar-thumb {
     border-radius: 4px;
