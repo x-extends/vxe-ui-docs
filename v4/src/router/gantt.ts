@@ -258,6 +258,7 @@ export const ganttRouteConfig: RouteRecordRaw = {
       component: RouteLayout,
       children: [
         { path: 'default', name: 'ComponentGanttScalesDefault', component: () => import('@/views/gantt/scales/default/CodeExample.vue') },
+        { path: 'date', name: 'ComponentGanttScalesDate', component: () => import('@/views/gantt/scales/date/CodeExample.vue') },
         { path: 'yearMonthDate', name: 'ComponentGanttScalesYearMonthDate', component: () => import('@/views/gantt/scales/yearMonthDate/CodeExample.vue') },
         { path: 'yearWeekDate', name: 'ComponentGanttScalesYearWeekDate', component: () => import('@/views/gantt/scales/yearWeekDate/CodeExample.vue') },
         { path: 'quarterMonthDate', name: 'ComponentGanttScalesQuarterMonthDate', component: () => import('@/views/gantt/scales/quarterMonthDate/CodeExample.vue') },

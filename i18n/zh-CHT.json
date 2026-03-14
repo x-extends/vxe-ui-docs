@@ -419,6 +419,8 @@
         "edit": "可编辑",
         "editTableCell": "编辑表格单元格",
         "editTaskBar": "编辑任务条",
+        "scales": "日期轴",
+        "scalesDate": "按天",
         "dependency": "依赖线",
         "dependencyLinks": "配连连接线",
         "dependencyLineStatus": "线状态颜色",

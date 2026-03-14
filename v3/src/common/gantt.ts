@@ -225,6 +225,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       title: '日期轴',
       children: [
         { title: '自定义日期轴', routerLink: { name: 'ComponentGanttScalesDefault' } },
+        { title: '按天', routerLink: { name: 'ComponentGanttScalesDate' } },
         { title: '年-月-日', routerLink: { name: 'ComponentGanttScalesYearMonthDate' } },
         { title: '年-周-日', routerLink: { name: 'ComponentGanttScalesYearWeekDate' } },
         { title: '季-月-日', routerLink: { name: 'ComponentGanttScalesQuarterMonthDate' } },

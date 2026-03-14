@@ -1,6 +1,7 @@
 <template>
   <div>
     <vxe-button status="primary" @click="submitEvent">手动上传</vxe-button>
+    <vxe-button status="success" @click="getFileEvent">获取未上传文件列表</vxe-button>
 
     <vxe-upload
       multiple
@@ -46,6 +47,13 @@ export default Vue.extend({
     }
   },
   methods: {
+    getFileEvent () {
+      const $upload = this.$refs.refUpload as VxeUploadInstance
+      if ($upload) {
+        const files = $upload.getPendingFiles()
+        console.log(files)
+      }
+    },
     submitEvent () {
       const $upload = this.$refs.refUpload as VxeUploadInstance
       if ($upload) {

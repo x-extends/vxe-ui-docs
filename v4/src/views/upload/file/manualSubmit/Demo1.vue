@@ -1,6 +1,7 @@
 <template>
   <div>
     <vxe-button status="primary" @click="submitEvent">点击手动上传</vxe-button>
+    <vxe-button status="success" @click="getFileEvent">获取未上传文件列表</vxe-button>
 
     <vxe-upload
       multiple
@@ -38,6 +39,14 @@ const uploadMethod: VxeUploadPropTypes.UploadMethod = ({ file, updateProgress })
       ...res.data
     }
   })
+}
+
+const getFileEvent = () => {
+  const $upload = refUpload.value
+  if ($upload) {
+    const files = $upload.getPendingFiles()
+    console.log(files)
+  }
 }
 
 const submitEvent = () => {
