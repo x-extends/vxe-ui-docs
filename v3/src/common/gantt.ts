@@ -48,6 +48,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       children: [
         { title: '网格样式', routerLink: { name: 'ComponentGanttTaskViewGridding' } },
         { title: '边框', routerLink: { name: 'ComponentGanttTaskViewBorder' } },
+        { title: '单元格宽度', routerLink: { name: 'ComponentGanttTaskViewCellWidth' } },
         { title: '行样式', routerLink: { name: 'ComponentGanttTaskViewRowStyle' } },
         { title: '行附加 className', routerLink: { name: 'ComponentGanttTaskViewRowClass' } },
         { title: '单元格样式', routerLink: { name: 'ComponentGanttTaskViewCellStyle' } },

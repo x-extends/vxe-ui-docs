@@ -53,6 +53,7 @@ export const ganttRouteConfig: RouteRecordRaw = {
       children: [
         { path: 'gridding', name: 'ComponentGanttTaskViewGridding', component: () => import('@/views/gantt/taskView/gridding/CodeExample.vue') },
         { path: 'border', name: 'ComponentGanttTaskViewBorder', component: () => import('@/views/gantt/taskView/border/CodeExample.vue') },
+        { path: 'cellWidth', name: 'ComponentGanttTaskViewCellWidth', component: () => import('@/views/gantt/taskView/cellWidth/CodeExample.vue') },
         { path: 'rowClass', name: 'ComponentGanttTaskViewRowClass', component: () => import('@/views/gantt/taskView/rowClass/CodeExample.vue') },
         { path: 'rowStyle', name: 'ComponentGanttTaskViewRowStyle', component: () => import('@/views/gantt/taskView/rowStyle/CodeExample.vue') },
         { path: 'cellClass', name: 'ComponentGanttTaskViewCellClass', component: () => import('@/views/gantt/taskView/cellClass/CodeExample.vue') },
