@@ -328,6 +328,7 @@ export const ganttRouteConfig: RouteRecordRaw = {
       component: RouteLayout,
       children: [
         { path: 'layout', name: 'ComponentGantTemplateLayout', component: () => import('@/views/gantt/template/layout/CodeExample.vue') },
+        { path: 'taskNowLine', name: 'ComponentGantTemplateTaskNowLine', component: () => import('@/views/gantt/template/taskNowLine/CodeExample.vue') },
         { path: 'taskBar', name: 'ComponentGantTemplateTaskBar', component: () => import('@/views/gantt/template/taskBar/CodeExample.vue') },
         { path: 'taskCellTitle', name: 'ComponentGantTemplateTaskCellTitle', component: () => import('@/views/gantt/template/taskCellTitle/CodeExample.vue') },
         { path: 'taskBarTip', name: 'ComponentGantTemplateTaskBarTip', component: () => import('@/views/gantt/template/taskBarTip/CodeExample.vue') },

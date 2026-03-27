@@ -1,19 +1,18 @@
 <template>
   <div>
-    <vxe-radio-group v-model="taskNowLineConfig.mode">
-      <vxe-radio-button checked-value="start" content="靠左"></vxe-radio-button>
-      <vxe-radio-button checked-value="center" content="居中"></vxe-radio-button>
-      <vxe-radio-button checked-value="end" content="靠右"></vxe-radio-button>
-      <vxe-radio-button checked-value="progress" content="实际进度"></vxe-radio-button>
-    </vxe-radio-group>
-
-    <vxe-gantt v-bind="ganttOptions"></vxe-gantt>
+    <vxe-gantt v-bind="ganttOptions">
+      <template #task-now-line>
+        <div class="custom-nowline">
+          <vxe-icon name="flag-fill"></vxe-icon>
+        </div>
+      </template>
+    </vxe-gantt>
   </div>
 </template>
 
-<script lang="ts">
+<script lang="tsx">
 import Vue from 'vue'
-import { VxeGanttProps, VxeGanttPropTypes } from 'vxe-gantt'
+import { VxeGanttProps } from 'vxe-gantt'
 import XEUtils from 'xe-utils'
 
 interface RowVO {
@@ -26,23 +25,12 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
-    const taskNowLineConfig: VxeGanttPropTypes.TaskNowLineConfig = {
-      mode: 'start'
-    }
-
-    const ganttOptions: VxeGanttProps<RowVO> & { taskViewConfig: VxeGanttPropTypes.TaskViewConfig } = {
+    const ganttOptions: VxeGanttProps<RowVO> = {
       border: true,
       taskBarConfig: {
         showProgress: true,
         showContent: true
       },
-      taskViewConfig: {
-        showNowLine: true,
-        tableStyle: {
-          width: 480
-        }
-      },
-      taskNowLineConfig,
       columns: [
         { type: 'seq', width: 70 },
         { field: 'title', title: '任务名称' },
@@ -57,9 +45,17 @@ export default Vue.extend({
     }
 
     return {
-      ganttOptions,
-      taskNowLineConfig
+      ganttOptions
     }
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.custom-nowline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: red;
+}
+</style>
