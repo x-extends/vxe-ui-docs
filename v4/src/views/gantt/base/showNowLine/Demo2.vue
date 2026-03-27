@@ -1,6 +1,10 @@
 <template>
   <div>
-    <vxe-switch v-model="taskViewConfig.showNowLine"></vxe-switch>
+    <vxe-radio-group v-model="taskNowLineConfig.mode">
+      <vxe-radio-button checked-value="start" content="靠左"></vxe-radio-button>
+      <vxe-radio-button checked-value="progress" content="实际进度"></vxe-radio-button>
+      <vxe-radio-button checked-value="end" content="靠右"></vxe-radio-button>
+    </vxe-radio-group>
 
     <vxe-gantt v-bind="ganttOptions"></vxe-gantt>
   </div>
@@ -19,11 +23,8 @@ interface RowVO {
   progress: number
 }
 
-const taskViewConfig = reactive<VxeGanttPropTypes.TaskViewConfig>({
-  showNowLine: true,
-  tableStyle: {
-    width: 480
-  }
+const taskNowLineConfig = reactive<VxeGanttPropTypes.TaskNowLineConfig>({
+  mode: 'start'
 })
 
 const ganttOptions = reactive<VxeGanttProps<RowVO>>({
@@ -32,7 +33,14 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     showProgress: true,
     showContent: true
   },
-  taskViewConfig,
+  taskNowLineConfig,
+  taskViewConfig: {
+    scales: ['month', 'week'],
+    showNowLine: true,
+    tableStyle: {
+      width: 480
+    }
+  },
   columns: [
     { type: 'seq', width: 70 },
     { field: 'title', title: '任务名称' },

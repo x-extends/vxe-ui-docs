@@ -1,6 +1,10 @@
 <template>
   <div>
-    <vxe-switch v-model="taskViewConfig.showNowLine"></vxe-switch>
+    <vxe-radio-group v-model="taskNowLineConfig.mode">
+      <vxe-radio-button checked-value="start" content="靠左"></vxe-radio-button>
+      <vxe-radio-button checked-value="progress" content="实际进度"></vxe-radio-button>
+      <vxe-radio-button checked-value="end" content="靠右"></vxe-radio-button>
+    </vxe-radio-group>
 
     <vxe-gantt v-bind="ganttOptions"></vxe-gantt>
   </div>
@@ -21,14 +25,11 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
-    const taskViewConfig: VxeGanttPropTypes.TaskViewConfig = {
-      showNowLine: true,
-      tableStyle: {
-        width: 480
-      }
+    const taskNowLineConfig: VxeGanttPropTypes.TaskNowLineConfig = {
+      mode: 'start'
     }
 
-    const ganttOptions: VxeGanttProps<RowVO> = {
+    const ganttOptions: VxeGanttProps<RowVO> & { taskViewConfig: VxeGanttPropTypes.TaskViewConfig } = {
       border: true,
       taskBarConfig: {
         showProgress: true,
@@ -40,6 +41,7 @@ export default Vue.extend({
           width: 480
         }
       },
+      taskNowLineConfig,
       columns: [
         { type: 'seq', width: 70 },
         { field: 'title', title: '任务名称' },
@@ -55,7 +57,7 @@ export default Vue.extend({
 
     return {
       ganttOptions,
-      taskViewConfig
+      taskNowLineConfig
     }
   }
 })
