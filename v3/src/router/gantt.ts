@@ -13,6 +13,7 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'size', name: 'ComponentGanttBaseSize', component: () => import('@/views/gantt/base/size/CodeExample.vue') },
         { path: 'field', name: 'ComponentGanttBaseField', component: () => import('@/views/gantt/base/field/CodeExample.vue') },
         { path: 'data', name: 'ComponentGanttBaseData', component: () => import('@/views/gantt/base/data/CodeExample.vue') },
+        { path: 'date', name: 'ComponentGanttBaseDate', component: () => import('@/views/gantt/base/date/CodeExample.vue') },
         { path: 'tableWidth', name: 'ComponentGanttBaseTableWidth', component: () => import('@/views/gantt/base/tableWidth/CodeExample.vue') },
         { path: 'border', name: 'ComponentGanttBaseBorder', component: () => import('@/views/gantt/base/border/CodeExample.vue') },
         { path: 'stripe', name: 'ComponentGanttBaseStripe', component: () => import('@/views/gantt/base/stripe/CodeExample.vue') },
