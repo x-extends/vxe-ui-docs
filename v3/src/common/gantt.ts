@@ -325,7 +325,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       children: [
         { title: '商品计划进度', routerLink: { name: 'ComponentGanttOtherProductPlan' } },
         { title: '实现拆分多个任务条', routerLink: { name: 'ComponentGanttOtherMultiBar' } },
-        { title: '定位行、定位列', routerLink: { name: 'ComponentGanttOtherScrollTo' } }
+        { title: '定位行、定位列、定位任务', routerLink: { name: 'ComponentGanttOtherScrollTo' } }
       ]
     }
   ]
