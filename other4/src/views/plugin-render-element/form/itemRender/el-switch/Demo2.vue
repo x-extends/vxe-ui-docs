@@ -33,8 +33,8 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     flag: false
   },
   items: [
-    { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-    { field: 'flag', title: '开关', span: 24, itemRender: { }, slots: { default: 'flag' } },
+    { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+    { field: 'flag', title: '开关', span: 24, itemRender: {}, slots: { default: 'flag' } },
     { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })

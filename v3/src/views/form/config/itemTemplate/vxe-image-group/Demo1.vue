@@ -47,8 +47,8 @@ export default Vue.extend({
         ]
       },
       items: [
-        { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-        { field: 'imgList', title: '查看图片组', span: 24, itemRender: { }, slots: { default: 'imgList' } },
+        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+        { field: 'imgList', title: '查看图片组', span: 24, itemRender: {}, slots: { default: 'imgList' } },
         { align: 'center', span: 24, itemRender: actionItemRender }
       ]
     }

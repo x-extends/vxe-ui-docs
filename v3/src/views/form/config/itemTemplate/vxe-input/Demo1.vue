@@ -41,8 +41,8 @@ export default Vue.extend({
         address: ''
       },
       items: [
-        { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-        { field: 'nickname', title: '输入框', span: 24, itemRender: { }, slots: { default: 'role' } },
+        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+        { field: 'nickname', title: '输入框', span: 24, itemRender: {}, slots: { default: 'role' } },
         { align: 'center', span: 24, slots: { default: 'action' } }
       ]
     }

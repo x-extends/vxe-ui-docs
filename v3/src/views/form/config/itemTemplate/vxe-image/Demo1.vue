@@ -41,8 +41,8 @@ export default Vue.extend({
         imgUrl: 'https://vxeui.com/resource/img/fj562.png'
       },
       items: [
-        { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-        { field: 'imgUrl', title: '查看图片', span: 24, itemRender: { }, slots: { default: 'imgUrl' } },
+        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+        { field: 'imgUrl', title: '查看图片', span: 24, itemRender: {}, slots: { default: 'imgUrl' } },
         { align: 'center', span: 24, itemRender: actionItemRender }
       ]
     }

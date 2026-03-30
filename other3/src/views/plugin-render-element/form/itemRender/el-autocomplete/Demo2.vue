@@ -47,8 +47,8 @@ export default Vue.extend({
         ]
       },
       items: [
-        { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-        { field: 'role', title: '自动补全输入', span: 24, itemRender: { }, slots: { default: 'role' } },
+        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+        { field: 'role', title: '自动补全输入', span: 24, itemRender: {}, slots: { default: 'role' } },
         { align: 'center', span: 24, slots: { default: 'action' } }
       ]
     }

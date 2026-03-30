@@ -33,7 +33,7 @@ export default Vue.extend({
         nickname: 'Testing'
       },
       items: [
-        { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
+        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
         { align: 'center', span: 24, slots: { default: 'action' } }
       ]
     }

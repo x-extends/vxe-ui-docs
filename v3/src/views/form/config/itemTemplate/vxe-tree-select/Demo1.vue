@@ -60,9 +60,9 @@ export default Vue.extend({
         regionList: []
       },
       items: [
-        { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-        { field: 'region', title: '下拉树单选', span: 24, itemRender: { }, slots: { default: 'region' } },
-        { field: 'regionList', title: '下拉树多选', span: 24, itemRender: { }, slots: { default: 'regionList' } },
+        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+        { field: 'region', title: '下拉树单选', span: 24, itemRender: {}, slots: { default: 'region' } },
+        { field: 'regionList', title: '下拉树多选', span: 24, itemRender: {}, slots: { default: 'regionList' } },
         { align: 'center', span: 24, slots: { default: 'action' } }
       ]
     }

@@ -111,11 +111,11 @@ export default Vue.extend({
         ]
       },
       items: [
-        { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-        { field: 'sex', title: '下拉框', span: 24, itemRender: { }, slots: { default: 'sex' } },
-        { field: 'sexList', title: '下拉框多选', span: 24, itemRender: { }, slots: { default: 'sexList' } },
-        { field: 'type', title: '下拉框分组', span: 24, itemRender: { }, slots: { default: 'type' } },
-        { field: 'typeList', title: '下拉框分组多选', span: 24, itemRender: { }, slots: { default: 'typeList' } },
+        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+        { field: 'sex', title: '下拉框', span: 24, itemRender: {}, slots: { default: 'sex' } },
+        { field: 'sexList', title: '下拉框多选', span: 24, itemRender: {}, slots: { default: 'sexList' } },
+        { field: 'type', title: '下拉框分组', span: 24, itemRender: {}, slots: { default: 'type' } },
+        { field: 'typeList', title: '下拉框分组多选', span: 24, itemRender: {}, slots: { default: 'typeList' } },
         { align: 'center', span: 24, slots: { default: 'action' } }
       ]
     }

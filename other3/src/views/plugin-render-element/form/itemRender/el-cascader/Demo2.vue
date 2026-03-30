@@ -67,7 +67,7 @@ export default Vue.extend({
         ]
       },
       items: [
-        { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
+        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
         { field: 'region', title: '级联选择', span: 24, itemRender: {}, slots: { default: 'region' } },
         { align: 'center', span: 24, slots: { default: 'action' } }
       ]

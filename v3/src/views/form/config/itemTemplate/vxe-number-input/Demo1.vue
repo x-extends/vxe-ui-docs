@@ -49,11 +49,11 @@ export default Vue.extend({
         money: null
       },
       items: [
-        { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-        { field: 'num', title: '数字', span: 24, itemRender: { }, slots: { default: 'num' } },
-        { field: 'integer', title: '整数', span: 24, itemRender: { }, slots: { default: 'integer' } },
-        { field: 'float', title: '小数', span: 24, itemRender: { }, slots: { default: 'float' } },
-        { field: 'money', title: '金额', span: 24, itemRender: { }, slots: { default: 'amount' } },
+        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+        { field: 'num', title: '数字', span: 24, itemRender: {}, slots: { default: 'num' } },
+        { field: 'integer', title: '整数', span: 24, itemRender: {}, slots: { default: 'integer' } },
+        { field: 'float', title: '小数', span: 24, itemRender: {}, slots: { default: 'float' } },
+        { field: 'money', title: '金额', span: 24, itemRender: {}, slots: { default: 'amount' } },
         { align: 'center', span: 24, slots: { default: 'action' } }
       ]
     }

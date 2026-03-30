@@ -35,8 +35,8 @@ export default Vue.extend({
         num: 4
       },
       items: [
-        { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-        { field: 'num', title: '评分', span: 24, itemRender: { }, slots: { default: 'num' } },
+        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+        { field: 'num', title: '评分', span: 24, itemRender: {}, slots: { default: 'num' } },
         { align: 'center', span: 24, slots: { default: 'action' } }
       ]
     }

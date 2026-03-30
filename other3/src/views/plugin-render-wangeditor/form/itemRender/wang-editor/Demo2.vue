@@ -35,8 +35,8 @@ export default Vue.extend({
         remark: ''
       },
       items: [
-        { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-        { field: 'remark', title: '富文本', span: 24, itemRender: { }, slots: { default: 'remark' } },
+        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+        { field: 'remark', title: '富文本', span: 24, itemRender: {}, slots: { default: 'remark' } },
         { align: 'center', span: 24, slots: { default: 'action' } }
       ]
     }

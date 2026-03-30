@@ -47,9 +47,9 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     ]
   },
   items: [
-    { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-    { field: 'date1', title: '日期', span: 24, itemRender: { }, slots: { default: 'date1' } },
-    { field: 'date2', title: '日期带时间', span: 24, itemRender: { }, slots: { default: 'date2' } },
+    { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+    { field: 'date1', title: '日期', span: 24, itemRender: {}, slots: { default: 'date1' } },
+    { field: 'date2', title: '日期带时间', span: 24, itemRender: {}, slots: { default: 'date2' } },
     { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })

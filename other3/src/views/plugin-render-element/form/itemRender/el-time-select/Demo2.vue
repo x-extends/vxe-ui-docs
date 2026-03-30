@@ -40,8 +40,8 @@ export default Vue.extend({
         ]
       },
       items: [
-        { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-        { field: 'time', title: '时间选择', span: 24, itemRender: { }, slots: { default: 'time' } },
+        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+        { field: 'time', title: '时间选择', span: 24, itemRender: {}, slots: { default: 'time' } },
         { align: 'center', span: 24, slots: { default: 'action' } }
       ]
     }

@@ -62,11 +62,11 @@ export default Vue.extend({
         ]
       },
       items: [
-        { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-        { field: 'fileList1', title: '上传附件', span: 24, itemRender: { }, slots: { default: 'fileList1' } },
-        { field: 'fileList2', title: '上传附件多选', span: 24, itemRender: { }, slots: { default: 'fileList2' } },
-        { field: 'imgList1', title: '上传图片', span: 24, itemRender: { }, slots: { default: 'imgList1' } },
-        { field: 'imgList2', title: '上传图片多选', span: 24, itemRender: { }, slots: { default: 'imgList2' } },
+        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+        { field: 'fileList1', title: '上传附件', span: 24, itemRender: {}, slots: { default: 'fileList1' } },
+        { field: 'fileList2', title: '上传附件多选', span: 24, itemRender: {}, slots: { default: 'fileList2' } },
+        { field: 'imgList1', title: '上传图片', span: 24, itemRender: {}, slots: { default: 'imgList1' } },
+        { field: 'imgList2', title: '上传图片多选', span: 24, itemRender: {}, slots: { default: 'imgList2' } },
         { align: 'center', span: 24, slots: { default: 'action' } }
       ]
     }
