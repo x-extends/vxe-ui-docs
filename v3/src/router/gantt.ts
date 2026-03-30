@@ -341,7 +341,8 @@ export const ganttRouteConfig: RouteConfig = {
       component: RouteLayout,
       children: [
         { path: 'productPlan', name: 'ComponentGanttOtherProductPlan', component: () => import('@/views/gantt/other/productPlan/CodeExample.vue') },
-        { path: 'multiBar', name: 'ComponentGanttOtherMultiBar', component: () => import('@/views/gantt/other/multiBar/CodeExample.vue') }
+        { path: 'multiBar', name: 'ComponentGanttOtherMultiBar', component: () => import('@/views/gantt/other/multiBar/CodeExample.vue') },
+        { path: 'scrollTo', name: 'ComponentGanttOtherScrollTo', component: () => import('@/views/gantt/other/scrollTo/CodeExample.vue') }
       ]
     }
   ]
