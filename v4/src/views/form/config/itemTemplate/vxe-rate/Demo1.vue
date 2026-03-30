@@ -35,8 +35,8 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     marks: 3
   },
   items: [
-    { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-    { field: 'marks', title: '评分', span: 24, itemRender: { }, slots: { default: 'marks' } },
+    { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+    { field: 'marks', title: '评分', span: 24, itemRender: {}, slots: { default: 'marks' } },
     { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })

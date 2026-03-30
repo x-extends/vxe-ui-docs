@@ -92,7 +92,7 @@ const loadList = () => {
     const ganttData: RowVO[] = []
     list.forEach(item => {
       const currRow = XEUtils.assign({}, item, { type: VxeGanttTaskType.Subview })
-      const planRow = XEUtils.assign({ }, item, {
+      const planRow = XEUtils.assign({}, item, {
         id: 10000000 + item.id,
         title: '计划',
         parentId: item.id,

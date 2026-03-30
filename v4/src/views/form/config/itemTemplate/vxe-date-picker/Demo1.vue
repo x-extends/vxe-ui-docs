@@ -69,14 +69,14 @@ const formOptions = reactive<VxeFormProps<FormDataVO>>({
     datetime: ''
   },
   items: [
-    { field: 'name', title: '名称', span: 24, itemRender: { }, slots: { default: 'name' } },
-    { field: 'date', title: '日期', span: 24, itemRender: { }, slots: { default: 'date' } },
-    { field: 'year', title: '年份', span: 24, itemRender: { }, slots: { default: 'year' } },
-    { field: 'quarter', title: '季度', span: 24, itemRender: { }, slots: { default: 'quarter' } },
-    { field: 'month', title: '月份', span: 24, itemRender: { }, slots: { default: 'month' } },
-    { field: 'week', title: '周', span: 24, itemRender: { }, slots: { default: 'week' } },
-    { field: 'time', title: '时间', span: 24, itemRender: { }, slots: { default: 'time' } },
-    { field: 'datetime', title: '日期带时间', span: 24, itemRender: { }, slots: { default: 'datetime' } },
+    { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name' } },
+    { field: 'date', title: '日期', span: 24, itemRender: {}, slots: { default: 'date' } },
+    { field: 'year', title: '年份', span: 24, itemRender: {}, slots: { default: 'year' } },
+    { field: 'quarter', title: '季度', span: 24, itemRender: {}, slots: { default: 'quarter' } },
+    { field: 'month', title: '月份', span: 24, itemRender: {}, slots: { default: 'month' } },
+    { field: 'week', title: '周', span: 24, itemRender: {}, slots: { default: 'week' } },
+    { field: 'time', title: '时间', span: 24, itemRender: {}, slots: { default: 'time' } },
+    { field: 'datetime', title: '日期带时间', span: 24, itemRender: {}, slots: { default: 'datetime' } },
     { align: 'center', span: 24, slots: { default: 'action' } }
   ]
 })
