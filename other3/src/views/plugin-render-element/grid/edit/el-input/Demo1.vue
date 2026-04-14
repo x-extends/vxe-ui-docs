@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { MessageBox } from 'element-ui'
+import { VxeUI } from 'vxe-pc-ui'
 import type { VxeGridInstance, VxeGridProps } from 'vxe-table'
 
 interface RowVO {
@@ -65,9 +65,14 @@ export default Vue.extend({
       if ($grid) {
         const { insertRecords, removeRecords, updateRecords } = $grid.getRecordset()
         if (insertRecords.length || removeRecords.length || updateRecords.length) {
-          MessageBox.alert(`insertRecords=${insertRecords.length}; removeRecords=${removeRecords.length}; updateRecords=${updateRecords.length}`)
+          VxeUI.modal.message({
+            content: `insertRecords=${insertRecords.length}; removeRecords=${removeRecords.length}; updateRecords=${updateRecords.length}`
+          })
         } else {
-          MessageBox.alert('数据未改动！')
+          VxeUI.modal.message({
+            content: '数据未改动！',
+            status: 'warning'
+          })
         }
       }
     }
