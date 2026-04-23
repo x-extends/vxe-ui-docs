@@ -111,12 +111,14 @@ const ganttEvents: VxeGanttListeners<RowVO> = {
     if ($gantt) {
       $gantt.setCurrentRow(row)
     }
+    console.log('触发 cell-menu')
   },
   menuClick ({ menu }) {
     VxeUI.modal.message({
       content: `点击了 ${menu.code}`,
       status: 'success'
     })
+    console.log('触发 menu-click')
   }
 }
 </script>
