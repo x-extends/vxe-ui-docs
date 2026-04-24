@@ -2357,6 +2357,7 @@ const routes: Array<RouteRecordRaw> = [
               { path: 'prefixIcon', name: 'ComponentDateRangePickerDatePrefixIcon', component: () => import('@/views/date-range-picker/date/prefixIcon/CodeExample.vue') },
               { path: 'suffixIcon', name: 'ComponentDateRangePickerDateSuffixIcon', component: () => import('@/views/date-range-picker/date/suffixIcon/CodeExample.vue') },
               { path: 'defVal', name: 'ComponentDateRangePickerDateDefVal', component: () => import('@/views/date-range-picker/date/defVal/CodeExample.vue') },
+              { path: 'trigger', name: 'ComponentDateRangePickerDateTrigger', component: () => import('@/views/date-range-picker/date/trigger/CodeExample.vue') },
               {
                 path: 'template',
                 component: RouteLayout,
