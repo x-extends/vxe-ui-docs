@@ -177,6 +177,7 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
             { title: '跨表拖拽', routerLink: { name: 'ComponentGanttRowDragTreeCossTable' } }
           ]
         },
+        { title: '拖拽事件', routerLink: { name: 'ComponentGanttRowDragEvents' } },
         { title: '拖拽拦截', routerLink: { name: 'ComponentGanttRowDragDragMethod' } },
         { title: '手动移动', routerLink: { name: 'ComponentGanttRowDragManual' } },
         { title: '跨表拖拽', routerLink: { name: 'ComponentGanttRowDragCossTable' } }

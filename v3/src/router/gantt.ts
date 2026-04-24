@@ -195,6 +195,7 @@ export const ganttRouteConfig: RouteConfig = {
             { path: 'cossTable', name: 'ComponentGanttRowDragTreeCossTable', component: () => import('@/views/gantt/rowDrag/tree/cossTable/CodeExample.vue') }
           ]
         },
+        { path: 'events', name: 'ComponentGanttRowDragEvents', component: () => import('@/views/gantt/rowDrag/events/CodeExample.vue') },
         { path: 'dragMethod', name: 'ComponentGanttRowDragDragMethod', component: () => import('@/views/gantt/rowDrag/dragMethod/CodeExample.vue') },
         { path: 'manual', name: 'ComponentGanttRowDragManual', component: () => import('@/views/gantt/rowDrag/manual/CodeExample.vue') },
         { path: 'cossTable', name: 'ComponentGanttRowDragCossTable', component: () => import('@/views/gantt/rowDrag/cossTable/CodeExample.vue') }
