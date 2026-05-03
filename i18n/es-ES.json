@@ -348,7 +348,8 @@
         "editCursorLock": "Bloqueo del cursor con teclas de dirección",
         "keypadDelMethod": "Personalizar acción de la tecla Delete",
         "keypadBackMethod": "Personalizar acción de la tecla Backspace",
-        "keypadBeforeEditMethod": "Prevenir edición"
+        "keypadBeforeEditMethod": "Prevenir edición",
+        "keypadUndoRedo": "撤销和重做"
       }
     },
     "extendPivotTable": {

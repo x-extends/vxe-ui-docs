@@ -348,7 +348,8 @@
         "editCursorLock": "方向キーでカーソルをロック",
         "keypadDelMethod": "Deleteキーの動作をカスタマイズ",
         "keypadBackMethod": "Backspaceキーの動作をカスタマイズ",
-        "keypadBeforeEditMethod": "編集を防止"
+        "keypadBeforeEditMethod": "編集を防止",
+        "keypadUndoRedo": "撤销和重做"
       }
     },
     "extendPivotTable": {

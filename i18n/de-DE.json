@@ -348,7 +348,8 @@
         "editCursorLock": "方向键锁定光标",
         "keypadDelMethod": "自定义按 Delete 键删除",
         "keypadBackMethod": "自定义按 Backspace 键删除",
-        "keypadBeforeEditMethod": "阻止编辑"
+        "keypadBeforeEditMethod": "阻止编辑",
+        "keypadUndoRedo": "撤销和重做"
       }
     },
     "extendPivotTable": {

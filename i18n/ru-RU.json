@@ -348,7 +348,8 @@
         "editCursorLock": "Блокировка курсора клавишами направления",
         "keypadDelMethod": "Пользовательское действие клавиши Delete",
         "keypadBackMethod": "Пользовательское действие клавиши Backspace",
-        "keypadBeforeEditMethod": "Запретить редактирование"
+        "keypadBeforeEditMethod": "Запретить редактирование",
+        "keypadUndoRedo": "撤销和重做"
       }
     },
     "extendPivotTable": {
