@@ -428,6 +428,7 @@
         "dependencyLineStatus": "Line status color",
         "dependencyLineType": "Line style type",
         "dependencyTreeLinks": "Connection lines",
+        "dependencyMoveUpdate": "拖拽任务联动更新依赖任务",
         "dependencyManual": "Manual connection line operation",
         "dependencyLineWidth": "Custom line width",
         "dependencyLineColor": "Custom line color",

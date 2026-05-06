@@ -428,6 +428,7 @@
         "dependencyLineStatus": "線の状態色",
         "dependencyLineType": "線のスタイルタイプ",
         "dependencyTreeLinks": "接続線",
+        "dependencyMoveUpdate": "拖拽任务联动更新依赖任务",
         "dependencyManual": "接続線の手動操作",
         "dependencyLineWidth": "線の幅をカスタマイズ",
         "dependencyLineColor": "線の色をカスタマイズ",

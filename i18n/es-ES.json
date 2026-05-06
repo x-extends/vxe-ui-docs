@@ -428,6 +428,7 @@
         "dependencyLineStatus": "Color de estado de línea",
         "dependencyLineType": "Tipo de estilo de línea",
         "dependencyTreeLinks": "Líneas de conexión",
+        "dependencyMoveUpdate": "拖拽任务联动更新依赖任务",
         "dependencyManual": "Operación manual de líneas de conexión",
         "dependencyLineWidth": "Ancho personalizado de línea",
         "dependencyLineColor": "Color personalizado de línea",

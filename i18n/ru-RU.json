@@ -428,6 +428,7 @@
         "dependencyLineStatus": "Цвет состояния линии",
         "dependencyLineType": "Тип стиля линии",
         "dependencyTreeLinks": "Связующие линии",
+        "dependencyMoveUpdate": "拖拽任务联动更新依赖任务",
         "dependencyManual": "Ручное управление связями",
         "dependencyLineWidth": "Пользовательская ширина линии",
         "dependencyLineColor": "Пользовательский цвет линии",

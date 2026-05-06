@@ -428,6 +428,7 @@
         "dependencyLineStatus": "線狀態顏色",
         "dependencyLineType": "線樣式類型",
         "dependencyTreeLinks": "連接線",
+        "dependencyMoveUpdate": "拖拽任务联动更新依赖任务",
         "dependencyManual": "手動操作連接線",
         "dependencyLineWidth": "自定義線寬度",
         "dependencyLineColor": "自定義線顏色",
