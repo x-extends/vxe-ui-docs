@@ -1833,6 +1833,7 @@ const routes: Array<RouteRecordRaw> = [
             children: [
               { path: 'size', name: 'ComponentDatePickerDateSize', component: () => import('@/views/date-picker/date/size/CodeExample.vue') },
               { path: 'base', name: 'ComponentDatePickerDateBase', component: () => import('@/views/date-picker/date/base/CodeExample.vue') },
+              { path: 'labelFormat', name: 'ComponentDatePickerDateLabelFormat', component: () => import('@/views/date-picker/date/labelFormat/CodeExample.vue') },
               { path: 'clearable', name: 'ComponentDatePickerDateClearable', component: () => import('@/views/date-picker/date/clearable/CodeExample.vue') },
               { path: 'disabled', name: 'ComponentDatePickerDateDisabled', component: () => import('@/views/date-picker/date/disabled/CodeExample.vue') },
               { path: 'readonly', name: 'ComponentDatePickerDateReadonly', component: () => import('@/views/date-picker/date/readonly/CodeExample.vue') },
