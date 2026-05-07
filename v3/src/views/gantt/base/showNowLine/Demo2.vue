@@ -32,17 +32,19 @@ export default Vue.extend({
 
     const ganttOptions: VxeGanttProps<RowVO> & { taskViewConfig: VxeGanttPropTypes.TaskViewConfig } = {
       border: true,
+      height: 300,
       taskBarConfig: {
         showProgress: true,
         showContent: true
       },
+      taskNowLineConfig,
       taskViewConfig: {
+        scales: ['month', 'week'],
         showNowLine: true,
         tableStyle: {
           width: 480
         }
       },
-      taskNowLineConfig,
       columns: [
         { type: 'seq', width: 70 },
         { field: 'title', title: '任务名称' },
@@ -50,9 +52,14 @@ export default Vue.extend({
         { field: 'end', title: '结束时间', width: 100 }
       ],
       data: [
-        { id: 10001, title: 'A项目', start: XEUtils.getWhatDay(new Date(), -6), end: XEUtils.getWhatDay(new Date(), -2), progress: 40 },
-        { id: 10002, title: '城市道路修理进度', start: XEUtils.getWhatDay(new Date(), -3), end: XEUtils.getWhatDay(new Date(), 3), progress: 60 },
-        { id: 10003, title: 'B大工程', start: XEUtils.getWhatDay(new Date(), 1), end: XEUtils.getWhatDay(new Date(), 9), progress: 90 }
+        { id: 10001, title: 'A项目', start: XEUtils.getWhatDay(new Date(), -6), end: XEUtils.getWhatDay(new Date(), 6), progress: 40 },
+        { id: 10002, title: 'B项目', start: XEUtils.getWhatDay(new Date(), -3), end: XEUtils.getWhatDay(new Date(), 3), progress: 60 },
+        { id: 10003, title: 'C项目', start: XEUtils.getWhatDay(new Date(), 1), end: XEUtils.getWhatDay(new Date(), 9), progress: 90 },
+        { id: 10004, title: 'D项目', start: XEUtils.getWhatDay(new Date(), -15), end: XEUtils.getWhatDay(new Date(), -3), progress: 95 },
+        { id: 10005, title: 'E项目', start: XEUtils.getWhatDay(new Date(), -22), end: XEUtils.getWhatDay(new Date(), -8), progress: 80 },
+        { id: 10006, title: 'F项目', start: XEUtils.getWhatDay(new Date(), -1), end: XEUtils.getWhatDay(new Date(), 8), progress: 60 },
+        { id: 10007, title: 'G项目', start: XEUtils.getWhatDay(new Date(), 1), end: XEUtils.getWhatDay(new Date(), 9), progress: 90 },
+        { id: 10008, title: 'H项目', start: XEUtils.getWhatDay(new Date(), 11), end: XEUtils.getWhatDay(new Date(), 19), progress: 100 }
       ]
     }
 
