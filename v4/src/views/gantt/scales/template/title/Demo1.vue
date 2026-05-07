@@ -19,12 +19,18 @@ interface RowVO {
 const ganttOptions = reactive<VxeGanttProps<RowVO>>({
   border: true,
   taskViewConfig: {
+    viewStyle: {
+      cellWidth: 50
+    },
     scales: [
       {
         type: 'month',
         slots: {
           title: ({ dateObj }) => {
-            return <span style="color: red;">{`自定义内容：第${dateObj.M}月份`}</span>
+            return <span>
+              <vxe-icon name="flag-fill" status="error"></vxe-icon>
+              <span style="color: red;">{`自定义内容：第${dateObj.M}月份`}</span>
+            </span>
           }
         }
       },
@@ -32,7 +38,10 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
         type: 'date',
         slots: {
           title: ({ dateObj }) => {
-            return <span style="color: blue;">{dateObj.d}</span>
+            return <span>
+              <vxe-icon name="calendar" status="primary"></vxe-icon>
+              <span style="color: blue;">{dateObj.d}</span>
+            </span>
           }
         }
       }
