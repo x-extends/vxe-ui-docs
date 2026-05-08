@@ -428,7 +428,7 @@
         "dependencyLineStatus": "线状态颜色",
         "dependencyLineType": "线样式类型",
         "dependencyTreeLinks": "连接线",
-        "dependencyMoveUpdate": "拖拽任务联动更新依赖任务",
+        "dependencyMoveUpdate": "拖拽任务自定义更新关联任务",
         "dependencyManual": "手动操作连接线",
         "dependencyLineWidth": "自定义线宽度",
         "dependencyLineColor": "自定义线颜色",
