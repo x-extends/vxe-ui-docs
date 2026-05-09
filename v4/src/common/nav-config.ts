@@ -1751,6 +1751,13 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: '自定义根节点',
+        children: [
+          { title: '指定根节点的父级节点', routerLink: { name: 'ComponentTreeRootNodeRootParentValue' } },
+          { title: '指定根节点', routerLink: { name: 'ComponentTreeRootNodeRootValues' } }
+        ]
+      },
+      {
         title: '高亮节点',
         children: [
           { title: '当前节点', routerLink: { name: 'ComponentTreeCurrentBase' } },

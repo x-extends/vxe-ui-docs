@@ -19,10 +19,10 @@
     "vue-router": "~3.5.1",
     "vuex": "~3.4.0",
     "vxe-design": "~3.0.0",
-    "vxe-gantt": "~3.4.1",
-    "vxe-pc-ui": "~3.14.5",
-    "vxe-table": "~3.21.0-beta.2",
-    "xe-utils": "^4.0.6"
+    "vxe-gantt": "~3.4.2",
+    "vxe-pc-ui": "~3.14.6",
+    "vxe-table": "~3.21.0-beta.3",
+    "xe-utils": "^4.0.7"
   },
   "devDependencies": {
     "@types/node": "~24.1.0",

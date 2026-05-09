@@ -4206,6 +4206,14 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'rootNode',
+            component: RouteLayout,
+            children: [
+              { path: 'rootParentValue', name: 'ComponentTreeRootNodeRootParentValue', component: () => import('@/views/tree/rootNode/rootParentValue/CodeExample.vue') },
+              { path: 'rootValues', name: 'ComponentTreeRootNodeRootValues', component: () => import('@/views/tree/rootNode/rootValues/CodeExample.vue') }
+            ]
+          },
+          {
             path: 'current',
             component: RouteLayout,
             children: [
