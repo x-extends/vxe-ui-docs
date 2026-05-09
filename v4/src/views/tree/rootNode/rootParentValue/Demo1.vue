@@ -1,5 +1,8 @@
 <template>
   <div>
+    <vxe-button status="primary" @click="treeOptions.rootParentValue = 'root'">设置 'root'</vxe-button>
+    <vxe-button status="primary" @click="treeOptions.rootParentValue = 'top'">设置 'top'</vxe-button>
+
     <vxe-tree v-bind="treeOptions"></vxe-tree>
   </div>
 </template>
@@ -22,7 +25,7 @@ const treeOptions = reactive<VxeTreeProps<NodeVO>>({
     isHover: true
   },
   data: [
-    { title: '节点2', id: '2', parentId: 'root' },
+    { title: '节点2', id: '2', parentId: 'top' },
     { title: '节点3', id: '3', parentId: 'root' },
     { title: '节点3-1', id: '31', parentId: '3' },
     { title: '节点3-2', id: '32', parentId: '3' },
@@ -33,7 +36,7 @@ const treeOptions = reactive<VxeTreeProps<NodeVO>>({
     { title: '节点3-3-2', id: '332', parentId: '33' },
     { title: '节点3-3-3', id: '333', parentId: '33' },
     { title: '节点3-4', id: '34', parentId: '3' },
-    { title: '节点4', id: '4', parentId: 'root' },
+    { title: '节点4', id: '4', parentId: 'top' },
     { title: '节点4-1', id: '41', parentId: '4' },
     { title: '节点4-1-1', id: '411', parentId: '42' },
     { title: '节点4-1-2', id: '412', parentId: '42' },
