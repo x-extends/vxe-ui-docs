@@ -121,6 +121,7 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: '导出 XLSX 文件', routerLink: { name: 'PluginExportXlsxTableExport' } },
           { title: '导入 XLSX 格式', routerLink: { name: 'PluginExportXlsxTableImport' } },
+          { title: '格式化单元格内容', routerLink: { name: 'PluginExportXlsxTableFormat' } },
           { title: '使用工具栏', routerLink: { name: 'PluginExportXlsxTableToolbar' } },
           { title: '高级导出', routerLink: { name: 'PluginExportXlsxTableAdvanced' } },
           { title: '大数据量导出', routerLink: { name: 'PluginExportXlsxTableScroll' } },
@@ -143,6 +144,7 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: '导出 XLSX 文件', routerLink: { name: 'PluginExportXlsxGridExport' } },
           { title: '导入 XLSX 格式', routerLink: { name: 'PluginExportXlsxGridImport' } },
+          { title: '格式化单元格内容', routerLink: { name: 'PluginExportXlsxGridFormat' } },
           { title: '使用工具栏', routerLink: { name: 'PluginExportXlsxGridToolbar' } },
           { title: '高级导出', routerLink: { name: 'PluginExportXlsxGridAdvanced' } },
           { title: '高级导入', routerLink: { name: 'PluginExportXlsxGridOpenImport' } },

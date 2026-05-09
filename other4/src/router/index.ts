@@ -340,6 +340,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'PluginExportXlsxTableImport',
             component: () => import('@/views/plugin-export-xlsx/table/import/CodeExample.vue')
           },
+          { path: 'format', name: 'PluginExportXlsxTableFormat', component: () => import('@/views/plugin-export-xlsx/table/format/CodeExample.vue') },
           {
             path: 'toolbar',
             name: 'PluginExportXlsxTableToolbar',
@@ -412,6 +413,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'PluginExportXlsxGridImport',
             component: () => import('@/views/plugin-export-xlsx/grid/import/CodeExample.vue')
           },
+          { path: 'format', name: 'PluginExportXlsxGridFormat', component: () => import('@/views/plugin-export-xlsx/grid/format/CodeExample.vue') },
           {
             path: 'toolbar',
             name: 'PluginExportXlsxGridToolbar',
