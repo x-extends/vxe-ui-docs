@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-button @click="exportEvent">直接导出 XLSX 文件</vxe-button>
+    <vxe-button tatus="primary" @click="exportEvent">直接导出 XLSX 文件</vxe-button>
     <vxe-table
       border
       show-footer
