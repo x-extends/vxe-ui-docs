@@ -6,7 +6,7 @@
           通过 <ApiLink name="grid" prop="export-method"/> 可以格式化导出单元格的内容
         </vxe-tip>
         <vxe-tip status="error" title="小提示">
-          优先级 <ApiLink name="grid" prop="export-method"/> > <ApiLink name="grid" prop="formatter"/>，两者区别是一个会显示在单元格中，一个不会显示在单元格中
+          优先级 <ApiLink name="grid" prop="export-method"/> > <ApiLink name="grid" prop="formatter"/> > <ApiLink name="grid" prop="field"/>，两者区别是一个会显示在单元格中，一个不会显示在单元格中
         </vxe-tip>
       </template>
     </CodeLight>
