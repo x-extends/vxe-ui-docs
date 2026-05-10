@@ -36,7 +36,7 @@ export default Vue.extend({
   },
   methods: {
     openEvent () {
-      open(`${process.env.VUE_APP_SITE_PLUGIN_URL}/pluginDocs/table${process.env.VUE_APP_VXE_VERSION}/#${decodeURIComponent(`${this.$route.query.previewPath || ''}`)}`)
+      open(`${process.env.VUE_APP_SITE_PLUGIN_URL}#${decodeURIComponent(`${this.$route.query.previewPath || ''}`)}`)
     }
   }
 })

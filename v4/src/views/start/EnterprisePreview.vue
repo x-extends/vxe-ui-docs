@@ -32,7 +32,7 @@ const previewUrl = computed(() => {
 })
 
 const openEvent = () => {
-  open(`${import.meta.env.VITE_APP_SITE_PLUGIN_URL}/pluginDocs/table${import.meta.env.VITE_APP_VXE_VERSION}/#${decodeURIComponent(`${route.query.previewPath || ''}`)}`)
+  open(`${import.meta.env.VITE_APP_SITE_PLUGIN_URL}#${decodeURIComponent(`${route.query.previewPath || ''}`)}`)
 }
 </script>
 
