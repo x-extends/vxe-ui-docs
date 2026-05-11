@@ -8,7 +8,7 @@
       show-overflow
       keep-source
       ref="tableRef"
-      :edit-config="{ trigger: 'click', mode: 'row', showStatus: true}"
+      :edit-config="{ trigger: 'click', mode: 'row'}"
       :data="tableData">
       <vxe-column type="checkbox" width="60"></vxe-column>
       <vxe-column type="seq" title="Number" width="80"></vxe-column>
@@ -20,24 +20,12 @@
           <span>{{ row.name }}</span>
         </template>
       </vxe-column>
-      <vxe-column title="下拉框" field="sex" width="200" :edit-render="{}">
-        <template #default="{ row }">
-          <span>{{ formatSexLabel([row.sex]) }}</span>
-        </template>
+      <vxe-column title="级联选择" field="region" width="200" :edit-render="{}">
         <template #edit="{ row }">
-          <el-select v-model="row.sex">
-            <el-option v-for="item in sexOptions" :key="item.value" :value="item.value" :label="item.label"></el-option>
-          </el-select>
+          <el-cascader v-model="row.region" :options="regionList"></el-cascader>
         </template>
-      </vxe-column>
-      <vxe-column title="下拉框多选" field="sexList" width="200" :edit-render="{}">
         <template #default="{ row }">
-          <span>{{ formatSexLabel(row.sexList) }}</span>
-        </template>
-        <template #edit="{ row }">
-          <el-select v-model="row.sexList" multiple>
-            <el-option v-for="item in sexOptions" :key="item.value" :value="item.value" :label="item.label"></el-option>
-          </el-select>
+          <span>{{ formatRegionLabel(row.region) }}</span>
         </template>
       </vxe-column>
     </vxe-table>
@@ -52,30 +40,65 @@ import type { VxeTableInstance } from 'vxe-table'
 interface RowVO {
   id: number
   name: string
-  sex: string
-  sexList: string[]
+  region: number[]
 }
 
 const tableRef = ref<VxeTableInstance<RowVO>>()
 
-const sexOptions = ref([
-  { label: '男', value: '1' },
-  { label: '女', value: '0' }
-])
+const regionList = [
+  {
+    label: '北京',
+    value: 1,
+    children: [
+      { value: 3, label: '东城区' },
+      { value: 4, label: '西城区' }
+    ]
+  },
+  {
+    label: '上海',
+    value: 21,
+    children: [
+      { value: 23, label: '黄浦区' },
+      { value: 24, label: '卢湾区' }
+    ]
+  },
+  {
+    label: '广东',
+    value: 42,
+    children: [
+      { value: 43, label: '广州市' },
+      { value: 67, label: '深圳市' }
+    ]
+  }
+]
 
 const tableData = ref<RowVO[]>([
-  { id: 10001, name: 'Test1', sex: '1', sexList: [] },
-  { id: 10002, name: 'Test2', sex: '', sexList: ['0', '1'] }
+  { id: 10001, name: 'Test1', region: [] },
+  { id: 10002, name: 'Test2', region: [21, 24] }
 ])
 
-const formatSexLabel = (sexList: string[]) => {
-  if (sexList) {
-    return sexList.map(sex => {
-      const item = sexOptions.value.find(item => item.value === sex)
-      return item ? item.label : sex
-    }).join(',')
+const getLabelByValue = (vals: number[], list: any[], separator = '-') => {
+  let currentList = list
+  const labels = []
+  for (let i = 0; i < vals.length; i++) {
+    const targetValue = vals[i]
+    const found = currentList.find(item => item.value === targetValue)
+    if (!found) {
+      return ''
+    }
+    labels.push(found.label)
+    if (i < vals.length - 1) {
+      if (!found.children) {
+        return ''
+      }
+      currentList = found.children
+    }
   }
-  return ''
+  return labels.join(separator)
+}
+
+const formatRegionLabel = (regionVals: number[]) => {
+  return getLabelByValue(regionVals, regionList)
 }
 
 const insertEvent = async () => {

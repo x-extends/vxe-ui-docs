@@ -11,11 +11,11 @@
         <span>{{ row.name }}</span>
       </template>
 
-      <template #edit_role="{ row }">
-        <el-autocomplete v-model="row.role" :fetch-suggestions="roleFetchSuggestions"></el-autocomplete>
+      <template #edit_region="{ row }">
+        <el-cascader v-model="row.region" :options="regionList"></el-cascader>
       </template>
-      <template #default_role="{ row }">
-        <span>{{ row.role }}</span>
+      <template #default_region="{ row }">
+        <span>{{ formatRegionLabel(row.region) }}</span>
       </template>
     </vxe-grid>
   </div>
@@ -29,16 +29,36 @@ import { VxeGridInstance, VxeGridProps } from 'vxe-table'
 interface RowVO {
   id: number
   name: string
-  role: string
+  region: number[]
 }
 
 const gridRef = ref<VxeGridInstance<RowVO>>()
 
-const restaurants = [
-  { value: 'Designer', name: 'Designer' },
-  { value: 'Develop', name: 'Develop' },
-  { value: 'Test', name: 'Test' },
-  { value: 'PM', name: 'PM' }
+const regionList = [
+  {
+    label: '北京',
+    value: 1,
+    children: [
+      { value: 3, label: '东城区' },
+      { value: 4, label: '西城区' }
+    ]
+  },
+  {
+    label: '上海',
+    value: 21,
+    children: [
+      { value: 23, label: '黄浦区' },
+      { value: 24, label: '卢湾区' }
+    ]
+  },
+  {
+    label: '广东',
+    value: 42,
+    children: [
+      { value: 43, label: '广州市' },
+      { value: 67, label: '深圳市' }
+    ]
+  }
 ]
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
@@ -50,28 +70,44 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     mode: 'row'
   },
   editRules: {
-    role: [
-      { required: true, content: '请输入' }
+    region: [
+      { required: true, type: 'array', content: '请输入' }
     ]
   },
   columns: [
     { type: 'checkbox', width: 60 },
     { type: 'seq', title: 'Number', width: 80 },
     { field: 'name', title: 'Name', minWidth: 140, editRender: { autoFocus: true }, slots: { edit: 'edit_name', default: 'default_name' } },
-    { field: 'role', title: '自动补全输入', width: 200, editRender: { autoFocus: true }, slots: { edit: 'edit_role', default: 'default_role' } }
+    { field: 'region', title: '级联选择', width: 200, editRender: { autoFocus: true }, slots: { edit: 'edit_region', default: 'default_region' } }
   ],
   data: [
-    { id: 10001, name: 'Test1', role: '' },
-    { id: 10002, name: 'Test2', role: 'Develop' }
+    { id: 10001, name: 'Test1', region: [] },
+    { id: 10002, name: 'Test2', region: [21, 24] }
   ]
 })
 
-const roleFetchSuggestions = (queryString: any, cb: (params: any) => void) => {
-  const results = queryString ? restaurants.filter(item => (item.name.toLowerCase().indexOf(queryString.toLowerCase()) === 0)) : restaurants
-  // 模拟后端接口
-  setTimeout(() => {
-    cb(results)
-  }, 500 * Math.random())
+const getLabelByValue = (vals: number[], list: any[], separator = '-') => {
+  let currentList = list
+  const labels = []
+  for (let i = 0; i < vals.length; i++) {
+    const targetValue = vals[i]
+    const found = currentList.find(item => item.value === targetValue)
+    if (!found) {
+      return ''
+    }
+    labels.push(found.label)
+    if (i < vals.length - 1) {
+      if (!found.children) {
+        return ''
+      }
+      currentList = found.children
+    }
+  }
+  return labels.join(separator)
+}
+
+const formatRegionLabel = (regionVals: number[]) => {
+  return getLabelByValue(regionVals, regionList)
 }
 
 const insertEvent = async () => {

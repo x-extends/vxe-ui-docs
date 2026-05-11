@@ -7,5 +7,13 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="plugin-render-element/table/edit/el-time-select/Demo2">
+      <template #tip>
+        <vxe-tip status="primary" title="el-time-select">
+          使用插槽式
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>

@@ -49,8 +49,8 @@ const gridOptions: VxeGridProps<RowVO> = {
     { type: 'checkbox', width: 60 },
     { type: 'seq', title: 'Number', width: 80 },
     { field: 'name', title: 'Name', minWidth: 140, editRender: { name: 'ElInput' } },
-    { field: 'date1', title: '日期', width: 200, editRender: { autofocus: '.el-input__inner' }, slots: { edit: 'edit_date1' } },
-    { field: 'date2', title: '日期带时间', width: 220, editRender: { autofocus: '.el-input__inner' }, slots: { edit: 'edit_date2' } }
+    { field: 'date1', title: '日期', width: 200, editRender: { autoFocus: true }, slots: { edit: 'edit_date1' } },
+    { field: 'date2', title: '日期带时间', width: 220, editRender: { autoFocus: true }, slots: { edit: 'edit_date2' } }
 
   ],
   data: [
