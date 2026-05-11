@@ -85,7 +85,7 @@ const tableData = ref<RowVO[]>([
 
 const getLabelByValue = (vals: number[], list: RegionVO[], separator = '-') => {
   let currentList = list
-  const labels = []
+  const labels: string[] = []
   for (let i = 0; i < vals.length; i++) {
     const targetValue = vals[i]
     const found = currentList.find(item => item.value === targetValue)
