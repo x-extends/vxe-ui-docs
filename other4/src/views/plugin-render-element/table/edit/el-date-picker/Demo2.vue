@@ -8,7 +8,6 @@
       show-overflow
       keep-source
       ref="tableRef"
-      :edit-rules="editRules"
       :edit-config="{ trigger: 'click', mode: 'row'}"
       :data="tableData">
       <vxe-column type="checkbox" width="60"></vxe-column>
@@ -21,12 +20,20 @@
           <span>{{ row.name }}</span>
         </template>
       </vxe-column>
-      <vxe-column title="输入框" field="nickname" width="200" :edit-render="{ autoFocus: true }">
+      <vxe-column title="日期" field="date1" width="200" :edit-render="{ autoFocus: true }">
         <template #edit="{ row }">
-          <el-input v-model="row.nickname"></el-input>
+          <el-date-picker v-model="row.date1" type="date" value-format="YYYY-MM-DD"></el-date-picker>
         </template>
         <template #default="{ row }">
-          <span>{{ row.nickname }}</span>
+          <span>{{ row.date1 }}</span>
+        </template>
+      </vxe-column>
+      <vxe-column title="日期带时间" field="date2" width="200" :edit-render="{ autoFocus: true }">
+        <template #edit="{ row }">
+          <el-date-picker v-model="row.date2" type="datetime"  value-format="YYYY-MM-DD HH:mm:ss"></el-date-picker>
+        </template>
+        <template #default="{ row }">
+          <span>{{ row.date2 }}</span>
         </template>
       </vxe-column>
     </vxe-table>
@@ -34,27 +41,22 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive } from 'vue'
+import { ref } from 'vue'
 import { ElMessageBox } from 'element-plus'
-import type { VxeTableInstance, VxeTablePropTypes } from 'vxe-table'
+import type { VxeTableInstance } from 'vxe-table'
 
 interface RowVO {
   id: number
   name: string
-  nickname: string
+  date1: string
+  date2: string
 }
 
 const tableRef = ref<VxeTableInstance<RowVO>>()
 
-const editRules = reactive<VxeTablePropTypes.EditRules>({
-  nickname: [
-    { required: true, content: '请输入' }
-  ]
-})
-
 const tableData = ref<RowVO[]>([
-  { id: 10001, name: 'Test1', nickname: 'Nickname11' },
-  { id: 10002, name: 'Test2', nickname: '' }
+  { id: 10001, name: 'Test1', date1: '', date2: '' },
+  { id: 10002, name: 'Test2', date1: '2018-01-01', date2: '2018-01-01 10:10:30' }
 ])
 
 const insertEvent = async () => {

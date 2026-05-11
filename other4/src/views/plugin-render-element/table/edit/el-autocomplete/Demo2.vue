@@ -8,7 +8,6 @@
       show-overflow
       keep-source
       ref="tableRef"
-      :edit-rules="editRules"
       :edit-config="{ trigger: 'click', mode: 'row'}"
       :data="tableData">
       <vxe-column type="checkbox" width="60"></vxe-column>
@@ -21,12 +20,12 @@
           <span>{{ row.name }}</span>
         </template>
       </vxe-column>
-      <vxe-column title="输入框" field="nickname" width="200" :edit-render="{ autoFocus: true }">
+      <vxe-column title="自动补全输入" field="role" width="200" :edit-render="{ autoFocus: true }">
         <template #edit="{ row }">
-          <el-input v-model="row.nickname"></el-input>
+          <el-autocomplete v-model="row.role" :fetch-suggestions="roleFetchSuggestions"></el-autocomplete>
         </template>
         <template #default="{ row }">
-          <span>{{ row.nickname }}</span>
+          <span>{{ row.role }}</span>
         </template>
       </vxe-column>
     </vxe-table>
@@ -34,28 +33,37 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive } from 'vue'
+import { ref } from 'vue'
 import { ElMessageBox } from 'element-plus'
-import type { VxeTableInstance, VxeTablePropTypes } from 'vxe-table'
+import type { VxeTableInstance } from 'vxe-table'
 
 interface RowVO {
   id: number
   name: string
-  nickname: string
+  role: string
 }
 
 const tableRef = ref<VxeTableInstance<RowVO>>()
 
-const editRules = reactive<VxeTablePropTypes.EditRules>({
-  nickname: [
-    { required: true, content: '请输入' }
-  ]
-})
+const restaurants = [
+  { value: 'Designer', name: 'Designer' },
+  { value: 'Develop', name: 'Develop' },
+  { value: 'Test', name: 'Test' },
+  { value: 'PM', name: 'PM' }
+]
 
 const tableData = ref<RowVO[]>([
-  { id: 10001, name: 'Test1', nickname: 'Nickname11' },
-  { id: 10002, name: 'Test2', nickname: '' }
+  { id: 10001, name: 'Test1', role: '' },
+  { id: 10002, name: 'Test2', role: 'Develop' }
 ])
+
+const roleFetchSuggestions = (queryString: any, cb: (params: any) => void) => {
+  const results = queryString ? restaurants.filter(item => (item.name.toLowerCase().indexOf(queryString.toLowerCase()) === 0)) : restaurants
+  // 模拟后端接口
+  setTimeout(() => {
+    cb(results)
+  }, 500 * Math.random())
+}
 
 const insertEvent = async () => {
   const $table = tableRef.value

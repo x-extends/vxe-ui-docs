@@ -3,7 +3,15 @@
     <vxe-button @click="insertEvent">新增</vxe-button>
     <vxe-button @click="saveEvent">保存</vxe-button>
 
-    <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
+    <vxe-grid ref="gridRef" v-bind="gridOptions">
+      <template #edit_name="{ row }">
+        <el-input v-model="row.name"></el-input>
+      </template>
+
+      <template #edit_num="{ row }">
+        <el-input-number v-model="row.num"></el-input-number>
+      </template>
+    </vxe-grid>
   </div>
 </template>
 
@@ -36,8 +44,8 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   columns: [
     { type: 'checkbox', width: 60 },
     { type: 'seq', title: 'Number', width: 80 },
-    { field: 'name', title: 'Name', minWidth: 140, editRender: { name: 'ElInput' } },
-    { field: 'num', title: '数字输入框', width: 200, align: 'center', editRender: { name: 'ElInputNumber' } }
+    { field: 'name', title: 'Name', minWidth: 140, editRender: { autoFocus: true }, slots: { edit: 'edit_name' } },
+    { field: 'num', title: '数字输入框', width: 200, align: 'center', editRender: { autoFocus: true }, slots: { edit: 'edit_num' } }
   ],
   data: [
     { id: 10001, name: 'Test1', num: null },

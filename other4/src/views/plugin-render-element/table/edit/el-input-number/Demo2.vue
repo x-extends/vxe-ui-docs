@@ -12,14 +12,20 @@
       :data="tableData">
       <vxe-column type="checkbox" width="60"></vxe-column>
       <vxe-column type="seq" title="Number" width="80"></vxe-column>
-      <vxe-column title="Name" field="name" min-width="140" :edit-render="{ autofocus: '.el-input__inner' }">
+      <vxe-column title="Name" field="name" min-width="140" :edit-render="{ autoFocus: true }">
         <template #edit="{ row }">
           <el-input v-model="row.name"></el-input>
         </template>
+        <template #default="{ row }">
+          <span>{{ row.name }}</span>
+        </template>
       </vxe-column>
-      <vxe-column title="数字输入框" field="num" width="200" align="center" :edit-render="{ autofocus: '.el-input__inner' }">
+      <vxe-column title="数字输入框" field="num" width="200" align="center" :edit-render="{ autoFocus: true }">
         <template #edit="{ row }">
           <el-input-number v-model="row.num"></el-input-number>
+        </template>
+        <template #default="{ row }">
+          <span>{{ row.num }}</span>
         </template>
       </vxe-column>
     </vxe-table>

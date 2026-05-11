@@ -44,8 +44,8 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   columns: [
     { type: 'checkbox', width: 60 },
     { type: 'seq', title: 'Number', width: 80 },
-    { field: 'name', title: 'Name', minWidth: 140, editRender: { autofocus: '.el-input__inner' }, slots: { edit: 'edit_name' } },
-    { field: 'nickname', title: '输入框', width: 200, editRender: { autofocus: '.el-input__inner' }, slots: { edit: 'edit_nickname' } }
+    { field: 'name', title: 'Name', minWidth: 140, editRender: { autoFocus: true }, slots: { edit: 'edit_name' } },
+    { field: 'nickname', title: '输入框', width: 200, editRender: { autoFocus: true }, slots: { edit: 'edit_nickname' } }
   ],
   data: [
     { id: 10001, name: 'Test1', nickname: 'Nickname11' },

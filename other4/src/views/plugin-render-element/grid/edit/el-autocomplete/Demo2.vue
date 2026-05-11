@@ -3,22 +3,37 @@
     <vxe-button @click="insertEvent">新增</vxe-button>
     <vxe-button @click="saveEvent">保存</vxe-button>
 
-    <vxe-grid ref="gridRef" v-bind="gridOptions"></vxe-grid>
+    <vxe-grid ref="gridRef" v-bind="gridOptions">
+      <template #edit_name="{ row }">
+        <el-input v-model="row.name"></el-input>
+      </template>
+
+      <template #edit_role="{ row }">
+        <el-autocomplete v-model="row.role" :fetch-suggestions="roleFetchSuggestions"></el-autocomplete>
+      </template>
+    </vxe-grid>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 import { ElMessageBox } from 'element-plus'
-import type { VxeGridInstance, VxeGridProps } from 'vxe-table'
+import { VxeGridInstance, VxeGridProps } from 'vxe-table'
 
 interface RowVO {
   id: number
   name: string
-  num: number | null
+  role: string
 }
 
 const gridRef = ref<VxeGridInstance<RowVO>>()
+
+const restaurants = [
+  { value: 'Designer', name: 'Designer' },
+  { value: 'Develop', name: 'Develop' },
+  { value: 'Test', name: 'Test' },
+  { value: 'PM', name: 'PM' }
+]
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
@@ -29,21 +44,29 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
     mode: 'row'
   },
   editRules: {
-    num: [
+    role: [
       { required: true, content: '请输入' }
     ]
   },
   columns: [
     { type: 'checkbox', width: 60 },
     { type: 'seq', title: 'Number', width: 80 },
-    { field: 'name', title: 'Name', minWidth: 140, editRender: { name: 'ElInput' } },
-    { field: 'num', title: '数字输入框', width: 200, align: 'center', editRender: { name: 'ElInputNumber' } }
+    { field: 'name', title: 'Name', minWidth: 140, editRender: { autoFocus: true }, slots: { edit: 'edit_name' } },
+    { field: 'role', title: '自动补全输入', width: 200, editRender: { autoFocus: true }, slots: { edit: 'edit_role' } }
   ],
   data: [
-    { id: 10001, name: 'Test1', num: null },
-    { id: 10002, name: 'Test2', num: 3 }
+    { id: 10001, name: 'Test1', role: '' },
+    { id: 10002, name: 'Test2', role: 'Develop' }
   ]
 })
+
+const roleFetchSuggestions = (queryString: any, cb: (params: any) => void) => {
+  const results = queryString ? restaurants.filter(item => (item.name.toLowerCase().indexOf(queryString.toLowerCase()) === 0)) : restaurants
+  // 模拟后端接口
+  setTimeout(() => {
+    cb(results)
+  }, 500 * Math.random())
+}
 
 const insertEvent = async () => {
   const $grid = gridRef.value
