@@ -9,7 +9,7 @@
 
     <CodeLight path="gantt/footer/footerData/Demo2">
       <template #tip>
-        <vxe-tip status="primary">多行表尾数据</vxe-tip>
+        <vxe-tip status="primary">多行表尾数据，如果需要展示多行，传数组格式</vxe-tip>
       </template>
     </CodeLight>
   </div>
