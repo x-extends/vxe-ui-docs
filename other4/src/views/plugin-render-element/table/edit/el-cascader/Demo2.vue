@@ -77,7 +77,7 @@ const tableData = ref<RowVO[]>([
   { id: 10002, name: 'Test2', region: [21, 24] }
 ])
 
-const getLabelByValue = (vals: number[], list: any[], separator = '-') => {
+const getLabelByValue = (vals: number[], list: typeof regionList, separator = '-') => {
   let currentList = list
   const labels = []
   for (let i = 0; i < vals.length; i++) {

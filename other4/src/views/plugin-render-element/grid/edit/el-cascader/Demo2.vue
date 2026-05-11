@@ -86,7 +86,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   ]
 })
 
-const getLabelByValue = (vals: number[], list: any[], separator = '-') => {
+const getLabelByValue = (vals: number[], list: typeof regionList, separator = '-') => {
   let currentList = list
   const labels = []
   for (let i = 0; i < vals.length; i++) {
