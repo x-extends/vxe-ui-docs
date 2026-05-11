@@ -32,9 +32,15 @@ interface RowVO {
   region: number[]
 }
 
+interface RegionVO {
+  label: string
+  value: number
+  children?: RegionVO[]
+}
+
 const gridRef = ref<VxeGridInstance<RowVO>>()
 
-const regionList = [
+const regionList: RegionVO[] = [
   {
     label: '北京',
     value: 1,
@@ -86,7 +92,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   ]
 })
 
-const getLabelByValue = (vals: number[], list: typeof regionList, separator = '-') => {
+const getLabelByValue = (vals: number[], list: RegionVO[], separator = '-') => {
   let currentList = list
   const labels = []
   for (let i = 0; i < vals.length; i++) {

@@ -5,15 +5,17 @@
 
     <vxe-grid ref="gridRef" v-bind="gridOptions">
       <template #edit_name="{ row }">
-        <el-input  v-model="row.name"></el-input>
+        <el-input v-model="row.name"></el-input>
+      </template>
+      <template #default_name="{ row }">
+        <span>{{ row.name }}</span>
       </template>
 
-      <template #edit_date1="{ row }">
-        <el-date-picker v-model="row.date1" type="date" value-format="yyyy-MM-dd"></el-date-picker>
+      <template #edit_role="{ row }">
+        <el-autocomplete v-model="row.role" :fetch-suggestions="roleFetchSuggestions"></el-autocomplete>
       </template>
-
-      <template #edit_date2="{ row }">
-        <el-date-picker v-model="row.date2" type="datetime" value-format="yyyy-MM-dd HH:mm:ss" @change="date2ChangeEvent"></el-date-picker>
+      <template #default_role="{ row }">
+        <span>{{ row.role }}</span>
       </template>
     </vxe-grid>
   </div>
@@ -22,17 +24,23 @@
 <script lang="ts">
 import Vue from 'vue'
 import { MessageBox } from 'element-ui'
-import type { VxeGridInstance, VxeGridProps } from 'vxe-table'
+import { VxeGridInstance, VxeGridProps, VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
   name: string
-  date1: string
-  date2: string
+  role: string
 }
 
 export default Vue.extend({
   data () {
+    const restaurants = [
+      { value: 'Designer', name: 'Designer' },
+      { value: 'Develop', name: 'Develop' },
+      { value: 'Test', name: 'Test' },
+      { value: 'PM', name: 'PM' }
+    ]
+
     const gridOptions: VxeGridProps<RowVO> = {
       border: true,
       showOverflow: true,
@@ -42,34 +50,34 @@ export default Vue.extend({
         mode: 'row'
       },
       editRules: {
-        date1: [
-          { required: true, content: '请输入' }
-        ],
-        date2: [
+        role: [
           { required: true, content: '请输入' }
         ]
       },
       columns: [
         { type: 'checkbox', width: 60 },
         { type: 'seq', title: 'Number', width: 80 },
-        { field: 'name', title: 'Name', minWidth: 140, editRender: { autoFocus: true }, slots: { edit: 'edit_name' } },
-        { field: 'date1', title: '日期', width: 200, editRender: { autoFocus: true }, slots: { edit: 'edit_date1' } },
-        { field: 'date2', title: '日期带时间', width: 220, editRender: { autoFocus: true }, slots: { edit: 'edit_date2' } }
-
+        { field: 'name', title: 'Name', minWidth: 140, editRender: { autoFocus: true }, slots: { edit: 'edit_name', default: 'default_name' } },
+        { field: 'role', title: '自动补全输入', width: 200, editRender: { autoFocus: true }, slots: { edit: 'edit_role', default: 'default_role' } }
       ],
       data: [
-        { id: 10001, name: 'Test1', date1: '', date2: '' },
-        { id: 10002, name: 'Test2', date1: '2018-01-01', date2: '2018-01-01 10:10:30' }
+        { id: 10001, name: 'Test1', role: '' },
+        { id: 10002, name: 'Test2', role: 'Develop' }
       ]
     }
 
     return {
-      gridOptions
+      gridOptions,
+      restaurants
     }
   },
   methods: {
-    date2ChangeEvent (eventParams) {
-      console.log(eventParams)
+    roleFetchSuggestions (queryString: any, cb: (params: any) => void) {
+      const results = queryString ? this.restaurants.filter(item => (item.name.toLowerCase().indexOf(queryString.toLowerCase()) === 0)) : this.restaurants
+      // 模拟后端接口
+      setTimeout(() => {
+        cb(results)
+      }, 500 * Math.random())
     },
     async insertEvent () {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>

@@ -86,7 +86,7 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   columns: [
     { type: 'checkbox', width: 60 },
     { type: 'seq', title: 'Number', width: 80 },
-    { field: 'name', title: 'Name', minWidth: 140, editRender: { autofocus: '.el-input__inner' }, slots: { edit: 'edit_name' } },
+    { field: 'name', title: 'Name', minWidth: 140, editRender: { autoFocus: true }, slots: { edit: 'edit_name' } },
     { field: 'sex', title: '下拉框', width: 140, editRender: {}, slots: { default: 'default_sex', edit: 'edit_sex' } },
     { field: 'sexList', title: '下拉框多选', width: 200, editRender: {}, slots: { default: 'default_sexList', edit: 'edit_sexList' } },
     { field: 'role', title: '远程搜索', width: 140, editRender: {}, slots: { default: 'default_role', edit: 'edit_role' } }

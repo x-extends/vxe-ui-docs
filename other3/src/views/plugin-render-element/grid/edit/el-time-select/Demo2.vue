@@ -5,11 +5,11 @@
 
     <vxe-grid ref="gridRef" v-bind="gridOptions">
       <template #edit_name="{ row }">
-        <el-input  v-model="row.name"></el-input>
+        <el-input v-model="row.name"></el-input>
       </template>
 
-      <template #edit_nickname="{ row }">
-        <el-input v-model="row.nickname"></el-input>
+      <template #edit_time="{ row }">
+        <el-time-select v-model="row.time"></el-time-select>
       </template>
     </vxe-grid>
   </div>
@@ -17,13 +17,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeUI } from 'vxe-pc-ui'
+import { MessageBox } from 'element-ui'
 import type { VxeGridInstance, VxeGridProps } from 'vxe-table'
 
 interface RowVO {
   id: number
   name: string
-  nickname: string
+  time: string
 }
 
 export default Vue.extend({
@@ -37,7 +37,7 @@ export default Vue.extend({
         mode: 'row'
       },
       editRules: {
-        nickname: [
+        time: [
           { required: true, content: '请输入' }
         ]
       },
@@ -45,11 +45,11 @@ export default Vue.extend({
         { type: 'checkbox', width: 60 },
         { type: 'seq', title: 'Number', width: 80 },
         { field: 'name', title: 'Name', minWidth: 140, editRender: { autoFocus: true }, slots: { edit: 'edit_name' } },
-        { field: 'nickname', title: '输入框', width: 200, editRender: { autoFocus: true }, slots: { edit: 'edit_nickname' } }
+        { field: 'time', title: '时间选择', width: 200, editRender: { autoFocus: true }, slots: { edit: 'edit_time' } }
       ],
       data: [
-        { id: 10001, name: 'Test1', nickname: 'Nickname11' },
-        { id: 10002, name: 'Test2', nickname: '' }
+        { id: 10001, name: 'Test1', time: '' },
+        { id: 10002, name: 'Test2', time: '10:30' }
       ]
     }
 
@@ -73,14 +73,9 @@ export default Vue.extend({
       if ($grid) {
         const { insertRecords, removeRecords, updateRecords } = $grid.getRecordset()
         if (insertRecords.length || removeRecords.length || updateRecords.length) {
-          VxeUI.modal.message({
-            content: `insertRecords=${insertRecords.length}; removeRecords=${removeRecords.length}; updateRecords=${updateRecords.length}`
-          })
+          MessageBox.alert(`insertRecords=${insertRecords.length}; removeRecords=${removeRecords.length}; updateRecords=${updateRecords.length}`)
         } else {
-          VxeUI.modal.message({
-            content: '数据未改动！',
-            status: 'warning'
-          })
+          MessageBox.alert('数据未改动！')
         }
       }
     }

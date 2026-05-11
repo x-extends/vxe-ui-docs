@@ -43,9 +43,15 @@ interface RowVO {
   region: number[]
 }
 
+interface RegionVO {
+  label: string
+  value: number
+  children?: RegionVO[]
+}
+
 const tableRef = ref<VxeTableInstance<RowVO>>()
 
-const regionList = [
+const regionList: RegionVO[] = [
   {
     label: '北京',
     value: 1,
@@ -77,7 +83,7 @@ const tableData = ref<RowVO[]>([
   { id: 10002, name: 'Test2', region: [21, 24] }
 ])
 
-const getLabelByValue = (vals: number[], list: typeof regionList, separator = '-') => {
+const getLabelByValue = (vals: number[], list: RegionVO[], separator = '-') => {
   let currentList = list
   const labels = []
   for (let i = 0; i < vals.length; i++) {
