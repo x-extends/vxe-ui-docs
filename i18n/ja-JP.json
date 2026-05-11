@@ -344,6 +344,7 @@
         "loadMoreVertical": "行の追加読み込み",
         "loadMoreHorizontal": "列の追加読み込み",
         "other": "機能例",
+        "footerImmediately": "实时更新表尾数据",
         "bookkeepingVoucher": "簿記伝票",
         "editCursorLock": "方向キーでカーソルをロック",
         "keypadDelMethod": "Deleteキーの動作をカスタマイズ",

@@ -344,6 +344,7 @@
         "loadMoreVertical": "实现加载行",
         "loadMoreHorizontal": "实现加载列",
         "other": "功能示例",
+        "footerImmediately": "实时更新表尾数据",
         "bookkeepingVoucher": "记账凭证",
         "editCursorLock": "方向键锁定光标",
         "keypadDelMethod": "自定义按 Delete 键删除",

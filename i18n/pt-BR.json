@@ -344,6 +344,7 @@
         "loadMoreVertical": "Implementar linhas de carregamento",
         "loadMoreHorizontal": "Implementar colunas de carregamento",
         "other": "Exemplos funcionais",
+        "footerImmediately": "实时更新表尾数据",
         "bookkeepingVoucher": "Coloque contábil",
         "editCursorLock": "方向键锁定光标",
         "keypadDelMethod": "自定义按 Delete 键删除",

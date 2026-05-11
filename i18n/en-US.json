@@ -344,6 +344,7 @@
         "loadMoreVertical": "Load more rows",
         "loadMoreHorizontal": "Load more columns",
         "other": "Functional examples",
+        "footerImmediately": "实时更新表尾数据",
         "bookkeepingVoucher": "Accounting voucher",
         "editCursorLock": "Direction keys lock cursor",
         "keypadDelMethod": "Custom Delete key behavior",

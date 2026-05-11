@@ -344,6 +344,7 @@
         "loadMoreVertical": "Cargar más filas",
         "loadMoreHorizontal": "Cargar más columnas",
         "other": "Ejemplos de funciones",
+        "footerImmediately": "实时更新表尾数据",
         "bookkeepingVoucher": "Comprobante contable",
         "editCursorLock": "Bloqueo del cursor con teclas de dirección",
         "keypadDelMethod": "Personalizar acción de la tecla Delete",

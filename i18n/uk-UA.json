@@ -344,6 +344,7 @@
         "loadMoreVertical": "Впровадити завантажувальні рядки",
         "loadMoreHorizontal": "Впровадити стовпці завантаження",
         "other": "Функціональні приклади",
+        "footerImmediately": "实时更新表尾数据",
         "bookkeepingVoucher": "Ваучер",
         "editCursorLock": "方向键锁定光标",
         "keypadDelMethod": "自定义按 Delete 键删除",

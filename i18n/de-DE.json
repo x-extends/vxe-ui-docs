@@ -344,6 +344,7 @@
         "loadMoreVertical": "Ladezreihen implementieren",
         "loadMoreHorizontal": "Ladespalten implementieren",
         "other": "Funktionale Beispiele",
+        "footerImmediately": "实时更新表尾数据",
         "bookkeepingVoucher": "Buchhaltungsgutschein",
         "editCursorLock": "方向键锁定光标",
         "keypadDelMethod": "自定义按 Delete 键删除",

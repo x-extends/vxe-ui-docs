@@ -344,6 +344,7 @@
         "loadMoreVertical": "Дозагрузка строк",
         "loadMoreHorizontal": "Дозагрузка столбцов",
         "other": "Примеры функций",
+        "footerImmediately": "实时更新表尾数据",
         "bookkeepingVoucher": "Бухгалтерская проводка",
         "editCursorLock": "Блокировка курсора клавишами направления",
         "keypadDelMethod": "Пользовательское действие клавиши Delete",
