@@ -22,14 +22,15 @@ export default Vue.extend({
   },
   computed: {
     ...mapState([
-      'resBaseUrl'
+      'resBaseUrl',
+      'previewVersion'
     ]),
     previewCode () {
       return this.$route.params.previewCode || ''
     },
     previewUrl () {
       if (this.previewCode) {
-        return `${(this as any).resBaseUrl}/resource/pluginImg/${(this as any).previewCode}.gif?v=${process.env.VUE_APP_DATE_NOW}`
+        return `${(this as any).resBaseUrl}/resource/pluginImg/${(this as any).previewCode}.gif?v=${(this as any).previewVersion}`
       }
       return ''
     }
