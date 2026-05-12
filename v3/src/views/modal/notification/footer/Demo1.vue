@@ -21,7 +21,7 @@ export default Vue.extend({
         confirmButtonText: '点击跳转'
       }).then(type => {
         if (type === 'confirm') {
-          open('https://vxetable.cn/pluginDocs/table/')
+          open('https://vxeui.com')
         }
       })
     }
