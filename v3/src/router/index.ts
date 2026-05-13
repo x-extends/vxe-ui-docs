@@ -4251,6 +4251,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentTreeCheckboxVisibleMethod',
                 component: () => import('@/views/tree/checkbox/visibleMethod/CodeExample.vue')
               },
+              { path: 'color', name: 'ComponentTreeCheckboxColor', component: () => import('@/views/tree/checkbox/color/CodeExample.vue') },
               {
                 path: 'template',
                 name: 'ComponentTreeCheckboxTemplate',
@@ -4663,6 +4664,15 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentTableSelectBaseFooter',
                 component: () => import('@/views/table-select/base/footer/CodeExample.vue')
               }
+            ]
+          },
+          {
+            path: 'radio',
+            component: RouteLayout,
+            children: [
+              { path: 'base', name: 'ComponentTableSelectRadioBase', component: () => import('@/views/table-select/radio/base/CodeExample.vue') },
+              { path: 'clearable', name: 'ComponentTableSelectRadioClearable', component: () => import('@/views/table-select/radio/clearable/CodeExample.vue') },
+              { path: 'trigger', name: 'ComponentTableSelectRadioTrigger', component: () => import('@/views/table-select/radio/trigger/CodeExample.vue') }
             ]
           },
           {

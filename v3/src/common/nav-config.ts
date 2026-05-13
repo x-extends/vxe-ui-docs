@@ -1578,6 +1578,14 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
+            title: '单选框',
+            children: [
+              { title: '显示复选框', routerLink: { name: 'ComponentTableSelectRadioBase' } },
+              { title: '可清除', routerLink: { name: 'ComponentTableSelectRadioClearable' } },
+              { title: '点击行自动选中', routerLink: { name: 'ComponentTableSelectRadioTrigger' } }
+            ]
+          },
+          {
             title: '复选框',
             children: [
               { title: '显示复选框', routerLink: { name: 'ComponentTableSelectCheckboxBase' } },
@@ -1779,6 +1787,7 @@ export const navConfigList: NavVO[] = [
           { title: '节点不关联', routerLink: { name: 'ComponentTreeCheckboxCheckStrictly' } },
           { title: '禁用', routerLink: { name: 'ComponentTreeCheckboxCheckMethod' } },
           { title: '显示隐藏', routerLink: { name: 'ComponentTreeCheckboxVisibleMethod' } },
+          { title: '自定义节点字体颜色', routerLink: { name: 'ComponentTreeCheckboxColor' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentTreeCheckboxTemplate' } }
         ]
       },
