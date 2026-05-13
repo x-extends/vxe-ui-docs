@@ -4540,7 +4540,8 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'trigger',
                 name: 'ComponentTreeSelectCheckboxTrigger',
                 component: () => import('@/views/tree-select/checkbox/trigger/CodeExample.vue')
-              }
+              },
+              { path: 'color', name: 'ComponentTreeSelectCheckboxColor', component: () => import('@/views/tree-select/checkbox/color/CodeExample.vue') }
             ]
           },
           {
