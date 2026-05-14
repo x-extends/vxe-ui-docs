@@ -22,6 +22,14 @@
               anchor: {},
               anchorLink: {},
               avatar: {},
+              backtop: {
+                showIcon: true,
+                showContent: true,
+                showTop: true,
+                showBottom: true,
+                shadow: true,
+                threshold: 20
+              },
               badge: {},
               breadcrumb: {
                 separator: '/'
@@ -29,12 +37,14 @@
               breadcrumbItem: {},
               button: {
                 trigger: 'hover',
+                // destroyOnClose: false,
                 prefixTooltip: {
                   enterable: true
                 },
                 suffixTooltip: {
                   enterable: true
-                }
+                },
+                showDropdownIcon: true
               },
               buttonGroup: {},
               calendar: {
@@ -53,6 +63,9 @@
                 interval: 5000
               },
               carouselItem: {},
+              cascader: {
+                autoClose: true
+              },
               checkbox: {},
               checkboxButton: {},
               checkboxGroup: {},
@@ -64,6 +77,9 @@
                 }
               },
               collapsePane: {},
+              contextMenu: {
+                autoLocate: true
+              },
               countdown: {},
               colorPicker: {
                 type: 'rgb',
@@ -115,6 +131,7 @@
               },
               drawer: {
                 // size: null,
+                // useHtml: false,
                 position: 'right',
                 showHeader: true,
                 lockView: true,
@@ -122,6 +139,7 @@
                 showTitleOverflow: true,
                 showClose: true,
                 padding: true,
+                // destroyOnClose: false,
                 cancelClosable: true,
                 confirmClosable: true
               },
@@ -131,7 +149,7 @@
                 // size: null,
                 // colon: false,
                 validConfig: {
-                  showMessage: true,
+                  showErrorMessage: true,
                   autoPos: true,
                   theme: 'beautify'
                 },
@@ -152,20 +170,21 @@
               formItem: {},
               formView: {},
               icon: {},
-              iconPicr: {
+              iconPicker: {
                 icons: ['home', 'company', 'comment', 'setting', 'send', 'envelope', 'envelope-open', 'bell', 'search', 'print', 'pc', 'goods', 'chart-line', 'edit', 'delete', 'save', 'folder', 'microphone', 'flag', 'link', 'location', 'sunny', 'rmb', 'usd', 'user', 'add-user', 'add-users', 'star', 'unlock', 'time', 'text', 'feedback', 'calendar', 'association-form', 'cloud-download', 'cloud-upload', 'file', 'subtable', 'chart-bar-x', 'chart-bar-y', 'chart-line', 'chart-pie', 'chart-radar']
               },
               image: {
+                draggable: null,
                 showPreview: true,
-                showPrintButton: true,
-                maskClosable: true
+                showPrintButton: true
               },
               imageGroup: {
                 showPreview: true,
                 showPrintButton: true
               },
               imagePreview: {
-                showPrintButton: true
+                showPrintButton: true,
+                maskClosable: true
               },
               input: {
                 // size: null,
@@ -181,7 +200,10 @@
                 controls: true
               },
               layoutAside: {},
-              layoutBody: {},
+              layoutBody: {
+                backtopConfig: {
+                }
+              },
               layoutContainer: {},
               layoutFooter: {},
               layoutHeader: {},
@@ -210,6 +232,9 @@
                 // size: null,
                 top: 16,
                 showHeader: true,
+                // useHtml: false,
+                // width: null,
+                // height: null,
                 minWidth: 340,
                 minHeight: 140,
                 lockView: true,
@@ -236,23 +261,24 @@
                     left: 32
                   }
                 },
+                // destroyOnClose: false,
                 // remember: false,
                 // storage: false,
                 storageKey: 'VXE_MODAL_POSITION'
               },
               noticeBar: {},
               numberInput: {
-              // size: null,
-              // transfer: false
-              digits: 2,
-              autoFill: true,
-              controlConfig: {
-                enabled: true,
-                layout: 'right',
-                showButton: true,
-                isWheel: true,
-                isArrow: true
-              }
+                // size: null,
+                // transfer: false
+                digits: 2,
+                autoFill: true,
+                controlConfig: {
+                  enabled: true,
+                  layout: 'right',
+                  showButton: true,
+                  isWheel: true,
+                  isArrow: true
+                }
               },
               optgroup: {},
               option: {},
@@ -274,7 +300,7 @@
               },
               printPageBreak: {},
               pulldown: {
-                destroyOnClose: true
+                // destroyOnClose: false
               },
               radio: {
                 strict: true
@@ -288,6 +314,7 @@
               rate: {},
               result: {},
               row: {},
+              segmented: {},
               select: {
                 multiCharOverflow: 8,
                 remoteConfig: {
@@ -337,7 +364,9 @@
                   }
                 }
               },
-              tabs: {},
+              tabs: {
+                // destroyOnClose: false
+              },
               tag: {},
               textEllipsis: {
                 underline: true
@@ -350,6 +379,8 @@
               textarea: {
                 resize: 'none'
               },
+              timeline: {},
+              timelineItem: {},
               tip: {},
               tooltip: {
                 // size: null,
@@ -366,6 +397,12 @@
                 minHeight: 60,
                 radioConfig: {
                   strict: true
+                },
+                dragConfig: {
+                  showIcon: true,
+                  animation: true,
+                  showGuidesStatus: true,
+                  showDragTip: true
                 },
                 virtualYConfig: {
                   enabled: true,
@@ -403,7 +440,9 @@
                 showLimitSize: true,
                 showLimitCount: true,
                 autoSubmit: true,
-                maxSimultaneousUploads: 5
+                // urlArgs: false,
+                maxSimultaneousUploads: 5,
+                previewImageConfig: {}
               },
               watermark: {
                 rotate: -30,
@@ -442,6 +481,12 @@
                   isSyncAutoWidth: true,
                   minHeight: 18
                 },
+                currentRowConfig: {
+                  strict: true
+                },
+                currentColumnConfig: {
+                  strict: true
+                },
                 radioConfig: {
                   // trigger: 'default'
                   strict: true
@@ -463,7 +508,8 @@
                   strict: true
                 },
                 tooltipConfig: {
-                  enterable: true
+                  enterable: true,
+                  defaultPlacement: 'top'
                 },
                 headerTooltipConfig: {
                   enterable: true
@@ -472,7 +518,7 @@
                   enterable: true
                 },
                 validConfig: {
-                  showMessage: true,
+                  showErrorMessage: true,
                   autoClear: true,
                   autoPos: true,
                   message: 'inline',
@@ -496,15 +542,18 @@
                 footerCellConfig: {
                   height: 'unset'
                 },
-                // menuConfig: {
-                //   visibleMethod () {}
-                // },
+                menuConfig: {
+                  // visibleMethod () {},
+                  // transfer: false,
+                  destroyOnClose: true
+                },
                 customConfig: {
                   // enabled: false,
                   allowVisible: true,
                   allowResizable: true,
                   allowFixed: true,
                   allowSort: true,
+                  showSortDragButton: true,
                   showFooter: true,
                   placement: 'top-right',
                   //  storage: false,
@@ -549,7 +598,11 @@
                   // transfer: false,
                   destroyOnClose: true,
                   multiple: true,
-                  showIcon: true
+                  showIcon: true,
+                  maxHeight: 280
+                },
+                floatingFilterConfig: {
+                  // enabled: false
                 },
                 aggregateConfig: {
                   padding: true,
@@ -570,7 +623,8 @@
                   hasChildField: 'hasChild',
                   mapChildrenField: '_X_ROW_CHILD',
                   indent: 20,
-                  showIcon: true
+                  showIcon: true,
+                  showRootLine: true
                 },
                 expandConfig: {
                   // trigger: 'default',
@@ -584,8 +638,20 @@
                   autoFocus: true
                 },
                 importConfig: {
+                  _typeMaps: {
+                    csv: 1,
+                    html: 1,
+                    xml: 1,
+                    txt: 1
+                  }
                 },
                 exportConfig: {
+                  _typeMaps: {
+                    csv: 1,
+                    html: 1,
+                    xml: 1,
+                    txt: 1
+                  }
                 },
                 printConfig: {
                 },
@@ -640,6 +706,9 @@
                     // position: 'right',
                     visible: true
                   }
+                },
+                undoRedoHistoryConfig: {
+                  stackSize: 50
                 }
               },
               grid: {
@@ -665,9 +734,10 @@
                   showResponseMsg: true,
                   showActionMsg: true,
                   response: {
-                    list: null,
+                    list: 'list',
                     result: 'result',
                     total: 'page.total',
+                    footerData: 'footerData',
                     message: 'message'
                   }
                   // beforeItem: null,
@@ -728,19 +798,59 @@
                   // beforeSave: null,
                   // afterSave: null
                 },
-                taskViewScaleConfs: {
+                taskBarTooltipConfig: {
+                  enterable: true
+                },
+                taskLinkConfig: {
+                  enabled: true,
+                  isHover: true,
+                  showArrow: true
+                },
+                taskViewScaleConfig: {
+                  year: {
+                    valueFormat: 'yyyy-MM-dd'
+                  },
+                  quarter: {
+                    valueFormat: 'yyyy-MM-dd'
+                  },
+                  month: {
+                    valueFormat: 'yyyy-MM-dd'
+                  },
                   week: {
-                    startDay: 1
+                    startDay: 1,
+                    valueFormat: 'yyyy-MM-dd'
+                  },
+                  day: {
+                    valueFormat: 'yyyy-MM-dd'
+                  },
+                  date: {
+                    valueFormat: 'yyyy-MM-dd'
+                  },
+                  hour: {
+                    valueFormat: 'yyyy-MM-dd HH:mm:ss'
+                  },
+                  minute: {
+                    valueFormat: 'yyyy-MM-dd HH:mm:ss'
+                  },
+                  second: {
+                    valueFormat: 'yyyy-MM-dd HH:mm:ss'
                   }
                 },
                 taskViewConfig: {
-                  showNowLine: true
+                  showNowLine: true,
+                  gridding: {
+                    leftSpacing: 1,
+                    rightSpacing: 1
+                  }
                 },
                 taskSplitConfig: {
                   enabled: true,
                   resize: true,
                   showCollapseTableButton: true,
                   showCollapseTaskButton: true
+                },
+                taskBarSubviewConfig: {
+                  // showOverview: false
                 }
               }
             })
