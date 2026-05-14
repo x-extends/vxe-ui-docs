@@ -26,7 +26,7 @@ interface NodeVO {
 
 const checkNodeKeys = ref<VxeTreePropTypes.CheckNodeKeys>([])
 
-const indeterminateColor = ref('5F9EA0')
+const indeterminateColor = ref('#5F9EA0')
 const checkedColor = ref('#1E90FF')
 
 const colorList = ref([
