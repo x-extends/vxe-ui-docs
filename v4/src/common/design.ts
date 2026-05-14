@@ -46,7 +46,7 @@ export const designNavConfig: NavVO & { children: NavVO[] } = {
                 { title: '自定义头部模板', routerLink: { name: 'ComponentFormDesignTemplateHeader' } }
               ]
             },
-            { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form-design/renderView` }
+            { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form-design/renderView` }
           ]
         },
         {

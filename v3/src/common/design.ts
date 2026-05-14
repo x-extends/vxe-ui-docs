@@ -16,7 +16,7 @@ export const designNavConfig: NavVO & { children: NavVO[] } = {
         //     { title: '移动端设计器', routerLink: { name: 'ComponentFormDesignMobile' } },
         //     { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentFormDesignPcAndMobile' } },
         //     { title: '渲染视图', routerLink: { name: 'ComponentFormDesignRenderView' } },
-        //     { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}/#/plugin-render-element/form-design/renderView` }
+        //     { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form-design/renderView` }
         //   ]
         // },
         // {
