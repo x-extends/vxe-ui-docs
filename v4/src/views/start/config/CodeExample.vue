@@ -19,396 +19,435 @@
               // version: 1, // 版本号，对于某些带数据缓存的功能有用到，上升版本号可以用于重置数据
 
               alert: {},
-              anchor: {},
-              anchorLink: {},
-              avatar: {},
-              badge: {},
-              breadcrumb: {
-                separator: '/'
-              },
-              breadcrumbItem: {},
-              button: {
-                trigger: 'hover',
-                prefixTooltip: {
-                  enterable: true
-                },
-                suffixTooltip: {
-                  enterable: true
-                }
-              },
-              buttonGroup: {},
-              calendar: {
-                minDate: new Date(1900, 0, 1),
-                maxDate: new Date(2100, 0, 1),
-                startDay: 1,
-                selectDay: 1
-              },
-              card: {
-                border: true,
-                padding: true
-              },
-              carousel: {
-                height: 200,
-                loop: true,
-                interval: 5000
-              },
-              carouselItem: {},
-              checkbox: {},
-              checkboxButton: {},
-              checkboxGroup: {},
-              col: {},
-              collapse: {
-                padding: true,
-                expandConfig: {
-                  showIcon: true
-                }
-              },
-              collapsePane: {},
-              countdown: {},
-              colorPicker: {
-                type: 'rgb',
-                clearable: true,
-                showAlpha: true,
-                clickToCopy: true,
-                showColorExtractor: true,
-                showQuick: true
-              },
-              datePanel: {
-                // parseFormat: 'yyyy-MM-dd HH:mm:ss.SSS',
-                // labelFormat: '',
-                // valueFormat: '',
-                startDate: new Date(1900, 0, 1),
-                endDate: new Date(2100, 0, 1),
-                startDay: 1,
-                selectDay: 1
-              },
-              datePicker: {
-                // size: null,
-                // transfer: false,
-                shortcutConfig: {
-                  // position: 'left',
-                  align: 'left',
-                  mode: 'text',
-                  autoClose: true
-                },
-                startDay: 1,
-                selectDay: 1,
-                autoClose: true,
-                showClearButton: null,
-                showConfirmButton: null
-              },
-              dateRangePicker: {
-                // size: null,
-                // transfer: false,
-                shortcutConfig: {
-                  // position: 'left',
-                  align: 'left',
-                  mode: 'text',
-                  autoClose: true
-                },
-                startDay: 1,
-                selectDay: 1,
-                separator: ' ~ ',
-                autoClose: true,
-                showClearButton: null,
-                showConfirmButton: null
-              },
-              drawer: {
-                // size: null,
-                position: 'right',
-                showHeader: true,
-                lockView: true,
-                mask: true,
-                showTitleOverflow: true,
-                showClose: true,
-                padding: true,
-                cancelClosable: true,
-                confirmClosable: true
-              },
-              empty: {},
-              form: {
-                // preventSubmit: false,
-                // size: null,
-                // colon: false,
-                validConfig: {
-                  showMessage: true,
-                  autoPos: true,
-                  theme: 'beautify'
-                },
-                tooltipConfig: {
-                  enterable: true
-                },
-                titleAsterisk: true,
-                titleOverflow: false,
-                padding: true
-              },
-              formDesign: {
-                height: 400,
-                showHeader: true,
-                showPc: true
-              },
-              formGather: {},
-              formGroup: {},
-              formItem: {},
-              formView: {},
-              icon: {},
-              iconPicker: {
-                icons: ['home', 'company', 'comment', 'setting', 'send', 'envelope', 'envelope-open', 'bell', 'search', 'print', 'pc', 'goods', 'chart-line', 'edit', 'delete', 'save', 'folder', 'microphone', 'flag', 'link', 'location', 'sunny', 'rmb', 'usd', 'user', 'add-user', 'add-users', 'star', 'unlock', 'time', 'text', 'feedback', 'calendar', 'association-form', 'cloud-download', 'cloud-upload', 'file', 'subtable', 'chart-bar-x', 'chart-bar-y', 'chart-line', 'chart-pie', 'chart-radar']
-              },
-              image: {
-                showPreview: true,
-                showPrintButton: true,
-                maskClosable: true
-              },
-              imageGroup: {
-                showPreview: true,
-                showPrintButton: true
-              },
-              imagePreview: {
-                showPrintButton: true
-              },
-              input: {
-                // size: null,
-                // transfer: false
-                // parseFormat: 'yyyy-MM-dd HH:mm:ss.SSS',
-                // labelFormat: '',
-                // valueFormat: '',
-                startDate: new Date(1900, 0, 1),
-                endDate: new Date(2100, 0, 1),
-                startDay: 1,
-                selectDay: 1,
-                digits: 2,
-                controls: true
-              },
-              layoutAside: {},
-              layoutBody: {},
-              layoutContainer: {},
-              layoutFooter: {},
-              layoutHeader: {},
-              link: {
-                underline: true
-              },
-              listDesign: {
-                height: 400,
-                showPc: true
-              },
-              listView: {},
-              list: {
-                // size: null,
-                virtualYConfig: {
-                  enabled: true,
-                  gt: 100
-                  // oSize: 0
-                }
-              },
-              loading: {
-                showIcon: true,
-                showText: true
-              },
-              menu: {},
-              modal: {
-                // size: null,
-                top: 16,
-                showHeader: true,
-                minWidth: 340,
-                minHeight: 140,
-                lockView: true,
-                mask: true,
-                duration: 3000,
-                marginSize: 0,
-                dblclickZoom: true,
-                showTitleOverflow: true,
-                animat: true,
-                showClose: true,
-                padding: true,
-                draggable: true,
-                showConfirmButton: null,
-                cancelClosable: true,
-                confirmClosable: true,
-                zoomConfig: {
-                  minimizeMaxSize: 10,
-                  minimizeVerticalOffset: {
-                    top: -24,
-                    left: 0
-                  },
-                  minimizeHorizontalOffset: {
-                    top: 0,
-                    left: 32
-                  }
-                },
-                // remember: false,
-                // storage: false,
-                storageKey: 'VXE_MODAL_POSITION'
-              },
-              noticeBar: {},
-              numberInput: {
-                // size: null,
-                // transfer: false
-                digits: 2,
-                autoFill: true,
-                controlConfig: {
-                  enabled: true,
-                  layout: 'right',
-                  showButton: true,
-                  isWheel: true,
-                  isArrow: true
-                }
-              },
-              optgroup: {},
-              option: {},
-              pager: {
-                pageSizePlacement: 'top'
-                // size: null,
-                // autoHidden: false,
-                // perfect: true,
-                // pageSize: 10,
-                // pagerCount: 7,
-                // pageSizes: [10, 15, 20, 50, 100],
-                // layouts: ['PrevJump', 'PrevPage', 'Jump', 'PageCount', 'NextPage', 'NextJump', 'Sizes', 'Total']
-              },
-              print: {
-                pageStyle: {}
-              },
-              passwordInput: {
-                controls: true
-              },
-              printPageBreak: {},
-              pulldown: {
-                destroyOnClose: true
-              },
-              radio: {
-                strict: true
-              },
-              radioButton: {
-                strict: true
-              },
-              radioGroup: {
-                strict: true
-              },
-              rate: {},
-              result: {},
-              row: {},
-              select: {
-                multiCharOverflow: 8,
-                remoteConfig: {
-                  enabled: true,
-                  autoLoad: true
-                },
-                virtualYConfig: {
-                  enabled: true,
-                  gt: 50,
-                  oSize: 2
-                }
-              },
-              splitter: {
-                resize: true,
-                itemConfig: {
-                  minWidth: 40,
-                  minHeight: 40
-                },
-                resizeConfig: {
-                  // immediate: false,
-                  showTip: true
-                }
-              },
-              splitterPanel: {},
-              slider: {
-                max: 100,
-                min: 0
-              },
-              steps: {},
-              switch: {},
-              tabPane: {},
-              tableSelect: {
-                gridConfig: {
-                  showOverflow: true,
-                  showHeaderOverflow: true,
-                  showFooterOverflow: true,
-                  rowConfig: {
-                    isHover: true
-                  },
-                  virtualXConfig: {
-                    enabled: true,
-                    gt: 0
-                  },
-                  virtualYConfig: {
-                    enabled: true,
-                    gt: 0
-                  }
-                }
-              },
-              tabs: {},
-              tag: {},
-              textEllipsis: {
-                underline: true
-              },
-              text: {
-                copyConfig: {
-                  showMessage: true
-                }
-              },
-              textarea: {
-                resize: 'none'
-              },
-              tip: {},
-              tooltip: {
-                // size: null,
-                // enterable: false,
-                trigger: 'hover',
-                theme: 'dark',
-                enterDelay: 500,
-                leaveDelay: 300,
-                isArrow: true
-              },
-              tree: {
-                // autoResize: false,
-                indent: 20,
-                minHeight: 60,
-                radioConfig: {
-                  strict: true
-                },
-                virtualYConfig: {
-                  enabled: true,
-                  gt: 50,
-                  oSize: 2
-                }
-              },
-              treeSelect: {
-                autoClose: true,
-                virtualYConfig: {
-                  enabled: true,
-                  gt: 0,
-                  oSize: 2
-                },
-                treeConfig: {
-                  maxHeight: 300,
-                  radioConfig: {},
-                  checkboxConfig: {},
-                  filterConfig: {
-                    autoExpandAll: true
-                  }
-                }
-              },
-              upload: {
-                mode: 'all',
-                imageTypes: ['jpg', 'jpeg', 'png', 'gif'],
-                showList: true,
-                showUploadButton: true,
-                showButtonText: true,
-                showRemoveButton: true,
-                showButtonIcon: true,
-                showPreview: true,
-                dragToUpload: true,
-                // imageConfig: {},
-                showLimitSize: true,
-                showLimitCount: true,
-                autoSubmit: true,
-                maxSimultaneousUploads: 5
-              },
-              watermark: {
-                rotate: -30,
-                gap: [100, 100]
-              },
+  anchor: {},
+  anchorLink: {},
+  avatar: {},
+  backtop: {
+    showIcon: true,
+    showContent: true,
+    showTop: true,
+    showBottom: true,
+    shadow: true,
+    threshold: 20
+  },
+  badge: {},
+  breadcrumb: {
+    separator: '/'
+  },
+  breadcrumbItem: {},
+  button: {
+    trigger: 'hover',
+    // destroyOnClose: false,
+    prefixTooltip: {
+      enterable: true
+    },
+    suffixTooltip: {
+      enterable: true
+    },
+    showDropdownIcon: true
+  },
+  buttonGroup: {},
+  calendar: {
+    minDate: new Date(1900, 0, 1),
+    maxDate: new Date(2100, 0, 1),
+    startDay: 1,
+    selectDay: 1
+  },
+  card: {
+    border: true,
+    padding: true
+  },
+  carousel: {
+    height: 200,
+    loop: true,
+    interval: 5000
+  },
+  carouselItem: {},
+  cascader: {
+    autoClose: true
+  },
+  checkbox: {},
+  checkboxButton: {},
+  checkboxGroup: {},
+  col: {},
+  collapse: {
+    padding: true,
+    expandConfig: {
+      showIcon: true
+    }
+  },
+  collapsePane: {},
+  contextMenu: {
+    autoLocate: true
+  },
+  countdown: {},
+  colorPicker: {
+    type: 'rgb',
+    clearable: true,
+    showAlpha: true,
+    clickToCopy: true,
+    showColorExtractor: true,
+    showQuick: true
+  },
+  datePanel: {
+    // parseFormat: 'yyyy-MM-dd HH:mm:ss.SSS',
+    // labelFormat: '',
+    // valueFormat: '',
+    startDate: new Date(1900, 0, 1),
+    endDate: new Date(2100, 0, 1),
+    startDay: 1,
+    selectDay: 1
+  },
+  datePicker: {
+    // size: null,
+    // transfer: false,
+    shortcutConfig: {
+      // position: 'left',
+      align: 'left',
+      mode: 'text',
+      autoClose: true
+    },
+    startDay: 1,
+    selectDay: 1,
+    autoClose: true,
+    showClearButton: null,
+    showConfirmButton: null
+  },
+  dateRangePicker: {
+    // size: null,
+    // transfer: false,
+    shortcutConfig: {
+      // position: 'left',
+      align: 'left',
+      mode: 'text',
+      autoClose: true
+    },
+    startDay: 1,
+    selectDay: 1,
+    separator: ' ~ ',
+    autoClose: true,
+    showClearButton: null,
+    showConfirmButton: null
+  },
+  drawer: {
+    // size: null,
+    // useHtml: false,
+    position: 'right',
+    showHeader: true,
+    lockView: true,
+    mask: true,
+    showTitleOverflow: true,
+    showClose: true,
+    padding: true,
+    // destroyOnClose: false,
+    cancelClosable: true,
+    confirmClosable: true
+  },
+  empty: {},
+  form: {
+    // preventSubmit: false,
+    // size: null,
+    // colon: false,
+    validConfig: {
+      showErrorMessage: true,
+      autoPos: true,
+      theme: 'beautify'
+    },
+    tooltipConfig: {
+      enterable: true
+    },
+    titleAsterisk: true,
+    titleOverflow: false,
+    padding: true
+  },
+  formDesign: {
+    height: 400,
+    showHeader: true,
+    showPc: true
+  },
+  formGather: {},
+  formGroup: {},
+  formItem: {},
+  formView: {},
+  icon: {},
+  iconPicker: {
+    icons: ['home', 'company', 'comment', 'setting', 'send', 'envelope', 'envelope-open', 'bell', 'search', 'print', 'pc', 'goods', 'chart-line', 'edit', 'delete', 'save', 'folder', 'microphone', 'flag', 'link', 'location', 'sunny', 'rmb', 'usd', 'user', 'add-user', 'add-users', 'star', 'unlock', 'time', 'text', 'feedback', 'calendar', 'association-form', 'cloud-download', 'cloud-upload', 'file', 'subtable', 'chart-bar-x', 'chart-bar-y', 'chart-line', 'chart-pie', 'chart-radar']
+  },
+  image: {
+    draggable: null,
+    showPreview: true,
+    showPrintButton: true
+  },
+  imageGroup: {
+    showPreview: true,
+    showPrintButton: true
+  },
+  imagePreview: {
+    showPrintButton: true,
+    maskClosable: true
+  },
+  input: {
+    // size: null,
+    // transfer: false
+    // parseFormat: 'yyyy-MM-dd HH:mm:ss.SSS',
+    // labelFormat: '',
+    // valueFormat: '',
+    startDate: new Date(1900, 0, 1),
+    endDate: new Date(2100, 0, 1),
+    startDay: 1,
+    selectDay: 1,
+    digits: 2,
+    controls: true
+  },
+  layoutAside: {},
+  layoutBody: {
+    backtopConfig: {
+    }
+  },
+  layoutContainer: {},
+  layoutFooter: {},
+  layoutHeader: {},
+  link: {
+    underline: true
+  },
+  listDesign: {
+    height: 400,
+    showPc: true
+  },
+  listView: {},
+  list: {
+    // size: null,
+    virtualYConfig: {
+      enabled: true,
+      gt: 100
+      // oSize: 0
+    }
+  },
+  loading: {
+    showIcon: true,
+    showText: true
+  },
+  menu: {},
+  modal: {
+    // size: null,
+    top: 16,
+    showHeader: true,
+    // useHtml: false,
+    // width: null,
+    // height: null,
+    minWidth: 340,
+    minHeight: 140,
+    lockView: true,
+    mask: true,
+    duration: 3000,
+    marginSize: 0,
+    dblclickZoom: true,
+    showTitleOverflow: true,
+    animat: true,
+    showClose: true,
+    padding: true,
+    draggable: true,
+    showConfirmButton: null,
+    cancelClosable: true,
+    confirmClosable: true,
+    zoomConfig: {
+      minimizeMaxSize: 10,
+      minimizeVerticalOffset: {
+        top: -24,
+        left: 0
+      },
+      minimizeHorizontalOffset: {
+        top: 0,
+        left: 32
+      }
+    },
+    // destroyOnClose: false,
+    // remember: false,
+    // storage: false,
+    storageKey: 'VXE_MODAL_POSITION'
+  },
+  noticeBar: {},
+  numberInput: {
+    // size: null,
+    // transfer: false
+    digits: 2,
+    autoFill: true,
+    controlConfig: {
+      enabled: true,
+      layout: 'right',
+      showButton: true,
+      isWheel: true,
+      isArrow: true
+    }
+  },
+  optgroup: {},
+  option: {},
+  pager: {
+    pageSizePlacement: 'top'
+    // size: null,
+    // autoHidden: false,
+    // perfect: true,
+    // pageSize: 10,
+    // pagerCount: 7,
+    // pageSizes: [10, 15, 20, 50, 100],
+    // layouts: ['PrevJump', 'PrevPage', 'Jump', 'PageCount', 'NextPage', 'NextJump', 'Sizes', 'Total']
+  },
+  print: {
+    pageStyle: {}
+  },
+  passwordInput: {
+    controls: true
+  },
+  printPageBreak: {},
+  pulldown: {
+    // destroyOnClose: false
+  },
+  radio: {
+    strict: true
+  },
+  radioButton: {
+    strict: true
+  },
+  radioGroup: {
+    strict: true
+  },
+  rate: {},
+  result: {},
+  row: {},
+  segmented: {},
+  select: {
+    multiCharOverflow: 8,
+    remoteConfig: {
+      enabled: true,
+      autoLoad: true
+    },
+    virtualYConfig: {
+      enabled: true,
+      gt: 50,
+      oSize: 2
+    }
+  },
+  splitter: {
+    resize: true,
+    itemConfig: {
+      minWidth: 40,
+      minHeight: 40
+    },
+    resizeConfig: {
+      // immediate: false,
+      showTip: true
+    }
+  },
+  splitterPanel: {},
+  slider: {
+    max: 100,
+    min: 0
+  },
+  steps: {},
+  switch: {},
+  tabPane: {},
+  tableSelect: {
+    gridConfig: {
+      showOverflow: true,
+      showHeaderOverflow: true,
+      showFooterOverflow: true,
+      rowConfig: {
+        isHover: true
+      },
+      virtualXConfig: {
+        enabled: true,
+        gt: 0
+      },
+      virtualYConfig: {
+        enabled: true,
+        gt: 0
+      }
+    }
+  },
+  tabs: {
+    // destroyOnClose: false
+  },
+  tag: {},
+  textEllipsis: {
+    underline: true
+  },
+  text: {
+    copyConfig: {
+      showMessage: true
+    }
+  },
+  textarea: {
+    resize: 'none'
+  },
+  timeline: {},
+  timelineItem: {},
+  tip: {},
+  tooltip: {
+    // size: null,
+    // enterable: false,
+    trigger: 'hover',
+    theme: 'dark',
+    enterDelay: 500,
+    leaveDelay: 300,
+    isArrow: true
+  },
+  tree: {
+    // autoResize: false,
+    indent: 20,
+    minHeight: 60,
+    radioConfig: {
+      strict: true
+    },
+    dragConfig: {
+      showIcon: true,
+      animation: true,
+      showGuidesStatus: true,
+      showDragTip: true
+    },
+    virtualYConfig: {
+      enabled: true,
+      gt: 50,
+      oSize: 2
+    }
+  },
+  treeSelect: {
+    autoClose: true,
+    virtualYConfig: {
+      enabled: true,
+      gt: 0,
+      oSize: 2
+    },
+    treeConfig: {
+      maxHeight: 300,
+      radioConfig: {},
+      checkboxConfig: {},
+      filterConfig: {
+        autoExpandAll: true
+      }
+    }
+  },
+  upload: {
+    mode: 'all',
+    imageTypes: ['jpg', 'jpeg', 'png', 'gif'],
+    showList: true,
+    showUploadButton: true,
+    showButtonText: true,
+    showRemoveButton: true,
+    showButtonIcon: true,
+    showPreview: true,
+    dragToUpload: true,
+    // imageConfig: {},
+    showLimitSize: true,
+    showLimitCount: true,
+    autoSubmit: true,
+    // urlArgs: false,
+    maxSimultaneousUploads: 5,
+    previewImageConfig: {}
+  },
+  watermark: {
+    rotate: -30,
+    gap: [100, 100]
+  },
 
               table: {
                 showHeader: true,
