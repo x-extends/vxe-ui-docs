@@ -25,8 +25,8 @@ export default Vue.extend({
         parentField: 'parentId',
         checkboxConfig: {
           nodeStyle: {
-            indeterminateColor: '#9abfe6',
-            checkedColor: '#409eff'
+            indeterminateColor: '#5F9EA0',
+            checkedColor: '#1E90FF'
           }
         }
       },

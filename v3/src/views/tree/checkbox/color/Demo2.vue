@@ -1,5 +1,8 @@
 <template>
   <div>
+    <vxe-color-picker v-model="indeterminateColor" :colors="colorList" clearable></vxe-color-picker>
+    <vxe-color-picker v-model="checkedColor" :colors="colorList" clearable></vxe-color-picker>
+
     <vxe-tree
       v-bind="treeOptions"
       :check-node-keys.sync="checkNodeKeys"
@@ -25,8 +28,17 @@ export default Vue.extend({
   data () {
     const checkNodeKeys: VxeTreePropTypes.CheckNodeKeys = []
 
-    const indeterminateColor = '#9abfe6'
-    const checkedColor = '#409eff'
+    const indeterminateColor = '#5F9EA0'
+    const checkedColor = '#1E90FF'
+
+    const colorList = [
+      '#DC143C', '#FF1493', '#FF00FF', '#9932CC', '#6A5ACD',
+      '#0000FF', '#00008B', '#778899', '#1E90FF', '#00BFFF',
+      '#5F9EA0', '#00FFFF', '#008080', '#7FFFAA', '#3CB371',
+      '#8FBC8F', '#008000', '#7CFC00', '#556B2F', '#FFFFE0',
+      '#FFFF00', '#808000', '#EEE8AA', '#FFD700', '#FFA500',
+      '#FF4500', '#FA8072', '#FF0000', '#800000', '#C0C0C0'
+    ]
 
     const treeOptions: VxeTreeProps = {
       transform: true,
@@ -59,6 +71,7 @@ export default Vue.extend({
       checkNodeKeys,
       indeterminateColor,
       checkedColor,
+      colorList,
       treeOptions
     }
   }

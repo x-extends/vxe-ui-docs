@@ -24,8 +24,8 @@ const treeSelectOptions = reactive<VxeTreeSelectProps<NodeVO>>({
     checkboxConfig: {
       showIcon: true,
       nodeStyle: {
-        indeterminateColor: '#9abfe6',
-        checkedColor: '#409eff'
+        indeterminateColor: '#5F9EA0',
+        checkedColor: '#1E90FF'
       }
     }
   },
