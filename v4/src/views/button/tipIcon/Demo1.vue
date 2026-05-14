@@ -42,12 +42,12 @@ const suffixTooltip2 = reactive<VxeButtonPropTypes.SuffixTooltip>({
 const prefixTooltip3 = reactive<VxeButtonPropTypes.PrefixTooltip>({
   content: '点击查看官网：<a href="https://vxetable.cn/" style="color: #ffffff;">vxe-table</a>',
   icon: 'vxe-icon-warning-circle-fill',
-  useHTML: true
+  useHtml: true
 })
 
 const suffixTooltip3 = reactive<VxeButtonPropTypes.SuffixTooltip>({
   content: '点击查看官网：<a href="https://vxetable.cn/" style="color: #ffffff;">vxe-table</a>',
   icon: 'vxe-icon-warning-triangle-fill',
-  useHTML: true
+  useHtml: true
 })
 </script>

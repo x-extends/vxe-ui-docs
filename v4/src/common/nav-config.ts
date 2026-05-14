@@ -1954,6 +1954,7 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'drawer' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentDrawerSize' } },
           { title: '自定义弹出方向', routerLink: { name: 'ComponentDrawerBase' } },
+          { title: '显示HTML标签', routerLink: { name: 'ComponentDrawerHtml' } },
           { title: '宽度与高度', routerLink: { name: 'ComponentDrawerWH' } },
           { title: '内边距', routerLink: { name: 'ComponentDrawerPadding' } },
           { title: '加载中', routerLink: { name: 'ComponentDrawerLoading' } },
@@ -1978,6 +1979,7 @@ export const navConfigList: NavVO[] = [
           { title: '触发方式', routerLink: { name: 'ComponentTooltipTrigger' } },
           { title: '可操作', routerLink: { name: 'ComponentTooltipEnterable' } },
           { title: '设置宽高', routerLink: { name: 'ComponentTooltipStyle' } },
+          { title: '显示HTML标签', routerLink: { name: 'ComponentTooltipHtml' } },
           { title: '手动模式', routerLink: { name: 'ComponentTooltipManual' } },
           { title: '单例模式', routerLink: { name: 'ComponentTooltipSingle' } },
           { title: '在表格中使用', routerLink: { name: 'ComponentTooltipTable' } }
@@ -1995,6 +1997,7 @@ export const navConfigList: NavVO[] = [
           { title: '全局调用', routerLink: { name: 'ComponentModalMessageGlobal' } },
           { title: '唯一', routerLink: { name: 'ComponentModalMessageMultiple' } },
           { title: '状态提示', routerLink: { name: 'ComponentModalMessageStatus' } },
+          { title: '显示HTML标签', routerLink: { name: 'ComponentModalMessageHtml' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentModalMessageTemplate' } }
         ]
       },
@@ -2004,6 +2007,7 @@ export const navConfigList: NavVO[] = [
           { title: '全局调用', routerLink: { name: 'ComponentModalNotificationGlobal' } },
           { title: '唯一', routerLink: { name: 'ComponentModalNotificationMultiple' } },
           { title: '状态提示', routerLink: { name: 'ComponentModalNotificationStatus' } },
+          { title: '显示HTML标签', routerLink: { name: 'ComponentModalNotificationHtml' } },
           { title: '带操作按钮', routerLink: { name: 'ComponentModalNotificationFooter' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentModalNotificationTemplate' } }
         ]
@@ -2012,6 +2016,7 @@ export const navConfigList: NavVO[] = [
         i18nKey: 'app.aside.menu.modalAlertTitle',
         children: [
           { title: '全局调用', routerLink: { name: 'ComponentModalAlertGlobal' } },
+          { title: '显示HTML标签', routerLink: { name: 'ComponentModalAlertHtml' } },
           { title: '弹出多个', routerLink: { name: 'ComponentModalAlertMultiple' } },
           { title: '禁止拖动', routerLink: { name: 'ComponentModalAlertDraggable' } },
           { title: '按 Esc 键可关闭', routerLink: { name: 'ComponentModalAlertEscClosable' } },
@@ -2024,6 +2029,7 @@ export const navConfigList: NavVO[] = [
         i18nKey: 'app.aside.menu.modalConfirmTitle',
         children: [
           { title: '全局调用', routerLink: { name: 'ComponentModalConfirmGlobal' } },
+          { title: '显示HTML标签', routerLink: { name: 'ComponentModalConfirmHtml' } },
           { title: '弹出多个', routerLink: { name: 'ComponentModalConfirmMultiple' } },
           { title: '禁止拖动', routerLink: { name: 'ComponentModalConfirmDraggable' } },
           { title: '按 Esc 键可关闭', routerLink: { name: 'ComponentModalConfirmEscClosable' } },
@@ -2041,6 +2047,7 @@ export const navConfigList: NavVO[] = [
           { title: '完整插槽模板', routerLink: { name: 'ComponentModalModalTemplateLayout' } },
           { title: '内边距', routerLink: { name: 'ComponentModalModalPadding' } },
           { title: '加载中', routerLink: { name: 'ComponentModalModalLoading' } },
+          { title: '显示HTML标签', routerLink: { name: 'ComponentModalModalHtml' } },
           { title: '遮罩层', routerLink: { name: 'ComponentModalModalMask' } },
           { title: '锁页面滚动条', routerLink: { name: 'ComponentModalModalLockScroll' } },
           { title: '锁定页面操作', routerLink: { name: 'ComponentModalModalLockView' } },

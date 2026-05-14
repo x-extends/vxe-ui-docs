@@ -3076,6 +3076,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentModalAlertGlobal',
             component: () => import('@/views/modal/alert/global/CodeExample.vue')
           },
+          { path: 'html', name: 'ComponentModalAlertHtml', component: () => import('@/views/modal/alert/html/CodeExample.vue') },
           {
             path: 'draggable',
             name: 'ComponentModalAlertDraggable',
@@ -3117,6 +3118,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentModalConfirmGlobal',
             component: () => import('@/views/modal/confirm/global/CodeExample.vue')
           },
+          { path: 'html', name: 'ComponentModalConfirmHtml', component: () => import('@/views/modal/confirm/html/CodeExample.vue') },
           {
             path: 'draggable',
             name: 'ComponentModalConfirmDraggable',
@@ -3153,6 +3155,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentModalMessageGlobal',
             component: () => import('@/views/modal/message/global/CodeExample.vue')
           },
+          { path: 'html', name: 'ComponentModalMessageHtml', component: () => import('@/views/modal/message/html/CodeExample.vue') },
           {
             path: 'multiple',
             name: 'ComponentModalMessageMultiple',
@@ -3179,6 +3182,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentModalNotificationGlobal',
             component: () => import('@/views/modal/notification/global/CodeExample.vue')
           },
+          { path: 'html', name: 'ComponentModalNotificationHtml', component: () => import('@/views/modal/notification/html/CodeExample.vue') },
           {
             path: 'multiple',
             name: 'ComponentModalNotificationMultiple',
@@ -3230,6 +3234,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentModalModalLoading',
             component: () => import('@/views/modal/modal/loading/CodeExample.vue')
           },
+          { path: 'html', name: 'ComponentModalModalHtml', component: () => import('@/views/modal/modal/html/CodeExample.vue') },
           {
             path: 'draggable',
             name: 'ComponentModalModalDraggable',
@@ -3381,6 +3386,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentTooltipStyle',
             component: () => import('@/views/tooltip/style/CodeExample.vue')
           },
+          { path: 'html', name: 'ComponentTooltipHtml', component: () => import('@/views/tooltip/html/CodeExample.vue') },
           {
             path: 'manual',
             name: 'ComponentTooltipManual',
@@ -3664,6 +3670,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentDrawerBase',
             component: () => import('@/views/drawer/base/CodeExample.vue')
           },
+          { path: 'html', name: 'ComponentDrawerHtml', component: () => import('@/views/drawer/html/CodeExample.vue') },
           {
             path: 'wh',
             name: 'ComponentDrawerWH',
