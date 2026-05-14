@@ -40,7 +40,7 @@ export default Vue.extend({
       '#FF4500', '#FA8072', '#FF0000', '#800000', '#C0C0C0'
     ]
 
-    const treeOptions: VxeTreeProps = {
+    const treeOptions: VxeTreeProps<NodeVO> = {
       transform: true,
       showCheckbox: true,
       data: [

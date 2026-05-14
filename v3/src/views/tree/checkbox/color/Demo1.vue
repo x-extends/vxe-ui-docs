@@ -18,7 +18,7 @@ export default Vue.extend({
   data () {
     const checkNodeKeys: VxeTreePropTypes.CheckNodeKeys = []
 
-    const treeOptions: VxeTreeProps = {
+    const treeOptions: VxeTreeProps<NodeVO> = {
       transform: true,
       showCheckbox: true,
       checkboxConfig: {
