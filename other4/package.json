@@ -3,7 +3,7 @@
   "version": "4.0.0",
   "private": true,
   "scripts": {
-    "update": "npm install --legacy-peer-deps --prefer-offline",
+    "update": "npm install --legacy-peer-deps",
     "serve": "vite",
     "build": "vue-tsc && vite build",
     "pack": "npm run build && gulp build_examples && npm run oxfix:examples",
