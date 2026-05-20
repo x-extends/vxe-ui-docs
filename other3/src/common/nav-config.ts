@@ -381,8 +381,8 @@ export const navConfigList: NavVO[] = [
           {
             i18nKey: 'app.aside.menu.fullInsrall',
             children: [
-              { title: 'NPM 安装插件', routerLink: { name: 'PluginRenderAntdStartFullNpmInstall' } }
-              // { title: 'CDN 安装插件', routerLink: { name: 'PluginRenderAntdStartFullCdnInstall' } }
+              { title: 'NPM 安装插件', routerLink: { name: 'PluginRenderAntdStartFullNpmInstall' } },
+              { title: 'CDN 安装插件', routerLink: { name: 'PluginRenderAntdStartFullCdnInstall' } }
             ]
           },
           {
