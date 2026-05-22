@@ -2775,6 +2775,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentSelectBaseIcon',
                 component: () => import('@/views/select/base/icon/CodeExample.vue')
               },
+              { path: 'radio', name: 'ComponentSelectBaseRadio', component: () => import('@/views/select/base/radio/CodeExample.vue') },
               {
                 path: 'loading',
                 name: 'ComponentSelectBaseLoading',
@@ -2805,6 +2806,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentSelectBaseMultiple',
                 component: () => import('@/views/select/base/multiple/CodeExample.vue')
               },
+              { path: 'checkbox', name: 'ComponentSelectBaseCheckbox', component: () => import('@/views/select/base/checkbox/CodeExample.vue') },
               {
                 path: 'max',
                 name: 'ComponentSelectBaseMax',
@@ -2852,6 +2854,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentSelectConfigDisabled',
                 component: () => import('@/views/select/config/disabled/CodeExample.vue')
               },
+              { path: 'radio', name: 'ComponentSelectConfigRadio', component: () => import('@/views/select/config/radio/CodeExample.vue') },
               {
                 path: 'loading',
                 name: 'ComponentSelectConfigLoading',
@@ -2882,6 +2885,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentSelectConfigMultiple',
                 component: () => import('@/views/select/config/multiple/CodeExample.vue')
               },
+              { path: 'checkbox', name: 'ComponentSelectConfigCheckbox', component: () => import('@/views/select/config/checkbox/CodeExample.vue') },
               {
                 path: 'max',
                 name: 'ComponentSelectConfigMax',

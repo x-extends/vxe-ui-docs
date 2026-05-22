@@ -5,18 +5,14 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 import { VxeSelectProps } from 'vxe-pc-ui'
 
 const val1 = ref([])
-const selectOptions: VxeSelectProps = {
-  multiple: true,
+const selectOptions = reactive<VxeSelectProps>({
   clearable: true,
-  showTotalButoon: true,
-  showCheckedButoon: true,
-  showClearButton: true,
-  showCloseButton: true,
-  placeholder: '显示操作按钮',
+  multiple: true,
+  showCheckbox: true,
   options: [
     { value: 1001, label: 'table' },
     { value: 1002, label: 'grid' },
@@ -31,5 +27,5 @@ const selectOptions: VxeSelectProps = {
     { value: 1012, label: 'checkbox' },
     { value: 1013, label: 'group' }
   ]
-}
+})
 </script>

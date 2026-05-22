@@ -20,6 +20,7 @@ const treeSelectOptions = reactive<VxeTreeSelectProps<NodeVO>>({
   showTotalButoon: true,
   showCheckedButoon: true,
   showClearButton: true,
+  showCloseButton: true,
   optionProps: {
     label: 'title',
     value: 'id'

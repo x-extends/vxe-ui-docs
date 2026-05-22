@@ -22,7 +22,8 @@ export default Vue.extend({
       showTotalButoon: true,
       showCheckedButoon: true,
       showClearButton: true,
-      showCloseButton: true,
+      checkedClosable: true,
+      clearClosable: true,
       optionProps: {
         label: 'title',
         value: 'id'

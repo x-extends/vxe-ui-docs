@@ -16,7 +16,8 @@ export default Vue.extend({
       showTotalButoon: true,
       showCheckedButoon: true,
       showClearButton: true,
-      showCloseButton: true,
+      checkedClosable: true,
+      clearClosable: true,
       placeholder: '显示操作按钮',
       options: [
         { value: 1001, label: 'table' },

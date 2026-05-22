@@ -11,13 +11,9 @@ import { VxeSelectProps } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const selectOptions: VxeSelectProps = {
-      multiple: true,
       clearable: true,
-      showTotalButoon: true,
-      showCheckedButoon: true,
-      showClearButton: true,
-      showCloseButton: true,
-      placeholder: '显示操作按钮',
+      multiple: true,
+      showCheckbox: true,
       options: [
         { value: 1001, label: 'table' },
         { value: 1002, label: 'grid' },
