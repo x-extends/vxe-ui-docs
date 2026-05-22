@@ -361,6 +361,8 @@
         "allowGroup": "Allow drag grouping",
         "dynamicInteraction": "Dynamic interaction",
         "aggDragValues": "Drag and data aggregation",
+        "placement": "面板展示位置",
+        "colgroup": "分组列",
         "defAggFunc": "Set default aggregation function",
         "disabledAggGroup": "Disable data grouping",
         "disabledAggValues": "Disable aggregation summary",

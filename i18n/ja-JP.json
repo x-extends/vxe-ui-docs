@@ -361,6 +361,8 @@
         "allowGroup": "グループのドラッグを許可",
         "dynamicInteraction": "動的インタラクション",
         "aggDragValues": "ドラッグとデータ集計",
+        "placement": "面板展示位置",
+        "colgroup": "分组列",
         "defAggFunc": "デフォルト集計関数を設定",
         "disabledAggGroup": "データグループを無効化",
         "disabledAggValues": "集計を無効化",

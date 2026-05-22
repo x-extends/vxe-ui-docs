@@ -361,6 +361,8 @@
         "allowGroup": "Permitir arrastre de grupos",
         "dynamicInteraction": "Interacción dinámica",
         "aggDragValues": "Arrastre y agregación de datos",
+        "placement": "面板展示位置",
+        "colgroup": "分组列",
         "defAggFunc": "Establecer función de agregación por defecto",
         "disabledAggGroup": "Deshabilitar agrupación de datos",
         "disabledAggValues": "Deshabilitar agregación",

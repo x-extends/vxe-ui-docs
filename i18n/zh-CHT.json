@@ -361,6 +361,8 @@
         "allowGroup": "允許拖拽分組",
         "dynamicInteraction": "動態交互",
         "aggDragValues": "拖拽與數據匯總",
+        "placement": "面板展示位置",
+        "colgroup": "分组列",
         "defAggFunc": "設置默認聚合函數",
         "disabledAggGroup": "禁用數據分組",
         "disabledAggValues": "禁用聚合匯總",
