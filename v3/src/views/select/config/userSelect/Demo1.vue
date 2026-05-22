@@ -24,6 +24,7 @@ export default Vue.extend({
       multiple: true,
       filterable: true,
       clearable: true,
+      showCloseButton: true,
       placeholder: '人员选择',
       optionConfig: {
         height: 40

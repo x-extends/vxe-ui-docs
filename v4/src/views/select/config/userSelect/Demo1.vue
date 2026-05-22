@@ -24,6 +24,7 @@ const selectOptions = reactive<VxeSelectProps>({
   multiple: true,
   filterable: true,
   clearable: true,
+  showCloseButton: true,
   placeholder: '人员选择',
   optionConfig: {
     height: 40
