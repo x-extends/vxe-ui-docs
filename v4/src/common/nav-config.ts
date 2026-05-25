@@ -1494,6 +1494,7 @@ export const navConfigList: NavVO[] = [
               { title: '多选', routerLink: { name: 'ComponentTreeSelectBaseMultiple' } },
               { title: '自定义图标', routerLink: { name: 'ComponentTreeSelectBaseIcon' } },
               { title: '自定义字段', routerLink: { name: 'ComponentTreeSelectBaseOptionProps' } },
+              { title: '显示完整路径', routerLink: { name: 'ComponentTreeSelectBaseFullLabel' } },
               { title: '自定义宽高', routerLink: { name: 'ComponentTreeSelectBasePopupWH' } },
               { title: '连接线', routerLink: { name: 'ComponentTreeSelectBaseShowLine' } },
               { title: '默认展开', routerLink: { name: 'ComponentTreeSelectBaseExpandAll' } },
@@ -1560,6 +1561,12 @@ export const navConfigList: NavVO[] = [
               { title: '自定义树节点标题模板', routerLink: { name: 'ComponentTreeSelectTemplateTreeTitle' } },
               { title: '自定义树节点图标模板', routerLink: { name: 'ComponentTreeSelectTemplateTreeIcon' } },
               { title: '自定义树节点右侧模板', routerLink: { name: 'ComponentTreeSelectTemplateTreeExtra' } }
+            ]
+          },
+          {
+            title: '功能示例',
+            children: [
+              { title: '省市区', routerLink: { name: 'ComponentTreeSelectOtherRegion' } }
             ]
           }
         ]

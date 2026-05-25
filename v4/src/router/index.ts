@@ -4495,6 +4495,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentTreeSelectBaseOptionProps',
                 component: () => import('@/views/tree-select/base/optionProps/CodeExample.vue')
               },
+              { path: 'fullLabel', name: 'ComponentTreeSelectBaseFullLabel', component: () => import('@/views/tree-select/base/fullLabel/CodeExample.vue') },
               {
                 path: 'popupWH',
                 name: 'ComponentTreeSelectBasePopupWH',
@@ -4637,6 +4638,13 @@ const routes: Array<RouteRecordRaw> = [
               { path: 'treeTitle', name: 'ComponentTreeSelectTemplateTreeTitle', component: () => import('@/views/tree-select/template/title/CodeExample.vue') },
               { path: 'treeIcon', name: 'ComponentTreeSelectTemplateTreeIcon', component: () => import('@/views/tree-select/template/icon/CodeExample.vue') },
               { path: 'treeExtra', name: 'ComponentTreeSelectTemplateTreeExtra', component: () => import('@/views/tree-select/template/extra/CodeExample.vue') }
+            ]
+          },
+          {
+            path: 'other',
+            component: RouteLayout,
+            children: [
+              { path: 'region', name: 'ComponentTreeSelectOtherRegion', component: () => import('@/views/tree-select/other/region/CodeExample.vue') }
             ]
           }
         ]
