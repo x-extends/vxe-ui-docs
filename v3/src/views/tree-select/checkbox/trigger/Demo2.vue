@@ -2,6 +2,7 @@
   <div>
     <vxe-tree-select
       v-model="val1"
+      multiple
       :tree-config="treeConfig"
       :options="treeList">
     </vxe-tree-select>
@@ -17,13 +18,20 @@ interface RowVO {
   value: string
   children?: RowVO[]
 }
+
 export default Vue.extend({
   data () {
     const treeConfig: VxeTreeSelectPropTypes.TreeConfig<RowVO> = {
       trigger: 'node',
-      radioConfig: {
+      checkboxConfig: {
         showIcon: true,
-        visibleMode: 'last'
+        checkStrictly: true,
+        visibleMethod ({ node }) {
+          return !(node.children && node.children.length)
+        },
+        checkMethod ({ node }) {
+          return !node.children || !node.children.length
+        }
       }
     }
 
@@ -67,7 +75,7 @@ export default Vue.extend({
     ]
 
     return {
-      val1: null,
+      val1: [],
       treeConfig,
       treeList
     }

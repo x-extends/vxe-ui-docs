@@ -21,15 +21,15 @@ export default Vue.extend({
   data () {
     const checkNodeKeys: VxeTreePropTypes.CheckNodeKeys = []
 
+    const checkboxConfig: VxeTreePropTypes.CheckboxConfig<NodeVO> = {
+      visibleMode: 'last'
+    }
+
     const treeOptions: VxeTreeProps<NodeVO> = {
       transform: true,
       showCheckbox: true,
       keyField: 'id',
-      checkboxConfig: {
-        visibleMethod ({ node }) {
-          return node.id !== '3'
-        }
-      },
+      checkboxConfig,
       data: [
         { title: '节点2', id: '2', parentId: null },
         { title: '节点3', id: '3', parentId: null },
@@ -56,6 +56,7 @@ export default Vue.extend({
 
     return {
       checkNodeKeys,
+      checkboxConfig,
       treeOptions
     }
   }

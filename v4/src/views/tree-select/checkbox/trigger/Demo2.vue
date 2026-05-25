@@ -2,6 +2,7 @@
   <div>
     <vxe-tree-select
       v-model="val1"
+      multiple
       :tree-config="treeConfig"
       :options="treeList">
     </vxe-tree-select>
@@ -20,13 +21,16 @@ interface RowVO {
 
 const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig<RowVO>>({
   trigger: 'node',
-  radioConfig: {
+  checkboxConfig: {
     showIcon: true,
-    visibleMode: 'last'
+    checkStrictly: true,
+    visibleMethod ({ node }) {
+      return !(node.children && node.children.length)
+    }
   }
 })
 
-const val1 = ref()
+const val1 = ref([])
 
 const treeList = ref<VxeTreeSelectPropTypes.Options>([
   { label: '节点2', value: '2' },

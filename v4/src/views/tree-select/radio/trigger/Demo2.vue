@@ -22,7 +22,9 @@ const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig<RowVO>>({
   trigger: 'node',
   radioConfig: {
     showIcon: true,
-    visibleMode: 'last'
+    visibleMethod ({ node }) {
+      return !(node.children && node.children.length)
+    }
   }
 })
 

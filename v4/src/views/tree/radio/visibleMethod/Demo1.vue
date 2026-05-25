@@ -1,5 +1,11 @@
 <template>
   <div>
+    <vxe-radio-group v-model="radioConfig.visibleMode">
+      <vxe-radio-button checked-value="all" content="全部"></vxe-radio-button>
+      <vxe-radio-button checked-value="first" content="第一级"></vxe-radio-button>
+      <vxe-radio-button checked-value="last" content="最后一级"></vxe-radio-button>
+    </vxe-radio-group>
+
     <vxe-tree
       v-bind="treeOptions"
       v-model:check-node-key="checkNodeKey">
@@ -18,16 +24,15 @@ interface NodeVO {
 }
 
 const checkNodeKey = ref<VxeTreePropTypes.CheckNodeKey>()
+const radioConfig = reactive<VxeTreePropTypes.RadioConfig<NodeVO>>({
+  visibleMode: 'last'
+})
 
 const treeOptions = reactive<VxeTreeProps<NodeVO>>({
   transform: true,
   showRadio: true,
   keyField: 'id',
-  radioConfig: {
-    visibleMethod ({ node }) {
-      return node.id !== '3'
-    }
-  },
+  radioConfig,
   data: [
     { title: '节点2', id: '2', parentId: null },
     { title: '节点3', id: '3', parentId: null },

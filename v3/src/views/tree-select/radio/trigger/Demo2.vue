@@ -23,7 +23,9 @@ export default Vue.extend({
       trigger: 'node',
       radioConfig: {
         showIcon: true,
-        visibleMode: 'last'
+        visibleMethod ({ node }) {
+          return !(node.children && node.children.length)
+        }
       }
     }
 

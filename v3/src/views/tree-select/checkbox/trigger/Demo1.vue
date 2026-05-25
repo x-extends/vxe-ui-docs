@@ -26,12 +26,7 @@ export default Vue.extend({
       checkboxConfig: {
         showIcon: true,
         checkStrictly: true,
-        visibleMethod ({ node }) {
-          return !(node.children && node.children.length)
-        },
-        checkMethod ({ node }) {
-          return !node.children || !node.children.length
-        }
+        visibleMode: 'last'
       }
     }
 
