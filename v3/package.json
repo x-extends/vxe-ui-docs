@@ -12,7 +12,7 @@
     "oxfix:examples": "oxfmt dist/example/js/ --write"
   },
   "dependencies": {
-    "axios": "~1.7.2",
+    "axios": "1.7.2",
     "core-js": "^3.49.0",
     "tinycolor2": "~1.6.0",
     "vue": "2.6.14",
