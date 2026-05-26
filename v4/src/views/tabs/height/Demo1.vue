@@ -16,9 +16,6 @@
           <div>内容2</div>
           <div>内容2</div>
           <div>内容2</div>
-          <div>内容2</div>
-          <div>内容2</div>
-          <div>内容2</div>
         </template>
       </vxe-tab-pane>
       <vxe-tab-pane title="标题3" name="3">
