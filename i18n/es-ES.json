@@ -359,6 +359,7 @@
         "handleRowGroup": "Agrupación de datos",
         "rowGroupSummary": "Resumen de grupos",
         "allowGroup": "Permitir arrastre de grupos",
+        "aggSetting": "基础配置",
         "dynamicInteraction": "Interacción dinámica",
         "aggDragValues": "Arrastre y agregación de datos",
         "placement": "面板展示位置",

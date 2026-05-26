@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@vxe-ui/plugin-export-pdf": "~3.4.0",
-    "@vxe-ui/plugin-export-xlsx": "~3.5.1",
+    "@vxe-ui/plugin-export-xlsx": "~3.5.2",
     "@vxe-ui/plugin-menu": "~3.3.2",
     "@vxe-ui/plugin-render-chart": "~3.3.1",
     "@vxe-ui/plugin-render-element": "~3.3.1",
@@ -34,7 +34,7 @@
     "vue-i18n": "~8.15.1",
     "vue-router": "~3.5.1",
     "vuex": "~3.4.0",
-    "vxe-pc-ui": "~3.14.22",
+    "vxe-pc-ui": "~3.14.23",
     "vxe-design": "~3.0.0",
     "vxe-table": "~3.21.2",
     "vxe-gantt": "~3.4.5",

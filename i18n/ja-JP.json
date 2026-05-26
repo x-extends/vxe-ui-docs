@@ -359,6 +359,7 @@
         "handleRowGroup": "データグループ",
         "rowGroupSummary": "グループ集計",
         "allowGroup": "グループのドラッグを許可",
+        "aggSetting": "基础配置",
         "dynamicInteraction": "動的インタラクション",
         "aggDragValues": "ドラッグとデータ集計",
         "placement": "面板展示位置",

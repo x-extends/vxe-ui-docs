@@ -359,6 +359,7 @@
         "handleRowGroup": "數據分組",
         "rowGroupSummary": "分組匯總",
         "allowGroup": "允許拖拽分組",
+        "aggSetting": "基础配置",
         "dynamicInteraction": "動態交互",
         "aggDragValues": "拖拽與數據匯總",
         "placement": "面板展示位置",

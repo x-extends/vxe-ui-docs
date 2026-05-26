@@ -359,6 +359,7 @@
         "handleRowGroup": "Группировка данных",
         "rowGroupSummary": "Итоги по группам",
         "allowGroup": "Разрешить перетаскивание групп",
+        "aggSetting": "基础配置",
         "dynamicInteraction": "Динамическое взаимодействие",
         "aggDragValues": "Перетаскивание и агрегация данных",
         "placement": "面板展示位置",

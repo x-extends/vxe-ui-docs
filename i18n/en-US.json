@@ -359,6 +359,7 @@
         "handleRowGroup": "Data grouping",
         "rowGroupSummary": "Group summary",
         "allowGroup": "Allow drag grouping",
+        "aggSetting": "基础配置",
         "dynamicInteraction": "Dynamic interaction",
         "aggDragValues": "Drag and data aggregation",
         "placement": "面板展示位置",
