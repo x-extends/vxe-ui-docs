@@ -31,17 +31,26 @@ export default Vue.extend({
         nickname: '',
         role: ''
       },
-      rules: {
-        name: [
-          { required: true, message: '必须填写' }
-        ],
-        role: [
-          { required: true, message: '必须填写' }
-        ]
-      },
+      rules: {},
       items: [
-        { field: 'name', title: '名称', span: 12, itemRender: { name: 'VxeInput' } },
-        { field: 'role', title: '角色', span: 12, itemRender: { name: 'VxeInput' } },
+        {
+          field: 'name',
+          title: '名称',
+          span: 12,
+          rules: [
+            { required: true, message: '必须填写' }
+          ],
+          itemRender: { name: 'VxeInput' }
+        },
+        {
+          field: 'role',
+          title: '角色',
+          span: 12,
+          rules: [
+            { required: true, message: '必须填写' }
+          ],
+          itemRender: { name: 'VxeInput' }
+        },
         {
           align: 'center',
           span: 24,

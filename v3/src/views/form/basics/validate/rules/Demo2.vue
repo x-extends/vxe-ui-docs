@@ -11,12 +11,12 @@
       :rules="formRules"
       @submit="submitEvent"
       @reset="resetEvent">
-      <vxe-form-item title="名称" field="name" span="12" :item-render="{}">
+      <vxe-form-item title="名称" field="name" span="12" :rules="nameRules" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="角色" field="role" span="12" :item-render="{}">
+      <vxe-form-item title="角色" field="role" span="12" :rules="roleRules" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.role" @change="changeEvent(params)"></vxe-input>
         </template>
@@ -33,7 +33,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeUI, VxeFormInstance, VxeFormPropTypes } from 'vxe-pc-ui'
+import { VxeUI, VxeFormInstance, VxeFormItemPropTypes, VxeFormPropTypes } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -51,19 +51,22 @@ export default Vue.extend({
       role: ''
     }
 
-    const formRules: VxeFormPropTypes.Rules<FormDataVO> = {
-      name: [
-        { required: true, message: '必须填写' }
-      ],
-      role: [
-        { required: true, message: '必须填写' }
-      ]
-    }
+    const formRules: VxeFormPropTypes.Rules<FormDataVO> = {}
+
+    const nameRules: VxeFormItemPropTypes.Rules = [
+      { required: true, message: '必须填写' }
+    ]
+
+    const roleRules: VxeFormItemPropTypes.Rules = [
+      { required: true, message: '必须填写' }
+    ]
 
     return {
       vertical,
       formData,
-      formRules
+      formRules,
+      nameRules,
+      roleRules
     }
   },
   methods: {

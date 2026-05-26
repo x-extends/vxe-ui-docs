@@ -10,7 +10,7 @@
     <CodeLight path="form/basics/validate/rules/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          带边框样式
+          也可以单独给表单项加 <ApiLink name="form-item" prop="rules"/> 局部规则，覆盖全局会覆盖全局规则
         </vxe-tip>
       </template>
     </CodeLight>
