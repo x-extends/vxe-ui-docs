@@ -371,7 +371,9 @@
         "customStorage": "Локальное сохранение состояния столбцов",
         "template": "Пользовательские шаблоны слотов",
         "templateGroupContent": "Пользовательский шаблон содержимого группы",
-        "templateGroupValues": "Пользовательский шаблон агрегированных данных группы"
+        "templateGroupValues": "Пользовательский шаблон агрегированных данных группы",
+        "exportExceljs": "第三方插件 - exceljs 导入导出",
+        "exportXlsx": "导出 xlsx"
       }
     },
     "filtersComplexInput": {

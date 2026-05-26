@@ -371,7 +371,9 @@
         "customStorage": "Guardar estado de columnas localmente",
         "template": "Plantillas de slot personalizadas",
         "templateGroupContent": "Plantilla personalizada para contenido de grupo",
-        "templateGroupValues": "Plantilla personalizada para datos agregados de grupo"
+        "templateGroupValues": "Plantilla personalizada para datos agregados de grupo",
+        "exportExceljs": "第三方插件 - exceljs 导入导出",
+        "exportXlsx": "导出 xlsx"
       }
     },
     "filtersComplexInput": {

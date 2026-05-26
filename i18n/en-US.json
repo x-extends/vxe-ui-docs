@@ -371,7 +371,9 @@
         "customStorage": "Save column operation state locally",
         "template": "Custom slot templates",
         "templateGroupContent": "Custom group content template",
-        "templateGroupValues": "Custom group column aggregation data template"
+        "templateGroupValues": "Custom group column aggregation data template",
+        "exportExceljs": "第三方插件 - exceljs 导入导出",
+        "exportXlsx": "导出 xlsx"
       }
     },
     "filtersComplexInput": {

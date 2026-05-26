@@ -371,7 +371,9 @@
         "customStorage": "列操作状态本地保存",
         "template": "自定义插槽模板",
         "templateGroupContent": "自定义分组内容模版",
-        "templateGroupValues": "自定义分组列聚合数据模板"
+        "templateGroupValues": "自定义分组列聚合数据模板",
+        "exportExceljs": "第三方插件 - exceljs 导入导出",
+        "exportXlsx": "导出 xlsx"
       }
     },
     "filtersComplexInput": {
