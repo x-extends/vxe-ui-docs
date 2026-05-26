@@ -27,5 +27,6 @@ export interface NavVO {
   children?: NavVO[]
 }
 
+export const oldExtendUrl = `https://vxetable.cn/other${process.env.VUE_APP_VXE_VERSION}`
 export const otherUrl = process.env.VUE_APP_OTHER_DOCS_URL
 export const tablePluginDocsUrl = process.env.VUE_APP_SITE_PLUGIN_URL
