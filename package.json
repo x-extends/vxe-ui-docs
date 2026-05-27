@@ -19,7 +19,8 @@
     "pack:other4": "npm run build:other4 && gulp build_other4_docs && gulp build_other4_zip",
     "pack:v3": "npm run build:v3 && gulp build_v3_docs && gulp build_v3_zip",
     "pack:v4": "npm run build:v4 && gulp build_v4_docs && gulp build_v4_zip",
-    "pack:all": "npm run build:all && gulp build_all_docs && gulp build_all_zip"
+    "pack:all": "npm run build:all && gulp build_all_docs && gulp build_all_zip",
+    "sync:i18n": "node ./syncI18n.js"
   },
   "devDependencies": {
     "del": "~6.0.0",
