@@ -25,6 +25,9 @@ export default Vue.extend({
         showIcon: true,
         visibleMethod ({ node }) {
           return !(node.children && node.children.length)
+        },
+        checkMethod ({ node }) {
+          return !(node.children && node.children.length)
         }
       }
     }

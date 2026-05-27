@@ -23,7 +23,8 @@ export default Vue.extend({
       trigger: 'node',
       radioConfig: {
         showIcon: true,
-        visibleMode: 'last'
+        visibleMode: 'last',
+        checkMode: 'last'
       }
     }
 

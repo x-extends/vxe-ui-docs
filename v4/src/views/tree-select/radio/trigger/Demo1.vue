@@ -22,7 +22,8 @@ const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig<RowVO>>({
   trigger: 'node',
   radioConfig: {
     showIcon: true,
-    visibleMode: 'last'
+    visibleMode: 'last',
+    checkMode: 'last'
   }
 })
 

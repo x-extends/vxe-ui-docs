@@ -26,7 +26,8 @@ export default Vue.extend({
       checkboxConfig: {
         showIcon: true,
         checkStrictly: true,
-        visibleMode: 'last'
+        visibleMode: 'last',
+        checkMode: 'last'
       }
     }
 

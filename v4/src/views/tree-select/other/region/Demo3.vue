@@ -15,9 +15,7 @@ const treeList = ref<VxeTreeSelectPropTypes.Options>([])
 const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig>({
   trigger: 'node',
   radioConfig: {
-    checkMethod ({ node }) {
-      return !node.children || !node.children.length
-    }
+    checkMode: 'last'
   }
 })
 

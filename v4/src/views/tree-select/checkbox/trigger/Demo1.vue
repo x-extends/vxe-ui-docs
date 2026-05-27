@@ -24,7 +24,8 @@ const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig<RowVO>>({
   checkboxConfig: {
     showIcon: true,
     checkStrictly: true,
-    visibleMode: 'last'
+    visibleMode: 'last',
+    checkMode: 'last'
   }
 })
 

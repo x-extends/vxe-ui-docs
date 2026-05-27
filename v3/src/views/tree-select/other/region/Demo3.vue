@@ -17,9 +17,7 @@ export default Vue.extend({
     const treeConfig: VxeTreeSelectPropTypes.TreeConfig = {
       trigger: 'node',
       radioConfig: {
-        checkMethod ({ node }) {
-          return !node.children || !node.children.length
-        }
+        checkMode: 'last'
       }
     }
 

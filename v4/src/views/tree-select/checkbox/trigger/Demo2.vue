@@ -26,6 +26,9 @@ const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig<RowVO>>({
     checkStrictly: true,
     visibleMethod ({ node }) {
       return !(node.children && node.children.length)
+    },
+    checkMethod ({ node }) {
+      return !(node.children && node.children.length)
     }
   }
 })
