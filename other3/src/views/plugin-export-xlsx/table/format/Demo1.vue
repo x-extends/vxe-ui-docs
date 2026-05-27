@@ -12,7 +12,7 @@
         <vxe-column field="name" title="Name"></vxe-column>
         <vxe-column field="role" title="Role"></vxe-column>
       </vxe-colgroup>
-      <vxe-column field="sex" title="Sex"></vxe-column>
+      <vxe-column field="sex" title="Sex" :cell-render="sexCellRender"></vxe-column>
       <vxe-column field="age" title="Age" :export-method="ageExportMethod" :footer-export-method="ageFooterExportMethod"></vxe-column>
       <vxe-column field="no1" title="NO1"></vxe-column>
       <vxe-column field="no2" title="NO2" cell-type="string"></vxe-column>
@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import type { VxeTableInstance, VxeTablePropTypes } from 'vxe-table'
+import type { VxeTableInstance, VxeTablePropTypes, VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -37,19 +37,28 @@ interface RowVO {
 export default Vue.extend({
   data () {
     const tableData: RowVO[] = [
-      { id: 10001, name: '张三', role: 'Develop', sex: 'Man', age: 28, no1: '028', no2: '028' },
-      { id: 10002, name: '李四', role: '研发', sex: 'Women', age: 36, no1: '220', no2: '220' },
-      { id: 10003, name: '王五', role: '产品经理', sex: 'Man', age: 44, no1: '003200', no2: '003200' },
-      { id: 10004, name: '老六', role: 'Designer', sex: 'Women', age: 38, no1: '02040', no2: '02040' }
+      { id: 10001, name: '张三', role: 'Develop', sex: '1', age: 28, no1: '028', no2: '028' },
+      { id: 10002, name: '李四', role: '研发', sex: '0', age: 36, no1: '220', no2: '220' },
+      { id: 10003, name: '王五', role: '产品经理', sex: '1', age: 44, no1: '003200', no2: '003200' },
+      { id: 10004, name: '老六', role: 'Designer', sex: '0', age: 38, no1: '02040', no2: '02040' }
     ]
 
     const footerData: VxeTablePropTypes.FooterData = [
       { seq: '合计', name: '12人', age: '999', no1: 356 }
     ]
 
+    const sexCellRender: VxeColumnPropTypes.CellRender = {
+      name: 'FormatSelect',
+      options: [
+        { label: '女', value: '0' },
+        { label: '男', value: '1' }
+      ]
+    }
+
     return {
       tableData,
-      footerData
+      footerData,
+      sexCellRender
     }
   },
   methods: {
