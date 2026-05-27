@@ -374,7 +374,9 @@
         "templateGroupContent": "Custom group content template",
         "templateGroupValues": "Custom group column aggregation data template",
         "exportExceljs": "第三方插件 - exceljs 导入导出",
-        "exportXlsx": "导出 xlsx"
+        "exportXlsx": "导出 xlsx",
+        "menu": "官方插件 - 右键菜单",
+        "menuBase": "单元格右键菜单"
       }
     },
     "filtersComplexInput": {
