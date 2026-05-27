@@ -232,8 +232,8 @@
         "install": "安裝使用",
         "npmInstall": "NPM 安裝使用",
         "cdnInstall": "CDN 安裝使用",
-        "useV4Old": "安裝老版本插件 v4.0 ~ v4.6.x",
-        "useV3Old": "安裝老版本插件 v3.0 ~ v3.8.x",
+        "useV4Old": "已停止维护版本插件 v4.0 ~ v4.6.x",
+        "useV3Old": "已停止维护版本插件 v3.0 ~ v3.8.x",
         "table": "Table 基礎表格",
         "grid": "Grid 配置式表格",
         "gantt": "Gantt 甘特圖",
@@ -373,10 +373,12 @@
         "template": "自定義插槽模板",
         "templateGroupContent": "自定義分組內容模版",
         "templateGroupValues": "自定義分組列聚合數據模板",
-        "exportExceljs": "第三方插件 - exceljs 导入导出",
+        "exceljs": "第三方插件 - exceljs 导入导出",
         "exportXlsx": "导出 xlsx",
         "menu": "官方插件 - 右键菜单",
-        "menuBase": "单元格右键菜单"
+        "menuBase": "单元格右键菜单",
+        "chart": "官方插件 - 单元格图表",
+        "chartBase": "渲染简单图表"
       }
     },
     "filtersComplexInput": {

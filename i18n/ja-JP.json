@@ -232,8 +232,8 @@
         "install": "インストールと使用",
         "npmInstall": "NPM インストールと使用",
         "cdnInstall": "CDN インストールと使用",
-        "useV4Old": "古いバージョン v4.0 ~ v4.6.x をインストール",
-        "useV3Old": "古いバージョン v3.0 ~ v3.8.x をインストール",
+        "useV4Old": "已停止维护版本插件 v4.0 ~ v4.6.x",
+        "useV3Old": "已停止维护版本插件 v3.0 ~ v3.8.x",
         "table": "基本テーブル",
         "grid": "グリッド設定テーブル",
         "gantt": "ガントチャート",
@@ -373,10 +373,12 @@
         "template": "カスタムスロットテンプレート",
         "templateGroupContent": "グループ内容テンプレートをカスタマイズ",
         "templateGroupValues": "グループ列集計データテンプレートをカスタマイズ",
-        "exportExceljs": "第三方插件 - exceljs 导入导出",
+        "exceljs": "第三方插件 - exceljs 导入导出",
         "exportXlsx": "导出 xlsx",
         "menu": "官方插件 - 右键菜单",
-        "menuBase": "单元格右键菜单"
+        "menuBase": "单元格右键菜单",
+        "chart": "官方插件 - 单元格图表",
+        "chartBase": "渲染简单图表"
       }
     },
     "filtersComplexInput": {
