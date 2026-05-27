@@ -8,15 +8,16 @@
       :data="tableData">
       <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
-      <vxe-column field="num10" title="柱状图" width="200" :cell-render="{ name: 'bar', props: { bar: { max: 100 }, label: { formatter: '{value}%' } } }"></vxe-column>
-      <vxe-column field="num11" title="柱状图 - 显示值" width="200" :cell-render="{ name: 'bar',  props: { label: { formatter: '{value}' }  } }"></vxe-column>
-      <vxe-column field="num12" title="柱状图 - 最大值" width="200" :cell-render="{ name: 'bar', props: { bar: { max: 140 }, colors: ['#FFDB5C', '#91C7AE', '#D48265'], tooltip: { formatter: '值：{value}%' }, label: {  formatter: '{value}%' } } }"></vxe-column>
+      <vxe-column field="num10" title="柱状图" width="200" :cell-render="num10CellRender"></vxe-column>
+      <vxe-column field="num11" title="柱状图 - 显示值" width="200" :cell-render="num11CellRender"></vxe-column>
+      <vxe-column field="num12" title="柱状图 - 最大值" width="200" :cell-render="num12CellRender"></vxe-column>
     </vxe-table>
   </div>
 </template>
 
 <script lang="tsx" setup>
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
+import { VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -38,4 +39,42 @@ const tableData = ref<RowVO[]>([
   { id: 109, name: 'test9', num10: [100], num11: [14, 66], num12: [27, 34, 98] },
   { id: 1010, name: 'test10', num10: [98], num11: [44, 98], num12: [29, 107, 127] }
 ])
+
+const num10CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'bar',
+  props: {
+    bar: {
+      max: 100
+    },
+    label: {
+      formatter: '{value}%'
+    }
+  }
+})
+
+const num11CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'bar',
+  props: {
+    label: {
+      formatter: '{value}'
+    }
+  }
+})
+
+const num12CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'bar',
+  props: {
+    bar: {
+      max: 140
+    },
+    colors: ['#FFDB5C', '#91C7AE', '#D48265'],
+    labels: ['团队1', '团队2', '团队3'],
+    tooltip: {
+      formatter: '{label}：{value}%'
+    },
+    label: {
+      formatter: '{value}%'
+    }
+  }
+})
 </script>

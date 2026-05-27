@@ -8,17 +8,18 @@
       :data="tableData">
       <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
-      <vxe-column field="num20" title="饼图 - 环形" width="100" :cell-render="{ name: 'pie',  props: { ring: { diameter: '60%' } } }"></vxe-column>
-      <vxe-column field="num21" title="饼图 - 自定义环形" width="140" :cell-render="{ name: 'pie', props: { colors: ['#FFDB5C', '#F0F0F0'], ring: { diameter: '60%' }, label: { formatter: '{value[0]}%' } } }"></vxe-column>
-      <vxe-column field="num23" title="饼图 - 实心" width="100" :cell-render="{ name: 'pie' }"></vxe-column>
-      <vxe-column field="num30" title="饼图 - 自定义实心" width="140" :cell-render="{ name: 'pie', props: { colors: ['#FFDB5C', '#91C7AE', '#D48265'], ring: { diameter: '60%', color: '#2F4554' }, label: { color: '#ffffff', formatter: '概况' } } }"></vxe-column>
-      <vxe-column field="num31" title="多种混合" width="200" :cell-render="{ name: 'pies', children: [  { props: { tooltip: { formatter: '值：{value}' }, colors: ['#FFDB5C', '#D48265'], ring: { diameter: '60%' } } }, { props: { tooltip: { formatter: '值：{value}' } } }, { props: { tooltip: { formatter: '值：{value}' } }  } ] }"></vxe-column>
+      <vxe-column field="num20" title="饼图 - 环形" width="100" :cell-render="num20CellRender"></vxe-column>
+      <vxe-column field="num21" title="饼图 - 自定义环形" width="140" :cell-render="num21CellRender"></vxe-column>
+      <vxe-column field="num23" title="饼图 - 实心" width="100" :cell-render="num23CellRender"></vxe-column>
+      <vxe-column field="num30" title="饼图 - 自定义实心" width="140" :cell-render="num30CellRender"></vxe-column>
+      <vxe-column field="num31" title="多种混合" width="200" :cell-render="num31CellRender"></vxe-column>
     </vxe-table>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -45,8 +46,87 @@ export default Vue.extend({
       { id: 1010, name: 'test10', num20: [72, 28], num21: [22, 78], num30: [17, 10, 31], num31: [[77, 100, 58], [75, 85], [14, 250, 59, 44, 16, 50, 100]], num23: [200, 400, 500] }
     ]
 
+    const num20CellRender: VxeColumnPropTypes.CellRender = {
+      name: 'pie',
+      props: {
+        ring: {
+          diameter: '60%'
+        }
+      }
+    }
+
+    const num21CellRender: VxeColumnPropTypes.CellRender = {
+      name: 'pie',
+      props: {
+        colors: ['#FFDB5C', '#F0F0F0'],
+        ring: {
+          diameter: '60%'
+        },
+        label: {
+          formatter: '{value[0]}%'
+        }
+      }
+    }
+
+    const num23CellRender: VxeColumnPropTypes.CellRender = {
+      name: 'pie'
+    }
+
+    const num30CellRender: VxeColumnPropTypes.CellRender = {
+      name: 'pie',
+      props: {
+        colors: ['#FFDB5C', '#91C7AE', '#D48265'],
+        labels: ['团队1', '团队2', '团队3'],
+        ring: {
+          diameter: '60%',
+          color: '#2F4554'
+        },
+        tooltip: {
+          formatter: '{label}：{value}%'
+        },
+        label: {
+          color: '#ffffff',
+          formatter: '概况'
+        }
+      }
+    }
+
+    const num31CellRender: VxeColumnPropTypes.CellRender = {
+      name: 'pies',
+      children: [
+        {
+          props: {
+            tooltip: {
+              formatter: '值：{value}'
+            },
+            colors: ['#FFDB5C', '#D48265'],
+            ring: { diameter: '60%' }
+          }
+        },
+        {
+          props: {
+            tooltip: {
+              formatter: '值：{value}'
+            }
+          }
+        },
+        {
+          props: {
+            tooltip: {
+              formatter: '值：{value}'
+            }
+          }
+        }
+      ]
+    }
+
     return {
-      tableData
+      tableData,
+      num20CellRender,
+      num21CellRender,
+      num23CellRender,
+      num30CellRender,
+      num31CellRender
     }
   }
 })

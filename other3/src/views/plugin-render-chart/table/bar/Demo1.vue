@@ -8,15 +8,16 @@
       :data="tableData">
       <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
-      <vxe-column field="num10" title="柱状图" width="200" :cell-render="{ name: 'bar', props: { bar: { max: 100 }, label: { formatter: '{value}%' } } }"></vxe-column>
-      <vxe-column field="num11" title="柱状图 - 显示值" width="200" :cell-render="{ name: 'bar',  props: { label: { formatter: '{value}' }  } }"></vxe-column>
-      <vxe-column field="num12" title="柱状图 - 最大值" width="200" :cell-render="{ name: 'bar', props: { bar: { max: 140 }, colors: ['#FFDB5C', '#91C7AE', '#D48265'], tooltip: { formatter: '值：{value}%' }, label: {  formatter: '{value}%' } } }"></vxe-column>
+      <vxe-column field="num10" title="柱状图" width="200" :cell-render="num10CellRender"></vxe-column>
+      <vxe-column field="num11" title="柱状图 - 显示值" width="200" :cell-render="num11CellRender"></vxe-column>
+      <vxe-column field="num12" title="柱状图 - 最大值" width="200" :cell-render="num12CellRender"></vxe-column>
     </vxe-table>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -41,8 +42,49 @@ export default Vue.extend({
       { id: 1010, name: 'test10', num10: [98], num11: [44, 98], num12: [29, 107, 127] }
     ]
 
+    const num10CellRender: VxeColumnPropTypes.CellRender = {
+      name: 'bar',
+      props: {
+        bar: {
+          max: 100
+        },
+        label: {
+          formatter: '{value}%'
+        }
+      }
+    }
+
+    const num11CellRender: VxeColumnPropTypes.CellRender = {
+      name: 'bar',
+      props: {
+        label: {
+          formatter: '{value}'
+        }
+      }
+    }
+
+    const num12CellRender: VxeColumnPropTypes.CellRender = {
+      name: 'bar',
+      props: {
+        bar: {
+          max: 140
+        },
+        colors: ['#FFDB5C', '#91C7AE', '#D48265'],
+        labels: ['团队1', '团队2', '团队3'],
+        tooltip: {
+          formatter: '{label}：{value}%'
+        },
+        label: {
+          formatter: '{value}%'
+        }
+      }
+    }
+
     return {
-      tableData
+      tableData,
+      num10CellRender,
+      num11CellRender,
+      num12CellRender
     }
   }
 })

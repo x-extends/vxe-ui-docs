@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import type { VxeGridProps } from 'vxe-table'
+import type { VxeGridProps, VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -15,6 +15,44 @@ interface RowVO {
   num11: number[]
   num12: number[]
 }
+
+const num10CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'bar',
+  props: {
+    bar: {
+      max: 100
+    },
+    label: {
+      formatter: '{value}%'
+    }
+  }
+})
+
+const num11CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'bar',
+  props: {
+    label: {
+      formatter: '{value}'
+    }
+  }
+})
+
+const num12CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'bar',
+  props: {
+    bar: {
+      max: 140
+    },
+    colors: ['#FFDB5C', '#91C7AE', '#D48265'],
+    labels: ['团队1', '团队2', '团队3'],
+    tooltip: {
+      formatter: '{label}：{value}%'
+    },
+    label: {
+      formatter: '{value}%'
+    }
+  }
+})
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
@@ -26,55 +64,9 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   columns: [
     { type: 'seq', width: 70 },
     { field: 'name', title: 'Name' },
-    {
-      field: 'num10',
-      title: '柱状图',
-      width: 200,
-      cellRender: {
-        name: 'bar',
-        props: {
-          bar: {
-            max: 100
-          },
-          label: {
-            formatter: '{value}%'
-          }
-        }
-      }
-    },
-    {
-      field: 'num11',
-      title: '柱状图 - 显示值',
-      width: 200,
-      cellRender: {
-        name: 'bar',
-        props: {
-          label: {
-            formatter: '{value}'
-          }
-        }
-      }
-    },
-    {
-      field: 'num12',
-      title: '柱状图 - 最大值',
-      width: 200,
-      cellRender: {
-        name: 'bar',
-        props: {
-          bar: {
-            max: 140
-          },
-          colors: ['#FFDB5C', '#91C7AE', '#D48265'],
-          tooltip: {
-            formatter: '值：{value}%'
-          },
-          label: {
-            formatter: '{value}%'
-          }
-        }
-      }
-    }
+    { field: 'num10', title: '柱状图', width: 200, cellRender: num10CellRender },
+    { field: 'num11', title: '柱状图 - 显示值', width: 200, cellRender: num11CellRender },
+    { field: 'num12', title: '柱状图 - 最大值', width: 200, cellRender: num12CellRender }
   ],
   data: [
     { id: 101, name: 'test1', num10: [60], num11: [60, 111], num12: [60, 134, 76] },

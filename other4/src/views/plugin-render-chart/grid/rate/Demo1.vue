@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import type { VxeGridProps } from 'vxe-table'
+import type { VxeGridProps, VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -14,6 +14,17 @@ interface RowVO {
   num41: number
   num42: number
 }
+
+const num41CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'rate'
+})
+
+const num42CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'rate',
+  props: {
+    colors: ['#91C7AE', '#D48265']
+  }
+})
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
@@ -25,18 +36,8 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   columns: [
     { type: 'seq', width: 70 },
     { field: 'name', title: 'Name' },
-    { field: 'num41', title: '评分', width: 180, cellRender: { name: 'rate' } },
-    {
-      field: 'num42',
-      title: '评分 - 自定义颜色',
-      width: 180,
-      cellRender: {
-        name: 'rate',
-        props: {
-          colors: ['#91C7AE', '#D48265']
-        }
-      }
-    }
+    { field: 'num41', title: '评分', width: 180, cellRender: num41CellRender },
+    { field: 'num42', title: '评分 - 自定义颜色', width: 180, cellRender: num42CellRender }
   ],
   data: [
     { id: 101, name: 'test1', num41: 1, num42: 4 },

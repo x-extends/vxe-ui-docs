@@ -8,14 +8,15 @@
       :data="tableData">
       <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
-      <vxe-column field="num41" title="评分" width="180" :cell-render="{ name: 'rate' }"></vxe-column>
-      <vxe-column field="num42" title="评分 - 自定义颜色" width="180" :cell-render="{ name: 'rate', props: { colors: ['#91C7AE', '#D48265'] } }"></vxe-column>
+      <vxe-column field="num41" title="评分" width="180" :cell-render="num41CellRender"></vxe-column>
+      <vxe-column field="num42" title="评分 - 自定义颜色" width="180" :cell-render="num42CellRender"></vxe-column>
     </vxe-table>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -39,8 +40,21 @@ export default Vue.extend({
       { id: 1010, name: 'test10', num41: 4, num42: 2 }
     ]
 
+    const num41CellRender: VxeColumnPropTypes.CellRender = {
+      name: 'rate'
+    }
+
+    const num42CellRender: VxeColumnPropTypes.CellRender = {
+      name: 'rate',
+      props: {
+        colors: ['#91C7AE', '#D48265']
+      }
+    }
+
     return {
-      tableData
+      tableData,
+      num41CellRender,
+      num42CellRender
     }
   }
 })

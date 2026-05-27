@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import type { VxeGridProps } from 'vxe-table'
+import type { VxeGridProps, VxeColumnPropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -18,6 +18,80 @@ interface RowVO {
   num23: number[]
 }
 
+const num20CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'pie',
+  props: {
+    ring: {
+      diameter: '60%'
+    }
+  }
+})
+
+const num21CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'pie',
+  props: {
+    colors: ['#FFDB5C', '#F0F0F0'],
+    ring: {
+      diameter: '60%'
+    },
+    label: {
+      formatter: '{value[0]}%'
+    }
+  }
+})
+
+const num23CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'pie'
+})
+
+const num30CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'pie',
+  props: {
+    colors: ['#FFDB5C', '#91C7AE', '#D48265'],
+    labels: ['团队1', '团队2', '团队3'],
+    ring: {
+      diameter: '60%',
+      color: '#2F4554'
+    },
+    tooltip: {
+      formatter: '{label}：{value}%'
+    },
+    label: {
+      color: '#ffffff',
+      formatter: '概况'
+    }
+  }
+})
+
+const num31CellRender = reactive<VxeColumnPropTypes.CellRender>({
+  name: 'pies',
+  children: [
+    {
+      props: {
+        tooltip: {
+          formatter: '值：{value}'
+        },
+        colors: ['#FFDB5C', '#D48265'],
+        ring: { diameter: '60%' }
+      }
+    },
+    {
+      props: {
+        tooltip: {
+          formatter: '值：{value}'
+        }
+      }
+    },
+    {
+      props: {
+        tooltip: {
+          formatter: '值：{value}'
+        }
+      }
+    }
+  ]
+})
+
 const gridOptions = reactive<VxeGridProps<RowVO>>({
   border: true,
   showOverflow: true,
@@ -28,96 +102,11 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   columns: [
     { type: 'seq', width: 70 },
     { field: 'name', title: 'Name' },
-    {
-      field: 'num20',
-      title: '饼图 - 环形',
-      width: 100,
-      cellRender: {
-        name: 'pie',
-        props: {
-          ring: {
-            diameter: '60%'
-          }
-        }
-      }
-    },
-    {
-      field: 'num21',
-      title: '饼图 - 自定义环形',
-      width: 140,
-      cellRender: {
-        name: 'pie',
-        props: {
-          colors: ['#FFDB5C', '#F0F0F0'],
-          ring: {
-            diameter: '60%'
-          },
-          label: {
-            formatter: '{value[0]}%'
-          }
-        }
-      }
-    },
-    {
-      field: 'num23',
-      title: '饼图 - 实心',
-      width: 100,
-      cellRender: {
-        name: 'pie'
-      }
-    },
-    {
-      field: 'num30',
-      title: '饼图 - 自定义实心',
-      width: 140,
-      cellRender: {
-        name: 'pie',
-        props: {
-          colors: ['#FFDB5C', '#91C7AE', '#D48265'],
-          ring: {
-            diameter: '60%',
-            color: '#2F4554'
-          },
-          label: {
-            color: '#ffffff',
-            formatter: '概况'
-          }
-        }
-      }
-    },
-    {
-      field: 'num31',
-      title: '多种混合',
-      width: 200,
-      cellRender: {
-        name: 'pies',
-        children: [
-          {
-            props: {
-              tooltip: {
-                formatter: '值：{value}'
-              },
-              colors: ['#FFDB5C', '#D48265'],
-              ring: { diameter: '60%' }
-            }
-          },
-          {
-            props: {
-              tooltip: {
-                formatter: '值：{value}'
-              }
-            }
-          },
-          {
-            props: {
-              tooltip: {
-                formatter: '值：{value}'
-              }
-            }
-          }
-        ]
-      }
-    }
+    { field: 'num20', title: '饼图 - 环形', width: 100, cellRender: num20CellRender },
+    { field: 'num21', title: '饼图 - 自定义环形', width: 140, cellRender: num21CellRender },
+    { field: 'num23', title: '饼图 - 实心', width: 100, cellRender: num23CellRender },
+    { field: 'num30', title: '饼图 - 自定义实心', width: 140, cellRender: num30CellRender },
+    { field: 'num31', title: '多种混合', width: 200, cellRender: num31CellRender }
   ],
   data: [
     { id: 101, name: 'test1', num20: [30, 70], num21: [30, 70], num30: [47, 67, 67], num31: [[60, 28, 26], [77, 100], [77, 100, 8, 55, 100, 77, 142]], num23: [20, 30, 50] },
