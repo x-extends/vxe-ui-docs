@@ -33,7 +33,7 @@ const treeOptions = reactive<VxeTreeProps>({
 
 const loadList = () => {
   treeOptions.loading = true
-  fetch('/resource/json/provinces_list.json').then(res => res.json()).then((data: NodeVO[]) => {
+  fetch('https://vxeui.com/resource/json/provinces_list.json').then(res => res.json()).then((data: NodeVO[]) => {
     treeOptions.loading = false
     const $tree = treeRef.value
     if ($tree) {

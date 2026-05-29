@@ -35,7 +35,7 @@ const treeSelectOptions = reactive<VxeTreeSelectProps<NodeVO>>({
 
 const loadList = () => {
   treeSelectOptions.loading = true
-  fetch('/resource/json/provinces_list.json').then(res => res.json()).then((data: NodeVO[]) => {
+  fetch('https://vxeui.com/resource/json/provinces_list.json').then(res => res.json()).then((data: NodeVO[]) => {
     treeSelectOptions.loading = false
     treeSelectOptions.options = data
   })
