@@ -354,7 +354,8 @@
         "keypadDelMethod": "自定義按 Delete 鍵刪除",
         "keypadBackMethod": "自定義按 Backspace 鍵刪除",
         "keypadBeforeEditMethod": "阻止編輯",
-        "keypadUndoRedo": "撤销和重做"
+        "keypadUndoRedo": "撤销和重做",
+        "keypadFillByCopy": "自动填充内容"
       }
     },
     "extendPivotTable": {

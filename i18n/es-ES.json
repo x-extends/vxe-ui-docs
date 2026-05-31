@@ -354,7 +354,8 @@
         "keypadDelMethod": "Personalizar acción de la tecla Delete",
         "keypadBackMethod": "Personalizar acción de la tecla Backspace",
         "keypadBeforeEditMethod": "Prevenir edición",
-        "keypadUndoRedo": "撤销和重做"
+        "keypadUndoRedo": "撤销和重做",
+        "keypadFillByCopy": "自动填充内容"
       }
     },
     "extendPivotTable": {
