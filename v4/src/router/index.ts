@@ -386,6 +386,8 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'default',
                 component: RouteLayout,
                 children: [
+                  { path: 'reApi', name: 'GlobalRendererTableDefaultReApi', redirect: { name: 'GlobalRendererTableDefaultApi' } },
+                  { path: 'api', name: 'GlobalRendererTableDefaultApi', component: () => import('@/views/global/renderer/table/default/api/CodeExample.vue') },
                   {
                     path: 'myCellLink',
                     name: 'GlobalRendererTableDefaultMyLink',
@@ -415,7 +417,8 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'myFullAmount',
                     name: 'GlobalRendererTableDefaultMyFullAmount',
                     component: () => import('@/views/global/renderer/table/default/myFullAmount/CodeExample.vue')
-                  }
+                  },
+                  { path: 'myCellStyle', name: 'GlobalRendererTableDefaultMyCellStyle', component: () => import('@/views/global/renderer/table/default/myCellStyle/CodeExample.vue') }
                 ]
               },
               {
