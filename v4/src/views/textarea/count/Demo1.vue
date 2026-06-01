@@ -7,5 +7,5 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const val1 = ref('')
+const val1 = ref('这是一段多行文本\n这是一段多行文本\n这是一段多行文本\n这是一段多行文本\n这是一段多行文本')
 </script>

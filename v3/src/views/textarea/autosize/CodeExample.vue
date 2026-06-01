@@ -2,7 +2,9 @@
   <div>
     <CodeLight path="textarea/autosize/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="自适应文本高度">可以设置默认行高以及最大最小行高</vxe-tip>
+        <vxe-tip status="primary" title="自适应文本高度">
+          可以<ApiLink name="textarea" prop="auto-size"/> 设置默认行高以及最大最小行高
+        </vxe-tip>
       </template>
     </CodeLight>
 

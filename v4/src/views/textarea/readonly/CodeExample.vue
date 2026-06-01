@@ -3,7 +3,15 @@
     <CodeLight path="textarea/readonly/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="只读查看模式">
-          通过 <ApiLink name="textarea" prop="readonly"/> 设置为只读查看模式，该模式下会渲染成文本
+          通过 <ApiLink name="textarea" prop="readonly"/> 设置为只读查看模式，该模式下会渲染成文本，默认情况下是自适应高度
+        </vxe-tip>
+      </template>
+    </CodeLight>
+
+    <CodeLight path="textarea/readonly/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          通过 <ApiLink name="textarea" prop="auto-size"/> 设置指定行高
         </vxe-tip>
       </template>
     </CodeLight>

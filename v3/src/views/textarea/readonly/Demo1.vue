@@ -11,7 +11,7 @@ import Vue from 'vue'
 export default Vue.extend({
   data () {
     return {
-      val1: '内容111',
+      val1: '这是一段多行文本\n这是一段多行文本\n这是一段多行文本\n这是一段多行文本\n这是一段多行文本\n这是一段多行文本\n这是一段多行文本',
       isReadonly: true
     }
   }

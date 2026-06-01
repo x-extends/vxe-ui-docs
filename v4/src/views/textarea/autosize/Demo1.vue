@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-textarea v-model="val1" placeholder="2行高度" :autosize="{ minRows: 2, maxRows: 2 }"></vxe-textarea>
+    <vxe-textarea v-model="val1" placeholder="2行高度" :auto-size="{ minRows: 2, maxRows: 2 }"></vxe-textarea>
   </div>
 </template>
 

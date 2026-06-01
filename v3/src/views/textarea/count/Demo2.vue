@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-textarea v-model="val1" placeholder="字数统计" max-length="100"  :countMethod="countMethod" show-word-count></vxe-textarea>
+    <vxe-textarea v-model="val1" placeholder="字数统计" max-length="100" :count-method="countMethod" show-word-count></vxe-textarea>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default Vue.extend({
     }
 
     return {
-      val1: '',
+      val1: '这是一段多行文本\n这是一段多行文本\n这是一段多行文本\n这是一段多行文本\n这是一段多行文本',
       countMethod
     }
   }
