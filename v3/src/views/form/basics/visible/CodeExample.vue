@@ -3,7 +3,7 @@
     <CodeLight path="form/basics/visible/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="显示与隐藏项">
-          通过修改 <ApiLink name="form-item" prop="visible"/> 属性来设置是否显示，自动相应
+          通过修改 <ApiLink name="form-item" prop="visible"/> 属性来设置是否显示，更新后会自动响应变化
         </vxe-tip>
       </template>
     </CodeLight>
