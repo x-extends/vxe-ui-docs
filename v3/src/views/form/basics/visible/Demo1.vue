@@ -1,9 +1,9 @@
 <template>
   <div>
-    <vxe-button status="success" @click="showItemEvent('sex')">显示sex</vxe-button>
-    <vxe-button status="info" @click="hideItemEvent('sex')">隐藏sex</vxe-button>
-    <vxe-button status="success" @click="showItemEvent('age')">显示age</vxe-button>
-    <vxe-button status="info" @click="hideItemEvent('age')">隐藏age</vxe-button>
+    <vxe-button status="success" @click="sexVisible = true">显示sex</vxe-button>
+    <vxe-button status="info" @click="sexVisible = false">隐藏sex</vxe-button>
+    <vxe-button status="success" @click="ageVisible = true">显示sex</vxe-button>
+    <vxe-button status="info" @click="ageVisible = false">隐藏sex</vxe-button>
 
     <vxe-form
       ref="formRef"
@@ -15,12 +15,12 @@
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="性别" field="sex" span="12" :item-render="{}">
+      <vxe-form-item title="性别" field="sex" span="12" :visible="sexVisible" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.sex" @change="changeEvent(params)"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="年龄" field="age" span="12" :item-render="{}">
+      <vxe-form-item title="年龄" field="age" span="12" :visible="ageVisible" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.age" @change="changeEvent(params)"></vxe-input>
         </template>
@@ -54,6 +54,9 @@ interface FormDataVO {
 
 export default Vue.extend({
   data () {
+    const sexVisible = true
+    const ageVisible = true
+
     const formData: FormDataVO = {
       name: 'test1',
       nickname: 'Testing',
@@ -63,7 +66,9 @@ export default Vue.extend({
     }
 
     return {
-      formData
+      formData,
+      sexVisible,
+      ageVisible
     }
   },
   methods: {
@@ -71,18 +76,6 @@ export default Vue.extend({
       const $form = this.$refs.formRef as VxeFormInstance
       if ($form) {
         $form.updateStatus(params)
-      }
-    },
-    showItemEvent (field: string) {
-      const $form = this.$refs.formRef as VxeFormInstance<FormDataVO>
-      if ($form) {
-        $form.showItem(field)
-      }
-    },
-    hideItemEvent (field: string) {
-      const $form = this.$refs.formRef as VxeFormInstance<FormDataVO>
-      if ($form) {
-        $form.hideItem(field)
       }
     },
     submitEvent () {
