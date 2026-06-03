@@ -16,11 +16,11 @@
       <vxe-form-item title="性别" field="sex" span="12" :item-render="{name: 'VxeInput'}"></vxe-form-item>
       <vxe-form-item title="年龄" field="age" span="12" :item-render="{name: 'VxeNumberInput', props: {type: 'integer'}}"></vxe-form-item>
       <vxe-form-item title="联系电话" field="mobile" span="12" :item-render="{name: 'VxeNumberInput', props: {type: 'integer'}}"></vxe-form-item>
-      <vxe-form-item title="教育经历" field="educationExperience" span="24" vertical :item-render="{name: 'VxeTextarea', props: {autosize: { minRows: 2, maxRows: 8 }}}"></vxe-form-item>
-      <vxe-form-item title="专业技能" field="professionalSkill" span="24" vertical :item-render="{name: 'VxeTextarea', props: {autosize: { minRows: 4, maxRows: 8 }}}"></vxe-form-item>
-      <vxe-form-item title="工作经历" field="workExperience" span="24" vertical :item-render="{name: 'VxeTextarea', props: {autosize: { minRows: 4, maxRows: 8 }}}"></vxe-form-item>
-      <vxe-form-item title="项目经验" field="projectExperience" span="24" vertical :item-render="{name: 'VxeTextarea', props: {autosize: { minRows: 4, maxRows: 8 }}}"></vxe-form-item>
-      <vxe-form-item title="自我评价" field="selfEvaluation" span="24" vertical :item-render="{name: 'VxeTextarea', props: {autosize: { minRows: 4, maxRows: 8 }}}"></vxe-form-item>
+      <vxe-form-item title="教育经历" field="educationExperience" span="24" vertical :item-render="{name: 'VxeTextarea', props: {autoSize: { minRows: 2, maxRows: 8 }}}"></vxe-form-item>
+      <vxe-form-item title="专业技能" field="professionalSkill" span="24" vertical :item-render="{name: 'VxeTextarea', props: {autoSize: { minRows: 4, maxRows: 8 }}}"></vxe-form-item>
+      <vxe-form-item title="工作经历" field="workExperience" span="24" vertical :item-render="{name: 'VxeTextarea', props: {autoSize: { minRows: 4, maxRows: 8 }}}"></vxe-form-item>
+      <vxe-form-item title="项目经验" field="projectExperience" span="24" vertical :item-render="{name: 'VxeTextarea', props: {autoSize: { minRows: 4, maxRows: 8 }}}"></vxe-form-item>
+      <vxe-form-item title="自我评价" field="selfEvaluation" span="24" vertical :item-render="{name: 'VxeTextarea', props: {autoSize: { minRows: 4, maxRows: 8 }}}"></vxe-form-item>
       <vxe-form-item align="center" span="24" :item-render="{}">
         <template #default>
           <vxe-button type="submit" status="primary" content="提交"></vxe-button>
