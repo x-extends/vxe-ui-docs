@@ -1,11 +1,13 @@
 <template>
   <div>
-    <vxe-button status="primary" @click="clearEvent">清除</vxe-button>
+    <vxe-button status="primary" @click="clearEvent1">清除所有1</vxe-button>
+    <vxe-button status="success" @click="clearEvent2">清除所有2</vxe-button>
 
-    <vxe-upload ref="uploadRef" v-model="fileList">
+    <vxe-upload ref="uploadRef" v-model="fileList" multiple>
       <template #option="{ option }">
         <span>文件：{{ option.name }}</span>
-        <vxe-button status="error" mode="text" @click="removeEvent(option)">删除</vxe-button>
+        <vxe-button status="error" mode="text" @click="removeEvent1(option)">删除1</vxe-button>
+        <vxe-button status="error" mode="text" @click="removeEvent2(option)">删除2</vxe-button>
       </template>
     </vxe-upload>
   </div>
@@ -26,17 +28,23 @@ export default Vue.extend({
     }
   },
   methods: {
-    clearEvent () {
+    clearEvent1 () {
       const $upload = this.$refs.uploadRef as VxeUploadInstance
       if ($upload) {
         $upload.clear()
       }
     },
-    removeEvent (option: VxeUploadDefines.FileObjItem) {
+    clearEvent2 () {
+      this.fileList = []
+    },
+    removeEvent1 (option: VxeUploadDefines.FileObjItem) {
       const $upload = this.$refs.uploadRef as VxeUploadInstance
       if ($upload) {
         $upload.remove(option)
       }
+    },
+    removeEvent2 (option: VxeUploadDefines.FileObjItem) {
+      this.fileList = this.fileList.filter(item => item.url !== option.url)
     }
   }
 })

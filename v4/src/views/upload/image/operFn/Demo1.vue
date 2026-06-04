@@ -1,11 +1,15 @@
 <template>
   <div>
-    <vxe-button status="primary" @click="clearEvent">清除</vxe-button>
+    <vxe-button status="primary" @click="clearEvent1">清除所有1</vxe-button>
+    <vxe-button status="success" @click="clearEvent2">清除所有2</vxe-button>
 
-    <vxe-upload ref="uploadRef" v-model="imgList" mode="image">
+    <vxe-upload ref="uploadRef" v-model="imgList" mode="image" multiple>
       <template #option="{ option }">
-        <img :src="option.url" style="width: 20px;height: 20px;" />
-        <vxe-button status="error" mode="text" @click="removeEvent(option)">删除</vxe-button>
+        <img :src="option.url" style="width: 80px;height: 80px;" />
+        <div>
+          <vxe-button status="error" mode="text" @click="removeEvent1(option)">删除1</vxe-button>
+          <vxe-button status="error" mode="text" @click="removeEvent2(option)">删除2</vxe-button>
+        </div>
       </template>
     </vxe-upload>
   </div>
@@ -18,20 +22,30 @@ import { VxeUploadInstance, VxeUploadDefines } from 'vxe-pc-ui'
 const uploadRef = ref<VxeUploadInstance>()
 
 const imgList = ref([
-  { name: 'fj577.jpg', url: 'https://vxeui.com/resource/img/fj577.jpg' }
+  { name: 'fj579.png', url: 'https://vxeui.com/resource/img/fj579.png' },
+  { name: 'fj577.jpg', url: 'https://vxeui.com/resource/img/fj577.jpg' },
+  { name: 'fj573.jpeg', url: 'https://vxeui.com/resource/img/fj573.jpeg' }
 ])
 
-const clearEvent = () => {
+const clearEvent1 = () => {
   const $upload = uploadRef.value
   if ($upload) {
     $upload.clear()
   }
 }
 
-const removeEvent = (option: VxeUploadDefines.FileObjItem) => {
+const clearEvent2 = () => {
+  imgList.value = []
+}
+
+const removeEvent1 = (option: VxeUploadDefines.FileObjItem) => {
   const $upload = uploadRef.value
   if ($upload) {
     $upload.remove(option)
   }
+}
+
+const removeEvent2 = (option: VxeUploadDefines.FileObjItem) => {
+  imgList.value = imgList.value.filter(item => item.url !== option.url)
 }
 </script>
