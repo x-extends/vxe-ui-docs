@@ -17,6 +17,11 @@
       <vxe-button @click="scrollRowEvent(ganttOptions.data[49])">定位第50行</vxe-button>
       <vxe-button @click="scrollRowEvent(ganttOptions.data[105])">定位第106行</vxe-button>
     </div>
+    <div>
+      <vxe-button @click="scrollDateEvent('2024-03-13')">定位 2024-03-13 列</vxe-button>
+      <vxe-button @click="scrollDateEvent('2024-03-01')">定位 2024-03-01 列</vxe-button>
+      <vxe-button @click="scrollDateEvent('2024-04-01')">定位 2024-04-01 列</vxe-button>
+    </div>
     <vxe-gantt ref="ganttRef" v-bind="ganttOptions"></vxe-gantt>
   </div>
 </template>
@@ -132,8 +137,8 @@ export default Vue.extend({
           {
             id: 10000 + i,
             title: '项目' + (i + 1),
-            start: i % 2 ? '2024-03-04' : i % 3 ? '2024-03-18' : i % 4 ? '2024-03-12' : i % 5 ? '2024-03-04' : '2024-03-08',
-            end: i % 2 ? '2024-03-10' : i % 3 ? '2024-03-25' : i % 4 ? '2024-04-02' : i % 5 ? '2024-03-12' : '2024-03-18',
+            start: i % 2 ? '2024-03-01' : i % 3 ? '2024-03-18' : i % 4 ? '2024-04-02' : i % 5 ? '2024-05-04' : '2024-05-08',
+            end: i % 2 ? '2024-03-10' : i % 3 ? '2024-03-25' : i % 4 ? '2024-04-22' : i % 5 ? '2024-05-12' : '2024-05-18',
             progress: i % 3 ? 100 : 80,
             attr1: '',
             attr2: '',
@@ -184,6 +189,12 @@ export default Vue.extend({
       const $gantt = this.$refs.ganttRef as VxeGanttInstance<RowVO>
       if ($gantt) {
         $gantt.scrollToTaskView(row)
+      }
+    },
+    scrollDateEvent (date: string) {
+      const $gantt = this.$refs.ganttRef as VxeGanttInstance<RowVO>
+      if ($gantt) {
+        $gantt.scrollToDateView(date)
       }
     }
   }

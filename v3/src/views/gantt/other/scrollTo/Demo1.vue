@@ -17,6 +17,11 @@
       <vxe-button @click="scrollRowEvent(ganttOptions.data[9])">定位第10行</vxe-button>
       <vxe-button @click="scrollRowEvent(ganttOptions.data[15])">定位第16行</vxe-button>
     </div>
+    <div>
+      <vxe-button @click="scrollDateEvent('2024-03-13')">定位 2024-03-13 列</vxe-button>
+      <vxe-button @click="scrollDateEvent('2024-03-01')">定位 2024-03-01 列</vxe-button>
+      <vxe-button @click="scrollDateEvent('2024-04-01')">定位 2024-04-01 列</vxe-button>
+    </div>
     <vxe-gantt ref="ganttRef" v-bind="ganttOptions"></vxe-gantt>
   </div>
 </template>
@@ -91,7 +96,17 @@ export default Vue.extend({
         { id: 10017, title: '项目17', start: '2024-03-17', end: '2024-03-22', progress: 50, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' },
         { id: 10018, title: '项目18', start: '2024-03-26', end: '2024-04-06', progress: 100, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' },
         { id: 10019, title: '项目19', start: '2024-03-21', end: '2024-03-24', progress: 60, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' },
-        { id: 10020, title: '项目20', start: '2024-03-25', end: '2024-04-04', progress: 70, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' }
+        { id: 10020, title: '项目20', start: '2024-03-25', end: '2024-04-04', progress: 70, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' },
+        { id: 10021, title: '项目21', start: '2024-04-01', end: '2024-04-10', progress: 70, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' },
+        { id: 10022, title: '项目22', start: '2024-04-05', end: '2024-04-15', progress: 90, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' },
+        { id: 10023, title: '项目23', start: '2024-04-10', end: '2024-04-15', progress: 80, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' },
+        { id: 10024, title: '项目24', start: '2024-04-12', end: '2024-04-18', progress: 50, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' },
+        { id: 10025, title: '项目25', start: '2024-04-09', end: '2024-04-28', progress: 80, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' },
+        { id: 10026, title: '项目26', start: '2024-04-17', end: '2024-04-23', progress: 90, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' },
+        { id: 10027, title: '项目27', start: '2024-04-22', end: '2024-04-28', progress: 100, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' },
+        { id: 10028, title: '项目28', start: '2024-04-25', end: '2024-05-02', progress: 80, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' },
+        { id: 10028, title: '项目29', start: '2024-05-02', end: '2024-05-09', progress: 100, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' },
+        { id: 10028, title: '项目30', start: '2024-05-05', end: '2024-05-16', progress: 90, attr1: '', attr2: '', attr3: '', attr4: '', attr5: '', attr6: '', attr7: '', attr8: '', attr9: '', attr10: '' }
       ]
     }
 
@@ -128,6 +143,12 @@ export default Vue.extend({
       const $gantt = this.$refs.ganttRef as VxeGanttInstance<RowVO>
       if ($gantt) {
         $gantt.scrollToTaskView(row)
+      }
+    },
+    scrollDateEvent (date: string) {
+      const $gantt = this.$refs.ganttRef as VxeGanttInstance<RowVO>
+      if ($gantt) {
+        $gantt.scrollToDateView(date)
       }
     }
   }
