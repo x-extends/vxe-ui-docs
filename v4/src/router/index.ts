@@ -4087,6 +4087,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentWatermarkFontSize',
             component: () => import('@/views/watermark/fontSize/CodeExample.vue')
           },
+          { path: 'gap', name: 'ComponentWatermarkGap', component: () => import('@/views/watermark/gap/CodeExample.vue') },
           {
             path: 'table',
             name: 'ComponentWatermarkTable',

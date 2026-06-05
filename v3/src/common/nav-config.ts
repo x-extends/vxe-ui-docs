@@ -1735,6 +1735,7 @@ export const navConfigList: NavVO[] = [
           { title: '基础', routerLink: { name: 'ComponentWatermarkBase' } },
           { title: '字体颜色', routerLink: { name: 'ComponentWatermarkColor' } },
           { title: '字体大小', routerLink: { name: 'ComponentWatermarkFontSize' } },
+          { title: '间距', routerLink: { name: 'ComponentWatermarkGap' } },
           { title: '表格水印', routerLink: { name: 'ComponentWatermarkTable' } },
           { title: '表单水印', routerLink: { name: 'ComponentWatermarkForm' } }
         ]
