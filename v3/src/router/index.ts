@@ -2358,6 +2358,7 @@ const routes: Array<RouteConfig> = [
               { path: 'suffixIcon', name: 'ComponentDateRangePickerDateSuffixIcon', component: () => import('@/views/date-range-picker/date/suffixIcon/CodeExample.vue') },
               { path: 'defVal', name: 'ComponentDateRangePickerDateDefVal', component: () => import('@/views/date-range-picker/date/defVal/CodeExample.vue') },
               { path: 'trigger', name: 'ComponentDateRangePickerDateTrigger', component: () => import('@/views/date-range-picker/date/trigger/CodeExample.vue') },
+              { path: 'linkedPanels', name: 'ComponentDateRangePickerDateLinkedPanels', component: () => import('@/views/date-range-picker/date/linkedPanels/CodeExample.vue') },
               {
                 path: 'template',
                 component: RouteLayout,
@@ -2437,6 +2438,7 @@ const routes: Array<RouteConfig> = [
                   }
                 ]
               },
+              { path: 'linkedPanels', name: 'ComponentDateRangePickerWeekLinkedPanels', component: () => import('@/views/date-range-picker/week/linkedPanels/CodeExample.vue') },
               {
                 path: 'template',
                 component: RouteLayout,
@@ -2706,6 +2708,7 @@ const routes: Array<RouteConfig> = [
                   }
                 ]
               },
+              { path: 'linkedPanels', name: 'ComponentDateRangePickerDatetimeLinkedPanels', component: () => import('@/views/date-range-picker/datetime/linkedPanels/CodeExample.vue') },
               {
                 path: 'template',
                 component: RouteLayout,
