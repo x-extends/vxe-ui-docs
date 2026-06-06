@@ -11,7 +11,7 @@ import { VxeWatermarkPropTypes } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const watermarkFont: VxeWatermarkPropTypes.Font = {
-      fontSize: 48
+      fontSize: 36
     }
 
     return {

@@ -9,6 +9,6 @@ import { reactive } from 'vue'
 import { VxeWatermarkPropTypes } from 'vxe-pc-ui'
 
 const watermarkFont = reactive<VxeWatermarkPropTypes.Font>({
-  fontSize: 48
+  fontSize: 36
 })
 </script>
