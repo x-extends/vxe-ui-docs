@@ -38,8 +38,10 @@ const route = useRoute()
 const showLeft = ref(true)
 const asideWidth = ref(360)
 
-if (window.innerWidth < 1000) {
-  asideWidth.value = 220
+if (window.innerWidth > 2200) {
+  asideWidth.value = 460
+} else if (window.innerWidth < 1000) {
+  asideWidth.value = 260
 }
 
 const backtopConfig = reactive<VxeLayoutBodyPropTypes.BacktopConfig>({
