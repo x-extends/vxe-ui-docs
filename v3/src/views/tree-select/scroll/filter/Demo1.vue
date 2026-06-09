@@ -20,8 +20,8 @@ export default Vue.extend({
     const treeSelectOptions: VxeTreeSelectProps<NodeVO> = {
       multiple: true,
       filterable: true,
-      showTotalButoon: true,
-      showCheckedButoon: true,
+      showTotalButton: true,
+      showCheckedButton: true,
       showClearButton: true,
       showExpandButton: true,
       optionProps: {

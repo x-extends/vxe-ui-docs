@@ -12,8 +12,8 @@ const val1 = ref([])
 const selectOptions: VxeSelectProps = {
   multiple: true,
   clearable: true,
-  showTotalButoon: true,
-  showCheckedButoon: true,
+  showTotalButton: true,
+  showCheckedButton: true,
   showClearButton: true,
   checkedClosable: true,
   clearClosable: true,

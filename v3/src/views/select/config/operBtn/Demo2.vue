@@ -13,8 +13,8 @@ export default Vue.extend({
     const selectOptions: VxeSelectProps = {
       multiple: true,
       clearable: true,
-      showTotalButoon: true,
-      showCheckedButoon: true,
+      showTotalButton: true,
+      showCheckedButton: true,
       showClearButton: true,
       checkedClosable: true,
       clearClosable: true,

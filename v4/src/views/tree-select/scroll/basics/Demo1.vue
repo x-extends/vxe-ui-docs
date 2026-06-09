@@ -17,8 +17,8 @@ interface NodeVO {
 const val1 = ref()
 const treeSelectOptions = reactive<VxeTreeSelectProps<NodeVO>>({
   multiple: true,
-  showTotalButoon: true,
-  showCheckedButoon: true,
+  showTotalButton: true,
+  showCheckedButton: true,
   showClearButton: true,
   showExpandButton: true,
   optionProps: {

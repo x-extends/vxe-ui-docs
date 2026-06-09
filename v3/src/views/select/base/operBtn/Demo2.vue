@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-select v-model="val1" placeholder="显示操作按钮" multiple clearable show-total-butoon show-checked-butoon show-clear-button checked-closable clear-closable>
+    <vxe-select v-model="val1" placeholder="显示操作按钮" multiple clearable show-total-button show-checked-button show-clear-button checked-closable clear-closable>
       <vxe-option value="1" label="选项1"></vxe-option>
       <vxe-option value="2" label="选项2"></vxe-option>
       <vxe-option value="3" label="选项3"></vxe-option>
