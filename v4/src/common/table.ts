@@ -1411,6 +1411,7 @@ export const tableNavConfig: NavVO & { children: NavVO[] } = {
             { title: '自适应行高', routerLink: { name: 'ComponentGridScrollAutoRowHeight' }, keywords: '自适应行高,自适应高度,auto-height' },
             { title: '自适应行高 + 纵向和横向', routerLink: { name: 'ComponentGridScrollAutoRowVH' }, keywords: '自适应行高,自适应高度,auto-height' },
             { title: '自适应行高 + 复杂渲染', routerLink: { name: 'ComponentGridScrollAutoRowFixed' }, keywords: '自适应行高,自适应高度,auto-height' },
+            { title: '设置行高 + 自适应行高', routerLink: { name: 'ComponentGridScrollSetRowHeight' } },
             { title: '拖拽调整行顺序', routerLink: { name: 'ComponentGridScrollDragRow' } },
             { title: '拖拽调整列顺序', routerLink: { name: 'ComponentGridScrollDragCol' } },
             { title: '使用分组表头', routerLink: { name: 'ComponentGridScrollGroup' } },
