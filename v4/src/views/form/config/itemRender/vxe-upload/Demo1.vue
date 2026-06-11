@@ -26,7 +26,7 @@ const fileList1ItemRender = reactive<VxeFormItemPropTypes.ItemRender<FormDataVO,
       const formData = new FormData()
       formData.append('file', file)
       return axios.post('/publicapi/api/pub/upload/single', formData).then((res) => {
-        // { url: ''}
+        // return { url: ''}
         return {
           ...res.data
         }
@@ -43,7 +43,7 @@ const fileList2ItemRender = reactive<VxeFormItemPropTypes.ItemRender<FormDataVO,
       const formData = new FormData()
       formData.append('file', file)
       return axios.post('/publicapi/api/pub/upload/single', formData).then((res) => {
-        // { url: ''}
+        // return { url: ''}
         return {
           ...res.data
         }
@@ -60,7 +60,7 @@ const imgList1ItemRender = reactive<VxeFormItemPropTypes.ItemRender<FormDataVO, 
       const formData = new FormData()
       formData.append('file', file)
       return axios.post('/publicapi/api/pub/upload/single', formData).then((res) => {
-        // { url: ''}
+        // return { url: ''}
         return {
           ...res.data
         }
@@ -78,7 +78,7 @@ const imgList2ItemRender = reactive<VxeFormItemPropTypes.ItemRender<FormDataVO, 
       const formData = new FormData()
       formData.append('file', file)
       return axios.post('/publicapi/api/pub/upload/single', formData).then((res) => {
-        // { url: ''}
+        // return { url: ''}
         return {
           ...res.data
         }
