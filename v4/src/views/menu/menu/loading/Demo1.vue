@@ -101,9 +101,11 @@ const menuConfig = reactive<VxeMenuPropTypes.MenuConfig>({
     options.forEach(list => {
       list.forEach(item => {
         if (item.code === '1' || item.code === '3') {
+          item.visible = true
           item.loading = true
         }
         if (item.code === '4' || item.code === '11') {
+              item.visible = true
           item.loading = true
         }
       })
