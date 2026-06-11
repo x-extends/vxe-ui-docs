@@ -56,7 +56,7 @@ export default Vue.extend({
         header: {
           options: [
             [
-              { code: 'exportAll', name: '导出所有.csv', className: 'my-red', prefixConfig: { icon: 'vxe-icon-download' } }
+              { code: 'exportAll', name: '导出所有.csv', className: 'my-red', prefixConfig: { icon: 'vxe-icon-download', className: 'my-red' } }
             ]
           ]
         },
@@ -112,8 +112,11 @@ export default Vue.extend({
 
 <style lang="scss">
 .my-table-menu-wrapper {
-  .my-red a {
+  .my-red .vxe-context-menu--link {
     color: red;
+  }
+  .my-blue a {
+    color: blue;
   }
   .my-blue a {
     color: blue;
