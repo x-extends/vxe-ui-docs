@@ -14,19 +14,22 @@
             <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>
           </template>
         </vxe-form-item>
+        <vxe-image src="https://vxeui.com/resource/avatarImg/avatar1.jpeg" width="60"></vxe-image>
       </div>
-      <div style="width: 100%;height: 100px;padding-left: 30px;">
+      <div style="width: 100%;height: 180px;padding-left: 30px;">
         <vxe-form-item title="性别" field="sex" span="12" :item-render="{}">
           <template #default="params">
             <vxe-input v-model="formData.sex" @change="changeEvent(params)"></vxe-input>
           </template>
         </vxe-form-item>
         <div style="color: red;">自定义内容</div>
+        <vxe-image src="https://vxeui.com/resource/avatarImg/avatar1.jpeg" width="60"></vxe-image>
         <vxe-form-item title="角色" field="role" span="12" :item-render="{}">
           <template #default="params">
             <vxe-input v-model="formData.role" @change="changeEvent(params)"></vxe-input>
           </template>
         </vxe-form-item>
+        <vxe-image src="https://vxeui.com/resource/avatarImg/avatar1.jpeg" width="60"></vxe-image>
         <vxe-form-item title="年龄" field="age" span="12" :item-render="{}">
           <template #default="params">
             <vxe-number-input v-model="formData.age" @change="changeEvent(params)"></vxe-number-input>
