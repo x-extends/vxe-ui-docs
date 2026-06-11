@@ -39,6 +39,7 @@
             import VxeUIBase, { VxeUI } from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
             import VxeUITable from 'vxe-table'
+            // import VxeUITable, { VxeUI } from 'vxe-table'
             import 'vxe-table/lib/style.css'
             import VxeUIPluginRenderEcharts from '@vxe-ui/plugin-render-echarts'
             // ...
@@ -64,6 +65,7 @@
             import VxeUIBase, { VxeUI } from 'vxe-pc-ui'
             import 'vxe-pc-ui/lib/style.css'
             import VxeUITable from 'vxe-table'
+            // import VxeUITable, { VxeUI } from 'vxe-table'
             import 'vxe-table/lib/style.css'
             import VxeUIPluginRenderEcharts from '@vxe-ui/plugin-render-echarts'
             import * as echarts from 'echarts'
