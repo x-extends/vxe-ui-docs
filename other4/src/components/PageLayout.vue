@@ -62,7 +62,7 @@ const isFullView = computed(() => {
 })
 
 const showOperBtn = computed(() => {
-  return route.name === 'DocsApi'
+  return true// route.name === 'DocsApi'
 })
 
 provide('pluginType', route.query.pt || '')
