@@ -384,7 +384,9 @@
         "menu": "官方插件 - 右键菜单",
         "menuBase": "单元格右键菜单",
         "chart": "官方插件 - 单元格图表",
-        "chartBase": "渲染简单图表"
+        "chartBase": "渲染简单图表",
+        "chartBar": "柱状图",
+        "chartPie": "饼图"
       }
     },
     "filtersComplexInput": {
