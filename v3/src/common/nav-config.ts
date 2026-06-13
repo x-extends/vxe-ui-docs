@@ -575,7 +575,9 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Radio 单选框',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'radio' } } },
+          { title: 'Radio API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'radio' } } },
+          { title: 'Radio Button API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'radio-button' } } },
+          { title: 'Radio Group API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'radio-group' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentRadioSize' } },
           { title: '自定义值', routerLink: { name: 'ComponentRadioValue' } },
           { title: '禁用状态', routerLink: { name: 'ComponentRadioDisabled' } },
@@ -589,7 +591,9 @@ export const navConfigList: NavVO[] = [
       {
         title: 'Checkbox 复选框',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'checkbox' } } },
+          { title: 'Checkbox API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'checkbox' } } },
+          { title: 'Checkbox Button API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'checkbox-button' } } },
+          { title: 'Checkbox Group API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'checkbox-group' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentCheckboxSize' } },
           { title: '半选状态', routerLink: { name: 'ComponentCheckboxIndeterminate' } },
           { title: '自定义值', routerLink: { name: 'ComponentCheckboxValue' } },
