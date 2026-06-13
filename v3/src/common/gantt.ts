@@ -57,6 +57,15 @@ export const ganttNavConfig: NavVO & { children: NavVO[] } = {
       ]
     },
     {
+      title: '折叠面板',
+      children: [
+        { title: '允许折叠面板', routerLink: { name: 'ComponentGanttTaskSplitShowCollapse' } },
+        { title: '拖拽调整宽度', routerLink: { name: 'ComponentGanttTaskSplitResize' } },
+        { title: '显示折叠按钮', routerLink: { name: 'ComponentGanttTaskSplitCollapseBtn' } },
+        { title: '显示动画效果', routerLink: { name: 'ComponentGanttTaskSplitAnimation' } }
+      ]
+    },
+    {
       title: '单元格配置',
       children: [
         { title: '设置单元格边距', routerLink: { name: 'ComponentGanttCellPadding' } },

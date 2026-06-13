@@ -62,6 +62,16 @@ export const ganttRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'split',
+      component: RouteLayout,
+      children: [
+        { path: 'showCollapse', name: 'ComponentGanttTaskSplitShowCollapse', component: () => import('@/views/gantt/split/showCollapse/CodeExample.vue') },
+        { path: 'collapseBtn', name: 'ComponentGanttTaskSplitCollapseBtn', component: () => import('@/views/gantt/split/collapseBtn/CodeExample.vue') },
+        { path: 'resize', name: 'ComponentGanttTaskSplitResize', component: () => import('@/views/gantt/split/resize/CodeExample.vue') },
+        { path: 'animation', name: 'ComponentGanttTaskSplitAnimation', component: () => import('@/views/gantt/split/animation/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'cell',
       component: RouteLayout,
       children: [
