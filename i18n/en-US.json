@@ -117,16 +117,16 @@
       }
     },
     "header": {
-      "moreProducts": "⭐Ecosystem",
-      "morePlugin": "🔥Plugin",
-      "pluginDocs": "🔥Plugin documentation",
-      "pluginVersion": "企业版",
-      "freeVersion": "开源版",
+      "moreProducts": "⭐生态",
+      "morePlugin": "🔥插件",
+      "pluginDocs": "🔥插件文档",
+      "pluginVersion": "插件",
       "pluginStore": "插件市场",
-      "enterprisePluginVersion": "Enterprise plugin",
-      "enterpriseVersion": "Enterprise Edition",
-      "buyPlugin": "Purchase plugin license",
-      "supportUs": "About us"
+      "enterprisePluginVersion": "企业版插件",
+      "freeVersion": "开源版",
+      "enterpriseVersion": "企业版",
+      "buyPlugin": "获取插件授权",
+      "supportUs": "关于我们"
     },
     "base": {
       "light": "Light",

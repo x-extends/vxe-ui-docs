@@ -117,16 +117,16 @@
       }
     },
     "header": {
-      "moreProducts": "⭐生態",
+      "moreProducts": "⭐生态",
       "morePlugin": "🔥插件",
-      "pluginDocs": "🔥插件文檔",
-      "pluginVersion": "企业版",
+      "pluginDocs": "🔥插件文档",
+      "pluginVersion": "插件",
+      "pluginStore": "插件市场",
+      "enterprisePluginVersion": "企业版插件",
       "freeVersion": "开源版",
-      "pluginStore": "插件市場",
-      "enterprisePluginVersion": "企業版插件",
-      "enterpriseVersion": "企業版",
-      "buyPlugin": "獲取插件授權",
-      "supportUs": "關於我們"
+      "enterpriseVersion": "企业版",
+      "buyPlugin": "获取插件授权",
+      "supportUs": "关于我们"
     },
     "base": {
       "light": "白天",
