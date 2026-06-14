@@ -119,9 +119,9 @@
     "header": {
       "moreProducts": "⭐エコシステム",
       "morePlugin": "🔥プラグイン",
-      "pluginDocs": "🔥プラグインドキュメント",
-      "pluginVersion": "プラグイン",
-      "freeStore": "开源版",
+      "pluginDocs": "🔥插件文档",
+      "pluginVersion": "企业版",
+      "freeVersion": "开源版",
       "pluginStore": "プラグインマーケット",
       "enterprisePluginVersion": "エンタープライズプラグイン",
       "enterpriseVersion": "エンタープライズエディション",
