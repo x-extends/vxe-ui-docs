@@ -92,6 +92,9 @@ const loadList = () => {
     appStore.getComponentApiConf(currApiName),
     appStore.getComponentI18nJSON()
   ]).then(([data]) => {
+    if (currApiName !== apiName.value) {
+      return
+    }
     const treeList = XEUtils.clone(data || [], true)
     let firstI18nKey = ''
     XEUtils.eachTree(treeList, (item, i, items, path, parent, nodes) => {
