@@ -144,6 +144,7 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: '导出 XLSX 文件', routerLink: { name: 'PluginExportXlsxGridExport' } },
           { title: '导入 XLSX 格式', routerLink: { name: 'PluginExportXlsxGridImport' } },
+          { title: '单元格数据类型', routerLink: { name: 'PluginExportXlsxGridCellType' } },
           { title: '格式化单元格内容', routerLink: { name: 'PluginExportXlsxGridFormat' } },
           { title: '使用工具栏', routerLink: { name: 'PluginExportXlsxGridToolbar' } },
           { title: '高级导出', routerLink: { name: 'PluginExportXlsxGridAdvanced' } },

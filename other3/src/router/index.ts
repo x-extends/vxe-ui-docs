@@ -406,6 +406,7 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/plugin-export-xlsx/grid/import/CodeExample.vue')
           },
           { path: 'format', name: 'PluginExportXlsxGridFormat', component: () => import('@/views/plugin-export-xlsx/grid/format/CodeExample.vue') },
+          { path: 'cellType', name: 'PluginExportXlsxGridCellType', component: () => import('@/views/plugin-export-xlsx/grid/cellType/CodeExample.vue') },
           {
             path: 'toolbar',
             name: 'PluginExportXlsxGridToolbar',
