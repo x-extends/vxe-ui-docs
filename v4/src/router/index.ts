@@ -1636,6 +1636,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentNumberInputFloatDigits',
                 component: () => import('@/views/number-input/float/digits/CodeExample.vue')
               },
+              { path: 'mode', name: 'ComponentNumberInputFloatMode', component: () => import('@/views/number-input/float/mode/CodeExample.vue') },
               {
                 path: 'step',
                 name: 'ComponentNumberInputFloatStep',

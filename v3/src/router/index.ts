@@ -1630,6 +1630,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentNumberInputFloatDigits',
                 component: () => import('@/views/number-input/float/digits/CodeExample.vue')
               },
+              { path: 'mode', name: 'ComponentNumberInputFloatMode', component: () => import('@/views/number-input/float/mode/CodeExample.vue') },
               {
                 path: 'step',
                 name: 'ComponentNumberInputFloatStep',
@@ -1681,6 +1682,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentNumberInputAmountDigits',
                 component: () => import('@/views/number-input/amount/digits/CodeExample.vue')
               },
+              { path: 'mode', name: 'ComponentNumberInputAmountMode', component: () => import('@/views/number-input/amount/mode/CodeExample.vue') },
               {
                 path: 'showCurrency',
                 name: 'ComponentNumberInputAmountShowCurrency',

@@ -711,6 +711,7 @@ export const navConfigList: NavVO[] = [
               { title: '只读模式', routerLink: { name: 'ComponentNumberInputFloatReadonly' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputFloatStep' } },
               { title: '小数位数', routerLink: { name: 'ComponentNumberInputFloatDigits' } },
+              { title: '舍入方式', routerLink: { name: 'ComponentNumberInputFloatMode' } },
               { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputFloatRange' } },
               { title: '自动补0', routerLink: { name: 'ComponentNumberInputFloatAutoFill' } },
               { title: '控制按钮', routerLink: { name: 'ComponentNumberInputFloatControls' } }
