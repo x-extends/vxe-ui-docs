@@ -725,6 +725,7 @@ export const navConfigList: NavVO[] = [
               { title: '只读模式', routerLink: { name: 'ComponentNumberInputAmountReadonly' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputAmountStep' } },
               { title: '小数位数', routerLink: { name: 'ComponentNumberInputAmountDigits' } },
+              { title: '舍入方式', routerLink: { name: 'ComponentNumberInputAmountMode' } },
               { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputAmountRange' } },
               { title: '自动补0', routerLink: { name: 'ComponentNumberInputAmountAutoFill' } },
               { title: '显示货币符号', routerLink: { name: 'ComponentNumberInputAmountShowCurrency' } },

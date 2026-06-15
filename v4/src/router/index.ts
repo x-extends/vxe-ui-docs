@@ -1687,6 +1687,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentNumberInputAmountDigits',
                 component: () => import('@/views/number-input/amount/digits/CodeExample.vue')
               },
+              { path: 'mode', name: 'ComponentNumberInputAmountMode', component: () => import('@/views/number-input/amount/mode/CodeExample.vue') },
               {
                 path: 'showCurrency',
                 name: 'ComponentNumberInputAmountShowCurrency',
