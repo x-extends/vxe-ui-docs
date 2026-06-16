@@ -23,9 +23,8 @@ export default Vue.extend({
     const treeConfig: VxeTreeSelectPropTypes.TreeConfig<RowVO> = {
       trigger: 'node',
       radioConfig: {
-        checkMethod ({ node }) {
-          return !node.children || !node.children.length
-        }
+        visibleMode: 'last',
+        checkMode: 'last'
       }
     }
 

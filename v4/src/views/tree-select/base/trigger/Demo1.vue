@@ -21,9 +21,8 @@ interface RowVO {
 const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig<RowVO>>({
   trigger: 'node',
   radioConfig: {
-    checkMethod ({ node }) {
-      return !node.children || !node.children.length
-    }
+    visibleMode: 'last',
+    checkMode: 'last'
   }
 })
 
