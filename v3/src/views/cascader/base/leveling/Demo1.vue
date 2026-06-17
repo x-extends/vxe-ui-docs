@@ -4,7 +4,7 @@
       v-model="val1"
       :tree-config="treeConfig"
       :options="treeList"
-      :option-props="{label: 'title', value: 'id'}">
+      :option-props="{title: 'title', value: 'id'}">
     </vxe-cascader>
   </div>
 </template>
@@ -21,7 +21,7 @@ interface NodeVO {
 
 export default Vue.extend({
   data () {
-    const val1 = ''
+    const val1 = '321'
 
     const treeConfig: VxeCascaderPropTypes.TreeConfig = {
       transform: true,
@@ -40,6 +40,12 @@ export default Vue.extend({
       { title: '节点3-3-1', id: '331', parentId: '33' },
       { title: '节点3-3-2', id: '332', parentId: '33' },
       { title: '节点3-3-3', id: '333', parentId: '33' },
+      { title: '节点3-3-4', id: '334', parentId: '33' },
+      { title: '节点3-3-5', id: '335', parentId: '33' },
+      { title: '节点3-3-6', id: '336', parentId: '33' },
+      { title: '节点3-3-7', id: '337', parentId: '33' },
+      { title: '节点3-3-8', id: '338', parentId: '33' },
+      { title: '节点3-3-9', id: '339', parentId: '33' },
       { title: '节点3-4', id: '34', parentId: '3' },
       { title: '节点4', id: '4', parentId: null },
       { title: '节点4-1', id: '41', parentId: '4' },
@@ -49,7 +55,27 @@ export default Vue.extend({
       { title: '节点4-3', id: '43', parentId: '4' },
       { title: '节点4-3-1', id: '431', parentId: '43' },
       { title: '节点4-3-2', id: '432', parentId: '43' },
-      { title: '节点5', id: '5', parentId: null }
+      { title: '节点4-4', id: '44', parentId: '4' },
+      { title: '节点4-5', id: '45', parentId: '4' },
+      { title: '节点4-6', id: '46', parentId: '4' },
+      { title: '节点4-7', id: '47', parentId: '4' },
+      { title: '节点4-8', id: '48', parentId: '4' },
+      { title: '节点4-9', id: '49', parentId: '4' },
+      { title: '节点5', id: '5', parentId: null },
+      { title: '节点6', id: '6', parentId: null },
+      { title: '节点7', id: '7', parentId: null },
+      { title: '节点8', id: '8', parentId: null },
+      { title: '节点9', id: '9', parentId: null },
+      { title: '节点9-1', id: '91', parentId: '9' },
+      { title: '节点9-2', id: '92', parentId: '9' },
+      { title: '节点9-3', id: '93', parentId: '9' },
+      { title: '节点9-4', id: '94', parentId: '9' },
+      { title: '节点9-5', id: '95', parentId: '9' },
+      { title: '节点9-6', id: '96', parentId: '9' },
+      { title: '节点9-7', id: '97', parentId: '9' },
+      { title: '节点9-8', id: '98', parentId: '9' },
+      { title: '节点9-9', id: '99', parentId: '9' },
+      { title: '节点10', id: '10', parentId: null }
     ]
 
     return {

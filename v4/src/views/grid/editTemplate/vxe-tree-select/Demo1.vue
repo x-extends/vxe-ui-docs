@@ -9,13 +9,13 @@
       </template>
 
       <template #region_edit="{ row }">
-        <vxe-tree-select v-model="row.region" :options="regionOptions"></vxe-tree-select>
+        <vxe-tree-select v-model="row.region" :options="regionOptions" show-radio></vxe-tree-select>
       </template>
       <template #region_default="{ row }">
         <span>{{ formatRegionLabel(row.region) }}</span>
       </template>
       <template #regionList_edit="{ row }">
-        <vxe-tree-select v-model="row.regionList" :options="regionListOptions" multiple></vxe-tree-select>
+        <vxe-tree-select v-model="row.regionList" :options="regionListOptions" multiple show-checkbox></vxe-tree-select>
       </template>
       <template #regionList_default="{ row }">
         <span>{{ formatRegionListLabel(row.regionList) }}</span>

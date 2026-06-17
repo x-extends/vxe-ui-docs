@@ -26,6 +26,9 @@ export default Vue.extend({
   data () {
     const regionItemRender: VxeFormItemPropTypes.ItemRender = {
       name: 'VxeTreeSelect',
+      props: {
+        showRadio: true
+      },
       options: [
         {
           label: '广东省',
@@ -49,7 +52,8 @@ export default Vue.extend({
     const regionListItemRender: VxeFormItemPropTypes.ItemRender = {
       name: 'VxeTreeSelect',
       props: {
-        multiple: true
+        multiple: true,
+        showCheckbox: true
       },
       options: [
         {

@@ -1,8 +1,9 @@
 <template>
   <div>
     <vxe-tree-select
-      v-model="val1"
       multiple
+      show-checkbox
+      v-model="val1"
       :tree-config="treeConfig"
       :options="treeList">
     </vxe-tree-select>
@@ -21,7 +22,6 @@ interface RowVO {
 
 const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig<RowVO>>({
   checkboxConfig: {
-    showIcon: true,
     checkStrictly: true
   }
 })

@@ -1,6 +1,7 @@
 <template>
   <div>
     <vxe-tree-select
+      show-radio
       v-model="val1"
       :tree-config="treeConfig"
       :options="treeList">
@@ -22,7 +23,6 @@ export default Vue.extend({
     const treeConfig: VxeTreeSelectPropTypes.TreeConfig<RowVO> = {
       trigger: 'node',
       radioConfig: {
-        showIcon: true,
         visibleMode: 'last',
         checkMode: 'last'
       }

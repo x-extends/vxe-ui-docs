@@ -8,14 +8,14 @@
           <vxe-input v-model="formData.name"></vxe-input>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="下拉框分组" field="region" span="24" :item-render="{}">
+      <vxe-form-item title="下拉树选择单选" field="region" span="24" :item-render="{}">
         <template #default>
-          <vxe-tree-select v-model="formData.region" :options="regionOptions"></vxe-tree-select>
+          <vxe-tree-select v-model="formData.region" :options="regionOptions" show-radio></vxe-tree-select>
         </template>
       </vxe-form-item>
-      <vxe-form-item title="下拉框分组多选" field="regionList" span="24" :item-render="{}">
+      <vxe-form-item title="下拉树选择多选" field="regionList" span="24" :item-render="{}">
         <template #default>
-          <vxe-tree-select v-model="formData.regionList" :options="regionOptions" multiple></vxe-tree-select>
+          <vxe-tree-select v-model="formData.regionList" :options="regionOptions" multiple show-checkbox></vxe-tree-select>
         </template>
       </vxe-form-item>
       <vxe-form-item align="center" span="24">

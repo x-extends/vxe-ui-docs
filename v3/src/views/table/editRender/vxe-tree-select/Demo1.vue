@@ -36,6 +36,9 @@ export default Vue.extend({
 
     const regionEditRender: VxeColumnPropTypes.EditRender<RowVO, VxeTreeSelectProps> = {
       name: 'VxeTreeSelect',
+      props: {
+        showRadio: true
+      },
       options: [
         {
           label: '广东省',
@@ -59,7 +62,8 @@ export default Vue.extend({
     const regionListEditRender: VxeColumnPropTypes.EditRender<RowVO, VxeTreeSelectProps> = {
       name: 'VxeTreeSelect',
       props: {
-        multiple: true
+        multiple: true,
+        showCheckbox: true
       },
       options: [
         {

@@ -1,8 +1,9 @@
 <template>
   <div>
     <vxe-cascader
-      v-model="val1"
       multiple
+      show-checkbox
+      v-model="val1"
       :tree-config="treeConfig"
       :checkbox-config="checkboxConfig"
       :options="treeList">
@@ -27,7 +28,6 @@ const treeConfig = reactive<VxeCascaderPropTypes.TreeConfig<RowVO>>({
 })
 
 const checkboxConfig = reactive<VxeCascaderPropTypes.CheckboxConfig<RowVO>>({
-  showIcon: true,
   checkStrictly: true,
   visibleMode: 'last',
   checkMode: 'last'

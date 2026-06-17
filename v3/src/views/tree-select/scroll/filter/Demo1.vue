@@ -20,6 +20,7 @@ export default Vue.extend({
     const treeSelectOptions: VxeTreeSelectProps<NodeVO> = {
       multiple: true,
       filterable: true,
+      showCheckbox: true,
       showTotalButton: true,
       showCheckedButton: true,
       showClearButton: true,
@@ -31,10 +32,7 @@ export default Vue.extend({
       treeConfig: {
         transform: true,
         keyField: 'id',
-        parentField: 'parentId',
-        checkboxConfig: {
-          showIcon: true
-        }
+        parentField: 'parentId'
       },
       options: []
     }

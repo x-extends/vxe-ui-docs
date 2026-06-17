@@ -18,6 +18,7 @@ const val1 = ref()
 const treeSelectOptions = reactive<VxeTreeSelectProps<NodeVO>>({
   multiple: true,
   filterable: true,
+  showCheckbox: true,
   showTotalButton: true,
   showCheckedButton: true,
   showClearButton: true,
@@ -29,10 +30,7 @@ const treeSelectOptions = reactive<VxeTreeSelectProps<NodeVO>>({
   treeConfig: {
     transform: true,
     keyField: 'id',
-    parentField: 'parentId',
-    checkboxConfig: {
-      showIcon: true
-    }
+    parentField: 'parentId'
   },
   options: []
 })

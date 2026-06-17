@@ -6,11 +6,11 @@
       </template>
 
       <template #region="{ data }">
-        <vxe-tree-select v-model="data.type" :options="regionOptions"></vxe-tree-select>
+        <vxe-tree-select v-model="data.type" :options="regionOptions" show-radio></vxe-tree-select>
       </template>
 
       <template #regionList="{ data }">
-        <vxe-tree-select v-model="data.regionList" :options="regionOptions" multiple></vxe-tree-select>
+        <vxe-tree-select v-model="data.regionList" :options="regionOptions" multiple show-checkbox></vxe-tree-select>
       </template>
 
       <template #action>

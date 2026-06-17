@@ -19,12 +19,12 @@ export default Vue.extend({
     const val1 = []
     const treeSelectOptions: VxeTreeSelectProps<NodeVO> = {
       multiple: true,
+      showCheckbox: true,
       treeConfig: {
         transform: true,
         keyField: 'value',
         parentField: 'parentId',
         checkboxConfig: {
-          showIcon: true,
           nodeStyle: {
             indeterminateColor: '#5F9EA0',
             checkedColor: '#1E90FF'

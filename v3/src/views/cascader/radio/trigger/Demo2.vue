@@ -1,6 +1,7 @@
 <template>
   <div>
     <vxe-cascader
+      show-radio
       v-model="val1"
       :tree-config="treeConfig"
       :radio-config="radioConfig"
@@ -28,7 +29,6 @@ export default Vue.extend({
     }
 
     const radioConfig: VxeCascaderPropTypes.RadioConfig<RowVO> = {
-      showIcon: true,
       visibleMethod ({ node }) {
         return !(node.children && node.children.length)
       },

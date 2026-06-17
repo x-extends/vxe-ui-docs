@@ -1,8 +1,9 @@
 <template>
   <div>
     <vxe-tree-select
-      v-model="val1"
       multiple
+      show-checkbox
+      v-model="val1"
       :tree-config="treeConfig"
       :options="treeList">
     </vxe-tree-select>
@@ -23,7 +24,6 @@ export default Vue.extend({
   data () {
     const treeConfig: VxeTreeSelectPropTypes.TreeConfig<RowVO> = {
       checkboxConfig: {
-        showIcon: true,
         checkStrictly: true
       }
     }

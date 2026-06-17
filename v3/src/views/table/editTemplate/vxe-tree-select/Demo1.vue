@@ -13,7 +13,7 @@
       </vxe-column>
       <vxe-column field="region" title="下拉树单选" width="200" :edit-render="{}">
         <template #edit="{ row }">
-          <vxe-tree-select v-model="row.region" :options="regionOptions"></vxe-tree-select>
+          <vxe-tree-select v-model="row.region" :options="regionOptions" show-radio></vxe-tree-select>
         </template>
         <template #default="{ row }">
           <span>{{ formatRegionLabel(row.region) }}</span>
@@ -21,7 +21,7 @@
       </vxe-column>
       <vxe-column field="regionList" title="下拉树多选" width="200" :edit-render="{}">
         <template #edit="{ row }">
-          <vxe-tree-select v-model="row.regionList" :options="regionListOptions" multiple></vxe-tree-select>
+          <vxe-tree-select v-model="row.regionList" :options="regionListOptions" multiple show-checkbox></vxe-tree-select>
         </template>
         <template #default="{ row }">
           <span>{{ formatRegionListLabel(row.regionList) }}</span>

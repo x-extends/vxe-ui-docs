@@ -1,8 +1,9 @@
 <template>
   <div>
     <vxe-cascader
-      v-model="val1"
       multiple
+      show-checkbox
+      v-model="val1"
       :checkbox-config="checkboxConfig"
       :options="treeList">
     </vxe-cascader>
@@ -24,7 +25,6 @@ export default Vue.extend({
     const val1: string[] = []
 
     const checkboxConfig: VxeCascaderPropTypes.CheckboxConfig<RowVO> = {
-      showIcon: true,
       checkStrictly: true
     }
 

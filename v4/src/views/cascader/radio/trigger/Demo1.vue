@@ -1,6 +1,7 @@
 <template>
   <div>
     <vxe-cascader
+      show-radio
       v-model="val1"
       :tree-config="treeConfig"
       :radio-config="radioConfig"
@@ -26,7 +27,6 @@ const treeConfig = reactive<VxeCascaderPropTypes.TreeConfig<RowVO>>({
 })
 
 const radioConfig = reactive<VxeCascaderPropTypes.RadioConfig<RowVO>>({
-  showIcon: true,
   visibleMode: 'last',
   checkMode: 'last'
 })

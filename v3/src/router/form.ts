@@ -248,6 +248,7 @@ export const formRouteConfig: RouteConfig = {
               name: 'ComponentFormBasicsItemRenderVxeDateRangePicker',
               component: () => import('@/views/form/basics/itemRender/vxe-date-range-picker/CodeExample.vue')
             },
+            { path: 'vxe-cascader', name: 'ComponentFormBasicsItemRenderVxeCascader', component: () => import('@/views/form/basics/itemRender/vxe-cascader/CodeExample.vue') },
             {
               path: 'vxe-tree-select',
               name: 'ComponentFormBasicsItemRenderVxeTreeSelect',

@@ -19,6 +19,9 @@ interface RowVO {
 
 const regionEditRender = reactive<VxeColumnPropTypes.EditRender<RowVO, VxeTreeSelectProps>>({
   name: 'VxeTreeSelect',
+  props: {
+    showRadio: true
+  },
   options: [
     {
       label: '广东省',
@@ -42,7 +45,8 @@ const regionEditRender = reactive<VxeColumnPropTypes.EditRender<RowVO, VxeTreeSe
 const regionListEditRender = reactive<VxeColumnPropTypes.EditRender<RowVO, VxeTreeSelectProps>>({
   name: 'VxeTreeSelect',
   props: {
-    multiple: true
+    multiple: true,
+    showCheckbox: true
   },
   options: [
     {

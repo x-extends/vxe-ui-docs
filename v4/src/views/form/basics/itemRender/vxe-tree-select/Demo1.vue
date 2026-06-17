@@ -24,6 +24,9 @@ interface FormDataVO {
 
 const regionItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
   name: 'VxeTreeSelect',
+  props: {
+    showRadio: true
+  },
   options: [
     {
       label: '广东省',
@@ -47,7 +50,8 @@ const regionItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
 const regionListItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
   name: 'VxeTreeSelect',
   props: {
-    multiple: true
+    multiple: true,
+    showCheckbox: true
   },
   options: [
     {

@@ -68,6 +68,7 @@ export const formNavConfig: NavVO & { children: NavVO[] } = {
             { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSelect' } },
             { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeDatePicker' } },
             { title: 'VxeDateRangePicker 日期范围选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeDateRangePicker' } },
+            { title: 'VxeCascader 级联选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeCascader' } },
             { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTreeSelect' } },
             { title: 'VxeTableSelect 下拉表格选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTableSelect' } },
             { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSwitch' } },

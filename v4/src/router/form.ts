@@ -248,6 +248,7 @@ export const formRouteConfig: RouteRecordRaw = {
               name: 'ComponentFormBasicsItemRenderVxeDateRangePicker',
               component: () => import('@/views/form/basics/itemRender/vxe-date-range-picker/CodeExample.vue')
             },
+            { path: 'vxe-cascader', name: 'ComponentFormBasicsItemRenderVxeCascader', component: () => import('@/views/form/basics/itemRender/vxe-cascader/CodeExample.vue') },
             {
               path: 'vxe-tree-select',
               name: 'ComponentFormBasicsItemRenderVxeTreeSelect',
@@ -344,6 +345,7 @@ export const formRouteConfig: RouteRecordRaw = {
               name: 'ComponentFormBasicsItemTemplateVxeDateRangePicker',
               component: () => import('@/views/form/basics/itemTemplate/vxe-date-range-picker/CodeExample.vue')
             },
+            { path: 'vxe-cascader', name: 'ComponentFormBasicsItemTemplateVxeCascader', component: () => import('@/views/form/basics/itemTemplate/vxe-cascader/CodeExample.vue') },
             {
               path: 'vxe-tree-select',
               name: 'ComponentFormBasicsItemTemplateVxeTreeSelect',
@@ -651,6 +653,7 @@ export const formRouteConfig: RouteRecordRaw = {
               name: 'ComponentFormConfigItemRenderVxeDateRangePicker',
               component: () => import('@/views/form/config/itemRender/vxe-date-range-picker/CodeExample.vue')
             },
+            { path: 'vxe-cascader', name: 'ComponentFormConfigItemRenderVxeCascader', component: () => import('@/views/form/config/itemRender/vxe-cascader/CodeExample.vue') },
             {
               path: 'vxe-tree-select',
               name: 'ComponentFormConfigItemRenderVxeTreeSelect',
@@ -757,6 +760,7 @@ export const formRouteConfig: RouteRecordRaw = {
               name: 'ComponentFormConfigItemTemplateVxeDateRangePicker',
               component: () => import('@/views/form/config/itemTemplate/vxe-date-range-picker/CodeExample.vue')
             },
+            { path: 'vxe-cascader', name: 'ComponentFormConfigItemTemplateVxeCascader', component: () => import('@/views/form/config/itemTemplate/vxe-cascader/CodeExample.vue') },
             {
               path: 'vxe-tree-select',
               name: 'ComponentFormConfigItemTemplateVxeTreeSelect',
