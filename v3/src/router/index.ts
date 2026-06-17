@@ -2923,6 +2923,57 @@ const routes: Array<RouteConfig> = [
         ]
       },
       {
+        path: 'cascader',
+        component: RouteLayout,
+        children: [
+          {
+            path: 'basics',
+            component: RouteLayout,
+            children: [
+              { path: 'size', name: 'ComponentCascaderBaseSize', component: () => import('@/views/cascader/base/size/CodeExample.vue') },
+              { path: 'hierarchy', name: 'ComponentCascaderBaseHierarchy', component: () => import('@/views/cascader/base/hierarchy/CodeExample.vue') },
+              { path: 'leveling', name: 'ComponentCascaderBaseLeveling', component: () => import('@/views/cascader/base/leveling/CodeExample.vue') },
+              { path: 'multiple', name: 'ComponentCascaderBaseMultiple', component: () => import('@/views/cascader/base/multiple/CodeExample.vue') },
+              { path: 'icon', name: 'ComponentCascaderBaseIcon', component: () => import('@/views/cascader/base/icon/CodeExample.vue') },
+              { path: 'optionProps', name: 'ComponentCascaderBaseOptionProps', component: () => import('@/views/cascader/base/optionProps/CodeExample.vue') },
+              { path: 'fullLabel', name: 'ComponentCascaderBaseFullLabel', component: () => import('@/views/cascader/base/fullLabel/CodeExample.vue') }
+            ]
+          },
+          {
+            path: 'radio',
+            component: RouteLayout,
+            children: [
+              { path: 'base', name: 'ComponentCascaderRadioBase', component: () => import('@/views/cascader/radio/base/CodeExample.vue') },
+              { path: 'trigger', name: 'ComponentCascaderRadioTrigger', component: () => import('@/views/cascader/radio/trigger/CodeExample.vue') }
+            ]
+          },
+          {
+            path: 'checkbox',
+            component: RouteLayout,
+            children: [
+              { path: 'base', name: 'ComponentCascaderCheckboxBase', component: () => import('@/views/cascader/checkbox/base/CodeExample.vue') },
+              { path: 'checkStrictly', name: 'ComponentCascaderCheckboxCheckStrictly', component: () => import('@/views/cascader/checkbox/checkStrictly/CodeExample.vue') },
+              { path: 'trigger', name: 'ComponentCascaderCheckboxTrigger', component: () => import('@/views/cascader/checkbox/trigger/CodeExample.vue') }
+            ]
+          },
+          {
+            path: 'operBtn',
+            component: RouteLayout,
+            children: [
+              { path: 'close', name: 'ComponentCascaderOperBtnClose', component: () => import('@/views/cascader/operBtn/close/CodeExample.vue') },
+              { path: 'checked', name: 'ComponentCascaderOperBtnChecked', component: () => import('@/views/cascader/operBtn/checked/CodeExample.vue') }
+            ]
+          },
+          {
+            path: 'other',
+            component: RouteLayout,
+            children: [
+              { path: 'region', name: 'ComponentCascaderOtherRegion', component: () => import('@/views/cascader/other/region/CodeExample.vue') }
+            ]
+          }
+        ]
+      },
+      {
         path: 'pager',
         component: RouteLayout,
         children: [

@@ -116,7 +116,7 @@ export default Vue.extend({
         name: '控件',
         children: [
           'calendar', 'time', 'input', 'textarea', 'rich-text', 'select', 'text', 'tree-select', 'tabs', 'table', 'switch', 'subtable', 'slider', 'values',
-          'minus', 'num-list', 'number', 'row-col', 'voice', 'voice-fill', 'rmb', 'usd'
+          'num-list', 'number', 'row-col', 'voice', 'voice-fill', 'rmb', 'usd'
         ]
       },
       {
@@ -134,7 +134,7 @@ export default Vue.extend({
       {
         name: '操作',
         children: [
-          'add', 'add-sub',
+          'minus', 'add', 'add-sub',
           'delete', 'delete-fill',
           'link',
           'search-zoom-in', 'search-zoom-out', 'search',

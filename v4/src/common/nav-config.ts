@@ -1235,6 +1235,52 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: 'Cascader 级联选择',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'cascader' } } },
+          {
+            title: '基础',
+            children: [
+              { title: '尺寸大小', routerLink: { name: 'ComponentCascaderBaseSize' } },
+              { title: '层级结构', routerLink: { name: 'ComponentCascaderBaseHierarchy' } },
+              { title: '平级结构', routerLink: { name: 'ComponentCascaderBaseLeveling' } },
+              { title: '多选', routerLink: { name: 'ComponentCascaderBaseMultiple' } },
+              { title: '自定义图标', routerLink: { name: 'ComponentCascaderBaseIcon' } },
+              { title: '自定义字段', routerLink: { name: 'ComponentCascaderBaseOptionProps' } },
+              { title: '显示完整路径', routerLink: { name: 'ComponentCascaderBaseFullLabel' } }
+            ]
+          },
+          {
+            title: '单选框',
+            children: [
+              { title: '显示单选框', routerLink: { name: 'ComponentCascaderRadioBase' } },
+              { title: '选中子节点', routerLink: { name: 'ComponentCascaderRadioTrigger' } }
+            ]
+          },
+          {
+            title: '复选框',
+            children: [
+              { title: '显示复选框', routerLink: { name: 'ComponentCascaderCheckboxBase' } },
+              { title: '节点不关联', routerLink: { name: 'ComponentCascaderCheckboxCheckStrictly' } },
+              { title: '选中子节点', routerLink: { name: 'ComponentCascaderCheckboxTrigger' } }
+            ]
+          },
+          {
+            title: '操作按钮',
+            children: [
+              { title: '关闭按钮', routerLink: { name: 'ComponentCascaderOperBtnClose' } },
+              { title: '多选按钮', routerLink: { name: 'ComponentCascaderOperBtnChecked' } }
+            ]
+          }
+          // {
+          //   title: '功能示例',
+          //   children: [
+          //     { title: '省市区', routerLink: { name: 'ComponentCascaderOtherRegion' } }
+          //   ]
+          // }
+        ]
+      },
+      {
         title: 'TreeSelect 下拉树选择',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tree-select' } } },
