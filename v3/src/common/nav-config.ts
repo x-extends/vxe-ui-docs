@@ -1769,7 +1769,8 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: '弹窗与表单', routerLink: { name: 'ComponentModalModalOtherForm' } },
           { title: '弹窗与表格', routerLink: { name: 'ComponentModalModalOtherTable' } },
-          { title: '弹窗中实现左边树和右边表格', routerLink: { name: 'ComponentModalModalOtherLeftRight' } }
+          { title: '弹窗中实现左边树和右边表格', routerLink: { name: 'ComponentModalModalOtherLeftRight' } },
+          { title: '弹窗中展示多表格', routerLink: { name: 'ComponentModalModalOtherSplitTable' } }
         ]
       }
     ]

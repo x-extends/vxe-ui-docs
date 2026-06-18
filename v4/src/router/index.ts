@@ -3427,7 +3427,8 @@ const routes: Array<RouteRecordRaw> = [
             children: [
               { path: 'form', name: 'ComponentModalModalOtherForm', component: () => import('@/views/modal/other/form/CodeExample.vue') },
               { path: 'table', name: 'ComponentModalModalOtherTable', component: () => import('@/views/modal/other/table/CodeExample.vue') },
-              { path: 'leftRight', name: 'ComponentModalModalOtherLeftRight', component: () => import('@/views/modal/other/leftRight/CodeExample.vue') }
+              { path: 'leftRight', name: 'ComponentModalModalOtherLeftRight', component: () => import('@/views/modal/other/leftRight/CodeExample.vue') },
+              { path: 'splitTable', name: 'ComponentModalModalOtherSplitTable', component: () => import('@/views/modal/other/splitTable/CodeExample.vue') }
             ]
           }
         ]
