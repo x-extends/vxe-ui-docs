@@ -14,10 +14,11 @@ interface NodeVO {
   parentId?: string | null
 }
 
-const val1 = ref()
+const val1 = ref([])
 const treeSelectOptions = reactive<VxeTreeSelectProps<NodeVO>>({
+  multiple: true,
   filterable: true,
-  showRadio: true,
+  showCheckbox: true,
   optionProps: {
     label: 'title',
     value: 'id'

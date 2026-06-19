@@ -19,6 +19,8 @@ export default Vue.extend({
     const val1 = ''
     const cascaderOptions: VxeCascaderProps<NodeVO> = {
       multiple: true,
+      clearable: true,
+      showCheckbox: true,
       showTotalButton: true,
       showCheckedButton: true,
       showClearButton: true,

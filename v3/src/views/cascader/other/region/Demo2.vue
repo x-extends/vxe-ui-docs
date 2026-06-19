@@ -1,6 +1,18 @@
 <template>
   <div>
-    <vxe-cascader v-model="val1" :options="treeList" :treeConfig="treeConfig" :radio-config="radioConfig" :option-props="{value: 'id', label: 'name'}" filterable clearable></vxe-cascader>
+    <vxe-cascader
+      multiple
+      show-checkbox
+      filterable
+      clearable
+      show-checked-button
+      show-clear-button
+      show-total-button
+      show-close-button
+      v-model="val1"
+      :options="treeList"
+      :option-props="{value: 'id', label: 'name'}">
+    </vxe-cascader>
   </div>
 </template>
 
@@ -11,22 +23,12 @@ import XEUtils from 'xe-utils'
 
 export default Vue.extend({
   data () {
-    const val1 = 1202
+    const val1 = [1202]
     const treeList: VxeCascaderPropTypes.Options = []
-
-    const treeConfig: VxeCascaderPropTypes.TreeConfig = {
-      trigger: 'node'
-    }
-
-    const radioConfig: VxeCascaderPropTypes.RadioConfig = {
-      checkMode: 'last'
-    }
 
     return {
       val1,
-      treeList,
-      treeConfig,
-      radioConfig
+      treeList
     }
   },
   created () {

@@ -14,15 +14,17 @@ interface NodeVO {
   parentId?: string | null
 }
 
-const val1 = ref()
+const val1 = ref([])
 const cascaderOptions = reactive<VxeCascaderProps<NodeVO>>({
   multiple: true,
-  clearable: true,
+  filterable: true,
   showCheckbox: true,
-  showTotalButton: true,
-  showCheckedButton: true,
-  showClearButton: true,
-  showCloseButton: true,
+  filterConfig: {
+    filterMethod ({ filterValue, node }) {
+      // 重写为精确匹配
+      return node.title === filterValue
+    }
+  },
   optionProps: {
     label: 'title',
     value: 'id'

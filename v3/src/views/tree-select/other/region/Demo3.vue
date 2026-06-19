@@ -1,6 +1,21 @@
 <template>
   <div>
-    <vxe-tree-select v-model="val1" :options="treeList" :treeConfig="treeConfig" :option-props="{value: 'id', label: 'name'}" show-full-label filterable clearable></vxe-tree-select>
+    <vxe-tree-select
+      multiple
+      show-checkbox
+      filterable
+      clearable
+      show-checked-button
+      show-clear-button
+      show-total-button
+      show-close-button
+      show-expand-button
+      show-full-label
+      v-model="val1"
+      :options="treeList"
+      :treeConfig="treeConfig"
+      :option-props="{value: 'id', label: 'name'}">
+    </vxe-tree-select>
   </div>
 </template>
 
@@ -11,7 +26,7 @@ import XEUtils from 'xe-utils'
 
 export default Vue.extend({
   data () {
-    const val1 = null
+    const val1 = [1202]
     const treeList: VxeTreeSelectPropTypes.Options = []
 
     const treeConfig: VxeTreeSelectPropTypes.TreeConfig = {

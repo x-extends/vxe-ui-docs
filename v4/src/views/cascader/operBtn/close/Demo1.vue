@@ -16,7 +16,7 @@ interface NodeVO {
 
 const val1 = ref()
 const cascaderOptions = reactive<VxeCascaderProps<NodeVO>>({
-  multiple: true,
+  showRadio: true,
   showCloseButton: true,
   optionProps: {
     label: 'title',

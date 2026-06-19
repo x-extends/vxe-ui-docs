@@ -11,7 +11,7 @@ import XEUtils from 'xe-utils'
 
 export default Vue.extend({
   data () {
-    const val1 = null
+    const val1 = 1202
     const treeList: VxeTreeSelectPropTypes.Options = []
 
     return {

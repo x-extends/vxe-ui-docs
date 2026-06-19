@@ -14,10 +14,11 @@ interface NodeVO {
   parentId?: string | null
 }
 
-const val1 = ref()
+const val1 = ref([])
 const treeSelectOptions = reactive<VxeTreeSelectProps<NodeVO>>({
   multiple: true,
   filterable: true,
+  showCheckbox: true,
   filterConfig: {
     filterMethod ({ filterValue, node }) {
       // 重写为精确匹配

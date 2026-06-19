@@ -16,10 +16,10 @@ interface NodeVO {
 
 export default Vue.extend({
   data () {
-    const val1 = []
+    const val1 = null
     const treeSelectOptions: VxeTreeSelectProps<NodeVO> = {
-      multiple: true,
       filterable: true,
+      showRadio: true,
       optionProps: {
         label: 'title',
         value: 'id'

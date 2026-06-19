@@ -2482,6 +2482,14 @@ const routes: Array<RouteConfig> = [
             ]
           },
           {
+            path: 'search',
+            component: RouteLayout,
+            children: [
+              { path: 'filterValue', name: 'ComponentCascaderSearchFilterValue', component: () => import('@/views/cascader/search/filterValue/CodeExample.vue') },
+              { path: 'filterMethod', name: 'ComponentCascaderSearchFilterMethod', component: () => import('@/views/cascader/search/filterMethod/CodeExample.vue') }
+            ]
+          },
+          {
             path: 'operBtn',
             component: RouteLayout,
             children: [

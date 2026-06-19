@@ -16,16 +16,17 @@ interface NodeVO {
 
 export default Vue.extend({
   data () {
-    const val1 = ''
+    const val1 = []
     const cascaderOptions: VxeCascaderProps<NodeVO> = {
       multiple: true,
-      clearable: true,
+      filterable: true,
       showCheckbox: true,
-      showTotalButton: true,
-      showCheckedButton: true,
-      showClearButton: true,
-      checkedClosable: true,
-      showCloseButton: true,
+      filterConfig: {
+        filterMethod ({ filterValue, node }) {
+          // 重写为精确匹配
+          return node.title === filterValue
+        }
+      },
       optionProps: {
         label: 'title',
         value: 'id'

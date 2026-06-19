@@ -18,7 +18,7 @@ export default Vue.extend({
   data () {
     const val1 = ''
     const cascaderOptions: VxeCascaderProps<NodeVO> = {
-      multiple: true,
+      showRadio: true,
       showCloseButton: true,
       optionProps: {
         label: 'title',

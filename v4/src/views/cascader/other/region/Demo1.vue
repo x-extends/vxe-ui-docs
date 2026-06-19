@@ -1,6 +1,16 @@
 <template>
   <div>
-    <vxe-cascader v-model="val1" :options="treeList" :option-props="{value: 'id', label: 'name'}" filterable clearable></vxe-cascader>
+    <vxe-cascader
+      show-radio
+      filterable
+      clearable
+      show-clear-button
+      show-total-button
+      show-close-button
+      v-model="val1"
+      :options="treeList"
+      :option-props="{value: 'id', label: 'name'}">
+    </vxe-cascader>
   </div>
 </template>
 

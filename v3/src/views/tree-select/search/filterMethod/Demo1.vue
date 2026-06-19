@@ -20,6 +20,7 @@ export default Vue.extend({
     const treeSelectOptions: VxeTreeSelectProps<NodeVO> = {
       multiple: true,
       filterable: true,
+      showCheckbox: true,
       filterConfig: {
         filterMethod ({ filterValue, node }) {
           // 重写为精确匹配

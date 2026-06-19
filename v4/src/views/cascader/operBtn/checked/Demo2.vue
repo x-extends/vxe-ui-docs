@@ -17,6 +17,8 @@ interface NodeVO {
 const val1 = ref()
 const cascaderOptions = reactive<VxeCascaderProps<NodeVO>>({
   multiple: true,
+  clearable: true,
+  showCheckbox: true,
   showTotalButton: true,
   showCheckedButton: true,
   showClearButton: true,

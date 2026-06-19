@@ -9,15 +9,7 @@
     <CodeLight path="cascader/other/region/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          只能选择到最后一级
-        </vxe-tip>
-      </template>
-    </CodeLight>
-
-    <CodeLight path="cascader/other/region/Demo3">
-      <template #tip>
-        <vxe-tip status="primary">
-          显示为完整路径
+          多选
         </vxe-tip>
       </template>
     </CodeLight>

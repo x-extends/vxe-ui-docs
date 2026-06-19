@@ -1061,18 +1061,25 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
+            title: '搜索',
+            children: [
+              { title: '过滤节点', routerLink: { name: 'ComponentCascaderSearchFilterValue' } },
+              { title: '自定义过滤方法', routerLink: { name: 'ComponentCascaderSearchFilterMethod' } }
+            ]
+          },
+          {
             title: '操作按钮',
             children: [
               { title: '关闭按钮', routerLink: { name: 'ComponentCascaderOperBtnClose' } },
               { title: '多选按钮', routerLink: { name: 'ComponentCascaderOperBtnChecked' } }
             ]
+          },
+          {
+            title: '功能示例',
+            children: [
+              { title: '省市区', routerLink: { name: 'ComponentCascaderOtherRegion' } }
+            ]
           }
-          // {
-          //   title: '功能示例',
-          //   children: [
-          //     { title: '省市区', routerLink: { name: 'ComponentCascaderOtherRegion' } }
-          //   ]
-          // }
         ]
       },
       {
