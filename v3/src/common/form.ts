@@ -1,6 +1,6 @@
 import { NavVO, otherUrl } from './nav'
 
-export const formNavConfig: NavVO & { children: NavVO[] } = {
+export const formNavConfig: NavVO = {
   i18nKey: 'app.aside.menu.formTitle',
   children: [
     { title: 'Form API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form' } }, keywords: 'vxe-form' },

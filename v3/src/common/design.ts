@@ -1,6 +1,6 @@
 import { NavVO } from './nav'
 
-export const designNavConfig: NavVO & { children: NavVO[] } = {
+export const designNavConfig: NavVO = {
   i18nKey: 'app.aside.menu.designTitle',
   keywords: 'vxe-design',
   children: [

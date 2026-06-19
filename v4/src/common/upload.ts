@@ -1,6 +1,6 @@
 import { NavVO } from './nav'
 
-export const uploadNavConfig: NavVO & { children: NavVO[] } = {
+export const uploadNavConfig: NavVO = {
   title: 'Upload 上传',
   children: [
     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'upload' } } },

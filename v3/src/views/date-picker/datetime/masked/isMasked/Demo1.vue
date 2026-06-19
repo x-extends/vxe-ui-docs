@@ -1,0 +1,24 @@
+<template>
+  <div>
+    <vxe-date-picker v-model="val1" placeholder="掩码输入" type="datetime" :masked-config="maskedConfig"></vxe-date-picker>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+import { VxeDatePickerPropTypes } from 'vxe-pc-ui'
+
+export default Vue.extend({
+  data () {
+    const val1 = ''
+    const maskedConfig: VxeDatePickerPropTypes.MaskedConfig = {
+      isMasked: true
+    }
+
+    return {
+      val1,
+      maskedConfig
+    }
+  }
+})
+</script>
