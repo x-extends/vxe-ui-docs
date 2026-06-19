@@ -14,6 +14,7 @@
             | Arrow Down ↓ | 向左移动数值输入区间 |
             | Arrow Left ← | 当前选择的值递减 |
             | Arrow Right → | 向右移动数值输入区间 |
+            | Enter | 按回车确认输入 |
           </pre-code>
         </pre>
       </template>
