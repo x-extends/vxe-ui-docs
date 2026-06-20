@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>
-      <vxe-upload v-model="fileList1" single-mode auto-hidden-button show-progress :upload-method="uploadMethod"></vxe-upload>
+      <vxe-upload v-model="selectFile" single-mode auto-hidden-button show-progress :upload-method="uploadMethod"></vxe-upload>
     </p>
   </div>
 </template>
@@ -11,7 +11,7 @@ import { ref } from 'vue'
 import axios from 'axios'
 import { VxeUploadPropTypes } from 'vxe-pc-ui'
 
-const fileList1 = ref({
+const selectFile = ref({
   name: 'fj577.jpg',
   url: 'https://vxeui.com/resource/img/fj577.jpg'
 })

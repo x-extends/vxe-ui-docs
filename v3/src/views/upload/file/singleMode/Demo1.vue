@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>
-      <vxe-upload v-model="fileList1" single-mode show-progress :upload-method="uploadMethod"></vxe-upload>
+      <vxe-upload v-model="selectFile" single-mode show-progress :upload-method="uploadMethod"></vxe-upload>
     </p>
   </div>
 </template>
@@ -13,7 +13,7 @@ import { VxeUploadPropTypes } from 'vxe-pc-ui'
 
 export default Vue.extend({
   data () {
-    const fileList1 = {
+    const selectFile = {
       name: 'fj577.jpg',
       url: 'https://vxeui.com/resource/img/fj577.jpg'
     }
@@ -30,7 +30,7 @@ export default Vue.extend({
     }
 
     return {
-      fileList1,
+      selectFile,
       uploadMethod
     }
   }
