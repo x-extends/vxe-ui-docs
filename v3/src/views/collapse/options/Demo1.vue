@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-collapse :options="itemList">
+    <vxe-collapse :options="itemList" padding border>
       <template #default1>
         <div>内容1</div>
         <div>内容1</div>

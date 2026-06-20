@@ -8,7 +8,7 @@
 
     <CodeLight path="collapse/base/Demo2">
       <template #tip>
-        <vxe-tip status="primary">去掉间距</vxe-tip>
+        <vxe-tip status="primary">不显示图标</vxe-tip>
       </template>
     </CodeLight>
   </div>

@@ -275,6 +275,8 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'collapse' } }, keywords: 'vxe-collapse' },
           { title: '基础', routerLink: { name: 'ComponentCollapseBase' } },
+          { title: '边距', routerLink: { name: 'ComponentCollapsePadding' } },
+          { title: '边框', routerLink: { name: 'ComponentCollapseBorder' } },
           { title: '图标', routerLink: { name: 'ComponentCollapseIon' } },
           { title: '配置式', routerLink: { name: 'ComponentCollapseOptions' } },
           { title: '自定义标题模板', routerLink: { name: 'ComponentCollapseTemplateTitle' } },

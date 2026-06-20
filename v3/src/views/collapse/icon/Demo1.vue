@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-collapse>
+    <vxe-collapse padding>
       <vxe-collapse-pane title="标题1" name="1" icon="vxe-icon-home">内容1</vxe-collapse-pane>
       <vxe-collapse-pane title="标题2" name="2">内容2</vxe-collapse-pane>
       <vxe-collapse-pane title="标题3" name="3" icon="vxe-icon-setting">内容3</vxe-collapse-pane>

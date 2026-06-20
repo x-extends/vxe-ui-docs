@@ -1,9 +1,9 @@
 <template>
   <div>
-    <vxe-collapse>
+    <vxe-collapse padding border>
       <vxe-collapse-pane name="1">
         <template #title>
-          <div>标题1</div>
+          <div style="color:red">标题1</div>
         </template>
 
         <template #default>
@@ -21,7 +21,7 @@
       </vxe-collapse-pane>
       <vxe-collapse-pane name="3">
         <template #title>
-          <div>标题3</div>
+          <div style="color:blue">标题3</div>
         </template>
 
         <template #default>

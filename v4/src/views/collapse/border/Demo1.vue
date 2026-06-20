@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-collapse :expand-config="expandConfig">
+    <vxe-collapse padding border>
       <vxe-collapse-pane title="标题1" name="1">
         <template #default>
           这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1这是一段内容内容1
@@ -29,20 +29,3 @@
     </vxe-collapse>
   </div>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-import { VxeCollapsePropTypes } from 'vxe-pc-ui'
-
-export default Vue.extend({
-  data () {
-    const expandConfig: VxeCollapsePropTypes.ExpandConfig = {
-      showIcon: false
-    }
-
-    return {
-      expandConfig
-    }
-  }
-})
-</script>

@@ -2795,6 +2795,8 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentCollapseBase',
             component: () => import('@/views/collapse/base/CodeExample.vue')
           },
+          { path: 'padding', name: 'ComponentCollapsePadding', component: () => import('@/views/collapse/padding/CodeExample.vue') },
+          { path: 'border', name: 'ComponentCollapseBorder', component: () => import('@/views/collapse/border/CodeExample.vue') },
           {
             path: 'icon',
             name: 'ComponentCollapseIon',
