@@ -33,7 +33,7 @@
         "insrall": "安装",
         "fullInsrall": "默认安装",
         "useTableInsrall": "表格安装",
-        "useDesignInsrall": "可视化设计器安装",
+        "useDesignInsrall": "设计器安装",
         "useGanttInsrall": "甘特图安装",
         "globalInstall": "全局安装 - 全量导入",
         "lazyUseGlobal": "全局安装 - 按需导入",
