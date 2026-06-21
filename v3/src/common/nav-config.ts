@@ -562,10 +562,10 @@ export const navConfigList: NavVO[] = [
       }
     ]
   },
-  formNavConfig,
   {
     i18nKey: 'app.aside.menu.dataTitle',
     children: [
+      formNavConfig,
       {
         title: 'Switch 开关',
         children: [
