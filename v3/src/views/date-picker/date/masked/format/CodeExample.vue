@@ -11,7 +11,7 @@
     <CodeLight path="date-picker/date/masked/format/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          还可以通过 <ApiLink name="date-picker" prop="popup-config"/>.<ApiLink name="date-picker" prop="enabled"/> 来关闭日期面板
+          还可以通过 <ApiLink name="date-picker" prop="popup-config"/>.<ApiLink name="date-picker" prop="enabled"/> 来关闭日期面板，也可以全局设置启用和关闭，也可以全局设置启用和关闭
         </vxe-tip>
       </template>
     </CodeLight>
