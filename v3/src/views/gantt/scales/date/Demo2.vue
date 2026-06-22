@@ -24,6 +24,9 @@ export default Vue.extend({
       cellConfig: {
         height: 80
       },
+      taskConfig: {
+        dateFormat: 'yyyy-MM-dd HH:mm:ss'
+      },
       taskBarConfig: {
         showProgress: true,
         showContent: true,

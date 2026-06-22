@@ -2,9 +2,8 @@ import { NavVO } from './nav'
 
 export const ganttNavConfig: NavVO = {
   i18nKey: 'app.aside.menu.ganttTitle',
-  keywords: 'vxe-gantt',
   children: [
-    { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'gantt' } } },
+    { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'gantt' } }, keywords: 'vxe-gantt' },
     {
       title: '基础',
       children: [
@@ -202,6 +201,16 @@ export const ganttNavConfig: NavVO = {
       ]
     },
     {
+      title: '右键菜单',
+      children: [
+        { title: '自定义前缀', routerLink: { name: 'ComponentGanttMenuPrefixConfig' } },
+        { title: '自定义后缀', routerLink: { name: 'ComponentGanttMenuSuffixConfig' } },
+        { title: '完整右键菜单', routerLink: { name: 'ComponentGanttMenuFull' } },
+        { title: '菜单权限控制', routerLink: { name: 'ComponentGanttMenuPrivilege' } }
+
+      ]
+    },
+    {
       title: '查询表单',
       children: [
         { title: '查询表单', routerLink: { name: 'ComponentGanttFormSearch' } },
@@ -237,17 +246,21 @@ export const ganttNavConfig: NavVO = {
       title: '日期轴',
       children: [
         { title: '自定义日期轴', routerLink: { name: 'ComponentGanttScalesDefault' } },
-        { title: '按天', routerLink: { name: 'ComponentGanttScalesDate' } },
+        { title: '年视图', routerLink: { name: 'ComponentGanttScalesYear' } },
+        { title: '季视图', routerLink: { name: 'ComponentGanttScalesYearQuartery' } },
+        { title: '月视图', routerLink: { name: 'ComponentGanttScalesYearMonth' } },
+        { title: '周视图', routerLink: { name: 'ComponentGanttScalesMonthWeek' } },
+        { title: '天视图', routerLink: { name: 'ComponentGanttScalesMonthDate' } },
+        { title: '小时视图', routerLink: { name: 'ComponentGanttScalesDateHour' } },
+        { title: '分钟视图', routerLink: { name: 'ComponentGanttScalesHourMinute' } },
+        { title: '秒视图', routerLink: { name: 'ComponentGanttScalesMinuteSecond' } },
+        // { title: '日', routerLink: { name: 'ComponentGanttScalesDate' } },
         { title: '年-月-日', routerLink: { name: 'ComponentGanttScalesYearMonthDate' } },
         { title: '年-周-日', routerLink: { name: 'ComponentGanttScalesYearWeekDate' } },
         { title: '季-月-日', routerLink: { name: 'ComponentGanttScalesQuarterMonthDate' } },
         { title: '周-星期-日', routerLink: { name: 'ComponentGanttScalesMonthDayDate' } },
-        { title: '月-日', routerLink: { name: 'ComponentGanttScalesMonthDate' } },
-        { title: '天-小时', routerLink: { name: 'ComponentGanttScalesDateHour' } },
-        { title: '小时-分钟', routerLink: { name: 'ComponentGanttScalesHourMinute' } },
-        { title: '分钟-秒', routerLink: { name: 'ComponentGanttScalesMinuteSecond' } },
-        { title: '日期间隔', routerLink: { name: 'ComponentGanttScalesMinuteStep' } },
-        // { title: '格式化列头标题', routerLink: { name: 'ComponentGanttScalesTitleFormat' } },
+        // { title: '日期间隔', routerLink: { name: 'ComponentGanttScalesMinuteStep' } },
+        { title: '格式化列头标题', routerLink: { name: 'ComponentGanttScalesTitleFormat' } },
         { title: '自定义列头标题', routerLink: { name: 'ComponentGanttScalesTitleMethod' } },
         { title: '自定义列头样式', routerLink: { name: 'ComponentGanttScalesHeaderCellStyle' } },
         {
@@ -318,8 +331,8 @@ export const ganttNavConfig: NavVO = {
         { title: '自定义表头模板', routerLink: { name: 'ComponentGantTemplateHeader' } },
         { title: '自定义表尾模板', routerLink: { name: 'ComponentGantTemplateFooter' } },
         { title: '自定义单元格提示模板', routerLink: { name: 'ComponentGantTemplateTooltip' } },
-        { title: '自定义此刻线模板', routerLink: { name: 'ComponentGantTemplateTaskNowLine' } },
         { title: '自定义分页模板', routerLink: { name: 'ComponentGantTemplatePager' } },
+        { title: '自定义此刻线模板', routerLink: { name: 'ComponentGantTemplateTaskNowLine' } },
         { title: '自定义任务条模板', routerLink: { name: 'ComponentGantTemplateTaskBar' } },
         { title: '自定义任务视图标题模板', routerLink: { name: 'ComponentGantTemplateTaskCellTitle' } },
         { title: '自定义任务条提示模板', routerLink: { name: 'ComponentGantTemplateTaskBarTip' } },

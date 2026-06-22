@@ -221,6 +221,16 @@ export const ganttRouteConfig: RouteConfig = {
       ]
     },
     {
+      path: 'menu',
+      component: RouteLayout,
+      children: [
+        { path: 'prefixConfig', name: 'ComponentGanttMenuPrefixConfig', component: () => import('@/views/gantt/menu/prefixConfig/CodeExample.vue') },
+        { path: 'suffixConfig', name: 'ComponentGanttMenuSuffixConfig', component: () => import('@/views/gantt/menu/suffixConfig/CodeExample.vue') },
+        { path: 'full', name: 'ComponentGanttMenuFull', component: () => import('@/views/gantt/menu/full/CodeExample.vue') },
+        { path: 'privilege', name: 'ComponentGanttMenuPrivilege', component: () => import('@/views/gantt/menu/privilege/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'form',
       component: RouteLayout,
       children: [
@@ -263,9 +273,13 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'default', name: 'ComponentGanttScalesDefault', component: () => import('@/views/gantt/scales/default/CodeExample.vue') },
         { path: 'date', name: 'ComponentGanttScalesDate', component: () => import('@/views/gantt/scales/date/CodeExample.vue') },
         { path: 'yearMonthDate', name: 'ComponentGanttScalesYearMonthDate', component: () => import('@/views/gantt/scales/yearMonthDate/CodeExample.vue') },
-        { path: 'quarterMonthDate', name: 'ComponentGanttScalesQuarterMonthDate', component: () => import('@/views/gantt/scales/quarterMonthDate/CodeExample.vue') },
         { path: 'yearWeekDate', name: 'ComponentGanttScalesYearWeekDate', component: () => import('@/views/gantt/scales/yearWeekDate/CodeExample.vue') },
+        { path: 'quarterMonthDate', name: 'ComponentGanttScalesQuarterMonthDate', component: () => import('@/views/gantt/scales/quarterMonthDate/CodeExample.vue') },
         { path: 'monthDayDate', name: 'ComponentGanttScalesMonthDayDate', component: () => import('@/views/gantt/scales/monthDayDate/CodeExample.vue') },
+        { path: 'year', name: 'ComponentGanttScalesYear', component: () => import('@/views/gantt/scales/year/CodeExample.vue') },
+        { path: 'yearQuartery', name: 'ComponentGanttScalesYearQuartery', component: () => import('@/views/gantt/scales/yearQuartery/CodeExample.vue') },
+        { path: 'yearMonth', name: 'ComponentGanttScalesYearMonth', component: () => import('@/views/gantt/scales/yearMonth/CodeExample.vue') },
+        { path: 'monthWeek', name: 'ComponentGanttScalesMonthWeek', component: () => import('@/views/gantt/scales/monthWeek/CodeExample.vue') },
         { path: 'monthDate', name: 'ComponentGanttScalesMonthDate', component: () => import('@/views/gantt/scales/monthDate/CodeExample.vue') },
         { path: 'dateHour', name: 'ComponentGanttScalesDateHour', component: () => import('@/views/gantt/scales/dateHour/CodeExample.vue') },
         { path: 'hourMinute', name: 'ComponentGanttScalesHourMinute', component: () => import('@/views/gantt/scales/hourMinute/CodeExample.vue') },

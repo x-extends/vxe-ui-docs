@@ -3,7 +3,10 @@
     <CodeLight path="gantt/scales/date/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="天视图">
-          如果数据不带时分秒，则默认填充满单元格
+          精度解析到天，默认填充满单元格
+        </vxe-tip>
+        <vxe-tip status="error">
+          当使用天视图时，应该控制好月份的限制，比如一个月内，当渲染月份数过大时，渲染的复杂度将会以倍数增长，渲染越多将会越慢
         </vxe-tip>
       </template>
     </CodeLight>
@@ -11,7 +14,7 @@
     <CodeLight path="gantt/scales/date/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          如果数据带有时分秒，则会自动识别时分秒维度渲染单元格
+          指定格式，精确到时分秒，自动在单元格内按实际进度显示
         </vxe-tip>
       </template>
     </CodeLight>

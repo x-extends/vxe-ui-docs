@@ -1,6 +1,5 @@
 <template>
   <div>
-    <vxe-date-picker v-model="selectValue" type="date" @change="loadList()"></vxe-date-picker>
     <vxe-gantt v-bind="ganttOptions"></vxe-gantt>
   </div>
 </template>
@@ -8,7 +7,6 @@
 <script lang="ts">
 import Vue from 'vue'
 import { VxeGanttProps } from 'vxe-gantt'
-import XEUtils from 'xe-utils'
 
 interface RowVO {
   id: number
@@ -16,15 +14,16 @@ interface RowVO {
   start: string
   end: string
   progress: number
-  owner: string
 }
 
 export default Vue.extend({
   data () {
     const ganttOptions: VxeGanttProps<RowVO> = {
       border: true,
-      height: 500,
-      loading: false,
+      showOverflow: true,
+      cellConfig: {
+        height: 80
+      },
       taskBarConfig: {
         showProgress: true,
         showContent: true,
@@ -38,47 +37,28 @@ export default Vue.extend({
         scales: ['date', 'hour'],
         tableStyle: {
           width: 320
+        },
+        viewStyle: {
+          cellWidth: 120
         }
       },
       columns: [
-        { field: 'title', title: '任务名称', width: 120 },
-        { field: 'owner', title: '负责人', width: 100 },
-        { field: 'start', title: '开始时间', width: 160 },
-        { field: 'end', title: '结束时间', width: 160 }
+        { type: 'seq', field: 'seq', width: 70 },
+        { field: 'title', title: '任务名称' },
+        { field: 'start', title: '开始时间', width: 100 },
+        { field: 'end', title: '结束时间', width: 100 }
       ],
-      data: []
+      data: [
+        { id: 10001, title: 'A项目', start: '2024-03-01 08:30:20', end: '2024-03-01 09:30:30', progress: 100 },
+        { id: 10002, title: '城市道路修理进度', start: '2024-03-01 00:00:00', end: '2024-03-01 00:00:00', progress: 100 },
+        { id: 10003, title: 'B大工程', start: '2024-03-01 01:00:00', end: '2024-03-01 01:05:0', progress: 90 },
+        { id: 10004, title: '超级大工程', start: '2024-03-01 01:20:00', end: '2024-03-01 08:50:00', progress: 80 }
+      ]
     }
-
-    const selectValue = '2025-01-01'
 
     return {
-      ganttOptions,
-      selectValue
+      ganttOptions
     }
-  },
-  methods: {
-    // 模拟后端接口
-    loadList () {
-      this.ganttOptions.loading = true
-      setTimeout(() => {
-        const mockList: RowVO[] = []
-        for (let i = 0; i < 10; i++) {
-          const selectDate = XEUtils.toStringDate(this.selectValue || Date.now())
-          selectDate.setHours(XEUtils.random(0, 10))
-          const startDate = XEUtils.toDateString(selectDate)
-          selectDate.setHours(XEUtils.random(11, 23))
-          const endDate = XEUtils.toDateString(selectDate)
-          mockList.push(
-            { id: 10000 + i, title: `任务${i + 1}`, start: startDate, end: endDate, owner: '张三', progress: XEUtils.random(20, 90) }
-          )
-        }
-        this.ganttOptions.loading = false
-        this.ganttOptions.data = mockList
-      }, 300)
-    }
-  },
-  created () {
-    this.loadList()
   }
 })
 </script>
