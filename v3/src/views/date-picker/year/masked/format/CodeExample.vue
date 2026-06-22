@@ -3,7 +3,7 @@
     <CodeLight path="date-picker/year/masked/format/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="掩码格式">
-          通过 <ApiLink name="date-picker" prop="masked-config"/>.<ApiLink name="date-picker" prop="label-format"/> 来自定义掩码输入格式
+          通过 <ApiLink name="date-picker" prop="label-format"/> 设置自定义显示的格式，会自动识别掩码格式
         </vxe-tip>
       </template>
     </CodeLight>

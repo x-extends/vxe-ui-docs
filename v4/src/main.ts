@@ -134,13 +134,6 @@ VxeUI.setConfig({
   //   }
   // }
   // scrollMarginStyle: 'obsolete'
-  datePicker: {
-    maskedConfig: {
-      enabled: true,
-      isMasked: true,
-      isArrow: true
-    }
-  }
 })
 
 // VxeUI.setI18n('zh-CN', zhCN)

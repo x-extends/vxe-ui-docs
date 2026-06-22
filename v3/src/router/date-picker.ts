@@ -34,7 +34,8 @@ export const datePickerRouteConfig: RouteConfig = {
             { path: 'isMasked', name: 'ComponentDatePickerDateMaskedIsMasked', component: () => import('@/views/date-picker/date/masked/isMasked/CodeExample.vue') },
             { path: 'isArrow', name: 'ComponentDatePickerDateMaskedIsArrow', component: () => import('@/views/date-picker/date/masked/isArrow/CodeExample.vue') },
             { path: 'format', name: 'ComponentDatePickerDateMaskedFormat', component: () => import('@/views/date-picker/date/masked/format/CodeExample.vue') },
-            { path: 'maskPlaceholder', name: 'ComponentDatePickerDateMaskedMaskPlaceholder', component: () => import('@/views/date-picker/date/masked/maskPlaceholder/CodeExample.vue') }
+            { path: 'maskPlaceholder', name: 'ComponentDatePickerDateMaskedMaskPlaceholder', component: () => import('@/views/date-picker/date/masked/maskPlaceholder/CodeExample.vue') },
+            { path: 'align', name: 'ComponentDatePickerDateMaskedAlign', component: () => import('@/views/date-picker/date/masked/align/CodeExample.vue') }
           ]
         },
         {
@@ -207,7 +208,8 @@ export const datePickerRouteConfig: RouteConfig = {
             { path: 'isMasked', name: 'ComponentDatePickerMonthMaskedIsMasked', component: () => import('@/views/date-picker/month/masked/isMasked/CodeExample.vue') },
             { path: 'isArrow', name: 'ComponentDatePickerMonthMaskedIsArrow', component: () => import('@/views/date-picker/month/masked/isArrow/CodeExample.vue') },
             { path: 'format', name: 'ComponentDatePickerMonthMaskedFormat', component: () => import('@/views/date-picker/month/masked/format/CodeExample.vue') },
-            { path: 'maskPlaceholder', name: 'ComponentDatePickerMonthMaskedMaskPlaceholder', component: () => import('@/views/date-picker/month/masked/maskPlaceholder/CodeExample.vue') }
+            { path: 'maskPlaceholder', name: 'ComponentDatePickerMonthMaskedMaskPlaceholder', component: () => import('@/views/date-picker/month/masked/maskPlaceholder/CodeExample.vue') },
+            { path: 'align', name: 'ComponentDatePickerMonthMaskedAlign', component: () => import('@/views/date-picker/month/masked/align/CodeExample.vue') }
           ]
         },
         {
@@ -305,7 +307,8 @@ export const datePickerRouteConfig: RouteConfig = {
             { path: 'isMasked', name: 'ComponentDatePickerYearMaskedIsMasked', component: () => import('@/views/date-picker/year/masked/isMasked/CodeExample.vue') },
             { path: 'isArrow', name: 'ComponentDatePickerYearMaskedIsArrow', component: () => import('@/views/date-picker/year/masked/isArrow/CodeExample.vue') },
             { path: 'format', name: 'ComponentDatePickerYearMaskedFormat', component: () => import('@/views/date-picker/year/masked/format/CodeExample.vue') },
-            { path: 'maskPlaceholder', name: 'ComponentDatePickerYearMaskedMaskPlaceholder', component: () => import('@/views/date-picker/year/masked/maskPlaceholder/CodeExample.vue') }
+            { path: 'maskPlaceholder', name: 'ComponentDatePickerYearMaskedMaskPlaceholder', component: () => import('@/views/date-picker/year/masked/maskPlaceholder/CodeExample.vue') },
+            { path: 'align', name: 'ComponentDatePickerYearMaskedAlign', component: () => import('@/views/date-picker/year/masked/align/CodeExample.vue') }
           ]
         },
         {
@@ -364,7 +367,8 @@ export const datePickerRouteConfig: RouteConfig = {
             { path: 'isMasked', name: 'ComponentDatePickerTimeMaskedIsMasked', component: () => import('@/views/date-picker/time/masked/isMasked/CodeExample.vue') },
             { path: 'isArrow', name: 'ComponentDatePickerTimeMaskedIsArrow', component: () => import('@/views/date-picker/time/masked/isArrow/CodeExample.vue') },
             { path: 'format', name: 'ComponentDatePickerTimeMaskedFormat', component: () => import('@/views/date-picker/time/masked/format/CodeExample.vue') },
-            { path: 'maskPlaceholder', name: 'ComponentDatePickerTimeMaskedMaskPlaceholder', component: () => import('@/views/date-picker/time/masked/maskPlaceholder/CodeExample.vue') }
+            { path: 'maskPlaceholder', name: 'ComponentDatePickerTimeMaskedMaskPlaceholder', component: () => import('@/views/date-picker/time/masked/maskPlaceholder/CodeExample.vue') },
+            { path: 'align', name: 'ComponentDatePickerTimeMaskedAlign', component: () => import('@/views/date-picker/time/masked/align/CodeExample.vue') }
           ]
         },
         {
@@ -457,7 +461,8 @@ export const datePickerRouteConfig: RouteConfig = {
             { path: 'isMasked', name: 'ComponentDatePickerDatetimeMaskedIsMasked', component: () => import('@/views/date-picker/datetime/masked/isMasked/CodeExample.vue') },
             { path: 'isArrow', name: 'ComponentDatePickerDatetimeMaskedIsArrow', component: () => import('@/views/date-picker/datetime/masked/isArrow/CodeExample.vue') },
             { path: 'format', name: 'ComponentDatePickerDatetimeMaskedFormat', component: () => import('@/views/date-picker/datetime/masked/format/CodeExample.vue') },
-            { path: 'maskPlaceholder', name: 'ComponentDatePickerDatetimeMaskedMaskPlaceholder', component: () => import('@/views/date-picker/datetime/masked/maskPlaceholder/CodeExample.vue') }
+            { path: 'maskPlaceholder', name: 'ComponentDatePickerDatetimeMaskedMaskPlaceholder', component: () => import('@/views/date-picker/datetime/masked/maskPlaceholder/CodeExample.vue') },
+            { path: 'align', name: 'ComponentDatePickerDatetimeMaskedAlign', component: () => import('@/views/date-picker/datetime/masked/align/CodeExample.vue') }
           ]
         },
         {

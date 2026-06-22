@@ -14,7 +14,7 @@ export default Vue.extend({
     const maskedConfig: VxeDatePickerPropTypes.MaskedConfig = {
       isMasked: true,
       isArrow: true,
-      maskPlaceholder: '#'
+      maskPlaceholder: '_'
     }
 
     return {

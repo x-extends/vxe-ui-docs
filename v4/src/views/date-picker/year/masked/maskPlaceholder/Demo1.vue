@@ -12,6 +12,6 @@ const val1 = ref('')
 const maskedConfig = reactive<VxeDatePickerPropTypes.MaskedConfig>({
   isMasked: true,
   isArrow: true,
-  maskPlaceholder: '#'
+  maskPlaceholder: '_'
 })
 </script>

@@ -22,7 +22,8 @@ export const datePickerNavConfig: NavVO = {
             { title: '掩码输入', routerLink: { name: 'ComponentDatePickerDateMaskedIsMasked' } },
             { title: '方向键操作', routerLink: { name: 'ComponentDatePickerDateMaskedIsArrow' } },
             { title: '掩码格式', routerLink: { name: 'ComponentDatePickerDateMaskedFormat' } },
-            { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerDateMaskedMaskPlaceholder' } }
+            { title: '自定义占位符', routerLink: { name: 'ComponentDatePickerDateMaskedMaskPlaceholder' } },
+            { title: '对齐方式', routerLink: { name: 'ComponentDatePickerDateMaskedAlign' } }
           ]
         },
         {
@@ -31,7 +32,7 @@ export const datePickerNavConfig: NavVO = {
             { title: '内置 Code', routerLink: { name: 'ComponentDatePickerDateShortcutCode' } },
             { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerDateShortcutStatus' } },
             { title: '显示位置', routerLink: { name: 'ComponentDatePickerDateShortcutPosition' } },
-            { title: '自定义占位符', routerLink: { name: 'ComponentDatePickerDateShortcutCustom' } }
+            { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerDateShortcutCustom' } }
           ]
         },
         { title: '限制日期范围', routerLink: { name: 'ComponentDatePickerDateMinMax' } },
@@ -67,7 +68,8 @@ export const datePickerNavConfig: NavVO = {
             { title: '掩码输入', routerLink: { name: 'ComponentDatePickerTimeMaskedIsMasked' } },
             { title: '方向键操作', routerLink: { name: 'ComponentDatePickerTimeMaskedIsArrow' } },
             { title: '掩码格式', routerLink: { name: 'ComponentDatePickerTimeMaskedFormat' } },
-            { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerTimeMaskedMaskPlaceholder' } }
+            { title: '自定义占位符', routerLink: { name: 'ComponentDatePickerTimeMaskedMaskPlaceholder' } },
+            { title: '对齐方式', routerLink: { name: 'ComponentDatePickerTimeMaskedAlign' } }
           ]
         },
         {
@@ -108,7 +110,8 @@ export const datePickerNavConfig: NavVO = {
             { title: '掩码输入', routerLink: { name: 'ComponentDatePickerDatetimeMaskedIsMasked' } },
             { title: '方向键操作', routerLink: { name: 'ComponentDatePickerDatetimeMaskedIsArrow' } },
             { title: '掩码格式', routerLink: { name: 'ComponentDatePickerDatetimeMaskedFormat' } },
-            { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerDatetimeMaskedMaskPlaceholder' } }
+            { title: '自定义占位符', routerLink: { name: 'ComponentDatePickerDatetimeMaskedMaskPlaceholder' } },
+            { title: '对齐方式', routerLink: { name: 'ComponentDatePickerDatetimeMaskedAlign' } }
           ]
         },
         {
@@ -178,7 +181,8 @@ export const datePickerNavConfig: NavVO = {
             { title: '掩码输入', routerLink: { name: 'ComponentDatePickerMonthMaskedIsMasked' } },
             { title: '方向键操作', routerLink: { name: 'ComponentDatePickerMonthMaskedIsArrow' } },
             { title: '掩码格式', routerLink: { name: 'ComponentDatePickerMonthMaskedFormat' } },
-            { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerMonthMaskedMaskPlaceholder' } }
+            { title: '自定义占位符', routerLink: { name: 'ComponentDatePickerMonthMaskedMaskPlaceholder' } },
+            { title: '对齐方式', routerLink: { name: 'ComponentDatePickerMonthMaskedAlign' } }
           ]
         },
         {
@@ -223,7 +227,8 @@ export const datePickerNavConfig: NavVO = {
             { title: '掩码输入', routerLink: { name: 'ComponentDatePickerYearMaskedIsMasked' } },
             { title: '方向键操作', routerLink: { name: 'ComponentDatePickerYearMaskedIsArrow' } },
             { title: '掩码格式', routerLink: { name: 'ComponentDatePickerYearMaskedFormat' } },
-            { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerYearMaskedMaskPlaceholder' } }
+            { title: '自定义占位符', routerLink: { name: 'ComponentDatePickerYearMaskedMaskPlaceholder' } },
+            { title: '对齐方式', routerLink: { name: 'ComponentDatePickerYearMaskedAlign' } }
           ]
         },
         {
