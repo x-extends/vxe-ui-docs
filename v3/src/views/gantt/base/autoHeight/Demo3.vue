@@ -54,7 +54,7 @@ export default Vue.extend({
         { id: 10001, title: 'A项目', start: '2024-03-01', end: '2024-03-04', progress: 3 },
         { id: 10002, title: '城市道路修理进度', start: '2024-03-03', end: '2024-03-08', progress: 10 },
         { id: 10003, title: 'B大工程', start: '2024-03-03', end: '2024-03-11', progress: 90 },
-        { id: 10004, title: '超级大工程', start: '2024-03-05', end: '2024-03-11', progress: 15 },
+        { id: 10004, title: '超级大工程', start: '2024-03-05', end: '2024-03-05', progress: 15 },
         { id: 10005, title: '地球净化项目', start: '2024-03-08', end: '2024-03-15', progress: 100 },
         { id: 10006, title: '一个小目标项目', start: '2024-03-10', end: '2024-03-21', progress: 0 },
         { id: 10007, title: '某某计划', start: '2024-03-15', end: '2024-03-24', progress: 70 },

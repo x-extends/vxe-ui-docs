@@ -53,7 +53,7 @@ const ganttOptions1 = reactive<VxeGanttProps<RowVO>>({
   ],
   data: [
     { id: 10002, title: '城市道路修理进度', start: '2024-03-03', end: '2024-03-08', progress: 10 },
-    { id: 10004, title: '超级大工程', start: '2024-03-05', end: '2024-03-11', progress: 15 },
+    { id: 10004, title: '超级大工程', start: '2024-03-05', end: '2024-03-05', progress: 15 },
     { id: 10006, title: '一个小目标项目', start: '2024-03-10', end: '2024-03-21', progress: 5 }
   ]
 })
