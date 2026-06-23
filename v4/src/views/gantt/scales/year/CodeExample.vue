@@ -3,7 +3,7 @@
     <CodeLight path="gantt/scales/year/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="年视图">
-          精度解析到年，默认填充满单元格
+          默认解析到年 yyyy，以年为维度进行渲染
         </vxe-tip>
       </template>
     </CodeLight>

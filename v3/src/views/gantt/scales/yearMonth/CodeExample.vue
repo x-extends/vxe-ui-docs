@@ -3,10 +3,10 @@
     <CodeLight path="gantt/scales/yearMonth/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="月视图">
-          精度解析到月，默认填充满单元格
+          默认解析到月 yyyy-MM，以月为维度进行渲染
         </vxe-tip>
         <vxe-tip status="error">
-          当使用月视图时，应该控制好月份的限制，比如一个年内，当渲染年份数过大时，渲染的复杂度将会以倍数增长，渲染越多将会越慢
+          当使用月视图时，应该控制好年的范围，比如2年内，当渲染年份跨度过大时，渲染的复杂度将会以倍数增长，渲染越多将会越慢
         </vxe-tip>
       </template>
     </CodeLight>
