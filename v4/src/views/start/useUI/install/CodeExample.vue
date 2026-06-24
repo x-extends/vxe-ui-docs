@@ -20,11 +20,11 @@
           <pre-code
             language="shell"
             :content="`
-            npm install ${uiCDNLib}
+            npm install ${uiCDNLib} ${tableCDNLib}
             # 或者
-            yarn add ${uiCDNLib}
+            yarn add ${uiCDNLib} ${tableCDNLib}
             # 或者
-            pnpm add ${uiCDNLib}
+            pnpm add ${uiCDNLib} ${tableCDNLib}
             `">
           </pre-code>
           <pre-code
@@ -49,6 +49,7 @@
             {
               ...
               "vxe-pc-ui": "^${uiLibVersion}",
+              "vxe-table": "^${tableCDNLib}"
               ...
             }
             `'>
@@ -60,6 +61,7 @@
             {
               ...
               "vxe-pc-ui": "~${uiLibVersion}",
+              "vxe-table": "~${tableCDNLib}",
               ...
             }
             `'>
