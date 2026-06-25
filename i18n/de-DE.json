@@ -481,7 +481,9 @@
         "customDrawer": "抽屉模式",
         "pager": "分页",
         "pagerMockPage": "模拟前端分页",
-        "pagerStart": "自定义序号"
+        "pagerStart": "自定义序号",
+        "other": "功能示例",
+        "tableGantt": "表格与甘特图任互相拖拽联动"
       }
     },
     "editDownTextarea": {

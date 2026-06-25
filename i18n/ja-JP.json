@@ -481,7 +481,9 @@
         "customDrawer": "ドロワーモード",
         "pager": "ページング",
         "pagerMockPage": "フロントエンドページングシミュレーション",
-        "pagerStart": "カスタムシリアル番号"
+        "pagerStart": "カスタムシリアル番号",
+        "other": "功能示例",
+        "tableGantt": "表格与甘特图任互相拖拽联动"
       }
     },
     "editDownTextarea": {

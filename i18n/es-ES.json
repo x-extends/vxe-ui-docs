@@ -481,7 +481,9 @@
         "customDrawer": "Modo cajón",
         "pager": "Paginación",
         "pagerMockPage": "Simular paginación en frontend",
-        "pagerStart": "Número de serie personalizado"
+        "pagerStart": "Número de serie personalizado",
+        "other": "功能示例",
+        "tableGantt": "表格与甘特图任互相拖拽联动"
       }
     },
     "editDownTextarea": {

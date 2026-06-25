@@ -481,7 +481,9 @@
         "customDrawer": "Drawer mode",
         "pager": "Pagination",
         "pagerMockPage": "Simulate frontend pagination",
-        "pagerStart": "Custom sequence number"
+        "pagerStart": "Custom sequence number",
+        "other": "功能示例",
+        "tableGantt": "表格与甘特图任互相拖拽联动"
       }
     },
     "editDownTextarea": {
