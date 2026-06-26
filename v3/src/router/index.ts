@@ -2792,6 +2792,7 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentCollapseIon',
             component: () => import('@/views/collapse/icon/CodeExample.vue')
           },
+          { path: 'preload', name: 'ComponentCollapsePreload', component: () => import('@/views/collapse/preload/CodeExample.vue') },
           {
             path: 'options',
             name: 'ComponentCollapseOptions',

@@ -1,15 +1,27 @@
 <template>
   <div>
-    <vxe-button content="点击弹出" @click="openEvent"></vxe-button>
+    <vxe-button content="点击弹出1" @click="showPopup1 = true"></vxe-button>
+    <vxe-drawer
+      show-footer
+      show-cancel-button
+      show-confirm-button
+      v-model="showPopup1"
+      :width="600">
+      <template #default>
+        <div>{{ myConten1 }}显示内容</div>
+      </template>
+    </vxe-drawer>
+
+    <vxe-button content="点击弹出2（预加载）" @click="showPopup2 = true"></vxe-button>
     <vxe-drawer
       show-footer
       show-cancel-button
       show-confirm-button
       preload
-      v-model="showPopup"
+      v-model="showPopup2"
       :width="600">
       <template #default>
-        <div>默认就会被加载 {{ myContent }}</div>
+        <div>{{ myConten2 }}显示内容</div>
       </template>
     </vxe-drawer>
   </div>
@@ -21,18 +33,18 @@ import Vue from 'vue'
 export default Vue.extend({
   data () {
     return {
-      showPopup: false
+      showPopup1: false,
+      showPopup2: false
     }
   },
   computed: {
-    myContent () {
-      console.log('立即加载 - 弹窗内容')
-      return '弹窗内容'
-    }
-  },
-  methods: {
-    openEvent () {
-      this.showPopup = true
+    myConten1 () {
+      console.log('加载弹窗内容1')
+      return '加载弹窗内容1'
+    },
+    myConten2 () {
+      console.log('加载弹窗内容2')
+      return '加载弹窗内容2'
     }
   }
 })

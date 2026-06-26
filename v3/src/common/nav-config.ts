@@ -278,6 +278,7 @@ export const navConfigList: NavVO[] = [
           { title: '边距', routerLink: { name: 'ComponentCollapsePadding' } },
           { title: '边框', routerLink: { name: 'ComponentCollapseBorder' } },
           { title: '图标', routerLink: { name: 'ComponentCollapseIon' } },
+          { title: '预加载', routerLink: { name: 'ComponentCollapsePreload' } },
           { title: '配置式', routerLink: { name: 'ComponentCollapseOptions' } },
           { title: '自定义标题模板', routerLink: { name: 'ComponentCollapseTemplateTitle' } },
           { title: '自定义内容模板', routerLink: { name: 'ComponentCollapseTemplateDefault' } }

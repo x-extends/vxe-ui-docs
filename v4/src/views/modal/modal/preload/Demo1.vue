@@ -1,16 +1,29 @@
 <template>
   <div>
-    <vxe-button content="点击弹出" @click="openEvent"></vxe-button>
+    <vxe-button content="点击弹出1" @click="showPopup1 = true"></vxe-button>
+    <vxe-modal
+      show-footer
+      show-cancel-button
+      show-confirm-button
+      v-model="showPopup1"
+      :width="600"
+      :height="400">
+      <template #default>
+        <div>{{ myConten1 }}显示内容</div>
+      </template>
+    </vxe-modal>
+
+    <vxe-button content="点击弹出2（预加载）" @click="showPopup2 = true"></vxe-button>
     <vxe-modal
       show-footer
       show-cancel-button
       show-confirm-button
       preload
-      v-model="showPopup"
+      v-model="showPopup2"
       :width="600"
       :height="400">
       <template #default>
-        <div>默认就会被加载 {{ myContent }}</div>
+        <div>{{ myConten2 }}显示内容</div>
       </template>
     </vxe-modal>
   </div>
@@ -19,14 +32,16 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
 
-const showPopup = ref(false)
+const showPopup1 = ref(false)
+const showPopup2 = ref(false)
 
-const myContent = computed(() => {
-  console.log('立即加载 - 弹窗内容')
-  return '弹窗内容'
+const myConten1 = computed(() => {
+  console.log('加载弹窗内容1')
+  return '加载弹窗内容1'
 })
 
-const openEvent = () => {
-  showPopup.value = true
-}
+const myConten2 = computed(() => {
+  console.log('加载弹窗内容2')
+  return '加载弹窗内容2'
+})
 </script>

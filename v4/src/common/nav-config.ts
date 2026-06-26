@@ -264,7 +264,7 @@ export const navConfigList: NavVO[] = [
           { title: '基础', routerLink: { name: 'ComponentCarouselBase' } },
           { title: '高度', routerLink: { name: 'ComponentCarouselHeight' } },
           { title: '纵向排版', routerLink: { name: 'ComponentCarouselVertical' } },
-          { title: '配置式', routerLink: { name: 'ComponentCarouselOptions' } },
+          { title: '配置式', routerLink: { name: 'ComponentCarouselOhttps://github.com/x-extends/vxe-gantt-docsptions' } },
           { title: '自定义插槽模板', routerLink: { name: 'ComponentCarouselTemplate' } },
           { title: '自动切换', routerLink: { name: 'ComponentCarouselAutoPlay' } },
           { title: '指示器', routerLink: { name: 'ComponentCarouselShowIndicators' } }
@@ -278,6 +278,7 @@ export const navConfigList: NavVO[] = [
           { title: '边距', routerLink: { name: 'ComponentCollapsePadding' } },
           { title: '边框', routerLink: { name: 'ComponentCollapseBorder' } },
           { title: '图标', routerLink: { name: 'ComponentCollapseIon' } },
+          { title: '预加载', routerLink: { name: 'ComponentCollapsePreload' } },
           { title: '配置式', routerLink: { name: 'ComponentCollapseOptions' } },
           { title: '自定义标题模板', routerLink: { name: 'ComponentCollapseTemplateTitle' } },
           { title: '自定义内容模板', routerLink: { name: 'ComponentCollapseTemplateDefault' } }
