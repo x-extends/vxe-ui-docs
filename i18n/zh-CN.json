@@ -69,7 +69,7 @@
         "displayTitle": "Display 展示组件",
         "treeTitle": "Tree 树",
         "feedbackTitle": "Feedback 反馈组件",
-        "formTitle": "Form 表单组件",
+        "formTitle": "Form 表单",
         "formBaseTitle": "基础表单",
         "formConfigTitle": "配置式表单",
         "formGlobalValidators": "校验（全局复用）",
