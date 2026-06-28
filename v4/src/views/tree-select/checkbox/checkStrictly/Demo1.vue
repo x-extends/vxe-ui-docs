@@ -4,7 +4,7 @@
       multiple
       show-checkbox
       v-model="val1"
-      :tree-config="treeConfig"
+      :checkbox-config="checkboxConfig"
       :options="treeList">
     </vxe-tree-select>
   </div>
@@ -20,10 +20,8 @@ interface RowVO {
   children?: RowVO[]
 }
 
-const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig<RowVO>>({
-  checkboxConfig: {
-    checkStrictly: true
-  }
+const checkboxConfig = reactive<VxeTreeSelectPropTypes.CheckboxConfig<RowVO>>({
+  checkStrictly: true
 })
 
 const val1 = ref([])

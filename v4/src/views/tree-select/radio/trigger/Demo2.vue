@@ -3,6 +3,7 @@
     <vxe-tree-select
       show-radio
       v-model="val1"
+      :radio-config="radioConfig"
       :tree-config="treeConfig"
       :options="treeList">
     </vxe-tree-select>
@@ -19,16 +20,17 @@ interface RowVO {
   children?: RowVO[]
 }
 
-const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig<RowVO>>({
-  trigger: 'node',
-  radioConfig: {
-    visibleMethod ({ node }) {
-      return !(node.children && node.children.length)
-    },
-    checkMethod ({ node }) {
-      return !(node.children && node.children.length)
-    }
+const radioConfig = reactive<VxeTreeSelectPropTypes.RadioConfig<RowVO>>({
+  visibleMethod ({ node }) {
+    return !(node.children && node.children.length)
+  },
+  checkMethod ({ node }) {
+    return !(node.children && node.children.length)
   }
+})
+
+const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig<RowVO>>({
+  trigger: 'node'
 })
 
 const val1 = ref()

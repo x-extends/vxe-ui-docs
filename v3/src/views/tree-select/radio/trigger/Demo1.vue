@@ -3,6 +3,7 @@
     <vxe-tree-select
       show-radio
       v-model="val1"
+      :radio-config="radioConfig"
       :tree-config="treeConfig"
       :options="treeList">
     </vxe-tree-select>
@@ -20,12 +21,13 @@ interface RowVO {
 }
 export default Vue.extend({
   data () {
+    const radioConfig: VxeTreeSelectPropTypes.RadioConfig<RowVO> = {
+      visibleMode: 'last',
+      checkMode: 'last'
+    }
+
     const treeConfig: VxeTreeSelectPropTypes.TreeConfig<RowVO> = {
-      trigger: 'node',
-      radioConfig: {
-        visibleMode: 'last',
-        checkMode: 'last'
-      }
+      trigger: 'node'
     }
 
     const treeList: VxeTreeSelectPropTypes.Options = [
@@ -69,6 +71,7 @@ export default Vue.extend({
 
     return {
       val1: null,
+      radioConfig,
       treeConfig,
       treeList
     }

@@ -4,6 +4,7 @@
       multiple
       show-checkbox
       v-model="val1"
+      :checkbox-config="checkboxConfig"
       :tree-config="treeConfig"
       :options="treeList">
     </vxe-tree-select>
@@ -22,13 +23,14 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
+    const checkboxConfig: VxeTreeSelectPropTypes.CheckboxConfig<RowVO> = {
+      checkStrictly: true,
+      visibleMode: 'last',
+      checkMode: 'last'
+    }
+
     const treeConfig: VxeTreeSelectPropTypes.TreeConfig<RowVO> = {
-      trigger: 'node',
-      checkboxConfig: {
-        checkStrictly: true,
-        visibleMode: 'last',
-        checkMode: 'last'
-      }
+      trigger: 'node'
     }
 
     const treeList: VxeTreeSelectPropTypes.Options = [
@@ -72,6 +74,7 @@ export default Vue.extend({
 
     return {
       val1: [],
+      checkboxConfig,
       treeConfig,
       treeList
     }

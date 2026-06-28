@@ -17,16 +17,16 @@ interface NodeVO {
 const val1 = ref()
 const treeSelectOptions = reactive<VxeTreeSelectProps<NodeVO>>({
   multiple: true,
+  checkboxConfig: {
+    nodeStyle: {
+      indeterminateColor: '#5F9EA0',
+      checkedColor: '#1E90FF'
+    }
+  },
   treeConfig: {
     transform: true,
     keyField: 'value',
-    parentField: 'parentId',
-    checkboxConfig: {
-      nodeStyle: {
-        indeterminateColor: '#5F9EA0',
-        checkedColor: '#1E90FF'
-      }
-    }
+    parentField: 'parentId'
   },
   options: [
     { label: '节点2', value: '值2', parentId: null },

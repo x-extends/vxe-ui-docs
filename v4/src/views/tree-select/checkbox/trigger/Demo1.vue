@@ -4,6 +4,7 @@
       multiple
       show-checkbox
       v-model="val1"
+      :checkbox-config="checkboxConfig"
       :tree-config="treeConfig"
       :options="treeList">
     </vxe-tree-select>
@@ -20,13 +21,14 @@ interface RowVO {
   children?: RowVO[]
 }
 
+const checkboxConfig = reactive<VxeTreeSelectPropTypes.CheckboxConfig<RowVO>>({
+  checkStrictly: true,
+  visibleMode: 'last',
+  checkMode: 'last'
+})
+
 const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig<RowVO>>({
-  trigger: 'node',
-  checkboxConfig: {
-    checkStrictly: true,
-    visibleMode: 'last',
-    checkMode: 'last'
-  }
+  trigger: 'node'
 })
 
 const val1 = ref([])
