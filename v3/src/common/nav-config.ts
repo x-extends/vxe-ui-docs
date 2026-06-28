@@ -1241,7 +1241,6 @@ export const navConfigList: NavVO[] = [
       // { title: 'Transfer 穿梭框' }
     ]
   },
-  tableNavConfig,
   {
     title: 'List 列表',
     children: [
@@ -1322,6 +1321,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   treeNavConfig,
+  tableNavConfig,
   {
     i18nKey: 'app.aside.menu.feedbackTitle',
     children: [
