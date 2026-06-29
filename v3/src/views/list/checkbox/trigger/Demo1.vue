@@ -20,7 +20,8 @@ export default Vue.extend({
       showCheckbox: true,
       rowConfig: {
         keyField: 'id',
-        contentField: 'label'
+        contentField: 'label',
+        isHover: true
       },
       checkboxConfig: {
         trigger: 'row'

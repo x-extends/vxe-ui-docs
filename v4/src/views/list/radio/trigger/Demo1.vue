@@ -20,7 +20,8 @@ const listOptions = reactive<VxeListProps<RowVO>>({
   showRadio: true,
   rowConfig: {
     keyField: 'id',
-    contentField: 'label'
+    contentField: 'label',
+    isHover: true
   },
   radioConfig: {
     trigger: 'row'

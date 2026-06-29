@@ -20,7 +20,8 @@ export default Vue.extend({
       showRadio: true,
       rowConfig: {
         keyField: 'id',
-        contentField: 'label'
+        contentField: 'label',
+        isHover: true
       },
       radioConfig: {
         trigger: 'row'
