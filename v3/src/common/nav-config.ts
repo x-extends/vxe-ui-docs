@@ -571,6 +571,8 @@ export const navConfigList: NavVO[] = [
           { title: '允许取消', routerLink: { name: 'ComponentRadioStrict' } },
           { title: '单选组', routerLink: { name: 'ComponentRadioGroup' } },
           { title: '单选按钮', routerLink: { name: 'ComponentRadioButton' } },
+          { title: '按钮状态颜色', routerLink: { name: 'ComponentRadioButtonStatus' } },
+          { title: '按钮禁用', routerLink: { name: 'ComponentRadioButtonDisabled' } },
           { title: '配置式选项', routerLink: { name: 'ComponentRadioOptions' } },
           { title: '默认值', routerLink: { name: 'ComponentRadioDefaultValue' } }
         ]
@@ -587,6 +589,8 @@ export const navConfigList: NavVO[] = [
           { title: '禁用状态', routerLink: { name: 'ComponentCheckboxDisabled' } },
           { title: '复选组', routerLink: { name: 'ComponentCheckboxGroup' } },
           { title: '复选按钮', routerLink: { name: 'ComponentCheckboxButton' } },
+          { title: '按钮状态颜色', routerLink: { name: 'ComponentCheckboxButtonStatus' } },
+          { title: '按钮禁用', routerLink: { name: 'ComponentCheckboxButtonDisabled' } },
           { title: '限制最大数量', routerLink: { name: 'ComponentCheckboxMax' } },
           { title: '配置式选项', routerLink: { name: 'ComponentCheckboxOptions' } },
           { title: '默认值', routerLink: { name: 'ComponentCheckboxDefaultValue' } }
@@ -613,7 +617,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'Input 输入框',
+        title: 'Input 单行输入框',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'input' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentInputSize' } },
@@ -758,6 +762,20 @@ export const navConfigList: NavVO[] = [
           { title: '自定义图标', routerLink: { name: 'ComponentIconPickerCustomIcon' } },
           { title: '显示图标标题', routerLink: { name: 'ComponentIconPickerTitle' } },
           { title: '图标颜色', routerLink: { name: 'ComponentIconPickerColor' } },
+          {
+            title: '可搜索',
+            children: [
+              { title: '可搜索', routerLink: { name: 'ComponentIconPickerSearchFilterable' } },
+              { title: '自定义查找方法', routerLink: { name: 'ComponentIconPickerSearchFilterMethod' } }
+            ]
+          },
+          {
+            title: '面板设置',
+            children: [
+              { title: '宽高', routerLink: { name: 'ComponentIconPickerPopupWh' } },
+              { title: '展示数量', routerLink: { name: 'ComponentIconPickerPopupChunkSize' } }
+            ]
+          },
           {
             i18nKey: 'app.aside.menu.iconPickerGlobalRenderer',
             children: [

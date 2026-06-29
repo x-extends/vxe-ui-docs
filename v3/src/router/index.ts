@@ -1204,6 +1204,8 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentRadioButton',
             component: () => import('@/views/radio/button/CodeExample.vue')
           },
+          { path: 'buttonStatus', name: 'ComponentRadioButtonStatus', component: () => import('@/views/radio/buttonStatus/CodeExample.vue') },
+          { path: 'buttonDisabled', name: 'ComponentRadioButtonDisabled', component: () => import('@/views/radio/buttonDisabled/CodeExample.vue') },
           { path: 'options', name: 'ComponentRadioOptions', component: () => import('@/views/radio/options/CodeExample.vue') },
           { path: 'defaultValue', name: 'ComponentRadioDefaultValue', component: () => import('@/views/radio/defaultValue/CodeExample.vue') }
         ]
@@ -1242,6 +1244,8 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentCheckboxButton',
             component: () => import('@/views/checkbox/button/CodeExample.vue')
           },
+          { path: 'buttonStatus', name: 'ComponentCheckboxButtonStatus', component: () => import('@/views/checkbox/buttonStatus/CodeExample.vue') },
+          { path: 'buttonDisabled', name: 'ComponentCheckboxButtonDisabled', component: () => import('@/views/checkbox/buttonDisabled/CodeExample.vue') },
           {
             path: 'max',
             name: 'ComponentCheckboxMax',
@@ -1827,6 +1831,22 @@ const routes: Array<RouteConfig> = [
             path: 'color',
             name: 'ComponentIconPickerColor',
             component: () => import('@/views/icon-picker/color/CodeExample.vue')
+          },
+          {
+            path: 'search',
+            component: RouteLayout,
+            children: [
+              { path: 'filterable', name: 'ComponentIconPickerSearchFilterable', component: () => import('@/views/icon-picker/search/filterable/CodeExample.vue') },
+              { path: 'filterMethod', name: 'ComponentIconPickerSearchFilterMethod', component: () => import('@/views/icon-picker/search/filterMethod/CodeExample.vue') }
+            ]
+          },
+          {
+            path: 'popup',
+            component: RouteLayout,
+            children: [
+              { path: 'wh', name: 'ComponentIconPickerPopupWh', component: () => import('@/views/icon-picker/popup/wh/CodeExample.vue') },
+              { path: 'chunkSize', name: 'ComponentIconPickerPopupChunkSize', component: () => import('@/views/icon-picker/popup/chunkSize/CodeExample.vue') }
+            ]
           }
         ]
       },
