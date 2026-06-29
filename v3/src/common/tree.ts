@@ -98,8 +98,8 @@ export const treeNavConfig: NavVO = {
         { title: '跨层级拖拽', routerLink: { name: 'ComponentTreeDragCossDrag' } },
         { title: '自己拖拽给自己子级', routerLink: { name: 'ComponentTreeDragSelfToChildDrag' } },
         { title: '拖拽转成子节点', routerLink: { name: 'ComponentTreeDragToChildDrag' } },
-        { title: '拖拽拦截', routerLink: { name: 'ComponentTreeDragDragMethod' } }
-        // { title: '跨树拖拽', routerLink: { name: 'ComponentTreeDragCossTree' } }
+        { title: '拖拽拦截', routerLink: { name: 'ComponentTreeDragDragMethod' } },
+        { title: '跨树拖拽', routerLink: { name: 'ComponentTreeDragCossTree' } }
       ]
     },
     {

@@ -240,8 +240,8 @@ export const treeRouteConfig: RouteRecordRaw = {
         { path: 'cossDrag', name: 'ComponentTreeDragCossDrag', component: () => import('@/views/tree/drag/cossDrag/CodeExample.vue') },
         { path: 'selfToChildDrag', name: 'ComponentTreeDragSelfToChildDrag', component: () => import('@/views/tree/drag/selfToChildDrag/CodeExample.vue') },
         { path: 'toChildDrag', name: 'ComponentTreeDragToChildDrag', component: () => import('@/views/tree/drag/toChildDrag/CodeExample.vue') },
-        { path: 'dragMethod', name: 'ComponentTreeDragDragMethod', component: () => import('@/views/tree/drag/dragMethod/CodeExample.vue') }
-        // { path: 'cossTree', name: 'ComponentTreeDragCossTree', component: () => import('@/views/tree/drag/cossTree/CodeExample.vue') }
+        { path: 'dragMethod', name: 'ComponentTreeDragDragMethod', component: () => import('@/views/tree/drag/dragMethod/CodeExample.vue') },
+        { path: 'cossTree', name: 'ComponentTreeDragCossTree', component: () => import('@/views/tree/drag/cossTree/CodeExample.vue') }
       ]
     },
     {

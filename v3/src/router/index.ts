@@ -1810,6 +1810,8 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentIconPickerClearable',
             component: () => import('@/views/icon-picker/clearable/CodeExample.vue')
           },
+          { path: 'readonly', name: 'ComponentIconPickerReadonly', component: () => import('@/views/icon-picker/readonly/CodeExample.vue') },
+          { path: 'disabled', name: 'ComponentIconPickerDisabled', component: () => import('@/views/icon-picker/disabled/CodeExample.vue') },
           {
             path: 'icons',
             name: 'ComponentIconPickerIcons',
@@ -1820,6 +1822,7 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentIconPickerCustomIcon',
             component: () => import('@/views/icon-picker/customIcon/CodeExample.vue')
           },
+          { path: 'title', name: 'ComponentIconPickerTitle', component: () => import('@/views/icon-picker/title/CodeExample.vue') },
           {
             path: 'color',
             name: 'ComponentIconPickerColor',

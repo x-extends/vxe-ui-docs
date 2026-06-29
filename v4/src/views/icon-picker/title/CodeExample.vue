@@ -1,14 +1,14 @@
 <template>
   <div>
-    <CodeLight path="icon-picker/icons/Demo1">
+    <CodeLight path="icon-picker/title/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="自定义图标列表">
-          支持内置图标
+        <vxe-tip status="primary" title="显示图标标题">
+          显示图标标题
         </vxe-tip>
       </template>
     </CodeLight>
 
-    <CodeLight path="icon-picker/icons/Demo2">
+    <CodeLight path="icon-picker/title/Demo2">
       <template #tip>
         <vxe-tip status="primary">
           自定义图标配置

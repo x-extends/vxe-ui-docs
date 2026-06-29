@@ -7,5 +7,13 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="icon-picker/icons/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          自定义图标配置
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>

@@ -752,8 +752,11 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon-picker' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentIconPickerSize' } },
           { title: '可清除', routerLink: { name: 'ComponentIconPickerClearable' } },
+          { title: '只读', routerLink: { name: 'ComponentIconPickerReadonly' } },
+          { title: '禁用', routerLink: { name: 'ComponentIconPickerDisabled' } },
           { title: '内置图标', routerLink: { name: 'ComponentIconPickerIcons' } },
           { title: '自定义图标', routerLink: { name: 'ComponentIconPickerCustomIcon' } },
+          { title: '显示图标标题', routerLink: { name: 'ComponentIconPickerTitle' } },
           { title: '图标颜色', routerLink: { name: 'ComponentIconPickerColor' } },
           {
             i18nKey: 'app.aside.menu.iconPickerGlobalRenderer',

@@ -11,13 +11,13 @@ import { VxeIconPickerPropTypes } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const iconList: VxeIconPickerPropTypes.Icons = [
-      'home',
-      'company',
-      'comment',
-      'setting',
-      'send',
-      'envelope',
-      'envelope-open'
+      { icon: 'vxe-icon-home', title: 'home' },
+      { icon: 'vxe-icon-company', title: 'company' },
+      { icon: 'vxe-icon-comment', title: 'comment' },
+      { icon: 'vxe-icon-setting', title: 'setting' },
+      { icon: 'vxe-icon-send', title: 'send' },
+      { icon: 'vxe-icon-envelope', title: 'henvelopeome' },
+      { icon: 'vxe-icon-envelope-open', title: 'envelope-open' }
     ]
     return {
       val1: 'vxe-icon-comment',
