@@ -8,7 +8,7 @@
       <vxe-button @click="loadList(250000)">加载25w条</vxe-button>
     </p>
 
-    <vxe-list class="my-table-list" height="600" :data="list" :virtual-y-config="{enabled: true, gt: 0, sItem: '.my-tr'}">
+    <vxe-list class="my-table-list" v-bind="listOptions">
       <template #default="{ items }">
         <table style="width: 2600px;">
           <colgroup>
@@ -71,7 +71,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeUI } from 'vxe-pc-ui'
+import { VxeUI, VxeListProps } from 'vxe-pc-ui'
 
 interface RowVO {
   id: number
@@ -86,56 +86,56 @@ interface RowVO {
   col14: string
 }
 
-// 模拟后台
-const mockList: RowVO[] = []
-const getList = (size: number): Promise<RowVO[]> => {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      if (size > mockList.length) {
-        for (let index = mockList.length; index < size; index++) {
-          mockList.push({
-            id: index,
-            index: index,
-            col1: `row ${index} col1`,
-            col2: `row ${index} col2`,
-            col3: `row ${index} col3`,
-            col4: `row ${index} col4`,
-            col5: `row ${index} col5`,
-            col12: `row ${index} col12`,
-            col13: `row ${index} col13`,
-            col14: `row ${index} col14`
-          })
-        }
-      }
-      resolve(mockList.slice(0, size))
-    }, 100)
-  })
-}
-
 export default Vue.extend({
   data () {
-    const loading = false
-    const list: RowVO[] = []
+    const listOptions: VxeListProps<RowVO> = {
+      height: 600,
+      loading: false,
+      virtualYConfig: {
+        enabled: true,
+        gt: 0,
+        sItem: '.my-tr'
+      },
+      data: []
+    }
 
     return {
-      loading,
-      list
+      listOptions
     }
   },
-  mounted () {
+  created () {
     this.loadList(200)
   },
   methods: {
-    async loadList (size: number) {
-      this.loading = true
-      this.list = await getList(size)
-      this.loading = false
-      const startTime = Date.now()
-      await this.$nextTick()
-      await VxeUI.modal.message({
-        content: `渲染 ${size} 行，用时 ${Date.now() - startTime}毫秒`,
-        status: 'info'
-      })
+    loadList (size: number) {
+      this.listOptions.loading = true
+      setTimeout(() => {
+        const mockList: RowVO[] = []
+        for (let i = 0; i < size; i++) {
+          mockList.push({
+            id: i,
+            index: i,
+            col1: `row ${i} col1`,
+            col2: `row ${i} col2`,
+            col3: `row ${i} col3`,
+            col4: `row ${i} col4`,
+            col5: `row ${i} col5`,
+            col12: `row ${i} col12`,
+            col13: `row ${i} col13`,
+            col14: `row ${i} col14`
+          })
+        }
+        this.listOptions.data = mockList
+        this.listOptions.loading = false
+
+        const startTime = Date.now()
+        this.$nextTick().then(() => {
+          VxeUI.modal.message({
+            content: `渲染 ${size} 行，用时 ${Date.now() - startTime}毫秒`,
+            status: 'info'
+          })
+        })
+      }, 100)
     }
   }
 })
