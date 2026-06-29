@@ -2754,6 +2754,7 @@ const routes: Array<RouteConfig> = [
               { path: 'base', name: 'ComponentListRadioBase', component: () => import('@/views/list/radio/base/CodeExample.vue') },
               { path: 'handleManual', name: 'ComponentListRadioHandleManual', component: () => import('@/views/list/radio/handleManual/CodeExample.vue') },
               { path: 'highlight', name: 'ComponentListRadioHighlight', component: () => import('@/views/list/radio/highlight/CodeExample.vue') },
+              { path: 'trigger', name: 'ComponentListRadioTrigger', component: () => import('@/views/list/radio/trigger/CodeExample.vue') },
               { path: 'checkMethod', name: 'ComponentListRadioCheckMethod', component: () => import('@/views/list/radio/checkMethod/CodeExample.vue') },
               { path: 'visibleMethod', name: 'ComponentListRadioVisibleMethod', component: () => import('@/views/list/radio/visibleMethod/CodeExample.vue') }
             ]
@@ -2765,6 +2766,7 @@ const routes: Array<RouteConfig> = [
               { path: 'base', name: 'ComponentListCheckboxBase', component: () => import('@/views/list/checkbox/base/CodeExample.vue') },
               { path: 'handleManual', name: 'ComponentListCheckboxHandleManual', component: () => import('@/views/list/checkbox/handleManual/CodeExample.vue') },
               { path: 'highlight', name: 'ComponentListCheckboxHighlight', component: () => import('@/views/list/checkbox/highlight/CodeExample.vue') },
+              { path: 'trigger', name: 'ComponentListCheckboxTrigger', component: () => import('@/views/list/checkbox/trigger/CodeExample.vue') },
               { path: 'checkMethod', name: 'ComponentListCheckboxCheckMethod', component: () => import('@/views/list/checkbox/checkMethod/CodeExample.vue') },
               { path: 'visibleMethod', name: 'ComponentListCheckboxVisibleMethod', component: () => import('@/views/list/checkbox/visibleMethod/CodeExample.vue') }
             ]

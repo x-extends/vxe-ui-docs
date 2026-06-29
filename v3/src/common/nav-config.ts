@@ -1268,6 +1268,7 @@ export const navConfigList: NavVO[] = [
           { title: '单选', routerLink: { name: 'ComponentListRadioBase' } },
           { title: '手动操作', routerLink: { name: 'ComponentListRadioHandleManual' } },
           { title: '高亮选中节点', routerLink: { name: 'ComponentListRadioHighlight' } },
+          { title: '触发方法', routerLink: { name: 'ComponentListRadioTrigger' } },
           { title: '禁用', routerLink: { name: 'ComponentListRadioCheckMethod' } },
           { title: '显示隐藏', routerLink: { name: 'ComponentListRadioVisibleMethod' } }
         ]
@@ -1278,6 +1279,7 @@ export const navConfigList: NavVO[] = [
           { title: '多选', routerLink: { name: 'ComponentListCheckboxBase' } },
           { title: '手动操作', routerLink: { name: 'ComponentListCheckboxHandleManual' } },
           { title: '高亮选中节点', routerLink: { name: 'ComponentListCheckboxHighlight' } },
+          { title: '触发方法', routerLink: { name: 'ComponentListCheckboxTrigger' } },
           { title: '禁用', routerLink: { name: 'ComponentListCheckboxCheckMethod' } },
           { title: '显示隐藏', routerLink: { name: 'ComponentListCheckboxVisibleMethod' } }
         ]
