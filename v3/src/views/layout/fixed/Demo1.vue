@@ -1,21 +1,19 @@
 <template>
-  <div>
-    <div class="page-wrapper">
-      <vxe-layout-container vertical>
-        <vxe-layout-header fixed class="bg1">
-          <div style="height: 50px">头部</div>
-        </vxe-layout-header>
+  <div class="page-wrapper">
+    <vxe-layout-container vertical>
+      <vxe-layout-header fixed class="bg1">
+        <div style="height: 50px">头部</div>
+      </vxe-layout-header>
 
-        <vxe-layout-body class="bg3" show-backtop>
-          <div style="height: 400px">内容</div>
-          <div style="height: 400px">内容</div>
-        </vxe-layout-body>
+      <vxe-layout-body class="bg3" show-backtop>
+        <div style="height: 400px">内容</div>
+        <div style="height: 400px">内容</div>
+      </vxe-layout-body>
 
-        <vxe-layout-footer fixed class="bg4">
-          <div style="height: 30px">底部</div>
-        </vxe-layout-footer>
-      </vxe-layout-container>
-    </div>
+      <vxe-layout-footer fixed class="bg4">
+        <div style="height: 30px">底部</div>
+      </vxe-layout-footer>
+    </vxe-layout-container>
   </div>
 </template>
 
