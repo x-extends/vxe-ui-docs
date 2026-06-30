@@ -545,7 +545,7 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    i18nKey: 'app.aside.menu.formTitle',
+    i18nKey: 'app.aside.menu.dataTitle',
     children: [
       formNavConfig,
       {

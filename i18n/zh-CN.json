@@ -75,7 +75,7 @@
         "formGlobalValidators": "校验（全局复用）",
         "formGlobalRenderer": "渲染器（高阶复用）",
         "form": {},
-        "dataTitle": "Data 数据列表",
+        "dataTitle": "Form 表单组件",
         "tableTitle": "Table 表格",
         "tableTableTitle": "Table 基础表格",
         "tableGridTitle": "Grid 配置式表格",

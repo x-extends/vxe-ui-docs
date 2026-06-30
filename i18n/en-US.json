@@ -75,7 +75,7 @@
         "formGlobalValidators": "Validation (global reuse)",
         "formGlobalRenderer": "Renderer (advanced reuse)",
         "form": {},
-        "dataTitle": "Data",
+        "dataTitle": "Form",
         "tableTitle": "Table",
         "tableTableTitle": "Table - Basic table",
         "tableGridTitle": "Grid - Configuration table",
