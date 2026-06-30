@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-icon-picker v-model="val1" filterable clearable></vxe-icon-picker>
+    <vxe-icon-picker v-model="val1" show-icon-title filterable clearable></vxe-icon-picker>
   </div>
 </template>
 

@@ -1811,32 +1811,38 @@ const routes: Array<RouteRecordRaw> = [
         component: RouteLayout,
         children: [
           {
-            path: 'size',
-            name: 'ComponentIconPickerSize',
-            component: () => import('@/views/icon-picker/size/CodeExample.vue')
-          },
-          {
-            path: 'clearable',
-            name: 'ComponentIconPickerClearable',
-            component: () => import('@/views/icon-picker/clearable/CodeExample.vue')
-          },
-          { path: 'readonly', name: 'ComponentIconPickerReadonly', component: () => import('@/views/icon-picker/readonly/CodeExample.vue') },
-          { path: 'disabled', name: 'ComponentIconPickerDisabled', component: () => import('@/views/icon-picker/disabled/CodeExample.vue') },
-          {
-            path: 'icons',
-            name: 'ComponentIconPickerIcons',
-            component: () => import('@/views/icon-picker/icons/CodeExample.vue')
-          },
-          {
-            path: 'customIcon',
-            name: 'ComponentIconPickerCustomIcon',
-            component: () => import('@/views/icon-picker/customIcon/CodeExample.vue')
-          },
-          { path: 'title', name: 'ComponentIconPickerTitle', component: () => import('@/views/icon-picker/title/CodeExample.vue') },
-          {
-            path: 'color',
-            name: 'ComponentIconPickerColor',
-            component: () => import('@/views/icon-picker/color/CodeExample.vue')
+            path: 'base',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'size',
+                name: 'ComponentIconPickerBaseSize',
+                component: () => import('@/views/icon-picker/base/size/CodeExample.vue')
+              },
+              {
+                path: 'clearable',
+                name: 'ComponentIconPickerBaseClearable',
+                component: () => import('@/views/icon-picker/base/clearable/CodeExample.vue')
+              },
+              { path: 'readonly', name: 'ComponentIconPickerBaseReadonly', component: () => import('@/views/icon-picker/base/readonly/CodeExample.vue') },
+              { path: 'disabled', name: 'ComponentIconPickerBaseDisabled', component: () => import('@/views/icon-picker/base/disabled/CodeExample.vue') },
+              {
+                path: 'icons',
+                name: 'ComponentIconPickerBaseIcons',
+                component: () => import('@/views/icon-picker/base/icons/CodeExample.vue')
+              },
+              {
+                path: 'customIcon',
+                name: 'ComponentIconPickerBaseCustomIcon',
+                component: () => import('@/views/icon-picker/base/customIcon/CodeExample.vue')
+              },
+              { path: 'title', name: 'ComponentIconPickerBaseTitle', component: () => import('@/views/icon-picker/base/title/CodeExample.vue') },
+              {
+                path: 'color',
+                name: 'ComponentIconPickerBaseColor',
+                component: () => import('@/views/icon-picker/base/color/CodeExample.vue')
+              }
+            ]
           },
           {
             path: 'search',
