@@ -98,8 +98,8 @@ export const treeNavConfig: NavVO = {
         { title: '跨层级拖拽', routerLink: { name: 'ComponentTreeDragCossDrag' } },
         { title: '自己拖拽给自己子级', routerLink: { name: 'ComponentTreeDragSelfToChildDrag' } },
         { title: '拖拽转成子节点', routerLink: { name: 'ComponentTreeDragToChildDrag' } },
-        { title: '拖拽拦截', routerLink: { name: 'ComponentTreeDragDragMethod' } }
-        // { title: '跨树拖拽', routerLink: { name: 'ComponentTreeDragCossTree' } }
+        { title: '拖拽拦截', routerLink: { name: 'ComponentTreeDragDragMethod' } },
+        { title: '跨树拖拽', routerLink: { name: 'ComponentTreeDragCossTree' } }
       ]
     },
     {
@@ -108,6 +108,14 @@ export const treeNavConfig: NavVO = {
         { title: '懒加载子节点', routerLink: { name: 'ComponentTreeLazyLoadMethod' } },
         { title: '加载失败', routerLink: { name: 'ComponentTreeLazyError' } },
         { title: '显示连接线', routerLink: { name: 'ComponentTreeLazyShowLine' } }
+      ]
+    },
+    {
+      title: '增删节点',
+      children: [
+        { title: '新增节点', routerLink: { name: 'ComponentTreeEditInsert' } },
+        { title: '删除节点', routerLink: { name: 'ComponentTreeEditRemove' } },
+        { title: '增除操作', routerLink: { name: 'ComponentTreeEditFull' } }
       ]
     },
     {

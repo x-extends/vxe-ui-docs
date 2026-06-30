@@ -266,6 +266,15 @@ export const treeRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'edit',
+      component: RouteLayout,
+      children: [
+        { path: 'insert', name: 'ComponentTreeEditInsert', component: () => import('@/views/tree/edit/insert/CodeExample.vue') },
+        { path: 'remove', name: 'ComponentTreeEditRemove', component: () => import('@/views/tree/edit/remove/CodeExample.vue') },
+        { path: 'full', name: 'ComponentTreeEditFull', component: () => import('@/views/tree/edit/full/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'scroll',
       component: RouteLayout,
       children: [

@@ -111,6 +111,14 @@ export const treeNavConfig: NavVO = {
       ]
     },
     {
+      title: '增删节点',
+      children: [
+        { title: '新增节点', routerLink: { name: 'ComponentTreeEditInsert' } },
+        { title: '删除节点', routerLink: { name: 'ComponentTreeEditRemove' } },
+        { title: '增除操作', routerLink: { name: 'ComponentTreeEditFull' } }
+      ]
+    },
+    {
       title: '虚拟滚动',
       children: [
         { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTreeScrollBasics' } },
