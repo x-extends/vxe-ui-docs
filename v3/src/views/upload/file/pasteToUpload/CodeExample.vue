@@ -7,5 +7,13 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="upload/file/pasteToUpload/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          显示更多
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>
