@@ -24,6 +24,15 @@ export const treeNavConfig: NavVO = {
       ]
     },
     {
+      title: '溢出隐藏',
+      children: [
+        { title: '文本超出提示', routerLink: { name: 'ComponentTreeTooltipBasics' } },
+        { title: '鼠标可进入', routerLink: { name: 'ComponentTreeTooltipEnterable' } },
+        { title: '显示全部提示', routerLink: { name: 'ComponentTreeTooltipShowAll' } },
+        { title: '自定义显示内容', routerLink: { name: 'ComponentTreeTooltipContentMethod' } }
+      ]
+    },
+    {
       title: '自定义根节点',
       children: [
         { title: '指定根节点的父级节点', routerLink: { name: 'ComponentTreeRootNodeRootParentValue' } },

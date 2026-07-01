@@ -83,6 +83,16 @@ export const treeRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'tooltip',
+      component: RouteLayout,
+      children: [
+        { path: 'basics', name: 'ComponentTreeTooltipBasics', component: () => import('@/views/tree/tooltip/basics/CodeExample.vue') },
+        { path: 'enterable', name: 'ComponentTreeTooltipEnterable', component: () => import('@/views/tree/tooltip/enterable/CodeExample.vue') },
+        { path: 'showAll', name: 'ComponentTreeTooltipShowAll', component: () => import('@/views/tree/tooltip/showAll/CodeExample.vue') },
+        { path: 'contentMethod', name: 'ComponentTreeTooltipContentMethod', component: () => import('@/views/tree/tooltip/contentMethod/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'rootNode',
       component: RouteLayout,
       children: [
