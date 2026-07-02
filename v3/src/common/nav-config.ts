@@ -573,6 +573,7 @@ export const navConfigList: NavVO[] = [
           { title: '单选按钮', routerLink: { name: 'ComponentRadioButton' } },
           { title: '按钮状态颜色', routerLink: { name: 'ComponentRadioButtonStatus' } },
           { title: '按钮禁用', routerLink: { name: 'ComponentRadioButtonDisabled' } },
+          { title: '按钮图标', routerLink: { name: 'ComponentRadioButtonIcon' } },
           { title: '配置式选项', routerLink: { name: 'ComponentRadioOptions' } },
           { title: '默认值', routerLink: { name: 'ComponentRadioDefaultValue' } }
         ]
@@ -591,6 +592,7 @@ export const navConfigList: NavVO[] = [
           { title: '复选按钮', routerLink: { name: 'ComponentCheckboxButton' } },
           { title: '按钮状态颜色', routerLink: { name: 'ComponentCheckboxButtonStatus' } },
           { title: '按钮禁用', routerLink: { name: 'ComponentCheckboxButtonDisabled' } },
+          { title: '按钮图标', routerLink: { name: 'ComponentCheckboxButtonIcon' } },
           { title: '限制最大数量', routerLink: { name: 'ComponentCheckboxMax' } },
           { title: '配置式选项', routerLink: { name: 'ComponentCheckboxOptions' } },
           { title: '默认值', routerLink: { name: 'ComponentCheckboxDefaultValue' } }
