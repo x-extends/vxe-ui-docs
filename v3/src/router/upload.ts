@@ -164,6 +164,7 @@ export const uploadRouteConfig: RouteConfig = {
           component: () => import('@/views/upload/file/action/CodeExample.vue')
         },
         { path: 'operFn', name: 'ComponentUploadFileOperFn', component: () => import('@/views/upload/file/operFn/CodeExample.vue') },
+        { path: 'events', name: 'ComponentUploadFileEvents', component: () => import('@/views/upload/file/events/CodeExample.vue') },
         {
           path: 'template',
           children: [
@@ -334,6 +335,7 @@ export const uploadRouteConfig: RouteConfig = {
           component: () => import('@/views/upload/image/action/CodeExample.vue')
         },
         { path: 'operFn', name: 'ComponentUploadImageOperFn', component: () => import('@/views/upload/image/operFn/CodeExample.vue') },
+        { path: 'events', name: 'ComponentUploadImageEvents', component: () => import('@/views/upload/image/events/CodeExample.vue') },
         {
           path: 'template',
           children: [

@@ -28,7 +28,10 @@ const customConfig = reactive<VxeTablePropTypes.CustomConfig<RowVO>>({
   allowVisible: false,
   allowFixed: false,
   allowResizable: false,
-  allowSort: true
+  allowSort: true,
+  allowAlign: false,
+  allowHeaderAlign: false,
+  allowFooterAlign: false
 })
 
 const gridOptions = reactive<VxeGridProps<RowVO>>({

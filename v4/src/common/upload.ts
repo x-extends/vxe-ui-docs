@@ -44,6 +44,7 @@ export const uploadNavConfig: NavVO = {
         { title: '手动上传', routerLink: { name: 'ComponentUploadFileManualSubmit' } },
         // { title: '自定义操作按钮', routerLink: { name: 'ComponentUploadFileAction' } },
         { title: '手动操作方法', routerLink: { name: 'ComponentUploadFileOperFn' } },
+        { title: '事件', routerLink: { name: 'ComponentUploadFileEvents' } },
         {
           title: '自定义操作按钮',
           children: [
@@ -93,6 +94,7 @@ export const uploadNavConfig: NavVO = {
         { title: '手动上传', routerLink: { name: 'ComponentUploadImageManualSubmit' } },
         // { title: '自定义操作按钮', routerLink: { name: 'ComponentUploadImageAction' } },
         { title: '手动操作方法', routerLink: { name: 'ComponentUploadImageOperFn' } },
+        { title: '事件', routerLink: { name: 'ComponentUploadImageEvents' } },
         {
           title: '自定义操作按钮',
           children: [

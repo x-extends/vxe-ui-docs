@@ -19,7 +19,7 @@
                 <tr v-for="(column, i) in tableColumnFullList" :key="i">
                   <td>{{ column.title }}</td>
                   <td>
-                    <vxe-checkbox v-model="column.visible"></vxe-checkbox>
+                    <vxe-switch v-model="column.visible"></vxe-switch>
                   </td>
                   <td>
                     <vxe-radio-group v-model="column.fixed">
@@ -65,45 +65,7 @@ interface CustomTemplateVO {
 
 export default Vue.extend({
   data () {
-    const selectTmplCode = '1'
-    const templateList: CustomTemplateVO[] = [
-      {
-        name: '模板1',
-        code: '1',
-        customData: {
-          visibleData: {
-            role: false,
-            age: false
-          }
-        }
-      },
-      {
-        name: '模板2',
-        code: '2',
-        customData: {
-          visibleData: {
-            sex: false,
-            age: false,
-            attr1: false,
-            attr2: false
-          }
-        }
-      },
-      {
-        name: '模板3',
-        code: '3',
-        customData: {
-          visibleData: {
-            attr1: false,
-            attr2: false
-          }
-        }
-      }
-    ]
-
-    const tableColumnFullList: VxeTableDefines.ColumnInfo[] = []
-
-    const gridOptions:VxeGridProps<RowVO> = {
+    const gridOptions: VxeGridProps<RowVO> = {
       id: 'myTableMultiTmpl',
       rowConfig: {
         keyField: 'id'
@@ -143,6 +105,44 @@ export default Vue.extend({
       ]
     }
 
+    const selectTmplCode = '1'
+    const templateList: CustomTemplateVO[] = [
+      {
+        name: '模板1',
+        code: '1',
+        customData: {
+          visibleData: {
+            role: false,
+            age: false
+          }
+        }
+      },
+      {
+        name: '模板2',
+        code: '2',
+        customData: {
+          visibleData: {
+            sex: false,
+            age: false,
+            attr1: false,
+            attr2: false
+          }
+        }
+      },
+      {
+        name: '模板3',
+        code: '3',
+        customData: {
+          visibleData: {
+            attr1: false,
+            attr2: false
+          }
+        }
+      }
+    ]
+
+    const tableColumnFullList: VxeTableDefines.ColumnInfo[] = []
+
     return {
       gridOptions,
       selectTmplCode,
@@ -163,12 +163,12 @@ export default Vue.extend({
         this.tableColumnFullList = fullColumn
       }
     },
-    async changeTemplateEvent  () {
+    changeTemplateEvent () {
       const $grid = this.$refs.gridRef as VxeGridInstance<RowVO>
       if ($grid) {
         const selectTmplItem = this.selectTempalte
         if (selectTmplItem) {
-          await $grid.setCustomStoreData(selectTmplItem.customData)
+          $grid.setCustomStoreData(selectTmplItem.customData)
         }
       }
     },
