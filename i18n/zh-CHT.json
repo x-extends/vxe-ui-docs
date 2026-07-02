@@ -75,6 +75,7 @@
         "formGlobalValidators": "校驗（全局復用）",
         "formGlobalRenderer": "渲染器（高階復用）",
         "form": {},
+        "dataTitle": "Form 表单组件",
         "tableTitle": "Table 表格",
         "tableTableTitle": "Table 基礎表格",
         "tableGridTitle": "Grid 配置式表格",
@@ -126,7 +127,12 @@
       "freeVersion": "开源版",
       "enterpriseVersion": "企业版",
       "buyPlugin": "获取插件授权",
-      "supportUs": "关于我们"
+      "supportUs": "关于我们",
+      "menuGroup": {
+        "base": "通用基础库",
+        "pcui": "桌面端",
+        "store": "插件库"
+      }
     },
     "base": {
       "light": "白天",

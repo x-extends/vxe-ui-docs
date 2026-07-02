@@ -127,7 +127,12 @@
       "freeVersion": "开源版",
       "enterpriseVersion": "Edición Empresarial",
       "buyPlugin": "Comprar licencia del plugin",
-      "supportUs": "Sobre nosotros"
+      "supportUs": "Sobre nosotros",
+      "menuGroup": {
+        "base": "通用基础库",
+        "pcui": "桌面端",
+        "store": "插件库"
+      }
     },
     "base": {
       "light": "Claro",

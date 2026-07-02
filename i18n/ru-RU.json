@@ -127,7 +127,12 @@
       "freeVersion": "开源版",
       "enterpriseVersion": "Корпоративная версия",
       "buyPlugin": "Приобрести лицензию плагина",
-      "supportUs": "О нас"
+      "supportUs": "О нас",
+      "menuGroup": {
+        "base": "通用基础库",
+        "pcui": "桌面端",
+        "store": "插件库"
+      }
     },
     "base": {
       "light": "Светлая",
