@@ -1,8 +1,8 @@
 <template>
   <div>
     <vxe-radio-group v-model="formOptions.vertical">
-      <vxe-radio-button :label="false" content="上下布局"></vxe-radio-button>
-      <vxe-radio-button :label="true" content="左右布局"></vxe-radio-button>
+      <vxe-radio-button :checked-value="false" content="上下布局"></vxe-radio-button>
+      <vxe-radio-button :checked-value="true" content="左右布局"></vxe-radio-button>
     </vxe-radio-group>
 
     <vxe-form v-bind="formOptions" v-on="formEvents" ></vxe-form>

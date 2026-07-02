@@ -1,11 +1,11 @@
 <template>
   <div>
     <vxe-checkbox-group v-model="valGroup1">
-      <vxe-checkbox label="1" content="HTML"></vxe-checkbox>
-      <vxe-checkbox label="2" content="CSS"></vxe-checkbox>
-      <vxe-checkbox label="3" content="Javascript"></vxe-checkbox>
-      <vxe-checkbox label="4" content="SASS"></vxe-checkbox>
-      <vxe-checkbox label="5" content="LESS"></vxe-checkbox>
+      <vxe-checkbox checked-value="1" content="HTML"></vxe-checkbox>
+      <vxe-checkbox checked-value="2" content="CSS"></vxe-checkbox>
+      <vxe-checkbox checked-value="3" content="Javascript"></vxe-checkbox>
+      <vxe-checkbox checked-value="4" content="SASS"></vxe-checkbox>
+      <vxe-checkbox checked-value="5" content="LESS"></vxe-checkbox>
     </vxe-checkbox-group>
   </div>
 </template>
