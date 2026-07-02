@@ -129,9 +129,9 @@
       "buyPlugin": "获取插件授权",
       "supportUs": "关于我们",
       "menuGroup": {
-        "base": "通用基础库",
-        "pcui": "桌面端",
-        "store": "插件库"
+        "base": "Base Library",
+        "pcui": "Web PC",
+        "store": "Extensive plugin"
       }
     },
     "base": {
