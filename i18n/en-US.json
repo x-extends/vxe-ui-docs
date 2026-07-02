@@ -117,17 +117,17 @@
       }
     },
     "header": {
-      "moreProducts": "⭐生态",
+      "moreProducts": "🔥More components",
       "morePlugin": "🔥插件",
       "pluginDocs": "🔥插件文档",
       "pluginVersion": "插件",
-      "pluginStore": "插件市场",
+      "pluginStore": "Plugin Market",
       "enterprisePluginVersion": "企业版插件",
       "freePluginVersion": "开源版插件",
       "freeVersion": "开源版",
       "enterpriseVersion": "企业版",
       "buyPlugin": "获取插件授权",
-      "supportUs": "关于我们",
+      "supportUs": "About Us",
       "menuGroup": {
         "base": "Base Library",
         "pcui": "Web PC",
