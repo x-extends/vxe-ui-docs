@@ -2,25 +2,33 @@
   <div>
     <CodeLight path="date-range-picker/date/base/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="绑定值">绑定值，绑定的2个值用逗号分隔</vxe-tip>
-        <vxe-tip status="error">
-          默认是根据绑定值自动识别，如果需要固定类型，通过 <ApiLink name="date-range-picker" prop="value-type"/>='string' 设置
+        <vxe-tip status="primary" title="绑定值格式">
+          绑定值，默认 string 类型
         </vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="date-range-picker/date/base/Demo2">
       <template #tip>
-        <vxe-tip status="primary">数组类型，绑定的2个值放数组中</vxe-tip>
-        <vxe-tip status="error">
-          默认是根据绑定值自动识别，如果需要固定类型，通过 <ApiLink name="date-range-picker" prop="value-type"/>='array' 设置
+        <vxe-tip status="primary">
+          通过 <ApiLink name="date-range-picker" prop="value-format"/>="date" 设置为 Date 类型
         </vxe-tip>
       </template>
     </CodeLight>
 
     <CodeLight path="date-range-picker/date/base/Demo3">
       <template #tip>
-        <vxe-tip status="primary">数据格式，支持同时绑定2个字段</vxe-tip>
+        <vxe-tip status="primary">
+          通过 <ApiLink name="date-range-picker" prop="value-format"/>="timestamp" 设置为 number 时间戳
+        </vxe-tip>
+      </template>
+    </CodeLight>
+
+    <CodeLight path="date-range-picker/date/base/Demo4">
+      <template #tip>
+        <vxe-tip status="primary">
+        通过 <ApiLink name="date-range-picker" prop="value-format"/>="dd/MM/yyyy" 设置自定义的格式
+        </vxe-tip>
       </template>
     </CodeLight>
   </div>

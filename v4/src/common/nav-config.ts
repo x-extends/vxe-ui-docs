@@ -803,6 +803,7 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '尺寸大小', routerLink: { name: 'ComponentDateRangePickerDateSize' } },
               { title: '绑定值格式', routerLink: { name: 'ComponentDateRangePickerDateBase' } },
+              { title: '绑定值类型', routerLink: { name: 'ComponentDateRangePickerDateValueType' } },
               { title: '可清除', routerLink: { name: 'ComponentDateRangePickerDateClearable' } },
               { title: '禁用', routerLink: { name: 'ComponentDateRangePickerDateDisabled' } },
               { title: '查看模式', routerLink: { name: 'ComponentDateRangePickerDateReadonly' } },

@@ -1879,6 +1879,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentDateRangePickerDateBase',
                 component: () => import('@/views/date-range-picker/date/base/CodeExample.vue')
               },
+              { path: 'valueType', name: 'ComponentDateRangePickerDateValueType', component: () => import('@/views/date-range-picker/date/valueType/CodeExample.vue') },
               { path: 'clearable', name: 'ComponentDateRangePickerDateClearable', component: () => import('@/views/date-range-picker/date/clearable/CodeExample.vue') },
               {
                 path: 'disabled',

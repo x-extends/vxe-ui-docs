@@ -1,7 +1,5 @@
 <template>
   <div>
-    <vxe-date-range-picker v-model="val1" clearable></vxe-date-range-picker>
-    <vxe-date-range-picker v-model="val2" clearable></vxe-date-range-picker>
     <vxe-date-range-picker :start-value.sync="startDate" :end-value.sync="endDate" clearable></vxe-date-range-picker>
   </div>
 </template>
@@ -12,8 +10,6 @@ import Vue from 'vue'
 export default Vue.extend({
   data () {
     return {
-      val1: '2025-10-10,2025-12-01',
-      val2: ['2025-10-10', '2025-12-01'],
       startDate: '2025-10-10',
       endDate: '2025-12-01'
     }
