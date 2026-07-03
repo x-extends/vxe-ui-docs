@@ -12,7 +12,7 @@
     "oxfix:examples": "oxfmt dist/example/js/ --write"
   },
   "dependencies": {
-    "@vxe-ui/plugin-export-pdf": "~3.5.1",
+    "@vxe-ui/plugin-export-pdf": "~3.4.0",
     "@vxe-ui/plugin-export-xlsx": "~3.5.2",
     "@vxe-ui/plugin-menu": "~3.3.2",
     "@vxe-ui/plugin-render-chart": "~3.3.2",
