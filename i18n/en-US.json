@@ -433,6 +433,7 @@
         "taskList": "Task list",
         "tree": "子任务",
         "subTask": "Subtask",
+        "multiTask": "实现拆分双任务",
         "taskDrag": "Task draggable",
         "taskDragBase": "Drag to move dates",
         "taskDragDragMethod": "Intercept drag move",

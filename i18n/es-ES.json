@@ -433,6 +433,7 @@
         "taskList": "Lista de tareas",
         "tree": "Subtarea",
         "subTask": "基础",
+        "multiTask": "实现拆分双任务",
         "taskDrag": "Tareas arrastrables",
         "taskDragBase": "Arrastrar para mover fechas",
         "taskDragDragMethod": "Interceptar arrastre",

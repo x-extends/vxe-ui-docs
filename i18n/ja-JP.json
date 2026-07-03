@@ -433,6 +433,7 @@
         "taskList": "タスクリスト",
         "tree": "子任务",
         "subTask": "サブタスク",
+        "multiTask": "实现拆分双任务",
         "taskDrag": "タスクのドラッグ",
         "taskDragBase": "日付移動のドラッグ",
         "taskDragDragMethod": "ドラッグ移動をインターセプト",
