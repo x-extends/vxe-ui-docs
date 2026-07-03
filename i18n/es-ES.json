@@ -431,7 +431,8 @@
       "nav": {
         "basics": "Funciones básicas",
         "taskList": "Lista de tareas",
-        "subTask": "Subtarea",
+        "tree": "Subtarea",
+        "subTask": "基础",
         "taskDrag": "Tareas arrastrables",
         "taskDragBase": "Arrastrar para mover fechas",
         "taskDragDragMethod": "Interceptar arrastre",

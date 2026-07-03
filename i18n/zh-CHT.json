@@ -431,7 +431,8 @@
       "nav": {
         "basics": "基礎功能",
         "taskList": "任務列表",
-        "subTask": "子任務",
+        "tree": "Subtarea",
+        "subTask": "基础",
         "taskDrag": "任務可拖拽",
         "taskDragBase": "拖拽移動日期",
         "taskDragDragMethod": "攔截拖拽移動",

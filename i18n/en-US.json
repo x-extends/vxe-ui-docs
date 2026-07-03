@@ -431,6 +431,7 @@
       "nav": {
         "basics": "Basic features",
         "taskList": "Task list",
+        "tree": "子任务",
         "subTask": "Subtask",
         "taskDrag": "Task draggable",
         "taskDragBase": "Drag to move dates",

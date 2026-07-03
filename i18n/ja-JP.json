@@ -431,6 +431,7 @@
       "nav": {
         "basics": "基本機能",
         "taskList": "タスクリスト",
+        "tree": "子任务",
         "subTask": "サブタスク",
         "taskDrag": "タスクのドラッグ",
         "taskDragBase": "日付移動のドラッグ",

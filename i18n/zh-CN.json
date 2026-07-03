@@ -431,7 +431,8 @@
       "nav": {
         "basics": "基础功能",
         "taskList": "任务列表",
-        "subTask": "子任务",
+        "tree": "子任务",
+        "subTask": "基础",
         "taskDrag": "任务可拖拽",
         "taskDragBase": "拖拽移动日期",
         "taskDragDragMethod": "拦截拖拽移动",
