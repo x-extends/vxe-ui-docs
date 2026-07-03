@@ -443,6 +443,7 @@
         "subviewInline": "子视图",
         "subviewDrag": "可拖拽",
         "subviewLinks": "连接线",
+        "subviewMultiBar": "实现双进度任务条",
         "edit": "可编辑",
         "editTableCell": "编辑表格单元格",
         "editTaskBar": "编辑任务条",

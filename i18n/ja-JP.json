@@ -443,6 +443,7 @@
         "subviewInline": "サブビュー",
         "subviewDrag": "ドラッグ可能",
         "subviewLinks": "接続線",
+        "subviewMultiBar": "实现双进度任务条",
         "edit": "編集可能",
         "editTableCell": "テーブルセルを編集",
         "editTaskBar": "タスクバーを編集",

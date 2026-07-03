@@ -443,6 +443,7 @@
         "subviewInline": "Sub-view",
         "subviewDrag": "Draggable",
         "subviewLinks": "Connection lines",
+        "subviewMultiBar": "实现双进度任务条",
         "edit": "Editable",
         "editTableCell": "Edit table cell",
         "editTaskBar": "Edit task bar",

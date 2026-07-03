@@ -443,6 +443,7 @@
         "subviewInline": "Подвид",
         "subviewDrag": "Перетаскиваемый",
         "subviewLinks": "Связующие линии",
+        "subviewMultiBar": "实现双进度任务条",
         "edit": "Редактируемый",
         "editTableCell": "Редактирование ячейки таблицы",
         "editTaskBar": "Редактирование панели задачи",
