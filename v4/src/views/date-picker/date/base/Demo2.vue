@@ -1,7 +1,11 @@
 <template>
   <div>
     <vxe-date-picker v-model="val1" value-format="date" clearable></vxe-date-picker>
+    <div>{{ val1 }}</div>
+    <br>
     <vxe-date-picker v-model="val2" value-format="date" clearable></vxe-date-picker>
+    <div>{{ val2 }}</div>
+    <br>
   </div>
 </template>
 

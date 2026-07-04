@@ -1,7 +1,11 @@
 <template>
   <div>
     <vxe-date-range-picker v-model="val2" value-format="date" clearable></vxe-date-range-picker>
+    <div>{{ val2 }}</div>
+    <br>
     <vxe-date-range-picker :start-value.sync="startDate" :end-value.sync="endDate" value-format="date" clearable></vxe-date-range-picker>
+    <div>{{ startDate }}</div>
+    <div>{{ endDate }}</div>
   </div>
 </template>
 
