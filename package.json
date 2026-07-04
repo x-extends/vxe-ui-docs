@@ -20,6 +20,7 @@
     "pack:v3": "npm run build:v3 && gulp build_v3_docs && gulp build_v3_zip",
     "pack:v4": "npm run build:v4 && gulp build_v4_docs && gulp build_v4_zip",
     "pack:all": "npm run build:all && gulp build_all_docs && gulp build_all_zip",
+    "pack:i18n": "gulp build_i18n",
     "sync:i18n": "node ./syncI18n.js"
   },
   "devDependencies": {

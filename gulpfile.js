@@ -318,3 +318,9 @@ gulp.task('build_all_zip', () => {
     .pipe(zip('docs_all.zip'))
     .pipe(gulp.dest('./'))
 })
+
+gulp.task('build_i18n', () => {
+  return gulp.src('i18n/**')
+    .pipe(zip('i18n.zip'))
+    .pipe(gulp.dest('./'))
+})
