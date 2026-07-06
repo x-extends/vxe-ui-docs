@@ -32,6 +32,9 @@ const treeRef = ref<VxeTreeInstance<NodeVO>>()
 
 const treeOptions = reactive<VxeTreeProps>({
   transform: true,
+  nodeConfig: {
+    isHover: true
+  },
   data: [
     { title: '节点2', id: '2', parentId: null },
     { title: '节点3', id: '3', parentId: null },

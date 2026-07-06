@@ -44,6 +44,17 @@ export const listNavConfig: NavVO = {
       ]
     },
     {
+      title: '右键菜单',
+      children: [
+        { title: '配置菜单', routerLink: { name: 'ComponentListMenuBasics' } },
+        { title: '前缀与后缀', routerLink: { name: 'ComponentListMenuIcon' } },
+        { title: '是否禁用', routerLink: { name: 'ComponentListMenuDisabled' } },
+        { title: '是否显示', routerLink: { name: 'ComponentListMenuVisible' } },
+        { title: '异步加载中', routerLink: { name: 'ComponentListMenuLoading' } },
+        { title: '权限控制', routerLink: { name: 'ComponentListMenuVisibleMethod' } }
+      ]
+    },
+    {
       title: '拖拽',
       children: [
         { title: '拖拽调整节点顺序', routerLink: { name: 'ComponentListDragSort' } },
@@ -54,7 +65,16 @@ export const listNavConfig: NavVO = {
         { title: '自定义提示', routerLink: { name: 'ComponentListDragTooltipMethod' } },
         { title: '禁用拖拽按钮', routerLink: { name: 'ComponentListDragDisabledMethod' } },
         { title: '拖拽按钮可视', routerLink: { name: 'ComponentListDragVisibleMethod' } },
-        { title: '拖拽拦截', routerLink: { name: 'ComponentListDragDragMethod' } }
+        { title: '拖拽拦截', routerLink: { name: 'ComponentListDragDragMethod' } },
+        { title: '跨列表拖拽', routerLink: { name: 'ComponentListDragDragCossList' } }
+      ]
+    },
+    {
+      title: '增删行',
+      children: [
+        { title: '新增行', routerLink: { name: 'ComponentListEditInsert' } },
+        { title: '删除行', routerLink: { name: 'ComponentListEditRemove' } },
+        { title: '增删操作', routerLink: { name: 'ComponentListEditFull' } }
       ]
     },
     {

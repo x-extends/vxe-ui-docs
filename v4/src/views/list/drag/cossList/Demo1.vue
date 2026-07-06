@@ -30,6 +30,7 @@ const listRef1 = ref<VxeListInstance<RowVO>>()
 const listOptions1 = reactive<VxeListProps<RowVO>>({
   height: 400,
   rowConfig: {
+    keyField: 'id',
     contentField: 'label'
   },
   dragConfig: {
@@ -62,6 +63,7 @@ const listRef2 = ref<VxeListInstance<RowVO>>()
 const listOptions2 = reactive<VxeListProps<RowVO>>({
   height: 400,
   rowConfig: {
+    keyField: 'id',
     contentField: 'label'
   },
   dragConfig: {
@@ -87,6 +89,7 @@ const listRef3 = ref<VxeListInstance<RowVO>>()
 const listOptions3 = reactive<VxeListProps<RowVO>>({
   height: 400,
   rowConfig: {
+    keyField: 'id',
     contentField: 'label'
   },
   dragConfig: {

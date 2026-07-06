@@ -31,6 +31,7 @@ export default Vue.extend({
     const listOptions1: VxeListProps<RowVO> = {
       height: 400,
       rowConfig: {
+        keyField: 'id',
         contentField: 'label'
       },
       dragConfig: {
@@ -55,6 +56,7 @@ export default Vue.extend({
     const listOptions2: VxeListProps<RowVO> = {
       height: 400,
       rowConfig: {
+        keyField: 'id',
         contentField: 'label'
       },
       dragConfig: {
@@ -72,6 +74,7 @@ export default Vue.extend({
     const listOptions3: VxeListProps<RowVO> = {
       height: 400,
       rowConfig: {
+        keyField: 'id',
         contentField: 'label'
       },
       dragConfig: {

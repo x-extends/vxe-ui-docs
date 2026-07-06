@@ -50,6 +50,18 @@ export const listRouteConfig: RouteRecordRaw = {
       ]
     },
     {
+      path: 'menu',
+      component: RouteLayout,
+      children: [
+        { path: 'basics', name: 'ComponentListMenuBasics', component: () => import('@/views/list/menu/basics/CodeExample.vue') },
+        { path: 'icon', name: 'ComponentListMenuIcon', component: () => import('@/views/list/menu/icon/CodeExample.vue') },
+        { path: 'disabled', name: 'ComponentListMenuDisabled', component: () => import('@/views/list/menu/disabled/CodeExample.vue') },
+        { path: 'visible', name: 'ComponentListMenuVisible', component: () => import('@/views/list/menu/visible/CodeExample.vue') },
+        { path: 'loading', name: 'ComponentListMenuLoading', component: () => import('@/views/list/menu/loading/CodeExample.vue') },
+        { path: 'visibleMethod', name: 'ComponentListMenuVisibleMethod', component: () => import('@/views/list/menu/visibleMethod/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'drag',
       component: RouteLayout,
       children: [
@@ -61,7 +73,17 @@ export const listRouteConfig: RouteRecordRaw = {
         { path: 'tooltipMethod', name: 'ComponentListDragTooltipMethod', component: () => import('@/views/list/drag/tooltipMethod/CodeExample.vue') },
         { path: 'disabledMethod', name: 'ComponentListDragDisabledMethod', component: () => import('@/views/list/drag/disabledMethod/CodeExample.vue') },
         { path: 'visibleMethod', name: 'ComponentListDragVisibleMethod', component: () => import('@/views/list/drag/visibleMethod/CodeExample.vue') },
-        { path: 'dragMethod', name: 'ComponentListDragDragMethod', component: () => import('@/views/list/drag/dragMethod/CodeExample.vue') }
+        { path: 'dragMethod', name: 'ComponentListDragDragMethod', component: () => import('@/views/list/drag/dragMethod/CodeExample.vue') },
+        { path: 'cossList', name: 'ComponentListDragDragCossList', component: () => import('@/views/list/drag/cossList/CodeExample.vue') }
+      ]
+    },
+    {
+      path: 'edit',
+      component: RouteLayout,
+      children: [
+        { path: 'insert', name: 'ComponentListEditInsert', component: () => import('@/views/list/edit/insert/CodeExample.vue') },
+        { path: 'remove', name: 'ComponentListEditRemove', component: () => import('@/views/list/edit/remove/CodeExample.vue') },
+        { path: 'full', name: 'ComponentListEditFull', component: () => import('@/views/list/edit/full/CodeExample.vue') }
       ]
     },
     {
