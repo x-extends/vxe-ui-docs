@@ -1791,11 +1791,8 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentColorPickerColors',
             component: () => import('@/views/color-picker/colors/CodeExample.vue')
           },
-          {
-            path: 'type',
-            name: 'ComponentColorPickerType',
-            component: () => import('@/views/color-picker/type/CodeExample.vue')
-          },
+          { path: 'rgb', name: 'ComponentColorPickerRgb', component: () => import('@/views/color-picker/rgb/CodeExample.vue') },
+          { path: 'hex', name: 'ComponentColorPickerHex', component: () => import('@/views/color-picker/hex/CodeExample.vue') },
           {
             path: 'showEyeDropper',
             name: 'ComponentColorPickerShowEyeDropper',
