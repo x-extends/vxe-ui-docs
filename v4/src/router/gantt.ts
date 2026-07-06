@@ -137,6 +137,7 @@ export const ganttRouteConfig: RouteRecordRaw = {
         { path: 'hierarchy', name: 'ComponentGanttTreeHierarchy', component: () => import('@/views/gantt/tree/hierarchy/CodeExample.vue') },
         { path: 'stripe', name: 'ComponentGanttTreeStripe', component: () => import('@/views/gantt/tree/stripe/CodeExample.vue') },
         { path: 'seqMode', name: 'ComponentGanttTreeSeqMode', component: () => import('@/views/gantt/tree/seqMode/CodeExample.vue') },
+        { path: 'icon', name: 'ComponentGanttTreeIcon', component: () => import('@/views/gantt/tree/icon/CodeExample.vue') },
         { path: 'line', name: 'ComponentGanttTreeLine', component: () => import('@/views/gantt/tree/line/CodeExample.vue') }
       ]
     },

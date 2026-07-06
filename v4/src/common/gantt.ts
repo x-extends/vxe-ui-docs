@@ -123,6 +123,7 @@ export const ganttNavConfig: NavVO = {
         { title: '层级结构', routerLink: { name: 'ComponentGanttTreeHierarchy' } },
         { title: '斑马线样式', routerLink: { name: 'ComponentGanttTreeStripe' } },
         { title: '序号', routerLink: { name: 'ComponentGanttTreeSeqMode' } },
+        { title: '树展开按钮', routerLink: { name: 'ComponentGanttTreeIcon' } },
         { title: '连接线', routerLink: { name: 'ComponentGanttTreeLine' } }
       ]
     },
