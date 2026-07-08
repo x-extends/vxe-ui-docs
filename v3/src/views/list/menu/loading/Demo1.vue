@@ -18,6 +18,7 @@ export default Vue.extend({
     const listOptions: VxeListProps<RowVO> = {
       height: 400,
       rowConfig: {
+        keyField: 'id',
         isHover: true,
         isCurrent: true
       },

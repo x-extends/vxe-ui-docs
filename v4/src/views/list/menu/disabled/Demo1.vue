@@ -16,6 +16,7 @@ interface RowVO {
 const listOptions = reactive<VxeListProps<RowVO>>({
   height: 400,
   rowConfig: {
+    keyField: 'id',
     isHover: true,
     isCurrent: true
   },
