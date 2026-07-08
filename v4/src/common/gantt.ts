@@ -260,6 +260,7 @@ export const ganttNavConfig: NavVO = {
         { title: '年-周-日', routerLink: { name: 'ComponentGanttScalesYearWeekDate' } },
         { title: '季-月-日', routerLink: { name: 'ComponentGanttScalesQuarterMonthDate' } },
         { title: '周-星期-日', routerLink: { name: 'ComponentGanttScalesMonthDayDate' } },
+        { title: '按天来显示小时', routerLink: { name: 'ComponentGanttScalesHourToDate' } },
         // { title: '日期间隔', routerLink: { name: 'ComponentGanttScalesMinuteStep' } },
         { title: '格式化列头标题', routerLink: { name: 'ComponentGanttScalesTitleFormat' } },
         { title: '自定义列头标题', routerLink: { name: 'ComponentGanttScalesTitleMethod' } },

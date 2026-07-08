@@ -10,13 +10,5 @@
         </vxe-tip>
       </template>
     </CodeLight>
-
-    <CodeLight path="gantt/scales/date/Demo2">
-      <template #tip>
-        <vxe-tip status="primary">
-          指定格式，精确到时分秒，自动在单元格内按实际进度显示
-        </vxe-tip>
-      </template>
-    </CodeLight>
   </div>
 </template>
