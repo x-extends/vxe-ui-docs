@@ -32,7 +32,7 @@
         "guide": "开发指南",
         "insrall": "安装",
         "fullInsrall": "默认安装",
-        "useTableInsrall": "表格安装",
+        "useTableInsrall": "纯表格安装",
         "useDesignInsrall": "设计器安装",
         "useGanttInsrall": "甘特图安装",
         "globalInstall": "全局安装 - 全量导入",
