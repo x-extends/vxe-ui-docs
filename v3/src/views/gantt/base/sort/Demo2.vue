@@ -68,11 +68,11 @@ export default Vue.extend({
         }
       ],
       data: [
-        { id: 10001, title: 'A项目', start: 1759892956721, end: 1760892956721, progress: 3 },
-        { id: 10002, title: '城市道路修理进度', start: 1757892956721, end: 1761892956721, progress: 10 },
-        { id: 10003, title: 'B大工程', start: 1756992956721, end: 1757792956721, progress: 90 },
-        { id: 10004, title: '超级大工程', start: 1757692956721, end: 1758692956721, progress: 15 },
-        { id: 10005, title: '地球净化项目', start: 1756892956721, end: 1757992956721, progress: 100 }
+        { id: 10001, title: '任务R790', start: 1759892956721, end: 1760892956721, progress: 3 },
+        { id: 10002, title: '任务C309', start: 1757892956721, end: 1761892956721, progress: 10 },
+        { id: 10003, title: '任务E563', start: 1756992956721, end: 1757792956721, progress: 90 },
+        { id: 10004, title: '任务P687', start: 1757692956721, end: 1758692956721, progress: 15 },
+        { id: 10005, title: '任务L843', start: 1756892956721, end: 1757992956721, progress: 100 }
       ]
     }
 

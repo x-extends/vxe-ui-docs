@@ -91,10 +91,10 @@ export default Vue.extend({
       this.ganttOptions.loading = true
       setTimeout(() => {
         const list: RowVO[] = [
-          { id: 10001, parentId: null, title: 'A项目', planStartDate: '2024-03-03', planEndDate: '2024-03-15', actualStartDate: '2024-03-03', actualEndDate: '2024-03-12' },
+          { id: 10001, parentId: null, title: '任务R790', planStartDate: '2024-03-03', planEndDate: '2024-03-15', actualStartDate: '2024-03-03', actualEndDate: '2024-03-12' },
           { id: 10002, parentId: null, title: 'B项目', planStartDate: '2024-03-10', planEndDate: '2024-03-25', actualStartDate: '2024-03-08', actualEndDate: '2024-03-16' },
           { id: 10003, parentId: null, title: 'C项目', planStartDate: '2024-03-20', planEndDate: '2024-04-10', actualStartDate: '2024-03-22', actualEndDate: '2024-04-01' },
-          { id: 10004, parentId: null, title: 'D项目', planStartDate: '2024-03-28', planEndDate: '2024-04-19', actualStartDate: '2024-03-28', actualEndDate: '2024-04-12' },
+          { id: 10004, parentId: null, title: '任务D554', planStartDate: '2024-03-28', planEndDate: '2024-04-19', actualStartDate: '2024-03-28', actualEndDate: '2024-04-12' },
           { id: 10005, parentId: null, title: 'E项目', planStartDate: '2024-04-05', planEndDate: '2024-04-28', actualStartDate: '2024-04-01', actualEndDate: '2024-04-24' }
         ]
 

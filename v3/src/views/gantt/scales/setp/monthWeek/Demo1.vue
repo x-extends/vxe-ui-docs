@@ -48,10 +48,10 @@ export default Vue.extend({
         { field: 'end', title: '结束时间', width: 100 }
       ],
       data: [
-        { id: 10001, title: 'A项目', start: '2024-02-26', end: '2024-03-03', progress: 80 },
-        { id: 10002, title: '城市道路修理进度', start: '2024-04-03', end: '2024-05-08', progress: 90 },
-        { id: 10003, title: 'B大工程', start: '2024-05-06', end: '2024-07-11', progress: 90 },
-        { id: 10004, title: '超级大工程', start: '2024-06-11', end: '2024-09-18', progress: 100 }
+        { id: 10001, title: '任务R790', start: '2024-02-26', end: '2024-03-03', progress: 80 },
+        { id: 10002, title: '任务C309', start: '2024-04-03', end: '2024-05-08', progress: 90 },
+        { id: 10003, title: '任务E563', start: '2024-05-06', end: '2024-07-11', progress: 90 },
+        { id: 10004, title: '任务P687', start: '2024-06-11', end: '2024-09-18', progress: 100 }
       ]
     }
 
