@@ -50,7 +50,7 @@ export default Vue.extend({
       ],
       data: [
         { id: 10001, title: '任务R790', start: '2024-03-01', end: '2024-03-04', progress: 3 },
-        { id: 10002, title: '任务C309', start: '2024-03-03', end: '2024-03-08', progress: 10 },
+        { id: 10002, title: '任务C30456572349', start: '2024-03-03', end: '2024-03-08', progress: 10 },
         { id: 10003, title: '任务E563', start: '2024-03-03', end: '2024-03-11', progress: 90 },
         { id: 10004, title: '任务P687', start: '2024-03-05', end: '2024-03-11', progress: 15 }
       ]

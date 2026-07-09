@@ -29,10 +29,10 @@ export default Vue.extend({
       ],
       data: [
         { id: 10001, title: '任务R790', start: '03/03/2024', end: '04/03/2024', progress: 3 },
-        { id: 10002, title: '任务C309', start: '04/03/2024', end: '08/03/2024', progress: 10 },
+        { id: 10002, title: '任务C30456572349', start: '04/03/2024', end: '08/03/2024', progress: 10 },
         { id: 10003, title: '任务E563', start: '08/03/2024', end: '12/03/2024', progress: 90 },
         { id: 10004, title: '任务P687', start: '14/03/2024', end: '19/03/2024', progress: 15 },
-        { id: 10005, title: '任务L843', start: '10/03/2024', end: '17/03/2024', progress: 100 }
+        { id: 10005, title: '任务L8412430903', start: '10/03/2024', end: '17/03/2024', progress: 100 }
       ]
     }
 

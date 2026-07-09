@@ -24,10 +24,10 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     { field: 'end', title: '结束时间', width: 100 }
   ],
   data: [
-    { id: 10002, name: '任务C309', start: '2024-03-03', end: '2024-03-03', progress: 10 },
+    { id: 10002, name: '任务C30456572349', start: '2024-03-03', end: '2024-03-03', progress: 10 },
     { id: 10004, name: '任务P687', start: '2024-03-05', end: '2024-03-11', progress: 15 },
     { id: 10006, name: '任务B567', start: '2024-03-10', end: '2024-03-21', progress: 5 },
-    { id: 10007, name: '任务V510', start: '2024-03-15', end: '2024-03-24', progress: 70 },
+    { id: 10007, name: '任务V513802134450', start: '2024-03-15', end: '2024-03-24', progress: 70 },
     { id: 10008, name: '任务G110', start: '2024-03-20', end: '2024-03-29', progress: 50 }
   ]
 })

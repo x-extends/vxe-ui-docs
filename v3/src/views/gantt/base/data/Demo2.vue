@@ -31,10 +31,10 @@ export default Vue.extend({
       ],
       data: [
         { id: 10001, name: '任务R790', startDate: new Date(2024, 2, 3), endDate: new Date(2024, 2, 5), progress: 3 },
-        { id: 10002, name: '任务C309', startDate: new Date(2024, 2, 1), endDate: new Date(2024, 2, 15), progress: 10 },
+        { id: 10002, name: '任务C30456572349', startDate: new Date(2024, 2, 1), endDate: new Date(2024, 2, 15), progress: 10 },
         { id: 10003, name: '任务E563', startDate: new Date(2024, 2, 5), endDate: new Date(2024, 2, 11), progress: 90 },
         { id: 10004, name: '任务P687', startDate: new Date(2024, 2, 1), endDate: new Date(2024, 2, 6), progress: 15 },
-        { id: 10005, name: '任务L843', startDate: new Date(2024, 2, 4), endDate: new Date(2024, 2, 6), progress: 100 }
+        { id: 10005, name: '任务L8412430903', startDate: new Date(2024, 2, 4), endDate: new Date(2024, 2, 6), progress: 100 }
       ]
     }
 

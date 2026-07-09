@@ -55,7 +55,7 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
   ],
   data: [
     { id: 10001, title: '任务R790', start: '2024-03-01 08:30:00', end: '2024-03-01 12:30:00', progress: 60 },
-    { id: 10002, title: '任务C309', start: '2024-03-01 09:00:00', end: '2024-03-01 14:20:15', progress: 50 },
+    { id: 10002, title: '任务C30456572349', start: '2024-03-01 09:00:00', end: '2024-03-01 14:20:15', progress: 50 },
     { id: 10003, title: '任务E563', start: '2024-03-01 11:20:30', end: '2024-03-01 14:40:50', progress: 90 },
     { id: 10004, title: '任务P687', start: '2024-03-01 12:30:00', end: '2024-03-01 18:30:00', progress: 70 },
     { id: 10005, title: 'C改造项目', start: '2024-03-02 10:20:00', end: '2024-03-02 15:30:20', progress: 40 },
