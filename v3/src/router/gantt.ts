@@ -17,7 +17,6 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'tableWidth', name: 'ComponentGanttBaseTableWidth', component: () => import('@/views/gantt/base/tableWidth/CodeExample.vue') },
         { path: 'border', name: 'ComponentGanttBaseBorder', component: () => import('@/views/gantt/base/border/CodeExample.vue') },
         { path: 'stripe', name: 'ComponentGanttBaseStripe', component: () => import('@/views/gantt/base/stripe/CodeExample.vue') },
-        { path: 'showNowLine', name: 'ComponentGanttBaseShowNowLine', component: () => import('@/views/gantt/base/showNowLine/CodeExample.vue') },
         { path: 'resizable', name: 'ComponentGanttBaseResizable', component: () => import('@/views/gantt/base/resizable/CodeExample.vue') },
         { path: 'resizableHeight', name: 'ComponentGanttBaseResizableHeight', component: () => import('@/views/gantt/base/resizableHeight/CodeExample.vue') },
         { path: 'autoHeight', name: 'ComponentGanttBaseAutoHeight', component: () => import('@/views/gantt/base/autoHeight/CodeExample.vue') },
@@ -27,6 +26,15 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'filter', name: 'ComponentGanttBaseFilter', component: () => import('@/views/gantt/base/filter/CodeExample.vue') },
         { path: 'loading', name: 'ComponentGanttBaseLoading', component: () => import('@/views/gantt/base/loading/CodeExample.vue') },
         { path: 'resize', name: 'ComponentGanttBaseResize', component: () => import('@/views/gantt/base/resize/CodeExample.vue') }
+      ]
+    },
+    {
+      path: 'nowLine',
+      component: RouteLayout,
+      children: [
+        { path: 'showNowLine', name: 'ComponentGanttNowLineShowNowLine', component: () => import('@/views/gantt/nowLine/showNowLine/CodeExample.vue') },
+        { path: 'color', name: 'ComponentGanttNowLineColor', component: () => import('@/views/gantt/nowLine/color/CodeExample.vue') },
+        { path: 'mode', name: 'ComponentGanttNowLineMode', component: () => import('@/views/gantt/nowLine/mode/CodeExample.vue') }
       ]
     },
     {
@@ -290,6 +298,20 @@ export const ganttRouteConfig: RouteConfig = {
         { path: 'titleFormat', name: 'ComponentGanttScalesTitleFormat', component: () => import('@/views/gantt/scales/titleFormat/CodeExample.vue') },
         { path: 'titleMethod', name: 'ComponentGanttScalesTitleMethod', component: () => import('@/views/gantt/scales/titleMethod/CodeExample.vue') },
         { path: 'headerCellStyle', name: 'ComponentGanttScalesHeaderCellStyle', component: () => import('@/views/gantt/scales/headerCellStyle/CodeExample.vue') },
+        {
+          path: 'setp',
+          component: RouteLayout,
+          children: [
+            { path: 'year', name: 'ComponentGanttScalesSetpYear', component: () => import('@/views/gantt/scales/setp/year/CodeExample.vue') },
+            { path: 'yearQuartery', name: 'ComponentGanttScalesSetpYearQuartery', component: () => import('@/views/gantt/scales/setp/yearQuartery/CodeExample.vue') },
+            { path: 'yearMonth', name: 'ComponentGanttScalesSetpYearMonth', component: () => import('@/views/gantt/scales/setp/yearMonth/CodeExample.vue') },
+            { path: 'monthWeek', name: 'ComponentGanttScalesSetpMonthWeek', component: () => import('@/views/gantt/scales/setp/monthWeek/CodeExample.vue') },
+            { path: 'monthDate', name: 'ComponentGanttScalesSetpMonthDate', component: () => import('@/views/gantt/scales/setp/monthDate/CodeExample.vue') },
+            { path: 'dateHour', name: 'ComponentGanttScalesSetpDateHour', component: () => import('@/views/gantt/scales/setp/dateHour/CodeExample.vue') },
+            { path: 'hourMinute', name: 'ComponentGanttScalesSetpHourMinute', component: () => import('@/views/gantt/scales/setp/hourMinute/CodeExample.vue') },
+            { path: 'minuteSecond', name: 'ComponentGanttScalesSetpMinuteSecond', component: () => import('@/views/gantt/scales/setp/minuteSecond/CodeExample.vue') }
+          ]
+        },
         {
           path: 'template',
           component: RouteLayout,

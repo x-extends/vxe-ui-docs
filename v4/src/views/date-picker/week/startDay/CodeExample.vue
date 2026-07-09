@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="date-picker/week/startDay/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="单选">默认周一开始，通过设置 <ApiLink name="date-picker" prop="start-day"/> 来自定义一周的开始日</vxe-tip>
+        <vxe-tip status="primary" title="自定义周的开始日">默认周一开始，通过设置 <ApiLink name="date-picker" prop="start-day"/> 来自定义一周的开始日</vxe-tip>
       </template>
     </CodeLight>
 

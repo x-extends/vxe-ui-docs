@@ -904,7 +904,7 @@ export const navConfigList: NavVO[] = [
               { title: '绑定值格式', routerLink: { name: 'ComponentDateRangePickerWeekBase' } },
               { title: '禁用', routerLink: { name: 'ComponentDateRangePickerWeekDisabled' } },
               { title: '可清除', routerLink: { name: 'ComponentDateRangePickerWeekClearable' } },
-              { title: '自定义开始日', routerLink: { name: 'ComponentDateRangePickerWeekStartDay' } },
+              { title: '自定义周的开始日', routerLink: { name: 'ComponentDateRangePickerWeekStartDay' } },
               { title: '自定义返回值', routerLink: { name: 'ComponentDateRangePickerWeekSelectDay' } },
               {
                 title: '快捷按钮',

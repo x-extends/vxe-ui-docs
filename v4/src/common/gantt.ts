@@ -14,7 +14,6 @@ export const ganttNavConfig: NavVO = {
         { title: '表格宽度', routerLink: { name: 'ComponentGanttBaseTableWidth' } },
         { title: '边框', routerLink: { name: 'ComponentGanttBaseBorder' } },
         { title: '斑马线样式', routerLink: { name: 'ComponentGanttBaseStripe' } },
-        { title: '高亮此刻线', routerLink: { name: 'ComponentGanttBaseShowNowLine' } },
         { title: '拖拽调整列宽', routerLink: { name: 'ComponentGanttBaseResizable' } },
         { title: '拖拽调整行高', routerLink: { name: 'ComponentGanttBaseResizableHeight' } },
         { title: '表格响应式高度', routerLink: { name: 'ComponentGanttBaseAutoHeight' } },
@@ -24,6 +23,14 @@ export const ganttNavConfig: NavVO = {
         { title: '筛选', routerLink: { name: 'ComponentGanttBaseFilter' } },
         { title: '加载中', routerLink: { name: 'ComponentGanttBaseLoading' } },
         { title: '拖拽调整视图宽度', routerLink: { name: 'ComponentGanttBaseResize' } }
+      ]
+    },
+    {
+      title: '此刻线',
+      children: [
+        { title: '高亮此刻线', routerLink: { name: 'ComponentGanttNowLineShowNowLine' } },
+        { title: '线颜色', routerLink: { name: 'ComponentGanttNowLineColor' } },
+        { title: '显示方式', routerLink: { name: 'ComponentGanttNowLineMode' } }
       ]
     },
     {
@@ -246,21 +253,39 @@ export const ganttNavConfig: NavVO = {
     {
       title: '日期轴',
       children: [
+        {
+          title: '基础配置',
+          children: [
+            { title: '年视图', routerLink: { name: 'ComponentGanttScalesYear' } },
+            { title: '季视图', routerLink: { name: 'ComponentGanttScalesYearQuartery' } },
+            { title: '月视图', routerLink: { name: 'ComponentGanttScalesYearMonth' } },
+            { title: '周视图', routerLink: { name: 'ComponentGanttScalesMonthWeek' } },
+            { title: '天视图', routerLink: { name: 'ComponentGanttScalesMonthDate' } },
+            { title: '小时视图', routerLink: { name: 'ComponentGanttScalesDateHour' } },
+            { title: '分钟视图', routerLink: { name: 'ComponentGanttScalesHourMinute' } },
+            { title: '秒视图', routerLink: { name: 'ComponentGanttScalesMinuteSecond' } }
+          ]
+        },
+        {
+          title: '设置跨度',
+          children: [
+            { title: '年视图', routerLink: { name: 'ComponentGanttScalesSetpYear' } },
+            { title: '季视图', routerLink: { name: 'ComponentGanttScalesSetpYearQuartery' } },
+            { title: '月视图', routerLink: { name: 'ComponentGanttScalesSetpYearMonth' } },
+            { title: '周视图', routerLink: { name: 'ComponentGanttScalesSetpMonthWeek' } },
+            { title: '天视图', routerLink: { name: 'ComponentGanttScalesSetpMonthDate' } },
+            { title: '小时视图', routerLink: { name: 'ComponentGanttScalesSetpDateHour' } },
+            { title: '分钟视图', routerLink: { name: 'ComponentGanttScalesSetpHourMinute' } },
+            { title: '秒视图', routerLink: { name: 'ComponentGanttScalesSetpMinuteSecond' } }
+          ]
+        },
         { title: '自定义日期轴', routerLink: { name: 'ComponentGanttScalesDefault' } },
-        { title: '年视图', routerLink: { name: 'ComponentGanttScalesYear' } },
-        { title: '季视图', routerLink: { name: 'ComponentGanttScalesYearQuartery' } },
-        { title: '月视图', routerLink: { name: 'ComponentGanttScalesYearMonth' } },
-        { title: '周视图', routerLink: { name: 'ComponentGanttScalesMonthWeek' } },
-        { title: '天视图', routerLink: { name: 'ComponentGanttScalesMonthDate' } },
-        { title: '小时视图', routerLink: { name: 'ComponentGanttScalesDateHour' } },
-        { title: '分钟视图', routerLink: { name: 'ComponentGanttScalesHourMinute' } },
-        { title: '秒视图', routerLink: { name: 'ComponentGanttScalesMinuteSecond' } },
         // { title: '日', routerLink: { name: 'ComponentGanttScalesDate' } },
-        { title: '年-月-日', routerLink: { name: 'ComponentGanttScalesYearMonthDate' } },
-        { title: '年-周-日', routerLink: { name: 'ComponentGanttScalesYearWeekDate' } },
-        { title: '季-月-日', routerLink: { name: 'ComponentGanttScalesQuarterMonthDate' } },
-        { title: '周-星期-日', routerLink: { name: 'ComponentGanttScalesMonthDayDate' } },
-        { title: '按天来显示小时', routerLink: { name: 'ComponentGanttScalesHourToDate' } },
+        // { title: '年-月-日', routerLink: { name: 'ComponentGanttScalesYearMonthDate' } },
+        // { title: '年-周-日', routerLink: { name: 'ComponentGanttScalesYearWeekDate' } },
+        // { title: '季-月-日', routerLink: { name: 'ComponentGanttScalesQuarterMonthDate' } },
+        { title: '自定义周的开始日', routerLink: { name: 'ComponentGanttScalesMonthDayDate' } },
+        // { title: '按天来显示小时', routerLink: { name: 'ComponentGanttScalesHourToDate' } },
         // { title: '日期间隔', routerLink: { name: 'ComponentGanttScalesMinuteStep' } },
         { title: '格式化列头标题', routerLink: { name: 'ComponentGanttScalesTitleFormat' } },
         { title: '自定义列头标题', routerLink: { name: 'ComponentGanttScalesTitleMethod' } },

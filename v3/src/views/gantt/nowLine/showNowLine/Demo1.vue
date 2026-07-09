@@ -34,12 +34,7 @@ export default Vue.extend({
         showProgress: true,
         showContent: true
       },
-      taskViewConfig: {
-        showNowLine: true,
-        tableStyle: {
-          width: 480
-        }
-      },
+      taskViewConfig,
       columns: [
         { type: 'seq', width: 70 },
         { field: 'title', title: '任务名称' },

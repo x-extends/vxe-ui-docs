@@ -23,14 +23,13 @@ interface RowVO {
   end: Date
   progress: number
 }
-
 export default Vue.extend({
   data () {
     const taskNowLineConfig: VxeGanttPropTypes.TaskNowLineConfig = {
       mode: 'start'
     }
 
-    const ganttOptions: VxeGanttProps<RowVO> & { taskViewConfig: VxeGanttPropTypes.TaskViewConfig } = {
+    const ganttOptions: VxeGanttProps<RowVO> = {
       border: true,
       height: 300,
       taskBarConfig: {

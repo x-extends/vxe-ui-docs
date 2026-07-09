@@ -2,8 +2,8 @@
   <div>
     <CodeLight path="gantt/scales/monthDayDate/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="周-星期-天">
-          默认周一开始，通过设置 <ApiLink name="gantt" prop="startDay"/> 来自定义一周的开始日
+        <vxe-tip status="primary" title="自定义周的开始日">
+          自定义周的开始日，默认周一开始，通过设置 <ApiLink name="gantt" prop="startDay"/> 来自定义一周的开始日
         </vxe-tip>
       </template>
     </CodeLight>

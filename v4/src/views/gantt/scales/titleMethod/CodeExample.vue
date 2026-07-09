@@ -7,5 +7,13 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="gantt/scales/titleMethod/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          自定义日期跨度时的标题
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>

@@ -146,7 +146,7 @@ export const datePickerNavConfig: NavVO = {
         { title: '可清除', routerLink: { name: 'ComponentDatePickerWeekClearable' } },
         { title: '禁用', routerLink: { name: 'ComponentDatePickerWeekDisabled' } },
         { title: '多选', routerLink: { name: 'ComponentDatePickerWeekMultiple' } },
-        { title: '自定义开始日', routerLink: { name: 'ComponentDatePickerWeekStartDay' } },
+        { title: '自定义周的开始日', routerLink: { name: 'ComponentDatePickerWeekStartDay' } },
         { title: '自定义返回值', routerLink: { name: 'ComponentDatePickerWeekSelectDay' } },
         {
           title: '快捷按钮',
