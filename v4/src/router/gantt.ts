@@ -294,22 +294,21 @@ export const ganttRouteConfig: RouteRecordRaw = {
         { path: 'hourMinute', name: 'ComponentGanttScalesHourMinute', component: () => import('@/views/gantt/scales/hourMinute/CodeExample.vue') },
         { path: 'minuteSecond', name: 'ComponentGanttScalesMinuteSecond', component: () => import('@/views/gantt/scales/minuteSecond/CodeExample.vue') },
         { path: 'hourToDate', name: 'ComponentGanttScalesHourToDate', component: () => import('@/views/gantt/scales/hourToDate/CodeExample.vue') },
-        { path: 'step', name: 'ComponentGanttScalesMinuteStep', component: () => import('@/views/gantt/scales/step/CodeExample.vue') },
         { path: 'titleFormat', name: 'ComponentGanttScalesTitleFormat', component: () => import('@/views/gantt/scales/titleFormat/CodeExample.vue') },
         { path: 'titleMethod', name: 'ComponentGanttScalesTitleMethod', component: () => import('@/views/gantt/scales/titleMethod/CodeExample.vue') },
         { path: 'headerCellStyle', name: 'ComponentGanttScalesHeaderCellStyle', component: () => import('@/views/gantt/scales/headerCellStyle/CodeExample.vue') },
         {
-          path: 'setp',
+          path: 'step',
           component: RouteLayout,
           children: [
-            { path: 'year', name: 'ComponentGanttScalesSetpYear', component: () => import('@/views/gantt/scales/setp/year/CodeExample.vue') },
-            { path: 'yearQuartery', name: 'ComponentGanttScalesSetpYearQuartery', component: () => import('@/views/gantt/scales/setp/yearQuartery/CodeExample.vue') },
-            { path: 'yearMonth', name: 'ComponentGanttScalesSetpYearMonth', component: () => import('@/views/gantt/scales/setp/yearMonth/CodeExample.vue') },
-            { path: 'monthWeek', name: 'ComponentGanttScalesSetpMonthWeek', component: () => import('@/views/gantt/scales/setp/monthWeek/CodeExample.vue') },
-            { path: 'monthDate', name: 'ComponentGanttScalesSetpMonthDate', component: () => import('@/views/gantt/scales/setp/monthDate/CodeExample.vue') },
-            { path: 'dateHour', name: 'ComponentGanttScalesSetpDateHour', component: () => import('@/views/gantt/scales/setp/dateHour/CodeExample.vue') },
-            { path: 'hourMinute', name: 'ComponentGanttScalesSetpHourMinute', component: () => import('@/views/gantt/scales/setp/hourMinute/CodeExample.vue') },
-            { path: 'minuteSecond', name: 'ComponentGanttScalesSetpMinuteSecond', component: () => import('@/views/gantt/scales/setp/minuteSecond/CodeExample.vue') }
+            { path: 'year', name: 'ComponentGanttScalesStepYear', component: () => import('@/views/gantt/scales/step/year/CodeExample.vue') },
+            { path: 'yearQuartery', name: 'ComponentGanttScalesStepYearQuartery', component: () => import('@/views/gantt/scales/step/yearQuartery/CodeExample.vue') },
+            { path: 'yearMonth', name: 'ComponentGanttScalesStepYearMonth', component: () => import('@/views/gantt/scales/step/yearMonth/CodeExample.vue') },
+            { path: 'monthWeek', name: 'ComponentGanttScalesStepMonthWeek', component: () => import('@/views/gantt/scales/step/monthWeek/CodeExample.vue') },
+            { path: 'monthDate', name: 'ComponentGanttScalesStepMonthDate', component: () => import('@/views/gantt/scales/step/monthDate/CodeExample.vue') },
+            { path: 'dateHour', name: 'ComponentGanttScalesStepDateHour', component: () => import('@/views/gantt/scales/step/dateHour/CodeExample.vue') },
+            { path: 'hourMinute', name: 'ComponentGanttScalesStepHourMinute', component: () => import('@/views/gantt/scales/step/hourMinute/CodeExample.vue') },
+            { path: 'minuteSecond', name: 'ComponentGanttScalesStepMinuteSecond', component: () => import('@/views/gantt/scales/step/minuteSecond/CodeExample.vue') }
           ]
         },
         {

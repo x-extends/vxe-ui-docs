@@ -269,14 +269,14 @@ export const ganttNavConfig: NavVO = {
         {
           title: '设置跨度',
           children: [
-            { title: '年视图', routerLink: { name: 'ComponentGanttScalesSetpYear' } },
-            { title: '季视图', routerLink: { name: 'ComponentGanttScalesSetpYearQuartery' } },
-            { title: '月视图', routerLink: { name: 'ComponentGanttScalesSetpYearMonth' } },
-            { title: '周视图', routerLink: { name: 'ComponentGanttScalesSetpMonthWeek' } },
-            { title: '天视图', routerLink: { name: 'ComponentGanttScalesSetpMonthDate' } },
-            { title: '小时视图', routerLink: { name: 'ComponentGanttScalesSetpDateHour' } },
-            { title: '分钟视图', routerLink: { name: 'ComponentGanttScalesSetpHourMinute' } },
-            { title: '秒视图', routerLink: { name: 'ComponentGanttScalesSetpMinuteSecond' } }
+            { title: '年视图', routerLink: { name: 'ComponentGanttScalesStepYear' } },
+            { title: '季视图', routerLink: { name: 'ComponentGanttScalesStepYearQuartery' } },
+            { title: '月视图', routerLink: { name: 'ComponentGanttScalesStepYearMonth' } },
+            { title: '周视图', routerLink: { name: 'ComponentGanttScalesStepMonthWeek' } },
+            { title: '天视图', routerLink: { name: 'ComponentGanttScalesStepMonthDate' } },
+            { title: '小时视图', routerLink: { name: 'ComponentGanttScalesStepDateHour' } },
+            { title: '分钟视图', routerLink: { name: 'ComponentGanttScalesStepHourMinute' } },
+            { title: '秒视图', routerLink: { name: 'ComponentGanttScalesStepMinuteSecond' } }
           ]
         },
         { title: '自定义日期轴', routerLink: { name: 'ComponentGanttScalesDefault' } },
@@ -286,7 +286,6 @@ export const ganttNavConfig: NavVO = {
         // { title: '季-月-日', routerLink: { name: 'ComponentGanttScalesQuarterMonthDate' } },
         { title: '自定义周的开始日', routerLink: { name: 'ComponentGanttScalesMonthDayDate' } },
         // { title: '按天来显示小时', routerLink: { name: 'ComponentGanttScalesHourToDate' } },
-        // { title: '日期间隔', routerLink: { name: 'ComponentGanttScalesMinuteStep' } },
         { title: '格式化列头标题', routerLink: { name: 'ComponentGanttScalesTitleFormat' } },
         { title: '自定义列头标题', routerLink: { name: 'ComponentGanttScalesTitleMethod' } },
         { title: '自定义列头样式', routerLink: { name: 'ComponentGanttScalesHeaderCellStyle' } },
