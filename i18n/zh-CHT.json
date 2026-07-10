@@ -193,7 +193,17 @@
         "showOptionJS": "選項式 JS",
         "showSetupTS": "組合式 TS",
         "showOptionTS": "選項式 TS",
-        "noExample": "暫無示例"
+        "noExample": "暫無示例",
+        "useTitle": "示例",
+        "step1": "第一步",
+        "step2": "第二步",
+        "step3": "第三步",
+        "step4": "第四步",
+        "step5": "第五步",
+        "step6": "第六步",
+        "step7": "第七步",
+        "step8": "第八步",
+        "step9": "第九步"
       }
     }
   },
