@@ -57,6 +57,7 @@ export const modalRouteConfig: RouteConfig = {
           name: 'ComponentModalConfirmGlobal',
           component: () => import('@/views/modal/confirm/global/CodeExample.vue')
         },
+        { path: 'loading', name: 'ComponentModalConfirmLoading', component: () => import('@/views/modal/confirm/loading/CodeExample.vue') },
         { path: 'html', name: 'ComponentModalConfirmHtml', component: () => import('@/views/modal/confirm/html/CodeExample.vue') },
         {
           path: 'draggable',

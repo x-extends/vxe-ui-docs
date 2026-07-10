@@ -42,6 +42,7 @@ export const modalNavConfig: NavVO = {
       i18nKey: 'app.aside.menu.modalConfirmTitle',
       children: [
         { title: '全局调用', routerLink: { name: 'ComponentModalConfirmGlobal' } },
+        { title: '加载中', routerLink: { name: 'ComponentModalConfirmLoading' } },
         { title: '显示HTML标签', routerLink: { name: 'ComponentModalConfirmHtml' } },
         { title: '弹出多个', routerLink: { name: 'ComponentModalConfirmMultiple' } },
         { title: '禁止拖动', routerLink: { name: 'ComponentModalConfirmDraggable' } },
