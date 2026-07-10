@@ -7,5 +7,13 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="icon-picker/popup/chunkSize/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          通过 <ApiLink name="icon-picker" prop="popup-config"/>.<ApiLink name="icon-picker" prop="chunkWidth"/> 图标宽度来显示数量
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>
