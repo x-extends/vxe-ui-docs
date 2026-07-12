@@ -337,7 +337,8 @@ export const treeRouteConfig: RouteRecordRaw = {
       component: RouteLayout,
       children: [
         { path: 'extra', name: 'ComponentTreeOtherExtra', component: () => import('@/views/tree/other/extra/CodeExample.vue') },
-        { path: 'scrollTo', name: 'ComponentTreeOtherScrollTo', component: () => import('@/views/tree/other/scrollTo/CodeExample.vue') }
+        { path: 'scrollTo', name: 'ComponentTreeOtherScrollTo', component: () => import('@/views/tree/other/scrollTo/CodeExample.vue') },
+        { path: 'treeTransfer', name: 'ComponentTreeOtherTreeTransfer', component: () => import('@/views/tree/other/treeTransfer/CodeExample.vue') }
       ]
     }
   ]

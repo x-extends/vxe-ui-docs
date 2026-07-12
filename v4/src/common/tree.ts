@@ -149,7 +149,8 @@ export const treeNavConfig: NavVO = {
       title: '功能示例',
       children: [
         { title: '实现右侧下拉按钮', routerLink: { name: 'ComponentTreeOtherExtra' } },
-        { title: '滚动到节点', routerLink: { name: 'ComponentTreeOtherScrollTo' } }
+        { title: '滚动到节点', routerLink: { name: 'ComponentTreeOtherScrollTo' } },
+        { title: '实现树穿梭框选择', routerLink: { name: 'ComponentTreeOtherTreeTransfer' } }
       ]
     }
   ]

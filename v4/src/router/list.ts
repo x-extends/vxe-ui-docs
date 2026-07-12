@@ -108,7 +108,8 @@ export const listRouteConfig: RouteRecordRaw = {
       component: RouteLayout,
       children: [
         { path: 'vn', name: 'ComponentListOtherVn', component: () => import('@/views/list/other/vn/CodeExample.vue') },
-        { path: 'table', name: 'ComponentListOtherTable', component: () => import('@/views/list/other/table/CodeExample.vue') }
+        { path: 'table', name: 'ComponentListOtherTable', component: () => import('@/views/list/other/table/CodeExample.vue') },
+        { path: 'listTransfer', name: 'ComponentListOtherListTransfer', component: () => import('@/views/list/other/listTransfer/CodeExample.vue') }
       ]
     }
   ]

@@ -81,6 +81,56 @@ export const navConfigList: NavVO[] = [
     showCount: true,
     children: [
       {
+        title: 'Layout 页面布局',
+        children: [
+          { title: 'Layout Container API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-container' } }, keywords: 'vxe-layout-container' },
+          { title: 'Layout Aside API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-aside' } }, keywords: 'vxe-layout-aside' },
+          { title: 'Layout Header API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-header' } }, keywords: 'vxe-layout-header' },
+          { title: 'Layout Body API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-body' } }, keywords: 'vxe-layout-body' },
+          { title: 'Layout Footer API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-footer' } }, keywords: 'vxe-layout-footer' },
+          { title: '基础布局', routerLink: { name: 'ComponentLayoutBase' } },
+          { title: '固定头部和底部', routerLink: { name: 'ComponentLayoutFixed' } },
+          { title: '侧边栏，内容区滚动条', routerLink: { name: 'ComponentLayoutAside' } },
+          { title: '头部固定，中间内容区滚动', routerLink: { name: 'ComponentLayoutHeader' } },
+          { title: '左侧与内容区滚动', routerLink: { name: 'ComponentLayoutBody' } }
+        ]
+      },
+      {
+        title: 'Backtop 回到顶部',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'backtop' } }, keywords: 'vxe-backtop' },
+          { title: '尺寸大小', routerLink: { name: 'ComponentBacktopSize' } },
+          { title: '状态颜色', routerLink: { name: 'ComponentBacktopStatus' } },
+          { title: '圆形', routerLink: { name: 'ComponentBacktopCircle' } },
+          { title: '图标', routerLink: { name: 'ComponentBacktopIcon' } },
+          { title: '文字', routerLink: { name: 'ComponentBacktopContent' } },
+          { title: '自定义位置', routerLink: { name: 'ComponentBacktopPos' } },
+          {
+            title: '自定义插槽模板',
+            children: [
+              { title: '自定义内容模板', routerLink: { name: 'ComponentBacktopTemplateDefault' } },
+              { title: '自定义顶部模板', routerLink: { name: 'ComponentBacktopTemplateTop' } },
+              { title: '自定义底部模板', routerLink: { name: 'ComponentBacktopTemplateBottom' } }
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Row 行与列',
+        children: [
+          { title: 'Row API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'row' } }, keywords: 'vxe-row' },
+          { title: 'Col API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'col' } }, keywords: 'vxe-col' },
+          { title: '占比', routerLink: { name: 'ComponentRowBase' } },
+          { title: '垂直布局', routerLink: { name: 'ComponentRowVertical' } },
+          { title: '自动换行', routerLink: { name: 'ComponentRowWrap' } },
+          { title: '间距', routerLink: { name: 'ComponentRowGutter' } },
+          { title: '固定宽度', routerLink: { name: 'ComponentRowColWidth' } },
+          { title: '铺满宽度', routerLink: { name: 'ComponentRowColFill' } },
+          { title: '对齐方式', routerLink: { name: 'ComponentRowColAlign' } },
+          { title: '溢出隐藏', routerLink: { name: 'ComponentRowColEllipsis' } }
+        ]
+      },
+      {
         i18nKey: 'app.aside.menu.iconTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon' } }, keywords: 'vxe-icon' },
@@ -191,57 +241,101 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
-    i18nKey: 'app.aside.menu.layoutTitle',
+    i18nKey: 'app.aside.menu.displayTitle',
     showCount: true,
     children: [
       {
-        title: 'Layout 页面布局',
+        title: 'Avatar 头像',
         children: [
-          { title: 'Layout Container API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-container' } }, keywords: 'vxe-layout-container' },
-          { title: 'Layout Aside API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-aside' } }, keywords: 'vxe-layout-aside' },
-          { title: 'Layout Header API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-header' } }, keywords: 'vxe-layout-header' },
-          { title: 'Layout Body API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-body' } }, keywords: 'vxe-layout-body' },
-          { title: 'Layout Footer API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-footer' } }, keywords: 'vxe-layout-footer' },
-          { title: '基础布局', routerLink: { name: 'ComponentLayoutBase' } },
-          { title: '固定头部和底部', routerLink: { name: 'ComponentLayoutFixed' } },
-          { title: '侧边栏，内容区滚动条', routerLink: { name: 'ComponentLayoutAside' } },
-          { title: '头部固定，中间内容区滚动', routerLink: { name: 'ComponentLayoutHeader' } },
-          { title: '左侧与内容区滚动', routerLink: { name: 'ComponentLayoutBody' } }
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'avatar' } } },
+          { title: '基础', routerLink: { name: 'ComponentAvatarBase' } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentAvatarSize' } },
+          { title: '图标', routerLink: { name: 'ComponentAvatarIcon' } },
+          { title: '圆形', routerLink: { name: 'ComponentAvatarCircle' } },
+          { title: '状态颜色', routerLink: { name: 'ComponentAvatarStatus' } },
+          { title: '小圆点', routerLink: { name: 'ComponentAvatarDot' } },
+          { title: '微标数量', routerLink: { name: 'ComponentAvatarCount' } }
         ]
       },
       {
-        title: 'Backtop 回到顶部',
+        title: 'Badge 微标',
         children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'backtop' } }, keywords: 'vxe-backtop' },
-          { title: '尺寸大小', routerLink: { name: 'ComponentBacktopSize' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentBacktopStatus' } },
-          { title: '圆形', routerLink: { name: 'ComponentBacktopCircle' } },
-          { title: '图标', routerLink: { name: 'ComponentBacktopIcon' } },
-          { title: '文字', routerLink: { name: 'ComponentBacktopContent' } },
-          { title: '自定义位置', routerLink: { name: 'ComponentBacktopPos' } },
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'badge' } } },
+          { title: '基础', routerLink: { name: 'ComponentBadgeBase' } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentBadgerSize' } },
+          { title: '图标', routerLink: { name: 'ComponentBadgerIcon' } },
+          { title: '小圆点', routerLink: { name: 'ComponentBadgerDot' } }
+        ]
+      },
+      {
+        i18nKey: 'app.aside.menu.textEllipsisTitle',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'text-ellipsis' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentTextEllipsisSize' } },
+          { title: '状态颜色', routerLink: { name: 'ComponentTextEllipsisStatus' } },
+          { title: '单行溢出省略', routerLink: { name: 'ComponentTextEllipsisIconLineSingle' } },
+          { title: '多行溢出省略', routerLink: { name: 'ComponentTextEllipsisLineClamp' } }
+        ]
+      },
+      {
+        title: 'Image 图片',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image' } } },
+          { title: '设置宽高', routerLink: { name: 'ComponentImageBase' } },
+          { title: '圆形图片', routerLink: { name: 'ComponentImageCircle' } },
+          { title: '预览链接', routerLink: { name: 'ComponentImageThumbnail' } },
+          { title: '预览多张图片', routerLink: { name: 'ComponentImageMultiple' } },
+          { title: '懒加载', routerLink: { name: 'ComponentImageLazy' } },
+          { title: '预览', routerLink: { name: 'ComponentImageShowPreview' } },
+          { title: '点击遮罩层关闭', routerLink: { name: 'ComponentImageMaskClosable' } },
+          // { title: '打印按钮', routerLink: { name: 'ComponentImageShowPrintButton' } },
+          { title: '工具栏按钮', routerLink: { name: 'ComponentImageToolBtn' } },
+          { title: '工具栏图标', routerLink: { name: 'ComponentImageToolIcon' } },
+          { title: '事件监听', routerLink: { name: 'ComponentImageEvents' } }
+        ]
+      },
+      {
+        title: 'ImageGroup 图片组',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image-group' } } },
+          { title: '设置宽高', routerLink: { name: 'ComponentImageGroupBase' } },
+          { title: '预览', routerLink: { name: 'ComponentImageGroupShowPreview' } },
+          { title: '打印按钮', routerLink: { name: 'ComponentImageGroupShowPrintButton' } },
+          { title: '下载按钮', routerLink: { name: 'ComponentImageGroupShowDownloadButton' } }
+        ]
+      },
+      {
+        title: 'ImagePreview 图片预览',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image-preview' } } },
+          { title: '打开预览', routerLink: { name: 'ComponentImagePreview' } }
+        ]
+      },
+      {
+        title: 'Calendar 日历',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'calendar' } } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentCalendarSize' } },
+          { title: '高度', routerLink: { name: 'ComponentCalendarHeight' } },
+          { title: '日期视图', routerLink: { name: 'ComponentCalendarDate' } },
+          { title: '周视图', routerLink: { name: 'ComponentCalendarWeek' } },
+          { title: '月度图', routerLink: { name: 'ComponentCalendarMonth' } },
+          { title: '季度图', routerLink: { name: 'ComponentCalendarQuarter' } },
+          { title: '年度视图', routerLink: { name: 'ComponentCalendarYear' } },
+          { title: '自定义样式', routerLink: { name: 'ComponentCalendarCellStyle' } },
+          { title: '显示节假日', routerLink: { name: 'ComponentCalendarFestivalMethod' } },
+          { title: '事件监听', routerLink: { name: 'ComponentCalendarFestivalEvents' } },
           {
-            title: '自定义插槽模板',
+            title: '右键菜单',
             children: [
-              { title: '自定义内容模板', routerLink: { name: 'ComponentBacktopTemplateDefault' } },
-              { title: '自定义顶部模板', routerLink: { name: 'ComponentBacktopTemplateTop' } },
-              { title: '自定义底部模板', routerLink: { name: 'ComponentBacktopTemplateBottom' } }
+              { title: '配置菜单', routerLink: { name: 'ComponentCalendarMenuBasics' } },
+              { title: '前缀与后缀', routerLink: { name: 'ComponentCalendarMenuIcon' } },
+              { title: '是否禁用', routerLink: { name: 'ComponentCalendarMenuDisabled' } },
+              { title: '是否显示', routerLink: { name: 'ComponentCalendarMenuVisible' } },
+              { title: '异步加载中', routerLink: { name: 'ComponentCalendarMenuLoading' } },
+              { title: '权限控制', routerLink: { name: 'ComponentCalendarMenuVisibleMethod' } }
             ]
           }
-        ]
-      },
-      {
-        title: 'Row 行与列',
-        children: [
-          { title: 'Row API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'row' } }, keywords: 'vxe-row' },
-          { title: 'Col API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'col' } }, keywords: 'vxe-col' },
-          { title: '占比', routerLink: { name: 'ComponentRowBase' } },
-          { title: '垂直布局', routerLink: { name: 'ComponentRowVertical' } },
-          { title: '自动换行', routerLink: { name: 'ComponentRowWrap' } },
-          { title: '间距', routerLink: { name: 'ComponentRowGutter' } },
-          { title: '固定宽度', routerLink: { name: 'ComponentRowColWidth' } },
-          { title: '铺满宽度', routerLink: { name: 'ComponentRowColFill' } },
-          { title: '对齐方式', routerLink: { name: 'ComponentRowColAlign' } },
-          { title: '溢出隐藏', routerLink: { name: 'ComponentRowColEllipsis' } }
         ]
       },
       // { title: 'Progress 进度条' },
@@ -357,106 +451,6 @@ export const navConfigList: NavVO[] = [
             ]
           },
           { title: '权限码', routerLink: { name: 'ComponentTabsPermissionCode' } }
-        ]
-      }
-    ]
-  },
-  {
-    i18nKey: 'app.aside.menu.displayTitle',
-    showCount: true,
-    children: [
-      {
-        title: 'Avatar 头像',
-        children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'avatar' } } },
-          { title: '基础', routerLink: { name: 'ComponentAvatarBase' } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentAvatarSize' } },
-          { title: '图标', routerLink: { name: 'ComponentAvatarIcon' } },
-          { title: '圆形', routerLink: { name: 'ComponentAvatarCircle' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentAvatarStatus' } },
-          { title: '小圆点', routerLink: { name: 'ComponentAvatarDot' } },
-          { title: '微标数量', routerLink: { name: 'ComponentAvatarCount' } }
-        ]
-      },
-      {
-        title: 'Badge 微标',
-        children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'badge' } } },
-          { title: '基础', routerLink: { name: 'ComponentBadgeBase' } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentBadgerSize' } },
-          { title: '图标', routerLink: { name: 'ComponentBadgerIcon' } },
-          { title: '小圆点', routerLink: { name: 'ComponentBadgerDot' } }
-        ]
-      },
-      {
-        i18nKey: 'app.aside.menu.textEllipsisTitle',
-        children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'text-ellipsis' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentTextEllipsisSize' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentTextEllipsisStatus' } },
-          { title: '单行溢出省略', routerLink: { name: 'ComponentTextEllipsisIconLineSingle' } },
-          { title: '多行溢出省略', routerLink: { name: 'ComponentTextEllipsisLineClamp' } }
-        ]
-      },
-      {
-        title: 'Image 图片',
-        children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image' } } },
-          { title: '设置宽高', routerLink: { name: 'ComponentImageBase' } },
-          { title: '圆形图片', routerLink: { name: 'ComponentImageCircle' } },
-          { title: '预览链接', routerLink: { name: 'ComponentImageThumbnail' } },
-          { title: '预览多张图片', routerLink: { name: 'ComponentImageMultiple' } },
-          { title: '懒加载', routerLink: { name: 'ComponentImageLazy' } },
-          { title: '预览', routerLink: { name: 'ComponentImageShowPreview' } },
-          { title: '点击遮罩层关闭', routerLink: { name: 'ComponentImageMaskClosable' } },
-          // { title: '打印按钮', routerLink: { name: 'ComponentImageShowPrintButton' } },
-          { title: '工具栏按钮', routerLink: { name: 'ComponentImageToolBtn' } },
-          { title: '工具栏图标', routerLink: { name: 'ComponentImageToolIcon' } },
-          { title: '事件监听', routerLink: { name: 'ComponentImageEvents' } }
-        ]
-      },
-      {
-        title: 'ImageGroup 图片组',
-        children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image-group' } } },
-          { title: '设置宽高', routerLink: { name: 'ComponentImageGroupBase' } },
-          { title: '预览', routerLink: { name: 'ComponentImageGroupShowPreview' } },
-          { title: '打印按钮', routerLink: { name: 'ComponentImageGroupShowPrintButton' } },
-          { title: '下载按钮', routerLink: { name: 'ComponentImageGroupShowDownloadButton' } }
-        ]
-      },
-      {
-        title: 'ImagePreview 图片预览',
-        children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image-preview' } } },
-          { title: '打开预览', routerLink: { name: 'ComponentImagePreview' } }
-        ]
-      },
-      {
-        title: 'Calendar 日历',
-        children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'calendar' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentCalendarSize' } },
-          { title: '高度', routerLink: { name: 'ComponentCalendarHeight' } },
-          { title: '日期视图', routerLink: { name: 'ComponentCalendarDate' } },
-          { title: '周视图', routerLink: { name: 'ComponentCalendarWeek' } },
-          { title: '月度图', routerLink: { name: 'ComponentCalendarMonth' } },
-          { title: '季度图', routerLink: { name: 'ComponentCalendarQuarter' } },
-          { title: '年度视图', routerLink: { name: 'ComponentCalendarYear' } },
-          { title: '自定义样式', routerLink: { name: 'ComponentCalendarCellStyle' } },
-          { title: '显示节假日', routerLink: { name: 'ComponentCalendarFestivalMethod' } },
-          { title: '事件监听', routerLink: { name: 'ComponentCalendarFestivalEvents' } },
-          {
-            title: '右键菜单',
-            children: [
-              { title: '配置菜单', routerLink: { name: 'ComponentCalendarMenuBasics' } },
-              { title: '前缀与后缀', routerLink: { name: 'ComponentCalendarMenuIcon' } },
-              { title: '是否禁用', routerLink: { name: 'ComponentCalendarMenuDisabled' } },
-              { title: '是否显示', routerLink: { name: 'ComponentCalendarMenuVisible' } },
-              { title: '异步加载中', routerLink: { name: 'ComponentCalendarMenuLoading' } },
-              { title: '权限控制', routerLink: { name: 'ComponentCalendarMenuVisibleMethod' } }
-            ]
-          }
         ]
       }
     ]

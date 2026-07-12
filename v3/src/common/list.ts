@@ -96,7 +96,8 @@ export const listNavConfig: NavVO = {
       title: '功能示例',
       children: [
         { title: '纵向虚拟列表', routerLink: { name: 'ComponentListOtherVn' } },
-        { title: '实现轻量级虚拟表格', routerLink: { name: 'ComponentListOtherTable' } }
+        { title: '实现轻量级虚拟表格', routerLink: { name: 'ComponentListOtherTable' } },
+        { title: '实现列表穿梭框选择', routerLink: { name: 'ComponentListOtherListTransfer' } }
       ]
     }
   ]
