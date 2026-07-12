@@ -78,6 +78,7 @@ export const navConfigList: NavVO[] = [
   },
   {
     i18nKey: 'app.aside.menu.baseTitle',
+    showCount: true,
     children: [
       {
         i18nKey: 'app.aside.menu.iconTitle',
@@ -191,6 +192,7 @@ export const navConfigList: NavVO[] = [
   },
   {
     i18nKey: 'app.aside.menu.layoutTitle',
+    showCount: true,
     children: [
       {
         title: 'Layout 页面布局',
@@ -361,6 +363,7 @@ export const navConfigList: NavVO[] = [
   },
   {
     i18nKey: 'app.aside.menu.displayTitle',
+    showCount: true,
     children: [
       {
         title: 'Avatar 头像',
@@ -460,6 +463,7 @@ export const navConfigList: NavVO[] = [
   },
   {
     i18nKey: 'app.aside.menu.navigationTitle',
+    showCount: true,
     children: [
       {
         title: 'Breadcrumb 面包屑',
@@ -547,6 +551,7 @@ export const navConfigList: NavVO[] = [
   },
   {
     i18nKey: 'app.aside.menu.dataTitle',
+    showCount: true,
     children: [
       formNavConfig,
       {
@@ -1277,6 +1282,7 @@ export const navConfigList: NavVO[] = [
   tableNavConfig,
   {
     i18nKey: 'app.aside.menu.feedbackTitle',
+    showCount: true,
     children: [
       {
         i18nKey: 'app.aside.menu.emptyTitle',
@@ -1395,6 +1401,7 @@ export const navConfigList: NavVO[] = [
   designNavConfig,
   {
     i18nKey: 'app.aside.menu.otherTitle',
+    showCount: true,
     children: [
       {
         title: 'Watermark 水印',
@@ -1458,6 +1465,7 @@ export const navConfigList: NavVO[] = [
   {
     title: 'API',
     isExpand: true,
+    showCount: true,
     children: []
   }
 ]

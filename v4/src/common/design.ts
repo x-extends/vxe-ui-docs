@@ -2,6 +2,8 @@ import { NavVO, otherUrl } from './nav'
 
 export const designNavConfig: NavVO = {
   i18nKey: 'app.aside.menu.designTitle',
+  showCount: true,
+  keywords: 'vxe-design',
   children: [
     {
       i18nKey: 'app.aside.menu.formDesignTitle',
