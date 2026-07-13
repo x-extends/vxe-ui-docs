@@ -1,6 +1,8 @@
 <template>
   <div>
     <p>
+      <vxe-icon name="home" size="xlarge">特大尺寸</vxe-icon>
+      <vxe-icon name="home" size="large">大型尺寸</vxe-icon>
       <vxe-icon name="home">默认尺寸</vxe-icon>
       <vxe-icon name="home" size="medium">中等尺寸</vxe-icon>
       <vxe-icon name="home" size="small">小型尺寸</vxe-icon>

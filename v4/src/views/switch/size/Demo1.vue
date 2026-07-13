@@ -1,9 +1,11 @@
 <template>
   <div>
-    <vxe-switch v-model="val1"></vxe-switch>
-    <vxe-switch v-model="val2" size="medium"></vxe-switch>
-    <vxe-switch v-model="val3" size="small"></vxe-switch>
-    <vxe-switch v-model="val4" size="mini"></vxe-switch>
+    <vxe-switch v-model="val1" size="xlarge"></vxe-switch>
+    <vxe-switch v-model="val2" size="large"></vxe-switch>
+    <vxe-switch v-model="val3"></vxe-switch>
+    <vxe-switch v-model="val4" size="medium"></vxe-switch>
+    <vxe-switch v-model="val5" size="small"></vxe-switch>
+    <vxe-switch v-model="val6" size="mini"></vxe-switch>
   </div>
 </template>
 
@@ -14,4 +16,6 @@ const val1 = ref(false)
 const val2 = ref(false)
 const val3 = ref(false)
 const val4 = ref(false)
+const val5 = ref(false)
+const val6 = ref(false)
 </script>

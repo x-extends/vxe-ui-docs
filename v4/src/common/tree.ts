@@ -11,6 +11,7 @@ export const treeNavConfig: NavVO = {
         { title: '尺寸大小', routerLink: { name: 'ComponentTreeBaseSize' } },
         { title: '层级结构', routerLink: { name: 'ComponentTreeBaseHierarchy' } },
         { title: '平级结构', routerLink: { name: 'ComponentTreeBaseLeveling' } },
+        { title: '空数据', routerLink: { name: 'ComponentTreeBaseEmptyText' } },
         { title: '高度', routerLink: { name: 'ComponentTreeBaseHeight' } },
         { title: '加载中', routerLink: { name: 'ComponentTreeBaseLoading' } },
         { title: '自定义字段', routerLink: { name: 'ComponentTreeBaseField' } },
@@ -142,7 +143,8 @@ export const treeNavConfig: NavVO = {
         { title: '自定义图标模板', routerLink: { name: 'ComponentTreeTemplateIcon' } },
         { title: '自定义右侧模板', routerLink: { name: 'ComponentTreeTemplateExtra' } },
         { title: '自定义头部模板', routerLink: { name: 'ComponentTreeTemplateHeader' } },
-        { title: '自定义尾部模板', routerLink: { name: 'ComponentTreeTemplateFooter' } }
+        { title: '自定义尾部模板', routerLink: { name: 'ComponentTreeTemplateFooter' } },
+        { title: '自定义空数据模板', routerLink: { name: 'ComponentTreeTemplateEmpty' } }
       ]
     },
     {

@@ -1528,6 +1528,7 @@ const routes: Array<RouteConfig> = [
             path: 'number',
             component: RouteLayout,
             children: [
+              { path: 'size', name: 'ComponentNumberInputNumberSize', component: () => import('@/views/number-input/number/size/CodeExample.vue') },
               {
                 path: 'base',
                 name: 'ComponentNumberInputNumberBase',

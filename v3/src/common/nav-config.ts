@@ -673,6 +673,7 @@ export const navConfigList: NavVO[] = [
           {
             title: '数值',
             children: [
+              { title: '尺寸大小', routerLink: { name: 'ComponentNumberInputNumberSize' } },
               { title: '基础', routerLink: { name: 'ComponentNumberInputNumberBase' } },
               { title: '可清除', routerLink: { name: 'ComponentNumberInputNumberClearable' } },
               { title: '只读模式', routerLink: { name: 'ComponentNumberInputNumberReadonly' } },

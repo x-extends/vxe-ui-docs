@@ -20,6 +20,7 @@ export const treeRouteConfig: RouteRecordRaw = {
           name: 'ComponentTreeBaseSize',
           component: () => import('@/views/tree/base/size/CodeExample.vue')
         },
+        { path: 'emptyText', name: 'ComponentTreeBaseEmptyText', component: () => import('@/views/tree/base/emptyText/CodeExample.vue') },
         {
           path: 'height',
           name: 'ComponentTreeBaseHeight',
@@ -329,7 +330,8 @@ export const treeRouteConfig: RouteRecordRaw = {
           path: 'footer',
           name: 'ComponentTreeTemplateFooter',
           component: () => import('@/views/tree/template/footer/CodeExample.vue')
-        }
+        },
+        { path: 'empty', name: 'ComponentTreeTemplateEmpty', component: () => import('@/views/tree/template/empty/CodeExample.vue') }
       ]
     },
     {

@@ -1,5 +1,19 @@
 <template>
   <div>
+    <vxe-button size="xlarge" transfer>
+      <template #default>特大尺寸</template>
+      <template #dropdowns>
+        <vxe-button mode="text" content="下拉按钮1"></vxe-button>
+        <vxe-button mode="text" content="下拉按钮3"></vxe-button>
+      </template>
+    </vxe-button>
+    <vxe-button size="large" transfer>
+      <template #default>大型尺寸</template>
+      <template #dropdowns>
+        <vxe-button mode="text" content="下拉按钮1"></vxe-button>
+        <vxe-button mode="text" content="下拉按钮3"></vxe-button>
+      </template>
+    </vxe-button>
     <vxe-button transfer>
       <template #default>默认尺寸</template>
       <template #dropdowns>
