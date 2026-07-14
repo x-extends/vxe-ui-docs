@@ -39,12 +39,12 @@ export default Vue.extend({
       props: {
         completedBgColor ({ row }) {
           if (row.num43 > 80) {
-            return '#9bd1b8'
+            return '#8de0ba'
           }
           if (row.num43 > 60) {
-            return '#ffe566'
+            return '#e0c43c'
           }
-          return '#c23531'
+          return '#f18582'
         }
       }
     }
