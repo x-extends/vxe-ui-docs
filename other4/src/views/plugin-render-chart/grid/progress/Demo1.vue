@@ -37,7 +37,7 @@ const num43CellRender = reactive<VxeColumnPropTypes.CellRender>({
   props: {
     completedBgColor ({ row }) {
       if (row.num43 > 70) {
-        return '9bd1b8'
+        return '#9bd1b8'
       }
       if (row.num43 > 30) {
         return '#ffe566'
