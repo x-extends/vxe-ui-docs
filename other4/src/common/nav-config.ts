@@ -16,6 +16,7 @@ export const navConfigList: NavVO[] = [
         title: 'Table 基础表格',
         children: [
           { title: '评分', routerLink: { name: 'PluginRenderChartTableRate' } },
+          { title: '进度条', routerLink: { name: 'PluginRenderChartTableProgress' } },
           { title: '柱状图', routerLink: { name: 'PluginRenderChartTableBar' } },
           { title: '饼图', routerLink: { name: 'PluginRenderChartTablePie' } }
         ]
@@ -24,6 +25,7 @@ export const navConfigList: NavVO[] = [
         title: 'Grid 配置式表格',
         children: [
           { title: '评分', routerLink: { name: 'PluginRenderChartGridRate' } },
+          { title: '进度条', routerLink: { name: 'PluginRenderChartGridProgress' } },
           { title: '柱状图', routerLink: { name: 'PluginRenderChartGridBar' } },
           { title: '饼图', routerLink: { name: 'PluginRenderChartGridPie' } }
         ]

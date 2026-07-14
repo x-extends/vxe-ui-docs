@@ -158,6 +158,11 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/plugin-render-chart/table/rate/CodeExample.vue')
           },
           {
+            path: 'progress',
+            name: 'PluginRenderChartTableProgress',
+            component: () => import('@/views/plugin-render-chart/table/progress/CodeExample.vue')
+          },
+          {
             path: 'bar',
             name: 'PluginRenderChartTableBar',
             component: () => import('@/views/plugin-render-chart/table/bar/CodeExample.vue')
@@ -177,6 +182,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'rate',
             name: 'PluginRenderChartGridRate',
             component: () => import('@/views/plugin-render-chart/grid/rate/CodeExample.vue')
+          },
+          {
+            path: 'progress',
+            name: 'PluginRenderChartGridProgress',
+            component: () => import('@/views/plugin-render-chart/grid/progress/CodeExample.vue')
           },
           {
             path: 'bar',
