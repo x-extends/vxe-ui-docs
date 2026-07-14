@@ -52,7 +52,7 @@ graph TD;
     filter[筛选]-->modules;
     Button-->filter;
     edit[可编辑]-->modules;
-    custom[个性化列设置]-->modules;
+    custom[个性化设置]-->modules;
     Button-->custom;
     Vvalidator[数据校验]-->modules;
     keyboard[按键导航]-->modules;

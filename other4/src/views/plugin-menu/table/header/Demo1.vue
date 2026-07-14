@@ -36,7 +36,7 @@ const menuConfig = reactive<VxeTablePropTypes.MenuConfig>({
       [
         { code: 'COPY_TITLE', name: '复制列标题' },
         { code: 'HIDDEN_COLUMN', name: '隐藏列' },
-        { code: 'RESET_COLUMN', name: '重置个性化列' }
+        { code: 'RESET_COLUMN', name: '重置个性化设置' }
       ]
     ]
   }

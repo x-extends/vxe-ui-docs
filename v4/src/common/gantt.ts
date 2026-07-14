@@ -235,7 +235,7 @@ export const ganttNavConfig: NavVO = {
       ]
     },
     {
-      title: '个性化列',
+      title: '个性化设置',
       children: [
         { title: '使用工具栏', routerLink: { name: 'ComponentGanttCustomsToolbar' } },
         { title: '窗口模式', routerLink: { name: 'ComponentGanttCustomsModal' } },
