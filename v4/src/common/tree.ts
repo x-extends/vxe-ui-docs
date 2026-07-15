@@ -2,6 +2,7 @@ import { NavVO } from './nav'
 
 export const treeNavConfig: NavVO = {
   i18nKey: 'app.aside.menu.treeTitle',
+  icon: 'vxe-icon-grouping',
   children: [
     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tree' } } },
     {

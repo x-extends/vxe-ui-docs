@@ -97,7 +97,7 @@
         "modal": {},
         "otherTitle": "Other 其他组件",
         "printTitle": "Print 打印",
-        "designTitle": "Design 可视化",
+        "designTitle": "Design 设计器",
         "formDesignTitle": "FormDesign 表单设计器",
         "formDesignUse": "使用设计器",
         "formDesignGlobalRenderer": "渲染器（高阶复用）",

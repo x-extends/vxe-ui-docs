@@ -2,6 +2,7 @@ import { NavVO, otherUrl } from './nav'
 
 export const designNavConfig: NavVO = {
   i18nKey: 'app.aside.menu.designTitle',
+  icon: 'vxe-icon-association-form',
   showCount: true,
   keywords: 'vxe-design',
   children: [
@@ -48,14 +49,14 @@ export const designNavConfig: NavVO = {
                 { title: '自定义头部模板', routerLink: { name: 'ComponentFormDesignTemplateHeader' } }
               ]
             },
-            { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form-design/renderView` }
+            { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form-design/renderView`, linkTarget: '_blank' }
           ]
         },
         {
           title: '设计器模板',
           children: [
-            { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/' },
-            { title: '零代码平台模板', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/' }
+            { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/', linkTarget: '_blank' },
+            { title: '零代码平台模板', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/', linkTarget: '_blank' }
           ]
         },
         {

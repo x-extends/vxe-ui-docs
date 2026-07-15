@@ -2,6 +2,7 @@ import { NavVO } from './nav'
 
 export const modalNavConfig: NavVO = {
   i18nKey: 'app.aside.menu.modalTitle',
+  icon: 'vxe-icon-modal',
   children: [
     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'modal' } } },
     {

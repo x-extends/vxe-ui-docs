@@ -17,7 +17,7 @@ export const designNavConfig: NavVO = {
         //     { title: '移动端设计器', routerLink: { name: 'ComponentFormDesignMobile' } },
         //     { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentFormDesignPcAndMobile' } },
         //     { title: '渲染视图', routerLink: { name: 'ComponentFormDesignRenderView' } },
-        //     { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form-design/renderView` }
+        //     { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form-design/renderView`, linkTarget: '_blank' }
         //   ]
         // },
         // {
@@ -52,7 +52,7 @@ export const designNavConfig: NavVO = {
     }
     // { title: 'FlowDesign 流程设计器' },
     // { title: 'PrintDesign 打印设计器' },
-    // { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/' },
-    // { title: '零代码平台模板', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/' }
+    // { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/', linkTarget: '_blank' },
+    // { title: '零代码平台模板', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/', linkTarget: '_blank' }
   ]
 }

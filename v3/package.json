@@ -21,8 +21,8 @@
     "vuex": "~3.6.2",
     "vxe-design": "~3.0.1",
     "vxe-gantt": "~3.6.0",
-    "vxe-pc-ui": "~3.16.10",
-    "vxe-table": "~3.22.1",
+    "vxe-pc-ui": "~3.16.11",
+    "vxe-table": "~3.22.2",
     "xe-utils": "^4.0.11"
   },
   "devDependencies": {
