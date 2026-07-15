@@ -2,8 +2,8 @@
   <div>
     <div style="width: 260px">
       <vxe-menu v-model="selectNav" :options="navList" @click="clickEvent">
-        <template #option="{ currentMenu }">
-          <span style="color: red;">无间距：{{ currentMenu.title }}</span>
+        <template #option="{ option }">
+          <span style="color: red;">无间距：{{ option.title }}</span>
         </template>
       </vxe-menu>
     </div>
@@ -41,8 +41,8 @@ export default Vue.extend({
     }
   },
   methods: {
-    clickEvent ({ currentMenu }) {
-      console.log(currentMenu.name)
+    clickEvent ({ option }) {
+      console.log(option.name)
     }
   }
 })

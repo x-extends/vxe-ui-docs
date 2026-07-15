@@ -61,7 +61,7 @@ const navList = ref<VxeMenuPropTypes.Options>([
   }
 ])
 
-const clickEvent: VxeMenuEvents.Click = ({ currentMenu }) => {
-  console.log(currentMenu.name)
+const clickEvent: VxeMenuEvents.Click = ({ currentOption }) => {
+  console.log(currentOption.name)
 }
 </script>

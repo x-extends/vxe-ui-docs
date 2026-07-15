@@ -41,8 +41,8 @@ export default Vue.extend({
     }
   },
   methods: {
-    clickEvent ({ currentMenu }) {
-      console.log(currentMenu.name)
+    clickEvent ({ option }) {
+      console.log(option.name)
     }
   }
 })

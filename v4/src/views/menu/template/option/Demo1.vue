@@ -2,8 +2,8 @@
   <div>
     <div style="width: 260px">
       <vxe-menu v-model="selectNav" :options="navList" @click="clickEvent">
-        <template #option="{ currentMenu }">
-          <span style="color: red">无间距：{{ currentMenu.title }}</span>
+        <template #option="{ option }">
+          <span style="color: red">无间距：{{ option.title }}</span>
         </template>
       </vxe-menu>
     </div>
@@ -34,7 +34,7 @@ const navList = ref<VxeMenuPropTypes.Options>([
   }
 ])
 
-const clickEvent: VxeMenuEvents.Click = ({ currentMenu }) => {
-  console.log(currentMenu.name)
+const clickEvent: VxeMenuEvents.Click = ({ option }) => {
+  console.log(option.name)
 }
 </script>

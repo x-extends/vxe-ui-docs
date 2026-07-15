@@ -2,12 +2,12 @@
   <div>
     <div style="width: 260px">
       <vxe-menu v-model="selectNav" :options="navList" @click="clickEvent">
-        <template #homeTitle="{ currentMenu }">
-          <span style="color: red">🔥{{ currentMenu.title }}</span>
+        <template #homeTitle="{ option }">
+          <span style="color: red">🔥{{ option.title }}</span>
         </template>
 
-        <template #changePasswordTitle="{ currentMenu }">
-          <span style="color: orange">{{ currentMenu.title }}🔥</span>
+        <template #changePasswordTitle="{ option }">
+          <span style="color: orange">{{ option.title }}🔥</span>
         </template>
       </vxe-menu>
     </div>
@@ -45,8 +45,8 @@ export default Vue.extend({
     }
   },
   methods: {
-    clickEvent ({ currentMenu }) {
-      console.log(currentMenu.name)
+    clickEvent ({ option }) {
+      console.log(option.name)
     }
   }
 })

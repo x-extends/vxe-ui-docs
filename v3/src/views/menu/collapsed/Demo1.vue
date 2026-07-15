@@ -87,8 +87,8 @@ export default Vue.extend({
     collapseEvent () {
       this.collapsed = !this.collapsed
     },
-    clickEvent ({ currentMenu }) {
-      console.log(currentMenu.name)
+    clickEvent ({ option }) {
+      console.log(option.name)
     }
   }
 })

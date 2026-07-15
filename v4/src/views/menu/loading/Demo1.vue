@@ -39,8 +39,8 @@ const loadList = () => {
   }, 3000)
 }
 
-const clickEvent: VxeMenuEvents.Click = ({ currentMenu }) => {
-  console.log(currentMenu.name)
+const clickEvent: VxeMenuEvents.Click = ({ currentOption }) => {
+  console.log(currentOption.name)
 }
 
 loadList()
