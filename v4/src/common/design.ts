@@ -2,12 +2,13 @@ import { NavVO, otherUrl } from './nav'
 
 export const designNavConfig: NavVO = {
   i18nKey: 'app.aside.menu.designTitle',
-  icon: 'vxe-icon-association-form',
+  icon: 'vxe-icon-pc',
   showCount: true,
   keywords: 'vxe-design',
   children: [
     {
       i18nKey: 'app.aside.menu.formDesignTitle',
+      icon: 'vxe-icon-association-form',
       children: [
         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-design' } }, keywords: 'vxe-design' },
         {
@@ -89,6 +90,7 @@ export const designNavConfig: NavVO = {
     },
     {
       i18nKey: 'app.aside.menu.listDesignTitle',
+      icon: 'vxe-icon-num-list',
       children: [
         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'list-design' } } },
         {

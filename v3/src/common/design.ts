@@ -2,6 +2,7 @@ import { NavVO } from './nav'
 
 export const designNavConfig: NavVO = {
   i18nKey: 'app.aside.menu.designTitle',
+  icon: 'vxe-icon-pc',
   showCount: true,
   keywords: 'vxe-design',
   children: [
@@ -37,6 +38,7 @@ export const designNavConfig: NavVO = {
     },
     {
       i18nKey: 'app.aside.menu.listDesignTitle',
+      icon: 'vxe-icon-num-list',
       children: [
         { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'list-design' } } }
         // {
