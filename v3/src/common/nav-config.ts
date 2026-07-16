@@ -7,11 +7,12 @@ import { treeNavConfig } from './tree'
 import { uploadNavConfig } from './upload'
 import { tableNavConfig } from './table'
 import { ganttNavConfig } from './gantt'
-import { designNavConfig } from './design'
+// import { designNavConfig } from './design'
 
 export const navConfigList: NavVO[] = [
   {
     i18nKey: 'app.aside.menu.guide',
+    icon: 'vxe-icon-rich-text',
     isExpand: true,
     children: [
       {
@@ -51,7 +52,7 @@ export const navConfigList: NavVO[] = [
           // { i18nKey: 'app.aside.menu.lazyUseGlobal', routerLink: { name: 'StartDesignUseGlobal' } },
           // { i18nKey: 'app.aside.menu.lazyUseImport', routerLink: { name: 'StartDesignUseImport' } },
           { i18nKey: 'app.aside.menu.useGlobalCDN', routerLink: { name: 'StartDesignCDN' } },
-          // { title: '使用第三方 UI 库', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form-design/renderView`, linkTarget: '_blank' },
+          { title: '使用第三方 UI 库', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form-design/renderView`, linkTarget: '_blank' },
           { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/', linkTarget: '_blank' }
         ]
       },
@@ -71,6 +72,7 @@ export const navConfigList: NavVO[] = [
   },
   {
     i18nKey: 'app.aside.menu.tools',
+    icon: 'vxe-icon-tools',
     children: [
       { i18nKey: 'app.aside.menu.clipboard', routerLink: { name: 'ToolClipboard' } },
       { i18nKey: 'app.aside.menu.functions', linkUrl: 'https://util.vxeui.com', linkTarget: '_blank' }
@@ -78,6 +80,7 @@ export const navConfigList: NavVO[] = [
   },
   {
     i18nKey: 'app.aside.menu.baseTitle',
+    icon: 'vxe-icon-layout',
     showCount: true,
     children: [
       {
@@ -242,6 +245,7 @@ export const navConfigList: NavVO[] = [
   },
   {
     i18nKey: 'app.aside.menu.displayTitle',
+    icon: 'vxe-icon-row-col',
     showCount: true,
     children: [
       {
@@ -457,6 +461,7 @@ export const navConfigList: NavVO[] = [
   },
   {
     i18nKey: 'app.aside.menu.navigationTitle',
+    icon: 'vxe-icon-menu',
     showCount: true,
     children: [
       {
@@ -545,6 +550,7 @@ export const navConfigList: NavVO[] = [
   },
   {
     i18nKey: 'app.aside.menu.dataTitle',
+    icon: 'vxe-icon-form',
     showCount: true,
     children: [
       formNavConfig,
@@ -1021,12 +1027,14 @@ export const navConfigList: NavVO[] = [
               { title: '可清除', routerLink: { name: 'ComponentSelectBaseClearable' } },
               { title: '禁用', routerLink: { name: 'ComponentSelectBaseDisabled' } },
               { title: '自定义图标', routerLink: { name: 'ComponentSelectBaseIcon' } },
+              { title: '单选框', routerLink: { name: 'ComponentSelectBaseRadio' } },
               { title: '加载中', routerLink: { name: 'ComponentSelectBaseLoading' } },
               { title: '本地搜索', routerLink: { name: 'ComponentSelectBaseFilterable' } },
               { title: '远程搜索', routerLink: { name: 'ComponentSelectBaseRemote' } },
               { title: '分组', routerLink: { name: 'ComponentSelectBaseGroup' } },
               { title: '默认值', routerLink: { name: 'ComponentSelectBaseDefaultValue' } },
               { title: '多选', routerLink: { name: 'ComponentSelectBaseMultiple' } },
+              { title: '复选框', routerLink: { name: 'ComponentSelectBaseCheckbox' } },
               { title: '限制最大数量', routerLink: { name: 'ComponentSelectBaseMax' } },
               { title: '自定义宽高', routerLink: { name: 'ComponentSelectBasePopupWH' } },
               { title: '可新增', routerLink: { name: 'ComponentSelectBaseAllowCreate' } },
@@ -1041,12 +1049,14 @@ export const navConfigList: NavVO[] = [
             children: [
               { title: '可清除', routerLink: { name: 'ComponentSelectConfigClearable' } },
               { title: '禁用', routerLink: { name: 'ComponentSelectConfigDisabled' } },
+              { title: '单选框', routerLink: { name: 'ComponentSelectConfigRadio' } },
               { title: '加载中', routerLink: { name: 'ComponentSelectConfigLoading' } },
               { title: '本地搜索', routerLink: { name: 'ComponentSelectConfigFilterable' } },
               { title: '远程搜索', routerLink: { name: 'ComponentSelectConfigRemote' } },
               { title: '分组', routerLink: { name: 'ComponentSelectConfigGroup' } },
               { title: '默认值', routerLink: { name: 'ComponentSelectConfigDefaultValue' } },
               { title: '多选', routerLink: { name: 'ComponentSelectConfigMultiple' } },
+              { title: '复选框', routerLink: { name: 'ComponentSelectConfigCheckbox' } },
               { title: '限制最大数量', routerLink: { name: 'ComponentSelectConfigMax' } },
               { title: '自定义宽高', routerLink: { name: 'ComponentSelectConfigPopupWH' } },
               { title: '可新增', routerLink: { name: 'ComponentSelectConfigAllowCreate' } },
@@ -1277,6 +1287,7 @@ export const navConfigList: NavVO[] = [
   tableNavConfig,
   {
     i18nKey: 'app.aside.menu.feedbackTitle',
+    icon: 'vxe-icon-info-circle',
     showCount: true,
     children: [
       {
@@ -1393,9 +1404,10 @@ export const navConfigList: NavVO[] = [
   },
   modalNavConfig,
   ganttNavConfig,
-  designNavConfig,
+  // designNavConfig,
   {
     i18nKey: 'app.aside.menu.otherTitle',
+    icon: 'vxe-icon-more',
     showCount: true,
     children: [
       {
@@ -1459,6 +1471,7 @@ export const navConfigList: NavVO[] = [
   },
   {
     title: 'API',
+    icon: 'vxe-icon-doc-search',
     isExpand: true,
     showCount: true,
     children: []

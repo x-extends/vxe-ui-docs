@@ -2,6 +2,7 @@ import { NavVO, otherUrl } from './nav'
 
 export const formNavConfig: NavVO = {
   i18nKey: 'app.aside.menu.formTitle',
+  showCount: true,
   children: [
     { title: 'Form API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form' } }, keywords: 'vxe-form' },
     { title: 'Form Group API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-group' } }, keywords: 'vxe-form-group' },
@@ -94,6 +95,7 @@ export const formNavConfig: NavVO = {
             { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSelect' } },
             { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDatePicker' } },
             { title: 'VxeDateRangePicker 日期范围选择', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDateRangePicker' } },
+            { title: 'VxeCascader 级联选择', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeCascader' } },
             { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeTreeSelect' } },
             { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSwitch' } },
             { title: 'VxeRadioGroup 单选组', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeRadioGroup' } },
@@ -178,6 +180,7 @@ export const formNavConfig: NavVO = {
             { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormConfigItemRenderVxeSelect' } },
             { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormConfigItemRenderVxeDatePicker' } },
             { title: 'VxeDateRangePicker 日期范围选择', routerLink: { name: 'ComponentFormConfigItemRenderVxeDateRangePicker' } },
+            { title: 'VxeCascader 级联选择', routerLink: { name: 'ComponentFormConfigItemRenderVxeCascader' } },
             { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentFormConfigItemRenderVxeTreeSelect' } },
             { title: 'VxeTableSelect 下拉表格选择', routerLink: { name: 'ComponentFormConfigItemRenderVxeTableSelect' } },
             { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormConfigItemRenderVxeSwitch' } },
@@ -205,6 +208,7 @@ export const formNavConfig: NavVO = {
             { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSelect' } },
             { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormConfigItemTemplateVxeDatePicker' } },
             { title: 'VxeDateRangePicker 日期范围选择', routerLink: { name: 'ComponentFormConfigItemTemplateVxeDateRangePicker' } },
+            { title: 'VxeCascader 级联选择', routerLink: { name: 'ComponentFormConfigItemTemplateVxeCascader' } },
             { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentFormConfigItemTemplateVxeTreeSelect' } },
             { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSwitch' } },
             { title: 'VxeRadioGroup 单选组', routerLink: { name: 'ComponentFormConfigItemTemplateVxeRadioGroup' } },

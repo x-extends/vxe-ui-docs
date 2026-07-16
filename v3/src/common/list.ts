@@ -2,6 +2,7 @@ import { NavVO } from './nav'
 
 export const listNavConfig: NavVO = {
   title: 'List 列表',
+  icon: 'vxe-icon-num-list',
   children: [
     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'list' } }, keywords: 'vxe-list' },
     {
