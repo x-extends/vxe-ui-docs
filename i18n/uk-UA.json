@@ -41,6 +41,7 @@
         "useNPM": "NPM",
         "useCDN": "CDN",
         "useGlobalCDN": "全局安装 - CDN 全量引入",
+        "useTableSingleCDN": "全局安装 - CDN 纯表格引入",
         "useUI": "使用配套 UI 库",
         "globalConfig": "Глобальні параметри",
         "globalTheme": "Глобальна тема",

@@ -41,6 +41,7 @@
         "useNPM": "NPM",
         "useCDN": "CDN",
         "useGlobalCDN": "Global installation - CDN full import",
+        "useTableSingleCDN": "全局安装 - CDN 纯表格引入",
         "useUI": "Use the Vxe UI library",
         "globalConfig": "Global parameters",
         "globalTheme": "Global theme",

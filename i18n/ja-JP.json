@@ -41,6 +41,7 @@
         "useNPM": "NPM",
         "useCDN": "CDN",
         "useGlobalCDN": "グローバルインストール - CDN 全量導入",
+        "useTableSingleCDN": "全局安装 - CDN 纯表格引入",
         "useUI": "付属 UI ライブラリを使用",
         "globalConfig": "グローバルパラメータ",
         "globalTheme": "グローバルテーマ",

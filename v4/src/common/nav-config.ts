@@ -33,6 +33,7 @@ export const navConfigList: NavVO[] = [
           { i18nKey: 'app.aside.menu.lazyUseGlobal', routerLink: { name: 'StartTableUseGlobal' } },
           { i18nKey: 'app.aside.menu.lazyUseImport', routerLink: { name: 'StartTableUseImport' } },
           { i18nKey: 'app.aside.menu.useGlobalCDN', routerLink: { name: 'StartTableCDN' } },
+          { i18nKey: 'app.aside.menu.useTableSingleCDN', routerLink: { name: 'StartTableSingleCDN' } },
           { title: '使用第三方 UI 库', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/grid/edit/el-input`, linkTarget: '_blank' }
         ]
       },
@@ -480,6 +481,7 @@ export const navConfigList: NavVO[] = [
           { title: '图标', routerLink: { name: 'ComponentMenuIcon' } },
           { title: '手风琴效果', routerLink: { name: 'ComponentMenuAccordion' } },
           { title: '可折叠', routerLink: { name: 'ComponentMenuCollapsed' } },
+          { title: '链接模式', routerLink: { name: 'ComponentMenuLinkUrl' } },
           { title: '路由模式', routerLink: { name: 'ComponentMenuRouterLink' } },
           { title: '权限码', routerLink: { name: 'ComponentMenuPermissionCode' } },
           {

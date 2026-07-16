@@ -60,7 +60,8 @@ const routes: Array<RouteConfig> = [
           { path: 'install', name: 'StartTableInstall', component: StartTableInstall },
           { path: 'useGlobal', name: 'StartTableUseGlobal', component: () => import('@/views/start/useTable/useGlobal/CodeExample.vue') },
           { path: 'useImport', name: 'StartTableUseImport', component: () => import('@/views/start/useTable/useImport/CodeExample.vue') },
-          { path: 'cdn', name: 'StartTableCDN', component: () => import('@/views/start/useTable/cdn/CodeExample.vue') }
+          { path: 'cdn', name: 'StartTableCDN', component: () => import('@/views/start/useTable/cdn/CodeExample.vue') },
+          { path: 'singleCdn', name: 'StartTableSingleCDN', component: () => import('@/views/start/useTable/singleCdn/CodeExample.vue') }
         ]
       },
       {
@@ -819,6 +820,7 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentMenuCollapsed',
             component: () => import('@/views/menu/collapsed/CodeExample.vue')
           },
+          { path: 'linkUrl', name: 'ComponentMenuLinkUrl', component: () => import('@/views/menu/linkUrl/CodeExample.vue') },
           {
             path: 'routerLink',
             name: 'ComponentMenuRouterLink',
