@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@vxe-ui/plugin-export-pdf": "~4.4.0",
-    "@vxe-ui/plugin-export-xlsx": "~4.5.2",
+    "@vxe-ui/plugin-export-xlsx": "~4.5.3",
     "@vxe-ui/plugin-menu": "~4.3.2",
     "@vxe-ui/plugin-render-chart": "~4.4.0",
     "@vxe-ui/plugin-render-element": "~4.4.0",
@@ -26,6 +26,7 @@
     "@vxe-ui/plugin-validator": "~4.3.1",
     "ant-design-vue": "4.2.6",
     "axios": "1.7.2",
+    "exceljs": "4.4.0",
     "element-plus": "2.13.2",
     "pinia": "~3.0.4",
     "tinycolor2": "~1.6.0",

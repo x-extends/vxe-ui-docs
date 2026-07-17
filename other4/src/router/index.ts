@@ -351,6 +351,7 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/plugin-export-xlsx/table/import/CodeExample.vue')
           },
           { path: 'format', name: 'PluginExportXlsxTableFormat', component: () => import('@/views/plugin-export-xlsx/table/format/CodeExample.vue') },
+          { path: 'template', name: 'PluginExportXlsxTableTemplate', component: () => import('@/views/plugin-export-xlsx/table/template/CodeExample.vue') },
           {
             path: 'toolbar',
             name: 'PluginExportXlsxTableToolbar',
@@ -424,6 +425,7 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/plugin-export-xlsx/grid/import/CodeExample.vue')
           },
           { path: 'format', name: 'PluginExportXlsxGridFormat', component: () => import('@/views/plugin-export-xlsx/grid/format/CodeExample.vue') },
+          { path: 'template', name: 'PluginExportXlsxGridTemplate', component: () => import('@/views/plugin-export-xlsx/grid/template/CodeExample.vue') },
           { path: 'cellType', name: 'PluginExportXlsxGridCellType', component: () => import('@/views/plugin-export-xlsx/grid/cellType/CodeExample.vue') },
           {
             path: 'toolbar',
