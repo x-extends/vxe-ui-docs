@@ -51,7 +51,7 @@
             {
               ...
               "vxe-pc-ui": "^${uiLibVersion}",
-              "vxe-table": "^${tableCDNLib}"
+              "vxe-table": "^${tableLibVersion}"
               ...
             }
             `'>
@@ -63,7 +63,7 @@
             {
               ...
               "vxe-pc-ui": "~${uiLibVersion}",
-              "vxe-table": "~${tableCDNLib}",
+              "vxe-table": "~${tableLibVersion}",
               ...
             }
             `'>
