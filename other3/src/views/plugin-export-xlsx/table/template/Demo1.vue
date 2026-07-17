@@ -46,7 +46,7 @@ export default Vue.extend({
       { id: 10004, name: '老六', role: 'Designer', sex: '0', age: 38, no1: '02040', no2: '02040', describe: '' }
     ]
 
-    const exportConfig: VxeTablePropTypes.ExportConfig= {
+    const exportConfig: VxeTablePropTypes.ExportConfig = {
       async sheetMethod (params) {
         const { worksheet } = params
         worksheet.eachRow((excelRow, i) => {
