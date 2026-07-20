@@ -462,6 +462,8 @@
         "editTaskBar": "編輯任務條",
         "scales": "日期軸",
         "scalesDate": "按天",
+        "scalesBase": "基础配置",
+        "scalesStep": "设置跨度",
         "dependency": "依賴線",
         "dependencyLinks": "配連連接線",
         "dependencyLineStatus": "線狀態顏色",

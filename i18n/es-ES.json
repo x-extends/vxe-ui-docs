@@ -462,6 +462,8 @@
         "editTaskBar": "Editar barra de tarea",
         "scales": "Eje de fechas",
         "scalesDate": "Por día",
+        "scalesBase": "基础配置",
+        "scalesStep": "设置跨度",
         "dependency": "Líneas de dependencia",
         "dependencyLinks": "Líneas de conexión",
         "dependencyLineStatus": "Color de estado de línea",

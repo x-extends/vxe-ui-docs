@@ -462,6 +462,8 @@
         "editTaskBar": "Edit task bar",
         "scales": "Date axis",
         "scalesDate": "Day",
+        "scalesBase": "基础配置",
+        "scalesStep": "设置跨度",
         "dependency": "Dependency line",
         "dependencyLinks": "Connection lines",
         "dependencyLineStatus": "Line status color",

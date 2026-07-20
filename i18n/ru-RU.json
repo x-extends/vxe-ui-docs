@@ -462,6 +462,8 @@
         "editTaskBar": "Редактирование панели задачи",
         "scales": "Шкала дат",
         "scalesDate": "По дням",
+        "scalesBase": "基础配置",
+        "scalesStep": "设置跨度",
         "dependency": "Линии зависимостей",
         "dependencyLinks": "Связующие линии",
         "dependencyLineStatus": "Цвет состояния линии",

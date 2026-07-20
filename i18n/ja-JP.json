@@ -462,6 +462,8 @@
         "editTaskBar": "タスクバーを編集",
         "scales": "日付軸",
         "scalesDate": "日単位",
+        "scalesBase": "基础配置",
+        "scalesStep": "设置跨度",
         "dependency": "依存線",
         "dependencyLinks": "接続線",
         "dependencyLineStatus": "線の状態色",
