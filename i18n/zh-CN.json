@@ -52,7 +52,7 @@
         "configI18n": "对组件内置内容进行翻译",
         "configTranslate": "支持对组件中特定的字段进行翻译",
         "tools": "Utility 工具类",
-        "functions": " 函数类",
+        "functions": "Js 函数库",
         "clipboard": "剪贴板",
         "baseTitle": "Basic 基础组件",
         "iconTitle": "Icon 图标",

@@ -52,7 +52,7 @@
         "configI18n": "Translate built-in component content",
         "configTranslate": "Support translating specific fields in components",
         "tools": "Utility",
-        "functions": "Function Class",
+        "functions": "Js Function",
         "clipboard": "Clipboard",
         "baseTitle": "Basic",
         "iconTitle": "Icon",
