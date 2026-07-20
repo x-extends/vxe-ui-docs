@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-table-select v-model="val1" :columns="columnList" :options="tableData"></vxe-table-select>
+    <vxe-table-select v-model="val1" :columns="columnList" :options="tableData" :option-props="{value: 'value', label: 'label'}"></vxe-table-select>
   </div>
 </template>
 
