@@ -10,11 +10,10 @@ import type { VxeGanttProps } from 'vxe-gantt'
 
 interface RowVO {
   id: number
-  parentId: number | null
-  name: string
-  type: string
-  size: number
-  date: string
+  title: string
+  start: string
+  end: string
+  progress: number
 }
 
 const ganttOptions = reactive<VxeGanttProps<RowVO>>({
@@ -28,9 +27,9 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     parentField: 'parentId'
   },
   checkboxConfig: {
-    labelField: 'name',
+    labelField: 'title',
     checkMethod ({ row }) {
-      return ![20045, 23671, 24566].includes(row.id)
+      return ![10004, 10005].includes(row.id)
     }
   },
   taskBarConfig: {
@@ -49,27 +48,16 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     { field: 'end', title: '结束时间', width: 100 }
   ],
   data: [
-    { id: 10000, parentId: null, name: 'Test1', type: 'mp3', size: 1024, date: '2020-08-01' },
-    { id: 10050, parentId: null, name: 'Test2', type: 'mp4', size: 0, date: '2021-04-01' },
-    { id: 24300, parentId: 10050, name: 'Test3', type: 'avi', size: 1024, date: '2020-03-01' },
-    { id: 20045, parentId: 24300, name: 'Test4', type: 'html', size: 600, date: '2021-04-01' },
-    { id: 10053, parentId: 24300, name: 'Test5', type: 'avi', size: 0, date: '2021-04-01' },
-    { id: 24330, parentId: 10053, name: 'Test6', type: 'txt', size: 25, date: '2021-10-01' },
-    { id: 21011, parentId: 10053, name: 'Test7', type: 'pdf', size: 512, date: '2020-01-01' },
-    { id: 22200, parentId: 10053, name: 'Test8', type: 'js', size: 1024, date: '2021-06-01' },
-    { id: 23666, parentId: null, name: 'Test9', type: 'xlsx', size: 2048, date: '2020-11-01' },
-    { id: 23677, parentId: 23666, name: 'Test10', type: 'js', size: 1024, date: '2021-06-01' },
-    { id: 23671, parentId: 23677, name: 'Test11', type: 'js', size: 500, date: '2021-06-01' },
-    { id: 23672, parentId: 23677, name: 'Test12', type: 'pdf', size: 1024, date: '2021-08-01' },
-    { id: 23688, parentId: 23666, name: 'Test13', type: 'txt', size: 400, date: '2021-06-01' },
-    { id: 23681, parentId: 23688, name: 'Test14', type: 'js', size: 1024, date: '2021-07-01' },
-    { id: 23682, parentId: 23688, name: 'Test15', type: 'html', size: 1024, date: '2021-06-01' },
-    { id: 24555, parentId: null, name: 'Test16', type: 'avi', size: 224, date: '2020-10-01' },
-    { id: 24566, parentId: 24555, name: 'Test17', type: 'js', size: 1024, date: '2021-06-01' },
-    { id: 24577, parentId: null, name: 'Test18', type: 'js', size: 1024, date: '2021-06-01' },
-    { id: 25100, parentId: 24577, name: 'Test19', type: 'avi', size: 224, date: '2020-10-01' },
-    { id: 25120, parentId: 25100, name: 'Test20', type: 'js', size: 300, date: '2021-06-01' },
-    { id: 25111, parentId: 25100, name: 'Test21', type: 'xlsx', size: 2048, date: '2021-06-01' }
+    { id: 10001, title: '任务R790', start: '2024-03-01', end: '2024-03-04', progress: 3 },
+    { id: 10002, title: '任务C30456572349', start: '2024-03-03', end: '2024-03-08', progress: 10 },
+    { id: 10003, title: '任务E563', start: '2024-03-03', end: '2024-03-11', progress: 90 },
+    { id: 10004, title: '任务P687', start: '2024-03-05', end: '2024-03-11', progress: 15 },
+    { id: 10005, title: '任务L8412430903', start: '2024-03-08', end: '2024-03-15', progress: 100 },
+    { id: 10006, title: '任务B567', start: '2024-03-10', end: '2024-03-21', progress: 5 },
+    { id: 10007, title: '任务V513802134450', start: '2024-03-15', end: '2024-03-24', progress: 70 },
+    { id: 10008, title: '任务G110', start: '2024-03-20', end: '2024-03-29', progress: 50 },
+    { id: 10009, title: '任务I802', start: '2024-03-19', end: '2024-03-20', progress: 5 },
+    { id: 10010, title: '任务K778', start: '2024-03-12', end: '2024-03-20', progress: 10 }
   ]
 })
 </script>

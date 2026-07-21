@@ -7,5 +7,13 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="gantt/split/resize/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          通过 css 变量设置调整面板宽度
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>
