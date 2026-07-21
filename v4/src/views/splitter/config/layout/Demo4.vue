@@ -6,9 +6,6 @@
           <template #leftContent>
             <div style="height: 100%;background-color: #f3e1e1;">左侧</div>
           </template>
-          <template #centerContent>
-            <div style="height: 100%;background-color: #e2f9d8;">中</div>
-          </template>
           <template #rightContent>
             <div style="height: 100%;background-color: #d8d8f9;">右侧</div>
           </template>
@@ -39,8 +36,7 @@ const splitOptions2 = reactive<VxeSplitterProps>({
   border: true,
   items: [
     { width: 100, slots: { default: 'leftContent' } },
-    { slots: { default: 'centerContent' } },
-    { width: 140, slots: { default: 'rightContent' } }
+    { slots: { default: 'rightContent' } }
   ]
 })
 </script>

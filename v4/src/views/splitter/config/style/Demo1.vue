@@ -1,9 +1,5 @@
 <template>
   <div>
-    显示左侧按钮：<vxe-switch v-model="actionConfig.showPrevButton"></vxe-switch>
-    显示右侧按钮：<vxe-switch v-model="actionConfig.showNextButton"></vxe-switch>
-    自动隐藏：<vxe-switch v-model="actionConfig.autoHideButton"></vxe-switch>
-
     <vxe-splitter v-bind="splitOptions1">
       <template #leftContent>
         <div style="height: 100%;background-color: #f3e1e1;">左侧</div>
@@ -26,8 +22,12 @@
 import { reactive } from 'vue'
 import { VxeSplitterProps, VxeSplitterPropTypes } from 'vxe-pc-ui'
 
+const barConfig = reactive<VxeSplitterPropTypes.BarConfig>({
+  width: 16,
+  height: 16
+})
+
 const actionConfig = reactive<VxeSplitterPropTypes.ActionConfig>({
-  autoHideButton: false,
   showPrevButton: true,
   showNextButton: true
 })
@@ -35,6 +35,7 @@ const actionConfig = reactive<VxeSplitterPropTypes.ActionConfig>({
 const splitOptions1 = reactive<VxeSplitterProps>({
   height: 300,
   border: true,
+  barConfig,
   actionConfig,
   items: [
     { width: 100, slots: { default: 'leftContent' } },
@@ -45,6 +46,7 @@ const splitOptions1 = reactive<VxeSplitterProps>({
 const splitOptions2 = reactive<VxeSplitterProps>({
   border: true,
   vertical: true,
+  barConfig,
   actionConfig,
   items: [
     { height: 100, slots: { default: 'topContent' } },

@@ -15,11 +15,6 @@
           </vxe-splitter-panel>
           <vxe-splitter-panel>
             <template #default>
-              <div style="height: 100%;background-color: #e2f9d8;">中</div>
-            </template>
-          </vxe-splitter-panel>
-          <vxe-splitter-panel height="140">
-            <template #default>
               <div style="height: 100%;background-color: #d8d8f9;">底部</div>
             </template>
           </vxe-splitter-panel>

@@ -10,11 +10,6 @@
           </vxe-splitter-panel>
           <vxe-splitter-panel>
             <template #default>
-              <div style="height: 100%;background-color: #e2f9d8;">中</div>
-            </template>
-          </vxe-splitter-panel>
-          <vxe-splitter-panel width="140">
-            <template #default>
               <div style="height: 100%;background-color: #d8d8f9;">右侧</div>
             </template>
           </vxe-splitter-panel>

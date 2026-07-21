@@ -403,7 +403,8 @@ export const navConfigList: NavVO[] = [
               { title: '拖拽调整宽度', routerLink: { name: 'ComponentSplitterBasicsResize' } },
               { title: '组合布局', routerLink: { name: 'ComponentSplitterBasicsLayout' } },
               { title: '可折叠', routerLink: { name: 'ComponentSplitterBasicsAction' } },
-              { title: '显示隐藏折叠按钮', routerLink: { name: 'ComponentSplitterBasicsActionConfig' } }
+              { title: '显示隐藏折叠按钮', routerLink: { name: 'ComponentSplitterBasicsActionConfig' } },
+              { title: '修改样式', routerLink: { name: 'ComponentSplitterBasicsStyle' } }
             ]
           },
           {
@@ -417,7 +418,8 @@ export const navConfigList: NavVO[] = [
               { title: '拖拽调整宽度', routerLink: { name: 'ComponentSplitterConfigResize' } },
               { title: '组合布局', routerLink: { name: 'ComponentSplitterConfigLayout' } },
               { title: '可折叠', routerLink: { name: 'ComponentSplitterConfigAction' } },
-              { title: '显示隐藏折叠按钮', routerLink: { name: 'ComponentSplitterConfigActionConfig' } }
+              { title: '显示隐藏折叠按钮', routerLink: { name: 'ComponentSplitterConfigActionConfig' } },
+              { title: '修改样式', routerLink: { name: 'ComponentSplitterConfigStyle' } }
             ]
           }
         ]

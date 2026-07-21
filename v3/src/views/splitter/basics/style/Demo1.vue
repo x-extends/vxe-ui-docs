@@ -1,20 +1,16 @@
 <template>
   <div>
-    显示左侧按钮：<vxe-switch v-model="actionConfig.showPrevButton"></vxe-switch>
-    显示右侧按钮：<vxe-switch v-model="actionConfig.showNextButton"></vxe-switch>
-    自动隐藏：<vxe-switch v-model="actionConfig.autoHideButton"></vxe-switch>
-
-    <vxe-splitter height="300" :action-config="actionConfig" border vertical>
-      <vxe-splitter-panel height="100">
+    <vxe-splitter height="300" :action-config="actionConfig" :bar-config="barConfig" border>
+      <vxe-splitter-panel width="100">
         <template #default>
-          <div style="height: 100%;background-color: #f3e1e1;">顶部</div>
+          <div style="height: 100%;background-color: #f3e1e1;">左侧</div>
         </template>
       </vxe-splitter-panel>
       <vxe-splitter-panel>
-        <vxe-splitter :action-config="actionConfig" border>
-          <vxe-splitter-panel width="100">
+        <vxe-splitter :action-config="actionConfig" border vertical>
+          <vxe-splitter-panel height="100">
             <template #default>
-              <div style="height: 100%;background-color: #e1f3e5;">左下角</div>
+              <div style="height: 100%;background-color: #e1f3e5;">右上角</div>
             </template>
           </vxe-splitter-panel>
           <vxe-splitter-panel>
@@ -35,13 +31,18 @@ import { VxeSplitterPropTypes } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const actionConfig: VxeSplitterPropTypes.ActionConfig = {
-      autoHideButton: false,
       showPrevButton: true,
       showNextButton: true
     }
 
+    const barConfig: VxeSplitterPropTypes.BarConfig = {
+      width: 16,
+      height: 16
+    }
+
     return {
-      actionConfig
+      actionConfig,
+      barConfig
     }
   }
 })

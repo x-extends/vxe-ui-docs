@@ -1339,6 +1339,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentSplitterBasicsActionConfig',
                 component: () => import('@/views/splitter/basics/actionConfig/CodeExample.vue')
               },
+              { path: 'style', name: 'ComponentSplitterBasicsStyle', component: () => import('@/views/splitter/basics/style/CodeExample.vue') },
               {
                 path: 'layout',
                 name: 'ComponentSplitterBasicsLayout',
@@ -1390,6 +1391,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentSplitterConfigActionConfig',
                 component: () => import('@/views/splitter/config/actionConfig/CodeExample.vue')
               },
+              { path: 'style', name: 'ComponentSplitterConfigStyle', component: () => import('@/views/splitter/config/style/CodeExample.vue') },
               {
                 path: 'layout',
                 name: 'ComponentSplitterConfigLayout',

@@ -1,7 +1,8 @@
 <template>
   <div>
-    <vxe-switch v-model="actionConfig.showPrevButton"></vxe-switch>
-    <vxe-switch v-model="actionConfig.showNextButton"></vxe-switch>
+    显示左侧按钮：<vxe-switch v-model="actionConfig.showPrevButton"></vxe-switch>
+    显示右侧按钮：<vxe-switch v-model="actionConfig.showNextButton"></vxe-switch>
+    自动隐藏：<vxe-switch v-model="actionConfig.autoHideButton"></vxe-switch>
 
     <vxe-splitter height="300" :action-config="actionConfig" border>
       <vxe-splitter-panel width="100">
@@ -34,6 +35,7 @@ import { VxeSplitterPropTypes } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     const actionConfig: VxeSplitterPropTypes.ActionConfig = {
+      autoHideButton: false,
       showPrevButton: true,
       showNextButton: true
     }

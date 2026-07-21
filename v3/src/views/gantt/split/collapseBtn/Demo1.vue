@@ -2,6 +2,7 @@
   <div>
     左侧表格按钮：<vxe-switch v-model="taskSplitConfig.showCollapseTableButton"></vxe-switch>
     右侧视图按钮：<vxe-switch v-model="taskSplitConfig.showCollapseTaskButton"></vxe-switch>
+    自动隐藏：<vxe-switch v-model="taskSplitConfig.autoHideCollapseButton"></vxe-switch>
 
     <vxe-gantt v-bind="ganttOptions"></vxe-gantt>
   </div>
@@ -22,8 +23,9 @@ interface RowVO {
 export default Vue.extend({
   data () {
     const taskSplitConfig: VxeGanttPropTypes.TaskSplitConfig = {
+      autoHideCollapseButton: false,
       showCollapseTableButton: true,
-      showCollapseTaskButton: false
+      showCollapseTaskButton: true
     }
 
     const ganttOptions: VxeGanttProps<RowVO> = {
