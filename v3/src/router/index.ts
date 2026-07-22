@@ -1100,6 +1100,7 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentButtonLoading',
             component: () => import('@/views/button/loading/CodeExample.vue')
           },
+          { path: 'router', name: 'ComponentButtonRouter', component: () => import('@/views/button/router/CodeExample.vue') },
           {
             path: 'group',
             name: 'ComponentButtonGroup',
