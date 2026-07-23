@@ -343,6 +343,7 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/plugin-export-xlsx/table/import/CodeExample.vue')
           },
           { path: 'format', name: 'PluginExportXlsxTableFormat', component: () => import('@/views/plugin-export-xlsx/table/format/CodeExample.vue') },
+          { path: 'template', name: 'PluginExportXlsxTableTemplate', component: () => import('@/views/plugin-export-xlsx/table/template/CodeExample.vue') },
           {
             path: 'toolbar',
             name: 'PluginExportXlsxTableToolbar',
@@ -353,6 +354,7 @@ const routes: Array<RouteConfig> = [
             name: 'PluginExportXlsxTableAdvanced',
             component: () => import('@/views/plugin-export-xlsx/table/advanced/CodeExample.vue')
           },
+          { path: 'hideCol', name: 'PluginExportXlsxTableHideCol', component: () => import('@/views/plugin-export-xlsx/table/hideCol/CodeExample.vue') },
           {
             path: 'scroll',
             name: 'PluginExportXlsxTableScroll',
@@ -416,6 +418,7 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/plugin-export-xlsx/grid/import/CodeExample.vue')
           },
           { path: 'format', name: 'PluginExportXlsxGridFormat', component: () => import('@/views/plugin-export-xlsx/grid/format/CodeExample.vue') },
+          { path: 'template', name: 'PluginExportXlsxGridTemplate', component: () => import('@/views/plugin-export-xlsx/grid/template/CodeExample.vue') },
           { path: 'cellType', name: 'PluginExportXlsxGridCellType', component: () => import('@/views/plugin-export-xlsx/grid/cellType/CodeExample.vue') },
           {
             path: 'toolbar',
@@ -432,6 +435,7 @@ const routes: Array<RouteConfig> = [
             name: 'PluginExportXlsxGridOpenImport',
             component: () => import('@/views/plugin-export-xlsx/grid/openImport/CodeExample.vue')
           },
+          { path: 'hideCol', name: 'PluginExportXlsxGridHideCol', component: () => import('@/views/plugin-export-xlsx/grid/hideCol/CodeExample.vue') },
           {
             path: 'scroll',
             name: 'PluginExportXlsxGridScroll',

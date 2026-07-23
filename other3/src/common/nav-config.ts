@@ -124,8 +124,10 @@ export const navConfigList: NavVO[] = [
           { title: '导出 XLSX 文件', routerLink: { name: 'PluginExportXlsxTableExport' } },
           { title: '导入 XLSX 格式', routerLink: { name: 'PluginExportXlsxTableImport' } },
           { title: '格式化单元格内容', routerLink: { name: 'PluginExportXlsxTableFormat' } },
+          { title: '导出插槽模板内容', routerLink: { name: 'PluginExportXlsxTableTemplate' } },
           { title: '使用工具栏', routerLink: { name: 'PluginExportXlsxTableToolbar' } },
           { title: '高级导出', routerLink: { name: 'PluginExportXlsxTableAdvanced' } },
+          { title: '导出隐藏列', routerLink: { name: 'PluginExportXlsxTableHideCol' } },
           { title: '大数据量导出', routerLink: { name: 'PluginExportXlsxTableScroll' } },
           {
             title: '自定义样式',
@@ -148,9 +150,11 @@ export const navConfigList: NavVO[] = [
           { title: '导入 XLSX 格式', routerLink: { name: 'PluginExportXlsxGridImport' } },
           { title: '单元格数据类型', routerLink: { name: 'PluginExportXlsxGridCellType' } },
           { title: '格式化单元格内容', routerLink: { name: 'PluginExportXlsxGridFormat' } },
+          { title: '导出插槽模板内容', routerLink: { name: 'PluginExportXlsxGridTemplate' } },
           { title: '使用工具栏', routerLink: { name: 'PluginExportXlsxGridToolbar' } },
           { title: '高级导出', routerLink: { name: 'PluginExportXlsxGridAdvanced' } },
           { title: '高级导入', routerLink: { name: 'PluginExportXlsxGridOpenImport' } },
+          { title: '导出隐藏列', routerLink: { name: 'PluginExportXlsxGridHideCol' } },
           { title: '大数据量导出', routerLink: { name: 'PluginExportXlsxGridScroll' } },
           {
             title: '自定义样式',

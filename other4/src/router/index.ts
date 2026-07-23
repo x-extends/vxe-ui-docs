@@ -362,6 +362,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'PluginExportXlsxTableAdvanced',
             component: () => import('@/views/plugin-export-xlsx/table/advanced/CodeExample.vue')
           },
+          { path: 'hideCol', name: 'PluginExportXlsxTableHideCol', component: () => import('@/views/plugin-export-xlsx/table/hideCol/CodeExample.vue') },
           {
             path: 'scroll',
             name: 'PluginExportXlsxTableScroll',
@@ -442,6 +443,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'PluginExportXlsxGridOpenImport',
             component: () => import('@/views/plugin-export-xlsx/grid/openImport/CodeExample.vue')
           },
+          { path: 'hideCol', name: 'PluginExportXlsxGridHideCol', component: () => import('@/views/plugin-export-xlsx/grid/hideCol/CodeExample.vue') },
           {
             path: 'scroll',
             name: 'PluginExportXlsxGridScroll',
