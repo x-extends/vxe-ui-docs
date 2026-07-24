@@ -757,6 +757,13 @@ export const navConfigList: NavVO[] = [
         title: 'ColorPicker 颜色选择',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'color-picker' } } },
+          {
+            title: '全局调用',
+            children: [
+              { title: '格式转换', routerLink: { name: 'ComponentUploadGlobalColorType' } },
+              { title: '效果处理', routerLink: { name: 'ComponentUploadGlobalColorEffect' } }
+            ]
+          },
           { title: '尺寸大小', routerLink: { name: 'ComponentColorPickerSize' } },
           { title: '可清除', routerLink: { name: 'ComponentColorPickerClearable' } },
           { title: '快捷颜色', routerLink: { name: 'ComponentColorPickerColors' } },

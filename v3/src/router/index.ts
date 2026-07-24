@@ -1783,6 +1783,14 @@ const routes: Array<RouteConfig> = [
         component: RouteLayout,
         children: [
           {
+            path: 'global',
+            component: RouteLayout,
+            children: [
+              { path: 'type', name: 'ComponentUploadGlobalColorType', component: () => import('@/views/color-picker/global/type/CodeExample.vue') },
+              { path: 'effect', name: 'ComponentUploadGlobalColorEffect', component: () => import('@/views/color-picker/global/effect/CodeExample.vue') }
+            ]
+          },
+          {
             path: 'size',
             name: 'ComponentColorPickerSize',
             component: () => import('@/views/color-picker/size/CodeExample.vue')

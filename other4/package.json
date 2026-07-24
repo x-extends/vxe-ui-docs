@@ -29,12 +29,11 @@
     "exceljs": "4.4.0",
     "element-plus": "2.13.2",
     "pinia": "~3.0.4",
-    "tinycolor2": "~1.6.0",
     "vue": "~3.5.27",
     "vue-i18n": "~11.3.0",
     "vue-router": "~4.5.1",
     "vxe-design": "~4.1.6",
-    "vxe-pc-ui": "~4.16.21",
+    "vxe-pc-ui": "~4.16.22",
     "vxe-table": "~4.20.7",
     "vxe-gantt": "~4.6.4",
     "xe-utils": "^4.0.11"
