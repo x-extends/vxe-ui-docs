@@ -16,7 +16,7 @@ import { VxeUI } from 'vxe-pc-ui'
 export default Vue.extend({
   data () {
     return {
-      val1: ''
+      val1: '#5467D6'
     }
   },
   computed: {

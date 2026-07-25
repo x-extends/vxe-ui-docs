@@ -13,7 +13,7 @@
 import { ref, computed } from 'vue'
 import { VxeUI } from 'vxe-pc-ui'
 
-const val1 = ref('')
+const val1 = ref('#5467D6')
 
 const txt1 = computed(() => {
   return VxeUI.color.lighten(val1.value, 10)

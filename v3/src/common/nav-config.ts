@@ -761,6 +761,7 @@ export const navConfigList: NavVO[] = [
             title: '全局调用',
             children: [
               { title: '格式转换', routerLink: { name: 'ComponentUploadGlobalColorType' } },
+              { title: '解析为指定格式', routerLink: { name: 'ComponentUploadGlobalColorParse' } },
               { title: '效果处理', routerLink: { name: 'ComponentUploadGlobalColorEffect' } }
             ]
           },
