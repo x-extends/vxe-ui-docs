@@ -21,7 +21,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const val1 = ref()
+const val1 = ref(null)
 const opts1 = ref([
   { label: '1111', value: '1' },
   { label: '2222', value: '2' },

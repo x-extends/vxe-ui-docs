@@ -14,7 +14,7 @@ import { VxeSelectInstance, VxeSelectProps } from 'vxe-pc-ui'
 
 const selectRef = ref<VxeSelectInstance>()
 
-const val1 = ref()
+const val1 = ref(null)
 const selectOptions = reactive<VxeSelectProps>({
   clearable: true,
   popupConfig: {

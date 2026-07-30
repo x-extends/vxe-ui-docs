@@ -8,7 +8,7 @@
 import { ref, reactive } from 'vue'
 import { VxeSelectProps } from 'vxe-pc-ui'
 
-const val1 = ref()
+const val1 = ref(null)
 const selectOptions = reactive<VxeSelectProps>({
   placeholder: '默认第一条',
   defaultConfig: {

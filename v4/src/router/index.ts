@@ -2384,6 +2384,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentSelectBaseGroup',
                 component: () => import('@/views/select/base/group/CodeExample.vue')
               },
+              { path: 'emptyValue', name: 'ComponentSelectBaseEmptyValue', component: () => import('@/views/select/base/emptyValue/CodeExample.vue') },
               {
                 path: 'defaultValue',
                 name: 'ComponentSelectBaseDefaultValue',
@@ -2463,6 +2464,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentSelectConfigGroup',
                 component: () => import('@/views/select/config/group/CodeExample.vue')
               },
+              { path: 'emptyValue', name: 'ComponentSelectConfigEmptyValue', component: () => import('@/views/select/config/emptyValue/CodeExample.vue') },
               {
                 path: 'defaultValue',
                 name: 'ComponentSelectConfigDefaultValue',

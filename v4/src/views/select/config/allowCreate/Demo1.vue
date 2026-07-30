@@ -7,7 +7,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const val1 = ref()
+const val1 = ref(null)
 const opts1 = ref([
   { value: 1001, label: 'table' },
   { value: 1002, label: 'grid' },

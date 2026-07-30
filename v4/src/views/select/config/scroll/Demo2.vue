@@ -21,7 +21,7 @@ interface OptVO {
 }
 
 const selectRef = ref<VxeSelectInstance>()
-const val1 = ref()
+const val1 = ref(null)
 
 const selectOptions = reactive<VxeSelectProps>({
   loading: false,
