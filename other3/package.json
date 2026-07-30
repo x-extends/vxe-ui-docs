@@ -16,7 +16,7 @@
     "@vxe-ui/plugin-export-xlsx": "~3.5.4",
     "@vxe-ui/plugin-menu": "~3.3.2",
     "@vxe-ui/plugin-render-chart": "~3.4.0",
-    "@vxe-ui/plugin-render-element": "~3.4.0",
+    "@vxe-ui/plugin-render-element": "~3.4.1",
     "@vxe-ui/plugin-render-antd": "~3.4.0",
     "@vxe-ui/plugin-render-iview": "~3.2.1",
     "@vxe-ui/plugin-render-tdesign": "~3.2.2",
