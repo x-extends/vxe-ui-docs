@@ -19,11 +19,13 @@ export default Vue.extend({
     const val1 = []
     const treeSelectOptions: VxeTreeSelectProps<NodeVO> = {
       multiple: true,
+      filterable: true,
       showTotalButton: true,
       showCheckedButton: true,
       showClearButton: true,
       showExpandButton: true,
       showCloseButton: true,
+      showCheckbox: true,
       optionProps: {
         label: 'title',
         value: 'id'
