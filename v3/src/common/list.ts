@@ -29,8 +29,8 @@ export const listNavConfig: NavVO = {
         { title: '手动操作', routerLink: { name: 'ComponentListRadioHandleManual' } },
         { title: '高亮选中节点', routerLink: { name: 'ComponentListRadioHighlight' } },
         { title: '触发方法', routerLink: { name: 'ComponentListRadioTrigger' } },
-        { title: '禁用', routerLink: { name: 'ComponentListRadioCheckMethod' } },
-        { title: '显示隐藏', routerLink: { name: 'ComponentListRadioVisibleMethod' } }
+        { title: '是否禁用', routerLink: { name: 'ComponentListRadioCheckMethod' } },
+        { title: '是否隐藏', routerLink: { name: 'ComponentListRadioVisibleMethod' } }
       ]
     },
     {
@@ -40,8 +40,8 @@ export const listNavConfig: NavVO = {
         { title: '手动操作', routerLink: { name: 'ComponentListCheckboxHandleManual' } },
         { title: '高亮选中节点', routerLink: { name: 'ComponentListCheckboxHighlight' } },
         { title: '触发方法', routerLink: { name: 'ComponentListCheckboxTrigger' } },
-        { title: '禁用', routerLink: { name: 'ComponentListCheckboxCheckMethod' } },
-        { title: '显示隐藏', routerLink: { name: 'ComponentListCheckboxVisibleMethod' } }
+        { title: '是否禁用', routerLink: { name: 'ComponentListCheckboxCheckMethod' } },
+        { title: '是否隐藏', routerLink: { name: 'ComponentListCheckboxVisibleMethod' } }
       ]
     },
     {

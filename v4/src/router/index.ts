@@ -3539,6 +3539,8 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentTreeSelectRadioBase',
                 component: () => import('@/views/tree-select/radio/base/CodeExample.vue')
               },
+              { path: 'checkMethod', name: 'ComponentTreeSelectRadioCheckMethod', component: () => import('@/views/tree-select/radio/checkMethod/CodeExample.vue') },
+              { path: 'visibleMethod', name: 'ComponentTreeSelectRadioVisibleMethod', component: () => import('@/views/tree-select/radio/visibleMethod/CodeExample.vue') },
               {
                 path: 'trigger',
                 name: 'ComponentTreeSelectRadioTrigger',
@@ -3560,6 +3562,8 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentTreeSelectCheckboxCheckStrictly',
                 component: () => import('@/views/tree-select/checkbox/checkStrictly/CodeExample.vue')
               },
+              { path: 'checkMethod', name: 'ComponentTreeSelectCheckboxCheckMethod', component: () => import('@/views/tree-select/checkbox/checkMethod/CodeExample.vue') },
+              { path: 'visibleMethod', name: 'ComponentTreeSelectCheckboxVisibleMethod', component: () => import('@/views/tree-select/checkbox/visibleMethod/CodeExample.vue') },
               {
                 path: 'trigger',
                 name: 'ComponentTreeSelectCheckboxTrigger',
