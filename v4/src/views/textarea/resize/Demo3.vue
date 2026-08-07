@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-textarea v-model="val1" placeholder="以调节元素的宽度" resize="horizontal"></vxe-textarea>
+    <vxe-textarea v-model="val1" placeholder="可以调节元素的宽度" resize="horizontal"></vxe-textarea>
   </div>
 </template>
 
