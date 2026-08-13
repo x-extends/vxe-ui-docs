@@ -19,8 +19,8 @@ import XEUtils from 'xe-utils'
 interface RowVO {
   id: number
   title: string
-  start: Date
-  end: Date
+  start: string
+  end: string
   progress: number
 }
 
@@ -46,18 +46,18 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
   columns: [
     { type: 'seq', width: 70 },
     { field: 'title', title: '任务名称' },
-    { field: 'start', title: '开始时间', width: 100 },
-    { field: 'end', title: '结束时间', width: 100 }
+    { field: 'start', title: '开始时间', width: 160 },
+    { field: 'end', title: '结束时间', width: 160 }
   ],
   data: [
-    { id: 10001, title: '任务R790', start: XEUtils.getWhatDay(new Date(), -6), end: XEUtils.getWhatDay(new Date(), 6), progress: 40 },
-    { id: 10002, title: 'B项目', start: XEUtils.getWhatDay(new Date(), -3), end: XEUtils.getWhatDay(new Date(), 3), progress: 60 },
-    { id: 10003, title: 'C项目', start: XEUtils.getWhatDay(new Date(), 1), end: XEUtils.getWhatDay(new Date(), 9), progress: 90 },
-    { id: 10004, title: '任务D554', start: XEUtils.getWhatDay(new Date(), -15), end: XEUtils.getWhatDay(new Date(), -3), progress: 95 },
-    { id: 10005, title: 'E项目', start: XEUtils.getWhatDay(new Date(), -22), end: XEUtils.getWhatDay(new Date(), -8), progress: 80 },
-    { id: 10006, title: 'F项目', start: XEUtils.getWhatDay(new Date(), -1), end: XEUtils.getWhatDay(new Date(), 8), progress: 60 },
-    { id: 10007, title: '任务R427953', start: XEUtils.getWhatDay(new Date(), 1), end: XEUtils.getWhatDay(new Date(), 9), progress: 90 },
-    { id: 10008, title: 'H项目', start: XEUtils.getWhatDay(new Date(), 11), end: XEUtils.getWhatDay(new Date(), 19), progress: 100 }
+    { id: 10001, title: '任务R790', start: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), -6)), end: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), 6)), progress: 40 },
+    { id: 10002, title: 'B项目', start: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), -3)), end: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), 3)), progress: 60 },
+    { id: 10003, title: 'C项目', start: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), 1)), end: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), 9)), progress: 90 },
+    { id: 10004, title: '任务D554', start: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), -15)), end: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), -3)), progress: 95 },
+    { id: 10005, title: 'E项目', start: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), -22)), end: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), -8)), progress: 80 },
+    { id: 10006, title: 'F项目', start: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), -1)), end: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), 8)), progress: 60 },
+    { id: 10007, title: '任务R427953', start: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), 1)), end: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), 9)), progress: 90 },
+    { id: 10008, title: 'H项目', start: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), 11)), end: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), 19)), progress: 100 }
   ]
 })
 </script>

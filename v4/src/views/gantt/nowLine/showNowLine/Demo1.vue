@@ -14,8 +14,8 @@ import XEUtils from 'xe-utils'
 interface RowVO {
   id: number
   title: string
-  start: Date
-  end: Date
+  start: string
+  end: string
   progress: number
 }
 
@@ -36,13 +36,13 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
   columns: [
     { type: 'seq', width: 70 },
     { field: 'title', title: '任务名称' },
-    { field: 'start', title: '开始时间', width: 100 },
-    { field: 'end', title: '结束时间', width: 100 }
+    { field: 'start', title: '开始时间', width: 160 },
+    { field: 'end', title: '结束时间', width: 160 }
   ],
   data: [
-    { id: 10001, title: '任务R790', start: XEUtils.getWhatDay(new Date(), -6), end: XEUtils.getWhatDay(new Date(), -2), progress: 40 },
-    { id: 10002, title: '任务C30456572349', start: XEUtils.getWhatDay(new Date(), -3), end: XEUtils.getWhatDay(new Date(), 3), progress: 60 },
-    { id: 10003, title: '任务E563', start: XEUtils.getWhatDay(new Date(), 1), end: XEUtils.getWhatDay(new Date(), 9), progress: 90 }
+    { id: 10001, title: '任务R790', start: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), -6)), end: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), -2)), progress: 40 },
+    { id: 10002, title: '任务C30456572349', start: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), -3)), end: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), 3)), progress: 60 },
+    { id: 10003, title: '任务E563', start: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), 1)), end: XEUtils.toDateString(XEUtils.getWhatDay(new Date(), 9)), progress: 90 }
   ]
 })
 </script>
