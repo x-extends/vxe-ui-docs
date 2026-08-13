@@ -19,9 +19,9 @@
     "vue-router": "~3.5.1",
     "vuex": "~3.6.2",
     "vxe-design": "~3.0.1",
-    "vxe-gantt": "~3.6.8",
+    "vxe-gantt": "~3.6.9",
     "vxe-pc-ui": "~3.16.28",
-    "vxe-table": "~3.22.11",
+    "vxe-table": "~3.22.12",
     "xe-utils": "^4.0.11"
   },
   "devDependencies": {
