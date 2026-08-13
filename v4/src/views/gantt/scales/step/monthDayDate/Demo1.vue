@@ -17,7 +17,6 @@ interface RowVO {
 }
 
 const ganttOptions = reactive<VxeGanttProps<RowVO>>({
-  border: true,
   showOverflow: true,
   cellConfig: {
     height: 80
@@ -32,17 +31,18 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     }
   },
   taskViewConfig: {
-    scales: ['month', 'day', 'date'],
+    scales: [
+      { type: 'month' },
+      { type: 'day' },
+      { type: 'date', step: 3 }
+    ],
     tableStyle: {
       width: 320
-    },
-    viewStyle: {
-      cellWidth: 120
     }
   },
   columns: [
     { type: 'seq', field: 'seq', width: 70 },
-    { field: 'title', title: '任务名称' },
+    { field: 'title', title: '任务名称', minWidth: 140 },
     { field: 'start', title: '开始时间', width: 160 },
     { field: 'end', title: '结束时间', width: 160 }
   ],

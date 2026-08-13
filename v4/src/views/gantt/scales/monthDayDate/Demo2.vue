@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import { VxeGanttProps } from 'vxe-gantt'
+import type { VxeGanttProps } from 'vxe-gantt'
 
 interface RowVO {
   id: number
@@ -14,13 +14,17 @@ interface RowVO {
   start: string
   end: string
   progress: number
-  owner: string
 }
 
 const ganttOptions = reactive<VxeGanttProps<RowVO>>({
   border: true,
-  height: 300,
-  loading: false,
+  showOverflow: true,
+  cellConfig: {
+    height: 80
+  },
+  taskConfig: {
+    dateFormat: 'yyyy-MM-dd HH:mm:ss'
+  },
   taskBarConfig: {
     showProgress: true,
     showContent: true,
@@ -31,32 +35,25 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     }
   },
   taskViewConfig: {
-    scales: [
-      { type: 'week', startDay: 2 },
-      { type: 'day' },
-      { type: 'date' }
-    ],
+    scales: ['month', 'day', 'date'],
     tableStyle: {
       width: 320
+    },
+    viewStyle: {
+      cellWidth: 120
     }
   },
   columns: [
-    { field: 'title', title: '任务名称', width: 120 },
-    { field: 'owner', title: '负责人', width: 100 },
+    { type: 'seq', field: 'seq', width: 70 },
+    { field: 'title', title: '任务名称' },
     { field: 'start', title: '开始时间', width: 160 },
     { field: 'end', title: '结束时间', width: 160 }
   ],
   data: [
-    { id: 10001, title: '任务R790', start: '2024-03-01', end: '2024-03-04', progress: 3, owner: '张三' },
-    { id: 10002, title: '任务C30456572349', start: '2024-03-03', end: '2024-03-08', progress: 10, owner: '小徐' },
-    { id: 10003, title: '任务E563', start: '2024-03-03', end: '2024-03-11', progress: 90, owner: '李四' },
-    { id: 10004, title: '任务P687', start: '2024-03-05', end: '2024-03-11', progress: 15, owner: '李四' },
-    { id: 10005, title: '任务L8412430903', start: '2024-03-08', end: '2024-03-15', progress: 100, owner: '老六' },
-    { id: 10006, title: '任务B567', start: '2024-03-10', end: '2024-03-21', progress: 5, owner: '小明' },
-    { id: 10007, title: '任务V513802134450', start: '2024-03-15', end: '2024-03-24', progress: 70, owner: '王五' },
-    { id: 10008, title: '任务G110', start: '2024-03-20', end: '2024-03-29', progress: 50, owner: '小徐' },
-    { id: 10009, title: '任务I802', start: '2024-03-19', end: '2024-03-20', progress: 5, owner: '王五' },
-    { id: 10010, title: '任务K778', start: '2024-03-12', end: '2024-03-20', progress: 10, owner: '老六' }
+    { id: 10001, title: '任务R790', start: '2024-03-01 08:00:00', end: '2024-03-04 12:30:00', progress: 3 },
+    { id: 10002, title: '任务C30456572349', start: '2024-03-03 09:30:00', end: '2024-03-08 14:00:00', progress: 10 },
+    { id: 10003, title: '任务E563', start: '2024-03-03 06:30:20', end: '2024-03-11 09:30:40', progress: 90 },
+    { id: 10004, title: '任务P687', start: '2024-03-05 12:30:00', end: '2024-03-11 18:30:00', progress: 15 }
   ]
 })
 </script>

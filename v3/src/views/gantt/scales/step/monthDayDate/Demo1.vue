@@ -19,7 +19,6 @@ interface RowVO {
 export default Vue.extend({
   data () {
     const ganttOptions: VxeGanttProps<RowVO> = {
-      border: true,
       showOverflow: true,
       cellConfig: {
         height: 80
@@ -35,20 +34,12 @@ export default Vue.extend({
       },
       taskViewConfig: {
         scales: [
-          { type: 'year' },
-          {
-            type: 'date',
-            step: 3,
-            titleMethod ({ startDateObj, endDateObj }) {
-              return `${startDateObj.M}月${startDateObj.d}日~${endDateObj.M}月${endDateObj.d}日`
-            }
-          }
+          { type: 'month' },
+          { type: 'day' },
+          { type: 'date', step: 3 }
         ],
         tableStyle: {
           width: 320
-        },
-        viewStyle: {
-          cellWidth: 140
         }
       },
       columns: [

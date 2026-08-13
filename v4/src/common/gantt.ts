@@ -262,6 +262,7 @@ export const ganttNavConfig: NavVO = {
             { title: '月视图', routerLink: { name: 'ComponentGanttScalesYearMonth' } },
             { title: '周视图', routerLink: { name: 'ComponentGanttScalesMonthWeek' } },
             { title: '天视图', routerLink: { name: 'ComponentGanttScalesMonthDate' } },
+            { title: '星期视图', routerLink: { name: 'ComponentGanttScalesMonthDayDate' } },
             { title: '小时视图', routerLink: { name: 'ComponentGanttScalesDateHour' } },
             { title: '分钟视图', routerLink: { name: 'ComponentGanttScalesHourMinute' } },
             { title: '秒视图', routerLink: { name: 'ComponentGanttScalesMinuteSecond' } }
@@ -275,6 +276,7 @@ export const ganttNavConfig: NavVO = {
             { title: '月视图', routerLink: { name: 'ComponentGanttScalesStepYearMonth' } },
             { title: '周视图', routerLink: { name: 'ComponentGanttScalesStepMonthWeek' } },
             { title: '天视图', routerLink: { name: 'ComponentGanttScalesStepMonthDate' } },
+            { title: '星期视图', routerLink: { name: 'ComponentGanttScalesStepMonthDayDate' } },
             { title: '小时视图', routerLink: { name: 'ComponentGanttScalesStepDateHour' } },
             { title: '分钟视图', routerLink: { name: 'ComponentGanttScalesStepHourMinute' } },
             { title: '秒视图', routerLink: { name: 'ComponentGanttScalesStepMinuteSecond' } }
@@ -285,7 +287,7 @@ export const ganttNavConfig: NavVO = {
         // { title: '年-月-日', routerLink: { name: 'ComponentGanttScalesYearMonthDate' } },
         // { title: '年-周-日', routerLink: { name: 'ComponentGanttScalesYearWeekDate' } },
         // { title: '季-月-日', routerLink: { name: 'ComponentGanttScalesQuarterMonthDate' } },
-        { title: '自定义周的开始日', routerLink: { name: 'ComponentGanttScalesMonthDayDate' } },
+        { title: '自定义周的开始日', routerLink: { name: 'ComponentGanttScalesWeekDayDate' } },
         // { title: '按天来显示小时', routerLink: { name: 'ComponentGanttScalesHourToDate' } },
         { title: '格式化列头标题', routerLink: { name: 'ComponentGanttScalesTitleFormat' } },
         { title: '自定义列头标题', routerLink: { name: 'ComponentGanttScalesTitleMethod' } },

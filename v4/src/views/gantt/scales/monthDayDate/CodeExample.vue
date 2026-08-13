@@ -2,8 +2,11 @@
   <div>
     <CodeLight path="gantt/scales/monthDayDate/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="自定义周的开始日">
-          自定义周的开始日，默认周一开始，通过设置 <ApiLink name="gantt" prop="startDay"/> 来自定义一周的开始日
+        <vxe-tip status="primary" title="星期视图">
+          默认解析到天 yyyy-MM-dd，以天为维度进行渲染
+        </vxe-tip>
+        <vxe-tip status="error">
+          当使用天视图时，应该控制好月份的限制，比如2个月内，当渲染月份数过大时，渲染的复杂度将会以倍数增长，渲染越多将会越慢
         </vxe-tip>
       </template>
     </CodeLight>
@@ -11,47 +14,7 @@
     <CodeLight path="gantt/scales/monthDayDate/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          周二开始
-        </vxe-tip>
-      </template>
-    </CodeLight>
-
-    <CodeLight path="gantt/scales/monthDayDate/Demo3">
-      <template #tip>
-        <vxe-tip status="primary">
-          周三开始
-        </vxe-tip>
-      </template>
-    </CodeLight>
-
-    <CodeLight path="gantt/scales/monthDayDate/Demo4">
-      <template #tip>
-        <vxe-tip status="primary">
-          周四开始
-        </vxe-tip>
-      </template>
-    </CodeLight>
-
-    <CodeLight path="gantt/scales/monthDayDate/Demo5">
-      <template #tip>
-        <vxe-tip status="primary">
-          周五开始
-        </vxe-tip>
-      </template>
-    </CodeLight>
-
-    <CodeLight path="gantt/scales/monthDayDate/Demo6">
-      <template #tip>
-        <vxe-tip status="primary">
-          周六开始
-        </vxe-tip>
-      </template>
-    </CodeLight>
-
-    <CodeLight path="gantt/scales/monthDayDate/Demo7">
-      <template #tip>
-        <vxe-tip status="primary">
-          周日开始
+          指定格式，精确到时分秒，自动在单元格内按实际进度显示
         </vxe-tip>
       </template>
     </CodeLight>

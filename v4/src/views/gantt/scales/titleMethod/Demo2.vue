@@ -37,9 +37,8 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
       {
         type: 'date',
         step: 3,
-        titleMethod ({ dateObj }) {
-          const endDate = new Date(dateObj.date.getTime() + (3 * 24 * 60 * 60 * 1000))
-          return `${dateObj.M}月${dateObj.d}日~${endDate.getMonth() + 1}月${endDate.getDate()}日`
+        titleMethod ({ startDateObj, endDateObj }) {
+          return `${startDateObj.M}月${startDateObj.d}日~${endDateObj.M}月${endDateObj.d}日`
         }
       }
     ],
