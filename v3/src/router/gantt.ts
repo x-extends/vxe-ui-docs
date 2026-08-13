@@ -34,6 +34,7 @@ export const ganttRouteConfig: RouteConfig = {
       children: [
         { path: 'showNowLine', name: 'ComponentGanttNowLineShowNowLine', component: () => import('@/views/gantt/nowLine/showNowLine/CodeExample.vue') },
         { path: 'color', name: 'ComponentGanttNowLineColor', component: () => import('@/views/gantt/nowLine/color/CodeExample.vue') },
+        { path: 'width', name: 'ComponentGanttNowLineWidth', component: () => import('@/views/gantt/nowLine/width/CodeExample.vue') },
         { path: 'mode', name: 'ComponentGanttNowLineMode', component: () => import('@/views/gantt/nowLine/mode/CodeExample.vue') }
       ]
     },

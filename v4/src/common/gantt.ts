@@ -31,6 +31,7 @@ export const ganttNavConfig: NavVO = {
       children: [
         { title: '高亮此刻线', routerLink: { name: 'ComponentGanttNowLineShowNowLine' } },
         { title: '线颜色', routerLink: { name: 'ComponentGanttNowLineColor' } },
+        { title: '线宽度', routerLink: { name: 'ComponentGanttNowLineWidth' } },
         { title: '显示方式', routerLink: { name: 'ComponentGanttNowLineMode' } }
       ]
     },
