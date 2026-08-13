@@ -83,7 +83,7 @@ export default Vue.extend({
     expandNodeEvent () {
       const $gantt = this.$refs.ganttRef as VxeGanttInstance<RowVO>
       if ($gantt) {
-        $gantt.setTreeExpand(this.ganttOptions.data[1], true)
+        $gantt.setTreeExpand(this.ganttOptions.data[2], true)
       }
     },
     expandAllEvent () {

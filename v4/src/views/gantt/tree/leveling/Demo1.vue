@@ -78,7 +78,7 @@ const ganttOptions = reactive<VxeGanttProps<RowVO> & { data: RowVO[] }>({
 const expandNodeEvent = () => {
   const $gantt = ganttRef.value
   if ($gantt) {
-    $gantt.setTreeExpand(ganttOptions.data[1], true)
+    $gantt.setTreeExpand(ganttOptions.data[2], true)
   }
 }
 
