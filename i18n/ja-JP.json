@@ -464,6 +464,7 @@
         "scales": "日付軸",
         "scalesMonthDate": "天视图",
         "scalesMonthDayDate": "星期视图",
+        "scalesDateHour": "小时视图",
         "scalesBase": "基础配置",
         "scalesStep": "设置跨度",
         "dependency": "依存線",
