@@ -14,7 +14,7 @@
 
     <CodeLight path="textarea/resize/Demo3">
       <template #tip>
-        <vxe-tip status="primary">以调节元素的宽度</vxe-tip>
+        <vxe-tip status="primary">可以调节元素的宽度</vxe-tip>
       </template>
     </CodeLight>
 
