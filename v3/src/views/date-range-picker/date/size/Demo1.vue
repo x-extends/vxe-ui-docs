@@ -13,10 +13,10 @@ import Vue from 'vue'
 export default Vue.extend({
   data () {
     return {
-      val1: '',
-      val2: '',
-      val3: '',
-      val4: ''
+      val1: '2026-08-15,2026-09-02',
+      val2: '2026-08-15,2026-09-02',
+      val3: '2026-08-15,2026-09-02',
+      val4: '2026-08-15,2026-09-02'
     }
   }
 })

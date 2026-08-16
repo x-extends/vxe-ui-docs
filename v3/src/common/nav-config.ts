@@ -750,6 +750,9 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'password-input' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentPasswordInputSize' } },
           { title: '可清除', routerLink: { name: 'ComponentPasswordInputClearable' } },
+          { title: '只读模式', routerLink: { name: 'ComponentPasswordInputReadonly' } },
+          { title: '不可编辑', routerLink: { name: 'ComponentPasswordInputEditable' } },
+          { title: '图标', routerLink: { name: 'ComponentPasswordInputIcon' } },
           { title: '控制按钮', routerLink: { name: 'ComponentPasswordInputControls' } }
         ]
       },

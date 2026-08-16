@@ -9,8 +9,8 @@
       <vxe-form-item title="性别" field="sex" :item-render="{}">
         <template #default="{ data }">
           <vxe-select v-model="data.sex" placeholder="请选择性别" clearable>
-            <vxe-option value="1" label="女"></vxe-option>
-            <vxe-option value="2" label="男"></vxe-option>
+            <vxe-option value="0" label="女"></vxe-option>
+            <vxe-option value="1" label="男"></vxe-option>
           </vxe-select>
         </template>
       </vxe-form-item>
@@ -30,8 +30,8 @@
       <vxe-form-item title="性别" field="sex" :item-render="{}">
         <template #default="{ data }">
           <vxe-select v-model="data.sex" placeholder="请选择性别" clearable>
-            <vxe-option value="1" label="女"></vxe-option>
-            <vxe-option value="2" label="男"></vxe-option>
+            <vxe-option value="0" label="女"></vxe-option>
+            <vxe-option value="1" label="男"></vxe-option>
           </vxe-select>
         </template>
       </vxe-form-item>
@@ -51,8 +51,8 @@
       <vxe-form-item title="性别" field="sex" :item-render="{}">
         <template #default="{ data }">
           <vxe-select v-model="data.sex" placeholder="请选择性别" clearable>
-            <vxe-option value="1" label="女"></vxe-option>
-            <vxe-option value="2" label="男"></vxe-option>
+            <vxe-option value="0" label="女"></vxe-option>
+            <vxe-option value="1" label="男"></vxe-option>
           </vxe-select>
         </template>
       </vxe-form-item>
@@ -72,8 +72,8 @@
       <vxe-form-item title="性别" field="sex" :item-render="{}">
         <template #default="{ data }">
           <vxe-select v-model="data.sex" placeholder="请选择性别" clearable>
-            <vxe-option value="1" label="女"></vxe-option>
-            <vxe-option value="2" label="男"></vxe-option>
+            <vxe-option value="0" label="女"></vxe-option>
+            <vxe-option value="1" label="男"></vxe-option>
           </vxe-select>
         </template>
       </vxe-form-item>
@@ -93,8 +93,8 @@
       <vxe-form-item title="性别" field="sex" :item-render="{}">
         <template #default="{ data }">
           <vxe-select v-model="data.sex" placeholder="请选择性别" clearable>
-            <vxe-option value="1" label="女"></vxe-option>
-            <vxe-option value="2" label="男"></vxe-option>
+            <vxe-option value="0" label="女"></vxe-option>
+            <vxe-option value="1" label="男"></vxe-option>
           </vxe-select>
         </template>
       </vxe-form-item>
@@ -114,8 +114,8 @@
       <vxe-form-item title="性别" field="sex" :item-render="{}">
         <template #default="{ data }">
           <vxe-select v-model="data.sex" placeholder="请选择性别" clearable>
-            <vxe-option value="1" label="女"></vxe-option>
-            <vxe-option value="2" label="男"></vxe-option>
+            <vxe-option value="0" label="女"></vxe-option>
+            <vxe-option value="1" label="男"></vxe-option>
           </vxe-select>
         </template>
       </vxe-form-item>

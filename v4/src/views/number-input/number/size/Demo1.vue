@@ -12,10 +12,10 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const val1 = ref(null)
-const val2 = ref(null)
-const val3 = ref(null)
-const val4 = ref(null)
-const val5 = ref(null)
-const val6 = ref(null)
+const val1 = ref(999)
+const val2 = ref(999)
+const val3 = ref(999)
+const val4 = ref(999)
+const val5 = ref(999)
+const val6 = ref(999)
 </script>

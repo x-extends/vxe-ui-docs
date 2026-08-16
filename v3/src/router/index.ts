@@ -1526,6 +1526,9 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentPasswordInputClearable',
             component: () => import('@/views/password-input/clearable/CodeExample.vue')
           },
+          { path: 'readonly', name: 'ComponentPasswordInputReadonly', component: () => import('@/views/password-input/readonly/CodeExample.vue') },
+          { path: 'editable', name: 'ComponentPasswordInputEditable', component: () => import('@/views/password-input/editable/CodeExample.vue') },
+          { path: 'icon', name: 'ComponentPasswordInputIcon', component: () => import('@/views/password-input/icon/CodeExample.vue') },
           {
             path: 'controls',
             name: 'ComponentPasswordInputControls',

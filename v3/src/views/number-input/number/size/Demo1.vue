@@ -15,13 +15,12 @@ import Vue from 'vue'
 export default Vue.extend({
   data () {
     return {
-      userName: null,
-      val1: null,
-      val2: null,
-      val3: null,
-      val4: null,
-      val5: null,
-      val6: null
+      val1: 999,
+      val2: 999,
+      val3: 999,
+      val4: 999,
+      val5: 999,
+      val6: 999
     }
   }
 })

@@ -10,8 +10,8 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const val1 = ref('')
-const val2 = ref('')
-const val3 = ref('')
-const val4 = ref('')
+const val1 = ref('2026-08-15')
+const val2 = ref('2026-08-15')
+const val3 = ref('2026-08-15')
+const val4 = ref('2026-08-15')
 </script>

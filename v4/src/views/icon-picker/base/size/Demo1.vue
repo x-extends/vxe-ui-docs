@@ -10,8 +10,8 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const val1 = ref('')
-const val2 = ref('')
-const val3 = ref('')
-const val4 = ref('')
+const val1 = ref('vxe-icon-home')
+const val2 = ref('vxe-icon-home')
+const val3 = ref('vxe-icon-home')
+const val4 = ref('vxe-icon-home')
 </script>

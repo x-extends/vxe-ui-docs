@@ -13,10 +13,10 @@ import Vue from 'vue'
 export default Vue.extend({
   data () {
     return {
-      val1: '',
-      val2: '',
-      val3: '',
-      val4: ''
+      val1: 'vxe-icon-home',
+      val2: 'vxe-icon-home',
+      val3: 'vxe-icon-home',
+      val4: 'vxe-icon-home'
     }
   }
 })
