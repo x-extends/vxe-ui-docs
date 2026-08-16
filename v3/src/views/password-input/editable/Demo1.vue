@@ -12,7 +12,7 @@ export default Vue.extend({
   data () {
     return {
       isEdit: false,
-      val1: ''
+      val1: 'abc123456'
     }
   }
 })

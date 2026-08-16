@@ -8,6 +8,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const val1 = ref('123')
+const val1 = ref('abc123456')
 const isEdit = ref(false)
 </script>

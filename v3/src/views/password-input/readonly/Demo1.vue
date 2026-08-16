@@ -12,7 +12,7 @@ export default Vue.extend({
   data () {
     return {
       isReadonly: true,
-      val1: ''
+      val1: 'abc123456'
     }
   }
 })
