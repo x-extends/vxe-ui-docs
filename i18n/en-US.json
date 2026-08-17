@@ -546,7 +546,7 @@
       "apiBtn": "View API documentation",
       "trialBtn": "Apply for trial",
       "buyBtn": "Purchase license",
-      "pyBuyBtn": "Purchase for client",
+      "pyBuyBtn": "Auth Purchase for Client",
       "ltBuyBtn": "Limited sale",
       "histVersion": "Version history",
       "registerBtn": "Register",
