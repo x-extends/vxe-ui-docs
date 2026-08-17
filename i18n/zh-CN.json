@@ -46,7 +46,7 @@
         "globalConfig": "全局参数",
         "globalTheme": "全局主题",
         "globalIcon": "全局图标",
-        "globalZIndex": "动态 z-index",
+        "globalZIndex": "动态设置 z-index",
         "globalPermission": "全局权限控制",
         "i18n": "国际化",
         "configI18n": "对组件内置内容进行翻译",
