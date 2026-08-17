@@ -44,21 +44,28 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     barStyle ({ row }) {
       if (row.flag === 1) {
         return {
-          transform: 'translateY(-24px)'
+          style: {
+            top: '-12px' // 偏移位置，计划于实际不重叠
+          }
         }
       }
       if (row.flag === 2) {
         return {
-          transform: 'translateY(1px)',
-          '--vxe-ui-gantt-view-task-bar-completed-background-color': '#31d231'
+          style: {
+            top: '12px' // 偏移位置，计划于实际不重叠
+          }
         }
       }
     }
   },
   taskBarConfig: {
     showContent: true,
-    barStyle: {
-      round: true
+    barStyle ({ row }) {
+      return {
+        round: true, // 圆角
+        bgColor: row.flag === 1 ? '#40d9eff' : '#31d231', // 任务条的背景颜色
+        completedBgColor: row.flag === 1 ? '#409eff' : '#14ae14' // 已完成部分任务条的背景颜色
+      }
     }
   },
   taskViewConfig: {
