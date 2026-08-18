@@ -16,8 +16,8 @@
     "@vxe-ui/plugin-export-xlsx": "~3.5.4",
     "@vxe-ui/plugin-menu": "~3.3.2",
     "@vxe-ui/plugin-render-chart": "~3.4.0",
-    "@vxe-ui/plugin-render-element": "~3.4.1",
-    "@vxe-ui/plugin-render-antd": "~3.4.0",
+    "@vxe-ui/plugin-render-element": "~3.4.3",
+    "@vxe-ui/plugin-render-antd": "~3.4.1",
     "@vxe-ui/plugin-render-iview": "~3.2.1",
     "@vxe-ui/plugin-render-tdesign": "~3.2.2",
     "@vxe-ui/plugin-render-wangeditor": "~3.3.1",
@@ -35,7 +35,7 @@
     "vxe-pc-ui": "~3.17.3",
     "vxe-design": "~3.0.1",
     "vxe-table": "~3.22.12",
-    "vxe-gantt": "~3.7.0",
+    "vxe-gantt": "~3.7.1",
     "xe-utils": "^4.0.11"
   },
   "devDependencies": {
