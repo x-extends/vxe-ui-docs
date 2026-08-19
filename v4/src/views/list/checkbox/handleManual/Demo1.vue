@@ -14,7 +14,7 @@
 
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-import { VxeUI, VxeListPropTypes, VxeListProps } from 'vxe-pc-ui'
+import { VxeUI, VxeListPropTypes, VxeListProps, VxeWithRequired } from 'vxe-pc-ui'
 
 interface RowVO {
   id: string
@@ -23,7 +23,7 @@ interface RowVO {
 
 const checkRowKeys = ref<VxeListPropTypes.CheckRowKeys>([])
 
-const listOptions = reactive<VxeListProps<RowVO> & { data: RowVO[] }>({
+const listOptions = reactive<VxeWithRequired<VxeListProps<RowVO>, 'data'>>({
   height: 400,
   showCheckbox: true,
   rowConfig: {

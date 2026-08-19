@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeFormItemPropTypes, VxeSelectProps, VxeDatePickerProps } from 'vxe-pc-ui'
+import { VxeFormItemPropTypes, VxeSelectProps, VxeDatePickerProps, VxeWithRequired } from 'vxe-pc-ui'
 import XEUtils from 'xe-utils'
 
 interface FormDataVO {
@@ -44,7 +44,7 @@ export default Vue.extend({
       }
     }
 
-    const roleItemRender: VxeFormItemPropTypes.ItemRender<FormDataVO, VxeSelectProps> & { props: VxeSelectProps } = {
+    const roleItemRender: VxeWithRequired<VxeFormItemPropTypes.ItemRender<FormDataVO, VxeSelectProps>, 'props'> = {
       name: 'VxeSelect',
       props: {
         disabled: true

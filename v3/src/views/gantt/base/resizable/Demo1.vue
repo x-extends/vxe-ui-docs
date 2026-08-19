@@ -9,7 +9,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import type { VxeGanttProps } from 'vxe-gantt'
-import type { VxeTablePropTypes } from 'vxe-table'
+import type { VxeWithRequired } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -21,9 +21,7 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
-    const ganttOptions: VxeGanttProps<RowVO> & {
-      columnConfig: VxeTablePropTypes.ColumnConfig<RowVO>
-    } = {
+    const ganttOptions: VxeWithRequired<VxeGanttProps<RowVO>, 'columnConfig'> = {
       columnConfig: {
         resizable: true
       },

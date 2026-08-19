@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeFormProps } from 'vxe-pc-ui'
+import { VxeFormProps, VxeWithRequired } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -27,7 +27,7 @@ interface FormDataVO {
 
 export default Vue.extend({
   data () {
-    const formOptions: VxeFormProps<FormDataVO> & { data: FormDataVO } = {
+    const formOptions: VxeWithRequired<VxeFormProps<FormDataVO>, 'data'> = {
       border: true,
       titleBackground: true,
       titleWidth: 80,

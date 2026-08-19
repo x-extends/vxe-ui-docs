@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import type { VxeGanttInstance, VxeGanttProps } from 'vxe-gantt'
+import type { VxeGanttInstance, VxeGanttProps, VxeWithRequired } from 'vxe-gantt'
 
 interface RowVO {
   id: number
@@ -26,7 +26,7 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
-    const ganttOptions: VxeGanttProps<RowVO> & { data: RowVO[] } = {
+    const ganttOptions: VxeWithRequired<VxeGanttProps<RowVO>, 'data'> = {
       border: true,
       height: 500,
       rowConfig: {

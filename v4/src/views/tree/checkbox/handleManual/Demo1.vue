@@ -14,7 +14,7 @@
 
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-import { VxeUI, VxeTreePropTypes, VxeTreeProps } from 'vxe-pc-ui'
+import { VxeUI, VxeTreePropTypes, VxeTreeProps, VxeWithRequired } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
@@ -24,7 +24,7 @@ interface NodeVO {
 
 const checkNodeKeys = ref<VxeTreePropTypes.CheckNodeKeys>([])
 
-const treeOptions = reactive<VxeTreeProps<NodeVO> & { data: NodeVO[] }>({
+const treeOptions = reactive<VxeWithRequired<VxeTreeProps<NodeVO>, 'data'>>({
   transform: true,
   showCheckbox: true,
   keyField: 'id',
