@@ -21,7 +21,7 @@
     "vxe-design": "~4.1.6",
     "vxe-gantt": "~4.7.1",
     "vxe-pc-ui": "~4.17.5",
-    "vxe-table": "4.21.0-beta.2",
+    "vxe-table": "4.21.0-beta.3",
     "xe-utils": "^4.0.11"
   },
   "devDependencies": {
@@ -52,6 +52,7 @@
     "vite": "~8.2.1",
     "vite-plugin-html": "~3.2.2",
     "vite-plugin-zip-pack": "~1.2.4",
+    "vue-eslint-parser": "^10.4.1",
     "vue-tsc": "~3.3.8"
   }
 }
