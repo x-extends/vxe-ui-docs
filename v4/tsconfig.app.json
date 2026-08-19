@@ -36,7 +36,7 @@
     "./src/**/*.d.ts",
     "./src/**/*.tsx", 
     "./src/**/*.vue"
-  ],
+, "src/views/grid/other/compareTable"  ],
   "exclude": [
     "node_modules"
   ]
