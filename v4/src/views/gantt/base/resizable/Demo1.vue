@@ -8,8 +8,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import type { VxeGanttProps } from 'vxe-gantt'
-import type { VxeTablePropTypes } from 'vxe-table'
+import type { VxeGanttProps, VxeWithRequired } from 'vxe-gantt'
 
 interface RowVO {
   id: number
@@ -19,9 +18,7 @@ interface RowVO {
   progress: number
 }
 
-const ganttOptions = reactive<VxeGanttProps<RowVO> & {
-  columnConfig: VxeTablePropTypes.ColumnConfig<RowVO>
-}>({
+const ganttOptions = reactive<VxeWithRequired<VxeGanttProps<RowVO>, 'columnConfig'>>({
   columnConfig: {
     resizable: true
   },

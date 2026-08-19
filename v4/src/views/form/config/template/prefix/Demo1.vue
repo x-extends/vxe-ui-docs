@@ -14,7 +14,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import { VxeFormProps } from 'vxe-pc-ui'
+import { VxeFormProps, VxeWithRequired } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -25,7 +25,7 @@ interface FormDataVO {
   isEnableSex: boolean
 }
 
-const formOptions = reactive<VxeFormProps<FormDataVO> & { data: FormDataVO }>({
+const formOptions = reactive<VxeWithRequired<VxeFormProps<FormDataVO>, 'data'>>({
   border: true,
   titleBackground: true,
   titleWidth: 80,
