@@ -16,8 +16,7 @@
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
 import { VxeUI } from 'vxe-pc-ui'
-import { VxeGanttProps, VxeGanttInstance } from 'vxe-gantt'
-import { VxeTablePropTypes } from 'vxe-table'
+import { VxeGanttProps, VxeGanttInstance, VxeWithRequired } from 'vxe-gantt'
 
 interface RowVO {
   id: number
@@ -41,7 +40,7 @@ interface RowVO {
 
 const ganttRef = ref<VxeGanttInstance<RowVO>>()
 
-const ganttOptions = reactive<VxeGanttProps<RowVO> & { validConfig: VxeTablePropTypes.ValidConfig }>({
+const ganttOptions = reactive<VxeWithRequired<VxeGanttProps<RowVO>, 'validConfig'>>({
   border: true,
   showOverflow: true,
   keepSource: true,

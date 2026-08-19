@@ -25,7 +25,7 @@
 
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-import type { VxeGanttInstance, VxeGanttProps } from 'vxe-gantt'
+import type { VxeGanttInstance, VxeGanttProps, VxeWithRequired } from 'vxe-gantt'
 
 interface RowVO {
   id: number
@@ -37,9 +37,7 @@ interface RowVO {
 
 const ganttRef = ref<VxeGanttInstance<RowVO>>()
 
-const ganttOptions = reactive<VxeGanttProps<RowVO> & {
-  data: RowVO[]
-}>({
+const ganttOptions = reactive<VxeWithRequired<VxeGanttProps<RowVO>, 'data'>>({
   border: true,
   taskBarConfig: {
     showProgress: true,

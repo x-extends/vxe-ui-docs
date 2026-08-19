@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeUI, VxeTreePropTypes, VxeTreeProps } from 'vxe-pc-ui'
+import { VxeUI, VxeTreePropTypes, VxeTreeProps, VxeWithRequired } from 'vxe-pc-ui'
 
 interface NodeVO {
   title: string
@@ -24,7 +24,7 @@ interface NodeVO {
 
 export default Vue.extend({
   data () {
-    const treeOptions: VxeTreeProps<NodeVO> & { data: NodeVO[] } = {
+    const treeOptions: VxeWithRequired<VxeTreeProps<NodeVO>, 'data'> = {
       transform: true,
       showCheckbox: true,
       keyField: 'id',

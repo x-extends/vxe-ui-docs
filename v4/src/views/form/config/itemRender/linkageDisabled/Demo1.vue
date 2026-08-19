@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import { VxeFormProps, VxeFormItemPropTypes, VxeSelectProps, VxeDatePickerProps } from 'vxe-pc-ui'
+import { VxeFormProps, VxeFormItemPropTypes, VxeSelectProps, VxeDatePickerProps, VxeWithRequired } from 'vxe-pc-ui'
 import XEUtils from 'xe-utils'
 
 interface FormDataVO {
@@ -32,7 +32,7 @@ const sexItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
   }
 })
 
-const roleItemRender = reactive<VxeFormItemPropTypes.ItemRender<FormDataVO, VxeSelectProps> & { props: VxeSelectProps }>({
+const roleItemRender = reactive<VxeWithRequired<VxeFormItemPropTypes.ItemRender<FormDataVO, VxeSelectProps>, 'props'>>({
   name: 'VxeSelect',
   props: {
     disabled: true
@@ -81,7 +81,7 @@ const actionItemRender = reactive<VxeFormItemPropTypes.ItemRender>({
   ]
 })
 
-const formOptions = reactive<VxeFormProps<FormDataVO> & { data: FormDataVO }>({
+const formOptions = reactive<VxeWithRequired<VxeFormProps<FormDataVO>, 'data'>>({
   titleWidth: 120,
   titleAlign: 'right',
   data: {

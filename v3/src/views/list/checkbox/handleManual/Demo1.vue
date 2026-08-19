@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeUI, VxeListPropTypes, VxeListProps } from 'vxe-pc-ui'
+import { VxeUI, VxeListPropTypes, VxeListProps, VxeWithRequired } from 'vxe-pc-ui'
 
 interface RowVO {
   id: string
@@ -23,7 +23,7 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
-    const listOptions: VxeListProps<RowVO> & { data: RowVO[] } = {
+    const listOptions: VxeWithRequired<VxeListProps<RowVO>, 'data'> = {
       height: 400,
       showCheckbox: true,
       rowConfig: {
