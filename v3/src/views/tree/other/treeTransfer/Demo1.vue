@@ -7,8 +7,10 @@
         <vxe-tree ref="treeRef1" v-bind="treeOptions1"></vxe-tree>
       </div>
       <div class="my-tree-transfer-handle">
-        <vxe-button class="my-tree-transfer-btn" status="primary" icon="vxe-icon-arrow-double-right" style="width: 100%;" @click="addEvent"></vxe-button>
-        <vxe-button class="my-tree-transfer-btn" status="error" icon="vxe-icon-arrow-double-left" style="width: 100%;" @click="delEvent"></vxe-button>
+        <vxe-button-group vertical>
+          <vxe-button status="primary" icon="vxe-icon-arrow-double-right" style="width: 100%;" @click="addEvent"></vxe-button>
+          <vxe-button status="error" icon="vxe-icon-arrow-double-left" style="width: 100%;" @click="delEvent"></vxe-button>
+        </vxe-button-group>
       </div>
       <div class="my-tree-transfer-right">
         <vxe-tree ref="treeRef2" v-bind="treeOptions2"></vxe-tree>
@@ -71,6 +73,7 @@ export default Vue.extend({
       keyField: 'id',
       parentField: 'parentId',
       showCheckbox: true,
+      emptyText: '请从左侧选择数据',
       drag: true,
       dragConfig: {
         isCrossDrag: true,
@@ -158,9 +161,6 @@ export default Vue.extend({
   flex-shrink: 0;
   padding: 0 5px;
   width: 50px;
-}
-.my-tree-transfer-btn {
-  margin: 2px 0;
 }
 .my-tree-transfer-left,
 .my-tree-transfer-right {

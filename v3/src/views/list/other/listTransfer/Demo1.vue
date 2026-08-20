@@ -7,8 +7,10 @@
         <vxe-list ref="listRef1" v-bind="listOptions1"></vxe-list>
       </div>
       <div class="my-list-transfer-handle">
-        <vxe-button class="my-list-transfer-btn" status="primary" icon="vxe-icon-arrow-double-right" style="width: 100%;" @click="addEvent"></vxe-button>
-        <vxe-button class="my-list-transfer-btn" status="error" icon="vxe-icon-arrow-double-left" style="width: 100%;" @click="delEvent"></vxe-button>
+        <vxe-button-group vertical>
+          <vxe-button status="primary" icon="vxe-icon-arrow-double-right" style="width: 100%;" @click="addEvent"></vxe-button>
+          <vxe-button status="error" icon="vxe-icon-arrow-double-left" style="width: 100%;" @click="delEvent"></vxe-button>
+        </vxe-button-group>
       </div>
       <div class="my-list-transfer-right">
         <vxe-list ref="listRef2" v-bind="listOptions2"></vxe-list>
@@ -162,9 +164,6 @@ export default Vue.extend({
   flex-shrink: 0;
   padding: 0 5px;
   width: 50px;
-}
-.my-list-transfer-btn {
-  margin: 2px 0;
 }
 .my-list-transfer-left,
 .my-list-transfer-right {
