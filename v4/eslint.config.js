@@ -25,7 +25,7 @@ export default defineConfig([
     ignores: ['**/node_modules/', '.git/']
   },
   tseslint.configs.recommended,
-  pluginVue.configs['flat/essential'],
+  pluginVue.configs['flat/recommended'],
   {
     files: ['**/*.vue'],
     languageOptions: {
