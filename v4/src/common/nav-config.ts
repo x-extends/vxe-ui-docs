@@ -770,6 +770,7 @@ export const navConfigList: NavVO[] = [
           },
           { title: '尺寸大小', routerLink: { name: 'ComponentColorPickerSize' } },
           { title: '可清除', routerLink: { name: 'ComponentColorPickerClearable' } },
+          { title: '面板默认颜色', routerLink: { name: 'ComponentColorPickerDefaultColor' } },
           { title: '快捷颜色', routerLink: { name: 'ComponentColorPickerColors' } },
           { title: 'RGB 格式', routerLink: { name: 'ComponentColorPickerRgb' } },
           { title: 'HEX 格式', routerLink: { name: 'ComponentColorPickerHex' } },

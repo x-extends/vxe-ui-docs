@@ -1818,6 +1818,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentColorPickerClearable',
             component: () => import('@/views/color-picker/clearable/CodeExample.vue')
           },
+          { path: 'defaultColor', name: 'ComponentColorPickerDefaultColor', component: () => import('@/views/color-picker/defaultColor/CodeExample.vue') },
           {
             path: 'colors',
             name: 'ComponentColorPickerColors',
