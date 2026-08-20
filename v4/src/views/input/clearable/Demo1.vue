@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-input v-model="val1" placeholder="显示字数统计" show-word-count clearable></vxe-input>
+    <vxe-input v-model="val1" placeholder="可清除" clearable></vxe-input>
   </div>
 </template>
 

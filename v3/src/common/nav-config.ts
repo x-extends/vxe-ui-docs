@@ -638,6 +638,7 @@ export const navConfigList: NavVO[] = [
           { title: '查看模式', routerLink: { name: 'ComponentInputReadonly' } },
           { title: '不可编辑', routerLink: { name: 'ComponentInputEditable' } },
           { title: '禁用', routerLink: { name: 'ComponentInputDisabled' } },
+          { title: '可清除', routerLink: { name: 'ComponentInputClearable' } },
           { title: '自动去掉左右空格', routerLink: { name: 'ComponentInputTrim' } },
           // { title: '密码类型', routerLink: { name: 'ComponentInputPassword' } },
           // { title: '时间类型', routerLink: { name: 'ComponentInputTime' } },

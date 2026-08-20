@@ -1423,6 +1423,7 @@ const routes: Array<RouteConfig> = [
           { path: 'readonly', name: 'ComponentInputReadonly', component: () => import('@/views/input/readonly/CodeExample.vue') },
           { path: 'editable', name: 'ComponentInputEditable', component: () => import('@/views/input/editable/CodeExample.vue') },
           { path: 'disabled', name: 'ComponentInputDisabled', component: () => import('@/views/input/disabled/CodeExample.vue') },
+          { path: 'clearable', name: 'ComponentInputClearable', component: () => import('@/views/input/clearable/CodeExample.vue') },
           { path: 'trim', name: 'ComponentInputTrim', component: () => import('@/views/input/trim/CodeExample.vue') },
           // {
           //   path: 'password',

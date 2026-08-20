@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-input v-model="val1" placeholder="显示字数统计" :countMethod="countMethod" show-word-count></vxe-input>
+    <vxe-input v-model="val1" placeholder="显示字数统计" :countMethod="countMethod" show-word-count clearable></vxe-input>
   </div>
 </template>
 
