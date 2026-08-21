@@ -671,7 +671,7 @@ export const navConfigList: NavVO[] = [
           { title: '尺寸大小', routerLink: { name: 'ComponentTextareaSize' } },
           { title: '查看模式', routerLink: { name: 'ComponentTextareaReadonly' } },
           { title: '不可编辑', routerLink: { name: 'ComponentTextareaEditable' } },
-          { title: '可清除', routerLink: { name: 'ComponentTextareaClearable' } },
+          // { title: '可清除', routerLink: { name: 'ComponentTextareaClearable' } },
           { title: '自动去掉左右空格', routerLink: { name: 'ComponentTextareaTrim' } },
           { title: '禁用', routerLink: { name: 'ComponentTextareaDisabled' } },
           { title: '字数统计', routerLink: { name: 'ComponentTextareaCount' } },
