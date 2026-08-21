@@ -32,13 +32,17 @@ const printEvent1 = () => {
 const printEvent2 = () => {
   VxeUI.print({
     align: 'center',
+    // 使用自定义分页模式，放弃内置的自动分页功能，可以灵活自定义实现任意分页
     pageBreaks: [
+      // 第一页
       {
         bodyHtml: '<img src="https://vxeui.com/resource/img/fj573.jpeg" style="width: 100%;">'
       },
+      // 第二页
       {
         bodyHtml: '<img src="https://vxeui.com/resource/img/fj562.png" style="width: 100%;">'
       },
+      // 第三页
       {
         bodyHtml: '<img src="https://vxeui.com/resource/img/fj187.jpg" style="width: 100%;">'
       }

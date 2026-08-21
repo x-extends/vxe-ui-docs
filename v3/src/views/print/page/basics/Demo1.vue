@@ -35,7 +35,9 @@ export default Vue.extend({
     },
     printEvent2  () {
       VxeUI.print({
+        // 使用自定义分页模式，放弃内置的自动分页功能，可以灵活自定义实现任意分页
         pageBreaks: [
+          // 第一页
           {
             bodyHtml: `
               <div>第一页</div>
@@ -43,6 +45,7 @@ export default Vue.extend({
               <div>内容</div>
               `
           },
+          // 第二页
           {
             bodyHtml: `
               <div>第二页</div>
