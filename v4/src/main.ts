@@ -136,10 +136,6 @@ VxeUI.setConfig({
   // scrollMarginStyle: 'obsolete'
 })
 
-VxeUI.setIcon({
-  TOOLBAR_TOOLS_CUSTOM: 'vxe-icon-custom-column'
-})
-
 // VxeUI.setI18n('zh-CN', zhCN)
 VxeUI.setI18n('zh-CHT', zhCHT)
 // VxeUI.setI18n('zh-HK', zhHK)
