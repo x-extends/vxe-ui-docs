@@ -5,7 +5,7 @@
       show-footer
       show-confirm-button
       show-cancel-button
-      show-zoom
+      show-maximize
       resize
       v-model="showPopup"
       confirm-button-text="自定义确认"

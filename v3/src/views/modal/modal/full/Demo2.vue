@@ -23,7 +23,7 @@ export default Vue.extend({
         escClosable: true,
         width: 600,
         height: 400,
-        showZoom: true,
+        showm: true,
         resize: true,
         showFooter: true,
         showConfirmButton: true,

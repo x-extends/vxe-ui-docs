@@ -17,7 +17,7 @@ const openEvent = () => {
     escClosable: true,
     width: 600,
     height: 400,
-    showZoom: true,
+    showMaximize: true,
     resize: true,
     showFooter: true,
     showConfirmButton: true,

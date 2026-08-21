@@ -14,7 +14,7 @@ export default Vue.extend({
       VxeUI.modal.open({
         title: '标题',
         showFooter: true,
-        showZoom: true,
+        showMaximize: true,
         width: 600,
         height: 400,
         slots: {

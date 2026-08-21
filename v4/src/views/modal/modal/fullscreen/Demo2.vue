@@ -17,7 +17,7 @@ const openEvent = () => {
     lockView: false,
     escClosable: true,
     fullscreen: true,
-    showZoom: true
+    showMaximize: true
   })
   num++
 }

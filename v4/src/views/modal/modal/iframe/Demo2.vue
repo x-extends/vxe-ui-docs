@@ -14,7 +14,7 @@ const openEvent = () => {
     height: 800,
     padding: false,
     resize: true,
-    showZoom: true,
+    showMaximize: true,
     slots: {
       default () {
         return <iframe src="https://vxeui.com/iframe/iframe2.html" style="display: block;width: 100%;height: 100%;border: 0;"></iframe>

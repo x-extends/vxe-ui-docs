@@ -23,7 +23,7 @@ export default Vue.extend({
         lockView: false,
         escClosable: true,
         fullscreen: true,
-        showZoom: true
+        showMaximize: true
       })
       this.num++
     }
