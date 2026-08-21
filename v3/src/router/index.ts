@@ -1772,6 +1772,7 @@ const routes: Array<RouteConfig> = [
           { path: 'disabled', name: 'ComponentTextareaDisabled', component: () => import('@/views/textarea/disabled/CodeExample.vue') },
           { path: 'readonly', name: 'ComponentTextareaReadonly', component: () => import('@/views/textarea/readonly/CodeExample.vue') },
           { path: 'editable', name: 'ComponentTextareaEditable', component: () => import('@/views/textarea/editable/CodeExample.vue') },
+          { path: 'clearable', name: 'ComponentTextareaClearable', component: () => import('@/views/textarea/clearable/CodeExample.vue') },
           { path: 'trim', name: 'ComponentTextareaTrim', component: () => import('@/views/textarea/trim/CodeExample.vue') },
           {
             path: 'count',
