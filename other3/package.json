@@ -32,10 +32,10 @@
     "vue-i18n": "~8.15.1",
     "vue-router": "~3.5.1",
     "vuex": "~3.6.2",
-    "vxe-pc-ui": "~3.17.13",
+    "vxe-pc-ui": "~3.17.14",
     "vxe-design": "~3.0.1",
-    "vxe-table": "~3.22.13",
-    "vxe-gantt": "~3.7.1",
+    "vxe-table": "~3.23.0",
+    "vxe-gantt": "~3.7.2",
     "xe-utils": "^4.0.11"
   },
   "devDependencies": {

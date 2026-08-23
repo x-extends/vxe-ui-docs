@@ -63,7 +63,7 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     barStyle ({ row }) {
       return {
         round: true, // 圆角
-        bgColor: row.flag === 1 ? '#40d9eff' : '#31d231', // 任务条的背景颜色
+        bgColor: row.flag === 1 ? '#40d9ef' : '#31d231', // 任务条的背景颜色
         completedBgColor: row.flag === 1 ? '#409eff' : '#14ae14' // 已完成部分任务条的背景颜色
       }
     }
