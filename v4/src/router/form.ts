@@ -516,6 +516,7 @@ export const formRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/form/config/format/CodeExample.vue')
         },
         { path: 'visible', name: 'ComponentFormConfigVisible', component: () => import('@/views/form/config/visible/CodeExample.vue') },
+        { path: 'reset', name: 'ComponentFormConfigReset', component: () => import('@/views/form/config/reset/CodeExample.vue') },
         {
           path: 'collapse',
           component: RouteLayout,

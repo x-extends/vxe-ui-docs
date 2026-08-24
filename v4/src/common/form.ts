@@ -142,6 +142,7 @@ export const formNavConfig: NavVO = {
         { title: '分行/分列', routerLink: { name: 'ComponentFormConfigChildren' } },
         { title: '分组', routerLink: { name: 'ComponentFormConfigGroup' } },
         { title: '显示与隐藏项', routerLink: { name: 'ComponentFormConfigVisible' } },
+        { title: '重置表单值', routerLink: { name: 'ComponentFormConfigReset' } },
         {
           title: '折叠表单',
           children: [
