@@ -18,8 +18,8 @@ export default Vue.extend({
     const val1 = ''
 
     const treeConfig: VxeCascaderPropTypes.TreeConfig = {
-      iconOpen: 'vxe-icon-arrow-up rotate90',
-      iconClose: 'vxe-icon-arrow-up'
+      iconOpen: 'vxe-icon-square-minus',
+      iconClose: 'vxe-icon-square-plus'
     }
 
     const treeList: VxeCascaderPropTypes.Options = [

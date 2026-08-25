@@ -1,10 +1,11 @@
 <template>
   <div>
     <vxe-cascader
-      clearable
       v-model="val1"
+      clearable
       :tree-config="treeConfig"
-      :options="treeList">
+      :options="treeList"
+    >
     </vxe-cascader>
   </div>
 </template>
@@ -16,8 +17,8 @@ import { VxeCascaderPropTypes } from 'vxe-pc-ui'
 const val1 = ref()
 
 const treeConfig = reactive<VxeCascaderPropTypes.TreeConfig>({
-  iconOpen: 'vxe-icon-arrow-up rotate90',
-  iconClose: 'vxe-icon-arrow-up'
+  iconOpen: 'vxe-icon-square-minus',
+  iconClose: 'vxe-icon-square-plus'
 })
 
 const treeList = ref<VxeCascaderPropTypes.Options>([
