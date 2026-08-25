@@ -689,6 +689,7 @@ export const navConfigList: NavVO[] = [
               { title: '尺寸大小', routerLink: { name: 'ComponentNumberInputNumberSize' } },
               { title: '基础', routerLink: { name: 'ComponentNumberInputNumberBase' } },
               { title: '可清除', routerLink: { name: 'ComponentNumberInputNumberClearable' } },
+              { title: '输入负数', routerLink: { name: 'ComponentNumberInputNumberNegative' } },
               { title: '只读模式', routerLink: { name: 'ComponentNumberInputNumberReadonly' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputNumberStep' } },
               { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputNumberRange' } },
@@ -705,6 +706,7 @@ export const navConfigList: NavVO[] = [
               { title: '基础', routerLink: { name: 'ComponentNumberInputIntegerBase' } },
               { title: '可清除', routerLink: { name: 'ComponentNumberInputIntegerClearable' } },
               { title: '只读模式', routerLink: { name: 'ComponentNumberInputIntegerReadonly' } },
+              { title: '输入负数', routerLink: { name: 'ComponentNumberInputIntegerNegative' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputIntegerStep' } },
               { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputIntegerRange' } },
               { title: '控制按钮', routerLink: { name: 'ComponentNumberInputIntegerControls' } }
@@ -731,6 +733,7 @@ export const navConfigList: NavVO[] = [
               { title: '对其方式', routerLink: { name: 'ComponentNumberInputAmountAlign' } },
               { title: '可清除', routerLink: { name: 'ComponentNumberInputAmountClearable' } },
               { title: '只读模式', routerLink: { name: 'ComponentNumberInputAmountReadonly' } },
+              { title: '输入负数', routerLink: { name: 'ComponentNumberInputAmountNegative' } },
               { title: '设置步数', routerLink: { name: 'ComponentNumberInputAmountStep' } },
               { title: '小数位数', routerLink: { name: 'ComponentNumberInputAmountDigits' } },
               { title: '舍入方式', routerLink: { name: 'ComponentNumberInputAmountMode' } },

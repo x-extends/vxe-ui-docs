@@ -1,8 +1,7 @@
 <template>
   <div>
     <vxe-number-input v-model="val1" placeholder="最小值" type="integer" min="5"></vxe-number-input>
-    <vxe-number-input v-model="val2" placeholder="最大值" type="integer" max="50"></vxe-number-input>
-    <vxe-number-input v-model="val3" placeholder="最小值与最大值" type="integer" min="10" max="100"></vxe-number-input>
+    <vxe-number-input v-model="val2" placeholder="可清除" type="integer" min="5" clearable></vxe-number-input>
   </div>
 </template>
 
@@ -11,5 +10,4 @@ import { ref } from 'vue'
 
 const val1 = ref(null)
 const val2 = ref(null)
-const val3 = ref(null)
 </script>

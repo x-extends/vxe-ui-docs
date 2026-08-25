@@ -1567,6 +1567,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentNumberInputNumberReadonly',
                 component: () => import('@/views/number-input/number/readonly/CodeExample.vue')
               },
+              { path: 'negative', name: 'ComponentNumberInputNumberNegative', component: () => import('@/views/number-input/number/negative/CodeExample.vue') },
               {
                 path: 'step',
                 name: 'ComponentNumberInputNumberStep',
@@ -1623,6 +1624,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentNumberInputIntegerReadonly',
                 component: () => import('@/views/number-input/integer/readonly/CodeExample.vue')
               },
+              { path: 'negative', name: 'ComponentNumberInputIntegerNegative', component: () => import('@/views/number-input/integer/negative/CodeExample.vue') },
               {
                 path: 'step',
                 name: 'ComponentNumberInputIntegerStep',
@@ -1711,6 +1713,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentNumberInputAmountReadonly',
                 component: () => import('@/views/number-input/amount/readonly/CodeExample.vue')
               },
+              { path: 'negative', name: 'ComponentNumberInputAmountNegative', component: () => import('@/views/number-input/amount/negative/CodeExample.vue') },
               {
                 path: 'digits',
                 name: 'ComponentNumberInputAmountDigits',
