@@ -360,6 +360,7 @@
         "scrollHorizontal": "横方向仮想スクロール",
         "scrollAutoHeight": "自動行高",
         "scrollCompactV": "コンパクトセル",
+        "scrollCompactEdit": "可编辑的紧凑型单元格",
         "scrollTree": "ツリー仮想スクロール",
         "scrollMerge": "セル結合",
         "loadMore": "無限スクロール",

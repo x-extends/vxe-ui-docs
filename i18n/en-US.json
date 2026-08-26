@@ -360,6 +360,7 @@
         "scrollHorizontal": "Horizontal virtual scroll",
         "scrollAutoHeight": "Adaptive row height",
         "scrollCompactV": "Compact cell",
+        "scrollCompactEdit": "可编辑的紧凑型单元格",
         "scrollTree": "Tree virtual scroll",
         "scrollMerge": "Cell merge",
         "loadMore": "Infinite scroll",

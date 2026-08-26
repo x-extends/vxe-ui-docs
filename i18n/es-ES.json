@@ -360,6 +360,7 @@
         "scrollHorizontal": "Desplazamiento horizontal virtual",
         "scrollAutoHeight": "Altura de fila adaptable",
         "scrollCompactV": "Celdas compactas",
+        "scrollCompactEdit": "可编辑的紧凑型单元格",
         "scrollTree": "Desplazamiento virtual de árbol",
         "scrollMerge": "Combinación de celdas",
         "loadMore": "Desplazamiento infinito",

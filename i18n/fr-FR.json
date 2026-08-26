@@ -360,6 +360,7 @@
         "scrollHorizontal": "Défilement virtuel horizontal",
         "scrollAutoHeight": "Hauteur adaptative",
         "scrollCompactV": "紧凑型单元格",
+        "scrollCompactEdit": "可编辑的紧凑型单元格",
         "scrollTree": "Défilement virtuel d'arbre",
         "scrollMerge": "单元格合并",
         "loadMore": "Défilement infini",

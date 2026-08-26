@@ -360,6 +360,7 @@
         "scrollHorizontal": "橫向虛擬滾動",
         "scrollAutoHeight": "自適應行高",
         "scrollCompactV": "緊湊型單元格",
+        "scrollCompactEdit": "可编辑的紧凑型单元格",
         "scrollTree": "樹形虛擬滾動",
         "scrollMerge": "單元格合併",
         "loadMore": "無限滾動",

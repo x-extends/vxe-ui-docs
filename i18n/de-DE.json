@@ -360,6 +360,7 @@
         "scrollHorizontal": "Horizontales virtuelles Scrollen",
         "scrollAutoHeight": "Anpassungshöhe",
         "scrollCompactV": "紧凑型单元格",
+        "scrollCompactEdit": "可编辑的紧凑型单元格",
         "scrollTree": "Baum virtuelles Scrollen",
         "scrollMerge": "单元格合并",
         "loadMore": "Unendliches Scrollen",

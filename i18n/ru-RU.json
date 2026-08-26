@@ -360,6 +360,7 @@
         "scrollHorizontal": "Горизонтальная виртуальная прокрутка",
         "scrollAutoHeight": "Автовысота строки",
         "scrollCompactV": "Компактные ячейки",
+        "scrollCompactEdit": "可编辑的紧凑型单元格",
         "scrollTree": "Виртуальная прокрутка дерева",
         "scrollMerge": "Объединение ячеек",
         "loadMore": "Бесконечная прокрутка",
