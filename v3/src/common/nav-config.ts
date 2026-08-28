@@ -374,6 +374,17 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: 'Space 间距',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'space' } }, keywords: 'vxe-space' },
+          { title: '基础', routerLink: { name: 'ComponentSpaceBase' } },
+          { title: '尺寸大小', routerLink: { name: 'ComponentSpaceSize' } },
+          { title: '自定义间距', routerLink: { name: 'ComponentSpaceGap' } },
+          { title: '纵向排版', routerLink: { name: 'ComponentSpaceVertical' } },
+          { title: '自动换行', routerLink: { name: 'ComponentSpaceWrap' } }
+        ]
+      },
+      {
         title: 'Collapse 折叠面板',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'collapse' } }, keywords: 'vxe-collapse' },
@@ -626,7 +637,8 @@ export const navConfigList: NavVO[] = [
           { title: '基础', routerLink: { name: 'ComponentSliderBase' } },
           { title: '范围滑动', routerLink: { name: 'ComponentSliderRange' } },
           { title: '只读', routerLink: { name: 'ComponentSliderReadonly' } },
-          { title: '禁用', routerLink: { name: 'ComponentSliderDisabled' } }
+          { title: '禁用', routerLink: { name: 'ComponentSliderDisabled' } },
+          { title: '实时更新', routerLink: { name: 'ComponentSliderImmediate' } }
         ]
       },
       {

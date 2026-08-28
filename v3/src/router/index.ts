@@ -1297,7 +1297,8 @@ const routes: Array<RouteConfig> = [
             path: 'disabled',
             name: 'ComponentSliderDisabled',
             component: () => import('@/views/slider/disabled/CodeExample.vue')
-          }
+          },
+          { path: 'immediate', name: 'ComponentSliderImmediate', component: () => import('@/views/slider/immediate/CodeExample.vue') }
         ]
       },
       {
@@ -3254,6 +3255,17 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentCarouselTemplate',
             component: () => import('@/views/carousel/template/CodeExample.vue')
           }
+        ]
+      },
+      {
+        path: 'space',
+        component: RouteLayout,
+        children: [
+          { path: 'size', name: 'ComponentSpaceSize', component: () => import('@/views/space/size/CodeExample.vue') },
+          { path: 'base', name: 'ComponentSpaceBase', component: () => import('@/views/space/base/CodeExample.vue') },
+          { path: 'gap', name: 'ComponentSpaceGap', component: () => import('@/views/space/gap/CodeExample.vue') },
+          { path: 'vertical', name: 'ComponentSpaceVertical', component: () => import('@/views/space/vertical/CodeExample.vue') },
+          { path: 'wrap', name: 'ComponentSpaceWrap', component: () => import('@/views/space/wrap/CodeExample.vue') }
         ]
       },
       {
