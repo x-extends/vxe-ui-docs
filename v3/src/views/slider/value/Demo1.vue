@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div>{{ val1 }}</div>
     <vxe-slider v-model="val1" range></vxe-slider>
-    <div>{{ val2 }}</div>
     <vxe-slider v-model="val2" range></vxe-slider>
   </div>
 </template>
@@ -14,7 +12,7 @@ export default Vue.extend({
   data () {
     return {
       val1: [],
-      val2: [10, 60]
+      val2: [10, 30]
     }
   }
 })

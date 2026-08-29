@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div>{{ val1 }}</div>
     <vxe-slider v-model="val1" min="10" max="20"></vxe-slider>
   </div>
 </template>

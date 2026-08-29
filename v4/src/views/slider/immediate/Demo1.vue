@@ -3,7 +3,7 @@
     <div>{{ val1 }}</div>
     <vxe-slider v-model="val1" immediate></vxe-slider>
     <div>{{ val2 }}</div>
-    <vxe-slider v-model="val2" :immediate="false"></vxe-slider>
+    <vxe-slider v-model="val2" range immediate></vxe-slider>
   </div>
 </template>
 
@@ -11,5 +11,5 @@
 import { ref } from 'vue'
 
 const val1 = ref(40)
-const val2 = ref(40)
+const val2 = ref([10, 40])
 </script>

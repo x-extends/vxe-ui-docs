@@ -381,7 +381,9 @@ export const navConfigList: NavVO[] = [
           { title: '尺寸大小', routerLink: { name: 'ComponentSpaceSize' } },
           { title: '自定义间距', routerLink: { name: 'ComponentSpaceGap' } },
           { title: '纵向排版', routerLink: { name: 'ComponentSpaceVertical' } },
-          { title: '自动换行', routerLink: { name: 'ComponentSpaceWrap' } }
+          { title: '自动换行', routerLink: { name: 'ComponentSpaceWrap' } },
+          { title: '对齐方式', routerLink: { name: 'ComponentSpaceAlign' } },
+          { title: '间隔符', routerLink: { name: 'ComponentSpaceSeparator' } }
         ]
       },
       {
@@ -635,9 +637,10 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'slider' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentSliderSize' } },
           { title: '基础', routerLink: { name: 'ComponentSliderBase' } },
-          { title: '范围滑动', routerLink: { name: 'ComponentSliderRange' } },
           { title: '只读', routerLink: { name: 'ComponentSliderReadonly' } },
           { title: '禁用', routerLink: { name: 'ComponentSliderDisabled' } },
+          { title: '范围滑动', routerLink: { name: 'ComponentSliderRange' } },
+          { title: '绑定值', routerLink: { name: 'ComponentSliderValue' } },
           { title: '实时更新', routerLink: { name: 'ComponentSliderImmediate' } }
         ]
       },

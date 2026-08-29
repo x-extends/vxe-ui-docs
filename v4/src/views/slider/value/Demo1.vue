@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div>{{ val1 }}</div>
     <vxe-slider v-model="val1" range></vxe-slider>
-    <div>{{ val2 }}</div>
     <vxe-slider v-model="val2" range></vxe-slider>
   </div>
 </template>
@@ -11,5 +9,5 @@
 import { ref } from 'vue'
 
 const val1 = ref([])
-const val2 = ref([10, 60])
+const val2 = ref([10, 30])
 </script>
