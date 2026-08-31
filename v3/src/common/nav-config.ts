@@ -666,6 +666,7 @@ export const navConfigList: NavVO[] = [
           // { title: '数值类型', routerLink: { name: 'ComponentInputNumber' } },
           // { title: '整数类型', routerLink: { name: 'ComponentInputInteger' } },
           // { title: '小数类型', routerLink: { name: 'ComponentInputFloat' } },
+          { title: '显示浮动标签', routerLink: { name: 'ComponentInputFloatContent' } },
           { title: '显示字数统计', routerLink: { name: 'ComponentInputCount' } },
           { title: '前缀', routerLink: { name: 'ComponentInputPrefix' } },
           { title: '后缀', routerLink: { name: 'ComponentInputSuffix' } },
@@ -712,6 +713,7 @@ export const navConfigList: NavVO[] = [
               { title: '按钮布局', routerLink: { name: 'ComponentNumberInputNumberLayout' } },
               { title: '自定义按钮图标', routerLink: { name: 'ComponentNumberInputNumberControlIcon' } },
               { title: '前缀后缀图标', routerLink: { name: 'ComponentNumberInputNumberIcon' } },
+              { title: '浮动文字', routerLink: { name: 'ComponentNumberInputNumberFloatContent' } },
               { title: '自定义模板', routerLink: { name: 'ComponentNumberInputNumberTemplate' } }
             ]
           },
@@ -760,6 +762,7 @@ export const navConfigList: NavVO[] = [
               { title: '按钮布局', routerLink: { name: 'ComponentNumberInputAmountLayout' } },
               { title: '自定义按钮图标', routerLink: { name: 'ComponentNumberInputAmountControlIcon' } },
               { title: '前缀后缀图标', routerLink: { name: 'ComponentNumberInputAmountIcon' } },
+              { title: '浮动文字', routerLink: { name: 'ComponentNumberInputAmountFloatContent' } },
               { title: '自定义模板', routerLink: { name: 'ComponentNumberInputAmountTemplate' } }
             ]
           }
@@ -774,6 +777,7 @@ export const navConfigList: NavVO[] = [
           { title: '只读模式', routerLink: { name: 'ComponentPasswordInputReadonly' } },
           { title: '不可编辑', routerLink: { name: 'ComponentPasswordInputEditable' } },
           { title: '图标', routerLink: { name: 'ComponentPasswordInputIcon' } },
+          { title: '浮动文字', routerLink: { name: 'ComponentPasswordInputFloatContent' } },
           { title: '控制按钮', routerLink: { name: 'ComponentPasswordInputControls' } }
         ]
       },

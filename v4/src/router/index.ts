@@ -1488,6 +1488,7 @@ const routes: Array<RouteRecordRaw> = [
           //   name: 'ComponentInputFloat',
           //   component: () => import('@/views/input/float/CodeExample.vue')
           // },
+          { path: 'floatContent', name: 'ComponentInputFloatContent', component: () => import('@/views/input/floatContent/CodeExample.vue') },
           {
             path: 'count',
             name: 'ComponentInputCount',
@@ -1538,6 +1539,7 @@ const routes: Array<RouteRecordRaw> = [
           { path: 'readonly', name: 'ComponentPasswordInputReadonly', component: () => import('@/views/password-input/readonly/CodeExample.vue') },
           { path: 'editable', name: 'ComponentPasswordInputEditable', component: () => import('@/views/password-input/editable/CodeExample.vue') },
           { path: 'icon', name: 'ComponentPasswordInputIcon', component: () => import('@/views/password-input/icon/CodeExample.vue') },
+          { path: 'floatContent', name: 'ComponentPasswordInputFloatContent', component: () => import('@/views/password-input/floatContent/CodeExample.vue') },
           {
             path: 'controls',
             name: 'ComponentPasswordInputControls',
@@ -1600,6 +1602,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentNumberInputNumberIcon',
                 component: () => import('@/views/number-input/number/icon/CodeExample.vue')
               },
+              { path: 'floatContent', name: 'ComponentNumberInputNumberFloatContent', component: () => import('@/views/number-input/number/floatContent/CodeExample.vue') },
               {
                 path: 'template',
                 name: 'ComponentNumberInputNumberTemplate',
@@ -1762,6 +1765,7 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentNumberInputAmountIcon',
                 component: () => import('@/views/number-input/amount/icon/CodeExample.vue')
               },
+              { path: 'floatContent', name: 'ComponentNumberInputAmountFloatContent', component: () => import('@/views/number-input/amount/floatContent/CodeExample.vue') },
               {
                 path: 'template',
                 name: 'ComponentNumberInputAmountTemplate',
