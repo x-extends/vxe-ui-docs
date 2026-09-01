@@ -22,7 +22,7 @@ export default Vue.extend({
     mouseleaveEvent  () {
       const $tooltip = this.$refs.tooltipRef as VxeTooltipInstance
       if ($tooltip) {
-        $tooltip?.close()
+        $tooltip.close()
       }
     }
   }

@@ -23,7 +23,7 @@ const mouseenterEvent: VxeButtonEvents.Mouseenter = ({ $event }) => {
 const mouseleaveEvent: VxeButtonEvents.Mouseleave = () => {
   const $tooltip = tooltipRef.value
   if ($tooltip) {
-    $tooltip?.close()
+    $tooltip.close()
   }
 }
 </script>

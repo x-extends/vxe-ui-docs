@@ -1438,6 +1438,12 @@ export const navConfigList: NavVO[] = [
         title: 'Tooltip 文字提示',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tooltip' } } },
+          {
+            title: '全局调用',
+            children: [
+              { title: '全局单例', routerLink: { name: 'ComponentTooltipGlobalTooltip' } }
+            ]
+          },
           { title: '触发方式', routerLink: { name: 'ComponentTooltipTrigger' } },
           { title: '可操作', routerLink: { name: 'ComponentTooltipEnterable' } },
           { title: '设置宽高', routerLink: { name: 'ComponentTooltipStyle' } },

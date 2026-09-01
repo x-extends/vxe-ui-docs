@@ -2741,6 +2741,13 @@ const routes: Array<RouteRecordRaw> = [
         component: RouteLayout,
         children: [
           {
+            path: 'global',
+            component: RouteLayout,
+            children: [
+              { path: 'tooltip', name: 'ComponentTooltipGlobalTooltip', component: () => import('@/views/tooltip/global/tooltip/CodeExample.vue') }
+            ]
+          },
+          {
             path: 'trigger',
             name: 'ComponentTooltipTrigger',
             component: () => import('@/views/tooltip/trigger/CodeExample.vue')
