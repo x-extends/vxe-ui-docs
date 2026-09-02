@@ -80,6 +80,17 @@ export const navConfigList: NavVO[] = [
     ]
   },
   {
+    i18nKey: 'app.aside.menu.iconTitle',
+    icon: 'vxe-icon-star',
+    children: [
+      { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon' } }, keywords: 'vxe-icon' },
+      { title: '图标列表', routerLink: { name: 'ComponentIconBase' } },
+      { title: '尺寸大小', routerLink: { name: 'ComponentIconSize' } },
+      { title: '效果', routerLink: { name: 'ComponentIconAnimation' } },
+      { title: '状态颜色', routerLink: { name: 'ComponentIconStatus' } }
+    ]
+  },
+  {
     i18nKey: 'app.aside.menu.baseTitle',
     icon: 'vxe-icon-layout',
     showCount: true,
@@ -132,16 +143,6 @@ export const navConfigList: NavVO[] = [
           { title: '铺满宽度', routerLink: { name: 'ComponentRowColFill' } },
           { title: '对齐方式', routerLink: { name: 'ComponentRowColAlign' } },
           { title: '溢出隐藏', routerLink: { name: 'ComponentRowColEllipsis' } }
-        ]
-      },
-      {
-        i18nKey: 'app.aside.menu.iconTitle',
-        children: [
-          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon' } }, keywords: 'vxe-icon' },
-          { title: '图标列表', routerLink: { name: 'ComponentIconBase' } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentIconSize' } },
-          { title: '效果', routerLink: { name: 'ComponentIconAnimation' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentIconStatus' } }
         ]
       },
       {
