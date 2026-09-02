@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-tree :data="treeList" show-radio show-line transform></vxe-tree>
+    <vxe-tree :data="treeList" icon-open="vxe-icon-arrow-right rotate90" icon-close="vxe-icon-arrow-right" show-radio show-line transform></vxe-tree>
   </div>
 </template>
 
