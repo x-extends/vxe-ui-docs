@@ -87,7 +87,7 @@ export const navConfigList: NavVO[] = [
       {
         title: '右键菜单',
         children: [
-          { title: '操作右键菜单', routerLink: { name: 'ComponentContextMenuGlobalContextMenu' } }
+          { title: '右键菜单', routerLink: { name: 'ComponentContextMenuGlobalContextMenu' } }
         ]
       },
       {
@@ -593,7 +593,7 @@ export const navConfigList: NavVO[] = [
           {
             title: '全局调用',
             children: [
-              { title: '操作右键菜单', routerLink: { name: 'ComponentContextMenuGlobalContextMenu' } }
+              { title: '右键菜单', routerLink: { name: 'ComponentContextMenuGlobalContextMenu' } }
             ]
           },
           { title: '菜单配置', routerLink: { name: 'ComponentContextMenuBase' } },
