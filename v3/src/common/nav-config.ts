@@ -76,7 +76,46 @@ export const navConfigList: NavVO[] = [
     icon: 'vxe-icon-tools',
     children: [
       { i18nKey: 'app.aside.menu.clipboard', routerLink: { name: 'ToolClipboard' } },
-      { i18nKey: 'app.aside.menu.functions', linkUrl: 'https://util.vxeui.com', linkTarget: '_blank' }
+      { i18nKey: 'app.aside.menu.functions', linkUrl: 'https://util.vxeui.com', linkTarget: '_blank' },
+      {
+        title: '文件操作',
+        children: [
+          { title: '读取文件', routerLink: { name: 'ComponentUploadGlobalReadFile' } },
+          { title: '下载文件', routerLink: { name: 'ComponentUploadGlobalSaveFile' } }
+        ]
+      },
+      {
+        title: '右键菜单',
+        children: [
+          { title: '操作右键菜单', routerLink: { name: 'ComponentContextMenuGlobalContextMenu' } }
+        ]
+      },
+      {
+        title: '加载中',
+        children: [
+          { title: '加载中', routerLink: { name: 'ComponentLoadingGlobalLoading' } }
+        ]
+      },
+      {
+        title: 'Tooltip 提示',
+        children: [
+          { title: '单例模式', routerLink: { name: 'ComponentTooltipGlobalTooltip' } }
+        ]
+      },
+      {
+        title: '颜色转换工具',
+        children: [
+          { title: '格式转换', routerLink: { name: 'ComponentUploadGlobalColorType' } },
+          { title: '解析为指定格式', routerLink: { name: 'ComponentUploadGlobalColorParse' } },
+          { title: '效果处理', routerLink: { name: 'ComponentUploadGlobalColorEffect' } }
+        ]
+      },
+      {
+        title: '打印 HTML 标签',
+        children: [
+          { title: '打印', routerLink: { name: 'ComponentPrintGlobalPrint' } }
+        ]
+      }
     ]
   },
   {
@@ -1443,7 +1482,7 @@ export const navConfigList: NavVO[] = [
           {
             title: '全局调用',
             children: [
-              { title: '全局单例', routerLink: { name: 'ComponentTooltipGlobalTooltip' } }
+              { title: '单例模式', routerLink: { name: 'ComponentTooltipGlobalTooltip' } }
             ]
           },
           { title: '触发方式', routerLink: { name: 'ComponentTooltipTrigger' } },
