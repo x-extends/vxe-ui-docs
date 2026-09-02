@@ -1597,6 +1597,7 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/number-input/number/icon/CodeExample.vue')
               },
               { path: 'floatContent', name: 'ComponentNumberInputNumberFloatContent', component: () => import('@/views/number-input/number/floatContent/CodeExample.vue') },
+              { path: 'showTip', name: 'ComponentNumberInputNumberShowTip', component: () => import('@/views/number-input/number/showTip/CodeExample.vue') },
               {
                 path: 'template',
                 name: 'ComponentNumberInputNumberTemplate',
@@ -1760,6 +1761,7 @@ const routes: Array<RouteConfig> = [
                 component: () => import('@/views/number-input/amount/icon/CodeExample.vue')
               },
               { path: 'floatContent', name: 'ComponentNumberInputAmountFloatContent', component: () => import('@/views/number-input/amount/floatContent/CodeExample.vue') },
+              { path: 'showTip', name: 'ComponentNumberInputAmountShowTip', component: () => import('@/views/number-input/amount/showTip/CodeExample.vue') },
               {
                 path: 'template',
                 name: 'ComponentNumberInputAmountTemplate',
