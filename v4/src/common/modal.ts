@@ -82,6 +82,7 @@ export const modalNavConfig: NavVO = {
         { title: '自定义窗口最小化的排列方式', routerLink: { name: 'ComponentModalModalMinimizeLayout' } },
         { title: '保留状态', routerLink: { name: 'ComponentModalModalRemember' } },
         { title: '记忆功能', routerLink: { name: 'ComponentModalModalStorage' } },
+        { title: '显示到挂载区域中', routerLink: { name: 'ComponentModalModalWithin' } },
         { title: '嵌入 iframe', routerLink: { name: 'ComponentModalModalIframe' } },
         { title: '手动操作', routerLink: { name: 'ComponentModalModalManual' } },
         { title: '完整功能', routerLink: { name: 'ComponentModalModalFull' } }

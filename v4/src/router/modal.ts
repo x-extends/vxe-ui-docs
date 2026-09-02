@@ -287,6 +287,7 @@ export const modalRouteConfig: RouteRecordRaw = {
           name: 'ComponentModalModalStorage',
           component: () => import('@/views/modal/modal/storage/CodeExample.vue')
         },
+        { path: 'within', name: 'ComponentModalModalWithin', component: () => import('@/views/modal/modal/within/CodeExample.vue') },
         {
           path: 'iframe',
           name: 'ComponentModalModalIframe',
