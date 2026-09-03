@@ -3039,6 +3039,8 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentDrawerMaskClosable',
             component: () => import('@/views/drawer/maskClosable/CodeExample.vue')
           },
+          { path: 'border', name: 'ComponentDrawerBorder', component: () => import('@/views/drawer/border/CodeExample.vue') },
+          { path: 'titleBg', name: 'ComponentDrawerTitleBg', component: () => import('@/views/drawer/titleBg/CodeExample.vue') },
           {
             path: 'padding',
             name: 'ComponentDrawerPadding',

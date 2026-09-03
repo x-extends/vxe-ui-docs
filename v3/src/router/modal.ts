@@ -164,6 +164,8 @@ export const modalRouteConfig: RouteConfig = {
           name: 'ComponentModalModalSize',
           component: () => import('@/views/modal/modal/size/CodeExample.vue')
         },
+        { path: 'border', name: 'ComponentModalModalBorder', component: () => import('@/views/modal/modal/border/CodeExample.vue') },
+        { path: 'titleBg', name: 'ComponentModalModalTitleBg', component: () => import('@/views/modal/modal/titleBg/CodeExample.vue') },
         {
           path: 'padding',
           name: 'ComponentModalModalPadding',

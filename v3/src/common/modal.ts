@@ -60,6 +60,8 @@ export const modalNavConfig: NavVO = {
         { title: '尺寸大小', routerLink: { name: 'ComponentModalModalSize' } },
         { title: '自定义模板', routerLink: { name: 'ComponentModalModalTemplateFooter' } },
         { title: '完整插槽模板', routerLink: { name: 'ComponentModalModalTemplateLayout' } },
+        { title: '边框', routerLink: { name: 'ComponentModalModalBorder' } },
+        { title: '标题背景', routerLink: { name: 'ComponentModalModalTitleBg' } },
         { title: '内边距', routerLink: { name: 'ComponentModalModalPadding' } },
         { title: '加载中', routerLink: { name: 'ComponentModalModalLoading' } },
         { title: '预加载', routerLink: { name: 'ComponentModalModalPreload' } },

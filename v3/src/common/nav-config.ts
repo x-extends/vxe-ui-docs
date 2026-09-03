@@ -1458,6 +1458,8 @@ export const navConfigList: NavVO[] = [
           { title: '自定义弹出方向', routerLink: { name: 'ComponentDrawerBase' } },
           { title: '显示HTML标签', routerLink: { name: 'ComponentDrawerHtml' } },
           { title: '宽度与高度', routerLink: { name: 'ComponentDrawerWH' } },
+          { title: '边框', routerLink: { name: 'ComponentDrawerBorder' } },
+          { title: '标题背景', routerLink: { name: 'ComponentDrawerTitleBg' } },
           { title: '内边距', routerLink: { name: 'ComponentDrawerPadding' } },
           { title: '加载中', routerLink: { name: 'ComponentDrawerLoading' } },
           { title: '预加载', routerLink: { name: 'ComponentDrawerDreload' } },
