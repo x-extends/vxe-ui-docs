@@ -64,7 +64,13 @@
               },
               carouselItem: {},
               cascader: {
-                autoClose: true
+                showFullLabel: true,
+                treeConfig: {
+                  showIcon: true
+                },
+                filterConfig: {
+                  autoExpandMode: 'first'
+                }
               },
               checkbox: {},
               checkboxButton: {},
@@ -101,6 +107,8 @@
               datePicker: {
                 // size: null,
                 // transfer: false,
+                startDate: new Date(1900, 0, 1),
+                endDate: new Date(2100, 0, 1),
                 shortcutConfig: {
                   // position: 'left',
                   align: 'left',
@@ -134,6 +142,8 @@
                 // useHtml: false,
                 position: 'right',
                 showHeader: true,
+                // showTitleBackground: false,
+                border: true,
                 lockView: true,
                 mask: true,
                 showTitleOverflow: true,
@@ -171,7 +181,10 @@
               formView: {},
               icon: {},
               iconPicker: {
-                icons: ['home', 'company', 'comment', 'setting', 'send', 'envelope', 'envelope-open', 'bell', 'search', 'print', 'pc', 'goods', 'chart-line', 'edit', 'delete', 'save', 'folder', 'microphone', 'flag', 'link', 'location', 'sunny', 'rmb', 'usd', 'user', 'add-user', 'add-users', 'star', 'unlock', 'time', 'text', 'feedback', 'calendar', 'association-form', 'cloud-download', 'cloud-upload', 'file', 'subtable', 'chart-bar-x', 'chart-bar-y', 'chart-line', 'chart-pie', 'chart-radar']
+                icons: ['home', 'company', 'comment', 'setting', 'send', 'envelope', 'envelope-open', 'bell', 'search', 'print', 'pc', 'goods', 'chart-line', 'edit', 'delete', 'save', 'folder', 'microphone', 'flag', 'link', 'location', 'sunny', 'rmb', 'usd', 'user', 'add-user', 'add-users', 'star', 'unlock', 'time', 'text', 'feedback', 'calendar', 'association-form', 'cloud-download', 'cloud-upload', 'file', 'subtable', 'chart-bar-x', 'chart-bar-y', 'chart-line', 'chart-pie', 'chart-radar'],
+                popupConfig: {
+                  // chunkSize: 4
+                }
               },
               image: {
                 draggable: null,
@@ -217,6 +230,15 @@
               listView: {},
               list: {
                 // size: null,
+                rowConfig: {
+                  contentField: 'label'
+                },
+                dragConfig: {
+                  showIcon: true,
+                  animation: true,
+                  showGuidesStatus: true,
+                  showDragTip: true
+                },
                 virtualYConfig: {
                   enabled: true,
                   gt: 100
@@ -232,6 +254,8 @@
                 // size: null,
                 top: 16,
                 showHeader: true,
+                // showTitleBackground: false,
+                border: true,
                 // useHtml: false,
                 // width: null,
                 // height: null,
@@ -272,12 +296,18 @@
                 // transfer: false
                 digits: 2,
                 autoFill: true,
+                negative: true,
                 controlConfig: {
                   enabled: true,
                   layout: 'right',
                   showButton: true,
                   isWheel: true,
                   isArrow: true
+                },
+                tooltipConfig: {
+                  minWidth: 60,
+                  enterable: true,
+                  enterDelay: 0
                 }
               },
               optgroup: {},
@@ -316,7 +346,16 @@
               row: {},
               segmented: {},
               select: {
+                emptyValue: null,
                 multiCharOverflow: 8,
+                radioConfig: {
+                  showIcon: true,
+                  trigger: 'option'
+                },
+                checkboxConfig: {
+                  showIcon: true,
+                  trigger: 'option'
+                },
                 remoteConfig: {
                   enabled: true,
                   autoLoad: true
@@ -336,6 +375,9 @@
                 resizeConfig: {
                   // immediate: false,
                   showTip: true
+                },
+                actionConfig: {
+                  autoHideButton: true
                 }
               },
               splitterPanel: {},
@@ -343,6 +385,7 @@
                 max: 100,
                 min: 0
               },
+              space: {},
               steps: {},
               switch: {},
               tabPane: {},
@@ -364,6 +407,7 @@
                   }
                 }
               },
+              tableTransfer: {},
               tabs: {
                 // destroyOnClose: false
               },
@@ -389,14 +433,22 @@
                 theme: 'dark',
                 enterDelay: 500,
                 leaveDelay: 300,
-                isArrow: true
+                isArrow: true,
+                defaultPlacement: 'top'
               },
+              transfer: {},
               tree: {
                 // autoResize: false,
                 indent: 20,
                 minHeight: 60,
+                showOverflow: true,
                 radioConfig: {
                   strict: true
+                },
+                tooltipConfig: {
+                  mode: 'tooltip',
+                  enterable: true,
+                  leaveDelay: 300
                 },
                 dragConfig: {
                   showIcon: true,
@@ -411,7 +463,7 @@
                 }
               },
               treeSelect: {
-                autoClose: true,
+                // separator: '/',
                 virtualYConfig: {
                   enabled: true,
                   gt: 0,
@@ -450,7 +502,9 @@
               },
 
               table: {
+                fit: true,
                 showHeader: true,
+                animat: true,
                 delayHover: 250,
                 autoResize: true,
                 // minHeight: null,
@@ -556,6 +610,7 @@
                   allowResizable: true,
                   allowFixed: true,
                   allowSort: true,
+                  allowAlign: true,
                   showSortDragButton: true,
                   showFooter: true,
                   placement: 'top-right',
@@ -564,9 +619,11 @@
                     visible: true,
                     resizable: true,
                     sort: true,
-                    fixed: true
-                    // rowGroup: false,
-                    // aggFunc: false
+                    fixed: true,
+                    align: true,
+                    headerAlign: true,
+                    footerAlign: true,
+                    aggFunc: true
                   },
                   // autoAggGroupValues: false,
                   //  checkMethod () {},
@@ -609,6 +666,7 @@
                 },
                 aggregateConfig: {
                   padding: true,
+                  placement: 'left',
                   rowField: 'id',
                   parentField: '_X_ROW_PARENT_KEY',
                   childrenField: '_X_ROW_CHILDREN',
@@ -636,9 +694,11 @@
                 },
                 editConfig: {
                   // mode: 'cell',
+                  // cache: true,
                   showIcon: true,
                   showAsterisk: true,
-                  autoFocus: true
+                  autoFocus: true,
+                  isReuseKeep: true
                 },
                 importConfig: {
                   _typeMaps: {
@@ -811,32 +871,32 @@
                 },
                 taskViewScaleConfig: {
                   year: {
-                    valueFormat: 'yyyy-MM-dd'
+                    valueFormat: ymdFormat
                   },
                   quarter: {
-                    valueFormat: 'yyyy-MM-dd'
+                    valueFormat: ymdFormat
                   },
                   month: {
-                    valueFormat: 'yyyy-MM-dd'
+                    valueFormat: ymdFormat
                   },
                   week: {
                     startDay: 1,
-                    valueFormat: 'yyyy-MM-dd'
+                    valueFormat: ymdFormat
                   },
                   day: {
-                    valueFormat: 'yyyy-MM-dd'
+                    valueFormat: ymdFormat
                   },
                   date: {
-                    valueFormat: 'yyyy-MM-dd'
+                    valueFormat: ymdFormat
                   },
                   hour: {
-                    valueFormat: 'yyyy-MM-dd HH:mm:ss'
+                    valueFormat: ymdhmsFormat
                   },
                   minute: {
-                    valueFormat: 'yyyy-MM-dd HH:mm:ss'
+                    valueFormat: ymdhmsFormat
                   },
                   second: {
-                    valueFormat: 'yyyy-MM-dd HH:mm:ss'
+                    valueFormat: ymdhmsFormat
                   }
                 },
                 taskViewConfig: {
@@ -849,6 +909,7 @@
                 taskSplitConfig: {
                   enabled: true,
                   resize: true,
+                  autoHideCollapseButton: true,
                   showCollapseTableButton: true,
                   showCollapseTaskButton: true
                 },
