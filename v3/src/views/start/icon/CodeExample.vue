@@ -23,8 +23,8 @@
               BUTTON_TOOLTIP_ICON: 'vxe-icon-question-circle-fill',
 
               // menu
-              MENU_ITEM_EXPAND_OPEN: 'vxe-icon-arrow-down rotate180',
-              MENU_ITEM_EXPAND_CLOSE: 'vxe-icon-arrow-down',
+              MENU_ITEM_EXPAND_OPEN: 'vxe-icon-arrow-right rotate90',
+              MENU_ITEM_EXPAND_CLOSE: 'vxe-icon-arrow-right',
 
               // select
               SELECT_LOADED: 'vxe-icon-spinner roll',
@@ -55,6 +55,9 @@
               CHECKBOX_CHECKED: 'vxe-icon-checkbox-checked-fill',
               CHECKBOX_UNCHECKED: 'vxe-icon-checkbox-unchecked',
               CHECKBOX_DISABLED_UNCHECKED: 'vxe-icon-checkbox-unchecked-fill',
+
+              // textarea
+              TEXTAREA_CLEAR: 'vxe-icon-error-circle-fill',
 
               // input
               INPUT_CLEAR: 'vxe-icon-error-circle-fill',
@@ -94,6 +97,7 @@
               FORM_SUFFIX: 'vxe-icon-question-circle-fill',
               FORM_FOLDING: 'vxe-icon-arrow-up rotate180',
               FORM_UNFOLDING: 'vxe-icon-arrow-up',
+              FORM_VALID_ERROR_ICON: 'vxe-icon-warning-circle-fill',
 
               // form-design
               FORM_DESIGN_STYLE_SETTING: 'vxe-icon-layout',
@@ -164,6 +168,10 @@
               TREE_NODE_OPEN: 'vxe-icon-caret-right rotate90',
               TREE_NODE_CLOSE: 'vxe-icon-caret-right',
               TREE_NODE_LOADED: 'vxe-icon-spinner roll',
+              TREE_DRAG: 'vxe-icon-drag-handle',
+              TREE_DRAG_STATUS_NODE: 'vxe-icon-sort',
+              TREE_DRAG_STATUS_SUB_NODE: 'vxe-icon-add-sub',
+              TREE_DRAG_DISABLED: 'vxe-icon-no-drop',
 
               // tree-select
               TREE_SELECT_LOADED: 'vxe-icon-spinner roll',
@@ -187,6 +195,10 @@
               // text
               TEXT_COPY: 'vxe-icon-copy',
               TEXT_LOADING: 'vxe-icon-spinner roll',
+
+              // tag
+              TAG_CLOSE: 'vxe-icon-close',
+              TAG_LOADING: 'vxe-icon-spinner roll',
 
               // carousel
               CAROUSEL_HORIZONTAL_PREVIOUS: 'vxe-icon-arrow-left',
@@ -225,6 +237,23 @@
               SPLIT_LEFT_ACTION: 'vxe-icon-arrow-left',
               SPLIT_RIGHT_ACTION: 'vxe-icon-arrow-right',
 
+              // backtop
+              BACKTOP_TOP: 'vxe-icon-top',
+
+              // context-menu
+              CONTEXT_MENU_OPTION_LOADING: 'vxe-icon-spinner roll',
+              CONTEXT_MENU_CHILDREN: 'vxe-icon-arrow-right',
+
+              // cascader
+              CASCADER_NODE_OPEN: 'vxe-icon-arrow-right',
+              CASCADER_NODE_CLOSE: 'vxe-icon-arrow-right',
+              CASCADER_NODE_LOADED: 'vxe-icon-spinner roll',
+
+              // list
+              LIST_DRAG: 'vxe-icon-drag-handle',
+              LIST_DRAG_STATUS_NODE: 'vxe-icon-sort',
+              LIST_DRAG_DISABLED: 'vxe-icon-no-drop',
+
               // table
               TABLE_SORT_ASC: 'vxe-icon-caret-up',
               TABLE_SORT_DESC: 'vxe-icon-caret-down',
@@ -247,7 +276,17 @@
               TABLE_RADIO_UNCHECKED: 'vxe-icon-radio-unchecked',
               TABLE_RADIO_DISABLED_UNCHECKED: 'vxe-icon-radio-unchecked-fill',
               TABLE_CUSTOM_SORT: 'vxe-icon-drag-handle',
+              TABLE_CUSTOM_FIXED_LEFT: 'vxe-icon-fixed-left',
+              TABLE_CUSTOM_FIXED_RIGHT: 'vxe-icon-fixed-right',
+              TABLE_CUSTOM_ALIGN_LEFT: 'vxe-icon-align-left',
+              TABLE_CUSTOM_ALIGN_CENTER: 'vxe-icon-align-center',
+              TABLE_CUSTOM_ALIGN_RIGHT: 'vxe-icon-align-right',
+              TABLE_CUSTOM_MOVE_UP: 'vxe-icon-arrows-up',
+              TABLE_CUSTOM_MOVE_DN: 'vxe-icon-arrows-down',
+              TABLE_CUSTOM_PUT_TOP: 'vxe-icon-top',
+              TABLE_CUSTOM_PUT_BOTTOM: 'vxe-icon-bottom',
               TABLE_MENU_OPTIONS: 'vxe-icon-arrow-right',
+              TABLE_MENU_OPTION_LOADING: 'vxe-icon-repeat roll',
               TABLE_DRAG_ROW: 'vxe-icon-drag-handle',
               TABLE_DRAG_COLUMN: 'vxe-icon-drag-handle',
               TABLE_DRAG_STATUS_ROW: 'vxe-icon-sort',
@@ -271,7 +310,7 @@
               TOOLBAR_TOOLS_PRINT: 'vxe-icon-print',
               TOOLBAR_TOOLS_FULLSCREEN: 'vxe-icon-fullscreen',
               TOOLBAR_TOOLS_MINIMIZE: 'vxe-icon-minimize',
-              TOOLBAR_TOOLS_CUSTOM: 'vxe-icon-custom-column',
+              TOOLBAR_TOOLS_CUSTOM: 'vxe-icon-setting',
               TOOLBAR_TOOLS_FIXED_LEFT: 'vxe-icon-fixed-left',
               TOOLBAR_TOOLS_FIXED_LEFT_ACTIVE: 'vxe-icon-fixed-left-fill',
               TOOLBAR_TOOLS_FIXED_RIGHT: 'vxe-icon-fixed-right',
@@ -281,7 +320,8 @@
               GANTT_VIEW_LEFT_OPEN: 'vxe-icon-arrow-left',
               GANTT_VIEW_LEFT_CLOSE: 'vxe-icon-arrow-right',
               GANTT_VIEW_RIGHT_OPEN: 'vxe-icon-arrow-right',
-              GANTT_VIEW_RIGHT_CLOSE: 'vxe-icon-arrow-left'
+              GANTT_VIEW_RIGHT_CLOSE: 'vxe-icon-arrow-left',
+              GANTT_VIEW_TASK_MILESTONE: 'vxe-icon-square-fill rotate45'
             })
           </pre-code>
         </pre>
