@@ -12,7 +12,7 @@
       </template>
     </CodeLight>
 
-    <div class="my-within-demo1-wrapper" style="height: 100%;height: 600px;position: relative;overflow: auto;background-color: #e8eaec;"></div>
+    <div class="my-modal-within-demo1-wrapper" style="height: 100%;height: 600px;position: relative;overflow: auto;background-color: var(--vxe-ui-status-info-tinge-color);"></div>
 
     <CodeLight path="modal/modal/within/Demo2">
       <template #tip>
@@ -22,6 +22,6 @@
       </template>
     </CodeLight>
 
-    <div class="my-within-demo2-wrapper" style="height: 100%;height: 600px;position: relative;overflow: auto;background-color: #e8eaec;"></div>
+    <div class="my-modal-within-demo2-wrapper" style="height: 100%;height: 600px;position: relative;overflow: auto;background-color: var(--vxe-ui-status-info-tinge-color);"></div>
   </div>
 </template>

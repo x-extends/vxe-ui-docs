@@ -1474,6 +1474,7 @@ export const navConfigList: NavVO[] = [
           { title: '拦截关闭', routerLink: { name: 'ComponentDrawerBeforeHide' } },
           { title: '自定义模板', routerLink: { name: 'ComponentDrawerTemplateFooter' } },
           { title: '完整插槽模板', routerLink: { name: 'ComponentDrawerTemplateLayout' } },
+          { title: '显示到挂载区域中', routerLink: { name: 'ComponentDrawerWithin' } },
           { title: '嵌入 iframe', routerLink: { name: 'ComponentDrawerIframe' } }
         ]
       },

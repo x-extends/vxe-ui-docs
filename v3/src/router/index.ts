@@ -3075,6 +3075,7 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentDrawerBeforeHide',
             component: () => import('@/views/drawer/beforeHide/CodeExample.vue')
           },
+          { path: 'within', name: 'ComponentDrawerWithin', component: () => import('@/views/drawer/within/CodeExample.vue') },
           {
             path: 'template',
             component: RouteLayout,
