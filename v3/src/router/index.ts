@@ -1283,6 +1283,7 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentSliderBase',
             component: () => import('@/views/slider/base/CodeExample.vue')
           },
+          { path: 'status', name: 'ComponentSliderStatus', component: () => import('@/views/slider/status/CodeExample.vue') },
           {
             path: 'readonly',
             name: 'ComponentSliderReadonly',
@@ -2375,6 +2376,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentSelectBaseIcon',
                 component: () => import('@/views/select/base/icon/CodeExample.vue')
               },
+              { path: 'radio', name: 'ComponentSelectBaseRadio', component: () => import('@/views/select/base/radio/CodeExample.vue') },
               {
                 path: 'loading',
                 name: 'ComponentSelectBaseLoading',
@@ -2395,6 +2397,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentSelectBaseGroup',
                 component: () => import('@/views/select/base/group/CodeExample.vue')
               },
+              { path: 'emptyValue', name: 'ComponentSelectBaseEmptyValue', component: () => import('@/views/select/base/emptyValue/CodeExample.vue') },
               {
                 path: 'defaultValue',
                 name: 'ComponentSelectBaseDefaultValue',
@@ -2405,6 +2408,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentSelectBaseMultiple',
                 component: () => import('@/views/select/base/multiple/CodeExample.vue')
               },
+              { path: 'checkbox', name: 'ComponentSelectBaseCheckbox', component: () => import('@/views/select/base/checkbox/CodeExample.vue') },
               {
                 path: 'max',
                 name: 'ComponentSelectBaseMax',
@@ -2452,6 +2456,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentSelectConfigDisabled',
                 component: () => import('@/views/select/config/disabled/CodeExample.vue')
               },
+              { path: 'radio', name: 'ComponentSelectConfigRadio', component: () => import('@/views/select/config/radio/CodeExample.vue') },
               {
                 path: 'loading',
                 name: 'ComponentSelectConfigLoading',
@@ -2472,6 +2477,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentSelectConfigGroup',
                 component: () => import('@/views/select/config/group/CodeExample.vue')
               },
+              { path: 'emptyValue', name: 'ComponentSelectConfigEmptyValue', component: () => import('@/views/select/config/emptyValue/CodeExample.vue') },
               {
                 path: 'defaultValue',
                 name: 'ComponentSelectConfigDefaultValue',
@@ -2482,6 +2488,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentSelectConfigMultiple',
                 component: () => import('@/views/select/config/multiple/CodeExample.vue')
               },
+              { path: 'checkbox', name: 'ComponentSelectConfigCheckbox', component: () => import('@/views/select/config/checkbox/CodeExample.vue') },
               {
                 path: 'max',
                 name: 'ComponentSelectConfigMax',

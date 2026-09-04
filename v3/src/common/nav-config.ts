@@ -677,6 +677,7 @@ export const navConfigList: NavVO[] = [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'slider' } } },
           { title: '尺寸大小', routerLink: { name: 'ComponentSliderSize' } },
           { title: '基础', routerLink: { name: 'ComponentSliderBase' } },
+          { title: '状态颜色', routerLink: { name: 'ComponentSliderStatus' } },
           { title: '只读', routerLink: { name: 'ComponentSliderReadonly' } },
           { title: '禁用', routerLink: { name: 'ComponentSliderDisabled' } },
           { title: '范围滑动', routerLink: { name: 'ComponentSliderRange' } },

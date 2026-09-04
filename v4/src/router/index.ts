@@ -1289,6 +1289,7 @@ const routes: Array<RouteRecordRaw> = [
             name: 'ComponentSliderBase',
             component: () => import('@/views/slider/base/CodeExample.vue')
           },
+          { path: 'status', name: 'ComponentSliderStatus', component: () => import('@/views/slider/status/CodeExample.vue') },
           {
             path: 'readonly',
             name: 'ComponentSliderReadonly',
