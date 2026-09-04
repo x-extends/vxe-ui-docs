@@ -423,6 +423,7 @@ export const navConfigList: NavVO[] = [
           { title: '纵向排版', routerLink: { name: 'ComponentSpaceVertical' } },
           { title: '自动换行', routerLink: { name: 'ComponentSpaceWrap' } },
           { title: '对齐方式', routerLink: { name: 'ComponentSpaceAlign' } },
+          { title: '项宽度', routerLink: { name: 'ComponentSpaceItemWidth' } },
           { title: '间隔符', routerLink: { name: 'ComponentSpaceSeparator' } }
         ]
       },
@@ -681,7 +682,8 @@ export const navConfigList: NavVO[] = [
           { title: '禁用', routerLink: { name: 'ComponentSliderDisabled' } },
           { title: '范围滑动', routerLink: { name: 'ComponentSliderRange' } },
           { title: '绑定值', routerLink: { name: 'ComponentSliderValue' } },
-          { title: '实时更新', routerLink: { name: 'ComponentSliderImmediate' } }
+          { title: '实时更新', routerLink: { name: 'ComponentSliderImmediate' } },
+          { title: '显示 Tooltip 提示', routerLink: { name: 'ComponentSliderShowTip' } }
         ]
       },
       {
@@ -754,7 +756,7 @@ export const navConfigList: NavVO[] = [
               { title: '自定义按钮图标', routerLink: { name: 'ComponentNumberInputNumberControlIcon' } },
               { title: '前缀后缀图标', routerLink: { name: 'ComponentNumberInputNumberIcon' } },
               { title: '浮动文字', routerLink: { name: 'ComponentNumberInputNumberFloatContent' } },
-              { title: '工具提示', routerLink: { name: 'ComponentNumberInputNumberShowTip' } },
+              { title: '显示 Tooltip 提示', routerLink: { name: 'ComponentNumberInputNumberShowTip' } },
               { title: '自定义模板', routerLink: { name: 'ComponentNumberInputNumberTemplate' } }
             ]
           },
@@ -803,7 +805,7 @@ export const navConfigList: NavVO[] = [
               { title: '自定义按钮图标', routerLink: { name: 'ComponentNumberInputAmountControlIcon' } },
               { title: '前缀后缀图标', routerLink: { name: 'ComponentNumberInputAmountIcon' } },
               { title: '浮动文字', routerLink: { name: 'ComponentNumberInputAmountFloatContent' } },
-              { title: '工具提示', routerLink: { name: 'ComponentNumberInputAmountShowTip' } },
+              { title: '显示 Tooltip 提示', routerLink: { name: 'ComponentNumberInputAmountShowTip' } },
               { title: '自定义模板', routerLink: { name: 'ComponentNumberInputAmountTemplate' } }
             ]
           }

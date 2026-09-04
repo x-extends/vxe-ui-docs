@@ -1305,7 +1305,8 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/slider/range/CodeExample.vue')
           },
           { path: 'value', name: 'ComponentSliderValue', component: () => import('@/views/slider/value/CodeExample.vue') },
-          { path: 'immediate', name: 'ComponentSliderImmediate', component: () => import('@/views/slider/immediate/CodeExample.vue') }
+          { path: 'immediate', name: 'ComponentSliderImmediate', component: () => import('@/views/slider/immediate/CodeExample.vue') },
+          { path: 'showTip', name: 'ComponentSliderShowTip', component: () => import('@/views/slider/showTip/CodeExample.vue') }
         ]
       },
       {
@@ -3296,7 +3297,8 @@ const routes: Array<RouteRecordRaw> = [
           { path: 'vertical', name: 'ComponentSpaceVertical', component: () => import('@/views/space/vertical/CodeExample.vue') },
           { path: 'separator', name: 'ComponentSpaceSeparator', component: () => import('@/views/space/separator/CodeExample.vue') },
           { path: 'wrap', name: 'ComponentSpaceWrap', component: () => import('@/views/space/wrap/CodeExample.vue') },
-          { path: 'align', name: 'ComponentSpaceAlign', component: () => import('@/views/space/align/CodeExample.vue') }
+          { path: 'align', name: 'ComponentSpaceAlign', component: () => import('@/views/space/align/CodeExample.vue') },
+          { path: 'itemWidth', name: 'ComponentSpaceItemWidth', component: () => import('@/views/space/itemWidth/CodeExample.vue') }
         ]
       },
       {

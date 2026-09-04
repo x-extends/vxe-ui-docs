@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-slider v-model="customGap" immediate></vxe-slider>
+    <vxe-slider v-model="customGap" show-tooltip immediate></vxe-slider>
     <vxe-space :gap="customGap">
       <vxe-card title="卡片1" border>
         <vxe-image src="https://vxeui.com/resource/img/fj843.jpg" width="140"></vxe-image>

@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="number-input/amount/showTip/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="显示工具提示">
+        <vxe-tip status="primary" title="显示 Tooltip 提示">
           通过 <ApiLink name="number-input" prop="show-tooltip" /> 启用工具提示
         </vxe-tip>
       </template>

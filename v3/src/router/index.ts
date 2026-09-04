@@ -1299,7 +1299,8 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/slider/range/CodeExample.vue')
           },
           { path: 'value', name: 'ComponentSliderValue', component: () => import('@/views/slider/value/CodeExample.vue') },
-          { path: 'immediate', name: 'ComponentSliderImmediate', component: () => import('@/views/slider/immediate/CodeExample.vue') }
+          { path: 'immediate', name: 'ComponentSliderImmediate', component: () => import('@/views/slider/immediate/CodeExample.vue') },
+          { path: 'showTip', name: 'ComponentSliderShowTip', component: () => import('@/views/slider/showTip/CodeExample.vue') }
         ]
       },
       {
