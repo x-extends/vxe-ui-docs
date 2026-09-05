@@ -266,6 +266,15 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
+        title: 'Divider 分割线',
+        children: [
+          { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'divider' } }, keywords: 'vxe-divider' },
+          { title: '水平割线', routerLink: { name: 'ComponentDividerBase' } },
+          { title: '垂直分隔线', routerLink: { name: 'ComponentDividerVertical' } },
+          { title: '显示标题', routerLink: { name: 'ComponentDividerTitle' } }
+        ]
+      },
+      {
         title: 'Segmented 分段器',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'segmented' } }, keywords: 'vxe-segmented' },

@@ -1147,6 +1147,15 @@ const routes: Array<RouteConfig> = [
         ]
       },
       {
+        path: 'divider',
+        component: RouteLayout,
+        children: [
+          { path: 'base', name: 'ComponentDividerBase', component: () => import('@/views/divider/base/CodeExample.vue') },
+          { path: 'vertical', name: 'ComponentDividerVertical', component: () => import('@/views/divider/vertical/CodeExample.vue') },
+          { path: 'title', name: 'ComponentDividerTitle', component: () => import('@/views/divider/title/CodeExample.vue') }
+        ]
+      },
+      {
         path: 'segmented',
         component: RouteLayout,
         children: [
