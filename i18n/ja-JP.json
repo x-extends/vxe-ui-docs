@@ -182,7 +182,7 @@
     "docs": {
       "button": {
         "viewCode": "コードを表示",
-        "runDemo": "オンラインで実行",
+        "runDemo": "Playground",
         "fixDocs": "エラーを発見",
         "fixDocTip": "ドキュメントに誤りや不十分な点があれば、PRを送信して改善にご協力ください！",
         "copyCode": "コードをコピー",

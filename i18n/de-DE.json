@@ -182,7 +182,7 @@
     "docs": {
       "button": {
         "viewCode": "Den Code anzeigen",
-        "runDemo": "Online laufen",
+        "runDemo": "Playground",
         "fixDocs": "Fehler gefunden",
         "fixDocTip": "Wenn es Fehler gibt oder im Dokument nicht detailliert sind, können Sie das Dokument verbessern, indem Sie PR einreichen!",
         "copyCode": "Kopieren Sie den Code",

@@ -182,7 +182,7 @@
     "docs": {
       "button": {
         "viewCode": "Ver código",
-        "runDemo": "Ejecutar en línea",
+        "runDemo": "Playground",
         "fixDocs": "Encontré un error",
         "fixDocTip": "Si el documento contiene errores o falta información, ¡ayúdanos a mejorarlo enviando un PR!",
         "copyCode": "Copiar código",

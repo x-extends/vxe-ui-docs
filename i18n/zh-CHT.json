@@ -182,7 +182,7 @@
     "docs": {
       "button": {
         "viewCode": "查看代碼",
-        "runDemo": "在線運行",
+        "runDemo": "演练场",
         "fixDocs": "發現錯誤",
         "fixDocTip": "如果該文檔存在錯誤或者不詳細，可以通過提交 PR 方式幫助完善文檔！",
         "copyCode": "複製代碼",

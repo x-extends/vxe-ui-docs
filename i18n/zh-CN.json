@@ -182,7 +182,7 @@
     "docs": {
       "button": {
         "viewCode": "查看代码",
-        "runDemo": "在线运行",
+        "runDemo": "演练场",
         "fixDocs": "发现错误",
         "fixDocTip": "如果该文档存在错误或者不详细，可以通过提交 PR 方式帮助完善文档！",
         "copyCode": "复制代码",
