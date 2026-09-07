@@ -1437,6 +1437,7 @@ const routes: Array<RouteConfig> = [
           { path: 'editable', name: 'ComponentInputEditable', component: () => import('@/views/input/editable/CodeExample.vue') },
           { path: 'disabled', name: 'ComponentInputDisabled', component: () => import('@/views/input/disabled/CodeExample.vue') },
           { path: 'clearable', name: 'ComponentInputClearable', component: () => import('@/views/input/clearable/CodeExample.vue') },
+          { path: 'width', name: 'ComponentInputWidth', component: () => import('@/views/input/width/CodeExample.vue') },
           { path: 'trim', name: 'ComponentInputTrim', component: () => import('@/views/input/trim/CodeExample.vue') },
           // {
           //   path: 'password',
@@ -1543,6 +1544,7 @@ const routes: Array<RouteConfig> = [
           },
           { path: 'readonly', name: 'ComponentPasswordInputReadonly', component: () => import('@/views/password-input/readonly/CodeExample.vue') },
           { path: 'editable', name: 'ComponentPasswordInputEditable', component: () => import('@/views/password-input/editable/CodeExample.vue') },
+          { path: 'width', name: 'ComponentPasswordInputWidth', component: () => import('@/views/password-input/width/CodeExample.vue') },
           { path: 'icon', name: 'ComponentPasswordInputIcon', component: () => import('@/views/password-input/icon/CodeExample.vue') },
           { path: 'floatContent', name: 'ComponentPasswordInputFloatContent', component: () => import('@/views/password-input/floatContent/CodeExample.vue') },
           {
@@ -1576,6 +1578,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentNumberInputNumberReadonly',
                 component: () => import('@/views/number-input/number/readonly/CodeExample.vue')
               },
+              { path: 'width', name: 'ComponentNumberInputNumberWidth', component: () => import('@/views/number-input/number/width/CodeExample.vue') },
               { path: 'negative', name: 'ComponentNumberInputNumberNegative', component: () => import('@/views/number-input/number/negative/CodeExample.vue') },
               {
                 path: 'step',
@@ -2465,6 +2468,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentSelectConfigDisabled',
                 component: () => import('@/views/select/config/disabled/CodeExample.vue')
               },
+              { path: 'width', name: 'ComponentSelectConfigWidth', component: () => import('@/views/select/config/width/CodeExample.vue') },
               { path: 'radio', name: 'ComponentSelectConfigRadio', component: () => import('@/views/select/config/radio/CodeExample.vue') },
               {
                 path: 'loading',
@@ -3297,6 +3301,7 @@ const routes: Array<RouteConfig> = [
         children: [
           { path: 'size', name: 'ComponentSpaceSize', component: () => import('@/views/space/size/CodeExample.vue') },
           { path: 'base', name: 'ComponentSpaceBase', component: () => import('@/views/space/base/CodeExample.vue') },
+          { path: 'width', name: 'ComponentSpaceWidth', component: () => import('@/views/space/width/CodeExample.vue') },
           { path: 'gap', name: 'ComponentSpaceGap', component: () => import('@/views/space/gap/CodeExample.vue') },
           { path: 'vertical', name: 'ComponentSpaceVertical', component: () => import('@/views/space/vertical/CodeExample.vue') },
           { path: 'separator', name: 'ComponentSpaceSeparator', component: () => import('@/views/space/separator/CodeExample.vue') },
