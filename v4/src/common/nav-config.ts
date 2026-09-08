@@ -835,6 +835,7 @@ export const navConfigList: NavVO[] = [
           { title: '宽度', routerLink: { name: 'ComponentPasswordInputWidth' } },
           { title: '图标', routerLink: { name: 'ComponentPasswordInputIcon' } },
           { title: '浮动文字', routerLink: { name: 'ComponentPasswordInputFloatContent' } },
+          // { title: '显示 Tooltip 提示', routerLink: { name: 'ComponentPasswordInputShowTip' } },
           { title: '控制按钮', routerLink: { name: 'ComponentPasswordInputControls' } }
         ]
       },

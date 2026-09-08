@@ -1553,6 +1553,7 @@ const routes: Array<RouteRecordRaw> = [
           { path: 'width', name: 'ComponentPasswordInputWidth', component: () => import('@/views/password-input/width/CodeExample.vue') },
           { path: 'icon', name: 'ComponentPasswordInputIcon', component: () => import('@/views/password-input/icon/CodeExample.vue') },
           { path: 'floatContent', name: 'ComponentPasswordInputFloatContent', component: () => import('@/views/password-input/floatContent/CodeExample.vue') },
+          // { path: 'showTip', name: 'ComponentPasswordInputShowTip', component: () => import('@/views/password-input/showTip/CodeExample.vue') },
           {
             path: 'controls',
             name: 'ComponentPasswordInputControls',
