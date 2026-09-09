@@ -134,6 +134,7 @@ VxeUI.setConfig({
   //   }
   // }
   // scrollMarginStyle: 'obsolete',
+  // tableHeadeSlotToTitleSlot: 'obsolete'
 })
 
 // VxeUI.setI18n('zh-CN', zhCN)

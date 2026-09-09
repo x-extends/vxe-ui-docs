@@ -120,7 +120,8 @@ window.XEUtils = XEUtils
 axios.defaults.baseURL = process.env.VUE_APP_PUBLIC_API_URL
 
 VxeUI.setConfig({
-  // scrollMarginStyle: 'obsolete'
+  // scrollMarginStyle: 'obsolete',
+  // tableHeadeSlotToTitleSlot: 'obsolete'
 })
 
 // VxeUI.setI18n('zh-CN', zhCN)
