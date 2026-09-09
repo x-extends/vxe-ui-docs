@@ -133,7 +133,7 @@ VxeUI.setConfig({
   //     mode: 'scroll'
   //   }
   // }
-  // scrollMarginStyle: 'obsolete'
+  // scrollMarginStyle: 'obsolete',
 })
 
 // VxeUI.setI18n('zh-CN', zhCN)
