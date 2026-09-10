@@ -293,6 +293,7 @@
         "areaCellFormatNumber": "数值",
         "areaCellFormatAmount": "货币",
         "areaKeypad": "按键导航",
+        "keypadEdit": "按键编辑",
         "areaKeypadHandle": "按键功能示例",
         "areaKeypadHandleEditAppend": "使用追加方式编辑",
         "areaKeypadHandleEnterAddRow": "回车键追加新行",
