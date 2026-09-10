@@ -516,7 +516,8 @@
     },
     "editDownTextarea": {
       "nav": {
-        "pulldown": "Editor de texto multilínea desplegable"
+        "pulldown": "Editor de texto multilínea desplegable",
+        "fixed": "冻结列"
       }
     }
   },

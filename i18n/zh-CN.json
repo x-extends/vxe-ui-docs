@@ -516,7 +516,8 @@
     },
     "editDownTextarea": {
       "nav": {
-        "pulldown": "下拉多行编辑"
+        "pulldown": "基础使用",
+        "fixed": "冻结列"
       }
     }
   },

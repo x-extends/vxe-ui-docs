@@ -516,7 +516,8 @@
     },
     "editDownTextarea": {
       "nav": {
-        "pulldown": "プルダウン複数行編集"
+        "pulldown": "プルダウン複数行編集",
+        "fixed": "冻结列"
       }
     }
   },

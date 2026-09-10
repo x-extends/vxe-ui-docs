@@ -516,7 +516,8 @@
     },
     "editDownTextarea": {
       "nav": {
-        "pulldown": "Dropdown multi-line editing"
+        "pulldown": "Dropdown multi-line editing",
+        "fixed": "冻结列"
       }
     }
   },
