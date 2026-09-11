@@ -19,6 +19,7 @@ const openVerticalEvent = () => {
     width: 600,
     height: 400,
     showMaximize: true,
+    showMinimize: true,
     zoomConfig: {
       minimizeLayout: 'vertical'
     }

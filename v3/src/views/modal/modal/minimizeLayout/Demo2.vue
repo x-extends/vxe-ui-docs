@@ -25,6 +25,7 @@ export default Vue.extend({
         width: 600,
         height: 400,
         showMaximize: true,
+        showMinimize: true,
         zoomConfig: {
           minimizeLayout: 'horizontal'
         }

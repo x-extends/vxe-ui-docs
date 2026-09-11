@@ -18,7 +18,8 @@ const openEvent = () => {
     escClosable: true,
     width: 600,
     height: 400,
-    showMaximize: true
+    showMaximize: true,
+    showMinimize: true
   })
   num++
 }

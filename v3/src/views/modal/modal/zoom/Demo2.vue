@@ -24,7 +24,8 @@ export default Vue.extend({
         escClosable: true,
         width: 600,
         height: 400,
-        showMaximize: true
+        showMaximize: true,
+        showMinimize: true
       })
       this.num++
     }

@@ -2,7 +2,9 @@
   <div>
     <CodeLight path="button/size/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="文本按钮尺寸"></vxe-tip>
+        <vxe-tip status="primary" title="尺寸大小">
+          通过 <ApiLink name="button" prop="size" /> 来设置尺寸大小
+        </vxe-tip>
       </template>
     </CodeLight>
 
