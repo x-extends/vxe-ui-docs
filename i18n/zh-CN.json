@@ -375,7 +375,7 @@
         "keypadBackMethod": "自定义按 Backspace 键删除",
         "keypadBeforeEditMethod": "阻止编辑",
         "keypadUndoRedo": "撤销和重做",
-        "keypadFillByCopy": "自动填充内容"
+        "keypadFillByCopy": "按键填充内容"
       }
     },
     "extendPivotTable": {
