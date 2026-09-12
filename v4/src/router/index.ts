@@ -441,7 +441,8 @@ const routes: Array<RouteRecordRaw> = [
                     path: 'myEditPulldown',
                     name: 'GlobalRendererTableEditMyEditPulldown',
                     component: () => import('@/views/global/renderer/table/edit/myEditPulldown/CodeExample.vue')
-                  }
+                  },
+                  { path: 'mixRender', name: 'GlobalRendererTableEditMixRender', component: () => import('@/views/global/renderer/table/edit/mixRender/CodeExample.vue') }
                 ]
               },
               {
