@@ -12,7 +12,7 @@ import XEUtils from 'xe-utils'
 
 const val1 = ref(null)
 
-const parseDateMethod: VxeDatePickerPropTypes.ParseMethod = ({ inputValue }) => {
+const parseDateMethod: VxeDatePickerPropTypes.ParseInputMethod = ({ inputValue }) => {
   if (!inputValue) {
     return null
   }
