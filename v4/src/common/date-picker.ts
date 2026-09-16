@@ -10,6 +10,7 @@ export const datePickerNavConfig: NavVO = {
         { title: '尺寸大小', routerLink: { name: 'ComponentDatePickerDateSize' } },
         { title: '绑定值格式', routerLink: { name: 'ComponentDatePickerDateBase' } },
         { title: '显示值格式', routerLink: { name: 'ComponentDatePickerDateLabelFormat' } },
+        { title: '自定义解析', routerLink: { name: 'ComponentDatePickerDateParseMethod' } },
         { title: '可清除', routerLink: { name: 'ComponentDatePickerDateClearable' } },
         { title: '禁用', routerLink: { name: 'ComponentDatePickerDateDisabled' } },
         { title: '查看模式', routerLink: { name: 'ComponentDatePickerDateReadonly' } },
