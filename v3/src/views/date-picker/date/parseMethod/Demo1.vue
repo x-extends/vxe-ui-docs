@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-notice-bar content="同时支持多种解析格式：yyyy-MM-dd，yyyy/MM/dd，dd-MM-yyyy，dd/MM/yyyy，yyyyMMdd，timestamp"></vxe-notice-bar>
-    <vxe-date-picker v-model="val1" :parse-method="parseDateMethod" clearable></vxe-date-picker>
+    <vxe-date-picker v-model="val1" :parse-input-method="parseDateMethod" clearable></vxe-date-picker>
   </div>
 </template>
 
