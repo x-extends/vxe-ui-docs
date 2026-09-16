@@ -455,6 +455,7 @@ export const datePickerRouteConfig: RouteRecordRaw = {
           name: 'ComponentDatePickerDatetimeValueFormat',
           component: () => import('@/views/date-picker/datetime/valueFormat/CodeExample.vue')
         },
+        { path: 'parseMethod', name: 'ComponentDatePickerDatetimeParseMethod', component: () => import('@/views/date-picker/datetime/parseMethod/CodeExample.vue') },
         {
           path: 'masked',
           component: RouteLayout,

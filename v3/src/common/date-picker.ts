@@ -104,6 +104,7 @@ export const datePickerNavConfig: NavVO = {
         { title: '禁止输入', routerLink: { name: 'ComponentDatePickerDatetimeEditable' } },
         { title: '多选', routerLink: { name: 'ComponentDatePickerDatetimeMultiple' } },
         { title: '自定义格式', routerLink: { name: 'ComponentDatePickerDatetimeValueFormat' } },
+        { title: '自定义解析', routerLink: { name: 'ComponentDatePickerDatetimeParseMethod' } },
         {
           title: '掩码输入',
           children: [
