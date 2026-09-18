@@ -444,7 +444,7 @@
         "basics": "基礎功能",
         "taskList": "任務列表",
         "tree": "Subtarea",
-        "subTask": "基础",
+        "subTask": "子任务",
         "multiTask": "实现拆分双任务",
         "taskDrag": "任務可拖拽",
         "taskDragBase": "拖拽移動日期",
