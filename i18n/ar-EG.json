@@ -491,6 +491,8 @@
         "dependencyCreateStart": "创建线二次确认",
         "criticalPath": "关键路径",
         "showCriticalPath": "显示关键路径",
+        "lineColor": "线颜色",
+        "lineType": "线类型",
         "scroll": "虚拟滚动（超大数据量）",
         "scrollVertical": "纵向虚拟滚动",
         "scrollTree": "树形虚拟滚动",

@@ -491,6 +491,8 @@
         "dependencyCreateStart": "線作成の確認",
         "criticalPath": "关键路径",
         "showCriticalPath": "显示关键路径",
+        "lineColor": "线颜色",
+        "lineType": "线类型",
         "scroll": "仮想スクロール（超大量データ）",
         "scrollVertical": "縦方向仮想スクロール",
         "scrollTree": "ツリー仮想スクロール",

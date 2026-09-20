@@ -491,6 +491,8 @@
         "dependencyCreateStart": "Confirmar creación de línea",
         "criticalPath": "关键路径",
         "showCriticalPath": "显示关键路径",
+        "lineColor": "线颜色",
+        "lineType": "线类型",
         "scroll": "Desplazamiento virtual (grandes volúmenes de datos)",
         "scrollVertical": "Desplazamiento vertical virtual",
         "scrollTree": "Desplazamiento virtual de árbol",

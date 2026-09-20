@@ -491,6 +491,8 @@
         "dependencyCreateStart": "Подтверждение создания линии",
         "criticalPath": "关键路径",
         "showCriticalPath": "显示关键路径",
+        "lineColor": "线颜色",
+        "lineType": "线类型",
         "scroll": "Виртуальная прокрутка (очень большие данные)",
         "scrollVertical": "Вертикальная виртуальная прокрутка",
         "scrollTree": "Виртуальная прокрутка дерева",
