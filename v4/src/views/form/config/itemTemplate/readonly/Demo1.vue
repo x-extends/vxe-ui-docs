@@ -6,7 +6,8 @@
 
     <vxe-form ref="formRef" v-bind="formOptions">
       <template #nameDefault="{ data, item, readonly }">
-        <vxe-input v-model="data[item.field]" :readonly="readonly"></vxe-input>
+        <span v-if="readonly">查看模式：{{ data[item.field] }}</span>
+        <vxe-input v-else v-model="data[item.field]"></vxe-input>
       </template>
 
       <template #numDefault="{ data, item, readonly }">

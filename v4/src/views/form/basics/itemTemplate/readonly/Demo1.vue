@@ -12,7 +12,8 @@
     >
       <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
         <template #default="{ readonly }">
-          <vxe-input v-model="formData.name" :readonly="readonly"></vxe-input>
+          <span v-if="readonly">查看模式：{{ formData.name }}</span>
+          <vxe-input v-model="formData.name"></vxe-input>
         </template>
       </vxe-form-item>
       <vxe-form-group span="24">
