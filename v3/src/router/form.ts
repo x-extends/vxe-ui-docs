@@ -379,7 +379,8 @@ export const formRouteConfig: RouteConfig = {
               path: 'vxe-upload',
               name: 'ComponentFormBasicsItemTemplateVxeUpload',
               component: () => import('@/views/form/basics/itemTemplate/vxe-upload/CodeExample.vue')
-            }
+            },
+            { path: 'readonly', name: 'ComponentFormBasicsItemTemplateReadonly', component: () => import('@/views/form/basics/itemTemplate/readonly/CodeExample.vue') }
           ]
         },
         {
@@ -802,7 +803,8 @@ export const formRouteConfig: RouteConfig = {
               path: 'vxe-upload',
               name: 'ComponentFormConfigItemTemplateVxeUpload',
               component: () => import('@/views/form/config/itemTemplate/vxe-upload/CodeExample.vue')
-            }
+            },
+            { path: 'readonly', name: 'ComponentFormConfigItemTemplateReadonly', component: () => import('@/views/form/config/itemTemplate/readonly/CodeExample.vue') }
           ]
         },
         {

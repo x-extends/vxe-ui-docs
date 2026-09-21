@@ -103,6 +103,7 @@ export const formNavConfig: NavVO = {
             { title: 'VxeRate 评分', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeRate' } },
             { title: 'VxeSlider 滑块', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSlider' } },
             { title: 'VxeUpload 上传', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeUpload' } },
+            { title: '只读模式', routerLink: { name: 'ComponentFormBasicsItemTemplateReadonly' } },
             // { title: 'WangEditor 第三方扩展-富文本', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-wangeditor/form/itemTemplate/wang-editor`, linkTarget: '_blank' },
             { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form/itemTemplate/el-input`, linkTarget: '_blank' }
           ]
@@ -218,6 +219,7 @@ export const formNavConfig: NavVO = {
             { title: 'VxeImage 图片', routerLink: { name: 'ComponentFormConfigItemTemplateVxeImage' } },
             { title: 'VxeImageGroup 图片组', routerLink: { name: 'ComponentFormConfigItemTemplateVxeImageGroup' } },
             { title: 'VxeUpload 上传', routerLink: { name: 'ComponentFormConfigItemTemplateVxeUpload' } },
+            { title: '只读模式', routerLink: { name: 'ComponentFormConfigItemTemplateReadonly' } },
             // { title: 'WangEditor 第三方扩展-富文本', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-wangeditor/form/itemRender/wang-editor`, linkTarget: '_blank' },
             { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form/itemRender/el-input`, linkTarget: '_blank' }
           ]
