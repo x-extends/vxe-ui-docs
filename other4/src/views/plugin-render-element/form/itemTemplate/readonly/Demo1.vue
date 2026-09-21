@@ -1,36 +1,48 @@
 <template>
   <div>
     <el-button type="primary" @click="toggleReadonly">切换只读</el-button>
-    <el-button @click="toggleBorder">显示边框</el-button>
-    <el-button @click="toggleBackground">显示背景</el-button>
 
-    <vxe-form ref="formRef" v-bind="formOptions">
-      <template #nameDefault="{ data, item, readonly }">
-        <span v-if="readonly">查看模式：{{ data[item.field] }}</span>
-        <el-input v-else v-model="data[item.field]"></el-input>
-      </template>
-
-      <template #numDefault="{ data, item, readonly }">
-        <span v-if="readonly">查看模式：{{ data[item.field] }}</span>
-        <el-input-number v-else v-model="data[item.field]"></el-input-number>
-      </template>
-
-      <template #addressDefault="{ data, item, readonly }">
-        <span v-if="readonly">查看模式：{{ data[item.field] }}</span>
-        <el-input v-else v-model="data[item.field]" type="textarea"></el-input>
-      </template>
-
-      <template #action="{ readonly }">
-        <el-button v-if="!readonly" native-type="reset">重置</el-button>
-        <el-button v-if="!readonly" native-type="submit" type="primary">提交</el-button>
-      </template>
+    <vxe-form
+      title-colon
+      title-width="120"
+      title-align="right"
+      :readonly="isReadonly"
+      :data="formData"
+      :rules="formRules"
+    >
+      <vxe-form-group span="24">
+        <vxe-form-item title="名称" field="name" span="12" :item-render="{}">
+          <template #default="{ readonly }">
+            <span v-if="readonly">查看模式：{{ formData.name }}</span>
+            <vxe-input v-model="formData.name"></vxe-input>
+          </template>
+        </vxe-form-item>
+        <vxe-form-item title="数字" field="num" span="8" :item-render="{}">
+          <template #default="{ readonly }">
+            <span v-if="readonly">查看模式：{{ formData.num }}</span>
+            <vxe-input v-model="formData.num"></vxe-input>
+          </template>
+        </vxe-form-item>
+      </vxe-form-group>
+      <vxe-form-item title="文本域" field="address" span="24" :item-render="{}">
+        <template #default="{ readonly }">
+          <span v-if="readonly">查看模式：{{ formData.address }}</span>
+          <el-input v-else v-model="formData.address" type="textarea"></el-input>
+        </template>
+      </vxe-form-item>
+      <vxe-form-item align="center" span="24">
+        <template #default="{ readonly }">
+          <el-button v-if="!readonly" native-type="reset">重置</el-button>
+          <el-button v-if="!readonly" native-type="submit" type="primary">提交</el-button>
+        </template>
+      </vxe-form-item>
     </vxe-form>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { reactive } from 'vue'
-import { VxeFormProps } from 'vxe-pc-ui'
+import { ref } from 'vue'
+import { VxeFormPropTypes } from 'vxe-pc-ui'
 
 interface FormDataVO {
   name: string
@@ -42,49 +54,24 @@ interface FormDataVO {
   address: string
 }
 
-const formOptions = reactive<VxeFormProps<FormDataVO>>({
-  border: false,
-  readonly: false,
-  titleWidth: 140,
-  titleColon: true,
-  titleBackground: false,
-  titleAlign: 'right',
-  data: {
-    name: 'test1',
-    nickname: 'Testing',
-    num: 4236985.3,
-    integer: 100000,
-    float: 31200.33,
-    amount: 100000,
-    address: '广东省深圳市'
-  },
-  items: [
-    {
-      span: 24,
-      children: [
-        { field: 'name', title: '名称', span: 12, itemRender: {}, slots: { default: 'nameDefault' } },
-        { field: 'num', title: '数字', span: 12, itemRender: {}, slots: { default: 'numDefault' } }
-      ]
-    },
-    { field: 'address', title: '文本域', span: 24, itemRender: {}, slots: { default: 'addressDefault' } },
-    { align: 'center', span: 24, slots: { default: 'action' } }
-  ],
-  rules: {
-    num: [
-      { required: true, message: '必填' }
-    ]
-  }
+const isReadonly = ref(false)
+const formData = ref<FormDataVO>({
+  name: 'test1',
+  nickname: 'Testing',
+  num: 4236985.3,
+  integer: 100000,
+  float: 31200.33,
+  amount: 100000,
+  address: '广东省深圳市'
+})
+
+const formRules = ref<VxeFormPropTypes.Rules>({
+  num: [
+    { required: true, message: '必填' }
+  ]
 })
 
 const toggleReadonly = () => {
-  formOptions.readonly = !formOptions.readonly
-}
-
-const toggleBorder = () => {
-  formOptions.border = !formOptions.border
-}
-
-const toggleBackground = () => {
-  formOptions.titleBackground = !formOptions.titleBackground
+  isReadonly.value = !isReadonly.value
 }
 </script>
