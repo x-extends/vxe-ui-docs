@@ -14,13 +14,13 @@
         <vxe-form-item title="名称" field="name" span="12" :item-render="{}">
           <template #default="{ readonly }">
             <span v-if="readonly">查看模式：{{ formData.name }}</span>
-            <vxe-input v-model="formData.name"></vxe-input>
+            <el-input v-model="formData.name"></el-input>
           </template>
         </vxe-form-item>
         <vxe-form-item title="数字" field="num" span="8" :item-render="{}">
           <template #default="{ readonly }">
             <span v-if="readonly">查看模式：{{ formData.num }}</span>
-            <vxe-input v-model="formData.num"></vxe-input>
+            <el-input v-model="formData.num"></el-input>
           </template>
         </vxe-form-item>
       </vxe-form-group>
