@@ -321,7 +321,8 @@ export const ganttNavConfig: NavVO = {
       title: '任务可拖拽',
       children: [
         { title: '任务拖拽自动移动日期', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_task_drag_drag' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2FtaskDrag%2Fdrag' } } },
-        { title: '任务拖拽自动调整日期', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_task_drag_resize' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2FtaskDrag%2Fresize' } } }
+        { title: '任务拖拽自动调整日期', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_task_drag_resize' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2FtaskDrag%2Fresize' } } },
+        { title: '拖拽后识别依赖自动排期', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_dependency_move_update' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2Fdependency%2FmoveUpdate' } } }
       ]
     },
     {
@@ -329,6 +330,12 @@ export const ganttNavConfig: NavVO = {
       children: [
         { title: '配置连接线', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_dependency_links' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2Fdependency%2Flinks' } } },
         { title: '可视化创建线', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_dependency_create_link' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2Fdependency%2FcreateLink' } } }
+      ]
+    },
+    {
+      title: '关键路径',
+      children: [
+        { title: '自动计算关键路径', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_critical_path_show_critical_path' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2FcriticalPath%2Flinks' } } }
       ]
     },
     {

@@ -335,7 +335,7 @@ export const ganttNavConfig: NavVO = {
     {
       title: '关键路径',
       children: [
-        { title: '自动计算关键路径', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_dependency_links' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2FcriticalPath%2Flinks' } } }
+        { title: '自动计算关键路径', isEnterprise: true, routerLink: { name: 'EnterprisePreview', params: { previewCode: 'extend_gantt_chart_gantt_critical_path_show_critical_path' }, query: { previewPath: '%2FextendGanttChart%2Fgantt%2FcriticalPath%2Flinks' } } }
       ]
     },
     {
