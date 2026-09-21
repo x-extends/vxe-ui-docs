@@ -639,7 +639,8 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'el-rate',
                 name: 'PluginRenderElementFormItemTemplateElRate',
                 component: () => import('@/views/plugin-render-element/form/itemTemplate/el-rate/CodeExample.vue')
-              }
+              },
+              { path: 'readonly', name: 'PluginRenderElementFormItemTemplateReadonly', component: () => import('@/views/plugin-render-element/form/itemTemplate/readonly/CodeExample.vue') }
             ]
           },
           {
@@ -700,7 +701,8 @@ const routes: Array<RouteRecordRaw> = [
                 path: 'el-rate',
                 name: 'PluginRenderElementFormItemRenderElRate',
                 component: () => import('@/views/plugin-render-element/form/itemRender/el-rate/CodeExample.vue')
-              }
+              },
+              { path: 'readonly', name: 'PluginRenderElementFormItemRenderReadonly', component: () => import('@/views/plugin-render-element/form/itemRender/readonly/CodeExample.vue') }
             ]
           }
         ]

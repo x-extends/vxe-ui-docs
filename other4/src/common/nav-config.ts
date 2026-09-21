@@ -287,7 +287,8 @@ export const navConfigList: NavVO[] = [
               { title: 'ElInput', routerLink: { name: 'PluginRenderElementFormItemTemplateElInput' } },
               { title: 'ElSelect', routerLink: { name: 'PluginRenderElementFormItemTemplateElSelect' } },
               { title: 'ElSwitch', routerLink: { name: 'PluginRenderElementFormItemTemplateElSwitch' } },
-              { title: 'ElRate', routerLink: { name: 'PluginRenderElementFormItemTemplateElRate' } }
+              { title: 'ElRate', routerLink: { name: 'PluginRenderElementFormItemTemplateElRate' } },
+              { title: '只读模式', routerLink: { name: 'PluginRenderElementFormItemTemplateReadonly' } }
             ]
           },
           {
@@ -303,7 +304,8 @@ export const navConfigList: NavVO[] = [
               { title: 'ElSwitch', routerLink: { name: 'PluginRenderElementFormItemRenderElSwitch' } },
               { title: 'ElRadioGroup', routerLink: { name: 'PluginRenderElementFormItemRenderElRadioGroup' } },
               { title: 'ElCheckboxGroup', routerLink: { name: 'PluginRenderElementFormItemRenderElCheckboxGroup' } },
-              { title: 'ElRate', routerLink: { name: 'PluginRenderElementFormItemRenderElRate' } }
+              { title: 'ElRate', routerLink: { name: 'PluginRenderElementFormItemRenderElRate' } },
+              { title: '只读模式', routerLink: { name: 'PluginRenderElementFormItemRenderReadonly' } }
             ]
           }
         ]
