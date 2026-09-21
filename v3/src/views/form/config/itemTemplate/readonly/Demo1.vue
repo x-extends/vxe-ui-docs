@@ -5,20 +5,20 @@
     <vxe-button status="success" @click="toggleBackground">显示背景</vxe-button>
 
     <vxe-form ref="formRef" v-bind="formOptions">
-      <template #nameDefault="{ data, item, readonly }">
+      <template #name_default="{ data, item, readonly }">
         <span v-if="readonly">查看模式：{{ data[item.field] }}</span>
         <vxe-input v-else v-model="data[item.field]"></vxe-input>
       </template>
 
-      <template #numDefault="{ data, item, readonly }">
+      <template #num_default="{ data, item, readonly }">
         <vxe-number-input v-model="data[item.field]" :readonly="readonly"></vxe-number-input>
       </template>
 
-      <template #amountDefault="{ data, item, readonly }">
+      <template #amount_default="{ data, item, readonly }">
         <vxe-number-input v-model="data[item.field]" type="amount" :readonly="readonly"></vxe-number-input>
       </template>
 
-      <template #addressDefault="{ data, item, readonly }">
+      <template #address_default="{ data, item, readonly }">
         <vxe-textarea v-model="data[item.field]" :readonly="readonly"></vxe-textarea>
       </template>
 
@@ -63,15 +63,15 @@ export default Vue.extend({
         address: '广东省深圳市'
       },
       items: [
-        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'nameDefault' } },
+        { field: 'name', title: '名称', span: 24, itemRender: {}, slots: { default: 'name_default' } },
         {
           span: 24,
           children: [
-            { field: 'num', title: '数字', span: 12, itemRender: {}, slots: { default: 'numDefault' } },
-            { field: 'amount', title: '金额', span: 12, itemRender: {}, slots: { default: 'amountDefault' } }
+            { field: 'num', title: '数字', span: 12, itemRender: {}, slots: { default: 'num_default' } },
+            { field: 'amount', title: '金额', span: 12, itemRender: {}, slots: { default: 'amount_default' } }
           ]
         },
-        { field: 'address', title: '文本域', span: 24, itemRender: {}, slots: { default: 'addressDefault' } },
+        { field: 'address', title: '文本域', span: 24, itemRender: {}, slots: { default: 'address_default' } },
         { align: 'center', span: 24, slots: { default: 'action' } }
       ],
       rules: {
