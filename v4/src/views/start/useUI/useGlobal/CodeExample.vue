@@ -170,7 +170,7 @@
               VxeRow,
               VxeSelect,
               VxeSplitter,
-              VxeSplitterPane,
+              VxeSplitterPanel,
               // VxeSplit,
               // VxeSplitPane,
               VxeSlider,
@@ -273,7 +273,7 @@
               app.use(VxeRow)
               app.use(VxeSelect)
               app.use(VxeSplitter)
-              app.use(VxeSplitterPane)
+              app.use(VxeSplitterPanel)
               // app.use(VxeSplit)
               // app.use(VxeSplitPane)
               app.use(VxeSlider)
