@@ -491,6 +491,8 @@
         "dependencyCreateStart": "创建线二次确认",
         "criticalPath": "关键路径",
         "showCriticalPath": "显示关键路径",
+        "scheduling": "自动排期",
+        "autoScheduling": "拖拽自动重新排期",
         "lineColor": "线颜色",
         "lineType": "线类型",
         "scroll": "虚拟滚动（超大数据量）",
