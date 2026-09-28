@@ -170,7 +170,7 @@
               VxeRow,
               VxeSelect,
               VxeSplitter,
-              VxeSplitterPane,
+              VxeSplitterPanel,
               // VxeSplit,
               // VxeSplitPane,
               VxeSlider,
@@ -275,7 +275,7 @@
             VxeUI.component(VxeRow)
             VxeUI.component(VxeSelect)
             VxeUI.component(VxeSplitter)
-            VxeUI.component(VxeSplitterPane)
+            VxeUI.component(VxeSplitterPanel)
             // VxeUI.component(VxeSplit)
             // VxeUI.component(VxeSplitPane)
             VxeUI.component(VxeSlider)
