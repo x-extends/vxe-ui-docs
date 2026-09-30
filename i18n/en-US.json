@@ -305,7 +305,7 @@
         "areaDisabledClip": "Disable copy and paste",
         "copyWithHead": "Copy with header",
         "copyAcrossArea": "Multi-area copy and paste",
-        "btnCopy": "Remove leading/trailing newlines from copied content",
+        "btnCopy": "Does it end with a line break",
         "cllipBeforeAfter": "Prevent paste",
         "areaClipCopyLabel": "Copy corresponding content",
         "areaClipCustomClip": "Custom copy and paste methods",

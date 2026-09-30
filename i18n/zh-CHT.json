@@ -305,7 +305,7 @@
         "areaDisabledClip": "禁用複製與粘貼",
         "copyWithHead": "複製帶表頭",
         "copyAcrossArea": "多區域複製粘貼",
-        "btnCopy": "去掉複製內容的首尾換行符",
+        "btnCopy": "是否末尾带一个换行符",
         "cllipBeforeAfter": "阻止粘貼",
         "areaClipCopyLabel": "複製對應內容",
         "areaClipCustomClip": "自定義複製和粘貼方法",
