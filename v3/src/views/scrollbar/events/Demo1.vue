@@ -14,7 +14,7 @@ import { VxeScrollbarDefines } from 'vxe-pc-ui'
 
 export default Vue.extend({
   methods: {
-    scrollEvent (eventParams: VxeScrollbarDefines.Scroll) {
+    scrollEvent (eventParams: VxeScrollbarDefines.ScrollEventParams) {
       console.log(`direction：${eventParams.direction} isTop：${eventParams.isTop} isBottom：${eventParams.isBottom} isLeft：${eventParams.isLeft} isRight：${eventParams.isRight}`)
     }
   }
