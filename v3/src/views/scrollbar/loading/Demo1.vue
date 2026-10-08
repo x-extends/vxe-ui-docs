@@ -1,5 +1,12 @@
 <template>
   <div>
+    <vxe-button @click="loadList(3)">加载3</vxe-button>
+    <vxe-button @click="loadList(5)">加载5</vxe-button>
+    <vxe-button @click="loadList(20)">加载20</vxe-button>
+    <vxe-button @click="loadList(100)">加载100</vxe-button>
+    <vxe-button @click="loadList(500)">加载500</vxe-button>
+    <vxe-button @click="loadList(2000)">加载2000</vxe-button>
+
     <vxe-scrollbar height="300" :loading="loading">
       <div v-for="item in myList" :key="item.id" class="my-scrollbar-item">
         <div>{{ item }}这是一段很长的内容</div>
@@ -53,7 +60,7 @@ export default Vue.extend({
             name: 'Test' + rowKey
           })
         }
-        this.myList = [...this.myList, ...dataList]
+        this.myList = dataList
         this.loading = false
       }, 300)
     }
