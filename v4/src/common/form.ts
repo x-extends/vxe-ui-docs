@@ -239,7 +239,7 @@ export const formNavConfig: NavVO = {
       ]
     },
     {
-      i18nKey: 'app.aside.menu.tableCssVar',
+      i18nKey: 'app.aside.menu.cssVar',
       children: [
         { title: '校验提示框', routerLink: { name: 'CssVarFormValid' } }
       ]

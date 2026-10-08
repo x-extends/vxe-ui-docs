@@ -81,7 +81,7 @@
         "tableTableTitle": "基本テーブル",
         "tableGridTitle": "グリッド設定テーブル",
         "tableOtherPlugin": "拡張プラグインライブラリ",
-        "tableCssVar": "CSS変数",
+        "cssVar": "CSS変数",
         "formGlobalFormats": "フォーム項目 - フォーマット（グローバル再利用）",
         "tableGlobalFormats": "セル - フォーマット（グローバル再利用）",
         "tableGlobalMenus": "右クリックメニュー（グローバル再利用）",

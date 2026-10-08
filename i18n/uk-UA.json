@@ -81,7 +81,7 @@
         "tableTableTitle": "Таблиця таблиці таблиця",
         "tableGridTitle": "Таблиця конфігурації сітки",
         "tableOtherPlugin": "扩展插件库",
-        "tableCssVar": "Змінна CSS",
+        "cssVar": "Змінна CSS",
         "formGlobalFormats": "表单项 - 格式化（全局复用）",
         "tableGlobalFormats": "单元格 - 格式化（全局复用）",
         "tableGlobalMenus": "Меню клацання правою кнопкою миші (глобальне повторне використання)",

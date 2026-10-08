@@ -523,6 +523,32 @@ export const navConfigList: NavVO[] = [
           },
           { title: '权限码', routerLink: { name: 'ComponentTabsPermissionCode' } }
         ]
+      },
+      {
+        title: 'Scrollbar 滚动条',
+        children: [
+          { title: 'Scrollbar API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'scrollbar' } }, keywords: 'vxe-scrollbar' },
+          { title: '基础', routerLink: { name: 'ComponentScrollbarBase' } },
+          { title: '加载中', routerLink: { name: 'ComponentScrollbarLoading' } },
+          { title: '原生滚动条', routerLink: { name: 'ComponentScrollbarNative' } },
+          { title: '滚动条宽度', routerLink: { name: 'ComponentScrollbarBarWidth' } },
+          { title: '自动隐藏', routerLink: { name: 'ComponentScrollbarAutoHide' } },
+          { title: '手动滚动', routerLink: { name: 'ComponentScrollbarScrollTo' } },
+          { title: '滚动事件', routerLink: { name: 'ComponentScrollbarEvents' } },
+          {
+            title: '无限加载',
+            children: [
+              { title: '指定阈值加载行', routerLink: { name: 'ComponentScrollbarLoadMoreBoundaryY' } }
+            ]
+          },
+          {
+            i18nKey: 'app.aside.menu.cssVar',
+            children: [
+              { title: '滚动条宽度', routerLink: { name: 'CssScrollBarWidth' } },
+              { title: '滚动条背景色', routerLink: { name: 'CssScrollBgColor' } }
+            ]
+          }
+        ]
       }
     ]
   },

@@ -1,19 +1,20 @@
 <template>
   <div>
-    <vxe-scrollbar height="400">
+    <vxe-scrollbar height="300">
       <div v-for="item in 20" :key="item" class="my-scrollbar-item">
-        <div>内容 {{ item }}</div>
+        <div>{{ item }}这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容</div>
       </div>
     </vxe-scrollbar>
   </div>
 </template>
 
+<script lang="ts" setup>
+</script>
+
 <style lang="scss" scoped>
 .my-scrollbar-item {
   margin: 10px 0;
   line-height: 30px;
-  text-align: center;
-  color: #ffffff;
-  background-color: #409eff;
+  width: 6000px;
 }
 </style>

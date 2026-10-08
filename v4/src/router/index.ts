@@ -590,6 +590,14 @@ const routes: Array<RouteRecordRaw> = [
     component: PageLayout,
     children: [
       {
+        path: 'scrollbar',
+        component: RouteLayout,
+        children: [
+          { path: 'width', name: 'CssScrollBarWidth', component: () => import('@/views/vars/scrollbar/width/CodeExample.vue') },
+          { path: 'bgColor', name: 'CssScrollBgColor', component: () => import('@/views/vars/scrollbar/bgColor/CodeExample.vue') }
+        ]
+      },
+      {
         path: 'form',
         component: RouteLayout,
         children: [
@@ -3036,7 +3044,19 @@ const routes: Array<RouteRecordRaw> = [
         component: RouteLayout,
         children: [
           { path: 'base', name: 'ComponentScrollbarBase', component: () => import('@/views/scrollbar/base/CodeExample.vue') },
-          { path: 'native', name: 'ComponentScrollbarNative', component: () => import('@/views/scrollbar/native/CodeExample.vue') }
+          { path: 'loading', name: 'ComponentScrollbarLoading', component: () => import('@/views/scrollbar/loading/CodeExample.vue') },
+          { path: 'native', name: 'ComponentScrollbarNative', component: () => import('@/views/scrollbar/native/CodeExample.vue') },
+          { path: 'autoHide', name: 'ComponentScrollbarAutoHide', component: () => import('@/views/scrollbar/autoHide/CodeExample.vue') },
+          { path: 'barWidth', name: 'ComponentScrollbarBarWidth', component: () => import('@/views/scrollbar/barWidth/CodeExample.vue') },
+          { path: 'scrollTo', name: 'ComponentScrollbarScrollTo', component: () => import('@/views/scrollbar/scrollTo/CodeExample.vue') },
+          { path: 'events', name: 'ComponentScrollbarEvents', component: () => import('@/views/scrollbar/events/CodeExample.vue') },
+          {
+            path: 'loadMore',
+            component: RouteLayout,
+            children: [
+              { path: 'boundaryY', name: 'ComponentScrollbarLoadMoreBoundaryY', component: () => import('@/views/scrollbar/loadMore/boundaryY/CodeExample.vue') }
+            ]
+          }
         ]
       },
       {

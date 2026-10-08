@@ -81,7 +81,7 @@
         "tableTableTitle": "Table 基础表格",
         "tableGridTitle": "Grid 配置式表格",
         "tableOtherPlugin": "扩展插件库",
-        "tableCssVar": "Css 变量",
+        "cssVar": "Css 变量",
         "formGlobalFormats": "表单项 - 格式化（全局复用）",
         "tableGlobalFormats": "单元格 - 格式化（全局复用）",
         "tableGlobalMenus": "右键菜单（全局复用）",

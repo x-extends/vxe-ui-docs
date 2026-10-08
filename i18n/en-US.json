@@ -81,7 +81,7 @@
         "tableTableTitle": "Table - Basic table",
         "tableGridTitle": "Grid - Configuration table",
         "tableOtherPlugin": "Extension plugin library",
-        "tableCssVar": "CSS variables",
+        "cssVar": "CSS variables",
         "formGlobalFormats": "Form item - formatting (global reuse)",
         "tableGlobalFormats": "Cell - formatting (global reuse)",
         "tableGlobalMenus": "Context menu (global reuse)",

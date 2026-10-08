@@ -81,7 +81,7 @@
         "tableTableTitle": "Tableau de base",
         "tableGridTitle": "Table de configuration de la grille",
         "tableOtherPlugin": "扩展插件库",
-        "tableCssVar": "Variable CSS",
+        "cssVar": "Variable CSS",
         "formGlobalFormats": "表单项 - 格式化（全局复用）",
         "tableGlobalFormats": "单元格 - 格式化（全局复用）",
         "tableGlobalMenus": "Menu avec le bouton droit sur le bouton droit (réutilisation globale)",

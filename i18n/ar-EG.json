@@ -81,7 +81,7 @@
         "tableTableTitle": "جدول الجدول الأساسي",
         "tableGridTitle": "جدول تكوين الشبكة",
         "tableOtherPlugin": "扩展插件库",
-        "tableCssVar": "متغير CSS",
+        "cssVar": "متغير CSS",
         "formGlobalFormats": "表单项 - 格式化（全局复用）",
         "tableGlobalFormats": "单元格 - 格式化（全局复用）",
         "tableGlobalMenus": "انقر بزر الماوس الأيمن (القائمة العالمية إعادة الاستخدام)",

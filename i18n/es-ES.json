@@ -81,7 +81,7 @@
         "tableTableTitle": "Tabla básica",
         "tableGridTitle": "Tabla Grid basada en configuración",
         "tableOtherPlugin": "Biblioteca de plugins extendidos",
-        "tableCssVar": "Variables CSS",
+        "cssVar": "Variables CSS",
         "formGlobalFormats": "Elementos de formulario - formato (reutilización global)",
         "tableGlobalFormats": "Celdas - formato (reutilización global)",
         "tableGlobalMenus": "Menú contextual (reutilización global)",
