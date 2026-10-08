@@ -524,6 +524,15 @@ export const navConfigList: NavVO[] = [
           },
           { title: '权限码', routerLink: { name: 'ComponentTabsPermissionCode' } }
         ]
+      },
+      {
+        title: 'Scrollbar 滚动条',
+        children: [
+          { title: 'Tabs API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tabs' } }, keywords: 'vxe-tabs' },
+          { title: 'Tab Pane API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tab-pane' } }, keywords: 'vxe-tab-pane' },
+          { title: '基础', routerLink: { name: 'ComponentScrollbarBase' } },
+          { title: '原生滚动条', routerLink: { name: 'ComponentScrollbarNative' } }
+        ]
       }
     ]
   },

@@ -2980,6 +2980,14 @@ const routes: Array<RouteConfig> = [
         ]
       },
       {
+        path: 'scrollbar',
+        component: RouteLayout,
+        children: [
+          { path: 'base', name: 'ComponentScrollbarBase', component: () => import('@/views/scrollbar/base/CodeExample.vue') },
+          { path: 'native', name: 'ComponentScrollbarNative', component: () => import('@/views/scrollbar/native/CodeExample.vue') }
+        ]
+      },
+      {
         path: 'drawer',
         component: RouteLayout,
         children: [
