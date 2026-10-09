@@ -25,9 +25,7 @@ export default Vue.extend({
         keyField: 'id',
         contentField: 'label'
       },
-      dragConfig: {
-        icon: 'vxe-icon-sort'
-      },
+      dragConfig: {},
       virtualYConfig: {
         enabled: true
       },

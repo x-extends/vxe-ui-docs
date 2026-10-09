@@ -25,9 +25,7 @@ const listOptions = reactive<VxeListProps<RowVO>>({
     keyField: 'id',
     contentField: 'label'
   },
-  dragConfig: {
-    icon: 'vxe-icon-sort'
-  },
+  dragConfig: {},
   virtualYConfig: {
     enabled: true
   },

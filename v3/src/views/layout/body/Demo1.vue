@@ -15,8 +15,8 @@
           <vxe-layout-body class="bg3" show-backtop :backtop-config="backtopConfig" :loading="loading">
             <vxe-button mode="text" status="error" @click="openLoading">点击加载中</vxe-button>
             <vxe-button mode="text" status="error" @click="toggleLeftAside">点击展开/收起左侧</vxe-button>
-            <div style="height: 400px">内容</div>
-            <div style="height: 400px">内容</div>
+            <div style="height: 400px;width: 3000px;">内容</div>
+            <div style="height: 400px;width: 3000px;">内容</div>
           </vxe-layout-body>
         </vxe-layout-container>
       </vxe-layout-container>
