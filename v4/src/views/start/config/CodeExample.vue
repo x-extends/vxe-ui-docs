@@ -349,6 +349,15 @@
               rate: {},
               result: {},
               row: {},
+              scrollbar: {
+                autoResize: true,
+                xConfig: {
+                  // visible: 'visible'
+                },
+                yConfig: {
+                  // visible: 'visible'
+                }
+              },
               segmented: {},
               select: {
                 emptyValue: null,
