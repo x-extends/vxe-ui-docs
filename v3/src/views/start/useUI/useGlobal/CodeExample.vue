@@ -132,11 +132,10 @@
               VxeRate,
               VxeResult,
               VxeRow,
+              VxeScrollbar,
               VxeSelect,
               VxeSplitter,
               VxeSplitterPanel,
-              // VxeSplit,
-              // VxeSplitPane,
               VxeSlider,
               VxeSteps,
               VxeSwitch,
@@ -235,11 +234,10 @@
               app.use(VxeRate)
               app.use(VxeResult)
               app.use(VxeRow)
+              app.use(VxeScrollbar)
               app.use(VxeSelect)
               app.use(VxeSplitter)
               app.use(VxeSplitterPanel)
-              // app.use(VxeSplit)
-              // app.use(VxeSplitPane)
               app.use(VxeSlider)
               app.use(VxeSteps)
               app.use(VxeSwitch)

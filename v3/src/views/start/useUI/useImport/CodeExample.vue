@@ -134,11 +134,10 @@
               VxeRate,
               VxeResult,
               VxeRow,
+              VxeScrollbar,
               VxeSelect,
               VxeSplitter,
               VxeSplitterPanel,
-              // VxeSplit,
-              // VxeSplitPane,
               VxeSlider,
               VxeSteps,
               VxeSwitch,
@@ -239,11 +238,10 @@
             VxeUI.component(VxeRate)
             VxeUI.component(VxeResult)
             VxeUI.component(VxeRow)
+            VxeUI.component(VxeScrollbar)
             VxeUI.component(VxeSelect)
             VxeUI.component(VxeSplitter)
             VxeUI.component(VxeSplitterPanel)
-            // VxeUI.component(VxeSplit)
-            // VxeUI.component(VxeSplitPane)
             VxeUI.component(VxeSlider)
             VxeUI.component(VxeSteps)
             VxeUI.component(VxeSwitch)
