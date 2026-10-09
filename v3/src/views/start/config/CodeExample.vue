@@ -212,10 +212,15 @@
                 digits: 2,
                 controls: true
               },
-              layoutAside: {},
-              layoutBody: {
-                backtopConfig: {
+              layoutAside: {
+                scrollbarConfig: {
+                  yConfig: {
+                    autoHide: true
+                  }
                 }
+              },
+              layoutBody: {
+                backtopConfig: {}
               },
               layoutContainer: {},
               layoutFooter: {},
