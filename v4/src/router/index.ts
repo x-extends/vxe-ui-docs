@@ -3048,6 +3048,8 @@ const routes: Array<RouteRecordRaw> = [
           { path: 'native', name: 'ComponentScrollbarNative', component: () => import('@/views/scrollbar/native/CodeExample.vue') },
           { path: 'autoHide', name: 'ComponentScrollbarAutoHide', component: () => import('@/views/scrollbar/autoHide/CodeExample.vue') },
           { path: 'barWidth', name: 'ComponentScrollbarBarWidth', component: () => import('@/views/scrollbar/barWidth/CodeExample.vue') },
+          { path: 'padding', name: 'ComponentScrollbarPadding', component: () => import('@/views/scrollbar/padding/CodeExample.vue') },
+          { path: 'position', name: 'ComponentScrollbarPosition', component: () => import('@/views/scrollbar/position/CodeExample.vue') },
           { path: 'scrollTo', name: 'ComponentScrollbarScrollTo', component: () => import('@/views/scrollbar/scrollTo/CodeExample.vue') },
           { path: 'events', name: 'ComponentScrollbarEvents', component: () => import('@/views/scrollbar/events/CodeExample.vue') },
           {
