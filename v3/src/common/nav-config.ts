@@ -429,6 +429,7 @@ export const navConfigList: NavVO[] = [
           { title: '基础', routerLink: { name: 'ComponentSpaceBase' } },
           { title: '尺寸大小', routerLink: { name: 'ComponentSpaceSize' } },
           { title: '宽度', routerLink: { name: 'ComponentSpaceWidth' } },
+          { title: '填充容器', routerLink: { name: 'ComponentSpaceFill' } },
           { title: '自定义间距', routerLink: { name: 'ComponentSpaceGap' } },
           { title: '纵向排版', routerLink: { name: 'ComponentSpaceVertical' } },
           { title: '自动换行', routerLink: { name: 'ComponentSpaceWrap' } },

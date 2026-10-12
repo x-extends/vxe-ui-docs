@@ -3340,6 +3340,7 @@ const routes: Array<RouteRecordRaw> = [
           { path: 'size', name: 'ComponentSpaceSize', component: () => import('@/views/space/size/CodeExample.vue') },
           { path: 'base', name: 'ComponentSpaceBase', component: () => import('@/views/space/base/CodeExample.vue') },
           { path: 'width', name: 'ComponentSpaceWidth', component: () => import('@/views/space/width/CodeExample.vue') },
+          { path: 'fill', name: 'ComponentSpaceFill', component: () => import('@/views/space/fill/CodeExample.vue') },
           { path: 'gap', name: 'ComponentSpaceGap', component: () => import('@/views/space/gap/CodeExample.vue') },
           { path: 'vertical', name: 'ComponentSpaceVertical', component: () => import('@/views/space/vertical/CodeExample.vue') },
           { path: 'separator', name: 'ComponentSpaceSeparator', component: () => import('@/views/space/separator/CodeExample.vue') },
