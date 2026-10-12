@@ -170,7 +170,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'Row 行与列',
+        title: 'Row 行 Col 列',
         children: [
           { title: 'Row API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'row' } }, keywords: 'vxe-row' },
           { title: 'Col API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'col' } }, keywords: 'vxe-col' },
@@ -181,7 +181,8 @@ export const navConfigList: NavVO[] = [
           { title: '固定宽度', routerLink: { name: 'ComponentRowColWidth' } },
           { title: '铺满宽度', routerLink: { name: 'ComponentRowColFill' } },
           { title: '对齐方式', routerLink: { name: 'ComponentRowColAlign' } },
-          { title: '溢出隐藏', routerLink: { name: 'ComponentRowColEllipsis' } }
+          { title: '溢出隐藏', routerLink: { name: 'ComponentRowColEllipsis' } },
+          { title: 'Grid 布局', routerLink: { name: 'ComponentRowColGrid' } }
         ]
       },
       {

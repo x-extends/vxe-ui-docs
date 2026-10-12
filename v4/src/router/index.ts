@@ -747,7 +747,8 @@ const routes: Array<RouteRecordRaw> = [
             path: 'colEllipsis',
             name: 'ComponentRowColEllipsis',
             component: () => import('@/views/row/colEllipsis/CodeExample.vue')
-          }
+          },
+          { path: 'grid', name: 'ComponentRowColGrid', component: () => import('@/views/row/grid/CodeExample.vue') }
         ]
       },
       {

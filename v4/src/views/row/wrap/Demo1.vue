@@ -33,7 +33,7 @@
 
 <style lang="scss" scoped>
 .row-wrapper {
-  margin: 10px 0;
+  padding: 10px;
 }
 .mybg {
   line-height: 30px;
