@@ -79,7 +79,17 @@ export const listNavConfig: NavVO = {
       ]
     },
     {
-      title: '虚拟滚动',
+      title: '虚拟滚动条',
+      children: [
+        { title: '使用滚动条', routerLink: { name: 'ComponentListUseScrollbarScrollbar' } },
+        { title: '滚动条宽度', routerLink: { name: 'ComponentListUseScrollbarBarWidth' } },
+        { title: '滚动条颜色', routerLink: { name: 'ComponentListUseScrollbarBarColor' } },
+        { title: '显示位置', routerLink: { name: 'ComponentListUseScrollbarPosition' } },
+        { title: '自动隐藏', routerLink: { name: 'ComponentListUseScrollbarAutoHide' } }
+      ]
+    },
+    {
+      title: '虚拟滚动 - 海量数据',
       children: [
         { title: '纵向虚拟滚动', routerLink: { name: 'ComponentListScrollBasics' } }
       ]

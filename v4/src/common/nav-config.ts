@@ -1337,7 +1337,7 @@ export const navConfigList: NavVO[] = [
           //   ]
           // },
           {
-            title: '虚拟滚动',
+            title: '虚拟滚动 - 海量数据',
             children: [
               { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTreeSelectScrollBasics' } },
               { title: '可过滤', routerLink: { name: 'ComponentTreeSelectScrollFilter' } }

@@ -87,6 +87,17 @@ export const listRouteConfig: RouteConfig = {
       ]
     },
     {
+      path: 'useScrollbar',
+      component: RouteLayout,
+      children: [
+        { path: 'scrollbar', name: 'ComponentListUseScrollbarScrollbar', component: () => import('@/views/list/useScrollbar/scrollbar/CodeExample.vue') },
+        { path: 'barWidth', name: 'ComponentListUseScrollbarBarWidth', component: () => import('@/views/list/useScrollbar/barWidth/CodeExample.vue') },
+        { path: 'barColor', name: 'ComponentListUseScrollbarBarColor', component: () => import('@/views/list/useScrollbar/barColor/CodeExample.vue') },
+        { path: 'position', name: 'ComponentListUseScrollbarPosition', component: () => import('@/views/list/useScrollbar/position/CodeExample.vue') },
+        { path: 'autoHide', name: 'ComponentListUseScrollbarAutoHide', component: () => import('@/views/list/useScrollbar/autoHide/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'scroll',
       component: RouteLayout,
       children: [

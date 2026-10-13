@@ -130,7 +130,7 @@ export const treeNavConfig: NavVO = {
       ]
     },
     {
-      title: '虚拟滚动',
+      title: '虚拟滚动 - 海量数据',
       children: [
         { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTreeScrollBasics' } },
         { title: '函数式加载', routerLink: { name: 'ComponentTreeScrollLoadData' } },
