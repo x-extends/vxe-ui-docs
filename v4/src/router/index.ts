@@ -2993,6 +2993,13 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/tabs/refreshConfig/CodeExample.vue')
           },
           {
+            path: 'useScrollbar',
+            component: RouteLayout,
+            children: [
+              { path: 'scrollbar', name: 'ComponentTabsUseScrollbarScrollbar', component: () => import('@/views/tabs/useScrollbar/scrollbar/CodeExample.vue') }
+            ]
+          },
+          {
             path: 'template',
             component: RouteLayout,
             children: [
@@ -3290,6 +3297,13 @@ const routes: Array<RouteRecordRaw> = [
             path: 'refresh',
             name: 'ComponentCardRefresh',
             component: () => import('@/views/card/refresh/CodeExample.vue')
+          },
+          {
+            path: 'useScrollbar',
+            component: RouteLayout,
+            children: [
+              { path: 'scrollbar', name: 'ComponentCardUseScrollbarScrollbar', component: () => import('@/views/card/useScrollbar/scrollbar/CodeExample.vue') }
+            ]
           }
         ]
       },

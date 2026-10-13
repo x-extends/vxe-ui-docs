@@ -407,7 +407,13 @@ export const navConfigList: NavVO[] = [
           { title: '显示/隐藏边距', routerLink: { name: 'ComponentCardPadding' } },
           { title: '边框阴影', routerLink: { name: 'ComponentCardShadow' } },
           { title: '自定义模板', routerLink: { name: 'ComponentCardTemplate' } },
-          { title: '实现可刷新', routerLink: { name: 'ComponentCardRefresh' } }
+          { title: '实现可刷新', routerLink: { name: 'ComponentCardRefresh' } },
+          {
+            title: '虚拟滚动条',
+            children: [
+              { title: '使用滚动条', routerLink: { name: 'ComponentCardUseScrollbarScrollbar' } }
+            ]
+          }
         ]
       },
       {
@@ -511,6 +517,12 @@ export const navConfigList: NavVO[] = [
           { title: '可关闭', routerLink: { name: 'ComponentTabsCloseConfig' } },
           { title: '拦截页签关闭', routerLink: { name: 'ComponentTabsBeforeClose' } },
           { title: '可刷新', routerLink: { name: 'ComponentTabsRefreshConfig' } },
+          {
+            title: '虚拟滚动条',
+            children: [
+              { title: '使用滚动条', routerLink: { name: 'ComponentTabsUseScrollbarScrollbar' } }
+            ]
+          },
           {
             title: '自定义插槽模板',
             children: [
