@@ -8,8 +8,9 @@
       <vxe-radio-button checked-value="left" content="left"></vxe-radio-button>
       <vxe-radio-button checked-value="right" content="right"></vxe-radio-button>
     </vxe-radio-group>
+    边距：<vxe-switch v-model="isPadding"></vxe-switch>
 
-    <vxe-scrollbar height="300" :x-config="xConfig" :y-config="yConfig">
+    <vxe-scrollbar height="300" :padding="isPadding" :x-config="xConfig" :y-config="yConfig">
       <div v-for="item in 20" :key="item" class="my-scrollbar-item">
         <div>{{ item }}这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容</div>
       </div>
@@ -33,7 +34,8 @@ export default Vue.extend({
 
     return {
       xConfig,
-      yConfig
+      yConfig,
+      isPadding: false
     }
   }
 })

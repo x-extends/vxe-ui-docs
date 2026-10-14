@@ -1,7 +1,6 @@
 <template>
   <div>
-    X:<vxe-switch v-model="scrollbarConfig.xConfig.autoHide"></vxe-switch>
-    Y:<vxe-switch v-model="scrollbarConfig.yConfig.autoHide"></vxe-switch>
+    自动隐藏:<vxe-switch v-model="listOptions.scrollbarConfig.autoHide"></vxe-switch>
 
     <vxe-list v-bind="listOptions">
       <template #default="{ items }">
@@ -17,7 +16,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeListProps, VxeListPropTypes, VxeWithRequired } from 'vxe-pc-ui'
+import { VxeListProps, VxeWithRequired } from 'vxe-pc-ui'
 
 interface RowVO {
   id: string
@@ -26,19 +25,12 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
-    const scrollbarConfig: VxeWithRequired<VxeListPropTypes.ScrollbarConfig, 'xConfig' | 'yConfig'> = {
-      xConfig: {
-        autoHide: true
-      },
-      yConfig: {
-        autoHide: true
-      }
-    }
-
-    const listOptions: VxeListProps<RowVO> = {
+    const listOptions: VxeWithRequired<VxeListProps<RowVO>, 'scrollbarConfig'> = {
       height: 400,
       useScrollbar: true,
-      scrollbarConfig,
+      scrollbarConfig: {
+        autoHide: true
+      },
       rowConfig: {
         contentField: 'label'
       },
@@ -80,7 +72,6 @@ export default Vue.extend({
     }
 
     return {
-      scrollbarConfig,
       listOptions
     }
   }

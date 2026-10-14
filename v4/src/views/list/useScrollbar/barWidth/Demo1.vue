@@ -1,7 +1,6 @@
 <template>
   <div>
-    X：<vxe-slider v-model="scrollbarConfig.xConfig.height" immediate show-tooltip></vxe-slider>
-    Y：<vxe-slider v-model="scrollbarConfig.yConfig.width" immediate show-tooltip></vxe-slider>
+    滚动条宽度：<vxe-slider v-model="listOptions.scrollbarConfig.width" immediate show-tooltip></vxe-slider>
 
     <vxe-list v-bind="listOptions">
       <template #default="{ items }">
@@ -17,26 +16,19 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import { VxeListProps, VxeListPropTypes, VxeWithRequired } from 'vxe-pc-ui'
+import { VxeListProps, VxeWithRequired } from 'vxe-pc-ui'
 
 interface RowVO {
   id: string
   label: string
 }
 
-const scrollbarConfig = reactive<VxeWithRequired<VxeListPropTypes.ScrollbarConfig, 'xConfig' | 'yConfig'>>({
-  xConfig: {
-    height: 6
-  },
-  yConfig: {
-    width: 6
-  }
-})
-
-const listOptions = reactive<VxeListProps<RowVO>>({
+const listOptions = reactive<VxeWithRequired<VxeListProps<RowVO>, 'scrollbarConfig'>>({
   height: 400,
   useScrollbar: true,
-  scrollbarConfig,
+  scrollbarConfig: {
+    width: 6
+  },
   rowConfig: {
     contentField: 'label'
   },

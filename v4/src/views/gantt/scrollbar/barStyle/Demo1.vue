@@ -1,12 +1,16 @@
 <template>
   <div>
+    X：<vxe-slider v-model="scrollbarConfig.xConfig.height" immediate show-tooltip></vxe-slider>
+    Y：<vxe-slider v-model="scrollbarConfig.yConfig.width" immediate show-tooltip></vxe-slider>
+
     <vxe-gantt class="mygantt-scrollbar" v-bind="ganttOptions"></vxe-gantt>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import type { VxeGanttProps } from 'vxe-gantt'
+import type { VxeGanttProps, VxeWithRequired } from 'vxe-gantt'
+import type { VxeTablePropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -28,6 +32,15 @@ interface RowVO {
   updateDate: string
 }
 
+const scrollbarConfig = reactive<VxeWithRequired<VxeTablePropTypes.ScrollbarConfig, 'xConfig' | 'yConfig'>>({
+  xConfig: {
+    height: 6
+  },
+  yConfig: {
+    width: 6
+  }
+})
+
 const ganttOptions = reactive<VxeGanttProps<RowVO>>({
   border: true,
   showFooter: true,
@@ -41,11 +54,7 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
       width: 480
     }
   },
-  // 滚动条宽高需与自定义的样式对应
-  scrollbarConfig: {
-    width: 24,
-    height: 24
-  },
+  scrollbarConfig,
   columns: [
     { type: 'seq', field: 'seq', width: 70 },
     { field: 'title', title: '任务名称', minWidth: 300 },

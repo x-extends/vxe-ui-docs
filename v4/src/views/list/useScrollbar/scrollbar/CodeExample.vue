@@ -7,5 +7,13 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="list/useScrollbar/scrollbar/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          可以通过 <ApiLink name="list" prop="scrollbar-config" />.<ApiLink name="list" prop="visible" /> 来禁用滚动条
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>

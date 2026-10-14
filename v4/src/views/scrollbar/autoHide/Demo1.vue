@@ -1,9 +1,8 @@
 <template>
   <div>
-    X:<vxe-switch v-model="xConfig.autoHide"></vxe-switch>
-    Y:<vxe-switch v-model="yConfig.autoHide"></vxe-switch>
+    自动隐藏:<vxe-switch v-model="isAutoHide"></vxe-switch>
 
-    <vxe-scrollbar height="300" :x-config="xConfig" :y-config="yConfig">
+    <vxe-scrollbar height="300" :auto-hide="isAutoHide">
       <div v-for="item in 20" :key="item" class="my-scrollbar-item">
         <div>{{ item }}这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容</div>
       </div>
@@ -12,15 +11,9 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive } from 'vue'
-import type { VxeScrollbarPropTypes } from 'vxe-pc-ui'
+import { ref } from 'vue'
 
-const xConfig = reactive<VxeScrollbarPropTypes.XConfig>({
-  autoHide: true
-})
-const yConfig = reactive<VxeScrollbarPropTypes.YConfig>({
-  autoHide: true
-})
+const isAutoHide = ref(true)
 </script>
 
 <style lang="scss" scoped>

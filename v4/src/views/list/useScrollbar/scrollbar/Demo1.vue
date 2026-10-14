@@ -1,6 +1,14 @@
 <template>
   <div>
-    <vxe-list v-bind="listOptions"></vxe-list>
+    <vxe-list v-bind="listOptions">
+      <template #default="{ items }">
+        <div class="my-list-wrapper">
+          <div v-for="(row, i) in items" :key="i" class="my-list-item">
+            <div>{{ row.label }}</div>
+          </div>
+        </div>
+      </template>
+    </vxe-list>
   </div>
 </template>
 
@@ -56,3 +64,9 @@ const listOptions = reactive<VxeListProps<RowVO>>({
   ]
 })
 </script>
+
+<style lang="scss" scoped>
+.my-list-item {
+  width: 4000px;
+}
+</style>

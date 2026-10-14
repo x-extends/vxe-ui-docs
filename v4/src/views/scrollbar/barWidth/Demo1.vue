@@ -1,9 +1,9 @@
 <template>
   <div>
-    X：<vxe-slider v-model="xConfig.height" immediate show-tooltip></vxe-slider>
-    Y：<vxe-slider v-model="yConfig.width" immediate show-tooltip></vxe-slider>
+    滚动条宽度：<vxe-slider v-model="yConfig.width" immediate show-tooltip></vxe-slider>
+    边距：<vxe-switch v-model="isPadding"></vxe-switch>
 
-    <vxe-scrollbar height="300" :x-config="xConfig" :y-config="yConfig">
+    <vxe-scrollbar height="300" :padding="isPadding" :y-config="yConfig">
       <div v-for="item in 20" :key="item" class="my-scrollbar-item">
         <div>{{ item }}这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容</div>
       </div>
@@ -12,15 +12,14 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive } from 'vue'
+import { ref, reactive } from 'vue'
 import type { VxeScrollbarPropTypes } from 'vxe-pc-ui'
 
-const xConfig = reactive<VxeScrollbarPropTypes.XConfig>({
-  height: 6
-})
 const yConfig = reactive<VxeScrollbarPropTypes.YConfig>({
   width: 6
 })
+
+const isPadding = ref(false)
 </script>
 
 <style lang="scss" scoped>

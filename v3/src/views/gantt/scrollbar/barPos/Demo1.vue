@@ -1,12 +1,22 @@
 <template>
   <div>
+    X：<vxe-radio-group v-model="scrollbarConfig.xConfig.position">
+      <vxe-radio-button checked-value="top" content="top"></vxe-radio-button>
+      <vxe-radio-button checked-value="bottom" content="bottom"></vxe-radio-button>
+    </vxe-radio-group>
+    Y：<vxe-radio-group v-model="scrollbarConfig.yConfig.position">
+      <vxe-radio-button checked-value="left" content="left"></vxe-radio-button>
+      <vxe-radio-button checked-value="right" content="right"></vxe-radio-button>
+    </vxe-radio-group>
+
     <vxe-gantt v-bind="ganttOptions"></vxe-gantt>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import type { VxeGanttProps } from 'vxe-gantt'
+import type { VxeGanttProps, VxeWithRequired } from 'vxe-gantt'
+import type { VxeTablePropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -30,6 +40,15 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
+    const scrollbarConfig: VxeWithRequired<VxeTablePropTypes.ScrollbarConfig, 'xConfig' | 'yConfig'> = {
+      xConfig: {
+        height: 6
+      },
+      yConfig: {
+        width: 6
+      }
+    }
+
     const ganttOptions: VxeGanttProps<RowVO> = {
       border: true,
       showFooter: true,
@@ -43,14 +62,7 @@ export default Vue.extend({
           width: 480
         }
       },
-      scrollbarConfig: {
-        x: {
-          position: 'top'
-        },
-        y: {
-          position: 'left'
-        }
-      },
+      scrollbarConfig,
       columns: [
         { type: 'seq', field: 'seq', width: 70 },
         { field: 'title', title: '任务名称', minWidth: 300 },
@@ -81,7 +93,8 @@ export default Vue.extend({
     }
 
     return {
-      ganttOptions
+      ganttOptions,
+      scrollbarConfig
     }
   }
 })

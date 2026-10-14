@@ -8,6 +8,7 @@
       <vxe-radio-button checked-value="left" content="left"></vxe-radio-button>
       <vxe-radio-button checked-value="right" content="right"></vxe-radio-button>
     </vxe-radio-group>
+    边距：<vxe-switch v-model="scrollbarConfig.padding"></vxe-switch>
 
     <vxe-list v-bind="listOptions">
       <template #default="{ items }">
@@ -31,6 +32,7 @@ interface RowVO {
 }
 
 const scrollbarConfig = reactive<VxeWithRequired<VxeListPropTypes.ScrollbarConfig, 'xConfig' | 'yConfig'>>({
+  padding: false,
   xConfig: {
     position: 'top'
   },
