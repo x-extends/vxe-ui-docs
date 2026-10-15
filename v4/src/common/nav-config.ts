@@ -519,9 +519,20 @@ export const navConfigList: NavVO[] = [
           { title: '拦截页签关闭', routerLink: { name: 'ComponentTabsBeforeClose' } },
           { title: '可刷新', routerLink: { name: 'ComponentTabsRefreshConfig' } },
           {
-            title: '虚拟滚动条',
+            title: '滚动条',
             children: [
-              { title: '使用滚动条', routerLink: { name: 'ComponentTabsUseScrollbarScrollbar' } }
+              {
+                title: '原生滚动条',
+                children: [
+                  { title: '使用滚动条', routerLink: { name: 'ComponentTabsScrollbarNativeScrollbar' } }
+                ]
+              },
+              {
+                title: '虚拟滚动条',
+                children: [
+                  { title: '使用滚动条', routerLink: { name: 'ComponentTabsScrollbarUseScrollbarScrollbar' } }
+                ]
+              }
             ]
           },
           {

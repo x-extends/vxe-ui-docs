@@ -2941,10 +2941,23 @@ const routes: Array<RouteConfig> = [
             component: () => import('@/views/tabs/refreshConfig/CodeExample.vue')
           },
           {
-            path: 'useScrollbar',
+            path: 'scrollbar',
             component: RouteLayout,
             children: [
-              { path: 'scrollbar', name: 'ComponentTabsUseScrollbarScrollbar', component: () => import('@/views/tabs/useScrollbar/scrollbar/CodeExample.vue') }
+              {
+                path: 'native',
+                component: RouteLayout,
+                children: [
+                  { path: 'scrollbar', name: 'ComponentTabsScrollbarNativeScrollbar', component: () => import('@/views/tabs/scrollbar/native/scrollbar/CodeExample.vue') }
+                ]
+              },
+              {
+                path: 'useScrollbar',
+                component: RouteLayout,
+                children: [
+                  { path: 'scrollbar', name: 'ComponentTabsScrollbarUseScrollbarScrollbar', component: () => import('@/views/tabs/scrollbar/useScrollbar/scrollbar/CodeExample.vue') }
+                ]
+              }
             ]
           },
           {
