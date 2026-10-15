@@ -3320,10 +3320,23 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/card/refresh/CodeExample.vue')
           },
           {
-            path: 'useScrollbar',
+            path: 'scrollbar',
             component: RouteLayout,
             children: [
-              { path: 'scrollbar', name: 'ComponentCardUseScrollbarScrollbar', component: () => import('@/views/card/useScrollbar/scrollbar/CodeExample.vue') }
+              {
+                path: 'native',
+                component: RouteLayout,
+                children: [
+                  { path: 'scrollbar', name: 'ComponentCardScrollbarNativeScrollbar', component: () => import('@/views/card/scrollbar/native/scrollbar/CodeExample.vue') }
+                ]
+              },
+              {
+                path: 'useScrollbar',
+                component: RouteLayout,
+                children: [
+                  { path: 'scrollbar', name: 'ComponentCardScrollbarUseScrollbarScrollbar', component: () => import('@/views/card/scrollbar/useScrollbar/scrollbar/CodeExample.vue') }
+                ]
+              }
             ]
           }
         ]

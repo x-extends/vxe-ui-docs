@@ -409,9 +409,20 @@ export const navConfigList: NavVO[] = [
           { title: '自定义模板', routerLink: { name: 'ComponentCardTemplate' } },
           { title: '实现可刷新', routerLink: { name: 'ComponentCardRefresh' } },
           {
-            title: '虚拟滚动条',
+            title: '滚动条',
             children: [
-              { title: '使用滚动条', routerLink: { name: 'ComponentCardUseScrollbarScrollbar' } }
+              {
+                title: '原生滚动条',
+                children: [
+                  { title: '使用滚动条', routerLink: { name: 'ComponentCardScrollbarNativeScrollbar' } }
+                ]
+              },
+              {
+                title: '虚拟滚动条',
+                children: [
+                  { title: '使用滚动条', routerLink: { name: 'ComponentCardScrollbarUseScrollbarScrollbar' } }
+                ]
+              }
             ]
           }
         ]
