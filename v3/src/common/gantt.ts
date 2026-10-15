@@ -355,8 +355,23 @@ export const ganttNavConfig: NavVO = {
     {
       title: '滚动条',
       children: [
-        { title: '滚动条样式', routerLink: { name: 'ComponentGantScrollbarBarStyle' } },
-        { title: '滚动条位置', routerLink: { name: 'ComponentGantScrollbarBarPos' } }
+        {
+          title: '原生滚动条',
+          children: [
+            { title: '滚动条样式', routerLink: { name: 'ComponentGantScrollbarNativeBarStyle' } },
+            { title: '滚动条位置', routerLink: { name: 'ComponentGantScrollbarNativeBarPos' } }
+          ]
+        },
+        {
+          title: '虚拟滚动条',
+          children: [
+            { title: '使用滚动条', routerLink: { name: 'ComponentGanttScrollbarUseScrollbarScrollbar' } },
+            { title: '滚动条宽度', routerLink: { name: 'ComponentGanttScrollbarUseScrollbarBarWidth' } },
+            { title: '滚动条颜色', routerLink: { name: 'ComponentGanttScrollbarUseScrollbarBarColor' } },
+            { title: '显示位置', routerLink: { name: 'ComponentGanttScrollbarUseScrollbarPosition' } },
+            { title: '自动隐藏', routerLink: { name: 'ComponentGanttScrollbarUseScrollbarAutoHide' } }
+          ]
+        }
       ]
     },
     {

@@ -3112,6 +3112,13 @@ const routes: Array<RouteConfig> = [
             path: 'iframe',
             name: 'ComponentDrawerIframe',
             component: () => import('@/views/drawer/iframe/CodeExample.vue')
+          },
+          {
+            path: 'useScrollbar',
+            component: RouteLayout,
+            children: [
+              { path: 'scrollbar', name: 'ComponentDrawerUseScrollbarScrollbar', component: () => import('@/views/drawer/useScrollbar/scrollbar/CodeExample.vue') }
+            ]
           }
         ]
       },

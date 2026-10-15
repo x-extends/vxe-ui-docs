@@ -350,19 +350,42 @@ export const ganttRouteConfig: RouteConfig = {
       ]
     },
     {
-      path: 'scroll',
+      path: 'scrollbar',
       component: RouteLayout,
       children: [
-        { path: 'vertical', name: 'ComponentGanttScrollVertical', component: () => import('@/views/gantt/scroll/vertical/CodeExample.vue') },
-        { path: 'tree', name: 'ComponentGanttScrollTree', component: () => import('@/views/gantt/scroll/tree/CodeExample.vue') }
+        {
+          path: 'native',
+          component: RouteLayout,
+          children: [
+            { path: 'barStyle', name: 'ComponentGantScrollbarNativeBarStyle', component: () => import('@/views/gantt/scrollbar/native/barStyle/CodeExample.vue') },
+            { path: 'barPos', name: 'ComponentGantScrollbarNativeBarPos', component: () => import('@/views/gantt/scrollbar/native/barPos/CodeExample.vue') }
+          ]
+        }
       ]
     },
     {
       path: 'scrollbar',
       component: RouteLayout,
       children: [
-        { path: 'barStyle', name: 'ComponentGantScrollbarBarStyle', component: () => import('@/views/gantt/scrollbar/barStyle/CodeExample.vue') },
-        { path: 'barPos', name: 'ComponentGantScrollbarBarPos', component: () => import('@/views/gantt/scrollbar/barPos/CodeExample.vue') }
+        {
+          path: 'native',
+          component: RouteLayout,
+          children: [
+            { path: 'barStyle', name: 'ComponentGantScrollbarNativeBarStyle', component: () => import('@/views/gantt/scrollbar/native/barStyle/CodeExample.vue') },
+            { path: 'barPos', name: 'ComponentGantScrollbarNativeBarPos', component: () => import('@/views/gantt/scrollbar/native/barPos/CodeExample.vue') }
+          ]
+        },
+        {
+          path: 'useScrollbar',
+          component: RouteLayout,
+          children: [
+            { path: 'scrollbar', name: 'ComponentGanttScrollbarUseScrollbarScrollbar', component: () => import('@/views/gantt/scrollbar/useScrollbar/scrollbar/CodeExample.vue') },
+            { path: 'barWidth', name: 'ComponentGanttScrollbarUseScrollbarBarWidth', component: () => import('@/views/gantt/scrollbar/useScrollbar/barWidth/CodeExample.vue') },
+            { path: 'barColor', name: 'ComponentGanttScrollbarUseScrollbarBarColor', component: () => import('@/views/gantt/scrollbar/useScrollbar/barColor/CodeExample.vue') },
+            { path: 'position', name: 'ComponentGanttScrollbarUseScrollbarPosition', component: () => import('@/views/gantt/scrollbar/useScrollbar/position/CodeExample.vue') },
+            { path: 'autoHide', name: 'ComponentGanttScrollbarUseScrollbarAutoHide', component: () => import('@/views/gantt/scrollbar/useScrollbar/autoHide/CodeExample.vue') }
+          ]
+        }
       ]
     },
     {

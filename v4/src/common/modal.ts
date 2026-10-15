@@ -91,6 +91,12 @@ export const modalNavConfig: NavVO = {
       ]
     },
     {
+      title: '虚拟滚动条',
+      children: [
+        { title: '使用滚动条', routerLink: { name: 'ComponentModalModalUseScrollbarScrollbar' } }
+      ]
+    },
+    {
       title: '功能示例',
       children: [
         { title: '弹窗与表单', routerLink: { name: 'ComponentModalModalOtherForm' } },

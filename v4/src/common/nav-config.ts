@@ -1536,7 +1536,13 @@ export const navConfigList: NavVO[] = [
           { title: '自定义模板', routerLink: { name: 'ComponentDrawerTemplateFooter' } },
           { title: '完整插槽模板', routerLink: { name: 'ComponentDrawerTemplateLayout' } },
           { title: '显示到挂载区域中', routerLink: { name: 'ComponentDrawerWithin' } },
-          { title: '嵌入 iframe', routerLink: { name: 'ComponentDrawerIframe' } }
+          { title: '嵌入 iframe', routerLink: { name: 'ComponentDrawerIframe' } },
+          {
+            title: '虚拟滚动条',
+            children: [
+              { title: '使用滚动条', routerLink: { name: 'ComponentDrawerUseScrollbarScrollbar' } }
+            ]
+          }
         ]
       },
       // { title: 'Popover 气泡提示框' },

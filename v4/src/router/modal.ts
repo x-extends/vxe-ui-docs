@@ -301,6 +301,13 @@ export const modalRouteConfig: RouteRecordRaw = {
           component: () => import('@/views/modal/modal/full/CodeExample.vue')
         },
         {
+          path: 'useScrollbar',
+          component: RouteLayout,
+          children: [
+            { path: 'scrollbar', name: 'ComponentModalModalUseScrollbarScrollbar', component: () => import('@/views/modal/useScrollbar/scrollbar/CodeExample.vue') }
+          ]
+        },
+        {
           path: 'other',
           component: RouteLayout,
           children: [
