@@ -45,6 +45,7 @@ export default Vue.extend({
           width: 480
         }
       },
+      useScrollbar: false,
       scrollbarConfig: {
         width: 12
       },

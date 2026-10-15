@@ -87,14 +87,27 @@ export const listRouteConfig: RouteRecordRaw = {
       ]
     },
     {
-      path: 'useScrollbar',
+      path: 'scrollbar',
       component: RouteLayout,
       children: [
-        { path: 'scrollbar', name: 'ComponentListUseScrollbarScrollbar', component: () => import('@/views/list/useScrollbar/scrollbar/CodeExample.vue') },
-        { path: 'barWidth', name: 'ComponentListUseScrollbarBarWidth', component: () => import('@/views/list/useScrollbar/barWidth/CodeExample.vue') },
-        { path: 'barColor', name: 'ComponentListUseScrollbarBarColor', component: () => import('@/views/list/useScrollbar/barColor/CodeExample.vue') },
-        { path: 'position', name: 'ComponentListUseScrollbarPosition', component: () => import('@/views/list/useScrollbar/position/CodeExample.vue') },
-        { path: 'autoHide', name: 'ComponentListUseScrollbarAutoHide', component: () => import('@/views/list/useScrollbar/autoHide/CodeExample.vue') }
+        {
+          path: 'native',
+          component: RouteLayout,
+          children: [
+            { path: 'scrollbar', name: 'ComponentListScrollbarNativeScrollbar', component: () => import('@/views/list/scrollbar/native/scrollbar/CodeExample.vue') }
+          ]
+        },
+        {
+          path: 'useScrollbar',
+          component: RouteLayout,
+          children: [
+            { path: 'scrollbar', name: 'ComponentListScrollbarUseScrollbarScrollbar', component: () => import('@/views/list/scrollbar/useScrollbar/scrollbar/CodeExample.vue') },
+            { path: 'barWidth', name: 'ComponentListScrollbarUseScrollbarBarWidth', component: () => import('@/views/list/scrollbar/useScrollbar/barWidth/CodeExample.vue') },
+            { path: 'barColor', name: 'ComponentListScrollbarUseScrollbarBarColor', component: () => import('@/views/list/scrollbar/useScrollbar/barColor/CodeExample.vue') },
+            { path: 'position', name: 'ComponentListScrollbarUseScrollbarPosition', component: () => import('@/views/list/scrollbar/useScrollbar/position/CodeExample.vue') },
+            { path: 'autoHide', name: 'ComponentListScrollbarUseScrollbarAutoHide', component: () => import('@/views/list/scrollbar/useScrollbar/autoHide/CodeExample.vue') }
+          ]
+        }
       ]
     },
     {

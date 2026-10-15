@@ -301,10 +301,23 @@ export const modalRouteConfig: RouteConfig = {
           component: () => import('@/views/modal/modal/full/CodeExample.vue')
         },
         {
-          path: 'useScrollbar',
+          path: 'scrollbar',
           component: RouteLayout,
           children: [
-            { path: 'scrollbar', name: 'ComponentModalModalUseScrollbarScrollbar', component: () => import('@/views/modal/useScrollbar/scrollbar/CodeExample.vue') }
+            {
+              path: 'native',
+              component: RouteLayout,
+              children: [
+                { path: 'scrollbar', name: 'ComponentModalModalScrollbarNativeScrollbar', component: () => import('@/views/modal/scrollbar/native/scrollbar/CodeExample.vue') }
+              ]
+            },
+            {
+              path: 'useScrollbar',
+              component: RouteLayout,
+              children: [
+                { path: 'scrollbar', name: 'ComponentModalModalScrollbarUseScrollbarScrollbar', component: () => import('@/views/modal/scrollbar/useScrollbar/scrollbar/CodeExample.vue') }
+              ]
+            }
           ]
         },
         {

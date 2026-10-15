@@ -42,6 +42,7 @@ const ganttOptions = reactive<VxeWithRequired<VxeGanttProps<RowVO>, 'scrollbarCo
       width: 480
     }
   },
+  useScrollbar: false,
   scrollbarConfig: {
     width: 12
   },

@@ -1,0 +1,19 @@
+<template>
+  <div>
+    <CodeLight path="list/scrollbar/useScrollbar/scrollbar/Demo1">
+      <template #tip>
+        <vxe-tip status="primary" title="虚拟滚动条">
+          默认是使用原生滚动条，可以通过 <ApiLink name="list" prop="use-scrollbar" /> 使用虚拟滚动条
+        </vxe-tip>
+      </template>
+    </CodeLight>
+
+    <CodeLight path="list/scrollbar/useScrollbar/scrollbar/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          可以通过 <ApiLink name="list" prop="scrollbar-config" />.<ApiLink name="list" prop="visible" /> 来禁用滚动条
+        </vxe-tip>
+      </template>
+    </CodeLight>
+  </div>
+</template>

@@ -59,6 +59,7 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
       width: 480
     }
   },
+  useScrollbar: false,
   scrollbarConfig,
   columns: [
     { type: 'seq', field: 'seq', width: 70 },

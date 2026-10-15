@@ -61,6 +61,7 @@ export default Vue.extend({
           width: 480
         }
       },
+      useScrollbar: false,
       scrollbarConfig,
       columns: [
         { type: 'seq', field: 'seq', width: 70 },

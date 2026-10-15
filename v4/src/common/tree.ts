@@ -130,13 +130,24 @@ export const treeNavConfig: NavVO = {
       ]
     },
     {
-      title: '虚拟滚动条',
+      title: '滚动条',
       children: [
-        { title: '使用滚动条', routerLink: { name: 'ComponentTreeUseScrollbarScrollbar' } },
-        { title: '滚动条宽度', routerLink: { name: 'ComponentTreeUseScrollbarBarWidth' } },
-        { title: '滚动条颜色', routerLink: { name: 'ComponentTreeUseScrollbarBarColor' } },
-        { title: '显示位置', routerLink: { name: 'ComponentTreeUseScrollbarPosition' } },
-        { title: '自动隐藏', routerLink: { name: 'ComponentTreeUseScrollbarAutoHide' } }
+        {
+          title: '原生滚动条',
+          children: [
+            { title: '使用滚动条', routerLink: { name: 'ComponentTreeScrollbarNativeScrollbar' } }
+          ]
+        },
+        {
+          title: '虚拟滚动条',
+          children: [
+            { title: '使用滚动条', routerLink: { name: 'ComponentTreeScrollbarUseScrollbarScrollbar' } },
+            { title: '滚动条宽度', routerLink: { name: 'ComponentTreeScrollbarUseScrollbarBarWidth' } },
+            { title: '滚动条颜色', routerLink: { name: 'ComponentTreeScrollbarUseScrollbarBarColor' } },
+            { title: '显示位置', routerLink: { name: 'ComponentTreeScrollbarUseScrollbarPosition' } },
+            { title: '自动隐藏', routerLink: { name: 'ComponentTreeScrollbarUseScrollbarAutoHide' } }
+          ]
+        }
       ]
     },
     {
