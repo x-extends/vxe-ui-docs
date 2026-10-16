@@ -2,6 +2,7 @@
   <div>
     <p>
       <vxe-button @click="loadList(10)">加载10条</vxe-button>
+      <vxe-button @click="loadList(50)">加载50条</vxe-button>
       <vxe-button @click="loadList(500)">加载500条</vxe-button>
       <vxe-button @click="loadList(10000)">加载1w条</vxe-button>
       <vxe-button @click="loadList(100000)">加载10w条</vxe-button>
