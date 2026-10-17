@@ -1232,7 +1232,24 @@ export const navConfigList: NavVO[] = [
               { title: '触发方式', routerLink: { name: 'ComponentSelectConfigTrigger' } },
               { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectConfigTemplate' } },
               { title: '虚拟滚动（大量数据选项）', routerLink: { name: 'ComponentSelectConfigScroll' } },
-              { title: '实现人员选择', routerLink: { name: 'ComponentSelectConfigUserSelect' } }
+              { title: '实现人员选择', routerLink: { name: 'ComponentSelectConfigUserSelect' } },
+              {
+                title: '滚动条',
+                children: [
+                  {
+                    title: '原生滚动条',
+                    children: [
+                      { title: '使用滚动条', routerLink: { name: 'ComponentSelectScrollbarNativeScrollbar' } }
+                    ]
+                  },
+                  {
+                    title: '虚拟滚动条',
+                    children: [
+                      { title: '使用滚动条', routerLink: { name: 'ComponentSelectScrollbarUseScrollbarScrollbar' } }
+                    ]
+                  }
+                ]
+              }
             ]
           }
         ]

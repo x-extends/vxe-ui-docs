@@ -2500,6 +2500,26 @@ const routes: Array<RouteConfig> = [
               },
               { path: 'userSelect', name: 'ComponentSelectConfigUserSelect', component: () => import('@/views/select/config/userSelect/CodeExample.vue') }
             ]
+          },
+          {
+            path: 'scrollbar',
+            component: RouteLayout,
+            children: [
+              {
+                path: 'native',
+                component: RouteLayout,
+                children: [
+                  { path: 'scrollbar', name: 'ComponentSelectScrollbarNativeScrollbar', component: () => import('@/views/select/scrollbar/native/scrollbar/CodeExample.vue') }
+                ]
+              },
+              {
+                path: 'useScrollbar',
+                component: RouteLayout,
+                children: [
+                  { path: 'scrollbar', name: 'ComponentSelectScrollbarUseScrollbarScrollbar', component: () => import('@/views/select/scrollbar/useScrollbar/scrollbar/CodeExample.vue') }
+                ]
+              }
+            ]
           }
         ]
       },

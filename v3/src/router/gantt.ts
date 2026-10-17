@@ -350,17 +350,11 @@ export const ganttRouteConfig: RouteConfig = {
       ]
     },
     {
-      path: 'scrollbar',
+      path: 'scroll',
       component: RouteLayout,
       children: [
-        {
-          path: 'native',
-          component: RouteLayout,
-          children: [
-            { path: 'barStyle', name: 'ComponentGantScrollbarNativeBarStyle', component: () => import('@/views/gantt/scrollbar/native/barStyle/CodeExample.vue') },
-            { path: 'barPos', name: 'ComponentGantScrollbarNativeBarPos', component: () => import('@/views/gantt/scrollbar/native/barPos/CodeExample.vue') }
-          ]
-        }
+        { path: 'vertical', name: 'ComponentGanttScrollVertical', component: () => import('@/views/gantt/scroll/vertical/CodeExample.vue') },
+        { path: 'tree', name: 'ComponentGanttScrollTree', component: () => import('@/views/gantt/scroll/tree/CodeExample.vue') }
       ]
     },
     {
