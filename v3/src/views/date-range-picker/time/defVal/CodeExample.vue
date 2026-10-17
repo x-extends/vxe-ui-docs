@@ -8,7 +8,7 @@
       </template>
     </CodeLight>
 
-    <CodeLight path="date-range-picker/date/defVal/Demo2">
+    <CodeLight path="date-range-picker/time/defVal/Demo2">
       <template #tip>
         <vxe-tip status="primary">
           字符串类型逗号分隔，分别设置面板不同的默认时间
