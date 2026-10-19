@@ -133,7 +133,8 @@ export const listRouteConfig: RouteConfig = {
       children: [
         { path: 'vn', name: 'ComponentListOtherVn', component: () => import('@/views/list/other/vn/CodeExample.vue') },
         { path: 'table', name: 'ComponentListOtherTable', component: () => import('@/views/list/other/table/CodeExample.vue') },
-        { path: 'listTransfer', name: 'ComponentListOtherListTransfer', component: () => import('@/views/list/other/listTransfer/CodeExample.vue') }
+        { path: 'listTransfer', name: 'ComponentListOtherListTransfer', component: () => import('@/views/list/other/listTransfer/CodeExample.vue') },
+        { path: 'multiCol', name: 'ComponentListOtherListMultiCol', component: () => import('@/views/list/other/multiCol/CodeExample.vue') }
       ]
     }
   ]
