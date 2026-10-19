@@ -96,7 +96,6 @@ loadList(200)
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 300px;
 }
 .my-list-img {
   padding: 10px;
