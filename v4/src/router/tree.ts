@@ -304,7 +304,8 @@ export const treeRouteConfig: RouteRecordRaw = {
             { path: 'barWidth', name: 'ComponentTreeScrollbarUseScrollbarBarWidth', component: () => import('@/views/tree/scrollbar/useScrollbar/barWidth/CodeExample.vue') },
             { path: 'barColor', name: 'ComponentTreeScrollbarUseScrollbarBarColor', component: () => import('@/views/tree/scrollbar/useScrollbar/barColor/CodeExample.vue') },
             { path: 'position', name: 'ComponentTreeScrollbarUseScrollbarPosition', component: () => import('@/views/tree/scrollbar/useScrollbar/position/CodeExample.vue') },
-            { path: 'autoHide', name: 'ComponentTreeScrollbarUseScrollbarAutoHide', component: () => import('@/views/tree/scrollbar/useScrollbar/autoHide/CodeExample.vue') }
+            { path: 'autoHide', name: 'ComponentTreeScrollbarUseScrollbarAutoHide', component: () => import('@/views/tree/scrollbar/useScrollbar/autoHide/CodeExample.vue') },
+            { path: 'fluentOverlay', name: 'ComponentTreeScrollbarUseScrollbarFluentOverlay', component: () => import('@/views/tree/scrollbar/useScrollbar/fluentOverlay/CodeExample.vue') }
           ]
         }
       ]

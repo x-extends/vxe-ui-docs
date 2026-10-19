@@ -94,7 +94,8 @@ export const listNavConfig: NavVO = {
             { title: '滚动条宽度', routerLink: { name: 'ComponentListScrollbarUseScrollbarBarWidth' } },
             { title: '滚动条颜色', routerLink: { name: 'ComponentListScrollbarUseScrollbarBarColor' } },
             { title: '显示位置', routerLink: { name: 'ComponentListScrollbarUseScrollbarPosition' } },
-            { title: '自动隐藏', routerLink: { name: 'ComponentListScrollbarUseScrollbarAutoHide' } }
+            { title: '自动隐藏', routerLink: { name: 'ComponentListScrollbarUseScrollbarAutoHide' } },
+            { title: '悬浮滚动条', routerLink: { name: 'ComponentListScrollbarUseScrollbarFluentOverlay' } }
           ]
         }
       ]

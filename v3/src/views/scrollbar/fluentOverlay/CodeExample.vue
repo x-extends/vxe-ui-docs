@@ -7,5 +7,13 @@
         </vxe-tip>
       </template>
     </CodeLight>
+
+    <CodeLight path="scrollbar/fluentOverlay/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          配合自动隐藏
+        </vxe-tip>
+      </template>
+    </CodeLight>
   </div>
 </template>

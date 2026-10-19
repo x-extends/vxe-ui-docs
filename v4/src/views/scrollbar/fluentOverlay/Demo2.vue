@@ -1,8 +1,6 @@
 <template>
   <div>
-    启用:<vxe-switch v-model="isFluentOverlay"></vxe-switch>
-
-    <vxe-scrollbar height="300" :fluent-overlay="isFluentOverlay" auto-hide>
+    <vxe-scrollbar height="300" fluent-overlay auto-hide>
       <div v-for="item in 20" :key="item" class="my-scrollbar-item">
         <div>{{ item }}这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容</div>
       </div>
@@ -11,9 +9,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-
-const isFluentOverlay = ref(true)
 </script>
 
 <style lang="scss" scoped>

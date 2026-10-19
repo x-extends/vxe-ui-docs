@@ -369,7 +369,8 @@ export const ganttNavConfig: NavVO = {
             { title: '滚动条宽度', routerLink: { name: 'ComponentGanttScrollbarUseScrollbarBarWidth' } },
             { title: '滚动条颜色', routerLink: { name: 'ComponentGanttScrollbarUseScrollbarBarColor' } },
             { title: '显示位置', routerLink: { name: 'ComponentGanttScrollbarUseScrollbarPosition' } },
-            { title: '自动隐藏', routerLink: { name: 'ComponentGanttScrollbarUseScrollbarAutoHide' } }
+            { title: '自动隐藏', routerLink: { name: 'ComponentGanttScrollbarUseScrollbarAutoHide' } },
+            { title: '悬浮滚动条', routerLink: { name: 'ComponentGanttScrollbarUseScrollbarFluentOverlay' } }
           ]
         }
       ]

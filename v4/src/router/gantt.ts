@@ -377,7 +377,8 @@ export const ganttRouteConfig: RouteRecordRaw = {
             { path: 'barWidth', name: 'ComponentGanttScrollbarUseScrollbarBarWidth', component: () => import('@/views/gantt/scrollbar/useScrollbar/barWidth/CodeExample.vue') },
             { path: 'barColor', name: 'ComponentGanttScrollbarUseScrollbarBarColor', component: () => import('@/views/gantt/scrollbar/useScrollbar/barColor/CodeExample.vue') },
             { path: 'position', name: 'ComponentGanttScrollbarUseScrollbarPosition', component: () => import('@/views/gantt/scrollbar/useScrollbar/position/CodeExample.vue') },
-            { path: 'autoHide', name: 'ComponentGanttScrollbarUseScrollbarAutoHide', component: () => import('@/views/gantt/scrollbar/useScrollbar/autoHide/CodeExample.vue') }
+            { path: 'autoHide', name: 'ComponentGanttScrollbarUseScrollbarAutoHide', component: () => import('@/views/gantt/scrollbar/useScrollbar/autoHide/CodeExample.vue') },
+            { path: 'fluentOverlay', name: 'ComponentGanttScrollbarUseScrollbarFluentOverlay', component: () => import('@/views/gantt/scrollbar/useScrollbar/fluentOverlay/CodeExample.vue') }
           ]
         }
       ]

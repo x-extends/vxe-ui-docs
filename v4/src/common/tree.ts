@@ -145,7 +145,8 @@ export const treeNavConfig: NavVO = {
             { title: '滚动条宽度', routerLink: { name: 'ComponentTreeScrollbarUseScrollbarBarWidth' } },
             { title: '滚动条颜色', routerLink: { name: 'ComponentTreeScrollbarUseScrollbarBarColor' } },
             { title: '显示位置', routerLink: { name: 'ComponentTreeScrollbarUseScrollbarPosition' } },
-            { title: '自动隐藏', routerLink: { name: 'ComponentTreeScrollbarUseScrollbarAutoHide' } }
+            { title: '自动隐藏', routerLink: { name: 'ComponentTreeScrollbarUseScrollbarAutoHide' } },
+            { title: '悬浮滚动条', routerLink: { name: 'ComponentTreeScrollbarUseScrollbarFluentOverlay' } }
           ]
         }
       ]
