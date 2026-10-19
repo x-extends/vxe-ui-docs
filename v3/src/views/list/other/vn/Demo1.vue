@@ -8,17 +8,15 @@
       <vxe-button @click="loadList(250000)">加载25w条</vxe-button>
     </p>
 
-    <vxe-list class="my-list" v-bind="listOptions">
+    <vxe-list class="my-vn-list" v-bind="listOptions">
       <template #default="{ items }">
-        <div class="my-list-wrapper">
-          <div class="my-list-item" v-for="(row, i) in items" :key="i">
-            <div class="my-list-img">
-              <vxe-image :src="row.imgUrl" width="50" circle></vxe-image>
-            </div>
-            <div class="my-list-describe">
-              <div class="my-list-title">{{ row.label }}</div>
-              <div>{{ row.describe }}</div>
-            </div>
+        <div class="my-list-item" v-for="(row, i) in items" :key="i">
+          <div class="my-list-img">
+            <vxe-image :src="row.imgUrl" width="50" circle></vxe-image>
+          </div>
+          <div class="my-list-describe">
+            <div class="my-list-title">{{ row.label }}</div>
+            <div>{{ row.describe }}</div>
           </div>
         </div>
       </template>
@@ -44,7 +42,8 @@ export default Vue.extend({
       loading: false,
       virtualYConfig: {
         enabled: true,
-        gt: 0
+        gt: 0,
+        sItem: '.my-list-item'
       },
       data: []
     }

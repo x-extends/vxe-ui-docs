@@ -7,13 +7,11 @@
       <vxe-button @click="loadList(200, 5)">5格</vxe-button>
     </div>
 
-    <vxe-list class="my-list" v-bind="listOptions">
+    <vxe-list class="my-multicol-list" :class="`col-${chunkSize}`" v-bind="listOptions">
       <template #default="{ items }">
-        <div class="my-list-wrapper" :class="`col-${chunkSize}`">
-          <div v-for="(row, i) in items" :key="i" class="my-list-item">
-            <div v-for="(item, j) in row.colList" :key="j" class="my-list-img">
-              <vxe-image :src="item.imgUrl" height="100%" width="100%"></vxe-image>
-            </div>
+        <div v-for="(row, i) in items" :key="i" class="my-list-item">
+          <div v-for="(item, j) in row.colList" :key="j" class="my-list-img">
+            <vxe-image :src="item.imgUrl" height="100%" width="100%"></vxe-image>
           </div>
         </div>
       </template>
@@ -42,7 +40,8 @@ const listOptions = reactive<VxeListProps<RowVO>>({
   loading: false,
   virtualYConfig: {
     enabled: true,
-    gt: 0
+    gt: 0,
+    sItem: '.my-list-item'
   },
   data: []
 })
@@ -71,7 +70,7 @@ loadList(200)
 </script>
 
 <style lang="scss" scoped>
-.my-list-wrapper {
+.my-multicol-list {
   &.col-2 {
     .my-list-img {
       width: 50%;
@@ -97,6 +96,7 @@ loadList(200)
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 300px;
 }
 .my-list-img {
   padding: 10px;
