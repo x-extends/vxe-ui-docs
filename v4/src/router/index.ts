@@ -3091,6 +3091,7 @@ const routes: Array<RouteRecordRaw> = [
           { path: 'padding', name: 'ComponentScrollbarPadding', component: () => import('@/views/scrollbar/padding/CodeExample.vue') },
           { path: 'barWidth', name: 'ComponentScrollbarBarWidth', component: () => import('@/views/scrollbar/barWidth/CodeExample.vue') },
           { path: 'scrollbar', name: 'ComponentScrollbarScrollbar', component: () => import('@/views/scrollbar/scrollbar/CodeExample.vue') },
+          { path: 'fluentOverlay', name: 'ComponentScrollbarFluentOverlay', component: () => import('@/views/scrollbar/fluentOverlay/CodeExample.vue') },
           { path: 'position', name: 'ComponentScrollbarPosition', component: () => import('@/views/scrollbar/position/CodeExample.vue') },
           { path: 'scrollTo', name: 'ComponentScrollbarScrollTo', component: () => import('@/views/scrollbar/scrollTo/CodeExample.vue') },
           { path: 'events', name: 'ComponentScrollbarEvents', component: () => import('@/views/scrollbar/events/CodeExample.vue') },

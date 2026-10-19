@@ -571,6 +571,7 @@ export const navConfigList: NavVO[] = [
           { title: '内边距', routerLink: { name: 'ComponentScrollbarPadding' } },
           { title: '滚动条宽度', routerLink: { name: 'ComponentScrollbarBarWidth' } },
           { title: '禁用滚动条', routerLink: { name: 'ComponentScrollbarScrollbar' } },
+          { title: '悬浮滚动条', routerLink: { name: 'ComponentScrollbarFluentOverlay' } },
           { title: '显示位置', routerLink: { name: 'ComponentScrollbarPosition' } },
           { title: '自动隐藏', routerLink: { name: 'ComponentScrollbarAutoHide' } },
           { title: '手动滚动', routerLink: { name: 'ComponentScrollbarScrollTo' } },
