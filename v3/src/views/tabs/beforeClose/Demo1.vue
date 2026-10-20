@@ -3,7 +3,6 @@
     <vxe-tabs
       padding
       v-model="selectTab"
-      type="round-card"
       :height="140"
       :options="tabList"
       :close-config="closeConfig"
