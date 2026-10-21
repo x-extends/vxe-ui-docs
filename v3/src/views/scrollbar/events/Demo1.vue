@@ -1,7 +1,7 @@
 <template>
   <div>
     <vxe-scrollbar height="300" @scroll="scrollEvent">
-      <div v-for="item in 20" :key="item" class="my-scrollbar-item">
+      <div v-for="item in rowSize" :key="item" class="my-scrollbar-item">
         <div>{{ item }}这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容这是一段很长的内容</div>
       </div>
     </vxe-scrollbar>
@@ -13,6 +13,11 @@ import Vue from 'vue'
 import { VxeScrollbarDefines } from 'vxe-pc-ui'
 
 export default Vue.extend({
+  data () {
+    return {
+      rowSize: 20
+    }
+  },
   methods: {
     scrollEvent (eventParams: VxeScrollbarDefines.ScrollEventParams) {
       console.log(`direction：${eventParams.direction} isTop：${eventParams.isTop} isBottom：${eventParams.isBottom} isLeft：${eventParams.isLeft} isRight：${eventParams.isRight}`)
