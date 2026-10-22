@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="grid/customEdit/defaulEdit/Demo1">
+    <CodeLight path="grid/customEdit/rewrite/defaulEdit/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="默认编辑">
           放弃内置的行编辑功能，通过自定义实现默认直接编辑功能

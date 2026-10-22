@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="grid/customEdit/clickEdit/Demo1">
+    <CodeLight path="grid/customEdit/rewrite/clickEdit/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="点击编辑">
           放弃内置的行编辑功能，通过自定义实现点击单元格编辑功能
@@ -11,7 +11,7 @@
       </template>
     </CodeLight>
 
-    <CodeLight path="grid/customEdit/clickEdit/Demo2">
+    <CodeLight path="grid/customEdit/rewrite/clickEdit/Demo2">
       <template #tip>
         <vxe-tip status="primary">
           通过条件控制是否允许编辑

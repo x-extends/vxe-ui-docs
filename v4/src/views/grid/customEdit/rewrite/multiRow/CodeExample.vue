@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="grid/customEdit/multiRow/Demo1" preview-path="/resource/docsImg/table_edit_custom_multi_row.gif">
+    <CodeLight path="grid/customEdit/rewrite/multiRow/Demo1" preview-path="/resource/docsImg/table_edit_custom_multi_row.gif">
       <template #tip>
         <vxe-tip status="primary" title="按钮编辑">
           放弃内置的行编辑功能，通过自定义实现多行编辑功能
@@ -11,7 +11,7 @@
       </template>
     </CodeLight>
 
-    <CodeLight path="grid/customEdit/multiRow/Demo2">
+    <CodeLight path="grid/customEdit/rewrite/multiRow/Demo2">
       <template #tip>
         <vxe-tip status="primary">
           通过条件控制是否允许编辑
