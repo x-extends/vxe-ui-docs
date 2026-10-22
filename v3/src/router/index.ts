@@ -3877,11 +3877,8 @@ const routes: Array<RouteConfig> = [
             path: 'pager',
             component: RouteLayout,
             children: [
-              {
-                path: 'page',
-                name: 'ComponentTableSelectPagerPage',
-                component: () => import('@/views/table-select/pager/page/CodeExample.vue')
-              }
+              { path: 'page', name: 'ComponentTableSelectPagerPage', component: () => import('@/views/table-select/pager/page/CodeExample.vue') },
+              { path: 'checkbox', name: 'ComponentTableSelectPagerCheckbox', component: () => import('@/views/table-select/pager/checkbox/CodeExample.vue') }
             ]
           },
           {

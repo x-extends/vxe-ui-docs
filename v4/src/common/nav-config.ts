@@ -1446,7 +1446,8 @@ export const navConfigList: NavVO[] = [
           {
             title: '分页',
             children: [
-              { title: '数据分页', routerLink: { name: 'ComponentTableSelectPagerPage' } }
+              { title: '分页单选', routerLink: { name: 'ComponentTableSelectPagerPage' } },
+              { title: '分页多选', routerLink: { name: 'ComponentTableSelectPagerCheckbox' } }
             ]
           },
           {
