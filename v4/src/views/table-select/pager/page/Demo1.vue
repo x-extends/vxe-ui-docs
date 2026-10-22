@@ -5,7 +5,8 @@
       :options="tableData"
       :popup-config="popupConfig"
       :grid-config="gridConfig"
-      @page-change="pageChangeEvent">
+      @page-change="pageChangeEvent"
+    >
     </vxe-table-select>
   </div>
 </template>
@@ -66,6 +67,7 @@ const pagerConfig = reactive({
 
 const gridConfig = reactive<VxeTableSelectPropTypes.GridConfig>({
   border: true,
+  loading: false,
   pagerConfig,
   columns: [
     { type: 'radio', width: 70 },
@@ -78,10 +80,12 @@ const gridConfig = reactive<VxeTableSelectPropTypes.GridConfig>({
 
 // 模拟前端分页
 const handlePageData = () => {
+  gridConfig.loading = true
   setTimeout(() => {
     const { pageSize, currentPage } = pagerConfig
     pagerConfig.total = allList.length
     tableData.value = allList.slice((currentPage - 1) * pageSize, currentPage * pageSize)
+    gridConfig.loading = false
   }, 100)
 }
 

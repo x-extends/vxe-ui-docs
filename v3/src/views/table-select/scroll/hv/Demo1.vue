@@ -14,7 +14,7 @@
       <vxe-button @click="loadDataAndColumns(150, 10000)">200行1w列</vxe-button>
       <vxe-button @click="loadDataAndColumns(200, 30000)">200行3w列</vxe-button>
     </p>
-    <vxe-table-select v-model="val1" :loading="loading" :columns="columnList" :options="tableData" :popup-config="popupConfig" :option-props="{value: 'id', label: 'name'}"></vxe-table-select>
+    <vxe-table-select v-model="val1" :loading="loading" :columns="columnList" :options="tableData" :popup-config="popupConfig" :option-props="{value: 'id', label: 'name'}" multiple></vxe-table-select>
   </div>
 </template>
 
@@ -52,7 +52,8 @@ export default Vue.extend({
       this.loading = true
       setTimeout(() => {
         const colList: VxeTableSelectPropTypes.Columns = [
-          { type: 'radio', width: 70 }
+          { type: 'checkbox', width: 70 },
+          { field: 'name', title: 'Name', width: 100 }
         ]
         for (let i = 0; i < colSize; i++) {
           colList.push({
