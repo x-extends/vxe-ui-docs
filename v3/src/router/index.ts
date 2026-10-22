@@ -2440,6 +2440,7 @@ const routes: Array<RouteConfig> = [
                 name: 'ComponentSelectConfigLoading',
                 component: () => import('@/views/select/config/loading/CodeExample.vue')
               },
+              { path: 'badge', name: 'ComponentSelectConfigBadge', component: () => import('@/views/select/config/badge/CodeExample.vue') },
               {
                 path: 'filterable',
                 name: 'ComponentSelectConfigFilterable',

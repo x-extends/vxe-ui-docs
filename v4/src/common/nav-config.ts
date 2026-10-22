@@ -1219,6 +1219,7 @@ export const navConfigList: NavVO[] = [
               { title: '宽度', routerLink: { name: 'ComponentSelectConfigWidth' } },
               { title: '单选框', routerLink: { name: 'ComponentSelectConfigRadio' } },
               { title: '加载中', routerLink: { name: 'ComponentSelectConfigLoading' } },
+              { title: '显示徽标', routerLink: { name: 'ComponentSelectConfigBadge' } },
               { title: '本地搜索', routerLink: { name: 'ComponentSelectConfigFilterable' } },
               { title: '远程搜索', routerLink: { name: 'ComponentSelectConfigRemote' } },
               { title: '分组', routerLink: { name: 'ComponentSelectConfigGroup' } },
@@ -1233,22 +1234,22 @@ export const navConfigList: NavVO[] = [
               { title: '触发方式', routerLink: { name: 'ComponentSelectConfigTrigger' } },
               { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectConfigTemplate' } },
               { title: '虚拟滚动（大量数据选项）', routerLink: { name: 'ComponentSelectConfigScroll' } },
-              { title: '实现人员选择', routerLink: { name: 'ComponentSelectConfigUserSelect' } },
+              { title: '实现人员选择', routerLink: { name: 'ComponentSelectConfigUserSelect' } }
+            ]
+          },
+          {
+            title: '滚动条',
+            children: [
               {
-                title: '滚动条',
+                title: '原生滚动条',
                 children: [
-                  {
-                    title: '原生滚动条',
-                    children: [
-                      { title: '使用滚动条', routerLink: { name: 'ComponentSelectScrollbarNativeScrollbar' } }
-                    ]
-                  },
-                  {
-                    title: '虚拟滚动条',
-                    children: [
-                      { title: '使用滚动条', routerLink: { name: 'ComponentSelectScrollbarUseScrollbarScrollbar' } }
-                    ]
-                  }
+                  { title: '使用滚动条', routerLink: { name: 'ComponentSelectScrollbarNativeScrollbar' } }
+                ]
+              },
+              {
+                title: '虚拟滚动条',
+                children: [
+                  { title: '使用滚动条', routerLink: { name: 'ComponentSelectScrollbarUseScrollbarScrollbar' } }
                 ]
               }
             ]
