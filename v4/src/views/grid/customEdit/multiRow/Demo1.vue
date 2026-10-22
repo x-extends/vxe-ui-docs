@@ -1,5 +1,7 @@
 <template>
   <div>
+    <vxe-button status="success" @click="saveEvent">保存</vxe-button>
+
     <vxe-grid v-bind="gridOptions">
       <template #name_default="{ row }">
         <vxe-input v-if="row.isEdit" v-model="row.name"></vxe-input>
@@ -17,9 +19,9 @@
       </template>
 
       <template #action="{ row }">
-        <vxe-button v-if="row.isEdit" mode="text" status="success" :loading="row.isLoading" @click="handleSave(row)">保存</vxe-button>
-        <vxe-button v-else mode="text" status="primary" @click="handleEdit(row)">编辑</vxe-button>
-        <vxe-button v-if="row.isEdit" mode="text" @click="cancelEdit(row)">取消</vxe-button>
+        <vxe-button v-if="row.isEdit" mode="text" status="success" :loading="row.isLoading" @click="handleRowSave(row)">保存</vxe-button>
+        <vxe-button v-else mode="text" status="primary" @click="handleRowEdit(row)">编辑</vxe-button>
+        <vxe-button v-if="row.isEdit" mode="text" @click="cancelRowEdit(row)">取消</vxe-button>
       </template>
     </vxe-grid>
   </div>
@@ -27,7 +29,8 @@
 
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
-import type { VxeGridProps } from 'vxe-table'
+import { VxeUI } from 'vxe-pc-ui'
+import type { VxeGridProps, VxeWithRequired } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -45,7 +48,7 @@ const sexList = ref([
   { label: '女', value: 'Women' }
 ])
 
-const gridOptions = reactive<VxeGridProps<RowVO>>({
+const gridOptions = reactive<VxeWithRequired<VxeGridProps<RowVO>, 'data'>>({
   border: true,
   showOverflow: true,
   rowConfig: {
@@ -66,20 +69,37 @@ const gridOptions = reactive<VxeGridProps<RowVO>>({
   ]
 })
 
-const handleEdit = (row: RowVO) => {
+const handleRowEdit = (row: RowVO) => {
   row.isEdit = true
 }
 
-const cancelEdit = (row: RowVO) => {
+const cancelRowEdit = (row: RowVO) => {
   row.isEdit = false
 }
 
-const handleSave = (row: RowVO) => {
+const handleRowSave = (row: RowVO) => {
   row.isLoading = true
   // 模拟后端接口
   setTimeout(() => {
     row.isEdit = false
     row.isLoading = false
+  }, 300)
+}
+
+const saveEvent = () => {
+  const editRows = gridOptions.data.filter(row => row.isEdit)
+  console.log(editRows)
+  if (!editRows.length) {
+    VxeUI.modal.message({
+      content: '数据未编辑',
+      status: 'warning'
+    })
+    return
+  }
+  gridOptions.loading = true
+  // 模拟后端接口
+  setTimeout(() => {
+    gridOptions.loading = false
   }, 300)
 }
 </script>
