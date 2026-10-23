@@ -3750,6 +3750,13 @@ const routes: Array<RouteRecordRaw> = [
             ]
           },
           {
+            path: 'remote',
+            component: RouteLayout,
+            children: [
+              { path: 'autoLoad', name: 'ComponentTreeSelectRemoteAutoLoad', component: () => import('@/views/tree-select/remote/autoLoad/CodeExample.vue') }
+            ]
+          },
+          {
             path: 'operBtn',
             component: RouteLayout,
             children: [
@@ -3909,6 +3916,22 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'ComponentTableSelectCheckboxTrigger',
                 component: () => import('@/views/table-select/checkbox/trigger/CodeExample.vue')
               }
+            ]
+          },
+          {
+            path: 'search',
+            component: RouteLayout,
+            children: [
+              { path: 'filterable', name: 'ComponentTableSelectSearchFilterable', component: () => import('@/views/table-select/search/filterable/CodeExample.vue') },
+              { path: 'filterMethod', name: 'ComponentTableSelectSearchFilterMethod', component: () => import('@/views/table-select/search/filterMethod/CodeExample.vue') },
+              { path: 'showResultCount', name: 'ComponentTableSelectSearchShowResultCount', component: () => import('@/views/table-select/search/showResultCount/CodeExample.vue') }
+            ]
+          },
+          {
+            path: 'remote',
+            component: RouteLayout,
+            children: [
+              { path: 'autoLoad', name: 'ComponentTableSelectRemoteAutoLoad', component: () => import('@/views/table-select/remote/autoLoad/CodeExample.vue') }
             ]
           },
           {

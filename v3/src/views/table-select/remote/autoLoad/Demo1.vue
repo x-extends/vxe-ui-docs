@@ -1,0 +1,71 @@
+<template>
+  <div>
+    <vxe-table-select v-model="val1" v-bind="tableSelectOptions"></vxe-table-select>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+import { VxeTableSelectProps } from 'vxe-pc-ui'
+
+interface RowVO {
+  value: number
+  label: string
+  role: string
+  sex: string
+  age: number
+  address: string
+}
+
+// 模拟后端接口
+function loadList (searchValue: string) {
+  const list: RowVO[] = [
+    { value: 10001, label: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
+    { value: 10002, label: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },
+    { value: 10003, label: 'Test3', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai' },
+    { value: 10004, label: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' },
+    { value: 10005, label: 'Test5', role: 'PM', sex: 'Man', age: 32, address: 'Guangzhou' },
+    { value: 10006, label: 'Test6', role: 'Develop', sex: 'Man', age: 24, address: 'test abc' },
+    { value: 10007, label: 'Test7', role: 'Develop', sex: 'Man', age: 26, address: 'Shanghai' },
+    { value: 10008, label: 'Test8', role: 'Test', sex: 'Women', age: 25, address: 'test abc' },
+    { value: 10009, label: 'Test9', role: 'PM', sex: 'Women', age: 32, address: 'Guangzhou' },
+    { value: 100010, label: 'Test10', role: 'Develop', sex: 'Women', age: 24, address: 'Guangzhou' }
+  ]
+  return new Promise<RowVO[]>(resolve => {
+    setTimeout(() => {
+      const rest = searchValue ? list.filter(item => `${item.label}`.indexOf(searchValue) > -1) : list
+      resolve(rest)
+    }, 200)
+  })
+}
+
+export default Vue.extend({
+  data () {
+    const tableSelectOptions: VxeTableSelectProps<RowVO> = {
+      filterable: true,
+      remote: true,
+      remoteConfig: {
+        async queryMethod ({ searchValue }) {
+          tableSelectOptions.options = await loadList(searchValue)
+        }
+      },
+      gridConfig: {
+        border: true,
+        columns: [
+          { type: 'radio', width: 70 },
+          { field: 'label', title: 'Name' },
+          { field: 'role', title: 'Role' },
+          { field: 'sex', title: 'Sex' },
+          { field: 'address', title: 'Address' }
+        ]
+      },
+      options: []
+    }
+
+    return {
+      tableSelectOptions,
+      val1: null
+    }
+  }
+})
+</script>

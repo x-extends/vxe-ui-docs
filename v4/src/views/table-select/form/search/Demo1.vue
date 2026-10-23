@@ -4,6 +4,7 @@
       v-model="val1"
       :options="tableData"
       :grid-config="gridConfig"
+      :popup-config="popupConfig"
       @form-submit="formSubmitEvent"
       @form-reset="formResetEvent">
     </vxe-table-select>
@@ -29,7 +30,11 @@ const allList: RowVO[] = [
   { value: 10001, label: 'Test1', role: 'Develop', sex: 'Man', age: 28, address: 'test abc' },
   { value: 10002, label: 'Test2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou' },
   { value: 10003, label: 'Test3', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai' },
-  { value: 10004, label: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
+  { value: 10004, label: 'Test4', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' },
+  { value: 10005, label: 'Test5', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai' },
+  { value: 10006, label: 'Test6', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' },
+  { value: 10007, label: 'Test7', role: 'PM', sex: 'Man', age: 32, address: 'Shanghai' },
+  { value: 10008, label: 'Test8', role: 'Designer', sex: 'Women', age: 24, address: 'Shanghai' }
 ]
 
 const tableData = ref<RowVO[]>([])
@@ -40,6 +45,11 @@ const formData = reactive({
   sex: '',
   num: '',
   address: ''
+})
+
+const popupConfig = reactive<VxeTableSelectPropTypes.PopupConfig>({
+  width: 600,
+  height: 400
 })
 
 const gridConfig = reactive<VxeTableSelectPropTypes.GridConfig>({

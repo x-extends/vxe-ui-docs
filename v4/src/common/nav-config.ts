@@ -1350,10 +1350,16 @@ export const navConfigList: NavVO[] = [
             ]
           },
           {
-            title: '搜索',
+            title: '本地搜索',
             children: [
               { title: '过滤节点', routerLink: { name: 'ComponentTreeSelectSearchFilterValue' } },
               { title: '自定义过滤方法', routerLink: { name: 'ComponentTreeSelectSearchFilterMethod' } }
+            ]
+          },
+          {
+            title: '远程搜索',
+            children: [
+              { title: '自动加载', routerLink: { name: 'ComponentTreeSelectRemoteAutoLoad' } }
             ]
           },
           {
@@ -1435,6 +1441,20 @@ export const navConfigList: NavVO[] = [
               { title: '显示复选框', routerLink: { name: 'ComponentTableSelectCheckboxBase' } },
               { title: '可清除', routerLink: { name: 'ComponentTableSelectCheckboxClearable' } },
               { title: '点击行自动选中', routerLink: { name: 'ComponentTableSelectCheckboxTrigger' } }
+            ]
+          },
+          {
+            title: '本地搜索',
+            children: [
+              { title: '过滤数据', routerLink: { name: 'ComponentTableSelectSearchFilterable' } },
+              { title: '自定义过滤方法', routerLink: { name: 'ComponentTableSelectSearchFilterMethod' } },
+              { title: '显示结果统计', routerLink: { name: 'ComponentTableSelectSearchShowResultCount' } }
+            ]
+          },
+          {
+            title: '远程搜索',
+            children: [
+              { title: '自动加载', routerLink: { name: 'ComponentTableSelectRemoteAutoLoad' } }
             ]
           },
           {
