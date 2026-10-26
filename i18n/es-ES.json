@@ -51,6 +51,7 @@
         "i18n": "Internacionalización",
         "configI18n": "Traducir contenido interno de los componentes",
         "configTranslate": "Soporte para traducir campos específicos en los componentes",
+        "configI18nCDN": "国际化 - CDN 引入",
         "tools": "Herramientas",
         "functions": "Funciones",
         "clipboard": "Portapapeles",

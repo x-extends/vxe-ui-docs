@@ -51,6 +51,7 @@
         "i18n": "国际化",
         "configI18n": "对组件内置内容进行翻译",
         "configTranslate": "支持对组件中特定的字段进行翻译",
+        "configI18nCDN": "国际化 - CDN 引入",
         "tools": "Utility 工具类",
         "functions": "Js 函数库",
         "clipboard": "剪贴板",

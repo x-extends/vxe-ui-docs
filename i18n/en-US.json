@@ -51,6 +51,7 @@
         "i18n": "Internationalization",
         "configI18n": "Translate built-in component content",
         "configTranslate": "Support translating specific fields in components",
+        "configI18nCDN": "国际化 - CDN 引入",
         "tools": "Utility",
         "functions": "Js Function",
         "clipboard": "Clipboard",

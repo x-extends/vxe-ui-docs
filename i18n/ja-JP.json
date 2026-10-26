@@ -51,6 +51,7 @@
         "i18n": "国際化",
         "configI18n": "コンポーネント内のテキストを翻訳する",
         "configTranslate": "コンポーネント内の特定フィールドの翻訳をサポート",
+        "configI18nCDN": "国际化 - CDN 引入",
         "tools": "ツール",
         "functions": "関数",
         "clipboard": "クリップボード",
