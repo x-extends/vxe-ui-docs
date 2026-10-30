@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-gantt v-bind="ganttOptions" :footerData="footerData"></vxe-gantt>
+    <vxe-gantt v-bind="ganttOptions" :footer-data="footerData"></vxe-gantt>
   </div>
 </template>
 

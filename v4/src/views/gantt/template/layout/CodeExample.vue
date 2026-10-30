@@ -7,15 +7,15 @@
         </vxe-tip>
         <vxe-tip status="success">
           <div>
-            <ApiLink name="gantt" prop="form"/>：自定义表单模板<br>
-            <ApiLink name="gantt" prop="toolbar"/>：自定义工具栏模板<br>
-            <ApiLink name="gantt" prop="top"/>：自定义顶部模板<br>
-            <ApiLink name="gantt" prop="bottom"/>：自定义底部模板<br>
-            <ApiLink name="gantt" prop="left"/>：自定义左边模板<br>
-            <ApiLink name="gantt" prop="right"/>：自定义右边模板<br>
-            <ApiLink name="gantt" prop="asideLeft"/>：自定义左侧模板<br>
-            <ApiLink name="gantt" prop="asideRight"/>：自定义右侧模板<br>
-            <ApiLink name="gantt" prop="pager"/>：自定义分页模板<br>
+            <ApiLink name="gantt" prop="form" />：自定义表单模板<br>
+            <ApiLink name="gantt" prop="toolbar" />：自定义工具栏模板<br>
+            <ApiLink name="gantt" prop="top" />：自定义顶部模板<br>
+            <ApiLink name="gantt" prop="bottom" />：自定义底部模板<br>
+            <ApiLink name="gantt" prop="left" />：自定义左边模板<br>
+            <ApiLink name="gantt" prop="right" />：自定义右边模板<br>
+            <ApiLink name="gantt" prop="asideLeft" />：自定义左侧模板<br>
+            <ApiLink name="gantt" prop="asideRight" />：自定义右侧模板<br>
+            <ApiLink name="gantt" prop="pager" />：自定义分页模板<br>
           </div>
         </vxe-tip>
       </template>

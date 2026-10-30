@@ -1,15 +1,16 @@
 <template>
   <div>
     <vxe-upload
+      v-model="fileList"
       multiple
       show-progress
       show-error-status
-      v-model="fileList"
       :upload-method="uploadMethod"
       @change="changeEvent"
       @upload-success="uploadSuccessEvent"
       @upload-error="uploadErrorEvent"
-      @upload-queue-end="uploadQueueEndEvent">
+      @upload-queue-end="uploadQueueEndEvent"
+    >
     </vxe-upload>
   </div>
 </template>

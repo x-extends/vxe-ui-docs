@@ -2,7 +2,8 @@
   <div>
     <vxe-form
       title-width="120"
-      :data="formData">
+      :data="formData"
+    >
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-item title="下拉表格单选" field="currUser" span="24" :item-render="currUserItemRender"></vxe-form-item>
       <vxe-form-item title="下拉表格多选" field="currUserList" span="24" :item-render="currUserListItemRender"></vxe-form-item>

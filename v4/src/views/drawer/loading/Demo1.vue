@@ -2,12 +2,13 @@
   <div>
     <vxe-button content="点击弹出" @click="openEvent"></vxe-button>
     <vxe-drawer
+      v-model="showPopup"
       show-footer
       show-cancel-button
       show-confirm-button
-      v-model="showPopup"
       :width="600"
-      :loading="loading">
+      :loading="loading"
+    >
       <div>显示加载中</div>
     </vxe-drawer>
   </div>

@@ -1,11 +1,12 @@
 <template>
   <div>
     <vxe-upload
+      v-model="fileList"
       show-download-button
       readonly
-      v-model="fileList"
       :download-method="downloadMethod"
-      :before-download-method="beforeDownloadMethod">
+      :before-download-method="beforeDownloadMethod"
+    >
     </vxe-upload>
   </div>
 </template>

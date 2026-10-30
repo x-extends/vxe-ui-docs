@@ -3,7 +3,8 @@
     <vxe-tree
       transform
       height="300"
-      :data="treeList">
+      :data="treeList"
+    >
       <template #header>
         <vxe-notice-bar style="background: burlywood;">自定义头部区域</vxe-notice-bar>
       </template>

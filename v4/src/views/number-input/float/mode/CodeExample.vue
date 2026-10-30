@@ -11,7 +11,7 @@
     <CodeLight path="number-input/float/mode/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          通过 <ApiLink name="number-input" prop="rounding-mode"/>='round' 来设置默认四舍五入，多数金融/数学教材采用此规则
+          通过 <ApiLink name="number-input" prop="rounding-mode" />='round' 来设置默认四舍五入，多数金融/数学教材采用此规则
         </vxe-tip>
       </template>
     </CodeLight>
@@ -19,7 +19,7 @@
     <CodeLight path="number-input/float/mode/Demo3">
       <template #tip>
         <vxe-tip status="primary">
-          通过 <ApiLink name="number-input" prop="rounding-mode"/>='ceil' 设置向上舍入
+          通过 <ApiLink name="number-input" prop="rounding-mode" />='ceil' 设置向上舍入
         </vxe-tip>
       </template>
     </CodeLight>
@@ -27,7 +27,7 @@
     <CodeLight path="number-input/float/mode/Demo4">
       <template #tip>
         <vxe-tip status="primary">
-          通过 <ApiLink name="number-input" prop="rounding-mode"/>='floor' 设置向下舍去
+          通过 <ApiLink name="number-input" prop="rounding-mode" />='floor' 设置向下舍去
         </vxe-tip>
       </template>
     </CodeLight>

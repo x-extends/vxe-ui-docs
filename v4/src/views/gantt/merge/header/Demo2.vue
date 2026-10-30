@@ -4,7 +4,7 @@
     <vxe-button @click="setMerge2">设置合并2</vxe-button>
     <vxe-button status="success" @click="saveMergeData">获取合并规则</vxe-button>
 
-    <vxe-gantt  ref="ganttRef" v-bind="ganttOptions"></vxe-gantt>
+    <vxe-gantt ref="ganttRef" v-bind="ganttOptions"></vxe-gantt>
   </div>
 </template>
 

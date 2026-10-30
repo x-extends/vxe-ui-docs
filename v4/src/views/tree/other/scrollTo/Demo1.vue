@@ -8,14 +8,15 @@
     </div>
 
     <vxe-tree
-      transform
       ref="treeRef"
+      transform
       height="300"
       title-field="title"
       key-field="id"
       parent-field="parentId"
       :node-config="nodeConfig"
-      :data="treeList">
+      :data="treeList"
+    >
     </vxe-tree>
   </div>
 </template>

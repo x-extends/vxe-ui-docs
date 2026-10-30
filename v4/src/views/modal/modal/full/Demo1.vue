@@ -2,16 +2,17 @@
   <div>
     <vxe-button content="点击弹出" @click="showPopup = true"></vxe-button>
     <vxe-modal
+      v-model="showPopup"
       show-footer
       show-confirm-button
       show-cancel-button
       show-maximize
       resize
-      v-model="showPopup"
       confirm-button-text="自定义确认"
       cancel-button-text="自定义取消"
       :width="600"
-      :height="400">
+      :height="400"
+    >
       <template #default>
         <div>支持移动窗口</div>
         <div>支持调整宽高</div>

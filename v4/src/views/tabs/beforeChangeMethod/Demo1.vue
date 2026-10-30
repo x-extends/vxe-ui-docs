@@ -1,14 +1,15 @@
 <template>
   <div>
     <vxe-tabs
-      padding
       v-model="selectTab"
+      padding
       type="round-card"
       :height="140"
       :options="tabList"
       :before-change-method="beforeChangeMethod"
       @tab-change="tabChangeEvent"
-      @tab-change-fail="tabChangeFailEvent">
+      @tab-change-fail="tabChangeFailEvent"
+    >
       <template #default1>
         <div>内容1</div>
         <div>内容1</div>

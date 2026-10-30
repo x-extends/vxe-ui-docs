@@ -3,7 +3,7 @@
     <CodeLight path="date-picker/month/masked/isArrow/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="方向键操作">
-          通过 <ApiLink name="date-picker" prop="masked-config"/>.<ApiLink name="date-picker" prop="isArrow"/> 来启用方向键操作，对于全键盘操作时该功能将非常适用
+          通过 <ApiLink name="date-picker" prop="masked-config" />.<ApiLink name="date-picker" prop="isArrow" /> 来启用方向键操作，对于全键盘操作时该功能将非常适用
         </vxe-tip>
       </template>
 
@@ -23,7 +23,7 @@
     <CodeLight path="date-picker/month/masked/isArrow/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          还可以通过 <ApiLink name="date-picker" prop="popup-config"/>.<ApiLink name="date-picker" prop="enabled"/> 来关闭日期面板，也可以全局设置启用和关闭
+          还可以通过 <ApiLink name="date-picker" prop="popup-config" />.<ApiLink name="date-picker" prop="enabled" /> 来关闭日期面板，也可以全局设置启用和关闭
         </vxe-tip>
       </template>
     </CodeLight>

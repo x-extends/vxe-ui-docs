@@ -2,7 +2,8 @@
   <div>
     <vxe-form
       title-width="120"
-      :data="formData">
+      :data="formData"
+    >
       <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
         <template #default>
           <vxe-input v-model="formData.name"></vxe-input>
@@ -20,12 +21,12 @@
       </vxe-form-item>
       <vxe-form-item title="下拉框分组" field="type" span="24" :item-render="{}">
         <template #default>
-          <vxe-select v-model="formData.type" :optionGroups="typeOptions"></vxe-select>
+          <vxe-select v-model="formData.type" :option-groups="typeOptions"></vxe-select>
         </template>
       </vxe-form-item>
       <vxe-form-item title="下拉框分组多选" field="typeList" span="24" :item-render="{}">
         <template #default>
-          <vxe-select v-model="formData.typeList" :optionGroups="typeOptions" multiple></vxe-select>
+          <vxe-select v-model="formData.typeList" :option-groups="typeOptions" multiple></vxe-select>
         </template>
       </vxe-form-item>
       <vxe-form-item align="center" span="24">

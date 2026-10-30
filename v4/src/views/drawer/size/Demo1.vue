@@ -1,32 +1,32 @@
 <template>
   <div>
     <vxe-button content="默认尺寸" @click="val1 = true"></vxe-button>
-      <vxe-drawer v-model="val1" :width="600" show-footer show-confirm-button>
-        <template #default>
-          <div>默认尺寸</div>
-        </template>
-      </vxe-drawer>
+    <vxe-drawer v-model="val1" :width="600" show-footer show-confirm-button>
+      <template #default>
+        <div>默认尺寸</div>
+      </template>
+    </vxe-drawer>
 
-      <vxe-button content="中等尺寸" @click="val2 = true" size="medium"></vxe-button>
-      <vxe-drawer v-model="val2" :width="600" size="medium" show-footer show-confirm-button>
-        <template #default>
-          <div>中等尺寸</div>
-        </template>
-      </vxe-drawer>
+    <vxe-button content="中等尺寸" size="medium" @click="val2 = true"></vxe-button>
+    <vxe-drawer v-model="val2" :width="600" size="medium" show-footer show-confirm-button>
+      <template #default>
+        <div>中等尺寸</div>
+      </template>
+    </vxe-drawer>
 
-      <vxe-button content="小型尺寸" @click="val3 = true" size="small"></vxe-button>
-      <vxe-drawer v-model="val3" :width="600" size="small" show-footer show-confirm-button>
-        <template #default>
-          <div>小型尺寸</div>
-        </template>
-      </vxe-drawer>
+    <vxe-button content="小型尺寸" size="small" @click="val3 = true"></vxe-button>
+    <vxe-drawer v-model="val3" :width="600" size="small" show-footer show-confirm-button>
+      <template #default>
+        <div>小型尺寸</div>
+      </template>
+    </vxe-drawer>
 
-      <vxe-button content="超小尺寸" @click="val4 = true" size="mini"></vxe-button>
-      <vxe-drawer v-model="val4" :width="600" size="mini" show-footer show-confirm-button>
-        <template #default>
-          <div>超小尺寸</div>
-        </template>
-      </vxe-drawer>
+    <vxe-button content="超小尺寸" size="mini" @click="val4 = true"></vxe-button>
+    <vxe-drawer v-model="val4" :width="600" size="mini" show-footer show-confirm-button>
+      <template #default>
+        <div>超小尺寸</div>
+      </template>
+    </vxe-drawer>
   </div>
 </template>
 

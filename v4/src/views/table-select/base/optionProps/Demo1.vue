@@ -5,7 +5,8 @@
       :columns="columnList"
       :options="tableData"
       :option-props="{value: 'id', label: 'name'}"
-      @change="changeEvent">
+      @change="changeEvent"
+    >
     </vxe-table-select>
   </div>
 </template>

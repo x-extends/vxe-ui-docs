@@ -1,10 +1,11 @@
 <template>
   <div>
     <vxe-upload
+      v-model="imgList"
       multiple
       show-progress
       mode="image"
-      v-model="imgList">
+    >
       <template #action>
         <vxe-button mode="text" icon="vxe-icon-edit" status="primary"></vxe-button>
         <vxe-button mode="text" icon="vxe-icon-question-circle" status="error"></vxe-button>

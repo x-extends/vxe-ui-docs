@@ -3,7 +3,7 @@
     <CodeLight path="tabs/position/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="页签显示位置">
-          通过 <ApiLink name="tabs" prop="position"/> 来设置页签显示位置
+          通过 <ApiLink name="tabs" prop="position" /> 来设置页签显示位置
         </vxe-tip>
       </template>
     </CodeLight>

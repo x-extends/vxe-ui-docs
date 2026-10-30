@@ -2,7 +2,8 @@
   <div>
     <vxe-tree
       :node-config="nodeConfig"
-      :data="treeList">
+      :data="treeList"
+    >
     </vxe-tree>
   </div>
 </template>

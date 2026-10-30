@@ -3,7 +3,7 @@
     <CodeLight path="number-input/number/layout/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="按钮布局">
-          左右布局，可以通过 <ApiLink name="number-input" prop="control-config"/>.<ApiLink name="number-input" prop="layout"/> 设置
+          左右布局，可以通过 <ApiLink name="number-input" prop="control-config" />.<ApiLink name="number-input" prop="layout" /> 设置
         </vxe-tip>
       </template>
     </CodeLight>

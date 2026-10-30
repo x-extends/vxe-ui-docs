@@ -1,11 +1,12 @@
 <template>
   <div>
     <vxe-cascader
-      show-radio
       v-model="val1"
+      show-radio
       :tree-config="treeConfig"
       :radio-config="radioConfig"
-      :options="treeList">
+      :options="treeList"
+    >
     </vxe-cascader>
   </div>
 </template>

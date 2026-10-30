@@ -3,7 +3,8 @@
     <vxe-form
       title-width="120"
       title-align="right"
-      :data="formData">
+      :data="formData"
+    >
       <vxe-form-item title="Name" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-item title="Sex" field="sex" span="12" :item-render="sexItemRender"></vxe-form-item>
       <vxe-form-item title="Role" field="role" span="12" :item-render="roleItemRender"></vxe-form-item>

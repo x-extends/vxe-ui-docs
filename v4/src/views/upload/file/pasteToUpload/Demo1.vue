@@ -3,10 +3,11 @@
     <span>是否启用：</span>
     <vxe-switch v-model="pasteToUpload"></vxe-switch>
     <vxe-upload
-      multiple
       v-model="fileList"
+      multiple
       :paste-to-upload="pasteToUpload"
-      :upload-method="uploadMethod">
+      :upload-method="uploadMethod"
+    >
     </vxe-upload>
   </div>
 </template>

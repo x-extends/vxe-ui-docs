@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-form v-bind="formOptions" >
+    <vxe-form v-bind="formOptions">
       <template #action>
         <vxe-button type="reset">重置</vxe-button>
         <vxe-button type="submit" status="primary">提交</vxe-button>

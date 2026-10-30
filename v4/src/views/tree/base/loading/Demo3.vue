@@ -5,7 +5,8 @@
       height="300"
       :loading="loading"
       :node-config="nodeConfig"
-      :data="treeList">
+      :data="treeList"
+    >
       <template #loading>
         <img src="https://vxeui.com/resource/img/546.gif" style="width: 100px;">
         <div>正在加载中，请稍后...</div>

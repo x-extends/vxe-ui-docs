@@ -1,11 +1,12 @@
 <template>
   <div>
     <vxe-upload
+      v-model="fileList"
       multiple
       paste-to-upload
-      v-model="fileList"
       :more-config="moreConfig"
-      :upload-method="uploadMethod">
+      :upload-method="uploadMethod"
+    >
     </vxe-upload>
   </div>
 </template>

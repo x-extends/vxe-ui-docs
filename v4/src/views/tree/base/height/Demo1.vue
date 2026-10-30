@@ -4,7 +4,8 @@
       transform
       height="400"
       :node-config="nodeConfig"
-      :data="treeList">
+      :data="treeList"
+    >
     </vxe-tree>
   </div>
 </template>

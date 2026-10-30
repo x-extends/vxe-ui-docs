@@ -17,11 +17,11 @@
     </div>
 
     <div>
-    <vxe-input v-model="val4">
-      <template #suffix>
-        <vxe-button statys="primary">搜索</vxe-button>
-      </template>
-    </vxe-input>
+      <vxe-input v-model="val4">
+        <template #suffix>
+          <vxe-button statys="primary">搜索</vxe-button>
+        </template>
+      </vxe-input>
     </div>
 
     <div>

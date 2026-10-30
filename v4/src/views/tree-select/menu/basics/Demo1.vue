@@ -5,7 +5,8 @@
       :tree-config="treeConfig"
       :menu-config="menuConfig"
       :options="treeList"
-      :option-props="{label: 'title', value: 'id'}">
+      :option-props="{label: 'title', value: 'id'}"
+    >
     </vxe-tree-select>
   </div>
 </template>

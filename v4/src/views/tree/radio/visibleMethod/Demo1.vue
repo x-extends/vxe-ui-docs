@@ -8,7 +8,8 @@
 
     <vxe-tree
       v-bind="treeOptions"
-      v-model:check-node-key="checkNodeKey">
+      v-model:check-node-key="checkNodeKey"
+    >
     </vxe-tree>
   </div>
 </template>

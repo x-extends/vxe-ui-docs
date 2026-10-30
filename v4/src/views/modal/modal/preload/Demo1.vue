@@ -2,12 +2,13 @@
   <div>
     <vxe-button content="点击弹出1" @click="showPopup1 = true"></vxe-button>
     <vxe-modal
+      v-model="showPopup1"
       show-footer
       show-cancel-button
       show-confirm-button
-      v-model="showPopup1"
       :width="600"
-      :height="400">
+      :height="400"
+    >
       <template #default>
         <div>{{ myConten1 }}显示内容</div>
       </template>
@@ -15,13 +16,14 @@
 
     <vxe-button content="点击弹出2（预加载）" @click="showPopup2 = true"></vxe-button>
     <vxe-modal
+      v-model="showPopup2"
       show-footer
       show-cancel-button
       show-confirm-button
       preload
-      v-model="showPopup2"
       :width="600"
-      :height="400">
+      :height="400"
+    >
       <template #default>
         <div>{{ myConten2 }}显示内容</div>
       </template>

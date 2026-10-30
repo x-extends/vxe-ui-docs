@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <vxe-gantt ref="ganttRef" v-bind="ganttOptions">
       <template #checkbox1="{ row }">
         <vxe-checkbox v-model="row.checked1"></vxe-checkbox>

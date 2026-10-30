@@ -11,7 +11,7 @@
     <CodeLight path="date-range-picker/date/base/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          通过 <ApiLink name="date-range-picker" prop="value-format"/>="date" 设置为 Date 类型
+          通过 <ApiLink name="date-range-picker" prop="value-format" />="date" 设置为 Date 类型
         </vxe-tip>
       </template>
     </CodeLight>
@@ -19,7 +19,7 @@
     <CodeLight path="date-range-picker/date/base/Demo3">
       <template #tip>
         <vxe-tip status="primary">
-          通过 <ApiLink name="date-range-picker" prop="value-format"/>="timestamp" 设置为 number 时间戳
+          通过 <ApiLink name="date-range-picker" prop="value-format" />="timestamp" 设置为 number 时间戳
         </vxe-tip>
       </template>
     </CodeLight>
@@ -27,7 +27,7 @@
     <CodeLight path="date-range-picker/date/base/Demo4">
       <template #tip>
         <vxe-tip status="primary">
-        通过 <ApiLink name="date-range-picker" prop="value-format"/>="dd/MM/yyyy" 设置自定义的格式
+          通过 <ApiLink name="date-range-picker" prop="value-format" />="dd/MM/yyyy" 设置自定义的格式
         </vxe-tip>
       </template>
     </CodeLight>

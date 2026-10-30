@@ -5,7 +5,8 @@
     <vxe-form
       ref="formRef"
       :data="formData"
-      :rules="formRules">
+      :rules="formRules"
+    >
       <vxe-form-item title="名称" field="name" span="12" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>

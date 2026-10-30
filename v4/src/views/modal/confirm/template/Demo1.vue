@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-modal v-model="showConfirm" type="confirm" title="标题" showFooter>
+    <vxe-modal v-model="showConfirm" type="confirm" title="标题" show-footer>
       <template #default>
         <span>
           <vxe-icon name="question-circle-fill" />

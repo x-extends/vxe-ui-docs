@@ -4,7 +4,8 @@
       :data="formData"
       :rules="formRules"
       @submit="submitEvent"
-      @reset="resetEvent">
+      @reset="resetEvent"
+    >
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-item title="2个字段格式" field="_startAndEnd" span="24" :item-render="{ name: 'VxeDateRangePicker', startField: 'startDate', endField: 'endDate' }"></vxe-form-item>
       <vxe-form-item align="center" span="24">

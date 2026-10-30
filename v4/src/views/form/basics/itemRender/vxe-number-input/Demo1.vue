@@ -2,7 +2,8 @@
   <div>
     <vxe-form
       title-width="120"
-      :data="formData">
+      :data="formData"
+    >
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-item title="数值" field="num" span="24" :item-render="{ name: 'VxeNumberInput' }"></vxe-form-item>
       <vxe-form-item title="整数" field="integer" span="24" :item-render="{ name: 'VxeNumberInput', props: { type: 'integer' } }"></vxe-form-item>

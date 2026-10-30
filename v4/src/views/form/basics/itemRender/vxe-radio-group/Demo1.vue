@@ -2,7 +2,8 @@
   <div>
     <vxe-form
       title-width="120"
-      :data="formData">
+      :data="formData"
+    >
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-item title="单选框" field="hobbies1" span="24" :item-render="hobbies1ItemRender"></vxe-form-item>
       <vxe-form-item title="单选按钮" field="hobbies2" span="24" :item-render="hobbies2ItemRender"></vxe-form-item>

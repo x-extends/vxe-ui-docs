@@ -2,11 +2,12 @@
   <div>
     <vxe-switch v-model="dragToUpload"></vxe-switch>
     <vxe-upload
+      v-model="imgList"
       multiple
       mode="image"
-      v-model="imgList"
       :drag-to-upload="dragToUpload"
-      :upload-method="uploadMethod">
+      :upload-method="uploadMethod"
+    >
     </vxe-upload>
   </div>
 </template>

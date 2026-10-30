@@ -3,14 +3,15 @@
     <vxe-switch v-model="vertical"></vxe-switch>
 
     <vxe-form
+      ref="formRef"
       border
       title-background
-      ref="formRef"
       :vertical="vertical"
       :data="formData"
       :rules="formRules"
       @submit="submitEvent"
-      @reset="resetEvent">
+      @reset="resetEvent"
+    >
       <vxe-form-item title="名称" field="name" span="12" :rules="nameRules" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>

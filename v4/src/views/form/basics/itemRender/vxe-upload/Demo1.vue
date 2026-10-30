@@ -2,7 +2,8 @@
   <div>
     <vxe-form
       title-width="120"
-      :data="formData">
+      :data="formData"
+    >
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-item title="上传附件" field="fileList1" span="24" :item-render="fileList1Render"></vxe-form-item>
       <vxe-form-item title="上传附件多选" field="fileList2" span="24" :item-render="fileList2ItemRender"></vxe-form-item>

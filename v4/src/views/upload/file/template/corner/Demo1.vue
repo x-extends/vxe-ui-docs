@@ -1,9 +1,10 @@
 <template>
   <div>
     <vxe-upload
+      v-model="fileList"
       multiple
       show-progress
-      v-model="fileList">
+    >
       <template #corner>
         <vxe-button mode="text" icon="vxe-icon-edit" status="primary"></vxe-button>
         <vxe-button mode="text" icon="vxe-icon-question-circle" status="error"></vxe-button>

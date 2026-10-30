@@ -3,17 +3,18 @@
     <vxe-gantt ref="ganttRef" v-bind="ganttOptions" v-on="ganttEvents"></vxe-gantt>
 
     <vxe-modal
+      v-model="showEditPopup"
       resize
       destroy-on-close
       show-footer
       show-confirm-button
       show-cancel-button
-      v-model="showEditPopup"
       title="编辑任务"
       width="680"
       height="620"
       :confirm-closable="false"
-      @confirm="confirmEvent">
+      @confirm="confirmEvent"
+    >
       <vxe-form ref="formRef" v-bind="formOptions"></vxe-form>
     </vxe-modal>
   </div>

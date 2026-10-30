@@ -11,7 +11,7 @@
     <CodeLight path="gantt/tree/seqMode/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          通过 <ApiLink name="gantt" prop="tree-config"/>.<ApiLink name="gantt" prop="seqMode"/>='increasing' 设置为自增序号
+          通过 <ApiLink name="gantt" prop="tree-config" />.<ApiLink name="gantt" prop="seqMode" />='increasing' 设置为自增序号
         </vxe-tip>
       </template>
     </CodeLight>
@@ -19,7 +19,7 @@
     <CodeLight path="gantt/tree/seqMode/Demo3">
       <template #tip>
         <vxe-tip status="primary">
-          通过 <ApiLink name="gantt" prop="tree-config"/>.<ApiLink name="gantt" prop="seqMode"/>='fixed' 设置为固定序号
+          通过 <ApiLink name="gantt" prop="tree-config" />.<ApiLink name="gantt" prop="seqMode" />='fixed' 设置为固定序号
         </vxe-tip>
       </template>
     </CodeLight>

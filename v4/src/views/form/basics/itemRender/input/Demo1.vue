@@ -2,7 +2,8 @@
   <div>
     <vxe-form
       title-width="120"
-      :data="formData">
+      :data="formData"
+    >
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'input' }"></vxe-form-item>
       <vxe-form-item title="文本框" field="nickname" span="24" :item-render="{ name: 'input' }"></vxe-form-item>
       <vxe-form-item title="数字" field="age" span="24" :item-render="{ name: 'input', attrs: { type: 'number' } }"></vxe-form-item>

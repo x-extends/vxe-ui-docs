@@ -5,7 +5,8 @@
       height="300"
       :loading="loading"
       :node-config="nodeConfig"
-      :data="treeList">
+      :data="treeList"
+    >
     </vxe-tree>
   </div>
 </template>

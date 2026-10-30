@@ -6,7 +6,8 @@
       :loading="loading"
       :loading-config="{icon: 'vxe-icon-indicator roll', text: '正在拼命加载中...'}"
       :node-config="nodeConfig"
-      :data="treeList">
+      :data="treeList"
+    >
     </vxe-tree>
   </div>
 </template>

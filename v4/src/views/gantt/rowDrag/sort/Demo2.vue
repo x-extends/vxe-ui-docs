@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-gantt  v-bind="ganttOptions"></vxe-gantt>
+    <vxe-gantt v-bind="ganttOptions"></vxe-gantt>
   </div>
 </template>
 

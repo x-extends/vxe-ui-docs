@@ -20,6 +20,6 @@
         <vxe-button content="文本按钮2" status="success"></vxe-button>
         <vxe-button content="文本按钮3" status="error"></vxe-button>
       </vxe-button-group>
-      </p>
+    </p>
   </div>
 </template>

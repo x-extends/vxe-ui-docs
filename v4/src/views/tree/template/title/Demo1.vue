@@ -2,7 +2,8 @@
   <div>
     <vxe-tree
       transform
-      :data="treeList">
+      :data="treeList"
+    >
       <template #title="{ node }">
         <vxe-icon status="success" name="chart-bar-y"></vxe-icon>
         <span>{{ node.title }}</span>

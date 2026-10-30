@@ -6,7 +6,8 @@
       key-field="id"
       parent-field="parentId"
       empty-text="已经没有更多数据了！"
-      :data="treeList">
+      :data="treeList"
+    >
     </vxe-tree>
   </div>
 </template>

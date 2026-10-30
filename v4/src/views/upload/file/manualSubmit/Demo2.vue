@@ -3,17 +3,18 @@
     <vxe-button status="primary" @click="submitEvent">点击手动上传</vxe-button>
 
     <vxe-upload
+      ref="refUpload"
+      v-model="fileList"
       multiple
       show-progress
       show-submit-button
       show-error-status
-      v-model="fileList"
-      ref="refUpload"
       button-text="选择文件或拖拽到此"
       :auto-submit="false"
       :limit-count="9"
       :limit-size="50"
-      :upload-method="uploadMethod">
+      :upload-method="uploadMethod"
+    >
     </vxe-upload>
   </div>
 </template>

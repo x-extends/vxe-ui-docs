@@ -5,7 +5,7 @@
       <vxe-radio-button :checked-value="true" content="左右布局"></vxe-radio-button>
     </vxe-radio-group>
 
-    <vxe-form v-bind="formOptions" v-on="formEvents" ></vxe-form>
+    <vxe-form v-bind="formOptions" v-on="formEvents"></vxe-form>
   </div>
 </template>
 

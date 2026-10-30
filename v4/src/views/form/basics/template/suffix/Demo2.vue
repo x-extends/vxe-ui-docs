@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-form vertical :data="formData" >
+    <vxe-form vertical :data="formData">
       <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
         <template #suffix>
           <vxe-button mode="text" status="primary" icon="vxe-icon-add-user"></vxe-button>

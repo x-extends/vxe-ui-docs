@@ -1,6 +1,7 @@
 <template>
   <div>
     <vxe-cascader
+      v-model="val1"
       multiple
       show-checkbox
       filterable
@@ -9,9 +10,9 @@
       show-clear-button
       show-total-button
       show-close-button
-      v-model="val1"
       :options="treeList"
-      :option-props="{value: 'id', label: 'name'}">
+      :option-props="{value: 'id', label: 'name'}"
+    >
     </vxe-cascader>
   </div>
 </template>

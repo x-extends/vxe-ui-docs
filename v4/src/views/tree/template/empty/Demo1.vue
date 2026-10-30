@@ -3,7 +3,8 @@
     <vxe-tree
       transform
       height="300"
-      :data="treeList">
+      :data="treeList"
+    >
       <template #empty>
         <vxe-empty content="没有更多数据了！"></vxe-empty>
       </template>

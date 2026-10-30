@@ -1,13 +1,14 @@
 <template>
   <div>
     <vxe-form
-      title-colon
       ref="formRef"
+      title-colon
       title-width="100"
       title-align="right"
       :collapse-config="{ foldButtonText: '关闭', unfoldButtonText: '更多', foldIcon: 'vxe-icon-funnel', unfoldIcon: 'vxe-icon-error-circle' }"
       :data="formData"
-      @submit="submitEvent">
+      @submit="submitEvent"
+    >
       <vxe-form-item title="名称" field="name" span="12" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>

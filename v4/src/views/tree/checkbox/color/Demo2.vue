@@ -9,7 +9,8 @@
       :style="{
         '--vxe-ui-tree-node-checkbox-indeterminate-color': indeterminateColor,
         '--vxe-ui-tree-node-checkbox-checked-color': checkedColor
-      }">
+      }"
+    >
     </vxe-tree>
   </div>
 </template>

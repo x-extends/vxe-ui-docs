@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-date-range-picker v-model:start-value="startDate" v-model:end-value="endDate" :show-clear-button="false" clearable ></vxe-date-range-picker>
+    <vxe-date-range-picker v-model:start-value="startDate" v-model:end-value="endDate" :show-clear-button="false" clearable></vxe-date-range-picker>
   </div>
 </template>
 

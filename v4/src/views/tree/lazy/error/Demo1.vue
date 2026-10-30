@@ -2,7 +2,8 @@
   <div>
     <vxe-tree
       v-bind="treeOptions"
-      v-on="treeEvents">
+      v-on="treeEvents"
+    >
     </vxe-tree>
   </div>
 </template>

@@ -46,26 +46,28 @@
         <pre>
           <pre-code
             language="json"
-            :content='`
+            :content="`
             {
               ...
-              "vxe-pc-ui": "^${uiLibVersion}",
-              "vxe-table": "^${tableLibVersion}"
+              &quot;vxe-pc-ui&quot;: &quot;^${uiLibVersion}&quot;,
+              &quot;vxe-table&quot;: &quot;^${tableLibVersion}&quot;
               ...
             }
-            `'>
+            `"
+>
           </pre-code>
           改成
           <pre-code
             language="json"
-            :content='`
+            :content="`
             {
               ...
-              "vxe-pc-ui": "~${uiLibVersion}",
-              "vxe-table": "~${tableLibVersion}"
+              &quot;vxe-pc-ui&quot;: &quot;~${uiLibVersion}&quot;,
+              &quot;vxe-table&quot;: &quot;~${tableLibVersion}&quot;
               ...
             }
-            `'>
+            `"
+>
           </pre-code>
         </pre>
       </template>
@@ -74,7 +76,7 @@
     <CodeLight>
       <template #use>
         <div>
-          如果您使用了 webpack，借助插件 <vxe-link  href="https://www.npmjs.com/package/babel-plugin-import" target="_blank">babel-plugin-import</vxe-link> 可以实现按需加载模块。
+          如果您使用了 webpack，借助插件 <vxe-link href="https://www.npmjs.com/package/babel-plugin-import" target="_blank">babel-plugin-import</vxe-link> 可以实现按需加载模块。
         </div>
         <pre>
           <pre-code class="shell">

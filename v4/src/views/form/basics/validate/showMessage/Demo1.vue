@@ -4,14 +4,15 @@
     显示提示：<vxe-switch v-model="validConfig.showErrorMessage"></vxe-switch>
 
     <vxe-form
-      title-colon
       ref="formRef"
+      title-colon
       :vertical="vertical"
       :data="formData"
       :rules="formRules"
       :valid-config="validConfig"
       @submit="submitEvent"
-      @reset="resetEvent">
+      @reset="resetEvent"
+    >
       <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>

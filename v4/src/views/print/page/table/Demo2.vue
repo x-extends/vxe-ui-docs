@@ -3,12 +3,13 @@
     <vxe-button @click="printEvent">分页打印表格</vxe-button>
 
     <vxe-table
+      ref="tableRef"
       border
       show-footer
       height="500"
-      ref="tableRef"
       :data="tableData"
-      :footer-data="footerData">
+      :footer-data="footerData"
+    >
       <vxe-column field="id" title="ID" width="60"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="num" title="Num"></vxe-column>

@@ -21,7 +21,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="my-tr" v-for="row in items" :key="row.id">
+            <tr v-for="row in items" :key="row.id" class="my-tr">
               <td>{{ row.col1 }}</td>
               <td>{{ row.col2 }}</td>
               <td>{{ row.col3 }}</td>

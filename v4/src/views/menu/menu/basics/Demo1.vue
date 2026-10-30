@@ -5,7 +5,8 @@
         v-model="selectNav"
         :options="navList"
         :menu-config="menuConfig"
-        @menu-click="menuClickEvent">
+        @menu-click="menuClickEvent"
+      >
       </vxe-menu>
     </div>
   </div>

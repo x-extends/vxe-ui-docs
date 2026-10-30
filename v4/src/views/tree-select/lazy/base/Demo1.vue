@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-tree-select v-model="val1" :options="treeList" :treeConfig="treeConfig" clearable></vxe-tree-select>
+    <vxe-tree-select v-model="val1" :options="treeList" :tree-config="treeConfig" clearable></vxe-tree-select>
   </div>
 </template>
 

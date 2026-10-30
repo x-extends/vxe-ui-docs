@@ -2,7 +2,8 @@
   <div>
     <vxe-form
       title-width="120"
-      :data="formData">
+      :data="formData"
+    >
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-item title="字符串格式" field="selectDate" span="24" :item-render="{ name: 'VxeDateRangePicker' }"></vxe-form-item>
       <vxe-form-item title="数组格式" field="dates" span="24" :item-render="{ name: 'VxeDateRangePicker' }"></vxe-form-item>

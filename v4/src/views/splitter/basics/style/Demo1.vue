@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <vxe-splitter height="300" :action-config="actionConfig" :bar-config="barConfig" border>
       <vxe-splitter-panel width="100">
         <template #default>

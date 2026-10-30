@@ -4,13 +4,14 @@
     <vxe-button status="success" @click="getFileEvent">获取未上传文件列表</vxe-button>
 
     <vxe-upload
+      ref="refUpload"
+      v-model="fileList"
       multiple
       show-progress
-      v-model="fileList"
-      ref="refUpload"
       mode="image"
       :auto-submit="false"
-      :upload-method="uploadMethod">
+      :upload-method="uploadMethod"
+    >
     </vxe-upload>
   </div>
 </template>

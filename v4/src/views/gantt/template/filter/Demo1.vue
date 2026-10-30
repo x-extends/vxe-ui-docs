@@ -2,7 +2,7 @@
   <div>
     <vxe-gantt ref="ganttRef" v-bind="ganttOptions">
       <template #sex_filter="{ column }">
-        <vxe-input v-model="option.data" v-for="(option, index) in column.filters" :key="index" @change="changeFilterEvent(option)"></vxe-input>
+        <vxe-input v-for="(option, index) in column.filters" :key="index" v-model="option.data" @change="changeFilterEvent(option)"></vxe-input>
       </template>
     </vxe-gantt>
   </div>

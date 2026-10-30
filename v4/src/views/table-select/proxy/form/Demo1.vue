@@ -58,17 +58,17 @@ const findPageList = (pageSize: number, currentPage: number, formData: any) => {
       const searchVal = `${formData.name || ''}`.toLowerCase()
       const rest = searchVal
         ? list.filter(item => {
-            if (`${item.label}`.toLowerCase().indexOf(searchVal) > -1) {
-              return true
-            }
-            if (`${item.role}`.toLowerCase().indexOf(searchVal) > -1) {
-              return true
-            }
-            if (`${item.address}`.toLowerCase().indexOf(searchVal) > -1) {
-              return true
-            }
-            return false
-          })
+          if (`${item.label}`.toLowerCase().indexOf(searchVal) > -1) {
+            return true
+          }
+          if (`${item.role}`.toLowerCase().indexOf(searchVal) > -1) {
+            return true
+          }
+          if (`${item.address}`.toLowerCase().indexOf(searchVal) > -1) {
+            return true
+          }
+          return false
+        })
         : list
       resolve({
         result: rest.slice((currentPage - 1) * pageSize, currentPage * pageSize),

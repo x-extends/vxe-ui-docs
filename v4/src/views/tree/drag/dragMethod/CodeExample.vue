@@ -3,15 +3,15 @@
     <CodeLight path="tree/drag/dragMethod/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="拖拽拦截">
-          通过 <ApiLink name="tree" prop="drag-config"/>.<ApiLink name="tree" prop="dragStartMethod"/> 可以自定义处理拖拽开始时的拖动
+          通过 <ApiLink name="tree" prop="drag-config" />.<ApiLink name="tree" prop="dragStartMethod" /> 可以自定义处理拖拽开始时的拖动
         </vxe-tip>
       </template>
     </CodeLight>
 
-    <CodeLight path="tree/drag/dragMethod/Demo2" previewPath="/resource/docsImg/tree_drag_drag_method.gif">
+    <CodeLight path="tree/drag/dragMethod/Demo2" preview-path="/resource/docsImg/tree_drag_drag_method.gif">
       <template #tip>
         <vxe-tip status="primary">
-          通过 <ApiLink name="tree" prop="drag-config"/>.<ApiLink name="tree" prop="dragEndMethod"/> 可以自定义处理拖拽结束时的拖动
+          通过 <ApiLink name="tree" prop="drag-config" />.<ApiLink name="tree" prop="dragEndMethod" /> 可以自定义处理拖拽结束时的拖动
         </vxe-tip>
       </template>
     </CodeLight>

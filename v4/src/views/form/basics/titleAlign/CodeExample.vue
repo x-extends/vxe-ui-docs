@@ -3,7 +3,7 @@
     <CodeLight path="form/basics/titleAlign/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="标题对齐方式">
-          通过 <ApiLink name="form" prop="title-align"/> 设置标题对齐方式，标题对齐方式需要设置标题宽度后生效
+          通过 <ApiLink name="form" prop="title-align" /> 设置标题对齐方式，标题对齐方式需要设置标题宽度后生效
         </vxe-tip>
       </template>
     </CodeLight>

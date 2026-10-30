@@ -1,10 +1,11 @@
 <template>
   <div>
     <vxe-pager
-      align="center"
       v-model:current-page="pageVO.currentPage"
       v-model:page-size="pageVO.pageSize"
-      :total="pageVO.total">
+      align="center"
+      :total="pageVO.total"
+    >
     </vxe-pager>
   </div>
 </template>

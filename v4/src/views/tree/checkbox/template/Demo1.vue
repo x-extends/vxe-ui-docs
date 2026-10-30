@@ -2,7 +2,8 @@
   <div>
     <vxe-tree
       v-bind="treeOptions"
-      v-model:check-node-keys="checkNodeKeys">
+      v-model:check-node-keys="checkNodeKeys"
+    >
       <template #title="{ node }">
         <span>{{ node.title }}</span>
         <vxe-icon status="error" name="warning-triangle"></vxe-icon>

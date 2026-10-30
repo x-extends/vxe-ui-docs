@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-form :data="formData" >
+    <vxe-form :data="formData">
       <vxe-form-item title="名称" field="name" span="24" :item-render="{}">
         <template #default>
           <vxe-input v-model="formData.name"></vxe-input>

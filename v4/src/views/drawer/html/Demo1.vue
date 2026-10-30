@@ -2,13 +2,14 @@
   <div>
     <vxe-button content="点击弹出" @click="openEvent"></vxe-button>
     <vxe-drawer
+      v-model="showPopup"
       show-footer
       show-cancel-button
       show-confirm-button
       use-html
-      v-model="showPopup"
       :width="600"
-      content='<div style="color: red;">内容11111111111111111</div><div><a href="https://vxeui.com" style="color: #409eff">点击查看官网</a></div>'>
+      content="<div style=&quot;color: red;&quot;>内容11111111111111111</div><div><a href=&quot;https://vxeui.com&quot; style=&quot;color: #409eff&quot;>点击查看官网</a></div>"
+    >
     </vxe-drawer>
   </div>
 </template>

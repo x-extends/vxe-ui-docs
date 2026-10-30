@@ -4,7 +4,8 @@
       v-model="val1"
       :tree-config="treeConfig"
       :options="treeList"
-      :option-props="{label: 'title', value: 'id'}">
+      :option-props="{label: 'title', value: 'id'}"
+    >
       <template #treeIcon="{ isExpand }">
         <vxe-icon v-if="isExpand" status="success" name="square-minus"></vxe-icon>
         <vxe-icon v-else status="error" name="square-plus"></vxe-icon>

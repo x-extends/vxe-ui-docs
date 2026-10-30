@@ -1,14 +1,15 @@
 <template>
   <div>
     <vxe-tabs
-      padding
       v-model="selectTab"
+      padding
       type="round-card"
       :height="140"
       :options="tabList"
       :close-config="closeConfig"
       :refresh-config="refreshConfig"
-      @tabClose="tabCloseEvent">
+      @tab-close="tabCloseEvent"
+    >
       <template #default1>
         <div>内容1</div>
         <div>内容1</div>

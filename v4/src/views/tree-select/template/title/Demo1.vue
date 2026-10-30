@@ -4,7 +4,8 @@
       v-model="val1"
       :tree-config="treeConfig"
       :options="treeList"
-      :option-props="{label: 'title', value: 'id'}">
+      :option-props="{label: 'title', value: 'id'}"
+    >
       <template #treeTitle="{ node }">
         <vxe-icon status="success" name="chart-bar-y"></vxe-icon>
         <span>{{ node.title }}</span>

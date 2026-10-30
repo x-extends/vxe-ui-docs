@@ -2,12 +2,13 @@
   <div>
     <vxe-button content="点击弹出" @click="showPopup = true"></vxe-button>
     <vxe-modal
+      v-model="showPopup"
       show-footer
       show-confirm-button
-      v-model="showPopup"
       :width="600"
       :height="400"
-      @confirm="confirmEvent">
+      @confirm="confirmEvent"
+    >
       <template #default>
         <div>显示确认按钮</div>
       </template>

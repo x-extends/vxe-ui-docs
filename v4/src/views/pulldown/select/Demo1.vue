@@ -6,7 +6,7 @@
       </template>
       <template #dropdown>
         <div class="dropdown-select">
-          <div class="list-item1" v-for="item in list" :key="item.value" @click="selectEvent(item)">
+          <div v-for="item in list" :key="item.value" class="list-item1" @click="selectEvent(item)">
             <i class="vxe-icon-user-fill"></i>
             <span>{{ item.label }}</span>
             <vxe-tag v-if="item.isOnline" class="is-online" status="success">在线</vxe-tag>

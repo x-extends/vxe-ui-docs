@@ -10,7 +10,8 @@
       :title-background="titleBackground"
       vertical-align="center"
       title-width="100"
-      :data="formData">
+      :data="formData"
+    >
       <vxe-form-item title="个人简历" field="name" span="24" title-align="center" :show-content="false" title-bold></vxe-form-item>
       <vxe-form-item title="名称" field="name" span="12" :item-render="{name: 'VxeInput'}"></vxe-form-item>
       <vxe-form-item title="性别" field="sex" span="12" :item-render="{name: 'VxeInput'}"></vxe-form-item>

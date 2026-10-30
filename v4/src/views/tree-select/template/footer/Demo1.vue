@@ -4,7 +4,8 @@
       v-model="val1"
       :tree-config="treeConfig"
       :options="treeList"
-      :option-props="{label: 'title', value: 'id'}">
+      :option-props="{label: 'title', value: 'id'}"
+    >
       <template #footer>
         <vxe-notice-bar loop style="background: dodgerblue;">自定义尾部区域</vxe-notice-bar>
       </template>

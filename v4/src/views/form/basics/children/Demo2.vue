@@ -1,12 +1,13 @@
 <template>
   <div>
     <vxe-form
+      ref="formRef"
       border
       title-background
-      ref="formRef"
       :data="formData"
       @submit="submitEvent"
-      @reset="resetEvent">
+      @reset="resetEvent"
+    >
       <vxe-form-group span="12">
         <vxe-form-item title="名称" field="name" span="12" :item-render="{}">
           <template #default="params">

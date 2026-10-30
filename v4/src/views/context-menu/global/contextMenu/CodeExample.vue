@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight path="context-menu/global/contextMenu/Demo1" previewPath="/resource/docsImg/context_menu_global_open.gif">
+    <CodeLight path="context-menu/global/contextMenu/Demo1" preview-path="/resource/docsImg/context_menu_global_open.gif">
       <template #tip>
         <vxe-tip status="primary" title="全局调用"></vxe-tip>
         <vxe-tip status="success">

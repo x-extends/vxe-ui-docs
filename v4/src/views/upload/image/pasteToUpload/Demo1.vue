@@ -2,11 +2,12 @@
   <div>
     <vxe-switch v-model="pasteToUpload"></vxe-switch>
     <vxe-upload
+      v-model="imgList"
       multiple
       mode="image"
-      v-model="imgList"
       :paste-to-upload="pasteToUpload"
-      :upload-method="uploadMethod">
+      :upload-method="uploadMethod"
+    >
     </vxe-upload>
   </div>
 </template>

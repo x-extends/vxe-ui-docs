@@ -1,10 +1,11 @@
 <template>
   <div>
     <vxe-tree-select
-      clearable
       v-model="val1"
+      clearable
       :tree-config="{iconOpen: 'vxe-icon-square-minus', iconClose: 'vxe-icon-square-plus'}"
-      :options="treeList">
+      :options="treeList"
+    >
     </vxe-tree-select>
   </div>
 </template>

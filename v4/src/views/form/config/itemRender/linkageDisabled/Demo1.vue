@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-form v-bind="formOptions" ></vxe-form>
+    <vxe-form v-bind="formOptions"></vxe-form>
   </div>
 </template>
 

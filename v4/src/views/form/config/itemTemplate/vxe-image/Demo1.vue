@@ -8,7 +8,6 @@
       <template #imgUrl="{ data }">
         <vxe-image :src="data.imgUrl" width="100" height="100"></vxe-image>
       </template>
-
     </vxe-form>
   </div>
 </template>

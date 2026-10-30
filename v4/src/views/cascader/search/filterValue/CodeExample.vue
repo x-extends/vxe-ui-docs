@@ -3,10 +3,10 @@
     <CodeLight path="cascader/search/filterValue/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="过滤节点">
-          通过 <ApiLink name="cascader" prop="filterable"/> 就可以设置过滤功能
+          通过 <ApiLink name="cascader" prop="filterable" /> 就可以设置过滤功能
         </vxe-tip>
         <vxe-tip status="error">
-          过滤功能只支持 <ApiLink name="cascader" prop="tree-config"/>.<ApiLink name="cascader" prop="transform"/> 模式
+          过滤功能只支持 <ApiLink name="cascader" prop="tree-config" />.<ApiLink name="cascader" prop="transform" /> 模式
         </vxe-tip>
       </template>
     </CodeLight>

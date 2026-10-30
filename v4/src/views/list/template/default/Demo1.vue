@@ -3,7 +3,7 @@
     <vxe-list v-bind="listOptions">
       <template #default="{ items }">
         <div class="my-list-wrapper">
-          <div class="my-list-item" v-for="(row, i) in items" :key="i">
+          <div v-for="(row, i) in items" :key="i" class="my-list-item">
             <div class="my-list-img">
               <vxe-image :src="row.imgUrl" width="50" circle></vxe-image>
             </div>

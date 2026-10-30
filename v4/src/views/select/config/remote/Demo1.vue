@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-select  v-model="val1" v-bind="selectOptions"></vxe-select>
+    <vxe-select v-model="val1" v-bind="selectOptions"></vxe-select>
   </div>
 </template>
 

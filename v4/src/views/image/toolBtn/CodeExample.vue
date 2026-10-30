@@ -3,7 +3,7 @@
     <CodeLight path="image/toolBtn/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="自定义工具栏按钮">
-          通过设置 <ApiLink name="image" prop="toolbar-config"/> 来自定义
+          通过设置 <ApiLink name="image" prop="toolbar-config" /> 来自定义
         </vxe-tip>
       </template>
     </CodeLight>

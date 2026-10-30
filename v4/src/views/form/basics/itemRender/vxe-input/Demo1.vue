@@ -2,7 +2,8 @@
   <div>
     <vxe-form
       title-width="120"
-      :data="formData">
+      :data="formData"
+    >
       <vxe-form-item title="名称" field="name" span="24" :item-render="nameItemRender"></vxe-form-item>
       <vxe-form-item title="输入框" field="nickname" span="24" :item-render="roleItemRender"></vxe-form-item>
       <vxe-form-item align="center" span="24">

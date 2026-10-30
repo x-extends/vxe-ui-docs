@@ -3,7 +3,7 @@
     <CodeLight path="modal/modal/maximize/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="窗口最大化">
-          通过 <ApiLink name="modal" prop="show-maximize"/> 开启窗口最大化
+          通过 <ApiLink name="modal" prop="show-maximize" /> 开启窗口最大化
         </vxe-tip>
       </template>
 

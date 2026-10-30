@@ -12,7 +12,7 @@
       <iframe :src="`${resBaseUrl}/resource/useCdn/development-history.html?v=${nowTime}`" style="width: 0;border: 0;height: 180px;width: 100%;background-color: transparent;"></iframe>
     </vxe-tip>
 
-    <vxe-tabs v-model="supportAuthor" >
+    <vxe-tabs v-model="supportAuthor">
       <vxe-tab-pane title="QQ交流群" name="1">
         <iframe :src="`${resBaseUrl}/resource/useCdn/free-discussion-group.html?v=${nowTime}`" style="width: 0;border: 0;height: 700px;width: 100%;"></iframe>
       </vxe-tab-pane>

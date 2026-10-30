@@ -2,7 +2,8 @@
   <div>
     <vxe-tree
       transform
-      :data="treeList">
+      :data="treeList"
+    >
       <template #icon="{ isExpand }">
         <vxe-icon v-if="isExpand" status="success" name="square-minus"></vxe-icon>
         <vxe-icon v-else status="error" name="square-plus"></vxe-icon>

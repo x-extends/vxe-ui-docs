@@ -5,7 +5,8 @@
       v-model:page-size="pageVO.pageSize"
       :total="pageVO.total"
       :layouts="['PrevJump', 'PrevPage', 'Jump', 'PageCount', 'NextPage', 'NextJump', 'Sizes', 'Total']"
-      @page-change="pageChangeEvent">
+      @page-change="pageChangeEvent"
+    >
     </vxe-pager>
   </div>
 </template>

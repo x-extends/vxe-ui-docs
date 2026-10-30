@@ -7,7 +7,8 @@
       title-align="right"
       :data="formData"
       @submit="submitEvent"
-      @reset="resetEvent">
+      @reset="resetEvent"
+    >
       <vxe-form-item title="超出隐藏，超出隐藏，超出隐藏，超出隐藏" field="name" span="24" :item-render="{}">
         <template #default>
           <vxe-input v-model="formData.name"></vxe-input>

@@ -4,7 +4,8 @@
       border
       vertical-align="center"
       title-width="100"
-      :data="formData">
+      :data="formData"
+    >
       <vxe-form-item title="名称" field="name" span="12"></vxe-form-item>
       <vxe-form-item title="昵称" field="nickname" span="12"></vxe-form-item>
       <vxe-form-item title="性别" field="sex" span="12"></vxe-form-item>

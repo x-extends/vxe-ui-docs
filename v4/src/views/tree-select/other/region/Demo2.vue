@@ -1,6 +1,7 @@
 <template>
   <div>
     <vxe-tree-select
+      v-model="val1"
       show-radio
       filterable
       clearable
@@ -10,10 +11,10 @@
       show-close-button
       show-expand-button
       show-full-label
-      v-model="val1"
       :options="treeList"
-      :treeConfig="treeConfig"
-      :option-props="{value: 'id', label: 'name'}">
+      :tree-config="treeConfig"
+      :option-props="{value: 'id', label: 'name'}"
+    >
     </vxe-tree-select>
   </div>
 </template>

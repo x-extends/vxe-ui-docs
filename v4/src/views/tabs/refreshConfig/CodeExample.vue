@@ -10,7 +10,7 @@
     <CodeLight path="tabs/refreshConfig/Demo2">
       <template #tip>
         <vxe-tip status="primary">
-          显示逻辑控制， <ApiLink name="tabs" prop="refresh-config"/>.<ApiLink name="tabs" prop="visible-method"/> 方法判断该页签是否显示刷新按钮
+          显示逻辑控制， <ApiLink name="tabs" prop="refresh-config" />.<ApiLink name="tabs" prop="visible-method" /> 方法判断该页签是否显示刷新按钮
         </vxe-tip>
       </template>
     </CodeLight>

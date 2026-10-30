@@ -4,14 +4,16 @@
       v-model:current-page="pageVO1.currentPage"
       v-model:page-size="pageVO1.pageSize"
       :layouts="['Home', 'PrevJump', 'PrevPage', 'Number', 'NextPage', 'NextJump', 'End', 'Sizes', 'FullJump', 'PageCount', 'Total']"
-      :total="pageVO1.total">
+      :total="pageVO1.total"
+    >
     </vxe-pager>
 
     <vxe-pager
       v-model:current-page="pageVO2.currentPage"
       v-model:page-size="pageVO2.pageSize"
       :layouts="['Home', 'PrevJump', 'PrevPage', 'Number', 'NextPage', 'NextJump', 'End', 'Sizes', 'FullJump', 'PageCount', 'Total']"
-      :total="pageVO2.total">
+      :total="pageVO2.total"
+    >
       <template #home>
         <span style="background: #f7b6b6;" @click="pageVO2.currentPage = 1">首页</span>
       </template>

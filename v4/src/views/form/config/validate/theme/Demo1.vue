@@ -7,7 +7,7 @@
       <vxe-radio-button checked-value="beautify" content="高亮"></vxe-radio-button>
     </vxe-radio-group>
 
-    <vxe-form v-bind="formOptions" v-on="formEvents" ></vxe-form>
+    <vxe-form v-bind="formOptions" v-on="formEvents"></vxe-form>
   </div>
 </template>
 

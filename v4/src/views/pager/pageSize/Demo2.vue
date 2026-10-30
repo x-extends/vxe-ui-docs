@@ -6,7 +6,8 @@
         v-model:page-size="pageVO.pageSize"
         :total="pageVO.total"
         page-size-placement="top"
-        @page-change="pageChangeEvent">
+        @page-change="pageChangeEvent"
+      >
       </vxe-pager>
     </p>
     <p>
@@ -15,7 +16,8 @@
         v-model:page-size="pageVO.pageSize"
         :total="pageVO.total"
         page-size-placement="bottom"
-        @page-change="pageChangeEvent">
+        @page-change="pageChangeEvent"
+      >
       </vxe-pager>
     </p>
   </div>

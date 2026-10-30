@@ -1,11 +1,12 @@
 <template>
   <div>
     <vxe-tree-select
-      show-radio
       v-model="val1"
+      show-radio
       :radio-config="radioConfig"
       :tree-config="treeConfig"
-      :options="treeList">
+      :options="treeList"
+    >
     </vxe-tree-select>
   </div>
 </template>

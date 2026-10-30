@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-modal v-model="showNotify" type="notification" :width="320" position="top-right" :mask="false" :lockView="false" showHeader>
+    <vxe-modal v-model="showNotify" type="notification" :width="320" position="top-right" :mask="false" :lock-view="false" show-header>
       <template #default>
         <span>
           <vxe-icon name="question-circle-fill" />

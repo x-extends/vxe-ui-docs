@@ -2,13 +2,13 @@
   <div>
     <CodeLight path="modal/modal/storage/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="记忆功能">通过配合 <ApiLink name="modal" prop="storage"/> 启用 indexedDB/localStorage 本地储存功能</vxe-tip>
+        <vxe-tip status="primary" title="记忆功能">通过配合 <ApiLink name="modal" prop="storage" /> 启用 indexedDB/localStorage 本地储存功能</vxe-tip>
         <vxe-tip status="error">
-          <div>用户窗口状态的记忆功能是根据窗口 <ApiLink name="modal" prop="id"/> 进行保存的，必须确保 <ApiLink name="modal" prop="id"/> 是整个全局唯一的。</div>
+          <div>用户窗口状态的记忆功能是根据窗口 <ApiLink name="modal" prop="id" /> 进行保存的，必须确保 <ApiLink name="modal" prop="id" /> 是整个全局唯一的。</div>
         </vxe-tip>
         <vxe-tip status="success">
-          <div>可以通过 <ApiLink name="modal" prop="storeDriver"/>='indexedDB' 或 <ApiLink name="modal" prop="storeDriver"/>='localStorage' 设置数据保存方式</div>
-          <div>用户拖动窗口位置后，会在首次打开恢复最后一次操作的状态，如果需要每次打开后自动恢复，可以配合 <ApiLink name="modal" prop="remember"/> 属性</div>
+          <div>可以通过 <ApiLink name="modal" prop="storeDriver" />='indexedDB' 或 <ApiLink name="modal" prop="storeDriver" />='localStorage' 设置数据保存方式</div>
+          <div>用户拖动窗口位置后，会在首次打开恢复最后一次操作的状态，如果需要每次打开后自动恢复，可以配合 <ApiLink name="modal" prop="remember" /> 属性</div>
         </vxe-tip>
       </template>
     </CodeLight>

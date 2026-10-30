@@ -17,7 +17,7 @@
       </vxe-splitter-panel>
       <vxe-splitter-panel width="200">
         <template #default>
-        <div style="height: 100%;background-color: #f3d0ec;">右侧</div>
+          <div style="height: 100%;background-color: #f3d0ec;">右侧</div>
         </template>
       </vxe-splitter-panel>
     </vxe-splitter>

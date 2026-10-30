@@ -1,10 +1,11 @@
 <template>
   <div>
     <vxe-upload
+      v-model="fileList"
       multiple
       show-progress
-      v-model="fileList"
-      :upload-method="uploadMethod">
+      :upload-method="uploadMethod"
+    >
       <template #action>
         <vxe-button mode="text" icon="vxe-icon-edit" status="primary"></vxe-button>
         <vxe-button mode="text" icon="vxe-icon-question-circle" status="error"></vxe-button>

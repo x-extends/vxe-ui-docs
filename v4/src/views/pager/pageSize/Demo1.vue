@@ -5,7 +5,8 @@
       v-model:page-size="pageVO.pageSize"
       :total="pageVO.total"
       :page-sizes="[10, 20, 100, {label: '大量数据', value: 1000}, {label: '全量数据', value: -1}]"
-      @page-change="pageChangeEvent">
+      @page-change="pageChangeEvent"
+    >
     </vxe-pager>
   </div>
 </template>

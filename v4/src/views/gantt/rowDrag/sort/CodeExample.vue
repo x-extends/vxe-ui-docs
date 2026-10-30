@@ -3,7 +3,7 @@
     <CodeLight path="gantt/rowDrag/sort/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="行拖拽">
-          通过 <ApiLink name="gantt" prop="row-config"/>.<ApiLink name="gantt" prop="drag"/> 和列设置 <ApiLink name="column" prop="drag-sort"/> 启用行拖拽排序功能
+          通过 <ApiLink name="gantt" prop="row-config" />.<ApiLink name="gantt" prop="drag" /> 和列设置 <ApiLink name="column" prop="drag-sort" /> 启用行拖拽排序功能
         </vxe-tip>
       </template>
 

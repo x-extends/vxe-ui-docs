@@ -11,7 +11,8 @@
       :lock-view="false"
       resize
       show-maximize
-      show-minimize>
+      show-minimize
+    >
       <template #default>
         <div>手动调用窗口方法</div>
         <div>

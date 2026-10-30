@@ -2,7 +2,7 @@
   <div>
     <vxe-switch v-model="formOptions.vertical"></vxe-switch>
 
-    <vxe-form v-bind="formOptions" v-on="formEvents" ></vxe-form>
+    <vxe-form v-bind="formOptions" v-on="formEvents"></vxe-form>
   </div>
 </template>
 

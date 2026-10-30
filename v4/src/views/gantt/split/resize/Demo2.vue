@@ -4,7 +4,8 @@
       v-bind="ganttOptions"
       :style="{
         '--vxe-ui-gantt-view-split-bar-width': '10px'
-      }">
+      }"
+    >
     </vxe-gantt>
   </div>
 </template>

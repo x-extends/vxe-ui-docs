@@ -3,7 +3,7 @@
     <CodeLight path="date-picker/date/disabledMethod/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="禁用指定日期">
-          通过设置 <ApiLink name="date-picker" prop="disabled-method"/> 限制指定额任意日期
+          通过设置 <ApiLink name="date-picker" prop="disabled-method" /> 限制指定额任意日期
         </vxe-tip>
       </template>
     </CodeLight>

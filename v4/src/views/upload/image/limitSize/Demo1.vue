@@ -1,14 +1,15 @@
 <template>
   <div>
     <vxe-upload
+      v-model="imgList"
       multiple
       show-progress
       show-tip
-      v-model="imgList"
       mode="image"
       :limit-count="3"
       :limit-size="1"
-      :upload-method="uploadMethod">
+      :upload-method="uploadMethod"
+    >
     </vxe-upload>
   </div>
 </template>

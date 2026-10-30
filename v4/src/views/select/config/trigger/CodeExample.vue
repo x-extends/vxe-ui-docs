@@ -3,7 +3,7 @@
     <CodeLight path="select/config/trigger/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="触发方式">
-          通过 <ApiLink name="select" prop="popup-config"/>.<ApiLink name="select" prop="trigger"/> 来设置下拉面板的触发方式
+          通过 <ApiLink name="select" prop="popup-config" />.<ApiLink name="select" prop="trigger" /> 来设置下拉面板的触发方式
         </vxe-tip>
       </template>
     </CodeLight>

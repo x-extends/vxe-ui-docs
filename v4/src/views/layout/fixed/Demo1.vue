@@ -14,7 +14,7 @@
         <div style="height: 30px">底部</div>
       </vxe-layout-footer>
     </vxe-layout-container>
-</div>
+  </div>
 </template>
 
 <style lang="scss" scoped>

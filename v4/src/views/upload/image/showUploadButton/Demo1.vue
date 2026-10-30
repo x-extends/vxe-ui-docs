@@ -2,13 +2,14 @@
   <div>
     <vxe-button type="primary" @click="selectEvent">点击上传</vxe-button>
     <vxe-upload
+      ref="uploadRef"
+      v-model="imgList"
       multiple
       show-progress
       mode="image"
-      ref="uploadRef"
-      v-model="imgList"
-      :showUploadButton="false"
-      :upload-method="uploadMethod">
+      :show-upload-button="false"
+      :upload-method="uploadMethod"
+    >
     </vxe-upload>
   </div>
 </template>

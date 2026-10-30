@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-gantt v-bind="ganttOptions" :footerData="footerData">
+    <vxe-gantt v-bind="ganttOptions" :footer-data="footerData">
       <template #title_footer="{ row }">
         <span style="color: red">平均进度：{{ row.progress }}%</span>
       </template>

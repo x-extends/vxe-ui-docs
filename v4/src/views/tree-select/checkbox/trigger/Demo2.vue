@@ -1,12 +1,13 @@
 <template>
   <div>
     <vxe-tree-select
+      v-model="val1"
       multiple
       show-checkbox
-      v-model="val1"
       :checkbox-config="checkboxConfig"
       :tree-config="treeConfig"
-      :options="treeList">
+      :options="treeList"
+    >
     </vxe-tree-select>
   </div>
 </template>

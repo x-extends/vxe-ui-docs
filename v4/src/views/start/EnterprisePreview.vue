@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CodeLight :previewPath="previewUrl">
+    <CodeLight :preview-path="previewUrl">
       <template #describe>
         <div style="text-align: center;">
           <vxe-button status="error" title="点击在线体验企业版功能" @click="openEvent">点击在线体验</vxe-button>

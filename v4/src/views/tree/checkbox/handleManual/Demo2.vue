@@ -11,7 +11,8 @@
     <vxe-tree
       ref="treeRef"
       v-bind="treeOptions"
-      v-model:check-node-keys="checkNodeKeys">
+      v-model:check-node-keys="checkNodeKeys"
+    >
     </vxe-tree>
   </div>
 </template>

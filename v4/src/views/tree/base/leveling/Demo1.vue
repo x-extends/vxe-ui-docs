@@ -6,7 +6,8 @@
       key-field="id"
       parent-field="parentId"
       :node-config="nodeConfig"
-      :data="treeList">
+      :data="treeList"
+    >
     </vxe-tree>
   </div>
 </template>

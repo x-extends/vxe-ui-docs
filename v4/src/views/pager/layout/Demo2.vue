@@ -6,7 +6,8 @@
         v-model:page-size="pageVO.pageSize"
         :total="pageVO.total"
         :layouts="['Jump', 'PageCount']"
-        @page-change="pageChangeEvent">
+        @page-change="pageChangeEvent"
+      >
       </vxe-pager>
     </p>
     <p>
@@ -15,7 +16,8 @@
         v-model:page-size="pageVO.pageSize"
         :total="pageVO.total"
         :layouts="['FullJump']"
-        @page-change="pageChangeEvent">
+        @page-change="pageChangeEvent"
+      >
       </vxe-pager>
     </p>
     <p>
@@ -24,7 +26,8 @@
         v-model:page-size="pageVO.pageSize"
         :total="pageVO.total"
         :layouts="['Total']"
-        @page-change="pageChangeEvent">
+        @page-change="pageChangeEvent"
+      >
       </vxe-pager>
     </p>
   </div>

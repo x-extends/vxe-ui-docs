@@ -3,7 +3,8 @@
     <vxe-form
       :data="formData"
       @submit="submitEvent"
-      @reset="resetEvent">
+      @reset="resetEvent"
+    >
       <vxe-form-item title="名称" field="name" :item-render="{}">
         <template #default>
           <vxe-input v-model="formData.name"></vxe-input>

@@ -6,7 +6,8 @@
       :data="formData"
       :rules="formRules"
       @submit="submitEvent"
-      @reset="resetEvent">
+      @reset="resetEvent"
+    >
       <div style="width: 100%">
         <div style="color: red;">自定义内容</div>
         <vxe-form-item title="名称" field="name" span="24" :item-render="{}">

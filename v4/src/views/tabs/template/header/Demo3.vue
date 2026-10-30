@@ -47,7 +47,7 @@
           <div>内容3</div>
           <div>内容3</div>
           <div>内容3</div>
-        <div>内容3</div>
+          <div>内容3</div>
         </template>
       </vxe-tab-pane>
 

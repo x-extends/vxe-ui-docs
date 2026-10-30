@@ -7,7 +7,8 @@
       :tooltip-config="{}"
       :data="tableData"
       @cell-mouseenter="cellMouseenterEvent"
-      @cell-mouseleave="cellMouseleaveEvent">
+      @cell-mouseleave="cellMouseleaveEvent"
+    >
       <vxe-column type="seq" width="70"></vxe-column>
       <vxe-column field="name" title="Name"></vxe-column>
       <vxe-column field="sex" title="Sex"></vxe-column>

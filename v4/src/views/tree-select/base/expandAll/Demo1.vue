@@ -3,7 +3,8 @@
     <vxe-tree-select
       v-model="val1"
       :tree-config="treeConfig"
-      :options="treeList">
+      :options="treeList"
+    >
     </vxe-tree-select>
   </div>
 </template>

@@ -2,7 +2,7 @@
   <div>
     <CodeLight path="date-range-picker/time/valueFormat/Demo1">
       <template #tip>
-        <vxe-tip status="primary" title="自定义格式化">显示时分，通过 <ApiLink name="date-range-picker" prop="value-format"/> 指定格式化</vxe-tip>
+        <vxe-tip status="primary" title="自定义格式化">显示时分，通过 <ApiLink name="date-range-picker" prop="value-format" /> 指定格式化</vxe-tip>
       </template>
     </CodeLight>
 

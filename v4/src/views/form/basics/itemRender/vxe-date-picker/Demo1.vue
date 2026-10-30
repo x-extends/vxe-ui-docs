@@ -2,7 +2,8 @@
   <div>
     <vxe-form
       title-width="120"
-      :data="formData">
+      :data="formData"
+    >
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-item title="日期" field="date" span="24" :item-render="{ name: 'VxeDatePicker' }"></vxe-form-item>
       <vxe-form-item title="年份" field="year" span="24" :item-render="{ name: 'VxeDatePicker', props: { type: 'year' } }"></vxe-form-item>

@@ -3,7 +3,7 @@
     <CodeLight path="list/base/basics/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="显示指定字段">
-          <div>通过 <ApiLink name="list" prop="row-config"/>.<ApiLink name="list" prop="contentField"/> 设置列表中需要展开的字段</div>
+          <div>通过 <ApiLink name="list" prop="row-config" />.<ApiLink name="list" prop="contentField" /> 设置列表中需要展开的字段</div>
         </vxe-tip>
       </template>
 

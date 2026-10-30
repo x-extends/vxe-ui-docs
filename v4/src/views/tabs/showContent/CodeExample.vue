@@ -3,7 +3,7 @@
     <CodeLight path="tabs/showContent/Demo1">
       <template #tip>
         <vxe-tip status="primary" title="是否显示面板内容">
-          通过 <ApiLink name="tabs" prop="show-body"/>=false 来关闭面板内容
+          通过 <ApiLink name="tabs" prop="show-body" />=false 来关闭面板内容
         </vxe-tip>
       </template>
     </CodeLight>

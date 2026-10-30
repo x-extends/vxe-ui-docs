@@ -1,12 +1,13 @@
 <template>
   <div>
     <vxe-cascader
+      v-model="val1"
       multiple
       show-checkbox
-      v-model="val1"
       :tree-config="treeConfig"
       :checkbox-config="checkboxConfig"
-      :options="treeList">
+      :options="treeList"
+    >
     </vxe-cascader>
   </div>
 </template>

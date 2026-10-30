@@ -1,13 +1,14 @@
 <template>
   <div>
     <vxe-form
-      title-colon
       ref="formRef"
+      title-colon
       title-width="100"
       title-align="right"
       :collapse-config="{ foldButtonText: '收起条件区', unfoldButtonText: '展开条件区' }"
       :data="formData"
-      @submit="submitEvent">
+      @submit="submitEvent"
+    >
       <vxe-form-item title="名称" field="name" span="12" :item-render="{}">
         <template #default="params">
           <vxe-input v-model="formData.name" @change="changeEvent(params)"></vxe-input>

@@ -3,7 +3,7 @@
     垂直布局：<vxe-switch v-model="formOptions.vertical"></vxe-switch>
     显示图标：<vxe-switch v-model="validConfig.showErrorIcon"></vxe-switch>
 
-    <vxe-form v-bind="formOptions" v-on="formEvents" ></vxe-form>
+    <vxe-form v-bind="formOptions" v-on="formEvents"></vxe-form>
   </div>
 </template>
 

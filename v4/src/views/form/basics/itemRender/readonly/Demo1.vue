@@ -3,12 +3,13 @@
     <vxe-button status="primary" @click="toggleReadonly">切换只读</vxe-button>
 
     <vxe-form
-      titleColon
+      title-colon
       title-width="120"
       title-align="right"
       :readonly="isReadonly"
       :data="formData"
-      :rules="formRules">
+      :rules="formRules"
+    >
       <vxe-form-item title="名称" field="name" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-item title="输入框" field="nickname" span="24" :item-render="{ name: 'VxeInput' }"></vxe-form-item>
       <vxe-form-group span="24">

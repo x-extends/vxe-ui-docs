@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-form v-bind="formOptions" >
+    <vxe-form v-bind="formOptions">
       <template #name="{ data }">
         <vxe-input v-model="data.name"></vxe-input>
       </template>
@@ -14,11 +14,11 @@
       </template>
 
       <template #type="{ data }">
-        <vxe-select v-model="data.type" :optionGroups="typeOptions"></vxe-select>
+        <vxe-select v-model="data.type" :option-groups="typeOptions"></vxe-select>
       </template>
 
       <template #typeList="{ data }">
-        <vxe-select v-model="data.typeList" :optionGroups="typeOptions" multiple></vxe-select>
+        <vxe-select v-model="data.typeList" :option-groups="typeOptions" multiple></vxe-select>
       </template>
 
       <template #action>

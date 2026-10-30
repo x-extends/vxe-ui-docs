@@ -18,7 +18,7 @@
     <CodeLight path="tabs/closeConfig/Demo3">
       <template #tip>
         <vxe-tip status="primary">
-          显示逻辑控制， <ApiLink name="tabs" prop="close-config"/>.<ApiLink name="tabs" prop="visible-method"/> 方法判断该页签是否显示关闭按钮
+          显示逻辑控制， <ApiLink name="tabs" prop="close-config" />.<ApiLink name="tabs" prop="visible-method" /> 方法判断该页签是否显示关闭按钮
         </vxe-tip>
       </template>
     </CodeLight>

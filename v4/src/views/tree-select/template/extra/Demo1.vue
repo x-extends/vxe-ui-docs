@@ -4,7 +4,8 @@
       v-model="val1"
       :tree-config="treeConfig"
       :options="treeList"
-      :option-props="{label: 'title', value: 'id'}">
+      :option-props="{label: 'title', value: 'id'}"
+    >
       <template #treeExtra>
         <vxe-link href="https://vxeui.com/" status="primary">详情</vxe-link>
       </template>

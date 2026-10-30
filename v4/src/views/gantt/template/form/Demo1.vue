@@ -2,7 +2,7 @@
   <div>
     <vxe-gantt v-bind="ganttOptions">
       <template #form>
-        <vxe-form v-bind="formOptions" v-on="formEvents" ></vxe-form>
+        <vxe-form v-bind="formOptions" v-on="formEvents"></vxe-form>
       </template>
     </vxe-gantt>
   </div>

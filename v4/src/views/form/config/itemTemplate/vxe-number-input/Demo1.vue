@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vxe-form v-bind="formOptions" >
+    <vxe-form v-bind="formOptions">
       <template #name="{ data }">
         <vxe-number-input v-model="data.name"></vxe-number-input>
       </template>

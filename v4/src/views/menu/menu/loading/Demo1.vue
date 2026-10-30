@@ -5,7 +5,8 @@
         v-model="selectNav"
         :options="navList"
         :menu-config="menuConfig"
-        @menu-click="menuClickEvent">
+        @menu-click="menuClickEvent"
+      >
       </vxe-menu>
     </div>
   </div>
@@ -105,7 +106,7 @@ const menuConfig = reactive<VxeMenuPropTypes.MenuConfig>({
           item.loading = true
         }
         if (item.code === '4' || item.code === '11') {
-              item.visible = true
+          item.visible = true
           item.loading = true
         }
       })

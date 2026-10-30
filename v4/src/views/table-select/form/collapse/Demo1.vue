@@ -8,7 +8,8 @@
       :popup-config="popupConfig"
       :grid-config="gridConfig"
       @form-submit="formSubmitEvent"
-      @form-reset="formResetEvent">
+      @form-reset="formResetEvent"
+    >
     </vxe-table-select>
   </div>
 </template>

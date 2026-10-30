@@ -1,14 +1,15 @@
 <template>
   <div>
     <vxe-form
+      ref="formRef"
       border
       title-background
       title-width="auto"
       title-align="right"
-      ref="formRef"
       :data="formData"
       @submit="submitEvent"
-      @reset="resetEvent">
+      @reset="resetEvent"
+    >
       <vxe-form-group span="24" title="基础信息" :title-prefix="{icon: 'vxe-icon-user', iconStatus: 'primary'}" title-bold vertical>
         <vxe-form-item title="名称" field="name" span="8" :item-render="{}">
           <template #default="params">

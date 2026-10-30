@@ -3,7 +3,8 @@
     <vxe-pager
       v-model:current-page="pageVO1.currentPage"
       v-model:page-size="pageVO1.pageSize"
-      :total="pageVO1.total">
+      :total="pageVO1.total"
+    >
       <template #right>
         <vxe-image src="https://vxeui.com/resource/img/546.gif" height="24"></vxe-image>
         <vxe-button content="下拉按钮">
