@@ -1,8 +1,8 @@
-import { RouteConfig } from 'vue-router'
+import { RouteRecordConfig } from './conf'
 
 import RouteLayout from '@/components/RouteLayout.vue'
 
-export const treeRouteConfig: RouteConfig = {
+export const treeRouteConfig: RouteRecordConfig = {
   path: 'tree',
   component: RouteLayout,
   children: [

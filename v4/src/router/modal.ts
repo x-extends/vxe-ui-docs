@@ -1,8 +1,8 @@
-import { RouteRecordRaw } from 'vue-router'
+import { RouteRecordConfig } from './conf'
 
 import RouteLayout from '@/components/RouteLayout.vue'
 
-export const modalRouteConfig: RouteRecordRaw = {
+export const modalRouteConfig: RouteRecordConfig = {
   path: 'modal',
   component: RouteLayout,
   children: [

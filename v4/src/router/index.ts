@@ -11,6 +11,7 @@ import { gridRouteConfig } from './grid'
 import { ganttRouteConfig } from './gantt'
 import { formDesignRouteConfig } from './form-design'
 import { listDesignRouteConfig } from './list-design'
+import { timelineRouteConfig } from './timeline'
 
 import RouteLayout from '@/components/RouteLayout.vue'
 import PageLayout from '@/components/PageLayout.vue'
@@ -3110,6 +3111,7 @@ const routes: Array<RouteRecordRaw> = [
           }
         ]
       },
+      timelineRouteConfig,
       {
         path: 'drawer',
         component: RouteLayout,

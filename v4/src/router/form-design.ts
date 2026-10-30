@@ -1,8 +1,8 @@
-import { RouteRecordRaw } from 'vue-router'
+import { RouteRecordConfig } from './conf'
 
 import RouteLayout from '@/components/RouteLayout.vue'
 
-export const formDesignRouteConfig: RouteRecordRaw = {
+export const formDesignRouteConfig: RouteRecordConfig = {
   path: 'form-design',
   component: RouteLayout,
   children: [

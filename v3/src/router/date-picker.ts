@@ -1,8 +1,8 @@
-import { RouteConfig } from 'vue-router'
+import { RouteRecordConfig } from './conf'
 
 import RouteLayout from '@/components/RouteLayout.vue'
 
-export const datePickerRouteConfig: RouteConfig = {
+export const datePickerRouteConfig: RouteRecordConfig = {
   path: 'date-picker',
   component: RouteLayout,
   children: [

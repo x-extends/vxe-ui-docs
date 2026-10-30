@@ -8,6 +8,7 @@ import { uploadNavConfig } from './upload'
 import { tableNavConfig } from './table'
 import { ganttNavConfig } from './gantt'
 // import { designNavConfig } from './design'
+import { timelineNavConfig } from './timeline'
 
 export const navConfigList: NavVO[] = [
   {
@@ -590,7 +591,8 @@ export const navConfigList: NavVO[] = [
             ]
           }
         ]
-      }
+      },
+      timelineNavConfig
     ]
   },
   {

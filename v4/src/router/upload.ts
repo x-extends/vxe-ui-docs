@@ -1,8 +1,8 @@
-import { RouteRecordRaw } from 'vue-router'
+import { RouteRecordConfig } from './conf'
 
 import RouteLayout from '@/components/RouteLayout.vue'
 
-export const uploadRouteConfig: RouteRecordRaw = {
+export const uploadRouteConfig: RouteRecordConfig = {
   path: 'upload',
   component: RouteLayout,
   children: [
