@@ -13,6 +13,7 @@ import { ganttRouteConfig } from './gantt'
 import { formDesignRouteConfig } from './form-design'
 import { listDesignRouteConfig } from './list-design'
 import { timelineRouteConfig } from './timeline'
+import { stepsRouteConfig } from './steps'
 
 import RouteLayout from '@/components/RouteLayout.vue'
 import PageLayout from '@/components/PageLayout.vue'
@@ -3557,6 +3558,7 @@ const routes: Array<RouteConfig> = [
           { path: 'style', name: 'ComponentContextMenuStyle', component: () => import('@/views/context-menu/style/CodeExample.vue') }
         ]
       },
+      stepsRouteConfig,
       {
         path: 'countdown',
         component: RouteLayout,

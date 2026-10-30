@@ -9,6 +9,7 @@ import { tableNavConfig } from './table'
 import { ganttNavConfig } from './gantt'
 // import { designNavConfig } from './design'
 import { timelineNavConfig } from './timeline'
+import { stepsNavConfig } from './steps'
 
 export const navConfigList: NavVO[] = [
   {
@@ -682,7 +683,8 @@ export const navConfigList: NavVO[] = [
           { title: '是否加载中', routerLink: { name: 'ComponentContextMenuLoading' } },
           { title: '自定义样式', routerLink: { name: 'ComponentContextMenuStyle' } }
         ]
-      }
+      },
+      stepsNavConfig
     ]
   },
   {
