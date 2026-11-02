@@ -48,6 +48,7 @@
         "globalIcon": "全局圖標",
         "globalZIndex": "全局 z-index",
         "globalPermission": "全局權限控制",
+        "globalScrollbar": "全局滚动条样式",
         "i18n": "國際化",
         "configI18n": "對組件內置內容進行翻譯",
         "configTranslate": "支持對組件中特定的字段進行翻譯",

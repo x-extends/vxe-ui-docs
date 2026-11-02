@@ -48,6 +48,7 @@
         "globalIcon": "グローバルアイコン",
         "globalZIndex": "グローバル z-index",
         "globalPermission": "グローバル権限制御",
+        "globalScrollbar": "全局滚动条样式",
         "i18n": "国際化",
         "configI18n": "コンポーネント内のテキストを翻訳する",
         "configTranslate": "コンポーネント内の特定フィールドの翻訳をサポート",

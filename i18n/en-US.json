@@ -48,6 +48,7 @@
         "globalIcon": "Global icon",
         "globalZIndex": "Global z-index",
         "globalPermission": "Global permission control",
+        "globalScrollbar": "全局滚动条样式",
         "i18n": "Internationalization",
         "configI18n": "Translate built-in component content",
         "configTranslate": "Support translating specific fields in components",

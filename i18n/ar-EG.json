@@ -48,6 +48,7 @@
         "globalIcon": "أيقونة عالمية",
         "globalZIndex": "Z-Index العالمية",
         "globalPermission": "السيطرة على الإذن العالمي",
+        "globalScrollbar": "全局滚动条样式",
         "i18n": "تدويل",
         "configI18n": "对组件内置内容进行翻译",
         "configTranslate": "支持对组件中特定的字段进行翻译",

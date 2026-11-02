@@ -48,6 +48,7 @@
         "globalIcon": "Icône mondiale",
         "globalZIndex": "Index z mondial",
         "globalPermission": "Contrôle mondial de l'autorisation",
+        "globalScrollbar": "全局滚动条样式",
         "i18n": "Internationalisation",
         "configI18n": "对组件内置内容进行翻译",
         "configTranslate": "支持对组件中特定的字段进行翻译",
