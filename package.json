@@ -27,7 +27,8 @@
     "pack:i18n": "node scripts/build-i18n",
     "sync:i18n": "node scripts/sync-i18n.js",
 
-    "clean:pack": "node scripts/clean-pack.js"
+    "clean:pack": "node scripts/clean-pack.js",
+    "clean:all": "node scripts/clean-all"
   },
   "devDependencies": {
     "archiver": "~8.0.0",
