@@ -43,9 +43,10 @@ export default defineConfig(({ mode, command }) => {
       sourcemap: command === 'build' ? false : 'inline',
       outDir: 'dist',
       assetsDir: 'static',
+      emptyOutDir: false,
       rollupOptions: {
         // 不打包依赖
-        axios: ['axios', 'highlight.js'],
+        external: ['axios', 'highlight.js'],
         plugins: [
           // 不打包依赖映射的对象
           externalGlobals({
