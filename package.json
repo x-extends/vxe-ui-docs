@@ -5,23 +5,28 @@
   "private": true,
   "scripts": {
     "update": "pnpm install --no-frozen-lockfile",
+    
     "update:other3": "cd other3 && npm run update",
     "update:other4": "cd other4 && npm run update",
     "update:v3": "cd v3 && npm run update",
     "update:v4": "cd v4 && npm run update",
     "update:all": "npm run update && concurrently --timings \"npm run update:other3\" \"npm run update:other4\" \"npm run update:v3\" \"npm run update:v4\"",
+    
     "build:other3": "cd other3 && npm run pack",
     "build:other4": "cd other4 && npm run pack",
     "build:v3": "cd v3 && npm run pack",
     "build:v4": "cd v4 && npm run pack",
     "build:all": "concurrently --timings \"npm run build:other3\" \"npm run build:other4\" \"npm run build:v3\" \"npm run build:v4\"",
+    
     "pack:other3": "npm run build:other3 && node scripts/build-pack.js other3",
     "pack:other4": "npm run build:other4 && node scripts/build-pack.js other4",
     "pack:v3": "npm run build:v3 && node scripts/build-pack.js v3",
     "pack:v4": "npm run build:v4 && node scripts/build-pack.js v4",
     "pack:all": "npm run build:all && node scripts/build-pack.js",
+
     "pack:i18n": "node scripts/build-i18n",
     "sync:i18n": "node scripts/sync-i18n.js",
+
     "clean:pack": "node scripts/clean-pack.js"
   },
   "devDependencies": {
