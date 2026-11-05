@@ -76,6 +76,14 @@ export const treeNavConfig: NavVO = {
       ]
     },
     {
+      title: '排序',
+      children: [
+        { title: '排序', routerLink: { name: 'ComponentTreeSortDefaultSort' } },
+        { title: '多字段排序', routerLink: { name: 'ComponentTreeSortMultiSort' } },
+        { title: '自定义排序方法', routerLink: { name: 'ComponentTreeSortSortMethod' } }
+      ]
+    },
+    {
       title: '搜索',
       children: [
         { title: '过滤节点', routerLink: { name: 'ComponentTreeSearchFilterValue' } },

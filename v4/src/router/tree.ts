@@ -203,24 +203,21 @@ export const treeRouteConfig: RouteRecordConfig = {
       ]
     },
     {
+      path: 'sort',
+      component: RouteLayout,
+      children: [
+        { path: 'defaultSort', name: 'ComponentTreeSortDefaultSort', component: () => import('@/views/tree/sort/defaultSort/CodeExample.vue') },
+        { path: 'multiSort', name: 'ComponentTreeSortMultiSort', component: () => import('@/views/tree/sort/multiSort/CodeExample.vue') },
+        { path: 'sortMethod', name: 'ComponentTreeSortSortMethod', component: () => import('@/views/tree/sort/sortMethod/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'search',
       component: RouteLayout,
       children: [
-        {
-          path: 'filterValue',
-          name: 'ComponentTreeSearchFilterValue',
-          component: () => import('@/views/tree/search/filterValue/CodeExample.vue')
-        },
-        {
-          path: 'filterMethod',
-          name: 'ComponentTreeSearchFilterMethod',
-          component: () => import('@/views/tree/search/filterMethod/CodeExample.vue')
-        },
-        {
-          path: 'light',
-          name: 'ComponentTreeSearchLight',
-          component: () => import('@/views/tree/search/light/CodeExample.vue')
-        }
+        { path: 'filterValue', name: 'ComponentTreeSearchFilterValue', component: () => import('@/views/tree/search/filterValue/CodeExample.vue') },
+        { path: 'filterMethod', name: 'ComponentTreeSearchFilterMethod', component: () => import('@/views/tree/search/filterMethod/CodeExample.vue') },
+        { path: 'light', name: 'ComponentTreeSearchLight', component: () => import('@/views/tree/search/light/CodeExample.vue') }
       ]
     },
     {

@@ -203,6 +203,15 @@ export const treeRouteConfig: RouteRecordConfig = {
       ]
     },
     {
+      path: 'sort',
+      component: RouteLayout,
+      children: [
+        { path: 'defaultSort', name: 'ComponentTreeSortDefaultSort', component: () => import('@/views/tree/sort/defaultSort/CodeExample.vue') },
+        { path: 'multiSort', name: 'ComponentTreeSortMultiSort', component: () => import('@/views/tree/sort/multiSort/CodeExample.vue') },
+        { path: 'sortMethod', name: 'ComponentTreeSortSortMethod', component: () => import('@/views/tree/sort/sortMethod/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'search',
       component: RouteLayout,
       children: [
