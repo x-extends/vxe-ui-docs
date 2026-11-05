@@ -433,7 +433,8 @@ const routes: Array<RouteRecordRaw> = [
                     name: 'GlobalRendererTableDefaultMyFullAmount',
                     component: () => import('@/views/global/renderer/table/default/myFullAmount/CodeExample.vue')
                   },
-                  { path: 'myCellStyle', name: 'GlobalRendererTableDefaultMyCellStyle', component: () => import('@/views/global/renderer/table/default/myCellStyle/CodeExample.vue') }
+                  { path: 'myCellStyle', name: 'GlobalRendererTableDefaultMyCellStyle', component: () => import('@/views/global/renderer/table/default/myCellStyle/CodeExample.vue') },
+                  { path: 'myCellBtn', name: 'GlobalRendererTableDefaultMyCellBtn', component: () => import('@/views/global/renderer/table/default/myCellBtn/CodeExample.vue') }
                 ]
               },
               {
