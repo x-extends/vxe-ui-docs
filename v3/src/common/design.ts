@@ -15,49 +15,49 @@ export const designNavConfig: NavVO = {
           i18nKey: 'app.aside.menu.formDesignUse',
           children: [
             {
-              title: '基础配置',
+              i18nKey: 'app.aside.menu.designBasicConfig',
               children: [
-                { title: '内置控件配置', routerLink: { name: 'ComponentFormDesignBasicsBase' } },
-                { title: '自定义控件分组', routerLink: { name: 'ComponentFormDesignBasicsCustomGroup' } },
-                { title: '显示样式配置', routerLink: { name: 'ComponentFormDesignBasicsStyleSetting' } }
+                { i18nKey: 'app.aside.menu.designBuiltinWidgetConfig', routerLink: { name: 'ComponentFormDesignBasicsBase' } },
+                { i18nKey: 'app.aside.menu.designCustomWidgetGroup', routerLink: { name: 'ComponentFormDesignBasicsCustomGroup' } },
+                { i18nKey: 'app.aside.menu.designDisplayStyleConfig', routerLink: { name: 'ComponentFormDesignBasicsStyleSetting' } }
               ]
             },
             {
-              title: '右键菜单',
+              i18nKey: 'app.aside.menu.designContextMenu',
               children: [
-                { title: '生成表单视图', routerLink: { name: 'ComponentFormDesignMenuBasics' } }
+                { i18nKey: 'app.aside.menu.designGenerateFormView', routerLink: { name: 'ComponentFormDesignMenuBasics' } }
               ]
             },
             {
-              title: '多端配置',
+              i18nKey: 'app.aside.menu.designMultiPlatformConfig',
               children: [
-                { title: '仅移动端', routerLink: { name: 'ComponentFormDesignMobile' } },
-                { title: '同时配置 PC 端和移动端', routerLink: { name: 'ComponentFormDesignPcAndMobile' } }
+                { i18nKey: 'app.aside.menu.designMobileOnly', routerLink: { name: 'ComponentFormDesignMobile' } },
+                { i18nKey: 'app.aside.menu.designPcAndMobileConfig', routerLink: { name: 'ComponentFormDesignPcAndMobile' } }
               ]
             },
             {
-              title: '视图转换',
+              i18nKey: 'app.aside.menu.designViewTransform',
               children: [
-                { title: '生成表单视图', routerLink: { name: 'ComponentFormDesignRenderView' } }
+                { i18nKey: 'app.aside.menu.designGenerateFormView', routerLink: { name: 'ComponentFormDesignRenderView' } }
               ]
             },
             {
-              title: '自定义插槽模板',
+              i18nKey: 'app.aside.menu.designCustomSlotTemplate',
               children: [
-                { title: '自定义标题模板', routerLink: { name: 'ComponentFormDesignTemplateTitle' } },
-                { title: '自定义标题前缀模板', routerLink: { name: 'ComponentFormDesignTemplateTitlePrefix' } },
-                { title: '自定义标题后缀模板', routerLink: { name: 'ComponentFormDesignTemplateTitleSuffix' } },
-                { title: '自定义头部模板', routerLink: { name: 'ComponentFormDesignTemplateHeader' } }
+                { i18nKey: 'app.aside.menu.designCustomTitleTemplate', routerLink: { name: 'ComponentFormDesignTemplateTitle' } },
+                { i18nKey: 'app.aside.menu.designCustomTitlePrefixTemplate', routerLink: { name: 'ComponentFormDesignTemplateTitlePrefix' } },
+                { i18nKey: 'app.aside.menu.designCustomTitleSuffixTemplate', routerLink: { name: 'ComponentFormDesignTemplateTitleSuffix' } },
+                { i18nKey: 'app.aside.menu.designCustomHeaderTemplate', routerLink: { name: 'ComponentFormDesignTemplateHeader' } }
               ]
             },
-            { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form-design/renderView`, linkTarget: '_blank' }
+            { i18nKey: 'app.aside.menu.designThirdPartyPluginIntegration', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form-design/renderView`, linkTarget: '_blank' }
           ]
         },
         {
-          title: '设计器模板',
+          i18nKey: 'app.aside.menu.designDesignerTemplate',
           children: [
-            { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/', linkTarget: '_blank' },
-            { title: '零代码平台模板', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/', linkTarget: '_blank' }
+            { i18nKey: 'app.aside.menu.designVisualDesignerTemplate', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/', linkTarget: '_blank' },
+            { i18nKey: 'app.aside.menu.designZeroCodePlatformTemplate', isEnterprise: true, linkUrl: 'https://vxeui.com/zero-code/', linkTarget: '_blank' }
           ]
         },
         {
@@ -65,23 +65,23 @@ export const designNavConfig: NavVO = {
           children: [
             { title: 'API', routerLink: { name: 'GlobalRendererFormDesignAPI' } },
             {
-              title: '创建控件',
+              i18nKey: 'app.aside.menu.designCreateWidget',
               children: [
-                { title: '单行输入', routerLink: { name: 'GlobalRendererFormDesignWidgetMyInputWidget' } },
-                { title: '多行输入', routerLink: { name: 'GlobalRendererFormDesignWidgetMyTextareaWidget' } },
-                { title: '下拉框', routerLink: { name: 'GlobalRendererFormDesignWidgetMySelectWidget' } },
-                { title: '日期选择', routerLink: { name: 'GlobalRendererFormDesignWidgetMyDatePickerWidget' } },
-                { title: '数值输入', routerLink: { name: 'GlobalRendererFormDesignWidgetMyNumberInputWidget' } },
-                { title: '金额输入', routerLink: { name: 'GlobalRendererFormDesignWidgetMyAmountInputWidget' } },
-                { title: '上传附件', routerLink: { name: 'GlobalRendererFormDesignWidgetMyUploadFileWidget' } },
-                { title: '上传图片', routerLink: { name: 'GlobalRendererFormDesignWidgetMyUploadImageWidget' } }
+                { i18nKey: 'app.aside.menu.designSingleLineInput', routerLink: { name: 'GlobalRendererFormDesignWidgetMyInputWidget' } },
+                { i18nKey: 'app.aside.menu.designMultilineInput', routerLink: { name: 'GlobalRendererFormDesignWidgetMyTextareaWidget' } },
+                { i18nKey: 'app.aside.menu.designSelect', routerLink: { name: 'GlobalRendererFormDesignWidgetMySelectWidget' } },
+                { i18nKey: 'app.aside.menu.designDatePicker', routerLink: { name: 'GlobalRendererFormDesignWidgetMyDatePickerWidget' } },
+                { i18nKey: 'app.aside.menu.designNumberInput', routerLink: { name: 'GlobalRendererFormDesignWidgetMyNumberInputWidget' } },
+                { i18nKey: 'app.aside.menu.designAmountInput', routerLink: { name: 'GlobalRendererFormDesignWidgetMyAmountInputWidget' } },
+                { i18nKey: 'app.aside.menu.designUploadFile', routerLink: { name: 'GlobalRendererFormDesignWidgetMyUploadFileWidget' } },
+                { i18nKey: 'app.aside.menu.designUploadImage', routerLink: { name: 'GlobalRendererFormDesignWidgetMyUploadImageWidget' } }
               ]
             },
             {
-              title: '创建表单',
+              i18nKey: 'app.aside.menu.designCreateForm',
               children: [
-                { title: '自定义表单1', routerLink: { name: 'GlobalRendererFormDesignMyform1' } },
-                { title: '自定义表单2', routerLink: { name: 'GlobalRendererFormDesignMyform2' } }
+                { i18nKey: 'app.aside.menu.designCustomForm1', routerLink: { name: 'GlobalRendererFormDesignMyform1' } },
+                { i18nKey: 'app.aside.menu.designCustomForm2', routerLink: { name: 'GlobalRendererFormDesignMyform2' } }
               ]
             }
           ]
@@ -96,10 +96,10 @@ export const designNavConfig: NavVO = {
         {
           i18nKey: 'app.aside.menu.listDesignUse',
           children: [
-            { title: '基础功能', routerLink: { name: 'ComponentListDesignBase' } },
-            { title: '移动端设计器', routerLink: { name: 'ComponentListDesignMobile' } },
-            { title: 'PC 端和移动端设计器', routerLink: { name: 'ComponentListDesignPcAndMobile' } },
-            { title: '集成表单设计器', routerLink: { name: 'ComponentListDesignFormAndList' } }
+            { i18nKey: 'app.aside.menu.designBasicFeatures', routerLink: { name: 'ComponentListDesignBase' } },
+            { i18nKey: 'app.aside.menu.designMobileDesigner', routerLink: { name: 'ComponentListDesignMobile' } },
+            { i18nKey: 'app.aside.menu.designPcAndMobileDesigner', routerLink: { name: 'ComponentListDesignPcAndMobile' } },
+            { i18nKey: 'app.aside.menu.designFormDesignerIntegration', routerLink: { name: 'ComponentListDesignFormAndList' } }
           ]
         }
       ]
