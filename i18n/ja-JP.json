@@ -14,6 +14,7 @@
       "searchPlaceholder": "キーワードを入力してドキュメントを検索",
       "searchResultHtml": "「<span class=\"keyword-lighten\">{0}</span>」に関連する結果が見つかりません！",
       "searchLoadingText": "検索中です。しばらくお待ちください！",
+      "updateLog": "更新日志",
       "menu": {
         "demoTitle": "機能デモ",
         "demoList": "通常リスト - デモ",
@@ -143,11 +144,21 @@
       "enterpriseVersion": "エンタープライズ版",
       "buyPlugin": "プラグインライセンスを取得",
       "supportUs": "会社情報",
+      "nativeScrollbar": "原生滚动条",
+      "vmScrollbar": "虚拟滚动条",
       "menuGroup": {
         "base": "共通基礎ライブラリ",
         "pcui": "Web デスクトップ",
         "store": "拡張プラグイン"
       }
+    },
+    "sizeGroup": {
+      "xlarge": "特大",
+      "large": "大",
+      "default": "默认",
+      "medium": "中",
+      "small": "小",
+      "mini": "迷你"
     },
     "base": {
       "light": "ライト",

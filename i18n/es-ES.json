@@ -14,6 +14,7 @@
       "searchPlaceholder": "Introduce palabras clave para buscar en la documentación",
       "searchResultHtml": "No se encontraron resultados para “<span class=\"keyword-lighten\">{0}</span>”.",
       "searchLoadingText": "Buscando, espera un momento.",
+      "updateLog": "更新日志",
       "menu": {
         "demoTitle": "Demos de funciones",
         "demoList": "Lista básica - Demo",
@@ -143,11 +144,21 @@
       "enterpriseVersion": "Enterprise",
       "buyPlugin": "Obtener licencia de plugin",
       "supportUs": "Sobre nosotros",
+      "nativeScrollbar": "原生滚动条",
+      "vmScrollbar": "虚拟滚动条",
       "menuGroup": {
         "base": "Bibliotecas base comunes",
         "pcui": "Web de escritorio",
         "store": "Plugins de extensión"
       }
+    },
+    "sizeGroup": {
+      "xlarge": "特大",
+      "large": "大",
+      "default": "默认",
+      "medium": "中",
+      "small": "小",
+      "mini": "迷你"
     },
     "base": {
       "light": "Claro",

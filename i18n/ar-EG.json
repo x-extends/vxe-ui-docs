@@ -14,6 +14,7 @@
       "searchPlaceholder": "أدخل الكلمات الرئيسية للبحث عن المستندات",
       "searchResultHtml": "لم يتم العثور على نتائج مرتبطة بـ \"<span class =\" keyword-lighten \"> {0} </span>\"!",
       "searchLoadingText": "البحث ، من فضلك انتظر!",
+      "updateLog": "更新日志",
       "menu": {
         "demoTitle": "مظاهرة وظيفية",
         "demoList": "القائمة العادية - العرض التوضيحي",
@@ -143,11 +144,21 @@
       "enterpriseVersion": "Enterprise Edition",
       "buyPlugin": "获取插件授权",
       "supportUs": "关于我们",
+      "nativeScrollbar": "原生滚动条",
+      "vmScrollbar": "虚拟滚动条",
       "menuGroup": {
         "base": "通用基础库",
         "pcui": "Web 桌面端",
         "store": "插件库"
       }
+    },
+    "sizeGroup": {
+      "xlarge": "特大",
+      "large": "大",
+      "default": "默认",
+      "medium": "中",
+      "small": "小",
+      "mini": "迷你"
     },
     "base": {
       "light": "خلال النهار",
