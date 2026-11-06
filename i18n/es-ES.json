@@ -426,6 +426,7 @@
       "nav": {
         "aggregationFilter": "Filtro básico",
         "options": "Lista de opciones personalizada",
+        "transfer": "自适应位置",
         "fixed": "Columna fija",
         "sort": "Ordenar",
         "combinationRemoteFilter": "Filtro del lado del servidor",

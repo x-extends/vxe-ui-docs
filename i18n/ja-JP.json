@@ -426,6 +426,7 @@
       "nav": {
         "aggregationFilter": "基本フィルター",
         "options": "カスタムオプションリスト",
+        "transfer": "自适应位置",
         "fixed": "固定列",
         "sort": "並び替え",
         "combinationRemoteFilter": "サーバーサイドフィルター",

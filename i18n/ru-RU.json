@@ -426,6 +426,7 @@
       "nav": {
         "aggregationFilter": "Базовый фильтр",
         "options": "Пользовательский список опций",
+        "transfer": "自适应位置",
         "fixed": "Замороженный столбец",
         "sort": "Сортировка",
         "combinationRemoteFilter": "Серверный фильтр",

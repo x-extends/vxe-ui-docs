@@ -426,6 +426,7 @@
       "nav": {
         "aggregationFilter": "Filtragem básica",
         "options": "自定义选项列表",
+        "transfer": "自适应位置",
         "fixed": "冻结列",
         "sort": "排序",
         "combinationRemoteFilter": "服务端筛选",

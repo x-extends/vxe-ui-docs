@@ -426,6 +426,7 @@
       "nav": {
         "aggregationFilter": "Basic filtering",
         "options": "Custom option list",
+        "transfer": "自适应位置",
         "fixed": "Frozen column",
         "sort": "Sort",
         "combinationRemoteFilter": "Server-side filtering",
