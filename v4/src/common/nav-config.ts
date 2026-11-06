@@ -25,7 +25,7 @@ export const navConfigList: NavVO[] = [
           { i18nKey: 'app.aside.menu.lazyUseGlobal', routerLink: { name: 'StartUIUseGlobal' } },
           { i18nKey: 'app.aside.menu.lazyUseImport', routerLink: { name: 'StartUIUseImport' } },
           { i18nKey: 'app.aside.menu.useGlobalCDN', routerLink: { name: 'StartUICDN' } },
-          { title: '后台管理系统模板', isTemplate: true, linkUrl: 'https://vxeui.com/admin-template/', linkTarget: '_blank' }
+          { i18nKey: 'app.aside.menu.adminSystem', isTemplate: true, linkUrl: 'https://vxeui.com/admin-template/', linkTarget: '_blank' }
         ]
       },
       {
@@ -36,7 +36,7 @@ export const navConfigList: NavVO[] = [
           { i18nKey: 'app.aside.menu.lazyUseImport', routerLink: { name: 'StartTableUseImport' } },
           { i18nKey: 'app.aside.menu.useGlobalCDN', routerLink: { name: 'StartTableCDN' } },
           { i18nKey: 'app.aside.menu.useTableSingleCDN', routerLink: { name: 'StartTableSingleCDN' } },
-          { title: '使用第三方 UI 库', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/grid/edit/el-input`, linkTarget: '_blank' }
+          { i18nKey: 'app.aside.menu.useThirdUI', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/grid/edit/el-input`, linkTarget: '_blank' }
         ]
       },
       {
@@ -55,8 +55,8 @@ export const navConfigList: NavVO[] = [
           // { i18nKey: 'app.aside.menu.lazyUseGlobal', routerLink: { name: 'StartDesignUseGlobal' } },
           // { i18nKey: 'app.aside.menu.lazyUseImport', routerLink: { name: 'StartDesignUseImport' } },
           { i18nKey: 'app.aside.menu.useGlobalCDN', routerLink: { name: 'StartDesignCDN' } },
-          { title: '使用第三方 UI 库', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form-design/renderView`, linkTarget: '_blank' },
-          { title: '可视化设计器模板', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/', linkTarget: '_blank' }
+          { i18nKey: 'app.aside.menu.useThirdUI', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form-design/renderView`, linkTarget: '_blank' },
+          { i18nKey: 'app.aside.menu.designSystem', isTemplate: true, linkUrl: 'https://vxeui.com/design-template/', linkTarget: '_blank' }
         ]
       },
       { i18nKey: 'app.aside.menu.globalConfig', routerLink: { name: 'StartConfig' } },
@@ -82,32 +82,32 @@ export const navConfigList: NavVO[] = [
       { i18nKey: 'app.aside.menu.clipboard', routerLink: { name: 'ToolClipboard' } },
       { i18nKey: 'app.aside.menu.functions', linkUrl: 'https://util.vxeui.com', linkTarget: '_blank' },
       {
-        title: '文件操作',
+        i18nKey: 'app.aside.menu.uploadUtils',
         children: [
           { title: '读取文件', routerLink: { name: 'ComponentUploadGlobalReadFile' } },
           { title: '下载文件', routerLink: { name: 'ComponentUploadGlobalSaveFile' } }
         ]
       },
       {
-        title: '右键菜单',
+        i18nKey: 'app.aside.menu.ctxMenuUtils',
         children: [
           { title: '右键菜单', routerLink: { name: 'ComponentContextMenuGlobalContextMenu' } }
         ]
       },
       {
-        title: '加载中',
+        i18nKey: 'app.aside.menu.loadingUtils',
         children: [
           { title: '加载中', routerLink: { name: 'ComponentLoadingGlobalLoading' } }
         ]
       },
       {
-        title: 'Tooltip 提示',
+        i18nKey: 'app.aside.menu.tooltipUtils',
         children: [
           { title: '单例模式', routerLink: { name: 'ComponentTooltipGlobalTooltip' } }
         ]
       },
       {
-        title: '颜色转换工具',
+        i18nKey: 'app.aside.menu.colorUtils',
         children: [
           { title: '格式转换', routerLink: { name: 'ComponentUploadGlobalColorType' } },
           { title: '解析为指定格式', routerLink: { name: 'ComponentUploadGlobalColorParse' } },
@@ -115,7 +115,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: '打印 HTML 标签',
+        i18nKey: 'app.aside.menu.printUtils',
         children: [
           { title: '打印', routerLink: { name: 'ComponentPrintGlobalPrint' } }
         ]
@@ -139,7 +139,7 @@ export const navConfigList: NavVO[] = [
     showCount: true,
     children: [
       {
-        title: 'Layout 页面布局',
+        i18nKey: 'app.aside.menu.layoutContainerTitle',
         children: [
           { title: 'Layout Container API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-container' } }, keywords: 'vxe-layout-container' },
           { title: 'Layout Aside API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-aside' } }, keywords: 'vxe-layout-aside' },
@@ -154,7 +154,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'Backtop 回到顶部',
+        i18nKey: 'app.aside.menu.backtopTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'backtop' } }, keywords: 'vxe-backtop' },
           { title: '尺寸大小', routerLink: { name: 'ComponentBacktopSize' } },
@@ -174,7 +174,7 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'Row 行 Col 列',
+        i18nKey: 'app.aside.menu.rowcolTitle',
         children: [
           { title: 'Row API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'row' } }, keywords: 'vxe-row' },
           { title: 'Col API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'col' } }, keywords: 'vxe-col' },
