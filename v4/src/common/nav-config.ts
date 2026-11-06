@@ -84,40 +84,40 @@ export const navConfigList: NavVO[] = [
       {
         i18nKey: 'app.aside.menu.uploadUtils',
         children: [
-          { title: '读取文件', routerLink: { name: 'ComponentUploadGlobalReadFile' } },
-          { title: '下载文件', routerLink: { name: 'ComponentUploadGlobalSaveFile' } }
+          { i18nKey: 'app.aside.menu.toolsReadFile', routerLink: { name: 'ComponentUploadGlobalReadFile' } },
+          { i18nKey: 'app.aside.menu.toolsDownloadFile', routerLink: { name: 'ComponentUploadGlobalSaveFile' } }
         ]
       },
       {
         i18nKey: 'app.aside.menu.ctxMenuUtils',
         children: [
-          { title: '右键菜单', routerLink: { name: 'ComponentContextMenuGlobalContextMenu' } }
+          { i18nKey: 'app.aside.menu.toolsContextMenu', routerLink: { name: 'ComponentContextMenuGlobalContextMenu' } }
         ]
       },
       {
         i18nKey: 'app.aside.menu.loadingUtils',
         children: [
-          { title: '加载中', routerLink: { name: 'ComponentLoadingGlobalLoading' } }
+          { i18nKey: 'app.aside.menu.toolsLoading', routerLink: { name: 'ComponentLoadingGlobalLoading' } }
         ]
       },
       {
         i18nKey: 'app.aside.menu.tooltipUtils',
         children: [
-          { title: '单例模式', routerLink: { name: 'ComponentTooltipGlobalTooltip' } }
+          { i18nKey: 'app.aside.menu.toolsSingletonMode', routerLink: { name: 'ComponentTooltipGlobalTooltip' } }
         ]
       },
       {
         i18nKey: 'app.aside.menu.colorUtils',
         children: [
-          { title: '格式转换', routerLink: { name: 'ComponentUploadGlobalColorType' } },
-          { title: '解析为指定格式', routerLink: { name: 'ComponentUploadGlobalColorParse' } },
-          { title: '效果处理', routerLink: { name: 'ComponentUploadGlobalColorEffect' } }
+          { i18nKey: 'app.aside.menu.toolsFormatConversion', routerLink: { name: 'ComponentUploadGlobalColorType' } },
+          { i18nKey: 'app.aside.menu.toolsParseToFormat', routerLink: { name: 'ComponentUploadGlobalColorParse' } },
+          { i18nKey: 'app.aside.menu.toolsEffectProcessing', routerLink: { name: 'ComponentUploadGlobalColorEffect' } }
         ]
       },
       {
         i18nKey: 'app.aside.menu.printUtils',
         children: [
-          { title: '打印', routerLink: { name: 'ComponentPrintGlobalPrint' } }
+          { i18nKey: 'app.aside.menu.toolsPrint', routerLink: { name: 'ComponentPrintGlobalPrint' } }
         ]
       }
     ]
@@ -127,10 +127,10 @@ export const navConfigList: NavVO[] = [
     icon: 'vxe-icon-star',
     children: [
       { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon' } }, keywords: 'vxe-icon' },
-      { title: '图标列表', routerLink: { name: 'ComponentIconBase' } },
-      { title: '尺寸大小', routerLink: { name: 'ComponentIconSize' } },
-      { title: '效果', routerLink: { name: 'ComponentIconAnimation' } },
-      { title: '状态颜色', routerLink: { name: 'ComponentIconStatus' } }
+      { i18nKey: 'app.aside.menu.iconList', routerLink: { name: 'ComponentIconBase' } },
+      { i18nKey: 'app.aside.menu.iconSize', routerLink: { name: 'ComponentIconSize' } },
+      { i18nKey: 'app.aside.menu.iconEffect', routerLink: { name: 'ComponentIconAnimation' } },
+      { i18nKey: 'app.aside.menu.iconStatusColor', routerLink: { name: 'ComponentIconStatus' } }
     ]
   },
   {
@@ -146,29 +146,29 @@ export const navConfigList: NavVO[] = [
           { title: 'Layout Header API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-header' } }, keywords: 'vxe-layout-header' },
           { title: 'Layout Body API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-body' } }, keywords: 'vxe-layout-body' },
           { title: 'Layout Footer API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'layout-footer' } }, keywords: 'vxe-layout-footer' },
-          { title: '基础布局', routerLink: { name: 'ComponentLayoutBase' } },
-          { title: '固定头部和底部', routerLink: { name: 'ComponentLayoutFixed' } },
-          { title: '侧边栏，内容区滚动条', routerLink: { name: 'ComponentLayoutAside' } },
-          { title: '头部固定，中间内容区滚动', routerLink: { name: 'ComponentLayoutHeader' } },
-          { title: '左侧与内容区滚动', routerLink: { name: 'ComponentLayoutBody' } }
+          { i18nKey: 'app.aside.menu.basicLayoutBaseLayout', routerLink: { name: 'ComponentLayoutBase' } },
+          { i18nKey: 'app.aside.menu.basicLayoutFixed', routerLink: { name: 'ComponentLayoutFixed' } },
+          { i18nKey: 'app.aside.menu.basicLayoutAside', routerLink: { name: 'ComponentLayoutAside' } },
+          { i18nKey: 'app.aside.menu.basicLayoutHeader', routerLink: { name: 'ComponentLayoutHeader' } },
+          { i18nKey: 'app.aside.menu.basicLayoutBody', routerLink: { name: 'ComponentLayoutBody' } }
         ]
       },
       {
         i18nKey: 'app.aside.menu.backtopTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'backtop' } }, keywords: 'vxe-backtop' },
-          { title: '尺寸大小', routerLink: { name: 'ComponentBacktopSize' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentBacktopStatus' } },
-          { title: '圆形', routerLink: { name: 'ComponentBacktopCircle' } },
-          { title: '图标', routerLink: { name: 'ComponentBacktopIcon' } },
-          { title: '文字', routerLink: { name: 'ComponentBacktopContent' } },
-          { title: '自定义位置', routerLink: { name: 'ComponentBacktopPos' } },
+          { i18nKey: 'app.aside.menu.basicSize', routerLink: { name: 'ComponentBacktopSize' } },
+          { i18nKey: 'app.aside.menu.basicStatusColor', routerLink: { name: 'ComponentBacktopStatus' } },
+          { i18nKey: 'app.aside.menu.basicCircle', routerLink: { name: 'ComponentBacktopCircle' } },
+          { i18nKey: 'app.aside.menu.basicIcon', routerLink: { name: 'ComponentBacktopIcon' } },
+          { i18nKey: 'app.aside.menu.basicText', routerLink: { name: 'ComponentBacktopContent' } },
+          { i18nKey: 'app.aside.menu.basicCustomPosition', routerLink: { name: 'ComponentBacktopPos' } },
           {
-            title: '自定义插槽模板',
+            i18nKey: 'app.aside.menu.basicCustomSlotTemplate',
             children: [
-              { title: '自定义内容模板', routerLink: { name: 'ComponentBacktopTemplateDefault' } },
-              { title: '自定义顶部模板', routerLink: { name: 'ComponentBacktopTemplateTop' } },
-              { title: '自定义底部模板', routerLink: { name: 'ComponentBacktopTemplateBottom' } }
+              { i18nKey: 'app.aside.menu.basicCustomContentTemplate', routerLink: { name: 'ComponentBacktopTemplateDefault' } },
+              { i18nKey: 'app.aside.menu.basicCustomTopTemplate', routerLink: { name: 'ComponentBacktopTemplateTop' } },
+              { i18nKey: 'app.aside.menu.basicCustomBottomTemplate', routerLink: { name: 'ComponentBacktopTemplateBottom' } }
             ]
           }
         ]
@@ -178,121 +178,121 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'Row API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'row' } }, keywords: 'vxe-row' },
           { title: 'Col API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'col' } }, keywords: 'vxe-col' },
-          { title: '占比', routerLink: { name: 'ComponentRowBase' } },
-          { title: '垂直布局', routerLink: { name: 'ComponentRowVertical' } },
-          { title: '自动换行', routerLink: { name: 'ComponentRowWrap' } },
-          { title: '间距', routerLink: { name: 'ComponentRowGutter' } },
-          { title: '固定宽度', routerLink: { name: 'ComponentRowColWidth' } },
-          { title: '铺满宽度', routerLink: { name: 'ComponentRowColFill' } },
-          { title: '对齐方式', routerLink: { name: 'ComponentRowColAlign' } },
-          { title: '溢出隐藏', routerLink: { name: 'ComponentRowColEllipsis' } },
-          { title: 'Grid 布局', routerLink: { name: 'ComponentRowColGrid' } }
+          { i18nKey: 'app.aside.menu.basicRowColRatio', routerLink: { name: 'ComponentRowBase' } },
+          { i18nKey: 'app.aside.menu.basicVerticalLayout', routerLink: { name: 'ComponentRowVertical' } },
+          { i18nKey: 'app.aside.menu.basicAutoWrap', routerLink: { name: 'ComponentRowWrap' } },
+          { i18nKey: 'app.aside.menu.basicGap', routerLink: { name: 'ComponentRowGutter' } },
+          { i18nKey: 'app.aside.menu.basicFixedWidth', routerLink: { name: 'ComponentRowColWidth' } },
+          { i18nKey: 'app.aside.menu.basicFillWidth', routerLink: { name: 'ComponentRowColFill' } },
+          { i18nKey: 'app.aside.menu.basicAlign', routerLink: { name: 'ComponentRowColAlign' } },
+          { i18nKey: 'app.aside.menu.basicOverflowHidden', routerLink: { name: 'ComponentRowColEllipsis' } },
+          { i18nKey: 'app.aside.menu.basicGridLayout', routerLink: { name: 'ComponentRowColGrid' } }
         ]
       },
       {
         i18nKey: 'app.aside.menu.textTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'text' } }, keywords: 'vxe-textT' },
-          { title: '尺寸大小', routerLink: { name: 'ComponentTextSize' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentTextStatus' } },
-          { title: '加载中', routerLink: { name: 'ComponentTextLoading' } },
-          { title: '前缀图标', routerLink: { name: 'ComponentTextIcon' } },
-          { title: '后缀图标', routerLink: { name: 'ComponentTextSuffixIcon' } },
-          { title: '点击复制内容', routerLink: { name: 'ComponentTextClickToCopy' } }
+          { i18nKey: 'app.aside.menu.basicSize', routerLink: { name: 'ComponentTextSize' } },
+          { i18nKey: 'app.aside.menu.basicStatusColor', routerLink: { name: 'ComponentTextStatus' } },
+          { i18nKey: 'app.aside.menu.basicLoading', routerLink: { name: 'ComponentTextLoading' } },
+          { i18nKey: 'app.aside.menu.basicPrefixIcon', routerLink: { name: 'ComponentTextIcon' } },
+          { i18nKey: 'app.aside.menu.basicSuffixIcon', routerLink: { name: 'ComponentTextSuffixIcon' } },
+          { i18nKey: 'app.aside.menu.basicClickToCopy', routerLink: { name: 'ComponentTextClickToCopy' } }
         ]
       },
       {
         i18nKey: 'app.aside.menu.linkTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'link' } }, keywords: 'vxe-link' },
-          { title: '尺寸大小', routerLink: { name: 'ComponentLinkSize' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentLinkStatus' } },
-          { title: '图标', routerLink: { name: 'ComponentLinkIcon' } },
-          { title: '下划线', routerLink: { name: 'ComponentLinkUnderline' } },
-          { title: '禁用', routerLink: { name: 'ComponentLinkDisabled' } },
-          { title: '超链接', routerLink: { name: 'ComponentLinkHref' } },
-          { title: '路由模式', routerLink: { name: 'ComponentLinkRouter' } },
-          { title: '权限码', routerLink: { name: 'ComponentLinkPermissionCode' } }
+          { i18nKey: 'app.aside.menu.basicSize', routerLink: { name: 'ComponentLinkSize' } },
+          { i18nKey: 'app.aside.menu.basicStatusColor', routerLink: { name: 'ComponentLinkStatus' } },
+          { i18nKey: 'app.aside.menu.basicIcon', routerLink: { name: 'ComponentLinkIcon' } },
+          { i18nKey: 'app.aside.menu.basicUnderline', routerLink: { name: 'ComponentLinkUnderline' } },
+          { i18nKey: 'app.aside.menu.basicDisabled', routerLink: { name: 'ComponentLinkDisabled' } },
+          { i18nKey: 'app.aside.menu.basicHref', routerLink: { name: 'ComponentLinkHref' } },
+          { i18nKey: 'app.aside.menu.basicRouterMode', routerLink: { name: 'ComponentLinkRouter' } },
+          { i18nKey: 'app.aside.menu.basicPermissionCode', routerLink: { name: 'ComponentLinkPermissionCode' } }
         ]
       },
       {
         i18nKey: 'app.aside.menu.tagTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tag' } }, keywords: 'vxe-tag' },
-          { title: '尺寸大小', routerLink: { name: 'ComponentTagSize' } },
-          { title: '状态', routerLink: { name: 'ComponentTagStatus' } },
-          { title: '图标', routerLink: { name: 'ComponentTagIcon' } },
-          { title: '圆角', routerLink: { name: 'ComponentTagRound' } },
-          { title: '边框', routerLink: { name: 'ComponentTagBorder' } },
-          { title: '加载中', routerLink: { name: 'ComponentTagLoading' } },
-          { title: '颜色', routerLink: { name: 'ComponentTagColor' } },
-          { title: '可关闭', routerLink: { name: 'ComponentTagClosable' } }
+          { i18nKey: 'app.aside.menu.basicSize', routerLink: { name: 'ComponentTagSize' } },
+          { i18nKey: 'app.aside.menu.basicStatus', routerLink: { name: 'ComponentTagStatus' } },
+          { i18nKey: 'app.aside.menu.basicIcon', routerLink: { name: 'ComponentTagIcon' } },
+          { i18nKey: 'app.aside.menu.basicRound', routerLink: { name: 'ComponentTagRound' } },
+          { i18nKey: 'app.aside.menu.basicBorder', routerLink: { name: 'ComponentTagBorder' } },
+          { i18nKey: 'app.aside.menu.basicLoading', routerLink: { name: 'ComponentTagLoading' } },
+          { i18nKey: 'app.aside.menu.basicColor', routerLink: { name: 'ComponentTagColor' } },
+          { i18nKey: 'app.aside.menu.basicClosable', routerLink: { name: 'ComponentTagClosable' } }
         ]
       },
       {
         i18nKey: 'app.aside.menu.buttonTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'button' } }, keywords: 'vxe-button' },
-          { title: '尺寸大小', routerLink: { name: 'ComponentButtonSize' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentButtonStatus' } },
-          { title: '圆角', routerLink: { name: 'ComponentButtonRound' } },
-          { title: '圆形', routerLink: { name: 'ComponentButtonCircle' } },
-          { title: '图标', routerLink: { name: 'ComponentButtonIcon' } },
-          { title: '提示图标', routerLink: { name: 'ComponentButtonTipIcon' } },
-          { title: '加载中', routerLink: { name: 'ComponentButtonLoading' } },
-          { title: '路由模式', routerLink: { name: 'ComponentButtonRouter' } },
-          { title: '按钮组', routerLink: { name: 'ComponentButtonGroup' } },
-          { title: '排版方式', routerLink: { name: 'ComponentButtonVertical' } },
+          { i18nKey: 'app.aside.menu.basicSize', routerLink: { name: 'ComponentButtonSize' } },
+          { i18nKey: 'app.aside.menu.basicStatusColor', routerLink: { name: 'ComponentButtonStatus' } },
+          { i18nKey: 'app.aside.menu.basicRound', routerLink: { name: 'ComponentButtonRound' } },
+          { i18nKey: 'app.aside.menu.basicCircle', routerLink: { name: 'ComponentButtonCircle' } },
+          { i18nKey: 'app.aside.menu.basicIcon', routerLink: { name: 'ComponentButtonIcon' } },
+          { i18nKey: 'app.aside.menu.basicTipIcon', routerLink: { name: 'ComponentButtonTipIcon' } },
+          { i18nKey: 'app.aside.menu.basicLoading', routerLink: { name: 'ComponentButtonLoading' } },
+          { i18nKey: 'app.aside.menu.basicRouterMode', routerLink: { name: 'ComponentButtonRouter' } },
+          { i18nKey: 'app.aside.menu.basicButtonGroup', routerLink: { name: 'ComponentButtonGroup' } },
+          { i18nKey: 'app.aside.menu.basicLayoutMode', routerLink: { name: 'ComponentButtonVertical' } },
           {
-            title: '下拉按钮',
+            i18nKey: 'app.aside.menu.basicDropdownButton',
             children: [
-              { title: '下拉按钮', routerLink: { name: 'ComponentButtonDropdownOptions' } },
-              { title: '状态颜色', routerLink: { name: 'ComponentButtonDropdownStatus' } },
-              { title: '触发方式', routerLink: { name: 'ComponentButtonDropdownTrigger' } },
-              { title: '提示图标', routerLink: { name: 'ComponentButtonDropdownTipIcon' } },
-              { title: '固定方向', routerLink: { name: 'ComponentButtonDropdownPlacement' } },
-              { title: '下拉面板挂载 Body', routerLink: { name: 'ComponentButtonDropdownTeleportTo' } },
-              { title: '自定义插槽模板', routerLink: { name: 'ComponentButtonDropdownTemplate' } },
-              { title: '权限码', routerLink: { name: 'ComponentButtonDropdownPermissionCode' } }
+              { i18nKey: 'app.aside.menu.basicDropdownButton', routerLink: { name: 'ComponentButtonDropdownOptions' } },
+              { i18nKey: 'app.aside.menu.basicStatusColor', routerLink: { name: 'ComponentButtonDropdownStatus' } },
+              { i18nKey: 'app.aside.menu.basicTriggerMode', routerLink: { name: 'ComponentButtonDropdownTrigger' } },
+              { i18nKey: 'app.aside.menu.basicTipIcon', routerLink: { name: 'ComponentButtonDropdownTipIcon' } },
+              { i18nKey: 'app.aside.menu.basicFixedDirection', routerLink: { name: 'ComponentButtonDropdownPlacement' } },
+              { i18nKey: 'app.aside.menu.basicDropdownTeleportTo', routerLink: { name: 'ComponentButtonDropdownTeleportTo' } },
+              { i18nKey: 'app.aside.menu.basicCustomSlotTemplate', routerLink: { name: 'ComponentButtonDropdownTemplate' } },
+              { i18nKey: 'app.aside.menu.basicPermissionCode', routerLink: { name: 'ComponentButtonDropdownPermissionCode' } }
             ]
           },
-          { title: '禁用', routerLink: { name: 'ComponentButtonDisabled' } },
-          { title: '使用右键菜单', routerLink: { name: 'ComponentButtonMenu' } },
-          { title: '权限码', routerLink: { name: 'ComponentButtonPermissionCode' } },
+          { i18nKey: 'app.aside.menu.basicDisabled', routerLink: { name: 'ComponentButtonDisabled' } },
+          { i18nKey: 'app.aside.menu.basicUseContextMenu', routerLink: { name: 'ComponentButtonMenu' } },
+          { i18nKey: 'app.aside.menu.basicPermissionCode', routerLink: { name: 'ComponentButtonPermissionCode' } },
           {
             i18nKey: 'app.aside.menu.buttonGlobalRenderer',
             children: [
               { title: 'API', routerLink: { name: 'GlobalRendererButtonAPI' } },
-              { title: '前缀图标', routerLink: { name: 'GlobalRendererButtonPrefix' } },
-              { title: '后缀图标', routerLink: { name: 'GlobalRendererButtonSuffix' } }
+              { i18nKey: 'app.aside.menu.basicPrefixIcon', routerLink: { name: 'GlobalRendererButtonPrefix' } },
+              { i18nKey: 'app.aside.menu.basicSuffixIcon', routerLink: { name: 'GlobalRendererButtonSuffix' } }
             ]
           },
-          { title: '使用第三方图标', isPlugin: true, linkUrl: `${otherUrl}#/other-iconfont/symbol/button/icon`, linkTarget: '_blank' }
+          { i18nKey: 'app.aside.menu.basicUseThirdPartyIcon', isPlugin: true, linkUrl: `${otherUrl}#/other-iconfont/symbol/button/icon`, linkTarget: '_blank' }
         ]
       },
       {
-        title: 'Divider 分割线',
+        i18nKey: 'app.aside.menu.basicDividerTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'divider' } }, keywords: 'vxe-divider' },
-          { title: '水平割线', routerLink: { name: 'ComponentDividerBase' } },
-          { title: '垂直分隔线', routerLink: { name: 'ComponentDividerVertical' } },
-          { title: '显示标题', routerLink: { name: 'ComponentDividerTitle' } }
+          { i18nKey: 'app.aside.menu.basicDividerHorizontal', routerLink: { name: 'ComponentDividerBase' } },
+          { i18nKey: 'app.aside.menu.basicDividerVertical', routerLink: { name: 'ComponentDividerVertical' } },
+          { i18nKey: 'app.aside.menu.basicShowTitle', routerLink: { name: 'ComponentDividerTitle' } }
         ]
       },
       {
-        title: 'Segmented 分段器',
+        i18nKey: 'app.aside.menu.basicSegmentedTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'segmented' } }, keywords: 'vxe-segmented' },
-          { title: '尺寸大小', routerLink: { name: 'ComponentSegmentedSize' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentSegmentedStatus' } },
-          { title: '图标', routerLink: { name: 'ComponentSegmentedIcon' } },
-          { title: '禁用', routerLink: { name: 'ComponentSegmentedDisabled' } },
-          { title: '类型样式', routerLink: { name: 'ComponentSegmentedType' } },
-          { title: '宽度', routerLink: { name: 'ComponentSegmentedWidth' } },
+          { i18nKey: 'app.aside.menu.basicSize', routerLink: { name: 'ComponentSegmentedSize' } },
+          { i18nKey: 'app.aside.menu.basicStatusColor', routerLink: { name: 'ComponentSegmentedStatus' } },
+          { i18nKey: 'app.aside.menu.basicIcon', routerLink: { name: 'ComponentSegmentedIcon' } },
+          { i18nKey: 'app.aside.menu.basicDisabled', routerLink: { name: 'ComponentSegmentedDisabled' } },
+          { i18nKey: 'app.aside.menu.basicTypeStyle', routerLink: { name: 'ComponentSegmentedType' } },
+          { i18nKey: 'app.aside.menu.basicWidth', routerLink: { name: 'ComponentSegmentedWidth' } },
           {
-            title: '自定义插槽模板',
+            i18nKey: 'app.aside.menu.basicCustomSlotTemplate',
             children: [
-              { title: '自定义内容模板', routerLink: { name: 'ComponentSegmentedTemplateDefault' } }
+              { i18nKey: 'app.aside.menu.basicCustomContentTemplate', routerLink: { name: 'ComponentSegmentedTemplateDefault' } }
             ]
           }
         ]
@@ -305,126 +305,126 @@ export const navConfigList: NavVO[] = [
     showCount: true,
     children: [
       {
-        title: 'Avatar 头像',
+        i18nKey: 'app.aside.menu.displayAvatarTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'avatar' } } },
-          { title: '基础', routerLink: { name: 'ComponentAvatarBase' } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentAvatarSize' } },
-          { title: '图标', routerLink: { name: 'ComponentAvatarIcon' } },
-          { title: '圆形', routerLink: { name: 'ComponentAvatarCircle' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentAvatarStatus' } },
-          { title: '小圆点', routerLink: { name: 'ComponentAvatarDot' } },
-          { title: '微标数量', routerLink: { name: 'ComponentAvatarCount' } }
+          { i18nKey: 'app.aside.menu.displayBase', routerLink: { name: 'ComponentAvatarBase' } },
+          { i18nKey: 'app.aside.menu.displaySize', routerLink: { name: 'ComponentAvatarSize' } },
+          { i18nKey: 'app.aside.menu.displayIcon', routerLink: { name: 'ComponentAvatarIcon' } },
+          { i18nKey: 'app.aside.menu.displayCircle', routerLink: { name: 'ComponentAvatarCircle' } },
+          { i18nKey: 'app.aside.menu.displayStatusColor', routerLink: { name: 'ComponentAvatarStatus' } },
+          { i18nKey: 'app.aside.menu.displayDot', routerLink: { name: 'ComponentAvatarDot' } },
+          { i18nKey: 'app.aside.menu.displayBadgeCount', routerLink: { name: 'ComponentAvatarCount' } }
         ]
       },
       {
-        title: 'Badge 微标',
+        i18nKey: 'app.aside.menu.displayBadgeTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'badge' } } },
-          { title: '基础', routerLink: { name: 'ComponentBadgeBase' } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentBadgerSize' } },
-          { title: '图标', routerLink: { name: 'ComponentBadgerIcon' } },
-          { title: '小圆点', routerLink: { name: 'ComponentBadgerDot' } }
+          { i18nKey: 'app.aside.menu.displayBase', routerLink: { name: 'ComponentBadgeBase' } },
+          { i18nKey: 'app.aside.menu.displaySize', routerLink: { name: 'ComponentBadgerSize' } },
+          { i18nKey: 'app.aside.menu.displayIcon', routerLink: { name: 'ComponentBadgerIcon' } },
+          { i18nKey: 'app.aside.menu.displayDot', routerLink: { name: 'ComponentBadgerDot' } }
         ]
       },
       {
         i18nKey: 'app.aside.menu.textEllipsisTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'text-ellipsis' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentTextEllipsisSize' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentTextEllipsisStatus' } },
-          { title: '单行溢出省略', routerLink: { name: 'ComponentTextEllipsisIconLineSingle' } },
-          { title: '多行溢出省略', routerLink: { name: 'ComponentTextEllipsisLineClamp' } }
+          { i18nKey: 'app.aside.menu.displaySize', routerLink: { name: 'ComponentTextEllipsisSize' } },
+          { i18nKey: 'app.aside.menu.displayStatusColor', routerLink: { name: 'ComponentTextEllipsisStatus' } },
+          { i18nKey: 'app.aside.menu.displaySingleLineEllipsis', routerLink: { name: 'ComponentTextEllipsisIconLineSingle' } },
+          { i18nKey: 'app.aside.menu.displayMultiLineEllipsis', routerLink: { name: 'ComponentTextEllipsisLineClamp' } }
         ]
       },
       {
-        title: 'Image 图片',
+        i18nKey: 'app.aside.menu.displayImageTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image' } } },
-          { title: '设置宽高', routerLink: { name: 'ComponentImageBase' } },
-          { title: '圆形图片', routerLink: { name: 'ComponentImageCircle' } },
-          { title: '预览链接', routerLink: { name: 'ComponentImageThumbnail' } },
-          { title: '预览多张图片', routerLink: { name: 'ComponentImageMultiple' } },
-          { title: '懒加载', routerLink: { name: 'ComponentImageLazy' } },
-          { title: '预览', routerLink: { name: 'ComponentImageShowPreview' } },
-          { title: '点击遮罩层关闭', routerLink: { name: 'ComponentImageMaskClosable' } },
+          { i18nKey: 'app.aside.menu.displaySetWidthHeight', routerLink: { name: 'ComponentImageBase' } },
+          { i18nKey: 'app.aside.menu.displayCircleImage', routerLink: { name: 'ComponentImageCircle' } },
+          { i18nKey: 'app.aside.menu.displayPreviewLink', routerLink: { name: 'ComponentImageThumbnail' } },
+          { i18nKey: 'app.aside.menu.displayPreviewMultipleImages', routerLink: { name: 'ComponentImageMultiple' } },
+          { i18nKey: 'app.aside.menu.displayLazyLoad', routerLink: { name: 'ComponentImageLazy' } },
+          { i18nKey: 'app.aside.menu.displayPreview', routerLink: { name: 'ComponentImageShowPreview' } },
+          { i18nKey: 'app.aside.menu.displayMaskClosable', routerLink: { name: 'ComponentImageMaskClosable' } },
           // { title: '打印按钮', routerLink: { name: 'ComponentImageShowPrintButton' } },
-          { title: '工具栏按钮', routerLink: { name: 'ComponentImageToolBtn' } },
-          { title: '工具栏图标', routerLink: { name: 'ComponentImageToolIcon' } },
-          { title: '事件监听', routerLink: { name: 'ComponentImageEvents' } }
+          { i18nKey: 'app.aside.menu.displayToolbarButton', routerLink: { name: 'ComponentImageToolBtn' } },
+          { i18nKey: 'app.aside.menu.displayToolbarIcon', routerLink: { name: 'ComponentImageToolIcon' } },
+          { i18nKey: 'app.aside.menu.displayEventListen', routerLink: { name: 'ComponentImageEvents' } }
         ]
       },
       {
-        title: 'ImageGroup 图片组',
+        i18nKey: 'app.aside.menu.displayImageGroupTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image-group' } } },
-          { title: '设置宽高', routerLink: { name: 'ComponentImageGroupBase' } },
-          { title: '预览', routerLink: { name: 'ComponentImageGroupShowPreview' } },
-          { title: '打印按钮', routerLink: { name: 'ComponentImageGroupShowPrintButton' } },
-          { title: '下载按钮', routerLink: { name: 'ComponentImageGroupShowDownloadButton' } }
+          { i18nKey: 'app.aside.menu.displaySetWidthHeight', routerLink: { name: 'ComponentImageGroupBase' } },
+          { i18nKey: 'app.aside.menu.displayPreview', routerLink: { name: 'ComponentImageGroupShowPreview' } },
+          { i18nKey: 'app.aside.menu.displayPrintButton', routerLink: { name: 'ComponentImageGroupShowPrintButton' } },
+          { i18nKey: 'app.aside.menu.displayDownloadButton', routerLink: { name: 'ComponentImageGroupShowDownloadButton' } }
         ]
       },
       {
-        title: 'ImagePreview 图片预览',
+        i18nKey: 'app.aside.menu.displayImagePreviewTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'image-preview' } } },
-          { title: '打开预览', routerLink: { name: 'ComponentImagePreview' } }
+          { i18nKey: 'app.aside.menu.displayOpenPreview', routerLink: { name: 'ComponentImagePreview' } }
         ]
       },
       {
-        title: 'Calendar 日历',
+        i18nKey: 'app.aside.menu.displayCalendarTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'calendar' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentCalendarSize' } },
-          { title: '高度', routerLink: { name: 'ComponentCalendarHeight' } },
-          { title: '日期视图', routerLink: { name: 'ComponentCalendarDate' } },
-          { title: '周视图', routerLink: { name: 'ComponentCalendarWeek' } },
-          { title: '月度图', routerLink: { name: 'ComponentCalendarMonth' } },
-          { title: '季度图', routerLink: { name: 'ComponentCalendarQuarter' } },
-          { title: '年度视图', routerLink: { name: 'ComponentCalendarYear' } },
-          { title: '自定义样式', routerLink: { name: 'ComponentCalendarCellStyle' } },
-          { title: '显示节假日', routerLink: { name: 'ComponentCalendarFestivalMethod' } },
-          { title: '事件监听', routerLink: { name: 'ComponentCalendarFestivalEvents' } },
+          { i18nKey: 'app.aside.menu.displaySize', routerLink: { name: 'ComponentCalendarSize' } },
+          { i18nKey: 'app.aside.menu.displayHeight', routerLink: { name: 'ComponentCalendarHeight' } },
+          { i18nKey: 'app.aside.menu.displayDateView', routerLink: { name: 'ComponentCalendarDate' } },
+          { i18nKey: 'app.aside.menu.displayWeekView', routerLink: { name: 'ComponentCalendarWeek' } },
+          { i18nKey: 'app.aside.menu.displayMonthView', routerLink: { name: 'ComponentCalendarMonth' } },
+          { i18nKey: 'app.aside.menu.displayQuarterView', routerLink: { name: 'ComponentCalendarQuarter' } },
+          { i18nKey: 'app.aside.menu.displayYearView', routerLink: { name: 'ComponentCalendarYear' } },
+          { i18nKey: 'app.aside.menu.displayCustomStyle', routerLink: { name: 'ComponentCalendarCellStyle' } },
+          { i18nKey: 'app.aside.menu.displayShowFestival', routerLink: { name: 'ComponentCalendarFestivalMethod' } },
+          { i18nKey: 'app.aside.menu.displayEventListen', routerLink: { name: 'ComponentCalendarFestivalEvents' } },
           {
-            title: '右键菜单',
+            i18nKey: 'app.aside.menu.displayContextMenu',
             children: [
-              { title: '配置菜单', routerLink: { name: 'ComponentCalendarMenuBasics' } },
-              { title: '前缀与后缀', routerLink: { name: 'ComponentCalendarMenuIcon' } },
-              { title: '是否禁用', routerLink: { name: 'ComponentCalendarMenuDisabled' } },
-              { title: '是否显示', routerLink: { name: 'ComponentCalendarMenuVisible' } },
-              { title: '异步加载中', routerLink: { name: 'ComponentCalendarMenuLoading' } },
-              { title: '权限控制', routerLink: { name: 'ComponentCalendarMenuVisibleMethod' } }
+              { i18nKey: 'app.aside.menu.displayConfigMenu', routerLink: { name: 'ComponentCalendarMenuBasics' } },
+              { i18nKey: 'app.aside.menu.displayPrefixAndSuffix', routerLink: { name: 'ComponentCalendarMenuIcon' } },
+              { i18nKey: 'app.aside.menu.displayIsDisabled', routerLink: { name: 'ComponentCalendarMenuDisabled' } },
+              { i18nKey: 'app.aside.menu.displayIsVisible', routerLink: { name: 'ComponentCalendarMenuVisible' } },
+              { i18nKey: 'app.aside.menu.displayAsyncLoading', routerLink: { name: 'ComponentCalendarMenuLoading' } },
+              { i18nKey: 'app.aside.menu.displayPermissionControl', routerLink: { name: 'ComponentCalendarMenuVisibleMethod' } }
             ]
           }
         ]
       },
       // { title: 'Progress 进度条' },
       {
-        title: 'Card 卡片',
+        i18nKey: 'app.aside.menu.displayCardTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'card' } }, keywords: 'vxe-card' },
-          { title: '基础', routerLink: { name: 'ComponentCardBase' } },
-          { title: '宽度', routerLink: { name: 'ComponentCardWidth' } },
-          { title: '高度', routerLink: { name: 'ComponentCardHeight' } },
-          { title: '加载中', routerLink: { name: 'ComponentCardLoading' } },
-          { title: '显示/隐藏边框', routerLink: { name: 'ComponentCardBorder' } },
-          { title: '显示/隐藏边距', routerLink: { name: 'ComponentCardPadding' } },
-          { title: '边框阴影', routerLink: { name: 'ComponentCardShadow' } },
-          { title: '自定义模板', routerLink: { name: 'ComponentCardTemplate' } },
-          { title: '实现可刷新', routerLink: { name: 'ComponentCardRefresh' } },
+          { i18nKey: 'app.aside.menu.displayBase', routerLink: { name: 'ComponentCardBase' } },
+          { i18nKey: 'app.aside.menu.displayWidth', routerLink: { name: 'ComponentCardWidth' } },
+          { i18nKey: 'app.aside.menu.displayHeight', routerLink: { name: 'ComponentCardHeight' } },
+          { i18nKey: 'app.aside.menu.displayLoading', routerLink: { name: 'ComponentCardLoading' } },
+          { i18nKey: 'app.aside.menu.displayToggleBorder', routerLink: { name: 'ComponentCardBorder' } },
+          { i18nKey: 'app.aside.menu.displayTogglePadding', routerLink: { name: 'ComponentCardPadding' } },
+          { i18nKey: 'app.aside.menu.displayBorderShadow', routerLink: { name: 'ComponentCardShadow' } },
+          { i18nKey: 'app.aside.menu.displayCustomTemplate', routerLink: { name: 'ComponentCardTemplate' } },
+          { i18nKey: 'app.aside.menu.displayImplementRefresh', routerLink: { name: 'ComponentCardRefresh' } },
           {
-            title: '滚动条',
+            i18nKey: 'app.aside.menu.displayScrollbar',
             children: [
               {
-                title: '原生滚动条',
+                i18nKey: 'app.aside.menu.displayNativeScrollbar',
                 children: [
-                  { title: '使用滚动条', routerLink: { name: 'ComponentCardScrollbarNativeScrollbar' } }
+                  { i18nKey: 'app.aside.menu.displayUseScrollbar', routerLink: { name: 'ComponentCardScrollbarNativeScrollbar' } }
                 ]
               },
               {
-                title: '虚拟滚动条',
+                i18nKey: 'app.aside.menu.displayVirtualScrollbar',
                 children: [
-                  { title: '使用滚动条', routerLink: { name: 'ComponentCardScrollbarUseScrollbarScrollbar' } }
+                  { i18nKey: 'app.aside.menu.displayUseScrollbar', routerLink: { name: 'ComponentCardScrollbarUseScrollbarScrollbar' } }
                 ]
               }
             ]
@@ -432,165 +432,165 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'Carousel 轮播图',
+        i18nKey: 'app.aside.menu.displayCarouselTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'carousel' } }, keywords: 'vxe-carousel' },
-          { title: '基础', routerLink: { name: 'ComponentCarouselBase' } },
-          { title: '高度', routerLink: { name: 'ComponentCarouselHeight' } },
-          { title: '纵向排版', routerLink: { name: 'ComponentCarouselVertical' } },
-          { title: '配置式', routerLink: { name: 'ComponentCarouselOptions' } },
-          { title: '自定义插槽模板', routerLink: { name: 'ComponentCarouselTemplate' } },
-          { title: '自动切换', routerLink: { name: 'ComponentCarouselAutoPlay' } },
-          { title: '指示器', routerLink: { name: 'ComponentCarouselShowIndicators' } }
+          { i18nKey: 'app.aside.menu.displayBase', routerLink: { name: 'ComponentCarouselBase' } },
+          { i18nKey: 'app.aside.menu.displayHeight', routerLink: { name: 'ComponentCarouselHeight' } },
+          { i18nKey: 'app.aside.menu.displayVerticalLayout', routerLink: { name: 'ComponentCarouselVertical' } },
+          { i18nKey: 'app.aside.menu.displayConfigDriven', routerLink: { name: 'ComponentCarouselOptions' } },
+          { i18nKey: 'app.aside.menu.displayCustomSlotTemplate', routerLink: { name: 'ComponentCarouselTemplate' } },
+          { i18nKey: 'app.aside.menu.displayAutoPlay', routerLink: { name: 'ComponentCarouselAutoPlay' } },
+          { i18nKey: 'app.aside.menu.displayIndicators', routerLink: { name: 'ComponentCarouselShowIndicators' } }
         ]
       },
       {
-        title: 'Space 间距',
+        i18nKey: 'app.aside.menu.displaySpaceTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'space' } }, keywords: 'vxe-space' },
-          { title: '基础', routerLink: { name: 'ComponentSpaceBase' } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentSpaceSize' } },
-          { title: '宽度', routerLink: { name: 'ComponentSpaceWidth' } },
-          { title: '填充容器', routerLink: { name: 'ComponentSpaceFill' } },
-          { title: '自定义间距', routerLink: { name: 'ComponentSpaceGap' } },
-          { title: '纵向排版', routerLink: { name: 'ComponentSpaceVertical' } },
-          { title: '自动换行', routerLink: { name: 'ComponentSpaceWrap' } },
-          { title: '对齐方式', routerLink: { name: 'ComponentSpaceAlign' } },
-          { title: '项宽度', routerLink: { name: 'ComponentSpaceItemWidth' } },
-          { title: '间隔符', routerLink: { name: 'ComponentSpaceSeparator' } }
+          { i18nKey: 'app.aside.menu.displayBase', routerLink: { name: 'ComponentSpaceBase' } },
+          { i18nKey: 'app.aside.menu.displaySize', routerLink: { name: 'ComponentSpaceSize' } },
+          { i18nKey: 'app.aside.menu.displayWidth', routerLink: { name: 'ComponentSpaceWidth' } },
+          { i18nKey: 'app.aside.menu.displayFillContainer', routerLink: { name: 'ComponentSpaceFill' } },
+          { i18nKey: 'app.aside.menu.displayCustomGap', routerLink: { name: 'ComponentSpaceGap' } },
+          { i18nKey: 'app.aside.menu.displayVerticalLayout', routerLink: { name: 'ComponentSpaceVertical' } },
+          { i18nKey: 'app.aside.menu.displayAutoWrap', routerLink: { name: 'ComponentSpaceWrap' } },
+          { i18nKey: 'app.aside.menu.displayAlign', routerLink: { name: 'ComponentSpaceAlign' } },
+          { i18nKey: 'app.aside.menu.displayItemWidth', routerLink: { name: 'ComponentSpaceItemWidth' } },
+          { i18nKey: 'app.aside.menu.displaySeparator', routerLink: { name: 'ComponentSpaceSeparator' } }
         ]
       },
       {
-        title: 'Collapse 折叠面板',
+        i18nKey: 'app.aside.menu.displayCollapseTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'collapse' } }, keywords: 'vxe-collapse' },
-          { title: '基础', routerLink: { name: 'ComponentCollapseBase' } },
-          { title: '绑定值', routerLink: { name: 'ComponentCollapseModel' } },
-          { title: '边距', routerLink: { name: 'ComponentCollapsePadding' } },
-          { title: '边框', routerLink: { name: 'ComponentCollapseBorder' } },
-          { title: '图标', routerLink: { name: 'ComponentCollapseIon' } },
-          { title: '预加载', routerLink: { name: 'ComponentCollapsePreload' } },
-          { title: '配置式', routerLink: { name: 'ComponentCollapseOptions' } },
-          { title: '自定义标题模板', routerLink: { name: 'ComponentCollapseTemplateTitle' } },
-          { title: '自定义内容模板', routerLink: { name: 'ComponentCollapseTemplateDefault' } }
+          { i18nKey: 'app.aside.menu.displayBase', routerLink: { name: 'ComponentCollapseBase' } },
+          { i18nKey: 'app.aside.menu.displayBindValue', routerLink: { name: 'ComponentCollapseModel' } },
+          { i18nKey: 'app.aside.menu.displayPadding', routerLink: { name: 'ComponentCollapsePadding' } },
+          { i18nKey: 'app.aside.menu.displayBorder', routerLink: { name: 'ComponentCollapseBorder' } },
+          { i18nKey: 'app.aside.menu.displayIcon', routerLink: { name: 'ComponentCollapseIon' } },
+          { i18nKey: 'app.aside.menu.displayPreload', routerLink: { name: 'ComponentCollapsePreload' } },
+          { i18nKey: 'app.aside.menu.displayConfigDriven', routerLink: { name: 'ComponentCollapseOptions' } },
+          { i18nKey: 'app.aside.menu.displayCustomTitleTemplate', routerLink: { name: 'ComponentCollapseTemplateTitle' } },
+          { i18nKey: 'app.aside.menu.displayCustomContentTemplate', routerLink: { name: 'ComponentCollapseTemplateDefault' } }
         ]
       },
       {
-        title: 'Splitter 分割面板',
+        i18nKey: 'app.aside.menu.displaySplitterTitle',
         children: [
           { title: 'Splitter API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'splitter' } }, keywords: 'vxe-splitter' },
           { title: 'Splitter Panel API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'splitter-panel' } }, keywords: 'vxe-splitter-panel' },
           {
-            title: '基础',
+            i18nKey: 'app.aside.menu.displayBase',
             children: [
-              { title: '基础', routerLink: { name: 'ComponentSplitterBasicsBase' } },
-              { title: '高度', routerLink: { name: 'ComponentSplitterBasicsHeight' } },
-              { title: '边框', routerLink: { name: 'ComponentSplitterBasicsBorder' } },
-              { title: '边距', routerLink: { name: 'ComponentSplitterBasicsPadding' } },
-              { title: '垂直布局', routerLink: { name: 'ComponentSplitterBasicsVertical' } },
-              { title: '拖拽调整宽度', routerLink: { name: 'ComponentSplitterBasicsResize' } },
-              { title: '组合布局', routerLink: { name: 'ComponentSplitterBasicsLayout' } },
-              { title: '可折叠', routerLink: { name: 'ComponentSplitterBasicsAction' } },
-              { title: '显示隐藏折叠按钮', routerLink: { name: 'ComponentSplitterBasicsActionConfig' } },
-              { title: '修改样式', routerLink: { name: 'ComponentSplitterBasicsStyle' } }
+              { i18nKey: 'app.aside.menu.displayBase', routerLink: { name: 'ComponentSplitterBasicsBase' } },
+              { i18nKey: 'app.aside.menu.displayHeight', routerLink: { name: 'ComponentSplitterBasicsHeight' } },
+              { i18nKey: 'app.aside.menu.displayBorder', routerLink: { name: 'ComponentSplitterBasicsBorder' } },
+              { i18nKey: 'app.aside.menu.displayPadding', routerLink: { name: 'ComponentSplitterBasicsPadding' } },
+              { i18nKey: 'app.aside.menu.displayVerticalLayout', routerLink: { name: 'ComponentSplitterBasicsVertical' } },
+              { i18nKey: 'app.aside.menu.displayDragResizeWidth', routerLink: { name: 'ComponentSplitterBasicsResize' } },
+              { i18nKey: 'app.aside.menu.displayCombinedLayout', routerLink: { name: 'ComponentSplitterBasicsLayout' } },
+              { i18nKey: 'app.aside.menu.displayCollapsible', routerLink: { name: 'ComponentSplitterBasicsAction' } },
+              { i18nKey: 'app.aside.menu.displayToggleCollapseButton', routerLink: { name: 'ComponentSplitterBasicsActionConfig' } },
+              { i18nKey: 'app.aside.menu.displayModifyStyle', routerLink: { name: 'ComponentSplitterBasicsStyle' } }
             ]
           },
           {
-            title: '配置式',
+            i18nKey: 'app.aside.menu.displayConfigDriven',
             children: [
-              { title: '基础', routerLink: { name: 'ComponentSplitterConfigBase' } },
-              { title: '高度', routerLink: { name: 'ComponentSplitterConfigHeight' } },
-              { title: '边框', routerLink: { name: 'ComponentSplitterConfigBorder' } },
-              { title: '边距', routerLink: { name: 'ComponentSplitterConfigPadding' } },
-              { title: '垂直布局', routerLink: { name: 'ComponentSplitterConfigVertical' } },
-              { title: '拖拽调整宽度', routerLink: { name: 'ComponentSplitterConfigResize' } },
-              { title: '组合布局', routerLink: { name: 'ComponentSplitterConfigLayout' } },
-              { title: '可折叠', routerLink: { name: 'ComponentSplitterConfigAction' } },
-              { title: '显示隐藏折叠按钮', routerLink: { name: 'ComponentSplitterConfigActionConfig' } },
-              { title: '修改样式', routerLink: { name: 'ComponentSplitterConfigStyle' } }
+              { i18nKey: 'app.aside.menu.displayBase', routerLink: { name: 'ComponentSplitterConfigBase' } },
+              { i18nKey: 'app.aside.menu.displayHeight', routerLink: { name: 'ComponentSplitterConfigHeight' } },
+              { i18nKey: 'app.aside.menu.displayBorder', routerLink: { name: 'ComponentSplitterConfigBorder' } },
+              { i18nKey: 'app.aside.menu.displayPadding', routerLink: { name: 'ComponentSplitterConfigPadding' } },
+              { i18nKey: 'app.aside.menu.displayVerticalLayout', routerLink: { name: 'ComponentSplitterConfigVertical' } },
+              { i18nKey: 'app.aside.menu.displayDragResizeWidth', routerLink: { name: 'ComponentSplitterConfigResize' } },
+              { i18nKey: 'app.aside.menu.displayCombinedLayout', routerLink: { name: 'ComponentSplitterConfigLayout' } },
+              { i18nKey: 'app.aside.menu.displayCollapsible', routerLink: { name: 'ComponentSplitterConfigAction' } },
+              { i18nKey: 'app.aside.menu.displayToggleCollapseButton', routerLink: { name: 'ComponentSplitterConfigActionConfig' } },
+              { i18nKey: 'app.aside.menu.displayModifyStyle', routerLink: { name: 'ComponentSplitterConfigStyle' } }
             ]
           }
         ]
       },
       {
-        title: 'Tabs 页签',
+        i18nKey: 'app.aside.menu.displayTabsTitle',
         children: [
           { title: 'Tabs API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tabs' } }, keywords: 'vxe-tabs' },
           { title: 'Tab Pane API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tab-pane' } }, keywords: 'vxe-tab-pane' },
-          { title: '基础', routerLink: { name: 'ComponentTabsBase' } },
-          { title: '样式 - 卡片风格', routerLink: { name: 'ComponentTabsCard' } },
-          { title: '样式 - 边框背景', routerLink: { name: 'ComponentTabsBorderCard' } },
-          { title: '样式 - 圆角边框背景', routerLink: { name: 'ComponentTabsRoundCard' } },
-          { title: '设置高度', routerLink: { name: 'ComponentTabsHeight' } },
-          { title: '配置式', routerLink: { name: 'ComponentTabsOptions' } },
-          { title: '页签图标', routerLink: { name: 'ComponentTabsIcon' } },
-          { title: '页签触发方式', routerLink: { name: 'ComponentTabsRoundTrigger' } },
-          { title: '页签显示位置', routerLink: { name: 'ComponentTabsRoundPosition' } },
-          { title: '是否显示面板内容', routerLink: { name: 'ComponentTabsRoundShowContent' } },
-          { title: '预加载页签', routerLink: { name: 'ComponentTabsRoundPreload' } },
-          { title: '页签超出可滚动', routerLink: { name: 'ComponentTabsOver' } },
-          { title: '拦截页签切换', routerLink: { name: 'ComponentTabsBeforeChangeMethod' } },
-          { title: '可关闭', routerLink: { name: 'ComponentTabsCloseConfig' } },
-          { title: '拦截页签关闭', routerLink: { name: 'ComponentTabsBeforeClose' } },
-          { title: '可刷新', routerLink: { name: 'ComponentTabsRefreshConfig' } },
+          { i18nKey: 'app.aside.menu.displayBase', routerLink: { name: 'ComponentTabsBase' } },
+          { i18nKey: 'app.aside.menu.displayCardStyle', routerLink: { name: 'ComponentTabsCard' } },
+          { i18nKey: 'app.aside.menu.displayBorderBgStyle', routerLink: { name: 'ComponentTabsBorderCard' } },
+          { i18nKey: 'app.aside.menu.displayRoundCardStyle', routerLink: { name: 'ComponentTabsRoundCard' } },
+          { i18nKey: 'app.aside.menu.displaySetHeight', routerLink: { name: 'ComponentTabsHeight' } },
+          { i18nKey: 'app.aside.menu.displayConfigDriven', routerLink: { name: 'ComponentTabsOptions' } },
+          { i18nKey: 'app.aside.menu.displayTabIcon', routerLink: { name: 'ComponentTabsIcon' } },
+          { i18nKey: 'app.aside.menu.displayTabTriggerMode', routerLink: { name: 'ComponentTabsRoundTrigger' } },
+          { i18nKey: 'app.aside.menu.displayTabPosition', routerLink: { name: 'ComponentTabsRoundPosition' } },
+          { i18nKey: 'app.aside.menu.displayShowPanelContent', routerLink: { name: 'ComponentTabsRoundShowContent' } },
+          { i18nKey: 'app.aside.menu.displayPreloadTab', routerLink: { name: 'ComponentTabsRoundPreload' } },
+          { i18nKey: 'app.aside.menu.displayTabOverflowScroll', routerLink: { name: 'ComponentTabsOver' } },
+          { i18nKey: 'app.aside.menu.displayInterceptTabSwitch', routerLink: { name: 'ComponentTabsBeforeChangeMethod' } },
+          { i18nKey: 'app.aside.menu.displayClosable', routerLink: { name: 'ComponentTabsCloseConfig' } },
+          { i18nKey: 'app.aside.menu.displayInterceptTabClose', routerLink: { name: 'ComponentTabsBeforeClose' } },
+          { i18nKey: 'app.aside.menu.displayRefreshable', routerLink: { name: 'ComponentTabsRefreshConfig' } },
           {
-            title: '滚动条',
+            i18nKey: 'app.aside.menu.displayScrollbar',
             children: [
               {
-                title: '原生滚动条',
+                i18nKey: 'app.aside.menu.displayNativeScrollbar',
                 children: [
-                  { title: '使用滚动条', routerLink: { name: 'ComponentTabsScrollbarNativeScrollbar' } }
+                  { i18nKey: 'app.aside.menu.displayUseScrollbar', routerLink: { name: 'ComponentTabsScrollbarNativeScrollbar' } }
                 ]
               },
               {
-                title: '虚拟滚动条',
+                i18nKey: 'app.aside.menu.displayVirtualScrollbar',
                 children: [
-                  { title: '使用滚动条', routerLink: { name: 'ComponentTabsScrollbarUseScrollbarScrollbar' } }
+                  { i18nKey: 'app.aside.menu.displayUseScrollbar', routerLink: { name: 'ComponentTabsScrollbarUseScrollbarScrollbar' } }
                 ]
               }
             ]
           },
           {
-            title: '自定义插槽模板',
+            i18nKey: 'app.aside.menu.displayCustomSlotTemplate',
             children: [
-              { title: '自定义标题', routerLink: { name: 'ComponentTabsTemplateTitle' } },
-              { title: '自定义标题前缀', routerLink: { name: 'ComponentTabsTemplateTitlePrefix' } },
-              { title: '自定义标题后缀', routerLink: { name: 'ComponentTabsTemplateTitleSuffix' } },
-              { title: '自定义页签前缀', routerLink: { name: 'ComponentTabsTemplatePrefix' } },
-              { title: '自定义页签后缀', routerLink: { name: 'ComponentTabsTemplateSuffix' } },
-              { title: '自定义面板头部模板', routerLink: { name: 'ComponentTabsTemplateHeader' } },
-              { title: '自定义面板底部模板', routerLink: { name: 'ComponentTabsTemplateFooter' } }
+              { i18nKey: 'app.aside.menu.displayCustomTitle', routerLink: { name: 'ComponentTabsTemplateTitle' } },
+              { i18nKey: 'app.aside.menu.displayCustomTitlePrefix', routerLink: { name: 'ComponentTabsTemplateTitlePrefix' } },
+              { i18nKey: 'app.aside.menu.displayCustomTitleSuffix', routerLink: { name: 'ComponentTabsTemplateTitleSuffix' } },
+              { i18nKey: 'app.aside.menu.displayCustomTabPrefix', routerLink: { name: 'ComponentTabsTemplatePrefix' } },
+              { i18nKey: 'app.aside.menu.displayCustomTabSuffix', routerLink: { name: 'ComponentTabsTemplateSuffix' } },
+              { i18nKey: 'app.aside.menu.displayCustomPanelHeaderTemplate', routerLink: { name: 'ComponentTabsTemplateHeader' } },
+              { i18nKey: 'app.aside.menu.displayCustomPanelFooterTemplate', routerLink: { name: 'ComponentTabsTemplateFooter' } }
             ]
           },
-          { title: '权限码', routerLink: { name: 'ComponentTabsPermissionCode' } }
+          { i18nKey: 'app.aside.menu.displayPermissionCode', routerLink: { name: 'ComponentTabsPermissionCode' } }
         ]
       },
       {
-        title: 'Scrollbar 滚动条',
+        i18nKey: 'app.aside.menu.displayScrollbarTitle',
         children: [
           { title: 'Scrollbar API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'scrollbar' } }, keywords: 'vxe-scrollbar' },
-          { title: '基础', routerLink: { name: 'ComponentScrollbarBase' } },
-          { title: '加载中', routerLink: { name: 'ComponentScrollbarLoading' } },
-          { title: '原生滚动条', routerLink: { name: 'ComponentScrollbarNative' } },
-          { title: '内边距', routerLink: { name: 'ComponentScrollbarPadding' } },
-          { title: '滚动条宽度', routerLink: { name: 'ComponentScrollbarBarWidth' } },
-          { title: '禁用滚动条', routerLink: { name: 'ComponentScrollbarScrollbar' } },
-          { title: '悬浮滚动条', routerLink: { name: 'ComponentScrollbarFluentOverlay' } },
-          { title: '显示位置', routerLink: { name: 'ComponentScrollbarPosition' } },
-          { title: '自动隐藏', routerLink: { name: 'ComponentScrollbarAutoHide' } },
-          { title: '手动滚动', routerLink: { name: 'ComponentScrollbarScrollTo' } },
-          { title: '滚动事件', routerLink: { name: 'ComponentScrollbarEvents' } },
+          { i18nKey: 'app.aside.menu.displayBase', routerLink: { name: 'ComponentScrollbarBase' } },
+          { i18nKey: 'app.aside.menu.displayLoading', routerLink: { name: 'ComponentScrollbarLoading' } },
+          { i18nKey: 'app.aside.menu.displayNativeScrollbar', routerLink: { name: 'ComponentScrollbarNative' } },
+          { i18nKey: 'app.aside.menu.displayPadding', routerLink: { name: 'ComponentScrollbarPadding' } },
+          { i18nKey: 'app.aside.menu.displayScrollbarWidth', routerLink: { name: 'ComponentScrollbarBarWidth' } },
+          { i18nKey: 'app.aside.menu.displayDisableScrollbar', routerLink: { name: 'ComponentScrollbarScrollbar' } },
+          { i18nKey: 'app.aside.menu.displayFloatingScrollbar', routerLink: { name: 'ComponentScrollbarFluentOverlay' } },
+          { i18nKey: 'app.aside.menu.displayDisplayPosition', routerLink: { name: 'ComponentScrollbarPosition' } },
+          { i18nKey: 'app.aside.menu.displayAutoHide', routerLink: { name: 'ComponentScrollbarAutoHide' } },
+          { i18nKey: 'app.aside.menu.displayManualScroll', routerLink: { name: 'ComponentScrollbarScrollTo' } },
+          { i18nKey: 'app.aside.menu.displayScrollEvent', routerLink: { name: 'ComponentScrollbarEvents' } },
           {
-            title: '无限加载',
+            i18nKey: 'app.aside.menu.displayInfiniteLoading',
             children: [
-              { title: '指定阈值加载行', routerLink: { name: 'ComponentScrollbarLoadMoreBoundaryY' } }
+              { i18nKey: 'app.aside.menu.displayLoadRowsByThreshold', routerLink: { name: 'ComponentScrollbarLoadMoreBoundaryY' } }
             ]
           },
           {
             i18nKey: 'app.aside.menu.cssVar',
             children: [
-              { title: '滚动条宽度', routerLink: { name: 'CssScrollBarWidth' } },
-              { title: '滚动条背景色', routerLink: { name: 'CssScrollBgColor' } }
+              { i18nKey: 'app.aside.menu.displayScrollbarWidth', routerLink: { name: 'CssScrollBarWidth' } },
+              { i18nKey: 'app.aside.menu.displayScrollbarBgColor', routerLink: { name: 'CssScrollBgColor' } }
             ]
           }
         ]
@@ -604,86 +604,86 @@ export const navConfigList: NavVO[] = [
     showCount: true,
     children: [
       {
-        title: 'Breadcrumb 面包屑',
+        i18nKey: 'app.aside.menu.navigationBreadcrumbTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'breadcrumb' } } },
-          { title: '基础', routerLink: { name: 'ComponentBreadcrumb' } }
+          { i18nKey: 'app.aside.menu.navigationBase', routerLink: { name: 'ComponentBreadcrumb' } }
         ]
       },
       {
-        title: 'Menu 菜单',
+        i18nKey: 'app.aside.menu.navigationMenuTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'menu' } } },
-          { title: '基础', routerLink: { name: 'ComponentMenuBase' } },
-          { title: '加载中', routerLink: { name: 'ComponentMenuLoading' } },
-          { title: '图标', routerLink: { name: 'ComponentMenuIcon' } },
-          { title: '手风琴效果', routerLink: { name: 'ComponentMenuAccordion' } },
-          { title: '可折叠', routerLink: { name: 'ComponentMenuCollapsed' } },
-          { title: '链接模式', routerLink: { name: 'ComponentMenuLinkUrl' } },
-          { title: '路由模式', routerLink: { name: 'ComponentMenuRouterLink' } },
-          { title: '权限码', routerLink: { name: 'ComponentMenuPermissionCode' } },
+          { i18nKey: 'app.aside.menu.navigationBase', routerLink: { name: 'ComponentMenuBase' } },
+          { i18nKey: 'app.aside.menu.navigationLoading', routerLink: { name: 'ComponentMenuLoading' } },
+          { i18nKey: 'app.aside.menu.navigationIcon', routerLink: { name: 'ComponentMenuIcon' } },
+          { i18nKey: 'app.aside.menu.navigationAccordion', routerLink: { name: 'ComponentMenuAccordion' } },
+          { i18nKey: 'app.aside.menu.navigationCollapsible', routerLink: { name: 'ComponentMenuCollapsed' } },
+          { i18nKey: 'app.aside.menu.navigationLinkMode', routerLink: { name: 'ComponentMenuLinkUrl' } },
+          { i18nKey: 'app.aside.menu.navigationRouterMode', routerLink: { name: 'ComponentMenuRouterLink' } },
+          { i18nKey: 'app.aside.menu.navigationPermissionCode', routerLink: { name: 'ComponentMenuPermissionCode' } },
           {
-            title: '右键菜单',
+            i18nKey: 'app.aside.menu.navigationContextMenu',
             children: [
-              { title: '配置菜单', routerLink: { name: 'ComponentMenuMenuBasics' } },
-              { title: '前缀与后缀', routerLink: { name: 'ComponentMenuMenuIcon' } },
-              { title: '是否禁用', routerLink: { name: 'ComponentMenuMenuDisabled' } },
-              { title: '是否显示', routerLink: { name: 'ComponentMenuMenuVisible' } },
-              { title: '异步加载中', routerLink: { name: 'ComponentMenuMenuLoading' } },
-              { title: '权限控制', routerLink: { name: 'ComponentMenuMenuVisibleMethod' } }
+              { i18nKey: 'app.aside.menu.navigationConfigMenu', routerLink: { name: 'ComponentMenuMenuBasics' } },
+              { i18nKey: 'app.aside.menu.navigationPrefixAndSuffix', routerLink: { name: 'ComponentMenuMenuIcon' } },
+              { i18nKey: 'app.aside.menu.navigationIsDisabled', routerLink: { name: 'ComponentMenuMenuDisabled' } },
+              { i18nKey: 'app.aside.menu.navigationIsVisible', routerLink: { name: 'ComponentMenuMenuVisible' } },
+              { i18nKey: 'app.aside.menu.navigationAsyncLoading', routerLink: { name: 'ComponentMenuMenuLoading' } },
+              { i18nKey: 'app.aside.menu.navigationPermissionControl', routerLink: { name: 'ComponentMenuMenuVisibleMethod' } }
             ]
           },
           {
-            title: '自定义插槽模板',
+            i18nKey: 'app.aside.menu.navigationCustomSlotTemplate',
             children: [
-              { title: '自定义菜单图标', routerLink: { name: 'ComponentMenuTemplateIcon' } },
-              { title: '自定义菜单标题', routerLink: { name: 'ComponentMenuTemplateTitle' } },
-              { title: '自定义菜单项', routerLink: { name: 'ComponentMenuTemplateOption' } }
+              { i18nKey: 'app.aside.menu.navigationCustomMenuIcon', routerLink: { name: 'ComponentMenuTemplateIcon' } },
+              { i18nKey: 'app.aside.menu.navigationCustomMenuTitle', routerLink: { name: 'ComponentMenuTemplateTitle' } },
+              { i18nKey: 'app.aside.menu.navigationCustomMenuItem', routerLink: { name: 'ComponentMenuTemplateOption' } }
             ]
           }
         ]
       },
       {
-        title: 'Anchor 锚点',
+        i18nKey: 'app.aside.menu.navigationAnchorTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'anchor' } } },
-          { title: '自定义容器', routerLink: { name: 'ComponentAnchor' } }
+          { i18nKey: 'app.aside.menu.navigationCustomContainer', routerLink: { name: 'ComponentAnchor' } }
         ]
       },
       {
-        title: 'Pager 分页',
+        i18nKey: 'app.aside.menu.navigationPagerTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pager' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentPagerSize' } },
-          { title: '对齐方式', routerLink: { name: 'ComponentPagerAlign' } },
-          { title: '自定义页大小列表', routerLink: { name: 'ComponentPagerPageSize' } },
-          { title: '自定义布局', routerLink: { name: 'ComponentPagerLayout' } },
+          { i18nKey: 'app.aside.menu.navigationSize', routerLink: { name: 'ComponentPagerSize' } },
+          { i18nKey: 'app.aside.menu.navigationAlign', routerLink: { name: 'ComponentPagerAlign' } },
+          { i18nKey: 'app.aside.menu.navigationCustomPageSizeList', routerLink: { name: 'ComponentPagerPageSize' } },
+          { i18nKey: 'app.aside.menu.navigationCustomLayout', routerLink: { name: 'ComponentPagerLayout' } },
           {
-            title: '自定义模板',
+            i18nKey: 'app.aside.menu.navigationCustomTemplate',
             children: [
-              { title: '左侧区域', routerLink: { name: 'ComponentPagerTemplateLeft' } },
-              { title: '右侧区域', routerLink: { name: 'ComponentPagerTemplateRight' } },
-              { title: '功能区', routerLink: { name: 'ComponentPagerTemplateFunc' } }
+              { i18nKey: 'app.aside.menu.navigationLeftArea', routerLink: { name: 'ComponentPagerTemplateLeft' } },
+              { i18nKey: 'app.aside.menu.navigationRightArea', routerLink: { name: 'ComponentPagerTemplateRight' } },
+              { i18nKey: 'app.aside.menu.navigationFunctionArea', routerLink: { name: 'ComponentPagerTemplateFunc' } }
             ]
           }
         ]
       },
       {
-        title: 'ContextMenu 右键菜单',
+        i18nKey: 'app.aside.menu.navigationContextMenuTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'context-menu' } } },
           {
-            title: '全局调用',
+            i18nKey: 'app.aside.menu.navigationGlobalInvoke',
             children: [
-              { title: '右键菜单', routerLink: { name: 'ComponentContextMenuGlobalContextMenu' } }
+              { i18nKey: 'app.aside.menu.navigationContextMenu', routerLink: { name: 'ComponentContextMenuGlobalContextMenu' } }
             ]
           },
-          { title: '菜单配置', routerLink: { name: 'ComponentContextMenuBase' } },
-          { title: '前缀与后缀', routerLink: { name: 'ComponentContextMenuIcon' } },
-          { title: '是否禁用', routerLink: { name: 'ComponentContextMenuDisabled' } },
-          { title: '是否显示', routerLink: { name: 'ComponentContextMenuVisible' } },
-          { title: '是否加载中', routerLink: { name: 'ComponentContextMenuLoading' } },
-          { title: '自定义样式', routerLink: { name: 'ComponentContextMenuStyle' } }
+          { i18nKey: 'app.aside.menu.navigationMenuConfig', routerLink: { name: 'ComponentContextMenuBase' } },
+          { i18nKey: 'app.aside.menu.navigationPrefixAndSuffix', routerLink: { name: 'ComponentContextMenuIcon' } },
+          { i18nKey: 'app.aside.menu.navigationIsDisabled', routerLink: { name: 'ComponentContextMenuDisabled' } },
+          { i18nKey: 'app.aside.menu.navigationIsVisible', routerLink: { name: 'ComponentContextMenuVisible' } },
+          { i18nKey: 'app.aside.menu.navigationIsLoading', routerLink: { name: 'ComponentContextMenuLoading' } },
+          { i18nKey: 'app.aside.menu.navigationCustomStyle', routerLink: { name: 'ComponentContextMenuStyle' } }
         ]
       },
       stepsNavConfig
@@ -696,91 +696,91 @@ export const navConfigList: NavVO[] = [
     children: [
       formNavConfig,
       {
-        title: 'Switch 开关',
+        i18nKey: 'app.aside.menu.dataSwitchTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'switch' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentSwitchSize' } },
-          { title: '禁用状态', routerLink: { name: 'ComponentSwitchDisabled' } },
-          { title: '自定义显示值', routerLink: { name: 'ComponentSwitchLabel' } },
-          { title: '自定义实际值', routerLink: { name: 'ComponentSwitchValue' } },
-          { title: '自定义图标', routerLink: { name: 'ComponentSwitchIcon' } }
+          { i18nKey: 'app.aside.menu.dataSwitchSize', routerLink: { name: 'ComponentSwitchSize' } },
+          { i18nKey: 'app.aside.menu.dataSwitchDisabled', routerLink: { name: 'ComponentSwitchDisabled' } },
+          { i18nKey: 'app.aside.menu.dataSwitchCustomLabel', routerLink: { name: 'ComponentSwitchLabel' } },
+          { i18nKey: 'app.aside.menu.dataSwitchCustomValue', routerLink: { name: 'ComponentSwitchValue' } },
+          { i18nKey: 'app.aside.menu.dataSwitchCustomIcon', routerLink: { name: 'ComponentSwitchIcon' } }
         ]
       },
       {
-        title: 'Radio 单选框',
+        i18nKey: 'app.aside.menu.dataRadioTitle',
         children: [
           { title: 'Radio API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'radio' } } },
           { title: 'Radio Button API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'radio-button' } } },
           { title: 'Radio Group API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'radio-group' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentRadioSize' } },
-          { title: '自定义值', routerLink: { name: 'ComponentRadioValue' } },
-          { title: '禁用状态', routerLink: { name: 'ComponentRadioDisabled' } },
-          { title: '允许取消', routerLink: { name: 'ComponentRadioStrict' } },
-          { title: '单选组', routerLink: { name: 'ComponentRadioGroup' } },
-          { title: '单选按钮', routerLink: { name: 'ComponentRadioButton' } },
-          { title: '按钮状态颜色', routerLink: { name: 'ComponentRadioButtonStatus' } },
-          { title: '按钮禁用', routerLink: { name: 'ComponentRadioButtonDisabled' } },
-          { title: '按钮图标', routerLink: { name: 'ComponentRadioButtonIcon' } },
-          { title: '配置式选项', routerLink: { name: 'ComponentRadioOptions' } },
-          { title: '默认值', routerLink: { name: 'ComponentRadioDefaultValue' } }
+          { i18nKey: 'app.aside.menu.dataRadioSize', routerLink: { name: 'ComponentRadioSize' } },
+          { i18nKey: 'app.aside.menu.dataRadioCustomValue', routerLink: { name: 'ComponentRadioValue' } },
+          { i18nKey: 'app.aside.menu.dataRadioDisabled', routerLink: { name: 'ComponentRadioDisabled' } },
+          { i18nKey: 'app.aside.menu.dataRadioAllowCancel', routerLink: { name: 'ComponentRadioStrict' } },
+          { i18nKey: 'app.aside.menu.dataRadioGroup', routerLink: { name: 'ComponentRadioGroup' } },
+          { i18nKey: 'app.aside.menu.dataRadioButton', routerLink: { name: 'ComponentRadioButton' } },
+          { i18nKey: 'app.aside.menu.dataRadioButtonStatus', routerLink: { name: 'ComponentRadioButtonStatus' } },
+          { i18nKey: 'app.aside.menu.dataRadioButtonDisabled', routerLink: { name: 'ComponentRadioButtonDisabled' } },
+          { i18nKey: 'app.aside.menu.dataRadioButtonIcon', routerLink: { name: 'ComponentRadioButtonIcon' } },
+          { i18nKey: 'app.aside.menu.dataRadioOptions', routerLink: { name: 'ComponentRadioOptions' } },
+          { i18nKey: 'app.aside.menu.dataRadioDefaultValue', routerLink: { name: 'ComponentRadioDefaultValue' } }
         ]
       },
       {
-        title: 'Checkbox 复选框',
+        i18nKey: 'app.aside.menu.dataCheckboxTitle',
         children: [
           { title: 'Checkbox API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'checkbox' } } },
           { title: 'Checkbox Button API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'checkbox-button' } } },
           { title: 'Checkbox Group API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'checkbox-group' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentCheckboxSize' } },
-          { title: '半选状态', routerLink: { name: 'ComponentCheckboxIndeterminate' } },
-          { title: '自定义值', routerLink: { name: 'ComponentCheckboxValue' } },
-          { title: '禁用状态', routerLink: { name: 'ComponentCheckboxDisabled' } },
-          { title: '复选组', routerLink: { name: 'ComponentCheckboxGroup' } },
-          { title: '复选按钮', routerLink: { name: 'ComponentCheckboxButton' } },
-          { title: '按钮状态颜色', routerLink: { name: 'ComponentCheckboxButtonStatus' } },
-          { title: '按钮禁用', routerLink: { name: 'ComponentCheckboxButtonDisabled' } },
-          { title: '按钮图标', routerLink: { name: 'ComponentCheckboxButtonIcon' } },
-          { title: '限制最大数量', routerLink: { name: 'ComponentCheckboxMax' } },
-          { title: '配置式选项', routerLink: { name: 'ComponentCheckboxOptions' } },
-          { title: '默认值', routerLink: { name: 'ComponentCheckboxDefaultValue' } }
+          { i18nKey: 'app.aside.menu.dataCheckboxSize', routerLink: { name: 'ComponentCheckboxSize' } },
+          { i18nKey: 'app.aside.menu.dataCheckboxIndeterminate', routerLink: { name: 'ComponentCheckboxIndeterminate' } },
+          { i18nKey: 'app.aside.menu.dataCheckboxCustomValue', routerLink: { name: 'ComponentCheckboxValue' } },
+          { i18nKey: 'app.aside.menu.dataCheckboxDisabled', routerLink: { name: 'ComponentCheckboxDisabled' } },
+          { i18nKey: 'app.aside.menu.dataCheckboxGroup', routerLink: { name: 'ComponentCheckboxGroup' } },
+          { i18nKey: 'app.aside.menu.dataCheckboxButton', routerLink: { name: 'ComponentCheckboxButton' } },
+          { i18nKey: 'app.aside.menu.dataCheckboxButtonStatus', routerLink: { name: 'ComponentCheckboxButtonStatus' } },
+          { i18nKey: 'app.aside.menu.dataCheckboxButtonDisabled', routerLink: { name: 'ComponentCheckboxButtonDisabled' } },
+          { i18nKey: 'app.aside.menu.dataCheckboxButtonIcon', routerLink: { name: 'ComponentCheckboxButtonIcon' } },
+          { i18nKey: 'app.aside.menu.dataCheckboxMax', routerLink: { name: 'ComponentCheckboxMax' } },
+          { i18nKey: 'app.aside.menu.dataCheckboxOptions', routerLink: { name: 'ComponentCheckboxOptions' } },
+          { i18nKey: 'app.aside.menu.dataCheckboxDefaultValue', routerLink: { name: 'ComponentCheckboxDefaultValue' } }
         ]
       },
       {
-        title: 'Rate 评分',
+        i18nKey: 'app.aside.menu.dataRateTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'rate' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentRateSize' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentRateStatus' } },
-          { title: '禁用状态', routerLink: { name: 'ComponentRateDisabled' } }
+          { i18nKey: 'app.aside.menu.dataRateSize', routerLink: { name: 'ComponentRateSize' } },
+          { i18nKey: 'app.aside.menu.dataRateStatusColor', routerLink: { name: 'ComponentRateStatus' } },
+          { i18nKey: 'app.aside.menu.dataRateDisabled', routerLink: { name: 'ComponentRateDisabled' } }
         ]
       },
       {
-        title: 'Slider 滑块',
+        i18nKey: 'app.aside.menu.dataSliderTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'slider' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentSliderSize' } },
-          { title: '基础', routerLink: { name: 'ComponentSliderBase' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentSliderStatus' } },
-          { title: '只读', routerLink: { name: 'ComponentSliderReadonly' } },
-          { title: '禁用', routerLink: { name: 'ComponentSliderDisabled' } },
-          { title: '范围滑动', routerLink: { name: 'ComponentSliderRange' } },
-          { title: '绑定值', routerLink: { name: 'ComponentSliderValue' } },
-          { title: '实时更新', routerLink: { name: 'ComponentSliderImmediate' } },
-          { title: '显示 Tooltip 提示', routerLink: { name: 'ComponentSliderShowTip' } }
+          { i18nKey: 'app.aside.menu.dataSliderSize', routerLink: { name: 'ComponentSliderSize' } },
+          { i18nKey: 'app.aside.menu.dataSliderBase', routerLink: { name: 'ComponentSliderBase' } },
+          { i18nKey: 'app.aside.menu.dataSliderStatusColor', routerLink: { name: 'ComponentSliderStatus' } },
+          { i18nKey: 'app.aside.menu.dataSliderReadonly', routerLink: { name: 'ComponentSliderReadonly' } },
+          { i18nKey: 'app.aside.menu.dataSliderDisabled', routerLink: { name: 'ComponentSliderDisabled' } },
+          { i18nKey: 'app.aside.menu.dataSliderRange', routerLink: { name: 'ComponentSliderRange' } },
+          { i18nKey: 'app.aside.menu.dataSliderValue', routerLink: { name: 'ComponentSliderValue' } },
+          { i18nKey: 'app.aside.menu.dataSliderImmediate', routerLink: { name: 'ComponentSliderImmediate' } },
+          { i18nKey: 'app.aside.menu.dataSliderShowTip', routerLink: { name: 'ComponentSliderShowTip' } }
         ]
       },
       {
-        title: 'Input 单行输入框',
+        i18nKey: 'app.aside.menu.dataInputTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'input' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentInputSize' } },
-          { title: '类型', routerLink: { name: 'ComponentInputType' } },
-          { title: '查看模式', routerLink: { name: 'ComponentInputReadonly' } },
-          { title: '不可编辑', routerLink: { name: 'ComponentInputEditable' } },
-          { title: '禁用', routerLink: { name: 'ComponentInputDisabled' } },
-          { title: '可清除', routerLink: { name: 'ComponentInputClearable' } },
-          { title: '宽度', routerLink: { name: 'ComponentInputWidth' } },
-          { title: '自动去掉左右空格', routerLink: { name: 'ComponentInputTrim' } },
+          { i18nKey: 'app.aside.menu.dataInputSize', routerLink: { name: 'ComponentInputSize' } },
+          { i18nKey: 'app.aside.menu.dataInputType', routerLink: { name: 'ComponentInputType' } },
+          { i18nKey: 'app.aside.menu.dataInputReadonly', routerLink: { name: 'ComponentInputReadonly' } },
+          { i18nKey: 'app.aside.menu.dataInputEditable', routerLink: { name: 'ComponentInputEditable' } },
+          { i18nKey: 'app.aside.menu.dataInputDisabled', routerLink: { name: 'ComponentInputDisabled' } },
+          { i18nKey: 'app.aside.menu.dataInputClearable', routerLink: { name: 'ComponentInputClearable' } },
+          { i18nKey: 'app.aside.menu.dataInputWidth', routerLink: { name: 'ComponentInputWidth' } },
+          { i18nKey: 'app.aside.menu.dataInputTrim', routerLink: { name: 'ComponentInputTrim' } },
           // { title: '密码类型', routerLink: { name: 'ComponentInputPassword' } },
           // { title: '时间类型', routerLink: { name: 'ComponentInputTime' } },
           // { title: '日期类型', routerLink: { name: 'ComponentInputDate' } },
@@ -792,470 +792,470 @@ export const navConfigList: NavVO[] = [
           // { title: '数值类型', routerLink: { name: 'ComponentInputNumber' } },
           // { title: '整数类型', routerLink: { name: 'ComponentInputInteger' } },
           // { title: '小数类型', routerLink: { name: 'ComponentInputFloat' } },
-          { title: '显示浮动标签', routerLink: { name: 'ComponentInputFloatContent' } },
-          { title: '显示字数统计', routerLink: { name: 'ComponentInputCount' } },
-          { title: '前缀', routerLink: { name: 'ComponentInputPrefix' } },
-          { title: '后缀', routerLink: { name: 'ComponentInputSuffix' } },
+          { i18nKey: 'app.aside.menu.dataInputFloatContent', routerLink: { name: 'ComponentInputFloatContent' } },
+          { i18nKey: 'app.aside.menu.dataInputCount', routerLink: { name: 'ComponentInputCount' } },
+          { i18nKey: 'app.aside.menu.dataInputPrefix', routerLink: { name: 'ComponentInputPrefix' } },
+          { i18nKey: 'app.aside.menu.dataInputSuffix', routerLink: { name: 'ComponentInputSuffix' } },
           {
-            title: '自定义插槽模板',
+            i18nKey: 'app.aside.menu.dataInputCustomSlotTemplate',
             children: [
-              { title: '前缀插槽模板', routerLink: { name: 'ComponentInputTemplatePrefix' } },
-              { title: '后缀插槽模板', routerLink: { name: 'ComponentInputTemplateSuffix' } }
+              { i18nKey: 'app.aside.menu.dataInputPrefixTemplate', routerLink: { name: 'ComponentInputTemplatePrefix' } },
+              { i18nKey: 'app.aside.menu.dataInputSuffixTemplate', routerLink: { name: 'ComponentInputTemplateSuffix' } }
             ]
           }
         ]
       },
       // { title: 'TextInput 单行文本输入' },
       {
-        title: 'Textarea 多行文本输入',
+        i18nKey: 'app.aside.menu.dataTextareaTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'textarea' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentTextareaSize' } },
-          { title: '查看模式', routerLink: { name: 'ComponentTextareaReadonly' } },
-          { title: '不可编辑', routerLink: { name: 'ComponentTextareaEditable' } },
-          { title: '可清除', routerLink: { name: 'ComponentTextareaClearable' } },
-          { title: '自动去掉左右空格', routerLink: { name: 'ComponentTextareaTrim' } },
-          { title: '禁用', routerLink: { name: 'ComponentTextareaDisabled' } },
-          { title: '字数统计', routerLink: { name: 'ComponentTextareaCount' } },
-          { title: '自适应高度', routerLink: { name: 'ComponentTextareaAutosize' } },
-          { title: '可调节高度', routerLink: { name: 'ComponentTextareaResize' } }
+          { i18nKey: 'app.aside.menu.dataTextareaSize', routerLink: { name: 'ComponentTextareaSize' } },
+          { i18nKey: 'app.aside.menu.dataTextareaReadonly', routerLink: { name: 'ComponentTextareaReadonly' } },
+          { i18nKey: 'app.aside.menu.dataTextareaEditable', routerLink: { name: 'ComponentTextareaEditable' } },
+          { i18nKey: 'app.aside.menu.dataTextareaClearable', routerLink: { name: 'ComponentTextareaClearable' } },
+          { i18nKey: 'app.aside.menu.dataTextareaTrim', routerLink: { name: 'ComponentTextareaTrim' } },
+          { i18nKey: 'app.aside.menu.dataTextareaDisabled', routerLink: { name: 'ComponentTextareaDisabled' } },
+          { i18nKey: 'app.aside.menu.dataTextareaCount', routerLink: { name: 'ComponentTextareaCount' } },
+          { i18nKey: 'app.aside.menu.dataTextareaAutosize', routerLink: { name: 'ComponentTextareaAutosize' } },
+          { i18nKey: 'app.aside.menu.dataTextareaResize', routerLink: { name: 'ComponentTextareaResize' } }
         ]
       },
       {
-        title: 'NumberInput 数值输入',
+        i18nKey: 'app.aside.menu.dataNumberInputTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'number-input' } } },
           {
-            title: '数值',
+            i18nKey: 'app.aside.menu.dataNumberInputNumberType',
             children: [
-              { title: '尺寸大小', routerLink: { name: 'ComponentNumberInputNumberSize' } },
-              { title: '基础', routerLink: { name: 'ComponentNumberInputNumberBase' } },
-              { title: '可清除', routerLink: { name: 'ComponentNumberInputNumberClearable' } },
-              { title: '只读模式', routerLink: { name: 'ComponentNumberInputNumberReadonly' } },
-              { title: '宽度', routerLink: { name: 'ComponentNumberInputNumberWidth' } },
-              { title: '输入负数', routerLink: { name: 'ComponentNumberInputNumberNegative' } },
-              { title: '设置步数', routerLink: { name: 'ComponentNumberInputNumberStep' } },
-              { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputNumberRange' } },
-              { title: '控制按钮', routerLink: { name: 'ComponentNumberInputNumberControls' } },
-              { title: '按钮布局', routerLink: { name: 'ComponentNumberInputNumberLayout' } },
-              { title: '自定义按钮图标', routerLink: { name: 'ComponentNumberInputNumberControlIcon' } },
-              { title: '前缀后缀图标', routerLink: { name: 'ComponentNumberInputNumberIcon' } },
-              { title: '浮动文字', routerLink: { name: 'ComponentNumberInputNumberFloatContent' } },
-              { title: '显示 Tooltip 提示', routerLink: { name: 'ComponentNumberInputNumberShowTip' } },
-              { title: '自定义模板', routerLink: { name: 'ComponentNumberInputNumberTemplate' } }
+              { i18nKey: 'app.aside.menu.dataNumberInputSize', routerLink: { name: 'ComponentNumberInputNumberSize' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputBase', routerLink: { name: 'ComponentNumberInputNumberBase' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputClearable', routerLink: { name: 'ComponentNumberInputNumberClearable' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputReadonly', routerLink: { name: 'ComponentNumberInputNumberReadonly' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputWidth', routerLink: { name: 'ComponentNumberInputNumberWidth' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputNegative', routerLink: { name: 'ComponentNumberInputNumberNegative' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputStep', routerLink: { name: 'ComponentNumberInputNumberStep' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputRange', routerLink: { name: 'ComponentNumberInputNumberRange' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputControls', routerLink: { name: 'ComponentNumberInputNumberControls' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputLayout', routerLink: { name: 'ComponentNumberInputNumberLayout' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputControlIcon', routerLink: { name: 'ComponentNumberInputNumberControlIcon' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputIcon', routerLink: { name: 'ComponentNumberInputNumberIcon' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputFloatContent', routerLink: { name: 'ComponentNumberInputNumberFloatContent' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputShowTip', routerLink: { name: 'ComponentNumberInputNumberShowTip' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputTemplate', routerLink: { name: 'ComponentNumberInputNumberTemplate' } }
             ]
           },
           {
-            title: '整数',
+            i18nKey: 'app.aside.menu.dataNumberInputIntegerType',
             children: [
-              { title: '基础', routerLink: { name: 'ComponentNumberInputIntegerBase' } },
-              { title: '可清除', routerLink: { name: 'ComponentNumberInputIntegerClearable' } },
-              { title: '只读模式', routerLink: { name: 'ComponentNumberInputIntegerReadonly' } },
-              { title: '输入负数', routerLink: { name: 'ComponentNumberInputIntegerNegative' } },
-              { title: '设置步数', routerLink: { name: 'ComponentNumberInputIntegerStep' } },
-              { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputIntegerRange' } },
-              { title: '控制按钮', routerLink: { name: 'ComponentNumberInputIntegerControls' } }
+              { i18nKey: 'app.aside.menu.dataNumberInputBase', routerLink: { name: 'ComponentNumberInputIntegerBase' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputClearable', routerLink: { name: 'ComponentNumberInputIntegerClearable' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputReadonly', routerLink: { name: 'ComponentNumberInputIntegerReadonly' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputNegative', routerLink: { name: 'ComponentNumberInputIntegerNegative' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputStep', routerLink: { name: 'ComponentNumberInputIntegerStep' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputRange', routerLink: { name: 'ComponentNumberInputIntegerRange' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputControls', routerLink: { name: 'ComponentNumberInputIntegerControls' } }
             ]
           },
           {
-            title: '小数',
+            i18nKey: 'app.aside.menu.dataNumberInputFloatType',
             children: [
-              { title: '基础', routerLink: { name: 'ComponentNumberInputFloatBase' } },
-              { title: '可清除', routerLink: { name: 'ComponentNumberInputFloatClearable' } },
-              { title: '只读模式', routerLink: { name: 'ComponentNumberInputFloatReadonly' } },
-              { title: '设置步数', routerLink: { name: 'ComponentNumberInputFloatStep' } },
-              { title: '小数位数', routerLink: { name: 'ComponentNumberInputFloatDigits' } },
-              { title: '舍入方式', routerLink: { name: 'ComponentNumberInputFloatMode' } },
-              { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputFloatRange' } },
-              { title: '自动补0', routerLink: { name: 'ComponentNumberInputFloatAutoFill' } },
-              { title: '控制按钮', routerLink: { name: 'ComponentNumberInputFloatControls' } }
+              { i18nKey: 'app.aside.menu.dataNumberInputBase', routerLink: { name: 'ComponentNumberInputFloatBase' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputClearable', routerLink: { name: 'ComponentNumberInputFloatClearable' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputReadonly', routerLink: { name: 'ComponentNumberInputFloatReadonly' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputStep', routerLink: { name: 'ComponentNumberInputFloatStep' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputDigits', routerLink: { name: 'ComponentNumberInputFloatDigits' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputMode', routerLink: { name: 'ComponentNumberInputFloatMode' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputRange', routerLink: { name: 'ComponentNumberInputFloatRange' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputAutoFill', routerLink: { name: 'ComponentNumberInputFloatAutoFill' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputControls', routerLink: { name: 'ComponentNumberInputFloatControls' } }
             ]
           },
           {
-            title: '金额',
+            i18nKey: 'app.aside.menu.dataNumberInputAmountType',
             children: [
-              { title: '基础', routerLink: { name: 'ComponentNumberInputAmountBase' } },
-              { title: '对其方式', routerLink: { name: 'ComponentNumberInputAmountAlign' } },
-              { title: '可清除', routerLink: { name: 'ComponentNumberInputAmountClearable' } },
-              { title: '只读模式', routerLink: { name: 'ComponentNumberInputAmountReadonly' } },
-              { title: '输入负数', routerLink: { name: 'ComponentNumberInputAmountNegative' } },
-              { title: '设置步数', routerLink: { name: 'ComponentNumberInputAmountStep' } },
-              { title: '小数位数', routerLink: { name: 'ComponentNumberInputAmountDigits' } },
-              { title: '舍入方式', routerLink: { name: 'ComponentNumberInputAmountMode' } },
-              { title: '最小值与最大值', routerLink: { name: 'ComponentNumberInputAmountRange' } },
-              { title: '自动补0', routerLink: { name: 'ComponentNumberInputAmountAutoFill' } },
-              { title: '显示货币符号', routerLink: { name: 'ComponentNumberInputAmountShowCurrency' } },
-              { title: '控制按钮', routerLink: { name: 'ComponentNumberInputAmountControls' } },
-              { title: '按钮布局', routerLink: { name: 'ComponentNumberInputAmountLayout' } },
-              { title: '自定义按钮图标', routerLink: { name: 'ComponentNumberInputAmountControlIcon' } },
-              { title: '前缀后缀图标', routerLink: { name: 'ComponentNumberInputAmountIcon' } },
-              { title: '浮动文字', routerLink: { name: 'ComponentNumberInputAmountFloatContent' } },
-              { title: '显示 Tooltip 提示', routerLink: { name: 'ComponentNumberInputAmountShowTip' } },
-              { title: '自定义模板', routerLink: { name: 'ComponentNumberInputAmountTemplate' } }
+              { i18nKey: 'app.aside.menu.dataNumberInputBase', routerLink: { name: 'ComponentNumberInputAmountBase' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputAlign', routerLink: { name: 'ComponentNumberInputAmountAlign' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputClearable', routerLink: { name: 'ComponentNumberInputAmountClearable' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputReadonly', routerLink: { name: 'ComponentNumberInputAmountReadonly' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputNegative', routerLink: { name: 'ComponentNumberInputAmountNegative' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputStep', routerLink: { name: 'ComponentNumberInputAmountStep' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputDigits', routerLink: { name: 'ComponentNumberInputAmountDigits' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputMode', routerLink: { name: 'ComponentNumberInputAmountMode' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputRange', routerLink: { name: 'ComponentNumberInputAmountRange' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputAutoFill', routerLink: { name: 'ComponentNumberInputAmountAutoFill' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputShowCurrency', routerLink: { name: 'ComponentNumberInputAmountShowCurrency' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputControls', routerLink: { name: 'ComponentNumberInputAmountControls' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputLayout', routerLink: { name: 'ComponentNumberInputAmountLayout' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputControlIcon', routerLink: { name: 'ComponentNumberInputAmountControlIcon' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputIcon', routerLink: { name: 'ComponentNumberInputAmountIcon' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputFloatContent', routerLink: { name: 'ComponentNumberInputAmountFloatContent' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputShowTip', routerLink: { name: 'ComponentNumberInputAmountShowTip' } },
+              { i18nKey: 'app.aside.menu.dataNumberInputTemplate', routerLink: { name: 'ComponentNumberInputAmountTemplate' } }
             ]
           }
         ]
       },
       {
-        title: 'PasswordInput 密码输入',
+        i18nKey: 'app.aside.menu.dataPasswordInputTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'password-input' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentPasswordInputSize' } },
-          { title: '可清除', routerLink: { name: 'ComponentPasswordInputClearable' } },
-          { title: '只读模式', routerLink: { name: 'ComponentPasswordInputReadonly' } },
-          { title: '不可编辑', routerLink: { name: 'ComponentPasswordInputEditable' } },
-          { title: '宽度', routerLink: { name: 'ComponentPasswordInputWidth' } },
-          { title: '图标', routerLink: { name: 'ComponentPasswordInputIcon' } },
-          { title: '浮动文字', routerLink: { name: 'ComponentPasswordInputFloatContent' } },
+          { i18nKey: 'app.aside.menu.dataPasswordInputSize', routerLink: { name: 'ComponentPasswordInputSize' } },
+          { i18nKey: 'app.aside.menu.dataPasswordInputClearable', routerLink: { name: 'ComponentPasswordInputClearable' } },
+          { i18nKey: 'app.aside.menu.dataPasswordInputReadonly', routerLink: { name: 'ComponentPasswordInputReadonly' } },
+          { i18nKey: 'app.aside.menu.dataPasswordInputEditable', routerLink: { name: 'ComponentPasswordInputEditable' } },
+          { i18nKey: 'app.aside.menu.dataPasswordInputWidth', routerLink: { name: 'ComponentPasswordInputWidth' } },
+          { i18nKey: 'app.aside.menu.dataPasswordInputIcon', routerLink: { name: 'ComponentPasswordInputIcon' } },
+          { i18nKey: 'app.aside.menu.dataPasswordInputFloatContent', routerLink: { name: 'ComponentPasswordInputFloatContent' } },
           // { title: '显示 Tooltip 提示', routerLink: { name: 'ComponentPasswordInputShowTip' } },
-          { title: '控制按钮', routerLink: { name: 'ComponentPasswordInputControls' } }
+          { i18nKey: 'app.aside.menu.dataPasswordInputControls', routerLink: { name: 'ComponentPasswordInputControls' } }
         ]
       },
       {
-        title: 'ColorPicker 颜色选择',
+        i18nKey: 'app.aside.menu.dataColorPickerTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'color-picker' } } },
           {
-            title: '全局调用',
+            i18nKey: 'app.aside.menu.dataColorPickerGlobalInvoke',
             children: [
-              { title: '格式转换', routerLink: { name: 'ComponentUploadGlobalColorType' } },
-              { title: '解析为指定格式', routerLink: { name: 'ComponentUploadGlobalColorParse' } },
-              { title: '效果处理', routerLink: { name: 'ComponentUploadGlobalColorEffect' } }
+              { i18nKey: 'app.aside.menu.dataColorPickerFormatConversion', routerLink: { name: 'ComponentUploadGlobalColorType' } },
+              { i18nKey: 'app.aside.menu.dataColorPickerParseToFormat', routerLink: { name: 'ComponentUploadGlobalColorParse' } },
+              { i18nKey: 'app.aside.menu.dataColorPickerEffectProcessing', routerLink: { name: 'ComponentUploadGlobalColorEffect' } }
             ]
           },
-          { title: '尺寸大小', routerLink: { name: 'ComponentColorPickerSize' } },
-          { title: '可清除', routerLink: { name: 'ComponentColorPickerClearable' } },
-          { title: '面板默认颜色', routerLink: { name: 'ComponentColorPickerDefaultColor' } },
-          { title: '快捷颜色', routerLink: { name: 'ComponentColorPickerColors' } },
-          { title: 'RGB 格式', routerLink: { name: 'ComponentColorPickerRgb' } },
-          { title: 'HEX 格式', routerLink: { name: 'ComponentColorPickerHex' } },
-          { title: '取色器', routerLink: { name: 'ComponentColorPickerShowEyeDropper' } }
+          { i18nKey: 'app.aside.menu.dataColorPickerSize', routerLink: { name: 'ComponentColorPickerSize' } },
+          { i18nKey: 'app.aside.menu.dataColorPickerClearable', routerLink: { name: 'ComponentColorPickerClearable' } },
+          { i18nKey: 'app.aside.menu.dataColorPickerDefaultColor', routerLink: { name: 'ComponentColorPickerDefaultColor' } },
+          { i18nKey: 'app.aside.menu.dataColorPickerColors', routerLink: { name: 'ComponentColorPickerColors' } },
+          { i18nKey: 'app.aside.menu.dataColorPickerRgb', routerLink: { name: 'ComponentColorPickerRgb' } },
+          { i18nKey: 'app.aside.menu.dataColorPickerHex', routerLink: { name: 'ComponentColorPickerHex' } },
+          { i18nKey: 'app.aside.menu.dataColorPickerEyeDropper', routerLink: { name: 'ComponentColorPickerShowEyeDropper' } }
         ]
       },
       {
-        title: 'IconPicker 图标选择',
+        i18nKey: 'app.aside.menu.dataIconPickerTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'icon-picker' } } },
           {
-            title: '基础',
+            i18nKey: 'app.aside.menu.dataIconPickerBase',
             children: [
-              { title: '尺寸大小', routerLink: { name: 'ComponentIconPickerBaseSize' } },
-              { title: '可清除', routerLink: { name: 'ComponentIconPickerBaseClearable' } },
-              { title: '只读', routerLink: { name: 'ComponentIconPickerBaseReadonly' } },
-              { title: '禁用', routerLink: { name: 'ComponentIconPickerBaseDisabled' } },
-              { title: '内置图标', routerLink: { name: 'ComponentIconPickerBaseIcons' } },
-              { title: '自定义图标', routerLink: { name: 'ComponentIconPickerBaseCustomIcon' } },
-              { title: '显示图标标题', routerLink: { name: 'ComponentIconPickerBaseTitle' } },
-              { title: '图标颜色', routerLink: { name: 'ComponentIconPickerBaseColor' } }
+              { i18nKey: 'app.aside.menu.dataIconPickerSize', routerLink: { name: 'ComponentIconPickerBaseSize' } },
+              { i18nKey: 'app.aside.menu.dataIconPickerClearable', routerLink: { name: 'ComponentIconPickerBaseClearable' } },
+              { i18nKey: 'app.aside.menu.dataIconPickerReadonly', routerLink: { name: 'ComponentIconPickerBaseReadonly' } },
+              { i18nKey: 'app.aside.menu.dataIconPickerDisabled', routerLink: { name: 'ComponentIconPickerBaseDisabled' } },
+              { i18nKey: 'app.aside.menu.dataIconPickerBuiltinIcons', routerLink: { name: 'ComponentIconPickerBaseIcons' } },
+              { i18nKey: 'app.aside.menu.dataIconPickerCustomIcon', routerLink: { name: 'ComponentIconPickerBaseCustomIcon' } },
+              { i18nKey: 'app.aside.menu.dataIconPickerShowIconTitle', routerLink: { name: 'ComponentIconPickerBaseTitle' } },
+              { i18nKey: 'app.aside.menu.dataIconPickerIconColor', routerLink: { name: 'ComponentIconPickerBaseColor' } }
             ]
           },
           {
-            title: '可搜索',
+            i18nKey: 'app.aside.menu.dataIconPickerSearchable',
             children: [
-              { title: '可搜索', routerLink: { name: 'ComponentIconPickerSearchFilterable' } },
-              { title: '自定义查找方法', routerLink: { name: 'ComponentIconPickerSearchFilterMethod' } }
+              { i18nKey: 'app.aside.menu.dataIconPickerSearchable', routerLink: { name: 'ComponentIconPickerSearchFilterable' } },
+              { i18nKey: 'app.aside.menu.dataIconPickerCustomFilterMethod', routerLink: { name: 'ComponentIconPickerSearchFilterMethod' } }
             ]
           },
           {
-            title: '面板设置',
+            i18nKey: 'app.aside.menu.dataIconPickerPanelSettings',
             children: [
-              { title: '宽高', routerLink: { name: 'ComponentIconPickerPopupWh' } },
-              { title: '展示数量', routerLink: { name: 'ComponentIconPickerPopupChunkSize' } }
+              { i18nKey: 'app.aside.menu.dataIconPickerPanelWH', routerLink: { name: 'ComponentIconPickerPopupWh' } },
+              { i18nKey: 'app.aside.menu.dataIconPickerPanelChunkSize', routerLink: { name: 'ComponentIconPickerPopupChunkSize' } }
             ]
           },
           {
             i18nKey: 'app.aside.menu.iconPickerGlobalRenderer',
             children: [
               { title: 'API', routerLink: { name: 'GlobalRendererIconPickerAPI' } },
-              { title: '选项图标', routerLink: { name: 'GlobalRendererIconPickerIcon' } }
+              { i18nKey: 'app.aside.menu.dataIconPickerOptionIcon', routerLink: { name: 'GlobalRendererIconPickerIcon' } }
             ]
           },
-          { title: '使用第三方图标', isPlugin: true, linkUrl: `${otherUrl}#/other-iconfont/symbol/icon-picker/icons`, linkTarget: '_blank' }
+          { i18nKey: 'app.aside.menu.dataIconPickerUseThirdPartyIcon', isPlugin: true, linkUrl: `${otherUrl}#/other-iconfont/symbol/icon-picker/icons`, linkTarget: '_blank' }
         ]
       },
       datePickerNavConfig,
       {
-        title: 'DateRangePicker 日期范围选择',
+        i18nKey: 'app.aside.menu.dataDateRangePickerTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'date-range-picker' } } },
           {
-            title: '日期类型',
+            i18nKey: 'app.aside.menu.dataDateRangePickerDateType',
             children: [
-              { title: '尺寸大小', routerLink: { name: 'ComponentDateRangePickerDateSize' } },
-              { title: '绑定值格式', routerLink: { name: 'ComponentDateRangePickerDateBase' } },
-              { title: '绑定值类型', routerLink: { name: 'ComponentDateRangePickerDateValueType' } },
-              { title: '可清除', routerLink: { name: 'ComponentDateRangePickerDateClearable' } },
-              { title: '禁用', routerLink: { name: 'ComponentDateRangePickerDateDisabled' } },
-              { title: '查看模式', routerLink: { name: 'ComponentDateRangePickerDateReadonly' } },
-              { title: '自动关闭', routerLink: { name: 'ComponentDateRangePickerDateAutoClose' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerSize', routerLink: { name: 'ComponentDateRangePickerDateSize' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerBase', routerLink: { name: 'ComponentDateRangePickerDateBase' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerValueType', routerLink: { name: 'ComponentDateRangePickerDateValueType' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerClearable', routerLink: { name: 'ComponentDateRangePickerDateClearable' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerDisabled', routerLink: { name: 'ComponentDateRangePickerDateDisabled' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerReadonly', routerLink: { name: 'ComponentDateRangePickerDateReadonly' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerAutoClose', routerLink: { name: 'ComponentDateRangePickerDateAutoClose' } },
               {
-                title: '快捷按钮',
+                i18nKey: 'app.aside.menu.dataDateRangePickerShortcut',
                 children: [
-                  { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerDateShortcutCode' } },
-                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerDateShortcutStatus' } },
-                  { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerDateShortcutPosition' } },
-                  { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerDateShortcutCustom' } }
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCode', routerLink: { name: 'ComponentDateRangePickerDateShortcutCode' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutStatus', routerLink: { name: 'ComponentDateRangePickerDateShortcutStatus' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutPosition', routerLink: { name: 'ComponentDateRangePickerDateShortcutPosition' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCustom', routerLink: { name: 'ComponentDateRangePickerDateShortcutCustom' } }
                 ]
               },
-              { title: '限制指定日期', routerLink: { name: 'ComponentDateRangePickerDateDisabledMethod' } },
-              { title: '前缀图标', routerLink: { name: 'ComponentDateRangePickerDatePrefixIcon' } },
-              { title: '后缀图标', routerLink: { name: 'ComponentDateRangePickerDateSuffixIcon' } },
-              { title: '面板的默认日期', routerLink: { name: 'ComponentDateRangePickerDateDefVal' } },
-              { title: '面板的触发方式', routerLink: { name: 'ComponentDateRangePickerDateTrigger' } },
-              { title: '日期面板联动', routerLink: { name: 'ComponentDateRangePickerDateLinkedPanels' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerDisabledMethod', routerLink: { name: 'ComponentDateRangePickerDateDisabledMethod' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerPrefixIcon', routerLink: { name: 'ComponentDateRangePickerDatePrefixIcon' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerSuffixIcon', routerLink: { name: 'ComponentDateRangePickerDateSuffixIcon' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerDefVal', routerLink: { name: 'ComponentDateRangePickerDateDefVal' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerTrigger', routerLink: { name: 'ComponentDateRangePickerDateTrigger' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerLinkedPanels', routerLink: { name: 'ComponentDateRangePickerDateLinkedPanels' } },
               {
-                title: '自定义插槽模板',
+                i18nKey: 'app.aside.menu.dataDateRangePickerCustomSlotTemplate',
                 children: [
-                  { title: '自定义顶部模板', routerLink: { name: 'ComponentDateRangePickerDateTemplateTop' } },
-                  { title: '自定义底部模板', routerLink: { name: 'ComponentDateRangePickerDateTemplateBottom' } },
-                  { title: '自定义左侧模板', routerLink: { name: 'ComponentDateRangePickerDateTemplateLeft' } },
-                  { title: '自定义右侧模板', routerLink: { name: 'ComponentDateRangePickerDateTemplateRight' } }
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomTopTemplate', routerLink: { name: 'ComponentDateRangePickerDateTemplateTop' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomBottomTemplate', routerLink: { name: 'ComponentDateRangePickerDateTemplateBottom' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomLeftTemplate', routerLink: { name: 'ComponentDateRangePickerDateTemplateLeft' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomRightTemplate', routerLink: { name: 'ComponentDateRangePickerDateTemplateRight' } }
                 ]
               }
             ]
           },
           {
-            title: '时间类型',
+            i18nKey: 'app.aside.menu.dataDateRangePickerTimeType',
             children: [
-              { title: '尺寸大小', routerLink: { name: 'ComponentDateRangePickerTimeSize' } },
-              { title: '绑定值格式', routerLink: { name: 'ComponentDateRangePickerTimeBase' } },
-              { title: '可清除', routerLink: { name: 'ComponentDateRangePickerTimeClearable' } },
-              { title: '禁用', routerLink: { name: 'ComponentDateRangePickerTimeDisabled' } },
-              { title: '自定义格式', routerLink: { name: 'ComponentDateRangePickerTimeValueFormat' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerSize', routerLink: { name: 'ComponentDateRangePickerTimeSize' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerBase', routerLink: { name: 'ComponentDateRangePickerTimeBase' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerClearable', routerLink: { name: 'ComponentDateRangePickerTimeClearable' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerDisabled', routerLink: { name: 'ComponentDateRangePickerTimeDisabled' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerValueFormat', routerLink: { name: 'ComponentDateRangePickerTimeValueFormat' } },
               {
-                title: '快捷按钮',
+                i18nKey: 'app.aside.menu.dataDateRangePickerShortcut',
                 children: [
                   // { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerTimeShortcutCode' } },
                   // { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerTimeShortcutStatus' } },
                   // { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerTimeShortcutPosition' } },
-                  { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerTimeShortcutCustom' } }
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCustom', routerLink: { name: 'ComponentDateRangePickerTimeShortcutCustom' } }
                 ]
               },
-              { title: '面板的默认日期', routerLink: { name: 'ComponentDateRangePickerTimeDefVal' } },
-              { title: '禁用时间选项', routerLink: { name: 'ComponentDateRangePickerTimeDisabledOpt' } },
-              { title: '自定义时间选项', routerLink: { name: 'ComponentDateRangePickerTimeOpts' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerDefVal', routerLink: { name: 'ComponentDateRangePickerTimeDefVal' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerDisabledOpt', routerLink: { name: 'ComponentDateRangePickerTimeDisabledOpt' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerOpts', routerLink: { name: 'ComponentDateRangePickerTimeOpts' } },
               {
-                title: '自定义插槽模板',
+                i18nKey: 'app.aside.menu.dataDateRangePickerCustomSlotTemplate',
                 children: [
-                  { title: '自定义顶部模板', routerLink: { name: 'ComponentDateRangePickerTimeTemplateTop' } },
-                  { title: '自定义底部模板', routerLink: { name: 'ComponentDateRangePickerTimeTemplateBottom' } },
-                  { title: '自定义左侧模板', routerLink: { name: 'ComponentDateRangePickerTimeTemplateLeft' } },
-                  { title: '自定义右侧模板', routerLink: { name: 'ComponentDateRangePickerTimeTemplateRight' } }
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomTopTemplate', routerLink: { name: 'ComponentDateRangePickerTimeTemplateTop' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomBottomTemplate', routerLink: { name: 'ComponentDateRangePickerTimeTemplateBottom' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomLeftTemplate', routerLink: { name: 'ComponentDateRangePickerTimeTemplateLeft' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomRightTemplate', routerLink: { name: 'ComponentDateRangePickerTimeTemplateRight' } }
                 ]
               }
             ]
           },
           {
-            title: '日期带时间类型',
+            i18nKey: 'app.aside.menu.dataDateRangePickerDatetimeType',
             children: [
-              { title: '绑定值格式', routerLink: { name: 'ComponentDateRangePickerDatetimeBase' } },
-              { title: '禁用', routerLink: { name: 'ComponentDateRangePickerDatetimeDisabled' } },
-              { title: '可清除', routerLink: { name: 'ComponentDateRangePickerDatetimeClearable' } },
-              { title: '自定义格式', routerLink: { name: 'ComponentDateRangePickerDatetimeValueFormat' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerBase', routerLink: { name: 'ComponentDateRangePickerDatetimeBase' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerDisabled', routerLink: { name: 'ComponentDateRangePickerDatetimeDisabled' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerClearable', routerLink: { name: 'ComponentDateRangePickerDatetimeClearable' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerValueFormat', routerLink: { name: 'ComponentDateRangePickerDatetimeValueFormat' } },
               {
-                title: '快捷按钮',
+                i18nKey: 'app.aside.menu.dataDateRangePickerShortcut',
                 children: [
-                  { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutCode' } },
-                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutStatus' } },
-                  { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutPosition' } },
-                  { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutCustom' } }
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCode', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutCode' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutStatus', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutStatus' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutPosition', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutPosition' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCustom', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutCustom' } }
                 ]
               },
-              { title: '面板的默认日期', routerLink: { name: 'ComponentDateRangePickerDatetimeDefVal' } },
-              { title: '禁用时间选项', routerLink: { name: 'ComponentDateRangePickerDatetimeDisabledOpt' } },
-              { title: '自定义时间选项', routerLink: { name: 'ComponentDateRangePickerDatetimeOpts' } },
-              { title: '日期面板联动', routerLink: { name: 'ComponentDateRangePickerDatetimeLinkedPanels' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerDefVal', routerLink: { name: 'ComponentDateRangePickerDatetimeDefVal' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerDisabledOpt', routerLink: { name: 'ComponentDateRangePickerDatetimeDisabledOpt' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerOpts', routerLink: { name: 'ComponentDateRangePickerDatetimeOpts' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerLinkedPanels', routerLink: { name: 'ComponentDateRangePickerDatetimeLinkedPanels' } },
               {
-                title: '自定义插槽模板',
+                i18nKey: 'app.aside.menu.dataDateRangePickerCustomSlotTemplate',
                 children: [
-                  { title: '自定义顶部模板', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateTop' } },
-                  { title: '自定义底部模板', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateBottom' } },
-                  { title: '自定义左侧模板', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateLeft' } },
-                  { title: '自定义右侧模板', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateRight' } }
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomTopTemplate', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateTop' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomBottomTemplate', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateBottom' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomLeftTemplate', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateLeft' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomRightTemplate', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateRight' } }
                 ]
               }
             ]
           },
           {
-            title: '周类型',
+            i18nKey: 'app.aside.menu.dataDateRangePickerWeekType',
             children: [
-              { title: '绑定值格式', routerLink: { name: 'ComponentDateRangePickerWeekBase' } },
-              { title: '禁用', routerLink: { name: 'ComponentDateRangePickerWeekDisabled' } },
-              { title: '可清除', routerLink: { name: 'ComponentDateRangePickerWeekClearable' } },
-              { title: '自定义周的开始日', routerLink: { name: 'ComponentDateRangePickerWeekStartDay' } },
-              { title: '自定义返回值', routerLink: { name: 'ComponentDateRangePickerWeekSelectDay' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerBase', routerLink: { name: 'ComponentDateRangePickerWeekBase' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerDisabled', routerLink: { name: 'ComponentDateRangePickerWeekDisabled' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerClearable', routerLink: { name: 'ComponentDateRangePickerWeekClearable' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerStartDay', routerLink: { name: 'ComponentDateRangePickerWeekStartDay' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerSelectDay', routerLink: { name: 'ComponentDateRangePickerWeekSelectDay' } },
               {
-                title: '快捷按钮',
+                i18nKey: 'app.aside.menu.dataDateRangePickerShortcut',
                 children: [
-                  { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerWeekShortcutCode' } },
-                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerWeekShortcutStatus' } },
-                  { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerWeekShortcutPosition' } },
-                  { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerWeekShortcutCustom' } }
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCode', routerLink: { name: 'ComponentDateRangePickerWeekShortcutCode' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutStatus', routerLink: { name: 'ComponentDateRangePickerWeekShortcutStatus' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutPosition', routerLink: { name: 'ComponentDateRangePickerWeekShortcutPosition' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCustom', routerLink: { name: 'ComponentDateRangePickerWeekShortcutCustom' } }
                 ]
               },
-              { title: '日期面板联动', routerLink: { name: 'ComponentDateRangePickerWeekLinkedPanels' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerLinkedPanels', routerLink: { name: 'ComponentDateRangePickerWeekLinkedPanels' } },
               {
-                title: '自定义插槽模板',
+                i18nKey: 'app.aside.menu.dataDateRangePickerCustomSlotTemplate',
                 children: [
-                  { title: '自定义顶部模板', routerLink: { name: 'ComponentDateRangePickerWeekTemplateTop' } },
-                  { title: '自定义底部模板', routerLink: { name: 'ComponentDateRangePickerWeekTemplateBottom' } },
-                  { title: '自定义左侧模板', routerLink: { name: 'ComponentDateRangePickerWeekTemplateLeft' } },
-                  { title: '自定义右侧模板', routerLink: { name: 'ComponentDateRangePickerWeekTemplateRight' } }
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomTopTemplate', routerLink: { name: 'ComponentDateRangePickerWeekTemplateTop' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomBottomTemplate', routerLink: { name: 'ComponentDateRangePickerWeekTemplateBottom' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomLeftTemplate', routerLink: { name: 'ComponentDateRangePickerWeekTemplateLeft' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerCustomRightTemplate', routerLink: { name: 'ComponentDateRangePickerWeekTemplateRight' } }
                 ]
               }
             ]
           },
           {
-            title: '月度类型',
+            i18nKey: 'app.aside.menu.dataDateRangePickerMonthType',
             children: [
-              { title: '绑定值格式', routerLink: { name: 'ComponentDateRangePickerMonthBase' } },
-              { title: '可清除', routerLink: { name: 'ComponentDateRangePickerMonthClearable' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerBase', routerLink: { name: 'ComponentDateRangePickerMonthBase' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerClearable', routerLink: { name: 'ComponentDateRangePickerMonthClearable' } },
               {
-                title: '快捷按钮',
+                i18nKey: 'app.aside.menu.dataDateRangePickerShortcut',
                 children: [
-                  { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerMonthShortcutCode' } },
-                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerMonthShortcutStatus' } },
-                  { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerMonthShortcutPosition' } },
-                  { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerMonthShortcutCustom' } }
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCode', routerLink: { name: 'ComponentDateRangePickerMonthShortcutCode' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutStatus', routerLink: { name: 'ComponentDateRangePickerMonthShortcutStatus' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutPosition', routerLink: { name: 'ComponentDateRangePickerMonthShortcutPosition' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCustom', routerLink: { name: 'ComponentDateRangePickerMonthShortcutCustom' } }
                 ]
               }
             ]
           },
           {
-            title: '季度类型',
+            i18nKey: 'app.aside.menu.dataDateRangePickerQuarterType',
             children: [
-              { title: '绑定值格式', routerLink: { name: 'ComponentDateRangePickerQuarterBase' } },
-              { title: '可清除', routerLink: { name: 'ComponentDateRangePickerQuarterClearable' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerBase', routerLink: { name: 'ComponentDateRangePickerQuarterBase' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerClearable', routerLink: { name: 'ComponentDateRangePickerQuarterClearable' } },
               {
-                title: '快捷按钮',
+                i18nKey: 'app.aside.menu.dataDateRangePickerShortcut',
                 children: [
-                  { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutCode' } },
-                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutStatus' } },
-                  { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutPosition' } },
-                  { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutCustom' } }
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCode', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutCode' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutStatus', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutStatus' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutPosition', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutPosition' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCustom', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutCustom' } }
                 ]
               }
             ]
           },
           {
-            title: '年度类型',
+            i18nKey: 'app.aside.menu.dataDateRangePickerYearType',
             children: [
-              { title: '绑定值格式', routerLink: { name: 'ComponentDateRangePickerYearBase' } },
-              { title: '可清除', routerLink: { name: 'ComponentDateRangePickerYearClearable' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerBase', routerLink: { name: 'ComponentDateRangePickerYearBase' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerClearable', routerLink: { name: 'ComponentDateRangePickerYearClearable' } },
               {
-                title: '快捷按钮',
+                i18nKey: 'app.aside.menu.dataDateRangePickerShortcut',
                 children: [
-                  { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerYearShortcutCode' } },
-                  { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerYearShortcutStatus' } },
-                  { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerYearShortcutPosition' } },
-                  { title: '自定义按钮', routerLink: { name: 'ComponentDateRangePickerYearShortcutCustom' } }
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCode', routerLink: { name: 'ComponentDateRangePickerYearShortcutCode' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutStatus', routerLink: { name: 'ComponentDateRangePickerYearShortcutStatus' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutPosition', routerLink: { name: 'ComponentDateRangePickerYearShortcutPosition' } },
+                  { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCustom', routerLink: { name: 'ComponentDateRangePickerYearShortcutCustom' } }
                 ]
               }
             ]
           },
           {
-            title: '功能示例',
+            i18nKey: 'app.aside.menu.dataDateRangePickerFeatureExamples',
             children: [
-              { title: '实现日期带小圆点', routerLink: { name: 'ComponentDateRangePickerFestivalMethod' } },
-              { title: '实现农历及节假日', routerLink: { name: 'ComponentDateRangePickerHolidays' } }
+              { i18nKey: 'app.aside.menu.dataDateRangePickerFestivalMethod', routerLink: { name: 'ComponentDateRangePickerFestivalMethod' } },
+              { i18nKey: 'app.aside.menu.dataDateRangePickerHolidays', routerLink: { name: 'ComponentDateRangePickerHolidays' } }
             ]
           },
           {
-            title: '快捷按钮指令（全局复用）',
+            i18nKey: 'app.aside.menu.dataDateRangePickerShortcutGlobalCommands',
             children: [
               { title: 'API', routerLink: { name: 'GlobalCommandsDateRangePickerAPI' } },
-              { title: '快捷按钮', routerLink: { name: 'GlobalCommandsDateRangePickerBase' } }
+              { i18nKey: 'app.aside.menu.dataDateRangePickerShortcut', routerLink: { name: 'GlobalCommandsDateRangePickerBase' } }
             ]
           }
         ]
       },
       {
-        title: 'Pulldown 下拉容器',
+        i18nKey: 'app.aside.menu.dataPulldownTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'pulldown' } }, keywords: 'vxe-pulldown' },
-          { title: '基础', routerLink: { name: 'ComponentPulldownBase' } },
-          { title: '配置列表', routerLink: { name: 'ComponentPulldownOptions' } },
+          { i18nKey: 'app.aside.menu.dataPulldownBase', routerLink: { name: 'ComponentPulldownBase' } },
+          { i18nKey: 'app.aside.menu.dataPulldownOptions', routerLink: { name: 'ComponentPulldownOptions' } },
           {
-            title: '自定义插槽模板',
+            i18nKey: 'app.aside.menu.dataPulldownCustomSlotTemplate',
             children: [
-              { title: '自定义头部插槽模板', routerLink: { name: 'ComponentPulldownTemplateHeader' } },
-              { title: '自定义尾部插槽模板', routerLink: { name: 'ComponentPulldownTemplateFooter' } },
-              { title: '自定义面板插槽模板', routerLink: { name: 'ComponentPulldownTemplateDropdown' } }
+              { i18nKey: 'app.aside.menu.dataPulldownCustomHeaderTemplate', routerLink: { name: 'ComponentPulldownTemplateHeader' } },
+              { i18nKey: 'app.aside.menu.dataPulldownCustomFooterTemplate', routerLink: { name: 'ComponentPulldownTemplateFooter' } },
+              { i18nKey: 'app.aside.menu.dataPulldownCustomDropdownTemplate', routerLink: { name: 'ComponentPulldownTemplateDropdown' } }
             ]
           },
-          { title: '可搜索的下拉框', routerLink: { name: 'ComponentPulldownSelect' } },
-          { title: '实现人员选择', routerLink: { name: 'ComponentPulldownSelectUser' } },
-          { title: '实现下拉表格', routerLink: { name: 'ComponentPulldownTable' } }
+          { i18nKey: 'app.aside.menu.dataPulldownSearchable', routerLink: { name: 'ComponentPulldownSelect' } },
+          { i18nKey: 'app.aside.menu.dataPulldownUserSelect', routerLink: { name: 'ComponentPulldownSelectUser' } },
+          { i18nKey: 'app.aside.menu.dataPulldownTable', routerLink: { name: 'ComponentPulldownTable' } }
         ]
       },
       {
-        title: 'Select 下拉框',
+        i18nKey: 'app.aside.menu.dataSelectTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'select' } } },
           {
-            title: '基础',
+            i18nKey: 'app.aside.menu.dataSelectBase',
             children: [
-              { title: '尺寸大小', routerLink: { name: 'ComponentSelectBaseSize' } },
-              { title: '可清除', routerLink: { name: 'ComponentSelectBaseClearable' } },
-              { title: '禁用', routerLink: { name: 'ComponentSelectBaseDisabled' } },
-              { title: '自定义图标', routerLink: { name: 'ComponentSelectBaseIcon' } },
-              { title: '单选框', routerLink: { name: 'ComponentSelectBaseRadio' } },
-              { title: '加载中', routerLink: { name: 'ComponentSelectBaseLoading' } },
-              { title: '本地搜索', routerLink: { name: 'ComponentSelectBaseFilterable' } },
-              { title: '远程搜索', routerLink: { name: 'ComponentSelectBaseRemote' } },
-              { title: '分组', routerLink: { name: 'ComponentSelectBaseGroup' } },
-              { title: '空值', routerLink: { name: 'ComponentSelectBaseEmptyValue' } },
-              { title: '默认值', routerLink: { name: 'ComponentSelectBaseDefaultValue' } },
-              { title: '多选', routerLink: { name: 'ComponentSelectBaseMultiple' } },
-              { title: '复选框', routerLink: { name: 'ComponentSelectBaseCheckbox' } },
-              { title: '限制最大数量', routerLink: { name: 'ComponentSelectBaseMax' } },
-              { title: '自定义宽高', routerLink: { name: 'ComponentSelectBasePopupWH' } },
-              { title: '可新增', routerLink: { name: 'ComponentSelectBaseAllowCreate' } },
-              { title: '操作按钮', routerLink: { name: 'ComponentSelectBaseOperBtn' } },
-              { title: '触发方式', routerLink: { name: 'ComponentSelectBaseTrigger' } },
-              { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectBaseTemplate' } },
-              { title: '虚拟滚动（大量数据选项）', routerLink: { name: 'ComponentSelectBaseScroll' } }
+              { i18nKey: 'app.aside.menu.dataSelectSize', routerLink: { name: 'ComponentSelectBaseSize' } },
+              { i18nKey: 'app.aside.menu.dataSelectClearable', routerLink: { name: 'ComponentSelectBaseClearable' } },
+              { i18nKey: 'app.aside.menu.dataSelectDisabled', routerLink: { name: 'ComponentSelectBaseDisabled' } },
+              { i18nKey: 'app.aside.menu.dataSelectCustomIcon', routerLink: { name: 'ComponentSelectBaseIcon' } },
+              { i18nKey: 'app.aside.menu.dataSelectRadio', routerLink: { name: 'ComponentSelectBaseRadio' } },
+              { i18nKey: 'app.aside.menu.dataSelectLoading', routerLink: { name: 'ComponentSelectBaseLoading' } },
+              { i18nKey: 'app.aside.menu.dataSelectFilterable', routerLink: { name: 'ComponentSelectBaseFilterable' } },
+              { i18nKey: 'app.aside.menu.dataSelectRemote', routerLink: { name: 'ComponentSelectBaseRemote' } },
+              { i18nKey: 'app.aside.menu.dataSelectGroup', routerLink: { name: 'ComponentSelectBaseGroup' } },
+              { i18nKey: 'app.aside.menu.dataSelectEmptyValue', routerLink: { name: 'ComponentSelectBaseEmptyValue' } },
+              { i18nKey: 'app.aside.menu.dataSelectDefaultValue', routerLink: { name: 'ComponentSelectBaseDefaultValue' } },
+              { i18nKey: 'app.aside.menu.dataSelectMultiple', routerLink: { name: 'ComponentSelectBaseMultiple' } },
+              { i18nKey: 'app.aside.menu.dataSelectCheckbox', routerLink: { name: 'ComponentSelectBaseCheckbox' } },
+              { i18nKey: 'app.aside.menu.dataSelectMax', routerLink: { name: 'ComponentSelectBaseMax' } },
+              { i18nKey: 'app.aside.menu.dataSelectPopupWH', routerLink: { name: 'ComponentSelectBasePopupWH' } },
+              { i18nKey: 'app.aside.menu.dataSelectAllowCreate', routerLink: { name: 'ComponentSelectBaseAllowCreate' } },
+              { i18nKey: 'app.aside.menu.dataSelectOperBtn', routerLink: { name: 'ComponentSelectBaseOperBtn' } },
+              { i18nKey: 'app.aside.menu.dataSelectTrigger', routerLink: { name: 'ComponentSelectBaseTrigger' } },
+              { i18nKey: 'app.aside.menu.dataSelectTemplate', routerLink: { name: 'ComponentSelectBaseTemplate' } },
+              { i18nKey: 'app.aside.menu.dataSelectScroll', routerLink: { name: 'ComponentSelectBaseScroll' } }
             ]
           },
           {
-            title: '配置式',
+            i18nKey: 'app.aside.menu.dataSelectConfig',
             children: [
-              { title: '可清除', routerLink: { name: 'ComponentSelectConfigClearable' } },
-              { title: '禁用', routerLink: { name: 'ComponentSelectConfigDisabled' } },
-              { title: '宽度', routerLink: { name: 'ComponentSelectConfigWidth' } },
-              { title: '单选框', routerLink: { name: 'ComponentSelectConfigRadio' } },
-              { title: '加载中', routerLink: { name: 'ComponentSelectConfigLoading' } },
-              { title: '显示徽标', routerLink: { name: 'ComponentSelectConfigBadge' } },
-              { title: '本地搜索', routerLink: { name: 'ComponentSelectConfigFilterable' } },
-              { title: '远程搜索', routerLink: { name: 'ComponentSelectConfigRemote' } },
-              { title: '分组', routerLink: { name: 'ComponentSelectConfigGroup' } },
-              { title: '空值', routerLink: { name: 'ComponentSelectConfigEmptyValue' } },
-              { title: '默认值', routerLink: { name: 'ComponentSelectConfigDefaultValue' } },
-              { title: '多选', routerLink: { name: 'ComponentSelectConfigMultiple' } },
-              { title: '复选框', routerLink: { name: 'ComponentSelectConfigCheckbox' } },
-              { title: '限制最大数量', routerLink: { name: 'ComponentSelectConfigMax' } },
-              { title: '自定义宽高', routerLink: { name: 'ComponentSelectConfigPopupWH' } },
-              { title: '可新增', routerLink: { name: 'ComponentSelectConfigAllowCreate' } },
-              { title: '操作按钮', routerLink: { name: 'ComponentSelectConfigOperBtn' } },
-              { title: '触发方式', routerLink: { name: 'ComponentSelectConfigTrigger' } },
-              { title: '自定义插槽模板', routerLink: { name: 'ComponentSelectConfigTemplate' } },
-              { title: '虚拟滚动（大量数据选项）', routerLink: { name: 'ComponentSelectConfigScroll' } },
-              { title: '实现人员选择', routerLink: { name: 'ComponentSelectConfigUserSelect' } }
+              { i18nKey: 'app.aside.menu.dataSelectClearable', routerLink: { name: 'ComponentSelectConfigClearable' } },
+              { i18nKey: 'app.aside.menu.dataSelectDisabled', routerLink: { name: 'ComponentSelectConfigDisabled' } },
+              { i18nKey: 'app.aside.menu.dataSelectWidth', routerLink: { name: 'ComponentSelectConfigWidth' } },
+              { i18nKey: 'app.aside.menu.dataSelectRadio', routerLink: { name: 'ComponentSelectConfigRadio' } },
+              { i18nKey: 'app.aside.menu.dataSelectLoading', routerLink: { name: 'ComponentSelectConfigLoading' } },
+              { i18nKey: 'app.aside.menu.dataSelectShowBadge', routerLink: { name: 'ComponentSelectConfigBadge' } },
+              { i18nKey: 'app.aside.menu.dataSelectFilterable', routerLink: { name: 'ComponentSelectConfigFilterable' } },
+              { i18nKey: 'app.aside.menu.dataSelectRemote', routerLink: { name: 'ComponentSelectConfigRemote' } },
+              { i18nKey: 'app.aside.menu.dataSelectGroup', routerLink: { name: 'ComponentSelectConfigGroup' } },
+              { i18nKey: 'app.aside.menu.dataSelectEmptyValue', routerLink: { name: 'ComponentSelectConfigEmptyValue' } },
+              { i18nKey: 'app.aside.menu.dataSelectDefaultValue', routerLink: { name: 'ComponentSelectConfigDefaultValue' } },
+              { i18nKey: 'app.aside.menu.dataSelectMultiple', routerLink: { name: 'ComponentSelectConfigMultiple' } },
+              { i18nKey: 'app.aside.menu.dataSelectCheckbox', routerLink: { name: 'ComponentSelectConfigCheckbox' } },
+              { i18nKey: 'app.aside.menu.dataSelectMax', routerLink: { name: 'ComponentSelectConfigMax' } },
+              { i18nKey: 'app.aside.menu.dataSelectPopupWH', routerLink: { name: 'ComponentSelectConfigPopupWH' } },
+              { i18nKey: 'app.aside.menu.dataSelectAllowCreate', routerLink: { name: 'ComponentSelectConfigAllowCreate' } },
+              { i18nKey: 'app.aside.menu.dataSelectOperBtn', routerLink: { name: 'ComponentSelectConfigOperBtn' } },
+              { i18nKey: 'app.aside.menu.dataSelectTrigger', routerLink: { name: 'ComponentSelectConfigTrigger' } },
+              { i18nKey: 'app.aside.menu.dataSelectTemplate', routerLink: { name: 'ComponentSelectConfigTemplate' } },
+              { i18nKey: 'app.aside.menu.dataSelectScroll', routerLink: { name: 'ComponentSelectConfigScroll' } },
+              { i18nKey: 'app.aside.menu.dataSelectUserSelect', routerLink: { name: 'ComponentSelectConfigUserSelect' } }
             ]
           },
           {
-            title: '滚动条',
+            i18nKey: 'app.aside.menu.displayScrollbar',
             children: [
               {
-                title: '原生滚动条',
+                i18nKey: 'app.aside.menu.displayNativeScrollbar',
                 children: [
-                  { title: '使用滚动条', routerLink: { name: 'ComponentSelectScrollbarNativeScrollbar' } }
+                  { i18nKey: 'app.aside.menu.displayUseScrollbar', routerLink: { name: 'ComponentSelectScrollbarNativeScrollbar' } }
                 ]
               },
               {
-                title: '虚拟滚动条',
+                i18nKey: 'app.aside.menu.displayVirtualScrollbar',
                 children: [
-                  { title: '使用滚动条', routerLink: { name: 'ComponentSelectScrollbarUseScrollbarScrollbar' } }
+                  { i18nKey: 'app.aside.menu.displayUseScrollbar', routerLink: { name: 'ComponentSelectScrollbarUseScrollbarScrollbar' } }
                 ]
               }
             ]
@@ -1263,124 +1263,124 @@ export const navConfigList: NavVO[] = [
         ]
       },
       {
-        title: 'Cascader 级联选择',
+        i18nKey: 'app.aside.menu.dataCascaderTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'cascader' } } },
           {
-            title: '基础',
+            i18nKey: 'app.aside.menu.dataCascaderBase',
             children: [
-              { title: '尺寸大小', routerLink: { name: 'ComponentCascaderBaseSize' } },
-              { title: '层级结构', routerLink: { name: 'ComponentCascaderBaseHierarchy' } },
-              { title: '平级结构', routerLink: { name: 'ComponentCascaderBaseLeveling' } },
-              { title: '多选', routerLink: { name: 'ComponentCascaderBaseMultiple' } },
-              { title: '自定义图标', routerLink: { name: 'ComponentCascaderBaseIcon' } },
-              { title: '自定义字段', routerLink: { name: 'ComponentCascaderBaseOptionProps' } },
-              { title: '显示完整路径', routerLink: { name: 'ComponentCascaderBaseFullLabel' } }
+              { i18nKey: 'app.aside.menu.dataCascaderSize', routerLink: { name: 'ComponentCascaderBaseSize' } },
+              { i18nKey: 'app.aside.menu.dataCascaderHierarchy', routerLink: { name: 'ComponentCascaderBaseHierarchy' } },
+              { i18nKey: 'app.aside.menu.dataCascaderLeveling', routerLink: { name: 'ComponentCascaderBaseLeveling' } },
+              { i18nKey: 'app.aside.menu.dataCascaderMultiple', routerLink: { name: 'ComponentCascaderBaseMultiple' } },
+              { i18nKey: 'app.aside.menu.dataCascaderCustomIcon', routerLink: { name: 'ComponentCascaderBaseIcon' } },
+              { i18nKey: 'app.aside.menu.dataCascaderCustomField', routerLink: { name: 'ComponentCascaderBaseOptionProps' } },
+              { i18nKey: 'app.aside.menu.dataCascaderFullLabel', routerLink: { name: 'ComponentCascaderBaseFullLabel' } }
             ]
           },
           {
-            title: '单选框',
+            i18nKey: 'app.aside.menu.dataCascaderRadio',
             children: [
-              { title: '显示单选框', routerLink: { name: 'ComponentCascaderRadioBase' } },
-              { title: '选中子节点', routerLink: { name: 'ComponentCascaderRadioTrigger' } }
+              { i18nKey: 'app.aside.menu.dataCascaderShowRadio', routerLink: { name: 'ComponentCascaderRadioBase' } },
+              { i18nKey: 'app.aside.menu.dataCascaderSelectChildNode', routerLink: { name: 'ComponentCascaderRadioTrigger' } }
             ]
           },
           {
-            title: '复选框',
+            i18nKey: 'app.aside.menu.dataCascaderCheckbox',
             children: [
-              { title: '显示复选框', routerLink: { name: 'ComponentCascaderCheckboxBase' } },
-              { title: '节点不关联', routerLink: { name: 'ComponentCascaderCheckboxCheckStrictly' } },
-              { title: '选中子节点', routerLink: { name: 'ComponentCascaderCheckboxTrigger' } }
+              { i18nKey: 'app.aside.menu.dataCascaderShowCheckbox', routerLink: { name: 'ComponentCascaderCheckboxBase' } },
+              { i18nKey: 'app.aside.menu.dataCascaderCheckStrictly', routerLink: { name: 'ComponentCascaderCheckboxCheckStrictly' } },
+              { i18nKey: 'app.aside.menu.dataCascaderSelectChildNode', routerLink: { name: 'ComponentCascaderCheckboxTrigger' } }
             ]
           },
           {
-            title: '搜索',
+            i18nKey: 'app.aside.menu.dataCascaderSearch',
             children: [
-              { title: '过滤节点', routerLink: { name: 'ComponentCascaderSearchFilterValue' } },
-              { title: '自定义过滤方法', routerLink: { name: 'ComponentCascaderSearchFilterMethod' } }
+              { i18nKey: 'app.aside.menu.dataCascaderFilterValue', routerLink: { name: 'ComponentCascaderSearchFilterValue' } },
+              { i18nKey: 'app.aside.menu.dataCascaderCustomFilterMethod', routerLink: { name: 'ComponentCascaderSearchFilterMethod' } }
             ]
           },
           {
-            title: '操作按钮',
+            i18nKey: 'app.aside.menu.dataCascaderOperBtn',
             children: [
-              { title: '关闭按钮', routerLink: { name: 'ComponentCascaderOperBtnClose' } },
-              { title: '多选按钮', routerLink: { name: 'ComponentCascaderOperBtnChecked' } }
+              { i18nKey: 'app.aside.menu.dataCascaderCloseButton', routerLink: { name: 'ComponentCascaderOperBtnClose' } },
+              { i18nKey: 'app.aside.menu.dataCascaderCheckedButton', routerLink: { name: 'ComponentCascaderOperBtnChecked' } }
             ]
           },
           {
-            title: '功能示例',
+            i18nKey: 'app.aside.menu.dataCascaderFeatureExamples',
             children: [
-              { title: '省市区', routerLink: { name: 'ComponentCascaderOtherRegion' } }
+              { i18nKey: 'app.aside.menu.dataCascaderRegion', routerLink: { name: 'ComponentCascaderOtherRegion' } }
             ]
           }
         ]
       },
       {
-        title: 'TreeSelect 下拉树选择',
+        i18nKey: 'app.aside.menu.dataTreeSelectTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tree-select' } } },
           {
-            title: '基础',
+            i18nKey: 'app.aside.menu.dataTreeSelectBase',
             children: [
-              { title: '尺寸大小', routerLink: { name: 'ComponentTreeSelectBaseSize' } },
-              { title: '层级结构', routerLink: { name: 'ComponentTreeSelectBaseHierarchy' } },
-              { title: '平级结构', routerLink: { name: 'ComponentTreeSelectBaseLeveling' } },
-              { title: '多选', routerLink: { name: 'ComponentTreeSelectBaseMultiple' } },
-              { title: '自定义图标', routerLink: { name: 'ComponentTreeSelectBaseIcon' } },
-              { title: '自定义字段', routerLink: { name: 'ComponentTreeSelectBaseOptionProps' } },
-              { title: '显示完整路径', routerLink: { name: 'ComponentTreeSelectBaseFullLabel' } },
-              { title: '自定义宽高', routerLink: { name: 'ComponentTreeSelectBasePopupWH' } },
-              { title: '连接线', routerLink: { name: 'ComponentTreeSelectBaseShowLine' } },
-              { title: '默认展开', routerLink: { name: 'ComponentTreeSelectBaseExpandAll' } },
-              { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectBaseTrigger' } }
+              { i18nKey: 'app.aside.menu.dataTreeSelectSize', routerLink: { name: 'ComponentTreeSelectBaseSize' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectHierarchy', routerLink: { name: 'ComponentTreeSelectBaseHierarchy' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectLeveling', routerLink: { name: 'ComponentTreeSelectBaseLeveling' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectMultiple', routerLink: { name: 'ComponentTreeSelectBaseMultiple' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectCustomIcon', routerLink: { name: 'ComponentTreeSelectBaseIcon' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectCustomField', routerLink: { name: 'ComponentTreeSelectBaseOptionProps' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectFullLabel', routerLink: { name: 'ComponentTreeSelectBaseFullLabel' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectPopupWH', routerLink: { name: 'ComponentTreeSelectBasePopupWH' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectShowLine', routerLink: { name: 'ComponentTreeSelectBaseShowLine' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectExpandAll', routerLink: { name: 'ComponentTreeSelectBaseExpandAll' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectSelectChildNode', routerLink: { name: 'ComponentTreeSelectBaseTrigger' } }
             ]
           },
           {
-            title: '单选框',
+            i18nKey: 'app.aside.menu.dataTreeSelectRadio',
             children: [
-              { title: '显示单选框', routerLink: { name: 'ComponentTreeSelectRadioBase' } },
-              { title: '是否禁用', routerLink: { name: 'ComponentTreeSelectRadioCheckMethod' } },
-              { title: '是否显示', routerLink: { name: 'ComponentTreeSelectRadioVisibleMethod' } },
-              { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectRadioTrigger' } }
+              { i18nKey: 'app.aside.menu.dataTreeSelectShowRadio', routerLink: { name: 'ComponentTreeSelectRadioBase' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectCheckMethod', routerLink: { name: 'ComponentTreeSelectRadioCheckMethod' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectVisibleMethod', routerLink: { name: 'ComponentTreeSelectRadioVisibleMethod' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectSelectChildNode', routerLink: { name: 'ComponentTreeSelectRadioTrigger' } }
             ]
           },
           {
-            title: '复选框',
+            i18nKey: 'app.aside.menu.dataTreeSelectCheckbox',
             children: [
-              { title: '显示复选框', routerLink: { name: 'ComponentTreeSelectCheckboxBase' } },
-              { title: '节点不关联', routerLink: { name: 'ComponentTreeSelectCheckboxCheckStrictly' } },
-              { title: '是否禁用', routerLink: { name: 'ComponentTreeSelectCheckboxCheckMethod' } },
-              { title: '是否显示', routerLink: { name: 'ComponentTreeSelectCheckboxVisibleMethod' } },
-              { title: '选中子节点', routerLink: { name: 'ComponentTreeSelectCheckboxTrigger' } },
-              { title: '自定义节点字体颜色', routerLink: { name: 'ComponentTreeSelectCheckboxColor' } }
+              { i18nKey: 'app.aside.menu.dataTreeSelectShowCheckbox', routerLink: { name: 'ComponentTreeSelectCheckboxBase' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectCheckStrictly', routerLink: { name: 'ComponentTreeSelectCheckboxCheckStrictly' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectCheckMethod', routerLink: { name: 'ComponentTreeSelectCheckboxCheckMethod' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectVisibleMethod', routerLink: { name: 'ComponentTreeSelectCheckboxVisibleMethod' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectSelectChildNode', routerLink: { name: 'ComponentTreeSelectCheckboxTrigger' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectNodeColor', routerLink: { name: 'ComponentTreeSelectCheckboxColor' } }
             ]
           },
           {
-            title: '本地搜索',
+            i18nKey: 'app.aside.menu.dataTreeSelectLocalSearch',
             children: [
-              { title: '过滤节点', routerLink: { name: 'ComponentTreeSelectSearchFilterValue' } },
-              { title: '自定义过滤方法', routerLink: { name: 'ComponentTreeSelectSearchFilterMethod' } }
+              { i18nKey: 'app.aside.menu.dataTreeSelectFilterValue', routerLink: { name: 'ComponentTreeSelectSearchFilterValue' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectCustomFilterMethod', routerLink: { name: 'ComponentTreeSelectSearchFilterMethod' } }
             ]
           },
           {
-            title: '远程搜索',
+            i18nKey: 'app.aside.menu.dataTreeSelectRemoteSearch',
             children: [
-              { title: '自动加载', routerLink: { name: 'ComponentTreeSelectRemoteAutoLoad' } }
+              { i18nKey: 'app.aside.menu.dataTreeSelectAutoLoad', routerLink: { name: 'ComponentTreeSelectRemoteAutoLoad' } }
             ]
           },
           {
-            title: '操作按钮',
+            i18nKey: 'app.aside.menu.dataTreeSelectOperBtn',
             children: [
-              { title: '多选按钮', routerLink: { name: 'ComponentTreeSelectOperBtnChecked' } },
-              { title: '展开收起按钮', routerLink: { name: 'ComponentTreeSelectOperBtnAll' } }
+              { i18nKey: 'app.aside.menu.dataTreeSelectCheckedButton', routerLink: { name: 'ComponentTreeSelectOperBtnChecked' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectToggleButton', routerLink: { name: 'ComponentTreeSelectOperBtnAll' } }
             ]
           },
           {
-            title: '懒加载',
+            i18nKey: 'app.aside.menu.dataTreeSelectLazyLoad',
             children: [
-              { title: '加载子节点', routerLink: { name: 'ComponentTreeSelectLazyBase' } },
-              { title: '多选', routerLink: { name: 'ComponentTreeSelectLazyMultiple' } },
-              { title: '处理回显', routerLink: { name: 'ComponentTreeSelectLazyLazyOptions' } }
+              { i18nKey: 'app.aside.menu.dataTreeSelectLazyBase', routerLink: { name: 'ComponentTreeSelectLazyBase' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectLazyMultiple', routerLink: { name: 'ComponentTreeSelectLazyMultiple' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectLazyOptions', routerLink: { name: 'ComponentTreeSelectLazyLazyOptions' } }
             ]
           },
           // {
@@ -1391,107 +1391,107 @@ export const navConfigList: NavVO[] = [
           //   ]
           // },
           {
-            title: '虚拟滚动 - 海量数据',
+            i18nKey: 'app.aside.menu.dataTreeSelectVirtualScroll',
             children: [
-              { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTreeSelectScrollBasics' } },
-              { title: '可过滤', routerLink: { name: 'ComponentTreeSelectScrollFilter' } }
+              { i18nKey: 'app.aside.menu.dataTreeSelectScrollBase', routerLink: { name: 'ComponentTreeSelectScrollBasics' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectScrollFilter', routerLink: { name: 'ComponentTreeSelectScrollFilter' } }
             ]
           },
           {
-            title: '自定义插槽模板',
+            i18nKey: 'app.aside.menu.dataTreeSelectCustomSlotTemplate',
             children: [
-              { title: '自定义头部模板', routerLink: { name: 'ComponentTreeSelectTemplateHeader' } },
-              { title: '自定义尾部模板', routerLink: { name: 'ComponentTreeSelectTemplateFooter' } },
-              { title: '自定义树节点标题模板', routerLink: { name: 'ComponentTreeSelectTemplateTreeTitle' } },
-              { title: '自定义树节点图标模板', routerLink: { name: 'ComponentTreeSelectTemplateTreeIcon' } },
-              { title: '自定义树节点右侧模板', routerLink: { name: 'ComponentTreeSelectTemplateTreeExtra' } }
+              { i18nKey: 'app.aside.menu.dataTreeSelectCustomHeaderTemplate', routerLink: { name: 'ComponentTreeSelectTemplateHeader' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectCustomFooterTemplate', routerLink: { name: 'ComponentTreeSelectTemplateFooter' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectCustomTreeTitleTemplate', routerLink: { name: 'ComponentTreeSelectTemplateTreeTitle' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectCustomTreeIconTemplate', routerLink: { name: 'ComponentTreeSelectTemplateTreeIcon' } },
+              { i18nKey: 'app.aside.menu.dataTreeSelectCustomTreeExtraTemplate', routerLink: { name: 'ComponentTreeSelectTemplateTreeExtra' } }
             ]
           },
           {
-            title: '功能示例',
+            i18nKey: 'app.aside.menu.dataTreeSelectFeatureExamples',
             children: [
-              { title: '省市区', routerLink: { name: 'ComponentTreeSelectOtherRegion' } }
+              { i18nKey: 'app.aside.menu.dataTreeSelectRegion', routerLink: { name: 'ComponentTreeSelectOtherRegion' } }
             ]
           }
         ]
       },
       {
-        title: 'TableSelect 下拉表格选择',
+        i18nKey: 'app.aside.menu.dataTableSelectTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'table-select' } } },
           {
-            title: '基础',
+            i18nKey: 'app.aside.menu.dataTableSelectBase',
             children: [
-              { title: '尺寸大小', routerLink: { name: 'ComponentTableSelectBaseSize' } },
-              { title: '列配置', routerLink: { name: 'ComponentTableSelectBaseColumns' } },
-              { title: '加载中', routerLink: { name: 'ComponentTableSelectBaseLoading' } },
-              { title: '边框', routerLink: { name: 'ComponentTableSelectBaseBorder' } },
-              { title: '可清除', routerLink: { name: 'ComponentTableSelectBaseClearable' } },
-              { title: '自定义字段', routerLink: { name: 'ComponentTableSelectBaseOptionProps' } },
-              { title: '点击行自动选中', routerLink: { name: 'ComponentTableSelectBaseRadioTrigger' } },
-              { title: '自定义宽高', routerLink: { name: 'ComponentTableSelectBasePopupWH' } },
-              { title: '表尾数据', routerLink: { name: 'ComponentTableSelectBaseFooter' } }
+              { i18nKey: 'app.aside.menu.dataTableSelectSize', routerLink: { name: 'ComponentTableSelectBaseSize' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectColumns', routerLink: { name: 'ComponentTableSelectBaseColumns' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectLoading', routerLink: { name: 'ComponentTableSelectBaseLoading' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectBorder', routerLink: { name: 'ComponentTableSelectBaseBorder' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectClearable', routerLink: { name: 'ComponentTableSelectBaseClearable' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectCustomField', routerLink: { name: 'ComponentTableSelectBaseOptionProps' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectClickRowSelect', routerLink: { name: 'ComponentTableSelectBaseRadioTrigger' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectPopupWH', routerLink: { name: 'ComponentTableSelectBasePopupWH' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectFooter', routerLink: { name: 'ComponentTableSelectBaseFooter' } }
             ]
           },
           {
-            title: '单选框',
+            i18nKey: 'app.aside.menu.dataTableSelectRadio',
             children: [
-              { title: '显示复选框', routerLink: { name: 'ComponentTableSelectRadioBase' } },
-              { title: '可清除', routerLink: { name: 'ComponentTableSelectRadioClearable' } },
-              { title: '点击行自动选中', routerLink: { name: 'ComponentTableSelectRadioTrigger' } }
+              { i18nKey: 'app.aside.menu.dataTableSelectShowCheckbox', routerLink: { name: 'ComponentTableSelectRadioBase' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectClearable', routerLink: { name: 'ComponentTableSelectRadioClearable' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectClickRowSelect', routerLink: { name: 'ComponentTableSelectRadioTrigger' } }
             ]
           },
           {
-            title: '复选框',
+            i18nKey: 'app.aside.menu.dataTableSelectCheckbox',
             children: [
-              { title: '显示复选框', routerLink: { name: 'ComponentTableSelectCheckboxBase' } },
-              { title: '可清除', routerLink: { name: 'ComponentTableSelectCheckboxClearable' } },
-              { title: '点击行自动选中', routerLink: { name: 'ComponentTableSelectCheckboxTrigger' } }
+              { i18nKey: 'app.aside.menu.dataTableSelectShowCheckbox', routerLink: { name: 'ComponentTableSelectCheckboxBase' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectClearable', routerLink: { name: 'ComponentTableSelectCheckboxClearable' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectClickRowSelect', routerLink: { name: 'ComponentTableSelectCheckboxTrigger' } }
             ]
           },
           {
-            title: '本地搜索',
+            i18nKey: 'app.aside.menu.dataTableSelectLocalSearch',
             children: [
-              { title: '过滤数据', routerLink: { name: 'ComponentTableSelectSearchFilterable' } },
-              { title: '自定义过滤方法', routerLink: { name: 'ComponentTableSelectSearchFilterMethod' } },
-              { title: '显示结果统计', routerLink: { name: 'ComponentTableSelectSearchShowResultCount' } }
+              { i18nKey: 'app.aside.menu.dataTableSelectFilterable', routerLink: { name: 'ComponentTableSelectSearchFilterable' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectCustomFilterMethod', routerLink: { name: 'ComponentTableSelectSearchFilterMethod' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectShowResultCount', routerLink: { name: 'ComponentTableSelectSearchShowResultCount' } }
             ]
           },
           {
-            title: '远程搜索',
+            i18nKey: 'app.aside.menu.dataTableSelectRemoteSearch',
             children: [
-              { title: '自动加载', routerLink: { name: 'ComponentTableSelectRemoteAutoLoad' } }
+              { i18nKey: 'app.aside.menu.dataTableSelectAutoLoad', routerLink: { name: 'ComponentTableSelectRemoteAutoLoad' } }
             ]
           },
           {
-            title: '查询表单',
+            i18nKey: 'app.aside.menu.dataTableSelectQueryForm',
             children: [
-              { title: '查询表单', routerLink: { name: 'ComponentTableSelectFormSearch' } },
-              { title: '折叠表单', routerLink: { name: 'ComponentTableSelectFormCollapse' } }
+              { i18nKey: 'app.aside.menu.dataTableSelectQueryForm', routerLink: { name: 'ComponentTableSelectFormSearch' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectCollapseForm', routerLink: { name: 'ComponentTableSelectFormCollapse' } }
             ]
           },
           {
-            title: '分页',
+            i18nKey: 'app.aside.menu.dataTableSelectPager',
             children: [
-              { title: '分页单选', routerLink: { name: 'ComponentTableSelectPagerPage' } },
-              { title: '分页多选', routerLink: { name: 'ComponentTableSelectPagerCheckbox' } }
+              { i18nKey: 'app.aside.menu.dataTableSelectPagerSingle', routerLink: { name: 'ComponentTableSelectPagerPage' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectPagerMultiple', routerLink: { name: 'ComponentTableSelectPagerCheckbox' } }
             ]
           },
           {
-            title: '数据代理',
+            i18nKey: 'app.aside.menu.dataTableSelectDataProxy',
             children: [
-              { title: '查询接口', routerLink: { name: 'ComponentTableSelectProxyQuery' } },
-              { title: '分页查询接口', routerLink: { name: 'ComponentTableSelectProxyPager' } },
-              { title: '集成表单查询', routerLink: { name: 'ComponentTableSelectProxyForm' } }
+              { i18nKey: 'app.aside.menu.dataTableSelectQueryApi', routerLink: { name: 'ComponentTableSelectProxyQuery' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectPagerQueryApi', routerLink: { name: 'ComponentTableSelectProxyPager' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectIntegratedFormQuery', routerLink: { name: 'ComponentTableSelectProxyForm' } }
             ]
           },
           {
-            title: '虚拟滚动（大量数据选项）',
+            i18nKey: 'app.aside.menu.dataTableSelectVirtualScroll',
             children: [
-              { title: '纵向虚拟滚动', routerLink: { name: 'ComponentTableSelectScrollVertical' } },
-              { title: '横向虚拟滚动', routerLink: { name: 'ComponentTableSelectScrollHorizontal' } },
-              { title: '纵向和横向虚拟滚动', routerLink: { name: 'ComponentTableSelectScrollHV' } },
-              { title: '使用分组表头', routerLink: { name: 'ComponentTableSelectScrollGroup' } }
+              { i18nKey: 'app.aside.menu.dataTableSelectScrollVertical', routerLink: { name: 'ComponentTableSelectScrollVertical' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectScrollHorizontal', routerLink: { name: 'ComponentTableSelectScrollHorizontal' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectScrollHV', routerLink: { name: 'ComponentTableSelectScrollHV' } },
+              { i18nKey: 'app.aside.menu.dataTableSelectScrollGroup', routerLink: { name: 'ComponentTableSelectScrollGroup' } }
             ]
           }
         ]
@@ -1512,39 +1512,39 @@ export const navConfigList: NavVO[] = [
         i18nKey: 'app.aside.menu.emptyTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'empty' } } },
-          { title: '基础', routerLink: { name: 'ComponentEmptyBase' } },
-          { title: '自定义图标', routerLink: { name: 'ComponentEmptyIcon' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentEmptyStatus' } },
-          { title: '自定义图片', routerLink: { name: 'ComponentEmptyImageUrl' } }
+          { i18nKey: 'app.aside.menu.feedbackEmptyBase', routerLink: { name: 'ComponentEmptyBase' } },
+          { i18nKey: 'app.aside.menu.feedbackEmptyIcon', routerLink: { name: 'ComponentEmptyIcon' } },
+          { i18nKey: 'app.aside.menu.feedbackEmptyStatusColor', routerLink: { name: 'ComponentEmptyStatus' } },
+          { i18nKey: 'app.aside.menu.feedbackEmptyImageUrl', routerLink: { name: 'ComponentEmptyImageUrl' } }
         ]
       },
       {
         i18nKey: 'app.aside.menu.resultTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'result' } } },
-          { title: '基础', routerLink: { name: 'ComponentResultBase' } },
-          { title: '自定义图标', routerLink: { name: 'ComponentResultIcon' } },
-          { title: '状态颜色', routerLink: { name: 'ComponentResultStatus' } },
-          { title: '自定义图片', routerLink: { name: 'ComponentResultImageUrl' } },
-          { title: '自定义操作按钮', routerLink: { name: 'ComponentResultExtra' } }
+          { i18nKey: 'app.aside.menu.feedbackResultBase', routerLink: { name: 'ComponentResultBase' } },
+          { i18nKey: 'app.aside.menu.feedbackResultIcon', routerLink: { name: 'ComponentResultIcon' } },
+          { i18nKey: 'app.aside.menu.feedbackResultStatusColor', routerLink: { name: 'ComponentResultStatus' } },
+          { i18nKey: 'app.aside.menu.feedbackResultImageUrl', routerLink: { name: 'ComponentResultImageUrl' } },
+          { i18nKey: 'app.aside.menu.feedbackResultExtra', routerLink: { name: 'ComponentResultExtra' } }
         ]
       },
       {
         i18nKey: 'app.aside.menu.noticeBarTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'notice-bar' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentNoticeBarSize' } },
-          { title: '横向滚动', routerLink: { name: 'ComponentNoticeBarHorizontal' } },
-          { title: '滚动方向', routerLink: { name: 'ComponentNoticeBarDirection' } },
-          { title: '滚动速度', routerLink: { name: 'ComponentNoticeBarSpeed' } },
-          { title: '动画时间', routerLink: { name: 'ComponentNoticeBarDuration' } },
-          { title: '循环滚动', routerLink: { name: 'ComponentNoticeBarLoop' } },
+          { i18nKey: 'app.aside.menu.feedbackNoticeBarSize', routerLink: { name: 'ComponentNoticeBarSize' } },
+          { i18nKey: 'app.aside.menu.feedbackNoticeBarHorizontal', routerLink: { name: 'ComponentNoticeBarHorizontal' } },
+          { i18nKey: 'app.aside.menu.feedbackNoticeBarDirection', routerLink: { name: 'ComponentNoticeBarDirection' } },
+          { i18nKey: 'app.aside.menu.feedbackNoticeBarSpeed', routerLink: { name: 'ComponentNoticeBarSpeed' } },
+          { i18nKey: 'app.aside.menu.feedbackNoticeBarDuration', routerLink: { name: 'ComponentNoticeBarDuration' } },
+          { i18nKey: 'app.aside.menu.feedbackNoticeBarLoop', routerLink: { name: 'ComponentNoticeBarLoop' } },
           {
-            title: '自定义插槽模板',
+            i18nKey: 'app.aside.menu.feedbackNoticeBarCustomSlotTemplate',
             children: [
-              { title: '自定义内容模板', routerLink: { name: 'ComponentNoticeBarTemplateDefault' } },
-              { title: '自定义前缀模板', routerLink: { name: 'ComponentNoticeBarTemplatePrefix' } },
-              { title: '自定义后缀模板', routerLink: { name: 'ComponentNoticeBarTemplateSuffix' } }
+              { i18nKey: 'app.aside.menu.feedbackNoticeBarCustomContentTemplate', routerLink: { name: 'ComponentNoticeBarTemplateDefault' } },
+              { i18nKey: 'app.aside.menu.feedbackNoticeBarCustomPrefixTemplate', routerLink: { name: 'ComponentNoticeBarTemplatePrefix' } },
+              { i18nKey: 'app.aside.menu.feedbackNoticeBarCustomSuffixTemplate', routerLink: { name: 'ComponentNoticeBarTemplateSuffix' } }
             ]
           }
         ]
@@ -1553,84 +1553,84 @@ export const navConfigList: NavVO[] = [
         i18nKey: 'app.aside.menu.loadingTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'loading' } } },
-          { title: '全局调用', routerLink: { name: 'ComponentLoadingGlobalLoading' } },
-          { title: '加载中', routerLink: { name: 'ComponentLoadingBase' } },
-          { title: '状态', routerLink: { name: 'ComponentLoadingStatus' } },
-          { title: '自定义图标', routerLink: { name: 'ComponentLoadingIcon' } },
-          { title: '自定义提示', routerLink: { name: 'ComponentLoadingText' } },
-          { title: '自定义插槽模板', routerLink: { name: 'ComponentLoadingTemplate' } }
+          { i18nKey: 'app.aside.menu.feedbackLoadingGlobalInvoke', routerLink: { name: 'ComponentLoadingGlobalLoading' } },
+          { i18nKey: 'app.aside.menu.feedbackLoadingBase', routerLink: { name: 'ComponentLoadingBase' } },
+          { i18nKey: 'app.aside.menu.feedbackLoadingStatus', routerLink: { name: 'ComponentLoadingStatus' } },
+          { i18nKey: 'app.aside.menu.feedbackLoadingIcon', routerLink: { name: 'ComponentLoadingIcon' } },
+          { i18nKey: 'app.aside.menu.feedbackLoadingText', routerLink: { name: 'ComponentLoadingText' } },
+          { i18nKey: 'app.aside.menu.feedbackLoadingCustomSlotTemplate', routerLink: { name: 'ComponentLoadingTemplate' } }
         ]
       },
       {
-        title: 'Tip 提示',
+        i18nKey: 'app.aside.menu.feedbackTipTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tip' } } },
-          { title: '状态', routerLink: { name: 'ComponentTipBase' } },
-          { title: '图标', routerLink: { name: 'ComponentTipIcon' } },
-          { title: '带标题', routerLink: { name: 'ComponentTipTitle' } }
+          { i18nKey: 'app.aside.menu.feedbackTipBase', routerLink: { name: 'ComponentTipBase' } },
+          { i18nKey: 'app.aside.menu.feedbackTipIcon', routerLink: { name: 'ComponentTipIcon' } },
+          { i18nKey: 'app.aside.menu.feedbackTipTitle', routerLink: { name: 'ComponentTipTitle' } }
         ]
       },
       {
-        title: 'Alert 警告提示',
+        i18nKey: 'app.aside.menu.feedbackAlertTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'alert' } } },
-          { title: '状态', routerLink: { name: 'ComponentAlertBase' } },
-          { title: '图标', routerLink: { name: 'ComponentAlertIcon' } },
-          { title: '带标题', routerLink: { name: 'ComponentAlertTitle' } },
-          { title: '可关闭', routerLink: { name: 'ComponentAlertClose' } }
+          { i18nKey: 'app.aside.menu.feedbackAlertBase', routerLink: { name: 'ComponentAlertBase' } },
+          { i18nKey: 'app.aside.menu.feedbackAlertIcon', routerLink: { name: 'ComponentAlertIcon' } },
+          { i18nKey: 'app.aside.menu.feedbackAlertTitle', routerLink: { name: 'ComponentAlertTitle' } },
+          { i18nKey: 'app.aside.menu.feedbackAlertClose', routerLink: { name: 'ComponentAlertClose' } }
         ]
       },
       {
-        title: 'Drawer 抽屉',
+        i18nKey: 'app.aside.menu.feedbackDrawerTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'drawer' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentDrawerSize' } },
-          { title: '自定义弹出方向', routerLink: { name: 'ComponentDrawerBase' } },
-          { title: '显示HTML标签', routerLink: { name: 'ComponentDrawerHtml' } },
-          { title: '宽度与高度', routerLink: { name: 'ComponentDrawerWH' } },
-          { title: '边框', routerLink: { name: 'ComponentDrawerBorder' } },
-          { title: '标题背景', routerLink: { name: 'ComponentDrawerTitleBg' } },
-          { title: '内边距', routerLink: { name: 'ComponentDrawerPadding' } },
-          { title: '加载中', routerLink: { name: 'ComponentDrawerLoading' } },
-          { title: '预加载', routerLink: { name: 'ComponentDrawerDreload' } },
-          { title: '点击遮罩层关闭', routerLink: { name: 'ComponentDrawerMaskClosable' } },
-          { title: '操作按钮', routerLink: { name: 'ComponentDrawerButton' } },
-          { title: '点击确认按钮不可关闭', routerLink: { name: 'ComponentDrawerConfirmClosable' } },
-          { title: '点击取消按钮不可关闭', routerLink: { name: 'ComponentDrawerCancelClosable' } },
-          { title: '同时弹出多个抽屉', routerLink: { name: 'ComponentDrawerMultiple' } },
-          { title: '拖拽调整大小', routerLink: { name: 'ComponentDrawerEscResize' } },
-          { title: '按 Esc 键可关闭', routerLink: { name: 'ComponentDrawerEscClosable' } },
-          { title: '拦截关闭', routerLink: { name: 'ComponentDrawerBeforeHide' } },
-          { title: '自定义模板', routerLink: { name: 'ComponentDrawerTemplateFooter' } },
-          { title: '完整插槽模板', routerLink: { name: 'ComponentDrawerTemplateLayout' } },
-          { title: '显示到挂载区域中', routerLink: { name: 'ComponentDrawerWithin' } },
-          { title: '嵌入 iframe', routerLink: { name: 'ComponentDrawerIframe' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerSize', routerLink: { name: 'ComponentDrawerSize' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerBase', routerLink: { name: 'ComponentDrawerBase' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerHtml', routerLink: { name: 'ComponentDrawerHtml' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerWH', routerLink: { name: 'ComponentDrawerWH' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerBorder', routerLink: { name: 'ComponentDrawerBorder' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerTitleBg', routerLink: { name: 'ComponentDrawerTitleBg' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerPadding', routerLink: { name: 'ComponentDrawerPadding' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerLoading', routerLink: { name: 'ComponentDrawerLoading' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerPreload', routerLink: { name: 'ComponentDrawerDreload' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerMaskClosable', routerLink: { name: 'ComponentDrawerMaskClosable' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerButton', routerLink: { name: 'ComponentDrawerButton' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerConfirmClosable', routerLink: { name: 'ComponentDrawerConfirmClosable' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerCancelClosable', routerLink: { name: 'ComponentDrawerCancelClosable' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerMultiple', routerLink: { name: 'ComponentDrawerMultiple' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerEscResize', routerLink: { name: 'ComponentDrawerEscResize' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerEscClosable', routerLink: { name: 'ComponentDrawerEscClosable' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerBeforeHide', routerLink: { name: 'ComponentDrawerBeforeHide' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerCustomTemplate', routerLink: { name: 'ComponentDrawerTemplateFooter' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerFullSlotTemplate', routerLink: { name: 'ComponentDrawerTemplateLayout' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerWithin', routerLink: { name: 'ComponentDrawerWithin' } },
+          { i18nKey: 'app.aside.menu.feedbackDrawerIframe', routerLink: { name: 'ComponentDrawerIframe' } },
           {
-            title: '虚拟滚动条',
+            i18nKey: 'app.aside.menu.feedbackDrawerVirtualScrollbar',
             children: [
-              { title: '使用滚动条', routerLink: { name: 'ComponentDrawerUseScrollbarScrollbar' } }
+              { i18nKey: 'app.aside.menu.feedbackDrawerUseScrollbar', routerLink: { name: 'ComponentDrawerUseScrollbarScrollbar' } }
             ]
           }
         ]
       },
       // { title: 'Popover 气泡提示框' },
       {
-        title: 'Tooltip 文字提示',
+        i18nKey: 'app.aside.menu.feedbackTooltipTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tooltip' } } },
           {
-            title: '全局调用',
+            i18nKey: 'app.aside.menu.feedbackTooltipGlobalInvoke',
             children: [
-              { title: '单例模式', routerLink: { name: 'ComponentTooltipGlobalTooltip' } }
+              { i18nKey: 'app.aside.menu.feedbackTooltipSingletonMode', routerLink: { name: 'ComponentTooltipGlobalTooltip' } }
             ]
           },
-          { title: '触发方式', routerLink: { name: 'ComponentTooltipTrigger' } },
-          { title: '可操作', routerLink: { name: 'ComponentTooltipEnterable' } },
-          { title: '设置宽高', routerLink: { name: 'ComponentTooltipStyle' } },
-          { title: '显示HTML标签', routerLink: { name: 'ComponentTooltipHtml' } },
-          { title: '手动模式', routerLink: { name: 'ComponentTooltipManual' } },
-          { title: '单例模式', routerLink: { name: 'ComponentTooltipSingle' } },
-          { title: '在表格中使用', routerLink: { name: 'ComponentTooltipTable' } }
+          { i18nKey: 'app.aside.menu.feedbackTooltipTriggerMode', routerLink: { name: 'ComponentTooltipTrigger' } },
+          { i18nKey: 'app.aside.menu.feedbackTooltipEnterable', routerLink: { name: 'ComponentTooltipEnterable' } },
+          { i18nKey: 'app.aside.menu.feedbackTooltipStyle', routerLink: { name: 'ComponentTooltipStyle' } },
+          { i18nKey: 'app.aside.menu.feedbackTooltipHtml', routerLink: { name: 'ComponentTooltipHtml' } },
+          { i18nKey: 'app.aside.menu.feedbackTooltipManualMode', routerLink: { name: 'ComponentTooltipManual' } },
+          { i18nKey: 'app.aside.menu.feedbackTooltipSingletonMode', routerLink: { name: 'ComponentTooltipSingle' } },
+          { i18nKey: 'app.aside.menu.feedbackTooltipInTable', routerLink: { name: 'ComponentTooltipTable' } }
         ]
       }
     ]
@@ -1644,26 +1644,26 @@ export const navConfigList: NavVO[] = [
     showCount: true,
     children: [
       {
-        title: 'Watermark 水印',
+        i18nKey: 'app.aside.menu.otherWatermarkTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'watermark' } } },
-          { title: '全局调用', routerLink: { name: 'ComponentWatermarkGlobal' } },
-          { title: '基础', routerLink: { name: 'ComponentWatermarkBase' } },
-          { title: '字体颜色', routerLink: { name: 'ComponentWatermarkColor' } },
-          { title: '字体大小', routerLink: { name: 'ComponentWatermarkFontSize' } },
-          { title: '间距', routerLink: { name: 'ComponentWatermarkGap' } },
-          { title: '表格水印', routerLink: { name: 'ComponentWatermarkTable' } },
-          { title: '表单水印', routerLink: { name: 'ComponentWatermarkForm' } }
+          { i18nKey: 'app.aside.menu.otherWatermarkGlobal', routerLink: { name: 'ComponentWatermarkGlobal' } },
+          { i18nKey: 'app.aside.menu.otherWatermarkBase', routerLink: { name: 'ComponentWatermarkBase' } },
+          { i18nKey: 'app.aside.menu.otherWatermarkColor', routerLink: { name: 'ComponentWatermarkColor' } },
+          { i18nKey: 'app.aside.menu.otherWatermarkFontSize', routerLink: { name: 'ComponentWatermarkFontSize' } },
+          { i18nKey: 'app.aside.menu.otherWatermarkGap', routerLink: { name: 'ComponentWatermarkGap' } },
+          { i18nKey: 'app.aside.menu.otherWatermarkTable', routerLink: { name: 'ComponentWatermarkTable' } },
+          { i18nKey: 'app.aside.menu.otherWatermarkForm', routerLink: { name: 'ComponentWatermarkForm' } }
         ]
       },
       {
-        title: 'Countdown 倒计时',
+        i18nKey: 'app.aside.menu.otherCountdownTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'countdown' } } },
-          { title: '尺寸大小', routerLink: { name: 'ComponentCountdownSize' } },
-          { title: '基础', routerLink: { name: 'ComponentCountdownBase' } },
-          { title: '格式化', routerLink: { name: 'ComponentCountdownFormat' } },
-          { title: '自定义插槽模板', routerLink: { name: 'ComponentCountdownTemplate' } }
+          { i18nKey: 'app.aside.menu.otherCountdownSize', routerLink: { name: 'ComponentCountdownSize' } },
+          { i18nKey: 'app.aside.menu.otherCountdownBase', routerLink: { name: 'ComponentCountdownBase' } },
+          { i18nKey: 'app.aside.menu.otherCountdownFormat', routerLink: { name: 'ComponentCountdownFormat' } },
+          { i18nKey: 'app.aside.menu.otherCountdownCustomSlotTemplate', routerLink: { name: 'ComponentCountdownTemplate' } }
         ]
       },
       {
@@ -1671,31 +1671,31 @@ export const navConfigList: NavVO[] = [
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'print' } } },
           {
-            title: '全局调用',
+            i18nKey: 'app.aside.menu.otherPrintGlobalInvoke',
             children: [
-              { title: '打印', routerLink: { name: 'ComponentPrintGlobalPrint' } }
+              { i18nKey: 'app.aside.menu.otherPrint', routerLink: { name: 'ComponentPrintGlobalPrint' } }
             ]
           },
           {
-            title: '常规打印',
+            i18nKey: 'app.aside.menu.otherPrintNormal',
             children: [
-              { title: '打印 HTML', routerLink: { name: 'ComponentPrintBaseHtml' } },
-              { title: '打印图片', routerLink: { name: 'ComponentPrintBaseImg' } },
-              { title: '打印表格', routerLink: { name: 'ComponentPrintBaseTable' } }
+              { i18nKey: 'app.aside.menu.otherPrintHtml', routerLink: { name: 'ComponentPrintBaseHtml' } },
+              { i18nKey: 'app.aside.menu.otherPrintImage', routerLink: { name: 'ComponentPrintBaseImg' } },
+              { i18nKey: 'app.aside.menu.otherPrintTable', routerLink: { name: 'ComponentPrintBaseTable' } }
             ]
           },
           {
-            title: '分页打印',
+            i18nKey: 'app.aside.menu.otherPrintPagination',
             children: [
-              { title: '基础', routerLink: { name: 'ComponentPrintPageBasics' } },
-              { title: '设置样式', routerLink: { name: 'ComponentPrintPageStyle' } },
-              { title: '引入样式文件', routerLink: { name: 'ComponentPrintPageStyleUrls' } },
-              { title: '页眉/标题', routerLink: { name: 'ComponentPrintPageHeader' } },
-              { title: '页尾/页码', routerLink: { name: 'ComponentPrintPageFooter' } },
-              { title: '设置边距', routerLink: { name: 'ComponentPrintPageMargin' } },
-              { title: '批量打印图片', routerLink: { name: 'ComponentPrintPageImage' } },
-              { title: '分页打印表格', routerLink: { name: 'ComponentPrintPageTable' } },
-              { title: '自定义模板', routerLink: { name: 'ComponentPrintPageTemplate' } }
+              { i18nKey: 'app.aside.menu.otherPrintPaginationBase', routerLink: { name: 'ComponentPrintPageBasics' } },
+              { i18nKey: 'app.aside.menu.otherPrintSetStyle', routerLink: { name: 'ComponentPrintPageStyle' } },
+              { i18nKey: 'app.aside.menu.otherPrintStyleUrls', routerLink: { name: 'ComponentPrintPageStyleUrls' } },
+              { i18nKey: 'app.aside.menu.otherPrintHeader', routerLink: { name: 'ComponentPrintPageHeader' } },
+              { i18nKey: 'app.aside.menu.otherPrintFooter', routerLink: { name: 'ComponentPrintPageFooter' } },
+              { i18nKey: 'app.aside.menu.otherPrintMargin', routerLink: { name: 'ComponentPrintPageMargin' } },
+              { i18nKey: 'app.aside.menu.otherPrintBatchImage', routerLink: { name: 'ComponentPrintPageImage' } },
+              { i18nKey: 'app.aside.menu.otherPrintPaginationTable', routerLink: { name: 'ComponentPrintPageTable' } },
+              { i18nKey: 'app.aside.menu.otherPrintCustomTemplate', routerLink: { name: 'ComponentPrintPageTemplate' } }
             ]
           }
         ]
