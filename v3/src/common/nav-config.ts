@@ -975,195 +975,301 @@ export const navConfigList: NavVO[] = [
       },
       datePickerNavConfig,
       {
+        // 日期范围选择器
         i18nKey: 'app.aside.menu.dataDateRangePickerTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'date-range-picker' } } },
           {
+            // 日期类型
             i18nKey: 'app.aside.menu.dataDateRangePickerDateType',
             children: [
+              // 尺寸
               { i18nKey: 'app.aside.menu.dataDateRangePickerSize', routerLink: { name: 'ComponentDateRangePickerDateSize' } },
+              // 基础
               { i18nKey: 'app.aside.menu.dataDateRangePickerBase', routerLink: { name: 'ComponentDateRangePickerDateBase' } },
+              // 值类型
               { i18nKey: 'app.aside.menu.dataDateRangePickerValueType', routerLink: { name: 'ComponentDateRangePickerDateValueType' } },
+              // 可清除
               { i18nKey: 'app.aside.menu.dataDateRangePickerClearable', routerLink: { name: 'ComponentDateRangePickerDateClearable' } },
+              // 禁用
               { i18nKey: 'app.aside.menu.dataDateRangePickerDisabled', routerLink: { name: 'ComponentDateRangePickerDateDisabled' } },
+              // 只读
               { i18nKey: 'app.aside.menu.dataDateRangePickerReadonly', routerLink: { name: 'ComponentDateRangePickerDateReadonly' } },
+              // 自动关闭
               { i18nKey: 'app.aside.menu.dataDateRangePickerAutoClose', routerLink: { name: 'ComponentDateRangePickerDateAutoClose' } },
               {
+                // 快捷方式
                 i18nKey: 'app.aside.menu.dataDateRangePickerShortcut',
                 children: [
+                  // 内置 Code
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCode', routerLink: { name: 'ComponentDateRangePickerDateShortcutCode' } },
+                  // 按钮状态
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutStatus', routerLink: { name: 'ComponentDateRangePickerDateShortcutStatus' } },
+                  // 显示位置
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutPosition', routerLink: { name: 'ComponentDateRangePickerDateShortcutPosition' } },
+                  // 自定义
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCustom', routerLink: { name: 'ComponentDateRangePickerDateShortcutCustom' } }
                 ]
               },
+              // 禁用方法
               { i18nKey: 'app.aside.menu.dataDateRangePickerDisabledMethod', routerLink: { name: 'ComponentDateRangePickerDateDisabledMethod' } },
+              // 前缀图标
               { i18nKey: 'app.aside.menu.dataDateRangePickerPrefixIcon', routerLink: { name: 'ComponentDateRangePickerDatePrefixIcon' } },
+              // 后缀图标
               { i18nKey: 'app.aside.menu.dataDateRangePickerSuffixIcon', routerLink: { name: 'ComponentDateRangePickerDateSuffixIcon' } },
+              // 默认值
               { i18nKey: 'app.aside.menu.dataDateRangePickerDefVal', routerLink: { name: 'ComponentDateRangePickerDateDefVal' } },
+              // 触发方式
               { i18nKey: 'app.aside.menu.dataDateRangePickerTrigger', routerLink: { name: 'ComponentDateRangePickerDateTrigger' } },
+              // 联动面板
               { i18nKey: 'app.aside.menu.dataDateRangePickerLinkedPanels', routerLink: { name: 'ComponentDateRangePickerDateLinkedPanels' } },
               {
+                // 自定义插槽模板
                 i18nKey: 'app.aside.menu.dataDateRangePickerCustomSlotTemplate',
                 children: [
+                  // 自定义顶部模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomTopTemplate', routerLink: { name: 'ComponentDateRangePickerDateTemplateTop' } },
+                  // 自定义底部模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomBottomTemplate', routerLink: { name: 'ComponentDateRangePickerDateTemplateBottom' } },
+                  // 自定义左侧模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomLeftTemplate', routerLink: { name: 'ComponentDateRangePickerDateTemplateLeft' } },
+                  // 自定义右侧模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomRightTemplate', routerLink: { name: 'ComponentDateRangePickerDateTemplateRight' } }
                 ]
               }
             ]
           },
           {
+            // 时间类型
             i18nKey: 'app.aside.menu.dataDateRangePickerTimeType',
             children: [
+              // 尺寸
               { i18nKey: 'app.aside.menu.dataDateRangePickerSize', routerLink: { name: 'ComponentDateRangePickerTimeSize' } },
+              // 基础
               { i18nKey: 'app.aside.menu.dataDateRangePickerBase', routerLink: { name: 'ComponentDateRangePickerTimeBase' } },
+              // 可清除
               { i18nKey: 'app.aside.menu.dataDateRangePickerClearable', routerLink: { name: 'ComponentDateRangePickerTimeClearable' } },
+              // 禁用
               { i18nKey: 'app.aside.menu.dataDateRangePickerDisabled', routerLink: { name: 'ComponentDateRangePickerTimeDisabled' } },
+              // 值格式
               { i18nKey: 'app.aside.menu.dataDateRangePickerValueFormat', routerLink: { name: 'ComponentDateRangePickerTimeValueFormat' } },
               {
+                // 快捷方式
                 i18nKey: 'app.aside.menu.dataDateRangePickerShortcut',
                 children: [
                   // { title: '内置 Code', routerLink: { name: 'ComponentDateRangePickerTimeShortcutCode' } },
                   // { title: '按钮状态颜色', routerLink: { name: 'ComponentDateRangePickerTimeShortcutStatus' } },
                   // { title: '显示位置', routerLink: { name: 'ComponentDateRangePickerTimeShortcutPosition' } },
+                  // 自定义
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCustom', routerLink: { name: 'ComponentDateRangePickerTimeShortcutCustom' } }
                 ]
               },
+              // 默认值
               { i18nKey: 'app.aside.menu.dataDateRangePickerDefVal', routerLink: { name: 'ComponentDateRangePickerTimeDefVal' } },
+              // 禁用选项
               { i18nKey: 'app.aside.menu.dataDateRangePickerDisabledOpt', routerLink: { name: 'ComponentDateRangePickerTimeDisabledOpt' } },
+              // 选项
               { i18nKey: 'app.aside.menu.dataDateRangePickerOpts', routerLink: { name: 'ComponentDateRangePickerTimeOpts' } },
               {
+                // 自定义插槽模板
                 i18nKey: 'app.aside.menu.dataDateRangePickerCustomSlotTemplate',
                 children: [
+                  // 自定义顶部模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomTopTemplate', routerLink: { name: 'ComponentDateRangePickerTimeTemplateTop' } },
+                  // 自定义底部模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomBottomTemplate', routerLink: { name: 'ComponentDateRangePickerTimeTemplateBottom' } },
+                  // 自定义左侧模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomLeftTemplate', routerLink: { name: 'ComponentDateRangePickerTimeTemplateLeft' } },
+                  // 自定义右侧模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomRightTemplate', routerLink: { name: 'ComponentDateRangePickerTimeTemplateRight' } }
                 ]
               }
             ]
           },
           {
+            // 日期时间类型
             i18nKey: 'app.aside.menu.dataDateRangePickerDatetimeType',
             children: [
+              // 基础
               { i18nKey: 'app.aside.menu.dataDateRangePickerBase', routerLink: { name: 'ComponentDateRangePickerDatetimeBase' } },
+              // 禁用
               { i18nKey: 'app.aside.menu.dataDateRangePickerDisabled', routerLink: { name: 'ComponentDateRangePickerDatetimeDisabled' } },
+              // 可清除
               { i18nKey: 'app.aside.menu.dataDateRangePickerClearable', routerLink: { name: 'ComponentDateRangePickerDatetimeClearable' } },
+              // 值格式
               { i18nKey: 'app.aside.menu.dataDateRangePickerValueFormat', routerLink: { name: 'ComponentDateRangePickerDatetimeValueFormat' } },
               {
+                // 快捷方式
                 i18nKey: 'app.aside.menu.dataDateRangePickerShortcut',
                 children: [
+                  // 内置 Code
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCode', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutCode' } },
+                  // 按钮状态
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutStatus', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutStatus' } },
+                  // 显示位置
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutPosition', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutPosition' } },
+                  // 自定义
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCustom', routerLink: { name: 'ComponentDateRangePickerDatetimeShortcutCustom' } }
                 ]
               },
+              // 默认值
               { i18nKey: 'app.aside.menu.dataDateRangePickerDefVal', routerLink: { name: 'ComponentDateRangePickerDatetimeDefVal' } },
+              // 禁用选项
               { i18nKey: 'app.aside.menu.dataDateRangePickerDisabledOpt', routerLink: { name: 'ComponentDateRangePickerDatetimeDisabledOpt' } },
+              // 选项
               { i18nKey: 'app.aside.menu.dataDateRangePickerOpts', routerLink: { name: 'ComponentDateRangePickerDatetimeOpts' } },
+              // 联动面板
               { i18nKey: 'app.aside.menu.dataDateRangePickerLinkedPanels', routerLink: { name: 'ComponentDateRangePickerDatetimeLinkedPanels' } },
               {
+                // 自定义插槽模板
                 i18nKey: 'app.aside.menu.dataDateRangePickerCustomSlotTemplate',
                 children: [
+                  // 自定义顶部模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomTopTemplate', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateTop' } },
+                  // 自定义底部模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomBottomTemplate', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateBottom' } },
+                  // 自定义左侧模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomLeftTemplate', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateLeft' } },
+                  // 自定义右侧模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomRightTemplate', routerLink: { name: 'ComponentDateRangePickerDatetimeTemplateRight' } }
                 ]
               }
             ]
           },
           {
+            // 周类型
             i18nKey: 'app.aside.menu.dataDateRangePickerWeekType',
             children: [
+              // 基础
               { i18nKey: 'app.aside.menu.dataDateRangePickerBase', routerLink: { name: 'ComponentDateRangePickerWeekBase' } },
+              // 禁用
               { i18nKey: 'app.aside.menu.dataDateRangePickerDisabled', routerLink: { name: 'ComponentDateRangePickerWeekDisabled' } },
+              // 可清除
               { i18nKey: 'app.aside.menu.dataDateRangePickerClearable', routerLink: { name: 'ComponentDateRangePickerWeekClearable' } },
+              // 开始日
               { i18nKey: 'app.aside.menu.dataDateRangePickerStartDay', routerLink: { name: 'ComponentDateRangePickerWeekStartDay' } },
+              // 选择日
               { i18nKey: 'app.aside.menu.dataDateRangePickerSelectDay', routerLink: { name: 'ComponentDateRangePickerWeekSelectDay' } },
               {
+                // 快捷方式
                 i18nKey: 'app.aside.menu.dataDateRangePickerShortcut',
                 children: [
+                  // 内置 Code
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCode', routerLink: { name: 'ComponentDateRangePickerWeekShortcutCode' } },
+                  // 按钮状态
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutStatus', routerLink: { name: 'ComponentDateRangePickerWeekShortcutStatus' } },
+                  // 显示位置
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutPosition', routerLink: { name: 'ComponentDateRangePickerWeekShortcutPosition' } },
+                  // 自定义
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCustom', routerLink: { name: 'ComponentDateRangePickerWeekShortcutCustom' } }
                 ]
               },
+              // 联动面板
               { i18nKey: 'app.aside.menu.dataDateRangePickerLinkedPanels', routerLink: { name: 'ComponentDateRangePickerWeekLinkedPanels' } },
               {
+                // 自定义插槽模板
                 i18nKey: 'app.aside.menu.dataDateRangePickerCustomSlotTemplate',
                 children: [
+                  // 自定义顶部模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomTopTemplate', routerLink: { name: 'ComponentDateRangePickerWeekTemplateTop' } },
+                  // 自定义底部模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomBottomTemplate', routerLink: { name: 'ComponentDateRangePickerWeekTemplateBottom' } },
+                  // 自定义左侧模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomLeftTemplate', routerLink: { name: 'ComponentDateRangePickerWeekTemplateLeft' } },
+                  // 自定义右侧模板
                   { i18nKey: 'app.aside.menu.dataDateRangePickerCustomRightTemplate', routerLink: { name: 'ComponentDateRangePickerWeekTemplateRight' } }
                 ]
               }
             ]
           },
           {
+            // 月类型
             i18nKey: 'app.aside.menu.dataDateRangePickerMonthType',
             children: [
+              // 基础
               { i18nKey: 'app.aside.menu.dataDateRangePickerBase', routerLink: { name: 'ComponentDateRangePickerMonthBase' } },
+              // 可清除
               { i18nKey: 'app.aside.menu.dataDateRangePickerClearable', routerLink: { name: 'ComponentDateRangePickerMonthClearable' } },
               {
+                // 快捷方式
                 i18nKey: 'app.aside.menu.dataDateRangePickerShortcut',
                 children: [
+                  // 内置 Code
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCode', routerLink: { name: 'ComponentDateRangePickerMonthShortcutCode' } },
+                  // 按钮状态
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutStatus', routerLink: { name: 'ComponentDateRangePickerMonthShortcutStatus' } },
+                  // 显示位置
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutPosition', routerLink: { name: 'ComponentDateRangePickerMonthShortcutPosition' } },
+                  // 自定义
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCustom', routerLink: { name: 'ComponentDateRangePickerMonthShortcutCustom' } }
                 ]
               }
             ]
           },
           {
+            // 季度类型
             i18nKey: 'app.aside.menu.dataDateRangePickerQuarterType',
             children: [
+              // 基础
               { i18nKey: 'app.aside.menu.dataDateRangePickerBase', routerLink: { name: 'ComponentDateRangePickerQuarterBase' } },
+              // 可清除
               { i18nKey: 'app.aside.menu.dataDateRangePickerClearable', routerLink: { name: 'ComponentDateRangePickerQuarterClearable' } },
               {
+                // 快捷方式
                 i18nKey: 'app.aside.menu.dataDateRangePickerShortcut',
                 children: [
+                  // 内置 Code
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCode', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutCode' } },
+                  // 按钮状态
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutStatus', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutStatus' } },
+                  // 显示位置
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutPosition', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutPosition' } },
+                  // 自定义
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCustom', routerLink: { name: 'ComponentDateRangePickerQuarterShortcutCustom' } }
                 ]
               }
             ]
           },
           {
+            // 年类型
             i18nKey: 'app.aside.menu.dataDateRangePickerYearType',
             children: [
+              // 基础
               { i18nKey: 'app.aside.menu.dataDateRangePickerBase', routerLink: { name: 'ComponentDateRangePickerYearBase' } },
+              // 可清除
               { i18nKey: 'app.aside.menu.dataDateRangePickerClearable', routerLink: { name: 'ComponentDateRangePickerYearClearable' } },
               {
+                // 快捷方式
                 i18nKey: 'app.aside.menu.dataDateRangePickerShortcut',
                 children: [
+                  // 内置 Code
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCode', routerLink: { name: 'ComponentDateRangePickerYearShortcutCode' } },
+                  // 按钮状态
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutStatus', routerLink: { name: 'ComponentDateRangePickerYearShortcutStatus' } },
+                  // 显示位置
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutPosition', routerLink: { name: 'ComponentDateRangePickerYearShortcutPosition' } },
+                  // 自定义
                   { i18nKey: 'app.aside.menu.dataDateRangePickerShortcutCustom', routerLink: { name: 'ComponentDateRangePickerYearShortcutCustom' } }
                 ]
               }
             ]
           },
           {
+            // 功能示例
             i18nKey: 'app.aside.menu.dataDateRangePickerFeatureExamples',
             children: [
+              // 节日方法
               { i18nKey: 'app.aside.menu.dataDateRangePickerFestivalMethod', routerLink: { name: 'ComponentDateRangePickerFestivalMethod' } },
+              // 节假日
               { i18nKey: 'app.aside.menu.dataDateRangePickerHolidays', routerLink: { name: 'ComponentDateRangePickerHolidays' } }
             ]
           },
           {
+            // 快捷方式全局命令
             i18nKey: 'app.aside.menu.dataDateRangePickerShortcutGlobalCommands',
             children: [
               { title: 'API', routerLink: { name: 'GlobalCommandsDateRangePickerAPI' } },
+              // 快捷方式
               { i18nKey: 'app.aside.menu.dataDateRangePickerShortcut', routerLink: { name: 'GlobalCommandsDateRangePickerBase' } }
             ]
           }
@@ -1504,110 +1610,173 @@ export const navConfigList: NavVO[] = [
   treeNavConfig,
   tableNavConfig,
   {
+    // 反馈组件
     i18nKey: 'app.aside.menu.feedbackTitle',
     icon: 'vxe-icon-info-circle',
     showCount: true,
     children: [
       {
+        // 空状态
         i18nKey: 'app.aside.menu.emptyTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'empty' } } },
+          // 基础用法
           { i18nKey: 'app.aside.menu.feedbackEmptyBase', routerLink: { name: 'ComponentEmptyBase' } },
+          // 图标
           { i18nKey: 'app.aside.menu.feedbackEmptyIcon', routerLink: { name: 'ComponentEmptyIcon' } },
+          // 状态颜色
           { i18nKey: 'app.aside.menu.feedbackEmptyStatusColor', routerLink: { name: 'ComponentEmptyStatus' } },
+          // 自定义图片地址
           { i18nKey: 'app.aside.menu.feedbackEmptyImageUrl', routerLink: { name: 'ComponentEmptyImageUrl' } }
         ]
       },
       {
+        // 结果页
         i18nKey: 'app.aside.menu.resultTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'result' } } },
+          // 基础用法
           { i18nKey: 'app.aside.menu.feedbackResultBase', routerLink: { name: 'ComponentResultBase' } },
+          // 图标
           { i18nKey: 'app.aside.menu.feedbackResultIcon', routerLink: { name: 'ComponentResultIcon' } },
+          // 状态颜色
           { i18nKey: 'app.aside.menu.feedbackResultStatusColor', routerLink: { name: 'ComponentResultStatus' } },
+          // 自定义图片地址
           { i18nKey: 'app.aside.menu.feedbackResultImageUrl', routerLink: { name: 'ComponentResultImageUrl' } },
+          // 额外内容
           { i18nKey: 'app.aside.menu.feedbackResultExtra', routerLink: { name: 'ComponentResultExtra' } }
         ]
       },
       {
+        // 通告栏
         i18nKey: 'app.aside.menu.noticeBarTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'notice-bar' } } },
+          // 尺寸
           { i18nKey: 'app.aside.menu.feedbackNoticeBarSize', routerLink: { name: 'ComponentNoticeBarSize' } },
+          // 横向滚动
           { i18nKey: 'app.aside.menu.feedbackNoticeBarHorizontal', routerLink: { name: 'ComponentNoticeBarHorizontal' } },
+          // 滚动方向
           { i18nKey: 'app.aside.menu.feedbackNoticeBarDirection', routerLink: { name: 'ComponentNoticeBarDirection' } },
+          // 滚动速度
           { i18nKey: 'app.aside.menu.feedbackNoticeBarSpeed', routerLink: { name: 'ComponentNoticeBarSpeed' } },
+          // 停留时长
           { i18nKey: 'app.aside.menu.feedbackNoticeBarDuration', routerLink: { name: 'ComponentNoticeBarDuration' } },
+          // 循环次数
           { i18nKey: 'app.aside.menu.feedbackNoticeBarLoop', routerLink: { name: 'ComponentNoticeBarLoop' } },
           {
+          // 自定义插槽模板
             i18nKey: 'app.aside.menu.feedbackNoticeBarCustomSlotTemplate',
             children: [
+            // 自定义内容模板
               { i18nKey: 'app.aside.menu.feedbackNoticeBarCustomContentTemplate', routerLink: { name: 'ComponentNoticeBarTemplateDefault' } },
+              // 自定义前缀模板
               { i18nKey: 'app.aside.menu.feedbackNoticeBarCustomPrefixTemplate', routerLink: { name: 'ComponentNoticeBarTemplatePrefix' } },
+              // 自定义后缀模板
               { i18nKey: 'app.aside.menu.feedbackNoticeBarCustomSuffixTemplate', routerLink: { name: 'ComponentNoticeBarTemplateSuffix' } }
             ]
           }
         ]
       },
       {
+        // 加载中
         i18nKey: 'app.aside.menu.loadingTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'loading' } } },
+          // 全局调用
           { i18nKey: 'app.aside.menu.feedbackLoadingGlobalInvoke', routerLink: { name: 'ComponentLoadingGlobalLoading' } },
+          // 基础用法
           { i18nKey: 'app.aside.menu.feedbackLoadingBase', routerLink: { name: 'ComponentLoadingBase' } },
+          // 状态
           { i18nKey: 'app.aside.menu.feedbackLoadingStatus', routerLink: { name: 'ComponentLoadingStatus' } },
+          // 图标
           { i18nKey: 'app.aside.menu.feedbackLoadingIcon', routerLink: { name: 'ComponentLoadingIcon' } },
+          // 文字
           { i18nKey: 'app.aside.menu.feedbackLoadingText', routerLink: { name: 'ComponentLoadingText' } },
+          // 自定义插槽模板
           { i18nKey: 'app.aside.menu.feedbackLoadingCustomSlotTemplate', routerLink: { name: 'ComponentLoadingTemplate' } }
         ]
       },
       {
+        // 提示
         i18nKey: 'app.aside.menu.feedbackTipTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tip' } } },
+          // 基础用法
           { i18nKey: 'app.aside.menu.feedbackTipBase', routerLink: { name: 'ComponentTipBase' } },
+          // 图标
           { i18nKey: 'app.aside.menu.feedbackTipIcon', routerLink: { name: 'ComponentTipIcon' } },
+          // 标题
           { i18nKey: 'app.aside.menu.feedbackTipTitle', routerLink: { name: 'ComponentTipTitle' } }
         ]
       },
       {
+        // 警告提示
         i18nKey: 'app.aside.menu.feedbackAlertTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'alert' } } },
+          // 基础用法
           { i18nKey: 'app.aside.menu.feedbackAlertBase', routerLink: { name: 'ComponentAlertBase' } },
+          // 图标
           { i18nKey: 'app.aside.menu.feedbackAlertIcon', routerLink: { name: 'ComponentAlertIcon' } },
+          // 标题
           { i18nKey: 'app.aside.menu.feedbackAlertTitle', routerLink: { name: 'ComponentAlertTitle' } },
+          // 可关闭
           { i18nKey: 'app.aside.menu.feedbackAlertClose', routerLink: { name: 'ComponentAlertClose' } }
         ]
       },
       {
+        // 抽屉
         i18nKey: 'app.aside.menu.feedbackDrawerTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'drawer' } } },
+          // 尺寸
           { i18nKey: 'app.aside.menu.feedbackDrawerSize', routerLink: { name: 'ComponentDrawerSize' } },
+          // 基础用法
           { i18nKey: 'app.aside.menu.feedbackDrawerBase', routerLink: { name: 'ComponentDrawerBase' } },
+          // HTML 内容
           { i18nKey: 'app.aside.menu.feedbackDrawerHtml', routerLink: { name: 'ComponentDrawerHtml' } },
+          // 宽高
           { i18nKey: 'app.aside.menu.feedbackDrawerWH', routerLink: { name: 'ComponentDrawerWH' } },
+          // 边框
           { i18nKey: 'app.aside.menu.feedbackDrawerBorder', routerLink: { name: 'ComponentDrawerBorder' } },
+          // 标题背景
           { i18nKey: 'app.aside.menu.feedbackDrawerTitleBg', routerLink: { name: 'ComponentDrawerTitleBg' } },
+          // 内边距
           { i18nKey: 'app.aside.menu.feedbackDrawerPadding', routerLink: { name: 'ComponentDrawerPadding' } },
+          // 加载中
           { i18nKey: 'app.aside.menu.feedbackDrawerLoading', routerLink: { name: 'ComponentDrawerLoading' } },
+          // 预加载
           { i18nKey: 'app.aside.menu.feedbackDrawerPreload', routerLink: { name: 'ComponentDrawerDreload' } },
+          // 点击遮罩关闭
           { i18nKey: 'app.aside.menu.feedbackDrawerMaskClosable', routerLink: { name: 'ComponentDrawerMaskClosable' } },
+          // 按钮
           { i18nKey: 'app.aside.menu.feedbackDrawerButton', routerLink: { name: 'ComponentDrawerButton' } },
+          // 确认按钮关闭
           { i18nKey: 'app.aside.menu.feedbackDrawerConfirmClosable', routerLink: { name: 'ComponentDrawerConfirmClosable' } },
+          // 取消按钮关闭
           { i18nKey: 'app.aside.menu.feedbackDrawerCancelClosable', routerLink: { name: 'ComponentDrawerCancelClosable' } },
+          // 多层嵌套
           { i18nKey: 'app.aside.menu.feedbackDrawerMultiple', routerLink: { name: 'ComponentDrawerMultiple' } },
+          // ESC 调整大小
           { i18nKey: 'app.aside.menu.feedbackDrawerEscResize', routerLink: { name: 'ComponentDrawerEscResize' } },
+          // ESC 关闭
           { i18nKey: 'app.aside.menu.feedbackDrawerEscClosable', routerLink: { name: 'ComponentDrawerEscClosable' } },
+          // 关闭前回调
           { i18nKey: 'app.aside.menu.feedbackDrawerBeforeHide', routerLink: { name: 'ComponentDrawerBeforeHide' } },
+          // 自定义模板
           { i18nKey: 'app.aside.menu.feedbackDrawerCustomTemplate', routerLink: { name: 'ComponentDrawerTemplateFooter' } },
+          // 全屏插槽模板
           { i18nKey: 'app.aside.menu.feedbackDrawerFullSlotTemplate', routerLink: { name: 'ComponentDrawerTemplateLayout' } },
+          // 内部调用
           { i18nKey: 'app.aside.menu.feedbackDrawerWithin', routerLink: { name: 'ComponentDrawerWithin' } },
+          // iframe 嵌入
           { i18nKey: 'app.aside.menu.feedbackDrawerIframe', routerLink: { name: 'ComponentDrawerIframe' } },
           {
+          // 虚拟滚动条
             i18nKey: 'app.aside.menu.feedbackDrawerVirtualScrollbar',
             children: [
+            // 启用滚动条
               { i18nKey: 'app.aside.menu.feedbackDrawerUseScrollbar', routerLink: { name: 'ComponentDrawerUseScrollbarScrollbar' } }
             ]
           }
@@ -1615,21 +1784,31 @@ export const navConfigList: NavVO[] = [
       },
       // { title: 'Popover 气泡提示框' },
       {
+        // 文字提示
         i18nKey: 'app.aside.menu.feedbackTooltipTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'tooltip' } } },
           {
+          // 全局调用
             i18nKey: 'app.aside.menu.feedbackTooltipGlobalInvoke',
             children: [
+            // 单例模式
               { i18nKey: 'app.aside.menu.feedbackTooltipSingletonMode', routerLink: { name: 'ComponentTooltipGlobalTooltip' } }
             ]
           },
+          // 触发方式
           { i18nKey: 'app.aside.menu.feedbackTooltipTriggerMode', routerLink: { name: 'ComponentTooltipTrigger' } },
+          // 可悬停
           { i18nKey: 'app.aside.menu.feedbackTooltipEnterable', routerLink: { name: 'ComponentTooltipEnterable' } },
+          // 样式
           { i18nKey: 'app.aside.menu.feedbackTooltipStyle', routerLink: { name: 'ComponentTooltipStyle' } },
+          // HTML 内容
           { i18nKey: 'app.aside.menu.feedbackTooltipHtml', routerLink: { name: 'ComponentTooltipHtml' } },
+          // 手动模式
           { i18nKey: 'app.aside.menu.feedbackTooltipManualMode', routerLink: { name: 'ComponentTooltipManual' } },
+          // 单例模式
           { i18nKey: 'app.aside.menu.feedbackTooltipSingletonMode', routerLink: { name: 'ComponentTooltipSingle' } },
+          // 在表格中使用
           { i18nKey: 'app.aside.menu.feedbackTooltipInTable', routerLink: { name: 'ComponentTooltipTable' } }
         ]
       }
