@@ -1,261 +1,414 @@
 import { NavVO } from './nav'
 
 export const datePickerNavConfig: NavVO = {
-  title: 'DatePicker 日期选择',
+  // DatePicker 日期选择
+  i18nKey: 'app.aside.menu.datePickerTitle',
   children: [
     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'date-picker' } } },
     {
-      title: '日期类型',
+      // 日期类型
+      i18nKey: 'app.aside.menu.datePickerDateType',
       children: [
-        { title: '尺寸大小', routerLink: { name: 'ComponentDatePickerDateSize' } },
-        { title: '绑定值格式', routerLink: { name: 'ComponentDatePickerDateBase' } },
-        { title: '显示值格式', routerLink: { name: 'ComponentDatePickerDateLabelFormat' } },
-        { title: '可清除', routerLink: { name: 'ComponentDatePickerDateClearable' } },
-        { title: '禁用', routerLink: { name: 'ComponentDatePickerDateDisabled' } },
-        { title: '查看模式', routerLink: { name: 'ComponentDatePickerDateReadonly' } },
-        { title: '禁用输入', routerLink: { name: 'ComponentDatePickerDateEditable' } },
-        { title: '多选', routerLink: { name: 'ComponentDatePickerDateMultiple' } },
-        { title: '自动关闭', routerLink: { name: 'ComponentDatePickerDateAutoClose' } },
+        // 尺寸大小
+        { i18nKey: 'app.aside.menu.datePickerSize', routerLink: { name: 'ComponentDatePickerDateSize' } },
+        // 绑定值格式
+        { i18nKey: 'app.aside.menu.datePickerValueFormat', routerLink: { name: 'ComponentDatePickerDateBase' } },
+        // 显示值格式
+        { i18nKey: 'app.aside.menu.datePickerLabelFormat', routerLink: { name: 'ComponentDatePickerDateLabelFormat' } },
+        // 自定义解析
+        { i18nKey: 'app.aside.menu.datePickerParseMethod', routerLink: { name: 'ComponentDatePickerDateParseMethod' } },
+        // 可清除
+        { i18nKey: 'app.aside.menu.datePickerClearable', routerLink: { name: 'ComponentDatePickerDateClearable' } },
+        // 禁用
+        { i18nKey: 'app.aside.menu.datePickerDisabled', routerLink: { name: 'ComponentDatePickerDateDisabled' } },
+        // 查看模式
+        { i18nKey: 'app.aside.menu.datePickerReadonly', routerLink: { name: 'ComponentDatePickerDateReadonly' } },
+        // 禁用输入
+        { i18nKey: 'app.aside.menu.datePickerEditable', routerLink: { name: 'ComponentDatePickerDateEditable' } },
+        // 多选
+        { i18nKey: 'app.aside.menu.datePickerMultiple', routerLink: { name: 'ComponentDatePickerDateMultiple' } },
+        // 自动关闭
+        { i18nKey: 'app.aside.menu.datePickerAutoClose', routerLink: { name: 'ComponentDatePickerDateAutoClose' } },
         {
-          title: '掩码输入',
+          // 掩码输入
+          i18nKey: 'app.aside.menu.datePickerMaskedInput',
           children: [
-            { title: '掩码输入', routerLink: { name: 'ComponentDatePickerDateMaskedIsMasked' } },
-            { title: '方向键操作', routerLink: { name: 'ComponentDatePickerDateMaskedIsArrow' } },
-            { title: '掩码格式', routerLink: { name: 'ComponentDatePickerDateMaskedFormat' } },
-            { title: '自定义占位符', routerLink: { name: 'ComponentDatePickerDateMaskedMaskPlaceholder' } },
-            { title: '对齐方式', routerLink: { name: 'ComponentDatePickerDateMaskedAlign' } }
+            // 掩码输入
+            { i18nKey: 'app.aside.menu.datePickerMaskedInput', routerLink: { name: 'ComponentDatePickerDateMaskedIsMasked' } },
+            // 方向键操作
+            { i18nKey: 'app.aside.menu.datePickerArrowKey', routerLink: { name: 'ComponentDatePickerDateMaskedIsArrow' } },
+            // 掩码格式
+            { i18nKey: 'app.aside.menu.datePickerMaskFormat', routerLink: { name: 'ComponentDatePickerDateMaskedFormat' } },
+            // 自定义占位符
+            { i18nKey: 'app.aside.menu.datePickerMaskPlaceholder', routerLink: { name: 'ComponentDatePickerDateMaskedMaskPlaceholder' } },
+            // 对齐方式
+            { i18nKey: 'app.aside.menu.datePickerAlign', routerLink: { name: 'ComponentDatePickerDateMaskedAlign' } }
           ]
         },
         {
-          title: '快捷按钮',
+          // 快捷按钮
+          i18nKey: 'app.aside.menu.datePickerShortcut',
           children: [
-            { title: '内置 Code', routerLink: { name: 'ComponentDatePickerDateShortcutCode' } },
-            { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerDateShortcutStatus' } },
-            { title: '显示位置', routerLink: { name: 'ComponentDatePickerDateShortcutPosition' } },
-            { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerDateShortcutCustom' } }
+            // 内置 Code
+            { i18nKey: 'app.aside.menu.datePickerShortcutCode', routerLink: { name: 'ComponentDatePickerDateShortcutCode' } },
+            // 按钮状态颜色
+            { i18nKey: 'app.aside.menu.datePickerShortcutStatus', routerLink: { name: 'ComponentDatePickerDateShortcutStatus' } },
+            // 显示位置
+            { i18nKey: 'app.aside.menu.datePickerShortcutPosition', routerLink: { name: 'ComponentDatePickerDateShortcutPosition' } },
+            // 自定义按钮
+            { i18nKey: 'app.aside.menu.datePickerShortcutCustom', routerLink: { name: 'ComponentDatePickerDateShortcutCustom' } }
           ]
         },
-        { title: '限制日期范围', routerLink: { name: 'ComponentDatePickerDateMinMax' } },
-        { title: '限制指定日期', routerLink: { name: 'ComponentDatePickerDateDisabledMethod' } },
-        { title: '前缀图标', routerLink: { name: 'ComponentDatePickerDatePrefixIcon' } },
-        { title: '后缀图标', routerLink: { name: 'ComponentDatePickerDateSuffixIcon' } },
-        { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerDateDefVal' } },
-        { title: '面板的触发方式', routerLink: { name: 'ComponentDatePickerDateTrigger' } },
-        { title: '小圆点', routerLink: { name: 'ComponentDatePickerDateDot' } },
-        { title: '农历及节假日', routerLink: { name: 'ComponentDatePickerDateHolidays' } },
+        // 限制日期范围
+        { i18nKey: 'app.aside.menu.datePickerMinMax', routerLink: { name: 'ComponentDatePickerDateMinMax' } },
+        // 限制指定日期
+        { i18nKey: 'app.aside.menu.datePickerDisabledMethod', routerLink: { name: 'ComponentDatePickerDateDisabledMethod' } },
+        // 前缀图标
+        { i18nKey: 'app.aside.menu.datePickerPrefixIcon', routerLink: { name: 'ComponentDatePickerDatePrefixIcon' } },
+        // 后缀图标
+        { i18nKey: 'app.aside.menu.datePickerSuffixIcon', routerLink: { name: 'ComponentDatePickerDateSuffixIcon' } },
+        // 面板的默认日期
+        { i18nKey: 'app.aside.menu.datePickerDefVal', routerLink: { name: 'ComponentDatePickerDateDefVal' } },
+        // 面板的触发方式
+        { i18nKey: 'app.aside.menu.datePickerTrigger', routerLink: { name: 'ComponentDatePickerDateTrigger' } },
+        // 小圆点
+        { i18nKey: 'app.aside.menu.datePickerDot', routerLink: { name: 'ComponentDatePickerDateDot' } },
+        // 农历及节假日
+        { i18nKey: 'app.aside.menu.datePickerHolidays', routerLink: { name: 'ComponentDatePickerDateHolidays' } },
         {
-          title: '自定义插槽模板',
+          // 自定义插槽模板
+          i18nKey: 'app.aside.menu.datePickerCustomSlotTemplate',
           children: [
-            { title: '自定义顶部模板', routerLink: { name: 'ComponentDatePickerDateTemplateTop' } },
-            { title: '自定义底部模板', routerLink: { name: 'ComponentDatePickerDateTemplateBottom' } },
-            { title: '自定义左侧模板', routerLink: { name: 'ComponentDatePickerDateTemplateLeft' } },
-            { title: '自定义右侧模板', routerLink: { name: 'ComponentDatePickerDateTemplateRight' } }
+            // 自定义顶部模板
+            { i18nKey: 'app.aside.menu.datePickerCustomTopTemplate', routerLink: { name: 'ComponentDatePickerDateTemplateTop' } },
+            // 自定义底部模板
+            { i18nKey: 'app.aside.menu.datePickerCustomBottomTemplate', routerLink: { name: 'ComponentDatePickerDateTemplateBottom' } },
+            // 自定义左侧模板
+            { i18nKey: 'app.aside.menu.datePickerCustomLeftTemplate', routerLink: { name: 'ComponentDatePickerDateTemplateLeft' } },
+            // 自定义右侧模板
+            { i18nKey: 'app.aside.menu.datePickerCustomRightTemplate', routerLink: { name: 'ComponentDatePickerDateTemplateRight' } }
           ]
         }
       ]
     },
     {
-      title: '时间类型',
+      // 时间类型
+      i18nKey: 'app.aside.menu.datePickerTimeType',
       children: [
-        { title: '尺寸大小', routerLink: { name: 'ComponentDatePickerTimeSize' } },
-        { title: '绑定值格式', routerLink: { name: 'ComponentDatePickerTimeBase' } },
-        { title: '可清除', routerLink: { name: 'ComponentDatePickerTimeClearable' } },
-        { title: '禁用', routerLink: { name: 'ComponentDatePickerTimeDisabled' } },
-        { title: '自定义格式', routerLink: { name: 'ComponentDatePickerTimeValueFormat' } },
+        // 尺寸大小
+        { i18nKey: 'app.aside.menu.datePickerSize', routerLink: { name: 'ComponentDatePickerTimeSize' } },
+        // 绑定值格式
+        { i18nKey: 'app.aside.menu.datePickerValueFormat', routerLink: { name: 'ComponentDatePickerTimeBase' } },
+        // 可清除
+        { i18nKey: 'app.aside.menu.datePickerClearable', routerLink: { name: 'ComponentDatePickerTimeClearable' } },
+        // 禁用
+        { i18nKey: 'app.aside.menu.datePickerDisabled', routerLink: { name: 'ComponentDatePickerTimeDisabled' } },
+        // 自定义格式
+        { i18nKey: 'app.aside.menu.datePickerCustomFormat', routerLink: { name: 'ComponentDatePickerTimeValueFormat' } },
         {
-          title: '掩码输入',
+          // 掩码输入
+          i18nKey: 'app.aside.menu.datePickerMaskedInput',
           children: [
-            { title: '掩码输入', routerLink: { name: 'ComponentDatePickerTimeMaskedIsMasked' } },
-            { title: '方向键操作', routerLink: { name: 'ComponentDatePickerTimeMaskedIsArrow' } },
-            { title: '掩码格式', routerLink: { name: 'ComponentDatePickerTimeMaskedFormat' } },
-            { title: '自定义占位符', routerLink: { name: 'ComponentDatePickerTimeMaskedMaskPlaceholder' } },
-            { title: '对齐方式', routerLink: { name: 'ComponentDatePickerTimeMaskedAlign' } }
+            // 掩码输入
+            { i18nKey: 'app.aside.menu.datePickerMaskedInput', routerLink: { name: 'ComponentDatePickerTimeMaskedIsMasked' } },
+            // 方向键操作
+            { i18nKey: 'app.aside.menu.datePickerArrowKey', routerLink: { name: 'ComponentDatePickerTimeMaskedIsArrow' } },
+            // 掩码格式
+            { i18nKey: 'app.aside.menu.datePickerMaskFormat', routerLink: { name: 'ComponentDatePickerTimeMaskedFormat' } },
+            // 自定义占位符
+            { i18nKey: 'app.aside.menu.datePickerMaskPlaceholder', routerLink: { name: 'ComponentDatePickerTimeMaskedMaskPlaceholder' } },
+            // 对齐方式
+            { i18nKey: 'app.aside.menu.datePickerAlign', routerLink: { name: 'ComponentDatePickerTimeMaskedAlign' } }
           ]
         },
         {
-          title: '快捷按钮',
+          // 快捷按钮
+          i18nKey: 'app.aside.menu.datePickerShortcut',
           children: [
             // { title: '内置 Code', routerLink: { name: 'ComponentDatePickerTimeShortcutCode' } },
             // { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerTimeShortcutStatus' } },
             // { title: '显示位置', routerLink: { name: 'ComponentDatePickerTimeShortcutPosition' } },
-            { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerTimeShortcutCustom' } }
+            // 自定义按钮
+            { i18nKey: 'app.aside.menu.datePickerShortcutCustom', routerLink: { name: 'ComponentDatePickerTimeShortcutCustom' } }
           ]
         },
-        { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerTimeDefVal' } },
-        { title: '禁用时间选项', routerLink: { name: 'ComponentDatePickerTimeDisabledOpt' } },
-        { title: '自定义时间选项', routerLink: { name: 'ComponentDatePickerTimeOpts' } },
+        // 面板的默认日期
+        { i18nKey: 'app.aside.menu.datePickerDefVal', routerLink: { name: 'ComponentDatePickerTimeDefVal' } },
+        // 禁用时间选项
+        { i18nKey: 'app.aside.menu.datePickerDisabledOpt', routerLink: { name: 'ComponentDatePickerTimeDisabledOpt' } },
+        // 自定义时间选项
+        { i18nKey: 'app.aside.menu.datePickerOpts', routerLink: { name: 'ComponentDatePickerTimeOpts' } },
         {
-          title: '自定义插槽模板',
+          // 自定义插槽模板
+          i18nKey: 'app.aside.menu.datePickerCustomSlotTemplate',
           children: [
-            { title: '自定义顶部模板', routerLink: { name: 'ComponentDatePickerTimeTemplateTop' } },
-            { title: '自定义底部模板', routerLink: { name: 'ComponentDatePickerTimeTemplateBottom' } },
-            { title: '自定义左侧模板', routerLink: { name: 'ComponentDatePickerTimeTemplateLeft' } },
-            { title: '自定义右侧模板', routerLink: { name: 'ComponentDatePickerTimeTemplateRight' } }
+            // 自定义顶部模板
+            { i18nKey: 'app.aside.menu.datePickerCustomTopTemplate', routerLink: { name: 'ComponentDatePickerTimeTemplateTop' } },
+            // 自定义底部模板
+            { i18nKey: 'app.aside.menu.datePickerCustomBottomTemplate', routerLink: { name: 'ComponentDatePickerTimeTemplateBottom' } },
+            // 自定义左侧模板
+            { i18nKey: 'app.aside.menu.datePickerCustomLeftTemplate', routerLink: { name: 'ComponentDatePickerTimeTemplateLeft' } },
+            // 自定义右侧模板
+            { i18nKey: 'app.aside.menu.datePickerCustomRightTemplate', routerLink: { name: 'ComponentDatePickerTimeTemplateRight' } }
           ]
         }
       ]
     },
     {
-      title: '日期带时间类型',
+      // 日期带时间类型
+      i18nKey: 'app.aside.menu.datePickerDatetimeType',
       children: [
-        { title: '绑定值格式', routerLink: { name: 'ComponentDatePickerDatetimeBase' } },
-        { title: '可清除', routerLink: { name: 'ComponentDatePickerDatetimeClearable' } },
-        { title: '禁用', routerLink: { name: 'ComponentDatePickerDatetimeDisabled' } },
-        { title: '禁止输入', routerLink: { name: 'ComponentDatePickerDatetimeEditable' } },
-        { title: '多选', routerLink: { name: 'ComponentDatePickerDatetimeMultiple' } },
-        { title: '自定义格式', routerLink: { name: 'ComponentDatePickerDatetimeValueFormat' } },
-        { title: '自定义解析', routerLink: { name: 'ComponentDatePickerDatetimeParseMethod' } },
+        // 绑定值格式
+        { i18nKey: 'app.aside.menu.datePickerValueFormat', routerLink: { name: 'ComponentDatePickerDatetimeBase' } },
+        // 可清除
+        { i18nKey: 'app.aside.menu.datePickerClearable', routerLink: { name: 'ComponentDatePickerDatetimeClearable' } },
+        // 禁用
+        { i18nKey: 'app.aside.menu.datePickerDisabled', routerLink: { name: 'ComponentDatePickerDatetimeDisabled' } },
+        // 禁止输入
+        { i18nKey: 'app.aside.menu.datePickerProhibitInput', routerLink: { name: 'ComponentDatePickerDatetimeEditable' } },
+        // 多选
+        { i18nKey: 'app.aside.menu.datePickerMultiple', routerLink: { name: 'ComponentDatePickerDatetimeMultiple' } },
+        // 自定义格式
+        { i18nKey: 'app.aside.menu.datePickerCustomFormat', routerLink: { name: 'ComponentDatePickerDatetimeValueFormat' } },
+        // 自定义解析
+        { i18nKey: 'app.aside.menu.datePickerParseMethod', routerLink: { name: 'ComponentDatePickerDatetimeParseMethod' } },
         {
-          title: '掩码输入',
+          // 掩码输入
+          i18nKey: 'app.aside.menu.datePickerMaskedInput',
           children: [
-            { title: '掩码输入', routerLink: { name: 'ComponentDatePickerDatetimeMaskedIsMasked' } },
-            { title: '方向键操作', routerLink: { name: 'ComponentDatePickerDatetimeMaskedIsArrow' } },
-            { title: '掩码格式', routerLink: { name: 'ComponentDatePickerDatetimeMaskedFormat' } },
-            { title: '自定义占位符', routerLink: { name: 'ComponentDatePickerDatetimeMaskedMaskPlaceholder' } },
-            { title: '对齐方式', routerLink: { name: 'ComponentDatePickerDatetimeMaskedAlign' } }
+            // 掩码输入
+            { i18nKey: 'app.aside.menu.datePickerMaskedInput', routerLink: { name: 'ComponentDatePickerDatetimeMaskedIsMasked' } },
+            // 方向键操作
+            { i18nKey: 'app.aside.menu.datePickerArrowKey', routerLink: { name: 'ComponentDatePickerDatetimeMaskedIsArrow' } },
+            // 掩码格式
+            { i18nKey: 'app.aside.menu.datePickerMaskFormat', routerLink: { name: 'ComponentDatePickerDatetimeMaskedFormat' } },
+            // 自定义占位符
+            { i18nKey: 'app.aside.menu.datePickerMaskPlaceholder', routerLink: { name: 'ComponentDatePickerDatetimeMaskedMaskPlaceholder' } },
+            // 对齐方式
+            { i18nKey: 'app.aside.menu.datePickerAlign', routerLink: { name: 'ComponentDatePickerDatetimeMaskedAlign' } }
           ]
         },
         {
-          title: '快捷按钮',
+          // 快捷按钮
+          i18nKey: 'app.aside.menu.datePickerShortcut',
           children: [
-            { title: '内置 Code', routerLink: { name: 'ComponentDatePickerDatetimeShortcutCode' } },
-            { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerDatetimeShortcutStatus' } },
-            { title: '显示位置', routerLink: { name: 'ComponentDatePickerDatetimeShortcutPosition' } },
-            { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerDatetimeShortcutCustom' } }
+            // 内置 Code
+            { i18nKey: 'app.aside.menu.datePickerShortcutCode', routerLink: { name: 'ComponentDatePickerDatetimeShortcutCode' } },
+            // 按钮状态颜色
+            { i18nKey: 'app.aside.menu.datePickerShortcutStatus', routerLink: { name: 'ComponentDatePickerDatetimeShortcutStatus' } },
+            // 显示位置
+            { i18nKey: 'app.aside.menu.datePickerShortcutPosition', routerLink: { name: 'ComponentDatePickerDatetimeShortcutPosition' } },
+            // 自定义按钮
+            { i18nKey: 'app.aside.menu.datePickerShortcutCustom', routerLink: { name: 'ComponentDatePickerDatetimeShortcutCustom' } }
           ]
         },
-        { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerDatetimeDefVal' } },
-        { title: '禁用时间选项', routerLink: { name: 'ComponentDatePickerDatetimeDisabledOpt' } },
-        { title: '自定义时间选项', routerLink: { name: 'ComponentDatePickerDatetimeOpts' } },
-        { title: '小圆点', routerLink: { name: 'ComponentDatePickerDatetimeDot' } },
-        { title: '农历及节假日', routerLink: { name: 'ComponentDatePickerDatetimeHolidays' } },
+        // 面板的默认日期
+        { i18nKey: 'app.aside.menu.datePickerDefVal', routerLink: { name: 'ComponentDatePickerDatetimeDefVal' } },
+        // 禁用时间选项
+        { i18nKey: 'app.aside.menu.datePickerDisabledOpt', routerLink: { name: 'ComponentDatePickerDatetimeDisabledOpt' } },
+        // 自定义时间选项
+        { i18nKey: 'app.aside.menu.datePickerOpts', routerLink: { name: 'ComponentDatePickerDatetimeOpts' } },
+        // 小圆点
+        { i18nKey: 'app.aside.menu.datePickerDot', routerLink: { name: 'ComponentDatePickerDatetimeDot' } },
+        // 农历及节假日
+        { i18nKey: 'app.aside.menu.datePickerHolidays', routerLink: { name: 'ComponentDatePickerDatetimeHolidays' } },
         {
-          title: '自定义插槽模板',
+          // 自定义插槽模板
+          i18nKey: 'app.aside.menu.datePickerCustomSlotTemplate',
           children: [
-            { title: '自定义顶部模板', routerLink: { name: 'ComponentDatePickerDatetimeTemplateTop' } },
-            { title: '自定义底部模板', routerLink: { name: 'ComponentDatePickerDatetimeTemplateBottom' } },
-            { title: '自定义左侧模板', routerLink: { name: 'ComponentDatePickerDatetimeTemplateLeft' } },
-            { title: '自定义右侧模板', routerLink: { name: 'ComponentDatePickerDatetimeTemplateRight' } }
+            // 自定义顶部模板
+            { i18nKey: 'app.aside.menu.datePickerCustomTopTemplate', routerLink: { name: 'ComponentDatePickerDatetimeTemplateTop' } },
+            // 自定义底部模板
+            { i18nKey: 'app.aside.menu.datePickerCustomBottomTemplate', routerLink: { name: 'ComponentDatePickerDatetimeTemplateBottom' } },
+            // 自定义左侧模板
+            { i18nKey: 'app.aside.menu.datePickerCustomLeftTemplate', routerLink: { name: 'ComponentDatePickerDatetimeTemplateLeft' } },
+            // 自定义右侧模板
+            { i18nKey: 'app.aside.menu.datePickerCustomRightTemplate', routerLink: { name: 'ComponentDatePickerDatetimeTemplateRight' } }
           ]
         }
       ]
     },
     {
-      title: '周类型',
+      // 周类型
+      i18nKey: 'app.aside.menu.datePickerWeekType',
       children: [
-        { title: '绑定值格式', routerLink: { name: 'ComponentDatePickerWeekBase' } },
-        { title: '可清除', routerLink: { name: 'ComponentDatePickerWeekClearable' } },
-        { title: '禁用', routerLink: { name: 'ComponentDatePickerWeekDisabled' } },
-        { title: '多选', routerLink: { name: 'ComponentDatePickerWeekMultiple' } },
-        { title: '自定义周的开始日', routerLink: { name: 'ComponentDatePickerWeekStartDay' } },
-        { title: '自定义返回值', routerLink: { name: 'ComponentDatePickerWeekSelectDay' } },
+        // 绑定值格式
+        { i18nKey: 'app.aside.menu.datePickerValueFormat', routerLink: { name: 'ComponentDatePickerWeekBase' } },
+        // 可清除
+        { i18nKey: 'app.aside.menu.datePickerClearable', routerLink: { name: 'ComponentDatePickerWeekClearable' } },
+        // 禁用
+        { i18nKey: 'app.aside.menu.datePickerDisabled', routerLink: { name: 'ComponentDatePickerWeekDisabled' } },
+        // 多选
+        { i18nKey: 'app.aside.menu.datePickerMultiple', routerLink: { name: 'ComponentDatePickerWeekMultiple' } },
+        // 自定义周的开始日
+        { i18nKey: 'app.aside.menu.datePickerStartDay', routerLink: { name: 'ComponentDatePickerWeekStartDay' } },
+        // 自定义返回值
+        { i18nKey: 'app.aside.menu.datePickerSelectDay', routerLink: { name: 'ComponentDatePickerWeekSelectDay' } },
         {
-          title: '快捷按钮',
+          // 快捷按钮
+          i18nKey: 'app.aside.menu.datePickerShortcut',
           children: [
-            { title: '内置 Code', routerLink: { name: 'ComponentDatePickerWeekShortcutCode' } },
-            { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerWeekShortcutStatus' } },
-            { title: '显示位置', routerLink: { name: 'ComponentDatePickerWeekShortcutPosition' } },
-            { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerWeekShortcutCustom' } }
+            // 内置 Code
+            { i18nKey: 'app.aside.menu.datePickerShortcutCode', routerLink: { name: 'ComponentDatePickerWeekShortcutCode' } },
+            // 按钮状态颜色
+            { i18nKey: 'app.aside.menu.datePickerShortcutStatus', routerLink: { name: 'ComponentDatePickerWeekShortcutStatus' } },
+            // 显示位置
+            { i18nKey: 'app.aside.menu.datePickerShortcutPosition', routerLink: { name: 'ComponentDatePickerWeekShortcutPosition' } },
+            // 自定义按钮
+            { i18nKey: 'app.aside.menu.datePickerShortcutCustom', routerLink: { name: 'ComponentDatePickerWeekShortcutCustom' } }
           ]
         },
-        { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerWeekDefVal' } },
+        // 面板的默认日期
+        { i18nKey: 'app.aside.menu.datePickerDefVal', routerLink: { name: 'ComponentDatePickerWeekDefVal' } },
         {
-          title: '自定义插槽模板',
+          // 自定义插槽模板
+          i18nKey: 'app.aside.menu.datePickerCustomSlotTemplate',
           children: [
-            { title: '自定义顶部模板', routerLink: { name: 'ComponentDatePickerWeekTemplateTop' } },
-            { title: '自定义底部模板', routerLink: { name: 'ComponentDatePickerWeekTemplateBottom' } },
-            { title: '自定义左侧模板', routerLink: { name: 'ComponentDatePickerWeekTemplateLeft' } },
-            { title: '自定义右侧模板', routerLink: { name: 'ComponentDatePickerWeekTemplateRight' } }
+            // 自定义顶部模板
+            { i18nKey: 'app.aside.menu.datePickerCustomTopTemplate', routerLink: { name: 'ComponentDatePickerWeekTemplateTop' } },
+            // 自定义底部模板
+            { i18nKey: 'app.aside.menu.datePickerCustomBottomTemplate', routerLink: { name: 'ComponentDatePickerWeekTemplateBottom' } },
+            // 自定义左侧模板
+            { i18nKey: 'app.aside.menu.datePickerCustomLeftTemplate', routerLink: { name: 'ComponentDatePickerWeekTemplateLeft' } },
+            // 自定义右侧模板
+            { i18nKey: 'app.aside.menu.datePickerCustomRightTemplate', routerLink: { name: 'ComponentDatePickerWeekTemplateRight' } }
           ]
         }
       ]
     },
     {
-      title: '月度类型',
+      // 月度类型
+      i18nKey: 'app.aside.menu.datePickerMonthType',
       children: [
-        { title: '绑定值格式', routerLink: { name: 'ComponentDatePickerMonthBase' } },
-        { title: '可清除', routerLink: { name: 'ComponentDatePickerMonthClearable' } },
-        { title: '多选', routerLink: { name: 'ComponentDatePickerMonthMultiple' } },
+        // 绑定值格式
+        { i18nKey: 'app.aside.menu.datePickerValueFormat', routerLink: { name: 'ComponentDatePickerMonthBase' } },
+        // 可清除
+        { i18nKey: 'app.aside.menu.datePickerClearable', routerLink: { name: 'ComponentDatePickerMonthClearable' } },
+        // 多选
+        { i18nKey: 'app.aside.menu.datePickerMultiple', routerLink: { name: 'ComponentDatePickerMonthMultiple' } },
         {
-          title: '掩码输入',
+          // 掩码输入
+          i18nKey: 'app.aside.menu.datePickerMaskedInput',
           children: [
-            { title: '掩码输入', routerLink: { name: 'ComponentDatePickerMonthMaskedIsMasked' } },
-            { title: '方向键操作', routerLink: { name: 'ComponentDatePickerMonthMaskedIsArrow' } },
-            { title: '掩码格式', routerLink: { name: 'ComponentDatePickerMonthMaskedFormat' } },
-            { title: '自定义占位符', routerLink: { name: 'ComponentDatePickerMonthMaskedMaskPlaceholder' } },
-            { title: '对齐方式', routerLink: { name: 'ComponentDatePickerMonthMaskedAlign' } }
+            // 掩码输入
+            { i18nKey: 'app.aside.menu.datePickerMaskedInput', routerLink: { name: 'ComponentDatePickerMonthMaskedIsMasked' } },
+            // 方向键操作
+            { i18nKey: 'app.aside.menu.datePickerArrowKey', routerLink: { name: 'ComponentDatePickerMonthMaskedIsArrow' } },
+            // 掩码格式
+            { i18nKey: 'app.aside.menu.datePickerMaskFormat', routerLink: { name: 'ComponentDatePickerMonthMaskedFormat' } },
+            // 自定义占位符
+            { i18nKey: 'app.aside.menu.datePickerMaskPlaceholder', routerLink: { name: 'ComponentDatePickerMonthMaskedMaskPlaceholder' } },
+            // 对齐方式
+            { i18nKey: 'app.aside.menu.datePickerAlign', routerLink: { name: 'ComponentDatePickerMonthMaskedAlign' } }
           ]
         },
         {
-          title: '快捷按钮',
+          // 快捷按钮
+          i18nKey: 'app.aside.menu.datePickerShortcut',
           children: [
-            { title: '内置 Code', routerLink: { name: 'ComponentDatePickerMonthShortcutCode' } },
-            { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerMonthShortcutStatus' } },
-            { title: '显示位置', routerLink: { name: 'ComponentDatePickerMonthShortcutPosition' } },
-            { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerMonthShortcutCustom' } }
+            // 内置 Code
+            { i18nKey: 'app.aside.menu.datePickerShortcutCode', routerLink: { name: 'ComponentDatePickerMonthShortcutCode' } },
+            // 按钮状态颜色
+            { i18nKey: 'app.aside.menu.datePickerShortcutStatus', routerLink: { name: 'ComponentDatePickerMonthShortcutStatus' } },
+            // 显示位置
+            { i18nKey: 'app.aside.menu.datePickerShortcutPosition', routerLink: { name: 'ComponentDatePickerMonthShortcutPosition' } },
+            // 自定义按钮
+            { i18nKey: 'app.aside.menu.datePickerShortcutCustom', routerLink: { name: 'ComponentDatePickerMonthShortcutCustom' } }
           ]
         },
-        { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerMonthDefVal' } }
+        // 面板的默认日期
+        { i18nKey: 'app.aside.menu.datePickerDefVal', routerLink: { name: 'ComponentDatePickerMonthDefVal' } }
       ]
     },
     {
-      title: '季度类型',
+      // 季度类型
+      i18nKey: 'app.aside.menu.datePickerQuarterType',
       children: [
-        { title: '绑定值格式', routerLink: { name: 'ComponentDatePickerQuarterBase' } },
-        { title: '可清除', routerLink: { name: 'ComponentDatePickerQuarterClearable' } },
-        { title: '多选', routerLink: { name: 'ComponentDatePickerQuarterMultiple' } },
+        // 绑定值格式
+        { i18nKey: 'app.aside.menu.datePickerValueFormat', routerLink: { name: 'ComponentDatePickerQuarterBase' } },
+        // 可清除
+        { i18nKey: 'app.aside.menu.datePickerClearable', routerLink: { name: 'ComponentDatePickerQuarterClearable' } },
+        // 多选
+        { i18nKey: 'app.aside.menu.datePickerMultiple', routerLink: { name: 'ComponentDatePickerQuarterMultiple' } },
         {
-          title: '快捷按钮',
+          // 快捷按钮
+          i18nKey: 'app.aside.menu.datePickerShortcut',
           children: [
-            { title: '内置 Code', routerLink: { name: 'ComponentDatePickerQuarterShortcutCode' } },
-            { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerQuarterShortcutStatus' } },
-            { title: '显示位置', routerLink: { name: 'ComponentDatePickerQuarterShortcutPosition' } },
-            { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerQuarterShortcutCustom' } }
+            // 内置 Code
+            { i18nKey: 'app.aside.menu.datePickerShortcutCode', routerLink: { name: 'ComponentDatePickerQuarterShortcutCode' } },
+            // 按钮状态颜色
+            { i18nKey: 'app.aside.menu.datePickerShortcutStatus', routerLink: { name: 'ComponentDatePickerQuarterShortcutStatus' } },
+            // 显示位置
+            { i18nKey: 'app.aside.menu.datePickerShortcutPosition', routerLink: { name: 'ComponentDatePickerQuarterShortcutPosition' } },
+            // 自定义按钮
+            { i18nKey: 'app.aside.menu.datePickerShortcutCustom', routerLink: { name: 'ComponentDatePickerQuarterShortcutCustom' } }
           ]
         },
-        { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerQuarterDefVal' } }
+        // 面板的默认日期
+        { i18nKey: 'app.aside.menu.datePickerDefVal', routerLink: { name: 'ComponentDatePickerQuarterDefVal' } }
       ]
     },
     {
-      title: '年度类型',
+      // 年度类型
+      i18nKey: 'app.aside.menu.datePickerYearType',
       children: [
-        { title: '绑定值格式', routerLink: { name: 'ComponentDatePickerYearBase' } },
-        { title: '可清除', routerLink: { name: 'ComponentDatePickerYearClearable' } },
-        { title: '多选', routerLink: { name: 'ComponentDatePickerYearMultiple' } },
+        // 绑定值格式
+        { i18nKey: 'app.aside.menu.datePickerValueFormat', routerLink: { name: 'ComponentDatePickerYearBase' } },
+        // 可清除
+        { i18nKey: 'app.aside.menu.datePickerClearable', routerLink: { name: 'ComponentDatePickerYearClearable' } },
+        // 多选
+        { i18nKey: 'app.aside.menu.datePickerMultiple', routerLink: { name: 'ComponentDatePickerYearMultiple' } },
         {
-          title: '掩码输入',
+          // 掩码输入
+          i18nKey: 'app.aside.menu.datePickerMaskedInput',
           children: [
-            { title: '掩码输入', routerLink: { name: 'ComponentDatePickerYearMaskedIsMasked' } },
-            { title: '方向键操作', routerLink: { name: 'ComponentDatePickerYearMaskedIsArrow' } },
-            { title: '掩码格式', routerLink: { name: 'ComponentDatePickerYearMaskedFormat' } },
-            { title: '自定义占位符', routerLink: { name: 'ComponentDatePickerYearMaskedMaskPlaceholder' } },
-            { title: '对齐方式', routerLink: { name: 'ComponentDatePickerYearMaskedAlign' } }
+            // 掩码输入
+            { i18nKey: 'app.aside.menu.datePickerMaskedInput', routerLink: { name: 'ComponentDatePickerYearMaskedIsMasked' } },
+            // 方向键操作
+            { i18nKey: 'app.aside.menu.datePickerArrowKey', routerLink: { name: 'ComponentDatePickerYearMaskedIsArrow' } },
+            // 掩码格式
+            { i18nKey: 'app.aside.menu.datePickerMaskFormat', routerLink: { name: 'ComponentDatePickerYearMaskedFormat' } },
+            // 自定义占位符
+            { i18nKey: 'app.aside.menu.datePickerMaskPlaceholder', routerLink: { name: 'ComponentDatePickerYearMaskedMaskPlaceholder' } },
+            // 对齐方式
+            { i18nKey: 'app.aside.menu.datePickerAlign', routerLink: { name: 'ComponentDatePickerYearMaskedAlign' } }
           ]
         },
         {
-          title: '快捷按钮',
+          // 快捷按钮
+          i18nKey: 'app.aside.menu.datePickerShortcut',
           children: [
-            { title: '内置 Code', routerLink: { name: 'ComponentDatePickerYearShortcutCode' } },
-            { title: '按钮状态颜色', routerLink: { name: 'ComponentDatePickerYearShortcutStatus' } },
-            { title: '显示位置', routerLink: { name: 'ComponentDatePickerYearShortcutPosition' } },
-            { title: '自定义按钮', routerLink: { name: 'ComponentDatePickerYearShortcutCustom' } }
+            // 内置 Code
+            { i18nKey: 'app.aside.menu.datePickerShortcutCode', routerLink: { name: 'ComponentDatePickerYearShortcutCode' } },
+            // 按钮状态颜色
+            { i18nKey: 'app.aside.menu.datePickerShortcutStatus', routerLink: { name: 'ComponentDatePickerYearShortcutStatus' } },
+            // 显示位置
+            { i18nKey: 'app.aside.menu.datePickerShortcutPosition', routerLink: { name: 'ComponentDatePickerYearShortcutPosition' } },
+            // 自定义按钮
+            { i18nKey: 'app.aside.menu.datePickerShortcutCustom', routerLink: { name: 'ComponentDatePickerYearShortcutCustom' } }
           ]
         },
-        { title: '面板的默认日期', routerLink: { name: 'ComponentDatePickerYearDefVal' } }
+        // 面板的默认日期
+        { i18nKey: 'app.aside.menu.datePickerDefVal', routerLink: { name: 'ComponentDatePickerYearDefVal' } }
       ]
     },
     {
-      title: '功能示例',
+      // 功能示例
+      i18nKey: 'app.aside.menu.datePickerFeatureExamples',
       children: [
-        { title: '实现日期带小圆点', routerLink: { name: 'ComponentDatePickerFestivalMethod' } },
-        { title: '实现农历及节假日', routerLink: { name: 'ComponentDatePickerHolidays' } }
+        // 实现日期带小圆点
+        { i18nKey: 'app.aside.menu.datePickerFestivalMethod', routerLink: { name: 'ComponentDatePickerFestivalMethod' } },
+        // 实现农历及节假日
+        { i18nKey: 'app.aside.menu.datePickerHolidaysExample', routerLink: { name: 'ComponentDatePickerHolidays' } }
       ]
     },
     {
-      title: '快捷按钮指令（全局复用）',
+      // 快捷按钮指令（全局复用）
+      i18nKey: 'app.aside.menu.datePickerShortcutGlobalCommands',
       children: [
         { title: 'API', routerLink: { name: 'GlobalCommandsDatePickerAPI' } },
-        { title: '快捷按钮', routerLink: { name: 'GlobalCommandsDatePickerBase' } }
+        // 快捷按钮
+        { i18nKey: 'app.aside.menu.datePickerShortcut', routerLink: { name: 'GlobalCommandsDatePickerBase' } }
       ]
     }
   ]

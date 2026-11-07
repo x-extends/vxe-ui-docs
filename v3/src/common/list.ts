@@ -1,127 +1,127 @@
 import { NavVO } from './nav'
 
 export const listNavConfig: NavVO = {
-  title: 'List 列表',
+  i18nKey: 'app.aside.menu.listTitle',
   icon: 'vxe-icon-num-list',
   children: [
     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'list' } }, keywords: 'vxe-list' },
     {
-      title: '基础',
+      i18nKey: 'app.aside.menu.listBase',
       children: [
-        { title: '基础', routerLink: { name: 'ComponentListBaseBasics' } },
-        { title: '高度', routerLink: { name: 'ComponentListBaseAutoResize' } },
-        { title: '行高度', routerLink: { name: 'ComponentListBaseItemHeight' } },
-        { title: '内边距', routerLink: { name: 'ComponentListBasePadding' } },
-        { title: '高亮行', routerLink: { name: 'ComponentListBaseHover' } }
+        { i18nKey: 'app.aside.menu.listBase', routerLink: { name: 'ComponentListBaseBasics' } },
+        { i18nKey: 'app.aside.menu.listHeight', routerLink: { name: 'ComponentListBaseAutoResize' } },
+        { i18nKey: 'app.aside.menu.listRowHeight', routerLink: { name: 'ComponentListBaseItemHeight' } },
+        { i18nKey: 'app.aside.menu.listPadding', routerLink: { name: 'ComponentListBasePadding' } },
+        { i18nKey: 'app.aside.menu.listHighlightRow', routerLink: { name: 'ComponentListBaseHover' } }
       ]
     },
     {
-      title: '当前行',
+      i18nKey: 'app.aside.menu.listCurrentRow',
       children: [
-        { title: '高亮当前行', routerLink: { name: 'ComponentListCurrentBase' } },
-        { title: '禁用', routerLink: { name: 'ComponentListCurrentCurrentMethod' } }
+        { i18nKey: 'app.aside.menu.listHighlightCurrentRow', routerLink: { name: 'ComponentListCurrentBase' } },
+        { i18nKey: 'app.aside.menu.listDisabled', routerLink: { name: 'ComponentListCurrentCurrentMethod' } }
       ]
     },
     {
-      title: '单选框',
+      i18nKey: 'app.aside.menu.listRadio',
       children: [
-        { title: '单选', routerLink: { name: 'ComponentListRadioBase' } },
-        { title: '手动操作', routerLink: { name: 'ComponentListRadioHandleManual' } },
-        { title: '高亮选中节点', routerLink: { name: 'ComponentListRadioHighlight' } },
-        { title: '触发方法', routerLink: { name: 'ComponentListRadioTrigger' } },
-        { title: '是否禁用', routerLink: { name: 'ComponentListRadioCheckMethod' } },
-        { title: '是否隐藏', routerLink: { name: 'ComponentListRadioVisibleMethod' } }
+        { i18nKey: 'app.aside.menu.listSingleSelect', routerLink: { name: 'ComponentListRadioBase' } },
+        { i18nKey: 'app.aside.menu.listManualOperation', routerLink: { name: 'ComponentListRadioHandleManual' } },
+        { i18nKey: 'app.aside.menu.listHighlightSelectedNode', routerLink: { name: 'ComponentListRadioHighlight' } },
+        { i18nKey: 'app.aside.menu.listTriggerMethod', routerLink: { name: 'ComponentListRadioTrigger' } },
+        { i18nKey: 'app.aside.menu.listIsDisabled', routerLink: { name: 'ComponentListRadioCheckMethod' } },
+        { i18nKey: 'app.aside.menu.listIsHidden', routerLink: { name: 'ComponentListRadioVisibleMethod' } }
       ]
     },
     {
-      title: '复选框',
+      i18nKey: 'app.aside.menu.listCheckbox',
       children: [
-        { title: '多选', routerLink: { name: 'ComponentListCheckboxBase' } },
-        { title: '手动操作', routerLink: { name: 'ComponentListCheckboxHandleManual' } },
-        { title: '高亮选中节点', routerLink: { name: 'ComponentListCheckboxHighlight' } },
-        { title: '触发方法', routerLink: { name: 'ComponentListCheckboxTrigger' } },
-        { title: '是否禁用', routerLink: { name: 'ComponentListCheckboxCheckMethod' } },
-        { title: '是否隐藏', routerLink: { name: 'ComponentListCheckboxVisibleMethod' } }
+        { i18nKey: 'app.aside.menu.listMultiSelect', routerLink: { name: 'ComponentListCheckboxBase' } },
+        { i18nKey: 'app.aside.menu.listManualOperation', routerLink: { name: 'ComponentListCheckboxHandleManual' } },
+        { i18nKey: 'app.aside.menu.listHighlightSelectedNode', routerLink: { name: 'ComponentListCheckboxHighlight' } },
+        { i18nKey: 'app.aside.menu.listTriggerMethod', routerLink: { name: 'ComponentListCheckboxTrigger' } },
+        { i18nKey: 'app.aside.menu.listIsDisabled', routerLink: { name: 'ComponentListCheckboxCheckMethod' } },
+        { i18nKey: 'app.aside.menu.listIsHidden', routerLink: { name: 'ComponentListCheckboxVisibleMethod' } }
       ]
     },
     {
-      title: '右键菜单',
+      i18nKey: 'app.aside.menu.listContextMenu',
       children: [
-        { title: '配置菜单', routerLink: { name: 'ComponentListMenuBasics' } },
-        { title: '前缀与后缀', routerLink: { name: 'ComponentListMenuIcon' } },
-        { title: '是否禁用', routerLink: { name: 'ComponentListMenuDisabled' } },
-        { title: '是否显示', routerLink: { name: 'ComponentListMenuVisible' } },
-        { title: '异步加载中', routerLink: { name: 'ComponentListMenuLoading' } },
-        { title: '权限控制', routerLink: { name: 'ComponentListMenuVisibleMethod' } }
+        { i18nKey: 'app.aside.menu.listConfigMenu', routerLink: { name: 'ComponentListMenuBasics' } },
+        { i18nKey: 'app.aside.menu.listPrefixAndSuffix', routerLink: { name: 'ComponentListMenuIcon' } },
+        { i18nKey: 'app.aside.menu.listIsDisabled', routerLink: { name: 'ComponentListMenuDisabled' } },
+        { i18nKey: 'app.aside.menu.listIsVisible', routerLink: { name: 'ComponentListMenuVisible' } },
+        { i18nKey: 'app.aside.menu.listAsyncLoading', routerLink: { name: 'ComponentListMenuLoading' } },
+        { i18nKey: 'app.aside.menu.listPermissionControl', routerLink: { name: 'ComponentListMenuVisibleMethod' } }
       ]
     },
     {
-      title: '拖拽',
+      i18nKey: 'app.aside.menu.listDrag',
       children: [
-        { title: '拖拽调整节点顺序', routerLink: { name: 'ComponentListDragSort' } },
-        { title: '自定义图标', routerLink: { name: 'ComponentListDragIcon' } },
-        { title: '拖拽辅助样式', routerLink: { name: 'ComponentListDragShowGuidesStatus' } },
-        { title: '触发方式', routerLink: { name: 'ComponentListDragTrigger' } },
-        { title: '拖拽事件', routerLink: { name: 'ComponentListDragEvents' } },
-        { title: '自定义提示', routerLink: { name: 'ComponentListDragTooltipMethod' } },
-        { title: '禁用拖拽按钮', routerLink: { name: 'ComponentListDragDisabledMethod' } },
-        { title: '拖拽按钮可视', routerLink: { name: 'ComponentListDragVisibleMethod' } },
-        { title: '拖拽拦截', routerLink: { name: 'ComponentListDragDragMethod' } },
-        { title: '跨列表拖拽', routerLink: { name: 'ComponentListDragDragCossList' } }
+        { i18nKey: 'app.aside.menu.listDragReorderNode', routerLink: { name: 'ComponentListDragSort' } },
+        { i18nKey: 'app.aside.menu.listCustomIcon', routerLink: { name: 'ComponentListDragIcon' } },
+        { i18nKey: 'app.aside.menu.listDragGuideStyle', routerLink: { name: 'ComponentListDragShowGuidesStatus' } },
+        { i18nKey: 'app.aside.menu.listTriggerMode', routerLink: { name: 'ComponentListDragTrigger' } },
+        { i18nKey: 'app.aside.menu.listDragEvents', routerLink: { name: 'ComponentListDragEvents' } },
+        { i18nKey: 'app.aside.menu.listCustomTip', routerLink: { name: 'ComponentListDragTooltipMethod' } },
+        { i18nKey: 'app.aside.menu.listDisableDragButton', routerLink: { name: 'ComponentListDragDisabledMethod' } },
+        { i18nKey: 'app.aside.menu.listDragButtonVisible', routerLink: { name: 'ComponentListDragVisibleMethod' } },
+        { i18nKey: 'app.aside.menu.listDragIntercept', routerLink: { name: 'ComponentListDragDragMethod' } },
+        { i18nKey: 'app.aside.menu.listCrossListDrag', routerLink: { name: 'ComponentListDragDragCossList' } }
       ]
     },
     {
-      title: '增删行',
+      i18nKey: 'app.aside.menu.listAddRemoveRow',
       children: [
-        { title: '新增行', routerLink: { name: 'ComponentListEditInsert' } },
-        { title: '删除行', routerLink: { name: 'ComponentListEditRemove' } },
-        { title: '增删操作', routerLink: { name: 'ComponentListEditFull' } }
+        { i18nKey: 'app.aside.menu.listInsertRow', routerLink: { name: 'ComponentListEditInsert' } },
+        { i18nKey: 'app.aside.menu.listRemoveRow', routerLink: { name: 'ComponentListEditRemove' } },
+        { i18nKey: 'app.aside.menu.listAddRemoveOperation', routerLink: { name: 'ComponentListEditFull' } }
       ]
     },
     {
-      title: '滚动条',
+      i18nKey: 'app.aside.menu.listScrollbar',
       children: [
         {
-          title: '原生滚动条',
+          i18nKey: 'app.aside.menu.listNativeScrollbar',
           children: [
-            { title: '使用滚动条', routerLink: { name: 'ComponentListScrollbarNativeScrollbar' } }
+            { i18nKey: 'app.aside.menu.listUseScrollbar', routerLink: { name: 'ComponentListScrollbarNativeScrollbar' } }
           ]
         },
         {
-          title: '虚拟滚动条',
+          i18nKey: 'app.aside.menu.listVirtualScrollbar',
           children: [
-            { title: '使用滚动条', routerLink: { name: 'ComponentListScrollbarUseScrollbarScrollbar' } },
-            { title: '滚动条宽度', routerLink: { name: 'ComponentListScrollbarUseScrollbarBarWidth' } },
-            { title: '滚动条颜色', routerLink: { name: 'ComponentListScrollbarUseScrollbarBarColor' } },
-            { title: '显示位置', routerLink: { name: 'ComponentListScrollbarUseScrollbarPosition' } },
-            { title: '自动隐藏', routerLink: { name: 'ComponentListScrollbarUseScrollbarAutoHide' } },
-            { title: '悬浮滚动条', routerLink: { name: 'ComponentListScrollbarUseScrollbarFluentOverlay' } }
+            { i18nKey: 'app.aside.menu.listUseScrollbar', routerLink: { name: 'ComponentListScrollbarUseScrollbarScrollbar' } },
+            { i18nKey: 'app.aside.menu.listScrollbarWidth', routerLink: { name: 'ComponentListScrollbarUseScrollbarBarWidth' } },
+            { i18nKey: 'app.aside.menu.listScrollbarColor', routerLink: { name: 'ComponentListScrollbarUseScrollbarBarColor' } },
+            { i18nKey: 'app.aside.menu.listDisplayPosition', routerLink: { name: 'ComponentListScrollbarUseScrollbarPosition' } },
+            { i18nKey: 'app.aside.menu.listAutoHide', routerLink: { name: 'ComponentListScrollbarUseScrollbarAutoHide' } },
+            { i18nKey: 'app.aside.menu.listFloatingScrollbar', routerLink: { name: 'ComponentListScrollbarUseScrollbarFluentOverlay' } }
           ]
         }
       ]
     },
     {
-      title: '虚拟滚动 - 海量数据',
+      i18nKey: 'app.aside.menu.listVirtualScrollLargeData',
       children: [
-        { title: '纵向虚拟滚动', routerLink: { name: 'ComponentListScrollBasics' } }
+        { i18nKey: 'app.aside.menu.listVerticalVirtualScroll', routerLink: { name: 'ComponentListScrollBasics' } }
       ]
     },
     {
-      title: '自定义插槽模板',
+      i18nKey: 'app.aside.menu.listCustomSlotTemplate',
       children: [
-        { title: '自定义内顶部插槽模板', routerLink: { name: 'ComponentListTemplateHeader' } },
-        { title: '自定义底部插槽模板', routerLink: { name: 'ComponentListTemplateFooter' } },
-        { title: '自定义内容插槽模板', routerLink: { name: 'ComponentListTemplateContent' } },
-        { title: '自定义列表插槽模板', routerLink: { name: 'ComponentListTemplateDefault' } }
+        { i18nKey: 'app.aside.menu.listCustomInnerHeaderTemplate', routerLink: { name: 'ComponentListTemplateHeader' } },
+        { i18nKey: 'app.aside.menu.listCustomFooterTemplate', routerLink: { name: 'ComponentListTemplateFooter' } },
+        { i18nKey: 'app.aside.menu.listCustomContentTemplate', routerLink: { name: 'ComponentListTemplateContent' } },
+        { i18nKey: 'app.aside.menu.listCustomListTemplate', routerLink: { name: 'ComponentListTemplateDefault' } }
       ]
     },
     {
-      title: '功能示例',
+      i18nKey: 'app.aside.menu.listFeatureExamples',
       children: [
-        { title: '纵向虚拟列表', routerLink: { name: 'ComponentListOtherVn' } },
-        { title: '实现轻量级虚拟表格', routerLink: { name: 'ComponentListOtherTable' } },
-        { title: '实现列表穿梭框选择', routerLink: { name: 'ComponentListOtherListTransfer' } },
-        { title: '实现栅格化列表', routerLink: { name: 'ComponentListOtherListMultiCol' } }
+        { i18nKey: 'app.aside.menu.listVerticalVirtualList', routerLink: { name: 'ComponentListOtherVn' } },
+        { i18nKey: 'app.aside.menu.listLightweightVirtualTable', routerLink: { name: 'ComponentListOtherTable' } },
+        { i18nKey: 'app.aside.menu.listTransferSelection', routerLink: { name: 'ComponentListOtherListTransfer' } },
+        { i18nKey: 'app.aside.menu.listGridList', routerLink: { name: 'ComponentListOtherListMultiCol' } }
       ]
     }
   ]

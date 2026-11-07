@@ -1,6 +1,7 @@
 import { NavVO, otherUrl } from './nav'
 
 export const formNavConfig: NavVO = {
+  // Form 表单
   i18nKey: 'app.aside.menu.formTitle',
   showCount: true,
   children: [
@@ -8,266 +9,457 @@ export const formNavConfig: NavVO = {
     { title: 'Form Group API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-group' } }, keywords: 'vxe-form-group' },
     { title: 'Form Item API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'form-item' } }, keywords: 'vxe-form-item' },
     {
+      // 基础表单
       i18nKey: 'app.aside.menu.formBaseTitle',
       children: [
-        { title: '基础功能', routerLink: { name: 'ComponentFormBasicsBase' } },
-        { title: '尺寸大小', routerLink: { name: 'ComponentFormBasicsSize' } },
-        { title: '数据类型', routerLink: { name: 'ComponentFormBasicsField' } },
-        { title: '横向排列', routerLink: { name: 'ComponentFormBasicsHorizontal' } },
-        { title: '上下布局', routerLink: { name: 'ComponentFormBasicsVertical' } },
-        { title: '边距', routerLink: { name: 'ComponentFormBasicsPadding' } },
-        { title: '标题冒号', routerLink: { name: 'ComponentFormBasicsColon' } },
-        { title: '标题加粗', routerLink: { name: 'ComponentFormBasicsBold' } },
-        { title: '标题宽度', routerLink: { name: 'ComponentFormBasicsWidth' } },
-        { title: '标题对齐方式', routerLink: { name: 'ComponentFormBasicsTitleAlign' } },
-        { title: '内容对齐方式', routerLink: { name: 'ComponentFormBasicsAlign' } },
-        { title: '溢出隐藏', routerLink: { name: 'ComponentFormBasicsOverflow' } },
-        { title: '标题前缀图标', routerLink: { name: 'ComponentFormBasicsTitlePrefix' } },
-        { title: '标题后缀图标', routerLink: { name: 'ComponentFormBasicsTitleSuffix' } },
-        { title: '边框', routerLink: { name: 'ComponentFormBasicsBorder' } },
-        { title: '标题背景', routerLink: { name: 'ComponentFormBasicsTitleBackground' } },
-        { title: '格式化内容', routerLink: { name: 'ComponentFormBasicsFormat' } },
-        { title: '分行/分列', routerLink: { name: 'ComponentFormBasicsChildren' } },
-        { title: '分组', routerLink: { name: 'ComponentFormBasicsGroup' } },
-        { title: '显示与隐藏项', routerLink: { name: 'ComponentFormBasicsVisible' } },
-        { title: '自定义布局', routerLink: { name: 'ComponentFormBasicsCustomLayout' } },
+        // 基础功能
+        { i18nKey: 'app.aside.menu.formBasicFeatures', routerLink: { name: 'ComponentFormBasicsBase' } },
+        // 尺寸大小
+        { i18nKey: 'app.aside.menu.formSize', routerLink: { name: 'ComponentFormBasicsSize' } },
+        // 数据类型
+        { i18nKey: 'app.aside.menu.formDataType', routerLink: { name: 'ComponentFormBasicsField' } },
+        // 横向排列
+        { i18nKey: 'app.aside.menu.formHorizontal', routerLink: { name: 'ComponentFormBasicsHorizontal' } },
+        // 上下布局
+        { i18nKey: 'app.aside.menu.formVertical', routerLink: { name: 'ComponentFormBasicsVertical' } },
+        // 边距
+        { i18nKey: 'app.aside.menu.formPadding', routerLink: { name: 'ComponentFormBasicsPadding' } },
+        // 标题冒号
+        { i18nKey: 'app.aside.menu.formColon', routerLink: { name: 'ComponentFormBasicsColon' } },
+        // 标题加粗
+        { i18nKey: 'app.aside.menu.formBold', routerLink: { name: 'ComponentFormBasicsBold' } },
+        // 标题宽度
+        { i18nKey: 'app.aside.menu.formTitleWidth', routerLink: { name: 'ComponentFormBasicsWidth' } },
+        // 标题对齐方式
+        { i18nKey: 'app.aside.menu.formTitleAlign', routerLink: { name: 'ComponentFormBasicsTitleAlign' } },
+        // 内容对齐方式
+        { i18nKey: 'app.aside.menu.formContentAlign', routerLink: { name: 'ComponentFormBasicsAlign' } },
+        // 溢出隐藏
+        { i18nKey: 'app.aside.menu.formOverflowHidden', routerLink: { name: 'ComponentFormBasicsOverflow' } },
+        // 标题前缀图标
+        { i18nKey: 'app.aside.menu.formTitlePrefixIcon', routerLink: { name: 'ComponentFormBasicsTitlePrefix' } },
+        // 标题后缀图标
+        { i18nKey: 'app.aside.menu.formTitleSuffixIcon', routerLink: { name: 'ComponentFormBasicsTitleSuffix' } },
+        // 边框
+        { i18nKey: 'app.aside.menu.formBorder', routerLink: { name: 'ComponentFormBasicsBorder' } },
+        // 标题背景
+        { i18nKey: 'app.aside.menu.formTitleBackground', routerLink: { name: 'ComponentFormBasicsTitleBackground' } },
+        // 格式化内容
+        { i18nKey: 'app.aside.menu.formFormatContent', routerLink: { name: 'ComponentFormBasicsFormat' } },
+        // 分行/分列
+        { i18nKey: 'app.aside.menu.formSplitRowColumn', routerLink: { name: 'ComponentFormBasicsChildren' } },
+        // 分组
+        { i18nKey: 'app.aside.menu.formGroup', routerLink: { name: 'ComponentFormBasicsGroup' } },
+        // 显示与隐藏项
+        { i18nKey: 'app.aside.menu.formShowHideItem', routerLink: { name: 'ComponentFormBasicsVisible' } },
+        // 自定义布局
+        { i18nKey: 'app.aside.menu.formCustomLayout', routerLink: { name: 'ComponentFormBasicsCustomLayout' } },
         {
-          title: '折叠表单',
+          // 折叠表单
+          i18nKey: 'app.aside.menu.formCollapseForm',
           children: [
-            { title: '展开与收起', routerLink: { name: 'ComponentFormBasicsCollapseBase' } },
-            { title: '自定义按钮文字', routerLink: { name: 'ComponentFormBasicsCollapseButtonText' } },
-            { title: '自定义按钮图标', routerLink: { name: 'ComponentFormBasicsCollapseButtonIcon' } }
+            // 展开与收起
+            { i18nKey: 'app.aside.menu.formExpandCollapse', routerLink: { name: 'ComponentFormBasicsCollapseBase' } },
+            // 自定义按钮文字
+            { i18nKey: 'app.aside.menu.formCustomButtonText', routerLink: { name: 'ComponentFormBasicsCollapseButtonText' } },
+            // 自定义按钮图标
+            { i18nKey: 'app.aside.menu.formCustomButtonIcon', routerLink: { name: 'ComponentFormBasicsCollapseButtonIcon' } }
           ]
         },
         {
-          title: '数据校验',
+          // 数据校验
+          i18nKey: 'app.aside.menu.formDataValidation',
           children: [
-            { title: '校验规则配置', routerLink: { name: 'ComponentFormBasicsValidateRules' } },
-            { title: '字符串校验规则', routerLink: { name: 'ComponentFormBasicsValidateString' } },
-            { title: '数值校验规则', routerLink: { name: 'ComponentFormBasicsValidateNumber' } },
-            { title: '正则校验规则', routerLink: { name: 'ComponentFormBasicsValidateRegexp' } },
-            { title: '数组校验规则', routerLink: { name: 'ComponentFormBasicsValidateArray' } },
-            { title: '多关联字段校验规则', routerLink: { name: 'ComponentFormBasicsValidateField' } },
-            { title: '自定义校验规则', routerLink: { name: 'ComponentFormBasicsValidateCustom' } },
-            { title: '显示提示消息', routerLink: { name: 'ComponentFormBasicsValidateShowMessage' } },
-            { title: '显示提示图标', routerLink: { name: 'ComponentFormBasicsValidateShowErrorIcon' } },
-            { title: '错误提示样式', routerLink: { name: 'ComponentFormBasicsValidateTheme' } },
+            // 校验规则配置
+            { i18nKey: 'app.aside.menu.formValidationRulesConfig', routerLink: { name: 'ComponentFormBasicsValidateRules' } },
+            // 字符串校验规则
+            { i18nKey: 'app.aside.menu.formStringValidationRule', routerLink: { name: 'ComponentFormBasicsValidateString' } },
+            // 数值校验规则
+            { i18nKey: 'app.aside.menu.formNumberValidationRule', routerLink: { name: 'ComponentFormBasicsValidateNumber' } },
+            // 正则校验规则
+            { i18nKey: 'app.aside.menu.formRegexpValidationRule', routerLink: { name: 'ComponentFormBasicsValidateRegexp' } },
+            // 数组校验规则
+            { i18nKey: 'app.aside.menu.formArrayValidationRule', routerLink: { name: 'ComponentFormBasicsValidateArray' } },
+            // 多关联字段校验规则
+            { i18nKey: 'app.aside.menu.formMultiFieldValidationRule', routerLink: { name: 'ComponentFormBasicsValidateField' } },
+            // 自定义校验规则
+            { i18nKey: 'app.aside.menu.formCustomValidationRule', routerLink: { name: 'ComponentFormBasicsValidateCustom' } },
+            // 显示提示消息
+            { i18nKey: 'app.aside.menu.formShowTipMessage', routerLink: { name: 'ComponentFormBasicsValidateShowMessage' } },
+            // 显示提示图标
+            { i18nKey: 'app.aside.menu.formShowTipIcon', routerLink: { name: 'ComponentFormBasicsValidateShowErrorIcon' } },
+            // 错误提示样式
+            { i18nKey: 'app.aside.menu.formErrorTipStyle', routerLink: { name: 'ComponentFormBasicsValidateTheme' } },
             // { title: '值改变时自动提交', routerLink: { name: 'ComponentFormBasicsValidateChangeToSubmit' } },
-            { title: '手动调用', routerLink: { name: 'ComponentFormBasicsValidateManual' } }
+            // 手动调用
+            { i18nKey: 'app.aside.menu.formManualCall', routerLink: { name: 'ComponentFormBasicsValidateManual' } }
           ]
         },
         {
-          title: '渲染 - 配置式',
+          // 渲染 - 配置式
+          i18nKey: 'app.aside.menu.formRenderConfig',
           children: [
-            { title: 'input 原生-输入框', routerLink: { name: 'ComponentFormBasicsItemRenderInput' } },
-            { title: 'textarea 原生-文本域', routerLink: { name: 'ComponentFormBasicsItemRenderTextarea' } },
-            { title: 'select 原生-下拉框', routerLink: { name: 'ComponentFormBasicsItemRenderSelect' } },
-            { title: 'VxeButtonGroup 按钮组', routerLink: { name: 'ComponentFormBasicsItemRenderVxeButtonGroup' } },
-            { title: 'VxeInput 单行输入框', routerLink: { name: 'ComponentFormBasicsItemRenderVxeInput' } },
-            { title: 'VxeNumberInput 数值输入框', routerLink: { name: 'ComponentFormBasicsItemRenderVxeNumberInput' } },
-            { title: 'VxeTextarea 文本域', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTextarea' } },
-            { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSelect' } },
-            { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeDatePicker' } },
-            { title: 'VxeDateRangePicker 日期范围选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeDateRangePicker' } },
-            { title: 'VxeCascader 级联选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeCascader' } },
-            { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTreeSelect' } },
-            { title: 'VxeTableSelect 下拉表格选择', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTableSelect' } },
-            { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSwitch' } },
-            { title: 'VxeRadioGroup 单选组', routerLink: { name: 'ComponentFormBasicsItemRenderVxeRadioGroup' } },
-            { title: 'VxeCheckboxGroup 复选组', routerLink: { name: 'ComponentFormBasicsItemRenderVxeCheckboxGroup' } },
-            { title: 'VxeRate 评分', routerLink: { name: 'ComponentFormBasicsItemRenderVxeRate' } },
-            { title: 'VxeSlider 滑块', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSlider' } },
-            { title: 'VxeUpload 上传', routerLink: { name: 'ComponentFormBasicsItemRenderVxeUpload' } },
+            // input 原生-输入框
+            { i18nKey: 'app.aside.menu.formNativeInput', routerLink: { name: 'ComponentFormBasicsItemRenderInput' } },
+            // textarea 原生-文本域
+            { i18nKey: 'app.aside.menu.formNativeTextarea', routerLink: { name: 'ComponentFormBasicsItemRenderTextarea' } },
+            // select 原生-下拉框
+            { i18nKey: 'app.aside.menu.formNativeSelect', routerLink: { name: 'ComponentFormBasicsItemRenderSelect' } },
+            // VxeButtonGroup 按钮组
+            { i18nKey: 'app.aside.menu.formVxeButtonGroup', routerLink: { name: 'ComponentFormBasicsItemRenderVxeButtonGroup' } },
+            // VxeInput 单行输入框
+            { i18nKey: 'app.aside.menu.formVxeInput', routerLink: { name: 'ComponentFormBasicsItemRenderVxeInput' } },
+            // VxeNumberInput 数值输入框
+            { i18nKey: 'app.aside.menu.formVxeNumberInput', routerLink: { name: 'ComponentFormBasicsItemRenderVxeNumberInput' } },
+            // VxeTextarea 文本域
+            { i18nKey: 'app.aside.menu.formVxeTextarea', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTextarea' } },
+            // VxeSelect 下拉框
+            { i18nKey: 'app.aside.menu.formVxeSelect', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSelect' } },
+            // VxeDatePicker 日期选择
+            { i18nKey: 'app.aside.menu.formVxeDatePicker', routerLink: { name: 'ComponentFormBasicsItemRenderVxeDatePicker' } },
+            // VxeDateRangePicker 日期范围选择
+            { i18nKey: 'app.aside.menu.formVxeDateRangePicker', routerLink: { name: 'ComponentFormBasicsItemRenderVxeDateRangePicker' } },
+            // VxeCascader 级联选择
+            { i18nKey: 'app.aside.menu.formVxeCascader', routerLink: { name: 'ComponentFormBasicsItemRenderVxeCascader' } },
+            // VxeTreeSelect 下拉树选择
+            { i18nKey: 'app.aside.menu.formVxeTreeSelect', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTreeSelect' } },
+            // VxeTableSelect 下拉表格选择
+            { i18nKey: 'app.aside.menu.formVxeTableSelect', routerLink: { name: 'ComponentFormBasicsItemRenderVxeTableSelect' } },
+            // VxeSwitch 开关
+            { i18nKey: 'app.aside.menu.formVxeSwitch', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSwitch' } },
+            // VxeRadioGroup 单选组
+            { i18nKey: 'app.aside.menu.formVxeRadioGroup', routerLink: { name: 'ComponentFormBasicsItemRenderVxeRadioGroup' } },
+            // VxeCheckboxGroup 复选组
+            { i18nKey: 'app.aside.menu.formVxeCheckboxGroup', routerLink: { name: 'ComponentFormBasicsItemRenderVxeCheckboxGroup' } },
+            // VxeRate 评分
+            { i18nKey: 'app.aside.menu.formVxeRate', routerLink: { name: 'ComponentFormBasicsItemRenderVxeRate' } },
+            // VxeSlider 滑块
+            { i18nKey: 'app.aside.menu.formVxeSlider', routerLink: { name: 'ComponentFormBasicsItemRenderVxeSlider' } },
+            // VxeUpload 上传
+            { i18nKey: 'app.aside.menu.formVxeUpload', routerLink: { name: 'ComponentFormBasicsItemRenderVxeUpload' } },
             // { title: 'WangEditor 第三方扩展-富文本', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-wangeditor/form/itemTemplate/wang-editor`, linkTarget: '_blank' },
-            { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form/itemTemplate/el-input`, linkTarget: '_blank' },
-            { title: '只读模式', routerLink: { name: 'ComponentFormBasicsItemRenderReadonly' } },
-            { title: '禁用模式', routerLink: { name: 'ComponentFormBasicsItemRenderDisabled' } },
-            { title: '实现联动禁用', routerLink: { name: 'ComponentFormBasicsItemRenderLinkageDisabled' } }
+            // 集成第三方扩展插件
+            { i18nKey: 'app.aside.menu.formIntegrateThirdPartyPlugin', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form/itemTemplate/el-input`, linkTarget: '_blank' },
+            // 只读模式
+            { i18nKey: 'app.aside.menu.formReadonlyMode', routerLink: { name: 'ComponentFormBasicsItemRenderReadonly' } },
+            // 禁用模式
+            { i18nKey: 'app.aside.menu.formDisabledMode', routerLink: { name: 'ComponentFormBasicsItemRenderDisabled' } },
+            // 实现联动禁用
+            { i18nKey: 'app.aside.menu.formLinkageDisabled', routerLink: { name: 'ComponentFormBasicsItemRenderLinkageDisabled' } }
           ]
         },
         {
-          title: '渲染 - 插槽式',
+          // 渲染 - 插槽式
+          i18nKey: 'app.aside.menu.formRenderSlot',
           children: [
-            { title: 'VxeButton 按钮', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeButton' } },
-            { title: 'VxeInput 单行输入框', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeInput' } },
-            { title: 'VxeNumberInput 数值输入框', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeNumberInput' } },
-            { title: 'VxeTextarea 文本域', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeTextarea' } },
-            { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSelect' } },
-            { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDatePicker' } },
-            { title: 'VxeDateRangePicker 日期范围选择', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDateRangePicker' } },
-            { title: 'VxeCascader 级联选择', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeCascader' } },
-            { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeTreeSelect' } },
-            { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSwitch' } },
-            { title: 'VxeRadioGroup 单选组', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeRadioGroup' } },
-            { title: 'VxeCheckboxGroup 复选组', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeCheckboxGroup' } },
-            { title: 'VxeRate 评分', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeRate' } },
-            { title: 'VxeSlider 滑块', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSlider' } },
-            { title: 'VxeUpload 上传', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeUpload' } },
-            { title: '只读模式', routerLink: { name: 'ComponentFormBasicsItemTemplateReadonly' } },
+            // VxeButton 按钮
+            { i18nKey: 'app.aside.menu.formVxeButton', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeButton' } },
+            // VxeInput 单行输入框
+            { i18nKey: 'app.aside.menu.formVxeInput', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeInput' } },
+            // VxeNumberInput 数值输入框
+            { i18nKey: 'app.aside.menu.formVxeNumberInput', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeNumberInput' } },
+            // VxeTextarea 文本域
+            { i18nKey: 'app.aside.menu.formVxeTextarea', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeTextarea' } },
+            // VxeSelect 下拉框
+            { i18nKey: 'app.aside.menu.formVxeSelect', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSelect' } },
+            // VxeDatePicker 日期选择
+            { i18nKey: 'app.aside.menu.formVxeDatePicker', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDatePicker' } },
+            // VxeDateRangePicker 日期范围选择
+            { i18nKey: 'app.aside.menu.formVxeDateRangePicker', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeDateRangePicker' } },
+            // VxeCascader 级联选择
+            { i18nKey: 'app.aside.menu.formVxeCascader', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeCascader' } },
+            // VxeTreeSelect 下拉树选择
+            { i18nKey: 'app.aside.menu.formVxeTreeSelect', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeTreeSelect' } },
+            // VxeSwitch 开关
+            { i18nKey: 'app.aside.menu.formVxeSwitch', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSwitch' } },
+            // VxeRadioGroup 单选组
+            { i18nKey: 'app.aside.menu.formVxeRadioGroup', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeRadioGroup' } },
+            // VxeCheckboxGroup 复选组
+            { i18nKey: 'app.aside.menu.formVxeCheckboxGroup', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeCheckboxGroup' } },
+            // VxeRate 评分
+            { i18nKey: 'app.aside.menu.formVxeRate', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeRate' } },
+            // VxeSlider 滑块
+            { i18nKey: 'app.aside.menu.formVxeSlider', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeSlider' } },
+            // VxeUpload 上传
+            { i18nKey: 'app.aside.menu.formVxeUpload', routerLink: { name: 'ComponentFormBasicsItemTemplateVxeUpload' } },
+            // 只读模式
+            { i18nKey: 'app.aside.menu.formReadonlyMode', routerLink: { name: 'ComponentFormBasicsItemTemplateReadonly' } },
             // { title: 'WangEditor 第三方扩展-富文本', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-wangeditor/form/itemTemplate/wang-editor`, linkTarget: '_blank' },
-            { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form/itemTemplate/el-input`, linkTarget: '_blank' }
+            // 集成第三方扩展插件
+            { i18nKey: 'app.aside.menu.formIntegrateThirdPartyPlugin', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form/itemTemplate/el-input`, linkTarget: '_blank' }
           ]
         },
         {
-          title: '自定义插槽模板',
+          // 自定义插槽模板
+          i18nKey: 'app.aside.menu.formCustomSlotTemplate',
           children: [
-            { title: '自定义标题模板', routerLink: { name: 'ComponentFormBasicsTemplateTitle' } },
-            { title: '自定义标题前缀模板', routerLink: { name: 'ComponentFormBasicsTemplatePrefix' } },
-            { title: '自定义标题后缀模板', routerLink: { name: 'ComponentFormBasicsTemplateSuffix' } },
-            { title: '自定义内容模板', routerLink: { name: 'ComponentFormBasicsTemplateContent' } }
+            // 自定义标题模板
+            { i18nKey: 'app.aside.menu.formCustomTitleTemplate', routerLink: { name: 'ComponentFormBasicsTemplateTitle' } },
+            // 自定义标题前缀模板
+            { i18nKey: 'app.aside.menu.formCustomTitlePrefixTemplate', routerLink: { name: 'ComponentFormBasicsTemplatePrefix' } },
+            // 自定义标题后缀模板
+            { i18nKey: 'app.aside.menu.formCustomTitleSuffixTemplate', routerLink: { name: 'ComponentFormBasicsTemplateSuffix' } },
+            // 自定义内容模板
+            { i18nKey: 'app.aside.menu.formCustomContentTemplate', routerLink: { name: 'ComponentFormBasicsTemplateContent' } }
           ]
         },
-        { title: '在页签中使用', routerLink: { name: 'ComponentFormBasicsTabs' } },
-        { title: '实现简历模板', routerLink: { name: 'ComponentFormBasicsResumeTemplate' } }
+        // 在页签中使用
+        { i18nKey: 'app.aside.menu.formUseInTabs', routerLink: { name: 'ComponentFormBasicsTabs' } },
+        // 实现简历模板
+        { i18nKey: 'app.aside.menu.formResumeTemplate', routerLink: { name: 'ComponentFormBasicsResumeTemplate' } }
       ]
     },
     {
+      // 配置式表单
       i18nKey: 'app.aside.menu.formConfigTitle',
       children: [
-        { title: '基础功能', routerLink: { name: 'ComponentFormConfigBase' } },
-        { title: '数据类型', routerLink: { name: 'ComponentFormConfigField' } },
-        { title: '横向排列', routerLink: { name: 'ComponentFormConfigHorizontal' } },
-        { title: '上下布局', routerLink: { name: 'ComponentFormConfigVertical' } },
-        { title: '边距', routerLink: { name: 'ComponentFormConfigPadding' } },
-        { title: '标题冒号', routerLink: { name: 'ComponentFormConfigColon' } },
-        { title: '标题加粗', routerLink: { name: 'ComponentFormConfigBold' } },
-        { title: '标题宽度', routerLink: { name: 'ComponentFormConfigWidth' } },
-        { title: '标题对齐方式', routerLink: { name: 'ComponentFormConfigTitleAlign' } },
-        { title: '内容对齐方式', routerLink: { name: 'ComponentFormConfigAlign' } },
-        { title: '溢出隐藏', routerLink: { name: 'ComponentFormConfigOverflow' } },
-        { title: '标题前缀图标', routerLink: { name: 'ComponentFormConfigTitlePrefix' } },
-        { title: '标题后缀图标', routerLink: { name: 'ComponentFormConfigTitleSuffix' } },
-        { title: '边框', routerLink: { name: 'ComponentFormConfigBorder' } },
-        { title: '标题背景', routerLink: { name: 'ComponentFormConfigTitleBackground' } },
-        { title: '格式化内容', routerLink: { name: 'ComponentFormConfigFormat' } },
-        { title: '分行/分列', routerLink: { name: 'ComponentFormConfigChildren' } },
-        { title: '分组', routerLink: { name: 'ComponentFormConfigGroup' } },
-        { title: '显示与隐藏项', routerLink: { name: 'ComponentFormConfigVisible' } },
+        // 基础功能
+        { i18nKey: 'app.aside.menu.formBasicFeatures', routerLink: { name: 'ComponentFormConfigBase' } },
+        // 数据类型
+        { i18nKey: 'app.aside.menu.formDataType', routerLink: { name: 'ComponentFormConfigField' } },
+        // 横向排列
+        { i18nKey: 'app.aside.menu.formHorizontal', routerLink: { name: 'ComponentFormConfigHorizontal' } },
+        // 上下布局
+        { i18nKey: 'app.aside.menu.formVertical', routerLink: { name: 'ComponentFormConfigVertical' } },
+        // 边距
+        { i18nKey: 'app.aside.menu.formPadding', routerLink: { name: 'ComponentFormConfigPadding' } },
+        // 标题冒号
+        { i18nKey: 'app.aside.menu.formColon', routerLink: { name: 'ComponentFormConfigColon' } },
+        // 标题加粗
+        { i18nKey: 'app.aside.menu.formBold', routerLink: { name: 'ComponentFormConfigBold' } },
+        // 标题宽度
+        { i18nKey: 'app.aside.menu.formTitleWidth', routerLink: { name: 'ComponentFormConfigWidth' } },
+        // 标题对齐方式
+        { i18nKey: 'app.aside.menu.formTitleAlign', routerLink: { name: 'ComponentFormConfigTitleAlign' } },
+        // 内容对齐方式
+        { i18nKey: 'app.aside.menu.formContentAlign', routerLink: { name: 'ComponentFormConfigAlign' } },
+        // 溢出隐藏
+        { i18nKey: 'app.aside.menu.formOverflowHidden', routerLink: { name: 'ComponentFormConfigOverflow' } },
+        // 标题前缀图标
+        { i18nKey: 'app.aside.menu.formTitlePrefixIcon', routerLink: { name: 'ComponentFormConfigTitlePrefix' } },
+        // 标题后缀图标
+        { i18nKey: 'app.aside.menu.formTitleSuffixIcon', routerLink: { name: 'ComponentFormConfigTitleSuffix' } },
+        // 边框
+        { i18nKey: 'app.aside.menu.formBorder', routerLink: { name: 'ComponentFormConfigBorder' } },
+        // 标题背景
+        { i18nKey: 'app.aside.menu.formTitleBackground', routerLink: { name: 'ComponentFormConfigTitleBackground' } },
+        // 格式化内容
+        { i18nKey: 'app.aside.menu.formFormatContent', routerLink: { name: 'ComponentFormConfigFormat' } },
+        // 分行/分列
+        { i18nKey: 'app.aside.menu.formSplitRowColumn', routerLink: { name: 'ComponentFormConfigChildren' } },
+        // 分组
+        { i18nKey: 'app.aside.menu.formGroup', routerLink: { name: 'ComponentFormConfigGroup' } },
+        // 显示与隐藏项
+        { i18nKey: 'app.aside.menu.formShowHideItem', routerLink: { name: 'ComponentFormConfigVisible' } },
+        // 重置表单值
+        { i18nKey: 'app.aside.menu.formResetFormValue', routerLink: { name: 'ComponentFormConfigReset' } },
         {
-          title: '折叠表单',
+          // 折叠表单
+          i18nKey: 'app.aside.menu.formCollapseForm',
           children: [
-            { title: '展开与收起', routerLink: { name: 'ComponentFormConfigCollapseBase' } },
-            { title: '自定义按钮文字', routerLink: { name: 'ComponentFormConfigCollapseButtonText' } },
-            { title: '自定义按钮图标', routerLink: { name: 'ComponentFormConfigCollapseButtonIcon' } }
+            // 展开与收起
+            { i18nKey: 'app.aside.menu.formExpandCollapse', routerLink: { name: 'ComponentFormConfigCollapseBase' } },
+            // 自定义按钮文字
+            { i18nKey: 'app.aside.menu.formCustomButtonText', routerLink: { name: 'ComponentFormConfigCollapseButtonText' } },
+            // 自定义按钮图标
+            { i18nKey: 'app.aside.menu.formCustomButtonIcon', routerLink: { name: 'ComponentFormConfigCollapseButtonIcon' } }
           ]
         },
         {
-          title: '数据校验',
+          // 数据校验
+          i18nKey: 'app.aside.menu.formDataValidation',
           children: [
-            { title: '校验规则配置', routerLink: { name: 'ComponentFormConfigValidateRules' } },
-            { title: '字符串校验规则', routerLink: { name: 'ComponentFormConfigValidateString' } },
-            { title: '数值校验规则', routerLink: { name: 'ComponentFormConfigValidateNumber' } },
-            { title: '正则校验规则', routerLink: { name: 'ComponentFormConfigValidateRegexp' } },
-            { title: '数组校验规则', routerLink: { name: 'ComponentFormConfigValidateArray' } },
-            { title: '多关联字段校验规则', routerLink: { name: 'ComponentFormConfigValidateField' } },
-            { title: '自定义校验规则', routerLink: { name: 'ComponentFormConfigValidateCustom' } },
-            { title: '显示提示消息', routerLink: { name: 'ComponentFormConfigValidateShowMessage' } },
-            { title: '显示提示图标', routerLink: { name: 'ComponentFormConfigValidateShowErrorIcon' } },
-            { title: '错误提示样式', routerLink: { name: 'ComponentFormConfigValidateTheme' } },
-            { title: '值改变时自动提交', routerLink: { name: 'ComponentFormConfigValidateChangeToSubmit' } },
-            { title: '手动调用', routerLink: { name: 'ComponentFormConfigValidateManual' } }
+            // 校验规则配置
+            { i18nKey: 'app.aside.menu.formValidationRulesConfig', routerLink: { name: 'ComponentFormConfigValidateRules' } },
+            // 字符串校验规则
+            { i18nKey: 'app.aside.menu.formStringValidationRule', routerLink: { name: 'ComponentFormConfigValidateString' } },
+            // 数值校验规则
+            { i18nKey: 'app.aside.menu.formNumberValidationRule', routerLink: { name: 'ComponentFormConfigValidateNumber' } },
+            // 正则校验规则
+            { i18nKey: 'app.aside.menu.formRegexpValidationRule', routerLink: { name: 'ComponentFormConfigValidateRegexp' } },
+            // 数组校验规则
+            { i18nKey: 'app.aside.menu.formArrayValidationRule', routerLink: { name: 'ComponentFormConfigValidateArray' } },
+            // 多关联字段校验规则
+            { i18nKey: 'app.aside.menu.formMultiFieldValidationRule', routerLink: { name: 'ComponentFormConfigValidateField' } },
+            // 自定义校验规则
+            { i18nKey: 'app.aside.menu.formCustomValidationRule', routerLink: { name: 'ComponentFormConfigValidateCustom' } },
+            // 显示提示消息
+            { i18nKey: 'app.aside.menu.formShowTipMessage', routerLink: { name: 'ComponentFormConfigValidateShowMessage' } },
+            // 显示提示图标
+            { i18nKey: 'app.aside.menu.formShowTipIcon', routerLink: { name: 'ComponentFormConfigValidateShowErrorIcon' } },
+            // 错误提示样式
+            { i18nKey: 'app.aside.menu.formErrorTipStyle', routerLink: { name: 'ComponentFormConfigValidateTheme' } },
+            // 值改变时自动提交
+            { i18nKey: 'app.aside.menu.formAutoSubmitOnChange', routerLink: { name: 'ComponentFormConfigValidateChangeToSubmit' } },
+            // 手动调用
+            { i18nKey: 'app.aside.menu.formManualCall', routerLink: { name: 'ComponentFormConfigValidateManual' } }
           ]
         },
         {
-          title: '渲染 - 配置式',
+          // 渲染 - 配置式
+          i18nKey: 'app.aside.menu.formRenderConfig',
           children: [
-            { title: 'input 原生-输入框', routerLink: { name: 'ComponentFormConfigItemRenderInput' } },
-            { title: 'textarea 原生-文本域', routerLink: { name: 'ComponentFormConfigItemRenderTextarea' } },
-            { title: 'select 原生-下拉框', routerLink: { name: 'ComponentFormConfigItemRenderSelect' } },
-            { title: 'VxeInput 单行输入框', routerLink: { name: 'ComponentFormConfigItemRenderVxeInput' } },
-            { title: 'VxeButtonGroup 按钮组', routerLink: { name: 'ComponentFormConfigItemRenderVxeButtonGroup' } },
-            { title: 'VxeTextarea 文本域', routerLink: { name: 'ComponentFormConfigItemRenderVxeTextarea' } },
-            { title: 'VxeNumberInput 数值输入', routerLink: { name: 'ComponentFormConfigItemRenderVxeNumberInput' } },
-            { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormConfigItemRenderVxeSelect' } },
-            { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormConfigItemRenderVxeDatePicker' } },
-            { title: 'VxeDateRangePicker 日期范围选择', routerLink: { name: 'ComponentFormConfigItemRenderVxeDateRangePicker' } },
-            { title: 'VxeCascader 级联选择', routerLink: { name: 'ComponentFormConfigItemRenderVxeCascader' } },
-            { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentFormConfigItemRenderVxeTreeSelect' } },
-            { title: 'VxeTableSelect 下拉表格选择', routerLink: { name: 'ComponentFormConfigItemRenderVxeTableSelect' } },
-            { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormConfigItemRenderVxeSwitch' } },
-            { title: 'VxeRadioGroup 单选组件', routerLink: { name: 'ComponentFormConfigItemRenderVxeRadioGroup' } },
-            { title: 'VxeCheckboxGroup 复选组', routerLink: { name: 'ComponentFormConfigItemRenderVxeCheckboxGroup' } },
-            { title: 'VxeRate 评分', routerLink: { name: 'ComponentFormConfigItemRenderVxeRate' } },
-            { title: 'VxeRate 滑块', routerLink: { name: 'ComponentFormConfigItemRenderVxeSlider' } },
-            { title: 'VxeImage 图片', routerLink: { name: 'ComponentFormConfigItemRenderVxeImage' } },
-            { title: 'VxeImageGroup 图片组', routerLink: { name: 'ComponentFormConfigItemRenderVxeImageGroup' } },
-            { title: 'VxeUpload 上传', routerLink: { name: 'ComponentFormConfigItemRenderVxeUpload' } },
+            // input 原生-输入框
+            { i18nKey: 'app.aside.menu.formNativeInput', routerLink: { name: 'ComponentFormConfigItemRenderInput' } },
+            // textarea 原生-文本域
+            { i18nKey: 'app.aside.menu.formNativeTextarea', routerLink: { name: 'ComponentFormConfigItemRenderTextarea' } },
+            // select 原生-下拉框
+            { i18nKey: 'app.aside.menu.formNativeSelect', routerLink: { name: 'ComponentFormConfigItemRenderSelect' } },
+            // VxeInput 单行输入框
+            { i18nKey: 'app.aside.menu.formVxeInput', routerLink: { name: 'ComponentFormConfigItemRenderVxeInput' } },
+            // VxeButtonGroup 按钮组
+            { i18nKey: 'app.aside.menu.formVxeButtonGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeButtonGroup' } },
+            // VxeTextarea 文本域
+            { i18nKey: 'app.aside.menu.formVxeTextarea', routerLink: { name: 'ComponentFormConfigItemRenderVxeTextarea' } },
+            // VxeNumberInput 数值输入
+            { i18nKey: 'app.aside.menu.formVxeNumberInputValue', routerLink: { name: 'ComponentFormConfigItemRenderVxeNumberInput' } },
+            // VxeSelect 下拉框
+            { i18nKey: 'app.aside.menu.formVxeSelect', routerLink: { name: 'ComponentFormConfigItemRenderVxeSelect' } },
+            // VxeDatePicker 日期选择
+            { i18nKey: 'app.aside.menu.formVxeDatePicker', routerLink: { name: 'ComponentFormConfigItemRenderVxeDatePicker' } },
+            // VxeDateRangePicker 日期范围选择
+            { i18nKey: 'app.aside.menu.formVxeDateRangePicker', routerLink: { name: 'ComponentFormConfigItemRenderVxeDateRangePicker' } },
+            // VxeCascader 级联选择
+            { i18nKey: 'app.aside.menu.formVxeCascader', routerLink: { name: 'ComponentFormConfigItemRenderVxeCascader' } },
+            // VxeTreeSelect 下拉树选择
+            { i18nKey: 'app.aside.menu.formVxeTreeSelect', routerLink: { name: 'ComponentFormConfigItemRenderVxeTreeSelect' } },
+            // VxeTableSelect 下拉表格选择
+            { i18nKey: 'app.aside.menu.formVxeTableSelect', routerLink: { name: 'ComponentFormConfigItemRenderVxeTableSelect' } },
+            // VxeSwitch 开关
+            { i18nKey: 'app.aside.menu.formVxeSwitch', routerLink: { name: 'ComponentFormConfigItemRenderVxeSwitch' } },
+            // VxeRadioGroup 单选组件
+            { i18nKey: 'app.aside.menu.formVxeRadioGroupComponent', routerLink: { name: 'ComponentFormConfigItemRenderVxeRadioGroup' } },
+            // VxeCheckboxGroup 复选组
+            { i18nKey: 'app.aside.menu.formVxeCheckboxGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeCheckboxGroup' } },
+            // VxeRate 评分
+            { i18nKey: 'app.aside.menu.formVxeRate', routerLink: { name: 'ComponentFormConfigItemRenderVxeRate' } },
+            // VxeRate 滑块
+            { i18nKey: 'app.aside.menu.formVxeRateSlider', routerLink: { name: 'ComponentFormConfigItemRenderVxeSlider' } },
+            // VxeImage 图片
+            { i18nKey: 'app.aside.menu.formVxeImage', routerLink: { name: 'ComponentFormConfigItemRenderVxeImage' } },
+            // VxeImageGroup 图片组
+            { i18nKey: 'app.aside.menu.formVxeImageGroup', routerLink: { name: 'ComponentFormConfigItemRenderVxeImageGroup' } },
+            // VxeUpload 上传
+            { i18nKey: 'app.aside.menu.formVxeUpload', routerLink: { name: 'ComponentFormConfigItemRenderVxeUpload' } },
             // { title: 'WangEditor 第三方扩展-富文本', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-wangeditor/form/itemRender/wang-editor`, linkTarget: '_blank' },
-            { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form/itemRender/el-input`, linkTarget: '_blank' },
-            { title: '只读模式', routerLink: { name: 'ComponentFormConfigItemRenderReadonly' } },
-            { title: '禁用模式', routerLink: { name: 'ComponentFormConfigItemRenderDisabled' } },
-            { title: '实现联动禁用', routerLink: { name: 'ComponentFormConfigItemRenderLinkageDisabled' } }
+            // 集成第三方扩展插件
+            { i18nKey: 'app.aside.menu.formIntegrateThirdPartyPlugin', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form/itemRender/el-input`, linkTarget: '_blank' },
+            // 只读模式
+            { i18nKey: 'app.aside.menu.formReadonlyMode', routerLink: { name: 'ComponentFormConfigItemRenderReadonly' } },
+            // 禁用模式
+            { i18nKey: 'app.aside.menu.formDisabledMode', routerLink: { name: 'ComponentFormConfigItemRenderDisabled' } },
+            // 实现联动禁用
+            { i18nKey: 'app.aside.menu.formLinkageDisabled', routerLink: { name: 'ComponentFormConfigItemRenderLinkageDisabled' } }
           ]
         },
         {
-          title: '渲染 - 插槽式',
+          // 渲染 - 插槽式
+          i18nKey: 'app.aside.menu.formRenderSlot',
           children: [
-            { title: 'VxeButton 按钮', routerLink: { name: 'ComponentFormConfigItemTemplateVxeButton' } },
-            { title: 'VxeInput 单行输入框', routerLink: { name: 'ComponentFormConfigItemTemplateVxeInput' } },
-            { title: 'VxeTextarea 文本域', routerLink: { name: 'ComponentFormConfigItemTemplateVxeTextarea' } },
-            { title: 'VxeNumberInput 数值输入', routerLink: { name: 'ComponentFormConfigItemTemplateVxeNumberInput' } },
-            { title: 'VxeSelect 下拉框', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSelect' } },
-            { title: 'VxeDatePicker 日期选择', routerLink: { name: 'ComponentFormConfigItemTemplateVxeDatePicker' } },
-            { title: 'VxeDateRangePicker 日期范围选择', routerLink: { name: 'ComponentFormConfigItemTemplateVxeDateRangePicker' } },
-            { title: 'VxeCascader 级联选择', routerLink: { name: 'ComponentFormConfigItemTemplateVxeCascader' } },
-            { title: 'VxeTreeSelect 下拉树选择', routerLink: { name: 'ComponentFormConfigItemTemplateVxeTreeSelect' } },
-            { title: 'VxeSwitch 开关', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSwitch' } },
-            { title: 'VxeRadioGroup 单选组', routerLink: { name: 'ComponentFormConfigItemTemplateVxeRadioGroup' } },
-            { title: 'VxeCheckboxGroup 复选组', routerLink: { name: 'ComponentFormConfigItemTemplateVxeCheckboxGroup' } },
-            { title: 'VxeRate 评分', routerLink: { name: 'ComponentFormConfigItemTemplateVxeRate' } },
-            { title: 'VxeRate 滑块', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSlider' } },
-            { title: 'VxeImage 图片', routerLink: { name: 'ComponentFormConfigItemTemplateVxeImage' } },
-            { title: 'VxeImageGroup 图片组', routerLink: { name: 'ComponentFormConfigItemTemplateVxeImageGroup' } },
-            { title: 'VxeUpload 上传', routerLink: { name: 'ComponentFormConfigItemTemplateVxeUpload' } },
-            { title: '只读模式', routerLink: { name: 'ComponentFormConfigItemTemplateReadonly' } },
+            // VxeButton 按钮
+            { i18nKey: 'app.aside.menu.formVxeButton', routerLink: { name: 'ComponentFormConfigItemTemplateVxeButton' } },
+            // VxeInput 单行输入框
+            { i18nKey: 'app.aside.menu.formVxeInput', routerLink: { name: 'ComponentFormConfigItemTemplateVxeInput' } },
+            // VxeTextarea 文本域
+            { i18nKey: 'app.aside.menu.formVxeTextarea', routerLink: { name: 'ComponentFormConfigItemTemplateVxeTextarea' } },
+            // VxeNumberInput 数值输入
+            { i18nKey: 'app.aside.menu.formVxeNumberInputValue', routerLink: { name: 'ComponentFormConfigItemTemplateVxeNumberInput' } },
+            // VxeSelect 下拉框
+            { i18nKey: 'app.aside.menu.formVxeSelect', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSelect' } },
+            // VxeDatePicker 日期选择
+            { i18nKey: 'app.aside.menu.formVxeDatePicker', routerLink: { name: 'ComponentFormConfigItemTemplateVxeDatePicker' } },
+            // VxeDateRangePicker 日期范围选择
+            { i18nKey: 'app.aside.menu.formVxeDateRangePicker', routerLink: { name: 'ComponentFormConfigItemTemplateVxeDateRangePicker' } },
+            // VxeCascader 级联选择
+            { i18nKey: 'app.aside.menu.formVxeCascader', routerLink: { name: 'ComponentFormConfigItemTemplateVxeCascader' } },
+            // VxeTreeSelect 下拉树选择
+            { i18nKey: 'app.aside.menu.formVxeTreeSelect', routerLink: { name: 'ComponentFormConfigItemTemplateVxeTreeSelect' } },
+            // VxeSwitch 开关
+            { i18nKey: 'app.aside.menu.formVxeSwitch', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSwitch' } },
+            // VxeRadioGroup 单选组
+            { i18nKey: 'app.aside.menu.formVxeRadioGroup', routerLink: { name: 'ComponentFormConfigItemTemplateVxeRadioGroup' } },
+            // VxeCheckboxGroup 复选组
+            { i18nKey: 'app.aside.menu.formVxeCheckboxGroup', routerLink: { name: 'ComponentFormConfigItemTemplateVxeCheckboxGroup' } },
+            // VxeRate 评分
+            { i18nKey: 'app.aside.menu.formVxeRate', routerLink: { name: 'ComponentFormConfigItemTemplateVxeRate' } },
+            // VxeRate 滑块
+            { i18nKey: 'app.aside.menu.formVxeRateSlider', routerLink: { name: 'ComponentFormConfigItemTemplateVxeSlider' } },
+            // VxeImage 图片
+            { i18nKey: 'app.aside.menu.formVxeImage', routerLink: { name: 'ComponentFormConfigItemTemplateVxeImage' } },
+            // VxeImageGroup 图片组
+            { i18nKey: 'app.aside.menu.formVxeImageGroup', routerLink: { name: 'ComponentFormConfigItemTemplateVxeImageGroup' } },
+            // VxeUpload 上传
+            { i18nKey: 'app.aside.menu.formVxeUpload', routerLink: { name: 'ComponentFormConfigItemTemplateVxeUpload' } },
+            // 只读模式
+            { i18nKey: 'app.aside.menu.formReadonlyMode', routerLink: { name: 'ComponentFormConfigItemTemplateReadonly' } },
             // { title: 'WangEditor 第三方扩展-富文本', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-wangeditor/form/itemRender/wang-editor`, linkTarget: '_blank' },
-            { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form/itemRender/el-input`, linkTarget: '_blank' }
+            // 集成第三方扩展插件
+            { i18nKey: 'app.aside.menu.formIntegrateThirdPartyPlugin', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form/itemRender/el-input`, linkTarget: '_blank' }
           ]
         },
         {
-          title: '自定义插槽模板',
+          // 自定义插槽模板
+          i18nKey: 'app.aside.menu.formCustomSlotTemplate',
           children: [
-            { title: '自定义标题模板', routerLink: { name: 'ComponentFormConfigTemplateTitle' } },
-            { title: '自定义标题前缀模板', routerLink: { name: 'ComponentFormConfigTemplatePrefix' } },
-            { title: '自定义标题后缀模板', routerLink: { name: 'ComponentFormConfigTemplateSuffix' } },
-            { title: '自定义内容模板', routerLink: { name: 'ComponentFormConfigTemplateContent' } }
+            // 自定义标题模板
+            { i18nKey: 'app.aside.menu.formCustomTitleTemplate', routerLink: { name: 'ComponentFormConfigTemplateTitle' } },
+            // 自定义标题前缀模板
+            { i18nKey: 'app.aside.menu.formCustomTitlePrefixTemplate', routerLink: { name: 'ComponentFormConfigTemplatePrefix' } },
+            // 自定义标题后缀模板
+            { i18nKey: 'app.aside.menu.formCustomTitleSuffixTemplate', routerLink: { name: 'ComponentFormConfigTemplateSuffix' } },
+            // 自定义内容模板
+            { i18nKey: 'app.aside.menu.formCustomContentTemplate', routerLink: { name: 'ComponentFormConfigTemplateContent' } }
           ]
         },
-        { title: '在页签中使用', routerLink: { name: 'ComponentFormConfigTabs' } },
-        { title: '实现简历模板', routerLink: { name: 'ComponentFormConfigResumeTemplate' } }
+        // 在页签中使用
+        { i18nKey: 'app.aside.menu.formUseInTabs', routerLink: { name: 'ComponentFormConfigTabs' } },
+        // 实现简历模板
+        { i18nKey: 'app.aside.menu.formResumeTemplate', routerLink: { name: 'ComponentFormConfigResumeTemplate' } }
       ]
     },
     {
+      // Css 变量
       i18nKey: 'app.aside.menu.cssVar',
       children: [
-        { title: '校验提示框', routerLink: { name: 'CssVarFormValid' } }
+        // 校验提示框
+        { i18nKey: 'app.aside.menu.formValidationTipBox', routerLink: { name: 'CssVarFormValid' } }
       ]
     },
     {
+      // 校验（全局复用）
       i18nKey: 'app.aside.menu.formGlobalValidators',
       children: [
         { title: 'API', routerLink: { name: 'GlobalValidatorsFormAPI' } },
-        { title: '表单项校验', routerLink: { name: 'GlobalValidatorsFormBase' } },
-        { title: '便捷校验配置插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-validator/form/base`, linkTarget: '_blank' }
+        // 表单项校验
+        { i18nKey: 'app.aside.menu.formFormItemValidation', routerLink: { name: 'GlobalValidatorsFormBase' } },
+        // 便捷校验配置插件
+        { i18nKey: 'app.aside.menu.formConvenientValidationConfigPlugin', isPlugin: true, linkUrl: `${otherUrl}#/plugin-validator/form/base`, linkTarget: '_blank' }
       ]
     },
     {
+      // 表单项 - 格式化（全局复用）
       i18nKey: 'app.aside.menu.formGlobalFormats',
       children: [
         { title: 'API', routerLink: { name: 'GlobalFormatsFormAPI' } },
-        { title: '表单项', routerLink: { name: 'GlobalFormatsFormBase' } }
+        // 表单项
+        { i18nKey: 'app.aside.menu.formFormItem', routerLink: { name: 'GlobalFormatsFormBase' } }
       ]
     },
     {
+      // 渲染器（高阶复用）
       i18nKey: 'app.aside.menu.formGlobalRenderer',
       children: [
         { title: 'API', routerLink: { name: 'GlobalRendererFormAPI' } },
         {
-          title: '表单项',
+          // 表单项
+          i18nKey: 'app.aside.menu.formFormItem',
           children: [
-            { title: '实现一个金额输入', routerLink: { name: 'GlobalRendererFormItemMyItemAmount' } },
-            { title: '实现一个附件上传', routerLink: { name: 'GlobalRendererFormItemMyItemUpload' } },
-            { title: '集成第三方扩展插件', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form/itemRender/el-input`, linkTarget: '_blank' }
+            // 实现一个金额输入
+            { i18nKey: 'app.aside.menu.formAmountInputExample', routerLink: { name: 'GlobalRendererFormItemMyItemAmount' } },
+            // 实现一个附件上传
+            { i18nKey: 'app.aside.menu.formAttachmentUploadExample', routerLink: { name: 'GlobalRendererFormItemMyItemUpload' } },
+            // 集成第三方扩展插件
+            { i18nKey: 'app.aside.menu.formIntegrateThirdPartyPlugin', isPlugin: true, linkUrl: `${otherUrl}#/plugin-render-element/form/itemRender/el-input`, linkTarget: '_blank' }
           ]
         }
       ]

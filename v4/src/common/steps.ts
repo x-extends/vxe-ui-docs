@@ -1,16 +1,16 @@
 import { NavVO } from './nav'
 
 export const stepsNavConfig: NavVO = {
-  title: 'Steps 步骤条',
+  i18nKey: 'app.aside.menu.stepsTitle',
   children: [
     { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'steps' } } },
-    { title: '尺寸大小', routerLink: { name: 'ComponentStepsSize' } },
-    { title: '绑定值', routerLink: { name: 'ComponentStepsValue' } },
-    { title: '显示步骤序号', routerLink: { name: 'ComponentStepsShowNum' } },
-    { title: '显示状态图标', routerLink: { name: 'ComponentStepsShowIcon' } },
-    { title: '布局方式', routerLink: { name: 'ComponentStepsVertical' } },
-    { title: '配置式', routerLink: { name: 'ComponentStepsOptions' } },
-    { title: '状态颜色', routerLink: { name: 'ComponentStepsStatus' } },
-    { title: '简化样式', routerLink: { name: 'ComponentStepsType' } }
+    { i18nKey: 'app.aside.menu.stepsSize', routerLink: { name: 'ComponentStepsSize' } },
+    { i18nKey: 'app.aside.menu.stepsValue', routerLink: { name: 'ComponentStepsValue' } },
+    { i18nKey: 'app.aside.menu.stepsShowNum', routerLink: { name: 'ComponentStepsShowNum' } },
+    { i18nKey: 'app.aside.menu.stepsShowIcon', routerLink: { name: 'ComponentStepsShowIcon' } },
+    { i18nKey: 'app.aside.menu.stepsLayout', routerLink: { name: 'ComponentStepsVertical' } },
+    { i18nKey: 'app.aside.menu.stepsOptions', routerLink: { name: 'ComponentStepsOptions' } },
+    { i18nKey: 'app.aside.menu.stepsStatus', routerLink: { name: 'ComponentStepsStatus' } },
+    { i18nKey: 'app.aside.menu.stepsType', routerLink: { name: 'ComponentStepsType' } }
   ]
 }

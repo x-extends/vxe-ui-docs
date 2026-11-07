@@ -8,112 +8,112 @@ export const modalNavConfig: NavVO = {
     {
       i18nKey: 'app.aside.menu.modalMessageTitle',
       children: [
-        { title: '全局调用', routerLink: { name: 'ComponentModalMessageGlobal' } },
-        { title: '唯一', routerLink: { name: 'ComponentModalMessageMultiple' } },
-        { title: '状态提示', routerLink: { name: 'ComponentModalMessageStatus' } },
-        { title: '显示HTML标签', routerLink: { name: 'ComponentModalMessageHtml' } },
-        { title: '自定义插槽模板', routerLink: { name: 'ComponentModalMessageTemplate' } }
+        { i18nKey: 'app.aside.menu.modalGlobalInvoke', routerLink: { name: 'ComponentModalMessageGlobal' } },
+        { i18nKey: 'app.aside.menu.modalUnique', routerLink: { name: 'ComponentModalMessageMultiple' } },
+        { i18nKey: 'app.aside.menu.modalStatusTip', routerLink: { name: 'ComponentModalMessageStatus' } },
+        { i18nKey: 'app.aside.menu.modalHtml', routerLink: { name: 'ComponentModalMessageHtml' } },
+        { i18nKey: 'app.aside.menu.modalCustomSlotTemplate', routerLink: { name: 'ComponentModalMessageTemplate' } }
       ]
     },
     {
       i18nKey: 'app.aside.menu.modalNotificationTitle',
       children: [
-        { title: '全局调用', routerLink: { name: 'ComponentModalNotificationGlobal' } },
-        { title: '唯一', routerLink: { name: 'ComponentModalNotificationMultiple' } },
-        { title: '状态提示', routerLink: { name: 'ComponentModalNotificationStatus' } },
-        { title: '显示HTML标签', routerLink: { name: 'ComponentModalNotificationHtml' } },
-        { title: '带操作按钮', routerLink: { name: 'ComponentModalNotificationFooter' } },
-        { title: '自定义插槽模板', routerLink: { name: 'ComponentModalNotificationTemplate' } }
+        { i18nKey: 'app.aside.menu.modalGlobalInvoke', routerLink: { name: 'ComponentModalNotificationGlobal' } },
+        { i18nKey: 'app.aside.menu.modalUnique', routerLink: { name: 'ComponentModalNotificationMultiple' } },
+        { i18nKey: 'app.aside.menu.modalStatusTip', routerLink: { name: 'ComponentModalNotificationStatus' } },
+        { i18nKey: 'app.aside.menu.modalHtml', routerLink: { name: 'ComponentModalNotificationHtml' } },
+        { i18nKey: 'app.aside.menu.modalWithActionButtons', routerLink: { name: 'ComponentModalNotificationFooter' } },
+        { i18nKey: 'app.aside.menu.modalCustomSlotTemplate', routerLink: { name: 'ComponentModalNotificationTemplate' } }
       ]
     },
     {
       i18nKey: 'app.aside.menu.modalAlertTitle',
       children: [
-        { title: '全局调用', routerLink: { name: 'ComponentModalAlertGlobal' } },
-        { title: '显示HTML标签', routerLink: { name: 'ComponentModalAlertHtml' } },
-        { title: '弹出多个', routerLink: { name: 'ComponentModalAlertMultiple' } },
-        { title: '禁止拖动', routerLink: { name: 'ComponentModalAlertDraggable' } },
-        { title: '按 Esc 键可关闭', routerLink: { name: 'ComponentModalAlertEscClosable' } },
-        { title: '状态提示', routerLink: { name: 'ComponentModalAlertStatus' } },
-        { title: '手动关闭', routerLink: { name: 'ComponentModalAlertManual' } },
-        { title: '自定义插槽模板', routerLink: { name: 'ComponentModalAlertTemplate' } }
+        { i18nKey: 'app.aside.menu.modalGlobalInvoke', routerLink: { name: 'ComponentModalAlertGlobal' } },
+        { i18nKey: 'app.aside.menu.modalHtml', routerLink: { name: 'ComponentModalAlertHtml' } },
+        { i18nKey: 'app.aside.menu.modalMultiplePopup', routerLink: { name: 'ComponentModalAlertMultiple' } },
+        { i18nKey: 'app.aside.menu.modalDraggableDisabled', routerLink: { name: 'ComponentModalAlertDraggable' } },
+        { i18nKey: 'app.aside.menu.modalEscClosable', routerLink: { name: 'ComponentModalAlertEscClosable' } },
+        { i18nKey: 'app.aside.menu.modalStatusTip', routerLink: { name: 'ComponentModalAlertStatus' } },
+        { i18nKey: 'app.aside.menu.modalManualClose', routerLink: { name: 'ComponentModalAlertManual' } },
+        { i18nKey: 'app.aside.menu.modalCustomSlotTemplate', routerLink: { name: 'ComponentModalAlertTemplate' } }
       ]
     },
     {
       i18nKey: 'app.aside.menu.modalConfirmTitle',
       children: [
-        { title: '全局调用', routerLink: { name: 'ComponentModalConfirmGlobal' } },
-        { title: '加载中', routerLink: { name: 'ComponentModalConfirmLoading' } },
-        { title: '显示HTML标签', routerLink: { name: 'ComponentModalConfirmHtml' } },
-        { title: '弹出多个', routerLink: { name: 'ComponentModalConfirmMultiple' } },
-        { title: '禁止拖动', routerLink: { name: 'ComponentModalConfirmDraggable' } },
-        { title: '按 Esc 键可关闭', routerLink: { name: 'ComponentModalConfirmEscClosable' } },
-        { title: '手动关闭', routerLink: { name: 'ComponentModalConfirmManual' } },
-        { title: '自定义插槽模板', routerLink: { name: 'ComponentModalConfirmTemplate' } }
+        { i18nKey: 'app.aside.menu.modalGlobalInvoke', routerLink: { name: 'ComponentModalConfirmGlobal' } },
+        { i18nKey: 'app.aside.menu.modalLoading', routerLink: { name: 'ComponentModalConfirmLoading' } },
+        { i18nKey: 'app.aside.menu.modalHtml', routerLink: { name: 'ComponentModalConfirmHtml' } },
+        { i18nKey: 'app.aside.menu.modalMultiplePopup', routerLink: { name: 'ComponentModalConfirmMultiple' } },
+        { i18nKey: 'app.aside.menu.modalDraggableDisabled', routerLink: { name: 'ComponentModalConfirmDraggable' } },
+        { i18nKey: 'app.aside.menu.modalEscClosable', routerLink: { name: 'ComponentModalConfirmEscClosable' } },
+        { i18nKey: 'app.aside.menu.modalManualClose', routerLink: { name: 'ComponentModalConfirmManual' } },
+        { i18nKey: 'app.aside.menu.modalCustomSlotTemplate', routerLink: { name: 'ComponentModalConfirmTemplate' } }
       ]
     },
     {
       i18nKey: 'app.aside.menu.modalModalTitle',
       children: [
-        { title: '全局调用', routerLink: { name: 'ComponentModalModalGlobal' } },
-        { title: '弹窗', routerLink: { name: 'ComponentModalModalBase' } },
-        { title: '尺寸大小', routerLink: { name: 'ComponentModalModalSize' } },
-        { title: '自定义模板', routerLink: { name: 'ComponentModalModalTemplateFooter' } },
-        { title: '完整插槽模板', routerLink: { name: 'ComponentModalModalTemplateLayout' } },
-        { title: '边框', routerLink: { name: 'ComponentModalModalBorder' } },
-        { title: '标题背景', routerLink: { name: 'ComponentModalModalTitleBg' } },
-        { title: '内边距', routerLink: { name: 'ComponentModalModalPadding' } },
-        { title: '加载中', routerLink: { name: 'ComponentModalModalLoading' } },
-        { title: '预加载', routerLink: { name: 'ComponentModalModalPreload' } },
-        { title: '显示HTML标签', routerLink: { name: 'ComponentModalModalHtml' } },
-        { title: '遮罩层', routerLink: { name: 'ComponentModalModalMask' } },
-        { title: '锁页面滚动条', routerLink: { name: 'ComponentModalModalLockScroll' } },
-        { title: '锁定页面操作', routerLink: { name: 'ComponentModalModalLockView' } },
-        { title: '拖动窗口', routerLink: { name: 'ComponentModalModalDraggable' } },
-        { title: '同时弹出多个窗口', routerLink: { name: 'ComponentModalModalMultiple' } },
-        { title: '按 Esc 键可关闭', routerLink: { name: 'ComponentModalModalEscClosable' } },
-        { title: '拦截关闭', routerLink: { name: 'ComponentModalModalBeforeHide' } },
-        { title: '操作按钮', routerLink: { name: 'ComponentModalModalButton' } },
-        { title: '点击确认按钮不可关闭', routerLink: { name: 'ComponentModalModalConfirmClosable' } },
-        { title: '点击取消按钮不可关闭', routerLink: { name: 'ComponentModalModalCancelClosable' } },
-        { title: '拖动调整宽高', routerLink: { name: 'ComponentModalModalResize' } },
-        { title: '全屏展示', routerLink: { name: 'ComponentModalModalFullscreen' } },
-        { title: '窗口最大化', routerLink: { name: 'ComponentModalModalMaximize' } },
-        { title: '窗口最小化', routerLink: { name: 'ComponentModalModalMinimize' } },
-        { title: '最大化与最小化', routerLink: { name: 'ComponentModalModalZoom' } },
-        { title: '自定义窗口最小化的排列方式', routerLink: { name: 'ComponentModalModalMinimizeLayout' } },
-        { title: '保留状态', routerLink: { name: 'ComponentModalModalRemember' } },
-        { title: '记忆功能', routerLink: { name: 'ComponentModalModalStorage' } },
-        { title: '显示到挂载区域中', routerLink: { name: 'ComponentModalModalWithin' } },
-        { title: '嵌入 iframe', routerLink: { name: 'ComponentModalModalIframe' } },
-        { title: '手动操作', routerLink: { name: 'ComponentModalModalManual' } },
-        { title: '完整功能', routerLink: { name: 'ComponentModalModalFull' } }
+        { i18nKey: 'app.aside.menu.modalGlobalInvoke', routerLink: { name: 'ComponentModalModalGlobal' } },
+        { i18nKey: 'app.aside.menu.modalDialog', routerLink: { name: 'ComponentModalModalBase' } },
+        { i18nKey: 'app.aside.menu.modalSize', routerLink: { name: 'ComponentModalModalSize' } },
+        { i18nKey: 'app.aside.menu.modalCustomTemplate', routerLink: { name: 'ComponentModalModalTemplateFooter' } },
+        { i18nKey: 'app.aside.menu.modalFullSlotTemplate', routerLink: { name: 'ComponentModalModalTemplateLayout' } },
+        { i18nKey: 'app.aside.menu.modalBorder', routerLink: { name: 'ComponentModalModalBorder' } },
+        { i18nKey: 'app.aside.menu.modalTitleBg', routerLink: { name: 'ComponentModalModalTitleBg' } },
+        { i18nKey: 'app.aside.menu.modalPadding', routerLink: { name: 'ComponentModalModalPadding' } },
+        { i18nKey: 'app.aside.menu.modalLoading', routerLink: { name: 'ComponentModalModalLoading' } },
+        { i18nKey: 'app.aside.menu.modalPreload', routerLink: { name: 'ComponentModalModalPreload' } },
+        { i18nKey: 'app.aside.menu.modalHtml', routerLink: { name: 'ComponentModalModalHtml' } },
+        { i18nKey: 'app.aside.menu.modalMask', routerLink: { name: 'ComponentModalModalMask' } },
+        { i18nKey: 'app.aside.menu.modalLockScroll', routerLink: { name: 'ComponentModalModalLockScroll' } },
+        { i18nKey: 'app.aside.menu.modalLockView', routerLink: { name: 'ComponentModalModalLockView' } },
+        { i18nKey: 'app.aside.menu.modalDraggable', routerLink: { name: 'ComponentModalModalDraggable' } },
+        { i18nKey: 'app.aside.menu.modalMultipleWindows', routerLink: { name: 'ComponentModalModalMultiple' } },
+        { i18nKey: 'app.aside.menu.modalEscClosable', routerLink: { name: 'ComponentModalModalEscClosable' } },
+        { i18nKey: 'app.aside.menu.modalBeforeHide', routerLink: { name: 'ComponentModalModalBeforeHide' } },
+        { i18nKey: 'app.aside.menu.modalButton', routerLink: { name: 'ComponentModalModalButton' } },
+        { i18nKey: 'app.aside.menu.modalConfirmClosable', routerLink: { name: 'ComponentModalModalConfirmClosable' } },
+        { i18nKey: 'app.aside.menu.modalCancelClosable', routerLink: { name: 'ComponentModalModalCancelClosable' } },
+        { i18nKey: 'app.aside.menu.modalResize', routerLink: { name: 'ComponentModalModalResize' } },
+        { i18nKey: 'app.aside.menu.modalFullscreen', routerLink: { name: 'ComponentModalModalFullscreen' } },
+        { i18nKey: 'app.aside.menu.modalMaximize', routerLink: { name: 'ComponentModalModalMaximize' } },
+        { i18nKey: 'app.aside.menu.modalMinimize', routerLink: { name: 'ComponentModalModalMinimize' } },
+        { i18nKey: 'app.aside.menu.modalZoom', routerLink: { name: 'ComponentModalModalZoom' } },
+        { i18nKey: 'app.aside.menu.modalMinimizeLayout', routerLink: { name: 'ComponentModalModalMinimizeLayout' } },
+        { i18nKey: 'app.aside.menu.modalRemember', routerLink: { name: 'ComponentModalModalRemember' } },
+        { i18nKey: 'app.aside.menu.modalStorage', routerLink: { name: 'ComponentModalModalStorage' } },
+        { i18nKey: 'app.aside.menu.modalWithin', routerLink: { name: 'ComponentModalModalWithin' } },
+        { i18nKey: 'app.aside.menu.modalIframe', routerLink: { name: 'ComponentModalModalIframe' } },
+        { i18nKey: 'app.aside.menu.modalManual', routerLink: { name: 'ComponentModalModalManual' } },
+        { i18nKey: 'app.aside.menu.modalFull', routerLink: { name: 'ComponentModalModalFull' } }
       ]
     },
     {
-      title: '滚动条',
+      i18nKey: 'app.aside.menu.modalScrollbar',
       children: [
         {
-          title: '原生滚动条',
+          i18nKey: 'app.aside.menu.modalNativeScrollbar',
           children: [
-            { title: '使用滚动条', routerLink: { name: 'ComponentModalModalScrollbarNativeScrollbar' } }
+            { i18nKey: 'app.aside.menu.modalUseScrollbar', routerLink: { name: 'ComponentModalModalScrollbarNativeScrollbar' } }
           ]
         },
         {
-          title: '虚拟滚动条',
+          i18nKey: 'app.aside.menu.modalVirtualScrollbar',
           children: [
-            { title: '使用滚动条', routerLink: { name: 'ComponentModalModalScrollbarUseScrollbarScrollbar' } }
+            { i18nKey: 'app.aside.menu.modalUseScrollbar', routerLink: { name: 'ComponentModalModalScrollbarUseScrollbarScrollbar' } }
           ]
         }
       ]
     },
     {
-      title: '功能示例',
+      i18nKey: 'app.aside.menu.modalFeatureExamples',
       children: [
-        { title: '弹窗与表单', routerLink: { name: 'ComponentModalModalOtherForm' } },
-        { title: '弹窗与表格', routerLink: { name: 'ComponentModalModalOtherTable' } },
-        { title: '弹窗中实现左边树和右边表格', routerLink: { name: 'ComponentModalModalOtherLeftRight' } },
-        { title: '弹窗中展示多表格', routerLink: { name: 'ComponentModalModalOtherSplitTable' } }
+        { i18nKey: 'app.aside.menu.modalWithForm', routerLink: { name: 'ComponentModalModalOtherForm' } },
+        { i18nKey: 'app.aside.menu.modalWithTable', routerLink: { name: 'ComponentModalModalOtherTable' } },
+        { i18nKey: 'app.aside.menu.modalLeftRightInModal', routerLink: { name: 'ComponentModalModalOtherLeftRight' } },
+        { i18nKey: 'app.aside.menu.modalSplitTableInModal', routerLink: { name: 'ComponentModalModalOtherSplitTable' } }
       ]
     }
   ]
