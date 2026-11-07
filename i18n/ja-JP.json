@@ -236,6 +236,8 @@
         "tableHighlightColumn": "列をハイライト",
         "tableHighlightRow": "行をハイライト",
         "tableDragResizeColumnWidth": "ドラッグで列幅を調整",
+        "tableDragResizeRowHeight": "拖拽调整行高",
+        "tableCustomTipTemplate": "自定义提示模板",
         "tableMinHeight": "テーブル最小高さ",
         "tableHeight": "テーブル高さ",
         "tableMaxHeight": "テーブル最大高さ",

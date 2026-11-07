@@ -236,6 +236,8 @@
         "tableHighlightColumn": "醒目提示欄",
         "tableHighlightRow": "醒目提示列",
         "tableDragResizeColumnWidth": "拖曳調整欄寬",
+        "tableDragResizeRowHeight": "拖拽调整行高",
+        "tableCustomTipTemplate": "自定义提示模板",
         "tableMinHeight": "表格最小高度",
         "tableHeight": "表格高度",
         "tableMaxHeight": "表格最大高度",
