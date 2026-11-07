@@ -1,4 +1,4 @@
-import { NavVO, otherUrl, oldExtendUrl } from './nav'
+import { NavVO, otherUrl } from './nav'
 
 export const gridNavConfig: NavVO = {
   // Grid 配置式表格
