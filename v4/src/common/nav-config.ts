@@ -1674,7 +1674,7 @@ export const navConfigList: NavVO[] = [
       },
       {
         // 警告提示
-        i18nKey: 'app.aside.menu.feedbackAlertTitle',
+        i18nKey: 'app.aside.menu.alertTitle',
         children: [
           { title: 'API', isSelfAPI: true, routerLink: { name: 'DocsApi', params: { name: 'alert' } } },
           // 基础用法
