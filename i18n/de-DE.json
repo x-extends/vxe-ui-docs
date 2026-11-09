@@ -2074,6 +2074,7 @@
         "fixDocs": "Fehler melden",
         "fixDocTip": "Wenn diese Dokumentation Fehler enthält oder nicht detailliert genug ist, können Sie sie durch Einreichen eines PR verbessern!",
         "copyCode": "Code kopieren",
+        "openCode": "新窗口打开",
         "showCode": "Code anzeigen",
         "showTsCode": "TS anzeigen",
         "showJsCode": "JS anzeigen",

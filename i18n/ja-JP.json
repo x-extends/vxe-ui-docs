@@ -2074,6 +2074,7 @@
         "fixDocs": "誤りを報告",
         "fixDocTip": "このドキュメントに誤りや不足がある場合は、PR を送信して改善にご協力ください！",
         "copyCode": "コードをコピー",
+        "openCode": "新窗口打开",
         "showCode": "コードを表示",
         "showTsCode": "TS を表示",
         "showJsCode": "JS を表示",

@@ -2074,6 +2074,7 @@
         "fixDocs": "Signaler une erreur",
         "fixDocTip": "Si ce document contient des erreurs ou manque de détails, vous pouvez aider à l'améliorer en soumettant une PR.",
         "copyCode": "Copier le code",
+        "openCode": "新窗口打开",
         "showCode": "Afficher le code",
         "showTsCode": "Afficher TS",
         "showJsCode": "Afficher JS",
