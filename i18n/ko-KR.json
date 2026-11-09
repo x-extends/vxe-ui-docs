@@ -2078,6 +2078,8 @@
         "showTsCode": "TS를 보여주십시오",
         "showJsCode": "JS를 보여주십시오",
         "hideCode": "코드를 숨 깁니다",
+        "showSetupCDN": "组合式 CDN",
+        "showOptionCDN": "选项式 CDN",
         "showSetupJS": "조합 js",
         "showOptionJS": "선택적 js",
         "showSetupTS": "조합 ts",

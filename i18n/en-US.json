@@ -2078,6 +2078,8 @@
         "showTsCode": "Show TS",
         "showJsCode": "Show JS",
         "hideCode": "Hide Code",
+        "showSetupCDN": "Setup CDN",
+        "showOptionCDN": "Options CDN",
         "showSetupJS": "Setup JS",
         "showOptionJS": "Options JS",
         "showSetupTS": "Setup TS",
