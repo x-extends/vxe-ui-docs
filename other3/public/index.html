@@ -26,10 +26,5 @@
     <script type="text/javascript" src="<%= VUE_APP_CDN_URL %>exceljs@4.4.0/dist/exceljs.min.js"></script>
     <script type="text/javascript" src="<%= VUE_APP_CDN_URL %>jspdf@3.0.4/dist/jspdf.umd.js"></script>
     <script type="text/javascript" src="<%= VUE_APP_CDN_URL %>@wangeditor/editor@5.1.23/dist/index.js"></script>
-    
-    <script type="module">
-      const sass = await import('https://jspm.dev/sass')
-      window.compileScss = (code) => sass.compileString(code).css;
-    </script>
   </body>
 </html>
