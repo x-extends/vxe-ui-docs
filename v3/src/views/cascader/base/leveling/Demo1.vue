@@ -4,7 +4,7 @@
       v-model="val1"
       :tree-config="treeConfig"
       :options="treeList"
-      :option-props="{title: 'title', value: 'id'}">
+      :option-props="{label: 'title', value: 'id'}">
     </vxe-cascader>
   </div>
 </template>
