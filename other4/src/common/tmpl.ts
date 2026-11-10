@@ -134,7 +134,6 @@ export function parseVueWithDOMParser (source: string) {
     }))
 
   return {
-    // —— 原有字段，结构不变 ——
     template: extractRawTemplate(raw),
     script: toScriptObj(normalScriptEl),
     style: {
@@ -143,11 +142,55 @@ export function parseVueWithDOMParser (source: string) {
     },
     styles: styleEls.map(toStyleObj),
 
-    // —— 新增字段 ——
     scriptSetup: setupScriptEl ? toScriptObj(setupScriptEl) : null,
     customBlocks,
     raw
   }
+}
+
+interface ScriptUrlResult {
+  scriptCode: string
+  scriptUrls: string[]
+  unresolved: string[]
+}
+
+function getScriptUrl (srcCode: string): ScriptUrlResult {
+  const importMap: Record<string, string> = {
+    axios: 'https://cdn.jsdelivr.net/npm/axios@1.20.0/dist/axios.min.js'
+  }
+
+  const scriptUrls: string[] = []
+  const unresolved: string[] = []
+
+  const resolve = (pkg: string): string | null => {
+    const url = importMap[pkg] || importMap[pkg.split('/')[0]]
+    if (url) {
+      if (!scriptUrls.includes(url)) {
+        scriptUrls.push(`<script src="${url}"></script>`)
+      }
+      return url
+    }
+    if (!unresolved.includes(pkg)) {
+      unresolved.push(pkg)
+    }
+    return null
+  }
+
+  let scriptCode = srcCode.replace(
+    /^[ \t]*import\s+[\s\S]*?from\s+['"]([^'"]+)['"][ \t]*;?[ \t]*$/gm,
+    (stmt, pkg) => resolve(pkg) ? '' : stmt
+  )
+
+  scriptCode = scriptCode.replace(
+    /^[ \t]*import\s+['"]([^'"]+)['"][ \t]*;?[ \t]*$/gm,
+    (stmt, pkg) => resolve(pkg) ? '' : stmt
+  )
+
+  if (unresolved.length) {
+    console.warn('[getScriptUrl] 未映射的 import：', unresolved)
+  }
+
+  return { scriptCode, scriptUrls, unresolved }
 }
 
 function getTemplate (scrTemplate: string) {
@@ -162,7 +205,7 @@ function getScript (srcCode: string) {
   return (code || 'var App = {}').replace(/^/gm, '      ')
 }
 
-function getCss (styles: ParseStyleObj[]) {
+function getStyle (styles: ParseStyleObj[]) {
   let styleCode = ''
   styles.forEach(style => {
     if (['scss', 'sass'].includes(style.lang)) {
@@ -174,18 +217,43 @@ function getCss (styles: ParseStyleObj[]) {
   return styleCode
 }
 
-export function getCdn3HtmlTemplate (tmpl: string, code: string) {
-  const fileRest = parseVueWithDOMParser(code)
-  const { template, script, styles } = fileRest
-  return XEUtils.toFormatString(tmpl, {
-    scriptUrl: '',
-    styleLink: '',
-    templateCode: getTemplate(template.code),
-    scriptCode: getScript(script.code),
-    styleCode: getCss(styles)
-  })
+function transformImport (code: string) {
+  const importMaps: Record<string, string> = {
+    'xe-utils': 'XEUtils',
+    vue: 'Vue',
+    'vxe-pc-ui': 'VxeUIBase',
+    'vxe-table': 'VxeUITable',
+    'vxe-gantt': 'VxeUIGantt',
+    'vxe-design': 'VxeUIDesign'
+  }
+  return code.replace(
+    /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
+    (full, specifiers: string, pkg: string) => {
+      const globalName = importMaps[pkg]
+      if (!globalName) return full
+      const normalized = specifiers
+        .split(',')
+        .map(s => s.trim())
+        .filter(Boolean)
+        .map(s => {
+          const m = s.match(/^([A-Za-z_$][\w$]*)\s+as\s+([A-Za-z_$][\w$]*)$/)
+          return m ? `${m[1]}: ${m[2]}` : s
+        })
+        .join(', ')
+      return `const { ${normalized} } = ${globalName}`
+    }
+  )
 }
 
-export function getCdn4HtmlTemplate (code: string) {
-  return '暂不支持'
+export function getCdnHtmlTemplate (tmpl: string, code: string) {
+  const fileRest = parseVueWithDOMParser(code)
+  const { template, script, styles } = fileRest
+  const { scriptCode, scriptUrls } = getScriptUrl(script.code)
+  return XEUtils.toFormatString(tmpl, {
+    scriptUrl: scriptUrls.join('\n'),
+    styleLink: '',
+    templateCode: getTemplate(template.code),
+    scriptCode: getScript(transformImport(scriptCode)),
+    styleCode: getStyle(styles)
+  })
 }
