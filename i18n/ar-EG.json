@@ -726,6 +726,7 @@
         "tableSetDifferentAndAutoRowHeight": "ضبط ارتفاعات صفوف مختلفة + ارتفاع تلقائي",
         "tableUseFooter": "استخدام التذييل",
         "tableMergeAndComplexFeatures": "دمج وميزات معقدة",
+        "tableMergeBig": "大量单元格合并",
         "tableTreeVH": "شجرة + رأسي وأفقي",
         "tableTreeDragVertical": "سحب شجرة + رأسي",
         "tableExpandRowComplexChildRender": "صف موسع + عرض جدول فرعي معقد",

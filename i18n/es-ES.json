@@ -726,6 +726,7 @@
         "tableSetDifferentAndAutoRowHeight": "Establecer alturas de fila diferentes + Altura automática",
         "tableUseFooter": "Usar pie",
         "tableMergeAndComplexFeatures": "Combinación y funciones complejas",
+        "tableMergeBig": "大量单元格合并",
         "tableTreeVH": "Árbol + Vertical y horizontal",
         "tableTreeDragVertical": "Arrastre de árbol + Vertical",
         "tableExpandRowComplexChildRender": "Fila expandida + Renderizado de tabla secundaria compleja",

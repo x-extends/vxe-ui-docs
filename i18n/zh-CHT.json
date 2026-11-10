@@ -726,6 +726,7 @@
         "tableSetDifferentAndAutoRowHeight": "設置不同行高 + 自適應行高",
         "tableUseFooter": "使用表尾",
         "tableMergeAndComplexFeatures": "合併與複雜功能",
+        "tableMergeBig": "大量单元格合并",
         "tableTreeVH": "樹形 + 縱向和橫向",
         "tableTreeDragVertical": "樹拖拽 + 縱向",
         "tableExpandRowComplexChildRender": "展開行 + 複雜子表渲染",

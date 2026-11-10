@@ -726,6 +726,7 @@
         "tableSetDifferentAndAutoRowHeight": "異なる行高 + 自動行高を設定",
         "tableUseFooter": "フッターを使用",
         "tableMergeAndComplexFeatures": "結合と複雑な機能",
+        "tableMergeBig": "大量单元格合并",
         "tableTreeVH": "ツリー + 縦横",
         "tableTreeDragVertical": "ツリードラッグ + 縦方向",
         "tableExpandRowComplexChildRender": "行展開 + 複雑な子テーブルレンダリング",

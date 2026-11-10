@@ -726,6 +726,7 @@
         "tableSetDifferentAndAutoRowHeight": "Unterschiedliche Zeilenhöhe + automatische Zeilenhöhe",
         "tableUseFooter": "Fußzeile verwenden",
         "tableMergeAndComplexFeatures": "Zusammenführen und komplexe Funktionen",
+        "tableMergeBig": "大量单元格合并",
         "tableTreeVH": "Baum + vertikal und horizontal",
         "tableTreeDragVertical": "Baum-Drag + vertikal",
         "tableExpandRowComplexChildRender": "Erweiterte Zeile + komplexes Rendering der Untertabelle",

@@ -726,6 +726,7 @@
         "tableSetDifferentAndAutoRowHeight": "Set Different and Auto Row Height",
         "tableUseFooter": "Use Footer",
         "tableMergeAndComplexFeatures": "Merge and Complex Features",
+        "tableMergeBig": "大量单元格合并",
         "tableTreeVH": "Tree + Vertical and Horizontal",
         "tableTreeDragVertical": "Tree Drag + Vertical",
         "tableExpandRowComplexChildRender": "Expand Row + Complex Child Table Rendering",
