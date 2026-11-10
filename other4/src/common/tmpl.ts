@@ -1,5 +1,11 @@
 import XEUtils from 'xe-utils'
 
+interface ParseTemplateObj {
+  code: string
+  content: string
+  attrs: Record<string, string | boolean>
+}
+
 interface ParseStyleObj {
   lang: string
   scoped: boolean
@@ -45,10 +51,10 @@ export function parseVueWithDOMParser (source: string) {
   }
 
   // 1) template：原始字符串扫描，保真 Vue 模板语法（大小写、自闭合、嵌套）
-  const extractRawTemplate = (src: string) => {
+  const extractRawTemplate = (src: string): ParseTemplateObj => {
     const openRe = /<template(\s[^>]*)?>/i
     const m = openRe.exec(src)
-    if (!m) return { code: '', content: '', attrs: {} as ParseBlockAttrs }
+    if (!m) return { code: '', content: '', attrs: {} }
 
     const attrs = parseAttrs(m[1] || '')
 
@@ -149,7 +155,9 @@ function getTemplate (scrTemplate: string) {
 }
 
 function getScript (srcCode: string) {
-  const code = srcCode.replace('export default {', 'var App = {')
+  const code = srcCode
+    .replace('import XEUtils from \'xe-utils\'\n', '')
+    .replace('export default {', 'var App = {')
 
   return (code || 'var App = {}').replace(/^/gm, '      ')
 }
@@ -170,6 +178,8 @@ export function getCdn3HtmlTemplate (tmpl: string, code: string) {
   const fileRest = parseVueWithDOMParser(code)
   const { template, script, styles } = fileRest
   return XEUtils.toFormatString(tmpl, {
+    scriptUrl: '',
+    styleLink: '',
     templateCode: getTemplate(template.code),
     scriptCode: getScript(script.code),
     styleCode: getCss(styles)
