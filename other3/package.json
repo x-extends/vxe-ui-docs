@@ -41,7 +41,7 @@
     "vxe-design": "~3.0.3",
     "vxe-table": "~3.25.17",
     "vxe-gantt": "~3.9.10",
-    "xe-utils": "^4.2.2"
+    "xe-utils": "^4.2.3"
   },
   "devDependencies": {
     "@types/node": "~26.6.5",
