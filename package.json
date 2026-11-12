@@ -17,12 +17,24 @@
     "build:v3": "cd v3 && npm run pack",
     "build:v4": "cd v4 && npm run pack",
     "build:all": "concurrently --timings \"npm run build:other3\" \"npm run build:other4\" \"npm run build:v3\" \"npm run build:v4\"",
-    
+
+    "build:other3:offline": "cd other3 && npm run pack:offline",
+    "build:other4:offline": "cd other4 && npm run pack:offline",
+    "build:v3:offline": "cd v3 && npm run pack:offline",
+    "build:v4:offline": "cd v4 && npm run pack:offline",
+    "build:all:offline": "concurrently --timings \"npm run build:other3:offline\" \"npm run build:other4:offline\" \"npm run build:v3:offline\" \"npm run build:v4:offline\"",
+
     "pack:other3": "npm run build:other3 && node scripts/build-pack.js other3",
     "pack:other4": "npm run build:other4 && node scripts/build-pack.js other4",
     "pack:v3": "npm run build:v3 && node scripts/build-pack.js v3",
     "pack:v4": "npm run build:v4 && node scripts/build-pack.js v4",
     "pack:all": "npm run build:all && node scripts/build-pack.js",
+
+    "pack:other3:offline": "npm run build:other3:offline && node scripts/build-pack.js other3 --offline",
+    "pack:other4:offline": "npm run build:other4:offline && node scripts/build-pack.js other4 --offline",
+    "pack:v3:offline": "npm run build:v3:offline && node scripts/build-pack.js v3 --offline",
+    "pack:v4:offline": "npm run build:v4:offline && node scripts/build-pack.js v4 --offline",
+    "pack:all:offline": "npm run build:all:offline && node scripts/build-pack.js --offline",
 
     "pack:i18n": "node scripts/build-i18n",
     "sync:i18n": "node scripts/sync-i18n.js",

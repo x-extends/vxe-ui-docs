@@ -6,11 +6,13 @@
     "update": "npm install",
     "serve": "vite",
     "build": "vue-tsc && vite build",
+    "build:offline": "vue-tsc && vite build --mode offline",
     "lint:es": "eslint src",
     "lint:ox": "oxfmt --check src/**",
     "esfix": "eslint --fix src",
     "oxfix": "oxfmt src/** --write",
     "pack": "node scripts/build-clean.js && concurrently --timings \"npm run build\" \"node scripts/build-example.js\" && npm run oxfix:examples",
+    "pack:offline": "node scripts/build-clean.js && concurrently --timings \"npm run build:offline\" \"node scripts/build-example.js\" && npm run oxfix:examples",
     "esfix:examples": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx,.vue dist/example/js/**",
     "oxfix:examples": "oxfmt dist/example/js/ --write",
     "clean:all": "node scripts/clean-all"
