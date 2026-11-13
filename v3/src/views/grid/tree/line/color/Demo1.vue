@@ -1,6 +1,14 @@
 <template>
   <div>
-    <vxe-grid v-bind="gridOptions"></vxe-grid>
+    线颜色：<vxe-color-picker v-model="lineColor" :colors="colorList" clearable></vxe-color-picker>
+
+    <vxe-grid
+      v-bind="gridOptions"
+      :style="{
+        '--vxe-ui-table-tree-node-line-color': lineColor
+      }"
+    >
+    </vxe-grid>
   </div>
 </template>
 
@@ -19,9 +27,19 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
+    const lineColor = '#FF0000'
+
+    const colorList = [
+      '#DC143C', '#FF1493', '#FF00FF', '#9932CC', '#6A5ACD',
+      '#0000FF', '#00008B', '#778899', '#1E90FF', '#00BFFF',
+      '#5F9EA0', '#00FFFF', '#008080', '#7FFFAA', '#3CB371',
+      '#8FBC8F', '#008000', '#7CFC00', '#556B2F', '#FFFFE0',
+      '#FFFF00', '#808000', '#EEE8AA', '#FFD700', '#FFA500',
+      '#FF4500', '#FA8072', '#FF0000', '#800000', '#C0C0C0'
+    ]
+
     const gridOptions: VxeGridProps<RowVO> = {
       showOverflow: true,
-      stripe: true,
       border: 'outer',
       rowConfig: {
         useKey: true
@@ -29,15 +47,12 @@ export default Vue.extend({
       columnConfig: {
         resizable: true
       },
-      checkboxConfig: {
-        labelField: 'name'
-      },
       treeConfig: {
         transform: true,
         showLine: true
       },
       columns: [
-        { type: 'checkbox', treeNode: true },
+        { field: 'name', title: 'Name', treeNode: true },
         { field: 'size', title: 'Size' },
         { field: 'type', title: 'Type' },
         { field: 'date', title: 'Date' }
@@ -65,6 +80,8 @@ export default Vue.extend({
     }
 
     return {
+      lineColor,
+      colorList,
       gridOptions
     }
   }

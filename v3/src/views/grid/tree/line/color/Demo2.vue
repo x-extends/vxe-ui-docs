@@ -1,7 +1,6 @@
 <template>
   <div>
-    显示连接线：<vxe-switch v-model="treeConfig.showLine"></vxe-switch>
-    显示根节点线：<vxe-switch v-model="treeConfig.showRootLine"></vxe-switch>
+    线颜色：<vxe-color-picker v-model="gridOptions.treeConfig.lineColor" :colors="colorList" clearable></vxe-color-picker>
 
     <vxe-grid v-bind="gridOptions"></vxe-grid>
   </div>
@@ -9,7 +8,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import type { VxeGridProps, VxeTablePropTypes } from 'vxe-table'
+import type { VxeGridProps, VxeWithRequired } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -22,13 +21,16 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
-    const treeConfig: VxeTablePropTypes.TreeConfig = {
-      transform: true,
-      showLine: true,
-      showRootLine: true
-    }
+    const colorList = [
+      '#DC143C', '#FF1493', '#FF00FF', '#9932CC', '#6A5ACD',
+      '#0000FF', '#00008B', '#778899', '#1E90FF', '#00BFFF',
+      '#5F9EA0', '#00FFFF', '#008080', '#7FFFAA', '#3CB371',
+      '#8FBC8F', '#008000', '#7CFC00', '#556B2F', '#FFFFE0',
+      '#FFFF00', '#808000', '#EEE8AA', '#FFD700', '#FFA500',
+      '#FF4500', '#FA8072', '#FF0000', '#800000', '#C0C0C0'
+    ]
 
-    const gridOptions: VxeGridProps<RowVO> = {
+    const gridOptions: VxeWithRequired<VxeGridProps<RowVO>, 'treeConfig'> = {
       showOverflow: true,
       border: 'outer',
       rowConfig: {
@@ -37,7 +39,11 @@ export default Vue.extend({
       columnConfig: {
         resizable: true
       },
-      treeConfig,
+      treeConfig: {
+        transform: true,
+        showLine: true,
+        lineColor: '#FF0000'
+      },
       columns: [
         { field: 'name', title: 'Name', treeNode: true },
         { field: 'size', title: 'Size' },
@@ -67,8 +73,8 @@ export default Vue.extend({
     }
 
     return {
-      gridOptions,
-      treeConfig
+      colorList,
+      gridOptions
     }
   }
 })
