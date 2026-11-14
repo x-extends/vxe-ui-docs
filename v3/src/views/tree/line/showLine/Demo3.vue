@@ -1,12 +1,12 @@
 <template>
   <div>
-    <vxe-tree :data="treeList" icon-open="vxe-icon-arrow-right rotate90" icon-close="vxe-icon-arrow-right" show-radio show-line transform></vxe-tree>
+    <vxe-tree :data="treeList" icon-open="vxe-icon-square-minus" icon-close="vxe-icon-square-plus" transform show-checkbox show-line></vxe-tree>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeTreePropTypes } from 'vxe-pc-ui'
+import type { VxeTreePropTypes } from 'vxe-pc-ui'
 
 export default Vue.extend({
   data () {

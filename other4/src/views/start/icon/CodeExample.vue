@@ -21,12 +21,12 @@
               BUTTON_LOADING: 'vxe-icon-spinner roll',
 
               // menu
-              MENU_ITEM_EXPAND_OPEN: 'vxe-icon-arrow-down rotate180',
+              MENU_ITEM_EXPAND_OPEN: 'vxe-icon-arrow-down rotate-180',
               MENU_ITEM_EXPAND_CLOSE: 'vxe-icon-arrow-down',
 
               // select
               SELECT_LOADED: 'vxe-icon-spinner roll',
-              SELECT_OPEN: 'vxe-icon-caret-down rotate180',
+              SELECT_OPEN: 'vxe-icon-caret-down rotate-180',
               SELECT_CLOSE: 'vxe-icon-caret-down',
 
               // pager
@@ -70,7 +70,7 @@
               // form
               FORM_PREFIX: 'vxe-icon-question-circle-fill',
               FORM_SUFFIX: 'vxe-icon-question-circle-fill',
-              FORM_FOLDING: 'vxe-icon-arrow-up rotate180',
+              FORM_FOLDING: 'vxe-icon-arrow-up rotate-180',
               FORM_UNFOLDING: 'vxe-icon-arrow-up',
 
               // form-design

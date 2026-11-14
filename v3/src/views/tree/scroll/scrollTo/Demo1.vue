@@ -22,7 +22,7 @@ export default Vue.extend({
   data () {
     const treeOptions: VxeTreeProps<NodeVO> = {
       loading: false,
-      height: 400,
+      height: 600,
       transform: true,
       titleField: 'name',
       virtualYConfig: {

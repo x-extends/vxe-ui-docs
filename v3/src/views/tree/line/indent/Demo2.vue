@@ -1,15 +1,28 @@
 <template>
   <div>
-    <vxe-tree :data="treeList" icon-open="vxe-icon-square-minus" icon-close="vxe-icon-square-plus" transform show-checkbox show-line></vxe-tree>
+    缩进：<vxe-radio-group v-model="indent">
+      <vxe-radio-button :checked-value="20" content="20px"></vxe-radio-button>
+      <vxe-radio-button :checked-value="30" content="30px"></vxe-radio-button>
+      <vxe-radio-button :checked-value="40" content="40px"></vxe-radio-button>
+    </vxe-radio-group>
+
+    <vxe-tree
+      :data="treeList"
+      :indent="indent"
+      show-line
+      transform
+    ></vxe-tree>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeTreePropTypes } from 'vxe-pc-ui'
+import type { VxeTreePropTypes } from 'vxe-pc-ui'
 
 export default Vue.extend({
   data () {
+    const indent: number = 20
+
     const treeList: VxeTreePropTypes.Data = [
       { title: '节点2', id: '2', parentId: null },
       { title: '节点3', id: '3', parentId: null },
@@ -34,6 +47,7 @@ export default Vue.extend({
     ]
 
     return {
+      indent,
       treeList
     }
   }

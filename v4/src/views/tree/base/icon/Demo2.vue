@@ -21,7 +21,7 @@ interface NodeVO {
 
 const treeOptions = reactive<VxeTreeProps<NodeVO>>({
   transform: true,
-  iconOpen: 'vxe-icon-arrow-right rotate90',
+  iconOpen: 'vxe-icon-arrow-right rotate-90',
   iconClose: 'vxe-icon-arrow-right',
   data: [
     { title: '节点2', id: '2', parentId: null },

@@ -21,7 +21,7 @@ export default Vue.extend({
   data () {
     const treeOptions: VxeTreeProps = {
       loading: false,
-      height: 400,
+      height: 800,
       transform: true,
       showCheckbox: true,
       titleField: 'name',

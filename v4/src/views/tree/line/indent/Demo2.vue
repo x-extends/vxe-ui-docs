@@ -1,7 +1,17 @@
 <template>
   <div>
-    <vxe-switch v-model="showLine"></vxe-switch>
-    <vxe-tree :data="treeList" :show-line="showLine" transform></vxe-tree>
+    缩进：<vxe-radio-group v-model="indent">
+      <vxe-radio-button :checked-value="20" content="20px"></vxe-radio-button>
+      <vxe-radio-button :checked-value="30" content="30px"></vxe-radio-button>
+      <vxe-radio-button :checked-value="40" content="40px"></vxe-radio-button>
+    </vxe-radio-group>
+
+    <vxe-tree
+      :data="treeList"
+      :indent="indent"
+      show-line
+      transform
+    ></vxe-tree>
   </div>
 </template>
 
@@ -9,7 +19,8 @@
 import { ref } from 'vue'
 import { VxeTreePropTypes } from 'vxe-pc-ui'
 
-const showLine = ref(true)
+const indent = ref(20)
+
 const treeList = ref<VxeTreePropTypes.Data>([
   { title: '节点2', id: '2', parentId: null },
   { title: '节点3', id: '3', parentId: null },

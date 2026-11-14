@@ -23,17 +23,17 @@
               BUTTON_TOOLTIP_ICON: 'vxe-icon-question-circle-fill',
 
               // menu
-              MENU_ITEM_EXPAND_OPEN: 'vxe-icon-arrow-right rotate90',
+              MENU_ITEM_EXPAND_OPEN: 'vxe-icon-arrow-right rotate-90',
               MENU_ITEM_EXPAND_CLOSE: 'vxe-icon-arrow-right',
 
               // select
               SELECT_LOADED: 'vxe-icon-spinner roll',
-              SELECT_OPEN: 'vxe-icon-caret-down rotate180',
+              SELECT_OPEN: 'vxe-icon-caret-down rotate-180',
               SELECT_CLOSE: 'vxe-icon-caret-down',
               SELECT_ADD_OPTION: 'vxe-icon-add',
 
               // icon-picker
-              ICON_PICKER_OPEN: 'vxe-icon-caret-down rotate180',
+              ICON_PICKER_OPEN: 'vxe-icon-caret-down rotate-180',
               ICON_PICKER_CLOSE: 'vxe-icon-caret-down',
 
               // pager
@@ -95,7 +95,7 @@
               // form
               FORM_PREFIX: 'vxe-icon-question-circle-fill',
               FORM_SUFFIX: 'vxe-icon-question-circle-fill',
-              FORM_FOLDING: 'vxe-icon-arrow-up rotate180',
+              FORM_FOLDING: 'vxe-icon-arrow-up rotate-180',
               FORM_UNFOLDING: 'vxe-icon-arrow-up',
               FORM_VALID_ERROR_ICON: 'vxe-icon-warning-circle-fill',
 
@@ -165,7 +165,7 @@
               ALERT_ERROR: 'vxe-icon-error-circle-fill',
 
               // tree
-              TREE_NODE_OPEN: 'vxe-icon-caret-right rotate90',
+              TREE_NODE_OPEN: 'vxe-icon-caret-right rotate-90',
               TREE_NODE_CLOSE: 'vxe-icon-caret-right',
               TREE_NODE_LOADED: 'vxe-icon-spinner roll',
               TREE_DRAG: 'vxe-icon-drag-handle',
@@ -175,12 +175,12 @@
 
               // tree-select
               TREE_SELECT_LOADED: 'vxe-icon-spinner roll',
-              TREE_SELECT_OPEN: 'vxe-icon-caret-down rotate180',
+              TREE_SELECT_OPEN: 'vxe-icon-caret-down rotate-180',
               TREE_SELECT_CLOSE: 'vxe-icon-caret-down',
 
               // table-select
               TABLE_SELECT_LOADED: 'vxe-icon-spinner roll',
-              TABLE_SELECT_OPEN: 'vxe-icon-caret-down rotate180',
+              TABLE_SELECT_OPEN: 'vxe-icon-caret-down rotate-180',
               TABLE_SELECT_CLOSE: 'vxe-icon-caret-down',
 
               // tabs
@@ -207,7 +207,7 @@
               CAROUSEL_VERTICAL_NEXT: 'vxe-icon-arrow-down',
 
               // collapse
-              COLLAPSE_OPEN: 'vxe-icon-arrow-right rotate90',
+              COLLAPSE_OPEN: 'vxe-icon-arrow-right rotate-90',
               COLLAPSE_CLOSE: 'vxe-icon-arrow-right',
 
               // empty
@@ -228,7 +228,7 @@
               // color-picker
               COLOR_PICKER_COLOR_COPY: 'vxe-icon-copy',
               COLOR_PICKER_EYE_DROPPER: 'vxe-icon-dropper',
-              COLOR_PICKER_TPTY_OPEN: 'vxe-icon-arrow-down rotate180',
+              COLOR_PICKER_TPTY_OPEN: 'vxe-icon-arrow-down rotate-180',
               COLOR_PICKER_TPTY_CLOSE: 'vxe-icon-arrow-down',
 
               // split
@@ -263,10 +263,10 @@
               TABLE_TITLE_PREFIX: 'vxe-icon-question-circle-fill',
               TABLE_TITLE_SUFFIX: 'vxe-icon-question-circle-fill',
               TABLE_TREE_LOADED: 'vxe-icon-spinner roll',
-              TABLE_TREE_OPEN: 'vxe-icon-caret-right rotate90',
+              TABLE_TREE_OPEN: 'vxe-icon-caret-right rotate-90',
               TABLE_TREE_CLOSE: 'vxe-icon-caret-right',
               TABLE_EXPAND_LOADED: 'vxe-icon-spinner roll',
-              TABLE_EXPAND_OPEN: 'vxe-icon-arrow-right rotate90',
+              TABLE_EXPAND_OPEN: 'vxe-icon-arrow-right rotate-90',
               TABLE_EXPAND_CLOSE: 'vxe-icon-arrow-right',
               TABLE_CHECKBOX_CHECKED: 'vxe-icon-checkbox-checked-fill',
               TABLE_CHECKBOX_UNCHECKED: 'vxe-icon-checkbox-unchecked',
@@ -295,7 +295,7 @@
               TABLE_DRAG_STATUS_AGG_VALUES: 'vxe-icon-values',
               TABLE_DRAG_STATUS_COLUMN: 'vxe-icon-swap',
               TABLE_DRAG_DISABLED: 'vxe-icon-no-drop',
-              TABLE_ROW_GROUP_OPEN: 'vxe-icon-arrow-right rotate90',
+              TABLE_ROW_GROUP_OPEN: 'vxe-icon-arrow-right rotate-90',
               TABLE_ROW_GROUP_CLOSE: 'vxe-icon-arrow-right',
               TABLE_AGGREGATE_GROUPING: 'vxe-icon-grouping',
               TABLE_AGGREGATE_VALUES: 'vxe-icon-values',
@@ -321,7 +321,7 @@
               GANTT_VIEW_LEFT_CLOSE: 'vxe-icon-arrow-right',
               GANTT_VIEW_RIGHT_OPEN: 'vxe-icon-arrow-right',
               GANTT_VIEW_RIGHT_CLOSE: 'vxe-icon-arrow-left',
-              GANTT_VIEW_TASK_MILESTONE: 'vxe-icon-square-fill rotate45'
+              GANTT_VIEW_TASK_MILESTONE: 'vxe-icon-square-fill rotate-45'
             })
           </pre-code>
         </pre>

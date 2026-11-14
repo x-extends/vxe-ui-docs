@@ -391,9 +391,10 @@
         "tableHierarchyStructure": "Hierarchical Structure",
         "tableSeqMode": "Sequence Mode",
         "tableShowConnectionLine": "Show Connection Line",
-        "tableShowConnectionShowLine": "连接线",
-        "tableShowConnectionLineType": "线类型",
-        "tableShowConnectionLineColor": "线颜色",
+        "tableShowConnectionShowLine": "Show line",
+        "tableShowConnectionLineType": "Line style)",
+        "tableShowConnectionLineColor": "Line Color",
+        "tableShowConnectionIndent": "节点缩进",
         "tableAccordionEffect": "Accordion Effect",
         "tableTreeSort": "Tree Sort",
         "tableTreeFilter": "Tree Filter",
@@ -1996,7 +1997,10 @@
         "datePickerFeatureExamples": "Feature Examples",
         "datePickerFestivalMethod": "Date with Dot",
         "datePickerHolidaysExample": "Lunar Calendar and Holidays Example",
-        "datePickerShortcutGlobalCommands": "Shortcut Commands (Global Reuse)"
+        "datePickerShortcutGlobalCommands": "Shortcut Commands (Global Reuse)",
+        "treeShowLine": "连接线",
+        "treeLineType": "线样式类型",
+        "treeLineColor": "线颜色"
       }
     },
     "header": {

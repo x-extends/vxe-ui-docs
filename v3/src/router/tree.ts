@@ -67,11 +67,6 @@ export const treeRouteConfig: RouteRecordConfig = {
           component: () => import('@/views/tree/base/accordion/CodeExample.vue')
         },
         {
-          path: 'showLine',
-          name: 'ComponentTreeBaseShowLine',
-          component: () => import('@/views/tree/base/showLine/CodeExample.vue')
-        },
-        {
           path: 'expandAll',
           name: 'ComponentTreeBaseExpandAll',
           component: () => import('@/views/tree/base/expandAll/CodeExample.vue')
@@ -203,6 +198,16 @@ export const treeRouteConfig: RouteRecordConfig = {
       ]
     },
     {
+      path: 'line',
+      component: RouteLayout,
+      children: [
+        { path: 'showLine', name: 'ComponentTreeLineShowLine', component: () => import('@/views/tree/line/showLine/CodeExample.vue') },
+        { path: 'indent', name: 'ComponentTreeLineIndent', component: () => import('@/views/tree/line/indent/CodeExample.vue') },
+        { path: 'type', name: 'ComponentTreeLineType', component: () => import('@/views/tree/line/type/CodeExample.vue') },
+        { path: 'color', name: 'ComponentTreeLineColor', component: () => import('@/views/tree/line/color/CodeExample.vue') }
+      ]
+    },
+    {
       path: 'sort',
       component: RouteLayout,
       children: [
@@ -215,21 +220,9 @@ export const treeRouteConfig: RouteRecordConfig = {
       path: 'search',
       component: RouteLayout,
       children: [
-        {
-          path: 'filterValue',
-          name: 'ComponentTreeSearchFilterValue',
-          component: () => import('@/views/tree/search/filterValue/CodeExample.vue')
-        },
-        {
-          path: 'filterMethod',
-          name: 'ComponentTreeSearchFilterMethod',
-          component: () => import('@/views/tree/search/filterMethod/CodeExample.vue')
-        },
-        {
-          path: 'light',
-          name: 'ComponentTreeSearchLight',
-          component: () => import('@/views/tree/search/light/CodeExample.vue')
-        }
+        { path: 'filterValue', name: 'ComponentTreeSearchFilterValue', component: () => import('@/views/tree/search/filterValue/CodeExample.vue') },
+        { path: 'filterMethod', name: 'ComponentTreeSearchFilterMethod', component: () => import('@/views/tree/search/filterMethod/CodeExample.vue') },
+        { path: 'light', name: 'ComponentTreeSearchLight', component: () => import('@/views/tree/search/light/CodeExample.vue') }
       ]
     },
     {

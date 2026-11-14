@@ -34,8 +34,6 @@ export const treeNavConfig: NavVO = {
         { i18nKey: 'app.aside.menu.treeCustomIcon', routerLink: { name: 'ComponentTreeBaseIcon' } },
         // 手风琴展开效果
         { i18nKey: 'app.aside.menu.treeAccordion', routerLink: { name: 'ComponentTreeBaseAccordion' } },
-        // 连接线
-        { i18nKey: 'app.aside.menu.treeConnectionLine', routerLink: { name: 'ComponentTreeBaseShowLine' } },
         // 默认展开全部节点
         { i18nKey: 'app.aside.menu.treeExpandAllNodes', routerLink: { name: 'ComponentTreeBaseExpandAll' } },
         // 默认展开指定节点
@@ -120,6 +118,20 @@ export const treeNavConfig: NavVO = {
         { i18nKey: 'app.aside.menu.treeNodeFontColor', routerLink: { name: 'ComponentTreeCheckboxColor' } },
         // 自定义插槽模板
         { i18nKey: 'app.aside.menu.treeCustomSlotTemplate', routerLink: { name: 'ComponentTreeCheckboxTemplate' } }
+      ]
+    },
+    {
+      // 连接线
+      i18nKey: 'app.aside.menu.treeConnectionLine',
+      children: [
+        // 连接线
+        { i18nKey: 'app.aside.menu.treeShowLine', routerLink: { name: 'ComponentTreeLineShowLine' } },
+        // 节点缩进
+        { i18nKey: 'app.aside.menu.treeShowIndent', routerLink: { name: 'ComponentTreeLineIndent' } },
+        // 线类型
+        { i18nKey: 'app.aside.menu.treeLineType', routerLink: { name: 'ComponentTreeLineType' } },
+        // 线颜色
+        { i18nKey: 'app.aside.menu.treeLineColor', routerLink: { name: 'ComponentTreeLineColor' } }
       ]
     },
     {
@@ -260,6 +272,8 @@ export const treeNavConfig: NavVO = {
       children: [
         // 纵向虚拟滚动
         { i18nKey: 'app.aside.menu.treeVerticalVirtualScroll', routerLink: { name: 'ComponentTreeScrollBasics' } },
+        // 连接线
+        { i18nKey: 'app.aside.menu.treeShowLine', routerLink: { name: 'ComponentTreeScrollLine' } },
         // 函数式加载
         { i18nKey: 'app.aside.menu.treeFunctionalLoad', routerLink: { name: 'ComponentTreeScrollLoadData' } },
         // 滚动到指定位置

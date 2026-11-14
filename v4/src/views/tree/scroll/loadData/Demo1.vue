@@ -21,7 +21,7 @@ const treeRef = ref<VxeTreeInstance<NodeVO>>()
 
 const treeOptions = reactive<VxeTreeProps>({
   loading: false,
-  height: 400,
+  height: 800,
   transform: true,
   showCheckbox: true,
   titleField: 'name',

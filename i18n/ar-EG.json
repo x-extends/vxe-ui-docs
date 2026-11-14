@@ -394,6 +394,7 @@
         "tableShowConnectionShowLine": "连接线",
         "tableShowConnectionLineType": "线类型",
         "tableShowConnectionLineColor": "线颜色",
+        "tableShowConnectionIndent": "节点缩进",
         "tableAccordionEffect": "تأثير الأكورديون",
         "tableTreeSort": "ترتيب الشجرة",
         "tableTreeFilter": "تصفية الشجرة",
@@ -1996,7 +1997,10 @@
         "datePickerFeatureExamples": "أمثلة الميزات",
         "datePickerFestivalMethod": "تنفيذ تاريخ بنقطة",
         "datePickerHolidaysExample": "تنفيذ التقويم القمري والعطلات",
-        "datePickerShortcutGlobalCommands": "أوامر الأزرار السريعة (إعادة استخدام عامة)"
+        "datePickerShortcutGlobalCommands": "أوامر الأزرار السريعة (إعادة استخدام عامة)",
+        "treeShowLine": "连接线",
+        "treeLineType": "线样式类型",
+        "treeLineColor": "线颜色"
       }
     },
     "header": {

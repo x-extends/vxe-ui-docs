@@ -394,6 +394,7 @@
         "tableShowConnectionShowLine": "连接线",
         "tableShowConnectionLineType": "线类型",
         "tableShowConnectionLineColor": "线颜色",
+        "tableShowConnectionIndent": "节点缩进",
         "tableAccordionEffect": "Akkordeon-Effekt",
         "tableTreeSort": "Baumsortierung",
         "tableTreeFilter": "Baumfilter",
@@ -1996,7 +1997,10 @@
         "datePickerFeatureExamples": "Funktionsbeispiele",
         "datePickerFestivalMethod": "Datum mit Punkt implementieren",
         "datePickerHolidaysExample": "Mondkalender und Feiertage implementieren",
-        "datePickerShortcutGlobalCommands": "Schnellbutton-Befehle (globale Wiederverwendung)"
+        "datePickerShortcutGlobalCommands": "Schnellbutton-Befehle (globale Wiederverwendung)",
+        "treeShowLine": "连接线",
+        "treeLineType": "线样式类型",
+        "treeLineColor": "线颜色"
       }
     },
     "header": {
