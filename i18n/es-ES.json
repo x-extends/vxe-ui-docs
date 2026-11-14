@@ -2000,7 +2000,8 @@
         "datePickerShortcutGlobalCommands": "Comandos de botones de acceso rápido (reutilización global)",
         "treeShowLine": "连接线",
         "treeLineType": "线样式类型",
-        "treeLineColor": "线颜色"
+        "treeLineColor": "线颜色",
+        "treeShowIndent": "节点缩进"
       }
     },
     "header": {
