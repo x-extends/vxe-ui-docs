@@ -1,23 +1,29 @@
 <template>
   <div>
     <vxe-tree-select
-      clearable
       v-model="val1"
+      clearable
+      show-radio
       :tree-config="treeConfig"
-      :options="treeList">
+      :options="treeList"
+    >
     </vxe-tree-select>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { VxeTreeSelectPropTypes } from 'vxe-pc-ui'
+import type { VxeTreeSelectPropTypes } from 'vxe-pc-ui'
 
 export default Vue.extend({
   data () {
     const treeConfig: VxeTreeSelectPropTypes.TreeConfig = {
-      showLine: true
+      showLine: true,
+      iconOpen: 'vxe-icon-arrow-right fs-10 rotate-90',
+      iconClose: 'vxe-icon-arrow-right fs-10'
     }
+
+    const val1: any = null
 
     const treeList: VxeTreeSelectPropTypes.Options = [
       { label: '节点2', value: '2' },
@@ -59,8 +65,8 @@ export default Vue.extend({
     ]
 
     return {
-      val1: null,
       treeConfig,
+      val1,
       treeList
     }
   }
