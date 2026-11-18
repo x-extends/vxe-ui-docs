@@ -431,6 +431,7 @@
         "tableManualEdit": "تعديل يدوي",
         "tableClickEdit": "انقر للتعديل",
         "tableDblclickEdit": "انقر مزدوجاً للتعديل",
+        "tableAutoClear": "自动清除编辑",
         "tableEditAndFocus": "تعديل وتركيز",
         "tableDisableAutoClearEditStatus": "تعطيل المسح التلقائي لحالة التعديل",
         "tableEditStatus": "حالة التعديل",

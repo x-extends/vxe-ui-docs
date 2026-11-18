@@ -431,6 +431,7 @@
         "tableManualEdit": "手動編輯",
         "tableClickEdit": "單擊編輯",
         "tableDblclickEdit": "雙擊編輯",
+        "tableAutoClear": "自动清除编辑",
         "tableEditAndFocus": "編輯與聚焦",
         "tableDisableAutoClearEditStatus": "關閉自動清除編輯狀態",
         "tableEditStatus": "編輯狀態",

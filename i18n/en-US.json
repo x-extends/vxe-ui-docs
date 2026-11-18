@@ -431,6 +431,7 @@
         "tableManualEdit": "Manual Edit",
         "tableClickEdit": "Click to Edit",
         "tableDblclickEdit": "Double-click to Edit",
+        "tableAutoClear": "Automatically clear the editing status",
         "tableEditAndFocus": "Edit and Focus",
         "tableDisableAutoClearEditStatus": "Disable Auto Clear Edit Status",
         "tableEditStatus": "Edit Status",

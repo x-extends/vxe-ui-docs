@@ -431,6 +431,7 @@
         "tableManualEdit": "手動編集",
         "tableClickEdit": "クリックで編集",
         "tableDblclickEdit": "ダブルクリックで編集",
+        "tableAutoClear": "自动清除编辑",
         "tableEditAndFocus": "編集とフォーカス",
         "tableDisableAutoClearEditStatus": "編集状態の自動クリアを無効化",
         "tableEditStatus": "編集状態",

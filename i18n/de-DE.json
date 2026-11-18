@@ -431,6 +431,7 @@
         "tableManualEdit": "Manuelle Bearbeitung",
         "tableClickEdit": "Zum Bearbeiten klicken",
         "tableDblclickEdit": "Zum Bearbeiten doppelklicken",
+        "tableAutoClear": "自动清除编辑",
         "tableEditAndFocus": "Bearbeiten und fokussieren",
         "tableDisableAutoClearEditStatus": "Automatisches Löschen des Bearbeitungsstatus deaktivieren",
         "tableEditStatus": "Bearbeitungsstatus",
