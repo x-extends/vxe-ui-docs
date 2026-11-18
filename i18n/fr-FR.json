@@ -2085,6 +2085,7 @@
         "fixDocTip": "Si ce document contient des erreurs ou manque de détails, vous pouvez aider à l'améliorer en soumettant une PR.",
         "copyCode": "Copier le code",
         "openCode": "新窗口打开",
+        "downloadCode": "下载",
         "showCode": "Afficher le code",
         "showTsCode": "Afficher TS",
         "showJsCode": "Afficher JS",

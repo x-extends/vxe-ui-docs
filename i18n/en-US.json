@@ -2085,6 +2085,7 @@
         "fixDocTip": "If this documentation contains errors or is not detailed enough, you can help improve it by submitting a PR!",
         "copyCode": "Copy Code",
         "openCode": "Open new window",
+        "downloadCode": "下载",
         "showCode": "Show Code",
         "showTsCode": "Show TS",
         "showJsCode": "Show JS",

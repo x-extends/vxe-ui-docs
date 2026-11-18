@@ -2085,6 +2085,7 @@
         "fixDocTip": "如果該文檔存在錯誤或者不詳細，可以通過提交 PR 方式幫助完善文檔！",
         "copyCode": "複製代碼",
         "openCode": "新窗口打开",
+        "downloadCode": "下载",
         "showCode": "顯示代碼",
         "showTsCode": "顯示TS",
         "showJsCode": "顯示JS",
