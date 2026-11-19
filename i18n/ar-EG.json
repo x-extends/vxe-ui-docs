@@ -2180,6 +2180,8 @@
         "areaExtendCalcFill": "ملء تلقائي بالسحب",
         "areaExtendCalcFillExtendByCopy": "ملء بالنسخ",
         "areaExtendCalcFillExtendByCalc": "قواعد الحساب",
+        "areaExtendCalcFillExtendByByDblclickCopy": "双击复制填充",
+        "areaExtendCalcFillExtendByByDblclickCalc": "双击运算规则",
         "calcFillExtendSetMethod": "طريقة تعيين منطقة موسعة مخصصة",
         "areaExcel": "نمط Excel",
         "areaFixed": "تحديد الأعمدة الثابتة",

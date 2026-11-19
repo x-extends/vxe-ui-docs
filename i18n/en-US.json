@@ -2180,6 +2180,8 @@
         "areaExtendCalcFill": "Drag Auto Fill",
         "areaExtendCalcFillExtendByCopy": "Copy Fill",
         "areaExtendCalcFillExtendByCalc": "Calculation Rules",
+        "areaExtendCalcFillExtendByByDblclickCopy": "双击复制填充",
+        "areaExtendCalcFillExtendByByDblclickCalc": "双击运算规则",
         "calcFillExtendSetMethod": "Custom Extended Area Assignment Method",
         "areaExcel": "Excel Style",
         "areaFixed": "Fixed Column Selection",

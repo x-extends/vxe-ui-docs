@@ -2180,6 +2180,8 @@
         "areaExtendCalcFill": "Relleno automático arrastrando",
         "areaExtendCalcFillExtendByCopy": "Relleno por copia",
         "areaExtendCalcFillExtendByCalc": "Reglas de cálculo",
+        "areaExtendCalcFillExtendByByDblclickCopy": "双击复制填充",
+        "areaExtendCalcFillExtendByByDblclickCalc": "双击运算规则",
         "calcFillExtendSetMethod": "Método de asignación de área extendida personalizado",
         "areaExcel": "Estilo Excel",
         "areaFixed": "Selección de columna fija",

@@ -2180,6 +2180,8 @@
         "areaExtendCalcFill": "Automatisches Ausfüllen per Drag",
         "areaExtendCalcFillExtendByCopy": "Kopierendes Ausfüllen",
         "areaExtendCalcFillExtendByCalc": "Berechnungsregeln",
+        "areaExtendCalcFillExtendByByDblclickCopy": "双击复制填充",
+        "areaExtendCalcFillExtendByByDblclickCalc": "双击运算规则",
         "calcFillExtendSetMethod": "Benutzerdefinierte Zuweisungsmethode für erweiterten Bereich",
         "areaExcel": "Excel-Stil",
         "areaFixed": "Auswahl fixierter Spalten",

@@ -2180,6 +2180,8 @@
         "areaExtendCalcFill": "ドラッグ自動入力",
         "areaExtendCalcFillExtendByCopy": "コピー入力",
         "areaExtendCalcFillExtendByCalc": "演算ルール",
+        "areaExtendCalcFillExtendByByDblclickCopy": "双击复制填充",
+        "areaExtendCalcFillExtendByByDblclickCalc": "双击运算规则",
         "calcFillExtendSetMethod": "カスタム拡張領域代入方法",
         "areaExcel": "Excel スタイル",
         "areaFixed": "固定列選択",

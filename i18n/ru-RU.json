@@ -2180,6 +2180,8 @@
         "areaExtendCalcFill": "Автозаполнение при перетаскивании",
         "areaExtendCalcFillExtendByCopy": "Копирование при заполнении",
         "areaExtendCalcFillExtendByCalc": "Правила вычислений",
+        "areaExtendCalcFillExtendByByDblclickCopy": "双击复制填充",
+        "areaExtendCalcFillExtendByByDblclickCalc": "双击运算规则",
         "calcFillExtendSetMethod": "Пользовательский метод присвоения значений расширенной области",
         "areaExcel": "Excel-стили",
         "areaFixed": "Выбор замороженных столбцов",

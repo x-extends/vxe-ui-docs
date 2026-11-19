@@ -2180,6 +2180,8 @@
         "areaExtendCalcFill": "拖動自動填充",
         "areaExtendCalcFillExtendByCopy": "複製填充",
         "areaExtendCalcFillExtendByCalc": "運算規則",
+        "areaExtendCalcFillExtendByByDblclickCopy": "双击复制填充",
+        "areaExtendCalcFillExtendByByDblclickCalc": "双击运算规则",
         "calcFillExtendSetMethod": "自定義擴展區域賦值方法",
         "areaExcel": "Excel 樣式",
         "areaFixed": "凍結列選取",

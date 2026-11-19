@@ -2180,6 +2180,8 @@
         "areaExtendCalcFill": "Remplissage automatique par glisser",
         "areaExtendCalcFillExtendByCopy": "Remplissage par copie",
         "areaExtendCalcFillExtendByCalc": "Règles de calcul",
+        "areaExtendCalcFillExtendByByDblclickCopy": "双击复制填充",
+        "areaExtendCalcFillExtendByByDblclickCalc": "双击运算规则",
         "calcFillExtendSetMethod": "Méthode personnalisée d'affectation de zone étendue",
         "areaExcel": "Style Excel",
         "areaFixed": "Sélection sur colonnes figées",
