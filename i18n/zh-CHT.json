@@ -1286,6 +1286,7 @@
         "dataTreeSelectCustomSlotTemplate": "自定義插槽模板",
         "dataTreeSelectFeatureExamples": "功能示例",
         "dataTreeSelectSize": "尺寸大小",
+        "dataTreeSelectLoading": "加载中",
         "dataTreeSelectHierarchy": "層級結構",
         "dataTreeSelectLeveling": "平級結構",
         "dataTreeSelectMultiple": "多選",

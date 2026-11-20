@@ -5,7 +5,7 @@
       :tree-config="treeConfig"
       :options="treeList"
       :popup-config="popupConfig"
-      :option-props="{label: 'title', value: 'id'}">
+      :option-props="optionProps">
     </vxe-tree-select>
   </div>
 </template>
@@ -56,11 +56,17 @@ export default Vue.extend({
       height: 400
     }
 
+    const optionProps: VxeTreeSelectPropTypes.OptionProps = {
+      label: 'title',
+      value: 'id'
+    }
+
     return {
       val1: null,
       treeList,
       treeConfig,
-      popupConfig
+      popupConfig,
+      optionProps
     }
   }
 })

@@ -15,6 +15,7 @@ export const treeSelectRouteConfig: RouteRecordConfig = {
           name: 'ComponentTreeSelectBaseSize',
           component: () => import('@/views/tree-select/base/size/CodeExample.vue')
         },
+        { path: 'loading', name: 'ComponentTreeSelectBaseLoading', component: () => import('@/views/tree-select/base/loading/CodeExample.vue') },
         {
           path: 'hierarchy',
           name: 'ComponentTreeSelectBaseHierarchy',

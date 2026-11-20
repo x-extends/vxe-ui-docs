@@ -1286,6 +1286,7 @@
         "dataTreeSelectCustomSlotTemplate": "カスタムスロットテンプレート",
         "dataTreeSelectFeatureExamples": "機能例",
         "dataTreeSelectSize": "サイズ",
+        "dataTreeSelectLoading": "加载中",
         "dataTreeSelectHierarchy": "階層構造",
         "dataTreeSelectLeveling": "フラット構造",
         "dataTreeSelectMultiple": "複数選択",

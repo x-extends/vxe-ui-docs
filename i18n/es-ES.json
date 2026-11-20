@@ -1286,6 +1286,7 @@
         "dataTreeSelectCustomSlotTemplate": "Plantilla de slot personalizada",
         "dataTreeSelectFeatureExamples": "Ejemplos de funciones",
         "dataTreeSelectSize": "Tamaño",
+        "dataTreeSelectLoading": "加载中",
         "dataTreeSelectHierarchy": "Estructura jerárquica",
         "dataTreeSelectLeveling": "Estructura plana",
         "dataTreeSelectMultiple": "Selección múltiple",

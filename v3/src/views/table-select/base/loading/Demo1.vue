@@ -39,7 +39,7 @@ export default Vue.extend({
 
     return {
       val1: null,
-      loading: false,
+      loading: true,
       columnList,
       tableData
     }

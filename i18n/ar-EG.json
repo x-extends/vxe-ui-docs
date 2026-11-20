@@ -1286,6 +1286,7 @@
         "dataTreeSelectCustomSlotTemplate": "قالب فتحة مخصص",
         "dataTreeSelectFeatureExamples": "أمثلة الميزات",
         "dataTreeSelectSize": "الحجم",
+        "dataTreeSelectLoading": "加载中",
         "dataTreeSelectHierarchy": "هيكل هرمي",
         "dataTreeSelectLeveling": "هيكل مسطح",
         "dataTreeSelectMultiple": "اختيار متعدد",

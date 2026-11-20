@@ -5,7 +5,7 @@
       :tree-config="treeConfig"
       :options="treeList"
       :popup-config="popupConfig"
-      :option-props="{label: 'title', value: 'id'}"
+      :option-props="optionProps"
     >
     </vxe-tree-select>
   </div>
@@ -32,6 +32,11 @@ const treeConfig = reactive<VxeTreeSelectPropTypes.TreeConfig>({
 const popupConfig = reactive<VxeTreeSelectPropTypes.PopupConfig>({
   width: 500,
   height: 400
+})
+
+const optionProps = reactive<VxeTreeSelectPropTypes.OptionProps>({
+  label: 'title',
+  value: 'id'
 })
 
 const treeList = ref<NodeVO[]>([

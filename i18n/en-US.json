@@ -1286,6 +1286,7 @@
         "dataTreeSelectCustomSlotTemplate": "Custom Slot Template",
         "dataTreeSelectFeatureExamples": "Feature Examples",
         "dataTreeSelectSize": "Size",
+        "dataTreeSelectLoading": "加载中",
         "dataTreeSelectHierarchy": "Hierarchical Structure",
         "dataTreeSelectLeveling": "Flat Structure",
         "dataTreeSelectMultiple": "Multiple",

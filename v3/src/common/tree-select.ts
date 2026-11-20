@@ -8,6 +8,7 @@ export const treeSelectNavConfig: NavVO = {
       i18nKey: 'app.aside.menu.dataTreeSelectBase',
       children: [
         { i18nKey: 'app.aside.menu.dataTreeSelectSize', routerLink: { name: 'ComponentTreeSelectBaseSize' } },
+        { i18nKey: 'app.aside.menu.dataTreeSelectLoading', routerLink: { name: 'ComponentTreeSelectBaseLoading' } },
         { i18nKey: 'app.aside.menu.dataTreeSelectHierarchy', routerLink: { name: 'ComponentTreeSelectBaseHierarchy' } },
         { i18nKey: 'app.aside.menu.dataTreeSelectLeveling', routerLink: { name: 'ComponentTreeSelectBaseLeveling' } },
         { i18nKey: 'app.aside.menu.dataTreeSelectMultiple', routerLink: { name: 'ComponentTreeSelectBaseMultiple' } },
@@ -15,7 +16,6 @@ export const treeSelectNavConfig: NavVO = {
         { i18nKey: 'app.aside.menu.dataTreeSelectCustomField', routerLink: { name: 'ComponentTreeSelectBaseOptionProps' } },
         { i18nKey: 'app.aside.menu.dataTreeSelectFullLabel', routerLink: { name: 'ComponentTreeSelectBaseFullLabel' } },
         { i18nKey: 'app.aside.menu.dataTreeSelectPopupWH', routerLink: { name: 'ComponentTreeSelectBasePopupWH' } },
-        { i18nKey: 'app.aside.menu.dataTreeSelectShowLine', routerLink: { name: 'ComponentTreeSelectBaseShowLine' } },
         { i18nKey: 'app.aside.menu.dataTreeSelectExpandAll', routerLink: { name: 'ComponentTreeSelectBaseExpandAll' } },
         { i18nKey: 'app.aside.menu.dataTreeSelectSelectChildNode', routerLink: { name: 'ComponentTreeSelectBaseTrigger' } }
       ]

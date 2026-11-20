@@ -1286,6 +1286,7 @@
         "dataTreeSelectCustomSlotTemplate": "Benutzerdefinierte Slot-Vorlage",
         "dataTreeSelectFeatureExamples": "Funktionsbeispiele",
         "dataTreeSelectSize": "Größe",
+        "dataTreeSelectLoading": "加载中",
         "dataTreeSelectHierarchy": "Hierarchische Struktur",
         "dataTreeSelectLeveling": "Flache Struktur",
         "dataTreeSelectMultiple": "Mehrfachauswahl",
