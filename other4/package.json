@@ -43,7 +43,7 @@
     "vxe-pc-ui": "~4.21.6",
     "vxe-table": "~4.24.3",
     "vxe-gantt": "~4.10.0",
-    "xe-utils": "^4.2.3"
+    "xe-utils": "^4.3.0"
   },
   "devDependencies": {
     "@eslint/css": "^2.0.1",
