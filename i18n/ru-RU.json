@@ -2332,6 +2332,7 @@
         "transfer": "自适应位置",
         "fixed": "Замороженный столбец",
         "sort": "Сортировка",
+        "optionSource": "选项列表的展示方式",
         "combinationRemoteFilter": "Серверный фильтр",
         "combinationPageFilter": "Серверный пагинационный фильтр",
         "handleFilter": "Ручная настройка опций",

@@ -2332,6 +2332,7 @@
         "transfer": "Position adaptative",
         "fixed": "Colonne figée",
         "sort": "Trier",
+        "optionSource": "选项列表的展示方式",
         "combinationRemoteFilter": "Filtre côté serveur",
         "combinationPageFilter": "Filtre de pagination côté serveur",
         "handleFilter": "Définir manuellement les options",
