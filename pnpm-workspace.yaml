@@ -1,2 +1,4 @@
 allowBuilds:
   es5-ext: true
+minimumReleaseAgeExclude:
+  - xe-utils@4.3.0
