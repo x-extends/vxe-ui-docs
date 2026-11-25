@@ -312,6 +312,7 @@
         "tableDragSecondaryConfirm": "Drag Secondary Confirmation",
         "tableLazyLoad": "Lazy Load",
         "tableDataFilter": "Data Filter",
+        "tableilterFooter": "实现表尾合计",
         "tableRemoteFilter": "Remote Filter",
         "tableManualPopup": "Manual Popup",
         "tableManualFilter": "Manual Filter",

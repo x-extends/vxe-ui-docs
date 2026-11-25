@@ -312,6 +312,7 @@
         "tableDragSecondaryConfirm": "تأكيد ثانوي للسحب",
         "tableLazyLoad": "تحميل كسول",
         "tableDataFilter": "تصفية البيانات",
+        "tableilterFooter": "实现表尾合计",
         "tableRemoteFilter": "تصفية من الخادم",
         "tableManualPopup": "منبثقة يدوياً",
         "tableManualFilter": "تصفية يدوية",

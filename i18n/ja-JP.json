@@ -312,6 +312,7 @@
         "tableDragSecondaryConfirm": "ドラッグ二次確認",
         "tableLazyLoad": "遅延読み込み",
         "tableDataFilter": "データフィルター",
+        "tableilterFooter": "实现表尾合计",
         "tableRemoteFilter": "サーバーサイドフィルター",
         "tableManualPopup": "手動ポップアップ",
         "tableManualFilter": "手動フィルター",

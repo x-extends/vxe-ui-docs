@@ -312,6 +312,7 @@
         "tableDragSecondaryConfirm": "Confirmación secundaria de arrastre",
         "tableLazyLoad": "Carga diferida",
         "tableDataFilter": "Filtro de datos",
+        "tableilterFooter": "实现表尾合计",
         "tableRemoteFilter": "Filtro del servidor",
         "tableManualPopup": "Emergente manual",
         "tableManualFilter": "Filtro manual",

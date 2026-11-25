@@ -312,6 +312,7 @@
         "tableDragSecondaryConfirm": "Sekundäre Drag-Bestätigung",
         "tableLazyLoad": "Lazy Loading",
         "tableDataFilter": "Datenfilter",
+        "tableilterFooter": "实现表尾合计",
         "tableRemoteFilter": "Serverseitiger Filter",
         "tableManualPopup": "Manuelles Popup",
         "tableManualFilter": "Manueller Filter",

@@ -312,6 +312,7 @@
         "tableDragSecondaryConfirm": "拖拽二次確認",
         "tableLazyLoad": "懶加載",
         "tableDataFilter": "數據篩選",
+        "tableilterFooter": "实现表尾合计",
         "tableRemoteFilter": "服務端篩選",
         "tableManualPopup": "手動彈出",
         "tableManualFilter": "手動篩選",
