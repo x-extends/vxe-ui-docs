@@ -2319,6 +2319,7 @@
       "nav": {
         "complexSimpleFilter": "필터를 입력하십시오",
         "complexRemoteFilter": "服务端筛选",
+        "complexInputSetting": "参数设置",
         "complexInputTitle": "조건으로 필터링하십시오",
         "stringFilter": "문자열 유형 필터링",
         "numberFilter": "숫자 유형 필터링",

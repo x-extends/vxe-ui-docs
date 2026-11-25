@@ -2319,6 +2319,7 @@
       "nav": {
         "complexSimpleFilter": "Базовый фильтр",
         "complexRemoteFilter": "Серверный фильтр",
+        "complexInputSetting": "参数设置",
         "complexInputTitle": "Фильтр с условиями",
         "stringFilter": "Фильтр для строк",
         "numberFilter": "Фильтр для чисел",

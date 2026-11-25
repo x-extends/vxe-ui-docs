@@ -2319,6 +2319,7 @@
       "nav": {
         "complexSimpleFilter": "Filtre de base",
         "complexRemoteFilter": "Filtre côté serveur",
+        "complexInputSetting": "参数设置",
         "complexInputTitle": "Filtre avec conditions",
         "stringFilter": "Filtre de chaîne",
         "numberFilter": "Filtre numérique",

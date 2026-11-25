@@ -2319,6 +2319,7 @@
       "nav": {
         "complexSimpleFilter": "基本フィルター",
         "complexRemoteFilter": "サーバーサイドフィルター",
+        "complexInputSetting": "参数设置",
         "complexInputTitle": "条件付きフィルター",
         "stringFilter": "文字列型フィルター",
         "numberFilter": "数値型フィルター",

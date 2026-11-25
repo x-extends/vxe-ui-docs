@@ -2319,6 +2319,7 @@
       "nav": {
         "complexSimpleFilter": "Введіть фільтр",
         "complexRemoteFilter": "服务端筛选",
+        "complexInputSetting": "参数设置",
         "complexInputTitle": "Фільтр з умовами",
         "stringFilter": "Фільтрування типу рядка",
         "numberFilter": "Фільтрування чисельного типу",

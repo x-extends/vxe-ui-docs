@@ -2319,6 +2319,7 @@
       "nav": {
         "complexSimpleFilter": "تصفية أساسية",
         "complexRemoteFilter": "تصفية من الخادم",
+        "complexInputSetting": "参数设置",
         "complexInputTitle": "تصفية بشرط",
         "stringFilter": "تصفية نوع النص",
         "numberFilter": "تصفية نوع الرقم",

@@ -2319,6 +2319,7 @@
       "nav": {
         "complexSimpleFilter": "Insira o filtro",
         "complexRemoteFilter": "服务端筛选",
+        "complexInputSetting": "参数设置",
         "complexInputTitle": "Filtrar com condições",
         "stringFilter": "Filtragem do tipo de string",
         "numberFilter": "Filtragem do tipo numérico",
