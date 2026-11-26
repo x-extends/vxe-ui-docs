@@ -212,8 +212,22 @@ export const ganttNavConfig: NavVO = {
         { i18nKey: 'app.aside.menu.ganttSeq', routerLink: { name: 'ComponentGanttTreeSeqMode' } },
         // 树展开按钮
         { i18nKey: 'app.aside.menu.ganttTreeExpandButton', routerLink: { name: 'ComponentGanttTreeIcon' } },
-        // 连接线
-        { i18nKey: 'app.aside.menu.ganttConnectionLine', routerLink: { name: 'ComponentGanttTreeLine' } }
+        // 显示连接线
+        {
+          i18nKey: 'app.aside.menu.tableShowConnectionLine',
+          children: [
+            // 连接线
+            { i18nKey: 'app.aside.menu.tableShowConnectionShowLine', routerLink: { name: 'ComponentGanttTreeLineShowLine' } },
+            // 节点缩进
+            { i18nKey: 'app.aside.menu.tableShowConnectionIndent', routerLink: { name: 'ComponentGanttTreeLineIndent' } },
+            // 线宽度
+            { i18nKey: 'app.aside.menu.tableTreeLineWidth', routerLink: { name: 'ComponentGanttTreeLineWidth' } },
+            // 线类型
+            { i18nKey: 'app.aside.menu.tableShowConnectionLineType', routerLink: { name: 'ComponentGanttTreeLineType' } },
+            // 线颜色
+            { i18nKey: 'app.aside.menu.tableShowConnectionLineColor', routerLink: { name: 'ComponentGanttTreeLineColor' } }
+          ]
+        }
       ]
     },
     {

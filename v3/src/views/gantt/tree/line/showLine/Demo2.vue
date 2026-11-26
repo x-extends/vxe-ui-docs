@@ -29,12 +29,14 @@ export default Vue.extend({
       columnConfig: {
         resizable: true
       },
-      checkboxConfig: {
-        labelField: 'name'
+      radioConfig: {
+        labelField: 'title'
       },
       treeConfig: {
         transform: true,
-        showLine: true
+        showLine: true,
+        iconOpen: 'vxe-icon-arrow-right rotate-90',
+        iconClose: 'vxe-icon-arrow-right'
       },
       taskBarConfig: {
         showProgress: true,
@@ -46,13 +48,13 @@ export default Vue.extend({
         }
       },
       columns: [
-        { field: 'title', title: '任务名称', treeNode: true },
+        { type: 'radio', title: 'Title', minWidth: 200, treeNode: true },
         { field: 'start', title: '开始时间', width: 100 },
         { field: 'end', title: '结束时间', width: 100 },
         { field: 'progress', title: '进度(%)', width: 80 }
       ],
       data: [
-        { id: 10001, parentId: null, title: '任务R790', start: '2024-03-01', end: '2024-03-04', progress: 3 },
+        { id: 10001, parentId: null, title: '任务R790', start: '2024-02-27', end: '2024-03-04', progress: 3 },
         { id: 10002, parentId: 10001, title: '任务C30456572349', start: '2024-03-03', end: '2024-03-08', progress: 10 },
         { id: 10003, parentId: null, title: '任务E563', start: '2024-03-03', end: '2024-03-11', progress: 90 },
         { id: 10004, parentId: 10003, title: '任务P687', start: '2024-03-05', end: '2024-03-11', progress: 15 },

@@ -1,0 +1,35 @@
+<template>
+  <div>
+    <CodeLight path="gantt/tree/line/showLine/Demo1">
+      <template #tip>
+        <vxe-tip status="primary" title="连接线">
+          通过配置 <ApiLink name="gantt" prop="tree-config" />.<ApiLink name="table" prop="showLine" /> 属性来开启树节点连接线，<ApiLink name="gantt" prop="tree-config" />.<ApiLink name="gantt" prop="showRootLine" /> 用于控制是否显示根节点连接线<br>
+        </vxe-tip>
+      </template>
+    </CodeLight>
+
+    <CodeLight path="gantt/tree/line/showLine/Demo2">
+      <template #tip>
+        <vxe-tip status="primary">
+          单选框与连接线
+        </vxe-tip>
+      </template>
+    </CodeLight>
+
+    <CodeLight path="gantt/tree/line/showLine/Demo3">
+      <template #tip>
+        <vxe-tip status="primary">
+          复选框与连接线
+        </vxe-tip>
+      </template>
+    </CodeLight>
+
+    <CodeLight path="gantt/tree/line/showLine/Demo4">
+      <template #tip>
+        <vxe-tip status="primary">
+          筛选与排序
+        </vxe-tip>
+      </template>
+    </CodeLight>
+  </div>
+</template>

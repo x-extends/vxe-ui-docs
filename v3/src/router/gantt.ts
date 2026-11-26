@@ -147,7 +147,17 @@ export const ganttRouteConfig: RouteRecordConfig = {
         { path: 'stripe', name: 'ComponentGanttTreeStripe', component: () => import('@/views/gantt/tree/stripe/CodeExample.vue') },
         { path: 'seqMode', name: 'ComponentGanttTreeSeqMode', component: () => import('@/views/gantt/tree/seqMode/CodeExample.vue') },
         { path: 'icon', name: 'ComponentGanttTreeIcon', component: () => import('@/views/gantt/tree/icon/CodeExample.vue') },
-        { path: 'line', name: 'ComponentGanttTreeLine', component: () => import('@/views/gantt/tree/line/CodeExample.vue') }
+        {
+          path: 'line',
+          component: RouteLayout,
+          children: [
+            { path: 'showLine', name: 'ComponentGanttTreeLineShowLine', component: () => import('@/views/gantt/tree/line/showLine/CodeExample.vue') },
+            { path: 'indent', name: 'ComponentGanttTreeLineIndent', component: () => import('@/views/gantt/tree/line/indent/CodeExample.vue') },
+            { path: 'width', name: 'ComponentGanttTreeLineWidth', component: () => import('@/views/gantt/tree/line/width/CodeExample.vue') },
+            { path: 'type', name: 'ComponentGanttTreeLineType', component: () => import('@/views/gantt/tree/line/type/CodeExample.vue') },
+            { path: 'color', name: 'ComponentGanttTreeLineColor', component: () => import('@/views/gantt/tree/line/color/CodeExample.vue') }
+          ]
+        }
       ]
     },
     {

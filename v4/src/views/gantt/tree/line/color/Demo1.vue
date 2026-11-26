@@ -1,11 +1,19 @@
 <template>
   <div>
-    <vxe-gantt v-bind="ganttOptions"></vxe-gantt>
+    线颜色：<vxe-color-picker v-model="lineColor" :colors="colorList" clearable></vxe-color-picker>
+
+    <vxe-gantt
+      v-bind="ganttOptions"
+      :style="{
+        '--vxe-ui-table-tree-node-line-color': lineColor
+      }"
+    >
+    </vxe-gantt>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { reactive } from 'vue'
+import { ref, reactive } from 'vue'
 import type { VxeGanttProps } from 'vxe-gantt'
 
 interface RowVO {
@@ -17,18 +25,25 @@ interface RowVO {
   progress: number
 }
 
+const lineColor = ref('#FF0000')
+
+const colorList = ref([
+  '#DC143C', '#FF1493', '#FF00FF', '#9932CC', '#6A5ACD',
+  '#0000FF', '#00008B', '#778899', '#1E90FF', '#00BFFF',
+  '#5F9EA0', '#00FFFF', '#008080', '#7FFFAA', '#3CB371',
+  '#8FBC8F', '#008000', '#7CFC00', '#556B2F', '#FFFFE0',
+  '#FFFF00', '#808000', '#EEE8AA', '#FFD700', '#FFA500',
+  '#FF4500', '#FA8072', '#FF0000', '#800000', '#C0C0C0'
+])
+
 const ganttOptions = reactive<VxeGanttProps<RowVO>>({
   showOverflow: true,
   border: 'outer',
-  stripe: true,
   rowConfig: {
     useKey: true
   },
   columnConfig: {
     resizable: true
-  },
-  checkboxConfig: {
-    labelField: 'name'
   },
   treeConfig: {
     transform: true,
@@ -50,7 +65,7 @@ const ganttOptions = reactive<VxeGanttProps<RowVO>>({
     { field: 'progress', title: '进度(%)', width: 80 }
   ],
   data: [
-    { id: 10001, parentId: null, title: '任务R790', start: '2024-03-01', end: '2024-03-04', progress: 3 },
+    { id: 10001, parentId: null, title: '任务R790', start: '2024-02-27', end: '2024-03-04', progress: 3 },
     { id: 10002, parentId: 10001, title: '任务C30456572349', start: '2024-03-03', end: '2024-03-08', progress: 10 },
     { id: 10003, parentId: null, title: '任务E563', start: '2024-03-03', end: '2024-03-11', progress: 90 },
     { id: 10004, parentId: 10003, title: '任务P687', start: '2024-03-05', end: '2024-03-11', progress: 15 },

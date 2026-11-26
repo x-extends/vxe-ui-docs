@@ -1,16 +1,20 @@
 <template>
   <div>
-    显示连接线：<vxe-switch v-model="treeConfig.showLine"></vxe-switch>
-    显示根节点线：<vxe-switch v-model="treeConfig.showRootLine"></vxe-switch>
+    线颜色：<vxe-color-picker v-model="lineColor" :colors="colorList" clearable></vxe-color-picker>
 
-    <vxe-gantt v-bind="ganttOptions"></vxe-gantt>
+    <vxe-gantt
+      v-bind="ganttOptions"
+      :style="{
+        '--vxe-ui-table-tree-node-line-color': lineColor
+      }"
+    >
+    </vxe-gantt>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import type { VxeGanttProps } from 'vxe-gantt'
-import type { VxeTablePropTypes } from 'vxe-table'
 
 interface RowVO {
   id: number
@@ -23,11 +27,16 @@ interface RowVO {
 
 export default Vue.extend({
   data () {
-    const treeConfig: VxeTablePropTypes.TreeConfig = {
-      transform: true,
-      showLine: true,
-      showRootLine: true
-    }
+    const lineColor: string = '#FF0000'
+
+    const colorList: string[] = [
+      '#DC143C', '#FF1493', '#FF00FF', '#9932CC', '#6A5ACD',
+      '#0000FF', '#00008B', '#778899', '#1E90FF', '#00BFFF',
+      '#5F9EA0', '#00FFFF', '#008080', '#7FFFAA', '#3CB371',
+      '#8FBC8F', '#008000', '#7CFC00', '#556B2F', '#FFFFE0',
+      '#FFFF00', '#808000', '#EEE8AA', '#FFD700', '#FFA500',
+      '#FF4500', '#FA8072', '#FF0000', '#800000', '#C0C0C0'
+    ]
 
     const ganttOptions: VxeGanttProps<RowVO> = {
       showOverflow: true,
@@ -38,7 +47,10 @@ export default Vue.extend({
       columnConfig: {
         resizable: true
       },
-      treeConfig,
+      treeConfig: {
+        transform: true,
+        showLine: true
+      },
       taskBarConfig: {
         showProgress: true,
         showContent: true
@@ -55,7 +67,7 @@ export default Vue.extend({
         { field: 'progress', title: '进度(%)', width: 80 }
       ],
       data: [
-        { id: 10001, parentId: null, title: '任务R790', start: '2024-03-01', end: '2024-03-04', progress: 3 },
+        { id: 10001, parentId: null, title: '任务R790', start: '2024-02-27', end: '2024-03-04', progress: 3 },
         { id: 10002, parentId: 10001, title: '任务C30456572349', start: '2024-03-03', end: '2024-03-08', progress: 10 },
         { id: 10003, parentId: null, title: '任务E563', start: '2024-03-03', end: '2024-03-11', progress: 90 },
         { id: 10004, parentId: 10003, title: '任务P687', start: '2024-03-05', end: '2024-03-11', progress: 15 },
@@ -83,8 +95,9 @@ export default Vue.extend({
     }
 
     return {
-      ganttOptions,
-      treeConfig
+      lineColor,
+      colorList,
+      ganttOptions
     }
   }
 })
