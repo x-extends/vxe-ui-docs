@@ -203,6 +203,7 @@ export const treeRouteConfig: RouteRecordConfig = {
       children: [
         { path: 'showLine', name: 'ComponentTreeLineShowLine', component: () => import('@/views/tree/line/showLine/CodeExample.vue') },
         { path: 'indent', name: 'ComponentTreeLineIndent', component: () => import('@/views/tree/line/indent/CodeExample.vue') },
+        { path: 'width', name: 'ComponentTreeLineWidth', component: () => import('@/views/tree/line/width/CodeExample.vue') },
         { path: 'type', name: 'ComponentTreeLineType', component: () => import('@/views/tree/line/type/CodeExample.vue') },
         { path: 'color', name: 'ComponentTreeLineColor', component: () => import('@/views/tree/line/color/CodeExample.vue') }
       ]

@@ -394,6 +394,7 @@
         "tableShowConnectionLine": "Show Connection Line",
         "tableShowConnectionShowLine": "Show line",
         "tableShowConnectionLineType": "Line style)",
+        "tableTreeLineWidth": "线宽度",
         "tableShowConnectionLineColor": "Line Color",
         "tableShowConnectionIndent": "节点缩进",
         "tableAccordionEffect": "Accordion Effect",
@@ -2003,6 +2004,7 @@
         "datePickerShortcutGlobalCommands": "Shortcut Commands (Global Reuse)",
         "treeShowLine": "连接线",
         "treeLineType": "线样式类型",
+        "treeLineWidth": "线宽度",
         "treeLineColor": "线颜色",
         "treeShowIndent": "节点缩进"
       }

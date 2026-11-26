@@ -128,6 +128,8 @@ export const treeNavConfig: NavVO = {
         { i18nKey: 'app.aside.menu.treeShowLine', routerLink: { name: 'ComponentTreeLineShowLine' } },
         // 节点缩进
         { i18nKey: 'app.aside.menu.treeShowIndent', routerLink: { name: 'ComponentTreeLineIndent' } },
+        // 线宽度
+        { i18nKey: 'app.aside.menu.treeLineWidth', routerLink: { name: 'ComponentTreeLineWidth' } },
         // 线类型
         { i18nKey: 'app.aside.menu.treeLineType', routerLink: { name: 'ComponentTreeLineType' } },
         // 线颜色

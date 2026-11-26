@@ -394,6 +394,7 @@
         "tableShowConnectionLine": "Verbindungslinie anzeigen",
         "tableShowConnectionShowLine": "连接线",
         "tableShowConnectionLineType": "线类型",
+        "tableTreeLineWidth": "线宽度",
         "tableShowConnectionLineColor": "线颜色",
         "tableShowConnectionIndent": "节点缩进",
         "tableAccordionEffect": "Akkordeon-Effekt",
@@ -2003,6 +2004,7 @@
         "datePickerShortcutGlobalCommands": "Schnellbutton-Befehle (globale Wiederverwendung)",
         "treeShowLine": "连接线",
         "treeLineType": "线样式类型",
+        "treeLineWidth": "线宽度",
         "treeLineColor": "线颜色",
         "treeShowIndent": "节点缩进"
       }

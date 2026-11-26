@@ -203,6 +203,7 @@ export const treeRouteConfig: RouteRecordConfig = {
       children: [
         { path: 'showLine', name: 'ComponentTreeLineShowLine', component: () => import('@/views/tree/line/showLine/CodeExample.vue') },
         { path: 'indent', name: 'ComponentTreeLineIndent', component: () => import('@/views/tree/line/indent/CodeExample.vue') },
+        { path: 'width', name: 'ComponentTreeLineWidth', component: () => import('@/views/tree/line/width/CodeExample.vue') },
         { path: 'type', name: 'ComponentTreeLineType', component: () => import('@/views/tree/line/type/CodeExample.vue') },
         { path: 'color', name: 'ComponentTreeLineColor', component: () => import('@/views/tree/line/color/CodeExample.vue') }
       ]
@@ -316,16 +317,9 @@ export const treeRouteConfig: RouteRecordConfig = {
       path: 'scroll',
       component: RouteLayout,
       children: [
-        {
-          path: 'basics',
-          name: 'ComponentTreeScrollBasics',
-          component: () => import('@/views/tree/scroll/basics/CodeExample.vue')
-        },
-        {
-          path: 'loadData',
-          name: 'ComponentTreeScrollLoadData',
-          component: () => import('@/views/tree/scroll/loadData/CodeExample.vue')
-        },
+        { path: 'basics', name: 'ComponentTreeScrollBasics', component: () => import('@/views/tree/scroll/basics/CodeExample.vue') },
+        { path: 'line', name: 'ComponentTreeScrollLine', component: () => import('@/views/tree/scroll/line/CodeExample.vue') },
+        { path: 'loadData', name: 'ComponentTreeScrollLoadData', component: () => import('@/views/tree/scroll/loadData/CodeExample.vue') },
         { path: 'scrollTo', name: 'ComponentTreeScrollScrollTo', component: () => import('@/views/tree/scroll/scrollTo/CodeExample.vue') }
       ]
     },
