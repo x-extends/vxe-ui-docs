@@ -954,6 +954,8 @@
         "displayUseScrollbar": "استخدام شريط التمرير",
         "displayVerticalLayout": "تخطيط رأسي",
         "displayConfigDriven": "تكويني",
+        "carouselModel": "绑定值",
+        "carouselShowPreview": "预览图片",
         "displayCustomSlotTemplate": "قالب فتحة مخصص",
         "displayAutoPlay": "تبديل تلقائي",
         "displayIndicators": "المؤشرات",

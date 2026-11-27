@@ -402,6 +402,8 @@ export const navConfigList: NavVO[] = [
           { i18nKey: 'app.aside.menu.displayHeight', routerLink: { name: 'ComponentCarouselHeight' } },
           { i18nKey: 'app.aside.menu.displayVerticalLayout', routerLink: { name: 'ComponentCarouselVertical' } },
           { i18nKey: 'app.aside.menu.displayConfigDriven', routerLink: { name: 'ComponentCarouselOptions' } },
+          { i18nKey: 'app.aside.menu.carouselModel', routerLink: { name: 'ComponentCarouselModel' } },
+          { i18nKey: 'app.aside.menu.carouselShowPreview', routerLink: { name: 'ComponentCarouselShowPreview' } },
           { i18nKey: 'app.aside.menu.displayCustomSlotTemplate', routerLink: { name: 'ComponentCarouselTemplate' } },
           { i18nKey: 'app.aside.menu.displayAutoPlay', routerLink: { name: 'ComponentCarouselAutoPlay' } },
           { i18nKey: 'app.aside.menu.displayIndicators', routerLink: { name: 'ComponentCarouselShowIndicators' } }

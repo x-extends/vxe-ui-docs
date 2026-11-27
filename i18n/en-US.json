@@ -954,6 +954,8 @@
         "displayUseScrollbar": "Use Scrollbar",
         "displayVerticalLayout": "Vertical Layout",
         "displayConfigDriven": "Config-driven",
+        "carouselModel": "绑定值",
+        "carouselShowPreview": "预览图片",
         "displayCustomSlotTemplate": "Custom Slot Template",
         "displayAutoPlay": "Auto Play",
         "displayIndicators": "Indicators",

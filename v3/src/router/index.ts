@@ -3356,6 +3356,8 @@ const routes: Array<RouteConfig> = [
             name: 'ComponentCarouselOptions',
             component: () => import('@/views/carousel/options/CodeExample.vue')
           },
+          { path: 'model', name: 'ComponentCarouselModel', component: () => import('@/views/carousel/model/CodeExample.vue') },
+          { path: 'showPreview', name: 'ComponentCarouselShowPreview', component: () => import('@/views/carousel/showPreview/CodeExample.vue') },
           {
             path: 'template',
             name: 'ComponentCarouselTemplate',

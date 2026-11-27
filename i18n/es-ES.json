@@ -954,6 +954,8 @@
         "displayUseScrollbar": "Usar barra de desplazamiento",
         "displayVerticalLayout": "Diseño vertical",
         "displayConfigDriven": "Configurable",
+        "carouselModel": "绑定值",
+        "carouselShowPreview": "预览图片",
         "displayCustomSlotTemplate": "Plantilla de slot personalizada",
         "displayAutoPlay": "Cambio automático",
         "displayIndicators": "Indicadores",

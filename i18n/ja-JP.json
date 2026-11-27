@@ -954,6 +954,8 @@
         "displayUseScrollbar": "スクロールバーを使用",
         "displayVerticalLayout": "縦方向レイアウト",
         "displayConfigDriven": "設定駆動型",
+        "carouselModel": "绑定值",
+        "carouselShowPreview": "预览图片",
         "displayCustomSlotTemplate": "カスタムスロットテンプレート",
         "displayAutoPlay": "自動切り替え",
         "displayIndicators": "インジケーター",

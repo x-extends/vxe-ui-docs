@@ -954,6 +954,8 @@
         "displayUseScrollbar": "使用滚动条",
         "displayVerticalLayout": "纵向排版",
         "displayConfigDriven": "配置式",
+        "carouselModel": "绑定值",
+        "carouselShowPreview": "预览图片",
         "displayCustomSlotTemplate": "自定义插槽模板",
         "displayAutoPlay": "自动切换",
         "displayIndicators": "指示器",
